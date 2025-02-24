@@ -13,11 +13,9 @@ const gapConfig: Record<Density, keyof DefaultNDSThemeType["space"]> = {
   relaxed: "x3",
 };
 
-export const DlContainer = styled.div(({ theme }) => {
-  return {
-    containerType: "inline-size",
-    width: "100%",
-  };
+export const DlContainer = styled.div({
+  containerType: "inline-size",
+  width: "100%",
 });
 
 export const Dl = styled.dl(({ theme }) => {

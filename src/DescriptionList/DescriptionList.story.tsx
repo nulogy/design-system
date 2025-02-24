@@ -11,12 +11,13 @@ import { Icon } from "../Icon";
 import { Input } from "../Input";
 import Sidebar from "../Layout/Sidebar";
 import { Link } from "../Link";
-import { Select } from "../Select";
+import { NDSOptionValue, Select } from "../Select";
 import { StatusIndicator } from "../StatusIndicator";
 import { Textarea } from "../Textarea";
 import { DefaultNDSThemeType } from "../theme";
+import { Breakpoints } from "../theme/theme.type";
 import { Tooltip } from "../Tooltip";
-import { Heading3, Heading4, Text } from "../Type";
+import { Heading1, Heading3, Heading4, Text } from "../Type";
 import { dashed } from "../utils/story/dashed";
 import type { Density as DensityType, Layout } from "./DescriptionList";
 import { DescriptionList } from "./DescriptionList";
@@ -665,7 +666,10 @@ export function Playground() {
   const [descriptionTermMaxWidth, setDescriptionTermMaxWidth] = useState("320px");
   const [fontSize, setFontSize] = useState<keyof DefaultNDSThemeType["fontSizes"]>("medium");
   const [lineHeight, setLineHeight] = useState<keyof DefaultNDSThemeType["lineHeights"]>("base");
-  const [columns, setColumns] = useState<number | undefined>(undefined);
+  const initialBreakpointColumns = [{ breakpoint: "extraSmall" as keyof Breakpoints, columns: 1 }];
+  const [columns, setColumns] = useState<number | Partial<Record<keyof Breakpoints, number>> | undefined>(1);
+  const [breakpointColumns, setBreakpointColumns] =
+    useState<Array<{ breakpoint: keyof Breakpoints; columns: number }>>(initialBreakpointColumns);
   const [groupMinWidth, setGroupMinWidth] = useState<string | undefined>(undefined);
   const [containerWidth, setContainerWidth] = useState<string | undefined>("720px");
   const [showDivider, setShowDivider] = useState(false);
@@ -836,18 +840,131 @@ export function Playground() {
             }))}
             labelText="Line Height"
           />
+          <Flex flexDirection="column" gap="x2">
+            <Flex justifyContent="space-between" alignItems="center">
+              <Text fontWeight="bold">Columns</Text>
+              <IconicButton
+                onClick={() => {
+                  const currentColumnValue = breakpointColumns[0].columns;
+                  const availableBreakpoints = Object.keys(theme.breakpoints).filter(
+                    (breakpoint) =>
+                      !breakpointColumns.some((col) => col.breakpoint === breakpoint || breakpoint === "map")
+                  );
 
-          <Input
-            type="number"
-            value={columns?.toString() ?? ""}
-            onChange={(e) => {
-              const value = e.target.value ? Number(e.target.value) : undefined;
-              setColumns(value);
-              if (value) setGroupMinWidth(undefined);
-            }}
-            labelText="Columns"
-            placeholder="Number of columns"
-          />
+                  if (breakpointColumns.length === 1) {
+                    // First time adding a breakpoint, convert the single column to a breakpoint
+                    const firstBreakpoint = breakpointColumns[0].breakpoint;
+                    setBreakpointColumns([
+                      { breakpoint: firstBreakpoint, columns: currentColumnValue },
+                      { breakpoint: availableBreakpoints[0] as keyof Breakpoints, columns: currentColumnValue },
+                    ]);
+                    setColumns({
+                      [firstBreakpoint]: currentColumnValue,
+                      [availableBreakpoints[0]]: currentColumnValue,
+                    });
+                  } else {
+                    // Add another breakpoint
+                    const nextBreakpoint = availableBreakpoints[0] as keyof Breakpoints;
+                    setBreakpointColumns([
+                      ...breakpointColumns,
+                      { breakpoint: nextBreakpoint, columns: currentColumnValue },
+                    ]);
+                    setColumns(
+                      Object.fromEntries(
+                        [...breakpointColumns, { breakpoint: nextBreakpoint, columns: currentColumnValue }].map(
+                          ({ breakpoint, columns }) => [breakpoint, columns]
+                        )
+                      )
+                    );
+                  }
+                }}
+                icon="add"
+                tooltip="Add column per breakpoint"
+                disabled={breakpointColumns.length >= Object.keys(theme.breakpoints).length - 1}
+              />
+            </Flex>
+            <Flex flexDirection="column" gap="x2">
+              {breakpointColumns.map((breakpointColumn, index) => (
+                <Flex key={index} gap="x2" alignItems="flex-end">
+                  {breakpointColumns.length > 1 && (
+                    <Select
+                      minWidth="240px"
+                      value={breakpointColumn.breakpoint}
+                      onChange={(value: NDSOptionValue) => {
+                        const newBreakpointColumns = [...breakpointColumns];
+                        newBreakpointColumns[index] = { ...breakpointColumn, breakpoint: value as keyof Breakpoints };
+                        setBreakpointColumns(newBreakpointColumns);
+                        setColumns(
+                          Object.fromEntries(
+                            newBreakpointColumns.map(({ breakpoint, columns }) => [breakpoint, columns])
+                          )
+                        );
+                      }}
+                      options={Object.keys(theme.breakpoints)
+                        .filter(
+                          (breakpoint) =>
+                            breakpoint === breakpointColumn.breakpoint ||
+                            !breakpointColumns.some((col) => col.breakpoint === breakpoint || breakpoint === "map")
+                        )
+                        .map((breakpoint) => ({
+                          value: breakpoint,
+                          label: `${breakpoint} (${theme.breakpoints[breakpoint]})`,
+                        }))}
+                      labelText={index === 0 ? "Breakpoint" : undefined}
+                    />
+                  )}
+                  <Input
+                    inputWidth={breakpointColumns.length === 1 ? undefined : "95px"}
+                    type="number"
+                    value={breakpointColumn.columns}
+                    onChange={(e) => {
+                      const newValue = Math.max(1, Number(e.target.value));
+                      const newBreakpointColumns = [...breakpointColumns];
+                      newBreakpointColumns[index] = {
+                        ...breakpointColumn,
+                        columns: newValue,
+                      };
+                      setBreakpointColumns(newBreakpointColumns);
+                      if (breakpointColumns.length === 1) {
+                        setColumns(newValue);
+                      } else {
+                        setColumns(
+                          Object.fromEntries(
+                            newBreakpointColumns.map(({ breakpoint, columns }) => [breakpoint, columns])
+                          )
+                        );
+                      }
+                    }}
+                    labelText={
+                      breakpointColumns.length === 1 ? "Number of columns" : index === 0 ? "Columns" : undefined
+                    }
+                    placeholder="Number of columns"
+                    min={1}
+                  />
+                  {breakpointColumns.length > 1 && (
+                    <IconicButton
+                      icon="delete"
+                      onClick={() => {
+                        const newBreakpointColumns = breakpointColumns.filter((_, i) => i !== index);
+                        if (newBreakpointColumns.length === 1) {
+                          // Convert back to single number when only one breakpoint remains
+                          setColumns(newBreakpointColumns[0].columns);
+                          setBreakpointColumns(newBreakpointColumns);
+                        } else {
+                          setBreakpointColumns(newBreakpointColumns);
+                          setColumns(
+                            Object.fromEntries(
+                              newBreakpointColumns.map(({ breakpoint, columns }) => [breakpoint, columns])
+                            )
+                          );
+                        }
+                      }}
+                    />
+                  )}
+                </Flex>
+              ))}
+            </Flex>
+          </Flex>
           <Input
             value={groupMinWidth ?? ""}
             onChange={(e) => {
@@ -947,7 +1064,7 @@ export function Playground() {
         </Flex>
       </Sidebar>
       <Box flex={1}>
-        <Heading3 mb="x3">Playground</Heading3>
+        <Heading1 mb="x3">DescriptionList Playground</Heading1>
         <Resizable
           enable={{
             right: true,
