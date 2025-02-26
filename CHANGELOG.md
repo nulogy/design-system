@@ -1,3 +1,10 @@
+## [14.1.1](https://github.com/nulogy/design-system/compare/v14.1.0...v14.1.1) (2025-02-26)
+
+
+### Bug Fixes
+
+* BottomSheet footer hiding container content ([1dbd6c0](https://github.com/nulogy/design-system/commit/1dbd6c0c8147d08ff53415034c0e493de1c1d1c6))
+
 # [14.1.0](https://github.com/nulogy/design-system/compare/v14.0.0...v14.1.0) (2025-02-26)
 
 
