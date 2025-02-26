@@ -45,6 +45,13 @@ export default function BottomSheet({
   closeButtonLabel ||= t("close");
   const closeOnClick = !disableCloseOnOverlayClick;
 
+  /* 
+    x5: The footer buttons are x5 in height
+    x2: The footer has a padding top and bottom of x2
+    x4: To match the top padding of the content
+  */
+  const footerHeight = `calc(${theme.space.x5} + (${theme.space.x2} * 2) + ${theme.space.x4})`;
+
   return (
     <BottomSheetParts.Root isOpen={isOpen} onClose={onClose}>
       <BottomSheetParts.Overlay closeOnClick={closeOnClick}>
@@ -65,7 +72,7 @@ export default function BottomSheet({
                     helpText
                   ))}
               </BottomSheetParts.Header>
-              <Box px="x3" py="x4">
+              <Box px="x3" pt="x4" pb={footerHeight}>
                 {children}
               </Box>
             </Box>
