@@ -1,3 +1,10 @@
+# [14.1.0](https://github.com/nulogy/design-system/compare/v14.0.0...v14.1.0) (2025-02-26)
+
+
+### Features
+
+* upgrade framer-motion to v6 ([38fabe8](https://github.com/nulogy/design-system/commit/38fabe8db64d5b79c0aceebd14c9075edd33d0e4))
+
 # [14.0.0](https://github.com/nulogy/design-system/compare/v13.5.1...v14.0.0) (2025-02-24)
 
 ### Bug Fixes
