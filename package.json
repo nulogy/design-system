@@ -21,7 +21,7 @@
     "check": "yarn warn:prepush && yarn check:types && yarn check:lint && yarn check:format",
     "check:types": "tsc && cd cypress && tsc --noEmit",
     "check:lint": "eslint --config ./.eslintrc .'*/**/*.{js,ts,tsx}'",
-    "check:format": "prettier -c .",
+    "check:format": "prettier -c --ignore-path .prettierignore-check .",
     "fix": "yarn fix:lint && yarn fix:format",
     "fix:lint": "yarn check:lint --fix",
     "fix:format": "prettier -w .",
