@@ -1,6 +1,5 @@
 import React, { useRef, useImperativeHandle } from "react";
 import { motion } from "framer-motion";
-import type { TransformProperties } from "framer-motion/types/motion/types";
 import type { Transition } from "framer-motion";
 import styled, { useTheme } from "styled-components";
 import { DefaultNDSThemeType } from "../theme";
@@ -28,7 +27,7 @@ type ToggleButtonProps = React.ComponentPropsWithRef<"input"> & {
 
 type AnimationConfig = {
   transition: Transition;
-  scale: TransformProperties["scale"];
+  scale: string | number;
 };
 
 const getSwitchBackground = (toggled) => (toggled ? "darkBlue" : "darkGrey");
