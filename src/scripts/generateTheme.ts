@@ -141,6 +141,10 @@ const legacy: DefaultNDSThemeType = {
     x6: tokens.size_base_x_6,
     x7: "56px",
     x8: tokens.size_base_x_8,
+    x9: "72px",
+    x10: "80px",
+    x11: "88px",
+    x12: "96px",
   },
   sizes: {
     none: tokens.size_base_none,
@@ -161,6 +165,10 @@ const legacy: DefaultNDSThemeType = {
     x6: tokens.size_base_x_6,
     x7: "56px",
     x8: tokens.size_base_x_8,
+    x9: "72px",
+    x10: "80px",
+    x11: "88px",
+    x12: "96px",
   },
   radii: {
     small: tokens.radius_border_small,
@@ -227,6 +235,10 @@ function generateThemeConfig(baseUnit: number): DefaultNDSThemeType {
     x6: px(baseUnit * 12),
     x7: px(baseUnit * 14),
     x8: px(baseUnit * 16),
+    x9: px(baseUnit * 18),
+    x10: px(baseUnit * 20),
+    x11: px(baseUnit * 22),
+    x12: px(baseUnit * 24),
   };
 
   return {

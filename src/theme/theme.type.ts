@@ -90,6 +90,10 @@ interface Space {
   x6: string;
   x7: string;
   x8: string;
+  x9: string;
+  x10: string;
+  x11: string;
+  x12: string;
 }
 
 interface Fonts {
