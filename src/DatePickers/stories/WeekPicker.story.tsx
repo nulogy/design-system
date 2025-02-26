@@ -33,7 +33,7 @@ export const WithCustomDateFormat = () => (
 );
 
 export const WithPreselectedDate = () => (
-  <WeekPicker inputProps={{ labelText: "Selected Week" }} selected={new Date()} />
+  <WeekPicker inputProps={{ labelText: "Selected Week" }} selected={new Date("01/21/2025")} />
 );
 
 export const WithCustomLocale = () => <WeekPicker inputProps={{ labelText: "Semaine" }} locale="fr_FR" />;
