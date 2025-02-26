@@ -1,6 +1,9 @@
 module.exports = {
   stories: ["../src/**/*.story.tsx", "../src/**/*.story.js"],
   webpackFinal: async (config) => {
+    // Add '.mjs' to extensions
+    config.resolve.extensions.push(".mjs");
+
     // Resolve error when webpack-ing storybook:
     // Can't import the named export 'Children' from non EcmaScript module (only
     // default export is available)
