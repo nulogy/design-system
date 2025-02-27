@@ -1,3 +1,10 @@
+## [14.1.2](https://github.com/nulogy/design-system/compare/v14.1.1...v14.1.2) (2025-02-27)
+
+
+### Bug Fixes
+
+* move Storybook back to devDependencies ([918f341](https://github.com/nulogy/design-system/commit/918f341bba069fec1ba019504477e546ff0fe42f))
+
 ## [14.1.1](https://github.com/nulogy/design-system/compare/v14.1.0...v14.1.1) (2025-02-26)
 
 
