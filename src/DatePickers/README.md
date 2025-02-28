@@ -106,3 +106,92 @@ export const AdvancedUsage = () => {
   );
 };
 ```
+
+# MonthPicker
+
+The MonthPicker is a specialized date picker that allows users to select an entire month at once. It is ideal for use-cases that involve monthly reporting, filtering data by month, or scheduling activities on a monthly basis.
+
+## Basic Usage
+
+```tsx
+import { MonthPicker } from "@nulogy/components";
+
+function MyComponent() {
+  return <MonthPicker />;
+}
+```
+
+## Props
+
+| Prop              | Type                                    | Description                                                     | Default                   |
+| ----------------- | --------------------------------------- | --------------------------------------------------------------- | ------------------------- |
+| `selected`        | `Date \| null`                          | The currently selected date (any date within the desired month) | -                         |
+| `onChange`        | `(date: Date) => void`                  | Callback when a month is selected, provides the selected date   | -                         |
+| `onBlur`          | `(event: FocusEvent<HTMLInputElement>)` | Callback when the input loses focus                             | -                         |
+| `onFocus`         | `(event: FocusEvent<HTMLInputElement>)` | Callback when the input gains focus                             | -                         |
+| `onInputChange`   | `(value: string) => void`               | Callback when the input value changes                           | -                         |
+| `dateFormat`      | `string`                                | Format for displaying the selected date                         | `"yyyy-MMM"`              |
+| `inputProps`      | `InputFieldProps`                       | Props to pass to the underlying input field                     | -                         |
+| `errorMessage`    | `string`                                | Error message to display                                        | -                         |
+| `errorList`       | `string[]`                              | List of error messages to display                               | -                         |
+| `minDate`         | `Date`                                  | Minimum selectable date                                         | -                         |
+| `maxDate`         | `Date`                                  | Maximum selectable date                                         | -                         |
+| `locale`          | `string`                                | Locale for date formatting and translations                     | NDSProvider context value |
+| `disableFlipping` | `boolean`                               | Prevents the calendar from flipping when near viewport edges    | -                         |
+
+## Accessibility
+
+- Enter key toggles the calendar dropdown
+- Maintains focus management for keyboard users
+- Year navigation with left/right arrow buttons in the header
+
+## Technical Considerations
+
+- The component is fully controlled through the `selected` prop
+
+## Best Practices
+
+1. Provide clear `labelText` that describes what the month selection is for
+2. Consider using a custom date format that makes sense for your use case
+
+## Advanced Usage
+
+```tsx
+export const AdvancedUsage = () => {
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [inputValue, setInputValue] = useState("");
+  const [hasError, setHasError] = useState(false);
+
+  const handleMonthChange = (date) => {
+    setSelectedDate(date);
+    setHasError(false);
+
+    // Format for display: "January 2023"
+    setInputValue(format(date, "MMMM yyyy"));
+  };
+
+  const handleInputChange = (value) => {
+    setInputValue(value);
+    // Custom validation could be implemented here
+  };
+
+  return (
+    <MonthPicker
+      selected={selectedDate}
+      onChange={handleMonthChange}
+      onInputChange={handleInputChange}
+      minDate={new Date(2023, 0, 1)}
+      maxDate={new Date()}
+      errorMessage={hasError ? "Please select a valid month" : undefined}
+      inputProps={{
+        value: inputValue,
+        inputWidth: "300px",
+        placeholder: "Select a month",
+        labelText: "Reporting Month",
+        requirementText: "(Required)",
+        helpText: "Select the month for your monthly report submission",
+      }}
+    />
+  );
+};
+```

@@ -1,6 +1,5 @@
-import { SpaceProps } from "styled-system";
-import { InputFieldProps } from "../../Input/InputField";
 import { ReactDatePickerProps } from "react-datepicker";
+import { InputFieldProps } from "../../Input/InputField";
 import { FieldProps } from "../../Form/Field";
 
 type OmittedFieldProps = "onChange" | "onBlur" | "onFocus";
