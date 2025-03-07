@@ -1,6 +1,7 @@
 import React from "react";
 import { desktop as theme } from "../src/theme";
 import { ALL_NDS_LOCALES, NDSProvider } from "../src";
+import { withThemeByClassName } from "@storybook/addon-themes";
 
 const viewports = {
   extraSmall: {
@@ -106,4 +107,13 @@ const withThemeProvider = (Story, context) => {
   );
 };
 
-export const decorators = [withThemeProvider];
+export const decorators = [
+  withThemeProvider,
+  withThemeByClassName({
+    themes: {
+      desktop: "desktop",
+      touch: "touch",
+    },
+    defaultTheme: "desktop",
+  }),
+];
