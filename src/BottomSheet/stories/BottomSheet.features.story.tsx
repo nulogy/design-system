@@ -10,6 +10,9 @@ import { toast, ToastContainer } from "../../ToastContainer";
 import { Text } from "../../Type";
 import { Placeholder } from "../../utils/story/placeholder";
 import BottomSheet from "../BottomSheet";
+import { ApplicationFrame, Page } from "../../Layout";
+import { menuItems } from "../../TopBar/stories/fixtures";
+import { TopBar } from "../../TopBar";
 
 export default {
   title: "Components/BottomSheet/Features",
@@ -36,6 +39,42 @@ export const WithCustomWidths = () => {
       </BottomSheet>
     </>
   );
+};
+
+export const WithAnApplicationFrame = () => {
+  const [isOpen, setIsOpen] = React.useState(true);
+
+  const navBar = (
+    <TopBar.Root>
+      <TopBar.BackLink href="/cycle-counts">Cycle counts</TopBar.BackLink>
+      <TopBar.PageTitle>Cycle count #3992</TopBar.PageTitle>
+      <TopBar.Menu>
+        <TopBar.MenuItem>
+          <TopBar.MenuItemLink title="Home" description="Go to the home page" icon="home" href="/home" />
+        </TopBar.MenuItem>
+      </TopBar.Menu>
+    </TopBar.Root>
+  );
+  return (
+    <ApplicationFrame navBar={navBar}>
+      <Page>
+        <Button onClick={() => setIsOpen(true)}>Open Sheet</Button>
+        <BottomSheet
+          aria-label="Example BottomSheet"
+          title="Edit Profile"
+          helpText="Update your profile information to access exclusive features."
+          isOpen={isOpen}
+          onClose={() => setIsOpen(false)}
+        >
+          <Placeholder />
+        </BottomSheet>
+      </Page>
+    </ApplicationFrame>
+  );
+};
+
+WithAnApplicationFrame.parameters = {
+  layout: "fullscreen",
 };
 
 export const DisableCloseOnOverlayClick = () => {
