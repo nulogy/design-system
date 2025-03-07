@@ -19,6 +19,7 @@ const Overlay = styled(motion(ReachDialogOverlay))(({ theme }) => ({
   alignItems: "flex-end",
   justifyContent: "center",
   backgroundColor: transparentize(0.5, theme.colors.blackBlue),
+  zIndex: theme.zIndices.overlay,
 }));
 
 interface SheetProps
