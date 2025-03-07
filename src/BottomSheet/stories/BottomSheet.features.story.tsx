@@ -11,14 +11,20 @@ import { Text } from "../../Type";
 import { Placeholder } from "../../utils/story/placeholder";
 import BottomSheet from "../BottomSheet";
 import { ApplicationFrame, Page } from "../../Layout";
-import { menuItems } from "../../TopBar/stories/fixtures";
 import { TopBar } from "../../TopBar";
+import { allModes } from "../../../.storybook/modes";
 
 export default {
   title: "Components/BottomSheet/Features",
   decorators: [(storyFn) => <div style={{ width: "800px", height: "800px" }}>{storyFn()}</div>],
   parameters: {
-    chromatic: { delay: 3000 },
+    chromatic: {
+      delay: 3000,
+      modes: {
+        touch: allModes["touch"],
+        desktop: allModes["desktop"],
+      },
+    },
   },
 };
 

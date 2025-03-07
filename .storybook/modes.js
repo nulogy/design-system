@@ -13,9 +13,4 @@ export const allModes = {
     desktopScale: "standard",
     theme: "desktop",
   },
-  experimental: {
-    locale: "en",
-    desktopScale: "experimental",
-    theme: "desktop",
-  },
 };
