@@ -1,3 +1,10 @@
+## [14.1.3](https://github.com/nulogy/design-system/compare/v14.1.2...v14.1.3) (2025-03-07)
+
+
+### Bug Fixes
+
+* use modal z-index for the BottomSheet ([bbf6c43](https://github.com/nulogy/design-system/commit/bbf6c434d3d8425738f2a6b35547280e408f331a))
+
 ## [14.1.2](https://github.com/nulogy/design-system/compare/v14.1.1...v14.1.2) (2025-02-27)
 
 
