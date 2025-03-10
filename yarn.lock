@@ -4061,10 +4061,10 @@
   resolved "https://registry.yarnpkg.com/@nulogy/icons/-/icons-4.37.2.tgz#2fcf555460036219dd67d82c6a9072096691b4c0"
   integrity sha512-Mfu4U7djXis5h8KzRHL6/e/mA3z0Q6ix4B0q9b4UCMPgzgKCJiX+ZSNvEWVP/08luHdhG4Ya8hvE7MIwy2vpIw==
 
-"@nulogy/tokens@^6.1.0":
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/@nulogy/tokens/-/tokens-6.1.0.tgz#c635acdcc5393f113da9387c065dd9b053ddd9e7"
-  integrity sha512-2lzX7aRzpeMBEaffm+uOZjy29oy/aeWfnqPSrAP6DtBaFd51eeAUUEiIFcN5n7udhZGNI4oO+VNCBdALkNBxVA==
+"@nulogy/tokens@^6.1.1":
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/@nulogy/tokens/-/tokens-6.1.1.tgz#96508ad0945b450d0b5bb0776284be144aa9b134"
+  integrity sha512-5UqGPU+/sgf40owem02HG6HnVMcG9PvG/p/jL8T3CJjnfJeVRHubFfcqJeWXlwMutgR2jOFnS/yfH/YUdfzzrw==
 
 "@octokit/auth-token@^2.4.4":
   version "2.4.5"
