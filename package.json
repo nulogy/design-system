@@ -9,7 +9,6 @@
   "scripts": {
     "ci": "yarn && yarn build && yarn test && yarn run check",
     "new": "plop",
-    "generate:theme": "npx tsx src/scripts/generateTheme.ts && prettier -w src/theme/theme.ts",
     "start": "concurrently \"yarn build:watch\" \"yarn start:storybook\"",
     "start:cypress": "yarn concurrently --kill-others \"yarn start --ci\" \"yarn wait-on http://localhost:9999 && cypress open\"",
     "start:storybook": "start-storybook -p 9999",
@@ -153,7 +152,7 @@
   "dependencies": {
     "@babel/runtime": "^7.9.6",
     "@emotion/is-prop-valid": "^1.3.1",
-    "@nulogy/tokens": "^5.4.0",
+    "@nulogy/tokens": "^6.1.0",
     "@reach/dialog": "0.17.0",
     "@styled-system/prop-types": "^5.1.4",
     "@styled-system/theme-get": "^5.1.2",
