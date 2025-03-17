@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { useTheme } from "styled-components";
-import { height, position, PositionProps, space, SpaceProps, width } from "styled-system";
+import { position, PositionProps, space, SpaceProps } from "styled-system";
 import icons from "@nulogy/icons";
 import { IconName } from "@nulogy/icons";
 import LoadingIcon from "./LoadingIcon";
@@ -55,6 +55,7 @@ const Svg = React.forwardRef<SVGSVGElement, IconProps>(
         />
       );
     }
+
     return (
       icons[icon] && (
         <svg
