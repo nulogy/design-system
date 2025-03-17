@@ -35,7 +35,7 @@ const Text = styled.p<TextProps>(
     opacity: disabled ? "0.7" : undefined,
     display: inline ? "inline" : undefined,
 
-    [`${Link}`]: {
+    a: {
       fontSize: "inherit",
       lineHeight: "inherit",
     },

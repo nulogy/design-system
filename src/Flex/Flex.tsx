@@ -10,24 +10,35 @@ export type FlexProps = BoxProps & {
   columnGap?: CSSProperties["columnGap"];
 };
 
+const gap = system({
+  gap: {
+    property: "gap",
+    scale: "space",
+  },
+  rowGap: {
+    property: "rowGap",
+    scale: "space",
+  },
+  columnGap: {
+    property: "columnGap",
+    scale: "space",
+  },
+});
+
 const Flex = styled(Box)<FlexProps>(
   {
     display: "flex",
   },
-  system({
-    gap: {
-      property: "gap",
-      scale: "space",
-    },
-    rowGap: {
-      property: "rowGap",
-      scale: "space",
-    },
-    columnGap: {
-      property: "columnGap",
-      scale: "space",
-    },
-  })
+  gap
+);
+
+const InlineFlex = styled(Box)<FlexProps>(
+  {
+    display: "inline-flex",
+  },
+  gap
 );
 
 export default Flex;
+
+export { InlineFlex };

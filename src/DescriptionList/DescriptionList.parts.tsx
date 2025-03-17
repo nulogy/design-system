@@ -1,7 +1,5 @@
 import styled from "styled-components";
-import { Link } from "../Link";
 import { DefaultNDSThemeType } from "../theme";
-import { Text } from "../Type";
 import { useDescriptionListContext } from "./DescriptionListContext";
 import { BaseDescriptionListProps, Columns, Density, GroupMinWidth } from "./lib/types";
 
@@ -36,12 +34,7 @@ export const DescriptionList = styled.dl(({ theme }) => {
       gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`,
     }),
 
-    [`${Link}`]: {
-      fontSize: "inherit",
-      lineHeight: "inherit",
-    },
-
-    [`${Text}`]: {
+    "a, p": {
       fontSize: "inherit",
       lineHeight: "inherit",
     },

@@ -5,15 +5,48 @@ import React from "react";
 import { DefaultNDSThemeType } from "../theme";
 import { addStyledProps, StyledProps } from "../StyledProps";
 import { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
+import { AppName } from "../AppTag/constants";
+import { AppTag } from "../AppTag";
+import { InlineFlex } from "../Flex";
+import { Icon } from "../Icon";
 
-export type LinkProps = React.ComponentPropsWithRef<"a"> &
-  Partial<StyledProps> & {
-    underline?: boolean;
-    hover?: string;
-    variant?: ComponentVariant;
-    to?: string;
-    as?: React.ElementType | string;
+export interface LinkProps extends React.ComponentPropsWithRef<"a">, Partial<StyledProps> {
+  underline?: boolean;
+  hover?: string;
+  variant?: ComponentVariant;
+  to?: string;
+  as?: React.ElementType | string;
+  forApp?: AppName;
+  openInNewTab?: boolean;
+}
+
+export default function Link({ children, forApp, openInNewTab, ...props }: LinkProps) {
+  const openInNewTabProps = openInNewTab ? { target: "_blank", rel: "noopener noreferrer" } : {};
+
+  const renderContent = () => {
+    if (forApp || openInNewTab) {
+      return (
+        <InlineFlex alignItems="center" gap="half">
+          <LinkWrapper underline={props.underline}>{children}</LinkWrapper>
+          {forApp && <AppTag app={forApp} type="interactive" />}
+          {openInNewTab && <Icon icon="openInNew" size="x2" color="midGrey" />}
+        </InlineFlex>
+      );
+    }
+
+    return children;
   };
+
+  return (
+    <Anchor {...openInNewTabProps} {...props}>
+      {renderContent()}
+    </Anchor>
+  );
+}
+
+const LinkWrapper = styled.span<Pick<LinkProps, "underline">>(({ underline = true }) => ({
+  textDecoration: underline ? "underline" : "none",
+}));
 
 const resetButtonStyles = {
   background: "none",
@@ -34,7 +67,7 @@ function getColor(props: StyledLinkProps) {
 
 const getHoverColor = (props: StyledLinkProps) => (props.hover ? getColor(props) : darken("0.1", getColor(props)));
 
-const Link = styled.a<LinkProps>(
+const Anchor = styled.a<LinkProps>(
   ({ underline = true, as, ...props }) => ({
     ...resetButtonStyles,
     padding: as === "button" ? "0" : undefined,
@@ -48,5 +81,3 @@ const Link = styled.a<LinkProps>(
   }),
   addStyledProps
 );
-
-export default Link;

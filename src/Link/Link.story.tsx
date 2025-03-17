@@ -65,3 +65,30 @@ export const _ReactRouterLink = () => (
 _ReactRouterLink.story = {
   name: "with react router",
 };
+
+export const WithAppTag = () => (
+  <Link href="#production-scheduling" forApp="production-scheduling">
+    POLI-120392
+  </Link>
+);
+
+WithAppTag.story = {
+  // This story is referenced in the AppTag story. If you change the name, update the URL in the AppTag story.
+  name: "With AppTag",
+};
+
+export const OpenInNewTab = () => (
+  <Link href="#production-scheduling" openInNewTab>
+    POLI-120392
+  </Link>
+);
+
+export const OpenInNewTabWithAppTag = () => (
+  <Link href="#production-scheduling" forApp="production-scheduling" openInNewTab>
+    POLI-120392
+  </Link>
+);
+
+OpenInNewTabWithAppTag.story = {
+  name: "Open in new tab with AppTag",
+};

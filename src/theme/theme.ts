@@ -1,5 +1,5 @@
-import { DefaultNDSThemeType } from "./theme.type";
 import * as tokens from "@nulogy/tokens";
+import { DefaultNDSThemeType } from "./theme.type";
 
 type ThemeKey = "legacy" | "experimental" | "tablet" | "phone";
 
