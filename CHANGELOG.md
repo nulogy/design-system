@@ -1,3 +1,10 @@
+# [14.2.0](https://github.com/nulogy/design-system/compare/v14.1.4...v14.2.0) (2025-03-18)
+
+
+### Features
+
+* Add AppTag component ([a85b07a](https://github.com/nulogy/design-system/commit/a85b07ac4ad74241e7d68885454405d45afbfc38))
+
 ## [14.1.4](https://github.com/nulogy/design-system/compare/v14.1.3...v14.1.4) (2025-03-10)
 
 
