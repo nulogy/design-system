@@ -1,13 +1,26 @@
 import React from "react";
-import { Tooltip } from "../Tooltip";
-import { TooltipProps } from "../Tooltip/Tooltip";
+import * as RadixTooltip from "@radix-ui/react-tooltip";
+import TooltipContent from "./TooltipContent";
 
-type MaybeTooltipProps = TooltipProps & {
+type MaybeTooltipProps = React.ComponentProps<typeof RadixTooltip.Root> & {
+  tooltip: React.ReactNode;
   showTooltip?: boolean;
 };
 
-const MaybeTooltip = ({ children = "", showTooltip = true, ...props }: MaybeTooltipProps) => {
-  return showTooltip ? <Tooltip {...props}>{children}</Tooltip> : <>{children}</>;
+const MaybeTooltip = ({ children, tooltip, showTooltip = true, ...rest }: MaybeTooltipProps) => {
+  if (!showTooltip) {
+    return <>{children}</>;
+  }
+  return (
+    <RadixTooltip.Provider>
+      <RadixTooltip.Root {...rest}>
+        <RadixTooltip.Trigger asChild>{children}</RadixTooltip.Trigger>
+        <RadixTooltip.Portal>
+          <TooltipContent>{tooltip}</TooltipContent>
+        </RadixTooltip.Portal>
+      </RadixTooltip.Root>
+    </RadixTooltip.Provider>
+  );
 };
 
 export default MaybeTooltip;
