@@ -1,3 +1,11 @@
+# [14.3.0](https://github.com/nulogy/design-system/compare/v14.2.1...v14.3.0) (2025-03-19)
+
+
+### Features
+
+* replace Popper for the TruncatedText tooltip ([67b4fde](https://github.com/nulogy/design-system/commit/67b4fdee7283db3e752df257bccc0f03b55c1d65))
+* show the TruncatedText tooltip on touch devices ([8f19c20](https://github.com/nulogy/design-system/commit/8f19c203f82565658611dd217f6102b1f6b72a20))
+
 ## [14.2.1](https://github.com/nulogy/design-system/compare/v14.2.0...v14.2.1) (2025-03-19)
 
 
