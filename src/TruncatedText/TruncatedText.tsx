@@ -1,8 +1,8 @@
 import React from "react";
 import { Text } from "../Type";
-import { TruncatedTextProps } from "./TruncatedTextProps";
-import TruncatedTextFillWidth from "./TruncatedTextFillWidth";
-import TruncatedTextMaxCharacters from "./TruncatedTextMaxCharacters";
+import { TruncatedTextProps } from "./types";
+import TruncatedTextFillWidth from "./components/TruncatedTextFillWidth";
+import TruncatedTextMaxCharacters from "./components/TruncatedTextMaxCharacters";
 
 const TruncatedText = ({
   indicator = "...",
