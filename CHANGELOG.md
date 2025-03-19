@@ -1,3 +1,10 @@
+## [14.2.1](https://github.com/nulogy/design-system/compare/v14.2.0...v14.2.1) (2025-03-19)
+
+
+### Bug Fixes
+
+* AppTag not displaying in touch mode ([f59f6db](https://github.com/nulogy/design-system/commit/f59f6dbba0f28bd0b2827edd2e0e3729c881e5c3))
+
 # [14.2.0](https://github.com/nulogy/design-system/compare/v14.1.4...v14.2.0) (2025-03-18)
 
 
