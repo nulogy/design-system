@@ -23,7 +23,7 @@ export default function AppTag({ app, type = "active", hideTooltip = false }: Ap
     <Tooltip content={displayName} hideTooltip={hideTooltip}>
       <Wrapper $type={type}>
         <LogoWrapper $type={type}>
-          <NulogyLogo width={8} height={8} />
+          <NulogyLogo width={theme.space.x1} height={theme.space.x1} />
         </LogoWrapper>
         <Text
           fontSize="smaller"
