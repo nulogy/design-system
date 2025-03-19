@@ -9,7 +9,7 @@ export const LogoWrapper = styled.span<{ $type?: AppTagType }>(({ theme, $type }
     background: color,
     display: "inline-block",
     padding: theme.space.half,
-    borderRadius: theme.radii.rounded,
+    borderRadius: theme.radii.circle,
     lineHeight: 0,
   };
 });

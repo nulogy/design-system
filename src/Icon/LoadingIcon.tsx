@@ -12,7 +12,7 @@ const LoadingIcon = React.forwardRef<SVGSVGElement, LoadingIconProps>(({ size, .
   return (
     <svg
       ref={ref}
-      viewBox="0 0 24px 24px"
+      viewBox="0 0 24 24"
       width={size}
       height={size}
       fill="none"
