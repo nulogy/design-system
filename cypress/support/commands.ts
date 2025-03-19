@@ -28,6 +28,7 @@
 // The plugin overrides the type command and manually triggers a click
 
 import "cypress-enter-plugin";
+import "cypress-real-events";
 
 Cypress.Commands.add("renderFromStorybook", (component, props) => {
   const baseUrl = `/iframe.html?path=/story/components-${component}`;
@@ -38,6 +39,23 @@ Cypress.Commands.add("renderFromStorybook", (component, props) => {
   } else {
     cy.visit(baseUrl);
   }
+});
+
+Cypress.Commands.add("assertTooltip", (triggerSelector, expectedText) => {
+  cy.get(triggerSelector).realHover();
+  cy.get(triggerSelector)
+    .should("have.attr", "aria-describedby")
+    .then((tooltipId) => {
+      cy.get(`#${tooltipId}`)
+        .should("exist")
+        .should("have.css", "visibility", "visible")
+        .and("have.css", "opacity", "1")
+        .contains(expectedText);
+    });
+});
+
+Cypress.Commands.add("assertNoTooltip", (triggerSelector) => {
+  cy.get(triggerSelector).should("not.have.attr", "aria-describedby");
 });
 
 Cypress.Commands.add("pressEscapeKey", () => {
