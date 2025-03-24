@@ -8,7 +8,7 @@ import type { AppName } from "./constants";
 import { APP_ABBREVIATIONS, APP_DISPLAY_NAMES, appTagColors } from "./constants";
 import { AppTagType } from "./types";
 
-type AppTagProps = {
+export type AppTagProps = {
   app: AppName;
   type?: AppTagType;
   hideTooltip?: boolean;

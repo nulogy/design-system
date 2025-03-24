@@ -1,7 +1,9 @@
-// Alphabetized list of all components, utilities, types and constants exported by the package
+// Alphabetized list of all components, utilities, types and constants exported by @nulogy/components
 
 export { Alert, NotificationTypes } from "./Alert";
 export type { NotificationType } from "./Alert";
+export { AppTag } from "./AppTag";
+export type { AppName, AppTagProps } from "./AppTag";
 export { AsyncSelect } from "./AsyncSelect";
 export { Banner } from "./Banner";
 export { BottomSheet, BottomSheetParts } from "./BottomSheet";
@@ -33,7 +35,7 @@ export { Card, CardSet } from "./Card";
 export { Checkbox, CheckboxGroup } from "./Checkbox";
 export { DatePicker, MonthPicker, WeekPicker } from "./DatePickers";
 export { DateRange } from "./DateRange";
-export { DescriptionList, DescriptionDetails, DescriptionGroup, DescriptionTerm } from "./DescriptionList";
+export { DescriptionDetails, DescriptionGroup, DescriptionList, DescriptionTerm } from "./DescriptionList";
 export type { DescriptionListProps } from "./DescriptionList";
 export { Divider } from "./Divider";
 export { DropdownButton, DropdownItem, DropdownLink, DropdownMenu, DropdownText } from "./DropdownMenu";
@@ -64,10 +66,10 @@ export {
   SelectMenu,
   SelectMultiValue,
   SelectOption,
-  type SelectOptionProps,
   type NDSOption,
   type NDSOptionValue,
   type NDSSelectProps,
+  type SelectOptionProps,
 } from "./Select";
 export { SortingTable } from "./SortingTable";
 export { StatusIndicator, StatusIndicatorValues } from "./StatusIndicator";
@@ -96,4 +98,3 @@ export type { TextProps } from "./Type";
 export { useWindowDimensions } from "./utils";
 export { InlineValidation } from "./Validation";
 export { VerticalDivider } from "./VerticalDivider";
-export { AppTag } from "./AppTag";
