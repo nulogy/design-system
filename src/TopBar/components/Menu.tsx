@@ -39,13 +39,18 @@ export function Menu({
   "aria-label"?: string;
 }) {
   const [showMenu, setShowMenu] = React.useState(defaultOpened);
+  const [animationComplete, setAnimationComplete] = React.useState(false);
   const { t } = useTranslation();
 
   function close() {
     setShowMenu(false);
+    setAnimationComplete(false);
   }
 
   function toggle() {
+    if (!showMenu) {
+      setAnimationComplete(false);
+    }
     setShowMenu((s) => !s);
   }
 
@@ -58,14 +63,24 @@ export function Menu({
         {showMenu && (
           <Overlay
             data-testid="topbar-menu-overlay"
+            data-visible={animationComplete ? "true" : undefined}
             initial="hidden"
             animate="visible"
             exit="exit"
             variants={blurVariants}
             isOpen={showMenu}
+            onAnimationComplete={() => {
+              if (showMenu) {
+                setAnimationComplete(true);
+              }
+            }}
             onDismiss={close}
           >
-            <DialogContent data-testid="topbar-menu" aria-label={props["aria-label"] ?? t("menu options")}>
+            <DialogContent
+              data-testid="topbar-menu"
+              data-visible={animationComplete ? true : undefined}
+              aria-label={props["aria-label"] ?? t("menu options")}
+            >
               <MenuItemList>{children}</MenuItemList>
             </DialogContent>
           </Overlay>

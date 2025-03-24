@@ -44,14 +44,22 @@ interface OverlayPartProps extends DialogOverlayProps {
 
 function OverlayPart({ closeOnClick, children, ...props }: OverlayPartProps) {
   const { onClose, isOpen } = useBottomSheet();
+  const [isAnimationComplete, setAnimationComplete] = React.useState(false);
 
   return (
     <Overlay
+      data-testid="bottom-sheet-overlay"
+      data-visible={isAnimationComplete ? true : undefined}
       variants={overlayVariants}
       initial="hidden"
       animate="visible"
       exit="hidden"
       transition={transition}
+      onAnimationComplete={() => {
+        if (isOpen) {
+          setAnimationComplete(true);
+        }
+      }}
       onClick={closeOnClick ? onClose : undefined}
       isOpen={isOpen}
       {...props}
@@ -74,18 +82,28 @@ interface SheetPartProps
 }
 
 function SheetPart({ children, ...props }: SheetPartProps) {
+  const { isOpen } = useBottomSheet();
+  const [isAnimationComplete, setAnimationComplete] = React.useState(false);
+
   function handleSheetClick(e: React.MouseEvent<HTMLDivElement, MouseEvent>) {
     e.stopPropagation();
   }
 
   return (
     <Sheet
+      data-testid="bottom-sheet-body"
       aria-label={props["aria-label"]}
+      data-visible={isAnimationComplete ? true : undefined}
       variants={sheetVariants}
       initial="hidden"
       animate="visible"
       exit="hidden"
       transition={transition}
+      onAnimationComplete={() => {
+        if (isOpen) {
+          setAnimationComplete(true);
+        }
+      }}
       onClick={handleSheetClick}
       {...props}
     >
