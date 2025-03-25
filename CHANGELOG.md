@@ -1,3 +1,15 @@
+# [14.4.0](https://github.com/nulogy/design-system/compare/v14.3.0...v14.4.0) (2025-03-25)
+
+
+### Bug Fixes
+
+* export AppTag related types ([d9d1a3e](https://github.com/nulogy/design-system/commit/d9d1a3e2dd7041b22c3bd30673a8957d4fe1efbf))
+
+
+### Features
+
+* Add animation completion tracking for TopBar and BottomSheet ([919240c](https://github.com/nulogy/design-system/commit/919240c0886a03e4ac0bb9e3062b45e4defcaa23))
+
 # [14.3.0](https://github.com/nulogy/design-system/compare/v14.2.1...v14.3.0) (2025-03-19)
 
 
