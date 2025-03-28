@@ -1,3 +1,10 @@
+## [14.4.1](https://github.com/nulogy/design-system/compare/v14.4.0...v14.4.1) (2025-03-28)
+
+
+### Bug Fixes
+
+* Show tooltips above other content ([6557402](https://github.com/nulogy/design-system/commit/6557402db4537b3ae772c53a882679820fc019dd))
+
 # [14.4.0](https://github.com/nulogy/design-system/compare/v14.3.0...v14.4.0) (2025-03-25)
 
 
