@@ -18,7 +18,9 @@ export function Tooltip({ children, content, hideTooltip = false }: TooltipProps
     <TooltipPrimitive.Provider>
       <TooltipPrimitive.Root>
         <TooltipPrimitive.Trigger asChild>{children}</TooltipPrimitive.Trigger>
-        <TooltipContent sideOffset={4}>{content}</TooltipContent>
+        <TooltipPrimitive.Portal>
+          <TooltipContent sideOffset={4}>{content}</TooltipContent>
+        </TooltipPrimitive.Portal>
       </TooltipPrimitive.Root>
     </TooltipPrimitive.Provider>
   );
@@ -70,7 +72,6 @@ const slideLeftAndFade = keyframes`
 
 const TooltipContent = styled(TooltipPrimitive.Content)`
   font-family: ${({ theme }) => theme.fonts.base};
-  font-weight: ${({ theme }) => theme.fontWeights.medium};
   white-space: nowrap;
   font-size: ${({ theme }) => theme.fontSizes.smaller};
   line-height: ${({ theme }) => theme.lineHeights.smallerText};
@@ -79,6 +80,7 @@ const TooltipContent = styled(TooltipPrimitive.Content)`
   border-radius: ${({ theme }) => theme.radii.medium};
   margin-top: ${({ theme }) => theme.space.half};
   padding: ${({ theme }) => `${theme.space.x0_25} ${theme.space.x0_75}`};
+  z-index: ${({ theme }) => theme.zIndices.aboveOverlay};
   pointer-events: none;
   animation-duration: 400ms;
   animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);

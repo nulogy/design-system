@@ -141,6 +141,7 @@ const StyledContent = styled(TooltipPrimitive.Content)`
   background-color: ${({ theme }) => theme.colors.white};
   border: 1px solid ${({ theme }) => theme.colors.grey};
   box-shadow: ${({ theme }) => theme.shadows.medium};
+  z-index: ${({ theme }) => theme.zIndices.aboveOverlay};
   animation-duration: 400ms;
   animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform, opacity;

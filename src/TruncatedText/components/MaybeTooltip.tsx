@@ -1,5 +1,6 @@
 import React, { PropsWithChildren } from "react";
 import { MaxWidthProps } from "styled-system";
+import * as TooltipPrimitive from "@radix-ui/react-tooltip";
 import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from "./TooltipComponents";
 
 export type MaybeTooltipProps = PropsWithChildren<{
@@ -32,9 +33,11 @@ function MaybeTooltip({
     <TooltipProvider>
       <Tooltip defaultOpen={defaultOpen} delayDuration={showDelay} supportMobileTap={supportMobileTap}>
         <TooltipTrigger asChild>{children}</TooltipTrigger>
-        <TooltipContent side={placement} className={className} maxWidth={maxWidth}>
-          {tooltip}
-        </TooltipContent>
+        <TooltipPrimitive.Portal>
+          <TooltipContent side={placement} className={className} maxWidth={maxWidth}>
+            {tooltip}
+          </TooltipContent>
+        </TooltipPrimitive.Portal>
       </Tooltip>
     </TooltipProvider>
   );
