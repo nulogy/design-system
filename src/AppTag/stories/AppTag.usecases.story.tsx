@@ -9,6 +9,7 @@ import { Heading1, Text } from "../../Type";
 import { Code } from "../../utils/story/code";
 import { Table } from "../../Table";
 import { Tooltip } from "../../Tooltip";
+import { Modal } from "../../Modal";
 
 export default {
   title: "Components/AppTag/Usecases",
@@ -163,3 +164,16 @@ export const WithTooltip = () => {
 };
 
 WithTooltip.storyName = "With Tooltip";
+
+export const InsideAModal = () => {
+  return (
+    <Modal title="Modal Title">
+      <Flex flexDirection="column" gap="half">
+        <Text>The point of this test is to see if the tooltip is visible and shown over the modal and its overlay</Text>
+        <AppTag app="digital-quality-inspection" type="active" />
+      </Flex>
+    </Modal>
+  );
+};
+
+InsideAModal.storyName = "Inside a Modal";

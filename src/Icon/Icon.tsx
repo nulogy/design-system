@@ -5,7 +5,7 @@ import icons from "@nulogy/icons";
 import { IconName } from "@nulogy/icons";
 import LoadingIcon from "./LoadingIcon";
 
-interface IconProps extends SpaceProps {
+export interface IconProps extends SpaceProps {
   icon: IconName | "loading";
   className?: string;
   size?: string;

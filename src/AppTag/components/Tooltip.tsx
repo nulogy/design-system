@@ -1,7 +1,7 @@
-import * as RadixTooltip from "@radix-ui/react-tooltip";
+import * as TooltipPrimitive from "@radix-ui/react-tooltip";
 import styled, { keyframes } from "styled-components";
 import { transparentize } from "polished";
-import React, { Fragment, ReactNode } from "react";
+import React, { ReactNode } from "react";
 
 type TooltipProps = {
   children: ReactNode;
@@ -11,20 +11,16 @@ type TooltipProps = {
 
 export function Tooltip({ children, content, hideTooltip = false }: TooltipProps) {
   if (hideTooltip) {
-    return <Fragment>{children}</Fragment>;
+    return <>{children}</>;
   }
 
   return (
-    <Fragment>
-      <RadixTooltip.Provider>
-        <RadixTooltip.Root>
-          <RadixTooltip.Trigger asChild>{children}</RadixTooltip.Trigger>
-          <RadixTooltip.Portal>
-            <TooltipContent sideOffset={4}>{content}</TooltipContent>
-          </RadixTooltip.Portal>
-        </RadixTooltip.Root>
-      </RadixTooltip.Provider>
-    </Fragment>
+    <TooltipPrimitive.Provider>
+      <TooltipPrimitive.Root>
+        <TooltipPrimitive.Trigger asChild>{children}</TooltipPrimitive.Trigger>
+        <TooltipContent sideOffset={4}>{content}</TooltipContent>
+      </TooltipPrimitive.Root>
+    </TooltipPrimitive.Provider>
   );
 }
 
@@ -72,8 +68,9 @@ const slideLeftAndFade = keyframes`
   }
 `;
 
-const TooltipContent = styled(RadixTooltip.Content)`
+const TooltipContent = styled(TooltipPrimitive.Content)`
   font-family: ${({ theme }) => theme.fonts.base};
+  font-weight: ${({ theme }) => theme.fontWeights.medium};
   white-space: nowrap;
   font-size: ${({ theme }) => theme.fontSizes.smaller};
   line-height: ${({ theme }) => theme.lineHeights.smallerText};
@@ -83,7 +80,6 @@ const TooltipContent = styled(RadixTooltip.Content)`
   margin-top: ${({ theme }) => theme.space.half};
   padding: ${({ theme }) => `${theme.space.x0_25} ${theme.space.x0_75}`};
   pointer-events: none;
-  z-index: 1000;
   animation-duration: 400ms;
   animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform, opacity;

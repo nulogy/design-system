@@ -10,5 +10,5 @@ export interface TruncatedTextProps extends TextProps {
   showTooltip?: boolean;
   fullWidth?: boolean;
   "data-testid"?: string;
-  tooltipProps?: MaybeTooltipProps;
+  tooltipProps?: Partial<MaybeTooltipProps>;
 }

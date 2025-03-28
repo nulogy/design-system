@@ -1,5 +1,4 @@
 import React, { PropsWithChildren } from "react";
-import * as TooltipPrimitive from "@radix-ui/react-tooltip";
 import { MaxWidthProps } from "styled-system";
 import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from "./TooltipComponents";
 
@@ -14,7 +13,7 @@ export type MaybeTooltipProps = PropsWithChildren<{
   supportMobileTap?: boolean;
 }>;
 
-const MaybeTooltip: React.FC<MaybeTooltipProps> = ({
+function MaybeTooltip({
   tooltip,
   children,
   placement = "bottom",
@@ -24,7 +23,7 @@ const MaybeTooltip: React.FC<MaybeTooltipProps> = ({
   showTooltip = true,
   supportMobileTap = true,
   className,
-}) => {
+}: MaybeTooltipProps) {
   if (!showTooltip) {
     return <>{children}</>;
   }
@@ -33,14 +32,12 @@ const MaybeTooltip: React.FC<MaybeTooltipProps> = ({
     <TooltipProvider>
       <Tooltip defaultOpen={defaultOpen} delayDuration={showDelay} supportMobileTap={supportMobileTap}>
         <TooltipTrigger asChild>{children}</TooltipTrigger>
-        <TooltipPrimitive.Portal>
-          <TooltipContent side={placement} className={className} maxWidth={maxWidth}>
-            {tooltip}
-          </TooltipContent>
-        </TooltipPrimitive.Portal>
+        <TooltipContent side={placement} className={className} maxWidth={maxWidth}>
+          {tooltip}
+        </TooltipContent>
       </Tooltip>
     </TooltipProvider>
   );
-};
+}
 
 export default MaybeTooltip;

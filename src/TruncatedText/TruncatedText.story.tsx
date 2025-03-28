@@ -1,6 +1,7 @@
 import React from "react";
 import { Heading1 } from "../Type";
 import { Box } from "../Box";
+import { Modal } from "../Modal";
 import { TruncatedText } from ".";
 
 export default {
@@ -76,3 +77,15 @@ export const WithoutChildren = () => (
 WithoutChildren.story = {
   name: "Without children",
 };
+
+export const TooltipInsideModal = () => {
+  return (
+    <Modal title="Modal Title">
+      <TruncatedText tooltipProps={{ defaultOpen: true }}>
+        The point of this test is to see if the tooltip is visible and shown over the modal and its overlay
+      </TruncatedText>
+    </Modal>
+  );
+};
+
+TooltipInsideModal.storyName = "Tooltip inside modal";
