@@ -12,30 +12,22 @@ const TruncatedText = ({
   showTooltip = true,
   "data-testid": dataTestId = "truncated-text",
   children,
-  ...props
-}: TruncatedTextProps) =>
-  fullWidth ? (
-    <TruncatedTextFillWidth
-      indicator={indicator}
-      element={element}
-      maxCharacters={maxCharacters}
-      showTooltip={showTooltip}
-      data-testid={dataTestId}
-      {...props}
-    >
-      {children}
-    </TruncatedTextFillWidth>
+  ...rest
+}: TruncatedTextProps) => {
+  const props = {
+    indicator,
+    element,
+    maxCharacters,
+    showTooltip,
+    "data-testid": dataTestId,
+    ...rest,
+  };
+
+  return fullWidth ? (
+    <TruncatedTextFillWidth {...props}>{children}</TruncatedTextFillWidth>
   ) : (
-    <TruncatedTextMaxCharacters
-      indicator={indicator}
-      element={element}
-      maxCharacters={maxCharacters}
-      showTooltip={showTooltip}
-      data-testid={dataTestId}
-      {...props}
-    >
-      {children}
-    </TruncatedTextMaxCharacters>
+    <TruncatedTextMaxCharacters {...props}>{children}</TruncatedTextMaxCharacters>
   );
+};
 
 export default TruncatedText;

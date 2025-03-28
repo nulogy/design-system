@@ -32,7 +32,7 @@ type TooltipProps = TooltipPrimitive.TooltipProps & {
   supportMobileTap?: boolean;
 };
 
-const Tooltip: React.FC<TooltipProps> = ({ children, ...props }) => {
+function Tooltip({ children, ...props }: TooltipProps) {
   const [open, setOpen] = React.useState<boolean>(props.defaultOpen ?? false);
   const hasHover = useHasHover();
 
@@ -53,7 +53,8 @@ const Tooltip: React.FC<TooltipProps> = ({ children, ...props }) => {
       </TooltipTriggerContext.Provider>
     </TooltipPrimitive.Root>
   );
-};
+}
+
 Tooltip.displayName = TooltipPrimitive.Root.displayName;
 
 const TooltipTrigger = React.forwardRef<
@@ -83,6 +84,7 @@ const TooltipTrigger = React.forwardRef<
     </TooltipPrimitive.Trigger>
   );
 });
+
 TooltipTrigger.displayName = TooltipPrimitive.Trigger.displayName;
 
 const slideUpAndFade = keyframes`
@@ -139,7 +141,6 @@ const StyledContent = styled(TooltipPrimitive.Content)`
   background-color: ${({ theme }) => theme.colors.white};
   border: 1px solid ${({ theme }) => theme.colors.grey};
   box-shadow: ${({ theme }) => theme.shadows.medium};
-  z-index: ${({ theme }) => theme.zIndices.content};
   animation-duration: 400ms;
   animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform, opacity;
