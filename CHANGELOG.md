@@ -1,3 +1,10 @@
+## [14.4.2](https://github.com/nulogy/design-system/compare/v14.4.1...v14.4.2) (2025-03-29)
+
+
+### Bug Fixes
+
+* portal the tooltip in the AppTag and TruncatedText ([6c62ea0](https://github.com/nulogy/design-system/commit/6c62ea035dc6a704aa7a07a100836f726b236f3a))
+
 ## [14.4.1](https://github.com/nulogy/design-system/compare/v14.4.0...v14.4.1) (2025-03-28)
 
 
