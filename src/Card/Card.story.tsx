@@ -1,19 +1,22 @@
 import React from "react";
 import {
+  ApplicationFrame,
   Card,
   CardSet,
   DescriptionDetails,
   DescriptionGroup,
   DescriptionList,
   DescriptionTerm,
-  Flex,
   Icon,
   Link,
+  Page,
   StatusIndicator,
   Tooltip,
+  TopBar,
 } from "../index";
-import { Heading1, Heading4, Text } from "../Type";
+import { Heading4, Text } from "../Type";
 import TruncatedText from "../TruncatedText/TruncatedText";
+import { menuItems } from "../TopBar/stories/fixtures";
 
 export default {
   title: "Components/Card",
@@ -76,7 +79,7 @@ function AdvancedCard() {
           <DescriptionDetails>
             <TruncatedText fontSize="small" maxCharacters={200}>
               Due to severe weather disruptions and unforeseen logistical challenges, this shipment has been
-              significantly delayed. The warehouse manager reported that mechanical issues with the transport vehicles,
+              significantly delayed. The warehouse manager reported that mechanical issues with the transport vehicles
               coupled with a shortage of available staff, have extended processing times at the loading dock.
               Additionally, mandatory safety inspections and inventory verifications required extra time, further
               postponing the dispatch schedule. His detailed notes also mention that alternate transportation
@@ -90,13 +93,34 @@ function AdvancedCard() {
   );
 }
 
-export const AdvancedUsage = () => (
-  <Flex flexDirection="column" gap="x2">
-    <Heading1 compact>Orders</Heading1>
-    <CardSet>
-      {[...Array(10)].map((_, i) => (
-        <AdvancedCard key={i} />
-      ))}
-    </CardSet>
-  </Flex>
-);
+export const AdvancedUsage = () => {
+  return (
+    <ApplicationFrame
+      navBar={
+        <TopBar.Root>
+          <TopBar.BackLink href="/cycle-counts">Cycle counts</TopBar.BackLink>
+          <TopBar.PageTitle>Cycle count #3992</TopBar.PageTitle>
+          <TopBar.Menu>
+            {menuItems.map((props) => (
+              <TopBar.MenuItem key={props.title}>
+                <TopBar.MenuItemLink {...props} />
+              </TopBar.MenuItem>
+            ))}
+          </TopBar.Menu>
+        </TopBar.Root>
+      }
+    >
+      <Page fullHeight>
+        <CardSet>
+          {[...Array(10)].map((_, i) => (
+            <AdvancedCard key={i} />
+          ))}
+        </CardSet>
+      </Page>
+    </ApplicationFrame>
+  );
+};
+
+AdvancedUsage.parameters = {
+  layout: "fullscreen",
+};
