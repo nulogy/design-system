@@ -18,7 +18,7 @@ import {
   Input,
   Toggle,
   IconicButton,
-  TruncatedText
+  TruncatedText,
 } from "../index";
 import { Columns } from "../Table/Table.types";
 import styled from "styled-components";
@@ -272,14 +272,23 @@ export const EditAndError = () => (
                   {row.toUnit}
                 </TruncatedText>
               ) : (
-                <TruncatedText fullWidth textAlign={"right"}>{row.toUnit}</TruncatedText>
+                <TruncatedText fullWidth textAlign={"right"}>
+                  {row.toUnit}
+                </TruncatedText>
               ),
           },
           {
             dataKey: "factor",
             width: "auto",
             label: "ea",
-            cellRenderer: ({ row }) => (row.state == "inactive" ? <TruncatedText fullWidth color="grey">{row.factor}</TruncatedText> : <TruncatedText fullWidth>{row.factor}</TruncatedText>),
+            cellRenderer: ({ row }) =>
+              row.state == "inactive" ? (
+                <TruncatedText fullWidth color="grey">
+                  {row.factor}
+                </TruncatedText>
+              ) : (
+                <TruncatedText fullWidth>{row.factor}</TruncatedText>
+              ),
           },
           {
             dataKey: "rounding",
@@ -287,7 +296,13 @@ export const EditAndError = () => (
             label: "",
             align: "center",
             cellRenderer: ({ row }) =>
-              row.state == "inactive" ? <Text color="grey" textAlign="center">{row.rounding}</Text> : <Text textAlign="center">{row.rounding}</Text>,
+              row.state == "inactive" ? (
+                <Text color="grey" textAlign="center">
+                  {row.rounding}
+                </Text>
+              ) : (
+                <Text textAlign="center">{row.rounding}</Text>
+              ),
           },
           {
             dataKey: "precision",
@@ -295,16 +310,15 @@ export const EditAndError = () => (
             label: "",
             cellRenderer: ({ row }) =>
               row.state != "error" ? (
-                  <Input className={`customCell`} value={row.precision} inputWidth="100%" disabled={row.inactive} />
-
+                <Input className={`customCell`} value={row.precision} inputWidth="100%" disabled={row.inactive} />
               ) : (
-                  <Input 
-                    className={`customCell`}
-                    value={row.precision}
-                    inputWidth="100%"
-                    disabled={row.inactive}
-                    errorMessage="This field is required."
-                  />
+                <Input
+                  className={`customCell`}
+                  value={row.precision}
+                  inputWidth="100%"
+                  disabled={row.inactive}
+                  errorMessage="This field is required."
+                />
               ),
           },
           {
@@ -312,17 +326,16 @@ export const EditAndError = () => (
             width: "6em",
             label: "",
             cellRenderer: ({ row }) => (
-                <Select
+              <Select
                 className={`customCell`}
-                  options={[
-                    { value: "ea", label: "ea" },
-                    { value: "cs", label: "cs" },
-                    { value: "pl", label: "pl" },
-                  ]}
-                  value="ea"
-                  disabled={row.inactive}
-                />
-
+                options={[
+                  { value: "ea", label: "ea" },
+                  { value: "cs", label: "cs" },
+                  { value: "pl", label: "pl" },
+                ]}
+                value="ea"
+                disabled={row.inactive}
+              />
             ),
           },
           {
@@ -330,7 +343,14 @@ export const EditAndError = () => (
             width: "auto",
             label: "",
             align: "center",
-            cellRenderer: ({ row }) => (row.state == "inactive" ? <Text color="grey" textAlign="center">{row.status}</Text> : <Text textAlign="center">{row.status}</Text>),
+            cellRenderer: ({ row }) =>
+              row.state == "inactive" ? (
+                <Text color="grey" textAlign="center">
+                  {row.status}
+                </Text>
+              ) : (
+                <Text textAlign="center">{row.status}</Text>
+              ),
           },
           {
             dataKey: "lastUpdated",
@@ -343,7 +363,9 @@ export const EditAndError = () => (
                   {row.lastUpdated}
                 </TruncatedText>
               ) : (
-                <TruncatedText fullWidth textAlign={"right"}>{row.lastUpdated}</TruncatedText>
+                <TruncatedText fullWidth textAlign={"right"}>
+                  {row.lastUpdated}
+                </TruncatedText>
               ),
           },
           {
@@ -351,14 +373,20 @@ export const EditAndError = () => (
             width: "auto",
             label: "",
             cellRenderer: ({ row }) =>
-              row.state == "inactive" ? <TruncatedText fullWidth color="grey">{row.actions}</TruncatedText> : <TruncatedText fullWidth>{row.actions}</TruncatedText>,
+              row.state == "inactive" ? (
+                <TruncatedText fullWidth color="grey">
+                  {row.actions}
+                </TruncatedText>
+              ) : (
+                <TruncatedText fullWidth>{row.actions}</TruncatedText>
+              ),
           },
           {
             dataKey: "active",
             width: "6em",
             label: "Active",
             cellRenderer: ({ row }) => (
-                  <Toggle className={`customCell`} p="0" toggled={row.inactive === false} onText="On" offText="Off" />
+              <Toggle className={`customCell`} p="0" toggled={row.inactive === false} onText="On" offText="Off" />
             ),
           },
           {
