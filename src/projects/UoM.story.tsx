@@ -18,6 +18,7 @@ import {
   Input,
   Toggle,
   IconicButton,
+  TruncatedText,
 } from "../index";
 import { Columns } from "../Table/Table.types";
 import styled from "styled-components";
@@ -271,11 +272,22 @@ export const EditAndError = () => (
             label: "",
             cellRenderer: ({ row }) =>
               row.state == "inactive" ? (
-                <Text textAlign={"right"} color="grey">
+                <TruncatedText
+                  maxWidth={{ extraSmall: "3em", small: "6em", medium: "100%" }}
+                  fullWidth
+                  textAlign={"right"}
+                  color="grey"
+                >
                   {row.toUnit}
-                </Text>
+                </TruncatedText>
               ) : (
-                <Text textAlign={"right"}>{row.toUnit}</Text>
+                <TruncatedText
+                  maxWidth={{ extraSmall: "3em", small: "6em", medium: "100%" }}
+                  fullWidth
+                  textAlign={"right"}
+                >
+                  {row.toUnit}
+                </TruncatedText>
               ),
           },
           {
@@ -366,7 +378,7 @@ export const EditAndError = () => (
                   {row.status}
                 </Text>
               ) : (
-                <Text textAlign="center">{row.status}</Text>
+                row.status
               ),
           },
           {
@@ -375,11 +387,22 @@ export const EditAndError = () => (
             label: "",
             cellRenderer: ({ row }) =>
               row.state == "inactive" ? (
-                <Text textAlign={"right"} color="grey">
+                <TruncatedText
+                  maxWidth={{ extraSmall: "3em", small: "6em", medium: "100%" }}
+                  fullWidth
+                  color="grey"
+                  textAlign={"right"}
+                >
                   {row.lastUpdated}
-                </Text>
+                </TruncatedText>
               ) : (
-                <Text textAlign={"right"}>{row.lastUpdated}</Text>
+                <TruncatedText
+                  maxWidth={{ extraSmall: "3em", small: "6em", medium: "100%" }}
+                  fullWidth
+                  textAlign={"right"}
+                >
+                  {row.lastUpdated}
+                </TruncatedText>
               ),
           },
           {
@@ -446,13 +469,13 @@ export const EditAndError = () => (
           {
             state: "error",
             fromUnit: "eaches",
-            toUnit: "999999",
+            toUnit: "9999999999999999",
             factor: "eaaaa",
             rounding: "=",
-            precision: "999999",
+            precision: "9999999999999999",
             direction: "csssss",
             status: "=",
-            lastUpdated: "99999",
+            lastUpdated: "999999999999999",
             actions: "ea",
             inactive: false,
           },
