@@ -88,6 +88,7 @@ const RatioTable = styled(Table)`
 
   td:has(.customCell){
     padding: ${({ theme }) => theme.space.x1};
+    overflow: visible;
   }
 
   td:nth-child(1), th:nth-child(1) {padding-left: ${({ theme }) => theme.space.x1};
