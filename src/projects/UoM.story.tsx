@@ -17,7 +17,7 @@ import {
   Select,
   Input,
   Toggle,
-  IconicButton,
+  IconicButton
 } from "../index";
 import { Columns } from "../Table/Table.types";
 import styled from "styled-components";
@@ -259,7 +259,12 @@ export const EditAndError = () => (
                 <Box minWidth="6em">
                   <Input className={`customCell`} inputWidth="100%" minWidth="12em" value="{row.fromUnit}" />
                 </Box>
-              ) : (
+              ) :  row.state == "inactive" ? (
+                <Text color="grey">
+                  {row.fromUnit}
+                </Text>
+              )
+              : (
                 row.fromUnit
               ),
           },
@@ -273,14 +278,23 @@ export const EditAndError = () => (
                   {row.toUnit}
                 </Text>
               ) : (
-                <Text textAlign={"right"}>{row.toUnit}</Text>
+                <Text textAlign={"right"}>
+                  {row.toUnit}
+                </Text>
               ),
           },
           {
             dataKey: "factor",
             width: "auto",
             label: "ea",
-            cellRenderer: ({ row }) => (row.state == "inactive" ? <Text color="grey">{row.factor}</Text> : row.factor),
+            cellRenderer: ({ row }) =>
+              row.state == "inactive" ? (
+                <Text color="grey">
+                  {row.factor}
+                </Text>
+              ) : (
+                row.factor
+              ),
           },
           {
             dataKey: "rounding",
@@ -302,35 +316,24 @@ export const EditAndError = () => (
             metadata: { className: "metadata" },
             cellRenderer: ({ row }) =>
               row.state != "error" ? (
-                <Flex
-                  width="auto"
-                  className={`customCell`}
-                  gap="x1"
-                  flexWrap={{ extraSmall: "wrap", medium: "nowrap" }}
-                >
+                <Flex width="auto" className={`customCell`} gap="x1" flexWrap={{ extraSmall: "wrap", medium: "nowrap" }} >
                   <Box width={{ extraSmall: "100%", medium: "62%" }}>
                     <Input value={row.precision} inputWidth="100%" disabled={row.inactive} />
                   </Box>
                   <Box width={{ extraSmall: "100%", medium: "38%" }}>
-                    <Select
-                      width="100%"
-                      options={[
-                        { value: "ea", label: "ea" },
-                        { value: "cs", label: "cs" },
-                        { value: "pl", label: "pl" },
-                      ]}
-                      value="ea"
-                      disabled={row.inactive}
-                    />
+                    <Select width="100%"
+                    options={[
+                      { value: "ea", label: "ea" },
+                      { value: "cs", label: "cs" },
+                      { value: "pl", label: "pl" },
+                    ]}
+                    value="ea"
+                    disabled={row.inactive}
+                  />
                   </Box>
                 </Flex>
               ) : (
-                <Flex
-                  width="auto"
-                  className={`customCell`}
-                  gap="x1"
-                  flexWrap={{ extraSmall: "wrap", medium: "nowrap" }}
-                >
+                <Flex width="auto" className={`customCell`} gap="x1" flexWrap={{ extraSmall: "wrap", medium: "nowrap" }}>
                   <Box width={{ extraSmall: "100%", medium: "62%" }}>
                     <Input
                       value={row.precision}
@@ -339,17 +342,16 @@ export const EditAndError = () => (
                       errorMessage="This field is required."
                     />
                   </Box>
-                  <Box width={{ extraSmall: "100%", medium: "38%" }}>
-                    <Select
-                      width="100%"
-                      options={[
-                        { value: "ea", label: "ea" },
-                        { value: "cs", label: "cs" },
-                        { value: "pl", label: "pl" },
-                      ]}
-                      value="ea"
-                      disabled={row.inactive}
-                    />
+                  <Box width={{ extraSmall: "100%", medium: "38%" }}>  
+                    <Select width="100%"
+                    options={[
+                      { value: "ea", label: "ea" },
+                      { value: "cs", label: "cs" },
+                      { value: "pl", label: "pl" },
+                    ]}
+                    value="ea"
+                    disabled={row.inactive}
+                  />
                   </Box>
                 </Flex>
               ),
@@ -377,7 +379,9 @@ export const EditAndError = () => (
                   {row.lastUpdated}
                 </Text>
               ) : (
-                <Text textAlign={"right"}>{row.lastUpdated}</Text>
+                <Text textAlign={"right"}>
+                  {row.lastUpdated}
+                </Text>
               ),
           },
           {
@@ -385,20 +389,30 @@ export const EditAndError = () => (
             width: "auto",
             label: "",
             cellRenderer: ({ row }) =>
-              row.state == "inactive" ? <Text color="grey">{row.actions}</Text> : row.actions,
+              row.state == "inactive" ? (
+                <Text color="grey">
+                  {row.actions}
+                </Text>
+              ) : (
+                row.actions
+              ),
           },
           {
             dataKey: "active",
             width: "64px",
             label: "Active",
-            cellRenderer: ({ row }) => <Toggle className={`customCell`} py="0" toggled={row.inactive === false} />,
+            cellRenderer: ({ row }) => (
+              <Toggle className={`customCell`} py="0" toggled={row.inactive === false} />
+            ),
           },
           {
             dataKey: "delete",
             width: "48px",
             label: "",
             cellRenderer: ({ row }) =>
-              row.state == "edit" ? <IconicButton className="customCell" icon="delete" py="half" /> : null,
+              row.state == "edit" ? (
+                  <IconicButton className="customCell" icon="delete" py="half" />
+              ) : null,
           },
         ]}
         rows={[
