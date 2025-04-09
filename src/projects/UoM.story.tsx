@@ -257,7 +257,7 @@ export const EditAndError = () => (
             label: "eaches",
             cellRenderer: ({ row }) =>
               row.state == "edit" ? (
-                <Box minWidth="6em">
+                <Box minWidth="5.75em">
                   <Input className={`customCell`} inputWidth="100%" minWidth="12em" value="{row.fromUnit}" />
                 </Box>
               ) : row.state == "inactive" ? (
@@ -273,7 +273,7 @@ export const EditAndError = () => (
             cellRenderer: ({ row }) =>
               row.state == "inactive" ? (
                 <TruncatedText
-                  maxWidth={{ extraSmall: "3em", small: "6em", medium: "100%" }}
+                  maxWidth={{ extraSmall: "2.75em", small: "5.75em", medium: "100%" }}
                   fullWidth
                   textAlign={"right"}
                   color="grey"
@@ -282,7 +282,7 @@ export const EditAndError = () => (
                 </TruncatedText>
               ) : (
                 <TruncatedText
-                  maxWidth={{ extraSmall: "3em", small: "6em", medium: "100%" }}
+                  maxWidth={{ extraSmall: "2.75em", small: "5.75em", medium: "100%" }}
                   fullWidth
                   textAlign={"right"}
                 >
@@ -294,7 +294,20 @@ export const EditAndError = () => (
             dataKey: "factor",
             width: "auto",
             label: "ea",
-            cellRenderer: ({ row }) => (row.state == "inactive" ? <Text color="grey">{row.factor}</Text> : row.factor),
+            cellRenderer: ({ row }) =>
+              row.state == "inactive" ? (
+                <TruncatedText
+                  maxWidth={{ extraSmall: "2.75em", small: "5.75em", medium: "100%" }}
+                  fullWidth
+                  color="grey"
+                >
+                  {row.factor}
+                </TruncatedText>
+              ) : (
+                <TruncatedText maxWidth={{ extraSmall: "2.75em", small: "5.75em", medium: "100%" }} fullWidth>
+                  {row.factor}
+                </TruncatedText>
+              ),
           },
           {
             dataKey: "rounding",
@@ -388,7 +401,7 @@ export const EditAndError = () => (
             cellRenderer: ({ row }) =>
               row.state == "inactive" ? (
                 <TruncatedText
-                  maxWidth={{ extraSmall: "3em", small: "6em", medium: "100%" }}
+                  maxWidth={{ extraSmall: "2.75em", small: "5.75em", medium: "100%" }}
                   fullWidth
                   color="grey"
                   textAlign={"right"}
@@ -397,7 +410,7 @@ export const EditAndError = () => (
                 </TruncatedText>
               ) : (
                 <TruncatedText
-                  maxWidth={{ extraSmall: "3em", small: "6em", medium: "100%" }}
+                  maxWidth={{ extraSmall: "2.75em", small: "5.75em", medium: "100%" }}
                   fullWidth
                   textAlign={"right"}
                 >
@@ -410,7 +423,19 @@ export const EditAndError = () => (
             width: "auto",
             label: "",
             cellRenderer: ({ row }) =>
-              row.state == "inactive" ? <Text color="grey">{row.actions}</Text> : row.actions,
+              row.state == "inactive" ? (
+                <TruncatedText
+                  maxWidth={{ extraSmall: "2.75em", small: "5.75em", medium: "100%" }}
+                  fullWidth
+                  color="grey"
+                >
+                  {row.actions}
+                </TruncatedText>
+              ) : (
+                <TruncatedText maxWidth={{ extraSmall: "2.75em", small: "5.75em", medium: "100%" }} fullWidth>
+                  {row.actions}
+                </TruncatedText>
+              ),
           },
           {
             dataKey: "active",
@@ -470,13 +495,13 @@ export const EditAndError = () => (
             state: "error",
             fromUnit: "eaches",
             toUnit: "9999999999999999",
-            factor: "eaaaa",
+            factor: "eaaaaa",
             rounding: "=",
             precision: "9999999999999999",
             direction: "csssss",
             status: "=",
             lastUpdated: "999999999999999",
-            actions: "ea",
+            actions: "eaaaaaa",
             inactive: false,
           },
         ]}
