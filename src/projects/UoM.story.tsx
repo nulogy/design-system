@@ -18,11 +18,10 @@ import {
   Input,
   Toggle,
   IconicButton,
-  TruncatedText,
 } from "../index";
 import { Columns } from "../Table/Table.types";
 import styled from "styled-components";
-import { minWidth, width } from "styled-system";
+import { border, minWidth, width } from "styled-system";
 
 export default {
   title: "Projects/UoM",
@@ -73,7 +72,6 @@ const unitsRowData = [
 
 const RatioTable = styled(Table)`
   border-collapse: collapse;
-  table-layout: fixed;
   > tbody > tr {
     border-bottom: 1px solid;
     border-color: ${({ theme }) => theme.colors.lightGrey};
@@ -84,6 +82,7 @@ const RatioTable = styled(Table)`
     vertical-align: top;
     overflow: hidden;
     text-overflow: ellipsis;
+    
   }
 
   td:has(.customCell){
@@ -109,7 +108,7 @@ export const Default = () => (
     <Box mb="x6">
       <RatioTable
         columns={[
-          { dataKey: "fromUnit", width: "9em", label: "eaches" },
+          { dataKey: "fromUnit", width: "auto", label: "eaches" },
           { dataKey: "toUnit", width: "auto", label: "", align: "right" },
           { dataKey: "factor", width: "auto", label: "ea" },
           { dataKey: "rounding", width: "auto", label: "", align: "center" },
@@ -118,7 +117,7 @@ export const Default = () => (
           { dataKey: "status", width: "auto", label: "", align: "center" },
           { dataKey: "lastUpdated", width: "auto", label: "", align: "right" },
           { dataKey: "actions", width: "auto", label: "" },
-          { dataKey: "conversion", width: "0", label: "" },
+          { dataKey: "conversion", width: "50%", label: "" },
         ]}
         rows={[
           {
@@ -253,13 +252,15 @@ export const EditAndError = () => (
         columns={[
           {
             dataKey: "fromUnit",
-            width: "9em",
+            width: "auto",
             label: "eaches",
             cellRenderer: ({ row }) =>
               row.state == "edit" ? (
-                <Input className={`customCell`} inputWidth="100%" value="{row.fromUnit}" />
+                <Box minWidth="6em">
+                  <Input className={`customCell`} inputWidth="100%" minWidth="12em" value="{row.fromUnit}" />
+                </Box>
               ) : (
-                <TruncatedText fullWidth>{row.fromUnit}</TruncatedText>
+                row.fromUnit
               ),
           },
           {
@@ -268,27 +269,18 @@ export const EditAndError = () => (
             label: "",
             cellRenderer: ({ row }) =>
               row.state == "inactive" ? (
-                <TruncatedText fullWidth textAlign={"right"} color="grey">
+                <Text textAlign={"right"} color="grey">
                   {row.toUnit}
-                </TruncatedText>
+                </Text>
               ) : (
-                <TruncatedText fullWidth textAlign={"right"}>
-                  {row.toUnit}
-                </TruncatedText>
+                <Text textAlign={"right"}>{row.toUnit}</Text>
               ),
           },
           {
             dataKey: "factor",
             width: "auto",
             label: "ea",
-            cellRenderer: ({ row }) =>
-              row.state == "inactive" ? (
-                <TruncatedText fullWidth color="grey">
-                  {row.factor}
-                </TruncatedText>
-              ) : (
-                <TruncatedText fullWidth>{row.factor}</TruncatedText>
-              ),
+            cellRenderer: ({ row }) => (row.state == "inactive" ? <Text color="grey">{row.factor}</Text> : row.factor),
           },
           {
             dataKey: "rounding",
@@ -305,37 +297,62 @@ export const EditAndError = () => (
           },
           {
             dataKey: "precision",
-            width: "8.5em",
+            width: "auto",
             label: "",
+            metadata: { className: "metadata" },
             cellRenderer: ({ row }) =>
               row.state != "error" ? (
-                <Input className={`customCell`} value={row.precision} inputWidth="100%" disabled={row.inactive} />
-              ) : (
-                <Input
+                <Flex
+                  width="auto"
                   className={`customCell`}
-                  value={row.precision}
-                  inputWidth="100%"
-                  disabled={row.inactive}
-                  errorMessage="This field is required."
-                />
+                  gap="x1"
+                  flexWrap={{ extraSmall: "wrap", medium: "nowrap" }}
+                >
+                  <Box width={{ extraSmall: "100%", medium: "62%" }}>
+                    <Input value={row.precision} inputWidth="100%" disabled={row.inactive} />
+                  </Box>
+                  <Box width={{ extraSmall: "100%", medium: "38%" }}>
+                    <Select
+                      width="100%"
+                      options={[
+                        { value: "ea", label: "ea" },
+                        { value: "cs", label: "cs" },
+                        { value: "pl", label: "pl" },
+                      ]}
+                      value="ea"
+                      disabled={row.inactive}
+                    />
+                  </Box>
+                </Flex>
+              ) : (
+                <Flex
+                  width="auto"
+                  className={`customCell`}
+                  gap="x1"
+                  flexWrap={{ extraSmall: "wrap", medium: "nowrap" }}
+                >
+                  <Box width={{ extraSmall: "100%", medium: "62%" }}>
+                    <Input
+                      value={row.precision}
+                      inputWidth="100%"
+                      disabled={row.inactive}
+                      errorMessage="This field is required."
+                    />
+                  </Box>
+                  <Box width={{ extraSmall: "100%", medium: "38%" }}>
+                    <Select
+                      width="100%"
+                      options={[
+                        { value: "ea", label: "ea" },
+                        { value: "cs", label: "cs" },
+                        { value: "pl", label: "pl" },
+                      ]}
+                      value="ea"
+                      disabled={row.inactive}
+                    />
+                  </Box>
+                </Flex>
               ),
-          },
-          {
-            dataKey: "direction",
-            width: "6em",
-            label: "",
-            cellRenderer: ({ row }) => (
-              <Select
-                className={`customCell`}
-                options={[
-                  { value: "ea", label: "ea" },
-                  { value: "cs", label: "cs" },
-                  { value: "pl", label: "pl" },
-                ]}
-                value="ea"
-                disabled={row.inactive}
-              />
-            ),
           },
           {
             dataKey: "status",
@@ -356,13 +373,11 @@ export const EditAndError = () => (
             label: "",
             cellRenderer: ({ row }) =>
               row.state == "inactive" ? (
-                <TruncatedText fullWidth textAlign={"right"} color="grey">
+                <Text textAlign={"right"} color="grey">
                   {row.lastUpdated}
-                </TruncatedText>
+                </Text>
               ) : (
-                <TruncatedText fullWidth textAlign={"right"}>
-                  {row.lastUpdated}
-                </TruncatedText>
+                <Text textAlign={"right"}>{row.lastUpdated}</Text>
               ),
           },
           {
@@ -370,32 +385,20 @@ export const EditAndError = () => (
             width: "auto",
             label: "",
             cellRenderer: ({ row }) =>
-              row.state == "inactive" ? (
-                <TruncatedText fullWidth color="grey">
-                  {row.actions}
-                </TruncatedText>
-              ) : (
-                <TruncatedText fullWidth>{row.actions}</TruncatedText>
-              ),
+              row.state == "inactive" ? <Text color="grey">{row.actions}</Text> : row.actions,
           },
           {
             dataKey: "active",
-            width: "6em",
+            width: "64px",
             label: "Active",
-            cellRenderer: ({ row }) => (
-              <Toggle className={`customCell`} p="0" toggled={row.inactive === false} onText="On" offText="Off" />
-            ),
+            cellRenderer: ({ row }) => <Toggle className={`customCell`} py="0" toggled={row.inactive === false} />,
           },
           {
             dataKey: "delete",
-            width: "3em",
+            width: "48px",
             label: "",
             cellRenderer: ({ row }) =>
-              row.state == "edit" ? (
-                <Flex width="100%" py="half" className="customCell" justifyContent={"flex-end"}>
-                  <IconicButton className="customCell" icon="delete" p="0" />
-                </Flex>
-              ) : null,
+              row.state == "edit" ? <IconicButton className="customCell" icon="delete" py="half" /> : null,
           },
         ]}
         rows={[
