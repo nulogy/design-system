@@ -1,7 +1,7 @@
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import styled from "styled-components";
 import React, { ReactNode } from "react";
-import { menuStyles } from "./AppSwitcher";
+import { menuStyles } from "./AppSwitcher/parts";
 
 export const HorizontalDivider = styled("span")({
   display: "inline-block",

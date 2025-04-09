@@ -1,0 +1,76 @@
+import React from "react";
+import * as NavigationMenu from "@radix-ui/react-navigation-menu";
+import { Icon } from "../../../Icon";
+import { NavigationMenuIconTrigger } from "../shared/components";
+import { NulogyApp } from "../../../types/NulogyApp";
+import AppSwitcher from "./parts";
+
+export type AppSwitcherConfig = false | Record<NulogyApp, { url: string; indicator?: React.ReactNode }>;
+
+type AppSwitcherProps = {
+  config: AppSwitcherConfig;
+};
+
+const apps = [
+  {
+    id: "connections",
+    label: "Connections",
+    description: "Multi-tiered bandwidth-monitored process improvement",
+  },
+  {
+    id: "digital-quality-inspection",
+    label: "Digital quality inspection",
+    description: "Cloned global attitude fully-configurable motivating support",
+  },
+  {
+    id: "production-scheduling",
+    label: "Production scheduling",
+    description:
+      "Assimilated 24 hour capability operative demand-driven model object-based zero tolerance model fully-configurable regional analyzer",
+  },
+  {
+    id: "shop-floor",
+    label: "Shop floor control",
+    description: "Persevering mobile capacity synchronized intangible core",
+  },
+  {
+    id: "supplier-collaboration",
+    label: "Supplier collaboration",
+    description: "Function-based coherent process improvement cloned encompassing infomediaries",
+  },
+];
+
+export function NulogyAppSwitcher({ config }: AppSwitcherProps) {
+  if (!config) return null;
+
+  const includedApps = apps
+    .filter((app) => app.id in config)
+    .map((app) => ({
+      ...app,
+      url: config[app.id].url,
+      indicator: config[app.id].indicator,
+    }));
+
+  return (
+    <NavigationMenu.Item>
+      <NavigationMenuIconTrigger>
+        <Icon icon="apps" size="x3" />
+      </NavigationMenuIconTrigger>
+      <AppSwitcher.Menu>
+        <AppSwitcher.List>
+          {includedApps.map((app) => (
+            <AppSwitcher.Item key={app.id}>
+              <AppSwitcher.Link href={app.url}>
+                <AppSwitcher.Header>
+                  <AppSwitcher.Title>{app.label}</AppSwitcher.Title>
+                  {app.indicator}
+                </AppSwitcher.Header>
+                <AppSwitcher.Description>{app.description}</AppSwitcher.Description>
+              </AppSwitcher.Link>
+            </AppSwitcher.Item>
+          ))}
+        </AppSwitcher.List>
+      </AppSwitcher.Menu>
+    </NavigationMenu.Item>
+  );
+}
