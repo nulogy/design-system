@@ -18,6 +18,7 @@ import {
   Input,
   Toggle,
   IconicButton,
+  TruncatedText
 } from "../index";
 import { Columns } from "../Table/Table.types";
 import styled from "styled-components";
@@ -72,25 +73,24 @@ const unitsRowData = [
 
 const RatioTable = styled(Table)`
   border-collapse: collapse;
-  width: 100%;
   table-layout: fixed;
   > tbody > tr {
     border-bottom: 1px solid;
     border-color: ${({ theme }) => theme.colors.lightGrey};
-    border-collapse: collapse;
   }
 
-  td,
-  th {
-    white-space: nowrap;
-    padding: ${({ theme }) => theme.space.x2} ${({ theme }) => theme.space.x2};
+  td, th{
+    padding: ${({ theme }) => theme.space.x2} ${({ theme }) => theme.space.x1};
     vertical-align: top;
-    text-overflow: ellipsis !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
-  td:has(.has-renderer) {
+  td:has(.customCell){
     padding: ${({ theme }) => theme.space.x1};
   }
+
+  td:nth-child(1), th:nth-child(1) {padding-left: ${({ theme }) => theme.space.x1};
 
   tr.inactive td {
     color: ${({ theme }) => theme.colors.grey};
@@ -108,16 +108,16 @@ export const Default = () => (
     <Box mb="x6">
       <RatioTable
         columns={[
-          { dataKey: "fromUnit", width: "21%", label: "eaches" },
-          { dataKey: "toUnit", width: "6%", label: "", align: "right" },
-          { dataKey: "factor", width: "3%", label: "ea" },
-          { dataKey: "rounding", width: "3%", label: "" },
-          { dataKey: "precision", width: "3%", label: "" },
-          { dataKey: "direction", width: "3%", label: "" },
-          { dataKey: "status", width: "3%", label: "" },
-          { dataKey: "lastUpdated", width: "6%", label: "", align: "right" },
-          { dataKey: "actions", width: "3%", label: "" },
-          { dataKey: "conversion", width: "49%", label: "" },
+          { dataKey: "fromUnit", width: "9em", label: "eaches" },
+          { dataKey: "toUnit", width: "auto", label: "", align: "right" },
+          { dataKey: "factor", width: "auto", label: "ea" },
+          { dataKey: "rounding", width: "auto", label: "", align: "center" },
+          { dataKey: "precision", width: "auto", label: "", align: "right" },
+          { dataKey: "direction", width: "auto", label: "" },
+          { dataKey: "status", width: "auto", label: "", align: "center" },
+          { dataKey: "lastUpdated", width: "auto", label: "", align: "right" },
+          { dataKey: "actions", width: "auto", label: "" },
+          { dataKey: "conversion", width: "0", label: "" },
         ]}
         rows={[
           {
@@ -252,71 +252,68 @@ export const EditAndError = () => (
         columns={[
           {
             dataKey: "fromUnit",
-            width: "21%",
+            width: "9em",
             label: "eaches",
             cellRenderer: ({ row }) =>
               row.state == "edit" ? (
-                <Flex width="100%" pr="x2" className="has-renderer" justifyContent={"flex-end"}>
-                  <Input inputWidth="100%" value="pallets" />
-                </Flex>
+                <Input className={`customCell`} inputWidth="100%" value="{row.fromUnit}" />
               ) : (
-                row.fromUnit
+                <TruncatedText fullWidth>{row.fromUnit}</TruncatedText>
               ),
           },
           {
             dataKey: "toUnit",
-            width: "6%",
+            width: "auto",
             label: "",
             align: "right",
             cellRenderer: ({ row }) =>
               row.state == "inactive" ? (
-                <Text textAlign={"right"} color="grey">
+                <TruncatedText fullWidth textAlign={"right"} color="grey">
                   {row.toUnit}
-                </Text>
+                </TruncatedText>
               ) : (
-                <Text textAlign={"right"}>{row.toUnit}</Text>
+                <TruncatedText fullWidth textAlign={"right"}>{row.toUnit}</TruncatedText>
               ),
           },
           {
             dataKey: "factor",
-            width: "3%",
+            width: "auto",
             label: "ea",
-            cellRenderer: ({ row }) => (row.state == "inactive" ? <Text color="grey">{row.factor}</Text> : row.factor),
+            cellRenderer: ({ row }) => (row.state == "inactive" ? <TruncatedText fullWidth color="grey">{row.factor}</TruncatedText> : <TruncatedText fullWidth>{row.factor}</TruncatedText>),
           },
           {
             dataKey: "rounding",
-            width: "3%",
+            width: "auto",
             label: "",
+            align: "center",
             cellRenderer: ({ row }) =>
-              row.state == "inactive" ? <Text color="grey">{row.rounding}</Text> : row.rounding,
+              row.state == "inactive" ? <Text color="grey" textAlign="center">{row.rounding}</Text> : <Text textAlign="center">{row.rounding}</Text>,
           },
           {
             dataKey: "precision",
-            width: "16%",
+            width: "8.5em",
             label: "",
             cellRenderer: ({ row }) =>
               row.state != "error" ? (
-                <Box width="100%" className={`has-renderer`}>
-                  <Input value={row.precision} inputWidth="100%" disabled={row.inactive} />
-                </Box>
+                  <Input className={`customCell`} value={row.precision} inputWidth="100%" disabled={row.inactive} />
+
               ) : (
-                <Box width="100%" className={`has-renderer`}>
-                  <Input
+                  <Input 
+                    className={`customCell`}
                     value={row.precision}
                     inputWidth="100%"
                     disabled={row.inactive}
                     errorMessage="This field is required."
                   />
-                </Box>
               ),
           },
           {
             dataKey: "direction",
-            width: "13%",
+            width: "6em",
             label: "",
             cellRenderer: ({ row }) => (
-              <Box width="100%" className={`has-renderer`}>
                 <Select
+                className={`customCell`}
                   options={[
                     { value: "ea", label: "ea" },
                     { value: "cs", label: "cs" },
@@ -325,57 +322,53 @@ export const EditAndError = () => (
                   value="ea"
                   disabled={row.inactive}
                 />
-              </Box>
+
             ),
           },
           {
             dataKey: "status",
-            width: "3%",
+            width: "auto",
             label: "",
-            cellRenderer: ({ row }) => (row.state == "inactive" ? <Text color="grey">{row.status}</Text> : row.status),
+            align: "center",
+            cellRenderer: ({ row }) => (row.state == "inactive" ? <Text color="grey" textAlign="center">{row.status}</Text> : <Text textAlign="center">{row.status}</Text>),
           },
           {
             dataKey: "lastUpdated",
-            width: "6%",
+            width: "auto",
             label: "",
             align: "right",
             cellRenderer: ({ row }) =>
               row.state == "inactive" ? (
-                <Text textAlign={"right"} color="grey">
+                <TruncatedText fullWidth textAlign={"right"} color="grey">
                   {row.lastUpdated}
-                </Text>
+                </TruncatedText>
               ) : (
-                <Text textAlign={"right"}>{row.lastUpdated}</Text>
+                <TruncatedText fullWidth textAlign={"right"}>{row.lastUpdated}</TruncatedText>
               ),
           },
           {
             dataKey: "actions",
-            width: "3%",
+            width: "auto",
             label: "",
             cellRenderer: ({ row }) =>
-              row.state == "inactive" ? <Text color="grey">{row.actions}</Text> : row.actions,
+              row.state == "inactive" ? <TruncatedText fullWidth color="grey">{row.actions}</TruncatedText> : <TruncatedText fullWidth>{row.actions}</TruncatedText>,
           },
-          { dataKey: "conversion", width: "3%", label: "" },
           {
             dataKey: "active",
-            width: "20%",
-            label: "",
+            width: "6em",
+            label: "Active",
             cellRenderer: ({ row }) => (
-              <Flex width="100%" justifyContent="flex-end" className={`has-renderer`}>
-                <Box minWidth="8em">
-                  <Toggle p="0" toggled={row.inactive === false} onText="Active" offText="Inactive" />
-                </Box>
-              </Flex>
+                  <Toggle className={`customCell`} p="0" toggled={row.inactive === false} onText="On" offText="Off" />
             ),
           },
           {
             dataKey: "delete",
-            width: "3%",
+            width: "3em",
             label: "",
             cellRenderer: ({ row }) =>
               row.state == "edit" ? (
-                <Flex width="100%" py="half" pr="x2" className="has-renderer" justifyContent={"flex-end"}>
-                  <IconicButton icon="delete" p="0" />
+                <Flex width="100%" py="half" className="customCell" justifyContent={"flex-end"}>
+                  <IconicButton className="customCell" icon="delete" p="0" />
                 </Flex>
               ) : null,
           },
@@ -423,13 +416,13 @@ export const EditAndError = () => (
           {
             state: "error",
             fromUnit: "eaches",
-            toUnit: "1",
-            factor: "ea",
+            toUnit: "999999",
+            factor: "eaaaa",
             rounding: "=",
-            precision: "3",
-            direction: "cs",
+            precision: "999999",
+            direction: "csssss",
             status: "=",
-            lastUpdated: "1",
+            lastUpdated: "99999",
             actions: "ea",
             inactive: false,
           },
