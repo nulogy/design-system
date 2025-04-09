@@ -266,7 +266,6 @@ export const EditAndError = () => (
             dataKey: "toUnit",
             width: "auto",
             label: "",
-            align: "right",
             cellRenderer: ({ row }) =>
               row.state == "inactive" ? (
                 <TruncatedText fullWidth textAlign={"right"} color="grey">
@@ -295,7 +294,6 @@ export const EditAndError = () => (
             dataKey: "rounding",
             width: "auto",
             label: "",
-            align: "center",
             cellRenderer: ({ row }) =>
               row.state == "inactive" ? (
                 <Text color="grey" textAlign="center">
@@ -343,7 +341,6 @@ export const EditAndError = () => (
             dataKey: "status",
             width: "auto",
             label: "",
-            align: "center",
             cellRenderer: ({ row }) =>
               row.state == "inactive" ? (
                 <Text color="grey" textAlign="center">
@@ -357,7 +354,6 @@ export const EditAndError = () => (
             dataKey: "lastUpdated",
             width: "auto",
             label: "",
-            align: "right",
             cellRenderer: ({ row }) =>
               row.state == "inactive" ? (
                 <TruncatedText fullWidth textAlign={"right"} color="grey">
