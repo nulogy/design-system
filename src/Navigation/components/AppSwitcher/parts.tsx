@@ -1,6 +1,8 @@
-import React, { ReactNode } from "react";
+import React, { ComponentProps } from "react";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import styled from "styled-components";
+import { Li } from "../../../Primitives";
+import Menu from "../shared/Menu";
 
 export const menuStyles = {
   display: "flex",
@@ -13,13 +15,14 @@ export const menuStyles = {
   flexDirection: "column",
 } as const;
 
-const Menu = styled("ul")({
-  ...menuStyles,
+const List = styled("ul")({
+  margin: 0,
+  padding: 0,
   gap: "16px",
   listStyle: "none",
 });
 
-const Link = styled("a")({
+const A = styled("a")({
   textDecoration: "none",
   width: "100%",
   display: "flex",
@@ -33,6 +36,12 @@ const Link = styled("a")({
     backgroundColor: "#E1EBFA",
   },
 });
+
+const Header = styled("div")(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  gap: theme.space.x1,
+}));
 
 const Title = styled("p")({
   color: "#434D59",
@@ -54,38 +63,28 @@ const Description = styled("p")({
   lineHeight: "16px",
 });
 
-const Item = React.forwardRef<any, any>(
-  (
-    { children, ...props }: { children: ReactNode; [key: string]: any },
-    forwardedRef
-  ) => (
-    <li style={{ width: "100%" }}>
-      <NavigationMenu.Link asChild>
-        <Link {...props} ref={forwardedRef}>
-          {children}
-        </Link>
-      </NavigationMenu.Link>
-    </li>
-  )
-);
+const Link = React.forwardRef<HTMLAnchorElement, ComponentProps<typeof A>>(({ children, ...props }, forwardedRef) => (
+  <NavigationMenu.Link asChild>
+    <A {...props} ref={forwardedRef}>
+      {children}
+    </A>
+  </NavigationMenu.Link>
+));
 
-const AppSwitcher = Object.assign(
-  {},
-  {},
-  {
-    Menu,
-    Item,
-    Title,
-    Description,
-  }
-);
+const Item = React.forwardRef<HTMLLIElement, ComponentProps<typeof Li>>(({ children, ...props }, forwardedRef) => (
+  <Li width="100%" {...props} ref={forwardedRef}>
+    {children}
+  </Li>
+));
 
-const Navigation = Object.assign(
-  {},
-  {},
-  {
-    AppSwitcher,
-  }
-);
+const AppSwitcher = {
+  Menu,
+  List,
+  Item,
+  Link,
+  Header,
+  Title,
+  Description,
+};
 
-export default Navigation;
+export default AppSwitcher;
