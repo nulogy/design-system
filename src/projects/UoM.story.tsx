@@ -25,7 +25,7 @@ import styled from "styled-components";
 import { border, minWidth, width } from "styled-system";
 
 export default {
-  title: "Projects/UoM",
+  title: "Projects/Shop Floor/UoM 1:1 NDS conversion",
 };
 
 // Table columns for units of measure
@@ -54,7 +54,6 @@ const unitsRowData = [
     lastUpdated: "1",
     actions: "ea",
     conversion: "",
-    id: "r1",
   },
   {
     fromUnit: "pallets",
@@ -67,7 +66,6 @@ const unitsRowData = [
     lastUpdated: "1",
     actions: "ea",
     conversion: "",
-    id: "r2",
   },
 ];
 
@@ -79,44 +77,28 @@ const RatioTable = styled(Table)`
 
     vertical-align: top; /* Not storybook supported */
   }
-
-  td, th{
-    //padding: ${({ theme }) => theme.space.x2} ${({ theme }) => theme.space.x1};
-    //vertical-align: top;
-    //text-overflow: ellipsis;
-  }
-
-  td:has(.customCell){
-    //padding: ${({ theme }) => theme.space.x1};
-  }
-
-  //td:nth-child(1), th:nth-child(1) {padding-left: ${({ theme }) => theme.space.x1};
-
-  tr.inactive td {
-    //color: ${({ theme }) => theme.colors.grey};
-  }
 `;
 
 export const Default = () => (
   <Box p="x3" style={{ border: "dotted 1px violet" }}>
     <Flex justifyContent="space-between" alignItems="center" mb="x4">
-      <Heading2 mb="0">Units of measure</Heading2>
-      <QuietButton variant="desktop">Edit</QuietButton>
+      <Heading2 mcompact>Units of measure</Heading2>
+      <QuietButton>Edit</QuietButton>
     </Flex>
 
     <Heading3 mb="x1">Conversion ratio</Heading3>
     <Box mb="x6">
       <RatioTable
         columns={[
-          { dataKey: "fromUnit", width: "auto", label: "eaches" },
-          { dataKey: "toUnit", width: "auto", label: "", align: "right" },
-          { dataKey: "factor", width: "auto", label: "ea" },
-          { dataKey: "rounding", width: "auto", label: "", align: "center" },
-          { dataKey: "precision", width: "auto", label: "", align: "right" },
-          { dataKey: "direction", width: "auto", label: "" },
-          { dataKey: "status", width: "auto", label: "", align: "center" },
-          { dataKey: "lastUpdated", width: "auto", label: "", align: "right" },
-          { dataKey: "actions", width: "auto", label: "" },
+          { dataKey: "fromUnit", label: "eaches" },
+          { dataKey: "toUnit", label: "", align: "right" },
+          { dataKey: "factor", label: "ea" },
+          { dataKey: "rounding", label: "", align: "center" },
+          { dataKey: "precision", label: "", align: "right" },
+          { dataKey: "direction", label: "" },
+          { dataKey: "status", label: "", align: "center" },
+          { dataKey: "lastUpdated", label: "", align: "right" },
+          { dataKey: "actions", label: "" },
           { dataKey: "conversion", width: "50%", label: "" },
         ]}
         rows={[
@@ -239,10 +221,10 @@ export const Default = () => (
 export const EditAndError = () => (
   <Box p="x3" style={{ border: "dotted 1px violet" }}>
     <Flex justifyContent="space-between" alignItems="center" mb="x4">
-      <Heading2 mb="0">Units of measure</Heading2>
+      <Heading2 compact>Units of measure</Heading2>
       <Flex gap="x1">
-        <PrimaryButton variant="desktop">Save</PrimaryButton>
-        <QuietButton variant="desktop">Cancel</QuietButton>
+        <PrimaryButton>Save</PrimaryButton>
+        <QuietButton>Cancel</QuietButton>
       </Flex>
     </Flex>
 
@@ -500,7 +482,7 @@ export const EditAndError = () => (
           },
           {
             state: "error",
-            fromUnit: "eaches",
+            fromUnit: "eaches eache eaches eaches",
             toUnit: "9999999999999999",
             factor: "eaaaaa",
             rounding: "=",
@@ -515,7 +497,7 @@ export const EditAndError = () => (
         rowHovers={false}
         loading={false}
       />
-      <QuietButton variant="desktop" icon="add" mt="x1">
+      <QuietButton icon="add" mt="x1">
         Add conversion ratio
       </QuietButton>
     </Box>
