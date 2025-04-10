@@ -72,29 +72,28 @@ const unitsRowData = [
 ];
 
 const RatioTable = styled(Table)`
-  border-collapse: collapse;
   > tbody > tr {
     border-bottom: 1px solid;
     border-color: ${({ theme }) => theme.colors.lightGrey};
+    border-collapse: collapse;
+
+    vertical-align: top; /* Not storybook supported */
   }
 
   td, th{
-    padding: ${({ theme }) => theme.space.x2} ${({ theme }) => theme.space.x1};
-    vertical-align: top;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    
+    //padding: ${({ theme }) => theme.space.x2} ${({ theme }) => theme.space.x1};
+    //vertical-align: top;
+    //text-overflow: ellipsis;
   }
 
   td:has(.customCell){
-    padding: ${({ theme }) => theme.space.x1};
-    overflow: visible;
+    //padding: ${({ theme }) => theme.space.x1};
   }
 
-  td:nth-child(1), th:nth-child(1) {padding-left: ${({ theme }) => theme.space.x1};
+  //td:nth-child(1), th:nth-child(1) {padding-left: ${({ theme }) => theme.space.x1};
 
   tr.inactive td {
-    color: ${({ theme }) => theme.colors.grey};
+    //color: ${({ theme }) => theme.colors.grey};
   }
 `;
 
@@ -257,13 +256,13 @@ export const EditAndError = () => (
             label: "eaches",
             cellRenderer: ({ row }) =>
               row.state == "edit" ? (
-                <Box minWidth="5.75em">
-                  <Input className={`customCell`} inputWidth="100%" minWidth="12em" value="{row.fromUnit}" />
+                <Box minWidth="5.75em" py="x1" pl="x2">
+                  <Input className={`customCell`} inputWidth="100%" value="{row.fromUnit}" />
                 </Box>
               ) : row.state == "inactive" ? (
-                <Text color="grey">{row.fromUnit}</Text>
+                  <Text color="grey" py="x2" pl="x2">{row.fromUnit}</Text>
               ) : (
-                row.fromUnit
+                <Text py="x2" pl="x2">{row.fromUnit}</Text>
               ),
           },
           {
@@ -277,6 +276,7 @@ export const EditAndError = () => (
                   fullWidth
                   textAlign={"right"}
                   color="grey"
+                  pr="x2" py="x2"
                 >
                   {row.toUnit}
                 </TruncatedText>
@@ -285,6 +285,7 @@ export const EditAndError = () => (
                   maxWidth={{ extraSmall: "2.75em", small: "5.75em", medium: "100%" }}
                   fullWidth
                   textAlign={"right"}
+                  pr="x2" py="x2"
                 >
                   {row.toUnit}
                 </TruncatedText>
@@ -300,11 +301,12 @@ export const EditAndError = () => (
                   maxWidth={{ extraSmall: "2.75em", small: "5.75em", medium: "100%" }}
                   fullWidth
                   color="grey"
+                  pr="x2" py="x2"
                 >
                   {row.factor}
                 </TruncatedText>
               ) : (
-                <TruncatedText maxWidth={{ extraSmall: "2.75em", small: "5.75em", medium: "100%" }} fullWidth>
+                <TruncatedText maxWidth={{ extraSmall: "2.75em", small: "5.75em", medium: "100%" }} fullWidth pr="x2" py="x2">
                   {row.factor}
                 </TruncatedText>
               ),
@@ -315,11 +317,11 @@ export const EditAndError = () => (
             label: "",
             cellRenderer: ({ row }) =>
               row.state == "inactive" ? (
-                <Text color="grey" textAlign="center">
+                <Text color="grey" textAlign="center" pr="x2" py="x2">
                   {row.rounding}
                 </Text>
               ) : (
-                <Text textAlign="center">{row.rounding}</Text>
+                <Text textAlign="center" pr="x2" py="x2">{row.rounding}</Text>
               ),
           },
           {
@@ -334,6 +336,7 @@ export const EditAndError = () => (
                   className={`customCell`}
                   gap="x1"
                   flexWrap={{ extraSmall: "wrap", medium: "nowrap" }}
+                  pr="x2" py="x1"
                 >
                   <Box width={{ extraSmall: "100%", medium: "62%" }}>
                     <Input value={row.precision} inputWidth="100%" disabled={row.inactive} />
@@ -357,6 +360,7 @@ export const EditAndError = () => (
                   className={`customCell`}
                   gap="x1"
                   flexWrap={{ extraSmall: "wrap", medium: "nowrap" }}
+                  pr="x2" py="x1"
                 >
                   <Box width={{ extraSmall: "100%", medium: "62%" }}>
                     <Input
@@ -387,11 +391,11 @@ export const EditAndError = () => (
             label: "",
             cellRenderer: ({ row }) =>
               row.state == "inactive" ? (
-                <Text color="grey" textAlign="center">
+                <Text color="grey" textAlign="center" pr="x2" py="x2">
                   {row.status}
                 </Text>
               ) : (
-                row.status
+                <Text textAlign="center" pr="x2" py="x2"> {row.status}</Text>
               ),
           },
           {
@@ -405,6 +409,7 @@ export const EditAndError = () => (
                   fullWidth
                   color="grey"
                   textAlign={"right"}
+                  pr="x2" py="x2"
                 >
                   {row.lastUpdated}
                 </TruncatedText>
@@ -413,6 +418,7 @@ export const EditAndError = () => (
                   maxWidth={{ extraSmall: "2.75em", small: "5.75em", medium: "100%" }}
                   fullWidth
                   textAlign={"right"}
+                  pr="x2" py="x2"
                 >
                   {row.lastUpdated}
                 </TruncatedText>
@@ -428,27 +434,28 @@ export const EditAndError = () => (
                   maxWidth={{ extraSmall: "2.75em", small: "5.75em", medium: "100%" }}
                   fullWidth
                   color="grey"
+                  pr="x2" py="x2"
                 >
                   {row.actions}
                 </TruncatedText>
               ) : (
-                <TruncatedText maxWidth={{ extraSmall: "2.75em", small: "5.75em", medium: "100%" }} fullWidth>
+                <TruncatedText maxWidth={{ extraSmall: "2.75em", small: "5.75em", medium: "100%" }} fullWidth pr="x2" py="x2">
                   {row.actions}
                 </TruncatedText>
               ),
           },
           {
             dataKey: "active",
-            width: "64px",
+            width: "48px",
             label: "Active",
-            cellRenderer: ({ row }) => <Toggle className={`customCell`} py="0" toggled={row.inactive === false} />,
+            cellRenderer: ({ row }) => <Toggle className={`customCell`} pr="x2" py="x1" toggled={row.inactive === false} />,
           },
           {
             dataKey: "delete",
-            width: "48px",
+            width: "40px",
             label: "",
             cellRenderer: ({ row }) =>
-              row.state == "edit" ? <IconicButton className="customCell" icon="delete" py="half" /> : null,
+              row.state == "edit" ? <IconicButton className="customCell" icon="delete" pr="x2" py="x1_5" /> : null,
           },
         ]}
         rows={[
