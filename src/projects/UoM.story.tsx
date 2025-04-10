@@ -242,9 +242,13 @@ export const EditAndError = () => (
                   <Input inputWidth="100%" value="{row.fromUnit}" />
                 </Box>
               ) : row.state == "inactive" ? (
-                  <Text color="grey" py="x2" pl="x2">{row.fromUnit}</Text>
+                <Text color="grey" py="x2" pl="x2">
+                  {row.fromUnit}
+                </Text>
               ) : (
-                <Text py="x2" pl="x2">{row.fromUnit}</Text>
+                <Text py="x2" pl="x2">
+                  {row.fromUnit}
+                </Text>
               ),
           },
           {
@@ -258,7 +262,8 @@ export const EditAndError = () => (
                   fullWidth
                   textAlign={"right"}
                   color="grey"
-                  pr="x2" py="x2"
+                  pr="x2"
+                  py="x2"
                 >
                   {row.toUnit}
                 </TruncatedText>
@@ -267,7 +272,8 @@ export const EditAndError = () => (
                   maxWidth={{ extraSmall: "2.75em", small: "5.75em", medium: "100%" }}
                   fullWidth
                   textAlign={"right"}
-                  pr="x2" py="x2"
+                  pr="x2"
+                  py="x2"
                 >
                   {row.toUnit}
                 </TruncatedText>
@@ -283,12 +289,18 @@ export const EditAndError = () => (
                   maxWidth={{ extraSmall: "2.75em", small: "5.75em", medium: "100%" }}
                   fullWidth
                   color="grey"
-                  pr="x2" py="x2"
+                  pr="x2"
+                  py="x2"
                 >
                   {row.factor}
                 </TruncatedText>
               ) : (
-                <TruncatedText maxWidth={{ extraSmall: "2.75em", small: "5.75em", medium: "100%" }} fullWidth pr="x2" py="x2">
+                <TruncatedText
+                  maxWidth={{ extraSmall: "2.75em", small: "5.75em", medium: "100%" }}
+                  fullWidth
+                  pr="x2"
+                  py="x2"
+                >
                   {row.factor}
                 </TruncatedText>
               ),
@@ -303,7 +315,9 @@ export const EditAndError = () => (
                   {row.rounding}
                 </Text>
               ) : (
-                <Text textAlign="center" pr="x2" py="x2">{row.rounding}</Text>
+                <Text textAlign="center" pr="x2" py="x2">
+                  {row.rounding}
+                </Text>
               ),
           },
           {
@@ -313,13 +327,7 @@ export const EditAndError = () => (
             metadata: { className: "metadata" },
             cellRenderer: ({ row }) =>
               row.state != "error" ? (
-                <Flex
-                  width="auto"
-                 
-                  gap="x1"
-                  flexWrap={{ extraSmall: "wrap", medium: "nowrap" }}
-                  pr="x2" py="x1"
-                >
+                <Flex width="auto" gap="x1" flexWrap={{ extraSmall: "wrap", medium: "nowrap" }} pr="x2" py="x1">
                   <Box width={{ extraSmall: "100%", medium: "62%" }} minWidth="5em">
                     <Input value={row.precision} inputWidth="100%" disabled={row.inactive} />
                   </Box>
@@ -337,13 +345,7 @@ export const EditAndError = () => (
                   </Box>
                 </Flex>
               ) : (
-                <Flex
-                  width="auto"
-                 
-                  gap="x1"
-                  flexWrap={{ extraSmall: "wrap", medium: "nowrap" }}
-                  pr="x2" py="x1"
-                >
+                <Flex width="auto" gap="x1" flexWrap={{ extraSmall: "wrap", medium: "nowrap" }} pr="x2" py="x1">
                   <Box width={{ extraSmall: "100%", medium: "62%" }} minWidth="5em">
                     <Input
                       value={row.precision}
@@ -377,7 +379,10 @@ export const EditAndError = () => (
                   {row.status}
                 </Text>
               ) : (
-                <Text textAlign="center" pr="x2" py="x2"> {row.status}</Text>
+                <Text textAlign="center" pr="x2" py="x2">
+                  {" "}
+                  {row.status}
+                </Text>
               ),
           },
           {
@@ -391,7 +396,8 @@ export const EditAndError = () => (
                   fullWidth
                   color="grey"
                   textAlign={"right"}
-                  pr="x2" py="x2"
+                  pr="x2"
+                  py="x2"
                 >
                   {row.lastUpdated}
                 </TruncatedText>
@@ -400,7 +406,8 @@ export const EditAndError = () => (
                   maxWidth={{ extraSmall: "2.75em", small: "5.75em", medium: "100%" }}
                   fullWidth
                   textAlign={"right"}
-                  pr="x2" py="x2"
+                  pr="x2"
+                  py="x2"
                 >
                   {row.lastUpdated}
                 </TruncatedText>
@@ -416,12 +423,18 @@ export const EditAndError = () => (
                   maxWidth={{ extraSmall: "2.75em", small: "5.75em", medium: "100%" }}
                   fullWidth
                   color="grey"
-                  pr="x2" py="x2"
+                  pr="x2"
+                  py="x2"
                 >
                   {row.actions}
                 </TruncatedText>
               ) : (
-                <TruncatedText maxWidth={{ extraSmall: "2.75em", small: "5.75em", medium: "100%" }} fullWidth pr="x2" py="x2">
+                <TruncatedText
+                  maxWidth={{ extraSmall: "2.75em", small: "5.75em", medium: "100%" }}
+                  fullWidth
+                  pr="x2"
+                  py="x2"
+                >
                   {row.actions}
                 </TruncatedText>
               ),
