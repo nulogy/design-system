@@ -80,9 +80,9 @@ const RatioTable = styled(Table)`
 `;
 
 export const Default = () => (
-  <Box p="x3" style={{ border: "dotted 1px violet" }}>
+  <Box p="x3" borderStyle="dotted" borderWidth=" 1px" borderColor="violet">
     <Flex justifyContent="space-between" alignItems="center" mb="x4">
-      <Heading2 mcompact>Units of measure</Heading2>
+      <Heading2 compact>Units of measure</Heading2>
       <QuietButton>Edit</QuietButton>
     </Flex>
 
@@ -219,7 +219,7 @@ export const Default = () => (
 );
 
 export const EditAndError = () => (
-  <Box p="x3" style={{ border: "dotted 1px violet" }}>
+  <Box p="x3" borderStyle="dotted" borderWidth=" 1px" borderColor="violet">
     <Flex justifyContent="space-between" alignItems="center" mb="x4">
       <Heading2 compact>Units of measure</Heading2>
       <Flex gap="x1">
