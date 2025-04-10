@@ -256,8 +256,8 @@ export const EditAndError = () => (
             label: "eaches",
             cellRenderer: ({ row }) =>
               row.state == "edit" ? (
-                <Box minWidth="5.75em" py="x1" pl="x2">
-                  <Input className={`customCell`} inputWidth="100%" value="{row.fromUnit}" />
+                <Box py="x1" pl="x2">
+                  <Input inputWidth="100%" value="{row.fromUnit}" />
                 </Box>
               ) : row.state == "inactive" ? (
                   <Text color="grey" py="x2" pl="x2">{row.fromUnit}</Text>
@@ -333,15 +333,15 @@ export const EditAndError = () => (
               row.state != "error" ? (
                 <Flex
                   width="auto"
-                  className={`customCell`}
+                 
                   gap="x1"
                   flexWrap={{ extraSmall: "wrap", medium: "nowrap" }}
                   pr="x2" py="x1"
                 >
-                  <Box width={{ extraSmall: "100%", medium: "62%" }}>
+                  <Box width={{ extraSmall: "100%", medium: "62%" }} minWidth="5em">
                     <Input value={row.precision} inputWidth="100%" disabled={row.inactive} />
                   </Box>
-                  <Box width={{ extraSmall: "100%", medium: "38%" }}>
+                  <Box width={{ extraSmall: "100%", medium: "38%" }} minWidth="5em">
                     <Select
                       width="100%"
                       options={[
@@ -357,12 +357,12 @@ export const EditAndError = () => (
               ) : (
                 <Flex
                   width="auto"
-                  className={`customCell`}
+                 
                   gap="x1"
                   flexWrap={{ extraSmall: "wrap", medium: "nowrap" }}
                   pr="x2" py="x1"
                 >
-                  <Box width={{ extraSmall: "100%", medium: "62%" }}>
+                  <Box width={{ extraSmall: "100%", medium: "62%" }} minWidth="5em">
                     <Input
                       value={row.precision}
                       inputWidth="100%"
@@ -370,7 +370,7 @@ export const EditAndError = () => (
                       errorMessage="This field is required."
                     />
                   </Box>
-                  <Box width={{ extraSmall: "100%", medium: "38%" }}>
+                  <Box width={{ extraSmall: "100%", medium: "38%" }} minWidth="5em">
                     <Select
                       width="100%"
                       options={[
@@ -448,7 +448,7 @@ export const EditAndError = () => (
             dataKey: "active",
             width: "48px",
             label: "Active",
-            cellRenderer: ({ row }) => <Toggle className={`customCell`} pr="x2" py="x1" toggled={row.inactive === false} />,
+            cellRenderer: ({ row }) => <Toggle pr="x2" py="x1" toggled={row.inactive === false} />,
           },
           {
             dataKey: "delete",
