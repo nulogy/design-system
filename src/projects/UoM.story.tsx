@@ -23,8 +23,6 @@ import {
 } from "../index";
 import { Columns } from "../Table/Table.types";
 import styled from "styled-components";
-import { wrap } from "module";
-import { flexWrap } from "styled-system";
 
 export default {
   title: "Projects/Shop Floor/UoM 1:1 NDS conversion",
