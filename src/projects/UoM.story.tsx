@@ -19,10 +19,12 @@ import {
   Toggle,
   IconicButton,
   TruncatedText,
+  FieldLabel,
 } from "../index";
 import { Columns } from "../Table/Table.types";
 import styled from "styled-components";
-import { border, minWidth, width } from "styled-system";
+import { wrap } from "module";
+import { flexWrap } from "styled-system";
 
 export default {
   title: "Projects/Shop Floor/UoM 1:1 NDS conversion",
@@ -73,7 +75,6 @@ const RatioTable = styled(Table)`
   > tbody > tr {
     border-bottom: 1px solid;
     border-color: ${({ theme }) => theme.colors.lightGrey};
-    border-collapse: collapse;
 
     vertical-align: top; /* Not storybook supported */
   }
@@ -234,26 +235,41 @@ export const EditAndError = () => (
         columns={[
           {
             dataKey: "fromUnit",
-            width: "auto",
             label: "eaches",
             cellRenderer: ({ row }) =>
-              row.state == "edit" ? (
-                <Box py="x1" pl="x2">
+              row.state == "add" ? (
+                <Box
+                  py="x1"
+                  px="x2"
+                  width="100%"
+                  minWidth="8em"
+                  maxWidth={{ extraSmall: "10em", small: "12.5em", medium: "100%" }}
+                >
                   <Input inputWidth="100%" value="{row.fromUnit}" />
                 </Box>
               ) : row.state == "inactive" ? (
-                <Text color="grey" py="x2" pl="x2">
+                <TruncatedText
+                  width="100%"
+                  maxWidth={{ extraSmall: "10em", small: "12.5em", medium: "100%" }}
+                  fullWidth
+                  color="grey"
+                  p="x2"
+                >
                   {row.fromUnit}
-                </Text>
+                </TruncatedText>
               ) : (
-                <Text py="x2" pl="x2">
+                <TruncatedText
+                  width="100%"
+                  maxWidth={{ extraSmall: "10em", small: "12.5em", medium: "100%" }}
+                  fullWidth
+                  p="x2"
+                >
                   {row.fromUnit}
-                </Text>
+                </TruncatedText>
               ),
           },
           {
             dataKey: "toUnit",
-            width: "auto",
             label: "",
             cellRenderer: ({ row }) =>
               row.state == "inactive" ? (
@@ -281,7 +297,7 @@ export const EditAndError = () => (
           },
           {
             dataKey: "factor",
-            width: "auto",
+
             label: "ea",
             cellRenderer: ({ row }) =>
               row.state == "inactive" ? (
@@ -307,7 +323,7 @@ export const EditAndError = () => (
           },
           {
             dataKey: "rounding",
-            width: "auto",
+
             label: "",
             cellRenderer: ({ row }) =>
               row.state == "inactive" ? (
@@ -322,7 +338,6 @@ export const EditAndError = () => (
           },
           {
             dataKey: "precision",
-            width: "auto",
             label: "",
             metadata: { className: "metadata" },
             cellRenderer: ({ row }) =>
@@ -371,7 +386,7 @@ export const EditAndError = () => (
           },
           {
             dataKey: "status",
-            width: "auto",
+
             label: "",
             cellRenderer: ({ row }) =>
               row.state == "inactive" ? (
@@ -387,7 +402,7 @@ export const EditAndError = () => (
           },
           {
             dataKey: "lastUpdated",
-            width: "auto",
+
             label: "",
             cellRenderer: ({ row }) =>
               row.state == "inactive" ? (
@@ -415,7 +430,7 @@ export const EditAndError = () => (
           },
           {
             dataKey: "actions",
-            width: "auto",
+
             label: "",
             cellRenderer: ({ row }) =>
               row.state == "inactive" ? (
@@ -450,7 +465,7 @@ export const EditAndError = () => (
             width: "40px",
             label: "",
             cellRenderer: ({ row }) =>
-              row.state == "edit" ? <IconicButton className="customCell" icon="delete" pr="x2" py="x1_5" /> : null,
+              row.state == "add" ? <IconicButton className="customCell" icon="delete" pr="x2" py="x1_5" /> : null,
           },
         ]}
         rows={[
@@ -481,7 +496,7 @@ export const EditAndError = () => (
             inactive: true,
           },
           {
-            state: "edit",
+            state: "add",
             fromUnit: "eaches",
             toUnit: "1",
             factor: "ea",
@@ -496,14 +511,14 @@ export const EditAndError = () => (
           {
             state: "error",
             fromUnit: "eaches eache eaches eaches",
-            toUnit: "9999999999999999",
-            factor: "eaaaaa",
+            toUnit: "1000000000",
+            factor: "mmm",
             rounding: "=",
-            precision: "9999999999999999",
+            precision: "1000000000",
             direction: "csssss",
             status: "=",
-            lastUpdated: "999999999999999",
-            actions: "eaaaaaa",
+            lastUpdated: "1000000000",
+            actions: "mmm",
             inactive: false,
           },
         ]}
@@ -515,140 +530,113 @@ export const EditAndError = () => (
       </QuietButton>
     </Box>
 
-    <Heading3 mb="x1">Context of use</Heading3>
+    <Heading3 mb="x3">Context of use</Heading3>
+    <Flex rowGap="x2" columnGap="x3" flexDirection="row" flexWrap="wrap">
+      <Select
+        width="48%"
+        defaultValue={["eaches"]}
+        options={[
+          { value: "eaches", label: "Eaches" },
+          { value: "cases", label: "Cases" },
+          { value: "pallets", label: "Pallets" },
+        ]}
+        labelText="Default"
+      />
+      <Select
+        width="48%"
+        defaultValue={["eaches"]}
+        options={[
+          { value: "eaches", label: "Eaches" },
+          { value: "cases", label: "Cases" },
+          { value: "pallets", label: "Pallets" },
+        ]}
+        labelText="Base"
+      />
+      <Box width="48%">
+        <FieldLabel labelText="Case" hint="Base unit of measure is typically the smallest unit of measure for an Item.">
+          <Select
+            defaultValue={["eaches"]}
+            options={[
+              { value: "eaches", label: "Eaches" },
+              { value: "cases", label: "Cases" },
+              { value: "pallets", label: "Pallets" },
+            ]}
+          />
+        </FieldLabel>
+      </Box>
+      <Box width="48%">
+        <FieldLabel
+          labelText="Receiving"
+          hint="Receiving unit of measure will be used when creating receipts in mobile. It is also the default unit of measure used on Receipts, Receive Orders and Planned Receipts."
+        >
+          <Select
+            defaultValue={["eaches"]}
+            options={[
+              { value: "eaches", label: "Eaches" },
+              { value: "cases", label: "Cases" },
+              { value: "pallets", label: "Pallets" },
+            ]}
+          />
+        </FieldLabel>
+      </Box>
+      <Select
+        width="48%"
+        defaultValue={["eaches"]}
+        options={[
+          { value: "eaches", label: "Eaches" },
+          { value: "cases", label: "Cases" },
+          { value: "pallets", label: "Pallets" },
+        ]}
+        labelText="Full pallet"
+      />
+      <Box width="48%">
+        <FieldLabel
+          labelText="Reconciliation"
+          hint="Reconciliation unit of measure will be the default unit of measure for physical counts and be displayed on the 'Compare and Reconcile' page when completing job reconciliation."
+        >
+          <Select
+            defaultValue={["eaches"]}
+            options={[
+              { value: "eaches", label: "Eaches" },
+              { value: "cases", label: "Cases" },
+              { value: "pallets", label: "Pallets" },
+            ]}
+          />
+        </FieldLabel>
+      </Box>
+      <Box width="48%">
+        <FieldLabel
+          labelText="Accounting"
+          hint="Accounting unit of measure will be used when synchronizing inventory in the accounting integration."
+        >
+          <Select
+            defaultValue={["eaches"]}
+            options={[
+              { value: "eaches", label: "Eaches" },
+              { value: "cases", label: "Cases" },
+              { value: "pallets", label: "Pallets" },
+            ]}
+          />
+        </FieldLabel>
+      </Box>
+      <Box width="48%">
+        <FieldLabel
+          labelText="Smart Factory"
+          hint="Smart Factory unit of measure will be used for integrations with Smart Factory."
+        >
+          <Select
+            defaultValue={["eaches"]}
+            options={[
+              { value: "eaches", label: "Eaches" },
+              { value: "cases", label: "Cases" },
+              { value: "pallets", label: "Pallets" },
+            ]}
+          />
+        </FieldLabel>
+      </Box>
+    </Flex>
+
     <DescriptionList columns={2} density="relaxed">
-      <DescriptionGroup>
-        <DescriptionTerm>
-          <Flex alignItems="center">Default</Flex>
-        </DescriptionTerm>
-        <Box>
-          <Select
-            options={[
-              { value: "eaches", label: "eaches" },
-              { value: "cases", label: "cases" },
-              { value: "pallets", label: "pallets" },
-            ]}
-            value="eaches"
-          />
-        </Box>
-      </DescriptionGroup>
-
-      <DescriptionGroup>
-        <DescriptionTerm>
-          <Flex alignItems="center">
-            Base
-            <Tooltip tooltip="Base unit ..." placement="top">
-              <Icon icon="info" size="x3" pl="half" />
-            </Tooltip>
-          </Flex>
-        </DescriptionTerm>
-        <Box>
-          <Select
-            options={[
-              { value: "eaches", label: "eaches" },
-              { value: "cases", label: "cases" },
-              { value: "pallets", label: "pallets" },
-            ]}
-            value="eaches"
-          />
-        </Box>
-      </DescriptionGroup>
-
-      <DescriptionGroup>
-        <DescriptionTerm>
-          <Flex alignItems="center">Case</Flex>
-        </DescriptionTerm>
-        <Box>
-          <Select
-            options={[
-              { value: "eaches", label: "eaches" },
-              { value: "cases", label: "cases" },
-              { value: "pallets", label: "pallets" },
-            ]}
-            value="cases"
-          />
-        </Box>
-      </DescriptionGroup>
-
-      <DescriptionGroup>
-        <DescriptionTerm>
-          <Flex alignItems="center">
-            Receiving
-            <Tooltip tooltip="Receiving unit ..." placement="top">
-              <Icon icon="info" size="x3" pl="half" />
-            </Tooltip>
-          </Flex>
-        </DescriptionTerm>
-        <Box>
-          <Select
-            options={[
-              { value: "eaches", label: "eaches" },
-              { value: "cases", label: "cases" },
-              { value: "pallets", label: "pallets" },
-            ]}
-            value="eaches"
-          />
-        </Box>
-      </DescriptionGroup>
-
-      <DescriptionGroup>
-        <DescriptionTerm>
-          <Flex alignItems="center">Full pallet</Flex>
-        </DescriptionTerm>
-        <Box>
-          <Select
-            options={[
-              { value: "eaches", label: "eaches" },
-              { value: "cases", label: "cases" },
-              { value: "pallets", label: "pallets" },
-            ]}
-            value="pallets"
-          />
-        </Box>
-      </DescriptionGroup>
-
-      <DescriptionGroup>
-        <DescriptionTerm>
-          <Flex alignItems="center">
-            Reconciliation
-            <Tooltip tooltip="Reconciliation  ..." placement="top">
-              <Icon icon="info" size="x3" pl="half" />
-            </Tooltip>
-          </Flex>
-        </DescriptionTerm>
-        <Box>
-          <Select
-            options={[
-              { value: "eaches", label: "eaches" },
-              { value: "cases", label: "cases" },
-              { value: "pallets", label: "pallets" },
-            ]}
-            value="eaches"
-          />
-        </Box>
-      </DescriptionGroup>
-
-      <DescriptionGroup>
-        <DescriptionTerm>
-          <Flex alignItems="center">
-            Accounting
-            <Tooltip tooltip="Accounting unit ..." placement="top">
-              <Icon icon="info" size="x3" pl="half" />
-            </Tooltip>
-          </Flex>
-        </DescriptionTerm>
-        <Box>
-          <Select
-            options={[
-              { value: "eaches", label: "eaches" },
-              { value: "cases", label: "cases" },
-              { value: "pallets", label: "pallets" },
-            ]}
-            value="eaches"
-          />
-        </Box>
-      </DescriptionGroup>
-
       <DescriptionGroup>
         <DescriptionTerm>
           <Flex alignItems="center">
