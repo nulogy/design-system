@@ -21,7 +21,7 @@ export default function FramedIcon({
   ...iconProps
 }: FramedIconProps) {
   return (
-    <Flex height="x3" width="x3" alignItems="center" justifyContent="center" flexShrink={0} borderRadius="medium">
+    <Flex height="x2" width="x2" alignItems="center" justifyContent="center" flexShrink={0} borderRadius="medium">
       {tooltip ? (
         <Tooltip tooltip={tooltip} defaultOpen={isTooltipOpenByDefault} maxWidth={maxWidth}>
           <Icon color="darkGrey" size={iconSize ?? "x2"} {...iconProps} />

@@ -20,13 +20,13 @@ export default function FieldLabel({
     <Label display="block" {...props}>
       <Box mb={children && "x1"} data-testid="field-label">
         <Flex alignItems="center">
-          <Flex alignItems="baseline">
+          <Flex>
             <LabelText data-testid="label-text">{labelText}</LabelText>
             {requirementText && <RequirementText data-testid="requirement-text">{requirementText}</RequirementText>}
           </Flex>
           {hint && (
-            <Flex display="inline-flex" ml="half">
-              <FramedIcon iconSize="x2_5" icon="info" tooltip={hint} />
+            <Flex display="inline-flex" ml="x0_25">
+              <FramedIcon iconSize="x2" icon="info" tooltip={hint} />
             </Flex>
           )}
         </Flex>
