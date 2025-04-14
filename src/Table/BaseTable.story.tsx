@@ -378,7 +378,6 @@ export const WithAFooter = () => (
 
 const TableWithBorderedRows = styled(Table)`
   border-collapse: collapse;
-
   > tbody > tr {
     border-bottom: 1px solid;
     border-color: ${({ theme }) => theme.colors.lightGrey};

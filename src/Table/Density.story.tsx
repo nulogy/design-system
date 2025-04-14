@@ -60,30 +60,17 @@ const rowData = [
 ];
 
 export default {
-  title: "Components/Table/Density"
+  title: "Components/Table/Density",
 };
 
-export const Default = () => (
-  <Table
-    columns={columns}
-    rows={rowData}
-  />
-);
+export const Default = () => <Table columns={columns} rows={rowData} />;
 
 Default.story = {
-    name: "Default",
-  };
+  name: "Default",
+};
 
-  export const Compact = () => (
-    <Table
-      columns={columns}
-      rows={rowData}
-      compact
-    />
-  );
-  
-  Compact.story = {
-      name: "Compact",
-    };
+export const Compact = () => <Table columns={columns} rows={rowData} compact />;
 
-
+Compact.story = {
+  name: "Compact",
+};
