@@ -60,7 +60,9 @@ export const Inputs = () => (
         {
           dataKey: "colToggleWithLabel",
           label: "Toggle with label",
-          cellRenderer: ({ row }) => <Toggle onChange={action("on change")} onText="Active" offText="Inactive" pr="x2" py="x1" />,
+          cellRenderer: ({ row }) => (
+            <Toggle onChange={action("on change")} onText="Active" offText="Inactive" pr="x2" py="x1" />
+          ),
         },
         {
           dataKey: "colToggle",
@@ -240,171 +242,130 @@ export const States = () => (
         {
           dataKey: "label",
           label: "Label",
-          cellRenderer: ({ row }) => (
+          cellRenderer: ({ row }) =>
             row.state === "disabled" ? (
-              <Box p="x2" color="midGrey">{row.label}</Box>
+              <Box p="x2" color="midGrey">
+                {row.label}
+              </Box>
             ) : row.state === "error" ? (
-              <Box p="x2" color="red">{row.label}</Box>
+              <Box p="x2" color="red">
+                {row.label}
+              </Box>
             ) : (
               <Box p="x2">{row.label}</Box>
-            )
-          ),
+            ),
         },
 
         {
           dataKey: "colInput",
           label: "Input",
-          cellRenderer: ({ row }) => (
-
-
-
-
-
-
-          row.state === "disabled" ? (
-            <Box py="x1" pr="x2" minWidth="8em" width="100%">
-              <Input disabled placeholder={row.colInput} />
-            </Box>
-          ) : row.state === "error" ? (
-            <Box py="x1" pr="x2" minWidth="8em" width="100%">
-              <Input errorMessage="Invalid value, try again." placeholder={row.colInput} />
-            </Box>
-          ) : (
-            <Box py="x1" pr="x2" minWidth="8em" width="100%">
-              <Input placeholder={row.colInput} />
-            </Box>
-          )
-        ),
+          cellRenderer: ({ row }) =>
+            row.state === "disabled" ? (
+              <Box py="x1" pr="x2" minWidth="8em" width="100%">
+                <Input disabled placeholder={row.colInput} />
+              </Box>
+            ) : row.state === "error" ? (
+              <Box py="x1" pr="x2" minWidth="8em" width="100%">
+                <Input errorMessage="Invalid value, try again." placeholder={row.colInput} />
+              </Box>
+            ) : (
+              <Box py="x1" pr="x2" minWidth="8em" width="100%">
+                <Input placeholder={row.colInput} />
+              </Box>
+            ),
         },
-
-
 
         {
           dataKey: "colSelect",
           label: "Select",
           width: "100px",
-            cellRenderer: ({ row }) => (
-              row.state === "disabled" ? (
-                <Box py="x1" pr="x2" minWidth="8em" width="100%" maxWidth="16em">
-              <Select disabled
-                options={[
-                  { value: "kg", label: "kg" },
-                  { value: "lb", label: "lb" },
-                  { value: "oz", label: "oz" },
-                ]}
-                value={row.colSelect}
-              />
-            </Box>
-              ) : row.state === "error" ? (
-                <Box py="x1" pr="x2" minWidth="8em" width="100%" maxWidth="16em">
-              <Select errorMessage="Invalid value"
-                options={[
-                  { value: "kg", label: "kg" },
-                  { value: "lb", label: "lb" },
-                  { value: "oz", label: "oz" },
-                ]}
-                value={row.colSelect}
-              />
-            </Box>
-              ) : (
-                <Box py="x1" pr="x2" minWidth="8em" width="100%" maxWidth="16em">
-              <Select
-                options={[
-                  { value: "kg", label: "kg" },
-                  { value: "lb", label: "lb" },
-                  { value: "oz", label: "oz" },
-                ]}
-                value={row.colSelect}
-              />
-            </Box>
-              )
+          cellRenderer: ({ row }) =>
+            row.state === "disabled" ? (
+              <Box py="x1" pr="x2" minWidth="8em" width="100%" maxWidth="16em">
+                <Select
+                  disabled
+                  options={[
+                    { value: "kg", label: "kg" },
+                    { value: "lb", label: "lb" },
+                    { value: "oz", label: "oz" },
+                  ]}
+                  value={row.colSelect}
+                />
+              </Box>
+            ) : row.state === "error" ? (
+              <Box py="x1" pr="x2" minWidth="8em" width="100%" maxWidth="16em">
+                <Select
+                  errorMessage="Invalid value"
+                  options={[
+                    { value: "kg", label: "kg" },
+                    { value: "lb", label: "lb" },
+                    { value: "oz", label: "oz" },
+                  ]}
+                  value={row.colSelect}
+                />
+              </Box>
+            ) : (
+              <Box py="x1" pr="x2" minWidth="8em" width="100%" maxWidth="16em">
+                <Select
+                  options={[
+                    { value: "kg", label: "kg" },
+                    { value: "lb", label: "lb" },
+                    { value: "oz", label: "oz" },
+                  ]}
+                  value={row.colSelect}
+                />
+              </Box>
             ),
-
-
-
-
         },
         {
           dataKey: "colCheckbox",
           label: "Checkbox",
-          cellRenderer: ({ row }) => (
+          cellRenderer: ({ row }) =>
             row.state === "disabled" ? (
-              
-              
-              
               <Box py="x1" pr="x2" minWidth="8em">
-              <Checkbox disabled id="checkbox" labelText={row.colCheckbox} />
-            </Box>
+                <Checkbox disabled id="checkbox" labelText={row.colCheckbox} />
+              </Box>
             ) : row.state === "error" ? (
               <Box py="x1" pr="x2" minWidth="8em">
-              <Checkbox error id="checkbox" labelText={row.colCheckbox} />
-            </Box>
+                <Checkbox error id="checkbox" labelText={row.colCheckbox} />
+              </Box>
             ) : (
               <Box py="x1" pr="x2" minWidth="8em">
-              <Checkbox id="checkbox" labelText={row.colCheckbox} />
-            </Box>
-            )
-          ),
-
-
-
-
-
-
-
-
-            
-
+                <Checkbox id="checkbox" labelText={row.colCheckbox} />
+              </Box>
+            ),
         },
         {
           dataKey: "colToggleWithLabel",
           label: "Toggle with label",
-          cellRenderer: ({ row }) => 
-
-          row.state === "disabled" ? (
-              
-              
-              
-            <Toggle disabled onChange={action("on change")} onText="Active" offText="Inactive" pr="x2" py="x1" />
-          ) : (
-            <Toggle onChange={action("on change")} onText="Active" offText="Inactive" pr="x2" py="x1" />
-          ),
-
-
-
-
-          
+          cellRenderer: ({ row }) =>
+            row.state === "disabled" ? (
+              <Toggle disabled onChange={action("on change")} onText="Active" offText="Inactive" pr="x2" py="x1" />
+            ) : (
+              <Toggle onChange={action("on change")} onText="Active" offText="Inactive" pr="x2" py="x1" />
+            ),
         },
         {
           dataKey: "colToggle",
           label: "Toggle",
           width: "48px",
-          cellRenderer: ({ row }) => 
-
-
-          row.state === "disabled" ? (
-              
-              
-              
-            <Toggle disabled onChange={action("on change")} pr="x2" py="x1" />
-          ) : (
-            <Toggle onChange={action("on change")} pr="x2" py="x1" />
-          ),
+          cellRenderer: ({ row }) =>
+            row.state === "disabled" ? (
+              <Toggle disabled onChange={action("on change")} pr="x2" py="x1" />
+            ) : (
+              <Toggle onChange={action("on change")} pr="x2" py="x1" />
+            ),
         },
         {
           dataKey: "colActions",
           label: "",
           width: "40px",
-          cellRenderer: ({ row }) => 
-
-          row.state === "disabled" ? (
-              
-              
-              
-            <IconicButton disabled icon="delete" pr="x2" py="x1" />
-          ) : (
-            <IconicButton icon="delete" pr="x2" py="x1" />
-          ),
+          cellRenderer: ({ row }) =>
+            row.state === "disabled" ? (
+              <IconicButton disabled icon="delete" pr="x2" py="x1" />
+            ) : (
+              <IconicButton icon="delete" pr="x2" py="x1" />
+            ),
         },
       ]}
       rows={[
