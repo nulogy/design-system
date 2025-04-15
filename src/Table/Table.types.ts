@@ -21,3 +21,5 @@ export type ColumnType<ColumnMetadata> = {
 } & ({ key: Key; dataKey?: never | undefined } | { dataKey: Key; key?: never | undefined });
 
 export type Columns<ColumnMetadata> = ColumnType<ColumnMetadata>[];
+
+export type RowBorder = boolean;
