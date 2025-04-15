@@ -386,3 +386,43 @@ export const WithRowBorder = () => (
     className="Table"
   />
 );
+
+export const WithVerticalAlignment = () => (
+  <Table
+    rowBorder={boolean("Show row border", true)}
+    columns={[
+      { label: "Description", dataKey: "description", width: "50%" },
+      { label: "Expected Quantity", dataKey: "expectedQuantity" },
+      { label: "Actual Quantity", dataKey: "actualQuantity" },
+    ]}
+    rows={[
+      {
+        description:
+          "This whole row is top aligned. lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing",
+        expectedQuantity: "2,025 eaches",
+        verticalAlign: "top",
+        actualQuantity: "1,800 eaches",
+        id: "r1",
+      },
+      {
+        description:
+          "This whole row is middle aligned. lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing",
+        expectedQuantity: "2,475 eaches",
+        verticalAlign: "middle",
+        actualQuantity: "2,250 eaches",
+        id: "r2",
+      },
+      {
+        description:
+          "This whole row is bottom aligned. lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing",
+        expectedQuantity: "2,475 eaches",
+        verticalAlign: "bottom",
+        actualQuantity: "1,425 eaches",
+        id: "r3",
+      },
+    ]}
+    rowHovers={boolean("Show row hovers", true)}
+    compact={boolean("Show with compact styling", false)}
+    loading={boolean("Show loading state", false)}
+  />
+);
