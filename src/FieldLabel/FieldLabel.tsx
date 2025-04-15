@@ -20,7 +20,8 @@ export default function FieldLabel({
   return (
     <Label display="block" {...props}>
       <Box mb={children && "x1"} data-testid="field-label">
-        <LabelText data-testid="label-text" //</Box>display="flex" flexWrap="wrap" gap="half" 
+        <LabelText
+          data-testid="label-text" //</Box>display="flex" flexWrap="wrap" gap="half"
         >
           <span>{labelText}</span>
           {requirementText && (
