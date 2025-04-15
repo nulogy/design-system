@@ -152,132 +152,113 @@ export const EditAndError = () => (
     </Box>
 
     <Heading3 mb="x3">Context of use</Heading3>
-    <Flex rowGap="x2" columnGap="x3" flexDirection="row" flexWrap="wrap">
-      <Select
-        width="48%"
-        defaultValue={["eaches"]}
-        options={[
-          { value: "eaches", label: "Eaches" },
-          { value: "cases", label: "Cases" },
-          { value: "pallets", label: "Pallets" },
-        ]}
-        labelText="Default"
-      />
-      <Select
-        width="48%"
-        defaultValue={["eaches"]}
-        options={[
-          { value: "eaches", label: "Eaches" },
-          { value: "cases", label: "Cases" },
-          { value: "pallets", label: "Pallets" },
-        ]}
-        labelText="Base"
-      />
-      <Box width="48%">
-        <FieldLabel labelText="Case" hint="Base unit of measure is typically the smallest unit of measure for an Item.">
-          <Select
-            defaultValue={["eaches"]}
-            options={[
-              { value: "eaches", label: "Eaches" },
-              { value: "cases", label: "Cases" },
-              { value: "pallets", label: "Pallets" },
-            ]}
-          />
-        </FieldLabel>
-      </Box>
-      <Box width="48%">
-        <FieldLabel
-          labelText="Receiving"
-          hint="Receiving unit of measure will be used when creating receipts in mobile. It is also the default unit of measure used on Receipts, Receive Orders and Planned Receipts."
-        >
-          <Select
-            defaultValue={["eaches"]}
-            options={[
-              { value: "eaches", label: "Eaches" },
-              { value: "cases", label: "Cases" },
-              { value: "pallets", label: "Pallets" },
-            ]}
-          />
-        </FieldLabel>
-      </Box>
-      <Select
-        width="48%"
-        defaultValue={["eaches"]}
-        options={[
-          { value: "eaches", label: "Eaches" },
-          { value: "cases", label: "Cases" },
-          { value: "pallets", label: "Pallets" },
-        ]}
-        labelText="Full pallet"
-      />
-      <Box width="48%">
-        <FieldLabel
-          labelText="Reconciliation"
-          hint="Reconciliation unit of measure will be the default unit of measure for physical counts and be displayed on the 'Compare and Reconcile' page when completing job reconciliation."
-        >
-          <Select
-            defaultValue={["eaches"]}
-            options={[
-              { value: "eaches", label: "Eaches" },
-              { value: "cases", label: "Cases" },
-              { value: "pallets", label: "Pallets" },
-            ]}
-          />
-        </FieldLabel>
-      </Box>
-      <Box width="48%">
-        <FieldLabel
-          labelText="Accounting"
-          hint="Accounting unit of measure will be used when synchronizing inventory in the accounting integration."
-        >
-          <Select
-            defaultValue={["eaches"]}
-            options={[
-              { value: "eaches", label: "Eaches" },
-              { value: "cases", label: "Cases" },
-              { value: "pallets", label: "Pallets" },
-            ]}
-          />
-        </FieldLabel>
-      </Box>
-      <Box width="48%">
-        <FieldLabel
-          labelText="Smart Factory"
-          hint="Smart Factory unit of measure will be used for integrations with Smart Factory."
-        >
-          <Select
-            defaultValue={["eaches"]}
-            options={[
-              { value: "eaches", label: "Eaches" },
-              { value: "cases", label: "Cases" },
-              { value: "pallets", label: "Pallets" },
-            ]}
-          />
-        </FieldLabel>
-      </Box>
-    </Flex>
-
-    <DescriptionList columns={2} density="relaxed">
-      <DescriptionGroup>
-        <DescriptionTerm>
-          <Flex alignItems="center">
-            Smart factory
-            <Tooltip tooltip="Smart Factory unit .." placement="top">
-              <Icon icon="info" size="x3" pl="half" />
-            </Tooltip>
-          </Flex>
-        </DescriptionTerm>
+    <Flex gap="x3" width="100%">
+      <Flex gap="x2" flexDirection="column" width="100%">
+        <Select
+          defaultValue={["eaches"]}
+          options={[
+            { value: "eaches", label: "Eaches" },
+            { value: "cases", label: "Cases" },
+            { value: "pallets", label: "Pallets" },
+          ]}
+          labelText="Default"
+        />
+        <Select
+          defaultValue={["eaches"]}
+          options={[
+            { value: "eaches", label: "Eaches" },
+            { value: "cases", label: "Cases" },
+            { value: "pallets", label: "Pallets" },
+          ]}
+          labelText="Base"
+        />
         <Box>
-          <Select
-            options={[
-              { value: "eaches", label: "eaches" },
-              { value: "cases", label: "cases" },
-              { value: "pallets", label: "pallets" },
-            ]}
-            value="eaches"
-          />
+          <FieldLabel
+            labelText="Case"
+            hint="Base unit of measure is typically the smallest unit of measure for an Item."
+          >
+            <Select
+              defaultValue={["eaches"]}
+              options={[
+                { value: "eaches", label: "Eaches" },
+                { value: "cases", label: "Cases" },
+                { value: "pallets", label: "Pallets" },
+              ]}
+            />
+          </FieldLabel>
         </Box>
-      </DescriptionGroup>
-    </DescriptionList>
+        <Box>
+          <FieldLabel
+            labelText="Receiving"
+            hint="Receiving unit of measure will be used when creating receipts in mobile. It is also the default unit of measure used on Receipts, Receive Orders and Planned Receipts."
+          >
+            <Select
+              defaultValue={["eaches"]}
+              options={[
+                { value: "eaches", label: "Eaches" },
+                { value: "cases", label: "Cases" },
+                { value: "pallets", label: "Pallets" },
+              ]}
+            />
+          </FieldLabel>
+        </Box>
+      </Flex>
+      <Flex flexDirection="column" gap="x2" width="100%">
+        <Select
+          defaultValue={["eaches"]}
+          options={[
+            { value: "eaches", label: "Eaches" },
+            { value: "cases", label: "Cases" },
+            { value: "pallets", label: "Pallets" },
+          ]}
+          labelText="Full pallet"
+        />
+        <Box>
+          <FieldLabel
+            labelText="Reconciliation"
+            hint="Reconciliation unit of measure will be the default unit of measure for physical counts and be displayed on the 'Compare and Reconcile' page when completing job reconciliation."
+          >
+            <Select
+              defaultValue={["eaches"]}
+              options={[
+                { value: "eaches", label: "Eaches" },
+                { value: "cases", label: "Cases" },
+                { value: "pallets", label: "Pallets" },
+              ]}
+            />
+          </FieldLabel>
+        </Box>
+        <Box>
+          <FieldLabel
+            labelText="Accounting"
+            hint="Accounting unit of measure will be used when synchronizing inventory in the accounting integration."
+          >
+            <Select
+              defaultValue={["eaches"]}
+              options={[
+                { value: "eaches", label: "Eaches" },
+                { value: "cases", label: "Cases" },
+                { value: "pallets", label: "Pallets" },
+              ]}
+            />
+          </FieldLabel>
+        </Box>
+        <Box>
+          <FieldLabel
+            labelText="Smart Factory"
+            hint="Smart Factory unit of measure will be used for integrations with Smart Factory."
+          >
+            <Select
+              defaultValue={["eaches"]}
+              options={[
+                { value: "eaches", label: "Eaches" },
+                { value: "cases", label: "Cases" },
+                { value: "pallets", label: "Pallets" },
+              ]}
+            />
+          </FieldLabel>
+        </Box>
+      </Flex>
+    </Flex>
   </Box>
 );
