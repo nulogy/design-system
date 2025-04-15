@@ -1,20 +1,23 @@
 import React, { CSSProperties } from "react";
-import styled, { CSSObject } from "styled-components";
+import styled from "styled-components";
 import { DefaultNDSThemeType } from "../theme";
 
 type StyledTableCellProps = {
   align?: CSSProperties["textAlign"];
   compact?: boolean;
+  verticalAlign?: CSSProperties["verticalAlign"];
   theme?: DefaultNDSThemeType;
 };
-const StyledTableCell: React.FC<React.PropsWithChildren<StyledTableCellProps>> = styled.td(
-  ({ align, compact, theme }: StyledTableCellProps): CSSObject => {
+
+const StyledTableCell = styled.td<StyledTableCellProps>(
+  ({ align, compact, verticalAlign, theme }: StyledTableCellProps) => {
     const padding = compact ? theme.space.x1 : theme.space.x2;
     return {
       paddingTop: padding,
       paddingBottom: padding,
       textAlign: align,
       paddingRight: padding,
+      verticalAlign: verticalAlign || "middle",
       "&:first-child": {
         paddingLeft: padding,
       },
@@ -39,7 +42,7 @@ const TableCell = ({ column = {}, row = {}, cellData = "", colSpan = undefined, 
     return <td colSpan={colSpan}>{cellRenderer ? cellRenderer({ cellData, column, row }) : cellData}</td>;
   }
   return (
-    <StyledTableCell align={column.align} compact={compact}>
+    <StyledTableCell align={column.align} compact={compact} verticalAlign={row.verticalAlign}>
       {cellContent}
     </StyledTableCell>
   );
