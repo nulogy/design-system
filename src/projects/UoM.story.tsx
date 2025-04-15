@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import {
   Box,
   Flex,
@@ -21,65 +22,25 @@ import {
   TruncatedText,
   FieldLabel,
 } from "../index";
-import { Columns } from "../Table/Table.types";
-import styled from "styled-components";
 
 export default {
   title: "Projects/Shop Floor/UoM 1:1 NDS conversion",
+  parameters: {
+    layout: "fullscreen",
+  },
 };
-
-// Table columns for units of measure
-const unitsColumns: Columns<{}> = [
-  { label: "eaches", dataKey: "fromUnit" },
-  { label: "ea", dataKey: "toUnit" },
-  { label: "", dataKey: "factor" },
-  { label: "", dataKey: "rounding" },
-  { label: "", dataKey: "precision" },
-  { label: "", dataKey: "direction" },
-  { label: "", dataKey: "status" },
-  { label: "", dataKey: "lastUpdated" },
-  { label: "", dataKey: "actions" },
-  { label: "", dataKey: "conversion" },
-];
-
-const unitsRowData = [
-  {
-    fromUnit: "cases",
-    toUnit: "1",
-    factor: "cs",
-    rounding: "=",
-    precision: "1",
-    direction: "ea",
-    status: "=",
-    lastUpdated: "1",
-    actions: "ea",
-    conversion: "",
-  },
-  {
-    fromUnit: "pallets",
-    toUnit: "1",
-    factor: "pl",
-    rounding: "=",
-    precision: "1",
-    direction: "cs",
-    status: "=",
-    lastUpdated: "1",
-    actions: "ea",
-    conversion: "",
-  },
-];
 
 const RatioTable = styled(Table)`
   > tbody > tr {
     border-bottom: 1px solid;
     border-color: ${({ theme }) => theme.colors.lightGrey};
 
-    vertical-align: top; /* Not storybook supported */
+    vertical-align: top;
   }
 `;
 
 export const Default = () => (
-  <Box p="x3" borderStyle="dotted" borderWidth=" 1px" borderColor="violet">
+  <Box p="x3">
     <Flex justifyContent="space-between" alignItems="center" mb="x4">
       <Heading2 compact>Units of measure</Heading2>
       <QuietButton>Edit</QuietButton>
@@ -218,7 +179,7 @@ export const Default = () => (
 );
 
 export const EditAndError = () => (
-  <Box p="x3" borderStyle="dotted" borderWidth=" 1px" borderColor="violet">
+  <Box p="x3">
     <Flex justifyContent="space-between" alignItems="center" mb="x4">
       <Heading2 compact>Units of measure</Heading2>
       <Flex gap="x1">
@@ -243,7 +204,7 @@ export const EditAndError = () => (
                   minWidth="8em"
                   maxWidth={{ extraSmall: "10em", small: "12.5em", medium: "100%" }}
                 >
-                  <Input inputWidth="100%" value="{row.fromUnit}" />
+                  <Input inputWidth="100%" value={row.fromUnit} />
                 </Box>
               ) : row.state == "inactive" ? (
                 <TruncatedText
@@ -274,7 +235,7 @@ export const EditAndError = () => (
                 <TruncatedText
                   maxWidth={{ extraSmall: "2.75em", small: "5.75em", medium: "100%" }}
                   fullWidth
-                  textAlign={"right"}
+                  textAlign="right"
                   color="grey"
                   pr="x2"
                   py="x2"
@@ -285,7 +246,7 @@ export const EditAndError = () => (
                 <TruncatedText
                   maxWidth={{ extraSmall: "2.75em", small: "5.75em", medium: "100%" }}
                   fullWidth
-                  textAlign={"right"}
+                  textAlign="right"
                   pr="x2"
                   py="x2"
                 >
@@ -408,7 +369,7 @@ export const EditAndError = () => (
                   maxWidth={{ extraSmall: "2.75em", small: "5.75em", medium: "100%" }}
                   fullWidth
                   color="grey"
-                  textAlign={"right"}
+                  textAlign="right"
                   pr="x2"
                   py="x2"
                 >
@@ -418,7 +379,7 @@ export const EditAndError = () => (
                 <TruncatedText
                   maxWidth={{ extraSmall: "2.75em", small: "5.75em", medium: "100%" }}
                   fullWidth
-                  textAlign={"right"}
+                  textAlign="right"
                   pr="x2"
                   py="x2"
                 >
