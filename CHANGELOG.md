@@ -1,3 +1,10 @@
+# [14.5.0](https://github.com/nulogy/design-system/compare/v14.4.2...v14.5.0) (2025-04-15)
+
+
+### Features
+
+* add row border to Table component ([b31bf31](https://github.com/nulogy/design-system/commit/b31bf3188e81d4e9ddd1e158b31dba4dd3cbca38))
+
 ## [14.4.2](https://github.com/nulogy/design-system/compare/v14.4.1...v14.4.2) (2025-03-29)
 
 
