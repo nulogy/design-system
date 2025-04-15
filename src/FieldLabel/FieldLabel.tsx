@@ -1,13 +1,12 @@
 import React from "react";
 import { Box } from "../Box";
-import { Flex } from "../Flex";
+import { Icon } from "../Icon";
+import { Tooltip } from "../Tooltip";
 import HelpText from "./HelpText";
 import Label from "./Label";
 import LabelText from "./LabelText";
 import RequirementText from "./RequirementText";
 import { FieldLabelProps } from "./FieldLabel.type";
-import { Tooltip } from "../Tooltip";
-import { Icon } from "../Icon";
 
 export default function FieldLabel({
   labelText,

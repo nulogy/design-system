@@ -26,6 +26,7 @@ export const CheckboxGroupWithAllProps = () => (
     helpText="Select a setting from the menu below:"
     required
     requirementText="(Required)"
+    hint="This is a hint"
     defaultValue={["a"]}
   >
     <Checkbox value="a" labelText="Option A" />

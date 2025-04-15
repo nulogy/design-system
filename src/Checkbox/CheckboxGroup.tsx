@@ -3,6 +3,9 @@ import styled from "styled-components";
 import { HelpText, RequirementText } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import { Fieldset } from "../Form";
+import { Icon } from "../Icon";
+import { Tooltip } from "../Tooltip";
+import LabelText from "../FieldLabel/LabelText";
 import Checkbox from "./Checkbox";
 
 interface CheckboxGroupProps {
@@ -20,6 +23,7 @@ interface CheckboxGroupProps {
   requirementText?: string;
   required?: boolean;
   disabled?: boolean;
+  hint?: string;
 }
 
 export default function CheckboxGroup({
@@ -30,14 +34,24 @@ export default function CheckboxGroup({
   labelText,
   helpText,
   requirementText,
+  hint,
   ...props
 }: CheckboxGroupProps) {
   const otherProps = { ...props, errorMessage, errorList };
   return (
     <Fieldset className={className} id={id}>
       <Legend>
-        <LabelText>{labelText}</LabelText>
-        {requirementText && <RequirementText>{requirementText}</RequirementText>}
+        <LabelText>
+          <span>{labelText}</span>
+
+          {requirementText && <RequirementText ml="none">{requirementText}</RequirementText>}
+
+          {hint && (
+            <Tooltip tooltip={hint}>
+              <Icon color="darkGrey" size="x2" icon="info" />
+            </Tooltip>
+          )}
+        </LabelText>
       </Legend>
       {helpText && <HelpText>{helpText}</HelpText>}
       {getCheckboxButtons(otherProps)}
@@ -65,12 +79,6 @@ const getCheckboxButtons = (props) => {
   });
   return checkboxButtons;
 };
-
-const LabelText = styled.span(({ theme }) => ({
-  fontSize: theme.fontSizes.small,
-  fontWeight: theme.fontWeights.bold,
-  lineHeight: theme.lineHeights.smallTextBase,
-}));
 
 const Legend = styled.legend(({ theme }) => ({
   marginBottom: theme.space.x1,
