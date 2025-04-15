@@ -4,7 +4,7 @@ import { space } from "styled-system";
 import TableHead from "./TableHead";
 import TableBody from "./TableBody";
 import TableFoot from "./TableFoot";
-import { RowType, Columns } from "./Table.types";
+import { RowType, Columns, RowBorder } from "./Table.types";
 
 export type BaseTableProps<ColumnMetaData> = {
   columns: Columns<ColumnMetaData>;
@@ -22,9 +22,10 @@ export type BaseTableProps<ColumnMetaData> = {
   onRowMouseLeave?: (...args: any[]) => any;
   onMouseEnter?: any;
   onMouseLeave?: any;
+  rowBorder?: RowBorder;
 };
 
-const StyledTable = styled.table<any>(space, {
+const StyledTable = styled.table(space, {
   borderCollapse: "collapse",
   width: "100%",
   background: "white",
@@ -45,6 +46,7 @@ function BaseTable<ColumnMetaData>({
   rows,
   id,
   className,
+  rowBorder = false,
   ...props
 }: BaseTableProps<ColumnMetaData>) {
   return (
@@ -60,6 +62,7 @@ function BaseTable<ColumnMetaData>({
         compact={compact}
         onRowMouseLeave={onRowMouseLeave}
         onRowMouseEnter={onRowMouseEnter}
+        rowBorder={rowBorder}
       />
       {footerRows && (
         <TableFoot columns={columns} rows={footerRows} keyField={keyField} loading={loading} compact={compact} />

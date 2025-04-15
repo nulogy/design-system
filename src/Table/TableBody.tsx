@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Box } from "../Box";
 import { DefaultNDSThemeType } from "../theme";
 import TableCell from "./TableCell";
+import { RowBorder } from "./Table.types";
 
 const StyledMessageContainer = styled(Box)(({ theme }) => ({
   padding: `${theme.space.x3} 0`,
@@ -12,17 +13,34 @@ const StyledMessageContainer = styled(Box)(({ theme }) => ({
 
 type StyledTrProps = React.ComponentProps<"tr"> & {
   rowHovers?: boolean;
+  rowBorder?: RowBorder;
   theme?: DefaultNDSThemeType;
   className?: string;
 };
 
-const StyledTr: React.FC<React.PropsWithChildren<StyledTrProps>> = styled.tr(({ rowHovers, theme }: StyledTrProps) => ({
+const StyledTr = styled.tr<StyledTrProps>(({ rowHovers, rowBorder, theme }: StyledTrProps) => ({
   "&:hover": {
     backgroundColor: rowHovers ? theme.colors.whiteGrey : null,
   },
+  ...(rowBorder && {
+    borderBottomWidth: 1,
+    borderBottomStyle: "solid",
+    borderBottomColor: theme.colors.lightGrey,
+    borderCollapse: "collapse",
+  }),
 }));
 
-const renderRows = (rows, columns, keyField, noRowsContent, rowHovers, compact, onRowMouseLeave, onRowMouseEnter) =>
+const renderRows = (
+  rows,
+  columns,
+  keyField,
+  noRowsContent,
+  rowHovers,
+  compact,
+  onRowMouseLeave,
+  onRowMouseEnter,
+  rowBorder
+) =>
   rows.length > 0 ? (
     rows.map((row) => (
       <TableBodyRow
@@ -35,6 +53,7 @@ const renderRows = (rows, columns, keyField, noRowsContent, rowHovers, compact, 
         rowClassName={row.rowClassName}
         onMouseEnter={(e) => onRowMouseEnter({ row, e })}
         onMouseLeave={(e) => onRowMouseLeave({ row, e })}
+        rowBorder={rowBorder}
       />
     ))
   ) : (
@@ -50,6 +69,7 @@ type TableBodyRowProps = {
   keyField?: string;
   onMouseEnter?: any;
   onMouseLeave?: any;
+  rowBorder?: RowBorder;
 };
 
 const TableBodyRow = ({
@@ -60,6 +80,7 @@ const TableBodyRow = ({
   rowClassName,
   onMouseLeave,
   onMouseEnter,
+  rowBorder,
 }: TableBodyRowProps) => {
   const renderAllCells = () =>
     columns.map((column, index) => (
@@ -79,6 +100,7 @@ const TableBodyRow = ({
         className={rowClassName}
         onMouseLeave={onMouseLeave}
         onMouseEnter={onMouseEnter}
+        rowBorder={rowBorder}
       >
         {row.heading ? (
           <TableCell row={row} colSpan={columns.length} cellData={row.heading} compact={compact} />
@@ -115,6 +137,7 @@ type TableBodyProps = {
   compact?: boolean;
   onRowMouseLeave?: any;
   onRowMouseEnter?: any;
+  rowBorder?: RowBorder;
 };
 
 const TableBody = ({
@@ -127,10 +150,21 @@ const TableBody = ({
   compact,
   onRowMouseLeave,
   onRowMouseEnter,
+  rowBorder,
 }: TableBodyProps) => (
   <tbody data-testid="table-body">
     {!loading ? (
-      renderRows(rows, columns, keyField, noRowsContent, rowHovers, compact, onRowMouseLeave, onRowMouseEnter)
+      renderRows(
+        rows,
+        columns,
+        keyField,
+        noRowsContent,
+        rowHovers,
+        compact,
+        onRowMouseLeave,
+        onRowMouseEnter,
+        rowBorder
+      )
     ) : (
       <LoadingContent colSpan={columns.length} />
     )}
