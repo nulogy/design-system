@@ -6,7 +6,8 @@ import Label from "./Label";
 import LabelText from "./LabelText";
 import RequirementText from "./RequirementText";
 import { FieldLabelProps } from "./FieldLabel.type";
-import FramedIcon from "./FramedIcon";
+import { Tooltip } from "../Tooltip";
+import { Icon } from "../Icon";
 
 export default function FieldLabel({
   labelText,
@@ -19,17 +20,17 @@ export default function FieldLabel({
   return (
     <Label display="block" {...props}>
       <Box mb={children && "x1"} data-testid="field-label">
-        <Flex alignItems="center">
-          <Flex>
-            <LabelText data-testid="label-text">{labelText}</LabelText>
-            {requirementText && <RequirementText data-testid="requirement-text">{requirementText}</RequirementText>}
-          </Flex>
-          {hint && (
-            <Flex display="inline-flex" ml="x0_25">
-              <FramedIcon iconSize="x2" icon="info" tooltip={hint} />
-            </Flex>
-          )}
-        </Flex>
+        
+          <LabelText data-testid="label-text" display="flex" flexWrap="wrap" gap="half" >
+          <span>{labelText}</span>
+            {requirementText && <RequirementText data-testid="requirement-text" ml="none">{requirementText}</RequirementText>}
+            {hint && (
+              <Tooltip tooltip={hint}>
+                <Icon color="darkGrey" size="x2" icon="info" />
+              </Tooltip>
+            )}
+          </LabelText>
+        
         {helpText && <HelpText data-testid="help-text">{helpText}</HelpText>}
       </Box>
       {children}
