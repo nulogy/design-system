@@ -1,3 +1,10 @@
+# [14.6.0](https://github.com/nulogy/design-system/compare/v14.5.0...v14.6.0) (2025-04-15)
+
+
+### Features
+
+* add vertical alignment support to Table component ([dcecc8a](https://github.com/nulogy/design-system/commit/dcecc8a9ffd0bd46dc26917df13fc8f74fb6c0c1))
+
 # [14.5.0](https://github.com/nulogy/design-system/compare/v14.4.2...v14.5.0) (2025-04-15)
 
 
