@@ -14,6 +14,7 @@ export const defaultRows = [
     lastUpdated: "--",
     actions: "ea",
     conversion: "",
+    verticalAlign: "top",
   },
   {
     fromUnit: "pallets",
@@ -26,6 +27,7 @@ export const defaultRows = [
     lastUpdated: "100",
     actions: "ea",
     conversion: "",
+    verticalAlign: "top",
   },
 ];
 
@@ -55,6 +57,7 @@ export const editModeRows = [
     lastUpdated: "10",
     actions: "ea",
     inactive: false,
+    verticalAlign: "top",
   },
   {
     state: "inactive",
@@ -68,6 +71,7 @@ export const editModeRows = [
     lastUpdated: "100",
     actions: "ea",
     inactive: true,
+    verticalAlign: "top",
   },
   {
     state: "add",
@@ -81,6 +85,7 @@ export const editModeRows = [
     lastUpdated: "1",
     actions: "ea",
     inactive: false,
+    verticalAlign: "top",
   },
   {
     state: "error",
@@ -94,6 +99,7 @@ export const editModeRows = [
     lastUpdated: "1000000000",
     actions: "mmm",
     inactive: false,
+    verticalAlign: "top",
   },
 ];
 

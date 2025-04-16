@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import {
   Box,
   Flex,
@@ -26,15 +25,6 @@ export default {
   },
 };
 
-const RatioTable = styled(Table)`
-  > tbody > tr {
-    border-bottom: 1px solid;
-    border-color: ${({ theme }) => theme.colors.lightGrey};
-
-    vertical-align: top;
-  }
-`;
-
 export const Default = () => (
   <Box p="x3">
     <Flex justifyContent="space-between" alignItems="center" mb="x4">
@@ -44,7 +34,7 @@ export const Default = () => (
 
     <Heading3 mb="x1">Conversion ratio</Heading3>
     <Box mb="x6">
-      <RatioTable columns={defaultColumns} rows={defaultRows} rowHovers={true} loading={false} />
+      <Table rowBorder columns={defaultColumns} rows={defaultRows} rowHovers={true} loading={false} />
     </Box>
 
     <Heading3 mb="x1">Context of use</Heading3>
@@ -145,7 +135,7 @@ export const EditAndError = () => (
 
     <Heading3 mb="x1">Conversion ratio</Heading3>
     <Box mb="x6">
-      <RatioTable columns={editModeColumns} rows={editModeRows} rowHovers={false} loading={false} />
+      <Table rowBorder columns={editModeColumns} rows={editModeRows} rowHovers={false} loading={false} />
       <QuietButton icon="add" mt="x1">
         Add conversion ratio
       </QuietButton>
