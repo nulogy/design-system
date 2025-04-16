@@ -1,8 +1,7 @@
-/* eslint-disable react/prop-types */
 import React from "react";
 import { action } from "@storybook/addon-actions";
-import { Table } from ".";
-import { Box, Text } from "..";
+import { Table } from "..";
+import { Box, Text } from "../..";
 
 const columns = [
   { label: "Date", dataKey: "date" },

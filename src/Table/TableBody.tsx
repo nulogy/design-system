@@ -42,20 +42,24 @@ const renderRows = (
   rowBorder
 ) =>
   rows.length > 0 ? (
-    rows.map((row) => (
-      <TableBodyRow
-        row={row}
-        columns={columns}
-        key={row[keyField]}
-        keyField={keyField}
-        rowHovers={rowHovers}
-        compact={compact}
-        rowClassName={row.rowClassName}
-        onMouseEnter={(e) => onRowMouseEnter({ row, e })}
-        onMouseLeave={(e) => onRowMouseLeave({ row, e })}
-        rowBorder={rowBorder}
-      />
-    ))
+    rows.map((row, rowIndex) => {
+      const rowKey = row[keyField] !== undefined ? row[keyField] : rowIndex;
+
+      return (
+        <TableBodyRow
+          key={rowKey}
+          row={row}
+          columns={columns}
+          keyField={keyField}
+          rowHovers={rowHovers}
+          compact={compact}
+          rowClassName={row.rowClassName}
+          onMouseEnter={(e) => onRowMouseEnter({ row, e })}
+          onMouseLeave={(e) => onRowMouseLeave({ row, e })}
+          rowBorder={rowBorder}
+        />
+      );
+    })
   ) : (
     <TableMessageContainer colSpan={columns.length}>{noRowsContent}</TableMessageContainer>
   );
@@ -117,7 +121,7 @@ const TableBodyRow = ({
   );
 };
 
-const TableMessageContainer = ({ colSpan, children }) => (
+const TableMessageContainer = ({ colSpan, children }: { colSpan: number; children: React.ReactNode }) => (
   <tr data-testid="table-message-container">
     <td colSpan={colSpan}>
       <StyledMessageContainer className="nds-table__no-rows-content">{children}</StyledMessageContainer>
@@ -125,7 +129,9 @@ const TableMessageContainer = ({ colSpan, children }) => (
   </tr>
 );
 
-const LoadingContent = ({ colSpan }) => <TableMessageContainer colSpan={colSpan}>Loading...</TableMessageContainer>;
+const LoadingContent = ({ colSpan }: { colSpan: number }) => (
+  <TableMessageContainer colSpan={colSpan}>Loading...</TableMessageContainer>
+);
 
 type TableBodyProps = {
   rows: any[];

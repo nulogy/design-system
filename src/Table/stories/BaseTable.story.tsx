@@ -1,10 +1,10 @@
 import React from "react";
 import { boolean, text } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
-import { Box, DropdownButton, DropdownMenu, Button, Text, Flex } from "..";
-import { getMockRows, mockColumns } from "./Table.mock-utils";
-import { Columns } from "./Table.types";
-import { Table } from ".";
+import { Box, DropdownButton, DropdownMenu, Button, Text, Flex } from "../..";
+import { getMockRows, mockColumns } from "../Table.mock-utils";
+import { Columns } from "../Table.types";
+import { Table } from "..";
 
 const dateToString = ({ cellData }) => {
   return new Date(cellData).toUTCString().split(" ").splice(0, 4).join(" ");

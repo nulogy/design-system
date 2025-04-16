@@ -1,6 +1,6 @@
 import React from "react";
-import { Table } from "..";
-import { Pagination } from "../Pagination";
+import { Table } from "../..";
+import { Pagination } from "../../Pagination";
 
 const COLUMNS = [
   { label: "Number", dataKey: "id" },

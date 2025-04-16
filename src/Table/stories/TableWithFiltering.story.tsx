@@ -1,7 +1,6 @@
-/* eslint-disable react/prop-types */
 import React, { useState, useEffect } from "react";
-import { Table } from "..";
-import { Input } from "../Input";
+import { Table } from "../..";
+import { Input } from "../../Input";
 
 const COLUMNS = [
   { label: "Name", dataKey: "name" },
