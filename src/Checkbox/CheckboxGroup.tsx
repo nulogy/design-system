@@ -3,9 +3,9 @@ import styled from "styled-components";
 import { HelpText, RequirementText } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import { Fieldset } from "../Form";
-import { Icon } from "../Icon";
+import { InlineIcon } from "../Icon";
 import { Tooltip } from "../Tooltip";
-import LabelText from "../FieldLabel/LabelText";
+import LabelText, { LabelContent } from "../FieldLabel/LabelText";
 import Checkbox from "./Checkbox";
 
 interface CheckboxGroupProps {
@@ -41,17 +41,19 @@ export default function CheckboxGroup({
   return (
     <Fieldset className={className} id={id}>
       <Legend>
-        <LabelText>
-          <span>{labelText}</span>
-
-          {requirementText && <RequirementText ml="none">{requirementText}</RequirementText>}
-
+        <LabelContent data-testid="label-content">
+          <LabelText data-testid="label-text">{labelText}</LabelText>
+          {requirementText && (
+            <RequirementText data-testid="requirement-text" ml="none">
+              {requirementText}
+            </RequirementText>
+          )}
           {hint && (
             <Tooltip tooltip={hint}>
-              <Icon color="darkGrey" size="x2" icon="info" />
+              <InlineIcon color="darkGrey" size="x2" icon="info" />
             </Tooltip>
           )}
-        </LabelText>
+        </LabelContent>
       </Legend>
       {helpText && <HelpText>{helpText}</HelpText>}
       {getCheckboxButtons(otherProps)}
