@@ -1,3 +1,10 @@
+## [14.6.1](https://github.com/nulogy/design-system/compare/v14.6.0...v14.6.1) (2025-04-17)
+
+
+### Bug Fixes
+
+* spacing and line height for the FieldLabel ([049c901](https://github.com/nulogy/design-system/commit/049c901cb40196b6b71216f34699c4675f88f4b1))
+
 # [14.6.0](https://github.com/nulogy/design-system/compare/v14.5.0...v14.6.0) (2025-04-15)
 
 
