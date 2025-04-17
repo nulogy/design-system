@@ -1,6 +1,5 @@
-/* eslint-disable react/prop-types */
 import React, { useState } from "react";
-import { Table } from "..";
+import { Table } from "../..";
 
 const COLUMNS = [
   { label: "Name", dataKey: "name" },
@@ -91,4 +90,3 @@ export const WithCustomSorting = () => <TableWithCustomSorting />;
 WithCustomSorting.story = {
   name: "with custom sorting",
 };
-/* eslint-enable react/prop-types */

@@ -2,8 +2,8 @@ import React from "react";
 import { action } from "@storybook/addon-actions";
 import { boolean, number } from "@storybook/addon-knobs";
 import { useState } from "react";
-import { Box, DropdownButton, DropdownMenu, Text } from "..";
-import { Table } from ".";
+import { Box, DropdownButton, DropdownMenu, Text } from "../..";
+import { Table } from "..";
 
 const dateToString = ({ cellData }) => {
   return new Date(cellData).toUTCString().split(" ").splice(0, 4).join(" ");
