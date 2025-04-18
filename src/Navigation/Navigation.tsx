@@ -2,17 +2,20 @@ import React from "react";
 import useMediaQuery from "../hooks/useMediaQuery";
 import DesktopNav from "./components/DesktopNav/DesktopNav";
 import MobileNav from "./components/MobileNav/MobileNav";
-import { MenuItems } from "./components/NavigationMenuItem";
-import { UserMenu } from "./types";
+import type { MenuItems, UserMenu } from "./types";
 import { AppSwitcherConfig } from "./components/AppSwitcher/NulogyAppSwitcher";
 
-export interface NavigationProps {
-  breakpoint?: string;
+export interface BaseNavigationProps {
   appSwitcher?: AppSwitcherConfig;
   secondaryLogo?: React.ReactNode;
+  primaryAppUrl?: string;
   primaryNavigation?: MenuItems;
   secondaryNavigation?: MenuItems;
   userMenu?: UserMenu;
+}
+
+export interface NavigationProps extends BaseNavigationProps {
+  breakpoint?: string;
 }
 
 const Navigation = ({ breakpoint = "1024px", ...props }: NavigationProps) => {

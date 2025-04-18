@@ -2,7 +2,7 @@ import React from "react";
 import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
 import { IconName } from "@nulogy/icons";
 
-type Header = {
+type UserMenuInfo = {
   title: string;
   subtitle1: string;
   subtitle2: string;
@@ -45,10 +45,19 @@ interface RenderUserMenuItem {
 type UserMenuItem = LinkUserMenuItem | ButtonUserMenuItem | RenderUserMenuItem;
 
 export interface UserMenu {
-  header: Header;
+  triggerText: UserMenuInfo;
+  header: UserMenuInfo;
   controls: ControlItem[];
   menuitems: UserMenuItem[];
 }
+
+/*
+| Menu Item 
+*/
+
+export type MenuItemBase = {
+  key: string;
+};
 
 type WithIcon = {
   icon: IconName;
@@ -59,12 +68,6 @@ type WithIcon = {
 type WithLabel = {
   label: string;
 };
-
-export type MenuItemBase = {
-  key: string;
-};
-
-export type MenuItem = MenuItemBase & (CustomMenuItem | MenuItemButton | MenuItemLink);
 
 type CustomMenuItem = {
   type: "custom";
@@ -81,5 +84,7 @@ type MenuItemLink = {
   type: "link";
   props?: React.ComponentPropsWithoutRef<typeof RadixNavigationMenu.Link>;
 } & (WithIcon | WithLabel);
+
+export type MenuItem = MenuItemBase & (CustomMenuItem | MenuItemButton | MenuItemLink);
 
 export type MenuItems = MenuItem[];

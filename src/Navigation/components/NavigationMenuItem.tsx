@@ -1,22 +1,22 @@
-import React, { CSSProperties } from "react";
-import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-import { MenuItem } from "../types";
+import React from "react";
+import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
+import styled from "styled-components";
+import type { MenuItem } from "../types";
 import { CaretDown, NavigationMenuLink, NavigationMenuTrigger } from "./shared/components";
 import { MenuSubItem } from "./MenuSubItem/MenuSubItem";
 import { SubMenuContent } from "./MenuSubItem/parts/styled";
 
-export const NavigationMenuItem = React.forwardRef<any, any>(
-  ({ item, style }: { item: MenuItem; style: CSSProperties }, forwardedRef) => {
+interface NavigationMenuItemProps extends RadixNavigationMenu.NavigationMenuItemProps {
+  item: MenuItem;
+}
+
+export const NavigationMenuItem = React.forwardRef<HTMLLIElement, NavigationMenuItemProps>(
+  ({ item, ...props }, forwardedRef) => {
     return (
-      <NavigationMenu.Item ref={forwardedRef} style={{ position: "relative", ...style }}>
+      <RadixNavigationMenuItem ref={forwardedRef} {...props}>
         {item.type === "button" ? (
           <>
-            <NavigationMenuTrigger
-              style={{ padding: "12px 8px" }}
-              onPointerMove={(event) => event.preventDefault()}
-              onPointerLeave={(event) => event.preventDefault()}
-              {...item.props}
-            >
+            <NavigationMenuTrigger py="x1_5" px="x1">
               {item.label}
               {item.items && <CaretDown icon="downArrow" aria-hidden size="x2" />}
             </NavigationMenuTrigger>
@@ -25,25 +25,29 @@ export const NavigationMenuItem = React.forwardRef<any, any>(
                 onPointerMove={(event) => event.preventDefault()}
                 onPointerLeave={(event) => event.preventDefault()}
               >
-                <NavigationMenu.Sub orientation="vertical">
-                  <NavigationMenu.List
-                    style={{
-                      padding: "0px",
-                      listStyle: "none",
-                    }}
-                  >
+                <RadixNavigationMenu.Sub orientation="vertical">
+                  <NavigationMenuList>
                     {item.items?.map((subItem) => <MenuSubItem key={subItem.key} item={subItem} />)}
-                  </NavigationMenu.List>
-                </NavigationMenu.Sub>
+                  </NavigationMenuList>
+                </RadixNavigationMenu.Sub>
               </SubMenuContent>
             )}
           </>
         ) : (
-          <NavigationMenuLink style={{ padding: "12px 8px" }} {...item.props}>
+          <NavigationMenuLink py="x1_5" px="x1" {...item.props}>
             {item.label}
           </NavigationMenuLink>
         )}
-      </NavigationMenu.Item>
+      </RadixNavigationMenuItem>
     );
   }
 );
+
+const NavigationMenuList = styled(RadixNavigationMenu.List)`
+  padding: 0px;
+  list-style: none;
+`;
+
+const RadixNavigationMenuItem = styled(RadixNavigationMenu.Item)`
+  position: relative;
+`;

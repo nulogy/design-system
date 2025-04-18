@@ -1,7 +1,6 @@
 import React from "react";
 import { Icon, StatusIndicator } from "../../..";
-import type { MenuItems } from "../../components/NavigationMenuItem";
-import type { UserMenu } from "../../types";
+import type { UserMenu, MenuItems } from "../../types";
 import { AppSwitcherConfig } from "../../components/AppSwitcher/NulogyAppSwitcher";
 import { NavigationMenuTrigger } from "../../components/shared/components";
 import Menu from "../../components/shared/Menu";
@@ -129,6 +128,11 @@ export const appSwitcher: AppSwitcherConfig = {
  and the usermenu header needs to accept a title and subtitle
 */
 export const userMenu: UserMenu = {
+  triggerText: {
+    title: "michael.scott@dundermifflin.com",
+    subtitle1: "Dunder Mifflin",
+    subtitle2: "Scranton, PA",
+  },
   header: {
     title: "jazmyne_hackett@hotmail.com",
     subtitle1: "new antonettamouth",
