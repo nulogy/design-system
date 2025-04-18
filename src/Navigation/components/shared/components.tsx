@@ -3,6 +3,7 @@ import styled, { CSSProperties } from "styled-components";
 import { Icon } from "../../../Icon";
 import { DefaultNDSThemeType } from "../../../theme";
 import { IconProps } from "../../../Icon/Icon";
+import { addStyledProps, StyledProps } from "../../../StyledProps";
 
 function itemStyles(theme: DefaultNDSThemeType): CSSProperties {
   return {
@@ -20,7 +21,12 @@ function itemStyles(theme: DefaultNDSThemeType): CSSProperties {
 }
 
 export const NavigationMenuRoot = styled(NavigationMenu.Root)({
-  display: "block",
+  display: "flex",
+  width: "100%",
+  justifyContent: "space-between",
+  padding: "0px 16px",
+  backgroundColor: "white",
+  borderBottom: "1px solid #E4E7EB",
 
   "& > div": {
     display: "flex",
@@ -40,26 +46,32 @@ export const NavigationMenuList = styled(NavigationMenu.List)(({ theme }) => ({
 export const NavigationMenuTrigger = styled(NavigationMenu.Trigger).attrs({
   onPointerMove: (event) => event.preventDefault(),
   onPointerLeave: (event) => event.preventDefault(),
-})(({ theme }) => ({
-  all: "unset",
-  ...itemStyles(theme),
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "space-between",
-  gap: 2,
-  "&:focus": { boxShadow: theme.shadows.focus },
-  "&:hover": { backgroundColor: theme.colors.lightBlue },
-}));
+})<StyledProps>(
+  ({ theme }) => ({
+    all: "unset",
+    ...itemStyles(theme),
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    gap: 2,
+    "&:focus": { boxShadow: theme.shadows.focus },
+    "&:hover": { backgroundColor: theme.colors.lightBlue },
+  }),
+  addStyledProps
+);
 
-export const NavigationMenuLink = styled(NavigationMenu.Link)(({ theme }) => ({
-  ...itemStyles(theme),
-  display: "block",
-  textDecoration: "none",
-  fontSize: theme.fontSizes.small,
-  lineHeight: theme.lineHeights.smallTextCompressed,
-  "&:focus": { boxShadow: theme.shadows.focus },
-  "&:hover": { backgroundColor: theme.colors.lightBlue },
-}));
+export const NavigationMenuLink = styled(NavigationMenu.Link)<StyledProps>(
+  ({ theme }) => ({
+    ...itemStyles(theme),
+    display: "block",
+    textDecoration: "none",
+    fontSize: theme.fontSizes.small,
+    lineHeight: theme.lineHeights.smallTextCompressed,
+    "&:focus": { boxShadow: theme.shadows.focus },
+    "&:hover": { backgroundColor: theme.colors.lightBlue },
+  }),
+  addStyledProps
+);
 
 export const NavigationMenuIconLink = styled(NavigationMenuLink).attrs({
   onPointerMove: (event) => event.preventDefault(),
