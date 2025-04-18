@@ -159,7 +159,7 @@
     "@styled-system/prop-types": "^5.1.4",
     "@styled-system/theme-get": "^5.1.2",
     "@types/react-window": "^1.8.8",
-    "@types/styled-system": "5.1.22",
+    "@types/styled-system": "5.1.23",
     "core-js": "3",
     "date-fns": "2.23.0",
     "debounce": "^1.2.0",
