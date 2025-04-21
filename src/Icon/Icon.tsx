@@ -89,18 +89,19 @@ const CenteredIcon = styled(Svg)({
 const IconContainer = styled.span(space, {
   display: "inline-flex",
   alignSelf: "center",
+  justifyContent: "center",
   position: "relative",
   height: "1em",
   width: `${ICON_SIZE_RATIO}em`,
 });
 
-export function InlineIcon(props: IconProps) {
+export const InlineIcon = React.forwardRef<HTMLSpanElement, IconProps>((props, ref) => {
   return (
-    <IconContainer {...props}>
+    <IconContainer ref={ref} {...props}>
       <CenteredIcon size={`${ICON_SIZE_RATIO}em`} {...props} />
     </IconContainer>
   );
-}
+});
 
 export const InputIcon = styled(Icon)<PositionProps>(
   ({ theme }) => ({
