@@ -1,3 +1,10 @@
+## [14.6.2](https://github.com/nulogy/design-system/compare/v14.6.1...v14.6.2) (2025-04-22)
+
+
+### Bug Fixes
+
+* Tooltip not showing on FieldLabel ([#1556](https://github.com/nulogy/design-system/issues/1556)) ([d26a4be](https://github.com/nulogy/design-system/commit/d26a4becdd2ea92921b6947018c06ad08075057e))
+
 ## [14.6.1](https://github.com/nulogy/design-system/compare/v14.6.0...v14.6.1) (2025-04-17)
 
 
