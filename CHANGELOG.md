@@ -1,3 +1,10 @@
+# [14.7.0](https://github.com/nulogy/design-system/compare/v14.6.2...v14.7.0) (2025-04-22)
+
+
+### Features
+
+* add Spanish (Spain) locale ([#1557](https://github.com/nulogy/design-system/issues/1557)) ([662043d](https://github.com/nulogy/design-system/commit/662043d47d92e13025ced3ff4956d054e1855abd))
+
 ## [14.6.2](https://github.com/nulogy/design-system/compare/v14.6.1...v14.6.2) (2025-04-22)
 
 
