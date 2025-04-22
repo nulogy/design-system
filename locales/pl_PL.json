@@ -44,5 +44,6 @@
   "time range": "Zakres czasu",
   "weekPicker date format": "'T'ww - d MMM yyyy",
   "weekPicker placeholder": "T52 - 31 gru 2023",
-  "week shorthand": "T"
+  "week shorthand": "T",
+  "no options": "Brak opcji"
 }

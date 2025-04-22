@@ -355,7 +355,7 @@ export const WithMultiselect = (props) => {
   return (
     <Select
       defaultValue={[partnerCompanyName[0].value, partnerCompanyName[2].value]}
-      noOptionsMessage={() => "No options"}
+      noOptionsMessage={() => "Nothing to see here"}
       placeholder="Please select inventory status"
       options={PCNList}
       labelText="Select PCN"
@@ -557,3 +557,13 @@ export const WithCustomOptionFields = () => {
     />
   );
 };
+
+export const WithACustomNoOptionsMessage = () => (
+  <Select
+    placeholder="Please select inventory status"
+    options={options}
+    noOptionsMessage={() => "No statuses found"}
+    labelText="Inventory status"
+    onInputChange={action("typed input value changed")}
+  />
+);

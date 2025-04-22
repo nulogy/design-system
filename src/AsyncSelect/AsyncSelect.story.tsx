@@ -155,3 +155,17 @@ export const WithIcon = () => (
     loadOptions={loadMatchingProvinces}
   />
 );
+
+export const WithACustomNoOptionsMessage = () => (
+  <AsyncSelect
+    placeholder="Enter a province"
+    noOptionsMessage={() => "No provinces found"}
+    onChange={action("selection changed")}
+    onBlur={action("blurred")}
+    className="Select"
+    classNamePrefix="SelectTest"
+    labelText="Province"
+    onInputChange={action("typed input value changed")}
+    loadOptions={loadMatchingProvinces}
+  />
+);
