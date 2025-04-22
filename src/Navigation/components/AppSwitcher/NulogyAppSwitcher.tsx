@@ -3,6 +3,7 @@ import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { Icon } from "../../../Icon";
 import { NavigationMenuIconTrigger } from "../shared/components";
 import { NulogyApp } from "../../../types/NulogyApp";
+import NavigationMenuContent from "../shared/NavigationMenuContent";
 import AppSwitcher from "./parts";
 
 export type AppSwitcherConfig = false | Record<NulogyApp, { url: string; indicator?: React.ReactNode }>;
@@ -56,21 +57,23 @@ export function NulogyAppSwitcher({ config }: AppSwitcherProps) {
       <NavigationMenuIconTrigger>
         <Icon icon="apps" size="x3" />
       </NavigationMenuIconTrigger>
-      <AppSwitcher.Menu>
-        <AppSwitcher.List>
-          {includedApps.map((app) => (
-            <AppSwitcher.Item key={app.id}>
-              <AppSwitcher.Link href={app.url}>
-                <AppSwitcher.Header>
-                  <AppSwitcher.Title>{app.label}</AppSwitcher.Title>
-                  {app.indicator}
-                </AppSwitcher.Header>
-                <AppSwitcher.Description>{app.description}</AppSwitcher.Description>
-              </AppSwitcher.Link>
-            </AppSwitcher.Item>
-          ))}
-        </AppSwitcher.List>
-      </AppSwitcher.Menu>
+      <NavigationMenuContent left={0}>
+        <AppSwitcher.Menu>
+          <AppSwitcher.List>
+            {includedApps.map((app) => (
+              <AppSwitcher.Item key={app.id}>
+                <AppSwitcher.Link href={app.url}>
+                  <AppSwitcher.Header>
+                    <AppSwitcher.Title>{app.label}</AppSwitcher.Title>
+                    {app.indicator}
+                  </AppSwitcher.Header>
+                  <AppSwitcher.Description>{app.description}</AppSwitcher.Description>
+                </AppSwitcher.Link>
+              </AppSwitcher.Item>
+            ))}
+          </AppSwitcher.List>
+        </AppSwitcher.Menu>
+      </NavigationMenuContent>
     </NavigationMenu.Item>
   );
 }
