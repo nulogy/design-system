@@ -2,12 +2,26 @@ import React from "react";
 import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
 import { IconName } from "@nulogy/icons";
 
-type UserMenuInfo = {
+/*
+  User menu 
+*/
+export interface UserMenu {
+  triggerText: UserMenuInfo;
+  header: UserMenuInfo;
+  controls: ControlItem[];
+  menuitems: UserMenuItem[];
+}
+
+// User menu info, used in the header and trigger text
+export type UserMenuInfo = {
   title: string;
-  subtitle1: string;
-  subtitle2: string;
+  subtitle1?: string;
+  subtitle2?: string;
 };
 
+/*
+  User menu controls
+*/
 interface SimpleControl {
   key: string;
   label: string;
@@ -20,6 +34,10 @@ interface RenderControl {
 }
 
 type ControlItem = SimpleControl | RenderControl;
+
+/*
+  User menu items
+*/
 
 interface LinkUserMenuItem {
   key: string;
@@ -39,17 +57,11 @@ interface ButtonUserMenuItem {
 interface RenderUserMenuItem {
   key: string;
   label: string;
+  type: "render";
   render: () => JSX.Element;
 }
 
-type UserMenuItem = LinkUserMenuItem | ButtonUserMenuItem | RenderUserMenuItem;
-
-export interface UserMenu {
-  triggerText: UserMenuInfo;
-  header: UserMenuInfo;
-  controls: ControlItem[];
-  menuitems: UserMenuItem[];
-}
+export type UserMenuItem = LinkUserMenuItem | ButtonUserMenuItem | RenderUserMenuItem;
 
 /*
 | Menu Item 

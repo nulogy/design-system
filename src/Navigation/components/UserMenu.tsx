@@ -1,7 +1,8 @@
-import * as NavigationMenu from "@radix-ui/react-navigation-menu";
+import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
 import styled from "styled-components";
-import React, { ReactNode } from "react";
-import { menuStyles } from "./AppSwitcher/parts";
+import React from "react";
+import { UserMenuInfo, UserMenuItem } from "../types";
+import Menu from "./shared/Menu";
 
 export const HorizontalDivider = styled("span")({
   display: "inline-block",
@@ -12,85 +13,100 @@ export const HorizontalDivider = styled("span")({
   marginBottom: 24,
 });
 
-type UserMenuProps = {
-  children?: ReactNode;
+export const UserMenuItems = ({ items }: { items: UserMenuItem[] }) => {
+  const renderItem = (item: UserMenuItem) => {
+    const key = item.key ?? item.label;
+
+    if (item.type === "render") {
+      return <RadixNavigationMenu.Item key={key}>{item.render()}</RadixNavigationMenu.Item>;
+    }
+
+    if (item.type === "link") {
+      // Destructure onSelect out, as its type conflicts with Radix's Link
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      const { onSelect, ...restLinkProps } = item.props || {};
+      return (
+        <RadixNavigationMenu.Item value={item.label} key={key}>
+          <RadixNavigationMenu.Link
+            {...restLinkProps}
+            style={
+              {
+                display: "block",
+                color: "var(--ui-dark-grey, #434D59)",
+                fontFamily: "IBM Plex Sans",
+                fontSize: "14px",
+                fontStyle: "normal",
+                fontWeight: 500,
+                lineHeight: "16px /* 114.286% */",
+                paddingTop: 8 + 4,
+                paddingBottom: 8 + 4,
+                textDecoration: "none",
+              } as React.CSSProperties
+            }
+          >
+            {item.label}
+          </RadixNavigationMenu.Link>
+        </RadixNavigationMenu.Item>
+      );
+    }
+
+    if (item.type === "button") {
+      // Destructure onSelect out for button trigger as well, just in case
+      // Radix Trigger might have a similar type conflict for onSelect
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      const { onSelect, ...restButtonProps } = item.props || {};
+      const triggerStyle: React.CSSProperties = {
+        background: "none",
+        border: "none",
+        outline: "none",
+        userSelect: "none",
+        display: "block",
+        color: "var(--ui-dark-grey, #434D59)",
+        fontFamily: "IBM Plex Sans",
+        fontSize: "14px",
+        fontStyle: "normal",
+        fontWeight: 500,
+        lineHeight: "16px /* 114.286% */",
+        padding: 0,
+        paddingTop: 8 + 4,
+        paddingBottom: 8 + 4,
+        textAlign: "left",
+        width: "100%",
+      };
+
+      if (item.items && item.items.length > 0) {
+        return (
+          <RadixNavigationMenu.Item value={item.label} key={key}>
+            <RadixNavigationMenu.Trigger {...restButtonProps} style={triggerStyle}>
+              {item.label}
+            </RadixNavigationMenu.Trigger>
+            <RadixNavigationMenu.Content>
+              <RadixNavigationMenu.Sub orientation="vertical">
+                <RadixNavigationMenu.List style={{ listStyle: "none", padding: "0" }}>
+                  <UserMenuItems items={item.items} />
+                </RadixNavigationMenu.List>
+              </RadixNavigationMenu.Sub>
+            </RadixNavigationMenu.Content>
+          </RadixNavigationMenu.Item>
+        );
+      } else {
+        return (
+          <RadixNavigationMenu.Item value={item.label} key={key}>
+            <RadixNavigationMenu.Trigger {...restButtonProps} style={triggerStyle}>
+              {item.label}
+            </RadixNavigationMenu.Trigger>
+          </RadixNavigationMenu.Item>
+        );
+      }
+    }
+
+    return null;
+  };
+
+  return <>{items.map(renderItem)}</>;
 };
 
-type UserMenuOptions = UserMenuOption[];
-
-type UserMenuOption = {
-  label: string;
-  key?: string;
-} & (UserMenuButton | UserMenuLink);
-
-type UserMenuButton = {
-  type: "button";
-  props?: React.ComponentPropsWithoutRef<typeof NavigationMenu.Trigger>;
-};
-
-type UserMenuLink = {
-  type: "link";
-  props?: React.ComponentPropsWithoutRef<typeof NavigationMenu.Link>;
-};
-
-export const Options = ({ options }: { options: UserMenuOptions }) => {
-  return (
-    <NavigationMenu.Sub orientation="vertical">
-      <NavigationMenu.List style={{ listStyle: "none", padding: "0" }}>
-        {options.map((options) =>
-          options.type === "button" ? (
-            <NavigationMenu.Item value={options.label} key={options.key ?? options.label}>
-              <NavigationMenu.Trigger
-                {...options.props}
-                style={{
-                  background: "none",
-                  border: "none",
-                  outline: "none",
-                  userSelect: "none",
-                  display: "block",
-                  color: "var(--ui-dark-grey, #434D59)",
-                  fontFamily: "IBM Plex Sans",
-                  fontSize: "14px",
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "16px /* 114.286% */",
-                  padding: 0,
-                  paddingTop: 8 + 4,
-                  paddingBottom: 8 + 4,
-                  textAlign: "left",
-                }}
-              >
-                {options.label}
-              </NavigationMenu.Trigger>
-            </NavigationMenu.Item>
-          ) : (
-            <NavigationMenu.Item value={options.label} key={options.key ?? options.label}>
-              <NavigationMenu.Link
-                {...options.props}
-                style={{
-                  display: "block",
-                  color: "var(--ui-dark-grey, #434D59)",
-                  fontFamily: "IBM Plex Sans",
-                  fontSize: "14px",
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "16px /* 114.286% */",
-                  paddingTop: 8 + 4,
-                  paddingBottom: 8 + 4,
-                  textDecoration: "none",
-                }}
-              >
-                {options.label}
-              </NavigationMenu.Link>
-            </NavigationMenu.Item>
-          )
-        )}
-      </NavigationMenu.List>
-    </NavigationMenu.Sub>
-  );
-};
-
-export const Header = ({ headerName, headerEmail, ...props }: { headerName: string; headerEmail: string }) => {
+export const Header = ({ title, subtitle1, subtitle2 }: UserMenuInfo) => {
   return (
     <div
       style={{
@@ -103,7 +119,6 @@ export const Header = ({ headerName, headerEmail, ...props }: { headerName: stri
         alignSelf: "stretch",
         backgroundColor: "#F0F2F5",
       }}
-      {...props}
     >
       <p
         style={{
@@ -116,7 +131,7 @@ export const Header = ({ headerName, headerEmail, ...props }: { headerName: stri
           margin: 0,
         }}
       >
-        {headerName}
+        {title}
       </p>
       <p
         style={{
@@ -129,7 +144,20 @@ export const Header = ({ headerName, headerEmail, ...props }: { headerName: stri
           margin: 0,
         }}
       >
-        {headerEmail}
+        {subtitle1}
+      </p>
+      <p
+        style={{
+          color: "#434D59",
+          textAlign: "center",
+          fontSize: "14px",
+          fontStyle: "normal",
+          fontWeight: 400,
+          lineHeight: "24px",
+          margin: 0,
+        }}
+      >
+        {subtitle2}
       </p>
     </div>
   );
@@ -139,26 +167,25 @@ export const Content = styled("div")({
   padding: 16,
 });
 
-export const UserMenu = Object.assign(
-  React.forwardRef<HTMLDivElement, UserMenuProps>(({ children }, forwardedRef) => (
-    <div ref={forwardedRef} style={{ ...menuStyles, padding: 0, overflow: "hidden" }}>
-      {children}
-    </div>
-  )),
-  {
-    Content,
-    Header,
-    items: [
-      {
-        label: "This is another submenu",
-        type: "link",
-        menuItemProps: {
-          href: "/go-to-something-else",
-        },
+const Root = styled(Menu)({
+  padding: 0,
+  overflow: "hidden",
+});
+
+export const UserMenu = {
+  Root,
+  Content,
+  Header,
+  items: [
+    {
+      label: "This is another submenu",
+      type: "link",
+      menuItemProps: {
+        href: "/go-to-something-else",
       },
-    ],
-    Options,
-  }
-);
+    },
+  ],
+  UserMenuItems,
+};
 
 export default UserMenu;

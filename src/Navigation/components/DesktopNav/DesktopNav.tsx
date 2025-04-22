@@ -13,6 +13,7 @@ import { SecondaryMenu } from "../SecondaryMenu/SecondaryMenu";
 import { NulogyAppSwitcher } from "../AppSwitcher/NulogyAppSwitcher";
 import { useResponsiveMenu } from "../../hooks/useResponsiveMenu";
 import { NulogyLogo } from "../shared/NulogyLogo";
+import NavigationMenuContent from "../shared/NavigationMenuContent";
 
 type DesktopNavProps = BaseNavigationProps;
 
@@ -62,48 +63,26 @@ export default function DesktopNav({
           <NavigationMenuTrigger>
             <Flex flexDirection="column" alignItems="flex-start">
               <TruncatedText showTooltip={false} fontSize="smaller" lineHeight="smallerText" fontWeight="normal">
-                {userMenu.triggerText.email}
-                michael.scott@dundermifflin.com
+                {userMenu.triggerText.title}
               </TruncatedText>
               <TruncatedText showTooltip={false} fontSize="smaller" lineHeight="smallerText" fontWeight="normal">
-                Dunder Mifflin
+                {userMenu.triggerText.subtitle1}
               </TruncatedText>
               <TruncatedText showTooltip={false} fontSize="smaller" lineHeight="smallerText" fontWeight="normal">
-                Scranton, PA
+                {userMenu.triggerText.subtitle2}
               </TruncatedText>
             </Flex>
             <CaretDown icon="downArrow" size="x2" aria-hidden />
           </NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <UserMenu>
-              <UserMenu.Header headerEmail="michael.scott@dundermifflin.com" headerName="Michael Scott" />
+          <NavigationMenuContent right={0}>
+            <UserMenu.Root>
+              <UserMenu.Header {...userMenu.header} />
               <UserMenu.Content>
                 {/* {userMenuInputs} */}
                 <HorizontalDivider />
-                <UserMenu.Options
-                  options={[
-                    {
-                      label: "User account",
-                      type: "button",
-                    },
-                    {
-                      label: "Click me",
-                      type: "button",
-                      props: {
-                        onClick: () => {
-                          return undefined;
-                        },
-                      },
-                    },
-                    {
-                      label: "Sign out",
-                      type: "link",
-                      props: { href: "" },
-                    },
-                  ]}
-                />
+                <UserMenu.UserMenuItems items={userMenu.menuitems} />
               </UserMenu.Content>
-            </UserMenu>
+            </UserMenu.Root>
           </NavigationMenuContent>
         </NavigationMenu.Item>
       </NavigationMenuList>
@@ -115,12 +94,3 @@ const HiddenNavigationMenuItem = styled(NavigationMenuItem)({
   visibility: "hidden",
   position: "absolute",
 });
-
-const NavigationMenuContent = styled(NavigationMenu.Content).attrs({
-  onPointerMove: (event) => event.preventDefault(),
-  onPointerLeave: (event) => event.preventDefault(),
-})(({ theme }) => ({
-  position: "absolute",
-  top: `calc(100% + ${theme.space.x1})`,
-  right: 0,
-}));

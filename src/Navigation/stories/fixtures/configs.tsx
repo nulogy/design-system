@@ -1,5 +1,5 @@
 import React from "react";
-import { Icon, StatusIndicator } from "../../..";
+import { Icon, StatusIndicator, Text } from "../../..";
 import type { UserMenu, MenuItems } from "../../types";
 import { AppSwitcherConfig } from "../../components/AppSwitcher/NulogyAppSwitcher";
 import { NavigationMenuTrigger } from "../../components/shared/components";
@@ -134,9 +134,8 @@ export const userMenu: UserMenu = {
     subtitle2: "Scranton, PA",
   },
   header: {
-    title: "jazmyne_hackett@hotmail.com",
-    subtitle1: "new antonettamouth",
-    subtitle2: "new antonettamouth",
+    title: "Michael Scott",
+    subtitle1: "michael.scott@dundermifflin.com",
   },
   controls: [
     {
@@ -157,7 +156,7 @@ export const userMenu: UserMenu = {
   menuitems: [
     {
       key: "preferences",
-      label: "preferences",
+      label: "Preferences",
       type: "link",
       props: {
         href: "/preferences",
@@ -165,7 +164,7 @@ export const userMenu: UserMenu = {
     },
     {
       key: "finance",
-      label: "finance",
+      label: "Finance",
       type: "button",
       props: {
         onClick: () => {
@@ -175,7 +174,7 @@ export const userMenu: UserMenu = {
     },
     {
       key: "browse_as",
-      label: "browse as",
+      label: "Browse as",
       type: "button",
       items: [
         {
@@ -185,11 +184,16 @@ export const userMenu: UserMenu = {
         },
       ],
     },
-    // {
-    //   key: "production",
-    //   label: "production",
-    //   render: () => <div>production</div>,
-    // },
+    {
+      key: "production",
+      label: "Production",
+      type: "render",
+      render: () => (
+        <Text fontWeight="bold" color="red">
+          production
+        </Text>
+      ),
+    },
   ],
 };
 
