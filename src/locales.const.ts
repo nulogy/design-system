@@ -5,6 +5,7 @@ export const NDS_TO_DATE_FN_LOCALES_MAP = {
   de_DE: de,
   en_US: enUS,
   es_MX: es,
+  es_ES: es,
   fr_FR: fr,
   nl_NL: nl,
   pl_PL: pl,
@@ -59,4 +60,9 @@ export const ALL_NDS_LOCALES = [
     value: "zh_CN",
     dateFnsValue: NDS_TO_DATE_FN_LOCALES_MAP.zh_CN,
   },
-];
+  {
+    label: "Spanish (Spain)",
+    value: "es_ES",
+    dateFnsValue: NDS_TO_DATE_FN_LOCALES_MAP.es_ES,
+  },
+] as const;
