@@ -4,17 +4,6 @@ import styled from "styled-components";
 import { Li } from "../../../Primitives";
 import Menu from "../shared/Menu";
 
-export const menuStyles = {
-  display: "flex",
-  borderRadius: "8px",
-  background: "#FFF",
-  boxShadow: "0px 6px 12px 2px rgba(1, 30, 56, 0.15)",
-  width: "calc(100vw - (16px * 2))",
-  maxWidth: "400px",
-  padding: "16px 0px",
-  flexDirection: "column",
-} as const;
-
 const List = styled("ul")({
   margin: 0,
   padding: 0,
