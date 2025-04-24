@@ -43,7 +43,7 @@ interface LinkUserMenuItem {
   key: string;
   label: string;
   type: "link";
-  props: React.ComponentPropsWithoutRef<"a">;
+  props: React.ComponentPropsWithoutRef<typeof RadixNavigationMenu.Link>;
 }
 
 interface ButtonUserMenuItem {

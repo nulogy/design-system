@@ -2,16 +2,16 @@ import React from "react";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import Logo from "../../icons/Logo";
 import { NavigationProps } from "../../Navigation";
-import UserMenu, { HorizontalDivider } from "../UserMenu";
+import UserMenu from "../UserMenu/UserMenu";
 import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuRoot,
   NavigationMenuTrigger,
 } from "../shared/components";
-import { MenuItem, MenuItems } from "../NavigationMenuItem";
+import { MenuItem, MenuItems } from "../../types";
 import { NulogyAppSwitcher } from "../AppSwitcher/NulogyAppSwitcher";
-
+import { Divider } from "../../../index";
 type MobileNavProps = Omit<NavigationProps, "breakpoint">;
 
 export default function MobileNav({ primaryNavigation, appSwitcher }: MobileNavProps) {
@@ -72,7 +72,7 @@ export default function MobileNav({ primaryNavigation, appSwitcher }: MobileNavP
 
                 <MobileNavigationMenu menu={primaryNavigation} />
 
-                <HorizontalDivider />
+                <Divider my="x3" />
 
                 <UserMenu.Options
                   options={[

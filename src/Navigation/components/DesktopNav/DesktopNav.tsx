@@ -1,12 +1,12 @@
-import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
-import { Flex, TruncatedText } from "../../..";
+import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
+import { Divider, Flex, TruncatedText } from "../../..";
 import { VerticalDivider } from "../../..";
 import { BaseNavigationProps } from "../../Navigation";
 import { NavigationMenuItem } from "../NavigationMenuItem";
-import UserMenu, { HorizontalDivider } from "../UserMenu";
+import UserMenu from "../UserMenu/UserMenu";
 import { CaretDown, NavigationMenuList, NavigationMenuTrigger } from "../shared/components";
 import { NavigationMenuRoot } from "../shared/components";
 import { SecondaryMenu } from "../SecondaryMenu/SecondaryMenu";
@@ -33,10 +33,9 @@ export default function DesktopNav({
     <NavigationMenuRoot>
       <NavigationMenuList ref={primaryMenuRef}>
         <NulogyAppSwitcher config={appSwitcher} />
-        <NavigationMenu.Item>
+        <RadixNavigationMenu.Item>
           <NulogyLogo url={primaryAppUrl || "/"} />
-        </NavigationMenu.Item>
-
+        </RadixNavigationMenu.Item>
         {menuItems.map((item) => (
           <NavigationMenuItem key={item.key} item={item} />
         ))}
@@ -59,7 +58,7 @@ export default function DesktopNav({
         <VerticalDivider />
         {secondaryLogo && secondaryLogo}
         <VerticalDivider />
-        <NavigationMenu.Item>
+        <RadixNavigationMenu.Item>
           <NavigationMenuTrigger>
             <Flex flexDirection="column" alignItems="flex-start">
               <TruncatedText showTooltip={false} fontSize="smaller" lineHeight="smallerText" fontWeight="normal">
@@ -75,16 +74,20 @@ export default function DesktopNav({
             <CaretDown icon="downArrow" size="x2" aria-hidden />
           </NavigationMenuTrigger>
           <NavigationMenuContent right={0}>
-            <UserMenu.Root>
-              <UserMenu.Header {...userMenu.header} />
-              <UserMenu.Content>
-                {/* {userMenuInputs} */}
-                <HorizontalDivider />
-                <UserMenu.UserMenuItems items={userMenu.menuitems} />
-              </UserMenu.Content>
-            </UserMenu.Root>
+            <RadixNavigationMenu.Sub orientation="vertical">
+              <UserMenu.Root>
+                <UserMenu.Header {...userMenu.header} />
+                <UserMenu.Content>
+                  {/* {userMenuInputs} */}
+                  <Divider my="x3" />
+                  {userMenu.menuItems.map((item) => (
+                    <UserMenu.Item key={item.key} item={item} />
+                  ))}
+                </UserMenu.Content>
+              </UserMenu.Root>
+            </RadixNavigationMenu.Sub>
           </NavigationMenuContent>
-        </NavigationMenu.Item>
+        </RadixNavigationMenu.Item>
       </NavigationMenuList>
     </NavigationMenuRoot>
   );
