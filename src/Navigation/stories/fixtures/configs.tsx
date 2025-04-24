@@ -1,5 +1,5 @@
 import React from "react";
-import { Icon, StatusIndicator, Text } from "../../..";
+import { Icon, StatusIndicator } from "../../..";
 import type { UserMenu, MenuItems } from "../../types";
 import { AppSwitcherConfig } from "../../components/AppSwitcher/NulogyAppSwitcher";
 import { NavigationMenuTrigger } from "../../components/shared/components";
@@ -153,7 +153,7 @@ export const userMenu: UserMenu = {
     //   render: () => <div>site</div>,
     // },
   ],
-  menuitems: [
+  menuItems: [
     {
       key: "preferences",
       label: "Preferences",
@@ -178,8 +178,8 @@ export const userMenu: UserMenu = {
       type: "button",
       items: [
         {
-          key: "finance",
-          label: "finance",
+          key: "foooooo",
+          label: "foooooo",
           type: "button",
         },
       ],
@@ -188,11 +188,7 @@ export const userMenu: UserMenu = {
       key: "production",
       label: "Production",
       type: "render",
-      render: () => (
-        <Text fontWeight="bold" color="red">
-          production
-        </Text>
-      ),
+      render: () => <button style={{ fontWeight: "bold", color: "red" }}>production</button>,
     },
   ],
 };
