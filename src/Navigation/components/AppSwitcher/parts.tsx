@@ -1,30 +1,34 @@
 import React, { ComponentProps } from "react";
-import * as NavigationMenu from "@radix-ui/react-navigation-menu";
+import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
 import styled from "styled-components";
 import { Li } from "../../../Primitives";
-import Menu from "../shared/Menu";
+import { Heading4, Text } from "../../../Type";
+import Content from "../shared/NavigationMenuContent";
 
-const List = styled("ul")({
+const List = styled.ul(({ theme }) => ({
   margin: 0,
   padding: 0,
-  gap: "16px",
+  gap: theme.space.x2,
   listStyle: "none",
-});
+}));
 
-const A = styled("a")({
+const A = styled("a")(({ theme }) => ({
   textDecoration: "none",
   width: "100%",
   display: "flex",
-  padding: "12px 24px 16px 24px",
   flexDirection: "column",
   alignItems: "flex-start",
   alignSelf: "stretch",
+  paddingTop: theme.space.x1_5,
+  paddingRight: theme.space.x3,
+  paddingBottom: theme.space.x2,
+  paddingLeft: theme.space.x3,
   transition: "background-color 250ms ease",
 
   "&:hover, &:focus": {
-    backgroundColor: "#E1EBFA",
+    backgroundColor: theme.colors.lightBlue,
   },
-});
+}));
 
 const Header = styled("div")(({ theme }) => ({
   display: "flex",
@@ -32,32 +36,22 @@ const Header = styled("div")(({ theme }) => ({
   gap: theme.space.x1,
 }));
 
-const Title = styled("p")({
-  color: "#434D59",
-  fontFamily: "IBM Plex Sans",
-  fontSize: "18px",
-  margin: 0,
-  fontStyle: "normal",
-  fontWeight: "500",
-  lineHeight: "24px",
-});
+const Title = styled(Heading4).attrs({
+  color: "darkGrey",
+  compact: true,
+})({});
 
-const Description = styled("p")({
-  color: "#6C7784",
-  margin: 0,
-  fontFamily: "IBM Plex Sans",
-  fontSize: "12px",
-  fontStyle: "normal",
-  fontWeight: "400",
-  lineHeight: "16px",
-});
+const Description = styled(Text).attrs({
+  color: "midGrey",
+  fontSize: "smaller",
+})({});
 
 const Link = React.forwardRef<HTMLAnchorElement, ComponentProps<typeof A>>(({ children, ...props }, forwardedRef) => (
-  <NavigationMenu.Link asChild>
+  <RadixNavigationMenu.Link asChild>
     <A {...props} ref={forwardedRef}>
       {children}
     </A>
-  </NavigationMenu.Link>
+  </RadixNavigationMenu.Link>
 ));
 
 const Item = React.forwardRef<HTMLLIElement, ComponentProps<typeof Li>>(({ children, ...props }, forwardedRef) => (
@@ -67,7 +61,7 @@ const Item = React.forwardRef<HTMLLIElement, ComponentProps<typeof Li>>(({ child
 ));
 
 const AppSwitcher = {
-  Menu,
+  Content,
   List,
   Item,
   Link,

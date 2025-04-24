@@ -3,7 +3,7 @@ import { Icon, StatusIndicator } from "../../..";
 import type { UserMenu, MenuItems } from "../../types";
 import { AppSwitcherConfig } from "../../components/AppSwitcher/NulogyAppSwitcher";
 import { NavigationMenuTrigger } from "../../components/shared/components";
-import Menu from "../../components/shared/Menu";
+import NavigationMenuContent from "../../components/shared/NavigationMenuContent";
 
 // The main menu can be a icon, icon and label, link, button, custom panel, or dropdown
 export const primaryMenu: MenuItems = [
@@ -182,6 +182,23 @@ export const userMenu: UserMenu = {
           label: "foooooo",
           type: "button",
         },
+        {
+          key: "baaaaar",
+          label: "baaaaar",
+          type: "button",
+        },
+        {
+          key: "baaaaaz",
+          label: "baaaaaz",
+          type: "button",
+          items: [
+            {
+              key: "baaaaaz",
+              label: "baaaaaz",
+              type: "button",
+            },
+          ],
+        },
       ],
     },
     {
@@ -215,7 +232,7 @@ export const secondaryMenu: MenuItems = [
           <Icon icon="home" size="x3" />
           <span>Home</span>
         </NavigationMenuTrigger>
-        <Menu padding="none">Something here</Menu>
+        <NavigationMenuContent padding="none">Something here</NavigationMenuContent>
       </>
     ),
   },
