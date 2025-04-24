@@ -1,4 +1,4 @@
-import * as NavigationMenu from "@radix-ui/react-navigation-menu";
+import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
 import styled, { CSSProperties } from "styled-components";
 import { Icon } from "../../../Icon";
 import { DefaultNDSThemeType } from "../../../theme";
@@ -20,7 +20,7 @@ function itemStyles(theme: DefaultNDSThemeType): CSSProperties {
   };
 }
 
-export const NavigationMenuRoot = styled(NavigationMenu.Root)({
+export const NavigationMenuRoot = styled(RadixNavigationMenu.Root)({
   display: "flex",
   width: "100%",
   justifyContent: "space-between",
@@ -33,7 +33,7 @@ export const NavigationMenuRoot = styled(NavigationMenu.Root)({
   },
 });
 
-export const NavigationMenuList = styled(NavigationMenu.List)(({ theme }) => ({
+export const NavigationMenuList = styled(RadixNavigationMenu.List)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   width: "100%",
@@ -43,7 +43,7 @@ export const NavigationMenuList = styled(NavigationMenu.List)(({ theme }) => ({
   margin: theme.space.none,
 }));
 
-export const NavigationMenuTrigger = styled(NavigationMenu.Trigger).attrs({
+export const NavigationMenuTrigger = styled(RadixNavigationMenu.Trigger).attrs({
   onPointerMove: (event) => event.preventDefault(),
   onPointerLeave: (event) => event.preventDefault(),
 })<StyledProps>(
@@ -60,7 +60,7 @@ export const NavigationMenuTrigger = styled(NavigationMenu.Trigger).attrs({
   addStyledProps
 );
 
-export const NavigationMenuLink = styled(NavigationMenu.Link)<StyledProps>(
+export const NavigationMenuLink = styled(RadixNavigationMenu.Link)<StyledProps>(
   ({ theme }) => ({
     ...itemStyles(theme),
     display: "block",

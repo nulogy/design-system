@@ -33,10 +33,13 @@ export const NavigationMenuItem = React.forwardRef<HTMLLIElement, NavigationMenu
               </SubMenuContent>
             )}
           </>
-        ) : (
+        ) : item.type === "link" ? (
           <NavigationMenuLink py="x1_5" px="x1" {...item.props}>
             {item.label}
           </NavigationMenuLink>
+        ) : (
+          // Custom menu items are rendered in UserMenu.tsx
+          <React.Fragment>{item.render()}</React.Fragment>
         )}
       </RadixNavigationMenuItem>
     );
