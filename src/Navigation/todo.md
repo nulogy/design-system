@@ -1,7 +1,8 @@
 ### What's left
 
 - [ ] Desktop
-  - [x] App switcher
+  - [-] App switcher
+    - [ ] Translation
   - [ ] Primary navigation
     - [ ] Seperators
     - [ ] Icons

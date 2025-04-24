@@ -1,5 +1,5 @@
 import React from "react";
-import * as NavigationMenu from "@radix-ui/react-navigation-menu";
+import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
 import { Icon } from "../../../Icon";
 import { NavigationMenuIconTrigger } from "../shared/components";
 import { NulogyApp } from "../../../types/NulogyApp";
@@ -53,27 +53,31 @@ export function NulogyAppSwitcher({ config }: AppSwitcherProps) {
     }));
 
   return (
-    <NavigationMenu.Item>
+    <RadixNavigationMenu.Item>
       <NavigationMenuIconTrigger>
         <Icon icon="apps" size="x3" />
       </NavigationMenuIconTrigger>
       <NavigationMenuContent left={0}>
-        <AppSwitcher.Menu>
+        <RadixNavigationMenu.Sub>
           <AppSwitcher.List>
             {includedApps.map((app) => (
               <AppSwitcher.Item key={app.id}>
                 <AppSwitcher.Link href={app.url}>
-                  <AppSwitcher.Header>
+                  {app.indicator ? (
+                    <AppSwitcher.Header>
+                      <AppSwitcher.Title>{app.label}</AppSwitcher.Title>
+                      {app.indicator}
+                    </AppSwitcher.Header>
+                  ) : (
                     <AppSwitcher.Title>{app.label}</AppSwitcher.Title>
-                    {app.indicator}
-                  </AppSwitcher.Header>
+                  )}
                   <AppSwitcher.Description>{app.description}</AppSwitcher.Description>
                 </AppSwitcher.Link>
               </AppSwitcher.Item>
             ))}
           </AppSwitcher.List>
-        </AppSwitcher.Menu>
+        </RadixNavigationMenu.Sub>
       </NavigationMenuContent>
-    </NavigationMenu.Item>
+    </RadixNavigationMenu.Item>
   );
 }

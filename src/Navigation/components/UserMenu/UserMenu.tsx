@@ -2,7 +2,7 @@ import React from "react";
 import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
 import styled from "styled-components";
 import { UserMenuItem } from "../../types";
-import Menu from "../shared/Menu";
+import NavigationMenuContent from "../shared/NavigationMenuContent";
 import { Header } from "./parts/Header";
 
 interface UserMenuItemProps extends RadixNavigationMenu.NavigationMenuItemProps {
@@ -84,7 +84,7 @@ const UserMenuTrigger = styled(RadixNavigationMenu.Trigger)(({ theme }) => ({
 }));
 
 export const UserMenu = {
-  Root: styled(Menu)({
+  Root: styled(NavigationMenuContent)({
     padding: 0,
     overflow: "hidden",
   }),
