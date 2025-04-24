@@ -13,7 +13,22 @@ import { SecondaryMenu } from "../SecondaryMenu/SecondaryMenu";
 import { NulogyAppSwitcher } from "../AppSwitcher/NulogyAppSwitcher";
 import { useResponsiveMenu } from "../../hooks/useResponsiveMenu";
 import { NulogyLogo } from "../shared/NulogyLogo";
-import NavigationMenuContent from "../shared/NavigationMenuContent";
+import { MenuItems } from "../../types";
+
+function MoreMenuItem({ moreMenu }: { moreMenu: MenuItems }) {
+  const { t } = useTranslation();
+
+  return (
+    <NavigationMenuItem
+      item={{
+        key: "nds-primary-menu-more-item",
+        label: t("more"),
+        type: "button",
+        items: moreMenu,
+      }}
+    />
+  );
+}
 
 type DesktopNavProps = BaseNavigationProps;
 
@@ -25,8 +40,7 @@ export default function DesktopNav({
   primaryAppUrl,
   userMenu,
 }: DesktopNavProps) {
-  const { t } = useTranslation();
-  const { menuItems, hiddenMenu, hiddenMenuItem, primaryMenuRef, secondaryMenuRef, hiddenButtonRef } =
+  const { menuItems, moreMenu, hiddenMenuItem, primaryMenuRef, secondaryMenuRef, hiddenButtonRef } =
     useResponsiveMenu(primaryNavigation);
 
   return (
@@ -39,16 +53,7 @@ export default function DesktopNav({
         {menuItems.map((item) => (
           <NavigationMenuItem key={item.key} item={item} />
         ))}
-        {hiddenMenu.length > 0 && (
-          <NavigationMenuItem
-            item={{
-              key: "nds-built-in-responsive-menu-more-item",
-              label: t("more"),
-              type: "button",
-              items: hiddenMenu,
-            }}
-          />
-        )}
+        {moreMenu.length > 0 && <MoreMenuItem moreMenu={moreMenu} />}
         <HiddenNavigationMenuItem ref={hiddenButtonRef} item={hiddenMenuItem} />
       </NavigationMenuList>
 
@@ -73,20 +78,18 @@ export default function DesktopNav({
             </Flex>
             <CaretDown icon="downArrow" size="x2" aria-hidden />
           </NavigationMenuTrigger>
-          <NavigationMenuContent right={0}>
-            <RadixNavigationMenu.Sub orientation="vertical">
-              <UserMenu.Root>
-                <UserMenu.Header {...userMenu.header} />
-                <UserMenu.Content>
-                  {/* {userMenuInputs} */}
-                  <Divider my="x3" />
-                  {userMenu.menuItems.map((item) => (
-                    <UserMenu.Item key={item.key} item={item} />
-                  ))}
-                </UserMenu.Content>
-              </UserMenu.Root>
-            </RadixNavigationMenu.Sub>
-          </NavigationMenuContent>
+          <UserMenu.Root right={0} position="absolute">
+            <UserMenu.Header {...userMenu.header} />
+            <UserMenu.Content>
+              <RadixNavigationMenu.Sub orientation="vertical">
+                {/* {userMenuInputs} */}
+                <Divider my="x3" />
+                {userMenu.menuItems.map((item) => (
+                  <UserMenu.Item key={item.key} item={item} />
+                ))}
+              </RadixNavigationMenu.Sub>
+            </UserMenu.Content>
+          </UserMenu.Root>
         </RadixNavigationMenu.Item>
       </NavigationMenuList>
     </NavigationMenuRoot>

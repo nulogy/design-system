@@ -6,13 +6,13 @@ const MIN_DISTANCE_BETWEEN_MENUS = 64;
 
 type MenuState = {
   menuItems: MenuItems;
-  hiddenMenu: MenuItems;
+  moreMenu: MenuItems;
   hiddenMenuItem: MenuItem | null;
 };
 
 type UseResponsiveMenu = (initialMenuItems: MenuItems) => {
   menuItems: MenuItems;
-  hiddenMenu: MenuItems;
+  moreMenu: MenuItems;
   hiddenMenuItem: MenuItem | null;
   primaryMenuRef: React.RefObject<HTMLUListElement>;
   secondaryMenuRef: React.RefObject<HTMLUListElement>;
@@ -22,7 +22,7 @@ type UseResponsiveMenu = (initialMenuItems: MenuItems) => {
 export const useResponsiveMenu: UseResponsiveMenu = (initialMenuItems: MenuItems) => {
   const [menuState, setMenuState] = useState<MenuState>({
     menuItems: initialMenuItems,
-    hiddenMenu: [],
+    moreMenu: [],
     hiddenMenuItem: {
       key: "hidden-menu-item",
       label: "",
@@ -47,27 +47,27 @@ export const useResponsiveMenu: UseResponsiveMenu = (initialMenuItems: MenuItems
     if (distance < MIN_DISTANCE_BETWEEN_MENUS && menuState.menuItems.length > 0) {
       const lastItem = menuState.menuItems[menuState.menuItems.length - 1];
       const newMenuItems = menuState.menuItems.slice(0, -1);
-      const newHiddenMenu = [lastItem, ...menuState.hiddenMenu];
+      const newHiddenMenu = [lastItem, ...menuState.moreMenu];
 
-      if (!equal(newMenuItems, menuState.menuItems) || !equal(newHiddenMenu, menuState.hiddenMenu)) {
+      if (!equal(newMenuItems, menuState.menuItems) || !equal(newHiddenMenu, menuState.moreMenu)) {
         setMenuState({
           menuItems: newMenuItems,
-          hiddenMenu: newHiddenMenu,
+          moreMenu: newHiddenMenu,
           hiddenMenuItem: lastItem,
         });
       }
     } else if (
       Math.floor(distance - hiddenButtonWidth - 8) > MIN_DISTANCE_BETWEEN_MENUS &&
-      menuState.hiddenMenu.length > 0
+      menuState.moreMenu.length > 0
     ) {
-      const firstHiddenItem = menuState.hiddenMenu[0];
-      const newHiddenMenu = menuState.hiddenMenu.slice(1);
+      const firstHiddenItem = menuState.moreMenu[0];
+      const newHiddenMenu = menuState.moreMenu.slice(1);
       const newMenuItems = [...menuState.menuItems, firstHiddenItem];
 
-      if (!equal(newHiddenMenu, menuState.hiddenMenu) || !equal(newMenuItems, menuState.menuItems)) {
+      if (!equal(newHiddenMenu, menuState.moreMenu) || !equal(newMenuItems, menuState.menuItems)) {
         setMenuState({
           menuItems: newMenuItems,
-          hiddenMenu: newHiddenMenu,
+          moreMenu: newHiddenMenu,
           hiddenMenuItem: firstHiddenItem,
         });
       }
@@ -85,7 +85,7 @@ export const useResponsiveMenu: UseResponsiveMenu = (initialMenuItems: MenuItems
 
   return {
     menuItems: menuState.menuItems,
-    hiddenMenu: menuState.hiddenMenu,
+    moreMenu: menuState.moreMenu,
     hiddenMenuItem: menuState.hiddenMenuItem,
     primaryMenuRef,
     secondaryMenuRef,

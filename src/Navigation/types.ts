@@ -9,7 +9,7 @@ export interface UserMenu {
   triggerText: UserMenuInfo;
   header: UserMenuInfo;
   controls: ControlItem[];
-  menuitems: UserMenuItem[];
+  menuItems: UserMenuItem[];
 }
 
 // User menu info, used in the header and trigger text
