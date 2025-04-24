@@ -47,13 +47,17 @@ export default function DesktopNav({
     <NavigationMenuRoot>
       <NavigationMenuList ref={primaryMenuRef}>
         <NulogyAppSwitcher config={appSwitcher} />
+
         <RadixNavigationMenu.Item>
           <NulogyLogo url={primaryAppUrl || "/"} />
         </RadixNavigationMenu.Item>
+
         {menuItems.map((item) => (
           <NavigationMenuItem key={item.key} item={item} />
         ))}
+
         {moreMenu.length > 0 && <MoreMenuItem moreMenu={moreMenu} />}
+
         <HiddenNavigationMenuItem ref={hiddenButtonRef} item={hiddenMenuItem} />
       </NavigationMenuList>
 

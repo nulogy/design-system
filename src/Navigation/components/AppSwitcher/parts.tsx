@@ -5,7 +5,13 @@ import { Li } from "../../../Primitives";
 import { Heading4, Text } from "../../../Type";
 import Content from "../shared/NavigationMenuContent";
 
-const List = styled.ul(({ theme }) => ({
+/* ---------------------------------------------------------------------
+ * Radix expects the structure: Root ▷ List …  This List is used inside
+ * &lt;NavigationMenu.Sub&gt; in NulogyAppSwitcher, so it **must** be a
+ * real &lt;NavigationMenu.List&gt; element, not a plain &lt;ul&gt;.
+ * -------------------------------------------------------------------*/
+
+const List = styled(RadixNavigationMenu.List)(({ theme }) => ({
   margin: 0,
   padding: 0,
   gap: theme.space.x2,
@@ -46,19 +52,23 @@ const Description = styled(Text).attrs({
   fontSize: "smaller",
 })({});
 
-const Link = React.forwardRef<HTMLAnchorElement, ComponentProps<typeof A>>(({ children, ...props }, forwardedRef) => (
-  <RadixNavigationMenu.Link asChild>
-    <A {...props} ref={forwardedRef}>
-      {children}
-    </A>
-  </RadixNavigationMenu.Link>
-));
+const Link = React.forwardRef<HTMLAnchorElement, ComponentProps<typeof A>>(
+  ({ children, ...props }, forwardedRef) => (
+    <RadixNavigationMenu.Link asChild>
+      <A {...props} ref={forwardedRef}>
+        {children}
+      </A>
+    </RadixNavigationMenu.Link>
+  )
+);
 
-const Item = React.forwardRef<HTMLLIElement, ComponentProps<typeof Li>>(({ children, ...props }, forwardedRef) => (
-  <Li width="100%" {...props} ref={forwardedRef}>
-    {children}
-  </Li>
-));
+const Item = React.forwardRef<HTMLLIElement, ComponentProps<typeof Li>>(
+  ({ children, ...props }, forwardedRef) => (
+    <Li width="100%" {...props} ref={forwardedRef}>
+      {children}
+    </Li>
+  )
+);
 
 const AppSwitcher = {
   Content,
