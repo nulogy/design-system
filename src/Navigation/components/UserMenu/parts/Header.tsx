@@ -24,6 +24,8 @@ export const Header = ({ title, subtitle1, subtitle2 }: UserMenuInfo) => {
       px="x3"
       py="none"
       bg="whiteGrey"
+      borderTopLeftRadius="large"
+      borderTopRightRadius="large"
       height={USER_MENU_HEADER_HEIGHT}
     >
       <HeaderText fontWeight="bold">{title}</HeaderText>

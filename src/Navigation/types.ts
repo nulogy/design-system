@@ -8,7 +8,7 @@ import { IconName } from "@nulogy/icons";
 export interface UserMenu {
   triggerText: UserMenuInfo;
   header: UserMenuInfo;
-  controls: ControlItem[];
+  controls: () => JSX.Element;
   menuItems: UserMenuItem[];
 }
 
@@ -18,22 +18,6 @@ export type UserMenuInfo = {
   subtitle1?: string;
   subtitle2?: string;
 };
-
-/*
-  User menu controls
-*/
-interface SimpleControl {
-  key: string;
-  label: string;
-  control: () => JSX.Element;
-}
-
-interface RenderControl {
-  key: string;
-  render: () => JSX.Element;
-}
-
-type ControlItem = SimpleControl | RenderControl;
 
 /*
   User menu items
