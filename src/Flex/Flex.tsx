@@ -1,29 +1,10 @@
-import { CSSProperties } from "react";
 import styled from "styled-components";
-import { system } from "styled-system";
 import { Box } from "../Box";
 import { BoxProps } from "../Box/Box";
+import { gap } from "../StyledProps";
+import type { GapProps } from "../StyledProps";
 
-export type FlexProps = BoxProps & {
-  gap?: CSSProperties["gap"];
-  rowGap?: CSSProperties["rowGap"];
-  columnGap?: CSSProperties["columnGap"];
-};
-
-const gap = system({
-  gap: {
-    property: "gap",
-    scale: "space",
-  },
-  rowGap: {
-    property: "rowGap",
-    scale: "space",
-  },
-  columnGap: {
-    property: "columnGap",
-    scale: "space",
-  },
-});
+interface FlexProps extends BoxProps, GapProps {}
 
 const Flex = styled(Box)<FlexProps>(
   {
