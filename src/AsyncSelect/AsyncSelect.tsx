@@ -93,8 +93,8 @@ const AsyncSelect = forwardRef(
     const theme = useTheme();
     const spaceProps = getSubset(props, propTypes.space);
     const error = !!(errorMessage || errorList);
-
     const componentVariant = useComponentVariant(variant);
+    noOptionsMessage ||= () => t("no options");
 
     return (
       <Field {...spaceProps}>
@@ -102,7 +102,7 @@ const AsyncSelect = forwardRef(
           <AsyncReactSelect
             className={className}
             classNamePrefix={classNamePrefix}
-            noOptionsMessage={noOptionsMessage}
+            noOptionsMessage={noOptionsMessage || t("no options")}
             value={value}
             ref={ref}
             defaultInputValue={defaultValue}

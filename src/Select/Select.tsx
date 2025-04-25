@@ -93,6 +93,7 @@ const NDSSelect = forwardRef(
       menuPlacement = "bottom" as MenuPlacement,
       classNamePrefix = "ndsSelect",
       closeMenuOnSelect = true,
+      noOptionsMessage,
       ...props
     }: NDSSelectProps<Option, IsMulti, Group>,
     ref:
@@ -108,6 +109,7 @@ const NDSSelect = forwardRef(
     const optionsRef = React.useRef(options);
     const optionsLength = React.useMemo(() => calcOptionsLength(options), [options]);
     const isWindowed = optionsLength >= windowThreshold;
+    noOptionsMessage ||= () => t("no options");
 
     React.useEffect(() => {
       checkOptionsAreValid(options);
@@ -163,6 +165,7 @@ const NDSSelect = forwardRef(
             menuPosition={menuPosition}
             menuPlacement={menuPlacement}
             maxMenuHeight={numberFromDimension(maxHeight)}
+            noOptionsMessage={noOptionsMessage}
             {...props}
           />
           <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
