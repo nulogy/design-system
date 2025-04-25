@@ -43,17 +43,19 @@ export const NavigationMenuList = styled(RadixNavigationMenu.List)(({ theme }) =
   margin: theme.space.none,
 }));
 
+interface NavigationMenuTriggerProps extends RadixNavigationMenu.NavigationMenuTriggerProps, StyledProps {}
+
 export const NavigationMenuTrigger = styled(RadixNavigationMenu.Trigger).attrs({
   onPointerMove: (event) => event.preventDefault(),
   onPointerLeave: (event) => event.preventDefault(),
-})<StyledProps>(
+})<NavigationMenuTriggerProps>(
   ({ theme }) => ({
     all: "unset",
     ...itemStyles(theme),
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    gap: 2,
+    gap: theme.space.half,
     "&:focus": { boxShadow: theme.shadows.focus },
     "&:hover": { backgroundColor: theme.colors.lightBlue },
   }),

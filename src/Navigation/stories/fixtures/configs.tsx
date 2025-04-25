@@ -1,11 +1,18 @@
 import React from "react";
-import { Icon, StatusIndicator } from "../../..";
+import { Flex, Icon, Select, StatusIndicator } from "../../..";
 import type { UserMenu, MenuItems } from "../../types";
 import { AppSwitcherConfig } from "../../components/AppSwitcher/NulogyAppSwitcher";
 import { NavigationMenuTrigger } from "../../components/shared/components";
 import NavigationMenuContent from "../../components/shared/NavigationMenuContent";
 
-// The main menu can be a icon, icon and label, link, button, custom panel, or dropdown
+// The main menu can be an:
+// [ ] icon
+// [ ] icon and label
+// [ ] link
+// [ ] button
+// [ ] custom panel
+// [ ] dropdown
+
 export const primaryMenu: MenuItems = [
   {
     key: "order-management",
@@ -35,7 +42,7 @@ export const primaryMenu: MenuItems = [
                   {
                     key: "4th-sub-analytics",
                     label: "4th sub analytics",
-                    type: "link",
+                    type: "button",
                   },
                 ],
               },
@@ -54,7 +61,7 @@ export const primaryMenu: MenuItems = [
                   {
                     key: "4th-sub-analytics-2",
                     label: "4th sub analytics",
-                    type: "link",
+                    type: "button",
                   },
                 ],
               },
@@ -90,17 +97,17 @@ export const primaryMenu: MenuItems = [
   {
     key: "invoices",
     label: "Invoices",
-    type: "link",
+    type: "button",
   },
   {
     key: "items",
     label: "Items",
-    type: "link",
+    type: "button",
   },
   {
     key: "imports-and-exports",
     label: "Imports and exports",
-    type: "link",
+    type: "button",
   },
 ];
 
@@ -137,22 +144,28 @@ export const userMenu: UserMenu = {
     title: "Michael Scott",
     subtitle1: "michael.scott@dundermifflin.com",
   },
-  controls: [
-    {
-      key: "profile",
-      label: "profile",
-      control: () => <div>profile</div>,
-    },
-    {
-      key: "settings",
-      label: "settings",
-      control: () => <div>settings</div>,
-    },
-    // {
-    //   key: "site",
-    //   render: () => <div>site</div>,
-    // },
-  ],
+  controls: () => (
+    <Flex gap="x2" flexDirection="column" width="100%">
+      <Select
+        defaultValue={["eaches"]}
+        options={[
+          { value: "eaches", label: "Eaches" },
+          { value: "cases", label: "Cases" },
+          { value: "pallets", label: "Pallets" },
+        ]}
+        labelText="Default"
+      />
+      <Select
+        defaultValue={["eaches"]}
+        options={[
+          { value: "eaches", label: "Eaches" },
+          { value: "cases", label: "Cases" },
+          { value: "pallets", label: "Pallets" },
+        ]}
+        labelText="Base"
+      />
+    </Flex>
+  ),
   menuItems: [
     {
       key: "preferences",
@@ -210,7 +223,6 @@ export const userMenu: UserMenu = {
   ],
 };
 
-// The icons can be a link, button, custom panel, or dropdown
 export const secondaryMenu: MenuItems = [
   {
     key: "settings",
@@ -230,7 +242,7 @@ export const secondaryMenu: MenuItems = [
       <>
         <NavigationMenuTrigger>
           <Icon icon="home" size="x3" />
-          <span>Home</span>
+          <span>Custom Panel</span>
         </NavigationMenuTrigger>
         <NavigationMenuContent padding="none">Something here</NavigationMenuContent>
       </>

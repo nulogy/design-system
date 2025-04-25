@@ -6,14 +6,14 @@ import { Divider, Flex, TruncatedText } from "../../..";
 import { VerticalDivider } from "../../..";
 import { BaseNavigationProps } from "../../Navigation";
 import { NavigationMenuItem } from "../NavigationMenuItem";
-import UserMenu from "../UserMenu/UserMenu";
-import { CaretDown, NavigationMenuList, NavigationMenuTrigger } from "../shared/components";
-import { NavigationMenuRoot } from "../shared/components";
+import UserMenuComponent from "../UserMenu/UserMenu"; // Renamed import to avoid conflict
+import { CaretDown, NavigationMenuList, NavigationMenuTrigger, NavigationMenuRoot } from "../shared/components";
+import NavigationMenuContent from "../shared/NavigationMenuContent"; // Import the shared content component
 import { SecondaryMenu } from "../SecondaryMenu/SecondaryMenu";
 import { NulogyAppSwitcher } from "../AppSwitcher/NulogyAppSwitcher";
 import { useResponsiveMenu } from "../../hooks/useResponsiveMenu";
 import { NulogyLogo } from "../shared/NulogyLogo";
-import { MenuItems } from "../../types";
+import { MenuItems, MenuItem as MenuItemType } from "../../types"; // Renamed MenuItem type import
 
 function MoreMenuItem({ moreMenu }: { moreMenu: MenuItems }) {
   const { t } = useTranslation();
@@ -33,13 +33,14 @@ function MoreMenuItem({ moreMenu }: { moreMenu: MenuItems }) {
 type DesktopNavProps = BaseNavigationProps;
 
 export default function DesktopNav({
-  primaryNavigation,
-  secondaryNavigation,
+  primaryNavigation = [],
+  secondaryNavigation = [],
   appSwitcher,
   secondaryLogo,
   primaryAppUrl,
   userMenu,
 }: DesktopNavProps) {
+  const userMenuExists = !!userMenu;
   const { menuItems, moreMenu, hiddenMenuItem, primaryMenuRef, secondaryMenuRef, hiddenButtonRef } =
     useResponsiveMenu(primaryNavigation);
 
@@ -58,49 +59,59 @@ export default function DesktopNav({
 
         {moreMenu.length > 0 && <MoreMenuItem moreMenu={moreMenu} />}
 
-        <HiddenNavigationMenuItem ref={hiddenButtonRef} item={hiddenMenuItem} />
+        {hiddenMenuItem && <HiddenNavigationMenuItem ref={hiddenButtonRef} item={hiddenMenuItem} />}
       </NavigationMenuList>
 
       {/* Secondary menu*/}
       <NavigationMenuList ref={secondaryMenuRef}>
-        <SecondaryMenu menuItems={secondaryNavigation} />
-        <VerticalDivider />
-        {secondaryLogo && secondaryLogo}
-        <VerticalDivider />
-        <RadixNavigationMenu.Item>
-          <NavigationMenuTrigger>
-            <Flex flexDirection="column" alignItems="flex-start">
-              <TruncatedText showTooltip={false} fontSize="smaller" lineHeight="smallerText" fontWeight="normal">
-                {userMenu.triggerText.title}
-              </TruncatedText>
-              <TruncatedText showTooltip={false} fontSize="smaller" lineHeight="smallerText" fontWeight="normal">
-                {userMenu.triggerText.subtitle1}
-              </TruncatedText>
-              <TruncatedText showTooltip={false} fontSize="smaller" lineHeight="smallerText" fontWeight="normal">
-                {userMenu.triggerText.subtitle2}
-              </TruncatedText>
-            </Flex>
-            <CaretDown icon="downArrow" size="x2" aria-hidden />
-          </NavigationMenuTrigger>
-          <UserMenu.Root right={0} position="absolute">
-            <UserMenu.Header {...userMenu.header} />
-            <UserMenu.Content>
-              <RadixNavigationMenu.Sub orientation="vertical">
-                {/* {userMenuInputs} */}
+        {secondaryNavigation.length > 0 && <SecondaryMenu menuItems={secondaryNavigation} />}
+        {secondaryNavigation.length > 0 && userMenuExists && <VerticalDivider />}
+        {secondaryLogo && <>{secondaryLogo}</>}
+        {secondaryLogo && userMenuExists && <VerticalDivider />}
+
+        {userMenuExists && (
+          <RadixNavigationMenu.Item>
+            <NavigationMenuTrigger>
+              <Flex flexDirection="column" alignItems="flex-start">
+                <TruncatedText showTooltip={false} fontSize="smaller" lineHeight="smallerText" fontWeight="normal">
+                  {userMenu.triggerText.title}
+                </TruncatedText>
+                {userMenu.triggerText.subtitle1 && (
+                  <TruncatedText showTooltip={false} fontSize="smaller" lineHeight="smallerText" fontWeight="normal">
+                    {userMenu.triggerText.subtitle1}
+                  </TruncatedText>
+                )}
+                {userMenu.triggerText.subtitle2 && (
+                  <TruncatedText showTooltip={false} fontSize="smaller" lineHeight="smallerText" fontWeight="normal">
+                    {userMenu.triggerText.subtitle2}
+                  </TruncatedText>
+                )}
+              </Flex>
+              <CaretDown icon="downArrow" size="x2" aria-hidden />
+            </NavigationMenuTrigger>
+            <NavigationMenuContent right={0} p="none">
+              <UserMenuComponent.Header {...userMenu.header} />
+              <UserMenuComponent.Container>
+                {userMenu.controls()}
+
                 <Divider my="x3" />
-                {userMenu.menuItems.map((item) => (
-                  <UserMenu.Item key={item.key} item={item} />
-                ))}
-              </RadixNavigationMenu.Sub>
-            </UserMenu.Content>
-          </UserMenu.Root>
-        </RadixNavigationMenu.Item>
+
+                <RadixNavigationMenu.List style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                  {userMenu.menuItems.map((item) => (
+                    <UserMenuComponent.Item key={item.key} item={item} />
+                  ))}
+                </RadixNavigationMenu.List>
+              </UserMenuComponent.Container>
+            </NavigationMenuContent>
+          </RadixNavigationMenu.Item>
+        )}
       </NavigationMenuList>
     </NavigationMenuRoot>
   );
 }
 
-const HiddenNavigationMenuItem = styled(NavigationMenuItem)({
-  visibility: "hidden",
-  position: "absolute",
-});
+// Use the actual MenuItem type here
+const HiddenNavigationMenuItem = styled(NavigationMenuItem)<{ item: MenuItemType }>`
+  position: absolute;
+  visibility: hidden;
+`;
