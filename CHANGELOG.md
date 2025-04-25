@@ -1,3 +1,10 @@
+## [14.7.1](https://github.com/nulogy/design-system/compare/v14.7.0...v14.7.1) (2025-04-25)
+
+
+### Bug Fixes
+
+* add i18n for the "No option" message ([#1559](https://github.com/nulogy/design-system/issues/1559)) ([72541e0](https://github.com/nulogy/design-system/commit/72541e0f4b3fd5907a00560db17d93f77b42540a))
+
 # [14.7.0](https://github.com/nulogy/design-system/compare/v14.6.2...v14.7.0) (2025-04-22)
 
 
