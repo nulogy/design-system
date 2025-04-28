@@ -5,6 +5,7 @@ import { Text } from "../../Type";
 import type { MenuItem } from "../types";
 import { Icon } from "../../Icon";
 import { VerticalDivider } from "../../VerticalDivider";
+import { Divider } from "../../Divider";
 import { CaretDown, NavigationMenuLink, NavigationMenuTrigger } from "./shared/components";
 import { MenuSubItem } from "./MenuSubItem/MenuSubItem";
 import { SubMenuContent } from "./MenuSubItem/parts/styled";
@@ -76,7 +77,7 @@ export const NavigationMenuItem = React.forwardRef<HTMLLIElement, NavigationMenu
     return (
       <RadixNavigationMenuItem ref={forwardedRef} {...props}>
         <NavigationMenuTrigger
-          borderRadius={hasLabel ? undefined : "rounded"}
+          // borderRadius={hasLabel ? undefined : "rounded"}
           p={hasIcon ? "x1" : undefined}
           {...item.props}
         >
@@ -101,6 +102,10 @@ const NavigationMenuSubList = styled(RadixNavigationMenu.List)`
   list-style: none;
   margin: 0;
   padding: 0;
+
+  & > ${Divider}:first-child {
+    display: none;
+  }
 `;
 
 const RadixNavigationMenuItem = styled(RadixNavigationMenu.Item)`

@@ -102,6 +102,10 @@ export const primaryMenu: MenuItems = [
     ],
   },
   {
+    key: "analytics-invenotry-management-separator",
+    type: "separator",
+  },
+  {
     key: "inventory-management",
     label: "Inventory management",
     type: "link",
@@ -274,7 +278,7 @@ export const secondaryMenu: MenuItems = [
     ),
   },
   {
-    key: "autoAwesome",
+    key: "magic",
     type: "button",
     icon: "autoAwesome",
     label: "Magic",
@@ -286,9 +290,11 @@ export const secondaryMenu: MenuItems = [
         tooltip: "AutoAwesome",
       },
       {
-        key: "autoAwesome",
+        key: "custom-div",
         type: "custom",
-        render: () => <div>Icon</div>,
+        render: () => (
+          <div style={{ backgroundColor: "red", color: "white", fontWeight: "bold" }}>This is a custom div</div>
+        ),
       },
     ],
   },

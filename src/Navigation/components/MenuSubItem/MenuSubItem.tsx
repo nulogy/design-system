@@ -16,6 +16,9 @@ type Props = {
 export function MenuSubItem({ item, level }: Props) {
   const theme = useTheme();
 
+  /* ---------------------------------------------------------------------
+   * Separator
+   * -------------------------------------------------------------------*/
   if (item.type === "separator") {
     return <Divider my="x1" mx="x1" width="auto" />;
   }
@@ -29,6 +32,9 @@ export function MenuSubItem({ item, level }: Props) {
     );
   }
 
+  /* ---------------------------------------------------------------------
+   * Default render
+   * -------------------------------------------------------------------*/
   const hasIcon = "icon" in item;
   const isLink = item.type === "link";
   const hasSubMenu = item.type === "button" && !!item.items && item.items.length > 0;
