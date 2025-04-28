@@ -69,8 +69,7 @@ type CustomMenuItem = {
   /**
    * Custom render fragment.
    * @param props.withinSubMenu – True when rendered within any submenu.
-   * @param props.level         – Depth (root = 0). Optional so existing
-   *                              callbacks remain valid.
+   * @param props.level         – Depth (root = 0).
    */
   render: (props: { withinSubMenu?: boolean; level?: number }) => JSX.Element;
 };
@@ -86,6 +85,10 @@ type MenuItemLink = {
   props?: React.ComponentPropsWithoutRef<typeof RadixNavigationMenu.Link>;
 } & (WithIcon | WithLabel);
 
-export type MenuItem = MenuItemBase & (CustomMenuItem | MenuItemButton | MenuItemLink);
+type MenuItemSeparator = {
+  type: "separator";
+};
+
+export type MenuItem = MenuItemBase & (CustomMenuItem | MenuItemButton | MenuItemLink | MenuItemSeparator);
 
 export type MenuItems = MenuItem[];

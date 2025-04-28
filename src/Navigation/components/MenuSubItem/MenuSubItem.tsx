@@ -5,6 +5,7 @@ import { Icon } from "../../../Icon";
 import { MenuItem } from "../../types";
 import { CaretRight } from "../shared/components";
 import { Flex } from "../../../Flex";
+import { Divider } from "../../../Divider";
 import { SubMenuContent, SubMenuItem, SubMenuItemButton, SubMenuItemLink, SubMenuList } from "./parts/styled";
 
 type Props = {
@@ -14,6 +15,10 @@ type Props = {
 
 export function MenuSubItem({ item, level }: Props) {
   const theme = useTheme();
+
+  if (item.type === "separator") {
+    return <Divider my="x1" mx="x1" width="auto" />;
+  }
 
   /* ---------------------------------------------------------------------
    * Custom render
