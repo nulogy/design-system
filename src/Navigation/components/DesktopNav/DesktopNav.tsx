@@ -6,12 +6,7 @@ import { Divider, Flex, TruncatedText, VerticalDivider } from "../../..";
 import { BaseNavigationProps } from "../../Navigation";
 import { NavigationMenuItem } from "../NavigationMenuItem";
 import UserMenuComponent from "../UserMenu/UserMenu";
-import {
-  CaretDown,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuRoot,
-} from "../shared/components";
+import { CaretDown, NavigationMenuList, NavigationMenuTrigger, NavigationMenuRoot } from "../shared/components";
 import NavigationMenuContent from "../shared/NavigationMenuContent";
 import { NulogyAppSwitcher } from "../AppSwitcher/NulogyAppSwitcher";
 import { useResponsiveMenu } from "../../hooks/useResponsiveMenu";
@@ -44,14 +39,8 @@ export default function DesktopNav({
   userMenu,
 }: DesktopNavProps) {
   const userMenuExists = !!userMenu;
-  const {
-    menuItems,
-    moreMenu,
-    hiddenMenuItem,
-    primaryMenuRef,
-    secondaryMenuRef,
-    hiddenButtonRef,
-  } = useResponsiveMenu(primaryNavigation);
+  const { menuItems, moreMenu, hiddenMenuItem, primaryMenuRef, secondaryMenuRef, hiddenButtonRef } =
+    useResponsiveMenu(primaryNavigation);
 
   return (
     <NavigationMenuRoot>
@@ -83,35 +72,21 @@ export default function DesktopNav({
         {secondaryLogo && <>{secondaryLogo}</>}
         {secondaryLogo && userMenuExists && <VerticalDivider />}
 
+        {/* ----------------------- User Menu ------------------------------ */}
         {userMenuExists && (
           <RadixNavigationMenu.Item>
             <NavigationMenuTrigger>
               <Flex flexDirection="column" alignItems="flex-start">
-                <TruncatedText
-                  showTooltip={false}
-                  fontSize="smaller"
-                  lineHeight="smallerText"
-                  fontWeight="normal"
-                >
+                <TruncatedText showTooltip={false} fontSize="smaller" lineHeight="smallerText" fontWeight="normal">
                   {userMenu.triggerText.title}
                 </TruncatedText>
                 {userMenu.triggerText.subtitle1 && (
-                  <TruncatedText
-                    showTooltip={false}
-                    fontSize="smaller"
-                    lineHeight="smallerText"
-                    fontWeight="normal"
-                  >
+                  <TruncatedText showTooltip={false} fontSize="smaller" lineHeight="smallerText" fontWeight="normal">
                     {userMenu.triggerText.subtitle1}
                   </TruncatedText>
                 )}
                 {userMenu.triggerText.subtitle2 && (
-                  <TruncatedText
-                    showTooltip={false}
-                    fontSize="smaller"
-                    lineHeight="smallerText"
-                    fontWeight="normal"
-                  >
+                  <TruncatedText showTooltip={false} fontSize="smaller" lineHeight="smallerText" fontWeight="normal">
                     {userMenu.triggerText.subtitle2}
                   </TruncatedText>
                 )}
