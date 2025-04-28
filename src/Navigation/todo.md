@@ -6,10 +6,10 @@
     - [ ] Translation
   - [ ] Primary navigation
     - [ ] Seperators (Might be scoped out)
-    - [ ] Icons
-      - [ ] Icons and labels
-      - [ ] Icons and dropdowns
-      - [ ] Icons and labels and dropdowns
+    - [x] Icons
+      - [x] Icons and labels
+      - [x] Icons and dropdowns
+      - [x] Icons and labels and dropdowns
   - [ ] Secondary navigation
   - [x] User menu
     - [x] Items

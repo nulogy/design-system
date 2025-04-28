@@ -40,9 +40,20 @@ export const primaryMenu: MenuItems = [
                 type: "button",
                 items: [
                   {
-                    key: "4th-sub-analytics",
-                    label: "4th sub analytics",
-                    type: "button",
+                    key: "home",
+                    type: "custom",
+                    render: ({ withinSubMenu, level }) => (
+                      <>
+                        <NavigationMenuTrigger>
+                          <Icon icon="home" size="x3" />
+                          <span>Custom Panel</span>
+                        </NavigationMenuTrigger>
+                        <NavigationMenuContent padding="none">
+                          We are {withinSubMenu ? "" : "not"} within a subMenu.{" "}
+                          {withinSubMenu ? `this deep: ${level}` : ""}
+                        </NavigationMenuContent>
+                      </>
+                    ),
                   },
                 ],
               },
@@ -106,7 +117,8 @@ export const primaryMenu: MenuItems = [
   },
   {
     key: "imports-and-exports",
-    label: "Imports and exports",
+    icon: "chatBubble",
+    tooltip: "Imports and exports",
     type: "button",
   },
 ];
@@ -216,7 +228,6 @@ export const userMenu: UserMenu = {
     },
     {
       key: "production",
-      label: "Production",
       type: "render",
       render: () => <button style={{ fontWeight: "bold", color: "red" }}>production</button>,
     },
@@ -238,13 +249,15 @@ export const secondaryMenu: MenuItems = [
   {
     key: "home",
     type: "custom",
-    render: () => (
+    render: ({ withinSubMenu: subMenu }) => (
       <>
         <NavigationMenuTrigger>
           <Icon icon="home" size="x3" />
           <span>Custom Panel</span>
         </NavigationMenuTrigger>
-        <NavigationMenuContent padding="none">Something here</NavigationMenuContent>
+        <NavigationMenuContent padding="none" bg={subMenu ? "red" : "blue"}>
+          Something here
+        </NavigationMenuContent>
       </>
     ),
   },
@@ -252,6 +265,7 @@ export const secondaryMenu: MenuItems = [
     key: "autoAwesome",
     type: "button",
     icon: "autoAwesome",
+    label: "Magic",
     items: [
       {
         key: "autoAwesome",

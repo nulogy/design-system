@@ -4,17 +4,24 @@ import { useTheme } from "styled-components";
 import { Icon } from "../../../Icon";
 import { MenuItem } from "../../types";
 import { CaretRight } from "../shared/components";
+import { Flex } from "../../../Flex";
 import { SubMenuContent, SubMenuItem, SubMenuItemButton, SubMenuItemLink, SubMenuList } from "./parts/styled";
 
 type Props = {
   item: MenuItem;
+  level: number;
 };
 
-export function MenuSubItem({ item }: Props) {
+export function MenuSubItem({ item, level }: Props) {
   const theme = useTheme();
 
+  /* ---------------------------------------------------------------------
+   * Custom render
+   * -------------------------------------------------------------------*/
   if (item.type === "custom") {
-    return <RadixNavigationMenu.Item key={item.key}>{item.render()}</RadixNavigationMenu.Item>;
+    return (
+      <RadixNavigationMenu.Item key={item.key}>{item.render({ withinSubMenu: true, level })}</RadixNavigationMenu.Item>
+    );
   }
 
   const hasIcon = "icon" in item;
@@ -23,7 +30,12 @@ export function MenuSubItem({ item }: Props) {
 
   const content = (
     <>
-      {hasIcon && <Icon icon={item.icon} size="x2" aria-hidden />}
+      {hasIcon && (
+        <Flex alignItems="center" gap="x1">
+          <Icon icon={item.icon} size="x3" aria-hidden />
+          <span>{item.tooltip}</span>
+        </Flex>
+      )}
       {"label" in item && item.label && <span>{item.label}</span>}
       {hasSubMenu && <CaretRight aria-hidden size="x2" />}
     </>
@@ -44,7 +56,7 @@ export function MenuSubItem({ item }: Props) {
             <SubMenuContent left={`calc(100% + ${theme.space.half})`} top={`calc(-1 * ${theme.space.x1})`}>
               <RadixNavigationMenu.Sub orientation="vertical">
                 <SubMenuList>
-                  {item.items?.map((subItem) => <MenuSubItem key={subItem.key} item={subItem} />)}
+                  {item.items?.map((subItem) => <MenuSubItem key={subItem.key} item={subItem} level={level + 1} />)}
                 </SubMenuList>
               </RadixNavigationMenu.Sub>
             </SubMenuContent>
