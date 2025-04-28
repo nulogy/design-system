@@ -60,6 +60,10 @@ export const primaryMenu: MenuItems = [
             ],
           },
           {
+            key: "settings-home-separator",
+            type: "separator",
+          },
+          {
             key: "2nd-sub-analytics-2",
             label: "2nd sub analytics 2",
             type: "button",
@@ -111,6 +115,10 @@ export const primaryMenu: MenuItems = [
     type: "button",
   },
   {
+    key: "invoices-item-separator",
+    type: "separator",
+  },
+  {
     key: "items",
     label: "Items",
     type: "button",
@@ -118,7 +126,7 @@ export const primaryMenu: MenuItems = [
   {
     key: "imports-and-exports",
     icon: "chatBubble",
-    tooltip: "Imports and exports",
+    tooltip: "imports and exports",
     type: "button",
   },
 ];
@@ -245,6 +253,10 @@ export const secondaryMenu: MenuItems = [
         padding: "x2",
       },
     },
+  },
+  {
+    key: "settings-home-separator",
+    type: "separator",
   },
   {
     key: "home",
