@@ -141,7 +141,7 @@
     "rollup-plugin-replace": "^2.2.0",
     "rollup-plugin-typescript2": "^0.36.0",
     "semantic-release": "^17.2.1",
-    "source-map-loader": "^1.0.1",
+    "source-map-loader": "^5.0.0",
     "storybook-addon-performance": "^0.17.1",
     "styled-components": "^6.0.0",
     "svg-sprite-loader": "^6.0.11",
