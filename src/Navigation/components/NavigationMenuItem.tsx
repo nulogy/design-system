@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { Text } from "../../Type";
 import type { MenuItem } from "../types";
 import { Icon } from "../../Icon";
+import { VerticalDivider } from "../../VerticalDivider";
 import { CaretDown, NavigationMenuLink, NavigationMenuTrigger } from "./shared/components";
 import { MenuSubItem } from "./MenuSubItem/MenuSubItem";
 import { SubMenuContent } from "./MenuSubItem/parts/styled";
@@ -19,6 +20,14 @@ interface NavigationMenuItemProps extends RadixNavigationMenu.NavigationMenuItem
  */
 export const NavigationMenuItem = React.forwardRef<HTMLLIElement, NavigationMenuItemProps>(
   ({ item, level = 0, ...props }, forwardedRef) => {
+    if (item.type === "separator") {
+      return (
+        <RadixNavigationMenuItem ref={forwardedRef} {...props}>
+          <VerticalDivider mx="x1" />
+        </RadixNavigationMenuItem>
+      );
+    }
+
     /* ---------------------------------------------------------------------
      * Handle "custom” items
      * -------------------------------------------------------------------*/
