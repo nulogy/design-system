@@ -11,7 +11,7 @@ export const SubMenuItemLink = styled(RadixNavigationMenu.Link)<StyledProps>(
     width: "100%",
     padding: `${theme.space.x1} ${theme.space.x2}`,
 
-    fontSize: theme.fontSizes.medium,
+    fontSize: theme.fontSizes.base,
     fontWeight: theme.fontWeights.medium,
     lineHeight: theme.lineHeights.baseRelaxed,
     whiteSpace: "nowrap",
@@ -43,7 +43,7 @@ export const SubMenuItemButton = styled(RadixNavigationMenu.Trigger)<StyledProps
     outline: "none",
 
     color: theme.colors.darkGrey,
-    fontSize: theme.fontSizes.medium,
+    fontSize: theme.fontSizes.base,
     fontWeight: theme.fontWeights.medium,
     lineHeight: theme.lineHeights.baseRelaxed,
     whiteSpace: "nowrap",
