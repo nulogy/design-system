@@ -2,18 +2,21 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
-import { Divider, Flex, TruncatedText } from "../../..";
-import { VerticalDivider } from "../../..";
+import { Divider, Flex, TruncatedText, VerticalDivider } from "../../..";
 import { BaseNavigationProps } from "../../Navigation";
 import { NavigationMenuItem } from "../NavigationMenuItem";
-import UserMenuComponent from "../UserMenu/UserMenu"; // Renamed import to avoid conflict
-import { CaretDown, NavigationMenuList, NavigationMenuTrigger, NavigationMenuRoot } from "../shared/components";
-import NavigationMenuContent from "../shared/NavigationMenuContent"; // Import the shared content component
-import { SecondaryMenu } from "../SecondaryMenu/SecondaryMenu";
+import UserMenuComponent from "../UserMenu/UserMenu";
+import {
+  CaretDown,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuRoot,
+} from "../shared/components";
+import NavigationMenuContent from "../shared/NavigationMenuContent";
 import { NulogyAppSwitcher } from "../AppSwitcher/NulogyAppSwitcher";
 import { useResponsiveMenu } from "../../hooks/useResponsiveMenu";
 import { NulogyLogo } from "../shared/NulogyLogo";
-import { MenuItems, MenuItem as MenuItemType } from "../../types"; // Renamed MenuItem type import
+import type { MenuItems, MenuItem as MenuItemType } from "../../types";
 
 function MoreMenuItem({ moreMenu }: { moreMenu: MenuItems }) {
   const { t } = useTranslation();
@@ -41,11 +44,18 @@ export default function DesktopNav({
   userMenu,
 }: DesktopNavProps) {
   const userMenuExists = !!userMenu;
-  const { menuItems, moreMenu, hiddenMenuItem, primaryMenuRef, secondaryMenuRef, hiddenButtonRef } =
-    useResponsiveMenu(primaryNavigation);
+  const {
+    menuItems,
+    moreMenu,
+    hiddenMenuItem,
+    primaryMenuRef,
+    secondaryMenuRef,
+    hiddenButtonRef,
+  } = useResponsiveMenu(primaryNavigation);
 
   return (
     <NavigationMenuRoot>
+      {/* ----------------------- Primary -------------------------------- */}
       <NavigationMenuList ref={primaryMenuRef}>
         <NulogyAppSwitcher config={appSwitcher} />
 
@@ -62,10 +72,14 @@ export default function DesktopNav({
         {hiddenMenuItem && <HiddenNavigationMenuItem ref={hiddenButtonRef} item={hiddenMenuItem} />}
       </NavigationMenuList>
 
-      {/* Secondary menu*/}
+      {/* ----------------------- Secondary ------------------------------ */}
       <NavigationMenuList ref={secondaryMenuRef}>
-        {secondaryNavigation.length > 0 && <SecondaryMenu menuItems={secondaryNavigation} />}
+        {secondaryNavigation.map((item) => (
+          <NavigationMenuItem key={item.key} item={item} />
+        ))}
+
         {secondaryNavigation.length > 0 && userMenuExists && <VerticalDivider />}
+
         {secondaryLogo && <>{secondaryLogo}</>}
         {secondaryLogo && userMenuExists && <VerticalDivider />}
 
@@ -73,16 +87,31 @@ export default function DesktopNav({
           <RadixNavigationMenu.Item>
             <NavigationMenuTrigger>
               <Flex flexDirection="column" alignItems="flex-start">
-                <TruncatedText showTooltip={false} fontSize="smaller" lineHeight="smallerText" fontWeight="normal">
+                <TruncatedText
+                  showTooltip={false}
+                  fontSize="smaller"
+                  lineHeight="smallerText"
+                  fontWeight="normal"
+                >
                   {userMenu.triggerText.title}
                 </TruncatedText>
                 {userMenu.triggerText.subtitle1 && (
-                  <TruncatedText showTooltip={false} fontSize="smaller" lineHeight="smallerText" fontWeight="normal">
+                  <TruncatedText
+                    showTooltip={false}
+                    fontSize="smaller"
+                    lineHeight="smallerText"
+                    fontWeight="normal"
+                  >
                     {userMenu.triggerText.subtitle1}
                   </TruncatedText>
                 )}
                 {userMenu.triggerText.subtitle2 && (
-                  <TruncatedText showTooltip={false} fontSize="smaller" lineHeight="smallerText" fontWeight="normal">
+                  <TruncatedText
+                    showTooltip={false}
+                    fontSize="smaller"
+                    lineHeight="smallerText"
+                    fontWeight="normal"
+                  >
                     {userMenu.triggerText.subtitle2}
                   </TruncatedText>
                 )}
@@ -93,12 +122,10 @@ export default function DesktopNav({
               <UserMenuComponent.Header {...userMenu.header} />
               <UserMenuComponent.Container>
                 {userMenu.controls()}
-
                 <Divider my="x3" />
-
                 <RadixNavigationMenu.List style={{ listStyle: "none", padding: 0, margin: 0 }}>
-                  {userMenu.menuItems.map((item) => (
-                    <UserMenuComponent.Item key={item.key} item={item} />
+                  {userMenu.menuItems.map((itm) => (
+                    <UserMenuComponent.Item key={itm.key} item={itm} />
                   ))}
                 </RadixNavigationMenu.List>
               </UserMenuComponent.Container>
@@ -110,7 +137,7 @@ export default function DesktopNav({
   );
 }
 
-// Use the actual MenuItem type here
+/* Hidden item used by responsive-menu hook */
 const HiddenNavigationMenuItem = styled(NavigationMenuItem)<{ item: MenuItemType }>`
   position: absolute;
   visibility: hidden;

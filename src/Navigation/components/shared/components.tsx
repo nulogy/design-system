@@ -7,7 +7,10 @@ import { addStyledProps, StyledProps } from "../../../StyledProps";
 
 function itemStyles(theme: DefaultNDSThemeType): CSSProperties {
   return {
-    padding: theme.space.x1,
+    paddingLeft: theme.space.x2,
+    paddingRight: theme.space.x2,
+    paddingTop: theme.space.x1_5,
+    paddingBottom: theme.space.x1_5,
     outline: "none",
     userSelect: "none",
     fontWeight: 500,

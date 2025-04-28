@@ -40,7 +40,6 @@ interface ButtonUserMenuItem {
 
 interface RenderUserMenuItem {
   key: string;
-  label: string;
   type: "render";
   render: () => JSX.Element;
 }
@@ -58,7 +57,7 @@ export type MenuItemBase = {
 type WithIcon = {
   icon: IconName;
   label?: string;
-  tooltip?: string;
+  tooltip: string;
 };
 
 type WithLabel = {
@@ -67,7 +66,13 @@ type WithLabel = {
 
 type CustomMenuItem = {
   type: "custom";
-  render: () => JSX.Element;
+  /**
+   * Custom render fragment.
+   * @param props.withinSubMenu – True when rendered within any submenu.
+   * @param props.level         – Depth (root = 0). Optional so existing
+   *                              callbacks remain valid.
+   */
+  render: (props: { withinSubMenu?: boolean; level?: number }) => JSX.Element;
 };
 
 type MenuItemButton = {
