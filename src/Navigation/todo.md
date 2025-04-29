@@ -18,6 +18,7 @@
 
 - [ ] Mobile
 
+  - [ ] mobileVisibility: “navigationMenu” | “navigationBar” | “hidden”
   - [ ] Primary navigation
   - [ ] Secondary navigation
   - [ ] User menu

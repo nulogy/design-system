@@ -4,6 +4,7 @@ import { Icon } from "../../../Icon";
 import { DefaultNDSThemeType } from "../../../theme";
 import { IconProps } from "../../../Icon/Icon";
 import { addStyledProps, StyledProps } from "../../../StyledProps";
+import { NAVIGATION_MENU_HEIGHT_STYLED_UNITS } from "./constants";
 
 function itemStyles(theme: DefaultNDSThemeType): CSSProperties {
   return {
@@ -23,18 +24,22 @@ function itemStyles(theme: DefaultNDSThemeType): CSSProperties {
   };
 }
 
-export const NavigationMenuRoot = styled(RadixNavigationMenu.Root)({
-  display: "flex",
-  width: "100%",
-  justifyContent: "space-between",
-  padding: "0px 16px",
-  backgroundColor: "white",
-  borderBottom: "1px solid #E4E7EB",
-
-  "& > div": {
+export const NavigationMenuRoot = styled(RadixNavigationMenu.Root)<StyledProps>(
+  ({ theme }) => ({
+    height: theme.space[NAVIGATION_MENU_HEIGHT_STYLED_UNITS],
     display: "flex",
-  },
-});
+    width: "100%",
+    justifyContent: "space-between",
+    padding: "0px 16px",
+    backgroundColor: "white",
+    borderBottom: "1px solid #E4E7EB",
+
+    "& > div": {
+      display: "flex",
+    },
+  }),
+  addStyledProps
+);
 
 export const NavigationMenuList = styled(RadixNavigationMenu.List)(({ theme }) => ({
   display: "flex",
