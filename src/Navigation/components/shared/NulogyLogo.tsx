@@ -8,9 +8,7 @@ interface NulogyLogoProps {
 
 export function NulogyLogo({ url }: NulogyLogoProps) {
   return (
-    <NavigationMenuLink
-      href={url} // marginRight="x3" marginLeft="x1" display="flex" alignItems="center">
-    >
+    <NavigationMenuLink href={url} p="x1" display="flex" alignItems="center">
       <Logo />
     </NavigationMenuLink>
   );
