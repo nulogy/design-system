@@ -5,7 +5,7 @@ import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
 import { Divider, Flex, TruncatedText, VerticalDivider } from "../../..";
 import { BaseNavigationProps } from "../../Navigation";
 import { NavigationMenuItem } from "../NavigationMenuItem";
-import UserMenuComponent from "../UserMenu/UserMenu";
+import UserMenu from "../UserMenu/UserMenu";
 import { CaretDown, NavigationMenuList, NavigationMenuTrigger, NavigationMenuRoot } from "../shared/components";
 import NavigationMenuContent from "../shared/NavigationMenuContent";
 import { NulogyAppSwitcher } from "../AppSwitcher/NulogyAppSwitcher";
@@ -75,7 +75,7 @@ export default function DesktopNav({
         {/* ----------------------- User Menu ------------------------------ */}
         {userMenuExists && (
           <RadixNavigationMenu.Item>
-            <NavigationMenuTrigger>
+            <NavigationMenuTrigger py="x1">
               <Flex flexDirection="column" alignItems="flex-start">
                 <TruncatedText showTooltip={false} fontSize="smaller" lineHeight="smallerText" fontWeight="normal">
                   {userMenu.triggerText.title}
@@ -94,16 +94,16 @@ export default function DesktopNav({
               <CaretDown icon="downArrow" size="x2" aria-hidden />
             </NavigationMenuTrigger>
             <NavigationMenuContent right={0} p="none">
-              <UserMenuComponent.Header {...userMenu.header} />
-              <UserMenuComponent.Container>
+              <UserMenu.Header {...userMenu.header} />
+              <UserMenu.Container>
                 {userMenu.controls()}
                 <Divider my="x3" />
-                <RadixNavigationMenu.List style={{ listStyle: "none", padding: 0, margin: 0 }}>
-                  {userMenu.menuItems.map((itm) => (
-                    <UserMenuComponent.Item key={itm.key} item={itm} />
+                <UserMenuItemsList>
+                  {userMenu.menuItems.map((item) => (
+                    <UserMenu.Item key={item.key} item={item} />
                   ))}
-                </RadixNavigationMenu.List>
-              </UserMenuComponent.Container>
+                </UserMenuItemsList>
+              </UserMenu.Container>
             </NavigationMenuContent>
           </RadixNavigationMenu.Item>
         )}
@@ -116,4 +116,10 @@ export default function DesktopNav({
 const HiddenNavigationMenuItem = styled(NavigationMenuItem)<{ item: MenuItemType }>`
   position: absolute;
   visibility: hidden;
+`;
+
+export const UserMenuItemsList = styled(RadixNavigationMenu.List)`
+  list-style: none;
+  padding: 0;
+  margin: 0;
 `;
