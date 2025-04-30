@@ -16,7 +16,7 @@ function MyComponent() {
 
 | Prop          | Type                                      | Description                                                          | Default  |
 | ------------- | ----------------------------------------- | -------------------------------------------------------------------- | -------- |
-| `app`         | `AppName`                                 | The application identifier to display (required).                    | -        |
+| `app`         | `NulogyAppName`                           | The application identifier to display (required).                    | -        |
 | `type`        | `"active" \| "inactive" \| "interactive"` | The visual state of the tag, affecting appearance.                   | `active` |
 | `hideTooltip` | `boolean`                                 | Controls whether to hide the tooltip displaying the app's full name. | `false`  |
 
@@ -24,7 +24,7 @@ function MyComponent() {
 
 The supported applications are:
 
-| AppName                      | Abbreviation | Display Name               |
+| NulogyAppName                | Abbreviation | Display Name               |
 | ---------------------------- | ------------ | -------------------------- |
 | `production-scheduling`      | `PS`         | Production Scheduling      |
 | `supplier-collaboration`     | `SC`         | Supplier Collaboration     |

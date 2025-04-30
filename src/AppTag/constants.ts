@@ -1,7 +1,7 @@
-import { NulogyApp } from "../types/NulogyApp";
+import { NulogyAppName } from "../types/NulogyApp";
 import { AppTagType, ColorName } from "./types";
 
-export const APP_ABBREVIATIONS: Record<NulogyApp, string> = {
+export const APP_ABBREVIATIONS: Record<NulogyAppName, string> = {
   "production-scheduling": "PS",
   "supplier-collaboration": "SC",
   "digital-quality-inspection": "DQI",
@@ -9,7 +9,7 @@ export const APP_ABBREVIATIONS: Record<NulogyApp, string> = {
   "smart-factory": "SFac",
 };
 
-export const APP_DISPLAY_NAMES: Record<AppName, string> = {
+export const APP_DISPLAY_NAMES: Record<NulogyAppName, string> = {
   "production-scheduling": "Production Scheduling",
   "supplier-collaboration": "Supplier Collaboration",
   "digital-quality-inspection": "Digital Quality Inspection",

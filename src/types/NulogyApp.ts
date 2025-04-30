@@ -1,4 +1,4 @@
-export type NulogyApp =
+export type NulogyAppName =
   | "production-scheduling"
   | "supplier-collaboration"
   | "digital-quality-inspection"
