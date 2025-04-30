@@ -2,11 +2,11 @@ import React from "react";
 import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
 import { Icon } from "../../../Icon";
 import { NavigationMenuIconTrigger } from "../shared/components";
-import { NulogyApp } from "../../../types/NulogyApp";
+import { NulogyAppName } from "../../../types/NulogyApp";
 import NavigationMenuContent from "../shared/NavigationMenuContent";
 import AppSwitcher from "./parts";
 
-export type AppSwitcherConfig = false | Record<NulogyApp, { url: string; indicator?: React.ReactNode }>;
+export type AppSwitcherConfig = false | Record<NulogyAppName, { url: string; indicator?: React.ReactNode }>;
 
 type AppSwitcherProps = {
   config: AppSwitcherConfig;
