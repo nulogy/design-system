@@ -1,7 +1,7 @@
 import React from "react";
 import { AppTag } from "..";
-import type { AppName } from "../constants";
 import { APP_DISPLAY_NAMES } from "../constants";
+import { NulogyAppName } from "../../types/NulogyApp";
 import { Table } from "../../Table";
 import { Flex } from "../../Flex";
 import { Heading1 } from "../../Type";
@@ -12,7 +12,7 @@ export default {
 };
 
 export const Default = () => {
-  const appNames = Object.keys(APP_DISPLAY_NAMES) as AppName[];
+  const appNames = Object.keys(APP_DISPLAY_NAMES) as NulogyAppName[];
 
   const columns = [
     { label: "Application Name", dataKey: "name", width: "25%" },
@@ -33,7 +33,7 @@ export const Default = () => {
 };
 
 export const WithoutATooltip = () => {
-  const appNames = Object.keys(APP_DISPLAY_NAMES) as AppName[];
+  const appNames = Object.keys(APP_DISPLAY_NAMES) as NulogyAppName[];
 
   return (
     <Flex flexDirection="column" gap="x2">
