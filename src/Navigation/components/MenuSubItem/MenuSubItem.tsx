@@ -28,7 +28,9 @@ export function MenuSubItem({ item, level }: Props) {
    * -------------------------------------------------------------------*/
   if (item.type === "custom") {
     return (
-      <RadixNavigationMenu.Item key={item.key}>{item.render({ withinSubMenu: true, level })}</RadixNavigationMenu.Item>
+      <RadixNavigationMenu.Item key={item.key}>
+        {item.render({ withinSubMenu: true, level, withinMobileNav: false })}
+      </RadixNavigationMenu.Item>
     );
   }
 
