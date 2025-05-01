@@ -68,10 +68,12 @@ type CustomMenuItem = {
   type: "custom";
   /**
    * Custom render fragment.
+
    * @param props.withinSubMenu – True when rendered within any submenu.
    * @param props.level         – Depth (root = 0).
+   * @param props.withinMobileNav – True when rendered within the mobile navigation.
    */
-  render: (props: { withinSubMenu?: boolean; level?: number }) => JSX.Element;
+  render: (props: { withinSubMenu: boolean; level: number; withinMobileNav: boolean }) => JSX.Element;
 };
 
 type MenuItemButton = {
