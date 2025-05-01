@@ -35,7 +35,7 @@ export const NavigationMenuItem = React.forwardRef<HTMLLIElement, NavigationMenu
     if (item.type === "custom") {
       return (
         <RadixNavigationMenuItem ref={forwardedRef} {...props}>
-          {item.render({ withinSubMenu: level > 0, level })}
+          {item.render({ withinSubMenu: level > 0, level, withinMobileNav: false })}
         </RadixNavigationMenuItem>
       );
     }
