@@ -18,7 +18,6 @@ export const BasicUsage = () => {
       secondaryNavigation={secondaryMenu}
       userMenu={userMenu}
       secondaryLogo={<Logo style={{ width: "auto", height: 32 }} />}
-      breakpoint="1024px"
     />
   );
 };

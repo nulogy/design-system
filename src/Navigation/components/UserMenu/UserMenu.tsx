@@ -3,6 +3,7 @@ import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
 import styled from "styled-components";
 import type { UserMenuItem as UserMenuItemType } from "../../types";
 import { CaretRight } from "../shared/components";
+import { addStyledProps, StyledProps } from "../../../StyledProps";
 import { Header } from "./parts/Header";
 
 interface UserMenuItemProps extends RadixNavigationMenu.NavigationMenuItemProps {
@@ -94,9 +95,12 @@ const Item = React.forwardRef<HTMLLIElement, UserMenuItemProps>(({ item, ...prop
 
 const Container = styled(RadixNavigationMenu.Sub).attrs({
   orientation: "vertical",
-})(({ theme }) => ({
-  padding: theme.space.x2,
-}));
+})<StyledProps>(
+  ({ theme }) => ({
+    padding: theme.space.x2,
+  }),
+  addStyledProps
+);
 
 const UserMenu = {
   Header,

@@ -6,7 +6,7 @@ import type { MenuItem } from "../types";
 import { Icon } from "../../Icon";
 import { VerticalDivider } from "../../VerticalDivider";
 import { Divider } from "../../Divider";
-import { CaretDown, NavigationMenuLink, NavigationMenuTrigger } from "./shared/components";
+import { CaretDown, NavigationMenuLink, NavigationMenuTrigger, RadixNavigationMenuItem } from "./shared/components";
 import { MenuSubItem } from "./MenuSubItem/MenuSubItem";
 import { SubMenuContent } from "./MenuSubItem/parts/styled";
 
@@ -106,8 +106,4 @@ const NavigationMenuSubList = styled(RadixNavigationMenu.List)`
   & > ${Divider}:first-child {
     display: none;
   }
-`;
-
-const RadixNavigationMenuItem = styled(RadixNavigationMenu.Item)`
-  position: relative;
 `;

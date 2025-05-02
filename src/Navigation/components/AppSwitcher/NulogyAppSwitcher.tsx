@@ -12,7 +12,13 @@ type AppSwitcherProps = {
   config: AppSwitcherConfig;
 };
 
-const apps = [
+type App = {
+  id: NulogyAppName;
+  label: string;
+  description: string;
+};
+
+const apps: App[] = [
   {
     id: "connections",
     label: "Connections",
@@ -39,7 +45,12 @@ const apps = [
     label: "Supplier collaboration",
     description: "Function-based coherent process improvement cloned encompassing infomediaries",
   },
-];
+  {
+    id: "smart-factory",
+    label: "Smart factory",
+    description: "Smart factory description",
+  },
+] as const;
 
 export function NulogyAppSwitcher({ config }: AppSwitcherProps) {
   if (!config) return null;

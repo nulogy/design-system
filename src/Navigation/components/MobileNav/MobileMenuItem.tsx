@@ -1,83 +1,117 @@
 import React from "react";
-import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
 import { MenuItem } from "../../types";
+import { Text } from "../../../Type";
+import { Icon } from "../../../Icon";
+import { Divider } from "../../../Divider";
+import { RadixNavigationMenuItem } from "../shared/components";
+import { IndentedContainer, ButtonTrigger, NavigationLink, MenuItemGroupLabel } from "./styled";
 
-export default function MobileMenuItem({ menuItem }: { menuItem: MenuItem }) {
-  if (menuItem.type === "button") {
-    if (menuItem.items) {
+/* ---------------------------------------------------------------------
+ * Component
+ * -------------------------------------------------------------------*/
+
+interface MobileMenuItemProps {
+  menuItem: MenuItem;
+  /** Depth (root = 0). */
+  level?: number;
+}
+
+export const MobileMenuItem = React.forwardRef<HTMLLIElement, MobileMenuItemProps>(
+  ({ menuItem, level = 0, ...props }, forwardedRef) => {
+    // Proceed only if mobileVisibility is "navigationMenu" or not specified
+    if (menuItem.mobileVisibility !== undefined && menuItem.mobileVisibility !== "navigationMenu") {
+      return null;
+    }
+
+    /* -------------------------------------------------------------------
+     * Separator
+     * -----------------------------------------------------------------*/
+    if (menuItem.type === "separator") {
       return (
-        <>
-          <p
-            style={{
-              color: "#6C7784",
-              fontFamily: "IBM Plex Sans",
-              fontSize: "14px",
-              fontStyle: "normal",
-              fontWeight: 400,
-              lineHeight: "16px /* 114.286% */",
-              margin: 0,
-              paddingTop: 8 + 4,
-              paddingBottom: 8 + 4,
-            }}
-          >
-            {menuItem.label}
-          </p>
-          <div style={{ paddingLeft: 16 }}>
-            {menuItem.items.map((item) => (
-              <MobileMenuItem menuItem={item} key={item.key} />
-            ))}
-          </div>
-        </>
-      );
-    } else {
-      return (
-        <RadixNavigationMenu.Trigger
-          onPointerMove={(event) => event.preventDefault()}
-          onPointerLeave={(event) => event.preventDefault()}
-          {...menuItem.props}
-          style={{
-            background: "none",
-            border: "none",
-            outline: "none",
-            userSelect: "none",
-            display: "block",
-            color: "var(--ui-dark-grey, #434D59)",
-            fontFamily: "IBM Plex Sans",
-            fontSize: "14px",
-            fontStyle: "normal",
-            fontWeight: 500,
-            lineHeight: "16px /* 114.286% */",
-            padding: 0,
-            paddingTop: 8 + 4,
-            paddingBottom: 8 + 4,
-            textAlign: "left",
-          }}
-        >
-          {menuItem.label}
-        </RadixNavigationMenu.Trigger>
+        <IndentedContainer level={level}>
+          <Divider secondary={level > 0} my="x2" />
+        </IndentedContainer>
       );
     }
-  } else {
-    return (
-      <RadixNavigationMenu.Link
-        {...menuItem.props}
-        onPointerMove={(event) => event.preventDefault()}
-        onPointerLeave={(event) => event.preventDefault()}
-        style={{
-          display: "block",
-          color: "var(--ui-dark-grey, #434D59)",
-          fontFamily: "IBM Plex Sans",
-          fontSize: "14px",
-          textDecoration: "none",
-          fontStyle: "normal",
-          fontWeight: 500,
-          lineHeight: "16px /* 114.286% */",
-          paddingTop: 8 + 4,
-          paddingBottom: 8 + 4,
-        }}
-      >
-        {menuItem.label}
-      </RadixNavigationMenu.Link>
-    );
+
+    /* -------------------------------------------------------------------
+     * Custom render fragment
+     * -----------------------------------------------------------------*/
+    if (menuItem.type === "custom") {
+      return (
+        <IndentedContainer level={level}>
+          <RadixNavigationMenuItem ref={forwardedRef} {...props}>
+            {menuItem.render({ withinSubMenu: level > 0, level, withinMobileNav: true })}
+          </RadixNavigationMenuItem>
+        </IndentedContainer>
+      );
+    }
+
+    /* -------------------------------------------------------------------
+     * Helpers shared by link & button
+     * -----------------------------------------------------------------*/
+    const hasIcon = "icon" in menuItem;
+    const hasLabel = "label" in menuItem && !!menuItem.label;
+    const hasTooltip = "tooltip" in menuItem && !!menuItem.tooltip;
+
+    const IconFragment = hasIcon ? <Icon icon={menuItem.icon} size="x3" aria-hidden /> : null;
+
+    // Determine the text to display: use label if available, otherwise use tooltip if icon is present
+    const labelText = hasLabel ? menuItem.label : hasIcon && hasTooltip ? menuItem.tooltip : null;
+
+    const LabelFragment = labelText ? (
+      <Text fontSize="small" lineHeight="smallTextCompressed">
+        {labelText}
+      </Text>
+    ) : null;
+
+    /* -------------------------------------------------------------------
+     * Link
+     * -----------------------------------------------------------------*/
+    if (menuItem.type === "link") {
+      return (
+        <IndentedContainer level={level}>
+          <NavigationLink {...("props" in menuItem ? menuItem.props : {})}>
+            {IconFragment}
+            {LabelFragment}
+          </NavigationLink>
+        </IndentedContainer>
+      );
+    }
+
+    /* -------------------------------------------------------------------
+     * Button
+     * -----------------------------------------------------------------*/
+    if (menuItem.type === "button") {
+      const hasItems = !!menuItem.items && menuItem.items.length > 0;
+
+      // Button with nested items – show group label then children
+      if (hasItems) {
+        return (
+          <>
+            {LabelFragment && (
+              <IndentedContainer level={level}>
+                <MenuItemGroupLabel as="div">{LabelFragment}</MenuItemGroupLabel>
+              </IndentedContainer>
+            )}
+            {(menuItem.items || []).map((item) => (
+              <MobileMenuItem key={item.key} menuItem={item} level={level + 1} />
+            ))}
+          </>
+        );
+      }
+
+      // Simple button with no children
+      return (
+        <IndentedContainer level={level}>
+          <ButtonTrigger {...("props" in menuItem ? menuItem.props : {})}>
+            {IconFragment}
+            {LabelFragment}
+          </ButtonTrigger>
+        </IndentedContainer>
+      );
+    }
+
+    return null;
   }
-}
+);
