@@ -4,7 +4,7 @@ import { BoxProps } from "../Box/Box";
 import { gap } from "../StyledProps";
 import type { GapProps } from "../StyledProps";
 
-interface FlexProps extends BoxProps, GapProps {}
+export interface FlexProps extends BoxProps, GapProps {}
 
 const Flex = styled(Box)<FlexProps>(
   {

@@ -3,4 +3,5 @@ export type NulogyAppName =
   | "supplier-collaboration"
   | "digital-quality-inspection"
   | "shop-floor"
-  | "smart-factory";
+  | "smart-factory"
+  | "connections";
