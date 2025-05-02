@@ -3,7 +3,7 @@ import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
 import { IconName } from "@nulogy/icons";
 
 /*
-  User menu 
+  User menu
 */
 export interface UserMenu {
   triggerText: UserMenuInfo;
@@ -47,10 +47,25 @@ interface RenderUserMenuItem {
 export type UserMenuItem = LinkUserMenuItem | ButtonUserMenuItem | RenderUserMenuItem;
 
 /*
-| Menu Item 
+| Menu Item
 */
 
+type MobileVisibility =
+  /**
+   * Show on the navigation bar, just before the trigger to open the mobile navigation menu
+   */
+  | "navigationBar"
+  /**
+   * Show in the navigation menu, inside the mobile navigation menu. If not specified, this option is assumed
+   */
+  | "navigationMenu"
+  /**
+   * Hide the item completely
+   */
+  | "hidden";
+
 export type MenuItemBase = {
+  mobileVisibility?: MobileVisibility;
   key: string;
 };
 

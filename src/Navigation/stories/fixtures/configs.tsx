@@ -38,6 +38,7 @@ export const primaryMenu: MenuItems = [
                 key: "3rd-sub-analytics",
                 label: "3rd sub analytics",
                 type: "button",
+                mobileVisibility: "navigationBar",
                 items: [
                   {
                     key: "home",
@@ -110,7 +111,7 @@ export const primaryMenu: MenuItems = [
     label: "Inventory management",
     type: "link",
     props: {
-      href: "/yoyo",
+      href: "https://www.google.com",
     },
   },
   {
@@ -150,6 +151,9 @@ export const appSwitcher: AppSwitcherConfig = {
     url: "https://www.google.com",
   },
   "smart-factory": {
+    url: "https://www.google.com",
+  },
+  connections: {
     url: "https://www.google.com",
   },
 };
@@ -252,6 +256,7 @@ export const secondaryMenu: MenuItems = [
     type: "button",
     icon: "settings",
     tooltip: "Settings",
+    mobileVisibility: "navigationBar",
     props: {
       style: {
         padding: "x2",
@@ -265,14 +270,16 @@ export const secondaryMenu: MenuItems = [
   {
     key: "home",
     type: "custom",
-    render: ({ withinSubMenu: subMenu }) => (
+    render: ({ withinSubMenu, withinMobileNav }) => (
       <>
         <NavigationMenuTrigger>
           <Icon icon="home" size="x3" />
           <span>Custom Panel</span>
         </NavigationMenuTrigger>
-        <NavigationMenuContent padding="none" bg={subMenu ? "red" : "blue"}>
-          Something here
+        <NavigationMenuContent padding="none" bg="whiteGrey">
+          This is a custom panel. I am rendered{" "}
+          {withinMobileNav ? "within the mobile navigation" : "within the desktop navigation"}. I am{" "}
+          {withinSubMenu ? "inside" : "not inside"} a submenu.
         </NavigationMenuContent>
       </>
     ),
@@ -288,12 +295,19 @@ export const secondaryMenu: MenuItems = [
         type: "link",
         icon: "autoAwesome",
         tooltip: "AutoAwesome",
+        props: {
+          href: "https://www.google.com",
+        },
       },
       {
         key: "custom-div",
         type: "custom",
-        render: () => (
-          <div style={{ backgroundColor: "red", color: "white", fontWeight: "bold" }}>This is a custom div</div>
+        render: ({ withinMobileNav, withinSubMenu }) => (
+          <div>
+            This is a custom panel. I am rendered{" "}
+            {withinMobileNav ? "within the mobile navigation" : "within the desktop navigation"}. I am{" "}
+            {withinSubMenu ? "inside" : "not inside"} a submenu.
+          </div>
         ),
       },
     ],
