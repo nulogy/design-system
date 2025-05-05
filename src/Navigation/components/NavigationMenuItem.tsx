@@ -10,7 +10,7 @@ import { CaretDown, NavigationMenuLink, NavigationMenuTrigger, RadixNavigationMe
 import { MenuSubItem } from "./MenuSubItem/MenuSubItem";
 import { SubMenuContent } from "./MenuSubItem/parts/styled";
 
-interface NavigationMenuItemProps extends RadixNavigationMenu.NavigationMenuItemProps {
+export interface NavigationMenuItemProps extends RadixNavigationMenu.NavigationMenuItemProps {
   item: MenuItem;
   /** Depth (root = 0). Set internally. */
   level?: number;
@@ -98,7 +98,7 @@ export const NavigationMenuItem = React.forwardRef<HTMLLIElement, NavigationMenu
   }
 );
 
-const NavigationMenuSubList = styled(RadixNavigationMenu.List)`
+export const NavigationMenuSubList = styled(RadixNavigationMenu.List)`
   list-style: none;
   margin: 0;
   padding: 0;

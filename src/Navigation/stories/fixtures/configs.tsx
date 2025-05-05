@@ -43,7 +43,7 @@ export const primaryMenu: MenuItems = [
                 key: "3rd-sub-analytics",
                 label: "3rd sub analytics",
                 type: "button",
-                mobileVisibility: "navigationBar",
+                // mobileVisibility: "navigationBar",
                 items: [
                   {
                     key: "home",
@@ -162,24 +162,26 @@ export const primaryMenu: MenuItems = [
 ];
 
 export const appSwitcher: AppSwitcherConfig = {
-  "production-scheduling": {
-    url: "https://www.google.com",
-    indicator: <StatusIndicator type="informative">new</StatusIndicator>,
-  },
-  "supplier-collaboration": {
-    url: "https://www.google.com",
-  },
-  "digital-quality-inspection": {
-    url: "https://www.google.com",
-  },
-  "shop-floor": {
-    url: "https://www.google.com",
-  },
-  "smart-factory": {
-    url: "https://www.google.com",
-  },
-  connections: {
-    url: "https://www.google.com",
+  apps: {
+    "production-scheduling": {
+      url: "https://www.google.com",
+      indicator: <StatusIndicator type="informative">new</StatusIndicator>,
+    },
+    "supplier-collaboration": {
+      url: "https://www.google.com",
+    },
+    "digital-quality-inspection": {
+      url: "https://www.google.com",
+    },
+    "shop-floor": {
+      url: "https://www.google.com",
+    },
+    "smart-factory": {
+      url: "https://www.google.com",
+    },
+    connections: {
+      url: "https://www.google.com",
+    },
   },
 };
 
@@ -262,6 +264,13 @@ export const userMenu: UserMenu = {
               key: "baaaaaz",
               label: "baaaaaz",
               type: "button",
+              items: [
+                {
+                  key: "baaaaaz",
+                  type: "render",
+                  render: () => <div>This is a custom panel inside the user menu</div>,
+                },
+              ],
             },
           ],
         },
