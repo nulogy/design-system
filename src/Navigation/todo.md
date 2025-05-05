@@ -3,7 +3,7 @@
 - [ ] Desktop
 
   - [-] App switcher
-    - [ ] Translation
+    - [-] Translation
   - [x] Primary navigation
     - [x] Seperators
     - [x] Icons
@@ -18,8 +18,8 @@
 
 - [ ] Mobile
 
-  - [ ] mobileVisibility: “navigationMenu” | “navigationBar” | “hidden”
-  - [ ] Primary navigation
+  - [x] mobileVisibility: “navigationMenu” | “navigationBar” | “hidden”
+  - [x] Primary navigation
   - [ ] Secondary navigation
   - [ ] User menu
     - [ ] Primary menu

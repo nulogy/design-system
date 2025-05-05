@@ -2,7 +2,7 @@ import React from "react";
 import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
 import styled from "styled-components";
 import type { UserMenuItem as UserMenuItemType } from "../../types";
-import { CaretRight } from "../shared/components";
+import { CaretRight, RadixNavigationMenuItem } from "../shared/components";
 import { addStyledProps, StyledProps } from "../../../StyledProps";
 import { Header } from "./parts/Header";
 
@@ -18,10 +18,22 @@ const UserMenuLink = styled(RadixNavigationMenu.Link)(({ theme }) => ({
   fontSize: theme.fontSizes.small,
   fontWeight: theme.fontWeights.bold,
   lineHeight: theme.lineHeights.smallTextBase,
-  padding: `${theme.space.x1_5} 0`,
+  paddingTop: theme.space.x1_5,
+  paddingBottom: theme.space.x1_5,
+  paddingLeft: theme.space.x2,
+  paddingRight: theme.space.x2,
   "&:hover, &:focus": {
     backgroundColor: theme.colors.lightBlue,
     outline: "none",
+  },
+
+  "&:first-child": {
+    borderTopLeftRadius: theme.radii.medium,
+    borderTopRightRadius: theme.radii.medium,
+  },
+  "&:last-child": {
+    borderBottomLeftRadius: theme.radii.medium,
+    borderBottomRightRadius: theme.radii.medium,
   },
 }));
 
@@ -38,24 +50,36 @@ const UserMenuTrigger = styled(RadixNavigationMenu.Trigger)(({ theme }) => ({
   fontSize: theme.fontSizes.small,
   fontWeight: theme.fontWeights.bold,
   lineHeight: theme.lineHeights.smallTextBase,
-  padding: `${theme.space.x1_5} 0`,
+  paddingTop: theme.space.x1_5,
+  paddingBottom: theme.space.x1_5,
+  paddingLeft: theme.space.x2,
+  paddingRight: theme.space.x2,
   textAlign: "left",
   "&:hover, &:focus": {
     backgroundColor: theme.colors.lightBlue,
     outline: "none",
+  },
+
+  "&:first-child": {
+    borderTopLeftRadius: theme.radii.medium,
+    borderTopRightRadius: theme.radii.medium,
+  },
+  "&:last-child": {
+    borderBottomLeftRadius: theme.radii.medium,
+    borderBottomRightRadius: theme.radii.medium,
   },
 }));
 
 const SubMenuContent = styled(RadixNavigationMenu.Content)(({ theme }) => ({
   position: "absolute",
   top: 0,
-  right: `calc(100% + ${theme.space.x2})`,
+  right: `calc(100% + ${theme.space.x1})`,
   width: "max-content",
   minWidth: "150px",
   background: theme.colors.white,
   borderRadius: theme.radii.medium,
   boxShadow: theme.shadows.medium,
-  padding: theme.space.x1,
+  padding: theme.space.none,
   listStyle: "none",
 }));
 
@@ -67,7 +91,7 @@ const SubMenuList = styled(RadixNavigationMenu.List)({
 
 const Item = React.forwardRef<HTMLLIElement, UserMenuItemProps>(({ item, ...props }, forwardedRef) => {
   return (
-    <RadixNavigationMenu.Item ref={forwardedRef} {...props} style={{ position: "relative" }}>
+    <RadixNavigationMenuItem ref={forwardedRef} {...props}>
       {item.type === "link" && <UserMenuLink {...item.props}>{item.label}</UserMenuLink>}
       {item.type === "button" && (
         <>
@@ -89,7 +113,7 @@ const Item = React.forwardRef<HTMLLIElement, UserMenuItemProps>(({ item, ...prop
         </>
       )}
       {item.type === "render" && item.render()}
-    </RadixNavigationMenu.Item>
+    </RadixNavigationMenuItem>
   );
 });
 

@@ -1,6 +1,5 @@
 import React from "react";
 import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
-import styled from "styled-components";
 import { NulogyLogo } from "../shared/NulogyLogo";
 import { BaseNavigationProps } from "../../Navigation";
 import { NavigationMenuList, NavigationMenuRoot, NavigationMenuTrigger } from "../shared/components";
@@ -41,33 +40,29 @@ export default function MobileNav({
           <NavigationMenuTrigger>
             <Icon icon="menu" />
           </NavigationMenuTrigger>
-          <NavigationMenuContent right={0} p="none">
+          <NavigationMenuContent right={0}>
             <UserMenu.Container p="none" display="flex" flexDirection="column" gap="x4">
-              <MobileNavSection>
+              <Box px="x2">
                 {primaryNavigation.map((item) => (
                   <MobileMenuItem menuItem={item} key={item.key} />
                 ))}
-              </MobileNavSection>
-
-              <MobileNavSection>
+              </Box>
+              <Box px="x2">
                 {secondaryNavigation.map((item) => (
                   <MobileMenuItem menuItem={item} key={item.key} />
                 ))}
-              </MobileNavSection>
-
-              <MobileNavSection>
+              </Box>
+              <Box px="x2">
                 <UserMenu.Header {...userMenu.header} containerProps={{ borderRadius: "large" }} />
-              </MobileNavSection>
-
-              <MobileNavSection>{userMenu.controls()}</MobileNavSection>
-
-              <MobileNavSection>
+              </Box>
+              <Box px="x2">{userMenu.controls()}</Box>
+              <Box px="none">
                 <UserMenuItemsList>
                   {userMenu.menuItems.map((item) => (
                     <UserMenu.Item key={item.key} item={item} />
                   ))}
                 </UserMenuItemsList>
-              </MobileNavSection>
+              </Box>
             </UserMenu.Container>
           </NavigationMenuContent>
         </RadixNavigationMenu.Item>
@@ -75,5 +70,3 @@ export default function MobileNav({
     </NavigationMenuRoot>
   );
 }
-
-const MobileNavSection = styled(Box)({});

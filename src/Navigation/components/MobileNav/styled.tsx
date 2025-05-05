@@ -8,14 +8,21 @@ export const IndentedContainer = styled(Box)<{ level: number }>(({ theme, level 
 }));
 
 export const MenuItemGroupLabel = styled(Text)(({ theme }) => ({
-  color: theme.colors.midGrey,
+  display: "flex",
+  alignItems: "center",
+  gap: theme.space.x1,
+  color: theme.colors.darkGrey,
   fontSize: theme.fontSizes.small,
+  fontWeight: theme.fontWeights.medium,
   lineHeight: theme.lineHeights.smallTextBase,
-  paddingTop: theme.space.x1,
-  paddingBottom: theme.space.x1,
+  width: "100%",
+  padding: 0,
+  paddingTop: theme.space.x2,
+  paddingBottom: theme.space.x2,
+  textAlign: "left",
 }));
 
-export const ButtonTrigger = styled(RadixNavigationMenu.Trigger).attrs({
+export const MobileNavigationButton = styled(RadixNavigationMenu.Trigger).attrs({
   onPointerMove: (e) => e.preventDefault(),
   onPointerLeave: (e) => e.preventDefault(),
 })(({ theme }) => ({
@@ -37,7 +44,11 @@ export const ButtonTrigger = styled(RadixNavigationMenu.Trigger).attrs({
   textAlign: "left",
 }));
 
-export const NavigationLink = styled(RadixNavigationMenu.Link)(({ theme }) => ({
+export const MobileNavigationLink = styled(RadixNavigationMenu.Link)(({ theme }) => ({
+  background: "none",
+  border: "none",
+  outline: "none",
+  userSelect: "none",
   display: "flex",
   alignItems: "center",
   gap: theme.space.x1,
@@ -45,8 +56,10 @@ export const NavigationLink = styled(RadixNavigationMenu.Link)(({ theme }) => ({
   fontSize: theme.fontSizes.small,
   fontWeight: theme.fontWeights.medium,
   lineHeight: theme.lineHeights.smallTextBase,
+  width: "100%",
   textDecoration: "none",
-  fontStyle: "normal",
+  padding: 0,
   paddingTop: theme.space.x2,
   paddingBottom: theme.space.x2,
+  textAlign: "left",
 }));

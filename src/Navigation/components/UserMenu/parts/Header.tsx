@@ -14,7 +14,7 @@ const HeaderText = styled(Text).attrs({
   m: "none",
 })({});
 
-interface HeaderProps extends UserMenuInfo {
+export interface HeaderProps extends UserMenuInfo {
   containerProps?: FlexProps;
 }
 
