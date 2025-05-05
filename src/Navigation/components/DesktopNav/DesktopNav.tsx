@@ -1,32 +1,15 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
-import styled from "styled-components";
 import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
-import { Divider, Flex, TruncatedText, VerticalDivider } from "../../..";
+import { Box, Divider, Flex, TruncatedText, VerticalDivider } from "../../..";
 import { BaseNavigationProps } from "../../Navigation";
-import { NavigationMenuItem } from "../NavigationMenuItem";
+import { NavigationMenuItem, NavigationMenuSubList } from "../NavigationMenuItem";
 import UserMenu from "../UserMenu/UserMenu";
 import { CaretDown, NavigationMenuList, NavigationMenuTrigger, NavigationMenuRoot } from "../shared/components";
 import NavigationMenuContent from "../shared/NavigationMenuContent";
 import { NulogyAppSwitcher } from "../AppSwitcher/NulogyAppSwitcher";
 import { useResponsiveMenu } from "../../hooks/useResponsiveMenu";
 import { NulogyLogo } from "../shared/NulogyLogo";
-import type { MenuItems, MenuItem as MenuItemType } from "../../types";
-
-function MoreMenuItem({ moreMenu }: { moreMenu: MenuItems }) {
-  const { t } = useTranslation();
-
-  return (
-    <NavigationMenuItem
-      item={{
-        key: "nds-primary-menu-more-item",
-        label: t("more"),
-        type: "button",
-        items: moreMenu,
-      }}
-    />
-  );
-}
+import MoreMenuItem, { HiddenNavigationMenuItem } from "./parts/MoreMenuItem";
 
 type DesktopNavProps = BaseNavigationProps;
 
@@ -95,14 +78,18 @@ export default function DesktopNav({
             </NavigationMenuTrigger>
             <NavigationMenuContent right={0} p="none">
               <UserMenu.Header {...userMenu.header} />
-              <UserMenu.Container>
-                {userMenu.controls()}
-                <Divider my="x3" />
-                <UserMenuItemsList>
-                  {userMenu.menuItems.map((item) => (
-                    <UserMenu.Item key={item.key} item={item} />
-                  ))}
-                </UserMenuItemsList>
+              <UserMenu.Container p="none" display="flex" flexDirection="column">
+                <Box p="x2">{userMenu.controls()}</Box>
+                <Box px="x2">
+                  <Divider my="x2" />
+                </Box>
+                <Box px="none">
+                  <NavigationMenuSubList>
+                    {userMenu.menuItems.map((item) => (
+                      <UserMenu.Item key={item.key} item={item} />
+                    ))}
+                  </NavigationMenuSubList>
+                </Box>
               </UserMenu.Container>
             </NavigationMenuContent>
           </RadixNavigationMenu.Item>
@@ -111,15 +98,3 @@ export default function DesktopNav({
     </NavigationMenuRoot>
   );
 }
-
-/* Hidden item used by responsive-menu hook */
-const HiddenNavigationMenuItem = styled(NavigationMenuItem)<{ item: MenuItemType }>`
-  position: absolute;
-  visibility: hidden;
-`;
-
-export const UserMenuItemsList = styled(RadixNavigationMenu.List)`
-  list-style: none;
-  padding: 0;
-  margin: 0;
-`;

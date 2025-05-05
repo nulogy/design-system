@@ -7,10 +7,9 @@ import { NulogyAppSwitcher } from "../AppSwitcher/NulogyAppSwitcher";
 import { Icon } from "../../../Icon";
 import NavigationMenuContent from "../shared/NavigationMenuContent";
 import UserMenu from "../UserMenu/UserMenu";
-import { UserMenuItemsList } from "../DesktopNav/DesktopNav";
 import { Box } from "../../../Box";
 import { getNavigationBarItems } from "../utils/getNavigationBarItems";
-import { NavigationMenuItem } from "../NavigationMenuItem";
+import { NavigationMenuItem, NavigationMenuSubList } from "../NavigationMenuItem";
 import { MobileMenuItem } from "./MobileMenuItem";
 
 type MobileNavProps = BaseNavigationProps;
@@ -57,11 +56,11 @@ export default function MobileNav({
               </Box>
               <Box px="x2">{userMenu.controls()}</Box>
               <Box px="none">
-                <UserMenuItemsList>
+                <NavigationMenuSubList>
                   {userMenu.menuItems.map((item) => (
                     <UserMenu.Item key={item.key} item={item} />
                   ))}
-                </UserMenuItemsList>
+                </NavigationMenuSubList>
               </Box>
             </UserMenu.Container>
           </NavigationMenuContent>

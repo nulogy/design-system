@@ -26,15 +26,6 @@ const UserMenuLink = styled(RadixNavigationMenu.Link)(({ theme }) => ({
     backgroundColor: theme.colors.lightBlue,
     outline: "none",
   },
-
-  "&:first-child": {
-    borderTopLeftRadius: theme.radii.medium,
-    borderTopRightRadius: theme.radii.medium,
-  },
-  "&:last-child": {
-    borderBottomLeftRadius: theme.radii.medium,
-    borderBottomRightRadius: theme.radii.medium,
-  },
 }));
 
 const UserMenuTrigger = styled(RadixNavigationMenu.Trigger)(({ theme }) => ({
@@ -59,21 +50,12 @@ const UserMenuTrigger = styled(RadixNavigationMenu.Trigger)(({ theme }) => ({
     backgroundColor: theme.colors.lightBlue,
     outline: "none",
   },
-
-  "&:first-child": {
-    borderTopLeftRadius: theme.radii.medium,
-    borderTopRightRadius: theme.radii.medium,
-  },
-  "&:last-child": {
-    borderBottomLeftRadius: theme.radii.medium,
-    borderBottomRightRadius: theme.radii.medium,
-  },
 }));
 
 const SubMenuContent = styled(RadixNavigationMenu.Content)(({ theme }) => ({
   position: "absolute",
-  top: 0,
-  right: `calc(100% + ${theme.space.x1})`,
+  top: `calc(-1 * ${theme.space.x1})`,
+  right: "100%",
   width: "max-content",
   minWidth: "150px",
   background: theme.colors.white,
@@ -83,11 +65,14 @@ const SubMenuContent = styled(RadixNavigationMenu.Content)(({ theme }) => ({
   listStyle: "none",
 }));
 
-const SubMenuList = styled(RadixNavigationMenu.List)({
+const SubMenuList = styled(RadixNavigationMenu.List)(({ theme }) => ({
   listStyle: "none",
-  padding: 0,
+  paddingLeft: theme.space.none,
+  paddingRight: theme.space.none,
+  paddingTop: theme.space.x1,
+  paddingBottom: theme.space.x1,
   margin: 0,
-});
+}));
 
 const Item = React.forwardRef<HTMLLIElement, UserMenuItemProps>(({ item, ...props }, forwardedRef) => {
   return (
