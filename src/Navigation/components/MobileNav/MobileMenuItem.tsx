@@ -4,7 +4,7 @@ import { Text } from "../../../Type";
 import { Icon } from "../../../Icon";
 import { Divider } from "../../../Divider";
 import { RadixNavigationMenuItem } from "../shared/components";
-import { IndentedContainer, ButtonTrigger, NavigationLink, MenuItemGroupLabel } from "./styled";
+import { IndentedContainer, MobileNavigationButton, MobileNavigationLink, MenuItemGroupLabel } from "./styled";
 
 /* ---------------------------------------------------------------------
  * Component
@@ -71,10 +71,10 @@ export const MobileMenuItem = React.forwardRef<HTMLLIElement, MobileMenuItemProp
     if (menuItem.type === "link") {
       return (
         <IndentedContainer level={level}>
-          <NavigationLink {...("props" in menuItem ? menuItem.props : {})}>
+          <MobileNavigationLink {...("props" in menuItem ? menuItem.props : {})}>
             {IconFragment}
             {LabelFragment}
-          </NavigationLink>
+          </MobileNavigationLink>
         </IndentedContainer>
       );
     }
@@ -91,7 +91,7 @@ export const MobileMenuItem = React.forwardRef<HTMLLIElement, MobileMenuItemProp
           <>
             {LabelFragment && (
               <IndentedContainer level={level}>
-                <MenuItemGroupLabel as="div">{LabelFragment}</MenuItemGroupLabel>
+                <MenuItemGroupLabel>{LabelFragment}</MenuItemGroupLabel>
               </IndentedContainer>
             )}
             {(menuItem.items || []).map((item) => (
@@ -104,10 +104,10 @@ export const MobileMenuItem = React.forwardRef<HTMLLIElement, MobileMenuItemProp
       // Simple button with no children
       return (
         <IndentedContainer level={level}>
-          <ButtonTrigger {...("props" in menuItem ? menuItem.props : {})}>
+          <MobileNavigationButton {...("props" in menuItem ? menuItem.props : {})}>
             {IconFragment}
             {LabelFragment}
-          </ButtonTrigger>
+          </MobileNavigationButton>
         </IndentedContainer>
       );
     }

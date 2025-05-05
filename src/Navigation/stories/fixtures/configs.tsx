@@ -6,18 +6,23 @@ import { NavigationMenuTrigger } from "../../components/shared/components";
 import NavigationMenuContent from "../../components/shared/NavigationMenuContent";
 
 // The main menu can be an:
-// [ ] icon
-// [ ] icon and label
-// [ ] link
-// [ ] button
-// [ ] custom panel
-// [ ] dropdown
+// [x] icon
+// [x] icon and label
+// [x] link
+// [x] button
+// [x] custom panel
+// [x] dropdown
 
 export const primaryMenu: MenuItems = [
   {
     key: "order-management",
     label: "Order management",
     type: "button",
+    props: {
+      onClick: () => {
+        alert("you clicked order management");
+      },
+    },
   },
   {
     key: "analytics",
@@ -78,6 +83,11 @@ export const primaryMenu: MenuItems = [
                     key: "4th-sub-analytics-2",
                     label: "4th sub analytics",
                     type: "button",
+                    props: {
+                      onClick: () => {
+                        alert("you clicked 4th sub analytics");
+                      },
+                    },
                   },
                 ],
               },
@@ -118,6 +128,11 @@ export const primaryMenu: MenuItems = [
     key: "invoices",
     label: "Invoices",
     type: "button",
+    props: {
+      onClick: () => {
+        alert("you clicked invoices");
+      },
+    },
   },
   {
     key: "invoices-item-separator",
@@ -127,12 +142,22 @@ export const primaryMenu: MenuItems = [
     key: "items",
     label: "Items",
     type: "button",
+    props: {
+      onClick: () => {
+        alert("you clicked items");
+      },
+    },
   },
   {
     key: "imports-and-exports",
     icon: "chatBubble",
     tooltip: "imports and exports",
     type: "button",
+    props: {
+      onClick: () => {
+        alert("you clicked imports and exports");
+      },
+    },
   },
 ];
 
@@ -260,6 +285,9 @@ export const secondaryMenu: MenuItems = [
     props: {
       style: {
         padding: "x2",
+      },
+      onClick: () => {
+        alert("you clicked settings");
       },
     },
   },
