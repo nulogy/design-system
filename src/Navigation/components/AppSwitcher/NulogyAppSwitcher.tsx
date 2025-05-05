@@ -6,7 +6,9 @@ import { NulogyAppName } from "../../../types/NulogyApp";
 import NavigationMenuContent from "../shared/NavigationMenuContent";
 import AppSwitcher from "./parts";
 
-export type AppSwitcherConfig = false | Record<NulogyAppName, { url: string; indicator?: React.ReactNode }>;
+export type AppSwitcherConfig =
+  | false
+  | { apps: Partial<Record<NulogyAppName, { url: string; indicator?: React.ReactNode }>> };
 
 type AppSwitcherProps = {
   config: AppSwitcherConfig;
