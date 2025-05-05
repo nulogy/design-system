@@ -26,28 +26,28 @@ const apps: App[] = [
   },
   {
     id: "digital-quality-inspection",
-    label: "Digital quality inspection",
+    label: "Digital Quality Inspection",
     description: "Cloned global attitude fully-configurable motivating support",
   },
   {
     id: "production-scheduling",
-    label: "Production scheduling",
+    label: "Production Scheduling",
     description:
       "Assimilated 24 hour capability operative demand-driven model object-based zero tolerance model fully-configurable regional analyzer",
   },
   {
     id: "shop-floor",
-    label: "Shop floor control",
+    label: "Shop Floor Control",
     description: "Persevering mobile capacity synchronized intangible core",
   },
   {
     id: "supplier-collaboration",
-    label: "Supplier collaboration",
+    label: "Supplier Collaboration",
     description: "Function-based coherent process improvement cloned encompassing infomediaries",
   },
   {
     id: "smart-factory",
-    label: "Smart factory",
+    label: "Smart Factory",
     description: "Smart factory description",
   },
 ] as const;
