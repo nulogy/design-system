@@ -43,7 +43,9 @@ export default function MobileNav({
             <UserMenu.Container p="none" display="flex" flexDirection="column" gap="x4">
               <Box px="x2">
                 {primaryNavigation.map((item) => (
-                  <MobileMenuItem menuItem={item} key={item.key} />
+                  <NavigationMenuSubList key={item.key}>
+                    <MobileMenuItem menuItem={item} />
+                  </NavigationMenuSubList>
                 ))}
               </Box>
               <Box px="x2">
@@ -58,7 +60,7 @@ export default function MobileNav({
               <Box px="none">
                 <NavigationMenuSubList>
                   {userMenu.menuItems.map((item) => (
-                    <UserMenu.Item key={item.key} item={item} />
+                    <UserMenu.MobileItem key={item.key} item={item} />
                   ))}
                 </NavigationMenuSubList>
               </Box>

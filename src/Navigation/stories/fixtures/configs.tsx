@@ -246,28 +246,28 @@ export const userMenu: UserMenu = {
       type: "button",
       items: [
         {
-          key: "foooooo",
-          label: "foooooo",
+          key: "admin",
+          label: "Admin",
           type: "button",
         },
         {
-          key: "baaaaar",
-          label: "baaaaar",
+          key: "operator",
+          label: "Operator",
           type: "button",
         },
         {
-          key: "baaaaaz",
-          label: "baaaaaz",
+          key: "customer",
+          label: "Customer",
           type: "button",
           items: [
             {
-              key: "baaaaaz",
-              label: "baaaaaz",
+              key: "customer-abc",
+              label: "Customer ABC",
               type: "button",
               items: [
                 {
-                  key: "baaaaaz",
-                  type: "render",
+                  key: "customer-abc-123",
+                  type: "custom",
                   render: () => <div>This is a custom panel inside the user menu</div>,
                 },
               ],
@@ -278,8 +278,10 @@ export const userMenu: UserMenu = {
     },
     {
       key: "production",
-      type: "render",
-      render: () => <button style={{ fontWeight: "bold", color: "red" }}>production</button>,
+      type: "custom",
+      render: () => (
+        <button style={{ fontWeight: "bold", color: "red" }}>This is a custom button inside the user menu</button>
+      ),
     },
   ],
 };

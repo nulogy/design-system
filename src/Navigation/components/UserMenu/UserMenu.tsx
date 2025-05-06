@@ -4,53 +4,60 @@ import styled from "styled-components";
 import type { UserMenuItem as UserMenuItemType } from "../../types";
 import { CaretRight, RadixNavigationMenuItem } from "../shared/components";
 import { addStyledProps, StyledProps } from "../../../StyledProps";
+import { IndentedContainer } from "../MobileNav/styled";
 import { Header } from "./parts/Header";
 
 interface UserMenuItemProps extends RadixNavigationMenu.NavigationMenuItemProps {
   item: UserMenuItemType;
 }
 
-const UserMenuLink = styled(RadixNavigationMenu.Link)(({ theme }) => ({
-  display: "block",
-  width: "100%",
-  textDecoration: "none",
-  color: theme.colors.darkGrey,
-  fontSize: theme.fontSizes.small,
-  fontWeight: theme.fontWeights.bold,
-  lineHeight: theme.lineHeights.smallTextBase,
-  paddingTop: theme.space.x1_5,
-  paddingBottom: theme.space.x1_5,
-  paddingLeft: theme.space.x2,
-  paddingRight: theme.space.x2,
-  "&:hover, &:focus": {
-    backgroundColor: theme.colors.lightBlue,
-    outline: "none",
-  },
-}));
+const UserMenuLink = styled(RadixNavigationMenu.Link)(
+  ({ theme }) => ({
+    display: "block",
+    width: "100%",
+    textDecoration: "none",
+    color: theme.colors.darkGrey,
+    fontSize: theme.fontSizes.small,
+    fontWeight: theme.fontWeights.bold,
+    lineHeight: theme.lineHeights.smallTextBase,
+    paddingTop: theme.space.x1_5,
+    paddingBottom: theme.space.x1_5,
+    paddingLeft: theme.space.x2,
+    paddingRight: theme.space.x2,
+    "&:hover, &:focus": {
+      backgroundColor: theme.colors.lightBlue,
+      outline: "none",
+    },
+  }),
+  addStyledProps
+);
 
-const UserMenuTrigger = styled(RadixNavigationMenu.Trigger)(({ theme }) => ({
-  background: "none",
-  border: "none",
-  outline: "none",
-  userSelect: "none",
-  display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center",
-  width: "100%",
-  color: theme.colors.darkGrey,
-  fontSize: theme.fontSizes.small,
-  fontWeight: theme.fontWeights.bold,
-  lineHeight: theme.lineHeights.smallTextBase,
-  paddingTop: theme.space.x1_5,
-  paddingBottom: theme.space.x1_5,
-  paddingLeft: theme.space.x2,
-  paddingRight: theme.space.x2,
-  textAlign: "left",
-  "&:hover, &:focus": {
-    backgroundColor: theme.colors.lightBlue,
+const UserMenuTrigger = styled(RadixNavigationMenu.Trigger)(
+  ({ theme }) => ({
+    background: "none",
+    border: "none",
     outline: "none",
-  },
-}));
+    userSelect: "none",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    width: "100%",
+    color: theme.colors.darkGrey,
+    fontSize: theme.fontSizes.small,
+    fontWeight: theme.fontWeights.bold,
+    lineHeight: theme.lineHeights.smallTextBase,
+    paddingTop: theme.space.x1_5,
+    paddingBottom: theme.space.x1_5,
+    paddingLeft: theme.space.x2,
+    paddingRight: theme.space.x2,
+    textAlign: "left",
+    "&:hover, &:focus": {
+      backgroundColor: theme.colors.lightBlue,
+      outline: "none",
+    },
+  }),
+  addStyledProps
+);
 
 const SubMenuContent = styled(RadixNavigationMenu.Content)(({ theme }) => ({
   position: "absolute",
@@ -74,33 +81,76 @@ const SubMenuList = styled(RadixNavigationMenu.List)(({ theme }) => ({
   margin: 0,
 }));
 
-const Item = React.forwardRef<HTMLLIElement, UserMenuItemProps>(({ item, ...props }, forwardedRef) => {
-  return (
-    <RadixNavigationMenuItem ref={forwardedRef} {...props}>
-      {item.type === "link" && <UserMenuLink {...item.props}>{item.label}</UserMenuLink>}
-      {item.type === "button" && (
+const Item = React.forwardRef<HTMLLIElement, UserMenuItemProps & { level?: number }>(
+  ({ item, level = 0, ...props }, forwardedRef) => {
+    return (
+      <RadixNavigationMenuItem ref={forwardedRef} {...props}>
+        {item.type === "link" && <UserMenuLink {...item.props}>{item.label}</UserMenuLink>}
+        {item.type === "button" && (
+          <>
+            <UserMenuTrigger {...item.props}>
+              {item.label}
+              {"items" in item && item.items && item.items.length > 0 && <CaretRight aria-hidden size="x2" />}
+            </UserMenuTrigger>
+            {"items" in item && item.items && item.items.length > 0 && (
+              <SubMenuContent>
+                <RadixNavigationMenu.Sub orientation="vertical">
+                  <SubMenuList>
+                    {item.items.map((subItem) => (
+                      <Item key={subItem.key} item={subItem} level={level + 1} />
+                    ))}
+                  </SubMenuList>
+                </RadixNavigationMenu.Sub>
+              </SubMenuContent>
+            )}
+          </>
+        )}
+        {item.type === "custom" && item.render({ level, withinMobileNav: false })}
+      </RadixNavigationMenuItem>
+    );
+  }
+);
+
+const MobileItem = React.forwardRef<HTMLLIElement, UserMenuItemProps & { level?: number }>(
+  ({ item, level = 0, ...props }, forwardedRef) => {
+    const hasSubItems = "items" in item && item.items && item.items.length > 0;
+
+    const content = (
+      <>
+        {item.type === "link" && (
+          <IndentedContainer level={level}>
+            <UserMenuLink {...item.props}>{item.label}</UserMenuLink>
+          </IndentedContainer>
+        )}
+        {item.type === "button" && (
+          <IndentedContainer level={level}>
+            <UserMenuTrigger {...item.props}>{item.label}</UserMenuTrigger>
+          </IndentedContainer>
+        )}
+        {item.type === "custom" && item.render({ level, withinMobileNav: true })}
+      </>
+    );
+
+    if (item.type === "button" && hasSubItems) {
+      return (
         <>
-          <UserMenuTrigger {...item.props}>
-            {item.label}
-            {item.items && item.items.length > 0 && <CaretRight aria-hidden size="x2" />}
-          </UserMenuTrigger>
-          {item.items && item.items.length > 0 && (
-            <SubMenuContent>
-              <RadixNavigationMenu.Sub orientation="vertical">
-                <SubMenuList>
-                  {item.items.map((subItem) => (
-                    <Item key={subItem.key} item={subItem} />
-                  ))}
-                </SubMenuList>
-              </RadixNavigationMenu.Sub>
-            </SubMenuContent>
-          )}
+          <RadixNavigationMenuItem ref={forwardedRef} {...props}>
+            {content}
+          </RadixNavigationMenuItem>
+          {item.items.map((subItem) => (
+            <MobileItem key={subItem.key} item={subItem} level={level + 1} />
+          ))}
         </>
-      )}
-      {item.type === "render" && item.render()}
-    </RadixNavigationMenuItem>
-  );
-});
+      );
+    }
+
+    return (
+      <RadixNavigationMenuItem ref={forwardedRef} {...props}>
+        {content}
+      </RadixNavigationMenuItem>
+    );
+  }
+);
 
 const Container = styled(RadixNavigationMenu.Sub).attrs({
   orientation: "vertical",
@@ -115,6 +165,7 @@ const UserMenu = {
   Header,
   Container,
   Item,
+  MobileItem,
 };
 
 export default UserMenu;

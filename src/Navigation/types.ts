@@ -23,15 +23,17 @@ export type UserMenuInfo = {
   User menu items
 */
 
-interface LinkUserMenuItem {
+interface BaseUserMenuItem {
   key: string;
+}
+
+interface LinkUserMenuItem {
   label: string;
   type: "link";
   props: React.ComponentPropsWithoutRef<typeof RadixNavigationMenu.Link>;
 }
 
 interface ButtonUserMenuItem {
-  key: string;
   label: string;
   type: "button";
   props?: React.ComponentPropsWithoutRef<"button">;
@@ -39,12 +41,16 @@ interface ButtonUserMenuItem {
 }
 
 interface RenderUserMenuItem {
-  key: string;
-  type: "render";
-  render: () => JSX.Element;
+  type: "custom";
+  /**
+   * Custom render fragment.
+   * @param props.level           – Depth (root = 0).
+   * @param props.withinMobileNav – True when rendered within the mobile navigation.
+   */
+  render: (props: { level: number; withinMobileNav: boolean }) => JSX.Element;
 }
 
-export type UserMenuItem = LinkUserMenuItem | ButtonUserMenuItem | RenderUserMenuItem;
+export type UserMenuItem = BaseUserMenuItem & (LinkUserMenuItem | ButtonUserMenuItem | RenderUserMenuItem);
 
 /*
 | Menu Item
@@ -52,15 +58,15 @@ export type UserMenuItem = LinkUserMenuItem | ButtonUserMenuItem | RenderUserMen
 
 type MobileVisibility =
   /**
-   * Show on the navigation bar, just before the trigger to open the mobile navigation menu
+   * Show on the navigation bar, just before the mobile navigation menu trigger
    */
   | "navigationBar"
   /**
-   * Show in the navigation menu, inside the mobile navigation menu. If not specified, this option is assumed
+   * Show inside the mobile navigation menu (default behavior)
    */
   | "navigationMenu"
   /**
-   * Hide the item completely
+   * Hide item completely
    */
   | "hidden";
 

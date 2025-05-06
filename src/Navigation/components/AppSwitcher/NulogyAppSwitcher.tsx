@@ -58,11 +58,11 @@ export function NulogyAppSwitcher({ config }: AppSwitcherProps) {
   if (!config) return null;
 
   const includedApps = apps
-    .filter((app) => app.id in config)
+    .filter((app) => app.id in config.apps)
     .map((app) => ({
       ...app,
-      url: config[app.id].url,
-      indicator: config[app.id].indicator,
+      url: config.apps[app.id].url,
+      indicator: config.apps[app.id].indicator,
     }));
 
   return (
