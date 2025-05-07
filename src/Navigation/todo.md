@@ -4,6 +4,8 @@
 
   - [-] App switcher
     - [-] Translation
+  - [x] Nulogy logo
+    - [x] Client side routing (and the rest of the navbar)
   - [x] Primary navigation
     - [x] Seperators
     - [x] Icons
