@@ -1,8 +1,8 @@
-import React from "react";
+import React, { SVGProps } from "react";
 
-export default function Logo() {
+export function SvgNulogyLogo(props: SVGProps<SVGSVGElement>) {
   return (
-    <svg width="102" height="24" viewBox="0 0 102 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 102 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
       <path
         d="M23.4218 0.867146L27.759 2.60144V18.2175C27.759 21.5706 23.6157 22.1596 20.8189 22.5547C22.4185 22.1596 23.4307 21.7156 23.4218 18.2175V4.33721L19.0846 2.60144L23.4218 0.867146ZM5.20435 21.6875V12.1474C5.20435 11.1871 5.925 10.1009 6.79955 9.72653L11.2773 7.80283V13.8699L15.6145 16.4846C16.4891 16.9286 18.2175 16.9389 18.2175 15.616V13.0131L16.4802 12.1445V0L3.2555 4.87288C1.45757 5.53434 0 7.61934 0 9.54304V23.8569L5.20435 21.6875Z"
         fill="#F0B41C"

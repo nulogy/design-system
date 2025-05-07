@@ -5,25 +5,13 @@ import { ApplicationFrame } from "../../Layout";
 import { Input } from "../../Input";
 import { FormSection } from "../../Form";
 import { appSwitcher, primaryMenu, secondaryMenu, userMenu } from "./fixtures/configs";
-import Logo from "./fixtures/logos/Logo";
+import Logo from "./fixtures/logos/CustomLogo3";
 
 export default {
-  title: "Components/Navigation",
+  title: "Components/Navigation/Other",
   parameters: {
     layout: "fullscreen",
   },
-};
-
-export const BasicUsage = () => {
-  return (
-    <Navigation
-      appSwitcher={appSwitcher}
-      primaryNavigation={primaryMenu}
-      secondaryNavigation={secondaryMenu}
-      userMenu={userMenu}
-      secondaryLogo={<Logo style={{ width: "auto", height: 32 }} />}
-    />
-  );
 };
 
 export const WithAnApplicationFrame = () => (

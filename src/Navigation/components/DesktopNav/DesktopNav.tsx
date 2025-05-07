@@ -4,11 +4,18 @@ import { Box, Divider, Flex, TruncatedText, VerticalDivider } from "../../..";
 import { BaseNavigationProps } from "../../Navigation";
 import { NavigationMenuItem, NavigationMenuSubList } from "../NavigationMenuItem";
 import UserMenu from "../UserMenu/UserMenu";
-import { CaretDown, NavigationMenuList, NavigationMenuTrigger, NavigationMenuRoot } from "../shared/components";
+import {
+  CaretDown,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuRoot,
+  RadixNavigationMenuItem,
+} from "../shared/components";
 import NavigationMenuContent from "../shared/NavigationMenuContent";
 import { NulogyAppSwitcher } from "../AppSwitcher/NulogyAppSwitcher";
 import { useResponsiveMenu } from "../../hooks/useResponsiveMenu";
-import { NulogyLogo } from "../shared/NulogyLogo";
+import { NulogyLogo } from "../NulogyLogo/NulogyLogo";
+import { NavigationLogoLink } from "../NulogyLogo/NavigationLogoLink";
 import MoreMenuItem, { HiddenNavigationMenuItem } from "./parts/MoreMenuItem";
 
 type DesktopNavProps = BaseNavigationProps;
@@ -18,7 +25,7 @@ export default function DesktopNav({
   secondaryNavigation = [],
   appSwitcher,
   secondaryLogo,
-  primaryAppUrl,
+  primaryLogo,
   userMenu,
 }: DesktopNavProps) {
   const userMenuExists = !!userMenu;
@@ -31,9 +38,13 @@ export default function DesktopNav({
       <NavigationMenuList ref={primaryMenuRef}>
         <NulogyAppSwitcher config={appSwitcher} />
 
-        <RadixNavigationMenu.Item>
-          <NulogyLogo url={primaryAppUrl || "/"} />
-        </RadixNavigationMenu.Item>
+        <RadixNavigationMenuItem display="flex">
+          {primaryLogo ?? (
+            <NavigationLogoLink href="/" aria-label="Nulogy Logo">
+              <NulogyLogo />
+            </NavigationLogoLink>
+          )}
+        </RadixNavigationMenuItem>
 
         {menuItems.map((item) => (
           <NavigationMenuItem key={item.key} item={item} />
@@ -52,7 +63,7 @@ export default function DesktopNav({
 
         {secondaryNavigation.length > 0 && userMenuExists && <VerticalDivider />}
 
-        {secondaryLogo && <>{secondaryLogo}</>}
+        {secondaryLogo && <RadixNavigationMenuItem display="flex">{secondaryLogo}</RadixNavigationMenuItem>}
         {secondaryLogo && userMenuExists && <VerticalDivider />}
 
         {/* ----------------------- User Menu ------------------------------ */}
