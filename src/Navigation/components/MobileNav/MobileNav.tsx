@@ -35,7 +35,7 @@ export default function MobileNav({
           {primaryLogo ?? (
             // @todo translate the aria-label
             <NavigationMenuLink href="/" aria-label="Nulogy Logo">
-              <NulogyLogo app="connections" />
+              <NulogyLogo />
             </NavigationMenuLink>
           )}
         </RadixNavigationMenuItem>
