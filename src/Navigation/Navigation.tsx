@@ -8,8 +8,8 @@ import { NAVIGATION_DEFAULT_BREAKPOINT_THEME_KEY } from "./components/shared/con
 
 export interface BaseNavigationProps {
   appSwitcher?: AppSwitcherConfig;
+  primaryLogo?: React.ReactNode;
   secondaryLogo?: React.ReactNode;
-  primaryAppUrl?: string;
   primaryNavigation?: MenuItems;
   secondaryNavigation?: MenuItems;
   userMenu?: UserMenu;
@@ -20,9 +20,9 @@ export interface NavigationProps extends BaseNavigationProps {
 }
 
 const Navigation = ({ breakpoint = NAVIGATION_DEFAULT_BREAKPOINT_THEME_KEY, ...props }: NavigationProps) => {
-  const onDesktop = useMediaQuery(breakpoint);
+  const largeScreen = useMediaQuery(breakpoint);
 
-  return <>{onDesktop ? <DesktopNav {...props} /> : <MobileNav {...props} />}</>;
+  return <>{largeScreen ? <DesktopNav {...props} /> : <MobileNav {...props} />}</>;
 };
 
 export default Navigation;

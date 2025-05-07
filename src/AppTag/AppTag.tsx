@@ -1,11 +1,11 @@
 import React from "react";
 import styled, { useTheme } from "styled-components";
 import { Text } from "../Type";
-import { NulogyAppName } from "../types/NulogyApp";
+import { APP_ABBREVIATIONS, APP_DISPLAY_NAMES, NulogyAppName } from "../types/NulogyApp";
 import { LogoWrapper } from "./components/LogoWrapper";
 import NulogyLogo from "./components/NulogyLogo";
 import { Tooltip } from "./components/Tooltip";
-import { APP_ABBREVIATIONS, APP_DISPLAY_NAMES, appTagColors } from "./constants";
+import { appTagColors } from "./constants";
 import { AppTagType } from "./types";
 
 export type AppTagProps = {
