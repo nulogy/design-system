@@ -120,7 +120,7 @@ export const Simplified = () => {
                     </DescriptionTerm>
                     <DescriptionDetails>
                       <Flex as="span" alignItems="center" gap="half">
-                        <Box as="span" color="midGrey" fontWeight="light">
+                        <Box as="span" color="midGrey">
                           200283764
                         </Box>
                         <Icon icon="arrowForward" color="grey" size="x2_5" />
@@ -138,7 +138,7 @@ export const Simplified = () => {
                     </DescriptionTerm>
                     <DescriptionDetails>
                       <Flex as="span" alignItems="center" gap="half">
-                        <Box as="span" color="midGrey" fontWeight="light">
+                        <Box as="span" color="midGrey">
                           Ugly gloves, marbled chocolate concrete large 4x48
                         </Box>
                         <Icon icon="arrowForward" color="grey" size="x2_5" />
@@ -156,7 +156,7 @@ export const Simplified = () => {
                     </DescriptionTerm>
                     <DescriptionDetails>
                       <Flex as="span" alignItems="center" gap="half">
-                        <Box as="span" color="midGrey" fontWeight="light">
+                        <Box as="span" color="midGrey">
                           John Smith
                         </Box>
                         <Icon icon="arrowForward" color="grey" size="x2_5" />
@@ -177,7 +177,7 @@ export const Simplified = () => {
                     </DescriptionTerm>
                     <DescriptionDetails>
                       <Flex as="span" alignItems="center" gap="half">
-                        <Box as="span" color="midGrey" fontWeight="light">
+                        <Box as="span" color="midGrey">
                           US $18.75
                         </Box>
                         <Icon icon="arrowForward" color="grey" size="x2_5" />
@@ -198,7 +198,7 @@ export const Simplified = () => {
                     </DescriptionTerm>
                     <DescriptionDetails>
                       <Flex as="span" alignItems="center" gap="half">
-                        <Box as="span" color="midGrey" fontWeight="light">
+                        <Box as="span" color="midGrey">
                           US $22.50
                         </Box>
                         <Icon icon="arrowForward" color="grey" size="x2_5" />
@@ -219,7 +219,7 @@ export const Simplified = () => {
                     </DescriptionTerm>
                     <DescriptionDetails>
                       <Flex as="span" alignItems="center" gap="half">
-                        <Box as="span" color="midGrey" fontWeight="light">
+                        <Box as="span" color="midGrey">
                           EA
                         </Box>
                         <Icon icon="arrowForward" color="grey" size="x2_5" />
@@ -240,7 +240,7 @@ export const Simplified = () => {
                     </DescriptionTerm>
                     <DescriptionDetails>
                       <Flex as="span" alignItems="center" gap="half">
-                        <Box as="span" color="midGrey" fontWeight="light">
+                        <Box as="span" color="midGrey">
                           EA
                         </Box>
                         <Icon icon="arrowForward" color="grey" size="x2_5" />
@@ -261,7 +261,7 @@ export const Simplified = () => {
                     </DescriptionTerm>
                     <DescriptionDetails>
                       <Flex as="span" alignItems="center" gap="half">
-                        <Box as="span" color="midGrey" fontWeight="light">
+                        <Box as="span" color="midGrey">
                           EA
                         </Box>
                         <Icon icon="arrowForward" color="grey" size="x2_5" />
@@ -279,7 +279,7 @@ export const Simplified = () => {
                     </DescriptionTerm>
                     <DescriptionDetails>
                       <Flex as="span" alignItems="center" gap="half">
-                        <Box as="span" color="midGrey" fontWeight="light">
+                        <Box as="span" color="midGrey">
                           100
                         </Box>
                         <Icon icon="arrowForward" color="grey" size="x2_5" />
@@ -297,7 +297,7 @@ export const Simplified = () => {
                     </DescriptionTerm>
                     <DescriptionDetails>
                       <Flex as="span" alignItems="center" gap="half">
-                        <Box as="span" color="midGrey" fontWeight="light">
+                        <Box as="span" color="midGrey">
                           US $25.50
                         </Box>
                         <Icon icon="arrowForward" color="grey" size="x2_5" />
@@ -310,7 +310,7 @@ export const Simplified = () => {
                 </DescriptionList>
 
                 <Box mt="x1_5" mb="x2_5">
-                  <Text color="midGrey" fontWeight="light" fontSize="small" lineHeight="smallCompact">
+                  <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
                     by
                     <Box as="span" color="black" fontWeight="normal" mx="half">
                       john.smith@something.com
@@ -339,7 +339,7 @@ export const Simplified = () => {
                     </DescriptionTerm>
                     <DescriptionDetails>
                       <Flex as="span" alignItems="center" gap="half">
-                        <Box as="span" color="midGrey" fontWeight="light">
+                        <Box as="span" color="midGrey">
                           200283764
                         </Box>
                         <Icon icon="arrowForward" color="grey" size="x2_5" />
@@ -357,7 +357,7 @@ export const Simplified = () => {
                     </DescriptionTerm>
                     <DescriptionDetails>
                       <Flex as="span" alignItems="center" gap="half">
-                        <Box as="span" color="midGrey" fontWeight="light">
+                        <Box as="span" color="midGrey">
                           Ugly gloves, marbled chocolate concrete large 4x48
                         </Box>
                         <Icon icon="arrowForward" color="grey" size="x2_5" />
@@ -375,7 +375,7 @@ export const Simplified = () => {
                     </DescriptionTerm>
                     <DescriptionDetails>
                       <Flex as="span" alignItems="center" gap="half">
-                        <Box as="span" color="midGrey" fontWeight="light">
+                        <Box as="span" color="midGrey">
                           John Smith
                         </Box>
                         <Icon icon="arrowForward" color="grey" size="x2_5" />
@@ -388,7 +388,7 @@ export const Simplified = () => {
                 </DescriptionList>
 
                 <Box mt="x1_5" mb="x2_5">
-                  <Text color="midGrey" fontWeight="light" fontSize="small" lineHeight="smallCompact">
+                  <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
                     by
                     <Box as="span" color="black" fontWeight="normal" mx="half">
                       john.smith@something.com
@@ -417,7 +417,7 @@ export const Simplified = () => {
 export const Colourful = () => {
   const [selectedIndex, setSelectedIndex] = useState(6);
 
-  const officeUsers = [
+  const users = [
     "michael.scott@dundermifflin.com",
     "jim.halpert@dundermifflin.com",
     "pam.beesly@dundermifflin.com",
@@ -516,38 +516,6 @@ export const Colourful = () => {
       { term: "Supplier UOM modified", supplier: "Quality Components", old: "EA", new: "PCS" },
     ];
 
-    let numTerms;
-    if (index % 5 === 0) {
-      numTerms = Math.floor(Math.random() * 2) + 1;
-    } else if (index % 3 === 0) {
-      numTerms = Math.floor(Math.random() * 6) + 15;
-    } else {
-      numTerms = Math.floor(Math.random() * 6) + 5;
-    }
-
-    let selectedTerms = allTerms.sort(() => Math.random() - 0.5).slice(0, numTerms);
-
-    if (numTerms > 5) {
-      const artisanTerms = allTerms.filter((term) => term.supplier === "Artisan");
-      const kdTerms = allTerms.filter((term) => term.supplier === "KD Services");
-      const supplierTerms = [...artisanTerms, ...kdTerms];
-      const randomSupplierTerm = supplierTerms[Math.floor(Math.random() * supplierTerms.length)];
-
-      const replaceIndex = Math.floor(Math.random() * selectedTerms.length);
-      selectedTerms[replaceIndex] = randomSupplierTerm;
-    }
-
-    // Sort terms alphabetically by their display text (term + supplier)
-    selectedTerms.sort((a, b) => {
-      const aText = a.supplier ? `${a.term} – ${a.supplier}` : a.term;
-      const bText = b.supplier ? `${b.term} – ${b.supplier}` : b.term;
-      return aText.localeCompare(bText);
-    });
-
-    // Get 1-3 random suppliers for this list
-    const numSuppliers = Math.floor(Math.random() * 3) + 1;
-    const selectedSuppliers = suppliers.sort(() => Math.random() - 0.5).slice(0, numSuppliers);
-
     // Special case for index 5 to show all supplier UOM changes
     if (index === 5) {
       return allTerms
@@ -568,7 +536,7 @@ export const Colourful = () => {
             </DescriptionTerm>
             <DescriptionDetails>
               <Flex as="span" alignItems="center" gap="half">
-                <Box as="span" color="midGrey" fontWeight="light">
+                <Box as="span" color="midGrey">
                   {item.old}
                 </Box>
                 <Icon icon="arrowForward" color="grey" size="x2_5" />
@@ -581,11 +549,17 @@ export const Colourful = () => {
         ));
     }
 
-    // First get non-supplier terms
-    const nonSupplierTerms = allTerms
-      .filter((term) => !term.supplier)
+    // Get random terms based on index
+    let selectedTerms = allTerms
       .sort(() => Math.random() - 0.5)
-      .slice(0, Math.floor(numTerms / 2));
+      .slice(0, index % 3 === 0 ? 15 : index % 5 === 0 ? 1 : 5);
+
+    // Sort terms alphabetically by their display text (term + supplier)
+    selectedTerms.sort((a, b) => {
+      const aText = a.supplier ? `${a.term} – ${a.supplier}` : a.term;
+      const bText = b.supplier ? `${b.term} – ${b.supplier}` : b.term;
+      return aText.localeCompare(bText);
+    });
 
     return selectedTerms.map((item, i) => (
       <DescriptionGroup key={i}>
@@ -602,7 +576,7 @@ export const Colourful = () => {
         </DescriptionTerm>
         <DescriptionDetails>
           <Flex as="span" alignItems="center" gap="half">
-            <Box as="span" color="midGrey" fontWeight="light">
+            <Box as="span" color="midGrey">
               {item.old}
             </Box>
             <Icon icon="arrowForward" color="grey" size="x2_5" />
@@ -689,10 +663,10 @@ export const Colourful = () => {
                     {generateRandomContent(index)}
                   </DescriptionList>
                   <Box mt="x1_5" mb="x2_5">
-                    <Text color="midGrey" fontWeight="light" fontSize="small" lineHeight="smallCompact">
+                    <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
                       by
                       <Box as="span" color="black" fontWeight="normal" mx="half">
-                        {officeUsers[index % officeUsers.length]}
+                        {users[index % users.length]}
                       </Box>
                       on
                       <Box as="span" color="black" fontWeight="normal" mx="half">
