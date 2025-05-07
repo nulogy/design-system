@@ -8,7 +8,7 @@ import AppSwitcher from "./parts";
 
 export type AppSwitcherConfig =
   | false
-  | { apps: Partial<Record<NulogyAppName, { url: string; indicator?: React.ReactNode }>> };
+  | { apps: Partial<Record<NulogyAppName, { url: string; indicator?: React.ReactNode; visible?: boolean }>> };
 
 type AppSwitcherProps = {
   config: AppSwitcherConfig;
@@ -60,12 +60,18 @@ export function NulogyAppSwitcher({ config }: AppSwitcherProps) {
   if (!config) return null;
 
   const includedApps = apps
-    .filter((app) => app.id in config.apps)
-    .map((app) => ({
-      ...app,
-      url: config.apps[app.id].url,
-      indicator: config.apps[app.id].indicator,
-    }));
+    .filter((app) => {
+      const appConfig = config.apps[app.id];
+      return Boolean(appConfig) && (appConfig.visible ?? true);
+    })
+    .map((app) => {
+      const appConfig = config.apps[app.id]!;
+      return {
+        ...app,
+        url: appConfig.url,
+        indicator: appConfig.indicator,
+      };
+    });
 
   return (
     <RadixNavigationMenu.Item>
