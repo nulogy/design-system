@@ -115,6 +115,9 @@ export const CaretRight = styled(Icon).attrs({
   color: theme.colors.darkGrey,
 }));
 
-export const RadixNavigationMenuItem = styled(RadixNavigationMenu.Item)`
-  position: relative;
-`;
+export const RadixNavigationMenuItem = styled(RadixNavigationMenu.Item)<StyledProps>(
+  {
+    position: "relative",
+  },
+  addStyledProps
+);

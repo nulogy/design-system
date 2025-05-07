@@ -71,17 +71,21 @@ export default function MobileNav({
                 )}
                 {userMenu && (
                   <>
-                    <Box px="x2">
-                      <UserMenu.Header {...userMenu.header} containerProps={{ borderRadius: "large" }} />
-                    </Box>
-                    <Box px="x2">{userMenu.controls()}</Box>
-                    <Box px="none">
-                      <NavigationMenuSubList>
-                        {userMenu.menuItems.map((item) => (
-                          <UserMenu.MobileItem key={item.key} item={item} />
-                        ))}
-                      </NavigationMenuSubList>
-                    </Box>
+                    {userMenu.header && (
+                      <Box px="x2">
+                        <UserMenu.Header {...userMenu.header} containerProps={{ borderRadius: "large" }} />
+                      </Box>
+                    )}
+                    {userMenu.controls && <Box px="x2">{userMenu.controls()}</Box>}
+                    {userMenu.menuItems && userMenu.menuItems.length > 0 && (
+                      <Box px="none">
+                        <NavigationMenuSubList>
+                          {userMenu.menuItems.map((item) => (
+                            <UserMenu.MobileItem key={item.key} item={item} />
+                          ))}
+                        </NavigationMenuSubList>
+                      </Box>
+                    )}
                   </>
                 )}
               </UserMenu.Container>
