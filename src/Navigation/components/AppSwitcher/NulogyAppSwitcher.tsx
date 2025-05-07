@@ -14,13 +14,15 @@ type AppSwitcherProps = {
   config: AppSwitcherConfig;
 };
 
-type App = {
+interface App {
   id: NulogyAppName;
   label: string;
   description: string;
-};
+}
 
-const apps: App[] = [
+type Apps = Readonly<App[]>;
+
+const apps: Apps = [
   {
     id: "connections",
     label: "Connections",

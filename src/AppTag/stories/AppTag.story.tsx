@@ -1,7 +1,6 @@
 import React from "react";
 import { AppTag } from "..";
-import { APP_DISPLAY_NAMES } from "../constants";
-import { NulogyAppName } from "../../types/NulogyApp";
+import { APP_DISPLAY_NAMES, NulogyAppName } from "../../types/NulogyApp";
 import { Table } from "../../Table";
 import { Flex } from "../../Flex";
 import { Heading1 } from "../../Type";

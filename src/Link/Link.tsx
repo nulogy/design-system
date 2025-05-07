@@ -5,10 +5,10 @@ import React from "react";
 import { DefaultNDSThemeType } from "../theme";
 import { addStyledProps, StyledProps } from "../StyledProps";
 import { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
-import { AppName } from "../AppTag/constants";
 import { AppTag } from "../AppTag";
 import { InlineFlex } from "../Flex";
 import { Icon } from "../Icon";
+import { NulogyAppName } from "../types/NulogyApp";
 
 export interface LinkProps extends React.ComponentPropsWithRef<"a">, Partial<StyledProps> {
   underline?: boolean;
@@ -16,7 +16,7 @@ export interface LinkProps extends React.ComponentPropsWithRef<"a">, Partial<Sty
   variant?: ComponentVariant;
   to?: string;
   as?: React.ElementType | string;
-  forApp?: AppName;
+  forApp?: NulogyAppName;
   openInNewTab?: boolean;
 }
 
