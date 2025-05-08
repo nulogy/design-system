@@ -20,6 +20,11 @@ export function NulogyLogo({ app }: NulogyLogoProps) {
     <Flex alignItems="flex-start" justifyContent="center" flexDirection={appDisplayName ? "column" : "row"}>
       <SvgNulogyLogo width="102" height="24" />
       {appDisplayName && (
+        /*
+        This Text component is using custom properties that are not 
+        in the theme because we're trying to match the branding 
+        typography and colors of the Nulogy logo.
+        */
         <Text
           fontSize="10px"
           lineHeight="12px"
