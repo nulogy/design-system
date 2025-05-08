@@ -20,7 +20,7 @@ export default {
 
 export const AllApps = () => {
   useAutoClickElement({
-    selector: 'button[aria-label="App Switcher"]',
+    selector: 'button[aria-label="App switcher"]',
   });
   return (
     <Navigation
@@ -52,7 +52,7 @@ export const AllApps = () => {
 
 export const OnlySelectApps = () => {
   useAutoClickElement({
-    selector: 'button[aria-label="App Switcher"]',
+    selector: 'button[aria-label="App switcher"]',
   });
   return (
     <Navigation
@@ -77,7 +77,7 @@ export const WithConditionallyVisibleApps = () => {
   const [isAdmin, setIsAdmin] = useState(false);
 
   useAutoClickElement({
-    selector: 'button[aria-label="App Switcher"]',
+    selector: 'button[aria-label="App switcher"]',
   });
   return (
     <ApplicationFrame
@@ -132,7 +132,7 @@ export const WithConditionallyVisibleApps = () => {
 
 export const WithAnIndicator = () => {
   useAutoClickElement({
-    selector: 'button[aria-label="App Switcher"]',
+    selector: 'button[aria-label="App switcher"]',
   });
   return (
     <ApplicationFrame

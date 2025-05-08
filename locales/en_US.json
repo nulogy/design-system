@@ -46,5 +46,6 @@
   "weekPicker date format": "'W'ww - MMM d, yyyy",
   "weekPicker placeholder": "W52 - Dec 31, 2023",
   "week shorthand": "W",
-  "more": "More"
+  "more": "More",
+  "app switcher": "App switcher"
 }
