@@ -19,7 +19,10 @@ export default function MoreMenuItem({ moreMenu }: { moreMenu: MenuItems }) {
   );
 }
 
-export const HiddenNavigationMenuItem = styled(NavigationMenuItem)<{ item: MenuItem }>({
+export const HiddenNavigationMenuItem = styled(NavigationMenuItem).attrs({
+  tabIndex: -1,
+  "aria-hidden": true,
+})<{ item: MenuItem }>({
   position: "absolute",
   visibility: "hidden",
 });
