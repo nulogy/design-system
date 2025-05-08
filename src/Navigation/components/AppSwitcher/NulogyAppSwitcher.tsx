@@ -1,5 +1,6 @@
 import React from "react";
 import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
+import { useTranslation } from "react-i18next";
 import { Icon } from "../../../Icon";
 import { NavigationMenuIconTrigger } from "../shared/components";
 import { NulogyAppName } from "../../../types/NulogyApp";
@@ -57,6 +58,7 @@ const apps: Apps = [
 ] as const;
 
 export function NulogyAppSwitcher({ config }: AppSwitcherProps) {
+  const { t } = useTranslation();
   if (!config) return null;
 
   const includedApps = apps
@@ -75,7 +77,7 @@ export function NulogyAppSwitcher({ config }: AppSwitcherProps) {
 
   return (
     <RadixNavigationMenu.Item>
-      <NavigationMenuIconTrigger aria-label="App Switcher">
+      <NavigationMenuIconTrigger aria-label={t("app switcher")}>
         <Icon icon="apps" size="x3" />
       </NavigationMenuIconTrigger>
       <NavigationMenuContent left={0}>
