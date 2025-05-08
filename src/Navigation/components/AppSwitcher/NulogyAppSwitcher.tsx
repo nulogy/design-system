@@ -75,7 +75,7 @@ export function NulogyAppSwitcher({ config }: AppSwitcherProps) {
 
   return (
     <RadixNavigationMenu.Item>
-      <NavigationMenuIconTrigger>
+      <NavigationMenuIconTrigger aria-label="App Switcher">
         <Icon icon="apps" size="x3" />
       </NavigationMenuIconTrigger>
       <NavigationMenuContent left={0}>
