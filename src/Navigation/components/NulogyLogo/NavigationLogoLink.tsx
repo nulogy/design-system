@@ -1,13 +1,18 @@
 import React from "react";
+import styled from "styled-components";
 import type { NavigationMenuLinkProps } from "@radix-ui/react-navigation-menu";
-import { NavigationMenuLink } from "../shared/components";
+import { NavigationMenuLink as BaseNavigationMenuLink } from "../shared/components";
+
+const NavigationMenuLink = styled(BaseNavigationMenuLink)(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  padding: theme.space.x1,
+}));
 
 interface NavigationLogoLinkProps extends Omit<NavigationMenuLinkProps, "asChild"> {
   renderAsFragment?: boolean;
 }
 
-export function NavigationLogoLink({ href, renderAsFragment = false, ...props }: NavigationLogoLinkProps) {
-  return (
-    <NavigationMenuLink display="flex" alignItems="center" p="x1" href={href} asChild={renderAsFragment} {...props} />
-  );
-}
+export const NavigationLogoLink: React.FC<NavigationLogoLinkProps> = ({ href, renderAsFragment = false, ...props }) => {
+  return <NavigationMenuLink href={href} asChild={renderAsFragment} {...props} />;
+};
