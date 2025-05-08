@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import useAutoClickElement from "../../hooks/useAutoClickElement";
 import Navigation from "../Navigation";
 import { ApplicationFrame, Page } from "../../Layout";
+import Sidebar from "../../Layout/Sidebar";
+import { Box } from "../../Box";
 import { Checkbox } from "../../Checkbox";
 import { Text } from "../../Type";
 import { StatusIndicator } from "../../StatusIndicator";
-import { InlineFlex } from "../../Flex";
+import { Flex, InlineFlex } from "../../Flex";
 import { Icon } from "../../Icon";
 import { Code } from "../../utils/story/code";
 
@@ -16,6 +19,9 @@ export default {
 };
 
 export const AllApps = () => {
+  useAutoClickElement({
+    selector: 'button[aria-label="App Switcher"]',
+  });
   return (
     <Navigation
       appSwitcher={{
@@ -45,6 +51,9 @@ export const AllApps = () => {
 };
 
 export const OnlySelectApps = () => {
+  useAutoClickElement({
+    selector: 'button[aria-label="App Switcher"]',
+  });
   return (
     <Navigation
       appSwitcher={{
@@ -67,6 +76,9 @@ export const OnlySelectApps = () => {
 export const WithConditionallyVisibleApps = () => {
   const [isAdmin, setIsAdmin] = useState(false);
 
+  useAutoClickElement({
+    selector: 'button[aria-label="App Switcher"]',
+  });
   return (
     <ApplicationFrame
       navBar={
@@ -92,17 +104,36 @@ export const WithConditionallyVisibleApps = () => {
       }
     >
       <Page fullHeight>
-        <Checkbox labelText="User is admin" checked={isAdmin} onChange={() => setIsAdmin(!isAdmin)} />
-        <Text fontSize="small" color="darkGrey">
-          In this example, the Smart Factory app is only visible to <strong>admins</strong>. The app switcher is
-          conditionally rendered based on the user&apos;s role.
-        </Text>
+        <Flex>
+          <Sidebar
+            height="100%"
+            width="350px"
+            hideCloseButton
+            isOpen
+            title="Story information"
+            overlay="hide"
+            top="64px"
+            bottom="0px"
+          >
+            <Flex flexDirection="column" gap="x2">
+              <Checkbox labelText="User is admin" checked={isAdmin} onChange={() => setIsAdmin(!isAdmin)} />
+              <Text fontSize="small" color="darkGrey">
+                In this example, the Smart Factory app is only visible to <strong>admins</strong>. The app switcher is
+                conditionally rendered based on the user&apos;s role.
+              </Text>
+            </Flex>
+          </Sidebar>
+          <Box flex={1} />
+        </Flex>
       </Page>
     </ApplicationFrame>
   );
 };
 
 export const WithAnIndicator = () => {
+  useAutoClickElement({
+    selector: 'button[aria-label="App Switcher"]',
+  });
   return (
     <ApplicationFrame
       navBar={
@@ -139,10 +170,26 @@ export const WithAnIndicator = () => {
       }
     >
       <Page fullHeight>
-        <Text fontSize="small" color="darkGrey">
-          In this example, the Smart Factory app is using a <Code>StatusIndicator</Code>, The Shop Floor app is using a
-          custom one.
-        </Text>
+        <Flex>
+          <Sidebar
+            height="100%"
+            width="350px"
+            hideCloseButton
+            isOpen
+            title="Story information"
+            overlay="hide"
+            top="64px"
+            bottom="0px"
+          >
+            <Flex flexDirection="column" gap="x2">
+              <Text fontSize="small" color="darkGrey">
+                In this example, the Smart Factory app is using a <Code>StatusIndicator</Code>, The Shop Floor app is
+                using a custom one.
+              </Text>
+            </Flex>
+          </Sidebar>
+          <Box flex={1} />
+        </Flex>
       </Page>
     </ApplicationFrame>
   );
