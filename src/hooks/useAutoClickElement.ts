@@ -52,7 +52,7 @@ interface UseAutoClickElementOptions {
  */
 export function useAutoClickElement({
   selector,
-  delay = 1000,
+  delay = 100,
   logging = true,
   onSuccess,
   onNotFound,
