@@ -3,7 +3,7 @@
 export { Alert, NotificationTypes } from "./Alert";
 export type { NotificationType } from "./Alert";
 export { AppTag } from "./AppTag";
-export type { AppName, AppTagProps } from "./AppTag";
+export type { AppTagProps } from "./AppTag";
 export { AsyncSelect } from "./AsyncSelect";
 export { Banner } from "./Banner";
 export { BottomSheet, BottomSheetParts } from "./BottomSheet";
@@ -95,6 +95,7 @@ export type { MenuItemLinkProps } from "./TopBar";
 export { TruncatedText } from "./TruncatedText";
 export { Heading1, Heading2, Heading3, Heading4, Text } from "./Type";
 export type { TextProps } from "./Type";
+export type { NulogyAppName } from "./types/NulogyApp";
 export { useWindowDimensions } from "./utils";
 export { InlineValidation } from "./Validation";
 export { VerticalDivider } from "./VerticalDivider";

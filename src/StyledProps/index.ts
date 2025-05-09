@@ -157,13 +157,34 @@ import type {
 import { CSSProperties } from "react";
 import { useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 
+export interface GapProps {
+  gap?: CSSProperties["gap"];
+  rowGap?: CSSProperties["rowGap"];
+  columnGap?: CSSProperties["columnGap"];
+}
+
+export const gap = system({
+  gap: {
+    property: "gap",
+    scale: "space",
+  },
+  rowGap: {
+    property: "rowGap",
+    scale: "space",
+  },
+  columnGap: {
+    property: "columnGap",
+    scale: "space",
+  },
+});
+
 export function getStyledPropNames(...styleFns: styleFn[]): string[] {
   return styleFns.reduce(
     (acc: string[], fn: styleFn) => (fn.propNames ? acc.concat(fn.propNames) : acc),
     [] as string[]
   );
 }
-
+margin;
 export const excludeStyledProps =
   (...styleFns: styleFn[]) =>
   (prop: string | number): boolean =>
@@ -251,6 +272,7 @@ export const addStyledProps = compose(
   layout,
   flexGrow,
   typography,
+  gap,
   system({
     visibility: true,
     transition: true,
@@ -367,4 +389,5 @@ export interface StyledProps
     BackgroundSizeProps,
     TextOverflowProps,
     VisibilityProps,
-    CursorProps {}
+    CursorProps,
+    GapProps {}
