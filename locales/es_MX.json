@@ -48,5 +48,12 @@
   "more": "Más",
   "no options": "Sin opciones",
   "nulogy logo": "Logo de Nulogy",
-  "app switcher": "Selector de aplicaciones"
+  "app switcher": "Selector de aplicaciones",
+  "connections app description": "Conecte sistemas internos, de clientes y proveedores con herramientas de autoservicio de bajo código/sin código",
+  "data app description": "Acceso directo a datos listos para el negocio para facilitar el análisis y la inteligencia de decisiones",
+  "digital quality inspection app description": "Digitalice las comprobaciones de calidad con inspecciones basadas en tabletas, firmas electrónicas y pistas de auditoría completas",
+  "production scheduling app description": "Visualice y optimice su programa de producción utilizando la demanda, los tiempos de inactividad, las tasas de producción y más",
+  "shop floor control app description": "Gestione las operaciones del taller para impulsar la visibilidad, la velocidad y la eficiencia operativa",
+  "supplier collaboration app description": "Colabore en tiempo real con socios de la red de la cadena de suministro para mejorar la visibilidad y la capacidad de respuesta",
+  "smart factory app description": "Automatice la captura de datos de máquinas para reducir el tiempo de inactividad y mejorar el rendimiento de la producción"
 }

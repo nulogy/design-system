@@ -48,5 +48,12 @@
   "more": "Meer",
   "no options": "Geen opties",
   "nulogy logo": "Nulogy-logo",
-  "app switcher": "Appkiezer"
+  "app switcher": "Appkiezer",
+  "connections app description": "Verbind interne, klant- en leverancierssystemen met self-service low-code/no-code tools",
+  "data app description": "Directe toegang tot bedrijfsklare gegevens om analyses en besluitvormingsintelligentie te faciliteren",
+  "digital quality inspection app description": "Digitaliseer kwaliteitscontroles met tabletgebaseerde inspecties, e-handtekeningen en volledige audittrails",
+  "production scheduling app description": "Visualiseer en optimaliseer uw productieschema met behulp van vraag, stilstandtijden, productiesnelheden en meer",
+  "shop floor control app description": "Beheer de werkvloeractiviteiten om de zichtbaarheid, snelheid en operationele efficiëntie te verhogen",
+  "supplier collaboration app description": "Werk in realtime samen met partners in het supply chain-netwerk voor verbeterde zichtbaarheid en responsiviteit",
+  "smart factory app description": "Automatiseer de gegevensverzameling van machines om stilstand te verminderen en de productiedoorvoer te verbeteren"
 }

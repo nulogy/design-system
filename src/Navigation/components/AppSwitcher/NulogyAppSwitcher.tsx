@@ -1,6 +1,7 @@
 import React from "react";
 import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
 import { useTranslation } from "react-i18next";
+import { TFunction } from "i18next";
 import { Icon } from "../../../Icon";
 import { NavigationMenuIconTrigger } from "../shared/components";
 import { NulogyAppName } from "../../../types/NulogyApp";
@@ -23,45 +24,50 @@ interface App {
 
 type Apps = Readonly<App[]>;
 
-const apps: Apps = [
-  {
-    id: "connections",
-    label: "Connections",
-    description: "Multi-tiered bandwidth-monitored process improvement",
-  },
-  {
-    id: "digital-quality-inspection",
-    label: "Digital Quality Inspection",
-    description: "Cloned global attitude fully-configurable motivating support",
-  },
-  {
-    id: "production-scheduling",
-    label: "Production Scheduling",
-    description:
-      "Assimilated 24 hour capability operative demand-driven model object-based zero tolerance model fully-configurable regional analyzer",
-  },
-  {
-    id: "shop-floor",
-    label: "Shop Floor Control",
-    description: "Persevering mobile capacity synchronized intangible core",
-  },
-  {
-    id: "supplier-collaboration",
-    label: "Supplier Collaboration",
-    description: "Function-based coherent process improvement cloned encompassing infomediaries",
-  },
-  {
-    id: "smart-factory",
-    label: "Smart Factory",
-    description: "Smart factory description",
-  },
-] as const;
+const apps = (t: TFunction): Apps =>
+  [
+    {
+      id: "connections",
+      label: t("Connections"),
+      description: t("connections app description"),
+    },
+    {
+      id: "digital-quality-inspection",
+      label: t("Digital Quality Inspection"),
+      description: t("digital quality inspection app description"),
+    },
+    {
+      id: "production-scheduling",
+      label: t("Production Scheduling"),
+      description: t("production scheduling app description"),
+    },
+    {
+      id: "shop-floor",
+      label: t("Shop Floor Control"),
+      description: t("shop floor control app description"),
+    },
+    {
+      id: "supplier-collaboration",
+      label: t("Supplier Collaboration"),
+      description: t("supplier collaboration app description"),
+    },
+    {
+      id: "smart-factory",
+      label: t("Smart Factory"),
+      description: t("smart factory app description"),
+    },
+    {
+      id: "data",
+      label: t("Data"),
+      description: t("data app description"),
+    },
+  ] as const;
 
 export function NulogyAppSwitcher({ config }: AppSwitcherProps) {
   const { t } = useTranslation();
   if (!config) return null;
 
-  const includedApps = apps
+  const includedApps = apps(t)
     .filter((app) => {
       const appConfig = config.apps[app.id];
       return Boolean(appConfig) && (appConfig.visible ?? true);

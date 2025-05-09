@@ -48,5 +48,12 @@
   "week shorthand": "W",
   "more": "More",
   "nulogy logo": "Nulogy logo",
-  "app switcher": "App switcher"
+  "app switcher": "App switcher",
+  "connections app description": "Connect internal, customer and supplier systems with self-serve low-code/no-code tools",
+  "data app description": "Direct access to business ready data to facilitate analytics and decision intelligence",
+  "digital quality inspection app description": "Digitize quality checks with tablet-based inspections, e-signatures, and full audit trails",
+  "production scheduling app description": "Visualize and optimize your production schedule using demand, downtimes, run rates, and more",
+  "shop floor control app description": "Manage shop floor operations to boost visibility, speed, and operational efficiency",
+  "supplier collaboration app description": "Collaborate in real time with supply chain network partners for enhanced visibility and responsiveness",
+  "smart factory app description": "Automate machine data capture to reduce downtime and improve production throughput"
 }
