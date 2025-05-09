@@ -4,7 +4,8 @@ export type NulogyAppName =
   | "digital-quality-inspection"
   | "shop-floor"
   | "smart-factory"
-  | "connections";
+  | "connections"
+  | "data";
 
 export const APP_ABBREVIATIONS: Record<NulogyAppName, string> = {
   "production-scheduling": "PS",
@@ -13,6 +14,7 @@ export const APP_ABBREVIATIONS: Record<NulogyAppName, string> = {
   "shop-floor": "SF",
   "smart-factory": "SFac",
   connections: "CN",
+  data: "Data",
 } as const;
 
 export const APP_DISPLAY_NAMES: Record<NulogyAppName, string> = {
@@ -22,4 +24,5 @@ export const APP_DISPLAY_NAMES: Record<NulogyAppName, string> = {
   "shop-floor": "Shop Floor",
   "smart-factory": "Smart Factory",
   connections: "Connections",
+  data: "Data",
 } as const;

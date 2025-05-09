@@ -48,5 +48,12 @@
   "more": "更多",
   "no options": "无选项",
   "nulogy logo": "Nulogy 标志",
-  "app switcher": "应用切换器"
+  "app switcher": "应用切换器",
+  "connections app description": "通过自助式低代码/无代码工具连接内部、客户和供应商系统",
+  "data app description": "直接访问业务就绪数据，以促进分析和决策智能",
+  "digital quality inspection app description": "通过基于平板电脑的检查、电子签名和完整的审计追踪，实现质量检查数字化",
+  "production scheduling app description": "利用需求、停机时间、运行率等信息，可视化并优化您的生产计划",
+  "shop floor control app description": "管理车间运营，以提高可见性、速度和运营效率",
+  "supplier collaboration app description": "与供应链网络合作伙伴实时协作，以增强可见性和响应能力",
+  "smart factory app description": "自动化机器数据捕获，以减少停机时间并提高生产吞吐量"
 }

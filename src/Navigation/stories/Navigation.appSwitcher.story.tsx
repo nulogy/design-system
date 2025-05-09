@@ -44,6 +44,9 @@ export const AllApps = () => {
           connections: {
             url: "https://nulogy.com/",
           },
+          data: {
+            url: "https://nulogy.com/",
+          },
         },
       }}
     />
