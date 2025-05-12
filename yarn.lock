@@ -3403,9 +3403,9 @@
     prettier "^2.0.5"
 
 "@nulogy/icons@^4.37.2":
-  version "4.37.2"
-  resolved "https://registry.yarnpkg.com/@nulogy/icons/-/icons-4.37.2.tgz#2fcf555460036219dd67d82c6a9072096691b4c0"
-  integrity sha512-Mfu4U7djXis5h8KzRHL6/e/mA3z0Q6ix4B0q9b4UCMPgzgKCJiX+ZSNvEWVP/08luHdhG4Ya8hvE7MIwy2vpIw==
+  version "4.38.1"
+  resolved "https://registry.yarnpkg.com/@nulogy/icons/-/icons-4.38.1.tgz#470dcdea5ef5b08678ac187209e890a6b046ad16"
+  integrity sha512-qDTUCuvc5RSxygXHw3QLt9duXdRYNUjNJIvGeKj9mUoi/5ekMhii9jrMO4EaGtfYLz3s1Ij4cqKAZQWw+zuwGA==
 
 "@nulogy/tokens@^6.1.1":
   version "6.1.1"
