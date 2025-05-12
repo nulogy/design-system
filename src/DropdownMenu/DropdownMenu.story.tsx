@@ -9,7 +9,6 @@ import {
   Flex,
   Text,
   Icon,
-  IconicButton,
 } from "../index";
 
 const customColors = {
@@ -165,3 +164,18 @@ export const WithConditionallyRenderedMenuItems = () => (
     {true && <DropdownButton onClick={() => {}}>Conditional Item C</DropdownButton>}
   </DropdownMenu>
 );
+
+export const WithHigherOrderChild = () => (
+  <DropdownMenu>
+    {({ closeMenu, openMenu }) => (
+      <>
+        <DropdownButton onClick={(e) => closeMenu(e)}>Close menu</DropdownButton>
+        <DropdownButton onClick={(e) => openMenu(e)}>Open menu</DropdownButton>
+      </>
+    )}
+  </DropdownMenu>
+);
+
+WithHigherOrderChild.story = {
+  name: "with higher order child",
+};

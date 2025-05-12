@@ -7,8 +7,16 @@ import { getSubset, omitSubset } from "../utils/subset";
 import { StyledProps } from "../StyledProps";
 import DropdownMenuContainer from "./DropdownMenuContainer";
 
-type DropdownMenuProps = {
-  children?: React.ReactNode;
+type HigherOrderChild = ({
+  closeMenu,
+  openMenu,
+}: {
+  closeMenu: (e: unknown) => void;
+  openMenu: (e: unknown) => void;
+}) => React.ReactNode;
+
+interface DropdownMenuProps extends StyledProps {
+  children?: React.ReactNode | HigherOrderChild;
   className?: string;
   variant?: ComponentVariant;
   id?: string;
@@ -36,7 +44,7 @@ type DropdownMenuProps = {
   openAriaLabel?: string;
   closeAriaLabel?: string;
   openOnHover?: boolean;
-} & StyledProps;
+}
 
 const DEFAULT_POPPER_MODIFIERS = {
   preventOverflow: { enabled: true, padding: 8, boundariesElement: "viewport" },
