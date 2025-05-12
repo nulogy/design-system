@@ -7,13 +7,21 @@ import { getSubset, omitSubset } from "../utils/subset";
 import { StyledProps } from "../StyledProps";
 import DropdownMenuContainer from "./DropdownMenuContainer";
 
-type DropdownMenuProps = {
-  children?: React.ReactNode;
-  className?: string;
+/*
+ * These render props are defined in the `transformInnerChildren`
+ * function in /src/Popper/Popper.tsx
+ */
+type DropdownMenuRenderProps = {
+  closeMenu: (e: React.MouseEvent) => void;
+  openMenu: (e: React.MouseEvent) => void;
+};
+
+interface DropdownMenuProps extends StyledProps {
+  children?: React.ReactNode | ((props: DropdownMenuRenderProps) => React.ReactElement);
   variant?: ComponentVariant;
   id?: string;
   disabled?: boolean;
-  trigger?: () => React.FunctionComponentElement<unknown>;
+  trigger?: () => React.ReactElement;
   backgroundColor?: string;
   showArrow?: boolean;
   placement?:
@@ -36,7 +44,8 @@ type DropdownMenuProps = {
   openAriaLabel?: string;
   closeAriaLabel?: string;
   openOnHover?: boolean;
-} & StyledProps;
+  className?: string;
+}
 
 const DEFAULT_POPPER_MODIFIERS = {
   preventOverflow: { enabled: true, padding: 8, boundariesElement: "viewport" },
