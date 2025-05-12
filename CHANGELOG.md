@@ -1,3 +1,10 @@
+## [14.7.2](https://github.com/nulogy/design-system/compare/v14.7.1...v14.7.2) (2025-05-12)
+
+
+### Bug Fixes
+
+* Dropdown props account for render props ([#1574](https://github.com/nulogy/design-system/issues/1574)) ([43fb458](https://github.com/nulogy/design-system/commit/43fb4585b2b81b6abf6cb001e0ff0324e0ab2d5b))
+
 ## [14.7.1](https://github.com/nulogy/design-system/compare/v14.7.0...v14.7.1) (2025-04-25)
 
 
