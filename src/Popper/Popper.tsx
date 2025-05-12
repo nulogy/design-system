@@ -133,11 +133,11 @@ const Popper = React.forwardRef<React.Ref<unknown>, PopperProps>(
     const transformInnerChildren = (elements) =>
       makeArray(elements).map((element, i) => {
         const transformedElement = wrapInFunction(element)({
-          closeMenu: (e) => {
+          closeMenu: (e: React.MouseEvent) => {
             closePopUp();
             e.stopPropagation();
           },
-          openMenu: (e) => {
+          openMenu: (e: React.MouseEvent) => {
             openPopUp();
             e.stopPropagation();
           },

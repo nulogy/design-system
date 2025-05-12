@@ -165,7 +165,7 @@ export const WithConditionallyRenderedMenuItems = () => (
   </DropdownMenu>
 );
 
-export const WithHigherOrderChild = () => (
+export const WithRenderProps = () => (
   <DropdownMenu>
     {({ closeMenu, openMenu }) => (
       <>
@@ -176,6 +176,6 @@ export const WithHigherOrderChild = () => (
   </DropdownMenu>
 );
 
-WithHigherOrderChild.story = {
-  name: "with higher order child",
+WithRenderProps.story = {
+  name: "With render props",
 };
