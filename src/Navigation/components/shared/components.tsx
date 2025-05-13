@@ -51,12 +51,21 @@ export const NavigationMenuList = styled(RadixNavigationMenu.List)(({ theme }) =
   margin: theme.space.none,
 }));
 
-interface NavigationMenuTriggerProps extends RadixNavigationMenu.NavigationMenuTriggerProps, StyledProps {}
+interface NavigationMenuTriggerProps extends RadixNavigationMenu.NavigationMenuTriggerProps, StyledProps {
+  hasTooltip?: boolean;
+}
 
-export const NavigationMenuTrigger = styled(RadixNavigationMenu.Trigger).attrs({
-  onPointerMove: (event) => event.preventDefault(),
-  onPointerLeave: (event) => event.preventDefault(),
-})<NavigationMenuTriggerProps>(
+export const NavigationMenuTrigger = styled(RadixNavigationMenu.Trigger).attrs<NavigationMenuTriggerProps>(
+  ({ hasTooltip = false }) => {
+    if (!hasTooltip) {
+      return {
+        onPointerEnter: (event) => event.preventDefault(),
+        onPointerMove: (event) => event.preventDefault(),
+        onPointerLeave: (event) => event.preventDefault(),
+      };
+    }
+  }
+)(
   ({ theme }) => ({
     all: "unset",
     ...itemStyles(theme),
@@ -73,7 +82,9 @@ export const NavigationMenuTrigger = styled(RadixNavigationMenu.Trigger).attrs({
 export const NavigationMenuLink = styled(RadixNavigationMenu.Link)<StyledProps>(
   ({ theme }) => ({
     ...itemStyles(theme),
-    display: "block",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
     textDecoration: "none",
     fontSize: theme.fontSizes.small,
     lineHeight: theme.lineHeights.smallTextCompressed,

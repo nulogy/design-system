@@ -46,10 +46,10 @@ export function MenuSubItem({ item, level }: Props) {
       {hasIcon && (
         <Flex alignItems="center" gap="x1">
           <Icon icon={item.icon} size="x3" aria-hidden />
-          <span>{item.tooltip}</span>
+          <span>{item.label ?? item.tooltip}</span>
         </Flex>
       )}
-      {"label" in item && item.label && <span>{item.label}</span>}
+      {"label" in item && item.label && !hasIcon && <span>{item.label}</span>}
       {hasSubMenu && <CaretRight aria-hidden size="x2" />}
     </>
   );
@@ -62,9 +62,7 @@ export function MenuSubItem({ item, level }: Props) {
         </SubMenuItemLink>
       ) : (
         <>
-          <SubMenuItemButton py="x1_5" px="x1" {...item.props}>
-            {content}
-          </SubMenuItemButton>
+          <SubMenuItemButton {...item.props}>{content}</SubMenuItemButton>
           {hasSubMenu && (
             <SubMenuContent left={`calc(100% + ${theme.space.half})`} top={`calc(-1 * ${theme.space.x1})`}>
               <RadixNavigationMenu.Sub orientation="vertical">

@@ -1,15 +1,19 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { BrowserRouter, Link } from "react-router-dom";
 import { NulogyLogo } from "../components/NulogyLogo/NulogyLogo";
 import { NavigationLogoLink } from "../components/NulogyLogo/NavigationLogoLink";
 import Navigation from "../Navigation";
 import { Page } from "../../Layout/Page";
-import { ApplicationFrame } from "../../Layout";
+import { ApplicationFrame, Sidebar } from "../../Layout";
 import { Alert } from "../../Alert";
 import { Code } from "../../utils/story/code";
+import { Radio } from "../../Radio";
+import { RadioGroup } from "../../Radio";
+import type { NulogyAppName } from "../..";
 import CustomLogo from "./fixtures/logos/Customlogo1";
 import CustomLogoTwo from "./fixtures/logos/CustomLogo2";
 import CustomLogoThree from "./fixtures/logos/CustomLogo3";
+
 export default {
   title: "Components/Navigation/Logos",
   parameters: {
@@ -44,20 +48,56 @@ export const UsingClientRouting = () => {
     </BrowserRouter>
   );
 };
-
 export const WithANulogyApplicationName = () => {
+  const [application, setApplication] = useState<NulogyAppName>("supplier-collaboration");
+
+  const handleApplicationChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setApplication(e.target.value as NulogyAppName);
+  };
+
   return (
-    <BrowserRouter>
-      <Navigation
-        primaryLogo={
-          <NavigationLogoLink renderAsFragment>
-            <Link to="/" aria-label="Nulogy Logo">
-              <NulogyLogo app="supplier-collaboration" />
-            </Link>
-          </NavigationLogoLink>
-        }
-      />
-    </BrowserRouter>
+    <ApplicationFrame
+      navBar={
+        <BrowserRouter>
+          <Navigation
+            primaryLogo={
+              <NavigationLogoLink renderAsFragment>
+                <Link to="/" aria-label="Nulogy Logo">
+                  <NulogyLogo app={application} />
+                </Link>
+              </NavigationLogoLink>
+            }
+          />
+        </BrowserRouter>
+      }
+    >
+      <Page fullHeight>
+        <Sidebar
+          height="100%"
+          width="350px"
+          hideCloseButton
+          isOpen
+          title="Story configuration"
+          overlay="hide"
+          top="64px"
+          bottom="0px"
+        >
+          <RadioGroup
+            labelText="Application name"
+            name="application"
+            onChange={handleApplicationChange}
+            defaultValue={application}
+          >
+            <Radio value="supplier-collaboration" labelText="Supplier Collaboration" />
+            <Radio value="smart-factory" labelText="Smart Factory" />
+            <Radio value="digital-quality-inspection" labelText="Digital Quality Inspection" />
+            <Radio value="production-scheduling" labelText="Production Scheduling" />
+            <Radio value="shop-floor" labelText="Shop Floor Control" />
+            <Radio value="data" labelText="Data" />
+          </RadioGroup>
+        </Sidebar>
+      </Page>
+    </ApplicationFrame>
   );
 };
 
@@ -90,8 +130,8 @@ export const WithoutPassingAPrimaryLogo = () => {
     <ApplicationFrame navBar={<Navigation />}>
       <Page fullHeight>
         <Alert type="warning">
-          If the primary logo is not passed, the Nulogy logo without an application name will be with a standard anchor
-          tag with an <Code>href=&quot;/&quot;</Code> attribute.
+          If the primary logo is not passed, the Nulogy logo without an application name will be used with a standard
+          anchor tag with an <Code>href=&quot;/&quot;</Code> attribute.
         </Alert>
       </Page>
     </ApplicationFrame>

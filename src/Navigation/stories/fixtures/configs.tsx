@@ -5,14 +5,6 @@ import { AppSwitcherConfig } from "../../components/AppSwitcher/NulogyAppSwitche
 import { NavigationMenuTrigger } from "../../components/shared/components";
 import NavigationMenuContent from "../../components/shared/NavigationMenuContent";
 
-// The main menu can be an:
-// [x] icon
-// [x] icon and label
-// [x] link
-// [x] button
-// [x] custom panel
-// [x] dropdown
-
 export const primaryMenu: MenuItems = [
   {
     key: "order-management",

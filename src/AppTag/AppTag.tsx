@@ -2,9 +2,9 @@ import React from "react";
 import styled, { useTheme } from "styled-components";
 import { Text } from "../Type";
 import { APP_ABBREVIATIONS, APP_DISPLAY_NAMES, NulogyAppName } from "../types/NulogyApp";
+import { Tooltip } from "../Tooltip2";
 import { LogoWrapper } from "./components/LogoWrapper";
 import NulogyLogo from "./components/NulogyLogo";
-import { Tooltip } from "./components/Tooltip";
 import { appTagColors } from "./constants";
 import { AppTagType } from "./types";
 

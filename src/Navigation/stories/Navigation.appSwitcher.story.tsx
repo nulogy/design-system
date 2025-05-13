@@ -82,6 +82,7 @@ export const WithConditionallyVisibleApps = () => {
   useAutoClickElement({
     selector: 'button[aria-label="App switcher"]',
   });
+
   return (
     <ApplicationFrame
       navBar={

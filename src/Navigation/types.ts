@@ -77,8 +77,8 @@ export type MenuItemBase = {
 
 type WithIcon = {
   icon: IconName;
-  label?: string;
   tooltip: string;
+  label?: string;
 };
 
 type WithLabel = {
