@@ -6,13 +6,13 @@ import type { MenuItem } from "../types";
 import { Icon } from "../../Icon";
 import { VerticalDivider } from "../../VerticalDivider";
 import { Divider } from "../../Divider";
+import { Tooltip } from "../../Tooltip2";
 import { CaretDown, NavigationMenuLink, NavigationMenuTrigger, RadixNavigationMenuItem } from "./shared/components";
 import { MenuSubItem } from "./MenuSubItem/MenuSubItem";
 import { SubMenuContent } from "./MenuSubItem/parts/styled";
 
 export interface NavigationMenuItemProps extends RadixNavigationMenu.NavigationMenuItemProps {
   item: MenuItem;
-  /** Depth (root = 0). Set internally. */
   level?: number;
 }
 
@@ -45,7 +45,9 @@ export const NavigationMenuItem = React.forwardRef<HTMLLIElement, NavigationMenu
     const hasSubMenu = item.type === "button" && !!item.items && item.items.length > 0;
     const hasLabel = "label" in item && item.label;
 
-    /* Shared inner content */
+    const hasIconOnly = hasIcon && !hasLabel;
+    const hasTooltip = hasIconOnly && item.tooltip && !hasSubMenu;
+
     const Content = (
       <>
         {hasIcon && <Icon icon={item.icon} size="x3" aria-hidden />}
@@ -60,29 +62,50 @@ export const NavigationMenuItem = React.forwardRef<HTMLLIElement, NavigationMenu
 
     /* Render link */
     if (isLink) {
+      const linkContent = (
+        <NavigationMenuLink
+          borderRadius={hasIconOnly ? "rounded" : undefined}
+          p={hasIcon ? "x1" : undefined}
+          {...item.props}
+        >
+          {Content}
+        </NavigationMenuLink>
+      );
+
       return (
         <RadixNavigationMenuItem ref={forwardedRef} {...props}>
-          <NavigationMenuLink
-            borderRadius={hasLabel ? undefined : "rounded"}
-            p={hasIcon ? "x1" : undefined}
-            {...item.props}
-          >
-            {Content}
-          </NavigationMenuLink>
+          {hasIconOnly && item.tooltip ? (
+            <Tooltip sideOffset={0} content={item.tooltip}>
+              {linkContent}
+            </Tooltip>
+          ) : (
+            linkContent
+          )}
         </RadixNavigationMenuItem>
       );
     }
 
     /* Render button + optional submenu */
+    const buttonContent = (
+      <NavigationMenuTrigger
+        borderRadius={hasIconOnly ? "rounded" : undefined}
+        p={hasIcon ? "x1" : undefined}
+        hasTooltip={hasTooltip}
+        {...item.props}
+      >
+        {Content}
+      </NavigationMenuTrigger>
+    );
+
     return (
       <RadixNavigationMenuItem ref={forwardedRef} {...props}>
-        <NavigationMenuTrigger
-          // borderRadius={hasLabel ? undefined : "rounded"}
-          p={hasIcon ? "x1" : undefined}
-          {...item.props}
-        >
-          {Content}
-        </NavigationMenuTrigger>
+        {hasTooltip ? (
+          <Tooltip sideOffset={0} content={item.tooltip}>
+            {buttonContent}
+          </Tooltip>
+        ) : (
+          buttonContent
+        )}
 
         {hasSubMenu && (
           <SubMenuContent onPointerMove={(e) => e.preventDefault()} onPointerLeave={(e) => e.preventDefault()}>
