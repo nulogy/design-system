@@ -55,17 +55,19 @@ interface NavigationMenuTriggerProps extends RadixNavigationMenu.NavigationMenuT
   hasTooltip?: boolean;
 }
 
-export const NavigationMenuTrigger = styled(RadixNavigationMenu.Trigger).attrs<NavigationMenuTriggerProps>(
-  ({ hasTooltip = false }) => {
-    if (!hasTooltip) {
-      return {
-        onPointerEnter: (event) => event.preventDefault(),
-        onPointerMove: (event) => event.preventDefault(),
-        onPointerLeave: (event) => event.preventDefault(),
-      };
-    }
-  }
-)(
+export const NavigationMenuTrigger = styled(RadixNavigationMenu.Trigger).attrs<NavigationMenuTriggerProps>(() => {
+  return {
+    onPointerEnter: (event) => {
+      event.preventDefault();
+    },
+    onPointerMove: (event) => {
+      event.preventDefault();
+    },
+    onPointerLeave: (event) => {
+      event.preventDefault();
+    },
+  };
+})(
   ({ theme }) => ({
     all: "unset",
     ...itemStyles(theme),
@@ -75,6 +77,12 @@ export const NavigationMenuTrigger = styled(RadixNavigationMenu.Trigger).attrs<N
     gap: theme.space.half,
     "&:focus": { boxShadow: theme.shadows.focus },
     "&:hover": { backgroundColor: theme.colors.lightBlue },
+    "&:disabled": {
+      cursor: "default",
+      "&:hover": {
+        backgroundColor: "transparent",
+      },
+    },
   }),
   addStyledProps
 );

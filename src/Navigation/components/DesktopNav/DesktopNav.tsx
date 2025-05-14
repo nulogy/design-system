@@ -1,5 +1,6 @@
 import React from "react";
 import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
+import { useTranslation } from "react-i18next";
 import { Box, Divider, Flex, TruncatedText, VerticalDivider } from "../../..";
 import { BaseNavigationProps } from "../../Navigation";
 import { NavigationMenuItem, NavigationMenuSubList } from "../NavigationMenuItem";
@@ -28,9 +29,13 @@ export default function DesktopNav({
   primaryLogo,
   userMenu,
 }: DesktopNavProps) {
+  const { t } = useTranslation();
   const userMenuExists = !!userMenu;
   const { menuItems, moreMenu, hiddenMenuItem, primaryMenuRef, secondaryMenuRef, hiddenButtonRef } =
     useResponsiveMenu(primaryNavigation);
+
+  const hasUserMenuContent =
+    userMenuExists && (userMenu.header || userMenu.controls || (userMenu.menuItems && userMenu.menuItems.length > 0));
 
   return (
     <NavigationMenuRoot>
@@ -69,7 +74,7 @@ export default function DesktopNav({
         {/* ----------------------- User Menu ------------------------------ */}
         {userMenuExists && (
           <RadixNavigationMenu.Item>
-            <NavigationMenuTrigger py="x1">
+            <NavigationMenuTrigger py="x1" disabled={!hasUserMenuContent} aria-label={t("User menu")}>
               <Flex flexDirection="column" alignItems="flex-start">
                 <TruncatedText showTooltip={false} fontSize="smaller" lineHeight="smallerText" fontWeight="normal">
                   {userMenu.triggerText.title}
@@ -85,24 +90,32 @@ export default function DesktopNav({
                   </TruncatedText>
                 )}
               </Flex>
-              <CaretDown icon="downArrow" size="x2" aria-hidden />
+              {hasUserMenuContent && <CaretDown icon="downArrow" size="x2" aria-hidden />}
             </NavigationMenuTrigger>
-            <NavigationMenuContent right={0} p="none">
-              <UserMenu.Header {...userMenu.header} />
-              <UserMenu.Container p="none" display="flex" flexDirection="column">
-                <Box p="x2">{userMenu.controls()}</Box>
-                <Box px="x2">
-                  <Divider my="x2" />
-                </Box>
-                <Box px="none">
-                  <NavigationMenuSubList>
-                    {userMenu.menuItems.map((item) => (
-                      <UserMenu.Item key={item.key} item={item} />
-                    ))}
-                  </NavigationMenuSubList>
-                </Box>
-              </UserMenu.Container>
-            </NavigationMenuContent>
+            {hasUserMenuContent && (
+              <NavigationMenuContent right={0} p="none">
+                {userMenu.header && <UserMenu.Header {...userMenu.header} />}
+                {(userMenu.controls || (userMenu.menuItems && userMenu.menuItems.length > 0)) && (
+                  <UserMenu.Container p="none" display="flex" flexDirection="column">
+                    {userMenu.controls && <Box p="x2">{userMenu.controls({ withinMobileNav: false })}</Box>}
+                    {userMenu.controls && userMenu.menuItems && userMenu.menuItems.length > 0 && (
+                      <Box px="x2">
+                        <Divider my="x2" />
+                      </Box>
+                    )}
+                    {userMenu.menuItems && userMenu.menuItems.length > 0 && (
+                      <Box px="none">
+                        <NavigationMenuSubList>
+                          {userMenu.menuItems.map((item) => (
+                            <UserMenu.Item key={item.key} item={item} />
+                          ))}
+                        </NavigationMenuSubList>
+                      </Box>
+                    )}
+                  </UserMenu.Container>
+                )}
+              </NavigationMenuContent>
+            )}
           </RadixNavigationMenu.Item>
         )}
       </NavigationMenuList>

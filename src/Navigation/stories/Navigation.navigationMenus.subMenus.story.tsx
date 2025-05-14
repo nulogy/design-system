@@ -95,14 +95,9 @@ export const SubMenus = () => {
         },
         {
           key: "search",
-          type: "button",
+          type: "link",
           icon: "search",
           tooltip: "Search",
-          props: {
-            onClick: () => {
-              alert("You clicked Search");
-            },
-          },
         },
         {
           key: "settings",
