@@ -88,7 +88,6 @@ export const NavigationMenuItem = React.forwardRef<HTMLLIElement, NavigationMenu
           position="relative"
           borderRadius={hasIconOnly ? "rounded" : undefined}
           p={hasIcon ? "x1" : undefined}
-          hasTooltip={false}
           {...item.props}
         >
           {Content}
