@@ -7,9 +7,9 @@ import { IconName } from "@nulogy/icons";
 */
 export interface UserMenu {
   triggerText: UserMenuInfo;
-  header: UserMenuInfo;
-  controls: () => JSX.Element;
-  menuItems: UserMenuItem[];
+  header?: UserMenuInfo;
+  controls?: (props: { withinMobileNav: boolean }) => JSX.Element;
+  menuItems?: UserMenuItem[];
 }
 
 // User menu info, used in the header and trigger text

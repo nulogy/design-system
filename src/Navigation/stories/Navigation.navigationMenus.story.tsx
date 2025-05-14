@@ -70,6 +70,14 @@ export const BasicUsage = () => {
                 },
               },
             },
+            {
+              key: "disabled",
+              label: "Disabled item",
+              type: "button",
+              props: {
+                disabled: true,
+              },
+            },
           ]}
           secondaryNavigation={[
             {

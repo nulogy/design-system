@@ -77,7 +77,7 @@ export default function MobileNav({
                         <UserMenu.Header {...userMenu.header} containerProps={{ borderRadius: "large" }} />
                       </Box>
                     )}
-                    {userMenu.controls && <Box px="x2">{userMenu.controls()}</Box>}
+                    {userMenu.controls && <Box px="x2">{userMenu.controls({ withinMobileNav: true })}</Box>}
                     {userMenu.menuItems && userMenu.menuItems.length > 0 && (
                       <Box px="none">
                         <NavigationMenuSubList>
