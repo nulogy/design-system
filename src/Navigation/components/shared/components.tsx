@@ -51,9 +51,7 @@ export const NavigationMenuList = styled(RadixNavigationMenu.List)(({ theme }) =
   margin: theme.space.none,
 }));
 
-interface NavigationMenuTriggerProps extends RadixNavigationMenu.NavigationMenuTriggerProps, StyledProps {
-  hasTooltip?: boolean;
-}
+interface NavigationMenuTriggerProps extends RadixNavigationMenu.NavigationMenuTriggerProps, StyledProps {}
 
 export const NavigationMenuTrigger = styled(RadixNavigationMenu.Trigger).attrs<NavigationMenuTriggerProps>(() => {
   return {
