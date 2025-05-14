@@ -46,7 +46,7 @@ export const NavigationMenuItem = React.forwardRef<HTMLLIElement, NavigationMenu
     const hasLabel = "label" in item && item.label;
 
     const hasIconOnly = hasIcon && !hasLabel;
-    const hasTooltip = hasIconOnly && item.tooltip && !hasSubMenu;
+    const hasTooltip = hasIconOnly && Boolean(item.tooltip);
 
     const Content = (
       <>
@@ -60,52 +60,39 @@ export const NavigationMenuItem = React.forwardRef<HTMLLIElement, NavigationMenu
       </>
     );
 
-    /* Render link */
     if (isLink) {
-      const linkContent = (
-        <NavigationMenuLink
-          borderRadius={hasIconOnly ? "rounded" : undefined}
-          p={hasIcon ? "x1" : undefined}
-          {...item.props}
-        >
-          {Content}
-        </NavigationMenuLink>
+      const Item = (
+        <RadixNavigationMenuItem ref={forwardedRef} {...props}>
+          <NavigationMenuLink
+            borderRadius={hasIconOnly ? "rounded" : undefined}
+            p={hasIcon ? "x1" : undefined}
+            {...item.props}
+          >
+            {Content}
+          </NavigationMenuLink>
+        </RadixNavigationMenuItem>
       );
 
-      return (
-        <RadixNavigationMenuItem ref={forwardedRef} {...props}>
-          {hasIconOnly && item.tooltip ? (
-            <Tooltip sideOffset={0} content={item.tooltip}>
-              {linkContent}
-            </Tooltip>
-          ) : (
-            linkContent
-          )}
-        </RadixNavigationMenuItem>
+      return hasTooltip ? (
+        <Tooltip sideOffset={0} content={item.tooltip}>
+          {Item}
+        </Tooltip>
+      ) : (
+        Item
       );
     }
 
-    /* Render button + optional submenu */
-    const buttonContent = (
-      <NavigationMenuTrigger
-        borderRadius={hasIconOnly ? "rounded" : undefined}
-        p={hasIcon ? "x1" : undefined}
-        hasTooltip={hasTooltip}
-        {...item.props}
-      >
-        {Content}
-      </NavigationMenuTrigger>
-    );
-
-    return (
+    const Item = (
       <RadixNavigationMenuItem ref={forwardedRef} {...props}>
-        {hasTooltip ? (
-          <Tooltip sideOffset={0} content={item.tooltip}>
-            {buttonContent}
-          </Tooltip>
-        ) : (
-          buttonContent
-        )}
+        <NavigationMenuTrigger
+          position="relative"
+          borderRadius={hasIconOnly ? "rounded" : undefined}
+          p={hasIcon ? "x1" : undefined}
+          hasTooltip={false}
+          {...item.props}
+        >
+          {Content}
+        </NavigationMenuTrigger>
 
         {hasSubMenu && (
           <SubMenuContent onPointerMove={(e) => e.preventDefault()} onPointerLeave={(e) => e.preventDefault()}>
@@ -117,6 +104,14 @@ export const NavigationMenuItem = React.forwardRef<HTMLLIElement, NavigationMenu
           </SubMenuContent>
         )}
       </RadixNavigationMenuItem>
+    );
+
+    return hasTooltip ? (
+      <Tooltip sideOffset={0} content={item.tooltip}>
+        {Item}
+      </Tooltip>
+    ) : (
+      Item
     );
   }
 );
