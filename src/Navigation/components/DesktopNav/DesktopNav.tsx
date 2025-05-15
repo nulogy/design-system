@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
 import { useTranslation } from "react-i18next";
 import { Box, Divider, Flex, TruncatedText, VerticalDivider } from "../../..";
@@ -34,8 +34,11 @@ export default function DesktopNav({
   const { menuItems, moreMenu, hiddenMenuItem, primaryMenuRef, secondaryMenuRef, hiddenButtonRef } =
     useResponsiveMenu(primaryNavigation);
 
-  const hasUserMenuContent =
-    userMenuExists && (userMenu.header || userMenu.controls || (userMenu.menuItems && userMenu.menuItems.length > 0));
+  const hasUserMenuContent = useMemo(
+    () =>
+      userMenuExists && (userMenu.header || userMenu.controls || (userMenu.menuItems && userMenu.menuItems.length > 0)),
+    [userMenuExists, userMenu]
+  );
 
   return (
     <NavigationMenuRoot>

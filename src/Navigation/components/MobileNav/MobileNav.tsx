@@ -3,7 +3,6 @@ import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
 import { useTranslation } from "react-i18next";
 import { BaseNavigationProps } from "../../Navigation";
 import {
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuRoot,
   NavigationMenuTrigger,
@@ -17,7 +16,10 @@ import { Box } from "../../../Box";
 import { getNavigationBarItems } from "../utils/getNavigationBarItems";
 import { NavigationMenuItem, NavigationMenuSubList } from "../NavigationMenuItem";
 import { NulogyLogo } from "../NulogyLogo/NulogyLogo";
+import { NavigationLogoLink } from "../NulogyLogo/NavigationLogoLink";
 import { MobileMenuItem } from "./MobileMenuItem";
+import { MobileSecondaryLogoContainer } from "./styled";
+
 type MobileNavProps = BaseNavigationProps;
 
 export default function MobileNav({
@@ -25,6 +27,7 @@ export default function MobileNav({
   secondaryNavigation = [],
   appSwitcher,
   primaryLogo,
+  secondaryLogo,
   userMenu,
 }: MobileNavProps) {
   const { t } = useTranslation();
@@ -35,9 +38,9 @@ export default function MobileNav({
         <NulogyAppSwitcher config={appSwitcher} />
         <RadixNavigationMenuItem display="flex">
           {primaryLogo ?? (
-            <NavigationMenuLink href="/" aria-label={t("nulogy logo")}>
+            <NavigationLogoLink href="/" aria-label={t("nulogy logo")}>
               <NulogyLogo />
-            </NavigationMenuLink>
+            </NavigationLogoLink>
           )}
         </RadixNavigationMenuItem>
       </NavigationMenuList>
@@ -90,6 +93,12 @@ export default function MobileNav({
                   </>
                 )}
               </UserMenu.Container>
+
+              {secondaryLogo && (
+                <MobileSecondaryLogoContainer>
+                  <RadixNavigationMenuItem>{secondaryLogo}</RadixNavigationMenuItem>
+                </MobileSecondaryLogoContainer>
+              )}
             </NavigationMenuContent>
           </RadixNavigationMenu.Item>
         </NavigationMenuList>
