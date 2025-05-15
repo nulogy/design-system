@@ -74,7 +74,7 @@ export default function DesktopNav({
         {/* ----------------------- User Menu ------------------------------ */}
         {userMenuExists && (
           <RadixNavigationMenu.Item>
-            <NavigationMenuTrigger py="x1" disabled={!hasUserMenuContent} aria-label={t("User menu")}>
+            <NavigationMenuTrigger py="x1" disabled={!hasUserMenuContent} aria-label={t("user menu")}>
               <Flex flexDirection="column" alignItems="flex-start">
                 <TruncatedText showTooltip={false} fontSize="smaller" lineHeight="smallerText" fontWeight="normal">
                   {userMenu.triggerText.title}
