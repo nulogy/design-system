@@ -7,6 +7,13 @@ import { FormSection } from "../../Form";
 import { appSwitcher, primaryMenu, secondaryMenu, userMenu } from "./fixtures/configs";
 import Logo from "./fixtures/logos/CustomLogo3";
 
+export default {
+  title: "Components/Navigation/Other",
+  parameters: {
+    layout: "fullscreen",
+  },
+};
+
 export const WithAnApplicationFrame = () => (
   <ApplicationFrame
     navBar={
