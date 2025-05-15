@@ -13,6 +13,6 @@ interface NavigationLogoLinkProps extends Omit<NavigationMenuLinkProps, "asChild
   renderAsFragment?: boolean;
 }
 
-export const NavigationLogoLink: React.FC<NavigationLogoLinkProps> = ({ href, renderAsFragment = false, ...props }) => {
+export const NavigationLogoLink = ({ href, renderAsFragment = false, ...props }: NavigationLogoLinkProps) => {
   return <NavigationMenuLink href={href} asChild={renderAsFragment} {...props} />;
 };

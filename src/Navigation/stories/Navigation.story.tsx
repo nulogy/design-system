@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+import { Input } from "../../Input";
 import { Navigation } from "..";
-import { ApplicationFrame, Page } from "../../Layout";
+import { ApplicationFrame, Page, Sidebar } from "../../Layout";
 import { Placeholder } from "../../utils/story/placeholder";
 import { Select } from "../../Select";
 import { Flex } from "../../Flex";
+import { Text } from "../../Type";
+import { Code } from "../../utils/story/code";
 import Logo from "./fixtures/logos/CustomLogo3";
 
 export default {
@@ -81,11 +84,43 @@ export const BasicUsage = () => (
             key: "forms",
             label: "Forms",
             type: "button",
-            props: {
-              onClick: () => {
-                alert("You clicked Forms");
+            items: [
+              {
+                key: "quality-inspection-form",
+                label: "Quality Inspection Form",
+                type: "button",
+                props: {
+                  onClick: () => {
+                    alert("You clicked Quality Inspection Form");
+                  },
+                },
               },
-            },
+              {
+                key: "production-report-form",
+                label: "Production Report Form",
+                type: "button",
+                props: {
+                  onClick: () => {
+                    alert("You clicked Production Report Form");
+                  },
+                },
+              },
+              {
+                key: "maintenance-request-form",
+                label: "Maintenance Request Form",
+                type: "button",
+                props: {
+                  onClick: () => {
+                    alert("You clicked Maintenance Request Form");
+                  },
+                },
+              },
+              {
+                key: "inventory-count-form",
+                label: "Inventory Count Form",
+                type: "link",
+              },
+            ],
           },
         ]}
         secondaryNavigation={[
@@ -173,3 +208,43 @@ export const BasicUsage = () => (
     </Page>
   </ApplicationFrame>
 );
+
+export const WithACustomBreakpoint = () => {
+  const [breakpoint, setBreakpoint] = useState("1000px");
+
+  return (
+    <ApplicationFrame
+      navBar={
+        <Navigation
+          primaryNavigation={[{ key: "dashboard", label: "Dashboard", type: "link" }]}
+          secondaryNavigation={[{ key: "settings", icon: "settings", tooltip: "Settings", type: "button" }]}
+          breakpoint={breakpoint}
+        />
+      }
+    >
+      <Page fullHeight>
+        <Sidebar
+          height="100%"
+          width="350px"
+          hideCloseButton
+          isOpen
+          title="Story information"
+          overlay="hide"
+          top="64px"
+          bottom="0px"
+        >
+          <Flex flexDirection="column" gap="x2">
+            <Input labelText="Breakpoint" value={breakpoint} onChange={(e) => setBreakpoint(e.target.value)} />
+            <Text fontSize="small" color="darkGrey">
+              The navigation will transition to desktop when the viewport is wider than <Code>{breakpoint}</Code>.
+            </Text>
+            <Text fontSize="small" color="darkGrey">
+              You can also use any valid key from the <a href="/?path=/story/tokens--breakpoints">theme breakpoints</a>{" "}
+              as a breakpoint value.
+            </Text>
+          </Flex>
+        </Sidebar>
+      </Page>
+    </ApplicationFrame>
+  );
+};

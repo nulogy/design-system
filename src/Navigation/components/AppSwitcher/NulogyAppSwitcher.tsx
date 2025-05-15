@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
 import { useTranslation } from "react-i18next";
 import { TFunction } from "i18next";
@@ -65,21 +65,25 @@ const apps = (t: TFunction): Apps =>
 
 export function NulogyAppSwitcher({ config }: AppSwitcherProps) {
   const { t } = useTranslation();
-  if (!config) return null;
+  const includedApps = useMemo(() => {
+    if (!config) return [];
 
-  const includedApps = apps(t)
-    .filter((app) => {
-      const appConfig = config.apps[app.id];
-      return Boolean(appConfig) && (appConfig.visible ?? true);
-    })
-    .map((app) => {
-      const appConfig = config.apps[app.id]!;
-      return {
-        ...app,
-        url: appConfig.url,
-        indicator: appConfig.indicator,
-      };
-    });
+    return apps(t)
+      .filter((app) => {
+        const appConfig = config.apps[app.id];
+        return Boolean(appConfig) && (appConfig.visible ?? true);
+      })
+      .map((app) => {
+        const appConfig = config.apps[app.id]!;
+        return {
+          ...app,
+          url: appConfig.url,
+          indicator: appConfig.indicator,
+        };
+      });
+  }, [config, t]);
+
+  if (!config) return null;
 
   return (
     <RadixNavigationMenu.Item>
