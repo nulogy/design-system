@@ -22,6 +22,7 @@ import {
   Table,
   Input,
   PrimaryButton,
+  Button,
   ButtonGroup,
   Toggle,
   AsyncSelect,
@@ -109,7 +110,7 @@ export const CustomView = () => {
           return <Text color="midGrey" fontSize="small" lineHeight="small" mx="x1" my="x1_25">{formattedNumber}</Text>;
         }
       },
-      width: "5%",
+      width: "3%",
     },
     {
       key: "columnLabel",
@@ -131,7 +132,7 @@ export const CustomView = () => {
         }
         return content;
       },
-      width: "37%",
+      width: "39%",
     },
     {
       key: "database",
@@ -209,10 +210,13 @@ export const CustomView = () => {
   ];
 
   const modalFooter = (
-    <ButtonGroup>
-      <PrimaryButton onClick={() => setIsModalOpen(false)}>Save</PrimaryButton>
-      <QuietButton onClick={() => setIsModalOpen(false)}>Cancel</QuietButton>
-    </ButtonGroup>
+    <Flex alignItems="center" gap="x3">
+      <ButtonGroup>
+        <PrimaryButton onClick={() => setIsModalOpen(false)}>Save and apply</PrimaryButton>
+        <Button onClick={() => setIsModalOpen(false)}>Save only</Button>
+        <QuietButton onClick={() => setIsModalOpen(false)}>Cancel</QuietButton>
+      </ButtonGroup>
+    </Flex>
   );
 
   return (
@@ -239,9 +243,7 @@ export const CustomView = () => {
           <IconicButton icon="info">Collaboration status</IconicButton>
           <DropdownMenu
             trigger={() => (
-              <IconicButton icon="tune">
-                Custom view
-              </IconicButton>
+              <IconicButton icon="tune">Custom view</IconicButton>
             )}
           >
             <DropdownButton onClick={() => {}}>
@@ -301,13 +303,14 @@ export const CustomView = () => {
             <Flex gap="x3">
               <Input
                 mb="x3"
-                labelText="Custom view title"
+                labelText="Title"
+                helpText="The title is used to identify the view throughout the application."
                 placeholder="Enter custom view title"
                 autoFocus
                 requirementText="(Required)"
               />
               <Toggle
-                mt="x3"
+                mt="x6"
                 onText="Set as default view"
                 offText="Not set as default view"
                 onChange={() => {}}
@@ -322,7 +325,6 @@ export const CustomView = () => {
             <Heading3 mb="x1">Configuration</Heading3>
             <Table columns={modalTableColumns} rows={tableRowsData} compact rowHovers={false} />
           </Box>
-          <Checkbox labelText="Apply on save" />
         </Modal>
       </Page>
     </ApplicationFrame>
