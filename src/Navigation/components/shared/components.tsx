@@ -14,7 +14,7 @@ function itemStyles(theme: DefaultNDSThemeType): CSSProperties {
     paddingBottom: theme.space.x1_5,
     outline: "none",
     userSelect: "none",
-    fontWeight: 500,
+    fontWeight: theme.fontWeights.medium,
     fontSize: theme.fontSizes.small,
     lineHeight: theme.lineHeights.smallTextCompressed,
     borderRadius: theme.radii.large,
@@ -100,10 +100,7 @@ export const NavigationMenuLink = styled(RadixNavigationMenu.Link)<StyledProps>(
   addStyledProps
 );
 
-export const NavigationMenuIconLink = styled(NavigationMenuLink).attrs({
-  onPointerMove: (event) => event.preventDefault(),
-  onPointerLeave: (event) => event.preventDefault(),
-})(({ theme }) => ({
+export const NavigationMenuIconLink = styled(NavigationMenuLink)(({ theme }) => ({
   paddingRight: theme.space.x1,
   borderRadius: theme.radii.rounded,
 }));

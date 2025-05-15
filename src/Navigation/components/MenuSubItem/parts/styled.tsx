@@ -11,10 +11,7 @@ export const SubMenuItemLink = styled(RadixNavigationMenu.Link)<StyledProps>(
     alignSelf: "stretch",
     width: "100%",
     padding: `${theme.space.x1} ${theme.space.x2}`,
-
     fontWeight: theme.fontWeights.medium,
-    // fontSize: theme.fontSizes.base,
-    // lineHeight: theme.lineHeights.baseRelaxed,
 
     fontSize: theme.fontSizes.small,
     lineHeight: theme.lineHeights.smallTextCompressed,
