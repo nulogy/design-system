@@ -94,7 +94,7 @@ export const NavigationMenuItem = React.forwardRef<HTMLLIElement, NavigationMenu
         </NavigationMenuTrigger>
 
         {hasSubMenu && (
-          <SubMenuContent onPointerMove={(e) => e.preventDefault()} onPointerLeave={(e) => e.preventDefault()}>
+          <SubMenuContent>
             <RadixNavigationMenu.Sub orientation="vertical">
               <NavigationMenuSubList>
                 {item.items?.map((sub) => <MenuSubItem key={sub.key} item={sub} level={level + 1} />)}
@@ -114,6 +114,8 @@ export const NavigationMenuItem = React.forwardRef<HTMLLIElement, NavigationMenu
     );
   }
 );
+
+NavigationMenuItem.displayName = "NavigationMenuItem";
 
 export const NavigationMenuSubList = styled(RadixNavigationMenu.List)`
   list-style: none;

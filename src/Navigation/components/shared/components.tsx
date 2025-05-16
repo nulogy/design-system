@@ -5,6 +5,7 @@ import { DefaultNDSThemeType } from "../../../theme";
 import { IconProps } from "../../../Icon/Icon";
 import { addStyledProps, StyledProps } from "../../../StyledProps";
 import { NAVIGATION_MENU_HEIGHT_STYLED_UNITS } from "./constants";
+import { disableMenuToggleOnHover } from "./disableMenuToggleOnHover";
 
 function itemStyles(theme: DefaultNDSThemeType): CSSProperties {
   return {
@@ -53,19 +54,9 @@ export const NavigationMenuList = styled(RadixNavigationMenu.List)(({ theme }) =
 
 interface NavigationMenuTriggerProps extends RadixNavigationMenu.NavigationMenuTriggerProps, StyledProps {}
 
-export const NavigationMenuTrigger = styled(RadixNavigationMenu.Trigger).attrs<NavigationMenuTriggerProps>(() => {
-  return {
-    onPointerEnter: (event) => {
-      event.preventDefault();
-    },
-    onPointerMove: (event) => {
-      event.preventDefault();
-    },
-    onPointerLeave: (event) => {
-      event.preventDefault();
-    },
-  };
-})(
+export const NavigationMenuTrigger = styled(RadixNavigationMenu.Trigger).attrs(
+  disableMenuToggleOnHover
+)<NavigationMenuTriggerProps>(
   ({ theme }) => ({
     all: "unset",
     ...itemStyles(theme),
@@ -105,10 +96,7 @@ export const NavigationMenuIconLink = styled(NavigationMenuLink)(({ theme }) => 
   borderRadius: theme.radii.rounded,
 }));
 
-export const NavigationMenuIconTrigger = styled(NavigationMenuTrigger).attrs({
-  onPointerMove: (event) => event.preventDefault(),
-  onPointerLeave: (event) => event.preventDefault(),
-})(({ theme }) => ({
+export const NavigationMenuIconTrigger = styled(NavigationMenuTrigger)(({ theme }) => ({
   padding: theme.space.x1,
   borderRadius: theme.radii.rounded,
 }));

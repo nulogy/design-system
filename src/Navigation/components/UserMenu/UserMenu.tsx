@@ -5,56 +5,48 @@ import type { UserMenuItem as UserMenuItemType } from "../../types";
 import { CaretRight, RadixNavigationMenuItem } from "../shared/components";
 import { addStyledProps, StyledProps } from "../../../StyledProps";
 import { IndentedContainer } from "../MobileNav/styled";
+import { DefaultNDSThemeType } from "../../../theme/theme.type";
 import { Header } from "./parts/Header";
 
 interface UserMenuItemProps extends RadixNavigationMenu.NavigationMenuItemProps {
   item: UserMenuItemType;
 }
 
+const baseUserMenuItemStyles = (theme: DefaultNDSThemeType) => ({
+  width: "100%",
+  color: theme.colors.darkGrey,
+  fontSize: theme.fontSizes.small,
+  fontWeight: theme.fontWeights.bold,
+  lineHeight: theme.lineHeights.smallTextBase,
+  paddingTop: theme.space.x1_5,
+  paddingBottom: theme.space.x1_5,
+  paddingLeft: theme.space.x2,
+  paddingRight: theme.space.x2,
+  "&:hover, &:focus": {
+    backgroundColor: theme.colors.lightBlue,
+    outline: "none",
+  },
+});
+
 const UserMenuLink = styled(RadixNavigationMenu.Link)(
   ({ theme }) => ({
+    ...baseUserMenuItemStyles(theme),
     display: "block",
-    width: "100%",
     textDecoration: "none",
-    color: theme.colors.darkGrey,
-    fontSize: theme.fontSizes.small,
-    fontWeight: theme.fontWeights.bold,
-    lineHeight: theme.lineHeights.smallTextBase,
-    paddingTop: theme.space.x1_5,
-    paddingBottom: theme.space.x1_5,
-    paddingLeft: theme.space.x2,
-    paddingRight: theme.space.x2,
-    "&:hover, &:focus": {
-      backgroundColor: theme.colors.lightBlue,
-      outline: "none",
-    },
   }),
   addStyledProps
 );
 
 const UserMenuTrigger = styled(RadixNavigationMenu.Trigger)(
   ({ theme }) => ({
+    ...baseUserMenuItemStyles(theme),
     background: "none",
     border: "none",
-    outline: "none",
     userSelect: "none",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    width: "100%",
-    color: theme.colors.darkGrey,
-    fontSize: theme.fontSizes.small,
-    fontWeight: theme.fontWeights.bold,
-    lineHeight: theme.lineHeights.smallTextBase,
-    paddingTop: theme.space.x1_5,
-    paddingBottom: theme.space.x1_5,
-    paddingLeft: theme.space.x2,
-    paddingRight: theme.space.x2,
     textAlign: "left",
-    "&:hover, &:focus": {
-      backgroundColor: theme.colors.lightBlue,
-      outline: "none",
-    },
   }),
   addStyledProps
 );
@@ -111,6 +103,8 @@ const Item = React.forwardRef<HTMLLIElement, UserMenuItemProps & { level?: numbe
   }
 );
 
+Item.displayName = "Item";
+
 const MobileItem = React.forwardRef<HTMLLIElement, UserMenuItemProps & { level?: number }>(
   ({ item, level = 0, ...props }, forwardedRef) => {
     const hasSubItems = "items" in item && item.items && item.items.length > 0;
@@ -151,6 +145,8 @@ const MobileItem = React.forwardRef<HTMLLIElement, UserMenuItemProps & { level?:
     );
   }
 );
+
+MobileItem.displayName = "MobileItem";
 
 const Container = styled(RadixNavigationMenu.Sub).attrs({
   orientation: "vertical",
