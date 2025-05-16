@@ -64,6 +64,7 @@ export const NavigationMenuItem = React.forwardRef<HTMLLIElement, NavigationMenu
       const Item = (
         <RadixNavigationMenuItem ref={forwardedRef} {...props}>
           <NavigationMenuLink
+            aria-label={hasIconOnly && item.tooltip ? item.tooltip : item.label}
             borderRadius={hasIconOnly ? "rounded" : undefined}
             p={hasIcon ? "x1" : undefined}
             {...item.props}
@@ -86,6 +87,7 @@ export const NavigationMenuItem = React.forwardRef<HTMLLIElement, NavigationMenu
       <RadixNavigationMenuItem ref={forwardedRef} {...props}>
         <NavigationMenuTrigger
           position="relative"
+          aria-label={hasIconOnly && item.tooltip ? item.tooltip : hasLabel ? item.label : undefined}
           borderRadius={hasIconOnly ? "rounded" : undefined}
           p={hasIcon ? "x1" : undefined}
           {...item.props}
