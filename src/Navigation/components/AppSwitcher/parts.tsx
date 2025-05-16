@@ -54,7 +54,9 @@ const Description = styled(Text).attrs({
   fontSize: "smaller",
 })({});
 
-const Link = React.forwardRef<HTMLAnchorElement, ComponentProps<typeof A>>(({ children, ...props }, forwardedRef) => (
+type LinkProps = ComponentProps<typeof A>;
+
+const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(({ children, ...props }, forwardedRef) => (
   <RadixNavigationMenu.Link asChild>
     <A {...props} ref={forwardedRef}>
       {children}
@@ -62,19 +64,26 @@ const Link = React.forwardRef<HTMLAnchorElement, ComponentProps<typeof A>>(({ ch
   </RadixNavigationMenu.Link>
 ));
 
-// Changed base component to RadixNavigationMenu.Item
-const Item = React.forwardRef<HTMLLIElement, ComponentProps<typeof RadixNavigationMenu.Item>>(
-  ({ children, ...props }, forwardedRef) => (
-    <RadixNavigationMenu.Item style={{ width: "100%" }} {...props} ref={forwardedRef}>
-      {children}
-    </RadixNavigationMenu.Item>
-  )
-);
+Link.displayName = "Link";
+
+const FullWidthItem = styled(RadixNavigationMenu.Item)({
+  width: "100%",
+});
+
+type ItemProps = ComponentProps<typeof FullWidthItem>;
+
+const Item = React.forwardRef<HTMLLIElement, ItemProps>(({ children, ...props }, forwardedRef) => (
+  <FullWidthItem {...props} ref={forwardedRef}>
+    {children}
+  </FullWidthItem>
+));
+
+Item.displayName = "Item";
 
 const AppSwitcher = {
   Content,
   List,
-  Item, // Now based on RadixNavigationMenu.Item
+  Item,
   Link,
   Header,
   Title,
