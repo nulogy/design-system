@@ -115,3 +115,5 @@ export const MobileMenuItem = React.forwardRef<HTMLLIElement, MobileMenuItemProp
     return null;
   }
 );
+
+MobileMenuItem.displayName = "MobileMenuItem";

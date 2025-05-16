@@ -1,8 +1,7 @@
 import { useState, useCallback, useLayoutEffect, useRef } from "react";
 import equal from "deep-equal";
 import { MenuItems, MenuItem } from "../types";
-
-const MIN_DISTANCE_BETWEEN_MENUS = 64;
+import { MIN_DISTANCE_BETWEEN_MENUS_PX } from "../components/shared/constants";
 
 type MenuState = {
   menuItems: MenuItems;
@@ -44,7 +43,7 @@ export const useResponsiveMenu: UseResponsiveMenu = (initialMenuItems: MenuItems
     const hiddenButtonWidth = hiddenButtonRef.current.getBoundingClientRect().width;
     const distance = secondaryRect.left - primaryRect.right;
 
-    if (distance < MIN_DISTANCE_BETWEEN_MENUS && menuState.menuItems.length > 0) {
+    if (distance < MIN_DISTANCE_BETWEEN_MENUS_PX && menuState.menuItems.length > 0) {
       const lastItem = menuState.menuItems[menuState.menuItems.length - 1];
       const newMenuItems = menuState.menuItems.slice(0, -1);
       const newHiddenMenu = [lastItem, ...menuState.moreMenu];
@@ -57,7 +56,7 @@ export const useResponsiveMenu: UseResponsiveMenu = (initialMenuItems: MenuItems
         });
       }
     } else if (
-      Math.floor(distance - hiddenButtonWidth - 8) > MIN_DISTANCE_BETWEEN_MENUS &&
+      Math.floor(distance - hiddenButtonWidth - 8) > MIN_DISTANCE_BETWEEN_MENUS_PX &&
       menuState.moreMenu.length > 0
     ) {
       const firstHiddenItem = menuState.moreMenu[0];
