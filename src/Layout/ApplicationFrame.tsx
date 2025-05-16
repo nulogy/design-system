@@ -1,4 +1,5 @@
 import React from "react";
+import { ZIndexProps } from "styled-system";
 import Box from "../Box/Box";
 import Flex, { FlexProps } from "../Flex/Flex";
 import EnvironmentBanner from "../BrandedNavBar/EnvironmentBanner";
@@ -12,7 +13,7 @@ type ApplicationFrameProps = FlexProps & {
 const ApplicationFrame = ({ navBar, children, environment, ...props }: ApplicationFrameProps) => {
   return (
     <Flex flexDirection="column" minHeight="100vh" {...props}>
-      <Box position="sticky" top="0" zIndex={"navBar" as any}>
+      <Box zIndex={"navBar" as ZIndexProps["zIndex"]}>
         {environment && <EnvironmentBanner>{environment}</EnvironmentBanner>}
         {navBar}
       </Box>
