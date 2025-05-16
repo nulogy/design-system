@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import useAutoClickElement from "../../hooks/useAutoClickElement";
+import useConditionalAutoClick from "../../hooks/useConditionalAutoClick";
 import Navigation from "../Navigation";
 import { ApplicationFrame, Page } from "../../Layout";
 import Sidebar from "../../Layout/Sidebar";
@@ -19,9 +19,12 @@ export default {
 };
 
 export const AllApps = () => {
-  useAutoClickElement({
-    selector: 'button[aria-label="App switcher"]',
+  useConditionalAutoClick({
+    selector: 'button[aria-label="Toggle app switcher"]',
+    queryParam: "cypressTest",
+    invert: true,
   });
+
   return (
     <Navigation
       appSwitcher={{
@@ -54,8 +57,10 @@ export const AllApps = () => {
 };
 
 export const OnlySelectApps = () => {
-  useAutoClickElement({
-    selector: 'button[aria-label="App switcher"]',
+  useConditionalAutoClick({
+    selector: 'button[aria-label="Toggle app switcher"]',
+    queryParam: "cypressTest",
+    invert: true,
   });
   return (
     <Navigation
@@ -79,8 +84,10 @@ export const OnlySelectApps = () => {
 export const WithConditionallyVisibleApps = () => {
   const [isAdmin, setIsAdmin] = useState(false);
 
-  useAutoClickElement({
-    selector: 'button[aria-label="App switcher"]',
+  useConditionalAutoClick({
+    selector: 'button[aria-label="Toggle app switcher"]',
+    queryParam: "cypressTest",
+    invert: true,
   });
 
   return (
@@ -135,9 +142,12 @@ export const WithConditionallyVisibleApps = () => {
 };
 
 export const WithAnIndicator = () => {
-  useAutoClickElement({
-    selector: 'button[aria-label="App switcher"]',
+  useConditionalAutoClick({
+    selector: 'button[aria-label="toggle app switcher"]',
+    queryParam: "cypressTest",
+    invert: true,
   });
+
   return (
     <ApplicationFrame
       navBar={

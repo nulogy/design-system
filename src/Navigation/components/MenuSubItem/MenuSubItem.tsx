@@ -57,9 +57,7 @@ export function MenuSubItem({ item, level }: Props) {
   return (
     <SubMenuItem key={item.key} value={"label" in item ? item.label : item.key}>
       {isLink ? (
-        <SubMenuItemLink style={{ padding: "12px 8px" }} {...item.props}>
-          {content}
-        </SubMenuItemLink>
+        <SubMenuItemLink {...item.props}>{content}</SubMenuItemLink>
       ) : (
         <>
           <SubMenuItemButton {...item.props}>{content}</SubMenuItemButton>

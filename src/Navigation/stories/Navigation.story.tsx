@@ -149,7 +149,7 @@ export const BasicUsage = () => (
         ]}
         secondaryLogo={<Logo style={{ width: "auto", height: 32 }} />}
         userMenu={{
-          triggerText: { title: "haidera@nulogy.com", subtitle1: "Nulogy", subtitle2: "Toronto, ON" },
+          triggerText: { title: "haidera@nulogy.com", subtitle2: "Toronto, ON" },
           header: {
             title: "Haider Alshamma",
             subtitle1: "haidera@nulogy.com",

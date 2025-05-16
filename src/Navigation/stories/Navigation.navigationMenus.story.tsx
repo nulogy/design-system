@@ -9,7 +9,6 @@ import { Button } from "../../Button";
 import { Alert } from "../../Alert";
 import { NavigationMenuTrigger } from "../components/shared/components";
 import NavigationMenuContent from "../components/shared/NavigationMenuContent";
-import { Icon } from "../../Icon";
 import { Code } from "../../utils/story/code";
 import { Input } from "../../Input";
 
@@ -232,26 +231,16 @@ export const CustomMenuItems = () => {
             {
               key: "custom-panel-1",
               type: "custom",
-              render: () => (
-                <>
-                  <NavigationMenuTrigger>
-                    Custom Panel <Icon icon="downArrow" size="x2" />
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent padding="none" bg="whiteGrey">
-                    I am a custom panel.
-                  </NavigationMenuContent>
-                </>
-              ),
-            },
-            {
-              key: "custom-panel-2",
-              type: "custom",
               render: ({ withinSubMenu, withinMobileNav, level }) => (
                 <>
-                  <NavigationMenuTrigger>
-                    Custom Panel 2 <Icon icon="downArrow" size="x2" />
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent padding="x2">
+                  <NavigationMenuTrigger>Open custom panel</NavigationMenuTrigger>
+                  <NavigationMenuContent
+                    padding="x2"
+                    background="coral"
+                    right={withinMobileNav ? "100%" : "auto"}
+                    top={withinMobileNav ? "0px" : "auto"}
+                  >
+                    <Text fontWeight="bold">I am a custom panel.</Text>
                     <pre>
                       <Text>withinSubMenu: {withinSubMenu ? "true" : "false"}</Text>
                       <Text>withinMobileNav: {withinMobileNav ? "true" : "false"}</Text>
