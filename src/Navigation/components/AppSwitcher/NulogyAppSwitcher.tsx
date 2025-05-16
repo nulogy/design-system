@@ -87,15 +87,15 @@ export function NulogyAppSwitcher({ config }: AppSwitcherProps) {
 
   return (
     <RadixNavigationMenu.Item>
-      <NavigationMenuIconTrigger aria-label={t("app switcher")}>
+      <NavigationMenuIconTrigger aria-label={t("toggle app switcher")}>
         <Icon icon="apps" size="x3" />
       </NavigationMenuIconTrigger>
-      <NavigationMenuContent left={0}>
+      <NavigationMenuContent left={0} aria-label={t("app switcher")}>
         <RadixNavigationMenu.Sub>
           <AppSwitcher.List>
             {includedApps.map((app) => (
               <AppSwitcher.Item key={app.id}>
-                <AppSwitcher.Link href={app.url}>
+                <AppSwitcher.Link href={app.url} aria-label={app.label}>
                   {app.indicator ? (
                     <AppSwitcher.Header>
                       <AppSwitcher.Title>{app.label}</AppSwitcher.Title>

@@ -3,25 +3,32 @@ import styled from "styled-components";
 import { addStyledProps, StyledProps } from "../../../../StyledProps";
 import { NAVIGATION_SUB_MENU_MIN_WIDTH_PX } from "../../shared/constants";
 import { disableMenuToggleOnHover } from "../../shared/disableMenuToggleOnHover";
+import { DefaultNDSThemeType } from "../../../../theme";
+const getSharedPaddingStyles = (theme: DefaultNDSThemeType) => ({
+  paddingTop: theme.space.x1,
+  paddingBottom: theme.space.x1,
+});
+
+const getSharedInteractiveItemStyles = (theme: DefaultNDSThemeType) => ({
+  paddingLeft: theme.space.x1_5,
+  paddingRight: theme.space.x1_5,
+  fontWeight: theme.fontWeights.medium,
+  fontSize: theme.fontSizes.small,
+  lineHeight: theme.lineHeights.smallRelaxed,
+  whiteSpace: "nowrap",
+  transition: "background-color 250ms ease",
+});
 
 export const SubMenuItemLink = styled(RadixNavigationMenu.Link)<StyledProps>(
   ({ theme }) => ({
+    ...getSharedPaddingStyles(theme),
+    ...getSharedInteractiveItemStyles(theme),
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
     alignSelf: "stretch",
     width: "100%",
-    padding: `${theme.space.x1} ${theme.space.x2}`,
-    fontWeight: theme.fontWeights.medium,
-
-    fontSize: theme.fontSizes.small,
-    lineHeight: theme.lineHeights.smallTextCompressed,
-
-    whiteSpace: "nowrap",
     textDecoration: "none",
-
-    transition: "background-color 250ms ease",
-
     "&:hover, &:focus": {
       backgroundColor: theme.colors.lightBlue,
     },
@@ -34,29 +41,18 @@ export const SubMenuItemLink = styled(RadixNavigationMenu.Link)<StyledProps>(
 
 export const SubMenuItemButton = styled(RadixNavigationMenu.Trigger)<StyledProps>(
   ({ theme }) => ({
+    ...getSharedPaddingStyles(theme),
+    ...getSharedInteractiveItemStyles(theme),
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
     width: "100%",
-    paddingTop: theme.space.x1,
-    paddingBottom: theme.space.x1,
-    paddingLeft: theme.space.x1_5,
-    paddingRight: theme.space.x1_5,
     gap: theme.space.x2,
-
     background: "none",
     border: "none",
     outline: "none",
-
     color: theme.colors.darkGrey,
-    fontSize: theme.fontSizes.small,
-    lineHeight: theme.lineHeights.smallRelaxed,
-    fontWeight: theme.fontWeights.medium,
-    whiteSpace: "nowrap",
-
     userSelect: "none",
-    transition: "background-color 250ms ease",
-
     "&:hover, &:focus": {
       backgroundColor: theme.colors.lightBlue,
       color: theme.colors.darkBlue,
@@ -67,27 +63,21 @@ export const SubMenuItemButton = styled(RadixNavigationMenu.Trigger)<StyledProps
 
 export const SubMenuContent = styled(RadixNavigationMenu.Content).attrs(disableMenuToggleOnHover)<StyledProps>(
   ({ theme }) => ({
+    ...getSharedPaddingStyles(theme),
     position: "absolute",
     top: `calc(100% + ${theme.space.half})`,
     left: 0,
     minWidth: NAVIGATION_SUB_MENU_MIN_WIDTH_PX,
-
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
-
     background: theme.colors.white,
     color: theme.colors.darkGrey,
     borderRadius: theme.radii.medium,
     boxShadow: theme.shadows.medium,
-
-    paddingTop: theme.space.x1,
     paddingRight: 0,
-    paddingBottom: theme.space.x1,
     paddingLeft: 0,
-
     listStyle: "none",
-
     "& > div": {
       width: "100%",
     },

@@ -52,7 +52,7 @@ export default function MobileNav({
             </RadixNavigationMenu.Item>
           ))}
           <RadixNavigationMenu.Item>
-            <NavigationMenuTrigger>
+            <NavigationMenuTrigger aria-label={t("toggle mobile menu")}>
               <Icon icon="menu" />
             </NavigationMenuTrigger>
             <NavigationMenuContent right={0}>

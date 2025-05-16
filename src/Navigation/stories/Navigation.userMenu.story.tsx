@@ -5,7 +5,7 @@ import { ApplicationFrame, Page } from "../../Layout";
 import { Text } from "../../Type";
 import Navigation from "../Navigation";
 import { Code } from "../../utils/story/code";
-import useAutoClickElement from "../../hooks/useAutoClickElement";
+import useConditionalAutoClick from "../../hooks/useConditionalAutoClick";
 import { Select } from "../../Select";
 
 export default {
@@ -16,6 +16,12 @@ export default {
 };
 
 export const BasicUsage = () => {
+  useConditionalAutoClick({
+    selector: 'button[aria-label="Toggle user menu"]',
+    queryParam: "cypressTest",
+    invert: true,
+  });
+
   return (
     <Navigation
       userMenu={{
@@ -135,8 +141,10 @@ export const Header = () => {
   const [subtitle1, setSubtitle1] = React.useState("haidera@nulogy.com");
   const [subtitle2, setSubtitle2] = React.useState("Nulogy");
 
-  useAutoClickElement({
-    selector: 'button[aria-label="User menu"]',
+  useConditionalAutoClick({
+    selector: 'button[aria-label="toggle user menu"]',
+    queryParam: "cypressTest",
+    invert: true,
   });
 
   return (
@@ -151,8 +159,6 @@ export const Header = () => {
             },
             header: {
               title: title,
-              // subtitle1: subtitle1,
-              // subtitle2: subtitle2,
             },
           }}
         />
@@ -192,8 +198,10 @@ export const Header = () => {
 };
 
 export const Controls = () => {
-  useAutoClickElement({
-    selector: 'button[aria-label="User menu"]',
+  useConditionalAutoClick({
+    selector: 'button[aria-label="toggle user menu"]',
+    queryParam: "cypressTest",
+    invert: true,
   });
 
   return (
@@ -232,8 +240,10 @@ export const Controls = () => {
 };
 
 export const MenuItems = () => {
-  useAutoClickElement({
-    selector: 'button[aria-label="User menu"]',
+  useConditionalAutoClick({
+    selector: 'button[aria-label="Toggle user menu"]',
+    queryParam: "cypressTest",
+    invert: true,
   });
 
   return (

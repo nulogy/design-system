@@ -77,7 +77,7 @@ export default function DesktopNav({
         {/* ----------------------- User Menu ------------------------------ */}
         {userMenuExists && (
           <RadixNavigationMenu.Item>
-            <NavigationMenuTrigger py="x1" disabled={!hasUserMenuContent} aria-label={t("user menu")}>
+            <NavigationMenuTrigger py="x1" disabled={!hasUserMenuContent} aria-label={t("toggle user menu")}>
               <Flex flexDirection="column" alignItems="flex-start">
                 <TruncatedText showTooltip={false} fontSize="smaller" lineHeight="smallerText" fontWeight="normal">
                   {userMenu.triggerText.title}
@@ -96,7 +96,7 @@ export default function DesktopNav({
               {hasUserMenuContent && <CaretDown icon="downArrow" size="x2" aria-hidden />}
             </NavigationMenuTrigger>
             {hasUserMenuContent && (
-              <NavigationMenuContent right={0} p="none">
+              <NavigationMenuContent right={0} p="none" aria-label={t("user menu")}>
                 {userMenu.header && <UserMenu.Header {...userMenu.header} />}
                 {(userMenu.controls || (userMenu.menuItems && userMenu.menuItems.length > 0)) && (
                   <UserMenu.Container p="none" display="flex" flexDirection="column">
