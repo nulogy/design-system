@@ -95,7 +95,7 @@ describe("NavigationUserMenu", () => {
   describe("Menu Items", () => {
     beforeEach(() => {
       cy.viewport(1280, 800);
-      cy.renderFromStorybook("navigation-user-menu--menu-items");
+      cy.renderFromStorybook("navigation-user-menu--menu-items&cypressTest=true");
     });
 
     it("shows link menu items", () => {
@@ -135,7 +135,7 @@ describe("NavigationUserMenu", () => {
   describe("Accessibility", () => {
     beforeEach(() => {
       cy.viewport(1280, 800);
-      cy.renderFromStorybook("navigation-user-menu--basic-usage");
+      cy.renderFromStorybook("navigation-user-menu--basic-usage&cypressTest=true");
     });
 
     it("closes with Escape key", () => {

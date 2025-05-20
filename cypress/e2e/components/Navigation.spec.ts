@@ -63,7 +63,7 @@ describe("Navigation", () => {
   describe("User Menu", () => {
     beforeEach(() => {
       cy.viewport(1280, 800);
-      cy.renderFromStorybook("navigation-user-menu--basic-usage");
+      cy.renderFromStorybook("navigation-user-menu--basic-usage&cypressTest=true");
     });
 
     it("shows user menu when clicked", () => {
@@ -96,7 +96,7 @@ describe("Navigation", () => {
   describe("Navigation with Sub Menus", () => {
     beforeEach(() => {
       cy.viewport(1280, 800);
-      cy.renderFromStorybook("navigation-navigation-menus-sub-menus--sub-menus");
+      cy.renderFromStorybook("navigation-navigation-menus-sub-menus--sub-menus&cypressTest=true");
     });
 
     it("shows submenu when parent menu is clicked", () => {
@@ -130,7 +130,7 @@ describe("Navigation", () => {
 
   describe("Logos", () => {
     beforeEach(() => {
-      cy.renderFromStorybook("navigation-logos--primary-logo");
+      cy.renderFromStorybook("navigation-logos--primary-logo&cypressTest=true");
     });
 
     it("renders the Nulogy logo", () => {
@@ -145,7 +145,7 @@ describe("Navigation", () => {
   describe("Secondary Logo", () => {
     beforeEach(() => {
       cy.viewport(1280, 800);
-      cy.renderFromStorybook("navigation-logos--secondary-logo");
+      cy.renderFromStorybook("navigation-logos--secondary-logo&cypressTest=true");
     });
 
     it("renders the secondary logo", () => {
@@ -155,7 +155,7 @@ describe("Navigation", () => {
 
   describe("Mobile Navigation", () => {
     beforeEach(() => {
-      cy.renderFromStorybook("navigation-mobile-visibility--default-behavior");
+      cy.renderFromStorybook("navigation-mobile-visibility--default-behavior&cypressTest=true");
       cy.viewport("iphone-x");
     });
 
@@ -180,7 +180,7 @@ describe("Navigation", () => {
 
   describe("Mobile Visibility", () => {
     beforeEach(() => {
-      cy.renderFromStorybook("navigation-mobile-visibility--item-in-navigation-bar");
+      cy.renderFromStorybook("navigation-mobile-visibility--item-in-navigation-bar&cypressTest=true");
       cy.viewport("iphone-x");
     });
 
@@ -199,7 +199,7 @@ describe("Navigation", () => {
 
   describe("Custom Breakpoint", () => {
     beforeEach(() => {
-      cy.renderFromStorybook("navigation--with-a-custom-breakpoint");
+      cy.renderFromStorybook("navigation--with-a-custom-breakpoint&cypressTest=true");
     });
 
     it("uses desktop navigation at wider viewport", () => {
