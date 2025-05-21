@@ -4,8 +4,8 @@ import styled from "styled-components";
 import type { UserMenuItem as UserMenuItemType } from "../../types";
 import { CaretRight, RadixNavigationMenuItem } from "../shared/components";
 import { addStyledProps, StyledProps } from "../../../StyledProps";
-import { IndentedContainer } from "../MobileNav/styled";
 import { DefaultNDSThemeType } from "../../../theme/theme.type";
+import { IndentedContainer } from "../MobileNav/parts/styled";
 import { Header } from "./parts/Header";
 
 interface UserMenuItemProps extends RadixNavigationMenu.NavigationMenuItemProps {

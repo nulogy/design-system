@@ -1,15 +1,15 @@
 import React from "react";
 import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
 import styled from "styled-components";
-import { Text } from "../../Type";
-import type { MenuItem } from "../types";
-import { Icon } from "../../Icon";
-import { VerticalDivider } from "../../VerticalDivider";
-import { Divider } from "../../Divider";
-import { Tooltip } from "../../Tooltip2";
-import { CaretDown, NavigationMenuLink, NavigationMenuTrigger, RadixNavigationMenuItem } from "./shared/components";
-import { MenuSubItem } from "./MenuSubItem/MenuSubItem";
-import { SubMenuContent } from "./MenuSubItem/parts/styled";
+import { Text } from "../../../Type";
+import type { MenuItem } from "../../types";
+import { Icon } from "../../../Icon";
+import { VerticalDivider } from "../../../VerticalDivider";
+import { Divider } from "../../../Divider";
+import { Tooltip } from "../../../Tooltip2";
+import { MenuSubItem } from "../MenuSubItem/MenuSubItem";
+import { SubMenuContent } from "../MenuSubItem/parts/styled";
+import { CaretDown, NavigationMenuLink, NavigationMenuTrigger, RadixNavigationMenuItem } from "./components";
 
 export interface NavigationMenuItemProps extends RadixNavigationMenu.NavigationMenuItemProps {
   item: MenuItem;
@@ -64,12 +64,13 @@ export const NavigationMenuItem = React.forwardRef<HTMLLIElement, NavigationMenu
       const Item = (
         <RadixNavigationMenuItem ref={forwardedRef} {...props}>
           <NavigationMenuLink
+            asChild={!!item.element}
             aria-label={hasIconOnly && item.tooltip ? item.tooltip : item.label}
             borderRadius={hasIconOnly ? "rounded" : undefined}
             p={hasIcon ? "x1" : undefined}
             {...item.props}
           >
-            {Content}
+            {item.element ? React.cloneElement(item.element, { ...item.props, children: Content }) : Content}
           </NavigationMenuLink>
         </RadixNavigationMenuItem>
       );

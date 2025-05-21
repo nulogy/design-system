@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import type { MenuItem, MenuItems } from "../../../types";
-import { NavigationMenuItem } from "../../NavigationMenuItem";
+import { NavigationMenuItem } from "../../shared/NavigationMenuItem";
 
 export default function MoreMenuItem({ moreMenu }: { moreMenu: MenuItems }) {
   const { t } = useTranslation();

@@ -14,11 +14,11 @@ import NavigationMenuContent from "../shared/NavigationMenuContent";
 import UserMenu from "../UserMenu/UserMenu";
 import { Box } from "../../../Box";
 import { getNavigationBarItems } from "../utils/getNavigationBarItems";
-import { NavigationMenuItem, NavigationMenuSubList } from "../NavigationMenuItem";
+import { NavigationMenuItem, NavigationMenuSubList } from "../shared/NavigationMenuItem";
 import { NulogyLogo } from "../NulogyLogo/NulogyLogo";
-import { NavigationLogoLink } from "../NulogyLogo/NavigationLogoLink";
-import { MobileMenuItem } from "./MobileMenuItem";
-import { MobileSecondaryLogoContainer } from "./styled";
+import { NavigationLogoLink } from "../shared/NavigationLogoLink";
+import { MobileMenuItem } from "./parts/MobileMenuItem";
+import { MobileSecondaryLogoContainer } from "./parts/styled";
 
 type MobileNavProps = BaseNavigationProps;
 

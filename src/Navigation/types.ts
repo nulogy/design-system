@@ -105,6 +105,7 @@ type MenuItemButton = {
 
 type MenuItemLink = {
   type: "link";
+  element?: JSX.Element;
   props?: React.ComponentPropsWithoutRef<typeof RadixNavigationMenu.Link>;
 } & (WithIcon | WithLabel);
 

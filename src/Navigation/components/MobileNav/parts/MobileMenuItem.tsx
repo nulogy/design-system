@@ -1,14 +1,10 @@
 import React from "react";
-import { MenuItem } from "../../types";
-import { Text } from "../../../Type";
-import { Icon } from "../../../Icon";
-import { Divider } from "../../../Divider";
-import { RadixNavigationMenuItem } from "../shared/components";
+import { MenuItem } from "../../../types";
+import { Text } from "../../../../Type";
+import { Icon } from "../../../../Icon";
+import { Divider } from "../../../../Divider";
+import { RadixNavigationMenuItem } from "../../shared/components";
 import { IndentedContainer, MobileNavigationButton, MobileNavigationLink, MenuItemGroupLabel } from "./styled";
-
-/* ---------------------------------------------------------------------
- * Component
- * -------------------------------------------------------------------*/
 
 interface MobileMenuItemProps {
   menuItem: MenuItem;
@@ -18,7 +14,6 @@ interface MobileMenuItemProps {
 
 export const MobileMenuItem = React.forwardRef<HTMLLIElement, MobileMenuItemProps>(
   ({ menuItem, level = 0, ...props }, forwardedRef) => {
-    // Proceed only if mobileVisibility is "navigationMenu" or not specified
     if (menuItem.mobileVisibility !== undefined && menuItem.mobileVisibility !== "navigationMenu") {
       return null;
     }

@@ -7,7 +7,7 @@ import { Select } from "../../Select";
 import { Flex } from "../../Flex";
 import { Text } from "../../Type";
 import { Code } from "../../utils/story/code";
-import Logo from "./fixtures/logos/CustomLogo3";
+import CustomLogo3 from "./fixtures/logos/CustomLogo3";
 
 export default {
   title: "Components/Navigation",
@@ -147,7 +147,7 @@ export const BasicUsage = () => (
             },
           },
         ]}
-        secondaryLogo={<Logo style={{ width: "auto", height: 32 }} />}
+        secondaryLogo={<CustomLogo3 style={{ width: "auto", height: 32 }} />}
         userMenu={{
           triggerText: { title: "haidera@nulogy.com", subtitle2: "Toronto, ON" },
           header: {

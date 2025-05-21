@@ -1,6 +1,6 @@
 import React, { SVGProps } from "react";
 
-export default function CustomLogoTwo(props: SVGProps<SVGSVGElement>) {
+export default function CustomLogo2(props: SVGProps<SVGSVGElement>) {
   return (
     <svg id="logo-76" viewBox="0 0 218 40" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
       <path

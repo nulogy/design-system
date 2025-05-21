@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
-import { Box } from "../../../Box";
-import { Text } from "../../../Type";
-import { DefaultNDSThemeType } from "../../../theme";
+import { Box } from "../../../../Box";
+import { Text } from "../../../../Type";
+import { DefaultNDSThemeType } from "../../../../theme";
 
 export const IndentedContainer = styled(Box)<{ level: number }>(({ theme, level }) => ({
   paddingLeft: `calc(${level} * ${theme.space.x2})`,
