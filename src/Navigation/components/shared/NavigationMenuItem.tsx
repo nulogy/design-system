@@ -64,13 +64,16 @@ export const NavigationMenuItem = React.forwardRef<HTMLLIElement, NavigationMenu
       const Item = (
         <RadixNavigationMenuItem ref={forwardedRef} {...props}>
           <NavigationMenuLink
-            asChild={!!item.element}
+            asChild
             aria-label={hasIconOnly && item.tooltip ? item.tooltip : item.label}
             borderRadius={hasIconOnly ? "rounded" : undefined}
             p={hasIcon ? "x1" : undefined}
-            {...item.props}
           >
-            {item.element ? React.cloneElement(item.element, { ...item.props, children: Content }) : Content}
+            {item.element ? (
+              React.cloneElement(item.element, { ...item.props, children: Content })
+            ) : (
+              <a {...item.props}>{Content}</a>
+            )}
           </NavigationMenuLink>
         </RadixNavigationMenuItem>
       );
@@ -87,13 +90,13 @@ export const NavigationMenuItem = React.forwardRef<HTMLLIElement, NavigationMenu
     const Item = (
       <RadixNavigationMenuItem ref={forwardedRef} {...props}>
         <NavigationMenuTrigger
+          asChild
           position="relative"
           aria-label={hasIconOnly && item.tooltip ? item.tooltip : hasLabel ? item.label : undefined}
           borderRadius={hasIconOnly ? "rounded" : undefined}
           p={hasIcon ? "x1" : undefined}
-          {...item.props}
         >
-          {Content}
+          <Button {...item.props}>{Content}</Button>
         </NavigationMenuTrigger>
 
         {hasSubMenu && (
@@ -129,3 +132,11 @@ export const NavigationMenuSubList = styled(RadixNavigationMenu.List)`
     display: none;
   }
 `;
+
+const Button = React.forwardRef<HTMLButtonElement, React.ComponentPropsWithoutRef<"button">>(
+  ({ onPointerEnter: _, onPointerLeave: __, onPointerMove: ___, ...props }, forwardedRef) => {
+    return <button {...props} ref={forwardedRef} />;
+  }
+);
+
+Button.displayName = "Button";

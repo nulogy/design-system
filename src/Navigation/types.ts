@@ -100,13 +100,13 @@ type CustomMenuItem = {
 type MenuItemButton = {
   type: "button";
   items?: MenuItem[];
-  props?: React.ComponentPropsWithoutRef<typeof RadixNavigationMenu.Trigger>;
+  props?: React.ComponentPropsWithoutRef<"button">;
 } & (WithIcon | WithLabel);
 
 type MenuItemLink = {
   type: "link";
   element?: JSX.Element;
-  props?: React.ComponentPropsWithoutRef<typeof RadixNavigationMenu.Link>;
+  props?: React.ComponentPropsWithoutRef<"a">;
 } & (WithIcon | WithLabel);
 
 type MenuItemSeparator = {
