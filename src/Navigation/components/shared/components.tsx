@@ -82,6 +82,7 @@ export const NavigationMenuLink = styled(RadixNavigationMenu.Link)<StyledProps>(
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
+    gap: theme.space.half,
     textDecoration: "none",
     fontSize: theme.fontSizes.small,
     lineHeight: theme.lineHeights.smallTextCompressed,

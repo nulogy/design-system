@@ -3,7 +3,7 @@ import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
 import { useTranslation } from "react-i18next";
 import { Box, Divider, Flex, TruncatedText, VerticalDivider } from "../../..";
 import { BaseNavigationProps } from "../../Navigation";
-import { NavigationMenuItem, NavigationMenuSubList } from "../NavigationMenuItem";
+import { NavigationMenuItem, NavigationMenuSubList } from "../shared/NavigationMenuItem";
 import UserMenu from "../UserMenu/UserMenu";
 import {
   CaretDown,
@@ -16,7 +16,7 @@ import NavigationMenuContent from "../shared/NavigationMenuContent";
 import { NulogyAppSwitcher } from "../AppSwitcher/NulogyAppSwitcher";
 import { useResponsiveMenu } from "../../hooks/useResponsiveMenu";
 import { NulogyLogo } from "../NulogyLogo/NulogyLogo";
-import { NavigationLogoLink } from "../NulogyLogo/NavigationLogoLink";
+import { NavigationLogoLink } from "../shared/NavigationLogoLink";
 import MoreMenuItem, { HiddenNavigationMenuItem } from "./parts/MoreMenuItem";
 
 type DesktopNavProps = BaseNavigationProps;

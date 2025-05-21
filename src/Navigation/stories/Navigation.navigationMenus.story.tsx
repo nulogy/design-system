@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter, Link } from "react-router-dom";
 import Navigation from "../Navigation";
 import { ApplicationFrame, Page } from "../../Layout";
 import Sidebar from "../../Layout/Sidebar";
@@ -317,5 +318,36 @@ export const IconsAndLabels = () => {
         },
       ]}
     />
+  );
+};
+
+export const WithClientRouting = () => {
+  return (
+    <BrowserRouter>
+      <Navigation
+        primaryNavigation={[
+          {
+            key: "dashboard",
+            label: "Dashboard",
+            type: "link",
+            element: <Link to="/dashboard" />,
+          },
+          {
+            key: "profile",
+            label: "Profile",
+            type: "link",
+            icon: "user",
+            element: <Link to="/profile" />,
+          },
+          {
+            key: "settings",
+            tooltip: "Settings",
+            type: "link",
+            icon: "settings",
+            element: <Link to="/settings" />,
+          },
+        ]}
+      />
+    </BrowserRouter>
   );
 };

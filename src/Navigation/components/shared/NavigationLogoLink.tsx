@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import type { NavigationMenuLinkProps } from "@radix-ui/react-navigation-menu";
-import { NavigationMenuLink as BaseNavigationMenuLink } from "../shared/components";
+import { NavigationMenuLink as BaseNavigationMenuLink } from "./components";
 
 const NavigationMenuLink = styled(BaseNavigationMenuLink)(({ theme }) => ({
   display: "flex",

@@ -1,7 +1,6 @@
 import React, { Fragment, useState } from "react";
 import { BrowserRouter, Link } from "react-router-dom";
 import { NulogyLogo } from "../components/NulogyLogo/NulogyLogo";
-import { NavigationLogoLink } from "../components/NulogyLogo/NavigationLogoLink";
 import Navigation from "../Navigation";
 import { Page } from "../../Layout/Page";
 import { ApplicationFrame, Sidebar } from "../../Layout";
@@ -10,8 +9,9 @@ import { Code } from "../../utils/story/code";
 import { Radio } from "../../Radio";
 import { RadioGroup } from "../../Radio";
 import type { NulogyAppName } from "../..";
+import { NavigationLogoLink } from "../components/shared/NavigationLogoLink";
 import CustomLogo from "./fixtures/logos/Customlogo1";
-import CustomLogoTwo from "./fixtures/logos/CustomLogo2";
+import CustomLogo2 from "./fixtures/logos/CustomLogo2";
 import CustomLogoThree from "./fixtures/logos/CustomLogo3";
 
 export default {
@@ -150,7 +150,7 @@ export const WithoutAPrimaryLogo = () => {
 
 export const WithACustomPrimaryLogo = () => {
   return (
-    <ApplicationFrame navBar={<Navigation primaryLogo={<CustomLogoTwo style={{ width: "auto", height: 24 }} />} />}>
+    <ApplicationFrame navBar={<Navigation primaryLogo={<CustomLogo2 style={{ width: "auto", height: 24 }} />} />}>
       <Page fullHeight>
         <Alert type="danger">This is not a recommended usage of the Navigation component.</Alert>
       </Page>
