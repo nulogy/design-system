@@ -5,7 +5,6 @@ import { DefaultNDSThemeType } from "../../../theme";
 import { IconProps } from "../../../Icon/Icon";
 import { addStyledProps, StyledProps } from "../../../StyledProps";
 import { NAVIGATION_MENU_HEIGHT_STYLED_UNITS } from "./constants";
-import { disableMenuToggleOnHover } from "./disableMenuToggleOnHover";
 
 function itemStyles(theme: DefaultNDSThemeType): CSSProperties {
   return {
@@ -54,9 +53,7 @@ export const NavigationMenuList = styled(RadixNavigationMenu.List)(({ theme }) =
 
 interface NavigationMenuTriggerProps extends RadixNavigationMenu.NavigationMenuTriggerProps, StyledProps {}
 
-export const NavigationMenuTrigger = styled(RadixNavigationMenu.Trigger).attrs(
-  disableMenuToggleOnHover
-)<NavigationMenuTriggerProps>(
+export const NavigationMenuTrigger = styled(RadixNavigationMenu.Trigger)<NavigationMenuTriggerProps>(
   ({ theme }) => ({
     all: "unset",
     ...itemStyles(theme),
