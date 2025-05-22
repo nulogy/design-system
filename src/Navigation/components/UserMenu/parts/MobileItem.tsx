@@ -12,7 +12,16 @@ const MobileItem = React.forwardRef<HTMLLIElement, UserMenuItemProps & { level?:
       <>
         {item.type === "link" && (
           <IndentedContainer level={level}>
-            <UserMenuLink {...item.props}>{item.label}</UserMenuLink>
+            <UserMenuLink asChild>
+              {item.element ? (
+                React.cloneElement(item.element, {
+                  ...item.props,
+                  children: item.label,
+                })
+              ) : (
+                <a {...item.props}>{item.label}</a>
+              )}
+            </UserMenuLink>
           </IndentedContainer>
         )}
         {item.type === "button" && (

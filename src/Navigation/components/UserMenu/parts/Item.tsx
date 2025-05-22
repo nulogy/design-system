@@ -12,7 +12,18 @@ const Item = React.forwardRef<HTMLLIElement, UserMenuItemProps & { level?: numbe
   ({ item, level = 0, ...props }, forwardedRef) => {
     return (
       <RadixNavigationMenuItem ref={forwardedRef} {...props}>
-        {item.type === "link" && <UserMenuLink {...item.props}>{item.label}</UserMenuLink>}
+        {item.type === "link" && (
+          <UserMenuLink asChild>
+            {item.element ? (
+              React.cloneElement(item.element, {
+                ...item.props,
+                children: item.label,
+              })
+            ) : (
+              <a {...item.props}>{item.label}</a>
+            )}
+          </UserMenuLink>
+        )}
         {item.type === "button" && (
           <>
             <UserMenuTrigger {...item.props}>
