@@ -30,7 +30,8 @@ interface BaseUserMenuItem {
 interface LinkUserMenuItem {
   label: string;
   type: "link";
-  props: React.ComponentPropsWithoutRef<typeof RadixNavigationMenu.Link>;
+  props?: React.ComponentPropsWithoutRef<"a">;
+  element?: JSX.Element;
 }
 
 interface ButtonUserMenuItem {
@@ -40,7 +41,7 @@ interface ButtonUserMenuItem {
   items?: UserMenuItem[];
 }
 
-interface RenderUserMenuItem {
+interface CustomUserMenuItem {
   type: "custom";
   /**
    * Custom render fragment.
@@ -50,7 +51,7 @@ interface RenderUserMenuItem {
   render: (props: { level: number; withinMobileNav: boolean }) => JSX.Element;
 }
 
-export type UserMenuItem = BaseUserMenuItem & (LinkUserMenuItem | ButtonUserMenuItem | RenderUserMenuItem);
+export type UserMenuItem = BaseUserMenuItem & (LinkUserMenuItem | ButtonUserMenuItem | CustomUserMenuItem);
 
 /*
 | Menu Item

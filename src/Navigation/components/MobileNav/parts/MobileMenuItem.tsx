@@ -66,9 +66,23 @@ export const MobileMenuItem = React.forwardRef<HTMLLIElement, MobileMenuItemProp
     if (menuItem.type === "link") {
       return (
         <IndentedContainer level={level}>
-          <MobileNavigationLink {...("props" in menuItem ? menuItem.props : {})}>
-            {IconFragment}
-            {LabelFragment}
+          <MobileNavigationLink asChild>
+            {menuItem.element ? (
+              React.cloneElement(menuItem.element, {
+                ...menuItem.props,
+                children: (
+                  <>
+                    {IconFragment}
+                    {LabelFragment}
+                  </>
+                ),
+              })
+            ) : (
+              <>
+                {IconFragment}
+                {LabelFragment}
+              </>
+            )}
           </MobileNavigationLink>
         </IndentedContainer>
       );

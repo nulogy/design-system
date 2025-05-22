@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter, Link } from "react-router-dom";
 import { Flex } from "../../Flex";
 import { Input } from "../../Input";
 import { ApplicationFrame, Page } from "../../Layout";
@@ -247,100 +248,108 @@ export const MenuItems = () => {
   });
 
   return (
-    <Navigation
-      userMenu={{
-        triggerText: {
-          title: "haidera@nulogy.com",
-          subtitle1: "Nulogy",
-          subtitle2: "Toronto, ON",
-        },
-        menuItems: [
-          {
-            key: "simple-link",
-            label: "A menu item can be a link",
-            type: "link",
-            props: {
-              href: "#",
-            },
+    <BrowserRouter>
+      <Navigation
+        userMenu={{
+          triggerText: {
+            title: "haidera@nulogy.com",
+            subtitle1: "Nulogy",
+            subtitle2: "Toronto, ON",
           },
-          {
-            key: "simple-button",
-            label: "A menu item can be a button",
-            type: "button",
-            props: {
-              onClick: () => {
-                console.log("You clicked finance");
+          menuItems: [
+            {
+              key: "simple-link",
+              label: "A menu item can be a link",
+              type: "link",
+              props: {
+                href: "#",
               },
             },
-          },
-          {
-            key: "nested-items",
-            label: "A menu item can have nested items",
-            type: "button",
-            items: [
-              {
-                key: "nested-item-1",
-                label: "Nested item 1",
-                type: "button",
+            {
+              key: "simple-button",
+              label: "A menu item can be a button",
+              type: "button",
+              props: {
+                onClick: () => {
+                  console.log("You clicked finance");
+                },
               },
-              {
-                key: "nested-item-2",
-                label: "Nested item 2",
-                type: "button",
-              },
-              {
-                key: "nested-item-3",
-                label: "A nested item can have nested items",
-                type: "button",
-                items: [
-                  {
-                    key: "nested-item-3-1",
-                    label: "A menu item can be custom rendered",
-                    type: "button",
-                    items: [
-                      {
-                        key: "custom-panel",
-                        type: "custom",
-                        render: () => (
-                          <div style={{ backgroundColor: "beige", padding: 24, borderRadius: 8 }}>
-                            This is a custom panel inside the user menu
-                          </div>
-                        ),
-                      },
-                      {
-                        key: "custom-button",
-                        type: "custom",
-                        render: () => (
-                          <button
-                            style={{
-                              backgroundColor: "#fff000",
-                              borderRadius: 12,
-                              color: "#000",
-                              cursor: "pointer",
-                              fontWeight: "bold",
-                              padding: "10px 15px",
-                              textAlign: "center",
-                              transition: "200ms",
-                              width: "100%",
-                              boxSizing: "border-box",
-                              border: 0,
-                              fontSize: 16,
-                              userSelect: "none",
-                              WebkitUserSelect: "none",
-                            }}
-                          >
-                            Custom button
-                          </button>
-                        ),
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      }}
-    />
+            },
+            {
+              key: "client-side-routing",
+              label: "A menu item can use client-side routing",
+              type: "link",
+              element: <Link to="/finance" />,
+            },
+            {
+              key: "nested-items",
+              label: "A menu item can have nested items",
+              type: "button",
+              items: [
+                {
+                  key: "nested-item-1",
+                  label: "Nested item 1",
+                  type: "button",
+                },
+                {
+                  key: "nested-item-2",
+                  label: "Nested item 2",
+                  type: "button",
+                },
+                {
+                  key: "nested-item-3",
+                  label: "A nested item can have nested items",
+                  type: "button",
+                  items: [
+                    {
+                      key: "nested-item-3-1",
+                      label: "A menu item can be custom rendered",
+                      type: "button",
+                      items: [
+                        {
+                          key: "custom-panel",
+                          type: "custom",
+                          render: () => (
+                            <div style={{ backgroundColor: "beige", padding: 24, borderRadius: 8 }}>
+                              This is a custom panel inside the user menu
+                            </div>
+                          ),
+                        },
+                        {
+                          key: "custom-button",
+                          type: "custom",
+                          render: () => (
+                            <button
+                              style={{
+                                backgroundColor: "#fff000",
+                                borderRadius: 12,
+                                color: "#000",
+                                cursor: "pointer",
+                                fontWeight: "bold",
+                                padding: "10px 15px",
+                                textAlign: "center",
+                                transition: "200ms",
+                                width: "100%",
+                                boxSizing: "border-box",
+                                border: 0,
+                                fontSize: 16,
+                                userSelect: "none",
+                                WebkitUserSelect: "none",
+                              }}
+                            >
+                              Custom button
+                            </button>
+                          ),
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        }}
+      />
+    </BrowserRouter>
   );
 };
