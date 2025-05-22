@@ -4,6 +4,7 @@ import { UserMenuInfo } from "../../../types";
 import { Text } from "../../../../Type";
 import { Flex } from "../../../../Flex";
 import { FlexProps } from "../../../../Flex/Flex";
+import BackgroundTriangles from "../../../../Decorations";
 const USER_MENU_HEADER_HEIGHT = "104px";
 
 const HeaderText = styled(Text).attrs({
@@ -15,6 +16,7 @@ const HeaderText = styled(Text).attrs({
 })({});
 
 const HeaderWrapper = styled(Flex).attrs({
+  position: "relative",
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "flex-start",
@@ -42,6 +44,7 @@ export const Header = ({ title, subtitle1, subtitle2, containerProps }: HeaderPr
       <HeaderText fontWeight="bold">{title}</HeaderText>
       <HeaderText fontWeight="normal">{subtitle1}</HeaderText>
       <HeaderText fontWeight="normal">{subtitle2}</HeaderText>
+      <BackgroundTriangles />
     </HeaderWrapper>
   );
 };

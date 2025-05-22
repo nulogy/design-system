@@ -2,13 +2,11 @@ import styled from "styled-components";
 import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
 import { addStyledProps, StyledProps } from "../../../StyledProps";
 import { NAVIGATION_MENU_CONTENT_WIDTH_MAX_WIDTH_PX } from "./constants";
-import { disableMenuToggleOnHover } from "./disableMenuToggleOnHover";
+import { disableHoverEvents } from "./disableHoverEvents";
 
 export interface NavigationMenuContentProps extends RadixNavigationMenu.NavigationMenuContentProps, StyledProps {}
 
-const NavigationMenuContent = styled(RadixNavigationMenu.Content).attrs(
-  disableMenuToggleOnHover
-)<NavigationMenuContentProps>(
+const NavigationMenuContent = styled(RadixNavigationMenu.Content).attrs(disableHoverEvents)<NavigationMenuContentProps>(
   ({ theme }) => ({
     position: "absolute",
     top: `calc(100% + ${theme.space.x1})`,
