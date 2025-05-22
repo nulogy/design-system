@@ -2,7 +2,7 @@ import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
 import styled from "styled-components";
 import { addStyledProps, StyledProps } from "../../../../StyledProps";
 import { NAVIGATION_SUB_MENU_MIN_WIDTH_PX } from "../../shared/constants";
-import { disableMenuToggleOnHover } from "../../shared/disableMenuToggleOnHover";
+import { disableHoverEvents } from "../../shared/disableHoverEvents";
 import { DefaultNDSThemeType } from "../../../../theme";
 const getSharedPaddingStyles = (theme: DefaultNDSThemeType) => ({
   paddingTop: theme.space.x1,
@@ -61,7 +61,7 @@ export const SubMenuItemButton = styled(RadixNavigationMenu.Trigger)<StyledProps
   addStyledProps
 );
 
-export const SubMenuContent = styled(RadixNavigationMenu.Content).attrs(disableMenuToggleOnHover)<StyledProps>(
+export const SubMenuContent = styled(RadixNavigationMenu.Content).attrs(disableHoverEvents)<StyledProps>(
   ({ theme }) => ({
     ...getSharedPaddingStyles(theme),
     position: "absolute",

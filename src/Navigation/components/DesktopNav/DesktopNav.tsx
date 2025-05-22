@@ -96,7 +96,13 @@ export default function DesktopNav({
               {hasUserMenuContent && <CaretDown icon="downArrow" size="x2" aria-hidden />}
             </NavigationMenuTrigger>
             {hasUserMenuContent && (
-              <NavigationMenuContent right={0} p="none" aria-label={t("user menu")}>
+              <NavigationMenuContent
+                right={0}
+                p="none"
+                pt={userMenu.header || userMenu.controls ? "none" : "x1"}
+                pb={userMenu.menuItems && userMenu.menuItems.length ? "x1" : "none"}
+                aria-label={t("user menu")}
+              >
                 {userMenu.header && <UserMenu.Header {...userMenu.header} />}
                 {(userMenu.controls || (userMenu.menuItems && userMenu.menuItems.length > 0)) && (
                   <UserMenu.Container p="none" display="flex" flexDirection="column">

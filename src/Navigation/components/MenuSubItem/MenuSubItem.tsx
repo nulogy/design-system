@@ -57,7 +57,13 @@ export function MenuSubItem({ item, level }: Props) {
   return (
     <SubMenuItem key={item.key} value={"label" in item ? item.label : item.key}>
       {isLink ? (
-        <SubMenuItemLink {...item.props}>{content}</SubMenuItemLink>
+        <SubMenuItemLink asChild>
+          {item.element ? (
+            React.cloneElement(item.element, { ...item.props, children: content })
+          ) : (
+            <a {...item.props}>{content}</a>
+          )}
+        </SubMenuItemLink>
       ) : (
         <>
           <SubMenuItemButton {...item.props}>{content}</SubMenuItemButton>
