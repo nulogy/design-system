@@ -1,11 +1,11 @@
 import React from "react";
-import styled, { useTheme } from "styled-components";
-import { Box } from "../Box";
-import type { BoxProps } from "../Box/Box";
+import { useTheme } from "styled-components";
 import { Flex } from "../Flex";
 import { Heading1, Text } from "../Type";
 import useMediaQuery from "../hooks/useMediaQuery";
 import numberFromDimension from "../utils/numberFromDimension";
+import BackgroundTriangles from "../Decorations";
+import { BoxProps } from "../Box";
 
 type Breakpoint = string | number;
 
@@ -86,33 +86,6 @@ const Header: React.FC<React.PropsWithChildren<HeaderProps>> = ({
 
       {!undecorated && <BackgroundTriangles zIndex={1} />}
     </Flex>
-  );
-};
-
-const RightAngleTriangle = styled(Box)`
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  clip-path: polygon(100% 0, 0 100%, 100% 100%);
-`;
-
-const BackgroundTriangles = (props) => {
-  const theme = useTheme();
-
-  return (
-    <Box position="absolute" bottom={0} right={0} height="100%" minWidth="55%" {...props}>
-      <RightAngleTriangle
-        height="33.33%"
-        opacity="0.5"
-        background="linear-gradient(178.25deg, rgba(192, 200, 209, 0.5) 62.98%, rgba(225, 235, 250, 0.25) 98.52%)"
-      />
-      <RightAngleTriangle
-        height="17%"
-        opacity="0.25"
-        background={`linear-gradient(196.88deg, ${theme.colors.grey} 11.92%, rgba(0, 67, 143, 0) 88.36%)`}
-      />
-    </Box>
   );
 };
 

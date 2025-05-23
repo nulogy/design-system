@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from "../Link";
 import { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import { addStyledProps, StyledProps } from "../StyledProps";
 
