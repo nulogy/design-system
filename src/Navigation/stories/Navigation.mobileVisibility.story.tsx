@@ -1,4 +1,5 @@
 import React from "react";
+import { useTheme } from "styled-components";
 import Navigation from "../Navigation";
 import { Text } from "../../Type";
 import type { MenuItems } from "../types";
@@ -6,7 +7,7 @@ import { ApplicationFrame } from "../../Layout";
 import { Page } from "../../Layout/Page";
 import { Code } from "../../utils/story/code";
 import { NAVIGATION_DEFAULT_BREAKPOINT_THEME_KEY } from "../components/shared/constants";
-import { useTheme } from "styled-components";
+
 export default {
   title: "Components/Navigation/Mobile Visibility",
   parameters: {

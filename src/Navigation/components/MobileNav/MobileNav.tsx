@@ -59,18 +59,24 @@ export default function MobileNav({
               <UserMenu.Container p="none" display="flex" flexDirection="column" gap="x4">
                 {primaryNavigation.length > 0 && (
                   <Box px="x2">
-                    {primaryNavigation.map((item) => (
-                      <NavigationMenuSubList key={item.key}>
-                        <MobileMenuItem menuItem={item} />
+                    <RadixNavigationMenu.Sub orientation="vertical">
+                      <NavigationMenuSubList>
+                        {primaryNavigation.map((item) => (
+                          <MobileMenuItem menuItem={item} key={item.key} />
+                        ))}
                       </NavigationMenuSubList>
-                    ))}
+                    </RadixNavigationMenu.Sub>
                   </Box>
                 )}
                 {secondaryNavigation.length > 0 && (
                   <Box px="x2">
-                    {secondaryNavigation.map((item) => (
-                      <MobileMenuItem menuItem={item} key={item.key} />
-                    ))}
+                    <RadixNavigationMenu.Sub orientation="vertical">
+                      <NavigationMenuSubList>
+                        {secondaryNavigation.map((item) => (
+                          <MobileMenuItem menuItem={item} key={item.key} />
+                        ))}
+                      </NavigationMenuSubList>
+                    </RadixNavigationMenu.Sub>
                   </Box>
                 )}
                 {userMenu && (
@@ -96,7 +102,9 @@ export default function MobileNav({
 
               {secondaryLogo && (
                 <MobileSecondaryLogoContainer>
-                  <RadixNavigationMenuItem>{secondaryLogo}</RadixNavigationMenuItem>
+                  <NavigationMenuSubList>
+                    <RadixNavigationMenuItem>{secondaryLogo}</RadixNavigationMenuItem>
+                  </NavigationMenuSubList>
                 </MobileSecondaryLogoContainer>
               )}
             </NavigationMenuContent>

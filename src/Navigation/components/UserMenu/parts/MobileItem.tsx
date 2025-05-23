@@ -1,6 +1,8 @@
 import React from "react";
+import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
 import { RadixNavigationMenuItem } from "../../shared/components";
 import { IndentedContainer } from "../../MobileNav/parts/styled";
+import { SubMenuList } from "../../MenuSubItem/parts/styled";
 import { UserMenuLink, UserMenuTrigger } from "./styled";
 import { UserMenuItemProps } from "./Item";
 
@@ -12,7 +14,7 @@ const MobileItem = React.forwardRef<HTMLLIElement, UserMenuItemProps & { level?:
       <>
         {item.type === "link" && (
           <IndentedContainer level={level}>
-            <UserMenuLink asChild isMobile>
+            <UserMenuLink asChild $isMobile>
               {item.element ? (
                 React.cloneElement(item.element, {
                   ...item.props,
@@ -26,7 +28,7 @@ const MobileItem = React.forwardRef<HTMLLIElement, UserMenuItemProps & { level?:
         )}
         {item.type === "button" && (
           <IndentedContainer level={level}>
-            <UserMenuTrigger {...item.props} isMobile>
+            <UserMenuTrigger {...item.props} $isMobile>
               {item.label}
             </UserMenuTrigger>
           </IndentedContainer>
@@ -37,14 +39,16 @@ const MobileItem = React.forwardRef<HTMLLIElement, UserMenuItemProps & { level?:
 
     if (item.type === "button" && hasSubItems) {
       return (
-        <>
-          <RadixNavigationMenuItem ref={forwardedRef} {...props}>
-            {content}
-          </RadixNavigationMenuItem>
-          {item.items.map((subItem) => (
-            <MobileItem key={subItem.key} item={subItem} level={level + 1} />
-          ))}
-        </>
+        <RadixNavigationMenuItem ref={forwardedRef} {...props}>
+          {content}
+          <RadixNavigationMenu.Sub orientation="vertical">
+            <SubMenuList>
+              {item.items.map((subItem) => (
+                <MobileItem key={subItem.key} item={subItem} level={level + 1} />
+              ))}
+            </SubMenuList>
+          </RadixNavigationMenu.Sub>
+        </RadixNavigationMenuItem>
       );
     }
 
