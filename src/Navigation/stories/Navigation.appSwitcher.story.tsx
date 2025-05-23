@@ -143,7 +143,7 @@ export const WithConditionallyVisibleApps = () => {
 
 export const WithAnIndicator = () => {
   useConditionalAutoClick({
-    selector: 'button[aria-label="toggle app switcher"]',
+    selector: 'button[aria-label="Toggle app switcher"]',
     queryParam: "cypressTest",
     invert: true,
   });
