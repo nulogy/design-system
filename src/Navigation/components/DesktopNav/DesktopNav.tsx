@@ -114,11 +114,13 @@ export default function DesktopNav({
                     )}
                     {userMenu.menuItems && userMenu.menuItems.length > 0 && (
                       <Box px="none">
-                        <NavigationMenuSubList>
-                          {userMenu.menuItems.map((item) => (
-                            <UserMenu.Item key={item.key} item={item} />
-                          ))}
-                        </NavigationMenuSubList>
+                        <RadixNavigationMenu.Sub orientation="vertical">
+                          <NavigationMenuSubList>
+                            {userMenu.menuItems.map((item) => (
+                              <UserMenu.Item key={item.key} item={item} />
+                            ))}
+                          </NavigationMenuSubList>
+                        </RadixNavigationMenu.Sub>
                       </Box>
                     )}
                   </UserMenu.Container>

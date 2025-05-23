@@ -27,6 +27,7 @@ const HeaderWrapper = styled(Flex).attrs({
   borderTopLeftRadius: "large",
   borderTopRightRadius: "large",
   height: USER_MENU_HEADER_HEIGHT,
+  overflow: "hidden",
 })(({ theme }) => ({
   "&:last-child": {
     borderBottomLeftRadius: theme.radii.large,

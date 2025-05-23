@@ -32,18 +32,18 @@ const baseUserMenuItemStyles = (theme: DefaultNDSThemeType, isMobile?: boolean) 
   }),
 });
 
-export const UserMenuLink = styled(RadixNavigationMenu.Link)<{ isMobile?: boolean }>(
-  ({ theme, isMobile }) => ({
-    ...baseUserMenuItemStyles(theme, isMobile),
+export const UserMenuLink = styled(RadixNavigationMenu.Link)<{ $isMobile?: boolean }>(
+  ({ theme, $isMobile }) => ({
+    ...baseUserMenuItemStyles(theme, $isMobile),
     display: "block",
     textDecoration: "none",
   }),
   addStyledProps
 );
 
-export const UserMenuTrigger = styled(RadixNavigationMenu.Trigger)<{ isMobile?: boolean }>(
-  ({ theme, isMobile }) => ({
-    ...baseUserMenuItemStyles(theme, isMobile),
+export const UserMenuTrigger = styled(RadixNavigationMenu.Trigger)<{ $isMobile?: boolean }>(
+  ({ theme, $isMobile }) => ({
+    ...baseUserMenuItemStyles(theme, $isMobile),
     background: "none",
     border: "none",
     userSelect: "none",

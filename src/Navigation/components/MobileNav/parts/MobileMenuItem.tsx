@@ -1,9 +1,11 @@
 import React from "react";
+import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
 import { MenuItem } from "../../../types";
 import { Text } from "../../../../Type";
 import { Icon } from "../../../../Icon";
 import { Divider } from "../../../../Divider";
 import { RadixNavigationMenuItem } from "../../shared/components";
+import { NavigationMenuSubList } from "../../shared/NavigationMenuItem";
 import { IndentedContainer, MobileNavigationButton, MobileNavigationLink, MenuItemGroupLabel } from "./styled";
 
 interface MobileMenuItemProps {
@@ -23,9 +25,11 @@ export const MobileMenuItem = React.forwardRef<HTMLLIElement, MobileMenuItemProp
      * -----------------------------------------------------------------*/
     if (menuItem.type === "separator") {
       return (
-        <IndentedContainer level={level}>
-          <Divider secondary={level > 0} my="x2" />
-        </IndentedContainer>
+        <RadixNavigationMenuItem ref={forwardedRef} {...props}>
+          <IndentedContainer level={level}>
+            <Divider secondary={level > 0} my="x2" />
+          </IndentedContainer>
+        </RadixNavigationMenuItem>
       );
     }
 
@@ -34,11 +38,11 @@ export const MobileMenuItem = React.forwardRef<HTMLLIElement, MobileMenuItemProp
      * -----------------------------------------------------------------*/
     if (menuItem.type === "custom") {
       return (
-        <IndentedContainer level={level}>
-          <RadixNavigationMenuItem ref={forwardedRef} {...props}>
+        <RadixNavigationMenuItem ref={forwardedRef} {...props}>
+          <IndentedContainer level={level}>
             {menuItem.render({ withinSubMenu: level > 0, level, withinMobileNav: true })}
-          </RadixNavigationMenuItem>
-        </IndentedContainer>
+          </IndentedContainer>
+        </RadixNavigationMenuItem>
       );
     }
 
@@ -65,26 +69,28 @@ export const MobileMenuItem = React.forwardRef<HTMLLIElement, MobileMenuItemProp
      * -----------------------------------------------------------------*/
     if (menuItem.type === "link") {
       return (
-        <IndentedContainer level={level}>
-          <MobileNavigationLink asChild>
-            {menuItem.element ? (
-              React.cloneElement(menuItem.element, {
-                ...menuItem.props,
-                children: (
-                  <>
-                    {IconFragment}
-                    {LabelFragment}
-                  </>
-                ),
-              })
-            ) : (
-              <>
-                {IconFragment}
-                {LabelFragment}
-              </>
-            )}
-          </MobileNavigationLink>
-        </IndentedContainer>
+        <RadixNavigationMenuItem ref={forwardedRef} {...props}>
+          <IndentedContainer level={level}>
+            <MobileNavigationLink asChild>
+              {menuItem.element ? (
+                React.cloneElement(menuItem.element, {
+                  ...menuItem.props,
+                  children: (
+                    <>
+                      {IconFragment}
+                      {LabelFragment}
+                    </>
+                  ),
+                })
+              ) : (
+                <a {...menuItem.props}>
+                  {IconFragment}
+                  {LabelFragment}
+                </a>
+              )}
+            </MobileNavigationLink>
+          </IndentedContainer>
+        </RadixNavigationMenuItem>
       );
     }
 
@@ -97,27 +103,33 @@ export const MobileMenuItem = React.forwardRef<HTMLLIElement, MobileMenuItemProp
       // Button with nested items – show group label then children
       if (hasItems) {
         return (
-          <>
+          <RadixNavigationMenuItem ref={forwardedRef} {...props}>
             {LabelFragment && (
               <IndentedContainer level={level}>
-                <MenuItemGroupLabel>{LabelFragment}</MenuItemGroupLabel>
+                <MenuItemGroupLabel>{labelText}</MenuItemGroupLabel>
               </IndentedContainer>
             )}
-            {(menuItem.items || []).map((item) => (
-              <MobileMenuItem key={item.key} menuItem={item} level={level + 1} />
-            ))}
-          </>
+            <RadixNavigationMenu.Sub orientation="vertical">
+              <NavigationMenuSubList>
+                {(menuItem.items || []).map((item) => (
+                  <MobileMenuItem key={item.key} menuItem={item} level={level + 1} />
+                ))}
+              </NavigationMenuSubList>
+            </RadixNavigationMenu.Sub>
+          </RadixNavigationMenuItem>
         );
       }
 
       // Simple button with no children
       return (
-        <IndentedContainer level={level}>
-          <MobileNavigationButton {...("props" in menuItem ? menuItem.props : {})}>
-            {IconFragment}
-            {LabelFragment}
-          </MobileNavigationButton>
-        </IndentedContainer>
+        <RadixNavigationMenuItem ref={forwardedRef} {...props}>
+          <IndentedContainer level={level}>
+            <MobileNavigationButton {...("props" in menuItem ? menuItem.props : {})}>
+              {IconFragment}
+              {LabelFragment}
+            </MobileNavigationButton>
+          </IndentedContainer>
+        </RadixNavigationMenuItem>
       );
     }
 
