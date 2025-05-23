@@ -133,7 +133,7 @@ export const Simplified = () => {
                   <DescriptionGroup>
                     <DescriptionTerm>
                       <Box as="span" color="black">
-                        Description
+                        Description modified
                       </Box>
                     </DescriptionTerm>
                     <DescriptionDetails>
@@ -274,7 +274,7 @@ export const Simplified = () => {
                   <DescriptionGroup>
                     <DescriptionTerm>
                       <Box as="span" color="black">
-                        Safety stock
+                        Safety stock modified
                       </Box>
                     </DescriptionTerm>
                     <DescriptionDetails>
@@ -290,9 +290,9 @@ export const Simplified = () => {
                     </DescriptionDetails>
                   </DescriptionGroup>
                   <DescriptionGroup>
-                    <DescriptionTerm color="black">
+                    <DescriptionTerm>
                       <Box as="span" color="black">
-                        Unit cost
+                        Unit cost modified
                       </Box>
                     </DescriptionTerm>
                     <DescriptionDetails>
@@ -352,7 +352,7 @@ export const Simplified = () => {
                   <DescriptionGroup>
                     <DescriptionTerm color="black">
                       <Box as="span" color="black">
-                        Description
+                        Description modified
                       </Box>
                     </DescriptionTerm>
                     <DescriptionDetails>
@@ -448,22 +448,19 @@ export const Colourful = () => {
     ];
 
     const allTerms = [
-      { term: "Status", old: "Active", new: "Inactive" },
-      { term: "Priority", old: "High", new: "Medium" },
-      { term: "Category", old: `Category ${index}`, new: `Category ${index + 1}` },
-
+      { term: "Status modified", old: "Active", new: "Inactive" },
+      { term: "Priority modified", old: "High", new: "Medium" },
+      { term: "Category modified", old: `Category ${index}`, new: `Category ${index + 1}` },
       {
-        term: "This is an extremely long term that will probably wrap to multiple lines and test the layout's ability to handle long text in the term section",
+        term: "This is an extremely long term that will probably wrap to multiple lines and test the layout's ability to handle long text in the term section modified",
         old: "Short value",
         new: "Another short value",
       },
-
       {
-        term: "Description",
+        term: "Description modified",
         old: "This is a very long description that will definitely wrap to multiple lines. It contains a lot of text to test how the layout handles long content in the description field. We want to make sure it looks good even with extensive content that might be entered by users.",
         new: "This is an even longer new description that will definitely wrap to multiple lines. It contains a lot of text to test how the layout handles long content in the description field. We want to make sure it looks good even with extensive content that might be entered by users. This is additional text to make it even longer.",
       },
-
       {
         term: "Cost per unit modified",
         supplier: "Artisan",
@@ -471,12 +468,11 @@ export const Colourful = () => {
         new: `US $${(index * 2.75).toFixed(2)}`,
       },
       { term: "Supplier UOM modified", supplier: "Artisan", old: "EA", new: "PCS" },
-      { term: "Lead time", supplier: "Artisan", old: `${index} days`, new: `${index + 2} days` },
-      { term: "Minimum order quantity", supplier: "Artisan", old: `${index * 5}`, new: `${index * 6}` },
-      { term: "Maximum order quantity", supplier: "Artisan", old: `${index * 100}`, new: `${index * 120}` },
-      { term: "Payment terms", supplier: "Artisan", old: "Net 30", new: "Net 45" },
-      { term: "Discount rate", supplier: "Artisan", old: `${index}%`, new: `${index + 1}%` },
-
+      { term: "Lead time modified", supplier: "Artisan", old: `${index} days`, new: `${index + 2} days` },
+      { term: "Minimum order quantity modified", supplier: "Artisan", old: `${index * 5}`, new: `${index * 6}` },
+      { term: "Maximum order quantity modified", supplier: "Artisan", old: `${index * 100}`, new: `${index * 120}` },
+      { term: "Payment terms modified", supplier: "Artisan", old: "Net 30", new: "Net 45" },
+      { term: "Discount rate modified", supplier: "Artisan", old: `${index}%`, new: `${index + 1}%` },
       {
         term: "Cost per unit modified",
         supplier: "KD Services",
@@ -484,36 +480,41 @@ export const Colourful = () => {
         new: `US $${(index * 3.75).toFixed(2)}`,
       },
       { term: "Supplier UOM modified", supplier: "KD Services", old: "EA", new: "PCS" },
-      { term: "Lead time", supplier: "KD Services", old: `${index} days`, new: `${index + 2} days` },
-      { term: "Minimum order quantity", supplier: "KD Services", old: `${index * 5}`, new: `${index * 6}` },
-      { term: "Maximum order quantity", supplier: "KD Services", old: `${index * 100}`, new: `${index * 120}` },
-      { term: "Payment terms", supplier: "KD Services", old: "Net 30", new: "Net 45" },
-      { term: "Discount rate", supplier: "KD Services", old: `${index}%`, new: `${index + 1}%` },
-
-      { term: "Item Number", old: `2002837${index}`, new: `2002837${index + 1}` },
-      { term: "Description", old: `Product ${index} - Standard`, new: `Product ${index} - Premium` },
+      { term: "Lead time modified", supplier: "KD Services", old: `${index} days`, new: `${index + 2} days` },
+      { term: "Minimum order quantity modified", supplier: "KD Services", old: `${index * 5}`, new: `${index * 6}` },
+      {
+        term: "Maximum order quantity modified",
+        supplier: "KD Services",
+        old: `${index * 100}`,
+        new: `${index * 120}`,
+      },
+      { term: "Payment terms modified", supplier: "KD Services", old: "Net 30", new: "Net 45" },
+      { term: "Discount rate modified", supplier: "KD Services", old: `${index}%`, new: `${index + 1}%` },
+      { term: "Item Number modified", old: `2002837${index}`, new: `2002837${index + 1}` },
+      { term: "Description modified", old: `Product ${index} - Standard`, new: `Product ${index} - Premium` },
       { term: "Materials owner modified", old: `Owner ${index}`, new: `Owner ${index + 1}` },
-      { term: "Safety stock", old: `${index * 10}`, new: `${index * 15}` },
-      { term: "Unit cost", old: `US $${(index * 3.5).toFixed(2)}`, new: `US $${(index * 3.75).toFixed(2)}` },
-      { term: "Quality rating", old: `${index}`, new: `${index + 1}` },
-      { term: "Production location", old: `Location ${index}`, new: `Location ${index + 1}` },
-      { term: "Storage requirements", old: "Standard", new: "Special" },
-      { term: "Shipping method", old: "Ground", new: "Express" },
+      { term: "Safety stock modified", old: `${index * 10}`, new: `${index * 15}` },
+      { term: "Unit cost modified", old: `US $${(index * 3.5).toFixed(2)}`, new: `US $${(index * 3.75).toFixed(2)}` },
+      { term: "Quality rating modified", old: `${index}`, new: `${index + 1}` },
+      { term: "Production location modified", old: `Location ${index}`, new: `Location ${index + 1}` },
+      { term: "Storage requirements modified", old: "Standard", new: "Special" },
+      { term: "Shipping method modified", old: "Ground", new: "Express" },
       {
         term: "Supplier contact information modified",
         old: `contact${index}@supplier.com`,
         new: `contact${index + 1}@supplier.com`,
       },
       {
-        term: "Long description field that might wrap to multiple lines",
+        term: "Long description field that might wrap to multiple lines modified",
         old: `Long value ${index} that might need to be truncated`,
         new: `New long value ${index + 1} that might need to be truncated`,
       },
-      { term: "Supplier UOM modified", supplier: "Point 1 Display", old: "EA", new: "PCS" },
-      { term: "Supplier UOM modified", supplier: "Global Manufacturing", old: "EA", new: "PCS" },
-      { term: "Supplier UOM modified", supplier: "Elite Packaging", old: "EA", new: "PCS" },
-      { term: "Supplier UOM modified", supplier: "Premium Supplies", old: "EA", new: "PCS" },
-      { term: "Supplier UOM modified", supplier: "Quality Components", old: "EA", new: "PCS" },
+      ...suppliers.map((supplier) => ({
+        term: "Supplier UOM modified",
+        supplier,
+        old: "EA",
+        new: "PCS",
+      })),
     ];
 
     // Special case for index 5 to show all supplier UOM changes
