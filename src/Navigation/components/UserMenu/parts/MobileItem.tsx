@@ -12,7 +12,7 @@ const MobileItem = React.forwardRef<HTMLLIElement, UserMenuItemProps & { level?:
       <>
         {item.type === "link" && (
           <IndentedContainer level={level}>
-            <UserMenuLink asChild>
+            <UserMenuLink asChild isMobile>
               {item.element ? (
                 React.cloneElement(item.element, {
                   ...item.props,
@@ -26,7 +26,9 @@ const MobileItem = React.forwardRef<HTMLLIElement, UserMenuItemProps & { level?:
         )}
         {item.type === "button" && (
           <IndentedContainer level={level}>
-            <UserMenuTrigger {...item.props}>{item.label}</UserMenuTrigger>
+            <UserMenuTrigger {...item.props} isMobile>
+              {item.label}
+            </UserMenuTrigger>
           </IndentedContainer>
         )}
         {item.type === "custom" && item.render({ level, withinMobileNav: true })}

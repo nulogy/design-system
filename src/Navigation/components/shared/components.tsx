@@ -73,7 +73,7 @@ export const NavigationMenuTrigger = styled(RadixNavigationMenu.Trigger).attrs<N
     justifyContent: "space-between",
     gap: theme.space.half,
     "&:focus": { boxShadow: theme.shadows.focus },
-    "&:hover": { backgroundColor: theme.colors.lightBlue },
+    "&:hover": { backgroundColor: theme.colors.lightBlue, color: theme.colors.darkBlue },
     "&:disabled": {
       cursor: "default",
       "&:hover": {
@@ -95,7 +95,7 @@ export const NavigationMenuLink = styled(RadixNavigationMenu.Link)<StyledProps>(
     fontSize: theme.fontSizes.small,
     lineHeight: theme.lineHeights.smallTextCompressed,
     "&:focus": { boxShadow: theme.shadows.focus },
-    "&:hover": { backgroundColor: theme.colors.lightBlue },
+    "&:hover": { backgroundColor: theme.colors.lightBlue, color: theme.colors.darkBlue },
   }),
   addStyledProps
 );
@@ -112,19 +112,19 @@ export const NavigationMenuIconTrigger = styled(NavigationMenuTrigger)(({ theme 
 
 export const CaretDown = styled(Icon).attrs({
   icon: "downArrow",
-})<Partial<IconProps>>(({ theme }) => ({
+})<Partial<IconProps>>({
   position: "relative",
-  color: theme.colors.darkGrey,
+  color: "currentColor",
   transition: "transform 250ms ease",
   "[data-state=open] &": { transform: "rotate(-180deg)" },
-}));
+});
 
 export const CaretRight = styled(Icon).attrs({
   icon: "rightArrow",
-})<Partial<IconProps>>(({ theme }) => ({
+})<Partial<IconProps>>({
   position: "relative",
-  color: theme.colors.darkGrey,
-}));
+  color: "currentColor",
+});
 
 export const RadixNavigationMenuItem = styled(RadixNavigationMenu.Item)<StyledProps>(
   {

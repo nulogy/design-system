@@ -31,6 +31,7 @@ export const A = styled("a")(({ theme }) => ({
 
   "&:hover, &:focus": {
     backgroundColor: theme.colors.lightBlue,
+    color: theme.colors.darkBlue,
     outline: "none",
   },
 }));
