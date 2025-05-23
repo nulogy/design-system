@@ -51,6 +51,16 @@ export { List, ListItem } from "./List";
 export { LoadingAnimation } from "./LoadingAnimation";
 export { ALL_NDS_LOCALES } from "./locales.const";
 export { Modal } from "./Modal";
+export { Navigation } from "./Navigation";
+export type {
+  NavigationProps,
+  MenuItems,
+  MenuItem,
+  UserMenu,
+  UserMenuItem,
+  UserMenuInfo,
+  AppSwitcherConfig,
+} from "./Navigation";
 export { NDSProvider } from "./NDSProvider";
 export { Overlay } from "./Overlay";
 export { Pagination } from "./Pagination";

@@ -1,5 +1,4 @@
 import React from "react";
-import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
 import { IconName } from "@nulogy/icons";
 
 /*
