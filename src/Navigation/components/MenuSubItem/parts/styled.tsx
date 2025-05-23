@@ -31,6 +31,8 @@ export const SubMenuItemLink = styled(RadixNavigationMenu.Link)<StyledProps>(
     textDecoration: "none",
     "&:hover, &:focus": {
       backgroundColor: theme.colors.lightBlue,
+      color: theme.colors.darkBlue,
+      outline: "none",
     },
     "&:visited": {
       color: "inherit",
