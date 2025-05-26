@@ -239,10 +239,34 @@ type UserMenuItem = BaseUserMenuItem & (LinkUserMenuItem | ButtonUserMenuItem | 
 
 ## Logos
 
-To maintain brand consistency, avoid replacing the primary Nulogy logo.  
-Secondary logos are not styled, ensure setting an explicit `width` / `height` to prevent overflow.
+1. To maintain brand consistency, avoid replacing the primary Nulogy logo.
+2. Secondary logos are not styled, ensure setting an explicit `width` / `height` on the passed ReactNode to prevent overflow, or using the `NavigationLogo` helper component.
+3. Use the `NavigationLogoLink` helper when the secondary logo should act as a link.
+4. Applications should display application names with logos using the `app` prop on the `NulogyLogo` component.
 
-Use the `NavigationLogoLink` helper when the logo should act as a link.
+### NavigationLogo
+
+| Prop          | Type              | Description                                      |
+| ------------- | ----------------- | ------------------------------------------------ |
+| **children**  | `React.ReactNode` | The logo element to be wrapped. **Required.**    |
+| **maxWidth**  | `string`          | Maximum width constraint. Defaults to `"184px"`. |
+| **maxHeight** | `string`          | Maximum height constraint. Defaults to `"36px"`. |
+
+### NavigationLogoLink
+
+Based on Radix UI's `NavigationMenuLink` component.
+
+| Prop                 | Type              | Description                                                                   |
+| -------------------- | ----------------- | ----------------------------------------------------------------------------- |
+| **href**             | `string`          | The URL to navigate to when clicked.                                          |
+| **renderAsFragment** | `boolean`         | Whether to render as a fragment for client-side routing. Defaults to `false`. |
+| **children**         | `React.ReactNode` | The content to be wrapped in the link. **Required.**                          |
+
+### NulogyLogo
+
+| Prop    | Type            | Description                                                         |
+| ------- | --------------- | ------------------------------------------------------------------- |
+| **app** | `NulogyAppName` | Application name to display below the logo. Shows app display name. |
 
 ---
 
