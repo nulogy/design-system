@@ -1,9 +1,9 @@
 import React from "react";
 import { IconName } from "@nulogy/icons";
 
-/*
-  User menu
-*/
+/* -------------------------------------------------------------------
+ * User Menu
+ * -----------------------------------------------------------------*/
 export interface UserMenu {
   triggerText: UserMenuInfo;
   header?: UserMenuInfo;
@@ -11,16 +11,13 @@ export interface UserMenu {
   menuItems?: UserMenuItem[];
 }
 
-// User menu info, used in the header and trigger text
 export type UserMenuInfo = {
   title: string;
   subtitle1?: string;
   subtitle2?: string;
 };
 
-/*
-  User menu items
-*/
+export type UserMenuItem = BaseUserMenuItem & (LinkUserMenuItem | ButtonUserMenuItem | CustomUserMenuItem);
 
 interface BaseUserMenuItem {
   key: string;
@@ -42,19 +39,16 @@ interface ButtonUserMenuItem {
 
 interface CustomUserMenuItem {
   type: "custom";
-  /**
-   * Custom render fragment.
-   * @param props.level           – Depth (root = 0).
-   * @param props.withinMobileNav – True when rendered within the mobile navigation.
-   */
   render: (props: { level: number; withinMobileNav: boolean }) => JSX.Element;
 }
 
-export type UserMenuItem = BaseUserMenuItem & (LinkUserMenuItem | ButtonUserMenuItem | CustomUserMenuItem);
+/* -------------------------------------------------------------------
+ * Menu Items
+ * -----------------------------------------------------------------*/
 
-/*
-| Menu Item
-*/
+export type MenuItem = MenuItemBase & (CustomMenuItem | MenuItemButton | MenuItemLink | MenuItemSeparator);
+
+export type MenuItems = MenuItem[];
 
 type MobileVisibility =
   /**
@@ -87,13 +81,6 @@ type WithLabel = {
 
 type CustomMenuItem = {
   type: "custom";
-  /**
-   * Custom render fragment.
-
-   * @param props.withinSubMenu – True when rendered within any submenu.
-   * @param props.level         – Depth (root = 0).
-   * @param props.withinMobileNav – True when rendered within the mobile navigation.
-   */
   render: (props: { withinSubMenu: boolean; level: number; withinMobileNav: boolean }) => JSX.Element;
 };
 
@@ -112,7 +99,3 @@ type MenuItemLink = {
 type MenuItemSeparator = {
   type: "separator";
 };
-
-export type MenuItem = MenuItemBase & (CustomMenuItem | MenuItemButton | MenuItemLink | MenuItemSeparator);
-
-export type MenuItems = MenuItem[];
