@@ -78,6 +78,7 @@ export const NavigationMenuTrigger = styled(RadixNavigationMenu.Trigger).attrs<N
       cursor: "default",
       "&:hover": {
         backgroundColor: "transparent",
+        color: theme.colors.darkGrey,
       },
     },
   }),
@@ -96,6 +97,13 @@ export const NavigationMenuLink = styled(RadixNavigationMenu.Link)<StyledProps>(
     lineHeight: theme.lineHeights.smallTextCompressed,
     "&:focus": { boxShadow: theme.shadows.focus },
     "&:hover": { backgroundColor: theme.colors.lightBlue, color: theme.colors.darkBlue },
+    "&:disabled": {
+      cursor: "default",
+      "&:hover": {
+        backgroundColor: "transparent",
+        color: theme.colors.darkGrey,
+      },
+    },
   }),
   addStyledProps
 );
