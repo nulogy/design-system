@@ -184,7 +184,6 @@ export function getStyledPropNames(...styleFns: styleFn[]): string[] {
     [] as string[]
   );
 }
-margin;
 export const excludeStyledProps =
   (...styleFns: styleFn[]) =>
   (prop: string | number): boolean =>
