@@ -6,6 +6,7 @@ import { Branding } from "../Branding";
 const MAX_LOGO_WIDTH = "184px";
 const MAX_LOGO_HEIGHT = "36px";
 
+/** @deprecated The BrandedNavBar component is deprecated. Use the Navigation component instead. */
 export type BrandLogoContainerProps = {
   logoSrc?: string;
   brandingLinkHref?: string;
@@ -39,4 +40,5 @@ const BrandLogoContainer = ({
   );
 };
 
+/** @deprecated The BrandedNavBar component is deprecated. Use the Navigation component instead. */
 export default BrandLogoContainer;

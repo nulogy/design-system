@@ -174,4 +174,5 @@ NavBarDropdownMenu.defaultProps = {
   hideDelay: "100",
 };
 
+/** @deprecated The BrandedNavBar component is deprecated. Use the Navigation component instead. */
 export default NavBarDropdownMenu;

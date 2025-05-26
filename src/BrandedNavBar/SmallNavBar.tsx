@@ -68,6 +68,7 @@ const MenuIcon = ({ isOpen }) => {
   return <Icon icon={icon} title={title} />;
 };
 
+/** @deprecated The BrandedNavBar component is deprecated. Use the Navigation component instead. */
 export type RenderMenuButtonProps = {
   themeColorObject: any;
   onClick: () => void;
@@ -160,6 +161,8 @@ const SmallNavBarNoState = ({
 
 const SmallNavBar = withMenuState(SmallNavBarNoState);
 
+/** @deprecated The BrandedNavBar component is deprecated. Use the Navigation component instead. */
 export type SmallNavBarProps = SmallNavBarNoStateProps & WithMenuStateProps;
 
+/** @deprecated The BrandedNavBar component is deprecated. Use the Navigation component instead. */
 export default SmallNavBar;

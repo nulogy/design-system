@@ -11,6 +11,7 @@ type NulogyLogoContainerProps = {
   height?: string;
 };
 
+/** @deprecated The BrandedNavBar component is deprecated. Use the Navigation component instead. */
 export const NulogyLogoContainer = ({ subText, height }: NulogyLogoContainerProps) => (
   <Flex
     px="x1"

@@ -1,3 +1,4 @@
+/** @deprecated The BrandedNavBar component is deprecated. Use the Navigation component instead. */
 export default function isValidMenuItem(arr, idx, componentName, location, propFullName) {
   const obj = arr[idx];
 

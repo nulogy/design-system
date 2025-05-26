@@ -32,4 +32,5 @@ const SubMenuTriggerButton = React.forwardRef<HTMLButtonElement, SubMenuTriggerB
 
 SubMenuTriggerButton.displayName = "SubMenuTriggerButton";
 
+/** @deprecated The BrandedNavBar component is deprecated. Use the Navigation component instead. */
 export default SubMenuTriggerButton;

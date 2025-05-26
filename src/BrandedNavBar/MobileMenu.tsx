@@ -267,6 +267,7 @@ const BaseMobileMenu = ({
   );
 };
 
+/** @deprecated The BrandedNavBar component is deprecated. Use the Navigation component instead. */
 const MobileMenu = styled(BaseMobileMenu)(display);
 
 export default MobileMenu;

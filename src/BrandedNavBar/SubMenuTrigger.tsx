@@ -80,4 +80,5 @@ function getPlacement(menuType) {
   }
 }
 
+/** @deprecated The BrandedNavBar component is deprecated. Use the Navigation component instead. */
 export default SubMenuTrigger;
