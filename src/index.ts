@@ -51,7 +51,7 @@ export { List, ListItem } from "./List";
 export { LoadingAnimation } from "./LoadingAnimation";
 export { ALL_NDS_LOCALES } from "./locales.const";
 export { Modal } from "./Modal";
-export { Navigation } from "./Navigation";
+export { Navigation, NulogyLogo, NavigationLogoLink, NavigationLogo } from "./Navigation";
 export type {
   NavigationProps,
   MenuItems,

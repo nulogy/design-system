@@ -8,8 +8,9 @@ import { Alert } from "../../Alert";
 import { Code } from "../../utils/story/code";
 import { Radio } from "../../Radio";
 import { RadioGroup } from "../../Radio";
-import type { NulogyAppName } from "../..";
+import { Flex, Text, type NulogyAppName } from "../..";
 import { NavigationLogoLink } from "../components/shared/NavigationLogoLink";
+import { NavigationLogo } from "../components/shared/NavigationLogo";
 import CustomLogo from "./fixtures/logos/Customlogo1";
 import CustomLogo2 from "./fixtures/logos/CustomLogo2";
 import CustomLogoThree from "./fixtures/logos/CustomLogo3";
@@ -156,4 +157,44 @@ export const WithACustomPrimaryLogo = () => {
       </Page>
     </ApplicationFrame>
   );
+};
+
+export const WithNavigationLogoWrapper = () => {
+  return (
+    <ApplicationFrame
+      navBar={
+        <Navigation
+          secondaryLogo={
+            <NavigationLogoLink href="/" aria-label="Custom Logo">
+              <NavigationLogo>
+                <CustomLogo2 />
+              </NavigationLogo>
+            </NavigationLogoLink>
+          }
+        />
+      }
+    >
+      <Page fullHeight>
+        <Flex flexDirection="column" gap="x2">
+          <Text>
+            Secondary logos are not styled, ensure setting an explicit <Code>width</Code> / <Code>height</Code> on the
+            passed <Code>ReactNode</Code> to prevent overflow, or using the <Code>NavigationLogo</Code> helper.
+          </Text>
+          <Text>
+            <Code>NavigationLogo</Code> component constrains logos to maximum <Code>184px</Code> width and{" "}
+            <Code>36px</Code> height by default to prevent overflow in the Navigation.
+          </Text>
+
+          <Text>
+            You can adjust this by passing <Code>maxWidth</Code> and <Code>maxHeight</Code> props to the{" "}
+            <Code>NavigationLogo</Code> component.
+          </Text>
+        </Flex>
+      </Page>
+    </ApplicationFrame>
+  );
+};
+
+WithNavigationLogoWrapper.story = {
+  name: "With NavigationLogo wrapper",
 };
