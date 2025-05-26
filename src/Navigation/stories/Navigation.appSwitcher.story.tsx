@@ -18,9 +18,11 @@ export default {
   },
 };
 
+const appSwitcherToggleSelector = 'button[aria-label="Toggle app switcher"]';
+
 export const AllApps = () => {
   useConditionalAutoClick({
-    selector: 'button[aria-label="Toggle app switcher"]',
+    selector: appSwitcherToggleSelector,
     condition: {
       queryParam: "cypressTest",
       when: "absent",
@@ -60,7 +62,7 @@ export const AllApps = () => {
 
 export const OnlySelectApps = () => {
   useConditionalAutoClick({
-    selector: 'button[aria-label="Toggle app switcher"]',
+    selector: appSwitcherToggleSelector,
     condition: {
       queryParam: "cypressTest",
       when: "absent",
@@ -89,7 +91,7 @@ export const WithConditionallyVisibleApps = () => {
   const [isAdmin, setIsAdmin] = useState(false);
 
   useConditionalAutoClick({
-    selector: 'button[aria-label="Toggle app switcher"]',
+    selector: appSwitcherToggleSelector,
     condition: {
       queryParam: "cypressTest",
       when: "absent",
@@ -149,7 +151,7 @@ export const WithConditionallyVisibleApps = () => {
 
 export const WithAnIndicator = () => {
   useConditionalAutoClick({
-    selector: 'button[aria-label="Toggle app switcher"]',
+    selector: appSwitcherToggleSelector,
     condition: {
       queryParam: "cypressTest",
       when: "absent",
