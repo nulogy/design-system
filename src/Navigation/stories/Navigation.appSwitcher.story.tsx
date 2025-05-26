@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import useConditionalAutoClick from "../../hooks/useConditionalAutoClick";
+import useConditionalAutoClick from "../../utils/testing/useConditionalAutoClick";
 import Navigation from "../Navigation";
 import { ApplicationFrame, Page } from "../../Layout";
 import Sidebar from "../../Layout/Sidebar";
@@ -21,8 +21,10 @@ export default {
 export const AllApps = () => {
   useConditionalAutoClick({
     selector: 'button[aria-label="Toggle app switcher"]',
-    queryParam: "cypressTest",
-    invert: true,
+    condition: {
+      queryParam: "cypressTest",
+      when: "absent",
+    },
   });
 
   return (
@@ -59,8 +61,10 @@ export const AllApps = () => {
 export const OnlySelectApps = () => {
   useConditionalAutoClick({
     selector: 'button[aria-label="Toggle app switcher"]',
-    queryParam: "cypressTest",
-    invert: true,
+    condition: {
+      queryParam: "cypressTest",
+      when: "absent",
+    },
   });
   return (
     <Navigation
@@ -86,8 +90,10 @@ export const WithConditionallyVisibleApps = () => {
 
   useConditionalAutoClick({
     selector: 'button[aria-label="Toggle app switcher"]',
-    queryParam: "cypressTest",
-    invert: true,
+    condition: {
+      queryParam: "cypressTest",
+      when: "absent",
+    },
   });
 
   return (
@@ -144,8 +150,10 @@ export const WithConditionallyVisibleApps = () => {
 export const WithAnIndicator = () => {
   useConditionalAutoClick({
     selector: 'button[aria-label="Toggle app switcher"]',
-    queryParam: "cypressTest",
-    invert: true,
+    condition: {
+      queryParam: "cypressTest",
+      when: "absent",
+    },
   });
 
   return (

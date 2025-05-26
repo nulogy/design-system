@@ -6,7 +6,7 @@ import { ApplicationFrame, Page } from "../../Layout";
 import { Text } from "../../Type";
 import Navigation from "../Navigation";
 import { Code } from "../../utils/story/code";
-import useConditionalAutoClick from "../../hooks/useConditionalAutoClick";
+import useConditionalAutoClick from "../../utils/testing/useConditionalAutoClick";
 import { Select } from "../../Select";
 
 export default {
@@ -19,8 +19,10 @@ export default {
 export const BasicUsage = () => {
   useConditionalAutoClick({
     selector: 'button[aria-label="Toggle user menu"]',
-    queryParam: "cypressTest",
-    invert: true,
+    condition: {
+      queryParam: "cypressTest",
+      when: "absent",
+    },
   });
 
   return (
@@ -144,8 +146,10 @@ export const Header = () => {
 
   useConditionalAutoClick({
     selector: 'button[aria-label="toggle user menu"]',
-    queryParam: "cypressTest",
-    invert: true,
+    condition: {
+      queryParam: "cypressTest",
+      when: "absent",
+    },
   });
 
   return (
@@ -201,8 +205,10 @@ export const Header = () => {
 export const Controls = () => {
   useConditionalAutoClick({
     selector: 'button[aria-label="toggle user menu"]',
-    queryParam: "cypressTest",
-    invert: true,
+    condition: {
+      queryParam: "cypressTest",
+      when: "absent",
+    },
   });
 
   return (
@@ -243,8 +249,10 @@ export const Controls = () => {
 export const MenuItems = () => {
   useConditionalAutoClick({
     selector: 'button[aria-label="Toggle user menu"]',
-    queryParam: "cypressTest",
-    invert: true,
+    condition: {
+      queryParam: "cypressTest",
+      when: "absent",
+    },
   });
 
   return (
