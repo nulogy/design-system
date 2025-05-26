@@ -13,6 +13,7 @@ import BrandLogoContainer from "./BrandLogoContainer";
 import SmallNavBar from "./SmallNavBar";
 import NavBarBackground from "./NavBarBackground";
 
+/** @deprecated The BrandedNavBar component is deprecated. Use the Navigation component instead. */
 export const NAVBAR_HEIGHT = "56px";
 
 const themeColorObject = {
@@ -143,6 +144,7 @@ const BaseNavBar = ({ environment, breakpointUpper = "medium", ...props }: BaseN
   );
 };
 
+/** @deprecated The BrandedNavBar component is deprecated. Use the Navigation component instead. */
 const NavBar = styled(BaseNavBar)({});
 
 export default NavBar;

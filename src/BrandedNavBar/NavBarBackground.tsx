@@ -3,6 +3,7 @@ import { DefaultNDSThemeType } from "../theme";
 import { Flex } from "../Flex";
 import { addStyledProps, StyledProps } from "../StyledProps";
 
+/** @deprecated The BrandedNavBar component is deprecated. Use the Navigation component instead. */
 export type NavBarBackgroundProps = {
   theme?: DefaultNDSThemeType;
 } & StyledProps;
@@ -18,4 +19,5 @@ const NavBarBackground = styled(Flex)(
   addStyledProps
 );
 
+/** @deprecated The BrandedNavBar component is deprecated. Use the Navigation component instead. */
 export default NavBarBackground;

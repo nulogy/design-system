@@ -2,6 +2,7 @@ import React from "react";
 import { Box } from "../Box";
 import { Text } from "../Type";
 
+/** @deprecated The BrandedNavBar component is deprecated. Use the Navigation component instead. */
 export type EnvironmentBannerProps = {
   children?: React.ReactNode;
 };
@@ -14,4 +15,5 @@ const EnvironmentBanner = ({ children }: EnvironmentBannerProps) => (
   </Box>
 );
 
+/** @deprecated The BrandedNavBar component is deprecated. Use the Navigation component instead. */
 export default EnvironmentBanner;

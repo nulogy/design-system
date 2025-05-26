@@ -70,4 +70,5 @@ const MenuTriggerButton = React.forwardRef<HTMLButtonElement, MenuTriggerButtonP
 
 MenuTriggerButton.displayName = "MenuTriggerButton";
 
+/** @deprecated The BrandedNavBar component is deprecated. Use the Navigation component instead. */
 export default MenuTriggerButton;

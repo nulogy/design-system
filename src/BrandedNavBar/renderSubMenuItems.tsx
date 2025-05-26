@@ -70,4 +70,5 @@ const NoWrapLi = styled.li(
   })
 );
 
+/** @deprecated The BrandedNavBar component is deprecated. Use the Navigation component instead. */
 export default renderSubMenuItems;

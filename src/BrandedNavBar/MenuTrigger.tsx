@@ -5,8 +5,10 @@ import renderSubMenuItems from "./renderSubMenuItems";
 import MenuTriggerButton from "./MenuTriggerButton";
 import { TriggerFunctionProps } from "./TriggerFunctionProps";
 
+/** @deprecated The BrandedNavBar component is deprecated. Use the Navigation component instead. */
 export type MenuType = "primary" | "secondary";
 
+/** @deprecated The BrandedNavBar component is deprecated. Use the Navigation component instead. */
 export type MenuTriggerProps = {
   name?: string;
   "aria-label"?: string;
@@ -91,4 +93,5 @@ const MenuTrigger = ({
   );
 };
 
+/** @deprecated The BrandedNavBar component is deprecated. Use the Navigation component instead. */
 export default MenuTrigger;

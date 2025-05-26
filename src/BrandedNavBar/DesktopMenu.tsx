@@ -124,6 +124,7 @@ const getRenderFunction = (menuItem) => {
 const renderMenuItem = (menuItem, themeColorObject, layer, menuType) =>
   getRenderFunction(menuItem)(menuItem, themeColorObject, layer, menuType);
 
+/** @deprecated The BrandedNavBar component is deprecated. Use the Navigation component instead. */
 export type DesktopMenuProps = {
   menuData: any[];
   menuType: MenuType;
@@ -138,6 +139,7 @@ const BaseDesktopMenu = React.forwardRef<HTMLElement, DesktopMenuProps>(
   )
 );
 
+/** @deprecated The BrandedNavBar component is deprecated. Use the Navigation component instead. */
 const DesktopMenu = styled(BaseDesktopMenu)({
   "& > div": {
     "&:not(:last-of-type)": {
