@@ -16,9 +16,11 @@ export default {
   },
 };
 
+const userMenuToggleSelector = 'button[aria-label="Toggle user menu"]';
+
 export const BasicUsage = () => {
   useConditionalAutoClick({
-    selector: 'button[aria-label="Toggle user menu"]',
+    selector: userMenuToggleSelector,
     condition: {
       queryParam: "cypressTest",
       when: "absent",
@@ -145,7 +147,7 @@ export const Header = () => {
   const [subtitle2, setSubtitle2] = React.useState("Nulogy");
 
   useConditionalAutoClick({
-    selector: 'button[aria-label="toggle user menu"]',
+    selector: userMenuToggleSelector,
     condition: {
       queryParam: "cypressTest",
       when: "absent",
@@ -204,7 +206,7 @@ export const Header = () => {
 
 export const Controls = () => {
   useConditionalAutoClick({
-    selector: 'button[aria-label="toggle user menu"]',
+    selector: userMenuToggleSelector,
     condition: {
       queryParam: "cypressTest",
       when: "absent",
@@ -248,7 +250,7 @@ export const Controls = () => {
 
 export const MenuItems = () => {
   useConditionalAutoClick({
-    selector: 'button[aria-label="Toggle user menu"]',
+    selector: userMenuToggleSelector,
     condition: {
       queryParam: "cypressTest",
       when: "absent",
