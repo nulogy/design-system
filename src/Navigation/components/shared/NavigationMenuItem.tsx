@@ -79,7 +79,7 @@ export const NavigationMenuItem = React.forwardRef<HTMLLIElement, NavigationMenu
       );
 
       return hasTooltip ? (
-        <Tooltip sideOffset={0} content={item.tooltip}>
+        <Tooltip delayDuration={0} sideOffset={0} content={item.tooltip}>
           {Item}
         </Tooltip>
       ) : (
@@ -112,7 +112,7 @@ export const NavigationMenuItem = React.forwardRef<HTMLLIElement, NavigationMenu
     );
 
     return hasTooltip ? (
-      <Tooltip sideOffset={0} content={item.tooltip}>
+      <Tooltip delayDuration={0} sideOffset={0} content={item.tooltip}>
         {Item}
       </Tooltip>
     ) : (
