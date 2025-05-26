@@ -58,7 +58,7 @@ export const UserMenuTrigger = styled(RadixNavigationMenu.Trigger)<{ $isMobile?:
 export const SubMenuContent = styled(RadixNavigationMenu.Content)(({ theme }) => ({
   position: "absolute",
   top: `calc(-1 * ${theme.space.x1})`,
-  right: "100%",
+  right: `calc(100% - ${theme.space.half})`,
   width: "max-content",
   minWidth: "150px",
   background: theme.colors.white,
