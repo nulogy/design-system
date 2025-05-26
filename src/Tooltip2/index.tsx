@@ -8,15 +8,16 @@ type TooltipProps = {
   content: ReactNode;
   hideTooltip?: boolean;
   sideOffset?: number;
+  delayDuration?: number;
 };
 
-export function Tooltip({ children, content, sideOffset = 4, hideTooltip = false }: TooltipProps) {
+export function Tooltip({ children, content, sideOffset = 4, hideTooltip = false, delayDuration = 700 }: TooltipProps) {
   if (hideTooltip) {
     return <>{children}</>;
   }
 
   return (
-    <TooltipPrimitive.Provider>
+    <TooltipPrimitive.Provider delayDuration={delayDuration}>
       <TooltipPrimitive.Root>
         <TooltipPrimitive.Trigger asChild>{children}</TooltipPrimitive.Trigger>
         <TooltipPrimitive.Portal>
@@ -71,7 +72,7 @@ const slideLeftAndFade = keyframes`
   }
 `;
 
-export const TooltipContent = styled(TooltipPrimitive.Content)`
+const TooltipContent = styled(TooltipPrimitive.Content)`
   font-family: ${({ theme }) => theme.fonts.base};
   white-space: nowrap;
   font-size: ${({ theme }) => theme.fontSizes.smaller};
