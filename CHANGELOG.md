@@ -1,3 +1,50 @@
+# [14.8.0](https://github.com/nulogy/design-system/compare/v14.7.2...v14.8.0) (2025-05-27)
+
+
+### Bug Fixes
+
+* adjust delayDuration for the icons Tooltip ([12d8d89](https://github.com/nulogy/design-system/commit/12d8d8936cff726d24d6471edeef4fbd6ee3ef99))
+* adjust padding for the user menu trigger ([8a8b3ee](https://github.com/nulogy/design-system/commit/8a8b3ee509df66e2ea468bbb3959f8fd13fef1b2))
+* adjust spacing between submenus ([5c91568](https://github.com/nulogy/design-system/commit/5c915685308f1fd4f4da7d435961589ef30553bd))
+* allow passing a custom link component ([ce6ed3a](https://github.com/nulogy/design-system/commit/ce6ed3a531b344f657df59fe146a669744bb0c3c))
+* change the text color when hovering over items ([e726702](https://github.com/nulogy/design-system/commit/e7267024f9c68b6859f2f93025b62d77352f4208))
+* cleanup types ([85045c2](https://github.com/nulogy/design-system/commit/85045c2a82959aea057197c399685db7c3a08653))
+* conditionally render the userMenu ([c8d8093](https://github.com/nulogy/design-system/commit/c8d80931f09c359dfd3fdf2dc564d8bdd615c37e))
+* do not hardcode app name ([2116a70](https://github.com/nulogy/design-system/commit/2116a70c8383f779330c37cd81dd5df9d32ec432))
+* filter out styled-system props from non-HTML native elements ([636024b](https://github.com/nulogy/design-system/commit/636024be148d15a10976ad1b9769c609482144be))
+* improve Tooltip support ([82bbefe](https://github.com/nulogy/design-system/commit/82bbefe4127c39b1b7c275f5b1a616e5908e1746))
+* invalid JSON syntax ([38de848](https://github.com/nulogy/design-system/commit/38de848020b70f635e0b9918c9cec81131a1d70b))
+* make HiddenNavigationMenuItem accessible ([5f49034](https://github.com/nulogy/design-system/commit/5f49034421cd49d10218858f6dc36fcba5b75e15))
+* make sure the hierarchy follows the right DOM structure ([881c632](https://github.com/nulogy/design-system/commit/881c632e0f6832305b3d5df930ad5750cb78853e))
+* remove unused expression ([6b93cfc](https://github.com/nulogy/design-system/commit/6b93cfc46645549a786a110a36597a229e7b6911))
+* remove unused hook ([658b574](https://github.com/nulogy/design-system/commit/658b574278bbd2c9e6c9ab100d961b02a3fb2643))
+* reset the story before running the spec ([d283c25](https://github.com/nulogy/design-system/commit/d283c2575fe5830c802e8392fd059c9e7a2a4ba7))
+* resolve AppName type issue ([e82eccc](https://github.com/nulogy/design-system/commit/e82eccc639e4fddd1df7e29a825f70d52b2ccd65))
+* story using the wrong query selector ([164c6d3](https://github.com/nulogy/design-system/commit/164c6d3102f5316de693b4fdea4199449474b862))
+* update default delay in useAutoClickElement hook ([a498d27](https://github.com/nulogy/design-system/commit/a498d27cada924ad28276083af558bd304b16da6))
+
+
+### Features
+
+* add a NavigationLogo helper component ([3ac4ca1](https://github.com/nulogy/design-system/commit/3ac4ca163eb899a8ff3382e0cc42b0ca04931b08))
+* add AppSwitcher story ([8069919](https://github.com/nulogy/design-system/commit/80699195e516a222ff50ecd135019f88552ab954))
+* add custom element support for the user menu link ([b59535b](https://github.com/nulogy/design-system/commit/b59535b222163ad57610a87c5eddaac44e79ac16))
+* add mobile support to the user menu on mobile ([21e66ba](https://github.com/nulogy/design-system/commit/21e66ba5cbfba9decc473ad0a58dc1770403565f))
+* add more UserMenu items support ([6ea8e75](https://github.com/nulogy/design-system/commit/6ea8e75858e368649364e799651f3b35ffa2ea42))
+* add support for icons and labels in the navigation menus ([5a59323](https://github.com/nulogy/design-system/commit/5a59323fadd40fac962fd70f9e61dd1b767ef065))
+* Add support for separators ([046692c](https://github.com/nulogy/design-system/commit/046692ce18114d4e998684fde5fe6f9c58b21a69))
+* add support for withinMobileNav render prop ([183450d](https://github.com/nulogy/design-system/commit/183450dbc48ece47b596584fd78e19c1ca548d4d))
+* deprecate the BrandedNavBar component ([1d56d99](https://github.com/nulogy/design-system/commit/1d56d99a5f1cbae99ec1ff5ae315ea47a29fca2b))
+* export the Navigation component and its props ([9a38413](https://github.com/nulogy/design-system/commit/9a384138905e466401aa8bcfc705555fde9efa9e))
+* handle different mobile visibility options ([27a6506](https://github.com/nulogy/design-system/commit/27a6506ef38c73a3f1d3654a35760df8516ccce9))
+* hide the separator when it's the first item in the SubMenu ([13eed80](https://github.com/nulogy/design-system/commit/13eed80bbaed6c3e51be688b7f6d3ddcc355ac72))
+* improve NulogyAppSwitcher component ([80c3724](https://github.com/nulogy/design-system/commit/80c37240615222f9e971d1669b302466b3ba31ae))
+
+
+### Reverts
+
+* do not filter based on styled-system props ([b4e4f62](https://github.com/nulogy/design-system/commit/b4e4f6274899720a9ac6fd45d47fb4dfe24f21ec))
+
 ## [14.7.2](https://github.com/nulogy/design-system/compare/v14.7.1...v14.7.2) (2025-05-12)
 
 
