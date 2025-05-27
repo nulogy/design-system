@@ -74,7 +74,6 @@ describe("NavigationUserMenu", () => {
     });
 
     it("opens and shows header content", () => {
-      getUserMenuTrigger().click();
       getUserMenu().contains("Haider Alshamma").should("be.visible");
     });
   });
@@ -86,7 +85,6 @@ describe("NavigationUserMenu", () => {
     });
 
     it("shows controls without header", () => {
-      getUserMenuTrigger().click();
       getUserMenu().contains("Default").should("be.visible");
       getUserMenu().contains("Base").should("be.visible");
     });
