@@ -1,3 +1,10 @@
+## [14.8.1](https://github.com/nulogy/design-system/compare/v14.8.0...v14.8.1) (2025-05-27)
+
+
+### Bug Fixes
+
+* move EnvironmentBanner to the Navigation ([96f89c2](https://github.com/nulogy/design-system/commit/96f89c261b9b661376d03570c8ae6c9265cfc820))
+
 # [14.8.0](https://github.com/nulogy/design-system/compare/v14.7.2...v14.8.0) (2025-05-27)
 
 
