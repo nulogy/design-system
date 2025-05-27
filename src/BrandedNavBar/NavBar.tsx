@@ -8,7 +8,7 @@ import { Box } from "../Box";
 import numberFromDimension from "../utils/numberFromDimension";
 import DesktopMenu from "./DesktopMenu";
 import { NulogyLogoContainer } from "./NulogyLogoContainer";
-import EnvironmentBanner from "./EnvironmentBanner";
+import EnvironmentBanner from "../Navigation/components/EnvironmentBanner/EnvironmentBanner";
 import BrandLogoContainer from "./BrandLogoContainer";
 import SmallNavBar from "./SmallNavBar";
 import NavBarBackground from "./NavBarBackground";

@@ -13,7 +13,6 @@ export {
   BrandedNavBar,
   BrandLogoContainer,
   DesktopMenu,
-  EnvironmentBanner,
   MenuTrigger,
   NavBarBackground,
   SmallNavBar,
@@ -21,7 +20,6 @@ export {
 export type {
   BrandLogoContainerProps,
   DesktopMenuProps,
-  EnvironmentBannerProps,
   MenuTriggerProps,
   NavBarBackgroundProps,
   RenderMenuButtonProps,
@@ -51,7 +49,7 @@ export { List, ListItem } from "./List";
 export { LoadingAnimation } from "./LoadingAnimation";
 export { ALL_NDS_LOCALES } from "./locales.const";
 export { Modal } from "./Modal";
-export { Navigation, NulogyLogo, NavigationLogoLink, NavigationLogo } from "./Navigation";
+export { Navigation, NulogyLogo, NavigationLogoLink, NavigationLogo, EnvironmentBanner } from "./Navigation";
 export type {
   NavigationProps,
   MenuItems,
@@ -60,6 +58,7 @@ export type {
   UserMenuItem,
   UserMenuInfo,
   AppSwitcherConfig,
+  EnvironmentBannerProps,
 } from "./Navigation";
 export { NDSProvider } from "./NDSProvider";
 export { Overlay } from "./Overlay";
