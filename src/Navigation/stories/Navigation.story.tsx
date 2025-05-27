@@ -7,6 +7,7 @@ import { Select } from "../../Select";
 import { Flex } from "../../Flex";
 import { Text } from "../../Type";
 import { Code } from "../../utils/story/code";
+import { Banner } from "../../Banner";
 import CustomLogo3 from "./fixtures/logos/CustomLogo3";
 
 export default {
@@ -244,6 +245,39 @@ export const WithACustomBreakpoint = () => {
             </Text>
           </Flex>
         </Sidebar>
+      </Page>
+    </ApplicationFrame>
+  );
+};
+
+export const WithBanners = () => {
+  return (
+    <ApplicationFrame
+      environment="production"
+      navBar={
+        <>
+          <Banner title="Action required">
+            We have detected unauthorized access attempts on your account. Please change your password immediately to
+            secure your account.
+          </Banner>
+          <Navigation
+            primaryNavigation={[{ key: "dashboard", label: "Dashboard", type: "link" }]}
+            secondaryNavigation={[{ key: "settings", icon: "settings", tooltip: "Settings", type: "button" }]}
+          />
+        </>
+      }
+    >
+      <Page fullHeight>
+        <Sidebar
+          height="100%"
+          width="350px"
+          hideCloseButton
+          isOpen
+          title="Story information"
+          overlay="hide"
+          top="83px"
+          bottom="0px"
+        />
       </Page>
     </ApplicationFrame>
   );

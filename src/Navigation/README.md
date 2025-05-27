@@ -74,7 +74,7 @@ function ApplicationHeader() {
 
 Use `Navigation` on every Nulogy application to provide a single, consistent entry point for navigation, cross-app switching, and account-level actions.
 
-Do **not** use it for in‑page or section navigation; use tabs or secondary menus instead. The `Navigation` component is not designed to be used for applications meant to be used primarily on touch devices. For those use cases, see the `TopBar` component.
+Do **not** use it for in‑page or section navigation; use tabs or a switcher instead. The `Navigation` component is not designed for applications meant to be used primarily on touch devices. For those use cases, use the `TopBar` component.
 
 ---
 
@@ -292,7 +292,7 @@ Change the `breakpoint` prop to control when the component switches to the deskt
 ## Technical Details
 
 - Powered by [Radix UI Navigation Menu](https://www.radix-ui.com/primitives/docs/components/navigation-menu).
-- For client‑side routing, pass `renderAsFragment` to `NavigationLogoLink` **or** supply an `element` to `MenuItemLink` / `LinkUserMenuItem`.
+- For client‑side routing, pass `renderAsFragment` to `NavigationLogoLink` **or** supply an `element` to link items.
 - Type definitions are located in `src/Navigation/types.ts`.
 
 ---
@@ -302,7 +302,13 @@ Change the `breakpoint` prop to control when the component switches to the deskt
 1. Keep navigation consistent across all pages.
 2. Write short, descriptive labels.
 3. Always provide the `tooltip` prop for icon‑only buttons.
-4. Make sure to set a width and height for the secondary logo to prevent overflow.
-5. Prefer nested sub‑menus and logical **separators** over long, flat lists.
+4. Make sure to set a width and height for the secondary logo to prevent overflow, or use the `NavigationLogo` helper component.
+5. Prefer nested sub‑menus and logical separators over long, flat lists.
 6. Test custom items on mobile and with a screen reader.
 7. Use the `mobileVisibility` prop to fine‑tune what appears in the collapsed layout.
+
+---
+
+## Migration from `BrandedNavBar`
+
+- The height of the new `Navigation` component is `64px` vs `56px` for `BrandedNavBar`. You need to adjust the `top` of the SideBar or any content (such as Pendo content) that is positioned relative to the page by `8px`.

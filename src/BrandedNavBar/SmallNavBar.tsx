@@ -6,7 +6,7 @@ import { DefaultNDSThemeType } from "../theme";
 import { Flex } from "../Flex";
 import NavBarSearch from "../NavBarSearch/NavBarSearch";
 import { withMenuState, WithMenuStateProps, AcceptsMenuStateProps } from "../utils";
-import EnvironmentBanner from "./EnvironmentBanner";
+import EnvironmentBanner from "../Navigation/components/EnvironmentBanner/EnvironmentBanner";
 import MobileMenu from "./MobileMenu";
 import NavBarBackground from "./NavBarBackground";
 
