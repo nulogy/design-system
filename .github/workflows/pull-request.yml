@@ -22,8 +22,6 @@ jobs:
           node-version-file: '.nvmrc'
       - name: Install dependencies
         run: yarn
-      - name: Clear storybook cache
-        run: yarn clean:storybook
       - name: Build
         run: yarn build
       - name: Test
