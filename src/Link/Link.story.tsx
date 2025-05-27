@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Link as ReactRouterLink } from "react-router-dom";
-import { Link } from "../index";
+import styled from "styled-components";
+import { addStyledProps, Link } from "../index";
 
 export default {
   title: "Components/Link",
@@ -92,3 +93,26 @@ export const OpenInNewTabWithAppTag = () => (
 OpenInNewTabWithAppTag.story = {
   name: "Open in new tab with AppTag",
 };
+
+const NotWorkingCustomLink = styled(Link)({
+  color: "red",
+});
+
+export const AsNonWorkingCustomLink = () => (
+  <NotWorkingCustomLink color="darkGrey" href="http://nulogy.design">
+    Link
+  </NotWorkingCustomLink>
+);
+
+const WorkingCustomLink = styled(Link)(
+  {
+    color: "red",
+  },
+  addStyledProps
+);
+
+export const AsAWorkingCustomLink = () => (
+  <WorkingCustomLink color="darkGrey" href="http://nulogy.design">
+    Link
+  </WorkingCustomLink>
+);
