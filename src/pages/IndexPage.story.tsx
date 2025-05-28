@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 import { Meta } from "@storybook/react";
-import { 
-  ApplicationFrame, 
-  BrandedNavBar, 
-  Page, 
-  Breadcrumbs, 
-  Box, 
-  Flex, 
-  Button, 
-  DropdownMenu, 
-  Icon, 
-  IconicButton, 
+import {
+  ApplicationFrame,
+  BrandedNavBar,
+  Page,
+  Breadcrumbs,
+  Box,
+  Flex,
+  Button,
+  DropdownMenu,
+  Icon,
+  IconicButton,
   Table,
   TableColumnType,
-  Sidebar, 
-  Select, 
+  Sidebar,
+  Select,
   Modal,
   PrimaryButton,
   QuietButton,
@@ -29,7 +29,7 @@ import {
   ToastContainer,
   toast,
   Pagination,
-  Divider
+  Divider,
 } from "../index";
 import { InputField } from "../Input/InputField";
 
@@ -49,7 +49,7 @@ const columns: TableColumnType<WorkOrder>[] = [
   { dataKey: "id", label: "ID" },
   { dataKey: "name", label: "Name" },
   { dataKey: "status", label: "Status" },
-  { dataKey: "date", label: "Date" }
+  { dataKey: "date", label: "Date" },
 ];
 
 export default {
@@ -78,7 +78,7 @@ export const Default = () => {
     bomVersion: "",
     status: "",
     plannedStart: null,
-    plannedEnd: null
+    plannedEnd: null,
   });
 
   const handleFilterClick = () => {
@@ -90,9 +90,9 @@ export const Default = () => {
   };
 
   const handleFilterChange = (field, value) => {
-    setFilters(prev => ({
+    setFilters((prev) => ({
       ...prev,
-      [field]: value
+      [field]: value,
     }));
   };
 
@@ -107,7 +107,7 @@ export const Default = () => {
   };
 
   const handleConfirmDelete = () => {
-    console.log('Deleting work order:', selectedWorkOrder);
+    console.log("Deleting work order:", selectedWorkOrder);
     handleCloseDeleteModal();
     toast.success("Work order deleted successfully");
   };
@@ -117,14 +117,14 @@ export const Default = () => {
   };
 
   const tableColumns: TableColumnType<WorkOrder>[] = [
-    { 
-      label: "Work order code", 
+    {
+      label: "Work order code",
       dataKey: "workOrderCode",
       cellFormatter: (props) => (
         <Link href={`#/work-orders/${props.row.id}`} underline={false}>
           {props.cellData}
         </Link>
-      )
+      ),
     },
     { label: "Customer name", dataKey: "customerName" },
     { label: "Item code", dataKey: "itemCode" },
@@ -133,17 +133,13 @@ export const Default = () => {
     { label: "Status", dataKey: "status" },
     { label: "Planned start", dataKey: "plannedStart" },
     { label: "Planned end", dataKey: "plannedEnd" },
-    { 
+    {
       dataKey: "actions",
-      width: "40px",  
+      width: "40px",
       cellFormatter: (props) => (
-        <IconicButton 
-          icon="delete" 
-          tooltip="Delete" 
-          onClick={() => handleDeleteClick(props.row)}
-        />
-      )
-    }
+        <IconicButton icon="delete" tooltip="Delete" onClick={() => handleDeleteClick(props.row)} />
+      ),
+    },
   ];
 
   const tableData = [
@@ -156,7 +152,7 @@ export const Default = () => {
       unitsExpected: 6000.0,
       status: "Booked",
       plannedStart: "2023-Sep-01 02:09 PM",
-      plannedEnd: "2023-Sep-08 02:09 PM"
+      plannedEnd: "2023-Sep-08 02:09 PM",
     },
     {
       id: "1133",
@@ -167,7 +163,7 @@ export const Default = () => {
       unitsExpected: 5000.0,
       status: "Booked",
       plannedStart: "2023-Aug-01 01:57 PM",
-      plannedEnd: "2023-Aug-08 01:58 PM"
+      plannedEnd: "2023-Aug-08 01:58 PM",
     },
     {
       id: "1076",
@@ -178,7 +174,7 @@ export const Default = () => {
       unitsExpected: 0.0,
       status: "Open",
       plannedStart: "",
-      plannedEnd: ""
+      plannedEnd: "",
     },
     {
       id: "693",
@@ -189,7 +185,7 @@ export const Default = () => {
       unitsExpected: 10000.0,
       status: "Open",
       plannedStart: "",
-      plannedEnd: ""
+      plannedEnd: "",
     },
     {
       id: "20",
@@ -200,7 +196,7 @@ export const Default = () => {
       unitsExpected: 1000.0,
       status: "Open",
       plannedStart: "",
-      plannedEnd: ""
+      plannedEnd: "",
     },
     // Generate 45 more rows
     ...Array.from({ length: 45 }, (_, i) => ({
@@ -212,14 +208,11 @@ export const Default = () => {
       unitsExpected: Math.floor(Math.random() * 10000),
       status: i % 3 === 0 ? "Open" : i % 3 === 1 ? "Booked" : "In Progress",
       plannedStart: i % 2 === 0 ? "2023-Sep-01 02:09 PM" : "",
-      plannedEnd: i % 2 === 0 ? "2023-Sep-08 02:09 PM" : ""
-    }))
+      plannedEnd: i % 2 === 0 ? "2023-Sep-08 02:09 PM" : "",
+    })),
   ];
 
-  const paginatedData = tableData.slice(
-    (currentPage - 1) * rowsPerPage,
-    currentPage * rowsPerPage
-  );
+  const paginatedData = tableData.slice((currentPage - 1) * rowsPerPage, currentPage * rowsPerPage);
 
   return (
     <ApplicationFrame>
@@ -229,24 +222,29 @@ export const Default = () => {
           primaryMenu: [
             { name: "Dashboard", href: "#" },
             { name: "Projects", href: "#" },
-            { name: "Settings", href: "#" }
+            { name: "Settings", href: "#" },
           ],
           secondaryMenu: [
             { name: "Profile", href: "#" },
-            { name: "Logout", href: "#" }
-          ]
+            { name: "Logout", href: "#" },
+          ],
         }}
       />
-      <Page 
-        title="Index template"
-        breadcrumbs={breadcrumbs}
-      >
+      <Page title="Index template" breadcrumbs={breadcrumbs}>
         <Flex gap="x2" px="x1" pb="x2" justifyContent="flex-end" alignItems="center">
-          <IconicButton icon="add" tooltip="Create">Create</IconicButton>
-          <IconicButton icon="filter" tooltip="Filter" onClick={handleFilterClick}>Filter</IconicButton>
+          <IconicButton icon="add" tooltip="Create">
+            Create
+          </IconicButton>
+          <IconicButton icon="filter" tooltip="Filter" onClick={handleFilterClick}>
+            Filter
+          </IconicButton>
           <VerticalDivider />
-          <IconicButton icon="getApp" tooltip="Import">Import</IconicButton>
-          <IconicButton icon="publish" tooltip="Export">Export</IconicButton>
+          <IconicButton icon="getApp" tooltip="Import">
+            Import
+          </IconicButton>
+          <IconicButton icon="publish" tooltip="Export">
+            Export
+          </IconicButton>
           <VerticalDivider />
           <DropdownMenu trigger={() => <IconicButton icon="more" />}>
             <DropdownButton onClick={() => {}}>Update cost</DropdownButton>
@@ -255,22 +253,22 @@ export const Default = () => {
             <DropdownButton onClick={() => {}}>Delete</DropdownButton>
           </DropdownMenu>
         </Flex>
-          <Table
-            columns={tableColumns}
-            rows={paginatedData}
-            hasSelectableRows
-            keyField="id"
-            onRowSelectionChange={(selectedRows) => console.log("Selected rows:", selectedRows)}
-            compact
-          />
-          <Divider />
+        <Table
+          columns={tableColumns}
+          rows={paginatedData}
+          hasSelectableRows
+          keyField="id"
+          onRowSelectionChange={(selectedRows) => console.log("Selected rows:", selectedRows)}
+          compact
+        />
+        <Divider />
 
-            <Pagination justifyContent="flex-end"
-              currentPage={currentPage}
-              totalPages={Math.ceil(tableData.length / rowsPerPage)}
-              onSelectPage={handlePageSelect}
-            />
-
+        <Pagination
+          justifyContent="flex-end"
+          currentPage={currentPage}
+          totalPages={Math.ceil(tableData.length / rowsPerPage)}
+          onSelectPage={handlePageSelect}
+        />
 
         <Sidebar
           isOpen={isFilterSidebarOpen}
@@ -297,10 +295,7 @@ export const Default = () => {
               />
             </FieldLabel>
             <FieldLabel labelText="Item code">
-              <InputField
-                value={filters.itemCode}
-                onChange={(e) => handleFilterChange("itemCode", e.target.value)}
-              />
+              <InputField value={filters.itemCode} onChange={(e) => handleFilterChange("itemCode", e.target.value)} />
             </FieldLabel>
             <FieldLabel labelText="BOM version">
               <Select
@@ -308,7 +303,7 @@ export const Default = () => {
                 onChange={(value) => handleFilterChange("bomVersion", value)}
                 options={[
                   { label: "All", value: "" },
-                  { label: "Peanut Butter Mix", value: "Peanut Butter Mix" }
+                  { label: "Peanut Butter Mix", value: "Peanut Butter Mix" },
                 ]}
               />
             </FieldLabel>
@@ -319,7 +314,7 @@ export const Default = () => {
                 options={[
                   { label: "All", value: "" },
                   { label: "Open", value: "Open" },
-                  { label: "Booked", value: "Booked" }
+                  { label: "Booked", value: "Booked" },
                 ]}
               />
             </FieldLabel>
@@ -330,10 +325,7 @@ export const Default = () => {
               />
             </FieldLabel>
             <FieldLabel labelText="Planned end">
-              <DatePicker
-                selected={filters.plannedEnd}
-                onChange={(date) => handleFilterChange("plannedEnd", date)}
-              />
+              <DatePicker selected={filters.plannedEnd} onChange={(date) => handleFilterChange("plannedEnd", date)} />
             </FieldLabel>
           </Flex>
         </Sidebar>
@@ -355,4 +347,4 @@ export const Default = () => {
       </Page>
     </ApplicationFrame>
   );
-}; 
+};
