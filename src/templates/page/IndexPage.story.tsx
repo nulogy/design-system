@@ -6,32 +6,45 @@ import {
   Page,
   Breadcrumbs,
   Box,
-  Flex,
+  Link,
+  Tabs,
+  Tab,
+  DescriptionList,
+  DescriptionGroup,
+  DescriptionTerm,
+  DescriptionDetails,
   Button,
-  DropdownMenu,
-  Icon,
-  IconicButton,
-  Table,
-  TableColumnType,
   Sidebar,
+  Flex,
+  IconicButton,
+  Form,
+  FormSection,
+  Input,
   Select,
-  Modal,
+  DatePicker,
+  Textarea,
+  FieldLabel,
   PrimaryButton,
   QuietButton,
-  Link,
+  Table,
   VerticalDivider,
+  DropdownMenu,
   DropdownButton,
-  FieldLabel,
-  DatePicker,
-  ButtonGroup,
   Text,
+  Header,
+  Heading2,
+  Heading3,
+  Card,
+  Modal,
+  ButtonGroup,
   DangerButton,
+  Divider,
+  Pagination,
   ToastContainer,
   toast,
-  Pagination,
-  Divider,
-} from "../index";
-import { InputField } from "../Input/InputField";
+} from "../../index";
+import { InputField } from "../../Input/InputField";
+import type { TableColumnType } from "../../Table";
 
 interface WorkOrder {
   id: string;
@@ -53,7 +66,7 @@ const columns: TableColumnType<WorkOrder>[] = [
 ];
 
 export default {
-  title: "Pages/IndexPage",
+  title: "Templates/Page/Index",
   parameters: {
     layout: "fullscreen",
   },

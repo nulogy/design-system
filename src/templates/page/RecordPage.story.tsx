@@ -35,10 +35,10 @@ import {
   Heading2,
   Heading3,
   Card,
-} from "../index";
+} from "../../index";
 
 export default {
-  title: "Pages/RecordPage",
+  title: "Templates/Page/Record",
   parameters: {
     layout: "fullscreen",
   },
