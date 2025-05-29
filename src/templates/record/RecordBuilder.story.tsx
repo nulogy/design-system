@@ -139,6 +139,12 @@ interface Section {
   uploadedData?: any[];
 }
 
+interface HeaderConfig {
+  title: string;
+  alternativeTitle: string;
+  includePageActions: boolean;
+}
+
 export const Builder = ({
   layout,
   width,
@@ -151,6 +157,11 @@ export const Builder = ({
   showContainerOutline,
 }) => {
   const [sections, setSections] = useState<Section[]>([]);
+  const [headerConfig, setHeaderConfig] = useState<HeaderConfig>({
+    title: "Record Builder",
+    alternativeTitle: "Create your record layout",
+    includePageActions: true,
+  });
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isDetailsSidebarOpen, setIsDetailsSidebarOpen] = useState(false);
   const [selectedRecord, setSelectedRecord] = useState(null);
@@ -175,6 +186,10 @@ export const Builder = ({
   const [groupMinWidth, setGroupMinWidth] = useState<string | undefined>(undefined);
   const [selectedSectionId, setSelectedSectionId] = useState<string | null>(null);
   const theme = useTheme();
+
+  const handleHeaderChange = (changes: Partial<HeaderConfig>) => {
+    setHeaderConfig((prev) => ({ ...prev, ...changes }));
+  };
 
   const handleEditClick = () => {
     setIsSidebarOpen(true);
@@ -499,19 +514,22 @@ export const Builder = ({
   };
 
   const handleExportLayout = () => {
-    const layout = sections.map((section) => ({
-      type: section.type,
-      width: section.width,
-      maxWidth: section.maxWidth,
-      title: section.title,
-      includeTitle: section.includeTitle,
-      includeActions: section.includeActions,
-      actionType: section.actionType,
-      contentType: section.contentType,
-      numberOfItems: section.numberOfItems,
-      showPagination: section.showPagination,
-      uploadedData: section.uploadedData,
-    }));
+    const layout = {
+      header: headerConfig,
+      sections: sections.map((section) => ({
+        type: section.type,
+        width: section.width,
+        maxWidth: section.maxWidth,
+        title: section.title,
+        includeTitle: section.includeTitle,
+        includeActions: section.includeActions,
+        actionType: section.actionType,
+        contentType: section.contentType,
+        numberOfItems: section.numberOfItems,
+        showPagination: section.showPagination,
+        uploadedData: section.uploadedData,
+      })),
+    };
 
     const blob = new Blob([JSON.stringify(layout, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
@@ -563,7 +581,7 @@ export const Builder = ({
     switch (section.type) {
       case "Card":
         return (
-          <Card {...commonProps} px="x4" py="x3">
+          <Card {...commonProps} px="x4" py="x3" mt="0">
             {renderHeader()}
             {section.content}
           </Card>
@@ -588,160 +606,271 @@ export const Builder = ({
 
   const selectedSection = sections.find((section) => section.id === selectedSectionId);
 
+  // Helper to group consecutive Tab sections
+  const renderSectionsWithTabGrouping = (sections: Section[]) => {
+    const result: React.ReactNode[] = [];
+    let i = 0;
+    while (i < sections.length) {
+      if (sections[i].type === "Tab") {
+        // Start a group of Tab sections
+        const tabGroup = [];
+        let j = i;
+        while (j < sections.length && sections[j].type === "Tab") {
+          tabGroup.push(sections[j]);
+          j++;
+        }
+
+        result.push(
+          <Box key={`tab-group-${i}`} my="x3">
+            <Tabs defaultSelectedIndex={0}>
+              {tabGroup.map((section) => (
+                <Tab key={section.id} label={section.title}>
+                  <Box pt="x2">
+                    <Flex
+                      justifyContent={section.includeTitle ? "space-between" : "flex-end"}
+                      alignItems="center"
+                      mb="x2"
+                    >
+                      {section.includeTitle && <Heading2 mb="0">{section.title}</Heading2>}
+                      {section.includeActions &&
+                        (section.actionType === "groups" ? (
+                          <Flex gap="x2" alignItems="center">
+                            <IconicButton icon="add" tooltip="New" onClick={handleCreateNewClick}>
+                              New
+                            </IconicButton>
+                            <IconicButton icon="print" tooltip="Print">
+                              Print
+                            </IconicButton>
+                            <VerticalDivider />
+                            <IconicButton icon="getApp" tooltip="Import">
+                              Import
+                            </IconicButton>
+                            <IconicButton icon="publish" tooltip="Export">
+                              Export
+                            </IconicButton>
+                            <VerticalDivider />
+                            <IconicButton icon="filter" tooltip="Filter">
+                              Filter
+                            </IconicButton>
+                          </Flex>
+                        ) : (
+                          <IconicButton icon="edit" onClick={() => setSelectedSectionId(section.id)}>
+                            Edit details
+                          </IconicButton>
+                        ))}
+                    </Flex>
+                    {section.content}
+                  </Box>
+                </Tab>
+              ))}
+            </Tabs>
+          </Box>
+        );
+        i = j;
+      } else {
+        result.push(<Box key={sections[i].id}>{renderSection(sections[i])}</Box>);
+        i++;
+      }
+    }
+    return result;
+  };
+
   const RecordPageElement = (
     <ApplicationFrame navBar={<BrandedNavBar menuData={menuData} />}>
       <Page
         breadcrumbs={breadcrumbs}
-        title="Record Builder"
+        title={headerConfig.title}
         renderHeader={() => (
-          <Header renderBreadcrumbs={() => breadcrumbs} title="Record Builder" subtitle="Create your record layout" />
+          <Header
+            renderBreadcrumbs={() => breadcrumbs}
+            title={headerConfig.title}
+            subtitle={headerConfig.alternativeTitle}
+            renderActions={() =>
+              headerConfig.includePageActions ? (
+                <Flex gap="x2" alignItems="center">
+                  <IconicButton icon="publish" tooltip="Export">
+                    Export
+                  </IconicButton>
+                </Flex>
+              ) : null
+            }
+          />
         )}
       >
         <Box maxWidth={containerWidthState} mx="auto">
-          {sections.map((section) => (
-            <Box key={section.id}>{renderSection(section)}</Box>
-          ))}
+          {renderSectionsWithTabGrouping(sections)}
         </Box>
       </Page>
       {isSidebarOpen && (
         <Sidebar title="Edit record" onClose={handleCloseSidebar}>
           <Form>
-            <FormSection>
-              <FieldLabel labelText="Record ID" htmlFor="recordId">
-                Record ID
+            <Box pb="x2">
+              <FieldLabel labelText="Title">
+                <Input value={headerConfig.title} onChange={(e) => handleHeaderChange({ title: e.target.value })} />
               </FieldLabel>
-              <Input id="recordId" value="REC-2024-001" readOnly />
-            </FormSection>
-            <FormSection>
-              <FieldLabel labelText="Status" htmlFor="status">
-                Status
+            </Box>
+            <Box pb="x2">
+              <FieldLabel labelText="Alternative title">
+                <Input
+                  value={headerConfig.alternativeTitle}
+                  onChange={(e) => handleHeaderChange({ alternativeTitle: e.target.value })}
+                />
               </FieldLabel>
-              <Select
-                id="status"
-                options={[
-                  { value: "active", label: "Active" },
-                  { value: "inactive", label: "Inactive" },
-                  { value: "pending", label: "Pending" },
-                ]}
-                value="active"
+            </Box>
+            <Box pb="x2">
+              <Checkbox
+                labelText="Include page-level actions"
+                checked={headerConfig.includePageActions}
+                onChange={(e) => handleHeaderChange({ includePageActions: e.target.checked })}
               />
-            </FormSection>
-            <FormSection>
-              <FieldLabel labelText="Category" htmlFor="category">
-                Category
-              </FieldLabel>
-              <Select
-                id="category"
-                options={[
-                  { value: "production", label: "Production" },
-                  { value: "maintenance", label: "Maintenance" },
-                  { value: "quality", label: "Quality" },
-                ]}
-                value="production"
-              />
-            </FormSection>
-            <FormSection>
-              <FieldLabel labelText="Priority" htmlFor="priority">
-                Priority
-              </FieldLabel>
-              <Select
-                id="priority"
-                options={[
-                  { value: "high", label: "High" },
-                  { value: "medium", label: "Medium" },
-                  { value: "low", label: "Low" },
-                ]}
-                value="high"
-              />
-            </FormSection>
-            <FormSection>
-              <FieldLabel labelText="Department" htmlFor="department">
-                Department
-              </FieldLabel>
-              <Select
-                id="department"
-                options={[
-                  { value: "manufacturing", label: "Manufacturing" },
-                  { value: "engineering", label: "Engineering" },
-                  { value: "quality", label: "Quality" },
-                ]}
-                value="manufacturing"
-              />
-            </FormSection>
-            <FormSection>
-              <FieldLabel labelText="Location" htmlFor="location">
-                Location
-              </FieldLabel>
-              <Input id="location" value="Factory Floor A" />
-            </FormSection>
-            <FormSection>
-              <FieldLabel labelText="Assigned to" htmlFor="assignedTo">
-                Assigned to
-              </FieldLabel>
-              <Select
-                id="assignedTo"
-                options={[
-                  { value: "michael", label: "Michael Brown" },
-                  { value: "sarah", label: "Sarah Johnson" },
-                  { value: "john", label: "John Smith" },
-                ]}
-                value="michael"
-              />
-            </FormSection>
-            <FormSection>
-              <FieldLabel labelText="Due date" htmlFor="dueDate">
-                Due date
-              </FieldLabel>
-              <DatePicker id="dueDate" selected={new Date("2024-03-20")} />
-            </FormSection>
-            <FormSection>
-              <FieldLabel labelText="Estimated hours" htmlFor="estimatedHours">
-                Estimated hours
-              </FieldLabel>
-              <Input id="estimatedHours" type="number" value="24" />
-            </FormSection>
-            <FormSection>
-              <FieldLabel labelText="Actual hours" htmlFor="actualHours">
-                Actual hours
-              </FieldLabel>
-              <Input id="actualHours" type="number" value="18.5" />
-            </FormSection>
-            <FormSection>
-              <FieldLabel labelText="Cost center" htmlFor="costCenter">
-                Cost center
-              </FieldLabel>
-              <Input id="costCenter" value="MFG-001" />
-            </FormSection>
-            <FormSection>
-              <FieldLabel labelText="Project code" htmlFor="projectCode">
-                Project code
-              </FieldLabel>
-              <Input id="projectCode" value="PRJ-2024-Q1" />
-            </FormSection>
-            <FormSection>
-              <FieldLabel labelText="Quality rating" htmlFor="qualityRating">
-                Quality rating
-              </FieldLabel>
-              <Input id="qualityRating" type="number" value="4.8" step="0.1" min="0" max="5" />
-            </FormSection>
-            <FormSection>
-              <FieldLabel labelText="Related records" htmlFor="relatedRecords">
-                Related records
-              </FieldLabel>
-              <Textarea
-                id="relatedRecords"
-                value="REC-2024-002 (Production Order), REC-2024-003 (Quality Check), REC-2024-004 (Material Request),
-                REC-2024-005 (Equipment Maintenance), REC-2024-006 (Safety Inspection), REC-2024-007 (Training
-                Record), REC-2024-008 (Inventory Adjustment), REC-2024-009 (Supplier Delivery), REC-2024-010 (Customer
-                Order)"
-                rows={4}
-              />
-            </FormSection>
+            </Box>
           </Form>
-          <Flex gap="x2" justifyContent="flex-end" mt="x4">
-            <QuietButton onClick={handleCloseSidebar}>Cancel</QuietButton>
-            <PrimaryButton onClick={handleCloseSidebar}>Save changes</PrimaryButton>
-          </Flex>
+          <HorizontalDivider />
+
+          {sections.map((section, index) => (
+            <Box key={section.id}>
+              <Heading3 mb="x2">Section {index + 1}</Heading3>
+              <Form>
+                <Box pb="x2">
+                  <Heading4 mb="x2">Layout</Heading4>
+                  <FieldLabel labelText="Type">
+                    <Select
+                      value={section.type}
+                      onChange={(value) =>
+                        handleSectionChange(section.id, { type: value as "Default" | "Card" | "Tab" })
+                      }
+                      options={[
+                        { value: "Default", label: "Default" },
+                        { value: "Card", label: "Card" },
+                        { value: "Tab", label: "Tab" },
+                      ]}
+                    />
+                  </FieldLabel>
+                </Box>
+                <Box pb="x2">
+                  <FieldLabel labelText="Width">
+                    <Select
+                      value={section.width}
+                      onChange={(value) => handleSectionChange(section.id, { width: value as "Full" | "Centered" })}
+                      options={[
+                        { value: "Full", label: "Full width" },
+                        { value: "Centered", label: "Centered" },
+                      ]}
+                    />
+                  </FieldLabel>
+                </Box>
+                {section.width === "Centered" && (
+                  <Box pb="x2">
+                    <FieldLabel labelText="Max width">
+                      <Input
+                        type="number"
+                        value={section.maxWidth}
+                        onChange={(e) => handleSectionChange(section.id, { maxWidth: Number(e.target.value) })}
+                        placeholder="e.g., 1360"
+                      />
+                    </FieldLabel>
+                  </Box>
+                )}
+
+                <Box pb="x2" mt="x3">
+                  <Heading4 mb="x2">Content</Heading4>
+                  <Checkbox
+                    labelText="Include title"
+                    checked={section.includeTitle}
+                    onChange={(e) => handleSectionChange(section.id, { includeTitle: e.target.checked })}
+                  />
+                </Box>
+                <Box pb="x2">
+                  <Checkbox
+                    labelText="Include section-level actions"
+                    checked={section.includeActions}
+                    onChange={(e) => handleSectionChange(section.id, { includeActions: e.target.checked })}
+                  />
+                </Box>
+                {section.includeActions && (
+                  <Box pb="x2">
+                    <FieldLabel labelText="Action type">
+                      <Select
+                        value={section.actionType || "edit"}
+                        onChange={(value) =>
+                          handleSectionChange(section.id, { actionType: value as "edit" | "groups" })
+                        }
+                        options={[
+                          { value: "edit", label: "Edit only" },
+                          { value: "groups", label: "Groups of actions" },
+                        ]}
+                      />
+                    </FieldLabel>
+                  </Box>
+                )}
+                <Box pb="x2">
+                  <FieldLabel labelText="Main content">
+                    <Select
+                      value={section.contentType}
+                      onChange={(value) =>
+                        handleSectionChange(section.id, { contentType: value as "DescriptionList" | "Table" })
+                      }
+                      options={[
+                        { value: "DescriptionList", label: "Description list" },
+                        { value: "Table", label: "Table" },
+                      ]}
+                    />
+                  </FieldLabel>
+                </Box>
+                {section.contentType === "Table" && (
+                  <>
+                    <Box pb="x2">
+                      <FieldLabel labelText="Number of rows">
+                        <Select
+                          value={String(section.numberOfItems || 5)}
+                          onChange={(value) => handleSectionChange(section.id, { numberOfItems: Number(value) })}
+                          options={[
+                            { value: "3", label: "3 rows" },
+                            { value: "5", label: "5 rows" },
+                            { value: "10", label: "10 rows" },
+                            { value: "20", label: "20 rows" },
+                            { value: "25", label: "25 rows" },
+                            { value: "30", label: "30 rows" },
+                            { value: "40", label: "40 rows" },
+                            { value: "50", label: "50 rows" },
+                          ]}
+                        />
+                      </FieldLabel>
+                    </Box>
+                    <Box pb="x2">
+                      <Checkbox
+                        labelText="Include pagination"
+                        checked={section.showPagination}
+                        onChange={(e) => handleSectionChange(section.id, { showPagination: e.target.checked })}
+                      />
+                    </Box>
+                  </>
+                )}
+                <Box pb="x2">
+                  <FieldLabel labelText="Upload CSV">
+                    <Input
+                      type="file"
+                      accept=".csv"
+                      onChange={(e) => {
+                        const file = e.target.files?.[0];
+                        if (file) {
+                          handleFileUpload(section.id, file);
+                        }
+                      }}
+                    />
+                  </FieldLabel>
+                </Box>
+              </Form>
+              <HorizontalDivider />
+            </Box>
+          ))}
+
+          <Box>
+            <Flex gap="x2" justifyContent="space-between">
+              <PrimaryButton onClick={handleAddSection}>Add section</PrimaryButton>
+              <IconicButton icon="getApp" tooltip="Download layout" onClick={handleExportLayout} />
+            </Flex>
+          </Box>
         </Sidebar>
       )}
       {isDetailsSidebarOpen && (
@@ -802,111 +931,166 @@ export const Builder = ({
         bottom="0px"
       >
         <Flex flexDirection="column" gap="x2">
+          <Box>
+            <Heading3 mb="x2">Header</Heading3>
+            <Form>
+              <Box pb="x2">
+                <FieldLabel labelText="Title">
+                  <Input value={headerConfig.title} onChange={(e) => handleHeaderChange({ title: e.target.value })} />
+                </FieldLabel>
+              </Box>
+              <Box pb="x2">
+                <FieldLabel labelText="Alternative title">
+                  <Input
+                    value={headerConfig.alternativeTitle}
+                    onChange={(e) => handleHeaderChange({ alternativeTitle: e.target.value })}
+                  />
+                </FieldLabel>
+              </Box>
+              <Box pb="x2">
+                <Checkbox
+                  labelText="Include page-level actions"
+                  checked={headerConfig.includePageActions}
+                  onChange={(e) => handleHeaderChange({ includePageActions: e.target.checked })}
+                />
+              </Box>
+            </Form>
+            <HorizontalDivider />
+          </Box>
+
           {sections.map((section, index) => (
             <Box key={section.id}>
               <Heading3 mb="x2">Section {index + 1}</Heading3>
               <Form>
-                <FormSection>
+                <Box pb="x2">
                   <Heading4 mb="x2">Layout</Heading4>
-                  <Select
-                    value={section.type}
-                    onChange={(value) => handleSectionChange(section.id, { type: value as "Default" | "Card" | "Tab" })}
-                    options={[
-                      { value: "Default", label: "Default" },
-                      { value: "Card", label: "Card" },
-                      { value: "Tab", label: "Tab" },
-                    ]}
-                    labelText="Type"
-                  />
-                  <Select
-                    value={section.width}
-                    onChange={(value) => handleSectionChange(section.id, { width: value as "Full" | "Centered" })}
-                    options={[
-                      { value: "Full", label: "Full width" },
-                      { value: "Centered", label: "Centered" },
-                    ]}
-                    labelText="Width"
-                  />
-                  {section.width === "Centered" && (
-                    <Input
-                      type="number"
-                      value={section.maxWidth}
-                      onChange={(e) => handleSectionChange(section.id, { maxWidth: Number(e.target.value) })}
-                      labelText="Max width"
-                      placeholder="e.g., 1360"
+                  <FieldLabel labelText="Type">
+                    <Select
+                      value={section.type}
+                      onChange={(value) =>
+                        handleSectionChange(section.id, { type: value as "Default" | "Card" | "Tab" })
+                      }
+                      options={[
+                        { value: "Default", label: "Default" },
+                        { value: "Card", label: "Card" },
+                        { value: "Tab", label: "Tab" },
+                      ]}
                     />
-                  )}
-                </FormSection>
+                  </FieldLabel>
+                </Box>
+                <Box pb="x2">
+                  <FieldLabel labelText="Width">
+                    <Select
+                      value={section.width}
+                      onChange={(value) => handleSectionChange(section.id, { width: value as "Full" | "Centered" })}
+                      options={[
+                        { value: "Full", label: "Full width" },
+                        { value: "Centered", label: "Centered" },
+                      ]}
+                    />
+                  </FieldLabel>
+                </Box>
+                {section.width === "Centered" && (
+                  <Box pb="x2">
+                    <FieldLabel labelText="Max width">
+                      <Input
+                        type="number"
+                        value={section.maxWidth}
+                        onChange={(e) => handleSectionChange(section.id, { maxWidth: Number(e.target.value) })}
+                        placeholder="e.g., 1360"
+                      />
+                    </FieldLabel>
+                  </Box>
+                )}
 
-                <FormSection>
+                <Box pb="x2" mt="x3">
                   <Heading4 mb="x2">Content</Heading4>
                   <Checkbox
-                    labelText="Title"
+                    labelText="Include title"
                     checked={section.includeTitle}
                     onChange={(e) => handleSectionChange(section.id, { includeTitle: e.target.checked })}
                   />
+                </Box>
+                <Box pb="x2">
                   <Checkbox
-                    labelText="Actions"
+                    labelText="Include section-level actions"
                     checked={section.includeActions}
                     onChange={(e) => handleSectionChange(section.id, { includeActions: e.target.checked })}
                   />
-                  {section.includeActions && (
+                </Box>
+                {section.includeActions && (
+                  <Box pb="x2">
+                    <FieldLabel labelText="Action type">
+                      <Select
+                        value={section.actionType || "edit"}
+                        onChange={(value) =>
+                          handleSectionChange(section.id, { actionType: value as "edit" | "groups" })
+                        }
+                        options={[
+                          { value: "edit", label: "Edit only" },
+                          { value: "groups", label: "Groups of actions" },
+                        ]}
+                      />
+                    </FieldLabel>
+                  </Box>
+                )}
+                <Box pb="x2">
+                  <FieldLabel labelText="Main content">
                     <Select
-                      value={section.actionType || "edit"}
-                      onChange={(value) => handleSectionChange(section.id, { actionType: value as "edit" | "groups" })}
+                      value={section.contentType}
+                      onChange={(value) =>
+                        handleSectionChange(section.id, { contentType: value as "DescriptionList" | "Table" })
+                      }
                       options={[
-                        { value: "edit", label: "Edit only" },
-                        { value: "groups", label: "Groups of actions" },
+                        { value: "DescriptionList", label: "Description list" },
+                        { value: "Table", label: "Table" },
                       ]}
                     />
-                  )}
-                  <Select
-                    value={section.contentType}
-                    onChange={(value) =>
-                      handleSectionChange(section.id, { contentType: value as "DescriptionList" | "Table" })
-                    }
-                    options={[
-                      { value: "DescriptionList", label: "Description list" },
-                      { value: "Table", label: "Table" },
-                    ]}
-                    labelText="Main content"
-                  />
-                  {section.contentType === "Table" && (
-                    <>
-                      <Select
-                        value={String(section.numberOfItems || 5)}
-                        onChange={(value) => handleSectionChange(section.id, { numberOfItems: Number(value) })}
-                        options={[
-                          { value: "3", label: "3 rows" },
-                          { value: "5", label: "5 rows" },
-                          { value: "10", label: "10 rows" },
-                          { value: "20", label: "20 rows" },
-                          { value: "25", label: "25 rows" },
-                          { value: "30", label: "30 rows" },
-                          { value: "40", label: "40 rows" },
-                          { value: "50", label: "50 rows" },
-                        ]}
-                        labelText="Number of rows"
-                      />
+                  </FieldLabel>
+                </Box>
+                {section.contentType === "Table" && (
+                  <>
+                    <Box pb="x2">
+                      <FieldLabel labelText="Number of rows">
+                        <Select
+                          value={String(section.numberOfItems || 5)}
+                          onChange={(value) => handleSectionChange(section.id, { numberOfItems: Number(value) })}
+                          options={[
+                            { value: "3", label: "3 rows" },
+                            { value: "5", label: "5 rows" },
+                            { value: "10", label: "10 rows" },
+                            { value: "20", label: "20 rows" },
+                            { value: "25", label: "25 rows" },
+                            { value: "30", label: "30 rows" },
+                            { value: "40", label: "40 rows" },
+                            { value: "50", label: "50 rows" },
+                          ]}
+                        />
+                      </FieldLabel>
+                    </Box>
+                    <Box pb="x2">
                       <Checkbox
                         labelText="Include pagination"
                         checked={section.showPagination}
                         onChange={(e) => handleSectionChange(section.id, { showPagination: e.target.checked })}
                       />
-                    </>
-                  )}
-                  <Input
-                    type="file"
-                    accept=".csv"
-                    onChange={(e) => {
-                      const file = e.target.files?.[0];
-                      if (file) {
-                        handleFileUpload(section.id, file);
-                      }
-                    }}
-                    labelText="Upload CSV"
-                  />
-                </FormSection>
+                    </Box>
+                  </>
+                )}
+                <Box pb="x2">
+                  <FieldLabel labelText="Upload CSV">
+                    <Input
+                      type="file"
+                      accept=".csv"
+                      onChange={(e) => {
+                        const file = e.target.files?.[0];
+                        if (file) {
+                          handleFileUpload(section.id, file);
+                        }
+                      }}
+                    />
+                  </FieldLabel>
+                </Box>
               </Form>
               <HorizontalDivider />
             </Box>
@@ -915,9 +1099,7 @@ export const Builder = ({
           <Box>
             <Flex gap="x2" justifyContent="space-between">
               <PrimaryButton onClick={handleAddSection}>Add section</PrimaryButton>
-              {sections.length > 0 && (
-                <IconicButton icon="getApp" tooltip="Download layout" onClick={handleExportLayout} />
-              )}
+              <IconicButton icon="getApp" tooltip="Download layout" onClick={handleExportLayout} />
             </Flex>
           </Box>
         </Flex>
