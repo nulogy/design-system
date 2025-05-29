@@ -13,7 +13,7 @@ type ApplicationFrameProps = FlexProps & {
 const ApplicationFrame = ({ navBar, children, environment, ...props }: ApplicationFrameProps) => {
   return (
     <Flex flexDirection="column" minHeight="100vh" {...props}>
-      <Box zIndex={"navBar" as ZIndexProps["zIndex"]}>
+      <Box position="sticky" top="0" zIndex={"navBar" as ZIndexProps["zIndex"]}>
         {environment && <EnvironmentBanner>{environment}</EnvironmentBanner>}
         {navBar}
       </Box>
