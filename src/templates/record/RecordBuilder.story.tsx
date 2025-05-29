@@ -161,8 +161,12 @@ export const Builder = ({
   const [descriptionListColumnsState, setDescriptionListColumnsState] = useState<
     number | Partial<Record<keyof Breakpoints, number>> | undefined
   >(4);
-  const [descriptionListLayoutState, setDescriptionListLayoutState] = useState<"stacked" | "inline" | "auto">("stacked");
-  const [descriptionListDensityState, setDescriptionListDensityState] = useState<"compact" | "medium" | "relaxed">("medium");
+  const [descriptionListLayoutState, setDescriptionListLayoutState] = useState<"stacked" | "inline" | "auto">(
+    "stacked"
+  );
+  const [descriptionListDensityState, setDescriptionListDensityState] = useState<"compact" | "medium" | "relaxed">(
+    "medium"
+  );
   const [descriptionTermMaxWidth, setDescriptionTermMaxWidth] = useState("320px");
   const [fontSize, setFontSize] = useState<keyof DefaultNDSThemeType["fontSizes"]>("medium");
   const [lineHeight, setLineHeight] = useState<keyof DefaultNDSThemeType["lineHeights"]>("base");
@@ -248,238 +252,254 @@ export const Builder = ({
     const reader = new FileReader();
     reader.onload = (e) => {
       const text = e.target?.result as string;
-      const rows = text.split('\n').map(row => {
-        const values = row.split(',');
+      const rows = text.split("\n").map((row) => {
+        const values = row.split(",");
         const obj: Record<string, string> = {};
         values.forEach((value, index) => {
           obj[`column${index + 1}`] = value.trim();
         });
         return obj;
       });
-      
+
       handleSectionChange(sectionId, { uploadedData: rows });
     };
     reader.readAsText(file);
   };
 
   const handleSectionChange = (sectionId: string, changes: Partial<Section>) => {
-    setSections(sections.map(section => {
-      if (section.id === sectionId) {
-        const updatedSection = { ...section, ...changes };
-        
-        // Update content based on content type or number of items
-        if (changes.contentType || changes.numberOfItems || changes.currentPage || changes.showPagination || changes.uploadedData) {
-          const allRows = updatedSection.uploadedData || [
-            { 
-              id: "RD-001", 
-              name: "Production Order", 
-              type: "Manufacturing",
-              status: "In Progress",
-              priority: "High",
-              assignedTo: "Michael Brown",
-              dueDate: "2024-Mar-20",
-              progress: "75%"
-            },
-            { 
-              id: "RD-002", 
-              name: "Quality Check", 
-              type: "Quality",
-              status: "Pending",
-              priority: "Medium",
-              assignedTo: "Sarah Johnson",
-              dueDate: "2024-Mar-21",
-              progress: "0%"
-            },
-            { 
-              id: "RD-003", 
-              name: "Material Request", 
-              type: "Inventory",
-              status: "Completed",
-              priority: "Low",
-              assignedTo: "John Smith",
-              dueDate: "2024-Mar-18",
-              progress: "100%"
-            },
-            { 
-              id: "RD-004", 
-              name: "Equipment Maintenance", 
-              type: "Maintenance",
-              status: "In Progress",
-              priority: "High",
-              assignedTo: "David Wilson",
-              dueDate: "2024-Mar-22",
-              progress: "45%"
-            },
-            { 
-              id: "RD-005", 
-              name: "Safety Inspection", 
-              type: "Safety",
-              status: "Pending",
-              priority: "High",
-              assignedTo: "Lisa Anderson",
-              dueDate: "2024-Mar-19",
-              progress: "0%"
-            },
-            { 
-              id: "RD-006", 
-              name: "Training Record", 
-              type: "Training",
-              status: "Completed",
-              priority: "Medium",
-              assignedTo: "Robert Taylor",
-              dueDate: "2024-Mar-23",
-              progress: "100%"
-            },
-            { 
-              id: "RD-007", 
-              name: "Inventory Adjustment", 
-              type: "Inventory",
-              status: "In Progress",
-              priority: "Low",
-              assignedTo: "Emily Davis",
-              dueDate: "2024-Mar-24",
-              progress: "30%"
-            },
-            { 
-              id: "RD-008", 
-              name: "Supplier Delivery", 
-              type: "Logistics",
-              status: "Pending",
-              priority: "High",
-              assignedTo: "James Wilson",
-              dueDate: "2024-Mar-25",
-              progress: "0%"
-            },
-            { 
-              id: "RD-009", 
-              name: "Customer Order", 
-              type: "Sales",
-              status: "In Progress",
-              priority: "High",
-              assignedTo: "Patricia Moore",
-              dueDate: "2024-Mar-26",
-              progress: "60%"
-            },
-            { 
-              id: "RD-010", 
-              name: "Quality Assurance", 
-              type: "Quality",
-              status: "Pending",
-              priority: "Medium",
-              assignedTo: "Thomas Lee",
-              dueDate: "2024-Mar-27",
-              progress: "0%"
-            }
-          ];
+    setSections(
+      sections.map((section) => {
+        if (section.id === sectionId) {
+          const updatedSection = { ...section, ...changes };
 
-          const totalPages = Math.ceil(allRows.length / (updatedSection.numberOfItems || 5));
-          const currentPage = Math.min(updatedSection.currentPage || 1, totalPages);
-          const startIndex = (currentPage - 1) * (updatedSection.numberOfItems || 5);
-          const endIndex = startIndex + (updatedSection.numberOfItems || 5);
+          // Update content based on content type or number of items
+          if (
+            changes.contentType ||
+            changes.numberOfItems ||
+            changes.currentPage ||
+            changes.showPagination ||
+            changes.uploadedData
+          ) {
+            const allRows = updatedSection.uploadedData || [
+              {
+                id: "RD-001",
+                name: "Production Order",
+                type: "Manufacturing",
+                status: "In Progress",
+                priority: "High",
+                assignedTo: "Michael Brown",
+                dueDate: "2024-Mar-20",
+                progress: "75%",
+              },
+              {
+                id: "RD-002",
+                name: "Quality Check",
+                type: "Quality",
+                status: "Pending",
+                priority: "Medium",
+                assignedTo: "Sarah Johnson",
+                dueDate: "2024-Mar-21",
+                progress: "0%",
+              },
+              {
+                id: "RD-003",
+                name: "Material Request",
+                type: "Inventory",
+                status: "Completed",
+                priority: "Low",
+                assignedTo: "John Smith",
+                dueDate: "2024-Mar-18",
+                progress: "100%",
+              },
+              {
+                id: "RD-004",
+                name: "Equipment Maintenance",
+                type: "Maintenance",
+                status: "In Progress",
+                priority: "High",
+                assignedTo: "David Wilson",
+                dueDate: "2024-Mar-22",
+                progress: "45%",
+              },
+              {
+                id: "RD-005",
+                name: "Safety Inspection",
+                type: "Safety",
+                status: "Pending",
+                priority: "High",
+                assignedTo: "Lisa Anderson",
+                dueDate: "2024-Mar-19",
+                progress: "0%",
+              },
+              {
+                id: "RD-006",
+                name: "Training Record",
+                type: "Training",
+                status: "Completed",
+                priority: "Medium",
+                assignedTo: "Robert Taylor",
+                dueDate: "2024-Mar-23",
+                progress: "100%",
+              },
+              {
+                id: "RD-007",
+                name: "Inventory Adjustment",
+                type: "Inventory",
+                status: "In Progress",
+                priority: "Low",
+                assignedTo: "Emily Davis",
+                dueDate: "2024-Mar-24",
+                progress: "30%",
+              },
+              {
+                id: "RD-008",
+                name: "Supplier Delivery",
+                type: "Logistics",
+                status: "Pending",
+                priority: "High",
+                assignedTo: "James Wilson",
+                dueDate: "2024-Mar-25",
+                progress: "0%",
+              },
+              {
+                id: "RD-009",
+                name: "Customer Order",
+                type: "Sales",
+                status: "In Progress",
+                priority: "High",
+                assignedTo: "Patricia Moore",
+                dueDate: "2024-Mar-26",
+                progress: "60%",
+              },
+              {
+                id: "RD-010",
+                name: "Quality Assurance",
+                type: "Quality",
+                status: "Pending",
+                priority: "Medium",
+                assignedTo: "Thomas Lee",
+                dueDate: "2024-Mar-27",
+                progress: "0%",
+              },
+            ];
 
-          updatedSection.content = updatedSection.contentType === "DescriptionList" ? (
-            <DescriptionList columns={{ small: 1, medium: 2, large: 3 }}>
-              {updatedSection.uploadedData ? (
-                updatedSection.uploadedData.map((row, index) => (
-                  <DescriptionGroup key={index}>
-                    {Object.entries(row).map(([key, value], i) => (
-                      <React.Fragment key={i}>
-                        <DescriptionTerm>{key}</DescriptionTerm>
-                        <DescriptionDetails>{value}</DescriptionDetails>
-                      </React.Fragment>
-                    ))}
-                  </DescriptionGroup>
-                ))
+            const totalPages = Math.ceil(allRows.length / (updatedSection.numberOfItems || 5));
+            const currentPage = Math.min(updatedSection.currentPage || 1, totalPages);
+            const startIndex = (currentPage - 1) * (updatedSection.numberOfItems || 5);
+            const endIndex = startIndex + (updatedSection.numberOfItems || 5);
+
+            updatedSection.content =
+              updatedSection.contentType === "DescriptionList" ? (
+                <DescriptionList columns={{ small: 1, medium: 2, large: 3 }}>
+                  {updatedSection.uploadedData ? (
+                    updatedSection.uploadedData.map((row, index) => (
+                      <DescriptionGroup key={index}>
+                        {Object.entries(row).map(([key, value], i) => (
+                          <React.Fragment key={i}>
+                            <DescriptionTerm>{key}</DescriptionTerm>
+                            <DescriptionDetails>{value}</DescriptionDetails>
+                          </React.Fragment>
+                        ))}
+                      </DescriptionGroup>
+                    ))
+                  ) : (
+                    <>
+                      <DescriptionGroup>
+                        <DescriptionTerm>Record ID</DescriptionTerm>
+                        <DescriptionDetails>REC-2024-001</DescriptionDetails>
+                      </DescriptionGroup>
+                      <DescriptionGroup>
+                        <DescriptionTerm>Created by</DescriptionTerm>
+                        <DescriptionDetails>John Smith</DescriptionDetails>
+                      </DescriptionGroup>
+                      <DescriptionGroup>
+                        <DescriptionTerm>Created date</DescriptionTerm>
+                        <DescriptionDetails>2024-Mar-15 09:30 AM</DescriptionDetails>
+                      </DescriptionGroup>
+                      <DescriptionGroup>
+                        <DescriptionTerm>Last modified by</DescriptionTerm>
+                        <DescriptionDetails>Sarah Johnson</DescriptionDetails>
+                      </DescriptionGroup>
+                      <DescriptionGroup>
+                        <DescriptionTerm>Last modified date</DescriptionTerm>
+                        <DescriptionDetails>2024-Mar-16 02:15 PM</DescriptionDetails>
+                      </DescriptionGroup>
+                      <DescriptionGroup>
+                        <DescriptionTerm>Status</DescriptionTerm>
+                        <DescriptionDetails>Active</DescriptionDetails>
+                      </DescriptionGroup>
+                    </>
+                  )}
+                </DescriptionList>
               ) : (
-                <>
-                  <DescriptionGroup>
-                    <DescriptionTerm>Record ID</DescriptionTerm>
-                    <DescriptionDetails>REC-2024-001</DescriptionDetails>
-                  </DescriptionGroup>
-                  <DescriptionGroup>
-                    <DescriptionTerm>Created by</DescriptionTerm>
-                    <DescriptionDetails>John Smith</DescriptionDetails>
-                  </DescriptionGroup>
-                  <DescriptionGroup>
-                    <DescriptionTerm>Created date</DescriptionTerm>
-                    <DescriptionDetails>2024-Mar-15 09:30 AM</DescriptionDetails>
-                  </DescriptionGroup>
-                  <DescriptionGroup>
-                    <DescriptionTerm>Last modified by</DescriptionTerm>
-                    <DescriptionDetails>Sarah Johnson</DescriptionDetails>
-                  </DescriptionGroup>
-                  <DescriptionGroup>
-                    <DescriptionTerm>Last modified date</DescriptionTerm>
-                    <DescriptionDetails>2024-Mar-16 02:15 PM</DescriptionDetails>
-                  </DescriptionGroup>
-                  <DescriptionGroup>
-                    <DescriptionTerm>Status</DescriptionTerm>
-                    <DescriptionDetails>Active</DescriptionDetails>
-                  </DescriptionGroup>
-                </>
-              )}
-            </DescriptionList>
-          ) : (
-            <Box>
-              <Table
-                columns={updatedSection.uploadedData ? 
-                  Object.keys(updatedSection.uploadedData[0] || {}).map(key => ({
-                    label: key,
-                    dataKey: key
-                  })) : [
-                    {
-                      label: "ID",
-                      dataKey: "id",
-                      cellFormatter: (props) => (
-                        <Link href={`#/records/${props.cellData}`} underline={false}>
-                          {props.cellData}
-                        </Link>
-                      ),
-                    },
-                    { label: "Name", dataKey: "name" },
-                    { label: "Type", dataKey: "type" },
-                    { label: "Status", dataKey: "status" },
-                    { label: "Priority", dataKey: "priority" },
-                    { label: "Assigned to", dataKey: "assignedTo" },
-                    { label: "Due date", dataKey: "dueDate" },
-                    { label: "Progress", dataKey: "progress" },
-                    {
-                      dataKey: "actions",
-                      width: "80px",
-                      cellFormatter: (props) => (
-                        <Flex gap="x1">
-                          <IconicButton icon="edit" tooltip="Edit" onClick={() => handleDetailsEditClick(props.row)} />
-                          <IconicButton icon="delete" tooltip="Delete" onClick={() => {}} />
-                        </Flex>
-                      ),
-                    },
-                  ]}
-                rows={allRows.slice(startIndex, endIndex)}
-                hasSelectableRows
-                keyField="id"
-                compact
-              />
-              {updatedSection.showPagination && (
-                <Flex justifyContent="flex-end" mt="x3">
-                  <Pagination
-                    currentPage={currentPage}
-                    totalPages={totalPages}
-                    onSelectPage={(page: number) => handleSectionChange(sectionId, { currentPage: page })}
+                <Box>
+                  <Table
+                    columns={
+                      updatedSection.uploadedData
+                        ? Object.keys(updatedSection.uploadedData[0] || {}).map((key) => ({
+                            label: key,
+                            dataKey: key,
+                          }))
+                        : [
+                            {
+                              label: "ID",
+                              dataKey: "id",
+                              cellFormatter: (props) => (
+                                <Link href={`#/records/${props.cellData}`} underline={false}>
+                                  {props.cellData}
+                                </Link>
+                              ),
+                            },
+                            { label: "Name", dataKey: "name" },
+                            { label: "Type", dataKey: "type" },
+                            { label: "Status", dataKey: "status" },
+                            { label: "Priority", dataKey: "priority" },
+                            { label: "Assigned to", dataKey: "assignedTo" },
+                            { label: "Due date", dataKey: "dueDate" },
+                            { label: "Progress", dataKey: "progress" },
+                            {
+                              dataKey: "actions",
+                              width: "80px",
+                              cellFormatter: (props) => (
+                                <Flex gap="x1">
+                                  <IconicButton
+                                    icon="edit"
+                                    tooltip="Edit"
+                                    onClick={() => handleDetailsEditClick(props.row)}
+                                  />
+                                  <IconicButton icon="delete" tooltip="Delete" onClick={() => {}} />
+                                </Flex>
+                              ),
+                            },
+                          ]
+                    }
+                    rows={allRows.slice(startIndex, endIndex)}
+                    hasSelectableRows
+                    keyField="id"
+                    compact
                   />
-                </Flex>
-              )}
-            </Box>
-          );
+                  {updatedSection.showPagination && (
+                    <Flex justifyContent="flex-end" mt="x3">
+                      <Pagination
+                        currentPage={currentPage}
+                        totalPages={totalPages}
+                        onSelectPage={(page: number) => handleSectionChange(sectionId, { currentPage: page })}
+                      />
+                    </Flex>
+                  )}
+                </Box>
+              );
+          }
+
+          return updatedSection;
         }
-        
-        return updatedSection;
-      }
-      return section;
-    }));
+        return section;
+      })
+    );
   };
 
   const handleExportLayout = () => {
-    const layout = sections.map(section => ({
+    const layout = sections.map((section) => ({
       type: section.type,
       width: section.width,
       maxWidth: section.maxWidth,
@@ -490,14 +510,14 @@ export const Builder = ({
       contentType: section.contentType,
       numberOfItems: section.numberOfItems,
       showPagination: section.showPagination,
-      uploadedData: section.uploadedData
+      uploadedData: section.uploadedData,
     }));
 
-    const blob = new Blob([JSON.stringify(layout, null, 2)], { type: 'application/json' });
+    const blob = new Blob([JSON.stringify(layout, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
+    const a = document.createElement("a");
     a.href = url;
-    a.download = 'record-layout.json';
+    a.download = "record-layout.json";
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -511,8 +531,8 @@ export const Builder = ({
     const renderHeader = () => (
       <Flex justifyContent={section.includeTitle ? "space-between" : "flex-end"} alignItems="center" mb="x2">
         {section.includeTitle && <Heading2 mb="0">{section.title}</Heading2>}
-        {section.includeActions && (
-          section.actionType === "groups" ? (
+        {section.includeActions &&
+          (section.actionType === "groups" ? (
             <Flex gap="x2" alignItems="center">
               <IconicButton icon="add" tooltip="New" onClick={handleCreateNewClick}>
                 New
@@ -536,8 +556,7 @@ export const Builder = ({
             <IconicButton icon="edit" onClick={() => setSelectedSectionId(section.id)}>
               Edit details
             </IconicButton>
-          )
-        )}
+          ))}
       </Flex>
     );
 
@@ -567,7 +586,7 @@ export const Builder = ({
     }
   };
 
-  const selectedSection = sections.find(section => section.id === selectedSectionId);
+  const selectedSection = sections.find((section) => section.id === selectedSectionId);
 
   const RecordPageElement = (
     <ApplicationFrame navBar={<BrandedNavBar menuData={menuData} />}>
@@ -575,11 +594,7 @@ export const Builder = ({
         breadcrumbs={breadcrumbs}
         title="Record Builder"
         renderHeader={() => (
-          <Header
-            renderBreadcrumbs={() => breadcrumbs}
-            title="Record Builder"
-            subtitle="Create your record layout"
-          />
+          <Header renderBreadcrumbs={() => breadcrumbs} title="Record Builder" subtitle="Create your record layout" />
         )}
       >
         <Box maxWidth={containerWidthState} mx="auto">
@@ -847,7 +862,9 @@ export const Builder = ({
                   )}
                   <Select
                     value={section.contentType}
-                    onChange={(value) => handleSectionChange(section.id, { contentType: value as "DescriptionList" | "Table" })}
+                    onChange={(value) =>
+                      handleSectionChange(section.id, { contentType: value as "DescriptionList" | "Table" })
+                    }
                     options={[
                       { value: "DescriptionList", label: "Description list" },
                       { value: "Table", label: "Table" },
@@ -894,18 +911,12 @@ export const Builder = ({
               <HorizontalDivider />
             </Box>
           ))}
-          
+
           <Box>
             <Flex gap="x2" justifyContent="space-between">
-              <PrimaryButton onClick={handleAddSection}>
-                Add section
-              </PrimaryButton>
+              <PrimaryButton onClick={handleAddSection}>Add section</PrimaryButton>
               {sections.length > 0 && (
-                <IconicButton 
-                  icon="getApp" 
-                  tooltip="Download layout" 
-                  onClick={handleExportLayout}
-                />
+                <IconicButton icon="getApp" tooltip="Download layout" onClick={handleExportLayout} />
               )}
             </Flex>
           </Box>
@@ -926,4 +937,4 @@ export const Builder = ({
 
 Builder.parameters = {
   chromatic: { disable: true },
-}; 
+};
