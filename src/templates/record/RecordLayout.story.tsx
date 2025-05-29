@@ -114,94 +114,92 @@ export const FullWidth = () => {
           />
         )}
       >
-
-          <Box my="x3" pb="x3">
-            <Flex justifyContent="flex-end" mb="x2">
-              <IconicButton icon="edit" onClick={handleEditClick}>
-                Edit
-              </IconicButton>
-            </Flex>
-            <DescriptionList columns={{ small: 1, medium: 2, large: 3 }}>
-              <DescriptionGroup>
-                <DescriptionTerm>Record ID</DescriptionTerm>
-                <DescriptionDetails>REC-2024-001</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Created by</DescriptionTerm>
-                <DescriptionDetails>John Smith</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Created date</DescriptionTerm>
-                <DescriptionDetails>2024-Mar-15 09:30 AM</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Last modified by</DescriptionTerm>
-                <DescriptionDetails>Sarah Johnson</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Last modified date</DescriptionTerm>
-                <DescriptionDetails>2024-Mar-16 02:15 PM</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Status</DescriptionTerm>
-                <DescriptionDetails>Active</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Category</DescriptionTerm>
-                <DescriptionDetails>Production</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Priority</DescriptionTerm>
-                <DescriptionDetails>High</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Department</DescriptionTerm>
-                <DescriptionDetails>Manufacturing</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Location</DescriptionTerm>
-                <DescriptionDetails>Factory Floor A</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Assigned to</DescriptionTerm>
-                <DescriptionDetails>Michael Brown</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Due date</DescriptionTerm>
-                <DescriptionDetails>2024-Mar-20 05:00 PM</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Estimated hours</DescriptionTerm>
-                <DescriptionDetails>24</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Actual hours</DescriptionTerm>
-                <DescriptionDetails>18.5</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Cost center</DescriptionTerm>
-                <DescriptionDetails>MFG-001</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Project code</DescriptionTerm>
-                <DescriptionDetails>PRJ-2024-Q1</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Quality rating</DescriptionTerm>
-                <DescriptionDetails>4.8/5.0</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Related records</DescriptionTerm>
-                <DescriptionDetails>
-                  REC-2024-002 (Production Order), REC-2024-003 (Quality Check), REC-2024-004 (Material Request),
-                  REC-2024-005 (Equipment Maintenance), REC-2024-006 (Safety Inspection), REC-2024-007 (Training
-                  Record), REC-2024-008 (Inventory Adjustment), REC-2024-009 (Supplier Delivery), REC-2024-010 (Customer
-                  Order)
-                </DescriptionDetails>
-              </DescriptionGroup>
-            </DescriptionList>
-          </Box>
-<Box my="x3" pb="x3">
+        <Box my="x3" pb="x3">
+          <Flex justifyContent="flex-end" mb="x2">
+            <IconicButton icon="edit" onClick={handleEditClick}>
+              Edit
+            </IconicButton>
+          </Flex>
+          <DescriptionList columns={{ small: 1, medium: 2, large: 3 }}>
+            <DescriptionGroup>
+              <DescriptionTerm>Record ID</DescriptionTerm>
+              <DescriptionDetails>REC-2024-001</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Created by</DescriptionTerm>
+              <DescriptionDetails>John Smith</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Created date</DescriptionTerm>
+              <DescriptionDetails>2024-Mar-15 09:30 AM</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Last modified by</DescriptionTerm>
+              <DescriptionDetails>Sarah Johnson</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Last modified date</DescriptionTerm>
+              <DescriptionDetails>2024-Mar-16 02:15 PM</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Status</DescriptionTerm>
+              <DescriptionDetails>Active</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Category</DescriptionTerm>
+              <DescriptionDetails>Production</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Priority</DescriptionTerm>
+              <DescriptionDetails>High</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Department</DescriptionTerm>
+              <DescriptionDetails>Manufacturing</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Location</DescriptionTerm>
+              <DescriptionDetails>Factory Floor A</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Assigned to</DescriptionTerm>
+              <DescriptionDetails>Michael Brown</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Due date</DescriptionTerm>
+              <DescriptionDetails>2024-Mar-20 05:00 PM</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Estimated hours</DescriptionTerm>
+              <DescriptionDetails>24</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Actual hours</DescriptionTerm>
+              <DescriptionDetails>18.5</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Cost center</DescriptionTerm>
+              <DescriptionDetails>MFG-001</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Project code</DescriptionTerm>
+              <DescriptionDetails>PRJ-2024-Q1</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Quality rating</DescriptionTerm>
+              <DescriptionDetails>4.8/5.0</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Related records</DescriptionTerm>
+              <DescriptionDetails>
+                REC-2024-002 (Production Order), REC-2024-003 (Quality Check), REC-2024-004 (Material Request),
+                REC-2024-005 (Equipment Maintenance), REC-2024-006 (Safety Inspection), REC-2024-007 (Training Record),
+                REC-2024-008 (Inventory Adjustment), REC-2024-009 (Supplier Delivery), REC-2024-010 (Customer Order)
+              </DescriptionDetails>
+            </DescriptionGroup>
+          </DescriptionList>
+        </Box>
+        <Box my="x3" pb="x3">
           <Tabs defaultSelectedIndex={0}>
             <Tab label="Details">
               <Box pt="x2">
@@ -365,8 +363,7 @@ export const FullWidth = () => {
               </Box>
             </Tab>
           </Tabs>
-          </Box>
-
+        </Box>
       </Page>
       <Sidebar
         isOpen={isSidebarOpen}
@@ -614,94 +611,92 @@ export const Centered = () => {
           />
         )}
       >
-
-          <Box maxWidth="1360px" mx="auto" my="x3" pb="x3">
-            <Flex justifyContent="flex-end" mb="x2">
-              <IconicButton icon="edit" onClick={handleEditClick}>
-                Edit
-              </IconicButton>
-            </Flex>
-            <DescriptionList columns={{ small: 1, medium: 2, large: 3 }}>
-              <DescriptionGroup>
-                <DescriptionTerm>Record ID</DescriptionTerm>
-                <DescriptionDetails>REC-2024-001</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Created by</DescriptionTerm>
-                <DescriptionDetails>John Smith</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Created date</DescriptionTerm>
-                <DescriptionDetails>2024-Mar-15 09:30 AM</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Last modified by</DescriptionTerm>
-                <DescriptionDetails>Sarah Johnson</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Last modified date</DescriptionTerm>
-                <DescriptionDetails>2024-Mar-16 02:15 PM</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Status</DescriptionTerm>
-                <DescriptionDetails>Active</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Category</DescriptionTerm>
-                <DescriptionDetails>Production</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Priority</DescriptionTerm>
-                <DescriptionDetails>High</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Department</DescriptionTerm>
-                <DescriptionDetails>Manufacturing</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Location</DescriptionTerm>
-                <DescriptionDetails>Factory Floor A</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Assigned to</DescriptionTerm>
-                <DescriptionDetails>Michael Brown</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Due date</DescriptionTerm>
-                <DescriptionDetails>2024-Mar-20 05:00 PM</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Estimated hours</DescriptionTerm>
-                <DescriptionDetails>24</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Actual hours</DescriptionTerm>
-                <DescriptionDetails>18.5</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Cost center</DescriptionTerm>
-                <DescriptionDetails>MFG-001</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Project code</DescriptionTerm>
-                <DescriptionDetails>PRJ-2024-Q1</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Quality rating</DescriptionTerm>
-                <DescriptionDetails>4.8/5.0</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Related records</DescriptionTerm>
-                <DescriptionDetails>
-                  REC-2024-002 (Production Order), REC-2024-003 (Quality Check), REC-2024-004 (Material Request),
-                  REC-2024-005 (Equipment Maintenance), REC-2024-006 (Safety Inspection), REC-2024-007 (Training
-                  Record), REC-2024-008 (Inventory Adjustment), REC-2024-009 (Supplier Delivery), REC-2024-010 (Customer
-                  Order)
-                </DescriptionDetails>
-              </DescriptionGroup>
-            </DescriptionList>
-          </Box>
-<Box maxWidth="1360px" mx="auto" my="x3" pb="x3">
+        <Box maxWidth="1360px" mx="auto" my="x3" pb="x3">
+          <Flex justifyContent="flex-end" mb="x2">
+            <IconicButton icon="edit" onClick={handleEditClick}>
+              Edit
+            </IconicButton>
+          </Flex>
+          <DescriptionList columns={{ small: 1, medium: 2, large: 3 }}>
+            <DescriptionGroup>
+              <DescriptionTerm>Record ID</DescriptionTerm>
+              <DescriptionDetails>REC-2024-001</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Created by</DescriptionTerm>
+              <DescriptionDetails>John Smith</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Created date</DescriptionTerm>
+              <DescriptionDetails>2024-Mar-15 09:30 AM</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Last modified by</DescriptionTerm>
+              <DescriptionDetails>Sarah Johnson</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Last modified date</DescriptionTerm>
+              <DescriptionDetails>2024-Mar-16 02:15 PM</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Status</DescriptionTerm>
+              <DescriptionDetails>Active</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Category</DescriptionTerm>
+              <DescriptionDetails>Production</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Priority</DescriptionTerm>
+              <DescriptionDetails>High</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Department</DescriptionTerm>
+              <DescriptionDetails>Manufacturing</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Location</DescriptionTerm>
+              <DescriptionDetails>Factory Floor A</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Assigned to</DescriptionTerm>
+              <DescriptionDetails>Michael Brown</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Due date</DescriptionTerm>
+              <DescriptionDetails>2024-Mar-20 05:00 PM</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Estimated hours</DescriptionTerm>
+              <DescriptionDetails>24</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Actual hours</DescriptionTerm>
+              <DescriptionDetails>18.5</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Cost center</DescriptionTerm>
+              <DescriptionDetails>MFG-001</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Project code</DescriptionTerm>
+              <DescriptionDetails>PRJ-2024-Q1</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Quality rating</DescriptionTerm>
+              <DescriptionDetails>4.8/5.0</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Related records</DescriptionTerm>
+              <DescriptionDetails>
+                REC-2024-002 (Production Order), REC-2024-003 (Quality Check), REC-2024-004 (Material Request),
+                REC-2024-005 (Equipment Maintenance), REC-2024-006 (Safety Inspection), REC-2024-007 (Training Record),
+                REC-2024-008 (Inventory Adjustment), REC-2024-009 (Supplier Delivery), REC-2024-010 (Customer Order)
+              </DescriptionDetails>
+            </DescriptionGroup>
+          </DescriptionList>
+        </Box>
+        <Box maxWidth="1360px" mx="auto" my="x3" pb="x3">
           <Tabs defaultSelectedIndex={0}>
             <Tab label="Details">
               <Box pt="x2">
@@ -865,8 +860,7 @@ export const Centered = () => {
               </Box>
             </Tab>
           </Tabs>
-          </Box>
-
+        </Box>
       </Page>
       <Sidebar
         isOpen={isSidebarOpen}
@@ -1114,94 +1108,92 @@ export const Combined = () => {
           />
         )}
       >
-
-          <Box maxWidth="1360px" mx="auto" my="x3" pb="x3">
-            <Flex justifyContent="flex-end" mb="x2">
-              <IconicButton icon="edit" onClick={handleEditClick}>
-                Edit
-              </IconicButton>
-            </Flex>
-            <DescriptionList columns={{ small: 1, medium: 2, large: 3 }}>
-              <DescriptionGroup>
-                <DescriptionTerm>Record ID</DescriptionTerm>
-                <DescriptionDetails>REC-2024-001</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Created by</DescriptionTerm>
-                <DescriptionDetails>John Smith</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Created date</DescriptionTerm>
-                <DescriptionDetails>2024-Mar-15 09:30 AM</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Last modified by</DescriptionTerm>
-                <DescriptionDetails>Sarah Johnson</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Last modified date</DescriptionTerm>
-                <DescriptionDetails>2024-Mar-16 02:15 PM</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Status</DescriptionTerm>
-                <DescriptionDetails>Active</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Category</DescriptionTerm>
-                <DescriptionDetails>Production</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Priority</DescriptionTerm>
-                <DescriptionDetails>High</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Department</DescriptionTerm>
-                <DescriptionDetails>Manufacturing</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Location</DescriptionTerm>
-                <DescriptionDetails>Factory Floor A</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Assigned to</DescriptionTerm>
-                <DescriptionDetails>Michael Brown</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Due date</DescriptionTerm>
-                <DescriptionDetails>2024-Mar-20 05:00 PM</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Estimated hours</DescriptionTerm>
-                <DescriptionDetails>24</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Actual hours</DescriptionTerm>
-                <DescriptionDetails>18.5</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Cost center</DescriptionTerm>
-                <DescriptionDetails>MFG-001</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Project code</DescriptionTerm>
-                <DescriptionDetails>PRJ-2024-Q1</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Quality rating</DescriptionTerm>
-                <DescriptionDetails>4.8/5.0</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Related records</DescriptionTerm>
-                <DescriptionDetails>
-                  REC-2024-002 (Production Order), REC-2024-003 (Quality Check), REC-2024-004 (Material Request),
-                  REC-2024-005 (Equipment Maintenance), REC-2024-006 (Safety Inspection), REC-2024-007 (Training
-                  Record), REC-2024-008 (Inventory Adjustment), REC-2024-009 (Supplier Delivery), REC-2024-010 (Customer
-                  Order)
-                </DescriptionDetails>
-              </DescriptionGroup>
-            </DescriptionList>
-          </Box>
-<Box my="x3" pb="x3">
+        <Box maxWidth="1360px" mx="auto" my="x3" pb="x3">
+          <Flex justifyContent="flex-end" mb="x2">
+            <IconicButton icon="edit" onClick={handleEditClick}>
+              Edit
+            </IconicButton>
+          </Flex>
+          <DescriptionList columns={{ small: 1, medium: 2, large: 3 }}>
+            <DescriptionGroup>
+              <DescriptionTerm>Record ID</DescriptionTerm>
+              <DescriptionDetails>REC-2024-001</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Created by</DescriptionTerm>
+              <DescriptionDetails>John Smith</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Created date</DescriptionTerm>
+              <DescriptionDetails>2024-Mar-15 09:30 AM</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Last modified by</DescriptionTerm>
+              <DescriptionDetails>Sarah Johnson</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Last modified date</DescriptionTerm>
+              <DescriptionDetails>2024-Mar-16 02:15 PM</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Status</DescriptionTerm>
+              <DescriptionDetails>Active</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Category</DescriptionTerm>
+              <DescriptionDetails>Production</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Priority</DescriptionTerm>
+              <DescriptionDetails>High</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Department</DescriptionTerm>
+              <DescriptionDetails>Manufacturing</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Location</DescriptionTerm>
+              <DescriptionDetails>Factory Floor A</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Assigned to</DescriptionTerm>
+              <DescriptionDetails>Michael Brown</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Due date</DescriptionTerm>
+              <DescriptionDetails>2024-Mar-20 05:00 PM</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Estimated hours</DescriptionTerm>
+              <DescriptionDetails>24</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Actual hours</DescriptionTerm>
+              <DescriptionDetails>18.5</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Cost center</DescriptionTerm>
+              <DescriptionDetails>MFG-001</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Project code</DescriptionTerm>
+              <DescriptionDetails>PRJ-2024-Q1</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Quality rating</DescriptionTerm>
+              <DescriptionDetails>4.8/5.0</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Related records</DescriptionTerm>
+              <DescriptionDetails>
+                REC-2024-002 (Production Order), REC-2024-003 (Quality Check), REC-2024-004 (Material Request),
+                REC-2024-005 (Equipment Maintenance), REC-2024-006 (Safety Inspection), REC-2024-007 (Training Record),
+                REC-2024-008 (Inventory Adjustment), REC-2024-009 (Supplier Delivery), REC-2024-010 (Customer Order)
+              </DescriptionDetails>
+            </DescriptionGroup>
+          </DescriptionList>
+        </Box>
+        <Box my="x3" pb="x3">
           <Tabs defaultSelectedIndex={0}>
             <Tab label="Details">
               <Box pt="x2">
@@ -1365,8 +1357,7 @@ export const Combined = () => {
               </Box>
             </Tab>
           </Tabs>
-          </Box>
-
+        </Box>
       </Page>
       <Sidebar
         isOpen={isSidebarOpen}
@@ -1560,4 +1551,4 @@ export const Combined = () => {
       </Sidebar>
     </ApplicationFrame>
   );
-}; 
+};

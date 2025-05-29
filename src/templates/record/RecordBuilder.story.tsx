@@ -130,7 +130,9 @@ export const Builder = ({
   const [containerWidth, setContainerWidth] = useState<string | undefined>("1360px");
   const [containerOutline, setContainerOutline] = useState(true);
   const [showGroupOutline, setShowGroupOutline] = useState(false);
-  const [descriptionListColumns, setDescriptionListColumns] = useState<number | Partial<Record<keyof Breakpoints, number>> | undefined>(4);
+  const [descriptionListColumns, setDescriptionListColumns] = useState<
+    number | Partial<Record<keyof Breakpoints, number>> | undefined
+  >(4);
   const [descriptionListLayout, setDescriptionListLayout] = useState<"stacked" | "inline" | "auto">("stacked");
   const [descriptionListDensity, setDescriptionListDensity] = useState<"compact" | "medium" | "relaxed">("medium");
   const [descriptionTermMaxWidth, setDescriptionTermMaxWidth] = useState("320px");
@@ -178,7 +180,11 @@ export const Builder = ({
 
     switch (type) {
       case "Card":
-        return <Card {...commonProps} px="x4" py="x3">{content}</Card>;
+        return (
+          <Card {...commonProps} px="x4" py="x3">
+            {content}
+          </Card>
+        );
       case "Tab":
         return (
           <Box {...commonProps}>
@@ -298,8 +304,8 @@ export const Builder = ({
                   <DescriptionDetails>
                     REC-2024-002 (Production Order), REC-2024-003 (Quality Check), REC-2024-004 (Material Request),
                     REC-2024-005 (Equipment Maintenance), REC-2024-006 (Safety Inspection), REC-2024-007 (Training
-                    Record), REC-2024-008 (Inventory Adjustment), REC-2024-009 (Supplier Delivery), REC-2024-010 (Customer
-                    Order)
+                    Record), REC-2024-008 (Inventory Adjustment), REC-2024-009 (Supplier Delivery), REC-2024-010
+                    (Customer Order)
                   </DescriptionDetails>
                 </DescriptionGroup>
               </DescriptionList>
@@ -452,17 +458,18 @@ export const Builder = ({
         </Box>
       </Page>
       {isSidebarOpen && (
-        <Sidebar
-          title="Edit record"
-          onClose={handleCloseSidebar}
-        >
+        <Sidebar title="Edit record" onClose={handleCloseSidebar}>
           <Form>
             <FormSection>
-              <FieldLabel labelText="Record ID" htmlFor="recordId">Record ID</FieldLabel>
+              <FieldLabel labelText="Record ID" htmlFor="recordId">
+                Record ID
+              </FieldLabel>
               <Input id="recordId" value="REC-2024-001" readOnly />
             </FormSection>
             <FormSection>
-              <FieldLabel labelText="Status" htmlFor="status">Status</FieldLabel>
+              <FieldLabel labelText="Status" htmlFor="status">
+                Status
+              </FieldLabel>
               <Select
                 id="status"
                 options={[
@@ -474,7 +481,9 @@ export const Builder = ({
               />
             </FormSection>
             <FormSection>
-              <FieldLabel labelText="Category" htmlFor="category">Category</FieldLabel>
+              <FieldLabel labelText="Category" htmlFor="category">
+                Category
+              </FieldLabel>
               <Select
                 id="category"
                 options={[
@@ -486,7 +495,9 @@ export const Builder = ({
               />
             </FormSection>
             <FormSection>
-              <FieldLabel labelText="Priority" htmlFor="priority">Priority</FieldLabel>
+              <FieldLabel labelText="Priority" htmlFor="priority">
+                Priority
+              </FieldLabel>
               <Select
                 id="priority"
                 options={[
@@ -498,7 +509,9 @@ export const Builder = ({
               />
             </FormSection>
             <FormSection>
-              <FieldLabel labelText="Department" htmlFor="department">Department</FieldLabel>
+              <FieldLabel labelText="Department" htmlFor="department">
+                Department
+              </FieldLabel>
               <Select
                 id="department"
                 options={[
@@ -510,11 +523,15 @@ export const Builder = ({
               />
             </FormSection>
             <FormSection>
-              <FieldLabel labelText="Location" htmlFor="location">Location</FieldLabel>
+              <FieldLabel labelText="Location" htmlFor="location">
+                Location
+              </FieldLabel>
               <Input id="location" value="Factory Floor A" />
             </FormSection>
             <FormSection>
-              <FieldLabel labelText="Assigned to" htmlFor="assignedTo">Assigned to</FieldLabel>
+              <FieldLabel labelText="Assigned to" htmlFor="assignedTo">
+                Assigned to
+              </FieldLabel>
               <Select
                 id="assignedTo"
                 options={[
@@ -526,31 +543,45 @@ export const Builder = ({
               />
             </FormSection>
             <FormSection>
-              <FieldLabel labelText="Due date" htmlFor="dueDate">Due date</FieldLabel>
+              <FieldLabel labelText="Due date" htmlFor="dueDate">
+                Due date
+              </FieldLabel>
               <DatePicker id="dueDate" selected={new Date("2024-03-20")} />
             </FormSection>
             <FormSection>
-              <FieldLabel labelText="Estimated hours" htmlFor="estimatedHours">Estimated hours</FieldLabel>
+              <FieldLabel labelText="Estimated hours" htmlFor="estimatedHours">
+                Estimated hours
+              </FieldLabel>
               <Input id="estimatedHours" type="number" value="24" />
             </FormSection>
             <FormSection>
-              <FieldLabel labelText="Actual hours" htmlFor="actualHours">Actual hours</FieldLabel>
+              <FieldLabel labelText="Actual hours" htmlFor="actualHours">
+                Actual hours
+              </FieldLabel>
               <Input id="actualHours" type="number" value="18.5" />
             </FormSection>
             <FormSection>
-              <FieldLabel labelText="Cost center" htmlFor="costCenter">Cost center</FieldLabel>
+              <FieldLabel labelText="Cost center" htmlFor="costCenter">
+                Cost center
+              </FieldLabel>
               <Input id="costCenter" value="MFG-001" />
             </FormSection>
             <FormSection>
-              <FieldLabel labelText="Project code" htmlFor="projectCode">Project code</FieldLabel>
+              <FieldLabel labelText="Project code" htmlFor="projectCode">
+                Project code
+              </FieldLabel>
               <Input id="projectCode" value="PRJ-2024-Q1" />
             </FormSection>
             <FormSection>
-              <FieldLabel labelText="Quality rating" htmlFor="qualityRating">Quality rating</FieldLabel>
+              <FieldLabel labelText="Quality rating" htmlFor="qualityRating">
+                Quality rating
+              </FieldLabel>
               <Input id="qualityRating" type="number" value="4.8" step="0.1" min="0" max="5" />
             </FormSection>
             <FormSection>
-              <FieldLabel labelText="Related records" htmlFor="relatedRecords">Related records</FieldLabel>
+              <FieldLabel labelText="Related records" htmlFor="relatedRecords">
+                Related records
+              </FieldLabel>
               <Textarea
                 id="relatedRecords"
                 value="REC-2024-002 (Production Order), REC-2024-003 (Quality Check), REC-2024-004 (Material Request),
@@ -568,21 +599,24 @@ export const Builder = ({
         </Sidebar>
       )}
       {isDetailsSidebarOpen && (
-        <Sidebar
-          title={isCreatingNew ? "New record detail" : "Edit record detail"}
-          onClose={handleCloseDetailsSidebar}
-        >
+        <Sidebar title={isCreatingNew ? "New record detail" : "Edit record detail"} onClose={handleCloseDetailsSidebar}>
           <Form>
             <FormSection>
-              <FieldLabel labelText="ID" htmlFor="detailId">ID</FieldLabel>
+              <FieldLabel labelText="ID" htmlFor="detailId">
+                ID
+              </FieldLabel>
               <Input id="detailId" value={selectedRecord?.id || "RD-004"} readOnly />
             </FormSection>
             <FormSection>
-              <FieldLabel labelText="Name" htmlFor="detailName">Name</FieldLabel>
+              <FieldLabel labelText="Name" htmlFor="detailName">
+                Name
+              </FieldLabel>
               <Input id="detailName" value={selectedRecord?.name || ""} />
             </FormSection>
             <FormSection>
-              <FieldLabel labelText="Status" htmlFor="detailStatus">Status</FieldLabel>
+              <FieldLabel labelText="Status" htmlFor="detailStatus">
+                Status
+              </FieldLabel>
               <Select
                 id="detailStatus"
                 options={[
@@ -594,7 +628,9 @@ export const Builder = ({
               />
             </FormSection>
             <FormSection>
-              <FieldLabel labelText="Date" htmlFor="detailDate">Date</FieldLabel>
+              <FieldLabel labelText="Date" htmlFor="detailDate">
+                Date
+              </FieldLabel>
               <DatePicker id="detailDate" selected={new Date(selectedRecord?.date || "2024-03-18")} />
             </FormSection>
           </Form>
@@ -695,7 +731,11 @@ export const Builder = ({
           <Checkbox labelText="Show divider" checked={showDivider} onChange={() => setShowDivider(!showDivider)} />
           <HorizontalDivider />
           <Text fontWeight="bold">Debugging</Text>
-          <Checkbox labelText="Show Group outline" checked={showGroupOutline} onChange={() => setShowGroupOutline(!showGroupOutline)} />
+          <Checkbox
+            labelText="Show Group outline"
+            checked={showGroupOutline}
+            onChange={() => setShowGroupOutline(!showGroupOutline)}
+          />
           <Input
             value={containerWidth}
             onChange={(e) => setContainerWidth(e.target.value)}
@@ -725,4 +765,4 @@ export const Builder = ({
 
 Builder.parameters = {
   chromatic: { disable: true },
-}; 
+};
