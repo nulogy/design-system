@@ -3,8 +3,8 @@ import { Link } from "../Link";
 import { Box } from "../Box";
 import { PrimaryButton } from "../Button";
 import { WithSummary as Header } from "../Layout/Header.story";
-import { BrandedNavBar } from "../BrandedNavBar";
 import { Flex } from "../Flex";
+import { Navigation } from "../Navigation";
 import Banner from "./Banner";
 
 export const WithCallToAction = () => (
@@ -28,20 +28,20 @@ export const AboveTheNavbar = () => (
       We have detected unauthorized access attempts on your account. Please change your password immediately to secure
       your account.
     </Banner>
-    <BrandedNavBar menuData={menuData} />
+    <Navigation />
   </>
 );
 
 export const BellowTheNavbar = () => (
   <>
-    <BrandedNavBar menuData={menuData} />
+    <Navigation />
     <WithCallToAction />
   </>
 );
 
 export const BellowTheHeader = () => (
   <>
-    <BrandedNavBar menuData={menuData} />
+    <Navigation />
     <Header />
     <Banner type="warning">
       <strong>Page refresh required</strong> To obtain the most recent data, <Link href="/">click here</Link>.
@@ -66,30 +66,4 @@ export default {
   parameters: {
     layout: "fullscreen",
   },
-};
-
-const menuData = {
-  primaryMenu: [
-    {
-      name: "Dashboard",
-      items: [{ name: "Items", href: "/" }, { name: "Carriers", href: "/" }, { name: "Only text submenu" }],
-    },
-  ],
-  secondaryMenu: [
-    {
-      name: "User@Nulogy.com",
-      items: [
-        { name: "Profile", href: "/" },
-        { name: "Preferences", href: "/" },
-        { name: "Logout", href: "/" },
-      ],
-    },
-    {
-      name: "Settings",
-      items: [
-        { name: "Permissions", href: "/" },
-        { name: "Manage account", href: "/" },
-      ],
-    },
-  ],
 };

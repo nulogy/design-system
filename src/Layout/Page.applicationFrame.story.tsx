@@ -1,31 +1,13 @@
 import React from "react";
-import { ApplicationFrame, Breadcrumbs, Link, Heading2, Text, Page, StatusIndicator, Navigation } from "..";
+import { Link } from "../Link";
+import { ApplicationFrame, Navigation, Page, Breadcrumbs, Heading2, Text } from "..";
 
 export default {
-  title: "Components/Page",
+  title: "Components/Page/Within an ApplicationFrame",
   parameters: {
     layout: "fullscreen",
   },
 };
-
-export const _Page = () => (
-  <Page
-    breadcrumbs={
-      <Breadcrumbs>
-        <Link href="/">Home</Link>
-        <Link href="/">Materials</Link>
-      </Breadcrumbs>
-    }
-    title="Materials Overview"
-    headerContent={<StatusIndicator type="informative">Beta</StatusIndicator>}
-  >
-    <>
-      <Text fontFamily="mono" fontSize="small">
-        content
-      </Text>
-    </>
-  </Page>
-);
 
 export const NoPageTitle = () => (
   <ApplicationFrame navBar={<Navigation />}>
@@ -53,18 +35,6 @@ export const NoBreadcrumbs = () => (
       </>
     </Page>
   </ApplicationFrame>
-);
-
-export const NoBackground = () => (
-  <Page
-    breadcrumbs={
-      <Breadcrumbs>
-        <Link href="/">Home</Link>
-        <Link href="/">Materials</Link>
-      </Breadcrumbs>
-    }
-    title="Materials Overview"
-  />
 );
 
 export const WithFullHeight = () => (

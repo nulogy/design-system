@@ -2,8 +2,6 @@ import { text } from "@storybook/addon-knobs";
 import React, { useState, useRef } from "react";
 import {
   ApplicationFrame,
-  BrandedNavBar,
-  Icon,
   Breadcrumbs,
   Link,
   Page,
@@ -13,88 +11,10 @@ import {
   Box,
   Textarea,
   Heading3,
+  Navigation,
 } from "..";
 import { useUrlProps } from "../utils/testing/useUrlProps";
 import { SidebarProps } from "./Sidebar";
-
-const primaryMenu = [
-  {
-    name: "Order Management",
-    items: [
-      { name: "Dashboard", href: "/" },
-      { name: "Moves", href: "/" },
-      { name: "Pick Lists", href: "/" },
-      { name: "Receive Orders", href: "/" },
-      { name: "Receipts", href: "/" },
-      { name: "Ship Orders", href: "/" },
-      { name: "Shipments", href: "/" },
-      { name: "Item Lists", href: "/" },
-      { name: "Cycle Counts", href: "/" },
-      { name: "Blind Counts", href: "/" },
-      { name: "Inbound Stock Transfer Orders", href: "/" },
-      { name: "Inbound Stock Transfers", href: "/" },
-      { name: "Outbound Stock Transfers", href: "/" },
-    ],
-  },
-
-  {
-    name: "Analytics",
-    items: [
-      { name: "Dashboard", href: "/" },
-      { name: "Moves", href: "/" },
-      { name: "Pick Lists", href: "/" },
-      { name: "Receive Orders", href: "/" },
-      { name: "Receipts", href: "/" },
-      { name: "Ship Orders", href: "/" },
-      { name: "Shipments", href: "/" },
-      { name: "Item Lists", href: "/" },
-      { name: "Cycle Counts", href: "/" },
-      { name: "Blind Counts", href: "/" },
-      { name: "Inbound Stock Transfer Orders", href: "/" },
-      { name: "Inbound Stock Transfers", href: "/" },
-      { name: "Outbound Stock Transfers", href: "/" },
-    ],
-  },
-  {
-    name: "Materials Overview",
-    items: [
-      {
-        name: "Production",
-        items: [
-          { name: "Dashboard", href: "/" },
-          {
-            name: "Projects",
-            items: [
-              { name: "Cycle Counts", href: "/" },
-              { name: "Blind Counts", href: "/" },
-            ],
-          },
-          {
-            name: "Jobs",
-            items: [
-              { name: "Job 1", href: "/" },
-              { name: "Job 2", href: "/" },
-            ],
-          },
-        ],
-      },
-      { name: "Item cart", href: "/" },
-      { name: "Inventory", href: "/" },
-    ],
-  },
-  { name: "Items", href: "/" },
-];
-
-const secondaryMenu = [
-  {
-    name: <Icon icon="user"></Icon>,
-    items: [
-      { name: "Profile", href: "/" },
-      { name: "Preferences", href: "/" },
-      { name: "Logout", href: "/" },
-    ],
-  },
-];
 
 export default {
   title: "Components/Sidebar",
@@ -134,7 +54,7 @@ export const _Sidebar = () => {
   };
 
   return (
-    <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />} overflowX="hidden">
+    <ApplicationFrame navBar={<Navigation />} overflowX="hidden">
       <Page
         breadcrumbs={
           <Breadcrumbs>
@@ -176,7 +96,7 @@ export const WithoutOverlay = () => {
   };
 
   return (
-    <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />} overflowX="hidden">
+    <ApplicationFrame navBar={<Navigation />} overflowX="hidden">
       <Page
         breadcrumbs={
           <Breadcrumbs>
@@ -219,7 +139,7 @@ export const OpenByDefault = () => {
   };
 
   return (
-    <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />} overflowX="hidden">
+    <ApplicationFrame navBar={<Navigation />} overflowX="hidden">
       <Page
         breadcrumbs={
           <Breadcrumbs>
@@ -260,7 +180,7 @@ export const WithCustomOffset = () => {
   };
 
   return (
-    <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />} overflowX="hidden">
+    <ApplicationFrame navBar={<Navigation />} overflowX="hidden">
       <Page
         breadcrumbs={
           <Breadcrumbs>
@@ -303,7 +223,7 @@ export const DontCloseOnOutsideClick = () => {
   };
 
   return (
-    <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />} overflowX="hidden">
+    <ApplicationFrame navBar={<Navigation />} overflowX="hidden">
       <Page
         breadcrumbs={
           <Breadcrumbs>
@@ -345,7 +265,7 @@ export const WithoutCloseButton = () => {
   };
 
   return (
-    <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />} overflowX="hidden">
+    <ApplicationFrame navBar={<Navigation />} overflowX="hidden">
       <Page
         breadcrumbs={
           <Breadcrumbs>
@@ -387,7 +307,7 @@ export const WithALongTitle = () => {
   };
 
   return (
-    <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />} overflowX="hidden">
+    <ApplicationFrame navBar={<Navigation />} overflowX="hidden">
       <Page
         breadcrumbs={
           <Breadcrumbs>

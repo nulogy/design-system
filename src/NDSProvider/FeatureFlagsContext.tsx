@@ -2,6 +2,7 @@ import React, { createContext, useContext } from "react";
 
 export interface FeatureFlags {
   experimentalDesktopTypographyScale?: boolean;
+  navigationV3?: boolean;
 }
 
 export interface FeatureFlagsContextValue {

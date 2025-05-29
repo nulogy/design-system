@@ -311,4 +311,9 @@ Change the `breakpoint` prop to control when the component switches to the deskt
 
 ## Migration from `BrandedNavBar`
 
-- The height of the new `Navigation` component is `64px` vs `56px` for `BrandedNavBar`. You need to adjust the `top` of the SideBar or any content (such as Pendo content) that is positioned relative to the page by `8px`.
+- The height of the new `Navigation` component is `64px` vs `56px` for `BrandedNavBar`. You need to adjust the `top` any component or content (such as Pendo content) that is positioned relative to the navigation by `8px`.
+- Once migrated away from `BrandedNavBar`, set the `navigationV3` feature flag to `true` in the `NDSProvider`. This will adjust the position of all components that are positioned relative to the navigation _inside of NDS_ to account for the new height.
+
+```tsx
+<NDSProvider featureFlags={{ navigationV3: true }} />
+```
