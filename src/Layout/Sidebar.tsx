@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useRef, RefObject, CSSProperties } from "react";
 import { AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { useTheme } from "styled-components";
+import { ZIndexProps } from "styled-system";
 import { Box } from "../Box";
 import { Flex } from "../Flex";
 import { IconicButton } from "../Button";
@@ -8,6 +10,8 @@ import { Heading2, Text } from "../Type";
 import { AnimatedBoxProps, AnimatedBox } from "../Box/Box";
 import { NAVBAR_HEIGHT } from "../BrandedNavBar/NavBar";
 import { useScrollLock } from "../utils/useScrollLock";
+import { useFeatureFlags } from "../NDSProvider/FeatureFlagsContext";
+import { NAVIGATION_MENU_HEIGHT_STYLED_UNITS } from "../Navigation/components/shared/constants";
 
 type PredefinedSidebarWidth = "xs" | "s" | "m" | "l" | "xl";
 
@@ -83,12 +87,12 @@ function Sidebar({
   offset = "0px",
   triggerRef,
   duration = 0.25,
-  top = NAVBAR_HEIGHT,
+  top,
   closeOnOutsideClick = true,
   overlay = "show",
   disableScroll = true,
   hideCloseButton = false,
-  zIndex = "sidebar" as any,
+  zIndex = "sidebar" as ZIndexProps["zIndex"],
   helpText,
   renderHelpText,
   ...props
@@ -99,6 +103,11 @@ function Sidebar({
   const sideBarRef = useRef(null);
   const contentRef = useRef(null);
   const selectedWidth = sidebarWidths[width] ?? width;
+
+  const { navigationV3 } = useFeatureFlags();
+  const theme = useTheme();
+
+  top ||= navigationV3 ? theme.space[NAVIGATION_MENU_HEIGHT_STYLED_UNITS] : NAVBAR_HEIGHT;
 
   useScrollLock({
     autoLock: overlay && disableScroll && isOpen,
@@ -176,7 +185,7 @@ function Sidebar({
         bg="white"
         display="flex"
         flexDirection="column"
-        height={`calc(100% - ${NAVBAR_HEIGHT})`}
+        height={`calc(100% - ${navigationV3 ? theme.space[NAVIGATION_MENU_HEIGHT_STYLED_UNITS] : NAVBAR_HEIGHT})`}
         borderLeftWidth="1px"
         borderLeftStyle="solid"
         borderLeftColor="lightGrey"

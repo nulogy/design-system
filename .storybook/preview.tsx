@@ -99,7 +99,7 @@ const withThemeProvider = (Story, context) => {
     <NDSProvider
       locale={locale}
       variant={theme}
-      featureFlags={{ experimentalDesktopTypographyScale: desktopScale === "experimental" }}
+      featureFlags={{ experimentalDesktopTypographyScale: desktopScale === "experimental", navigationV3: true }}
     >
       <Story />
     </NDSProvider>

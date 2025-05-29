@@ -1,7 +1,7 @@
 # TopBar
 
 The TopBar component provides users a consistent navigation experience across touch application pages.
-It combines functionality from the desktop `Header` and the `BrandedNavBar` components.
+It combines functionality from the desktop `Header` and the `Navigation` components.
 The component is meant to be used in applications where the primary input device is a touch screen.
 
 ## Basic Usage
