@@ -34,7 +34,6 @@ interface ButtonUserMenuItem {
   label: string;
   type: "button";
   props?: React.ComponentPropsWithoutRef<"button">;
-  items?: UserMenuItem[];
 }
 
 interface CustomUserMenuItem {

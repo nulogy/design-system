@@ -221,19 +221,18 @@ type UserMenuItem = BaseUserMenuItem & (LinkUserMenuItem | ButtonUserMenuItem | 
 
 ##### ButtonUserMenuItem
 
-| Prop      | Type                                       | Description           |
-| --------- | ------------------------------------------ | --------------------- |
-| **type**  | `"button"`                                 | Discriminator.        |
-| **label** | `string`                                   | Visible text.         |
-| **props** | `React.ComponentPropsWithoutRef<"button">` | Pass‑through props.   |
-| **items** | `UserMenuItem[]`                           | Nested submenu items. |
+| Prop      | Type                                       | Description         |
+| --------- | ------------------------------------------ | ------------------- |
+| **type**  | `"button"`                                 | Discriminator.      |
+| **label** | `string`                                   | Visible text.       |
+| **props** | `React.ComponentPropsWithoutRef<"button">` | Pass‑through props. |
 
 ##### CustomUserMenuItem
 
-| Prop       | Type                                  | Description                                                                                                                                                                                                                                                                             |
-| ---------- | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **type**   | `"custom"`                            | Discriminator.                                                                                                                                                                                                                                                                          |
-| **render** | `(props: RenderProps) => JSX.Element` | A function that returns the JSX to be rendered for this menu item. <br/>**`RenderProps`**: <br/>- `level: number`: The depth of the item (0 for root, 1 for first submenu, etc.). <br/>- `withinMobileNav: boolean`: True if the item is rendered within the mobile navigation context. |
+| Prop       | Type                                  | Description                                                                                                                                                                                      |
+| ---------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **type**   | `"custom"`                            | Discriminator.                                                                                                                                                                                   |
+| **render** | `(props: RenderProps) => JSX.Element` | A function that returns the JSX to be rendered for this menu item. <br/>**`RenderProps`**: <br/>- `withinMobileNav: boolean`: True if the item is rendered within the mobile navigation context. |
 
 ---
 

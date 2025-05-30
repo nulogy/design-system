@@ -54,25 +54,3 @@ export const UserMenuTrigger = styled(RadixNavigationMenu.Trigger)<{ $isMobile?:
   }),
   addStyledProps
 );
-
-export const SubMenuContent = styled(RadixNavigationMenu.Content)(({ theme }) => ({
-  position: "absolute",
-  top: `calc(-1 * ${theme.space.x1})`,
-  right: `calc(100% - ${theme.space.half})`,
-  width: "max-content",
-  minWidth: "150px",
-  background: theme.colors.white,
-  borderRadius: theme.radii.medium,
-  boxShadow: theme.shadows.medium,
-  padding: theme.space.none,
-  listStyle: "none",
-}));
-
-export const SubMenuList = styled(RadixNavigationMenu.List)(({ theme }) => ({
-  listStyle: "none",
-  paddingLeft: theme.space.none,
-  paddingRight: theme.space.none,
-  paddingTop: theme.space.x1,
-  paddingBottom: theme.space.x1,
-  margin: 0,
-}));

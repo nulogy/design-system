@@ -295,67 +295,6 @@ export const MenuItems = () => {
               key: "nested-items",
               label: "A menu item can have nested items",
               type: "button",
-              items: [
-                {
-                  key: "nested-item-1",
-                  label: "Nested item 1",
-                  type: "button",
-                },
-                {
-                  key: "nested-item-2",
-                  label: "Nested item 2",
-                  type: "button",
-                },
-                {
-                  key: "nested-item-3",
-                  label: "A nested item can have nested items",
-                  type: "button",
-                  items: [
-                    {
-                      key: "nested-item-3-1",
-                      label: "A menu item can be custom rendered",
-                      type: "button",
-                      items: [
-                        {
-                          key: "custom-panel",
-                          type: "custom",
-                          render: () => (
-                            <div style={{ backgroundColor: "beige", padding: 24, borderRadius: 8 }}>
-                              This is a custom panel inside the user menu
-                            </div>
-                          ),
-                        },
-                        {
-                          key: "custom-button",
-                          type: "custom",
-                          render: () => (
-                            <button
-                              style={{
-                                backgroundColor: "#fff000",
-                                borderRadius: 12,
-                                color: "#000",
-                                cursor: "pointer",
-                                fontWeight: "bold",
-                                padding: "10px 15px",
-                                textAlign: "center",
-                                transition: "200ms",
-                                width: "100%",
-                                boxSizing: "border-box",
-                                border: 0,
-                                fontSize: 16,
-                                userSelect: "none",
-                                WebkitUserSelect: "none",
-                              }}
-                            >
-                              Custom button
-                            </button>
-                          ),
-                        },
-                      ],
-                    },
-                  ],
-                },
-              ],
             },
           ],
         }}
