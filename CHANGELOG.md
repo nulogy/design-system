@@ -1,3 +1,11 @@
+## [14.8.2](https://github.com/nulogy/design-system/compare/v14.8.1...v14.8.2) (2025-05-30)
+
+
+### Bug Fixes
+
+* make the application frame header sticky again ([b882b31](https://github.com/nulogy/design-system/commit/b882b31ae7444e1c25022cc7641543711ef8b3b1))
+* remove the ability to nest items in the user menu ([312a71f](https://github.com/nulogy/design-system/commit/312a71f6c6c5ab12c6ca9a8a308f15ad1391975f))
+
 ## [14.8.1](https://github.com/nulogy/design-system/compare/v14.8.0...v14.8.1) (2025-05-27)
 
 
