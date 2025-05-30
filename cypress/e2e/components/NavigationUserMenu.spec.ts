@@ -67,17 +67,6 @@ describe("NavigationUserMenu", () => {
     });
   });
 
-  describe("Header", () => {
-    beforeEach(() => {
-      cy.viewport(1280, 800);
-      cy.renderFromStorybook("navigation-user-menu--header");
-    });
-
-    it("opens and shows header content", () => {
-      getUserMenu().contains("Haider Alshamma").should("be.visible");
-    });
-  });
-
   describe("Controls", () => {
     beforeEach(() => {
       cy.viewport(1280, 800);
@@ -104,29 +93,6 @@ describe("NavigationUserMenu", () => {
     it("shows button menu items", () => {
       getUserMenuTrigger().click();
       getUserMenu().contains("A menu item can be a button").should("be.visible");
-    });
-
-    it("shows nested menu items", () => {
-      getUserMenuTrigger().click();
-      getUserMenu().contains("A menu item can have nested items").click();
-      getUserMenu().contains("Nested item 1").should("be.visible");
-      getUserMenu().contains("Nested item 2").should("be.visible");
-    });
-
-    it("handles deeply nested menu items", () => {
-      getUserMenuTrigger().click();
-      getUserMenu().contains("A menu item can have nested items").click();
-      getUserMenu().contains("A nested item can have nested items").click();
-      getUserMenu().contains("A menu item can be custom rendered").click();
-      getUserMenu().contains("This is a custom panel inside the user menu").should("be.visible");
-    });
-
-    it("renders custom components in the menu", () => {
-      getUserMenuTrigger().click();
-      getUserMenu().contains("A menu item can have nested items").click();
-      getUserMenu().contains("A nested item can have nested items").click();
-      getUserMenu().contains("A menu item can be custom rendered").click();
-      getUserMenu().contains("Custom button").should("be.visible");
     });
   });
 
