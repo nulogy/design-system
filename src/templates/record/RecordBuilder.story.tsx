@@ -261,30 +261,30 @@ export const Builder = ({
       currentPage: 1,
       content: (
         <DescriptionList columns={{ small: 1, medium: 2, large: 3 }}>
-                <DescriptionGroup>
-                  <DescriptionTerm>Record ID</DescriptionTerm>
-                  <DescriptionDetails>REC-2024-001</DescriptionDetails>
-                </DescriptionGroup>
-                <DescriptionGroup>
-                  <DescriptionTerm>Created by</DescriptionTerm>
-                  <DescriptionDetails>John Smith</DescriptionDetails>
-                </DescriptionGroup>
-                <DescriptionGroup>
-                  <DescriptionTerm>Created date</DescriptionTerm>
-                  <DescriptionDetails>2024-Mar-15 09:30 AM</DescriptionDetails>
-                </DescriptionGroup>
-                <DescriptionGroup>
-                  <DescriptionTerm>Last modified by</DescriptionTerm>
-                  <DescriptionDetails>Sarah Johnson</DescriptionDetails>
-                </DescriptionGroup>
-                <DescriptionGroup>
-                  <DescriptionTerm>Last modified date</DescriptionTerm>
-                  <DescriptionDetails>2024-Mar-16 02:15 PM</DescriptionDetails>
-                </DescriptionGroup>
-                <DescriptionGroup>
-                  <DescriptionTerm>Status</DescriptionTerm>
-                  <DescriptionDetails>Active</DescriptionDetails>
-                </DescriptionGroup>
+          <DescriptionGroup>
+            <DescriptionTerm>Record ID</DescriptionTerm>
+            <DescriptionDetails>REC-2024-001</DescriptionDetails>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <DescriptionTerm>Created by</DescriptionTerm>
+            <DescriptionDetails>John Smith</DescriptionDetails>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <DescriptionTerm>Created date</DescriptionTerm>
+            <DescriptionDetails>2024-Mar-15 09:30 AM</DescriptionDetails>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <DescriptionTerm>Last modified by</DescriptionTerm>
+            <DescriptionDetails>Sarah Johnson</DescriptionDetails>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <DescriptionTerm>Last modified date</DescriptionTerm>
+            <DescriptionDetails>2024-Mar-16 02:15 PM</DescriptionDetails>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <DescriptionTerm>Status</DescriptionTerm>
+            <DescriptionDetails>Active</DescriptionDetails>
+          </DescriptionGroup>
         </DescriptionList>
       ),
     };
@@ -444,36 +444,36 @@ export const Builder = ({
                             <DescriptionDetails>{value}</DescriptionDetails>
                           </React.Fragment>
                         ))}
-                </DescriptionGroup>
+                      </DescriptionGroup>
                     ))
                   ) : (
                     <>
-                <DescriptionGroup>
+                      <DescriptionGroup>
                         <DescriptionTerm>Record ID</DescriptionTerm>
                         <DescriptionDetails>REC-2024-001</DescriptionDetails>
-                </DescriptionGroup>
-                <DescriptionGroup>
+                      </DescriptionGroup>
+                      <DescriptionGroup>
                         <DescriptionTerm>Created by</DescriptionTerm>
                         <DescriptionDetails>John Smith</DescriptionDetails>
-                </DescriptionGroup>
-                <DescriptionGroup>
+                      </DescriptionGroup>
+                      <DescriptionGroup>
                         <DescriptionTerm>Created date</DescriptionTerm>
                         <DescriptionDetails>2024-Mar-15 09:30 AM</DescriptionDetails>
-                </DescriptionGroup>
-                <DescriptionGroup>
+                      </DescriptionGroup>
+                      <DescriptionGroup>
                         <DescriptionTerm>Last modified by</DescriptionTerm>
                         <DescriptionDetails>Sarah Johnson</DescriptionDetails>
-                </DescriptionGroup>
-                <DescriptionGroup>
+                      </DescriptionGroup>
+                      <DescriptionGroup>
                         <DescriptionTerm>Last modified date</DescriptionTerm>
                         <DescriptionDetails>2024-Mar-16 02:15 PM</DescriptionDetails>
-                </DescriptionGroup>
-                <DescriptionGroup>
+                      </DescriptionGroup>
+                      <DescriptionGroup>
                         <DescriptionTerm>Status</DescriptionTerm>
                         <DescriptionDetails>Active</DescriptionDetails>
-                </DescriptionGroup>
-            </>
-          )}
+                      </DescriptionGroup>
+                    </>
+                  )}
                 </DescriptionList>
               ) : (
                 <Box>
@@ -581,30 +581,30 @@ export const Builder = ({
         {section.includeActions &&
           (section.actionType === "groups" ? (
             <Flex gap="x2" alignItems="center">
-                  <IconicButton icon="add" tooltip="New" onClick={handleCreateNewClick}>
-                    New
-                  </IconicButton>
-                  <IconicButton icon="print" tooltip="Print">
-                    Print
-                  </IconicButton>
-                  <VerticalDivider />
-                  <IconicButton icon="getApp" tooltip="Import">
-                    Import
-                  </IconicButton>
-                  <IconicButton icon="publish" tooltip="Export">
-                    Export
-                  </IconicButton>
-                  <VerticalDivider />
-                  <IconicButton icon="filter" tooltip="Filter">
-                    Filter
-                  </IconicButton>
-                </Flex>
+              <IconicButton icon="add" tooltip="New" onClick={handleCreateNewClick}>
+                New
+              </IconicButton>
+              <IconicButton icon="print" tooltip="Print">
+                Print
+              </IconicButton>
+              <VerticalDivider />
+              <IconicButton icon="getApp" tooltip="Import">
+                Import
+              </IconicButton>
+              <IconicButton icon="publish" tooltip="Export">
+                Export
+              </IconicButton>
+              <VerticalDivider />
+              <IconicButton icon="filter" tooltip="Filter">
+                Filter
+              </IconicButton>
+            </Flex>
           ) : (
             <IconicButton icon="edit" onClick={() => setSelectedSectionId(section.id)}>
               Edit details
             </IconicButton>
           ))}
-              </Flex>
+      </Flex>
     );
 
     switch (section.type) {
@@ -765,82 +765,85 @@ export const Builder = ({
     },
   ];
 
-  const tableData = React.useMemo(() => [
-    {
-      id: "1134",
-      workOrderCode: "1134",
-      customerName: "Company ABC",
-      itemCode: "DEMO123",
-      bomVersion: "Peanut Butter Mix",
-      unitsExpected: 6000.0,
-      status: "Booked",
-      plannedStart: "2023-Sep-01 02:09 PM",
-      plannedEnd: "2023-Sep-08 02:09 PM",
-    },
-    {
-      id: "1133",
-      workOrderCode: "1133",
-      customerName: "Company ABC",
-      itemCode: "DEMO123",
-      bomVersion: "Peanut Butter Mix",
-      unitsExpected: 5000.0,
-      status: "Booked",
-      plannedStart: "2023-Aug-01 01:57 PM",
-      plannedEnd: "2023-Aug-08 01:58 PM",
-    },
-    {
-      id: "1076",
-      workOrderCode: "1076",
-      customerName: "Hackathon Team 1 Customer",
-      itemCode: "Brandon's Test Item",
-      bomVersion: "",
-      unitsExpected: 0.0,
-      status: "Open",
-      plannedStart: "",
-      plannedEnd: "",
-    },
-    {
-      id: "693",
-      workOrderCode: "WO-10839",
-      customerName: "Company ABC",
-      itemCode: "Peanut Butter Jar",
-      bomVersion: "",
-      unitsExpected: 10000.0,
-      status: "Open",
-      plannedStart: "",
-      plannedEnd: "",
-    },
-    {
-      id: "20",
-      workOrderCode: "Bradon's Test Work Order",
-      customerName: "Company ABC",
-      itemCode: "Brandon's Test Item",
-      bomVersion: "",
-      unitsExpected: 1000.0,
-      status: "Open",
-      plannedStart: "",
-      plannedEnd: "",
-    },
-    // Generate 45 more rows
-    ...Array.from({ length: 45 }, (_, i) => ({
-      id: `${1000 + i}`,
-      workOrderCode: `WO-${1000 + i}`,
-      customerName: i % 2 === 0 ? "Company ABC" : "Hackathon Team 1 Customer",
-      itemCode: i % 2 === 0 ? "DEMO123" : "Brandon's Test Item",
-      bomVersion: i % 2 === 0 ? "Peanut Butter Mix" : "",
-      unitsExpected: Math.floor(Math.random() * 10000),
-      status: i % 3 === 0 ? "Open" : i % 3 === 1 ? "Booked" : "In Progress",
-      plannedStart: i % 2 === 0 ? "2023-Sep-01 02:09 PM" : "",
-      plannedEnd: i % 2 === 0 ? "2023-Sep-08 02:09 PM" : "",
-    })),
-  ], []); // Empty dependency array ensures data is only created once
+  const tableData = React.useMemo(
+    () => [
+      {
+        id: "1134",
+        workOrderCode: "1134",
+        customerName: "Company ABC",
+        itemCode: "DEMO123",
+        bomVersion: "Peanut Butter Mix",
+        unitsExpected: 6000.0,
+        status: "Booked",
+        plannedStart: "2023-Sep-01 02:09 PM",
+        plannedEnd: "2023-Sep-08 02:09 PM",
+      },
+      {
+        id: "1133",
+        workOrderCode: "1133",
+        customerName: "Company ABC",
+        itemCode: "DEMO123",
+        bomVersion: "Peanut Butter Mix",
+        unitsExpected: 5000.0,
+        status: "Booked",
+        plannedStart: "2023-Aug-01 01:57 PM",
+        plannedEnd: "2023-Aug-08 01:58 PM",
+      },
+      {
+        id: "1076",
+        workOrderCode: "1076",
+        customerName: "Hackathon Team 1 Customer",
+        itemCode: "Brandon's Test Item",
+        bomVersion: "",
+        unitsExpected: 0.0,
+        status: "Open",
+        plannedStart: "",
+        plannedEnd: "",
+      },
+      {
+        id: "693",
+        workOrderCode: "WO-10839",
+        customerName: "Company ABC",
+        itemCode: "Peanut Butter Jar",
+        bomVersion: "",
+        unitsExpected: 10000.0,
+        status: "Open",
+        plannedStart: "",
+        plannedEnd: "",
+      },
+      {
+        id: "20",
+        workOrderCode: "Bradon's Test Work Order",
+        customerName: "Company ABC",
+        itemCode: "Brandon's Test Item",
+        bomVersion: "",
+        unitsExpected: 1000.0,
+        status: "Open",
+        plannedStart: "",
+        plannedEnd: "",
+      },
+      // Generate 45 more rows
+      ...Array.from({ length: 45 }, (_, i) => ({
+        id: `${1000 + i}`,
+        workOrderCode: `WO-${1000 + i}`,
+        customerName: i % 2 === 0 ? "Company ABC" : "Hackathon Team 1 Customer",
+        itemCode: i % 2 === 0 ? "DEMO123" : "Brandon's Test Item",
+        bomVersion: i % 2 === 0 ? "Peanut Butter Mix" : "",
+        unitsExpected: Math.floor(Math.random() * 10000),
+        status: i % 3 === 0 ? "Open" : i % 3 === 1 ? "Booked" : "In Progress",
+        plannedStart: i % 2 === 0 ? "2023-Sep-01 02:09 PM" : "",
+        plannedEnd: i % 2 === 0 ? "2023-Sep-08 02:09 PM" : "",
+      })),
+    ],
+    []
+  ); // Empty dependency array ensures data is only created once
 
   // Calculate paginated data only when pagination is enabled
   const paginatedData = React.useMemo(() => {
     if (!indexConfig.showPagination) {
       return indexConfig.uploadedData || tableData;
     }
-    
+
     const data = indexConfig.uploadedData || tableData;
     const startIndex = (currentPage - 1) * indexConfig.numberOfRows;
     const endIndex = startIndex + indexConfig.numberOfRows;
@@ -850,12 +853,12 @@ export const Builder = ({
   const handleIndexConfigChange = (changes: Partial<typeof indexConfig>) => {
     setIndexConfig((prev) => {
       const newConfig = { ...prev, ...changes };
-      
+
       // If pagination is being disabled, reset to page 1
       if (changes.showPagination === false) {
         setCurrentPage(1);
       }
-      
+
       return newConfig;
     });
   };
@@ -865,20 +868,23 @@ export const Builder = ({
     reader.onload = (e) => {
       const text = e.target?.result as string;
       const csvRows = text.split("\n");
-      
+
       // Get headers from first row and remove quotes
-      const headers = csvRows[0].split(",").map(header => header.trim().replace(/^"|"$/g, ""));
-      
+      const headers = csvRows[0].split(",").map((header) => header.trim().replace(/^"|"$/g, ""));
+
       // Initialize visibility for all columns
-      const initialVisibility = headers.reduce((acc, header) => {
-        acc[header.toLowerCase().replace(/\s+/g, '_')] = true;
-        return acc;
-      }, { actions: true });
+      const initialVisibility = headers.reduce(
+        (acc, header) => {
+          acc[header.toLowerCase().replace(/\s+/g, "_")] = true;
+          return acc;
+        },
+        { actions: true }
+      );
 
       // Create table columns from headers
       const newColumns = headers.map((header, index) => ({
         label: header,
-        dataKey: header.toLowerCase().replace(/\s+/g, '_'),
+        dataKey: header.toLowerCase().replace(/\s+/g, "_"),
         ...(index === 0 && {
           cellFormatter: (props) => (
             <Link href={`#/work-orders/${props.row.id}`} underline={false}>
@@ -899,17 +905,17 @@ export const Builder = ({
 
       // Process data rows
       const data = csvRows.slice(1).map((row, rowIndex) => {
-        const values = row.split(",").map(value => value.trim().replace(/^"|"$/g, ""));
+        const values = row.split(",").map((value) => value.trim().replace(/^"|"$/g, ""));
         const obj: Record<string, string> = {
           id: `row-${rowIndex + 1}`, // Add an id for each row
         };
         headers.forEach((header, index) => {
-          obj[header.toLowerCase().replace(/\s+/g, '_')] = values[index] || "";
+          obj[header.toLowerCase().replace(/\s+/g, "_")] = values[index] || "";
         });
         return obj;
       });
 
-      handleIndexConfigChange({ 
+      handleIndexConfigChange({
         uploadedData: data,
         tableColumns: newColumns,
         visibleColumns: initialVisibility,
@@ -919,7 +925,7 @@ export const Builder = ({
   };
 
   const handleColumnVisibilityChange = (columnKey: string, isVisible: boolean) => {
-    setIndexConfig(prev => ({
+    setIndexConfig((prev) => ({
       ...prev,
       visibleColumns: {
         ...prev.visibleColumns,
@@ -931,9 +937,7 @@ export const Builder = ({
   // Filter columns based on visibility
   const visibleTableColumns = React.useMemo(() => {
     if (!indexConfig.tableColumns) return tableColumns;
-    return indexConfig.tableColumns.filter(column => 
-      indexConfig.visibleColumns[column.dataKey] !== false
-    );
+    return indexConfig.tableColumns.filter((column) => indexConfig.visibleColumns[column.dataKey] !== false);
   }, [indexConfig.tableColumns, indexConfig.visibleColumns]);
 
   const IndexPageElement = (
@@ -976,8 +980,8 @@ export const Builder = ({
         ]}
       />
       <Box height="calc(100vh - 64px)" overflow="auto">
-        <Page 
-          title={indexConfig.title} 
+        <Page
+          title={indexConfig.title}
           breadcrumbs={breadcrumbs}
           renderHeader={() => (
             <Header
@@ -1060,26 +1064,20 @@ export const Builder = ({
             </FormSection>
             <FormSection>
               <FieldLabel labelText="Item code">
-                <Input
-                  value={filters.itemCode}
-                  onChange={(e) => handleFilterChange("itemCode", e.target.value)}
-                />
+                <Input value={filters.itemCode} onChange={(e) => handleFilterChange("itemCode", e.target.value)} />
               </FieldLabel>
             </FormSection>
             <FormSection>
               <FieldLabel labelText="BOM version">
-                <Input
-                  value={filters.bomVersion}
-                  onChange={(e) => handleFilterChange("bomVersion", e.target.value)}
-                />
+                <Input value={filters.bomVersion} onChange={(e) => handleFilterChange("bomVersion", e.target.value)} />
               </FieldLabel>
             </FormSection>
             <FormSection>
               <FieldLabel labelText="Status">
-              <Select
+                <Select
                   value={filters.status}
                   onChange={(value) => handleFilterChange("status", value)}
-                options={[
+                  options={[
                     { value: "", label: "All" },
                     { value: "Open", label: "Open" },
                     { value: "Booked", label: "Booked" },
@@ -1098,10 +1096,7 @@ export const Builder = ({
             </FormSection>
             <FormSection>
               <FieldLabel labelText="Planned end">
-                <DatePicker
-                  selected={filters.plannedEnd}
-                  onChange={(date) => handleFilterChange("plannedEnd", date)}
-                />
+                <DatePicker selected={filters.plannedEnd} onChange={(date) => handleFilterChange("plannedEnd", date)} />
               </FieldLabel>
             </FormSection>
           </Form>
@@ -1112,10 +1107,7 @@ export const Builder = ({
         </Sidebar>
       )}
       {isDeleteModalOpen && (
-        <Modal
-          title="Delete work order"
-          onRequestClose={handleCloseDeleteModal}
-        >
+        <Modal title="Delete work order" onRequestClose={handleCloseDeleteModal}>
           <Text>Are you sure you want to delete this work order?</Text>
           <Flex gap="x2" justifyContent="flex-end" mt="x4">
             <QuietButton onClick={handleCloseDeleteModal}>Cancel</QuietButton>
@@ -1224,12 +1216,12 @@ export const Builder = ({
                 <Box pb="x2">
                   <Heading4 mb="x2">Layout</Heading4>
                   <FieldLabel labelText="Type">
-              <Select
+                    <Select
                       value={section.type}
                       onChange={(value) =>
                         handleSectionChange(section.id, { type: value as "Default" | "Card" | "Tab" })
                       }
-                options={[
+                      options={[
                         { value: "Default", label: "Default" },
                         { value: "Card", label: "Card" },
                         { value: "Tab", label: "Tab" },
@@ -1239,10 +1231,10 @@ export const Builder = ({
                 </Box>
                 <Box pb="x2">
                   <FieldLabel labelText="Width">
-              <Select
+                    <Select
                       value={section.width}
                       onChange={(value) => handleSectionChange(section.id, { width: value as "Full" | "Centered" })}
-                options={[
+                      options={[
                         { value: "Full", label: "Full width" },
                         { value: "Centered", label: "Centered" },
                       ]}
@@ -1280,12 +1272,12 @@ export const Builder = ({
                 {section.includeActions && (
                   <Box pb="x2">
                     <FieldLabel labelText="Action type">
-              <Select
+                      <Select
                         value={section.actionType || "edit"}
                         onChange={(value) =>
                           handleSectionChange(section.id, { actionType: value as "edit" | "groups" })
                         }
-                options={[
+                        options={[
                           { value: "edit", label: "Edit only" },
                           { value: "groups", label: "Groups of actions" },
                         ]}
@@ -1295,12 +1287,12 @@ export const Builder = ({
                 )}
                 <Box pb="x2">
                   <FieldLabel labelText="Main content">
-              <Select
+                    <Select
                       value={section.contentType}
                       onChange={(value) =>
                         handleSectionChange(section.id, { contentType: value as "DescriptionList" | "Table" })
                       }
-                options={[
+                      options={[
                         { value: "DescriptionList", label: "Description list" },
                         { value: "Table", label: "Table" },
                       ]}
@@ -1350,7 +1342,7 @@ export const Builder = ({
                     />
                   </FieldLabel>
                 </Box>
-          </Form>
+              </Form>
               <HorizontalDivider />
             </Box>
           ))}
@@ -1358,12 +1350,8 @@ export const Builder = ({
           <Box>
             <Flex gap="x2" justifyContent="space-between">
               <PrimaryButton onClick={handleAddSection}>Add section</PrimaryButton>
-              <IconicButton 
-                icon="getApp" 
-                tooltip="Download layout" 
-                onClick={handleExportLayout}
-              />
-          </Flex>
+              <IconicButton icon="getApp" tooltip="Download layout" onClick={handleExportLayout} />
+            </Flex>
           </Box>
         </Sidebar>
       )}
@@ -1617,11 +1605,7 @@ export const Builder = ({
               <Box>
                 <Flex gap="x2" justifyContent="space-between">
                   <PrimaryButton onClick={handleAddSection}>Add section</PrimaryButton>
-                  <IconicButton 
-                    icon="getApp" 
-                    tooltip="Download layout" 
-                    onClick={handleExportLayout}
-                  />
+                  <IconicButton icon="getApp" tooltip="Download layout" onClick={handleExportLayout} />
                 </Flex>
               </Box>
             </>
@@ -1698,17 +1682,18 @@ export const Builder = ({
                   {indexConfig.tableColumns && (
                     <Box pb="x2">
                       <Heading4 mb="x2">Column visibility</Heading4>
-                      {indexConfig.tableColumns.map((column) => (
-                        column.dataKey !== "actions" && (
-                          <Box key={column.dataKey} pb="x1">
-                            <Checkbox
-                              labelText={column.label}
-                              checked={indexConfig.visibleColumns[column.dataKey] !== false}
-                              onChange={(e) => handleColumnVisibilityChange(column.dataKey, e.target.checked)}
-                            />
-                          </Box>
-                        )
-                      ))}
+                      {indexConfig.tableColumns.map(
+                        (column) =>
+                          column.dataKey !== "actions" && (
+                            <Box key={column.dataKey} pb="x1">
+                              <Checkbox
+                                labelText={column.label}
+                                checked={indexConfig.visibleColumns[column.dataKey] !== false}
+                                onChange={(e) => handleColumnVisibilityChange(column.dataKey, e.target.checked)}
+                              />
+                            </Box>
+                          )
+                      )}
                     </Box>
                   )}
                 </Form>
@@ -1733,4 +1718,4 @@ export const Builder = ({
 
 Builder.parameters = {
   chromatic: { disable: true },
-}; 
+};
