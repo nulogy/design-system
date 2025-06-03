@@ -1169,6 +1169,14 @@ export const Builder = ({
 
                     <Box pb="x2" mt="x3">
                       <Heading4 mb="x2">Content</Heading4>
+                      <Box pb="x2">
+                        <FieldLabel labelText="Title">
+                          <Input
+                            value={section.title}
+                            onChange={(e) => handleSectionChange(section.id, { title: e.target.value })}
+                          />
+                        </FieldLabel>
+                      </Box>
                       <Checkbox
                         labelText="Include title"
                         checked={section.includeTitle}
