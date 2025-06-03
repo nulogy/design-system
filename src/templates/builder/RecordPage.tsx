@@ -1,5 +1,17 @@
-import React from "react";
-import { Box, Flex, IconicButton, Link, Breadcrumbs, VerticalDivider, Heading2, Card, Tabs, Tab } from "../../index";
+import React, { useState } from "react";
+import {
+  Box,
+  Flex,
+  IconicButton,
+  Link,
+  Breadcrumbs,
+  VerticalDivider,
+  Heading2,
+  Card,
+  Tabs,
+  Tab,
+  Input,
+} from "../../index";
 import { Section, HeaderConfig } from "./types";
 
 interface RecordPageProps {
@@ -47,37 +59,69 @@ const RecordPage: React.FC<RecordPageProps> = (props) => {
     </Breadcrumbs>
   );
 
-  const renderHeader = (section: Section) => (
-    <Flex justifyContent={section.includeTitle ? "space-between" : "flex-end"} alignItems="center" mb="x2">
-      {section.includeTitle && <Heading2 mb="0">{section.title}</Heading2>}
-      {section.includeActions &&
-        (section.actionType === "groups" ? (
-          <Flex gap="x2" alignItems="center" mr="x1">
-            <IconicButton icon="add" tooltip="New" onClick={onCreateNewClick}>
-              New
+  const renderHeader = (section: Section) => {
+    const [isEditingTitle, setIsEditingTitle] = useState(false);
+    const [editedTitle, setEditedTitle] = useState(section.title);
+
+    const handleTitleSave = () => {
+      onSectionChange(section.id, { title: editedTitle });
+      setIsEditingTitle(false);
+    };
+
+    const handleTitleKeyDown = (e: React.KeyboardEvent) => {
+      if (e.key === "Enter") {
+        handleTitleSave();
+      } else if (e.key === "Escape") {
+        setIsEditingTitle(false);
+        setEditedTitle(section.title);
+      }
+    };
+
+    return (
+      <Flex justifyContent={section.includeTitle ? "space-between" : "flex-end"} alignItems="center" mb="x2">
+        {section.includeTitle &&
+          (isEditingTitle ? (
+            <Input
+              value={editedTitle}
+              onChange={(e) => setEditedTitle(e.target.value)}
+              onBlur={handleTitleSave}
+              onKeyDown={handleTitleKeyDown}
+              autoFocus
+            />
+          ) : (
+            <Heading2 mb="0" onClick={() => setIsEditingTitle(true)} style={{ cursor: "pointer" }}>
+              {section.title}
+            </Heading2>
+          ))}
+        {section.includeActions &&
+          (section.actionType === "groups" ? (
+            <Flex gap="x2" alignItems="center" mr="x1">
+              <IconicButton icon="add" tooltip="New" onClick={onCreateNewClick}>
+                New
+              </IconicButton>
+              <IconicButton icon="print" tooltip="Print">
+                Print
+              </IconicButton>
+              <VerticalDivider />
+              <IconicButton icon="getApp" tooltip="Import">
+                Import
+              </IconicButton>
+              <IconicButton icon="publish" tooltip="Export">
+                Export
+              </IconicButton>
+              <VerticalDivider />
+              <IconicButton icon="filter" tooltip="Filter">
+                Filter
+              </IconicButton>
+            </Flex>
+          ) : (
+            <IconicButton icon="edit" onClick={() => onSectionChange(section.id, {})}>
+              Edit
             </IconicButton>
-            <IconicButton icon="print" tooltip="Print">
-              Print
-            </IconicButton>
-            <VerticalDivider />
-            <IconicButton icon="getApp" tooltip="Import">
-              Import
-            </IconicButton>
-            <IconicButton icon="publish" tooltip="Export">
-              Export
-            </IconicButton>
-            <VerticalDivider />
-            <IconicButton icon="filter" tooltip="Filter">
-              Filter
-            </IconicButton>
-          </Flex>
-        ) : (
-          <IconicButton icon="edit" onClick={() => onSectionChange(section.id, {})}>
-            Edit
-          </IconicButton>
-        ))}
-    </Flex>
-  );
+          ))}
+      </Flex>
+    );
+  };
 
   const renderSection = (section: Section) => {
     const widthProps = section.width === "Centered" ? { maxWidth: section.maxWidth || 1360, mx: "auto" } : {};
