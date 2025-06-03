@@ -1,15 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Checkbox,
-  Divider,
-  FieldLabel,
-  Form,
-  Heading3,
-  Heading4,
-  Input,
-  Select,
-} from "../../index";
+import { Box, Checkbox, Divider, FieldLabel, Form, Heading3, Heading4, Input, Select } from "../../index";
 import { IndexConfig } from "./types";
 
 interface IndexConfigSidebarProps {
@@ -32,10 +22,7 @@ export const IndexConfigSidebar: React.FC<IndexConfigSidebarProps> = ({
         <Form>
           <Box pb="x2">
             <FieldLabel labelText="Title">
-              <Input
-                value={config.title}
-                onChange={(e) => onConfigChange({ title: e.target.value })}
-              />
+              <Input value={config.title} onChange={(e) => onConfigChange({ title: e.target.value })} />
             </FieldLabel>
           </Box>
           <Box pb="x2">
@@ -124,4 +111,4 @@ export const IndexConfigSidebar: React.FC<IndexConfigSidebarProps> = ({
       </Box>
     </>
   );
-}; 
+};

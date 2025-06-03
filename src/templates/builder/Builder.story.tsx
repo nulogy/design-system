@@ -670,16 +670,28 @@ export const Builder = ({
         {section.includeActions &&
           (section.actionType === "groups" ? (
             <Flex gap="x2" alignItems="center" mr="x1">
-              <IconicButton icon="add" tooltip="New" onClick={handleCreateNewClick}>New</IconicButton>
-              <IconicButton icon="print" tooltip="Print">Print</IconicButton>
+              <IconicButton icon="add" tooltip="New" onClick={handleCreateNewClick}>
+                New
+              </IconicButton>
+              <IconicButton icon="print" tooltip="Print">
+                Print
+              </IconicButton>
               <VerticalDivider />
-              <IconicButton icon="getApp" tooltip="Import">Import</IconicButton>
-              <IconicButton icon="publish" tooltip="Export">Export</IconicButton>
+              <IconicButton icon="getApp" tooltip="Import">
+                Import
+              </IconicButton>
+              <IconicButton icon="publish" tooltip="Export">
+                Export
+              </IconicButton>
               <VerticalDivider />
-              <IconicButton icon="filter" tooltip="Filter">Filter</IconicButton>
+              <IconicButton icon="filter" tooltip="Filter">
+                Filter
+              </IconicButton>
             </Flex>
           ) : (
-            <IconicButton icon="edit" onClick={() => setSelectedSectionId(section.id)}>Edit details</IconicButton>
+            <IconicButton icon="edit" onClick={() => setSelectedSectionId(section.id)}>
+              Edit details
+            </IconicButton>
           ))}
       </Flex>
     );
@@ -689,12 +701,10 @@ export const Builder = ({
     switch (section.type) {
       case "Card":
         return (
-         
-            <Card px="x4" py="x3" mb="x3" {...widthProps}>
-              {renderHeader()}
-              {section.content}
-            </Card>
-
+          <Card px="x4" py="x3" mb="x3" {...widthProps}>
+            {renderHeader()}
+            {section.content}
+          </Card>
         );
       case "Tab":
         return (
@@ -831,7 +841,10 @@ export const Builder = ({
     setCurrentPage(page);
   };
 
-  const paginatedData = tableData.slice((currentPage - 1) * indexConfig.numberOfRows, currentPage * indexConfig.numberOfRows);
+  const paginatedData = tableData.slice(
+    (currentPage - 1) * indexConfig.numberOfRows,
+    currentPage * indexConfig.numberOfRows
+  );
 
   const handleIndexConfigChange = (changes: Partial<IndexConfig>) => {
     setIndexConfig((prev) => {
@@ -844,9 +857,13 @@ export const Builder = ({
 
       // If table actions are being disabled, update the table columns
       if (changes.includeTableActions === false && prev.tableColumns) {
-        const columnsWithoutActions = prev.tableColumns.filter(col => col.dataKey !== 'actions');
+        const columnsWithoutActions = prev.tableColumns.filter((col) => col.dataKey !== "actions");
         newConfig.tableColumns = columnsWithoutActions;
-      } else if (changes.includeTableActions === true && prev.tableColumns && !prev.tableColumns.find(col => col.dataKey === 'actions')) {
+      } else if (
+        changes.includeTableActions === true &&
+        prev.tableColumns &&
+        !prev.tableColumns.find((col) => col.dataKey === "actions")
+      ) {
         newConfig.tableColumns = [
           ...prev.tableColumns,
           {
@@ -866,17 +883,20 @@ export const Builder = ({
     const reader = new FileReader();
     reader.onload = (e) => {
       const text = e.target?.result as string;
-      const rows = text.split("\n").filter(row => row.trim());
-      const csvHeaders = rows[0].split(",").map(header => header.trim().replace(/^["']|["']$/g, ""));
-      
+      const rows = text.split("\n").filter((row) => row.trim());
+      const csvHeaders = rows[0].split(",").map((header) => header.trim().replace(/^["']|["']$/g, ""));
+
       // Initialize visibility for all columns
-      const newVisibleColumns = csvHeaders.reduce((acc, header) => {
-        acc[header] = true;
-        return acc;
-      }, {} as Record<string, boolean>);
+      const newVisibleColumns = csvHeaders.reduce(
+        (acc, header) => {
+          acc[header] = true;
+          return acc;
+        },
+        {} as Record<string, boolean>
+      );
 
       // Explicitly type newTableColumns with all possible properties
-      const newTableColumns: IndexConfig['tableColumns'] = csvHeaders.map(header => ({
+      const newTableColumns: IndexConfig["tableColumns"] = csvHeaders.map((header) => ({
         label: header,
         dataKey: header,
         width: undefined,
@@ -890,11 +910,7 @@ export const Builder = ({
           dataKey: "actions",
           width: "40px",
           cellFormatter: (props) => (
-            <IconicButton
-              icon="delete"
-              tooltip="Delete"
-              onClick={() => handleDeleteClick(props.row)}
-            />
+            <IconicButton icon="delete" tooltip="Delete" onClick={() => handleDeleteClick(props.row)} />
           ),
         });
         newVisibleColumns.actions = true;
@@ -902,17 +918,20 @@ export const Builder = ({
 
       // Process data rows
       const newData = rows.slice(1).map((row, index) => {
-        const values = row.split(",").map(value => value.trim().replace(/^["']|["']$/g, ""));
-        const rowData = csvHeaders.reduce((acc, header, index) => {
-          acc[header] = values[index] || "";
-          return acc;
-        }, { id: `row-${index + 1}` } as Record<string, any>);
+        const values = row.split(",").map((value) => value.trim().replace(/^["']|["']$/g, ""));
+        const rowData = csvHeaders.reduce(
+          (acc, header, index) => {
+            acc[header] = values[index] || "";
+            return acc;
+          },
+          { id: `row-${index + 1}` } as Record<string, any>
+        );
 
         return rowData;
       });
 
       setTableData(newData);
-      setIndexConfig(prev => ({
+      setIndexConfig((prev) => ({
         ...prev,
         uploadedData: newData,
         tableColumns: newTableColumns,
@@ -1395,7 +1414,10 @@ export const Builder = ({
                         />
                       </FieldLabel>
                       <FieldLabel labelText="Item code">
-                        <Input value={filters.itemCode} onChange={(e) => handleFilterChange("itemCode", e.target.value)} />
+                        <Input
+                          value={filters.itemCode}
+                          onChange={(e) => handleFilterChange("itemCode", e.target.value)}
+                        />
                       </FieldLabel>
                       <FieldLabel labelText="BOM version">
                         <Select
@@ -1425,7 +1447,10 @@ export const Builder = ({
                         />
                       </FieldLabel>
                       <FieldLabel labelText="Planned end">
-                        <DatePicker selected={filters.plannedEnd} onChange={(date) => handleFilterChange("plannedEnd", date)} />
+                        <DatePicker
+                          selected={filters.plannedEnd}
+                          onChange={(date) => handleFilterChange("plannedEnd", date)}
+                        />
                       </FieldLabel>
                     </Flex>
                   </Sidebar>
@@ -1441,7 +1466,8 @@ export const Builder = ({
                     }
                   >
                     <Text>
-                      Are you sure you want to delete work order {selectedRecord?.workOrderCode}? This action cannot be undone.
+                      Are you sure you want to delete work order {selectedRecord?.workOrderCode}? This action cannot be
+                      undone.
                     </Text>
                   </Modal>
                 </Box>

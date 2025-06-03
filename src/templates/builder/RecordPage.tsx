@@ -1,16 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Flex,
-  IconicButton,
-  Link,
-  Breadcrumbs,
-  VerticalDivider,
-  Heading2,
-  Card,
-  Tabs,
-  Tab,
-} from "../../index";
+import { Box, Flex, IconicButton, Link, Breadcrumbs, VerticalDivider, Heading2, Card, Tabs, Tab } from "../../index";
 import { Section, HeaderConfig } from "./types";
 
 interface RecordPageProps {
@@ -64,16 +53,28 @@ const RecordPage: React.FC<RecordPageProps> = (props) => {
       {section.includeActions &&
         (section.actionType === "groups" ? (
           <Flex gap="x2" alignItems="center" mr="x1">
-            <IconicButton icon="add" tooltip="New" onClick={onCreateNewClick}>New</IconicButton>
-            <IconicButton icon="print" tooltip="Print">Print</IconicButton>
+            <IconicButton icon="add" tooltip="New" onClick={onCreateNewClick}>
+              New
+            </IconicButton>
+            <IconicButton icon="print" tooltip="Print">
+              Print
+            </IconicButton>
             <VerticalDivider />
-            <IconicButton icon="getApp" tooltip="Import">Import</IconicButton>
-            <IconicButton icon="publish" tooltip="Export">Export</IconicButton>
+            <IconicButton icon="getApp" tooltip="Import">
+              Import
+            </IconicButton>
+            <IconicButton icon="publish" tooltip="Export">
+              Export
+            </IconicButton>
             <VerticalDivider />
-            <IconicButton icon="filter" tooltip="Filter">Filter</IconicButton>
+            <IconicButton icon="filter" tooltip="Filter">
+              Filter
+            </IconicButton>
           </Flex>
         ) : (
-          <IconicButton icon="edit" onClick={() => onSectionChange(section.id, {})}>Edit</IconicButton>
+          <IconicButton icon="edit" onClick={() => onSectionChange(section.id, {})}>
+            Edit
+          </IconicButton>
         ))}
     </Flex>
   );
@@ -127,9 +128,8 @@ const RecordPage: React.FC<RecordPageProps> = (props) => {
         }
 
         // Get width props from the first tab in the group
-        const widthProps = tabGroup[0].width === "Centered" 
-          ? { maxWidth: tabGroup[0].maxWidth || 1360, mx: "auto" } 
-          : {};
+        const widthProps =
+          tabGroup[0].width === "Centered" ? { maxWidth: tabGroup[0].maxWidth || 1360, mx: "auto" } : {};
 
         result.push(
           <Box key={`tab-group-${i}`} {...widthProps} my="x3">
@@ -154,11 +154,7 @@ const RecordPage: React.FC<RecordPageProps> = (props) => {
     return result;
   };
 
-  return (
-    <>
-      {renderSections()}
-    </>
-  );
+  return <>{renderSections()}</>;
 };
 
-export default RecordPage; 
+export default RecordPage;

@@ -78,4 +78,4 @@ export interface BuilderState {
     plannedEnd: Date | null;
   };
   indexConfig: IndexConfig;
-} 
+}

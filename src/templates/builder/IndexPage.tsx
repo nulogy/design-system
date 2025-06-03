@@ -176,4 +176,4 @@ export const IndexPage: React.FC<IndexPageProps> = ({
       </Page>
     </ApplicationFrame>
   );
-}; 
+};
