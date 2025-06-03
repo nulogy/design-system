@@ -36,7 +36,11 @@ import {
   Heading3,
   Card,
   Navigation,
+  Modal,
+  ButtonGroup,
+  DangerButton,
 } from "../../index";
+import { toast } from "react-hot-toast";
 
 export default {
   title: "Templates/Record/Structure",
@@ -68,6 +72,7 @@ export const WithTabs = () => {
   const [isDetailsSidebarOpen, setIsDetailsSidebarOpen] = useState(false);
   const [selectedRecord, setSelectedRecord] = useState(null);
   const [isCreatingNew, setIsCreatingNew] = useState(false);
+  const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
 
   const handleEditClick = () => {
     setIsSidebarOpen(true);
@@ -91,9 +96,57 @@ export const WithTabs = () => {
 
   const handleCloseDetailsSidebar = () => {
     setIsDetailsSidebarOpen(false);
-    setSelectedRecord(null);
     setIsCreatingNew(false);
   };
+
+  const handleSaveChanges = () => {
+    console.log("Saving changes");
+    handleCloseSidebar();
+    toast.success("Changes saved successfully");
+  };
+
+  const handleSaveDetailsChanges = () => {
+    handleCloseDetailsSidebar();
+    toast.success(isCreatingNew ? "Record created successfully" : "Record updated successfully");
+  };
+
+  const handleDeleteClick = (record) => {
+    setSelectedRecord(record);
+    setIsDeleteModalOpen(true);
+  };
+
+  const handleCloseDeleteModal = () => {
+    setIsDeleteModalOpen(false);
+    setSelectedRecord(null);
+  };
+
+  const handleConfirmDelete = () => {
+    console.log("Deleting record:", selectedRecord);
+    setTableData((prevData) => prevData.filter((row) => row.id !== selectedRecord?.id));
+    handleCloseDeleteModal();
+    toast.success("Record deleted successfully");
+  };
+
+  const [tableData, setTableData] = useState([
+    {
+      id: "RD-001",
+      name: "Production Order",
+      status: "Active",
+      date: "2024-Mar-15",
+    },
+    {
+      id: "RD-002",
+      name: "Quality Check",
+      status: "Completed",
+      date: "2024-Mar-16",
+    },
+    {
+      id: "RD-003",
+      name: "Material Request",
+      status: "Pending",
+      date: "2024-Mar-17",
+    },
+  ]);
 
   return (
     <ApplicationFrame
@@ -307,31 +360,12 @@ export const WithTabs = () => {
                       cellFormatter: (props) => (
                         <Flex gap="x1">
                           <IconicButton icon="edit" tooltip="Edit" onClick={() => handleDetailsEditClick(props.row)} />
-                          <IconicButton icon="delete" tooltip="Delete" onClick={() => {}} />
+                          <IconicButton icon="delete" tooltip="Delete" onClick={() => handleDeleteClick(props.row)} />
                         </Flex>
                       ),
                     },
                   ]}
-                  rows={[
-                    {
-                      id: "RD-001",
-                      name: "Production Order",
-                      status: "Active",
-                      date: "2024-Mar-15",
-                    },
-                    {
-                      id: "RD-002",
-                      name: "Quality Check",
-                      status: "Completed",
-                      date: "2024-Mar-16",
-                    },
-                    {
-                      id: "RD-003",
-                      name: "Material Request",
-                      status: "Pending",
-                      date: "2024-Mar-17",
-                    },
-                  ]}
+                  rows={tableData}
                   hasSelectableRows
                   keyField="id"
                   compact
@@ -411,7 +445,7 @@ export const WithTabs = () => {
             <QuietButton onClick={handleCloseSidebar} mr="x2">
               Cancel
             </QuietButton>
-            <PrimaryButton onClick={handleCloseSidebar}>Save</PrimaryButton>
+            <PrimaryButton onClick={handleSaveChanges}>Save</PrimaryButton>
           </Flex>
         }
       >
@@ -555,7 +589,7 @@ export const WithTabs = () => {
             <QuietButton onClick={handleCloseDetailsSidebar} mr="x2">
               Cancel
             </QuietButton>
-            <PrimaryButton onClick={handleCloseDetailsSidebar}>Save</PrimaryButton>
+            <PrimaryButton onClick={handleSaveDetailsChanges}>Save</PrimaryButton>
           </Flex>
         }
       >
@@ -591,6 +625,20 @@ export const WithTabs = () => {
           </FormSection>
         </Form>
       </Sidebar>
+      {isDeleteModalOpen && (
+        <Modal
+          title="Delete record"
+          onRequestClose={handleCloseDeleteModal}
+          footerContent={
+            <ButtonGroup>
+              <DangerButton onClick={handleConfirmDelete}>Delete</DangerButton>
+              <QuietButton onClick={handleCloseDeleteModal}>Cancel</QuietButton>
+            </ButtonGroup>
+          }
+        >
+          <Text>Are you sure you want to delete this record? This action cannot be undone.</Text>
+        </Modal>
+      )}
     </ApplicationFrame>
   );
 };
@@ -600,6 +648,7 @@ export const WithSections = () => {
   const [isDetailsSidebarOpen, setIsDetailsSidebarOpen] = useState(false);
   const [selectedRecord, setSelectedRecord] = useState(null);
   const [isCreatingNew, setIsCreatingNew] = useState(false);
+  const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
 
   const handleEditClick = () => {
     setIsSidebarOpen(true);
@@ -623,12 +672,118 @@ export const WithSections = () => {
 
   const handleCloseDetailsSidebar = () => {
     setIsDetailsSidebarOpen(false);
-    setSelectedRecord(null);
     setIsCreatingNew(false);
   };
 
+  const handleSaveChanges = () => {
+    console.log("Saving changes");
+    handleCloseSidebar();
+    toast.success("Changes saved successfully");
+  };
+
+  const handleSaveDetailsChanges = () => {
+    handleCloseDetailsSidebar();
+    toast.success(isCreatingNew ? "Record created successfully" : "Record updated successfully");
+  };
+
+  const handleDeleteClick = (record) => {
+    setSelectedRecord(record);
+    setIsDeleteModalOpen(true);
+  };
+
+  const handleCloseDeleteModal = () => {
+    setIsDeleteModalOpen(false);
+    setSelectedRecord(null);
+  };
+
+  const handleConfirmDelete = () => {
+    console.log("Deleting record:", selectedRecord);
+    setTableData((prevData) => prevData.filter((row) => row.id !== selectedRecord?.id));
+    handleCloseDeleteModal();
+    toast.success("Record deleted successfully");
+  };
+
+  const [tableData, setTableData] = useState([
+    {
+      id: "RD-001",
+      name: "Production Order",
+      status: "Active",
+      date: "2024-Mar-15",
+    },
+    {
+      id: "RD-002",
+      name: "Quality Check",
+      status: "Completed",
+      date: "2024-Mar-16",
+    },
+    {
+      id: "RD-003",
+      name: "Material Request",
+      status: "Pending",
+      date: "2024-Mar-17",
+    },
+  ]);
+
   return (
-    <ApplicationFrame navBar={<BrandedNavBar menuData={menuData} />}>
+    <ApplicationFrame
+      navBar={
+        <Navigation
+          appSwitcher={{
+            apps: {
+              "production-scheduling": {
+                url: "https://nulogy.com/",
+              },
+              "supplier-collaboration": {
+                url: "https://nulogy.com/",
+              },
+              "digital-quality-inspection": {
+                url: "https://nulogy.com/",
+              },
+              "shop-floor": {
+                url: "https://nulogy.com/",
+              },
+              "smart-factory": {
+                url: "https://nulogy.com/",
+              },
+              connections: {
+                url: "https://nulogy.com/",
+              },
+              data: {
+                url: "https://nulogy.com/",
+              },
+            },
+          }}
+          primaryNavigation={[
+            {
+              key: "home",
+              label: "Home",
+              type: "link" as const,
+              props: { href: "#" },
+            },
+            {
+              key: "records",
+              label: "Records",
+              type: "link" as const,
+              props: { href: "#" },
+            },
+          ]}
+          secondaryNavigation={[
+            {
+              key: "help",
+              label: "Help",
+              type: "link" as const,
+              props: { href: "#" },
+            },
+            {
+              key: "settings",
+              label: "Settings",
+              type: "link" as const,
+              props: { href: "#" },
+            },
+          ]}
+        />
+      }
+    >
       <Page
         breadcrumbs={breadcrumbs}
         title="Record 123"
@@ -777,31 +932,12 @@ export const WithSections = () => {
                 cellFormatter: (props) => (
                   <Flex gap="x1">
                     <IconicButton icon="edit" tooltip="Edit" onClick={() => handleDetailsEditClick(props.row)} />
-                    <IconicButton icon="delete" tooltip="Delete" onClick={() => {}} />
+                    <IconicButton icon="delete" tooltip="Delete" onClick={() => handleDeleteClick(props.row)} />
                   </Flex>
                 ),
               },
             ]}
-            rows={[
-              {
-                id: "RD-001",
-                name: "Production Order",
-                status: "Active",
-                date: "2024-Mar-15",
-              },
-              {
-                id: "RD-002",
-                name: "Quality Check",
-                status: "Completed",
-                date: "2024-Mar-16",
-              },
-              {
-                id: "RD-003",
-                name: "Material Request",
-                status: "Pending",
-                date: "2024-Mar-17",
-              },
-            ]}
+            rows={tableData}
             hasSelectableRows
             keyField="id"
             compact
@@ -878,7 +1014,7 @@ export const WithSections = () => {
             <QuietButton onClick={handleCloseSidebar} mr="x2">
               Cancel
             </QuietButton>
-            <PrimaryButton onClick={handleCloseSidebar}>Save</PrimaryButton>
+            <PrimaryButton onClick={handleSaveChanges}>Save</PrimaryButton>
           </Flex>
         }
       >
@@ -1022,7 +1158,7 @@ export const WithSections = () => {
             <QuietButton onClick={handleCloseDetailsSidebar} mr="x2">
               Cancel
             </QuietButton>
-            <PrimaryButton onClick={handleCloseDetailsSidebar}>Save</PrimaryButton>
+            <PrimaryButton onClick={handleSaveDetailsChanges}>Save</PrimaryButton>
           </Flex>
         }
       >
@@ -1058,6 +1194,20 @@ export const WithSections = () => {
           </FormSection>
         </Form>
       </Sidebar>
+      {isDeleteModalOpen && (
+        <Modal
+          title="Delete record"
+          onRequestClose={handleCloseDeleteModal}
+          footerContent={
+            <ButtonGroup>
+              <DangerButton onClick={handleConfirmDelete}>Delete</DangerButton>
+              <QuietButton onClick={handleCloseDeleteModal}>Cancel</QuietButton>
+            </ButtonGroup>
+          }
+        >
+          <Text>Are you sure you want to delete this record? This action cannot be undone.</Text>
+        </Modal>
+      )}
     </ApplicationFrame>
   );
 };
@@ -1067,6 +1217,7 @@ export const WithCards = () => {
   const [isDetailsSidebarOpen, setIsDetailsSidebarOpen] = useState(false);
   const [selectedRecord, setSelectedRecord] = useState(null);
   const [isCreatingNew, setIsCreatingNew] = useState(false);
+  const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
 
   const handleEditClick = () => {
     setIsSidebarOpen(true);
@@ -1090,12 +1241,118 @@ export const WithCards = () => {
 
   const handleCloseDetailsSidebar = () => {
     setIsDetailsSidebarOpen(false);
-    setSelectedRecord(null);
     setIsCreatingNew(false);
   };
 
+  const handleSaveChanges = () => {
+    console.log("Saving changes");
+    handleCloseSidebar();
+    toast.success("Changes saved successfully");
+  };
+
+  const handleSaveDetailsChanges = () => {
+    handleCloseDetailsSidebar();
+    toast.success(isCreatingNew ? "Record created successfully" : "Record updated successfully");
+  };
+
+  const handleDeleteClick = (record) => {
+    setSelectedRecord(record);
+    setIsDeleteModalOpen(true);
+  };
+
+  const handleCloseDeleteModal = () => {
+    setIsDeleteModalOpen(false);
+    setSelectedRecord(null);
+  };
+
+  const handleConfirmDelete = () => {
+    console.log("Deleting record:", selectedRecord);
+    setTableData((prevData) => prevData.filter((row) => row.id !== selectedRecord?.id));
+    handleCloseDeleteModal();
+    toast.success("Record deleted successfully");
+  };
+
+  const [tableData, setTableData] = useState([
+    {
+      id: "RD-001",
+      name: "Production Order",
+      status: "Active",
+      date: "2024-Mar-15",
+    },
+    {
+      id: "RD-002",
+      name: "Quality Check",
+      status: "Completed",
+      date: "2024-Mar-16",
+    },
+    {
+      id: "RD-003",
+      name: "Material Request",
+      status: "Pending",
+      date: "2024-Mar-17",
+    },
+  ]);
+
   return (
-    <ApplicationFrame navBar={<BrandedNavBar menuData={menuData} />}>
+    <ApplicationFrame
+      navBar={
+        <Navigation
+          appSwitcher={{
+            apps: {
+              "production-scheduling": {
+                url: "https://nulogy.com/",
+              },
+              "supplier-collaboration": {
+                url: "https://nulogy.com/",
+              },
+              "digital-quality-inspection": {
+                url: "https://nulogy.com/",
+              },
+              "shop-floor": {
+                url: "https://nulogy.com/",
+              },
+              "smart-factory": {
+                url: "https://nulogy.com/",
+              },
+              connections: {
+                url: "https://nulogy.com/",
+              },
+              data: {
+                url: "https://nulogy.com/",
+              },
+            },
+          }}
+          primaryNavigation={[
+            {
+              key: "home",
+              label: "Home",
+              type: "link" as const,
+              props: { href: "#" },
+            },
+            {
+              key: "records",
+              label: "Records",
+              type: "link" as const,
+              props: { href: "#" },
+            },
+          ]}
+          secondaryNavigation={[
+            {
+              key: "help",
+              label: "Help",
+              type: "link" as const,
+              props: { href: "#" },
+            },
+            {
+              key: "settings",
+              label: "Settings",
+              type: "link" as const,
+              props: { href: "#" },
+            },
+          ]}
+        />
+      }
+    >
       <Page
         breadcrumbs={breadcrumbs}
         title="Record 123"
@@ -1244,31 +1501,12 @@ export const WithCards = () => {
                 cellFormatter: (props) => (
                   <Flex gap="x1">
                     <IconicButton icon="edit" tooltip="Edit" onClick={() => handleDetailsEditClick(props.row)} />
-                    <IconicButton icon="delete" tooltip="Delete" onClick={() => {}} />
+                    <IconicButton icon="delete" tooltip="Delete" onClick={() => handleDeleteClick(props.row)} />
                   </Flex>
                 ),
               },
             ]}
-            rows={[
-              {
-                id: "RD-001",
-                name: "Production Order",
-                status: "Active",
-                date: "2024-Mar-15",
-              },
-              {
-                id: "RD-002",
-                name: "Quality Check",
-                status: "Completed",
-                date: "2024-Mar-16",
-              },
-              {
-                id: "RD-003",
-                name: "Material Request",
-                status: "Pending",
-                date: "2024-Mar-17",
-              },
-            ]}
+            rows={tableData}
             hasSelectableRows
             keyField="id"
             compact
@@ -1345,7 +1583,7 @@ export const WithCards = () => {
             <QuietButton onClick={handleCloseSidebar} mr="x2">
               Cancel
             </QuietButton>
-            <PrimaryButton onClick={handleCloseSidebar}>Save</PrimaryButton>
+            <PrimaryButton onClick={handleSaveChanges}>Save</PrimaryButton>
           </Flex>
         }
       >
@@ -1489,7 +1727,7 @@ export const WithCards = () => {
             <QuietButton onClick={handleCloseDetailsSidebar} mr="x2">
               Cancel
             </QuietButton>
-            <PrimaryButton onClick={handleCloseDetailsSidebar}>Save</PrimaryButton>
+            <PrimaryButton onClick={handleSaveDetailsChanges}>Save</PrimaryButton>
           </Flex>
         }
       >
@@ -1525,6 +1763,20 @@ export const WithCards = () => {
           </FormSection>
         </Form>
       </Sidebar>
+      {isDeleteModalOpen && (
+        <Modal
+          title="Delete record"
+          onRequestClose={handleCloseDeleteModal}
+          footerContent={
+            <ButtonGroup>
+              <DangerButton onClick={handleConfirmDelete}>Delete</DangerButton>
+              <QuietButton onClick={handleCloseDeleteModal}>Cancel</QuietButton>
+            </ButtonGroup>
+          }
+        >
+          <Text>Are you sure you want to delete this record? This action cannot be undone.</Text>
+        </Modal>
+      )}
     </ApplicationFrame>
   );
 };
@@ -1534,6 +1786,7 @@ export const Combined = () => {
   const [isDetailsSidebarOpen, setIsDetailsSidebarOpen] = useState(false);
   const [selectedRecord, setSelectedRecord] = useState(null);
   const [isCreatingNew, setIsCreatingNew] = useState(false);
+  const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
 
   const handleEditClick = () => {
     setIsSidebarOpen(true);
@@ -1557,12 +1810,118 @@ export const Combined = () => {
 
   const handleCloseDetailsSidebar = () => {
     setIsDetailsSidebarOpen(false);
-    setSelectedRecord(null);
     setIsCreatingNew(false);
   };
 
+  const handleSaveChanges = () => {
+    console.log("Saving changes");
+    handleCloseSidebar();
+    toast.success("Changes saved successfully");
+  };
+
+  const handleSaveDetailsChanges = () => {
+    handleCloseDetailsSidebar();
+    toast.success(isCreatingNew ? "Record created successfully" : "Record updated successfully");
+  };
+
+  const handleDeleteClick = (record) => {
+    setSelectedRecord(record);
+    setIsDeleteModalOpen(true);
+  };
+
+  const handleCloseDeleteModal = () => {
+    setIsDeleteModalOpen(false);
+    setSelectedRecord(null);
+  };
+
+  const handleConfirmDelete = () => {
+    console.log("Deleting record:", selectedRecord);
+    setTableData((prevData) => prevData.filter((row) => row.id !== selectedRecord?.id));
+    handleCloseDeleteModal();
+    toast.success("Record deleted successfully");
+  };
+
+  const [tableData, setTableData] = useState([
+    {
+      id: "RD-001",
+      name: "Production Order",
+      status: "Active",
+      date: "2024-Mar-15",
+    },
+    {
+      id: "RD-002",
+      name: "Quality Check",
+      status: "Completed",
+      date: "2024-Mar-16",
+    },
+    {
+      id: "RD-003",
+      name: "Material Request",
+      status: "Pending",
+      date: "2024-Mar-17",
+    },
+  ]);
+
   return (
-    <ApplicationFrame navBar={<BrandedNavBar menuData={menuData} />}>
+    <ApplicationFrame
+      navBar={
+        <Navigation
+          appSwitcher={{
+            apps: {
+              "production-scheduling": {
+                url: "https://nulogy.com/",
+              },
+              "supplier-collaboration": {
+                url: "https://nulogy.com/",
+              },
+              "digital-quality-inspection": {
+                url: "https://nulogy.com/",
+              },
+              "shop-floor": {
+                url: "https://nulogy.com/",
+              },
+              "smart-factory": {
+                url: "https://nulogy.com/",
+              },
+              connections: {
+                url: "https://nulogy.com/",
+              },
+              data: {
+                url: "https://nulogy.com/",
+              },
+            },
+          }}
+          primaryNavigation={[
+            {
+              key: "home",
+              label: "Home",
+              type: "link" as const,
+              props: { href: "#" },
+            },
+            {
+              key: "records",
+              label: "Records",
+              type: "link" as const,
+              props: { href: "#" },
+            },
+          ]}
+          secondaryNavigation={[
+            {
+              key: "help",
+              label: "Help",
+              type: "link" as const,
+              props: { href: "#" },
+            },
+            {
+              key: "settings",
+              label: "Settings",
+              type: "link" as const,
+              props: { href: "#" },
+            },
+          ]}
+        />
+      }
+    >
       <Page
         breadcrumbs={breadcrumbs}
         title="Record 123"
@@ -1712,31 +2071,12 @@ export const Combined = () => {
                       cellFormatter: (props) => (
                         <Flex gap="x1">
                           <IconicButton icon="edit" tooltip="Edit" onClick={() => handleDetailsEditClick(props.row)} />
-                          <IconicButton icon="delete" tooltip="Delete" onClick={() => {}} />
+                          <IconicButton icon="delete" tooltip="Delete" onClick={() => handleDeleteClick(props.row)} />
                         </Flex>
                       ),
                     },
                   ]}
-                  rows={[
-                    {
-                      id: "RD-001",
-                      name: "Production Order",
-                      status: "Active",
-                      date: "2024-Mar-15",
-                    },
-                    {
-                      id: "RD-002",
-                      name: "Quality Check",
-                      status: "Completed",
-                      date: "2024-Mar-16",
-                    },
-                    {
-                      id: "RD-003",
-                      name: "Material Request",
-                      status: "Pending",
-                      date: "2024-Mar-17",
-                    },
-                  ]}
+                  rows={tableData}
                   hasSelectableRows
                   keyField="id"
                   compact
@@ -1842,7 +2182,7 @@ export const Combined = () => {
             <QuietButton onClick={handleCloseSidebar} mr="x2">
               Cancel
             </QuietButton>
-            <PrimaryButton onClick={handleCloseSidebar}>Save</PrimaryButton>
+            <PrimaryButton onClick={handleSaveChanges}>Save</PrimaryButton>
           </Flex>
         }
       >
@@ -1986,7 +2326,7 @@ export const Combined = () => {
             <QuietButton onClick={handleCloseDetailsSidebar} mr="x2">
               Cancel
             </QuietButton>
-            <PrimaryButton onClick={handleCloseDetailsSidebar}>Save</PrimaryButton>
+            <PrimaryButton onClick={handleSaveDetailsChanges}>Save</PrimaryButton>
           </Flex>
         }
       >
@@ -2022,6 +2362,20 @@ export const Combined = () => {
           </FormSection>
         </Form>
       </Sidebar>
+      {isDeleteModalOpen && (
+        <Modal
+          title="Delete record"
+          onRequestClose={handleCloseDeleteModal}
+          footerContent={
+            <ButtonGroup>
+              <DangerButton onClick={handleConfirmDelete}>Delete</DangerButton>
+              <QuietButton onClick={handleCloseDeleteModal}>Cancel</QuietButton>
+            </ButtonGroup>
+          }
+        >
+          <Text>Are you sure you want to delete this record? This action cannot be undone.</Text>
+        </Modal>
+      )}
     </ApplicationFrame>
   );
 };
