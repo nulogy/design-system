@@ -53,7 +53,7 @@ import { Breakpoints } from "../../theme/theme.type";
 import { toast } from "react-hot-toast";
 import { IndexPage } from "./IndexPage";
 import { IndexConfigSidebar } from "./IndexConfigSidebar";
-import { BuilderState, IndexConfig, Section as SectionType, FilterField } from "./types";
+import { Section, IndexConfig, FilterField } from "./types";
 import RecordPage from "./RecordPage";
 import FilterSidebar from "./FilterSidebar";
 import DeleteModal from "./DeleteModal";
@@ -133,8 +133,6 @@ const menuData = {
   ],
 };
 
-interface Section extends SectionType {}
-
 interface HeaderConfig {
   title: string;
   alternativeTitle: string;
@@ -181,14 +179,15 @@ export const Builder = ({
     plannedEnd: null,
   });
   const [indexConfig, setIndexConfig] = useState<IndexConfig>({
-    title: "Index",
-    alternativeTitle: "Site #123",
+    title: "Work Orders",
+    alternativeTitle: "Alternative title",
     includePageActions: true,
     includeTableActions: true,
-    numberOfRows: 25,
+    numberOfRows: 5,
     showPagination: true,
     uploadedData: null,
     filterOpenByDefault: false,
+    showFilters: true,
     tableColumns: [
       {
         label: "Work order code",
@@ -836,7 +835,7 @@ export const Builder = ({
   const handleFilterChange = (filters: Record<string, any>) => {
     if (selectedSectionForFilter) {
       handleSectionChange(selectedSectionForFilter.id, { filters });
-    } else if (indexConfig.persistentFilter) {
+    } else if (indexConfig.showFilters) {
       setIndexConfig((prev) => ({
         ...prev,
         filters,

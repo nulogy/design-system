@@ -44,6 +44,7 @@ export interface IndexConfig {
   showPagination: boolean;
   uploadedData: any[] | null;
   filterOpenByDefault: boolean;
+  showFilters: boolean;
   tableColumns: Array<{
     label?: string;
     dataKey: string;
