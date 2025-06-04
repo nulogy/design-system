@@ -36,8 +36,16 @@ import {
   Tabs,
   Tab,
   Modal,
+  ButtonGroup,
+  DangerButton,
+  Divider,
+  Pagination,
+  ToastContainer,
+  toast,
 } from "../../index";
-import { toast } from "react-hot-toast";
+import DeleteModal from "../builder/DeleteModal";
+import FilterSidebar from "../builder/FilterSidebar";
+import { FilterField } from "../builder/types";
 
 export default {
   title: "Templates/Record/Layout",
@@ -70,6 +78,47 @@ export const FullWidth = () => {
   const [selectedRecord, setSelectedRecord] = useState(null);
   const [isCreatingNew, setIsCreatingNew] = useState(false);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+  const [isFilterSidebarOpen, setIsFilterSidebarOpen] = useState(false);
+  const [filters, setFilters] = useState({
+    name: "",
+    type: "",
+    status: "",
+    priority: "",
+    assignedTo: "",
+    dueDate: null,
+  });
+  const [tableData, setTableData] = useState([
+    {
+      id: "RD-001",
+      name: "Production Order",
+      type: "Manufacturing",
+      status: "In Progress",
+      priority: "High",
+      assignedTo: "Michael Brown",
+      dueDate: "2024-Mar-20",
+      progress: "75%",
+    },
+    {
+      id: "RD-002",
+      name: "Quality Check",
+      type: "Quality",
+      status: "Pending",
+      priority: "Medium",
+      assignedTo: "Sarah Johnson",
+      dueDate: "2024-Mar-21",
+      progress: "0%",
+    },
+    {
+      id: "RD-003",
+      name: "Material Request",
+      type: "Inventory",
+      status: "Completed",
+      priority: "Low",
+      assignedTo: "John Smith",
+      dueDate: "2024-Mar-18",
+      progress: "100%",
+    },
+  ]);
 
   const handleEditClick = () => {
     setIsSidebarOpen(true);
@@ -118,71 +167,132 @@ export const FullWidth = () => {
   };
 
   const handleConfirmDelete = () => {
-    console.log("Deleting record:", selectedRecord);
-    handleCloseDeleteModal();
-    toast.success("Record deleted successfully");
+    if (selectedRecord) {
+      setTableData((prevData) => prevData.filter((row) => row.id !== selectedRecord.id));
+      handleCloseDeleteModal();
+      toast.success("Record deleted successfully");
+    }
   };
 
+  const handleFilterClick = () => {
+    setIsFilterSidebarOpen(true);
+  };
+
+  const handleFilterApply = (newFilters) => {
+    setFilters(newFilters);
+    setIsFilterSidebarOpen(false);
+    toast.success("Filters applied successfully");
+  };
+
+  const filterFields: FilterField[] = [
+    {
+      key: "name",
+      label: "Name",
+      type: "text",
+    },
+    {
+      key: "type",
+      label: "Type",
+      type: "select",
+      options: [
+        { label: "All", value: "" },
+        { label: "Manufacturing", value: "Manufacturing" },
+        { label: "Quality", value: "Quality" },
+        { label: "Inventory", value: "Inventory" },
+      ],
+    },
+    {
+      key: "status",
+      label: "Status",
+      type: "select",
+      options: [
+        { label: "All", value: "" },
+        { label: "In Progress", value: "In Progress" },
+        { label: "Pending", value: "Pending" },
+        { label: "Completed", value: "Completed" },
+      ],
+    },
+    {
+      key: "priority",
+      label: "Priority",
+      type: "select",
+      options: [
+        { label: "All", value: "" },
+        { label: "High", value: "High" },
+        { label: "Medium", value: "Medium" },
+        { label: "Low", value: "Low" },
+      ],
+    },
+    {
+      key: "assignedTo",
+      label: "Assigned To",
+      type: "text",
+    },
+    {
+      key: "dueDate",
+      label: "Due Date",
+      type: "date",
+    },
+  ];
+
   return (
-    <ApplicationFrame
-      navBar={
-        <Navigation
-          appSwitcher={{
-            apps: {
-              "production-scheduling": {
-                url: "https://nulogy.com/",
-              },
-              "supplier-collaboration": {
-                url: "https://nulogy.com/",
-              },
-              "digital-quality-inspection": {
-                url: "https://nulogy.com/",
-              },
-              "shop-floor": {
-                url: "https://nulogy.com/",
-              },
-              "smart-factory": {
-                url: "https://nulogy.com/",
-              },
-              connections: {
-                url: "https://nulogy.com/",
-              },
-              data: {
-                url: "https://nulogy.com/",
-              },
+    <ApplicationFrame>
+      <ToastContainer />
+      <Navigation
+        appSwitcher={{
+          apps: {
+            "production-scheduling": {
+              url: "https://nulogy.com/",
             },
-          }}
-          primaryNavigation={[
-            {
-              key: "home",
-              label: "Home",
-              type: "link" as const,
-              props: { href: "#" },
+            "supplier-collaboration": {
+              url: "https://nulogy.com/",
             },
-            {
-              key: "records",
-              label: "Records",
-              type: "link" as const,
-              props: { href: "#" },
+            "digital-quality-inspection": {
+              url: "https://nulogy.com/",
             },
-          ]}
-          secondaryNavigation={[
-            {
-              key: "help",
-              label: "Help",
-              type: "link" as const,
-              props: { href: "#" },
+            "shop-floor": {
+              url: "https://nulogy.com/",
             },
-            {
-              key: "settings",
-              label: "Settings",
-              type: "link" as const,
-              props: { href: "#" },
+            "smart-factory": {
+              url: "https://nulogy.com/",
             },
-          ]}
-        />
-      }
-    >
+            connections: {
+              url: "https://nulogy.com/",
+            },
+            data: {
+              url: "https://nulogy.com/",
+            },
+          },
+        }}
+        primaryNavigation={[
+          {
+            key: "home",
+            label: "Home",
+            type: "link" as const,
+            props: { href: "#" },
+          },
+          {
+            key: "records",
+            label: "Records",
+            type: "link" as const,
+            props: { href: "#" },
+          },
+        ]}
+        secondaryNavigation={[
+          {
+            key: "help",
+            label: "Help",
+            type: "link" as const,
+            props: { href: "#" },
+          },
+          {
+            key: "settings",
+            label: "Settings",
+            type: "link" as const,
+            props: { href: "#" },
+          },
+        ]}
+      />
       <Page
         breadcrumbs={breadcrumbs}
         title="Record 123"
@@ -307,7 +417,7 @@ export const FullWidth = () => {
                       Export
                     </IconicButton>
                     <VerticalDivider />
-                    <IconicButton icon="filter" tooltip="Filter">
+                    <IconicButton icon="filter" tooltip="Filter" onClick={handleFilterClick}>
                       Filter
                     </IconicButton>
                   </Flex>
@@ -337,28 +447,10 @@ export const FullWidth = () => {
                       ),
                     },
                   ]}
-                  rows={[
-                    {
-                      id: "RD-001",
-                      name: "Production Order",
-                      status: "Active",
-                      date: "2024-Mar-15",
-                    },
-                    {
-                      id: "RD-002",
-                      name: "Quality Check",
-                      status: "Completed",
-                      date: "2024-Mar-16",
-                    },
-                    {
-                      id: "RD-003",
-                      name: "Material Request",
-                      status: "Pending",
-                      date: "2024-Mar-17",
-                    },
-                  ]}
+                  rows={tableData}
                   hasSelectableRows
                   keyField="id"
+                  onRowSelectionChange={(selectedRows) => console.log("Selected rows:", selectedRows)}
                   compact
                 />
                 <Card mt="x3" px="x4" py="x3">
@@ -451,6 +543,13 @@ export const FullWidth = () => {
             </Tab>
           </Tabs>
         </Box>
+        <FilterSidebar
+          isOpen={isFilterSidebarOpen}
+          onClose={() => setIsFilterSidebarOpen(false)}
+          onApply={handleFilterApply}
+          fields={filterFields}
+          initialFilters={filters}
+        />
       </Page>
       <Sidebar
         isOpen={isSidebarOpen}
@@ -458,11 +557,13 @@ export const FullWidth = () => {
         title="Edit record information"
         helpText="Record 123"
         footer={
-          <Flex justifyContent="flex-end">
-            <QuietButton onClick={handleCloseSidebar} mr="x2">
+          <Flex justifyContent="flex-start">
+            <PrimaryButton onClick={handleSaveChanges} mr="x2">
+              Save
+            </PrimaryButton>
+            <QuietButton onClick={handleCloseSidebar}>
               Cancel
             </QuietButton>
-            <PrimaryButton onClick={handleSaveChanges}>Save</PrimaryButton>
           </Flex>
         }
       >
@@ -471,26 +572,6 @@ export const FullWidth = () => {
             <Box pb="x3">
               <FieldLabel labelText="Record ID">
                 <Input value="REC-2024-001" disabled />
-              </FieldLabel>
-            </Box>
-            <Box pb="x3">
-              <FieldLabel labelText="Created by">
-                <Input value="John Smith" disabled />
-              </FieldLabel>
-            </Box>
-            <Box pb="x3">
-              <FieldLabel labelText="Created date">
-                <DatePicker selected={new Date("2024-03-15")} inputProps={{ disabled: true }} />
-              </FieldLabel>
-            </Box>
-            <Box pb="x3">
-              <FieldLabel labelText="Last modified by">
-                <Input value="Sarah Johnson" disabled />
-              </FieldLabel>
-            </Box>
-            <Box pb="x3">
-              <FieldLabel labelText="Last modified date">
-                <DatePicker selected={new Date("2024-03-16")} inputProps={{ disabled: true }} />
               </FieldLabel>
             </Box>
             <Box pb="x3">
@@ -563,36 +644,6 @@ export const FullWidth = () => {
                 <DatePicker selected={new Date("2024-03-20")} />
               </FieldLabel>
             </Box>
-            <Box pb="x3">
-              <FieldLabel labelText="Estimated hours">
-                <Input type="number" value="24" />
-              </FieldLabel>
-            </Box>
-            <Box pb="x3">
-              <FieldLabel labelText="Actual hours">
-                <Input type="number" value="18.5" />
-              </FieldLabel>
-            </Box>
-            <Box pb="x3">
-              <FieldLabel labelText="Cost center">
-                <Input value="MFG-001" />
-              </FieldLabel>
-            </Box>
-            <Box pb="x3">
-              <FieldLabel labelText="Project code">
-                <Input value="PRJ-2024-Q1" />
-              </FieldLabel>
-            </Box>
-            <Box pb="x3">
-              <FieldLabel labelText="Quality rating">
-                <Input value="4.8/5.0" />
-              </FieldLabel>
-            </Box>
-            <Box pb="x3">
-              <FieldLabel labelText="Related records">
-                <Textarea value="REC-2024-002 (Production Order), REC-2024-003 (Quality Check), REC-2024-004 (Material Request), REC-2024-005 (Equipment Maintenance), REC-2024-006 (Safety Inspection), REC-2024-007 (Training Record), REC-2024-008 (Inventory Adjustment), REC-2024-009 (Supplier Delivery), REC-2024-010 (Customer Order)" />
-              </FieldLabel>
-            </Box>
           </FormSection>
         </Form>
       </Sidebar>
@@ -602,11 +653,13 @@ export const FullWidth = () => {
         title={isCreatingNew ? "Create new record detail" : "Edit record detail"}
         helpText="Record 123"
         footer={
-          <Flex justifyContent="flex-end">
-            <QuietButton onClick={handleCloseDetailsSidebar} mr="x2">
+          <Flex justifyContent="flex-start">
+            <PrimaryButton onClick={handleSaveDetailsChanges} mr="x2">
+              Save
+            </PrimaryButton>
+            <QuietButton onClick={handleCloseDetailsSidebar}>
               Cancel
             </QuietButton>
-            <PrimaryButton onClick={handleSaveDetailsChanges}>Save</PrimaryButton>
           </Flex>
         }
       >
@@ -642,15 +695,14 @@ export const FullWidth = () => {
           </FormSection>
         </Form>
       </Sidebar>
-      {isDeleteModalOpen && (
-        <Modal title="Delete record" onRequestClose={handleCloseDeleteModal}>
-          <Text>Are you sure you want to delete this record? This action cannot be undone.</Text>
-          <Flex gap="x2" justifyContent="flex-end" mt="x4">
-            <QuietButton onClick={handleCloseDeleteModal}>Cancel</QuietButton>
-            <PrimaryButton onClick={handleConfirmDelete}>Delete</PrimaryButton>
-          </Flex>
-        </Modal>
-      )}
+      <DeleteModal
+        isOpen={isDeleteModalOpen}
+        onClose={handleCloseDeleteModal}
+        onConfirm={handleConfirmDelete}
+        title="Delete record"
+        itemName={selectedRecord?.id}
+        itemType="record"
+      />
     </ApplicationFrame>
   );
 };
@@ -661,6 +713,47 @@ export const Centered = () => {
   const [selectedRecord, setSelectedRecord] = useState(null);
   const [isCreatingNew, setIsCreatingNew] = useState(false);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+  const [isFilterSidebarOpen, setIsFilterSidebarOpen] = useState(false);
+  const [filters, setFilters] = useState({
+    name: "",
+    type: "",
+    status: "",
+    priority: "",
+    assignedTo: "",
+    dueDate: null,
+  });
+  const [tableData, setTableData] = useState([
+    {
+      id: "RD-001",
+      name: "Production Order",
+      type: "Manufacturing",
+      status: "In Progress",
+      priority: "High",
+      assignedTo: "Michael Brown",
+      dueDate: "2024-Mar-20",
+      progress: "75%",
+    },
+    {
+      id: "RD-002",
+      name: "Quality Check",
+      type: "Quality",
+      status: "Pending",
+      priority: "Medium",
+      assignedTo: "Sarah Johnson",
+      dueDate: "2024-Mar-21",
+      progress: "0%",
+    },
+    {
+      id: "RD-003",
+      name: "Material Request",
+      type: "Inventory",
+      status: "Completed",
+      priority: "Low",
+      assignedTo: "John Smith",
+      dueDate: "2024-Mar-18",
+      progress: "100%",
+    },
+  ]);
 
   const handleEditClick = () => {
     setIsSidebarOpen(true);
@@ -709,10 +802,73 @@ export const Centered = () => {
   };
 
   const handleConfirmDelete = () => {
-    console.log("Deleting record:", selectedRecord);
-    handleCloseDeleteModal();
-    toast.success("Record deleted successfully");
+    if (selectedRecord) {
+      setTableData((prevData) => prevData.filter((row) => row.id !== selectedRecord.id));
+      handleCloseDeleteModal();
+      toast.success("Record deleted successfully");
+    }
   };
+
+  const handleFilterClick = () => {
+    setIsFilterSidebarOpen(true);
+  };
+
+  const handleFilterApply = (newFilters) => {
+    setFilters(newFilters);
+    setIsFilterSidebarOpen(false);
+    toast.success("Filters applied successfully");
+  };
+
+  const filterFields: FilterField[] = [
+    {
+      key: "name",
+      label: "Name",
+      type: "text",
+    },
+    {
+      key: "type",
+      label: "Type",
+      type: "select",
+      options: [
+        { label: "All", value: "" },
+        { label: "Manufacturing", value: "Manufacturing" },
+        { label: "Quality", value: "Quality" },
+        { label: "Inventory", value: "Inventory" },
+      ],
+    },
+    {
+      key: "status",
+      label: "Status",
+      type: "select",
+      options: [
+        { label: "All", value: "" },
+        { label: "In Progress", value: "In Progress" },
+        { label: "Pending", value: "Pending" },
+        { label: "Completed", value: "Completed" },
+      ],
+    },
+    {
+      key: "priority",
+      label: "Priority",
+      type: "select",
+      options: [
+        { label: "All", value: "" },
+        { label: "High", value: "High" },
+        { label: "Medium", value: "Medium" },
+        { label: "Low", value: "Low" },
+      ],
+    },
+    {
+      key: "assignedTo",
+      label: "Assigned To",
+      type: "text",
+    },
+    {
+      key: "dueDate",
+      label: "Due Date",
+      type: "date",
+    },
+  ];
 
   return (
     <ApplicationFrame
@@ -898,7 +1054,7 @@ export const Centered = () => {
                       Export
                     </IconicButton>
                     <VerticalDivider />
-                    <IconicButton icon="filter" tooltip="Filter">
+                    <IconicButton icon="filter" tooltip="Filter" onClick={handleFilterClick}>
                       Filter
                     </IconicButton>
                   </Flex>
@@ -928,28 +1084,10 @@ export const Centered = () => {
                       ),
                     },
                   ]}
-                  rows={[
-                    {
-                      id: "RD-001",
-                      name: "Production Order",
-                      status: "Active",
-                      date: "2024-Mar-15",
-                    },
-                    {
-                      id: "RD-002",
-                      name: "Quality Check",
-                      status: "Completed",
-                      date: "2024-Mar-16",
-                    },
-                    {
-                      id: "RD-003",
-                      name: "Material Request",
-                      status: "Pending",
-                      date: "2024-Mar-17",
-                    },
-                  ]}
+                  rows={tableData}
                   hasSelectableRows
                   keyField="id"
+                  onRowSelectionChange={(selectedRows) => console.log("Selected rows:", selectedRows)}
                   compact
                 />
                 <Card mt="x3" px="x4" py="x3">
@@ -1042,6 +1180,13 @@ export const Centered = () => {
             </Tab>
           </Tabs>
         </Box>
+        <FilterSidebar
+          isOpen={isFilterSidebarOpen}
+          onClose={() => setIsFilterSidebarOpen(false)}
+          onApply={handleFilterApply}
+          fields={filterFields}
+          initialFilters={filters}
+        />
       </Page>
       <Sidebar
         isOpen={isSidebarOpen}
@@ -1049,11 +1194,13 @@ export const Centered = () => {
         title="Edit record information"
         helpText="Record 123"
         footer={
-          <Flex justifyContent="flex-end">
-            <QuietButton onClick={handleCloseSidebar} mr="x2">
+          <Flex justifyContent="flex-start">
+            <PrimaryButton onClick={handleSaveChanges} mr="x2">
+              Save
+            </PrimaryButton>
+            <QuietButton onClick={handleCloseSidebar}>
               Cancel
             </QuietButton>
-            <PrimaryButton onClick={handleSaveChanges}>Save</PrimaryButton>
           </Flex>
         }
       >
@@ -1062,26 +1209,6 @@ export const Centered = () => {
             <Box pb="x3">
               <FieldLabel labelText="Record ID">
                 <Input value="REC-2024-001" disabled />
-              </FieldLabel>
-            </Box>
-            <Box pb="x3">
-              <FieldLabel labelText="Created by">
-                <Input value="John Smith" disabled />
-              </FieldLabel>
-            </Box>
-            <Box pb="x3">
-              <FieldLabel labelText="Created date">
-                <DatePicker selected={new Date("2024-03-15")} inputProps={{ disabled: true }} />
-              </FieldLabel>
-            </Box>
-            <Box pb="x3">
-              <FieldLabel labelText="Last modified by">
-                <Input value="Sarah Johnson" disabled />
-              </FieldLabel>
-            </Box>
-            <Box pb="x3">
-              <FieldLabel labelText="Last modified date">
-                <DatePicker selected={new Date("2024-03-16")} inputProps={{ disabled: true }} />
               </FieldLabel>
             </Box>
             <Box pb="x3">
@@ -1154,36 +1281,6 @@ export const Centered = () => {
                 <DatePicker selected={new Date("2024-03-20")} />
               </FieldLabel>
             </Box>
-            <Box pb="x3">
-              <FieldLabel labelText="Estimated hours">
-                <Input type="number" value="24" />
-              </FieldLabel>
-            </Box>
-            <Box pb="x3">
-              <FieldLabel labelText="Actual hours">
-                <Input type="number" value="18.5" />
-              </FieldLabel>
-            </Box>
-            <Box pb="x3">
-              <FieldLabel labelText="Cost center">
-                <Input value="MFG-001" />
-              </FieldLabel>
-            </Box>
-            <Box pb="x3">
-              <FieldLabel labelText="Project code">
-                <Input value="PRJ-2024-Q1" />
-              </FieldLabel>
-            </Box>
-            <Box pb="x3">
-              <FieldLabel labelText="Quality rating">
-                <Input value="4.8/5.0" />
-              </FieldLabel>
-            </Box>
-            <Box pb="x3">
-              <FieldLabel labelText="Related records">
-                <Textarea value="REC-2024-002 (Production Order), REC-2024-003 (Quality Check), REC-2024-004 (Material Request), REC-2024-005 (Equipment Maintenance), REC-2024-006 (Safety Inspection), REC-2024-007 (Training Record), REC-2024-008 (Inventory Adjustment), REC-2024-009 (Supplier Delivery), REC-2024-010 (Customer Order)" />
-              </FieldLabel>
-            </Box>
           </FormSection>
         </Form>
       </Sidebar>
@@ -1193,11 +1290,13 @@ export const Centered = () => {
         title={isCreatingNew ? "Create new record detail" : "Edit record detail"}
         helpText="Record 123"
         footer={
-          <Flex justifyContent="flex-end">
-            <QuietButton onClick={handleCloseDetailsSidebar} mr="x2">
+          <Flex justifyContent="flex-start">
+            <PrimaryButton onClick={handleSaveDetailsChanges} mr="x2">
+              Save
+            </PrimaryButton>
+            <QuietButton onClick={handleCloseDetailsSidebar}>
               Cancel
             </QuietButton>
-            <PrimaryButton onClick={handleSaveDetailsChanges}>Save</PrimaryButton>
           </Flex>
         }
       >
@@ -1233,6 +1332,14 @@ export const Centered = () => {
           </FormSection>
         </Form>
       </Sidebar>
+      <DeleteModal
+        isOpen={isDeleteModalOpen}
+        onClose={handleCloseDeleteModal}
+        onConfirm={handleConfirmDelete}
+        title="Delete record"
+        itemName={selectedRecord?.id}
+        itemType="record"
+      />
     </ApplicationFrame>
   );
 };

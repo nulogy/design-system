@@ -53,8 +53,10 @@ import { Breakpoints } from "../../theme/theme.type";
 import { toast } from "react-hot-toast";
 import { IndexPage } from "./IndexPage";
 import { IndexConfigSidebar } from "./IndexConfigSidebar";
-import { BuilderState, IndexConfig, Section as SectionType } from "./types";
+import { BuilderState, IndexConfig, Section as SectionType, FilterField } from "./types";
 import RecordPage from "./RecordPage";
+import FilterSidebar from "./FilterSidebar";
+import DeleteModal from "./DeleteModal";
 
 export default {
   title: "Templates/Builder",
@@ -164,21 +166,6 @@ export const Builder = ({
   const [containerWidthState, setContainerWidthState] = useState<string | undefined>("1360px");
   const [containerOutline, setContainerOutline] = useState(true);
   const [showGroupOutline, setShowGroupOutline] = useState(false);
-  const [descriptionListColumnsState, setDescriptionListColumnsState] = useState<
-    number | Partial<Record<keyof Breakpoints, number>> | undefined
-  >(4);
-  const [descriptionListLayoutState, setDescriptionListLayoutState] = useState<"stacked" | "inline" | "auto">(
-    "stacked"
-  );
-  const [descriptionListDensityState, setDescriptionListDensityState] = useState<"compact" | "medium" | "relaxed">(
-    "medium"
-  );
-  const [descriptionTermMaxWidth, setDescriptionTermMaxWidth] = useState("320px");
-  const [fontSize, setFontSize] = useState<keyof DefaultNDSThemeType["fontSizes"]>("medium");
-  const [lineHeight, setLineHeight] = useState<keyof DefaultNDSThemeType["lineHeights"]>("base");
-  const [showDividerState, setShowDividerState] = useState(false);
-  const [autoLayoutBreakpoint, setAutoLayoutBreakpoint] = useState("640px");
-  const [groupMinWidth, setGroupMinWidth] = useState<string | undefined>(undefined);
   const [selectedSectionId, setSelectedSectionId] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [isFilterSidebarOpen, setIsFilterSidebarOpen] = useState(false);
@@ -201,6 +188,7 @@ export const Builder = ({
     numberOfRows: 25,
     showPagination: true,
     uploadedData: null,
+    filterOpenByDefault: false,
     tableColumns: [
       {
         label: "Work order code",
@@ -307,6 +295,14 @@ export const Builder = ({
     })),
   ]);
   const theme = useTheme();
+  const [selectedSectionForFilter, setSelectedSectionForFilter] = useState<Section | null>(null);
+
+  // Add effect to handle filter open by default
+  React.useEffect(() => {
+    if (indexConfig.filterOpenByDefault) {
+      setIsFilterSidebarOpen(true);
+    }
+  }, [indexConfig.filterOpenByDefault]);
 
   const handleHeaderChange = (changes: Partial<HeaderConfig>) => {
     setHeaderConfig((prev) => ({ ...prev, ...changes }));
@@ -684,7 +680,7 @@ export const Builder = ({
                 Export
               </IconicButton>
               <VerticalDivider />
-              <IconicButton icon="filter" tooltip="Filter">
+              <IconicButton icon="filter" tooltip="Filter" onClick={handleFilterClick(section)}>
                 Filter
               </IconicButton>
             </Flex>
@@ -774,7 +770,7 @@ export const Builder = ({
                               Export
                             </IconicButton>
                             <VerticalDivider />
-                            <IconicButton icon="filter" tooltip="Filter">
+                            <IconicButton icon="filter" tooltip="Filter" onClick={handleFilterClick(section)}>
                               Filter
                             </IconicButton>
                           </Flex>
@@ -800,41 +796,108 @@ export const Builder = ({
     return result;
   };
 
-  const handleFilterClick = () => {
-    setIsFilterSidebarOpen(true);
+  const handleFilterClick = (section?: Section) => {
+    return (e: React.MouseEvent<HTMLButtonElement>) => {
+      e.preventDefault();
+      if (section) {
+        setSelectedSectionForFilter(section);
+      }
+      setIsFilterSidebarOpen(true);
+    };
   };
 
-  const handleCloseFilterSidebar = () => {
-    setIsFilterSidebarOpen(false);
+  const handleFilterApply = (newFilters: Record<string, any>) => {
+    if (selectedSectionForFilter) {
+      setFilters((prev) => ({
+        ...prev,
+        [selectedSectionForFilter.id]: newFilters,
+      }));
+      // Apply filters to the section content
+      handleSectionChange(selectedSectionForFilter.id, {
+        filters: newFilters,
+      });
+    } else {
+      // Update filters with the new values while preserving the structure
+      setFilters((prev) => ({
+        ...prev,
+        workOrderCode: newFilters.workOrderCode || "",
+        customerName: newFilters.customerName || "",
+        itemCode: newFilters.itemCode || "",
+        bomVersion: newFilters.bomVersion || "",
+        status: newFilters.status || "",
+        plannedStart: newFilters.plannedStart || null,
+        plannedEnd: newFilters.plannedEnd || null,
+      }));
+      // Close the filter sidebar after applying filters
+      setIsFilterSidebarOpen(false);
+    }
   };
 
-  const handleFilterChange = (field, value) => {
-    setFilters((prev) => ({
-      ...prev,
-      [field]: value,
-    }));
+  const handleFilterChange = (filters: Record<string, any>) => {
+    if (selectedSectionForFilter) {
+      handleSectionChange(selectedSectionForFilter.id, { filters });
+    } else if (indexConfig.persistentFilter) {
+      setIndexConfig((prev) => ({
+        ...prev,
+        filters,
+      }));
+    }
   };
 
   const handleSaveChanges = () => {
-    handleCloseFilterSidebar();
-    toast.success("Changes saved successfully");
+    // Save changes logic here
+    console.log("Saving changes...");
+  };
+
+  const getFilterFieldsForSection = (section: Section): FilterField[] => {
+    if (section.contentType === "DescriptionList") {
+      // Extract fields from DescriptionList content
+      const fields: FilterField[] = [];
+      const content = section.content as React.ReactElement;
+      React.Children.forEach(content.props.children, (child) => {
+        if (React.isValidElement(child) && child.type === DescriptionGroup) {
+          const childElement = child as React.ReactElement;
+          const term = childElement.props.children.find((c: React.ReactElement) => c.type === DescriptionTerm);
+          const details = childElement.props.children.find((c: React.ReactElement) => c.type === DescriptionDetails);
+          if (term && details) {
+            fields.push({
+              key: term.props.children.toLowerCase().replace(/\s+/g, "_"),
+              label: term.props.children,
+              type: "text",
+            });
+          }
+        }
+      });
+      return fields;
+    } else if (section.contentType === "Table") {
+      // Extract fields from Table columns
+      return section.uploadedData
+        ? Object.keys(section.uploadedData[0] || {}).map((key) => ({
+            key,
+            label: key,
+            type: "text",
+          }))
+        : [];
+    }
+    return [];
   };
 
   const handleDeleteClick = (record) => {
-    setSelectedRecord(record);
+    setSelectedWorkOrder(record);
     setIsDeleteModalOpen(true);
   };
 
   const handleCloseDeleteModal = () => {
     setIsDeleteModalOpen(false);
-    setSelectedRecord(null);
+    setSelectedWorkOrder(null);
   };
 
   const handleConfirmDelete = () => {
-    console.log("Deleting record:", selectedRecord);
-    setTableData((prevData) => prevData.filter((row) => row.id !== selectedRecord?.id));
-    handleCloseDeleteModal();
-    toast.success("Record deleted successfully");
+    if (selectedWorkOrder) {
+      setTableData((prevData) => prevData.filter((row) => row.id !== selectedWorkOrder.id));
+      handleCloseDeleteModal();
+      toast.success("Record deleted successfully");
+    }
   };
 
   const handlePageSelect = (page: number) => {
@@ -1333,33 +1396,33 @@ export const Builder = ({
                   },
                 ]}
               />
-              <Page
-                breadcrumbs={indexBreadcrumbs}
-                renderHeader={() => (
-                  <Header
-                    renderBreadcrumbs={() => indexBreadcrumbs}
-                    title={indexConfig.title}
-                    subtitle={indexConfig.alternativeTitle}
-                    renderActions={() =>
-                      indexConfig.includePageActions ? (
-                        <Flex gap="x2" alignItems="center">
-                          <IconicButton icon="publish" tooltip="Export">
-                            Export
-                          </IconicButton>
-                        </Flex>
-                      ) : null
-                    }
-                  />
-                )}
-              >
-                <Box maxWidth={containerWidthState} mx="auto">
-                  {indexConfig.includeTableActions && (
-                    <>
+              <Flex>
+                <Box flex={1}>
+                  <Page
+                    breadcrumbs={indexBreadcrumbs}
+                    renderHeader={() => (
+                      <Header
+                        renderBreadcrumbs={() => indexBreadcrumbs}
+                        title={indexConfig.title}
+                        subtitle={indexConfig.alternativeTitle}
+                        renderActions={() =>
+                          indexConfig.includePageActions ? (
+                            <Flex gap="x2" alignItems="center">
+                              <IconicButton icon="publish" tooltip="Export">
+                                Export
+                              </IconicButton>
+                            </Flex>
+                          ) : null
+                        }
+                      />
+                    )}
+                  >
+                    <Box maxWidth={containerWidthState} mx="auto">
                       <Flex gap="x2" px="x1" pb="x2" justifyContent="flex-end" alignItems="center">
                         <IconicButton icon="add" tooltip="Create">
                           Create
                         </IconicButton>
-                        <IconicButton icon="filter" tooltip="Filter" onClick={handleFilterClick}>
+                        <IconicButton icon="filter" tooltip="Filter" onClick={handleFilterClick()}>
                           Filter
                         </IconicButton>
                         <VerticalDivider />
@@ -1377,109 +1440,41 @@ export const Builder = ({
                           <DropdownButton onClick={() => {}}>Delete</DropdownButton>
                         </DropdownMenu>
                       </Flex>
-                    </>
-                  )}
-                  <Table
-                    columns={visibleTableColumns}
-                    rows={paginatedData}
-                    hasSelectableRows
-                    keyField="id"
-                    onRowSelectionChange={(selectedRows) => console.log("Selected rows:", selectedRows)}
-                    compact
-                  />
-                  <Divider />
-                  {indexConfig.showPagination && (
-                    <Flex justifyContent="flex-end" mt="x3">
-                      <Pagination
-                        currentPage={currentPage}
-                        totalPages={Math.ceil(tableData.length / indexConfig.numberOfRows)}
-                        onSelectPage={handlePageSelect}
+                      <Table
+                        columns={visibleTableColumns}
+                        rows={paginatedData}
+                        hasSelectableRows
+                        keyField="id"
+                        onRowSelectionChange={(selectedRows) => console.log("Selected rows:", selectedRows)}
+                        compact
                       />
-                    </Flex>
-                  )}
-                  <Sidebar
-                    isOpen={isFilterSidebarOpen}
-                    onClose={handleCloseFilterSidebar}
-                    title="Filters"
-                    footer={
-                      <Flex gap="x2" justifyContent="flex-end" mt="x4">
-                        <QuietButton onClick={handleCloseFilterSidebar}>Cancel</QuietButton>
-                        <PrimaryButton onClick={handleSaveChanges}>Apply filters</PrimaryButton>
-                      </Flex>
-                    }
-                  >
-                    <Flex gap="x3" flexDirection="column">
-                      <FieldLabel labelText="Work order code" requirementText="(Required)">
-                        <Input
-                          value={filters.workOrderCode}
-                          onChange={(e) => handleFilterChange("workOrderCode", e.target.value)}
-                        />
-                      </FieldLabel>
-                      <FieldLabel labelText="Customer name" hint="Enter the full customer name">
-                        <Input
-                          value={filters.customerName}
-                          onChange={(e) => handleFilterChange("customerName", e.target.value)}
-                        />
-                      </FieldLabel>
-                      <FieldLabel labelText="Item code">
-                        <Input
-                          value={filters.itemCode}
-                          onChange={(e) => handleFilterChange("itemCode", e.target.value)}
-                        />
-                      </FieldLabel>
-                      <FieldLabel labelText="BOM version">
-                        <Select
-                          value={filters.bomVersion}
-                          onChange={(value) => handleFilterChange("bomVersion", value)}
-                          options={[
-                            { label: "All", value: "" },
-                            { label: "Peanut Butter Mix", value: "Peanut Butter Mix" },
-                          ]}
-                        />
-                      </FieldLabel>
-                      <FieldLabel labelText="Status">
-                        <Select
-                          value={filters.status}
-                          onChange={(value) => handleFilterChange("status", value)}
-                          options={[
-                            { label: "All", value: "" },
-                            { label: "Open", value: "Open" },
-                            { label: "Booked", value: "Booked" },
-                          ]}
-                        />
-                      </FieldLabel>
-                      <FieldLabel labelText="Planned start">
-                        <DatePicker
-                          selected={filters.plannedStart}
-                          onChange={(date) => handleFilterChange("plannedStart", date)}
-                        />
-                      </FieldLabel>
-                      <FieldLabel labelText="Planned end">
-                        <DatePicker
-                          selected={filters.plannedEnd}
-                          onChange={(date) => handleFilterChange("plannedEnd", date)}
-                        />
-                      </FieldLabel>
-                    </Flex>
-                  </Sidebar>
-                  <Modal
-                    isOpen={isDeleteModalOpen}
-                    onRequestClose={handleCloseDeleteModal}
-                    title="Delete work order"
-                    footerContent={
-                      <ButtonGroup>
-                        <DangerButton onClick={handleConfirmDelete}>Delete</DangerButton>
-                        <QuietButton onClick={handleCloseDeleteModal}>Cancel</QuietButton>
-                      </ButtonGroup>
-                    }
-                  >
-                    <Text>
-                      Are you sure you want to delete work order {selectedRecord?.workOrderCode}? This action cannot be
-                      undone.
-                    </Text>
-                  </Modal>
+                      <Divider />
+                      {indexConfig.showPagination && (
+                        <Flex justifyContent="flex-end" mt="x3">
+                          <Pagination
+                            currentPage={currentPage}
+                            totalPages={Math.ceil(tableData.length / indexConfig.numberOfRows)}
+                            onSelectPage={handlePageSelect}
+                          />
+                        </Flex>
+                      )}
+                      <FilterSidebar
+                        isOpen={isFilterSidebarOpen}
+                        onClose={() => setIsFilterSidebarOpen(false)}
+                        onApply={handleFilterApply}
+                        fields={indexConfig.tableColumns
+                          .filter((col) => col.dataKey !== "actions")
+                          .map((col) => ({
+                            key: col.dataKey,
+                            label: col.label || col.dataKey,
+                            type: "text",
+                          }))}
+                        initialFilters={filters}
+                      />
+                    </Box>
+                  </Page>
                 </Box>
-              </Page>
+              </Flex>
             </ApplicationFrame>
           )}
         </Resizable>
@@ -1489,5 +1484,5 @@ export const Builder = ({
 };
 
 Builder.parameters = {
-  chromatic: { disable: true },
+  chromatic: { disableSnapshot: true },
 };

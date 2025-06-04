@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Meta } from "@storybook/react";
 import {
   ApplicationFrame,
-  BrandedNavBar,
+  Navigation,
   Page,
   Breadcrumbs,
   Box,
@@ -35,12 +35,17 @@ import {
   Heading2,
   Heading3,
   Card,
-  Navigation,
   Modal,
   ButtonGroup,
   DangerButton,
+  Divider,
+  Pagination,
+  ToastContainer,
+  toast,
 } from "../../index";
-import { toast } from "react-hot-toast";
+import DeleteModal from "../builder/DeleteModal";
+import FilterSidebar from "../builder/FilterSidebar";
+import { FilterField } from "../builder/types";
 
 export default {
   title: "Templates/Record/Structure",
@@ -73,6 +78,47 @@ export const WithTabs = () => {
   const [selectedRecord, setSelectedRecord] = useState(null);
   const [isCreatingNew, setIsCreatingNew] = useState(false);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+  const [isFilterSidebarOpen, setIsFilterSidebarOpen] = useState(false);
+  const [filters, setFilters] = useState({
+    name: "",
+    type: "",
+    status: "",
+    priority: "",
+    assignedTo: "",
+    dueDate: null,
+  });
+  const [tableData, setTableData] = useState([
+    {
+      id: "RD-001",
+      name: "Production Order",
+      type: "Manufacturing",
+      status: "In Progress",
+      priority: "High",
+      assignedTo: "Michael Brown",
+      dueDate: "2024-Mar-20",
+      progress: "75%",
+    },
+    {
+      id: "RD-002",
+      name: "Quality Check",
+      type: "Quality",
+      status: "Pending",
+      priority: "Medium",
+      assignedTo: "Sarah Johnson",
+      dueDate: "2024-Mar-21",
+      progress: "0%",
+    },
+    {
+      id: "RD-003",
+      name: "Material Request",
+      type: "Inventory",
+      status: "Completed",
+      priority: "Low",
+      assignedTo: "John Smith",
+      dueDate: "2024-Mar-18",
+      progress: "100%",
+    },
+  ]);
 
   const handleEditClick = () => {
     setIsSidebarOpen(true);
@@ -121,93 +167,132 @@ export const WithTabs = () => {
   };
 
   const handleConfirmDelete = () => {
-    console.log("Deleting record:", selectedRecord);
-    setTableData((prevData) => prevData.filter((row) => row.id !== selectedRecord?.id));
-    handleCloseDeleteModal();
-    toast.success("Record deleted successfully");
+    if (selectedRecord) {
+      setTableData((prevData) => prevData.filter((row) => row.id !== selectedRecord.id));
+      handleCloseDeleteModal();
+      toast.success("Record deleted successfully");
+    }
   };
 
-  const [tableData, setTableData] = useState([
+  const handleFilterClick = () => {
+    setIsFilterSidebarOpen(true);
+  };
+
+  const handleFilterApply = (newFilters) => {
+    setFilters(newFilters);
+    setIsFilterSidebarOpen(false);
+    toast.success("Filters applied successfully");
+  };
+
+  const filterFields: FilterField[] = [
     {
-      id: "RD-001",
-      name: "Production Order",
-      status: "Active",
-      date: "2024-Mar-15",
+      key: "name",
+      label: "Name",
+      type: "text",
     },
     {
-      id: "RD-002",
-      name: "Quality Check",
-      status: "Completed",
-      date: "2024-Mar-16",
+      key: "type",
+      label: "Type",
+      type: "select",
+      options: [
+        { label: "All", value: "" },
+        { label: "Manufacturing", value: "Manufacturing" },
+        { label: "Quality", value: "Quality" },
+        { label: "Inventory", value: "Inventory" },
+      ],
     },
     {
-      id: "RD-003",
-      name: "Material Request",
-      status: "Pending",
-      date: "2024-Mar-17",
+      key: "status",
+      label: "Status",
+      type: "select",
+      options: [
+        { label: "All", value: "" },
+        { label: "In Progress", value: "In Progress" },
+        { label: "Pending", value: "Pending" },
+        { label: "Completed", value: "Completed" },
+      ],
     },
-  ]);
+    {
+      key: "priority",
+      label: "Priority",
+      type: "select",
+      options: [
+        { label: "All", value: "" },
+        { label: "High", value: "High" },
+        { label: "Medium", value: "Medium" },
+        { label: "Low", value: "Low" },
+      ],
+    },
+    {
+      key: "assignedTo",
+      label: "Assigned To",
+      type: "text",
+    },
+    {
+      key: "dueDate",
+      label: "Due Date",
+      type: "date",
+    },
+  ];
 
   return (
-    <ApplicationFrame
-      navBar={
-        <Navigation
-          appSwitcher={{
-            apps: {
-              "production-scheduling": {
-                url: "https://nulogy.com/",
-              },
-              "supplier-collaboration": {
-                url: "https://nulogy.com/",
-              },
-              "digital-quality-inspection": {
-                url: "https://nulogy.com/",
-              },
-              "shop-floor": {
-                url: "https://nulogy.com/",
-              },
-              "smart-factory": {
-                url: "https://nulogy.com/",
-              },
-              connections: {
-                url: "https://nulogy.com/",
-              },
-              data: {
-                url: "https://nulogy.com/",
-              },
+    <ApplicationFrame>
+      <ToastContainer />
+      <Navigation
+        appSwitcher={{
+          apps: {
+            "production-scheduling": {
+              url: "https://nulogy.com/",
             },
-          }}
-          primaryNavigation={[
-            {
-              key: "home",
-              label: "Home",
-              type: "link" as const,
-              props: { href: "#" },
+            "supplier-collaboration": {
+              url: "https://nulogy.com/",
             },
-            {
-              key: "records",
-              label: "Records",
-              type: "link" as const,
-              props: { href: "#" },
+            "digital-quality-inspection": {
+              url: "https://nulogy.com/",
             },
-          ]}
-          secondaryNavigation={[
-            {
-              key: "help",
-              label: "Help",
-              type: "link" as const,
-              props: { href: "#" },
+            "shop-floor": {
+              url: "https://nulogy.com/",
             },
-            {
-              key: "settings",
-              label: "Settings",
-              type: "link" as const,
-              props: { href: "#" },
+            "smart-factory": {
+              url: "https://nulogy.com/",
             },
-          ]}
-        />
-      }
-    >
+            connections: {
+              url: "https://nulogy.com/",
+            },
+            data: {
+              url: "https://nulogy.com/",
+            },
+          },
+        }}
+        primaryNavigation={[
+          {
+            key: "home",
+            label: "Home",
+            type: "link" as const,
+            props: { href: "#" },
+          },
+          {
+            key: "records",
+            label: "Records",
+            type: "link" as const,
+            props: { href: "#" },
+          },
+        ]}
+        secondaryNavigation={[
+          {
+            key: "help",
+            label: "Help",
+            type: "link" as const,
+            props: { href: "#" },
+          },
+          {
+            key: "settings",
+            label: "Settings",
+            type: "link" as const,
+            props: { href: "#" },
+          },
+        ]}
+      />
       <Page
         breadcrumbs={breadcrumbs}
         title="Record 123"
@@ -335,7 +420,7 @@ export const WithTabs = () => {
                       Export
                     </IconicButton>
                     <VerticalDivider />
-                    <IconicButton icon="filter" tooltip="Filter">
+                    <IconicButton icon="filter" tooltip="Filter" onClick={handleFilterClick}>
                       Filter
                     </IconicButton>
                   </Flex>
@@ -434,6 +519,13 @@ export const WithTabs = () => {
             </Tab>
           </Tabs>
         </Box>
+        <FilterSidebar
+          isOpen={isFilterSidebarOpen}
+          onClose={() => setIsFilterSidebarOpen(false)}
+          onApply={handleFilterApply}
+          fields={filterFields}
+          initialFilters={filters}
+        />
       </Page>
       <Sidebar
         isOpen={isSidebarOpen}
@@ -441,11 +533,13 @@ export const WithTabs = () => {
         title="Edit record information"
         helpText="Record 123"
         footer={
-          <Flex justifyContent="flex-end">
-            <QuietButton onClick={handleCloseSidebar} mr="x2">
+          <Flex justifyContent="flex-start">
+            <PrimaryButton onClick={handleSaveChanges} mr="x2">
+              Save
+            </PrimaryButton>
+            <QuietButton onClick={handleCloseSidebar}>
               Cancel
             </QuietButton>
-            <PrimaryButton onClick={handleSaveChanges}>Save</PrimaryButton>
           </Flex>
         }
       >
@@ -585,11 +679,13 @@ export const WithTabs = () => {
         title={isCreatingNew ? "Create new record detail" : "Edit record detail"}
         helpText="Record 123"
         footer={
-          <Flex justifyContent="flex-end">
-            <QuietButton onClick={handleCloseDetailsSidebar} mr="x2">
+          <Flex justifyContent="flex-start">
+            <PrimaryButton onClick={handleSaveDetailsChanges} mr="x2">
+              Save
+            </PrimaryButton>
+            <QuietButton onClick={handleCloseDetailsSidebar}>
               Cancel
             </QuietButton>
-            <PrimaryButton onClick={handleSaveDetailsChanges}>Save</PrimaryButton>
           </Flex>
         }
       >
@@ -625,20 +721,14 @@ export const WithTabs = () => {
           </FormSection>
         </Form>
       </Sidebar>
-      {isDeleteModalOpen && (
-        <Modal
-          title="Delete record"
-          onRequestClose={handleCloseDeleteModal}
-          footerContent={
-            <ButtonGroup>
-              <DangerButton onClick={handleConfirmDelete}>Delete</DangerButton>
-              <QuietButton onClick={handleCloseDeleteModal}>Cancel</QuietButton>
-            </ButtonGroup>
-          }
-        >
-          <Text>Are you sure you want to delete this record? This action cannot be undone.</Text>
-        </Modal>
-      )}
+      <DeleteModal
+        isOpen={isDeleteModalOpen}
+        onClose={handleCloseDeleteModal}
+        onConfirm={handleConfirmDelete}
+        title="Delete record"
+        itemName={selectedRecord?.id}
+        itemType="record"
+      />
     </ApplicationFrame>
   );
 };
@@ -649,6 +739,47 @@ export const WithSections = () => {
   const [selectedRecord, setSelectedRecord] = useState(null);
   const [isCreatingNew, setIsCreatingNew] = useState(false);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+  const [isFilterSidebarOpen, setIsFilterSidebarOpen] = useState(false);
+  const [filters, setFilters] = useState({
+    name: "",
+    type: "",
+    status: "",
+    priority: "",
+    assignedTo: "",
+    dueDate: null,
+  });
+  const [tableData, setTableData] = useState([
+    {
+      id: "RD-001",
+      name: "Production Order",
+      type: "Manufacturing",
+      status: "In Progress",
+      priority: "High",
+      assignedTo: "Michael Brown",
+      dueDate: "2024-Mar-20",
+      progress: "75%",
+    },
+    {
+      id: "RD-002",
+      name: "Quality Check",
+      type: "Quality",
+      status: "Pending",
+      priority: "Medium",
+      assignedTo: "Sarah Johnson",
+      dueDate: "2024-Mar-21",
+      progress: "0%",
+    },
+    {
+      id: "RD-003",
+      name: "Material Request",
+      type: "Inventory",
+      status: "Completed",
+      priority: "Low",
+      assignedTo: "John Smith",
+      dueDate: "2024-Mar-18",
+      progress: "100%",
+    },
+  ]);
 
   const handleEditClick = () => {
     setIsSidebarOpen(true);
@@ -697,93 +828,132 @@ export const WithSections = () => {
   };
 
   const handleConfirmDelete = () => {
-    console.log("Deleting record:", selectedRecord);
-    setTableData((prevData) => prevData.filter((row) => row.id !== selectedRecord?.id));
-    handleCloseDeleteModal();
-    toast.success("Record deleted successfully");
+    if (selectedRecord) {
+      setTableData((prevData) => prevData.filter((row) => row.id !== selectedRecord.id));
+      handleCloseDeleteModal();
+      toast.success("Record deleted successfully");
+    }
   };
 
-  const [tableData, setTableData] = useState([
+  const handleFilterClick = () => {
+    setIsFilterSidebarOpen(true);
+  };
+
+  const handleFilterApply = (newFilters) => {
+    setFilters(newFilters);
+    setIsFilterSidebarOpen(false);
+    toast.success("Filters applied successfully");
+  };
+
+  const filterFields: FilterField[] = [
     {
-      id: "RD-001",
-      name: "Production Order",
-      status: "Active",
-      date: "2024-Mar-15",
+      key: "name",
+      label: "Name",
+      type: "text",
     },
     {
-      id: "RD-002",
-      name: "Quality Check",
-      status: "Completed",
-      date: "2024-Mar-16",
+      key: "type",
+      label: "Type",
+      type: "select",
+      options: [
+        { label: "All", value: "" },
+        { label: "Manufacturing", value: "Manufacturing" },
+        { label: "Quality", value: "Quality" },
+        { label: "Inventory", value: "Inventory" },
+      ],
     },
     {
-      id: "RD-003",
-      name: "Material Request",
-      status: "Pending",
-      date: "2024-Mar-17",
+      key: "status",
+      label: "Status",
+      type: "select",
+      options: [
+        { label: "All", value: "" },
+        { label: "In Progress", value: "In Progress" },
+        { label: "Pending", value: "Pending" },
+        { label: "Completed", value: "Completed" },
+      ],
     },
-  ]);
+    {
+      key: "priority",
+      label: "Priority",
+      type: "select",
+      options: [
+        { label: "All", value: "" },
+        { label: "High", value: "High" },
+        { label: "Medium", value: "Medium" },
+        { label: "Low", value: "Low" },
+      ],
+    },
+    {
+      key: "assignedTo",
+      label: "Assigned To",
+      type: "text",
+    },
+    {
+      key: "dueDate",
+      label: "Due Date",
+      type: "date",
+    },
+  ];
 
   return (
-    <ApplicationFrame
-      navBar={
-        <Navigation
-          appSwitcher={{
-            apps: {
-              "production-scheduling": {
-                url: "https://nulogy.com/",
-              },
-              "supplier-collaboration": {
-                url: "https://nulogy.com/",
-              },
-              "digital-quality-inspection": {
-                url: "https://nulogy.com/",
-              },
-              "shop-floor": {
-                url: "https://nulogy.com/",
-              },
-              "smart-factory": {
-                url: "https://nulogy.com/",
-              },
-              connections: {
-                url: "https://nulogy.com/",
-              },
-              data: {
-                url: "https://nulogy.com/",
-              },
+    <ApplicationFrame>
+      <ToastContainer />
+      <Navigation
+        appSwitcher={{
+          apps: {
+            "production-scheduling": {
+              url: "https://nulogy.com/",
             },
-          }}
-          primaryNavigation={[
-            {
-              key: "home",
-              label: "Home",
-              type: "link" as const,
-              props: { href: "#" },
+            "supplier-collaboration": {
+              url: "https://nulogy.com/",
             },
-            {
-              key: "records",
-              label: "Records",
-              type: "link" as const,
-              props: { href: "#" },
+            "digital-quality-inspection": {
+              url: "https://nulogy.com/",
             },
-          ]}
-          secondaryNavigation={[
-            {
-              key: "help",
-              label: "Help",
-              type: "link" as const,
-              props: { href: "#" },
+            "shop-floor": {
+              url: "https://nulogy.com/",
             },
-            {
-              key: "settings",
-              label: "Settings",
-              type: "link" as const,
-              props: { href: "#" },
+            "smart-factory": {
+              url: "https://nulogy.com/",
             },
-          ]}
-        />
-      }
-    >
+            connections: {
+              url: "https://nulogy.com/",
+            },
+            data: {
+              url: "https://nulogy.com/",
+            },
+          },
+        }}
+        primaryNavigation={[
+          {
+            key: "home",
+            label: "Home",
+            type: "link" as const,
+            props: { href: "#" },
+          },
+          {
+            key: "records",
+            label: "Records",
+            type: "link" as const,
+            props: { href: "#" },
+          },
+        ]}
+        secondaryNavigation={[
+          {
+            key: "help",
+            label: "Help",
+            type: "link" as const,
+            props: { href: "#" },
+          },
+          {
+            key: "settings",
+            label: "Settings",
+            type: "link" as const,
+            props: { href: "#" },
+          },
+        ]}
+      />
       <Page
         breadcrumbs={breadcrumbs}
         title="Record 123"
@@ -907,7 +1077,7 @@ export const WithSections = () => {
                 Export
               </IconicButton>
               <VerticalDivider />
-              <IconicButton icon="filter" tooltip="Filter">
+              <IconicButton icon="filter" tooltip="Filter" onClick={handleFilterClick}>
                 Filter
               </IconicButton>
             </Flex>
@@ -1003,6 +1173,13 @@ export const WithSections = () => {
             compact
           />
         </Box>
+        <FilterSidebar
+          isOpen={isFilterSidebarOpen}
+          onClose={() => setIsFilterSidebarOpen(false)}
+          onApply={handleFilterApply}
+          fields={filterFields}
+          initialFilters={filters}
+        />
       </Page>
       <Sidebar
         isOpen={isSidebarOpen}
@@ -1010,11 +1187,13 @@ export const WithSections = () => {
         title="Edit record information"
         helpText="Record 123"
         footer={
-          <Flex justifyContent="flex-end">
-            <QuietButton onClick={handleCloseSidebar} mr="x2">
+          <Flex justifyContent="flex-start">
+            <PrimaryButton onClick={handleSaveChanges} mr="x2">
+              Save
+            </PrimaryButton>
+            <QuietButton onClick={handleCloseSidebar}>
               Cancel
             </QuietButton>
-            <PrimaryButton onClick={handleSaveChanges}>Save</PrimaryButton>
           </Flex>
         }
       >
@@ -1154,11 +1333,13 @@ export const WithSections = () => {
         title={isCreatingNew ? "Create new record detail" : "Edit record detail"}
         helpText="Record 123"
         footer={
-          <Flex justifyContent="flex-end">
-            <QuietButton onClick={handleCloseDetailsSidebar} mr="x2">
+          <Flex justifyContent="flex-start">
+            <PrimaryButton onClick={handleSaveDetailsChanges} mr="x2">
+              Save
+            </PrimaryButton>
+            <QuietButton onClick={handleCloseDetailsSidebar}>
               Cancel
             </QuietButton>
-            <PrimaryButton onClick={handleSaveDetailsChanges}>Save</PrimaryButton>
           </Flex>
         }
       >
@@ -1194,20 +1375,14 @@ export const WithSections = () => {
           </FormSection>
         </Form>
       </Sidebar>
-      {isDeleteModalOpen && (
-        <Modal
-          title="Delete record"
-          onRequestClose={handleCloseDeleteModal}
-          footerContent={
-            <ButtonGroup>
-              <DangerButton onClick={handleConfirmDelete}>Delete</DangerButton>
-              <QuietButton onClick={handleCloseDeleteModal}>Cancel</QuietButton>
-            </ButtonGroup>
-          }
-        >
-          <Text>Are you sure you want to delete this record? This action cannot be undone.</Text>
-        </Modal>
-      )}
+      <DeleteModal
+        isOpen={isDeleteModalOpen}
+        onClose={handleCloseDeleteModal}
+        onConfirm={handleConfirmDelete}
+        title="Delete record"
+        itemName={selectedRecord?.id}
+        itemType="record"
+      />
     </ApplicationFrame>
   );
 };
@@ -1218,6 +1393,47 @@ export const WithCards = () => {
   const [selectedRecord, setSelectedRecord] = useState(null);
   const [isCreatingNew, setIsCreatingNew] = useState(false);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+  const [isFilterSidebarOpen, setIsFilterSidebarOpen] = useState(false);
+  const [filters, setFilters] = useState({
+    name: "",
+    type: "",
+    status: "",
+    priority: "",
+    assignedTo: "",
+    dueDate: null,
+  });
+  const [tableData, setTableData] = useState([
+    {
+      id: "RD-001",
+      name: "Production Order",
+      type: "Manufacturing",
+      status: "In Progress",
+      priority: "High",
+      assignedTo: "Michael Brown",
+      dueDate: "2024-Mar-20",
+      progress: "75%",
+    },
+    {
+      id: "RD-002",
+      name: "Quality Check",
+      type: "Quality",
+      status: "Pending",
+      priority: "Medium",
+      assignedTo: "Sarah Johnson",
+      dueDate: "2024-Mar-21",
+      progress: "0%",
+    },
+    {
+      id: "RD-003",
+      name: "Material Request",
+      type: "Inventory",
+      status: "Completed",
+      priority: "Low",
+      assignedTo: "John Smith",
+      dueDate: "2024-Mar-18",
+      progress: "100%",
+    },
+  ]);
 
   const handleEditClick = () => {
     setIsSidebarOpen(true);
@@ -1266,93 +1482,132 @@ export const WithCards = () => {
   };
 
   const handleConfirmDelete = () => {
-    console.log("Deleting record:", selectedRecord);
-    setTableData((prevData) => prevData.filter((row) => row.id !== selectedRecord?.id));
-    handleCloseDeleteModal();
-    toast.success("Record deleted successfully");
+    if (selectedRecord) {
+      setTableData((prevData) => prevData.filter((row) => row.id !== selectedRecord.id));
+      handleCloseDeleteModal();
+      toast.success("Record deleted successfully");
+    }
   };
 
-  const [tableData, setTableData] = useState([
+  const handleFilterClick = () => {
+    setIsFilterSidebarOpen(true);
+  };
+
+  const handleFilterApply = (newFilters) => {
+    setFilters(newFilters);
+    setIsFilterSidebarOpen(false);
+    toast.success("Filters applied successfully");
+  };
+
+  const filterFields: FilterField[] = [
     {
-      id: "RD-001",
-      name: "Production Order",
-      status: "Active",
-      date: "2024-Mar-15",
+      key: "name",
+      label: "Name",
+      type: "text",
     },
     {
-      id: "RD-002",
-      name: "Quality Check",
-      status: "Completed",
-      date: "2024-Mar-16",
+      key: "type",
+      label: "Type",
+      type: "select",
+      options: [
+        { label: "All", value: "" },
+        { label: "Manufacturing", value: "Manufacturing" },
+        { label: "Quality", value: "Quality" },
+        { label: "Inventory", value: "Inventory" },
+      ],
     },
     {
-      id: "RD-003",
-      name: "Material Request",
-      status: "Pending",
-      date: "2024-Mar-17",
+      key: "status",
+      label: "Status",
+      type: "select",
+      options: [
+        { label: "All", value: "" },
+        { label: "In Progress", value: "In Progress" },
+        { label: "Pending", value: "Pending" },
+        { label: "Completed", value: "Completed" },
+      ],
     },
-  ]);
+    {
+      key: "priority",
+      label: "Priority",
+      type: "select",
+      options: [
+        { label: "All", value: "" },
+        { label: "High", value: "High" },
+        { label: "Medium", value: "Medium" },
+        { label: "Low", value: "Low" },
+      ],
+    },
+    {
+      key: "assignedTo",
+      label: "Assigned To",
+      type: "text",
+    },
+    {
+      key: "dueDate",
+      label: "Due Date",
+      type: "date",
+    },
+  ];
 
   return (
-    <ApplicationFrame
-      navBar={
-        <Navigation
-          appSwitcher={{
-            apps: {
-              "production-scheduling": {
-                url: "https://nulogy.com/",
-              },
-              "supplier-collaboration": {
-                url: "https://nulogy.com/",
-              },
-              "digital-quality-inspection": {
-                url: "https://nulogy.com/",
-              },
-              "shop-floor": {
-                url: "https://nulogy.com/",
-              },
-              "smart-factory": {
-                url: "https://nulogy.com/",
-              },
-              connections: {
-                url: "https://nulogy.com/",
-              },
-              data: {
-                url: "https://nulogy.com/",
-              },
+    <ApplicationFrame>
+      <ToastContainer />
+      <Navigation
+        appSwitcher={{
+          apps: {
+            "production-scheduling": {
+              url: "https://nulogy.com/",
             },
-          }}
-          primaryNavigation={[
-            {
-              key: "home",
-              label: "Home",
-              type: "link" as const,
-              props: { href: "#" },
+            "supplier-collaboration": {
+              url: "https://nulogy.com/",
             },
-            {
-              key: "records",
-              label: "Records",
-              type: "link" as const,
-              props: { href: "#" },
+            "digital-quality-inspection": {
+              url: "https://nulogy.com/",
             },
-          ]}
-          secondaryNavigation={[
-            {
-              key: "help",
-              label: "Help",
-              type: "link" as const,
-              props: { href: "#" },
+            "shop-floor": {
+              url: "https://nulogy.com/",
             },
-            {
-              key: "settings",
-              label: "Settings",
-              type: "link" as const,
-              props: { href: "#" },
+            "smart-factory": {
+              url: "https://nulogy.com/",
             },
-          ]}
-        />
-      }
-    >
+            connections: {
+              url: "https://nulogy.com/",
+            },
+            data: {
+              url: "https://nulogy.com/",
+            },
+          },
+        }}
+        primaryNavigation={[
+          {
+            key: "home",
+            label: "Home",
+            type: "link" as const,
+            props: { href: "#" },
+          },
+          {
+            key: "records",
+            label: "Records",
+            type: "link" as const,
+            props: { href: "#" },
+          },
+        ]}
+        secondaryNavigation={[
+          {
+            key: "help",
+            label: "Help",
+            type: "link" as const,
+            props: { href: "#" },
+          },
+          {
+            key: "settings",
+            label: "Settings",
+            type: "link" as const,
+            props: { href: "#" },
+          },
+        ]}
+      />
       <Page
         breadcrumbs={breadcrumbs}
         title="Record 123"
@@ -1476,7 +1731,7 @@ export const WithCards = () => {
                 Export
               </IconicButton>
               <VerticalDivider />
-              <IconicButton icon="filter" tooltip="Filter">
+              <IconicButton icon="filter" tooltip="Filter" onClick={handleFilterClick}>
                 Filter
               </IconicButton>
             </Flex>
@@ -1572,6 +1827,13 @@ export const WithCards = () => {
             compact
           />
         </Card>
+        <FilterSidebar
+          isOpen={isFilterSidebarOpen}
+          onClose={() => setIsFilterSidebarOpen(false)}
+          onApply={handleFilterApply}
+          fields={filterFields}
+          initialFilters={filters}
+        />
       </Page>
       <Sidebar
         isOpen={isSidebarOpen}
@@ -1579,11 +1841,13 @@ export const WithCards = () => {
         title="Edit record information"
         helpText="Record 123"
         footer={
-          <Flex justifyContent="flex-end">
-            <QuietButton onClick={handleCloseSidebar} mr="x2">
+          <Flex justifyContent="flex-start">
+            <PrimaryButton onClick={handleSaveChanges} mr="x2">
+              Save
+            </PrimaryButton>
+            <QuietButton onClick={handleCloseSidebar}>
               Cancel
             </QuietButton>
-            <PrimaryButton onClick={handleSaveChanges}>Save</PrimaryButton>
           </Flex>
         }
       >
@@ -1723,11 +1987,13 @@ export const WithCards = () => {
         title={isCreatingNew ? "Create new record detail" : "Edit record detail"}
         helpText="Record 123"
         footer={
-          <Flex justifyContent="flex-end">
-            <QuietButton onClick={handleCloseDetailsSidebar} mr="x2">
+          <Flex justifyContent="flex-start">
+            <PrimaryButton onClick={handleSaveDetailsChanges} mr="x2">
+              Save
+            </PrimaryButton>
+            <QuietButton onClick={handleCloseDetailsSidebar}>
               Cancel
             </QuietButton>
-            <PrimaryButton onClick={handleSaveDetailsChanges}>Save</PrimaryButton>
           </Flex>
         }
       >
@@ -1763,20 +2029,14 @@ export const WithCards = () => {
           </FormSection>
         </Form>
       </Sidebar>
-      {isDeleteModalOpen && (
-        <Modal
-          title="Delete record"
-          onRequestClose={handleCloseDeleteModal}
-          footerContent={
-            <ButtonGroup>
-              <DangerButton onClick={handleConfirmDelete}>Delete</DangerButton>
-              <QuietButton onClick={handleCloseDeleteModal}>Cancel</QuietButton>
-            </ButtonGroup>
-          }
-        >
-          <Text>Are you sure you want to delete this record? This action cannot be undone.</Text>
-        </Modal>
-      )}
+      <DeleteModal
+        isOpen={isDeleteModalOpen}
+        onClose={handleCloseDeleteModal}
+        onConfirm={handleConfirmDelete}
+        title="Delete record"
+        itemName={selectedRecord?.id}
+        itemType="record"
+      />
     </ApplicationFrame>
   );
 };
@@ -1787,6 +2047,47 @@ export const Combined = () => {
   const [selectedRecord, setSelectedRecord] = useState(null);
   const [isCreatingNew, setIsCreatingNew] = useState(false);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+  const [isFilterSidebarOpen, setIsFilterSidebarOpen] = useState(false);
+  const [filters, setFilters] = useState({
+    name: "",
+    type: "",
+    status: "",
+    priority: "",
+    assignedTo: "",
+    dueDate: null,
+  });
+  const [tableData, setTableData] = useState([
+    {
+      id: "RD-001",
+      name: "Production Order",
+      type: "Manufacturing",
+      status: "In Progress",
+      priority: "High",
+      assignedTo: "Michael Brown",
+      dueDate: "2024-Mar-20",
+      progress: "75%",
+    },
+    {
+      id: "RD-002",
+      name: "Quality Check",
+      type: "Quality",
+      status: "Pending",
+      priority: "Medium",
+      assignedTo: "Sarah Johnson",
+      dueDate: "2024-Mar-21",
+      progress: "0%",
+    },
+    {
+      id: "RD-003",
+      name: "Material Request",
+      type: "Inventory",
+      status: "Completed",
+      priority: "Low",
+      assignedTo: "John Smith",
+      dueDate: "2024-Mar-18",
+      progress: "100%",
+    },
+  ]);
 
   const handleEditClick = () => {
     setIsSidebarOpen(true);
@@ -1835,93 +2136,132 @@ export const Combined = () => {
   };
 
   const handleConfirmDelete = () => {
-    console.log("Deleting record:", selectedRecord);
-    setTableData((prevData) => prevData.filter((row) => row.id !== selectedRecord?.id));
-    handleCloseDeleteModal();
-    toast.success("Record deleted successfully");
+    if (selectedRecord) {
+      setTableData((prevData) => prevData.filter((row) => row.id !== selectedRecord.id));
+      handleCloseDeleteModal();
+      toast.success("Record deleted successfully");
+    }
   };
 
-  const [tableData, setTableData] = useState([
+  const handleFilterClick = () => {
+    setIsFilterSidebarOpen(true);
+  };
+
+  const handleFilterApply = (newFilters) => {
+    setFilters(newFilters);
+    setIsFilterSidebarOpen(false);
+    toast.success("Filters applied successfully");
+  };
+
+  const filterFields: FilterField[] = [
     {
-      id: "RD-001",
-      name: "Production Order",
-      status: "Active",
-      date: "2024-Mar-15",
+      key: "name",
+      label: "Name",
+      type: "text",
     },
     {
-      id: "RD-002",
-      name: "Quality Check",
-      status: "Completed",
-      date: "2024-Mar-16",
+      key: "type",
+      label: "Type",
+      type: "select",
+      options: [
+        { label: "All", value: "" },
+        { label: "Manufacturing", value: "Manufacturing" },
+        { label: "Quality", value: "Quality" },
+        { label: "Inventory", value: "Inventory" },
+      ],
     },
     {
-      id: "RD-003",
-      name: "Material Request",
-      status: "Pending",
-      date: "2024-Mar-17",
+      key: "status",
+      label: "Status",
+      type: "select",
+      options: [
+        { label: "All", value: "" },
+        { label: "In Progress", value: "In Progress" },
+        { label: "Pending", value: "Pending" },
+        { label: "Completed", value: "Completed" },
+      ],
     },
-  ]);
+    {
+      key: "priority",
+      label: "Priority",
+      type: "select",
+      options: [
+        { label: "All", value: "" },
+        { label: "High", value: "High" },
+        { label: "Medium", value: "Medium" },
+        { label: "Low", value: "Low" },
+      ],
+    },
+    {
+      key: "assignedTo",
+      label: "Assigned To",
+      type: "text",
+    },
+    {
+      key: "dueDate",
+      label: "Due Date",
+      type: "date",
+    },
+  ];
 
   return (
-    <ApplicationFrame
-      navBar={
-        <Navigation
-          appSwitcher={{
-            apps: {
-              "production-scheduling": {
-                url: "https://nulogy.com/",
-              },
-              "supplier-collaboration": {
-                url: "https://nulogy.com/",
-              },
-              "digital-quality-inspection": {
-                url: "https://nulogy.com/",
-              },
-              "shop-floor": {
-                url: "https://nulogy.com/",
-              },
-              "smart-factory": {
-                url: "https://nulogy.com/",
-              },
-              connections: {
-                url: "https://nulogy.com/",
-              },
-              data: {
-                url: "https://nulogy.com/",
-              },
+    <ApplicationFrame>
+      <ToastContainer />
+      <Navigation
+        appSwitcher={{
+          apps: {
+            "production-scheduling": {
+              url: "https://nulogy.com/",
             },
-          }}
-          primaryNavigation={[
-            {
-              key: "home",
-              label: "Home",
-              type: "link" as const,
-              props: { href: "#" },
+            "supplier-collaboration": {
+              url: "https://nulogy.com/",
             },
-            {
-              key: "records",
-              label: "Records",
-              type: "link" as const,
-              props: { href: "#" },
+            "digital-quality-inspection": {
+              url: "https://nulogy.com/",
             },
-          ]}
-          secondaryNavigation={[
-            {
-              key: "help",
-              label: "Help",
-              type: "link" as const,
-              props: { href: "#" },
+            "shop-floor": {
+              url: "https://nulogy.com/",
             },
-            {
-              key: "settings",
-              label: "Settings",
-              type: "link" as const,
-              props: { href: "#" },
+            "smart-factory": {
+              url: "https://nulogy.com/",
             },
-          ]}
-        />
-      }
-    >
+            connections: {
+              url: "https://nulogy.com/",
+            },
+            data: {
+              url: "https://nulogy.com/",
+            },
+          },
+        }}
+        primaryNavigation={[
+          {
+            key: "home",
+            label: "Home",
+            type: "link" as const,
+            props: { href: "#" },
+          },
+          {
+            key: "records",
+            label: "Records",
+            type: "link" as const,
+            props: { href: "#" },
+          },
+        ]}
+        secondaryNavigation={[
+          {
+            key: "help",
+            label: "Help",
+            type: "link" as const,
+            props: { href: "#" },
+          },
+          {
+            key: "settings",
+            label: "Settings",
+            type: "link" as const,
+            props: { href: "#" },
+          },
+        ]}
+      />
       <Page
         breadcrumbs={breadcrumbs}
         title="Record 123"
@@ -2046,7 +2386,7 @@ export const Combined = () => {
                       Export
                     </IconicButton>
                     <VerticalDivider />
-                    <IconicButton icon="filter" tooltip="Filter">
+                    <IconicButton icon="filter" tooltip="Filter" onClick={handleFilterClick}>
                       Filter
                     </IconicButton>
                   </Flex>
@@ -2171,6 +2511,13 @@ export const Combined = () => {
             </Tab>
           </Tabs>
         </Box>
+        <FilterSidebar
+          isOpen={isFilterSidebarOpen}
+          onClose={() => setIsFilterSidebarOpen(false)}
+          onApply={handleFilterApply}
+          fields={filterFields}
+          initialFilters={filters}
+        />
       </Page>
       <Sidebar
         isOpen={isSidebarOpen}
@@ -2178,11 +2525,13 @@ export const Combined = () => {
         title="Edit record information"
         helpText="Record 123"
         footer={
-          <Flex justifyContent="flex-end">
-            <QuietButton onClick={handleCloseSidebar} mr="x2">
+          <Flex justifyContent="flex-start">
+            <PrimaryButton onClick={handleSaveChanges} mr="x2">
+              Save
+            </PrimaryButton>
+            <QuietButton onClick={handleCloseSidebar}>
               Cancel
             </QuietButton>
-            <PrimaryButton onClick={handleSaveChanges}>Save</PrimaryButton>
           </Flex>
         }
       >
@@ -2362,20 +2711,14 @@ export const Combined = () => {
           </FormSection>
         </Form>
       </Sidebar>
-      {isDeleteModalOpen && (
-        <Modal
-          title="Delete record"
-          onRequestClose={handleCloseDeleteModal}
-          footerContent={
-            <ButtonGroup>
-              <DangerButton onClick={handleConfirmDelete}>Delete</DangerButton>
-              <QuietButton onClick={handleCloseDeleteModal}>Cancel</QuietButton>
-            </ButtonGroup>
-          }
-        >
-          <Text>Are you sure you want to delete this record? This action cannot be undone.</Text>
-        </Modal>
-      )}
+      <DeleteModal
+        isOpen={isDeleteModalOpen}
+        onClose={handleCloseDeleteModal}
+        onConfirm={handleConfirmDelete}
+        title="Delete record"
+        itemName={selectedRecord?.id}
+        itemType="record"
+      />
     </ApplicationFrame>
   );
 };

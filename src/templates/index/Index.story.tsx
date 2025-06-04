@@ -45,6 +45,8 @@ import {
 } from "../../index";
 import { InputField } from "../../Input/InputField";
 import type { TableColumnType } from "../../Table";
+import FilterSidebar from "../builder/FilterSidebar";
+import DeleteModal from "../builder/DeleteModal";
 
 interface WorkOrder {
   id: string;
@@ -65,12 +67,15 @@ const columns: TableColumnType<WorkOrder>[] = [
   { dataKey: "date", label: "Date" },
 ];
 
-export default {
-  title: "Templates/Index",
+const meta = {
+  title: "Templates/Index/Default",
+  component: Page,
   parameters: {
     layout: "fullscreen",
   },
 } as Meta;
+
+export default meta;
 
 const breadcrumbs = (
   <Breadcrumbs>
@@ -81,10 +86,21 @@ const breadcrumbs = (
 export const Default = () => {
   const [isFilterSidebarOpen, setIsFilterSidebarOpen] = useState(false);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isDetailsSidebarOpen, setIsDetailsSidebarOpen] = useState(false);
   const [selectedWorkOrder, setSelectedWorkOrder] = useState<WorkOrder | null>(null);
+  const [isCreatingNew, setIsCreatingNew] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const rowsPerPage = 25;
-  const [filters, setFilters] = useState({
+  const [filters, setFilters] = useState<{
+    workOrderCode: string;
+    customerName: string;
+    itemCode: string;
+    bomVersion: string;
+    status: string;
+    plannedStart: Date | null;
+    plannedEnd: Date | null;
+  }>({
     workOrderCode: "",
     customerName: "",
     itemCode: "",
@@ -93,69 +109,7 @@ export const Default = () => {
     plannedStart: null,
     plannedEnd: null,
   });
-
-  const handleFilterClick = () => {
-    setIsFilterSidebarOpen(true);
-  };
-
-  const handleCloseFilterSidebar = () => {
-    setIsFilterSidebarOpen(false);
-  };
-
-  const handleFilterChange = (field, value) => {
-    setFilters((prev) => ({
-      ...prev,
-      [field]: value,
-    }));
-  };
-
-  const handleDeleteClick = (workOrder: WorkOrder) => {
-    setSelectedWorkOrder(workOrder);
-    setIsDeleteModalOpen(true);
-  };
-
-  const handleCloseDeleteModal = () => {
-    setIsDeleteModalOpen(false);
-    setSelectedWorkOrder(null);
-  };
-
-  const handleConfirmDelete = () => {
-    console.log("Deleting work order:", selectedWorkOrder);
-    handleCloseDeleteModal();
-    toast.success("Work order deleted successfully");
-  };
-
-  const handlePageSelect = (page: number) => {
-    setCurrentPage(page);
-  };
-
-  const tableColumns: TableColumnType<WorkOrder>[] = [
-    {
-      label: "Work order code",
-      dataKey: "workOrderCode",
-      cellFormatter: (props) => (
-        <Link href={`#/work-orders/${props.row.id}`} underline={false}>
-          {props.cellData}
-        </Link>
-      ),
-    },
-    { label: "Customer name", dataKey: "customerName" },
-    { label: "Item code", dataKey: "itemCode" },
-    { label: "BOM version", dataKey: "bomVersion" },
-    { label: "Units expected", dataKey: "unitsExpected", align: "right" as const },
-    { label: "Status", dataKey: "status" },
-    { label: "Planned start", dataKey: "plannedStart" },
-    { label: "Planned end", dataKey: "plannedEnd" },
-    {
-      dataKey: "actions",
-      width: "40px",
-      cellFormatter: (props) => (
-        <IconicButton icon="delete" tooltip="Delete" onClick={() => handleDeleteClick(props.row)} />
-      ),
-    },
-  ];
-
-  const tableData = [
+  const [tableData, setTableData] = useState([
     {
       id: "1134",
       workOrderCode: "1134",
@@ -223,52 +177,249 @@ export const Default = () => {
       plannedStart: i % 2 === 0 ? "2023-Sep-01 02:09 PM" : "",
       plannedEnd: i % 2 === 0 ? "2023-Sep-08 02:09 PM" : "",
     })),
+  ]);
+
+  const handleFilterClick = () => {
+    setIsFilterSidebarOpen(true);
+  };
+
+  const handleCloseFilterSidebar = () => {
+    setIsFilterSidebarOpen(false);
+  };
+
+  const handleFilterChange = (field, value) => {
+    setFilters((prev) => ({
+      ...prev,
+      [field]: value,
+    }));
+  };
+
+  const handleEditClick = () => {
+    setIsSidebarOpen(true);
+  };
+
+  const handleCloseSidebar = () => {
+    setIsSidebarOpen(false);
+  };
+
+  const handleDetailsEditClick = (workOrder: WorkOrder) => {
+    setSelectedWorkOrder(workOrder);
+    setIsCreatingNew(false);
+    setIsDetailsSidebarOpen(true);
+  };
+
+  const handleCreateNewClick = () => {
+    setSelectedWorkOrder(null);
+    setIsCreatingNew(true);
+    setIsDetailsSidebarOpen(true);
+  };
+
+  const handleCloseDetailsSidebar = () => {
+    setIsDetailsSidebarOpen(false);
+    setSelectedWorkOrder(null);
+    setIsCreatingNew(false);
+  };
+
+  const handleSaveChanges = () => {
+    handleCloseSidebar();
+    toast.success("Changes saved successfully");
+  };
+
+  const handleSaveDetailsChanges = () => {
+    handleCloseDetailsSidebar();
+    toast.success(isCreatingNew ? "Work order created successfully" : "Work order updated successfully");
+  };
+
+  const handleDeleteClick = (workOrder: WorkOrder) => {
+    setSelectedWorkOrder(workOrder);
+    setIsDeleteModalOpen(true);
+  };
+
+  const handleCloseDeleteModal = () => {
+    setIsDeleteModalOpen(false);
+    setSelectedWorkOrder(null);
+  };
+
+  const handleConfirmDelete = () => {
+    console.log("Deleting work order:", selectedWorkOrder);
+    setTableData((prevData) => prevData.filter((row) => row.id !== selectedWorkOrder?.id));
+    handleCloseDeleteModal();
+    toast.success("Work order deleted successfully");
+  };
+
+  const handlePageSelect = (page: number) => {
+    setCurrentPage(page);
+  };
+
+  const tableColumns: TableColumnType<WorkOrder>[] = [
+    {
+      label: "Work order code",
+      dataKey: "workOrderCode",
+      cellFormatter: (props) => (
+        <Link href={`#/work-orders/${props.row.id}`} underline={false}>
+          {props.cellData}
+        </Link>
+      ),
+    },
+    { label: "Customer name", dataKey: "customerName" },
+    { label: "Item code", dataKey: "itemCode" },
+    { label: "BOM version", dataKey: "bomVersion" },
+    { label: "Units expected", dataKey: "unitsExpected", align: "right" as const },
+    { label: "Status", dataKey: "status" },
+    { label: "Planned start", dataKey: "plannedStart" },
+    { label: "Planned end", dataKey: "plannedEnd" },
+    {
+      dataKey: "actions",
+      width: "80px",
+      cellFormatter: (props) => (
+        <Flex gap="x1">
+          <IconicButton icon="edit" tooltip="Edit" onClick={() => handleDetailsEditClick(props.row)} />
+          <IconicButton icon="delete" tooltip="Delete" onClick={() => handleDeleteClick(props.row)} />
+        </Flex>
+      ),
+    },
   ];
 
   const paginatedData = tableData.slice((currentPage - 1) * rowsPerPage, currentPage * rowsPerPage);
+
+  const filterFields = [
+    {
+      key: "workOrderCode",
+      label: "Work order code",
+      type: "text" as const,
+      requirementText: "(Required)",
+    },
+    {
+      key: "customerName",
+      label: "Customer name",
+      type: "text" as const,
+      hint: "Enter the full customer name",
+    },
+    {
+      key: "itemCode",
+      label: "Item code",
+      type: "text" as const,
+    },
+    {
+      key: "bomVersion",
+      label: "BOM version",
+      type: "select" as const,
+      options: [
+        { label: "All", value: "" },
+        { label: "Peanut Butter Mix", value: "Peanut Butter Mix" },
+      ],
+    },
+    {
+      key: "status",
+      label: "Status",
+      type: "select" as const,
+      options: [
+        { label: "All", value: "" },
+        { label: "Open", value: "Open" },
+        { label: "Booked", value: "Booked" },
+      ],
+    },
+    {
+      key: "plannedStart",
+      label: "Planned start",
+      type: "date" as const,
+    },
+    {
+      key: "plannedEnd",
+      label: "Planned end",
+      type: "date" as const,
+    },
+  ];
+
+  const handleFilterApply = (newFilters: {
+    workOrderCode: string;
+    customerName: string;
+    itemCode: string;
+    bomVersion: string;
+    status: string;
+    plannedStart: Date | null;
+    plannedEnd: Date | null;
+  }) => {
+    setFilters(newFilters);
+    setIsFilterSidebarOpen(false);
+    toast.success("Filters applied successfully");
+  };
 
   return (
     <ApplicationFrame>
       <ToastContainer />
       <Navigation
+        appSwitcher={{
+          apps: {
+            "production-scheduling": {
+              url: "https://nulogy.com/",
+            },
+            "supplier-collaboration": {
+              url: "https://nulogy.com/",
+            },
+            "digital-quality-inspection": {
+              url: "https://nulogy.com/",
+            },
+            "shop-floor": {
+              url: "https://nulogy.com/",
+            },
+            "smart-factory": {
+              url: "https://nulogy.com/",
+            },
+            connections: {
+              url: "https://nulogy.com/",
+            },
+            data: {
+              url: "https://nulogy.com/",
+            },
+          },
+        }}
         primaryNavigation={[
           {
-            key: "dashboard",
-            label: "Dashboard",
-            type: "link",
+            key: "home",
+            label: "Home",
+            type: "link" as const,
             props: { href: "#" },
           },
           {
-            key: "projects",
-            label: "Projects",
-            type: "link",
-            props: { href: "#" },
-          },
-          {
-            key: "settings",
-            label: "Settings",
-            type: "link",
+            key: "records",
+            label: "Records",
+            type: "link" as const,
             props: { href: "#" },
           },
         ]}
         secondaryNavigation={[
           {
-            key: "profile",
-            label: "Profile",
-            type: "link",
+            key: "help",
+            label: "Help",
+            type: "link" as const,
             props: { href: "#" },
           },
           {
-            key: "logout",
-            label: "Logout",
-            type: "link",
+            key: "settings",
+            label: "Settings",
+            type: "link" as const,
             props: { href: "#" },
           },
         ]}
       />
-      <Page title="Index template" breadcrumbs={breadcrumbs}>
+      <Page
+        breadcrumbs={breadcrumbs}
+        renderHeader={() => (
+          <Header
+            renderBreadcrumbs={() => breadcrumbs}
+            title="Index template"
+            subtitle="Site name"
+            renderActions={() => (
+              <IconicButton icon="publish" tooltip="Export">
+                Export
+              </IconicButton>
+            )}
+          />
+        )}
+      >
         <Flex gap="x2" px="x1" pb="x2" justifyContent="flex-end" alignItems="center">
-          <IconicButton icon="add" tooltip="Create">
+          <IconicButton icon="add" tooltip="Create" onClick={handleCreateNewClick}>
             Create
           </IconicButton>
           <IconicButton icon="filter" tooltip="Filter" onClick={handleFilterClick}>
@@ -306,80 +457,158 @@ export const Default = () => {
           onSelectPage={handlePageSelect}
         />
 
-        <Sidebar
+        <FilterSidebar<{
+          workOrderCode: string;
+          customerName: string;
+          itemCode: string;
+          bomVersion: string;
+          status: string;
+          plannedStart: Date | null;
+          plannedEnd: Date | null;
+        }>
           isOpen={isFilterSidebarOpen}
-          onClose={handleCloseFilterSidebar}
-          title="Filters"
+          onClose={() => setIsFilterSidebarOpen(false)}
+          onApply={handleFilterApply}
+          fields={filterFields}
+          initialFilters={filters}
+        />
+
+        <DeleteModal
+          isOpen={isDeleteModalOpen}
+          onClose={handleCloseDeleteModal}
+          onConfirm={handleConfirmDelete}
+          title="Delete work order"
+          itemName={selectedWorkOrder?.workOrderCode}
+          itemType="work order"
+        />
+
+        <Sidebar
+          isOpen={isSidebarOpen}
+          onClose={handleCloseSidebar}
+          title="Edit work order information"
+          helpText="Work order 123"
           footer={
-            <Flex gap="x2" justifyContent="flex-end">
-              <PrimaryButton onClick={handleCloseFilterSidebar}>Cancel</PrimaryButton>
-              <PrimaryButton onClick={() => console.log("Apply filters:", filters)}>Apply Filters</PrimaryButton>
+            <Flex justifyContent="flex-start">
+              <PrimaryButton onClick={handleSaveChanges} mr="x2">
+                Save
+              </PrimaryButton>
+              <QuietButton onClick={handleCloseSidebar}>
+                Cancel
+              </QuietButton>
             </Flex>
           }
         >
-          <Flex gap="x3" flexDirection="column">
-            <FieldLabel labelText="Work order code" requirementText="(Required)">
-              <InputField
-                value={filters.workOrderCode}
-                onChange={(e) => handleFilterChange("workOrderCode", e.target.value)}
-              />
-            </FieldLabel>
-            <FieldLabel labelText="Customer name" hint="Enter the full customer name">
-              <InputField
-                value={filters.customerName}
-                onChange={(e) => handleFilterChange("customerName", e.target.value)}
-              />
-            </FieldLabel>
-            <FieldLabel labelText="Item code">
-              <InputField value={filters.itemCode} onChange={(e) => handleFilterChange("itemCode", e.target.value)} />
-            </FieldLabel>
-            <FieldLabel labelText="BOM version">
-              <Select
-                value={filters.bomVersion}
-                onChange={(value) => handleFilterChange("bomVersion", value)}
-                options={[
-                  { label: "All", value: "" },
-                  { label: "Peanut Butter Mix", value: "Peanut Butter Mix" },
-                ]}
-              />
-            </FieldLabel>
-            <FieldLabel labelText="Status">
-              <Select
-                value={filters.status}
-                onChange={(value) => handleFilterChange("status", value)}
-                options={[
-                  { label: "All", value: "" },
-                  { label: "Open", value: "Open" },
-                  { label: "Booked", value: "Booked" },
-                ]}
-              />
-            </FieldLabel>
-            <FieldLabel labelText="Planned start">
-              <DatePicker
-                selected={filters.plannedStart}
-                onChange={(date) => handleFilterChange("plannedStart", date)}
-              />
-            </FieldLabel>
-            <FieldLabel labelText="Planned end">
-              <DatePicker selected={filters.plannedEnd} onChange={(date) => handleFilterChange("plannedEnd", date)} />
-            </FieldLabel>
-          </Flex>
+          <Form>
+            <FormSection>
+              <Box pb="x3">
+                <FieldLabel labelText="Work order code">
+                  <Input value="WO-123" disabled />
+                </FieldLabel>
+              </Box>
+              <Box pb="x3">
+                <FieldLabel labelText="Created by">
+                  <Input value="John Smith" disabled />
+                </FieldLabel>
+              </Box>
+              <Box pb="x3">
+                <FieldLabel labelText="Created date">
+                  <DatePicker selected={new Date("2024-03-15")} inputProps={{ disabled: true }} />
+                </FieldLabel>
+              </Box>
+              <Box pb="x3">
+                <FieldLabel labelText="Last modified by">
+                  <Input value="Sarah Johnson" disabled />
+                </FieldLabel>
+              </Box>
+              <Box pb="x3">
+                <FieldLabel labelText="Last modified date">
+                  <DatePicker selected={new Date("2024-03-16")} inputProps={{ disabled: true }} />
+                </FieldLabel>
+              </Box>
+              <Box pb="x3">
+                <FieldLabel labelText="Status">
+                  <Select
+                    options={[
+                      { value: "open", label: "Open" },
+                      { value: "booked", label: "Booked" },
+                      { value: "in_progress", label: "In Progress" },
+                    ]}
+                    value="open"
+                  />
+                </FieldLabel>
+              </Box>
+            </FormSection>
+          </Form>
         </Sidebar>
-        <Modal
-          isOpen={isDeleteModalOpen}
-          onRequestClose={handleCloseDeleteModal}
-          title="Delete work order"
-          footerContent={
-            <ButtonGroup>
-              <DangerButton onClick={handleConfirmDelete}>Delete</DangerButton>
-              <QuietButton onClick={handleCloseDeleteModal}>Cancel</QuietButton>
-            </ButtonGroup>
+
+        <Sidebar
+          isOpen={isDetailsSidebarOpen}
+          onClose={handleCloseDetailsSidebar}
+          title={isCreatingNew ? "Create new work order" : "Edit work order"}
+          helpText="Work order details"
+          footer={
+            <Flex justifyContent="flex-start">
+              <PrimaryButton onClick={handleSaveDetailsChanges} mr="x2">
+                Save
+              </PrimaryButton>
+              <QuietButton onClick={handleCloseDetailsSidebar}>
+                Cancel
+              </QuietButton>
+            </Flex>
           }
         >
-          <Text>
-            Are you sure you want to delete work order {selectedWorkOrder?.workOrderCode}? This action cannot be undone.
-          </Text>
-        </Modal>
+          <Form>
+            <FormSection>
+              <Box pb="x3">
+                <FieldLabel labelText="Work order code">
+                  <Input value={selectedWorkOrder?.workOrderCode || ""} disabled={!isCreatingNew} />
+                </FieldLabel>
+              </Box>
+              <Box pb="x3">
+                <FieldLabel labelText="Customer name">
+                  <Input value={selectedWorkOrder?.customerName || ""} />
+                </FieldLabel>
+              </Box>
+              <Box pb="x3">
+                <FieldLabel labelText="Item code">
+                  <Input value={selectedWorkOrder?.itemCode || ""} />
+                </FieldLabel>
+              </Box>
+              <Box pb="x3">
+                <FieldLabel labelText="BOM version">
+                  <Input value={selectedWorkOrder?.bomVersion || ""} />
+                </FieldLabel>
+              </Box>
+              <Box pb="x3">
+                <FieldLabel labelText="Units expected">
+                  <Input type="number" value={selectedWorkOrder?.unitsExpected || ""} />
+                </FieldLabel>
+              </Box>
+              <Box pb="x3">
+                <FieldLabel labelText="Status">
+                  <Select
+                    options={[
+                      { value: "open", label: "Open" },
+                      { value: "booked", label: "Booked" },
+                      { value: "in_progress", label: "In Progress" },
+                    ]}
+                    value={selectedWorkOrder?.status?.toLowerCase() || ""}
+                  />
+                </FieldLabel>
+              </Box>
+              <Box pb="x3">
+                <FieldLabel labelText="Planned start">
+                  <DatePicker selected={selectedWorkOrder?.plannedStart ? new Date(selectedWorkOrder.plannedStart) : new Date()} />
+                </FieldLabel>
+              </Box>
+              <Box pb="x3">
+                <FieldLabel labelText="Planned end">
+                  <DatePicker selected={selectedWorkOrder?.plannedEnd ? new Date(selectedWorkOrder.plannedEnd) : new Date()} />
+                </FieldLabel>
+              </Box>
+            </FormSection>
+          </Form>
+        </Sidebar>
       </Page>
     </ApplicationFrame>
   );

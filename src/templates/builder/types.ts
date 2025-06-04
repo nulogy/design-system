@@ -2,11 +2,20 @@ import { ReactNode } from "react";
 import { Breakpoints } from "../../theme/theme.type";
 import { DefaultNDSThemeType } from "../../theme";
 
+export interface FilterField {
+  key: string;
+  label: string;
+  type: "text" | "select" | "date";
+  options?: { label: string; value: string }[];
+  requirementText?: string;
+  hint?: string;
+}
+
 export interface Section {
   id: string;
   type: "Default" | "Card" | "Tab";
   width: "Full" | "Centered";
-  maxWidth: number;
+  maxWidth?: number;
   title: string;
   includeTitle: boolean;
   includeActions: boolean;
@@ -16,7 +25,8 @@ export interface Section {
   showPagination?: boolean;
   currentPage?: number;
   content: ReactNode;
-  uploadedData?: any[];
+  uploadedData?: Array<Record<string, any>>;
+  filters?: Record<string, any>;
 }
 
 export interface HeaderConfig {
@@ -33,6 +43,7 @@ export interface IndexConfig {
   numberOfRows: number;
   showPagination: boolean;
   uploadedData: any[] | null;
+  filterOpenByDefault: boolean;
   tableColumns: Array<{
     label?: string;
     dataKey: string;

@@ -76,6 +76,13 @@ export const IndexConfigSidebar: React.FC<IndexConfigSidebarProps> = ({
             />
           </Box>
           <Box pb="x2">
+            <Checkbox
+              labelText="Filter open by default"
+              checked={config.filterOpenByDefault}
+              onChange={(e) => onConfigChange({ filterOpenByDefault: e.target.checked })}
+            />
+          </Box>
+          <Box pb="x2">
             <FieldLabel labelText="Upload content using CSV">
               <Input
                 type="file"
