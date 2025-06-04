@@ -537,9 +537,7 @@ export const WithTabs = () => {
             <PrimaryButton onClick={handleSaveChanges} mr="x2">
               Save
             </PrimaryButton>
-            <QuietButton onClick={handleCloseSidebar}>
-              Cancel
-            </QuietButton>
+            <QuietButton onClick={handleCloseSidebar}>Cancel</QuietButton>
           </Flex>
         }
       >
@@ -683,9 +681,7 @@ export const WithTabs = () => {
             <PrimaryButton onClick={handleSaveDetailsChanges} mr="x2">
               Save
             </PrimaryButton>
-            <QuietButton onClick={handleCloseDetailsSidebar}>
-              Cancel
-            </QuietButton>
+            <QuietButton onClick={handleCloseDetailsSidebar}>Cancel</QuietButton>
           </Flex>
         }
       >
@@ -1191,9 +1187,7 @@ export const WithSections = () => {
             <PrimaryButton onClick={handleSaveChanges} mr="x2">
               Save
             </PrimaryButton>
-            <QuietButton onClick={handleCloseSidebar}>
-              Cancel
-            </QuietButton>
+            <QuietButton onClick={handleCloseSidebar}>Cancel</QuietButton>
           </Flex>
         }
       >
@@ -1337,9 +1331,7 @@ export const WithSections = () => {
             <PrimaryButton onClick={handleSaveDetailsChanges} mr="x2">
               Save
             </PrimaryButton>
-            <QuietButton onClick={handleCloseDetailsSidebar}>
-              Cancel
-            </QuietButton>
+            <QuietButton onClick={handleCloseDetailsSidebar}>Cancel</QuietButton>
           </Flex>
         }
       >
@@ -1845,9 +1837,7 @@ export const WithCards = () => {
             <PrimaryButton onClick={handleSaveChanges} mr="x2">
               Save
             </PrimaryButton>
-            <QuietButton onClick={handleCloseSidebar}>
-              Cancel
-            </QuietButton>
+            <QuietButton onClick={handleCloseSidebar}>Cancel</QuietButton>
           </Flex>
         }
       >
@@ -1991,9 +1981,7 @@ export const WithCards = () => {
             <PrimaryButton onClick={handleSaveDetailsChanges} mr="x2">
               Save
             </PrimaryButton>
-            <QuietButton onClick={handleCloseDetailsSidebar}>
-              Cancel
-            </QuietButton>
+            <QuietButton onClick={handleCloseDetailsSidebar}>Cancel</QuietButton>
           </Flex>
         }
       >
@@ -2529,9 +2517,7 @@ export const Combined = () => {
             <PrimaryButton onClick={handleSaveChanges} mr="x2">
               Save
             </PrimaryButton>
-            <QuietButton onClick={handleCloseSidebar}>
-              Cancel
-            </QuietButton>
+            <QuietButton onClick={handleCloseSidebar}>Cancel</QuietButton>
           </Flex>
         }
       >

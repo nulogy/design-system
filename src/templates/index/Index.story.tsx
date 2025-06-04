@@ -492,9 +492,7 @@ export const Default = () => {
               <PrimaryButton onClick={handleSaveChanges} mr="x2">
                 Save
               </PrimaryButton>
-              <QuietButton onClick={handleCloseSidebar}>
-                Cancel
-              </QuietButton>
+              <QuietButton onClick={handleCloseSidebar}>Cancel</QuietButton>
             </Flex>
           }
         >
@@ -551,9 +549,7 @@ export const Default = () => {
               <PrimaryButton onClick={handleSaveDetailsChanges} mr="x2">
                 Save
               </PrimaryButton>
-              <QuietButton onClick={handleCloseDetailsSidebar}>
-                Cancel
-              </QuietButton>
+              <QuietButton onClick={handleCloseDetailsSidebar}>Cancel</QuietButton>
             </Flex>
           }
         >
@@ -598,12 +594,16 @@ export const Default = () => {
               </Box>
               <Box pb="x3">
                 <FieldLabel labelText="Planned start">
-                  <DatePicker selected={selectedWorkOrder?.plannedStart ? new Date(selectedWorkOrder.plannedStart) : new Date()} />
+                  <DatePicker
+                    selected={selectedWorkOrder?.plannedStart ? new Date(selectedWorkOrder.plannedStart) : new Date()}
+                  />
                 </FieldLabel>
               </Box>
               <Box pb="x3">
                 <FieldLabel labelText="Planned end">
-                  <DatePicker selected={selectedWorkOrder?.plannedEnd ? new Date(selectedWorkOrder.plannedEnd) : new Date()} />
+                  <DatePicker
+                    selected={selectedWorkOrder?.plannedEnd ? new Date(selectedWorkOrder.plannedEnd) : new Date()}
+                  />
                 </FieldLabel>
               </Box>
             </FormSection>

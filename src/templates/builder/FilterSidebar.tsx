@@ -1,15 +1,5 @@
 import React, { useState } from "react";
-import {
-  Sidebar,
-  Flex,
-  FieldLabel,
-  Input,
-  Select,
-  DatePicker,
-  PrimaryButton,
-  QuietButton,
-  Box,
-} from "../../index";
+import { Sidebar, Flex, FieldLabel, Input, Select, DatePicker, PrimaryButton, QuietButton, Box } from "../../index";
 
 interface FilterField {
   key: string;
@@ -60,18 +50,10 @@ const FilterSidebar = <T extends Record<string, any>>({
           />
         );
       case "date":
-        return (
-          <DatePicker
-            selected={filters[field.key]}
-            onChange={(date) => handleFilterChange(field.key, date)}
-          />
-        );
+        return <DatePicker selected={filters[field.key]} onChange={(date) => handleFilterChange(field.key, date)} />;
       default:
         return (
-          <Input
-            value={filters[field.key] || ""}
-            onChange={(e) => handleFilterChange(field.key, e.target.value)}
-          />
+          <Input value={filters[field.key] || ""} onChange={(e) => handleFilterChange(field.key, e.target.value)} />
         );
     }
   };
@@ -93,12 +75,7 @@ const FilterSidebar = <T extends Record<string, any>>({
     >
       <Flex gap="x3" flexDirection="column">
         {fields.map((field) => (
-          <FieldLabel
-            key={field.key}
-            labelText={field.label}
-            requirementText={field.requirementText}
-            hint={field.hint}
-          >
+          <FieldLabel key={field.key} labelText={field.label} requirementText={field.requirementText} hint={field.hint}>
             {renderField(field)}
           </FieldLabel>
         ))}
@@ -107,4 +84,4 @@ const FilterSidebar = <T extends Record<string, any>>({
   );
 };
 
-export default FilterSidebar; 
+export default FilterSidebar;

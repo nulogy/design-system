@@ -31,10 +31,11 @@ const DeleteModal: React.FC<DeleteModalProps> = ({
       }
     >
       <Text>
-        Are you sure you want to delete {itemName ? `${itemType} ${itemName}` : `this ${itemType}`}? This action cannot be undone.
+        Are you sure you want to delete {itemName ? `${itemType} ${itemName}` : `this ${itemType}`}? This action cannot
+        be undone.
       </Text>
     </Modal>
   );
 };
 
-export default DeleteModal; 
+export default DeleteModal;

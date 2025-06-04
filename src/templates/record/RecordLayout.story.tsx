@@ -561,9 +561,7 @@ export const FullWidth = () => {
             <PrimaryButton onClick={handleSaveChanges} mr="x2">
               Save
             </PrimaryButton>
-            <QuietButton onClick={handleCloseSidebar}>
-              Cancel
-            </QuietButton>
+            <QuietButton onClick={handleCloseSidebar}>Cancel</QuietButton>
           </Flex>
         }
       >
@@ -657,9 +655,7 @@ export const FullWidth = () => {
             <PrimaryButton onClick={handleSaveDetailsChanges} mr="x2">
               Save
             </PrimaryButton>
-            <QuietButton onClick={handleCloseDetailsSidebar}>
-              Cancel
-            </QuietButton>
+            <QuietButton onClick={handleCloseDetailsSidebar}>Cancel</QuietButton>
           </Flex>
         }
       >
@@ -1198,9 +1194,7 @@ export const Centered = () => {
             <PrimaryButton onClick={handleSaveChanges} mr="x2">
               Save
             </PrimaryButton>
-            <QuietButton onClick={handleCloseSidebar}>
-              Cancel
-            </QuietButton>
+            <QuietButton onClick={handleCloseSidebar}>Cancel</QuietButton>
           </Flex>
         }
       >
@@ -1294,9 +1288,7 @@ export const Centered = () => {
             <PrimaryButton onClick={handleSaveDetailsChanges} mr="x2">
               Save
             </PrimaryButton>
-            <QuietButton onClick={handleCloseDetailsSidebar}>
-              Cancel
-            </QuietButton>
+            <QuietButton onClick={handleCloseDetailsSidebar}>Cancel</QuietButton>
           </Flex>
         }
       >
