@@ -94,5 +94,8 @@ yarn-error.log*
 # VSCode settings
 .vscode
 
+# Cursor IDE settings
+.cursor
+
 # asdf version manager
 .tool-versions
