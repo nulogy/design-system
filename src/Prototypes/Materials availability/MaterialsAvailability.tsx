@@ -20,6 +20,7 @@ import { Button } from '../../Button';
 import { Checkbox } from '../../Checkbox';
 import { DescriptionList, DescriptionGroup, DescriptionTerm, DescriptionDetails } from '../../DescriptionList/index';
 import { DropdownMenu, DropdownButton } from '../../DropdownMenu';
+import { Tooltip } from '../../Tooltip';
 
 interface MaterialsAvailabilityProps {
   selectedIndex?: number;
@@ -41,6 +42,9 @@ const StyledTable = styled(Table)`
     min-width: 120px;
     position: relative;
     padding: ${props => props.theme.space.x1};
+    font-size: ${props => props.theme.fontSizes.small};
+    max-height: 48px;
+    overflow: visible;
   }
   th:first-child, td:first-child {
     min-width: auto;
@@ -56,6 +60,9 @@ const StyledTable = styled(Table)`
   }
   th[data-divider="true"], td[data-divider="true"] {
     padding-left: 16px;
+  }
+  tr {
+    position: relative;
   }
 `;
 
@@ -76,6 +83,7 @@ const TableHeader = styled(Box)`
   display: flex;
   justify-content: flex-end;
   margin-bottom: 16px;
+  min-height: 40px;
 `;
 
 const FilterSection = styled(Box)`
@@ -140,7 +148,7 @@ const getStatusType = (status: string) => {
   switch (status.toLowerCase()) {
     case 'temporary shortage':
       return 'warning';
-    case 'full shortage':
+    case 'material shortage':
       return 'danger';
     case 'no shortage':
       return 'quiet';
@@ -149,44 +157,155 @@ const getStatusType = (status: string) => {
   }
 };
 
+const TooltipCell = styled.div`
+  max-height: 48px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  &:hover {
+    cursor: help;
+  }
+`;
+
+const TruncatedCell = styled.div`
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 48px;
+`;
+
+const TooltipWrapper = ({ children, content }: { children: React.ReactNode; content: string }) => (
+  <Tooltip tooltip={content}>
+    {children}
+  </Tooltip>
+);
+
 const columns = [
-  { dataKey: 'poNumber', label: 'PO number' },
-  { dataKey: 'customer', label: 'Customer' },
-  { dataKey: 'itemCode', label: 'Item code and description' },
-  { dataKey: 'supplierPOLineItem', label: 'Supplier PO line item number' },
+  { dataKey: 'poNumber', label: 'PO number',
+    cellRenderer: ({ cellData }) => (
+      <TooltipWrapper content={cellData}>
+        <TruncatedCell>{cellData}</TruncatedCell>
+      </TooltipWrapper>
+    )
+  },
+  { dataKey: 'customer', label: 'Customer',
+    cellRenderer: ({ cellData }) => (
+      <TooltipWrapper content={cellData}>
+        <TruncatedCell>{cellData}</TruncatedCell>
+      </TooltipWrapper>
+    )
+  },
+  { dataKey: 'itemCode', label: 'Item code and description',
+    cellRenderer: ({ cellData }) => (
+      <TooltipWrapper content={cellData}>
+        <TruncatedCell>{cellData}</TruncatedCell>
+      </TooltipWrapper>
+    )
+  },
+  { dataKey: 'supplierPOLineItem', label: 'Supplier PO line item number',
+    cellRenderer: ({ cellData }) => (
+      <TooltipWrapper content={cellData}>
+        <TruncatedCell>{cellData}</TruncatedCell>
+      </TooltipWrapper>
+    )
+  },
   { 
     dataKey: 'priority', 
     label: 'Priority',
-    metadata: { divider: true }
-  },
-  { dataKey: 'problemsAndRisks', label: 'Problems and risks',
-    cellRenderer: ({ cellData }) => cellData && cellData !== 'None'
-      ? <StatusIndicator type="danger" style={{ whiteSpace: 'nowrap' }}>Late</StatusIndicator>
-      : '-' },
-  { 
-    dataKey: 'materialAvailabilityStatus', 
-    label: 'Material availability status',
+    metadata: { divider: true },
     cellRenderer: ({ cellData }) => (
-      <span style={{ cursor: 'pointer' }} onClick={() => window.open('about:blank', '_blank')}>
-        <StatusIndicator type={getStatusType(cellData)} style={{ whiteSpace: 'nowrap' }}>
-          {cellData}
-        </StatusIndicator>
-      </span>
+      <TooltipWrapper content={cellData}>
+        <TruncatedCell>{cellData}</TruncatedCell>
+      </TooltipWrapper>
     )
   },
-  { dataKey: 'readyToBuild', label: 'Ready to build' },
+  { 
+    dataKey: 'problemsAndRisks', 
+    label: 'Problems and risks',
+    cellRenderer: ({ cellData }) => {
+      if (cellData === 'Temporary material shortage') {
+        return <StatusIndicator type="warning" style={{ whiteSpace: 'nowrap' }}>Temporary material shortage</StatusIndicator>;
+      } else if (cellData === 'Material shortage') {
+        return <StatusIndicator type="danger" style={{ whiteSpace: 'nowrap' }}>Material shortage</StatusIndicator>;
+      } else if (cellData === 'Late') {
+        return <StatusIndicator type="danger" style={{ whiteSpace: 'nowrap' }}>Late</StatusIndicator>;
+      } else if (cellData === 'None') {
+        return '-';
+      }
+      return (
+        <TooltipWrapper content={cellData}>
+          <TruncatedCell>{cellData}</TruncatedCell>
+        </TooltipWrapper>
+      );
+    }
+  },
+  { dataKey: 'validatedForAssembly', label: 'Tags',
+    cellRenderer: ({ cellData }) => {
+      if (!cellData || cellData.length === 0) return '-';
+      return (
+        <Box>
+          {cellData.map((tag: string, index: number) => (
+            <Box key={tag} mb={index < cellData.length - 1 ? "x1" : 0}>
+              <StatusIndicator type="quiet" style={{ whiteSpace: 'nowrap' }}>{tag}</StatusIndicator>
+            </Box>
+          ))}
+        </Box>
+      );
+    }
+  },
   { 
     dataKey: 'canRunNow', 
     label: 'Can run (now)',
-    cellRenderer: ({ cellData }) => `${cellData} ${cellData > 0 ? 'PCS' : ''}`
+    cellRenderer: ({ cellData }) => {
+      const text = `${cellData} ${cellData > 0 ? 'PCS' : ''}`;
+      return (
+        <TooltipWrapper content={text}>
+          <TruncatedCell>{text}</TruncatedCell>
+        </TooltipWrapper>
+      );
+    }
   },
   { 
     dataKey: 'canRunByStartDate', 
     label: 'Can run (by production start date)',
-    cellRenderer: ({ cellData }) => `${cellData} ${cellData > 0 ? 'PCS' : ''}`
+    cellRenderer: ({ cellData }) => {
+      const text = `${cellData} ${cellData > 0 ? 'PCS' : ''}`;
+      return (
+        <TooltipWrapper content={text}>
+          <TruncatedCell>{text}</TruncatedCell>
+        </TooltipWrapper>
+      );
+    }
   },
-  { dataKey: 'materialAvailabilityDate', label: 'Material availability date' },
-  { dataKey: 'productionProgress', label: 'Production progress' },
+  { dataKey: 'materialAvailabilityDate', label: 'Material availability date',
+    cellRenderer: ({ cellData }) => (
+      <TooltipWrapper content={cellData}>
+        <TruncatedCell>{cellData}</TruncatedCell>
+      </TooltipWrapper>
+    )
+  },
+  { dataKey: 'productionProgress', label: 'Production progress',
+    cellRenderer: ({ cellData }) => {
+      if (typeof cellData === 'object' && cellData !== null) {
+        const { completed, total, percentage } = cellData;
+        const text = `${completed}/${total} • ${percentage}%`;
+        return (
+          <TooltipWrapper content={text}>
+            <TruncatedCell>{text}</TruncatedCell>
+          </TooltipWrapper>
+        );
+      }
+      return (
+        <TooltipWrapper content={cellData}>
+          <TruncatedCell>{cellData}</TruncatedCell>
+        </TooltipWrapper>
+      );
+    }
+  },
   { 
     dataKey: 'collaborationStatus', 
     label: 'Collaboration status',
@@ -199,26 +318,108 @@ const columns = [
       } else if (cellData === 'Accepted') {
         return <StatusIndicator type="quiet" style={{ whiteSpace: 'nowrap' }}>Accepted</StatusIndicator>;
       } else {
-        return cellData;
+        return (
+          <TooltipWrapper content={cellData}>
+            <TruncatedCell>{cellData}</TruncatedCell>
+          </TooltipWrapper>
+        );
       }
     }
   },
-  { dataKey: 'quantity', label: 'Quantity' },
-  { dataKey: 'uom', label: 'UOM' },
-  { dataKey: 'productionDueDate', label: 'Production due date' },
-  { dataKey: 'unitPrice', label: 'Unit price' },
-  { dataKey: 'currency', label: 'Currency' },
-  { dataKey: 'reason', label: 'Reason' },
-  { dataKey: 'note', label: 'Note' },
+  { dataKey: 'quantity', label: 'Quantity',
+    cellRenderer: ({ cellData }) => (
+      <TooltipWrapper content={cellData}>
+        <TruncatedCell>{cellData}</TruncatedCell>
+      </TooltipWrapper>
+    )
+  },
+  { dataKey: 'uom', label: 'UOM',
+    cellRenderer: ({ cellData }) => (
+      <TooltipWrapper content={cellData}>
+        <TruncatedCell>{cellData}</TruncatedCell>
+      </TooltipWrapper>
+    )
+  },
+  { dataKey: 'productionDueDate', label: 'Production due date',
+    cellRenderer: ({ cellData }) => (
+      <TooltipWrapper content={cellData}>
+        <TruncatedCell>{cellData}</TruncatedCell>
+      </TooltipWrapper>
+    )
+  },
+  { dataKey: 'unitPrice', label: 'Unit price',
+    cellRenderer: ({ cellData }) => (
+      <TooltipWrapper content={cellData}>
+        <TruncatedCell>{cellData}</TruncatedCell>
+      </TooltipWrapper>
+    )
+  },
+  { dataKey: 'currency', label: 'Currency',
+    cellRenderer: ({ cellData }) => (
+      <TooltipWrapper content={cellData}>
+        <TruncatedCell>{cellData}</TruncatedCell>
+      </TooltipWrapper>
+    )
+  },
+  { dataKey: 'reason', label: 'Reason',
+    cellRenderer: ({ cellData }) => (
+      <TooltipWrapper content={cellData}>
+        <TruncatedCell>{cellData}</TruncatedCell>
+      </TooltipWrapper>
+    )
+  },
+  { dataKey: 'note', label: 'Note',
+    cellRenderer: ({ cellData }) => (
+      <TooltipWrapper content={cellData}>
+        <TruncatedCell>{cellData}</TruncatedCell>
+      </TooltipWrapper>
+    )
+  },
+  { dataKey: 'productionStartDate', label: 'Production start date',
+    cellRenderer: ({ cellData }) => (
+      <TooltipWrapper content={cellData}>
+        <TruncatedCell>{cellData}</TruncatedCell>
+      </TooltipWrapper>
+    )
+  },
   { 
     dataKey: 'nextProductionDate', 
     label: 'Next production date',
-    metadata: { divider: true }
+    metadata: { divider: true },
+    cellRenderer: ({ cellData }) => (
+      <TooltipWrapper content={cellData}>
+        <TruncatedCell>{cellData}</TruncatedCell>
+      </TooltipWrapper>
+    )
   },
-  { dataKey: 'closeProductionNote', label: 'Close production note' },
-  { dataKey: 'carryOverSentTo', label: 'Carry over sent to' },
-  { dataKey: 'shipTo', label: 'Ship to' },
-  { dataKey: 'needByDate', label: 'Need by date' },
+  { dataKey: 'closeProductionNote', label: 'Close production note',
+    cellRenderer: ({ cellData }) => (
+      <TooltipWrapper content={cellData}>
+        <TruncatedCell>{cellData}</TruncatedCell>
+      </TooltipWrapper>
+    )
+  },
+  { dataKey: 'carryOverSentTo', label: 'Carry over sent to',
+    cellRenderer: ({ cellData }) => (
+      <TooltipWrapper content={cellData}>
+        <TruncatedCell>{cellData}</TruncatedCell>
+      </TooltipWrapper>
+    )
+  },
+  { dataKey: 'shipTo', label: 'Ship to',
+    cellRenderer: ({ cellData }) => (
+      <TooltipWrapper content={cellData}>
+        <TruncatedCell>{cellData}</TruncatedCell>
+      </TooltipWrapper>
+    )
+  },
+  { dataKey: 'needByDate', label: 'Need by date',
+    cellRenderer: ({ cellData }) => (
+      <TooltipWrapper content={cellData}>
+        <TruncatedCell>{cellData}</TruncatedCell>
+      </TooltipWrapper>
+    )
+  },
 ];
 
 const sampleData = [
@@ -230,21 +431,25 @@ const sampleData = [
     supplierPOLineItem: 'SPO-001',
     priority: 'High',
     problemsAndRisks: 'None',
-    materialAvailabilityStatus: 'No shortage',
     materialAvailabilityDate: '2024-04-01',
     canRunNow: 50,
     canRunByStartDate: 100,
-    productionProgress: 'In Progress',
-    readyToBuild: 'Yes',
+    productionProgress: {
+      completed: 75,
+      total: 100,
+      percentage: 75
+    },
+    validatedForAssembly: ['Validated for assembly', 'Express shipment'],
     collaborationStatus: 'Requires your response',
     quantity: 100,
     uom: 'PCS',
     requestType: 'Standard',
-    productionDueDate: '2024-04-01',
+    productionDueDate: '2024-04-15',
     unitPrice: 10.99,
     currency: 'USD',
-    reason: 'Regular order',
+    reason: 'Material shortage - Waiting for component delivery',
     note: 'Sample note',
+    productionStartDate: '2024-04-10',
     nextProductionDate: '2024-04-15',
     closeProductionNote: 'None',
     carryOverSentTo: 'Warehouse A',
@@ -258,13 +463,16 @@ const sampleData = [
     itemCode: 'ITEM-002 - Sample Item 2',
     supplierPOLineItem: 'SPO-002',
     priority: 'Medium',
-    problemsAndRisks: 'Material shortage',
-    materialAvailabilityStatus: 'Temporary shortage',
+    problemsAndRisks: 'Temporary material shortage',
     materialAvailabilityDate: '2024-04-05',
     canRunNow: 0,
     canRunByStartDate: 75,
-    productionProgress: 'Not Started',
-    readyToBuild: 'No',
+    productionProgress: {
+      completed: 40,
+      total: 100,
+      percentage: 40
+    },
+    validatedForAssembly: ['Validated for assembly'],
     collaborationStatus: 'Awaiting supplier response',
     quantity: 150,
     uom: 'PCS',
@@ -272,8 +480,9 @@ const sampleData = [
     productionDueDate: '2024-04-10',
     unitPrice: 15.99,
     currency: 'USD',
-    reason: 'Regular order',
+    reason: 'Machine breakdown - Production line maintenance',
     note: 'Sample note 2',
+    productionStartDate: '2024-04-08',
     nextProductionDate: '2024-04-20',
     closeProductionNote: 'None',
     carryOverSentTo: 'Warehouse B',
@@ -287,13 +496,16 @@ const sampleData = [
     itemCode: 'ITEM-003 - Sample Item 3',
     supplierPOLineItem: 'SPO-003',
     priority: 'Low',
-    problemsAndRisks: 'None',
-    materialAvailabilityStatus: 'Full shortage',
+    problemsAndRisks: 'Late',
     materialAvailabilityDate: '2024-04-12',
     canRunNow: 20,
     canRunByStartDate: 40,
-    productionProgress: 'Completed',
-    readyToBuild: 'Yes',
+    productionProgress: {
+      completed: 60,
+      total: 150,
+      percentage: 40
+    },
+    validatedForAssembly: ['Express shipment'],
     collaborationStatus: 'Accepted',
     quantity: 60,
     uom: 'PCS',
@@ -301,13 +513,47 @@ const sampleData = [
     productionDueDate: '2024-04-15',
     unitPrice: 12.99,
     currency: 'USD',
-    reason: 'Urgent order',
+    reason: 'Labour shortage - Reduced workforce availability',
     note: 'Sample note 3',
+    productionStartDate: '2024-04-12',
     nextProductionDate: '2024-04-18',
     closeProductionNote: 'None',
     carryOverSentTo: 'Warehouse C',
     shipTo: 'Customer Location 3',
     needByDate: '2024-04-28',
+  },
+  {
+    id: '4',
+    poNumber: 'PO-004',
+    customer: 'Sample Customer 4',
+    itemCode: 'ITEM-004 - Sample Item 4',
+    supplierPOLineItem: 'SPO-004',
+    priority: 'High',
+    problemsAndRisks: 'Material shortage',
+    materialAvailabilityDate: '2024-04-18',
+    canRunNow: 0,
+    canRunByStartDate: 0,
+    productionProgress: {
+      completed: 0,
+      total: 200,
+      percentage: 0
+    },
+    validatedForAssembly: [],
+    collaborationStatus: 'Awaiting supplier response',
+    quantity: 200,
+    uom: 'PCS',
+    requestType: 'Standard',
+    productionDueDate: '2024-04-25',
+    unitPrice: 8.99,
+    currency: 'USD',
+    reason: 'Quality control issues - Material inspection required',
+    note: 'Sample note 4',
+    productionStartDate: '2024-04-22',
+    nextProductionDate: '2024-04-22',
+    closeProductionNote: 'None',
+    carryOverSentTo: 'Warehouse D',
+    shipTo: 'Customer Location 4',
+    needByDate: '2024-04-30',
   }
 ];
 
@@ -323,7 +569,9 @@ const inboundTableColumns = [
     dataKey: 'stockTransferOrder', 
     label: 'Stock transfer order number',
     cellRenderer: ({ cellData }) => (
-      <PaddedCell style={{ cursor: 'pointer', textDecoration: 'underline' }}>{cellData}</PaddedCell>
+      <PaddedCell style={{ cursor: 'pointer' }}>
+        <HoverableText>{cellData}</HoverableText>
+      </PaddedCell>
     )
   },
   { dataKey: 'expectedShipDate', label: 'Expected ship date' },
@@ -356,8 +604,11 @@ const allocatedTableColumns = [
     dataKey: 'productionProgress', 
     label: 'Production progress',
     cellRenderer: ({ cellData }) => {
-      const { completed, total, percentage } = cellData;
-      return `${completed}/${total} • ${percentage}%`;
+      if (typeof cellData === 'object' && cellData !== null) {
+        const { completed, total, percentage } = cellData;
+        return `${completed}/${total} • ${percentage}%`;
+      }
+      return cellData;
     }
   },
   { dataKey: 'materialRequired', label: 'Material required for remaining production' },
@@ -474,11 +725,34 @@ const VerticalDivider = styled.div`
   margin: 0 12px;
 `;
 
+const ActionRow = styled(Box)`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 40px;
+  margin-top: -56px;
+  margin-bottom: 16px;
+`;
+
+const ActionButtons = styled(Box)`
+  display: flex;
+  & > * + * {
+    margin-left: ${props => props.theme.space.x2};
+  }
+`;
+
+const HoverableText = styled.span`
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({ selectedIndex = 0 }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [filters, setFilters] = useState<Record<string, any>>({});
   const [filteredData, setFilteredData] = useState(sampleData);
+  const [selectedRows, setSelectedRows] = useState<string[]>([]);
   const [selectedPO, setSelectedPO] = useState<string | null>('');
   const [selectedLineItem, setSelectedLineItem] = useState<string | null>('');
   const [showMaterialsTable, setShowMaterialsTable] = useState(false);
@@ -533,16 +807,45 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({ se
   };
 
   const applyFilters = () => {
-    const filtered = sampleData.filter(row => {
-      return Object.entries(filters).every(([key, value]) => {
-        if (!value) return true;
-        
-        const cellValue = row[key];
-        if (typeof value === 'string') {
-          return cellValue?.toString().toLowerCase().includes(value.toLowerCase());
-        }
-        return cellValue === value;
-      });
+    let filtered = sampleData;
+    
+    // Apply filter chip filters
+    if (isLateFilterActive) {
+      filtered = filtered.filter(row => row.problemsAndRisks === 'Late');
+    }
+    if (isRequiresResponseFilterActive) {
+      filtered = filtered.filter(row => row.collaborationStatus === 'Requires your response');
+    }
+    if (isAwaitingSupplierFilterActive) {
+      filtered = filtered.filter(row => row.collaborationStatus === 'Awaiting supplier response');
+    }
+    if (isTempShortageFilterActive) {
+      filtered = filtered.filter(row => row.problemsAndRisks === 'Temporary material shortage');
+    }
+    if (isFullShortageFilterActive) {
+      filtered = filtered.filter(row => row.problemsAndRisks === 'Material shortage');
+    }
+
+    // Apply tag filters
+    if (filters.validatedForAssembly) {
+      filtered = filtered.filter(row => row.validatedForAssembly?.includes('Validated for assembly'));
+    }
+    if (filters.expressShipment) {
+      filtered = filtered.filter(row => row.validatedForAssembly?.includes('Express shipment'));
+    }
+
+    // Apply other filters
+    Object.entries(filters).forEach(([key, value]) => {
+      if (!value || key === 'validatedForAssembly' || key === 'expressShipment') return;
+      
+      const cellValue = filtered[0]?.[key];
+      if (typeof value === 'string') {
+        filtered = filtered.filter(row => 
+          row[key]?.toString().toLowerCase().includes(value.toLowerCase())
+        );
+      } else {
+        filtered = filtered.filter(row => row[key] === value);
+      }
     });
     
     setFilteredData(filtered);
@@ -579,14 +882,6 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({ se
             placeholder="Search items" 
             value={filters.itemSearch || ''}
             onChange={e => handleFilterChange('itemSearch', e.target.value)}
-          />
-        </FilterSection>
-        <FilterSection>
-          <FilterLabel>Supplier PO line item number</FilterLabel>
-          <Input 
-            placeholder="Filter by supplier PO line item" 
-            value={filters.supplierPOLineItem || ''}
-            onChange={e => handleFilterChange('supplierPOLineItem', e.target.value)}
           />
         </FilterSection>
         <FilterSection>
@@ -643,6 +938,14 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({ se
           />
         </FilterSection>
         <FilterSection>
+          <FilterLabel>Supplier PO line item number</FilterLabel>
+          <Input 
+            placeholder="Filter by supplier PO line item" 
+            value={filters.supplierPOLineItem || ''}
+            onChange={e => handleFilterChange('supplierPOLineItem', e.target.value)}
+          />
+        </FilterSection>
+        <FilterSection>
           <FilterLabel>Priority</FilterLabel>
           <Select
             options={[
@@ -660,9 +963,9 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({ se
           <Select
             options={[
               { value: '', label: 'All' },
-              { value: 'active', label: 'Active' },
-              { value: 'pending', label: 'Pending' },
-              { value: 'inactive', label: 'Inactive' },
+              { value: 'Requires your response', label: 'Requires your response' },
+              { value: 'Awaiting supplier response', label: 'Awaiting supplier response' },
+              { value: 'Accepted', label: 'Accepted' },
             ]}
             value={filters.collaborationStatus || ''}
             onChange={value => handleFilterChange('collaborationStatus', value)}
@@ -680,6 +983,23 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({ se
             value={filters.productionProgress || ''}
             onChange={value => handleFilterChange('productionProgress', value)}
           />
+        </FilterSection>
+        <FilterSection>
+          <FilterLabel>Tags</FilterLabel>
+          <Box>
+            <Checkbox
+              labelText="Only line items marked as validated for assembly"
+              checked={filters.validatedForAssembly || false}
+              onChange={e => handleFilterChange('validatedForAssembly', e.target.checked)}
+            />
+            <Box>
+              <Checkbox
+                labelText="Only line items marked as express shipments"
+                checked={filters.expressShipment || false}
+                onChange={e => handleFilterChange('expressShipment', e.target.checked)}
+              />
+            </Box>
+          </Box>
         </FilterSection>
         <FilterSection>
           <FilterLabel>Demand</FilterLabel>
@@ -743,7 +1063,7 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({ se
               { value: '', label: 'All' },
               { value: 'No shortage', label: 'No shortage' },
               { value: 'Temporary shortage', label: 'Temporary shortage' },
-              { value: 'Full shortage', label: 'Full shortage' },
+              { value: 'Material shortage', label: 'Material shortage' },
             ]}
             value={filters.materialAvailabilityStatus || ''}
             onChange={value => handleFilterChange('materialAvailabilityStatus', value)}
@@ -757,14 +1077,7 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({ se
             onChange={e => handleFilterChange('subcomponentSearch', e.target.value)}
           />
         </FilterSection>
-        <FilterSection>
-          <FilterLabel>Ready to build</FilterLabel>
-          <Checkbox
-            labelText="Only line items marked as ready to build"
-            checked={filters.readyToBuild || false}
-            onChange={e => handleFilterChange('readyToBuild', e.target.checked)}
-          />
-        </FilterSection>
+        
       </Box>
       <FilterDivider />
 
@@ -786,14 +1099,7 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({ se
             onChange={e => handleFilterChange('needByDate', e.target.value)}
           />
         </FilterSection>
-        <FilterSection>
-          <FilterLabel>Express shipment</FilterLabel>
-          <Checkbox
-            labelText="Only line items marked as express shipments"
-            checked={filters.expressShipment || false}
-            onChange={e => handleFilterChange('expressShipment', e.target.checked)}
-          />
-        </FilterSection>
+        
       </Box>
     </Box>
   );
@@ -881,9 +1187,9 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({ se
       dataKey: 'bomComponent',
       label: 'BOM Component',
       cellRenderer: (cell: CellInfoType<unknown>) => (
-        <PaddedCell as={HoverableCell} onClick={() => window.open('about:blank', '_blank')}>
-          {cell.cellData}
-        </PaddedCell>
+      <PaddedCell style={{ cursor: 'pointer' }}>
+        <HoverableText>{cell.cellData}</HoverableText>
+      </PaddedCell>
       ),
     },
     { dataKey: 'uom', label: 'UOM' },
@@ -1073,7 +1379,7 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({ se
   React.useEffect(() => {
     let filtered = sampleData;
     if (isLateFilterActive) {
-      filtered = filtered.filter(row => row.problemsAndRisks && row.problemsAndRisks !== 'None');
+      filtered = filtered.filter(row => row.problemsAndRisks === 'Late');
     }
     if (isRequiresResponseFilterActive) {
       filtered = filtered.filter(row => row.collaborationStatus === 'Requires your response');
@@ -1082,10 +1388,10 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({ se
       filtered = filtered.filter(row => row.collaborationStatus === 'Awaiting supplier response');
     }
     if (isTempShortageFilterActive) {
-      filtered = filtered.filter(row => row.materialAvailabilityStatus === 'Temporary shortage');
+      filtered = filtered.filter(row => row.problemsAndRisks === 'Temporary material shortage');
     }
     if (isFullShortageFilterActive) {
-      filtered = filtered.filter(row => row.materialAvailabilityStatus === 'Full shortage');
+      filtered = filtered.filter(row => row.problemsAndRisks === 'Material shortage');
     }
     setFilteredData(filtered);
   }, [isLateFilterActive, isRequiresResponseFilterActive, isAwaitingSupplierFilterActive, isTempShortageFilterActive, isFullShortageFilterActive]);
@@ -1115,75 +1421,102 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({ se
           <Tab label="Orders">
             <Box mt="x4">
               <TableHeader>
-                <Box display="flex" flex="1" alignItems="center" style={{ gap: 8 }} ref={filterChipsRef}>
-                  <FilterChip
-                    label="Late"
-                    count={sampleData.filter(row => row.problemsAndRisks && row.problemsAndRisks !== 'None').length}
-                    active={isLateFilterActive}
-                    onClick={() => setIsLateFilterActive(active => !active)}
-                    innerType="danger"
-                  />
-                  <FilterChip
-                    label="Full shortage"
-                    count={sampleData.filter(row => row.materialAvailabilityStatus === 'Full shortage').length}
-                    active={isFullShortageFilterActive}
-                    onClick={() => setIsFullShortageFilterActive(active => !active)}
-                    innerType="danger"
-                  />
-                  <FilterChip
-                    label="Temporary shortage"
-                    count={sampleData.filter(row => row.materialAvailabilityStatus === 'Temporary shortage').length}
-                    active={isTempShortageFilterActive}
-                    onClick={() => setIsTempShortageFilterActive(active => !active)}
-                    innerType="warning"
-                  />
-                  <FilterChip
-                    label="Requires your response"
-                    count={sampleData.filter(row => row.collaborationStatus === 'Requires your response').length}
-                    active={isRequiresResponseFilterActive}
-                    onClick={() => setIsRequiresResponseFilterActive(active => !active)}
-                    innerType="warning"
-                  />
-                  <FilterChip
-                    label="Awaiting supplier response"
-                    count={sampleData.filter(row => row.collaborationStatus === 'Awaiting supplier response').length}
-                    active={isAwaitingSupplierFilterActive}
-                    onClick={() => setIsAwaitingSupplierFilterActive(active => !active)}
-                    innerType="neutral"
-                  />
-                </Box>
-                <Box display="flex" alignItems="center" ref={rightButtonsRef}>
-                  {collapseActions ? (
-                    <>
-                      <DropdownMenu
-                        trigger={() => (
-                          <IconicButton icon="more">More actions</IconicButton>
-                        )}
+                {selectedRows.length === 0 && (
+                  <>
+                    <Box display="flex" flex="1" alignItems="center" style={{ gap: 8 }} ref={filterChipsRef}>
+                      <FilterChip
+                        label="Late"
+                        count={sampleData.filter(row => row.problemsAndRisks === 'Late').length}
+                        active={isLateFilterActive}
+                        onClick={() => setIsLateFilterActive(active => !active)}
+                        innerType="danger"
+                      />
+                      <FilterChip
+                        label="Material shortage"
+                        count={sampleData.filter(row => row.problemsAndRisks === 'Material shortage').length}
+                        active={isFullShortageFilterActive}
+                        onClick={() => setIsFullShortageFilterActive(active => !active)}
+                        innerType="danger"
+                      />
+                      <FilterChip
+                        label="Temporary shortage"
+                        count={sampleData.filter(row => row.problemsAndRisks === 'Temporary material shortage').length}
+                        active={isTempShortageFilterActive}
+                        onClick={() => setIsTempShortageFilterActive(active => !active)}
+                        innerType="warning"
+                      />
+                      <FilterChip
+                        label="Requires your response"
+                        count={sampleData.filter(row => row.collaborationStatus === 'Requires your response').length}
+                        active={isRequiresResponseFilterActive}
+                        onClick={() => setIsRequiresResponseFilterActive(active => !active)}
+                        innerType="warning"
+                      />
+                      <FilterChip
+                        label="Awaiting supplier response"
+                        count={sampleData.filter(row => row.collaborationStatus === 'Awaiting supplier response').length}
+                        active={isAwaitingSupplierFilterActive}
+                        onClick={() => setIsAwaitingSupplierFilterActive(active => !active)}
+                        innerType="neutral"
+                      />
+                    </Box>
+                    <Box display="flex" alignItems="center" ref={rightButtonsRef}>
+                      {collapseActions ? (
+                        <>
+                          <DropdownMenu
+                            trigger={() => (
+                              <IconicButton icon="more">More actions</IconicButton>
+                            )}
+                          >
+                            <DropdownButton onClick={() => {}}>Import</DropdownButton>
+                            <DropdownButton onClick={() => {}}>Export</DropdownButton>
+                            <DropdownButton onClick={() => {}}>Collaboration status</DropdownButton>
+                          </DropdownMenu>
+                          <VerticalDivider />
+                        </>
+                      ) : (
+                        <>
+                          <IconicButton icon="publish">Import</IconicButton>
+                          <IconicButton icon="getApp">Export</IconicButton>
+                          <VerticalDivider />
+                          <IconicButton icon="sort">Collaboration status</IconicButton>
+                          <VerticalDivider />
+                        </>
+                      )}
+                      <IconicButton 
+                        icon="filter" 
+                        ref={filterButtonRef}
+                        onClick={handleFilterClick}
                       >
-                        <DropdownButton onClick={() => {}}>Import</DropdownButton>
-                        <DropdownButton onClick={() => {}}>Export</DropdownButton>
-                        <DropdownButton onClick={() => {}}>Collaboration status</DropdownButton>
-                      </DropdownMenu>
-                      <VerticalDivider />
-                    </>
-                  ) : (
-                    <>
-                      <IconicButton icon="publish">Import</IconicButton>
-                      <IconicButton icon="getApp">Export</IconicButton>
-                      <VerticalDivider />
-                      <IconicButton icon="sort">Collaboration status</IconicButton>
-                      <VerticalDivider />
-                    </>
-                  )}
-                  <IconicButton 
-                    icon="filter" 
-                    ref={filterButtonRef}
-                    onClick={handleFilterClick}
-                  >
-                    {`Filters (${appliedFiltersCount})`}
-                  </IconicButton>
-                </Box>
+                        {`Filters (${appliedFiltersCount})`}
+                      </IconicButton>
+                    </Box>
+                  </>
+                )}
               </TableHeader>
+              {selectedRows.length > 0 && (
+                <ActionRow>
+                  <Box color="midGrey">
+                    {selectedRows.length} {selectedRows.length === 1 ? 'item' : 'items'} selected
+                  </Box>
+                  <Box display="flex" alignItems="center">
+                    <DropdownMenu
+                      trigger={() => (
+                        <IconicButton icon="more">More actions</IconicButton>
+                      )}
+                    >
+                      <DropdownButton onClick={() => {}}>Add express shipment tag</DropdownButton>
+                      <DropdownButton onClick={() => {}}>Remove express shipment tag</DropdownButton>
+                    </DropdownMenu>
+                    <VerticalDivider />
+                    <Box ml="x3">
+                      <Button onClick={() => setSelectedRows([])} style={{ marginRight: '8px' }}>Cancel</Button>
+                      <Button onClick={() => {}} style={{ marginRight: '8px' }}>Edit</Button>
+                      <Button onClick={() => {}}>Accept</Button>
+                    </Box>
+                  </Box>
+                </ActionRow>
+              )}
               <TableContainer>
                 <ScrollableTable>
                   <StyledTable
@@ -1191,6 +1524,8 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({ se
                     rows={filteredData}
                     hasSelectableRows
                     keyField="id"
+                    selectedRows={selectedRows}
+                    onRowSelectionChange={setSelectedRows}
                   />
                 </ScrollableTable>
               </TableContainer>
