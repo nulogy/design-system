@@ -1,6 +1,23 @@
 import React, { useState } from "react";
-import { Box, Text, TopBar, Input, Card, DescriptionList, DescriptionTerm, DescriptionDetails, DescriptionGroup, Link, StatusIndicator, StatusIndicatorValues, IconicButton, Sidebar, Select, Divider, PrimaryButton, QuietButton } from "../..";
 import styled from "styled-components";
+import {
+  Box,
+  Text,
+  TopBar,
+  Input,
+  Card,
+  DescriptionList,
+  DescriptionTerm,
+  DescriptionDetails,
+  DescriptionGroup,
+  Link,
+  IconicButton,
+  Sidebar,
+  Select,
+  Divider,
+  PrimaryButton,
+  QuietButton,
+} from "../..";
 
 const Container = styled(Box)`
   margin: 0 auto;
@@ -13,16 +30,10 @@ const CardsContainer = styled(Box)`
   gap: ${({ theme }) => theme.space.x3};
 `;
 
-const DividerGroup = styled(DescriptionGroup)`
-  border-bottom: 1px solid ${({ theme }) => theme.colors.lightGrey};
-  padding-bottom: ${({ theme }) => theme.space.x2};
-  margin-bottom: ${({ theme }) => theme.space.x2};
-`;
-
 const StyledLink = styled(Link)`
   text-decoration: none;
   color: inherit;
-  
+
   &:hover {
     text-decoration: none;
     color: inherit;
@@ -52,8 +63,9 @@ const workOrders = [
     status: "not_started",
     remaining: 15,
     location: "Assembly Line A",
-    notes: "Priority order for production line. Complete by end of shift. Please ensure all items are checked for quality and quantity before moving to the next stage. If any discrepancies are found, report immediately to the supervisor. This is a high-priority order and must be completed without delay.",
-    finishedGoods: ["Pie Crust"]
+    notes:
+      "Priority order for production line. Complete by end of shift. Please ensure all items are checked for quality and quantity before moving to the next stage. If any discrepancies are found, report immediately to the supervisor. This is a high-priority order and must be completed without delay.",
+    finishedGoods: ["Pie Crust"],
   },
   {
     id: "WO-67890",
@@ -61,9 +73,10 @@ const workOrders = [
     status: "in_progress",
     remaining: 8,
     location: "Maintenance Bay",
-    notes: "Spare parts for equipment maintenance. Please double-check the part numbers and ensure all components are present. If any parts are missing, notify the inventory team immediately. This order supports critical maintenance operations.",
-    finishedGoods: ["Pie Plate"]
-  }
+    notes:
+      "Spare parts for equipment maintenance. Please double-check the part numbers and ensure all components are present. If any parts are missing, notify the inventory team immediately. This order supports critical maintenance operations.",
+    finishedGoods: ["Pie Plate"],
+  },
 ];
 
 const shipOrders = [
@@ -73,8 +86,9 @@ const shipOrders = [
     status: "not_started",
     remaining: 12,
     location: "Shipping Dock 3",
-    notes: "Express delivery. Handle with care. Ensure all packaging is secure and documentation is attached. This shipment is time-sensitive and must be prioritized for immediate dispatch. Contact the shipping coordinator if any issues arise.",
-    retailers: ["Walmart"]
+    notes:
+      "Express delivery. Handle with care. Ensure all packaging is secure and documentation is attached. This shipment is time-sensitive and must be prioritized for immediate dispatch. Contact the shipping coordinator if any issues arise.",
+    retailers: ["Walmart"],
   },
   {
     id: "SO-09876",
@@ -82,9 +96,10 @@ const shipOrders = [
     status: "in_progress",
     remaining: 5,
     location: "International Shipping",
-    notes: "Customs documentation attached. Verify all paperwork is complete and accurate before shipping. Any missing or incorrect documents may result in delays at customs. Coordinate with the export team for any questions.",
-    retailers: ["Costco"]
-  }
+    notes:
+      "Customs documentation attached. Verify all paperwork is complete and accurate before shipping. Any missing or incorrect documents may result in delays at customs. Coordinate with the export team for any questions.",
+    retailers: ["Costco"],
+  },
 ];
 
 export default {
@@ -137,14 +152,16 @@ export const Index = () => {
     setLocalShipTo("");
   };
 
-  const allOrders = [...workOrders, ...shipOrders].sort((a, b) => a.picklistId.localeCompare(b.picklistId, undefined, { numeric: true }));
-  const locations = [...new Set(allOrders.map(order => order.location))];
-  const workOrderCodes = workOrders.map(order => order.id);
-  const finishedGoods = [...new Set(workOrders.map(order => order.finishedGoods[0]))];
-  const shipToOptions = [...new Set(shipOrders.map(order => order.retailers[0]))];
+  const allOrders = [...workOrders, ...shipOrders].sort((a, b) =>
+    a.picklistId.localeCompare(b.picklistId, undefined, { numeric: true })
+  );
+  const locations = [...new Set(allOrders.map((order) => order.location))];
+  const workOrderCodes = workOrders.map((order) => order.id);
+  const finishedGoods = [...new Set(workOrders.map((order) => order.finishedGoods[0]))];
+  const shipToOptions = [...new Set(shipOrders.map((order) => order.retailers[0]))];
 
   // Filtering logic
-  let filteredOrders = allOrders.filter(order => {
+  const filteredOrders = allOrders.filter((order) => {
     // Location filter
     if (selectedLocation && order.location !== selectedLocation) return false;
     // Pick list type filter
@@ -177,12 +194,11 @@ export const Index = () => {
       <Container>
         <Box p="x2">
           <Box display="flex" justifyContent="flex-end" mb="x2">
-            <IconicButton icon="filter" onClick={() => setShowFilters(true)}>Filters</IconicButton>
+            <IconicButton icon="filter" onClick={() => setShowFilters(true)}>
+              Filters
+            </IconicButton>
           </Box>
-          <Input
-            placeholder="Enter pick list ID"
-            mb="x3"
-          />
+          <Input placeholder="Enter pick list ID" mb="x3" />
           <Divider mb="x3" />
           <Box display="flex" justifyContent="flex-end" mb="x2">
             <Text color="midGrey">Sorted by: Pick list ID (1 → 9)</Text>
@@ -197,7 +213,7 @@ export const Index = () => {
                     </Text>
                   </TitleRow>
                   <DescriptionList layout="inline" density="compact">
-                  <DescriptionGroup>
+                    <DescriptionGroup>
                       <DescriptionTerm>Drop-off location</DescriptionTerm>
                       <DescriptionDetails>{order.location}</DescriptionDetails>
                     </DescriptionGroup>
@@ -206,7 +222,7 @@ export const Index = () => {
                         {"finishedGoods" in order ? "Work order code" : "Ship order ID"}
                       </DescriptionTerm>
                       <DescriptionDetails>{order.id}</DescriptionDetails>
-                    </DescriptionGroup>                    
+                    </DescriptionGroup>
                     {"finishedGoods" in order && Array.isArray((order as any).finishedGoods) && (
                       <DescriptionGroup>
                         <DescriptionTerm>Finished good</DescriptionTerm>
@@ -237,7 +253,9 @@ export const Index = () => {
         footer={
           <Box display="flex" justifyContent="flex-start">
             <PrimaryButton onClick={handleApplyFilters}>Apply</PrimaryButton>
-            <QuietButton ml="x2" onClick={handleResetFilters}>Reset</QuietButton>
+            <QuietButton ml="x2" onClick={handleResetFilters}>
+              Reset
+            </QuietButton>
           </Box>
         }
       >
@@ -246,7 +264,7 @@ export const Index = () => {
             labelText="Drop-off location"
             options={[
               { value: "", label: "All locations" },
-              ...locations.map(location => ({ value: location, label: location }))
+              ...locations.map((location) => ({ value: location, label: location })),
             ]}
             value={localSelectedLocation}
             onChange={(value) => setLocalSelectedLocation(value === null ? "" : String(value))}
@@ -269,7 +287,7 @@ export const Index = () => {
                 labelText="Work order code"
                 options={[
                   { value: "", label: "All work order codes" },
-                  ...workOrderCodes.map(code => ({ value: code, label: code }))
+                  ...workOrderCodes.map((code) => ({ value: code, label: code })),
                 ]}
                 value={localWorkOrderCode}
                 onChange={(value) => setLocalWorkOrderCode(value as string)}
@@ -279,7 +297,7 @@ export const Index = () => {
                 labelText="Finished good code"
                 options={[
                   { value: "", label: "All finished goods" },
-                  ...finishedGoods.map(good => ({ value: good, label: good }))
+                  ...finishedGoods.map((good) => ({ value: good, label: good })),
                 ]}
                 value={localFinishedGoodCode}
                 onChange={(value) => setLocalFinishedGoodCode(value as string)}
@@ -300,7 +318,7 @@ export const Index = () => {
                 labelText="Ship to"
                 options={[
                   { value: "", label: "All ship to" },
-                  ...shipToOptions.map(retailer => ({ value: retailer, label: retailer }))
+                  ...shipToOptions.map((retailer) => ({ value: retailer, label: retailer })),
                 ]}
                 value={localShipTo}
                 onChange={(value) => setLocalShipTo(value as string)}
@@ -312,4 +330,4 @@ export const Index = () => {
       </Sidebar>
     </Box>
   );
-}; 
+};

@@ -1,6 +1,25 @@
 import React, { useState } from "react";
-import { Box, Text, TopBar, Switcher, Switch, IconicButton, Sidebar, Input, Select, DescriptionList, DescriptionTerm, DescriptionDetails, DescriptionGroup, Divider, Card, Heading3, PrimaryButton, QuietButton, Button } from "../..";
 import styled from "styled-components";
+import {
+  Box,
+  Text,
+  TopBar,
+  Switcher,
+  Switch,
+  IconicButton,
+  Sidebar,
+  Input,
+  Select,
+  DescriptionList,
+  DescriptionTerm,
+  DescriptionDetails,
+  DescriptionGroup,
+  Divider,
+  Card,
+  Heading3,
+  PrimaryButton,
+  Button,
+} from "../..";
 
 const Container = styled(Box)`
   margin: 0 auto;
@@ -45,7 +64,7 @@ export const PickingPage = () => {
   ];
 
   const getSelectedItemDescription = () => {
-    return items.find(item => item.code === selectedItem)?.description || "";
+    return items.find((item) => item.code === selectedItem)?.description || "";
   };
 
   const handlePalletInputKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -69,7 +88,9 @@ export const PickingPage = () => {
       <Container>
         <Box p="x4">
           <Box display="flex" justifyContent="flex-end" mb="x2">
-            <IconicButton icon="filter" onClick={() => setShowFilters(true)}>Items to pick</IconicButton>
+            <IconicButton icon="filter" onClick={() => setShowFilters(true)}>
+              Items to pick
+            </IconicButton>
           </Box>
 
           <SwitcherContainer mb="x3">
@@ -84,9 +105,9 @@ export const PickingPage = () => {
             <>
               <Heading3 mb="x2">Pallet</Heading3>
               {!showPalletCard && (
-                <Input 
-                  placeholder="Scan or enter pallet" 
-                  mb="x3" 
+                <Input
+                  placeholder="Scan or enter pallet"
+                  mb="x3"
                   value={palletInput}
                   onChange={(e) => setPalletInput(e.target.value)}
                   onKeyDown={handlePalletInputKeyDown}
@@ -95,7 +116,10 @@ export const PickingPage = () => {
               {showPalletCard && palletInput && (
                 <Card mb="x3">
                   <Box px="x2" py="x1">
-                    <Text fontSize="large" mb="x2"> {palletInput}</Text>
+                    <Text fontSize="large" mb="x2">
+                      {" "}
+                      {palletInput}
+                    </Text>
                     <DescriptionList layout="inline" density="compact">
                       <DescriptionGroup>
                         <DescriptionTerm>Item</DescriptionTerm>
@@ -107,7 +131,9 @@ export const PickingPage = () => {
                       </DescriptionGroup>
                       <DescriptionGroup>
                         <DescriptionTerm>Expiry</DescriptionTerm>
-                        <DescriptionDetails>{lotCodes.find(lot => lot.code === selectedLot)?.expiryDate}</DescriptionDetails>
+                        <DescriptionDetails>
+                          {lotCodes.find((lot) => lot.code === selectedLot)?.expiryDate}
+                        </DescriptionDetails>
                       </DescriptionGroup>
                       <DescriptionGroup>
                         <DescriptionTerm>Status</DescriptionTerm>
@@ -131,7 +157,9 @@ export const PickingPage = () => {
               <Heading3 mb="x2">To pallet</Heading3>
               <Box display="flex" alignItems="bottom" mb="x3">
                 <Input placeholder="Scan or enter pallet" mr="x2" />
-                <Button><NoWrapText>Generate Pallet</NoWrapText></Button>
+                <Button>
+                  <NoWrapText>Generate Pallet</NoWrapText>
+                </Button>
               </Box>
             </>
           )}
@@ -145,7 +173,9 @@ export const PickingPage = () => {
             <Box display="grid" gridTemplateColumns="1fr" gridGap="x2">
               <Card>
                 <Box p="x1">
-                  <Text fontSize="large" mb="x2">Location A1</Text>
+                  <Text fontSize="large" mb="x2">
+                    Location A1
+                  </Text>
                   <DescriptionList layout="inline" density="compact">
                     <DescriptionGroup>
                       <DescriptionTerm>Quantity available</DescriptionTerm>
@@ -156,7 +186,9 @@ export const PickingPage = () => {
               </Card>
               <Card>
                 <Box p="x1">
-                  <Text fontSize="large" mb="x2">Location B2</Text>
+                  <Text fontSize="large" mb="x2">
+                    Location B2
+                  </Text>
                   <DescriptionList layout="inline" density="compact">
                     <DescriptionGroup>
                       <DescriptionTerm>Quantity available</DescriptionTerm>
@@ -167,7 +199,9 @@ export const PickingPage = () => {
               </Card>
               <Card>
                 <Box p="x1">
-                  <Text fontSize="large" mb="x2">Location C3</Text>
+                  <Text fontSize="large" mb="x2">
+                    Location C3
+                  </Text>
                   <DescriptionList layout="inline" density="compact">
                     <DescriptionGroup>
                       <DescriptionTerm>Quantity available</DescriptionTerm>
@@ -180,20 +214,16 @@ export const PickingPage = () => {
           </Box>
         </Box>
       </Container>
-      <Sidebar
-        isOpen={showFilters}
-        onClose={() => setShowFilters(false)}
-        title="Items to pick"
-      >
+      <Sidebar isOpen={showFilters} onClose={() => setShowFilters(false)} title="Items to pick">
         <Box p="x4">
           <Box mb="x4">
             <Select
               labelText="Item"
               value={selectedItem}
               onChange={(value) => setSelectedItem(value as string)}
-              options={items.map(item => ({
+              options={items.map((item) => ({
                 value: item.code,
-                label: item.code
+                label: item.code,
               }))}
             />
           </Box>
@@ -212,9 +242,9 @@ export const PickingPage = () => {
               labelText="Lot code and expiry date"
               value={selectedLot}
               onChange={(value) => setSelectedLot(value as string)}
-              options={lotCodes.map(lot => ({
+              options={lotCodes.map((lot) => ({
                 value: lot.code,
-                label: `${lot.code} • ${lot.expiryDate}`
+                label: `${lot.code} • ${lot.expiryDate}`,
               }))}
             />
           </Box>
@@ -236,8 +266,8 @@ export const PickingPage = () => {
 export const DropOffPage = () => {
   const [locationInput, setLocationInput] = useState("");
   const [showPalletCard, setShowPalletCard] = useState(false);
-  const [selectedItem, setSelectedItem] = useState("ITEM001");
-  const [selectedLot, setSelectedLot] = useState("LOT001");
+  const [selectedItem] = useState("ITEM001");
+  const [selectedLot] = useState("LOT001");
 
   const lotCodes = [
     { code: "LOT001", expiryDate: "2024-12-31" },
@@ -266,9 +296,9 @@ export const DropOffPage = () => {
       <Container>
         <Box p="x4">
           <Heading3 mb="x2">Drop off</Heading3>
-          <Input 
-            placeholder="Scan or enter location" 
-            mb="x3" 
+          <Input
+            placeholder="Scan or enter location"
+            mb="x3"
             value={locationInput}
             onChange={(e) => setLocationInput(e.target.value)}
             onKeyDown={handleLocationInputKeyDown}
@@ -277,12 +307,16 @@ export const DropOffPage = () => {
 
           <Box display="flex" justifyContent="space-between" alignItems="center" mb="x2">
             <Heading3>Picked pallets</Heading3>
-            <Button icon="add" iconSide="left">Pick another pallet</Button>
+            <Button icon="add" iconSide="left">
+              Pick another pallet
+            </Button>
           </Box>
 
           <Card mb="x3">
             <Box px="x2" py="x1">
-              <Text fontSize="large" mb="x2">001</Text>
+              <Text fontSize="large" mb="x2">
+                001
+              </Text>
               <DescriptionList layout="inline" density="compact">
                 <DescriptionGroup>
                   <DescriptionTerm>Item</DescriptionTerm>
@@ -314,7 +348,9 @@ export const DropOffPage = () => {
 
           <Card mb="x3">
             <Box px="x2" py="x1">
-              <Text fontSize="large" mb="x2">002</Text>
+              <Text fontSize="large" mb="x2">
+                002
+              </Text>
               <DescriptionList layout="inline" density="compact">
                 <DescriptionGroup>
                   <DescriptionTerm>Item</DescriptionTerm>
@@ -347,7 +383,9 @@ export const DropOffPage = () => {
           {showPalletCard && locationInput && (
             <Card mb="x3">
               <Box px="x2" py="x1">
-                <Text fontSize="large" mb="x2">{locationInput}</Text>
+                <Text fontSize="large" mb="x2">
+                  {locationInput}
+                </Text>
                 <DescriptionList layout="inline" density="compact">
                   <DescriptionGroup>
                     <DescriptionTerm>Item</DescriptionTerm>
@@ -359,7 +397,9 @@ export const DropOffPage = () => {
                   </DescriptionGroup>
                   <DescriptionGroup>
                     <DescriptionTerm>Expiry</DescriptionTerm>
-                    <DescriptionDetails>{lotCodes.find(lot => lot.code === selectedLot)?.expiryDate}</DescriptionDetails>
+                    <DescriptionDetails>
+                      {lotCodes.find((lot) => lot.code === selectedLot)?.expiryDate}
+                    </DescriptionDetails>
                   </DescriptionGroup>
                   <DescriptionGroup>
                     <DescriptionTerm>Status</DescriptionTerm>
@@ -381,4 +421,4 @@ export const DropOffPage = () => {
       </Container>
     </Box>
   );
-}; 
+};
