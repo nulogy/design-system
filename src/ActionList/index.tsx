@@ -7,8 +7,8 @@ export type { ActionListButtonProps } from "./components/ActionListButton";
 export { default as ActionListMenu } from "./components/ActionListMenu";
 export type { ActionListMenuProps } from "./components/ActionListMenu";
 
-export { default as ActionListSection } from "./components/ActionListSection";
-export type { ActionListSectionProps } from "./components/ActionListSection";
+export { default as ActionListGroup } from "./components/ActionListGroup";
+export type { ActionListGroupProps } from "./components/ActionListGroup";
 
 export { default as ActionListLabel } from "./components/ActionListLabel";
 export type { ActionListLabelProps } from "./components/ActionListLabel";

@@ -11,12 +11,15 @@ import {
 } from "../NDSProvider/ComponentVariantContext";
 import { subPx } from "../utils";
 
+export type ButtonSize = "small" | "medium";
+export type IconSide = "left" | "right";
+
 export type ButtonProps = SpaceProps &
   React.ComponentPropsWithRef<"button"> & {
     className?: string;
     icon?: IconName | "loading";
-    iconSide?: "left" | "right";
-    size?: "small" | "medium";
+    iconSide?: IconSide;
+    size?: ButtonSize;
     variant?: ComponentVariant;
     fullWidth?: boolean;
     asLink?: boolean;

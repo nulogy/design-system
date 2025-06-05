@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { action } from "@storybook/addon-actions";
 import { Textarea, Button } from "../index";
-import { Flex } from "../Flex";
 
 const errorList = ["Error message 1", "Error message 2"];
 

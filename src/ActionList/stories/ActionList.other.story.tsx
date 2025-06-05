@@ -4,7 +4,7 @@ import {
   ActionListButton,
   ActionListLabel,
   ActionListMenu,
-  ActionListSection,
+  ActionListGroup,
   ActionListItem,
   ActionListCheckbox,
   ActionListDivider,
@@ -13,10 +13,10 @@ import {
   ActionSubListMenu,
   ActionListRadioGroup,
   ActionListRadioItem,
-} from ".";
+} from "..";
 
 export default {
-  title: "Components/ActionList",
+  title: "Components/ActionList/Other",
   component: ActionList,
 };
 
@@ -39,21 +39,21 @@ export const Default = () => {
 
           <ActionListDivider />
 
-          <ActionListSection title="Group title">
+          <ActionListGroup title="Group title">
             <ActionListItem onClick={() => alert("clicked")}> Action List Menu Item within a group</ActionListItem>
             <ActionListItem>Action List Menu Item within a group</ActionListItem>
-          </ActionListSection>
+          </ActionListGroup>
 
           <ActionListDivider />
 
-          <ActionListSection title="Checkboxes">
+          <ActionListGroup title="Checkboxes">
             <ActionListCheckbox checked={checkedItem === "1"} onClick={() => setCheckedItem("1")}>
               Checkbox 1
             </ActionListCheckbox>
             <ActionListCheckbox checked={checkedItem === "2"} onClick={() => setCheckedItem("2")}>
               Checkbox 2
             </ActionListCheckbox>
-          </ActionListSection>
+          </ActionListGroup>
 
           <ActionListDivider />
 
@@ -71,25 +71,25 @@ export const Default = () => {
 
               <ActionListDivider />
 
-              <ActionListSection title="Group title">
+              <ActionListGroup title="Group title">
                 <ActionListItem onClick={() => alert("clicked")}> Action List Menu Item within a group</ActionListItem>
                 <ActionListItem>Action List Menu Item within a group</ActionListItem>
-              </ActionListSection>
+              </ActionListGroup>
 
               <ActionListDivider />
 
-              <ActionListSection title="Checkboxes">
+              <ActionListGroup title="Checkboxes">
                 <ActionListCheckbox checked={checkedItem === "1"} onClick={() => setCheckedItem("1")}>
                   Checkbox 1
                 </ActionListCheckbox>
                 <ActionListCheckbox checked={checkedItem === "2"} onClick={() => setCheckedItem("2")}>
                   Checkbox 2
                 </ActionListCheckbox>
-              </ActionListSection>
+              </ActionListGroup>
 
               <ActionListDivider />
 
-              <ActionListSection title="Radio buttons">
+              <ActionListGroup title="Radio buttons">
                 <ActionListRadioGroup value={radioItem}>
                   <ActionListRadioItem value="1" onClick={() => setRadioItem("1")}>
                     Radio button 1
@@ -98,13 +98,13 @@ export const Default = () => {
                     Radio button 2
                   </ActionListRadioItem>
                 </ActionListRadioGroup>
-              </ActionListSection>
+              </ActionListGroup>
             </ActionSubListMenu>
           </ActionSubList>
 
           <ActionListDivider />
 
-          <ActionListSection title="Radio buttons">
+          <ActionListGroup title="Radio buttons">
             <ActionListRadioGroup value={radioItem}>
               <ActionListRadioItem value="1" onClick={() => setRadioItem("1")}>
                 Radio button 1
@@ -113,7 +113,7 @@ export const Default = () => {
                 Radio button 2
               </ActionListRadioItem>
             </ActionListRadioGroup>
-          </ActionListSection>
+          </ActionListGroup>
         </ActionListMenu>
       </ActionList>
     </div>
