@@ -10,7 +10,7 @@
 
 ### 1. Add the package
 
-## Peer dependencies
+## Peer dependencies !
 
 @nulogy/components relies on React, ReactDOM and Styled Components. You will need to add these to your projects dependencies if they are not there already.
 
