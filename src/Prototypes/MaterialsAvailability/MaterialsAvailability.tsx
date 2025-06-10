@@ -687,7 +687,7 @@ const sampleData = [
     unitPrice: 8.99,
     currency: 'USD',
     reason: 'Quality control issues - Material inspection required',
-    note: 'Sample note 4',
+    note: 'Sample note 41',
     productionStartDate: '2025-06-28',
     nextProductionDate: '2025-07-08',
     closeProductionNote: 'None',
