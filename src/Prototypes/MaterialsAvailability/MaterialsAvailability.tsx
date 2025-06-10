@@ -356,7 +356,7 @@ const columns = [
   },
   { dataKey: 'quantity', label: 'Quantity',
     cellRenderer: ({ cellData }) => (
-      <TooltipWrapper content={cellData}>
+      <TooltipWrapper content={cellData?.toString() || ''}>
         <TruncatedCell>{cellData}</TruncatedCell>
       </TooltipWrapper>
     )
@@ -377,7 +377,7 @@ const columns = [
   },
   { dataKey: 'unitPrice', label: 'Unit price',
     cellRenderer: ({ cellData }) => (
-      <TooltipWrapper content={cellData}>
+      <TooltipWrapper content={cellData?.toString() || ''}>
         <TruncatedCell>{cellData}</TruncatedCell>
       </TooltipWrapper>
     )
@@ -887,6 +887,35 @@ const HoverableText = styled.span`
   }
 `;
 
+const TwoRowCell = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+`;
+
+const MaterialCodeLink = styled.a`
+  color: ${props => props.theme.colors.blue};
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+const MaterialDescription = styled.div`
+  color: ${props => props.theme.colors.darkGrey};
+  font-size: ${props => props.theme.fontSizes.small};
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`;
+
 export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({ 
   selectedIndex = 0, 
   hideNavigation = false,
@@ -908,11 +937,7 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({
   const [uomMode, setUomMode] = useState<'customer' | 'supplier'>('customer');
   const filterButtonRef = React.useRef<HTMLButtonElement>(null);
   const inboundButtonRef = React.useRef<HTMLButtonElement>(null);
-  const [isLateFilterActive, setIsLateFilterActive] = useState(false);
-  const [isRequiresResponseFilterActive, setIsRequiresResponseFilterActive] = useState(false);
-  const [isAwaitingSupplierFilterActive, setIsAwaitingSupplierFilterActive] = useState(false);
-  const [isTempShortageFilterActive, setIsTempShortageFilterActive] = useState(false);
-  const [isFullShortageFilterActive, setIsFullShortageFilterActive] = useState(false);
+  const [activeFilter, setActiveFilter] = useState<string | null>(null);
   const theme = useTheme();
   const filterChipsRef = useRef<HTMLDivElement>(null);
   const rightButtonsRef = useRef<HTMLDivElement>(null);
@@ -957,20 +982,20 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({
     let filtered = sampleData;
     
     // Apply filter chip filters
-    if (isLateFilterActive) {
+    if (activeFilter === 'late') {
       filtered = filtered.filter(row => row.problemsAndRisks === 'Late');
     }
-    if (isRequiresResponseFilterActive) {
-      filtered = filtered.filter(row => row.collaborationStatus === 'Requires your response');
+    if (activeFilter === 'material-shortage') {
+      filtered = filtered.filter(row => row.problemsAndRisks === 'Material shortage');
     }
-    if (isAwaitingSupplierFilterActive) {
-      filtered = filtered.filter(row => row.collaborationStatus === 'Awaiting supplier response');
-    }
-    if (isTempShortageFilterActive) {
+    if (activeFilter === 'temp-shortage') {
       filtered = filtered.filter(row => row.problemsAndRisks === 'Temporary material shortage');
     }
-    if (isFullShortageFilterActive) {
-      filtered = filtered.filter(row => row.problemsAndRisks === 'Material shortage');
+    if (activeFilter === 'requires-response') {
+      filtered = filtered.filter(row => row.collaborationStatus === 'Requires your response');
+    }
+    if (activeFilter === 'awaiting-supplier') {
+      filtered = filtered.filter(row => row.collaborationStatus === 'Awaiting supplier response');
     }
 
     // Apply tag filters
@@ -1392,11 +1417,12 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({
     const customerUOMData = [
       {
         id: '1',
+        materialCode: 'NUL-STL-ROD-12',
         material: 'Steel Rod 12mm',
         materialAlternateCode: 'STL-12-ROD',
         uom: 'KG',
         materialRequirement: '3',
-        componentScrap: '5.0',
+        componentScrap: '0',
         conversionFactor: 1,
         selectedPoLineItem: selectedPoLineItem,
         events: [
@@ -1452,11 +1478,12 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({
       },
       {
         id: '2',
+        materialCode: 'NUL-ALU-SHT-5',
         material: 'Aluminum Sheet 5mm',
         materialAlternateCode: 'ALU-5-SHT',
         uom: 'M²',
         materialRequirement: '2',
-        componentScrap: '3.5',
+        componentScrap: '0',
         conversionFactor: 1,
         selectedPoLineItem: selectedPoLineItem,
         events: [
@@ -1500,11 +1527,12 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({
       },
       {
         id: '3',
+        materialCode: 'NUL-COP-WIR-2.5',
         material: 'Copper Wire 2.5mm',
         materialAlternateCode: 'COP-2.5-WIR',
         uom: 'M',
         materialRequirement: '1',
-        componentScrap: '2.0',
+        componentScrap: '0',
         conversionFactor: 1,
         selectedPoLineItem: selectedPoLineItem,
         events: [
@@ -1552,11 +1580,12 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({
     const supplierUOMData = [
       {
         id: '1',
+        materialCode: 'NUL-STL-ROD-12',
         material: 'Steel Rod 12mm',
         materialAlternateCode: 'STL-12-ROD',
         uom: 'EA',
         materialRequirement: '30',
-        componentScrap: '5.0',
+        componentScrap: '0',
         conversionFactor: 10,
         selectedPoLineItem: selectedPoLineItem,
         events: [
@@ -1612,11 +1641,12 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({
       },
       {
         id: '2',
+        materialCode: 'NUL-ALU-SHT-5',
         material: 'Aluminum Sheet 5mm',
         materialAlternateCode: 'ALU-5-SHT',
         uom: 'KG',
         materialRequirement: '20',
-        componentScrap: '3.5',
+        componentScrap: '0',
         conversionFactor: 10,
         selectedPoLineItem: selectedPoLineItem,
         events: [
@@ -1660,11 +1690,12 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({
       },
       {
         id: '3',
+        materialCode: 'NUL-COP-WIR-2.5',
         material: 'Copper Wire 2.5mm',
         materialAlternateCode: 'COP-2.5-WIR',
         uom: 'EA',
         materialRequirement: '5',
-        componentScrap: '2.0',
+        componentScrap: '0',
         conversionFactor: 5,
         selectedPoLineItem: selectedPoLineItem,
         events: [
@@ -1754,6 +1785,7 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({
             isLastExpanded: index === sortedEvents.length - 1,
             rowType: 'expanded',
             rowClassName: index === sortedEvents.length - 1 ? 'material-group-last' : 'material-group-item',
+            materialCode: index === 0 ? material.materialCode : '',
             material: index === 0 ? material.material : '',
             materialAlternateCode: index === 0 ? material.materialAlternateCode : '',
             uom: index === 0 ? material.uom : '',
@@ -1822,6 +1854,7 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({
                 isLastExpanded: false,
                 rowType: 'collapsed',
                 rowClassName: 'material-collapsed',
+                materialCode: material.materialCode,
                 material: material.material,
                 materialAlternateCode: material.materialAlternateCode,
                 uom: material.uom,
@@ -1929,7 +1962,7 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({
       bomComponent: 'Component A',
       bomRatio: '1:1',
       uom: 'PCS',
-      componentScrap: 2.5,
+      componentScrap: 0,
       remainingRequired: 50,
       materialBalanceOnHand: -10,
       materialBalanceByNextProdDate: 5,
@@ -1949,7 +1982,7 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({
       bomComponent: 'Component B',
       bomRatio: '2:1',
       uom: 'PCS',
-      componentScrap: 1.8,
+      componentScrap: 0,
       remainingRequired: 100,
       materialBalanceOnHand: 20,
       materialBalanceByNextProdDate: -15,
@@ -1969,7 +2002,7 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({
       bomComponent: 'Component C',
       bomRatio: '1:2',
       uom: 'PCS',
-      componentScrap: 3.2,
+      componentScrap: 0,
       remainingRequired: 75,
       materialBalanceOnHand: 0,
       materialBalanceByNextProdDate: -25,
@@ -2046,23 +2079,19 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({
 
   React.useEffect(() => {
     let filtered = sampleData;
-    if (isLateFilterActive) {
+    if (activeFilter === 'late') {
       filtered = filtered.filter(row => row.problemsAndRisks === 'Late');
-    }
-    if (isRequiresResponseFilterActive) {
+    } else if (activeFilter === 'material-shortage') {
+      filtered = filtered.filter(row => row.problemsAndRisks === 'Material shortage');
+    } else if (activeFilter === 'temp-shortage') {
+      filtered = filtered.filter(row => row.problemsAndRisks === 'Temporary material shortage');
+    } else if (activeFilter === 'requires-response') {
       filtered = filtered.filter(row => row.collaborationStatus === 'Requires your response');
-    }
-    if (isAwaitingSupplierFilterActive) {
+    } else if (activeFilter === 'awaiting-supplier') {
       filtered = filtered.filter(row => row.collaborationStatus === 'Awaiting supplier response');
     }
-    if (isTempShortageFilterActive) {
-      filtered = filtered.filter(row => row.problemsAndRisks === 'Temporary material shortage');
-    }
-    if (isFullShortageFilterActive) {
-      filtered = filtered.filter(row => row.problemsAndRisks === 'Material shortage');
-    }
     setFilteredData(filtered);
-  }, [isLateFilterActive, isRequiresResponseFilterActive, isAwaitingSupplierFilterActive, isTempShortageFilterActive, isFullShortageFilterActive]);
+  }, [activeFilter]);
 
   // Calculate the number of applied filters
   const appliedFiltersCount = Object.entries(filters).filter(
@@ -2086,36 +2115,36 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({
                   <FilterChip
                     label="Late"
                     count={sampleData.filter(row => row.problemsAndRisks === 'Late').length}
-                    active={isLateFilterActive}
-                    onClick={() => setIsLateFilterActive(active => !active)}
+                    active={activeFilter === 'late'}
+                    onClick={() => setActiveFilter(activeFilter === 'late' ? null : 'late')}
                     innerType="danger"
                   />
                   <FilterChip
                     label="Material shortage"
                     count={sampleData.filter(row => row.problemsAndRisks === 'Material shortage').length}
-                    active={isFullShortageFilterActive}
-                    onClick={() => setIsFullShortageFilterActive(active => !active)}
+                    active={activeFilter === 'material-shortage'}
+                    onClick={() => setActiveFilter(activeFilter === 'material-shortage' ? null : 'material-shortage')}
                     innerType="danger"
                   />
                   <FilterChip
                     label="Temporary material shortage"
                     count={sampleData.filter(row => row.problemsAndRisks === 'Temporary material shortage').length}
-                    active={isTempShortageFilterActive}
-                    onClick={() => setIsTempShortageFilterActive(active => !active)}
+                    active={activeFilter === 'temp-shortage'}
+                    onClick={() => setActiveFilter(activeFilter === 'temp-shortage' ? null : 'temp-shortage')}
                     innerType="warning"
                   />
                   <FilterChip
                     label="Requires your response"
                     count={sampleData.filter(row => row.collaborationStatus === 'Requires your response').length}
-                    active={isRequiresResponseFilterActive}
-                    onClick={() => setIsRequiresResponseFilterActive(active => !active)}
+                    active={activeFilter === 'requires-response'}
+                    onClick={() => setActiveFilter(activeFilter === 'requires-response' ? null : 'requires-response')}
                     innerType="warning"
                   />
                   <FilterChip
                     label="Awaiting supplier response"
                     count={sampleData.filter(row => row.collaborationStatus === 'Awaiting supplier response').length}
-                    active={isAwaitingSupplierFilterActive}
-                    onClick={() => setIsAwaitingSupplierFilterActive(active => !active)}
+                    active={activeFilter === 'awaiting-supplier'}
+                    onClick={() => setActiveFilter(activeFilter === 'awaiting-supplier' ? null : 'awaiting-supplier')}
                     innerType="neutral"
                   />
                 </Box>
@@ -2324,6 +2353,14 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({
                 <Switch value="supplier">Supplier UOM</Switch>
               </Switcher>
             </Box>
+            <Box mb="x3">
+              <DescriptionList layout="inline">
+                <DescriptionGroup>
+                  <DescriptionTerm>Revision name and release date:</DescriptionTerm>
+                  <DescriptionDetails>Revision 1 • 2025-01-01</DescriptionDetails>
+                </DescriptionGroup>
+              </DescriptionList>
+            </Box>
             <TableContainer>
               <ScrollableTable>
                 <StyledTable
@@ -2331,15 +2368,34 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({
                   columns={[
                     { 
                       dataKey: 'material', 
-                      label: 'Material',
+                      label: 'Customer material code',
                       cellRenderer: ({ cellData, row }) => {
                         const isSelected = row.isExpanded && row.isSelectedPo;
-                        return <Box fontWeight={isSelected ? "bold" : "normal"}>{cellData}</Box>;
+                        const materialCode = row.materialCode;
+                        const materialDescription = cellData;
+                        
+                        return (
+                          <TwoRowCell>
+                                                         {materialCode && (
+                               <MaterialCodeLink 
+                                 href="#" 
+                                 onClick={(e) => { e.preventDefault(); /* Handle material code click */ }}
+                               >
+                                 {materialCode}
+                               </MaterialCodeLink>
+                             )}
+                            {materialDescription && (
+                              <MaterialDescription style={{ fontWeight: isSelected ? "bold" : "normal" }}>
+                                {materialDescription}
+                              </MaterialDescription>
+                            )}
+                          </TwoRowCell>
+                        );
                       }
                     },
                     { 
                       dataKey: 'materialAlternateCode', 
-                      label: 'Material alternate code',
+                      label: 'Supplier material code',
                       cellRenderer: ({ cellData, row }) => {
                         const isSelected = row.isExpanded && row.isSelectedPo;
                         return <Box fontWeight={isSelected ? "bold" : "normal"}>{cellData}</Box>;
@@ -2414,8 +2470,52 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({
                       }
                     },
                     { 
+                      dataKey: 'onHandOnly', 
+                      label: 'On hand (without in-transit)', 
+                      metadata: { divider: true },
+                      cellRenderer: ({ cellData, row }) => {
+                        const isSelected = row.isExpanded && row.isSelectedPo;
+                        return <Box fontWeight={isSelected ? "bold" : "normal"}>{cellData}</Box>;
+                      }
+                    },
+                    { 
+                      dataKey: 'remainingMaterialDemandOnly', 
+                      label: 'Remaining material demand',
+                      cellRenderer: ({ cellData, row }) => {
+                        const isSelected = row.isExpanded && row.isSelectedPo;
+                        const displayValue = row.inventoryEvent === 'STO' && cellData === 0 ? '-' : cellData;
+                        return <Box fontWeight={isSelected ? "bold" : "normal"}>{displayValue}</Box>;
+                      }
+                    },
+                    { 
+                      dataKey: 'materialBalanceOnlyOnHand', 
+                      label: 'Material balance (without in-transit)',
+                      cellRenderer: ({ cellData, row }) => {
+                        const isNegative = typeof cellData === 'number' && cellData < 0;
+                        const isSelected = row.isExpanded && row.isSelectedPo;
+                        return (
+                          <Box 
+                            fontWeight={isSelected ? "bold" : "normal"}
+                            color={isNegative ? "red" : undefined}
+                          >
+                            {cellData}
+                          </Box>
+                        );
+                      }
+                    },
+                    
+                    { 
+                      dataKey: 'productionStartExpectedReceiveDate', 
+                      label: 'Production start date / Expected receive date',
+                      cellRenderer: ({ cellData, row }) => {
+                        const isSelected = row.isExpanded && row.isSelectedPo;
+                        return <Box fontWeight={isSelected ? "bold" : "normal"}>{cellData}</Box>;
+                      }
+                    },
+                    
+                    { 
                       dataKey: 'onHandWithTransit', 
-                      label: 'On hand', 
+                      label: 'On hand (with in-transit)', 
                       metadata: { divider: true },
                       cellRenderer: ({ cellData, row }) => {
                         const isSelected = row.isExpanded && row.isSelectedPo;
@@ -2443,48 +2543,6 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({
                     { 
                       dataKey: 'materialBalanceWithTransit', 
                       label: 'Material balance (with in-transit)',
-                      cellRenderer: ({ cellData, row }) => {
-                        const isNegative = typeof cellData === 'number' && cellData < 0;
-                        const isSelected = row.isExpanded && row.isSelectedPo;
-                        return (
-                          <Box 
-                            fontWeight={isSelected ? "bold" : "normal"}
-                            color={isNegative ? "red" : undefined}
-                          >
-                            {cellData}
-                          </Box>
-                        );
-                      }
-                    },
-                    { 
-                      dataKey: 'productionStartExpectedReceiveDate', 
-                      label: 'Production start date / Expected receive date',
-                      cellRenderer: ({ cellData, row }) => {
-                        const isSelected = row.isExpanded && row.isSelectedPo;
-                        return <Box fontWeight={isSelected ? "bold" : "normal"}>{cellData}</Box>;
-                      }
-                    },
-                    { 
-                      dataKey: 'onHandOnly', 
-                      label: 'On hand', 
-                      metadata: { divider: true },
-                      cellRenderer: ({ cellData, row }) => {
-                        const isSelected = row.isExpanded && row.isSelectedPo;
-                        return <Box fontWeight={isSelected ? "bold" : "normal"}>{cellData}</Box>;
-                      }
-                    },
-                    { 
-                      dataKey: 'remainingMaterialDemandOnly', 
-                      label: 'Remaining material demand',
-                      cellRenderer: ({ cellData, row }) => {
-                        const isSelected = row.isExpanded && row.isSelectedPo;
-                        const displayValue = row.inventoryEvent === 'STO' && cellData === 0 ? '-' : cellData;
-                        return <Box fontWeight={isSelected ? "bold" : "normal"}>{displayValue}</Box>;
-                      }
-                    },
-                    { 
-                      dataKey: 'materialBalanceOnlyOnHand', 
-                      label: 'Material balance (without in-transit)',
                       cellRenderer: ({ cellData, row }) => {
                         const isNegative = typeof cellData === 'number' && cellData < 0;
                         const isSelected = row.isExpanded && row.isSelectedPo;
