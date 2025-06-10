@@ -14,7 +14,7 @@ import { Icon } from '../../Icon';
 import { Sidebar } from '../../Layout';
 import { Input } from '../../Input';
 import { Select, NDSOptionValue } from '../../Select';
-import { Heading3, Heading4 } from '../../Type';
+import { Heading3, Heading4, Text } from '../../Type';
 import styled, { useTheme } from 'styled-components';
 import { Button } from '../../Button';
 import { Checkbox } from '../../Checkbox';
@@ -22,9 +22,12 @@ import { DescriptionList, DescriptionGroup, DescriptionTerm, DescriptionDetails 
 import { DropdownMenu, DropdownButton } from '../../DropdownMenu';
 import { Tooltip } from '../../Tooltip';
 import { Switcher, Switch } from '../../Switcher';
+import { Flex } from '../../Flex';
 
 interface MaterialsAvailabilityProps {
   selectedIndex?: number;
+  hideNavigation?: boolean;
+  onTabChange?: (index: number) => void;
 }
 
 const menuData = {
@@ -55,9 +58,9 @@ const StyledTable = styled(Table)`
     width: 100px;
   }
   th:nth-child(6), td:nth-child(6) {
-    min-width: 180px !important;
-    width: 180px !important;
-    padding-left: 16px !important;
+    min-width: 40px !important;
+    width: 40px !important;
+    padding-left: 8px !important;
   }
   th[data-divider="true"]::before, td[data-divider="true"]::before {
     content: '';
@@ -284,7 +287,7 @@ const columns = [
   },
   { 
     dataKey: 'canRunNow', 
-    label: 'Can run (now)',
+    label: 'FG quantity produceable (now)',
     cellRenderer: ({ cellData }) => {
       const text = `${cellData} ${cellData > 0 ? 'PCS' : ''}`;
       return (
@@ -296,7 +299,7 @@ const columns = [
   },
   { 
     dataKey: 'canRunByStartDate', 
-    label: 'Can run (by production start date)',
+    label: 'FG quantity produceable (by production start date)',
     cellRenderer: ({ cellData }) => {
       const text = `${cellData} ${cellData > 0 ? 'PCS' : ''}`;
       return (
@@ -551,7 +554,7 @@ const calculateFGQuantityProduceable = (includeInTransit = false, productionStar
       const fgUnits = Math.floor(availableQuantity / material.materialRequirement);
       bottleneckQuantity = Math.min(bottleneckQuantity, fgUnits);
     });
-  }
+  } 
 
   return {
     quantity: bottleneckQuantity === Infinity ? 0 : bottleneckQuantity,
@@ -884,7 +887,11 @@ const HoverableText = styled.span`
   }
 `;
 
-export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({ selectedIndex = 0 }) => {
+export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({ 
+  selectedIndex = 0, 
+  hideNavigation = false,
+  onTabChange
+}): JSX.Element => {
   const [currentPage, setCurrentPage] = useState(1);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [filters, setFilters] = useState<Record<string, any>>({});
@@ -910,7 +917,6 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({ se
   const filterChipsRef = useRef<HTMLDivElement>(null);
   const rightButtonsRef = useRef<HTMLDivElement>(null);
   const [collapseActions, setCollapseActions] = useState(false);
-  // Add new state for the currently viewed PO data
   const [currentPOData, setCurrentPOData] = useState<any>(null);
 
   useLayoutEffect(() => {
@@ -2063,6 +2069,451 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({ se
     ([, value]) => value !== undefined && value !== null && value !== '' && value !== false
   ).length;
 
+  const handleTabClick = (e: React.MouseEvent, index: number) => {
+    if (onTabChange) {
+      onTabChange(index);
+    }
+  };
+
+  const renderTabContent = (): JSX.Element => {
+    if (selectedIndex === 0) {
+      return (
+        <Box mt="x4">
+          <TableHeader>
+            {selectedRows.length === 0 && (
+              <>
+                <Box display="flex" flex="1" alignItems="center" style={{ gap: 8 }} ref={filterChipsRef}>
+                  <FilterChip
+                    label="Late"
+                    count={sampleData.filter(row => row.problemsAndRisks === 'Late').length}
+                    active={isLateFilterActive}
+                    onClick={() => setIsLateFilterActive(active => !active)}
+                    innerType="danger"
+                  />
+                  <FilterChip
+                    label="Material shortage"
+                    count={sampleData.filter(row => row.problemsAndRisks === 'Material shortage').length}
+                    active={isFullShortageFilterActive}
+                    onClick={() => setIsFullShortageFilterActive(active => !active)}
+                    innerType="danger"
+                  />
+                  <FilterChip
+                    label="Temporary material shortage"
+                    count={sampleData.filter(row => row.problemsAndRisks === 'Temporary material shortage').length}
+                    active={isTempShortageFilterActive}
+                    onClick={() => setIsTempShortageFilterActive(active => !active)}
+                    innerType="warning"
+                  />
+                  <FilterChip
+                    label="Requires your response"
+                    count={sampleData.filter(row => row.collaborationStatus === 'Requires your response').length}
+                    active={isRequiresResponseFilterActive}
+                    onClick={() => setIsRequiresResponseFilterActive(active => !active)}
+                    innerType="warning"
+                  />
+                  <FilterChip
+                    label="Awaiting supplier response"
+                    count={sampleData.filter(row => row.collaborationStatus === 'Awaiting supplier response').length}
+                    active={isAwaitingSupplierFilterActive}
+                    onClick={() => setIsAwaitingSupplierFilterActive(active => !active)}
+                    innerType="neutral"
+                  />
+                </Box>
+                <Box display="flex" alignItems="center" ref={rightButtonsRef}>
+                  {collapseActions ? (
+                    <>
+                      <DropdownMenu
+                        trigger={() => (
+                          <IconicButton icon="more">More actions</IconicButton>
+                        )}
+                      >
+                        <DropdownButton onClick={() => {}}>Import</DropdownButton>
+                        <DropdownButton onClick={() => {}}>Export</DropdownButton>
+                        <DropdownButton onClick={() => {}}>Collaboration status</DropdownButton>
+                      </DropdownMenu>
+                      <VerticalDivider />
+                    </>
+                  ) : (
+                    <>
+                      <IconicButton icon="publish">Import</IconicButton>
+                      <IconicButton icon="getApp">Export</IconicButton>
+                      <VerticalDivider />
+                      <IconicButton icon="sort">Collaboration status</IconicButton>
+                      <VerticalDivider />
+                    </>
+                  )}
+                  <IconicButton 
+                    icon="filter" 
+                    ref={filterButtonRef}
+                    onClick={handleFilterClick}
+                  >
+                    {`Filters (${appliedFiltersCount})`}
+                  </IconicButton>
+                </Box>
+              </>
+            )}
+          </TableHeader>
+          {selectedRows.length > 0 && (
+            <ActionRow>
+              <Box color="midGrey">
+                {selectedRows.length} {selectedRows.length === 1 ? 'item' : 'items'} selected
+              </Box>
+              <Box display="flex" alignItems="center">
+                <DropdownMenu
+                  trigger={() => (
+                    <IconicButton icon="more">Tags</IconicButton>
+                  )}
+                >
+                  <DropdownMenu
+                    trigger={() => (
+                      <DropdownButton>
+                        <Flex justifyContent="space-between" alignItems="center" width="100%">
+                          <Text>Add</Text>
+                          <Icon icon="rightArrow" title="right arrow" />
+                        </Flex>
+                      </DropdownButton>
+                    )}
+                    placement="right-start"
+                    showArrow={false}
+                    openOnHover
+                  >
+                    <DropdownButton onClick={() => {}} whiteSpace="nowrap">Express shipment tag</DropdownButton>
+                    <DropdownButton onClick={() => {}} whiteSpace="nowrap">Validated for assembly tag</DropdownButton>
+                  </DropdownMenu>
+                  <DropdownMenu
+                    trigger={() => (
+                      <DropdownButton>
+                        <Flex justifyContent="space-between" alignItems="center" width="100%">
+                          <Text>Remove</Text>
+                          <Icon icon="rightArrow" title="right arrow" />
+                        </Flex>
+                      </DropdownButton>
+                    )}
+                    placement="right-start"
+                    showArrow={false}
+                    openOnHover
+                  >
+                    <DropdownButton onClick={() => {}} whiteSpace="nowrap">Express shipment tag</DropdownButton>
+                    <DropdownButton onClick={() => {}} whiteSpace="nowrap">Validated for assembly tag</DropdownButton>
+                  </DropdownMenu>
+                </DropdownMenu>
+                <VerticalDivider />
+                <Box ml="x3">
+                  <Button onClick={() => setSelectedRows([])} style={{ marginRight: '8px' }}>Cancel</Button>
+                  <Button onClick={() => {}} style={{ marginRight: '8px' }}>Edit</Button>
+                  <Button onClick={() => {}}>Accept</Button>
+                </Box>
+              </Box>
+            </ActionRow>
+          )}
+          <TableContainer>
+            <ScrollableTable>
+              <StyledTable
+                columns={columns}
+                rows={filteredData}
+                hasSelectableRows
+                keyField="id"
+                selectedRows={selectedRows}
+                onRowSelectionChange={setSelectedRows}
+              />
+            </ScrollableTable>
+          </TableContainer>
+          <Sidebar
+            isOpen={isFilterOpen}
+            onClose={handleFilterClose}
+            title="Filters"
+            triggerRef={filterButtonRef}
+            width="m"
+            footer={renderFilterFooter()}
+          >
+            {renderFilters()}
+          </Sidebar>
+        </Box>
+      );
+    }
+    
+    return (
+      <Box mt="x4">
+        <Heading3>Viewing materials for</Heading3>
+        <SelectContainer>
+          <SelectWrapper width="200px">
+            <SelectLabel>PO</SelectLabel>
+            <Select
+              options={poOptions}
+              value={selectedPO}
+              onChange={handlePOChange}
+            />
+          </SelectWrapper>
+          <SelectWrapper width="500px">
+            <SelectLabel>Line item number</SelectLabel>
+            <Select
+              options={lineItemOptions}
+              value={selectedLineItem}
+              onChange={handleLineItemChange}
+            />
+          </SelectWrapper>
+          <Box display="flex" mr="x2">
+            <PrimaryButton onClick={handleApply}>
+              Apply
+            </PrimaryButton>
+            <Box ml="x2">
+              <QuietButton onClick={handleReset}>
+                Reset
+              </QuietButton>
+            </Box>
+          </Box>
+        </SelectContainer>
+        {showMaterialsTable && currentPOData && (
+          <>
+            <Box display="flex">
+              <DescriptionList layout="stacked" columns={5} density="relaxed" showDivider={false}>
+                <DescriptionGroup>
+                  <DescriptionTerm>Requested quantity</DescriptionTerm>
+                  <DescriptionDetails>{currentPOData.productionProgress.total}</DescriptionDetails>
+                </DescriptionGroup>
+                <DescriptionGroup>
+                  <DescriptionTerm>Remaining quantity</DescriptionTerm>
+                  <DescriptionDetails>
+                    {currentPOData.productionProgress.total - currentPOData.productionProgress.completed}
+                  </DescriptionDetails>
+                </DescriptionGroup>
+                <DescriptionGroup>
+                  <DescriptionTerm>Production progress</DescriptionTerm>
+                  <DescriptionDetails>
+                    {`${currentPOData.productionProgress.completed}/${currentPOData.productionProgress.total} • ${currentPOData.productionProgress.percentage}%`}
+                  </DescriptionDetails>
+                </DescriptionGroup>
+                <DescriptionGroup>
+                  <DescriptionTerm>Order UOM</DescriptionTerm>
+                  <DescriptionDetails>{currentPOData.uom}</DescriptionDetails>
+                </DescriptionGroup>
+                <DescriptionGroup>
+                  <DescriptionTerm>Production start date</DescriptionTerm>
+                  <DescriptionDetails>{currentPOData.productionStartDate}</DescriptionDetails>
+                </DescriptionGroup>
+                <DescriptionGroup>
+                  <DescriptionTerm>Production due date</DescriptionTerm>
+                  <DescriptionDetails>{currentPOData.productionDueDate}</DescriptionDetails>
+                </DescriptionGroup>
+                <DescriptionGroup>
+                  <DescriptionTerm>Priority</DescriptionTerm>
+                  <DescriptionDetails>{currentPOData.priority}</DescriptionDetails>
+                </DescriptionGroup>
+                <DescriptionGroup>
+                  <DescriptionTerm>FG quantity produceable (now)</DescriptionTerm>
+                  <DescriptionDetails>{currentPOData.canRunNow}</DescriptionDetails>
+                </DescriptionGroup>
+                <DescriptionGroup>
+                  <DescriptionTerm>FG quantity produceable (by production start date)</DescriptionTerm>
+                  <DescriptionDetails>{currentPOData.canRunByStartDate}</DescriptionDetails>
+                </DescriptionGroup>
+                <DescriptionGroup>
+                  <DescriptionTerm>Materials availability date</DescriptionTerm>
+                  <DescriptionDetails>{currentPOData.materialAvailabilityDate}</DescriptionDetails>
+                </DescriptionGroup>
+              </DescriptionList>
+            </Box>
+            <Box borderBottom="1px solid" borderColor="lightGrey" my="x4" />
+            <Box display="flex" justifyContent="space-between" alignItems="center" mb="x3">
+              <Heading3>Bill of materials</Heading3>
+              <Switcher
+                selected={uomMode}
+                onChange={(value) => setUomMode(value as 'customer' | 'supplier')}
+              >
+                <Switch value="customer">Customer UOM</Switch>
+                <Switch value="supplier">Supplier UOM</Switch>
+              </Switcher>
+            </Box>
+            <TableContainer>
+              <ScrollableTable>
+                <StyledTable
+                  rowBorder={true}
+                  columns={[
+                    { 
+                      dataKey: 'material', 
+                      label: 'Material',
+                      cellRenderer: ({ cellData, row }) => {
+                        const isSelected = row.isExpanded && row.isSelectedPo;
+                        return <Box fontWeight={isSelected ? "bold" : "normal"}>{cellData}</Box>;
+                      }
+                    },
+                    { 
+                      dataKey: 'materialAlternateCode', 
+                      label: 'Material alternate code',
+                      cellRenderer: ({ cellData, row }) => {
+                        const isSelected = row.isExpanded && row.isSelectedPo;
+                        return <Box fontWeight={isSelected ? "bold" : "normal"}>{cellData}</Box>;
+                      }
+                    },
+                    { 
+                      dataKey: 'uom', 
+                      label: 'UOM',
+                      cellRenderer: ({ cellData, row }) => {
+                        const isSelected = row.isExpanded && row.isSelectedPo;
+                        return <Box fontWeight={isSelected ? "bold" : "normal"}>{cellData}</Box>;
+                      }
+                    },
+                    { 
+                      dataKey: 'materialRequirement', 
+                      label: 'Material requirement (for 1 FG)',
+                      cellRenderer: ({ cellData, row }) => {
+                        const isSelected = row.isExpanded && row.isSelectedPo;
+                        return <Box fontWeight={isSelected ? "bold" : "normal"}>{cellData}</Box>;
+                      }
+                    },
+                    { 
+                      dataKey: 'componentScrap', 
+                      label: 'Component scrap (%)',
+                      cellRenderer: ({ cellData, row }) => {
+                        const isSelected = row.isExpanded && row.isSelectedPo;
+                        return <Box fontWeight={isSelected ? "bold" : "normal"}>{cellData}</Box>;
+                      }
+                    },
+                    { 
+                      dataKey: 'expandToggle', 
+                      label: '', 
+                      cellRenderer: ({ row }) => (
+                        <Box style={{ width: '40px', display: 'flex', justifyContent: 'center' }}>
+                          {row.isFirstEvent && (
+                            <Button
+                              onClick={() => toggleMaterialExpansion(row.materialId)}
+                              style={{ padding: '2px 6px', fontSize: '12px', width: '24px', height: '24px', lineHeight: '1' }}
+                            >
+                              {expandedMaterials.has(row.materialId) ? "−" : "+"}
+                            </Button>
+                          )}
+                        </Box>
+                      )
+                    },
+                    { 
+                      dataKey: 'inventoryEvent', 
+                      label: 'Inventory event', 
+                      metadata: { divider: true },
+                      cellRenderer: ({ cellData, row }) => {
+                        const isSelected = row.isExpanded && row.isSelectedPo;
+                        return (
+                          <Box fontWeight={isSelected ? "bold" : "normal"}>
+                            {cellData}
+                            {row.poLineItem && (
+                              <Box fontSize="small" fontWeight={isSelected ? "bold" : "normal"}>
+                                <HoverableText style={{ color: '#0066CC', cursor: 'pointer' }} onClick={() => {}}>
+                                  {row.poLineItem}
+                                </HoverableText>
+                              </Box>
+                            )}
+                          </Box>
+                        );
+                      }
+                    },
+                    { 
+                      dataKey: 'priority', 
+                      label: 'Priority',
+                      cellRenderer: ({ cellData, row }) => {
+                        const isSelected = row.isExpanded && row.isSelectedPo;
+                        return <Box fontWeight={isSelected ? "bold" : "normal"}>{cellData}</Box>;
+                      }
+                    },
+                    { 
+                      dataKey: 'onHandWithTransit', 
+                      label: 'On hand', 
+                      metadata: { divider: true },
+                      cellRenderer: ({ cellData, row }) => {
+                        const isSelected = row.isExpanded && row.isSelectedPo;
+                        return <Box fontWeight={isSelected ? "bold" : "normal"}>{cellData}</Box>;
+                      }
+                    },
+                    { 
+                      dataKey: 'inTransit', 
+                      label: 'In-transit',
+                      cellRenderer: ({ cellData, row }) => {
+                        const isSelected = row.isExpanded && row.isSelectedPo;
+                        const displayValue = row.inventoryEvent === 'PO line item' && cellData === 0 ? '-' : cellData;
+                        return <Box fontWeight={isSelected ? "bold" : "normal"}>{displayValue}</Box>;
+                      }
+                    },
+                    { 
+                      dataKey: 'remainingMaterialDemandWithTransit', 
+                      label: 'Remaining material demand',
+                      cellRenderer: ({ cellData, row }) => {
+                        const isSelected = row.isExpanded && row.isSelectedPo;
+                        const displayValue = row.inventoryEvent === 'STO' && cellData === 0 ? '-' : cellData;
+                        return <Box fontWeight={isSelected ? "bold" : "normal"}>{displayValue}</Box>;
+                      }
+                    },
+                    { 
+                      dataKey: 'materialBalanceWithTransit', 
+                      label: 'Material balance (with in-transit)',
+                      cellRenderer: ({ cellData, row }) => {
+                        const isNegative = typeof cellData === 'number' && cellData < 0;
+                        const isSelected = row.isExpanded && row.isSelectedPo;
+                        return (
+                          <Box 
+                            fontWeight={isSelected ? "bold" : "normal"}
+                            color={isNegative ? "red" : undefined}
+                          >
+                            {cellData}
+                          </Box>
+                        );
+                      }
+                    },
+                    { 
+                      dataKey: 'productionStartExpectedReceiveDate', 
+                      label: 'Production start date / Expected receive date',
+                      cellRenderer: ({ cellData, row }) => {
+                        const isSelected = row.isExpanded && row.isSelectedPo;
+                        return <Box fontWeight={isSelected ? "bold" : "normal"}>{cellData}</Box>;
+                      }
+                    },
+                    { 
+                      dataKey: 'onHandOnly', 
+                      label: 'On hand', 
+                      metadata: { divider: true },
+                      cellRenderer: ({ cellData, row }) => {
+                        const isSelected = row.isExpanded && row.isSelectedPo;
+                        return <Box fontWeight={isSelected ? "bold" : "normal"}>{cellData}</Box>;
+                      }
+                    },
+                    { 
+                      dataKey: 'remainingMaterialDemandOnly', 
+                      label: 'Remaining material demand',
+                      cellRenderer: ({ cellData, row }) => {
+                        const isSelected = row.isExpanded && row.isSelectedPo;
+                        const displayValue = row.inventoryEvent === 'STO' && cellData === 0 ? '-' : cellData;
+                        return <Box fontWeight={isSelected ? "bold" : "normal"}>{displayValue}</Box>;
+                      }
+                    },
+                    { 
+                      dataKey: 'materialBalanceOnlyOnHand', 
+                      label: 'Material balance (without in-transit)',
+                      cellRenderer: ({ cellData, row }) => {
+                        const isNegative = typeof cellData === 'number' && cellData < 0;
+                        const isSelected = row.isExpanded && row.isSelectedPo;
+                        return (
+                          <Box 
+                            fontWeight={isSelected ? "bold" : "normal"}
+                            color={isNegative ? "red" : undefined}
+                          >
+                            {cellData}
+                          </Box>
+                        );
+                      }
+                    },
+                  ]}
+                  rows={generateExpandedTableData()}
+                  keyField="id"
+                />
+              </ScrollableTable>
+            </TableContainer>
+          </>
+        )}
+      </Box>
+    );
+  };
+
+  if (hideNavigation) {
+    return renderTabContent();
+  }
+
   return (
     <Box>
       <FullWidthBox>
@@ -2079,409 +2530,15 @@ export const MaterialsAvailability: React.FC<MaterialsAvailabilityProps> = ({ se
         />
       </FullWidthBox>
       <Box p="x4">
-        <Tabs selectedIndex={selectedIndex}>
+        <Tabs selectedIndex={selectedIndex} onTabClick={handleTabClick}>
           <Tab label="Orders">
-            <Box mt="x4">
-              <TableHeader>
-                {selectedRows.length === 0 && (
-                  <>
-                    <Box display="flex" flex="1" alignItems="center" style={{ gap: 8 }} ref={filterChipsRef}>
-                      <FilterChip
-                        label="Late"
-                        count={sampleData.filter(row => row.problemsAndRisks === 'Late').length}
-                        active={isLateFilterActive}
-                        onClick={() => setIsLateFilterActive(active => !active)}
-                        innerType="danger"
-                      />
-                      <FilterChip
-                        label="Material shortage"
-                        count={sampleData.filter(row => row.problemsAndRisks === 'Material shortage').length}
-                        active={isFullShortageFilterActive}
-                        onClick={() => setIsFullShortageFilterActive(active => !active)}
-                        innerType="danger"
-                      />
-                      <FilterChip
-                        label="Temporary shortage"
-                        count={sampleData.filter(row => row.problemsAndRisks === 'Temporary material shortage').length}
-                        active={isTempShortageFilterActive}
-                        onClick={() => setIsTempShortageFilterActive(active => !active)}
-                        innerType="warning"
-                      />
-                      <FilterChip
-                        label="Requires your response"
-                        count={sampleData.filter(row => row.collaborationStatus === 'Requires your response').length}
-                        active={isRequiresResponseFilterActive}
-                        onClick={() => setIsRequiresResponseFilterActive(active => !active)}
-                        innerType="warning"
-                      />
-                      <FilterChip
-                        label="Awaiting supplier response"
-                        count={sampleData.filter(row => row.collaborationStatus === 'Awaiting supplier response').length}
-                        active={isAwaitingSupplierFilterActive}
-                        onClick={() => setIsAwaitingSupplierFilterActive(active => !active)}
-                        innerType="neutral"
-                      />
-                    </Box>
-                    <Box display="flex" alignItems="center" ref={rightButtonsRef}>
-                      {collapseActions ? (
-                        <>
-                          <DropdownMenu
-                            trigger={() => (
-                              <IconicButton icon="more">More actions</IconicButton>
-                            )}
-                          >
-                            <DropdownButton onClick={() => {}}>Import</DropdownButton>
-                            <DropdownButton onClick={() => {}}>Export</DropdownButton>
-                            <DropdownButton onClick={() => {}}>Collaboration status</DropdownButton>
-                          </DropdownMenu>
-                          <VerticalDivider />
-                        </>
-                      ) : (
-                        <>
-                          <IconicButton icon="publish">Import</IconicButton>
-                          <IconicButton icon="getApp">Export</IconicButton>
-                          <VerticalDivider />
-                          <IconicButton icon="sort">Collaboration status</IconicButton>
-                          <VerticalDivider />
-                        </>
-                      )}
-                      <IconicButton 
-                        icon="filter" 
-                        ref={filterButtonRef}
-                        onClick={handleFilterClick}
-                      >
-                        {`Filters (${appliedFiltersCount})`}
-                      </IconicButton>
-                    </Box>
-                  </>
-                )}
-              </TableHeader>
-              {selectedRows.length > 0 && (
-                <ActionRow>
-                  <Box color="midGrey">
-                    {selectedRows.length} {selectedRows.length === 1 ? 'item' : 'items'} selected
-                  </Box>
-                  <Box display="flex" alignItems="center">
-                    <DropdownMenu
-                      trigger={() => (
-                        <IconicButton icon="more">More actions</IconicButton>
-                      )}
-                    >
-                      <DropdownButton onClick={() => {}}>Add express shipment tag</DropdownButton>
-                      <DropdownButton onClick={() => {}}>Remove express shipment tag</DropdownButton>
-                    </DropdownMenu>
-                    <VerticalDivider />
-                    <Box ml="x3">
-                      <Button onClick={() => setSelectedRows([])} style={{ marginRight: '8px' }}>Cancel</Button>
-                      <Button onClick={() => {}} style={{ marginRight: '8px' }}>Edit</Button>
-                      <Button onClick={() => {}}>Accept</Button>
-                    </Box>
-                  </Box>
-                </ActionRow>
-              )}
-              <TableContainer>
-                <ScrollableTable>
-                  <StyledTable
-                    columns={columns}
-                    rows={filteredData}
-                    hasSelectableRows
-                    keyField="id"
-                    selectedRows={selectedRows}
-                    onRowSelectionChange={setSelectedRows}
-                  />
-                </ScrollableTable>
-              </TableContainer>
-            </Box>
+            {renderTabContent()}
           </Tab>
-                    <Tab label="Materials availability">
-            <Box mt="x4">
-              <Heading3>Viewing materials for</Heading3>
-              <SelectContainer>
-                <SelectWrapper width="200px">
-                  <SelectLabel>PO</SelectLabel>
-                  <Select
-                    options={poOptions}
-                    value={selectedPO}
-                    onChange={handlePOChange}
-                  />
-                </SelectWrapper>
-                <SelectWrapper width="500px">
-                  <SelectLabel>Line item number</SelectLabel>
-                  <Select
-                    options={lineItemOptions}
-                    value={selectedLineItem}
-                    onChange={handleLineItemChange}
-                  />
-                </SelectWrapper>
-                <Box display="flex" mr="x2">
-                  <PrimaryButton onClick={handleApply}>
-                    Apply
-                  </PrimaryButton>
-                  <Box ml="x2">
-                    <QuietButton onClick={handleReset}>
-                      Reset
-                    </QuietButton>
-                  </Box>
-                </Box>
-              </SelectContainer>
-              {showMaterialsTable && currentPOData && (
-                <>
-                  <Box display="flex">
-                    <DescriptionList layout="stacked" columns={5} density="relaxed" showDivider={false}>
-                      <DescriptionGroup>
-                        <DescriptionTerm>Requested quantity</DescriptionTerm>
-                        <DescriptionDetails>{currentPOData.productionProgress.total}</DescriptionDetails>
-                      </DescriptionGroup>
-                      <DescriptionGroup>
-                        <DescriptionTerm>Remaining quantity</DescriptionTerm>
-                        <DescriptionDetails>
-                          {currentPOData.productionProgress.total - currentPOData.productionProgress.completed}
-                        </DescriptionDetails>
-                      </DescriptionGroup>
-                      <DescriptionGroup>
-                        <DescriptionTerm>Production progress</DescriptionTerm>
-                        <DescriptionDetails>
-                          {`${currentPOData.productionProgress.completed}/${currentPOData.productionProgress.total} • ${currentPOData.productionProgress.percentage}%`}
-                        </DescriptionDetails>
-                      </DescriptionGroup>
-                      <DescriptionGroup>
-                        <DescriptionTerm>Order UOM</DescriptionTerm>
-                        <DescriptionDetails>{currentPOData.uom}</DescriptionDetails>
-                      </DescriptionGroup>
-                      <DescriptionGroup>
-                        <DescriptionTerm>Production start date</DescriptionTerm>
-                        <DescriptionDetails>{currentPOData.productionStartDate}</DescriptionDetails>
-                      </DescriptionGroup>
-                      <DescriptionGroup>
-                        <DescriptionTerm>Production due date</DescriptionTerm>
-                        <DescriptionDetails>{currentPOData.productionDueDate}</DescriptionDetails>
-                      </DescriptionGroup>
-                      <DescriptionGroup>
-                        <DescriptionTerm>Priority</DescriptionTerm>
-                        <DescriptionDetails>{currentPOData.priority}</DescriptionDetails>
-                      </DescriptionGroup>
-                      <DescriptionGroup>
-                        <DescriptionTerm>FG quantity produceable (now)</DescriptionTerm>
-                        <DescriptionDetails>{currentPOData.canRunNow}</DescriptionDetails>
-                      </DescriptionGroup>
-                      <DescriptionGroup>
-                        <DescriptionTerm>FG quantity produceable (by production start date)</DescriptionTerm>
-                        <DescriptionDetails>{currentPOData.canRunByStartDate}</DescriptionDetails>
-                      </DescriptionGroup>
-                      <DescriptionGroup>
-                        <DescriptionTerm>Materials availability date</DescriptionTerm>
-                        <DescriptionDetails>{currentPOData.materialAvailabilityDate}</DescriptionDetails>
-                      </DescriptionGroup>
-                    </DescriptionList>
-                  </Box>
-                  <Box borderBottom="1px solid" borderColor="lightGrey" my="x4" />
-                  <Box display="flex" justifyContent="space-between" alignItems="center" mb="x3">
-                    <Heading3>Bill of materials</Heading3>
-                    <Switcher
-                      selected={uomMode}
-                      onChange={(value) => setUomMode(value as 'customer' | 'supplier')}
-                    >
-                      <Switch value="customer">Customer UOM</Switch>
-                      <Switch value="supplier">Supplier UOM</Switch>
-                    </Switcher>
-                  </Box>
-                  <TableContainer>
-                    <ScrollableTable>
-                      <StyledTable
-                        rowBorder={true}
-                        columns={[
-                          { 
-                            dataKey: 'material', 
-                            label: 'Material',
-                            cellRenderer: ({ cellData, row }) => {
-                              const isSelected = row.isExpanded && row.isSelectedPo;
-                              return <Box fontWeight={isSelected ? "bold" : "normal"}>{cellData}</Box>;
-                            }
-                          },
-                          { 
-                            dataKey: 'materialAlternateCode', 
-                            label: 'Material alternate code',
-                            cellRenderer: ({ cellData, row }) => {
-                              const isSelected = row.isExpanded && row.isSelectedPo;
-                              return <Box fontWeight={isSelected ? "bold" : "normal"}>{cellData}</Box>;
-                            }
-                          },
-                          { 
-                            dataKey: 'uom', 
-                            label: 'UOM',
-                            cellRenderer: ({ cellData, row }) => {
-                              const isSelected = row.isExpanded && row.isSelectedPo;
-                              return <Box fontWeight={isSelected ? "bold" : "normal"}>{cellData}</Box>;
-                            }
-                          },
-                          { 
-                            dataKey: 'materialRequirement', 
-                            label: 'Material requirement (for 1 FG)',
-                            cellRenderer: ({ cellData, row }) => {
-                              const isSelected = row.isExpanded && row.isSelectedPo;
-                              return <Box fontWeight={isSelected ? "bold" : "normal"}>{cellData}</Box>;
-                            }
-                          },
-                          { 
-                            dataKey: 'componentScrap', 
-                            label: 'Component scrap (%)',
-                            cellRenderer: ({ cellData, row }) => {
-                              const isSelected = row.isExpanded && row.isSelectedPo;
-                              return <Box fontWeight={isSelected ? "bold" : "normal"}>{cellData}</Box>;
-                            }
-                          },
-                          { 
-                            dataKey: 'expandToggle', 
-                            label: '', 
-                            cellRenderer: ({ row }) => (
-                              <Box style={{ width: '40px', display: 'flex', justifyContent: 'center' }}>
-                                {row.isFirstEvent && (
-                                  <Button
-                                    onClick={() => toggleMaterialExpansion(row.materialId)}
-                                    style={{ padding: '2px 6px', fontSize: '12px', width: '24px', height: '24px', lineHeight: '1' }}
-                                  >
-                                    {expandedMaterials.has(row.materialId) ? "−" : "+"}
-                                  </Button>
-                                )}
-                              </Box>
-                            )
-                          },
-                          { 
-                            dataKey: 'inventoryEvent', 
-                            label: 'Inventory event', 
-                            metadata: { divider: true },
-                            cellRenderer: ({ cellData, row }) => {
-                              const isSelected = row.isExpanded && row.isSelectedPo;
-                              return (
-                                <Box fontWeight={isSelected ? "bold" : "normal"}>
-                                  {cellData}
-                                  {row.poLineItem && (
-                                    <Box fontSize="small" fontWeight={isSelected ? "bold" : "normal"}>
-                                      <HoverableText style={{ color: '#0066CC', cursor: 'pointer' }} onClick={() => {}}>
-                                        {row.poLineItem}
-                                      </HoverableText>
-                                    </Box>
-                                  )}
-                                </Box>
-                              );
-                            }
-                          },
-                          { 
-                            dataKey: 'priority', 
-                            label: 'Priority',
-                            cellRenderer: ({ cellData, row }) => {
-                              const isSelected = row.isExpanded && row.isSelectedPo;
-                              return <Box fontWeight={isSelected ? "bold" : "normal"}>{cellData}</Box>;
-                            }
-                          },
-                          { 
-                            dataKey: 'onHandWithTransit', 
-                            label: 'On hand', 
-                            metadata: { divider: true },
-                            cellRenderer: ({ cellData, row }) => {
-                              const isSelected = row.isExpanded && row.isSelectedPo;
-                              return <Box fontWeight={isSelected ? "bold" : "normal"}>{cellData}</Box>;
-                            }
-                          },
-                          { 
-                            dataKey: 'inTransit', 
-                            label: 'In-transit',
-                            cellRenderer: ({ cellData, row }) => {
-                              const isSelected = row.isExpanded && row.isSelectedPo;
-                              const displayValue = row.inventoryEvent === 'PO line item' && cellData === 0 ? '-' : cellData;
-                              return <Box fontWeight={isSelected ? "bold" : "normal"}>{displayValue}</Box>;
-                            }
-                          },
-                          { 
-                            dataKey: 'remainingMaterialDemandWithTransit', 
-                            label: 'Remaining material demand',
-                            cellRenderer: ({ cellData, row }) => {
-                              const isSelected = row.isExpanded && row.isSelectedPo;
-                              const displayValue = row.inventoryEvent === 'STO' && cellData === 0 ? '-' : cellData;
-                              return <Box fontWeight={isSelected ? "bold" : "normal"}>{displayValue}</Box>;
-                            }
-                          },
-                          { 
-                            dataKey: 'materialBalanceWithTransit', 
-                            label: 'Material balance (with in-transit)',
-                            cellRenderer: ({ cellData, row }) => {
-                              const isNegative = typeof cellData === 'number' && cellData < 0;
-                              const isSelected = row.isExpanded && row.isSelectedPo;
-                              return (
-                                <Box 
-                                  fontWeight={isSelected ? "bold" : "normal"}
-                                  color={isNegative ? "red" : undefined}
-                                >
-                                  {cellData}
-                                </Box>
-                              );
-                            }
-                          },
-                          { 
-                            dataKey: 'productionStartExpectedReceiveDate', 
-                            label: 'Production start date / Expected receive date',
-                            cellRenderer: ({ cellData, row }) => {
-                              const isSelected = row.isExpanded && row.isSelectedPo;
-                              return <Box fontWeight={isSelected ? "bold" : "normal"}>{cellData}</Box>;
-                            }
-                          },
-                          { 
-                            dataKey: 'onHandOnly', 
-                            label: 'On hand', 
-                            metadata: { divider: true },
-                            cellRenderer: ({ cellData, row }) => {
-                              const isSelected = row.isExpanded && row.isSelectedPo;
-                              return <Box fontWeight={isSelected ? "bold" : "normal"}>{cellData}</Box>;
-                            }
-                          },
-                          { 
-                            dataKey: 'remainingMaterialDemandOnly', 
-                            label: 'Remaining material demand',
-                            cellRenderer: ({ cellData, row }) => {
-                              const isSelected = row.isExpanded && row.isSelectedPo;
-                              const displayValue = row.inventoryEvent === 'STO' && cellData === 0 ? '-' : cellData;
-                              return <Box fontWeight={isSelected ? "bold" : "normal"}>{displayValue}</Box>;
-                            }
-                          },
-                          { 
-                            dataKey: 'materialBalanceOnlyOnHand', 
-                            label: 'Material balance (without in-transit)',
-                            cellRenderer: ({ cellData, row }) => {
-                              const isNegative = typeof cellData === 'number' && cellData < 0;
-                              const isSelected = row.isExpanded && row.isSelectedPo;
-                              return (
-                                <Box 
-                                  fontWeight={isSelected ? "bold" : "normal"}
-                                  color={isNegative ? "red" : undefined}
-                                >
-                                  {cellData}
-                                </Box>
-                              );
-                            }
-                          },
-                        ]}
-                        rows={generateExpandedTableData()}
-                        keyField="id"
-                      />
-                    </ScrollableTable>
-                  </TableContainer>
-                </>
-              )}
-            </Box>
+          <Tab label="Materials availability">
+            {renderTabContent()}
           </Tab>
         </Tabs>
       </Box>
-      <Sidebar
-        isOpen={isFilterOpen}
-        onClose={handleFilterClose}
-        title="Filters"
-        triggerRef={filterButtonRef}
-        width="m"
-        footer={renderFilterFooter()}
-      >
-        {renderFilters()}
-      </Sidebar>
-
     </Box>
   );
 }; 
