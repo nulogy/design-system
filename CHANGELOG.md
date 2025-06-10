@@ -1,3 +1,16 @@
+# [15.0.0](https://github.com/nulogy/design-system/compare/v14.8.2...v15.0.0) (2025-06-10)
+
+
+### Features
+
+* replace the underlying component of the Tooltip ([84711fb](https://github.com/nulogy/design-system/commit/84711fb531dde2b288581712d94b980bc973dd64))
+
+
+### BREAKING CHANGES
+
+* * Removes the ability to pass a ref to the Tooltip component
+* Removes the hideDelay prop on the Tooltip
+
 ## [14.8.2](https://github.com/nulogy/design-system/compare/v14.8.1...v14.8.2) (2025-05-30)
 
 ### Bug Fixes
