@@ -6,7 +6,7 @@ import type { MenuItem } from "../../types";
 import { Icon } from "../../../Icon";
 import { VerticalDivider } from "../../../VerticalDivider";
 import { Divider } from "../../../Divider";
-import { Tooltip } from "../../../Tooltip2";
+import { MiniTooltip } from "../../../MiniTooltip";
 import { MenuSubItem } from "../MenuSubItem/MenuSubItem";
 import { SubMenuContent } from "../MenuSubItem/parts/styled";
 import { CaretDown, NavigationMenuLink, NavigationMenuTrigger, RadixNavigationMenuItem } from "./components";
@@ -79,9 +79,9 @@ export const NavigationMenuItem = React.forwardRef<HTMLLIElement, NavigationMenu
       );
 
       return hasTooltip ? (
-        <Tooltip delayDuration={0} sideOffset={0} content={item.tooltip}>
+        <MiniTooltip delayDuration={0} sideOffset={0} content={item.tooltip}>
           {Item}
-        </Tooltip>
+        </MiniTooltip>
       ) : (
         Item
       );
@@ -112,9 +112,9 @@ export const NavigationMenuItem = React.forwardRef<HTMLLIElement, NavigationMenu
     );
 
     return hasTooltip ? (
-      <Tooltip delayDuration={0} sideOffset={0} content={item.tooltip}>
+      <MiniTooltip delayDuration={0} sideOffset={0} content={item.tooltip}>
         {Item}
-      </Tooltip>
+      </MiniTooltip>
     ) : (
       Item
     );

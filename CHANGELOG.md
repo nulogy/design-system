@@ -1,196 +1,172 @@
 ## [14.8.2](https://github.com/nulogy/design-system/compare/v14.8.1...v14.8.2) (2025-05-30)
 
-
 ### Bug Fixes
 
-* make the application frame header sticky again ([b882b31](https://github.com/nulogy/design-system/commit/b882b31ae7444e1c25022cc7641543711ef8b3b1))
-* remove the ability to nest items in the user menu ([312a71f](https://github.com/nulogy/design-system/commit/312a71f6c6c5ab12c6ca9a8a308f15ad1391975f))
+- make the application frame header sticky again ([b882b31](https://github.com/nulogy/design-system/commit/b882b31ae7444e1c25022cc7641543711ef8b3b1))
+- remove the ability to nest items in the user menu ([312a71f](https://github.com/nulogy/design-system/commit/312a71f6c6c5ab12c6ca9a8a308f15ad1391975f))
 
 ## [14.8.1](https://github.com/nulogy/design-system/compare/v14.8.0...v14.8.1) (2025-05-27)
 
-
 ### Bug Fixes
 
-* move EnvironmentBanner to the Navigation ([96f89c2](https://github.com/nulogy/design-system/commit/96f89c261b9b661376d03570c8ae6c9265cfc820))
+- move EnvironmentBanner to the Navigation ([96f89c2](https://github.com/nulogy/design-system/commit/96f89c261b9b661376d03570c8ae6c9265cfc820))
 
 # [14.8.0](https://github.com/nulogy/design-system/compare/v14.7.2...v14.8.0) (2025-05-27)
 
-
 ### Bug Fixes
 
-* adjust delayDuration for the icons Tooltip ([12d8d89](https://github.com/nulogy/design-system/commit/12d8d8936cff726d24d6471edeef4fbd6ee3ef99))
-* adjust padding for the user menu trigger ([8a8b3ee](https://github.com/nulogy/design-system/commit/8a8b3ee509df66e2ea468bbb3959f8fd13fef1b2))
-* adjust spacing between submenus ([5c91568](https://github.com/nulogy/design-system/commit/5c915685308f1fd4f4da7d435961589ef30553bd))
-* allow passing a custom link component ([ce6ed3a](https://github.com/nulogy/design-system/commit/ce6ed3a531b344f657df59fe146a669744bb0c3c))
-* change the text color when hovering over items ([e726702](https://github.com/nulogy/design-system/commit/e7267024f9c68b6859f2f93025b62d77352f4208))
-* cleanup types ([85045c2](https://github.com/nulogy/design-system/commit/85045c2a82959aea057197c399685db7c3a08653))
-* conditionally render the userMenu ([c8d8093](https://github.com/nulogy/design-system/commit/c8d80931f09c359dfd3fdf2dc564d8bdd615c37e))
-* do not hardcode app name ([2116a70](https://github.com/nulogy/design-system/commit/2116a70c8383f779330c37cd81dd5df9d32ec432))
-* filter out styled-system props from non-HTML native elements ([636024b](https://github.com/nulogy/design-system/commit/636024be148d15a10976ad1b9769c609482144be))
-* improve Tooltip support ([82bbefe](https://github.com/nulogy/design-system/commit/82bbefe4127c39b1b7c275f5b1a616e5908e1746))
-* invalid JSON syntax ([38de848](https://github.com/nulogy/design-system/commit/38de848020b70f635e0b9918c9cec81131a1d70b))
-* make HiddenNavigationMenuItem accessible ([5f49034](https://github.com/nulogy/design-system/commit/5f49034421cd49d10218858f6dc36fcba5b75e15))
-* make sure the hierarchy follows the right DOM structure ([881c632](https://github.com/nulogy/design-system/commit/881c632e0f6832305b3d5df930ad5750cb78853e))
-* remove unused expression ([6b93cfc](https://github.com/nulogy/design-system/commit/6b93cfc46645549a786a110a36597a229e7b6911))
-* remove unused hook ([658b574](https://github.com/nulogy/design-system/commit/658b574278bbd2c9e6c9ab100d961b02a3fb2643))
-* reset the story before running the spec ([d283c25](https://github.com/nulogy/design-system/commit/d283c2575fe5830c802e8392fd059c9e7a2a4ba7))
-* resolve AppName type issue ([e82eccc](https://github.com/nulogy/design-system/commit/e82eccc639e4fddd1df7e29a825f70d52b2ccd65))
-* story using the wrong query selector ([164c6d3](https://github.com/nulogy/design-system/commit/164c6d3102f5316de693b4fdea4199449474b862))
-* update default delay in useAutoClickElement hook ([a498d27](https://github.com/nulogy/design-system/commit/a498d27cada924ad28276083af558bd304b16da6))
-
+- adjust delayDuration for the icons Tooltip ([12d8d89](https://github.com/nulogy/design-system/commit/12d8d8936cff726d24d6471edeef4fbd6ee3ef99))
+- adjust padding for the user menu trigger ([8a8b3ee](https://github.com/nulogy/design-system/commit/8a8b3ee509df66e2ea468bbb3959f8fd13fef1b2))
+- adjust spacing between submenus ([5c91568](https://github.com/nulogy/design-system/commit/5c915685308f1fd4f4da7d435961589ef30553bd))
+- allow passing a custom link component ([ce6ed3a](https://github.com/nulogy/design-system/commit/ce6ed3a531b344f657df59fe146a669744bb0c3c))
+- change the text color when hovering over items ([e726702](https://github.com/nulogy/design-system/commit/e7267024f9c68b6859f2f93025b62d77352f4208))
+- cleanup types ([85045c2](https://github.com/nulogy/design-system/commit/85045c2a82959aea057197c399685db7c3a08653))
+- conditionally render the userMenu ([c8d8093](https://github.com/nulogy/design-system/commit/c8d80931f09c359dfd3fdf2dc564d8bdd615c37e))
+- do not hardcode app name ([2116a70](https://github.com/nulogy/design-system/commit/2116a70c8383f779330c37cd81dd5df9d32ec432))
+- filter out styled-system props from non-HTML native elements ([636024b](https://github.com/nulogy/design-system/commit/636024be148d15a10976ad1b9769c609482144be))
+- improve Tooltip support ([82bbefe](https://github.com/nulogy/design-system/commit/82bbefe4127c39b1b7c275f5b1a616e5908e1746))
+- invalid JSON syntax ([38de848](https://github.com/nulogy/design-system/commit/38de848020b70f635e0b9918c9cec81131a1d70b))
+- make HiddenNavigationMenuItem accessible ([5f49034](https://github.com/nulogy/design-system/commit/5f49034421cd49d10218858f6dc36fcba5b75e15))
+- make sure the hierarchy follows the right DOM structure ([881c632](https://github.com/nulogy/design-system/commit/881c632e0f6832305b3d5df930ad5750cb78853e))
+- remove unused expression ([6b93cfc](https://github.com/nulogy/design-system/commit/6b93cfc46645549a786a110a36597a229e7b6911))
+- remove unused hook ([658b574](https://github.com/nulogy/design-system/commit/658b574278bbd2c9e6c9ab100d961b02a3fb2643))
+- reset the story before running the spec ([d283c25](https://github.com/nulogy/design-system/commit/d283c2575fe5830c802e8392fd059c9e7a2a4ba7))
+- resolve AppName type issue ([e82eccc](https://github.com/nulogy/design-system/commit/e82eccc639e4fddd1df7e29a825f70d52b2ccd65))
+- story using the wrong query selector ([164c6d3](https://github.com/nulogy/design-system/commit/164c6d3102f5316de693b4fdea4199449474b862))
+- update default delay in useAutoClickElement hook ([a498d27](https://github.com/nulogy/design-system/commit/a498d27cada924ad28276083af558bd304b16da6))
 
 ### Features
 
-* add a NavigationLogo helper component ([3ac4ca1](https://github.com/nulogy/design-system/commit/3ac4ca163eb899a8ff3382e0cc42b0ca04931b08))
-* add AppSwitcher story ([8069919](https://github.com/nulogy/design-system/commit/80699195e516a222ff50ecd135019f88552ab954))
-* add custom element support for the user menu link ([b59535b](https://github.com/nulogy/design-system/commit/b59535b222163ad57610a87c5eddaac44e79ac16))
-* add mobile support to the user menu on mobile ([21e66ba](https://github.com/nulogy/design-system/commit/21e66ba5cbfba9decc473ad0a58dc1770403565f))
-* add more UserMenu items support ([6ea8e75](https://github.com/nulogy/design-system/commit/6ea8e75858e368649364e799651f3b35ffa2ea42))
-* add support for icons and labels in the navigation menus ([5a59323](https://github.com/nulogy/design-system/commit/5a59323fadd40fac962fd70f9e61dd1b767ef065))
-* Add support for separators ([046692c](https://github.com/nulogy/design-system/commit/046692ce18114d4e998684fde5fe6f9c58b21a69))
-* add support for withinMobileNav render prop ([183450d](https://github.com/nulogy/design-system/commit/183450dbc48ece47b596584fd78e19c1ca548d4d))
-* deprecate the BrandedNavBar component ([1d56d99](https://github.com/nulogy/design-system/commit/1d56d99a5f1cbae99ec1ff5ae315ea47a29fca2b))
-* export the Navigation component and its props ([9a38413](https://github.com/nulogy/design-system/commit/9a384138905e466401aa8bcfc705555fde9efa9e))
-* handle different mobile visibility options ([27a6506](https://github.com/nulogy/design-system/commit/27a6506ef38c73a3f1d3654a35760df8516ccce9))
-* hide the separator when it's the first item in the SubMenu ([13eed80](https://github.com/nulogy/design-system/commit/13eed80bbaed6c3e51be688b7f6d3ddcc355ac72))
-* improve NulogyAppSwitcher component ([80c3724](https://github.com/nulogy/design-system/commit/80c37240615222f9e971d1669b302466b3ba31ae))
-
+- add a NavigationLogo helper component ([3ac4ca1](https://github.com/nulogy/design-system/commit/3ac4ca163eb899a8ff3382e0cc42b0ca04931b08))
+- add AppSwitcher story ([8069919](https://github.com/nulogy/design-system/commit/80699195e516a222ff50ecd135019f88552ab954))
+- add custom element support for the user menu link ([b59535b](https://github.com/nulogy/design-system/commit/b59535b222163ad57610a87c5eddaac44e79ac16))
+- add mobile support to the user menu on mobile ([21e66ba](https://github.com/nulogy/design-system/commit/21e66ba5cbfba9decc473ad0a58dc1770403565f))
+- add more UserMenu items support ([6ea8e75](https://github.com/nulogy/design-system/commit/6ea8e75858e368649364e799651f3b35ffa2ea42))
+- add support for icons and labels in the navigation menus ([5a59323](https://github.com/nulogy/design-system/commit/5a59323fadd40fac962fd70f9e61dd1b767ef065))
+- Add support for separators ([046692c](https://github.com/nulogy/design-system/commit/046692ce18114d4e998684fde5fe6f9c58b21a69))
+- add support for withinMobileNav render prop ([183450d](https://github.com/nulogy/design-system/commit/183450dbc48ece47b596584fd78e19c1ca548d4d))
+- deprecate the BrandedNavBar component ([1d56d99](https://github.com/nulogy/design-system/commit/1d56d99a5f1cbae99ec1ff5ae315ea47a29fca2b))
+- export the Navigation component and its props ([9a38413](https://github.com/nulogy/design-system/commit/9a384138905e466401aa8bcfc705555fde9efa9e))
+- handle different mobile visibility options ([27a6506](https://github.com/nulogy/design-system/commit/27a6506ef38c73a3f1d3654a35760df8516ccce9))
+- hide the separator when it's the first item in the SubMenu ([13eed80](https://github.com/nulogy/design-system/commit/13eed80bbaed6c3e51be688b7f6d3ddcc355ac72))
+- improve NulogyAppSwitcher component ([80c3724](https://github.com/nulogy/design-system/commit/80c37240615222f9e971d1669b302466b3ba31ae))
 
 ### Reverts
 
-* do not filter based on styled-system props ([b4e4f62](https://github.com/nulogy/design-system/commit/b4e4f6274899720a9ac6fd45d47fb4dfe24f21ec))
+- do not filter based on styled-system props ([b4e4f62](https://github.com/nulogy/design-system/commit/b4e4f6274899720a9ac6fd45d47fb4dfe24f21ec))
 
 ## [14.7.2](https://github.com/nulogy/design-system/compare/v14.7.1...v14.7.2) (2025-05-12)
 
-
 ### Bug Fixes
 
-* Dropdown props account for render props ([#1574](https://github.com/nulogy/design-system/issues/1574)) ([43fb458](https://github.com/nulogy/design-system/commit/43fb4585b2b81b6abf6cb001e0ff0324e0ab2d5b))
+- Dropdown props account for render props ([#1574](https://github.com/nulogy/design-system/issues/1574)) ([43fb458](https://github.com/nulogy/design-system/commit/43fb4585b2b81b6abf6cb001e0ff0324e0ab2d5b))
 
 ## [14.7.1](https://github.com/nulogy/design-system/compare/v14.7.0...v14.7.1) (2025-04-25)
 
-
 ### Bug Fixes
 
-* add i18n for the "No option" message ([#1559](https://github.com/nulogy/design-system/issues/1559)) ([72541e0](https://github.com/nulogy/design-system/commit/72541e0f4b3fd5907a00560db17d93f77b42540a))
+- add i18n for the "No option" message ([#1559](https://github.com/nulogy/design-system/issues/1559)) ([72541e0](https://github.com/nulogy/design-system/commit/72541e0f4b3fd5907a00560db17d93f77b42540a))
 
 # [14.7.0](https://github.com/nulogy/design-system/compare/v14.6.2...v14.7.0) (2025-04-22)
 
-
 ### Features
 
-* add Spanish (Spain) locale ([#1557](https://github.com/nulogy/design-system/issues/1557)) ([662043d](https://github.com/nulogy/design-system/commit/662043d47d92e13025ced3ff4956d054e1855abd))
+- add Spanish (Spain) locale ([#1557](https://github.com/nulogy/design-system/issues/1557)) ([662043d](https://github.com/nulogy/design-system/commit/662043d47d92e13025ced3ff4956d054e1855abd))
 
 ## [14.6.2](https://github.com/nulogy/design-system/compare/v14.6.1...v14.6.2) (2025-04-22)
 
-
 ### Bug Fixes
 
-* Tooltip not showing on FieldLabel ([#1556](https://github.com/nulogy/design-system/issues/1556)) ([d26a4be](https://github.com/nulogy/design-system/commit/d26a4becdd2ea92921b6947018c06ad08075057e))
+- Tooltip not showing on FieldLabel ([#1556](https://github.com/nulogy/design-system/issues/1556)) ([d26a4be](https://github.com/nulogy/design-system/commit/d26a4becdd2ea92921b6947018c06ad08075057e))
 
 ## [14.6.1](https://github.com/nulogy/design-system/compare/v14.6.0...v14.6.1) (2025-04-17)
 
-
 ### Bug Fixes
 
-* spacing and line height for the FieldLabel ([049c901](https://github.com/nulogy/design-system/commit/049c901cb40196b6b71216f34699c4675f88f4b1))
+- spacing and line height for the FieldLabel ([049c901](https://github.com/nulogy/design-system/commit/049c901cb40196b6b71216f34699c4675f88f4b1))
 
 # [14.6.0](https://github.com/nulogy/design-system/compare/v14.5.0...v14.6.0) (2025-04-15)
 
-
 ### Features
 
-* add vertical alignment support to Table component ([dcecc8a](https://github.com/nulogy/design-system/commit/dcecc8a9ffd0bd46dc26917df13fc8f74fb6c0c1))
+- add vertical alignment support to Table component ([dcecc8a](https://github.com/nulogy/design-system/commit/dcecc8a9ffd0bd46dc26917df13fc8f74fb6c0c1))
 
 # [14.5.0](https://github.com/nulogy/design-system/compare/v14.4.2...v14.5.0) (2025-04-15)
 
-
 ### Features
 
-* add row border to Table component ([b31bf31](https://github.com/nulogy/design-system/commit/b31bf3188e81d4e9ddd1e158b31dba4dd3cbca38))
+- add row border to Table component ([b31bf31](https://github.com/nulogy/design-system/commit/b31bf3188e81d4e9ddd1e158b31dba4dd3cbca38))
 
 ## [14.4.2](https://github.com/nulogy/design-system/compare/v14.4.1...v14.4.2) (2025-03-29)
 
-
 ### Bug Fixes
 
-* portal the tooltip in the AppTag and TruncatedText ([6c62ea0](https://github.com/nulogy/design-system/commit/6c62ea035dc6a704aa7a07a100836f726b236f3a))
+- portal the tooltip in the AppTag and TruncatedText ([6c62ea0](https://github.com/nulogy/design-system/commit/6c62ea035dc6a704aa7a07a100836f726b236f3a))
 
 ## [14.4.1](https://github.com/nulogy/design-system/compare/v14.4.0...v14.4.1) (2025-03-28)
 
-
 ### Bug Fixes
 
-* Show tooltips above other content ([6557402](https://github.com/nulogy/design-system/commit/6557402db4537b3ae772c53a882679820fc019dd))
+- Show tooltips above other content ([6557402](https://github.com/nulogy/design-system/commit/6557402db4537b3ae772c53a882679820fc019dd))
 
 # [14.4.0](https://github.com/nulogy/design-system/compare/v14.3.0...v14.4.0) (2025-03-25)
 
-
 ### Bug Fixes
 
-* export AppTag related types ([d9d1a3e](https://github.com/nulogy/design-system/commit/d9d1a3e2dd7041b22c3bd30673a8957d4fe1efbf))
-
+- export AppTag related types ([d9d1a3e](https://github.com/nulogy/design-system/commit/d9d1a3e2dd7041b22c3bd30673a8957d4fe1efbf))
 
 ### Features
 
-* Add animation completion tracking for TopBar and BottomSheet ([919240c](https://github.com/nulogy/design-system/commit/919240c0886a03e4ac0bb9e3062b45e4defcaa23))
+- Add animation completion tracking for TopBar and BottomSheet ([919240c](https://github.com/nulogy/design-system/commit/919240c0886a03e4ac0bb9e3062b45e4defcaa23))
 
 # [14.3.0](https://github.com/nulogy/design-system/compare/v14.2.1...v14.3.0) (2025-03-19)
 
-
 ### Features
 
-* replace Popper for the TruncatedText tooltip ([67b4fde](https://github.com/nulogy/design-system/commit/67b4fdee7283db3e752df257bccc0f03b55c1d65))
-* show the TruncatedText tooltip on touch devices ([8f19c20](https://github.com/nulogy/design-system/commit/8f19c203f82565658611dd217f6102b1f6b72a20))
+- replace Popper for the TruncatedText tooltip ([67b4fde](https://github.com/nulogy/design-system/commit/67b4fdee7283db3e752df257bccc0f03b55c1d65))
+- show the TruncatedText tooltip on touch devices ([8f19c20](https://github.com/nulogy/design-system/commit/8f19c203f82565658611dd217f6102b1f6b72a20))
 
 ## [14.2.1](https://github.com/nulogy/design-system/compare/v14.2.0...v14.2.1) (2025-03-19)
 
-
 ### Bug Fixes
 
-* AppTag not displaying in touch mode ([f59f6db](https://github.com/nulogy/design-system/commit/f59f6dbba0f28bd0b2827edd2e0e3729c881e5c3))
+- AppTag not displaying in touch mode ([f59f6db](https://github.com/nulogy/design-system/commit/f59f6dbba0f28bd0b2827edd2e0e3729c881e5c3))
 
 # [14.2.0](https://github.com/nulogy/design-system/compare/v14.1.4...v14.2.0) (2025-03-18)
 
-
 ### Features
 
-* Add AppTag component ([a85b07a](https://github.com/nulogy/design-system/commit/a85b07ac4ad74241e7d68885454405d45afbfc38))
+- Add AppTag component ([a85b07a](https://github.com/nulogy/design-system/commit/a85b07ac4ad74241e7d68885454405d45afbfc38))
 
 ## [14.1.4](https://github.com/nulogy/design-system/compare/v14.1.3...v14.1.4) (2025-03-10)
 
-
 ### Bug Fixes
 
-* upgrade NDS tokens ([acb43ec](https://github.com/nulogy/design-system/commit/acb43ec44bf762fbb1589a4636c872c4ba8fc8ea))
+- upgrade NDS tokens ([acb43ec](https://github.com/nulogy/design-system/commit/acb43ec44bf762fbb1589a4636c872c4ba8fc8ea))
 
 ## [14.1.3](https://github.com/nulogy/design-system/compare/v14.1.2...v14.1.3) (2025-03-07)
 
-
 ### Bug Fixes
 
-* use modal z-index for the BottomSheet ([bbf6c43](https://github.com/nulogy/design-system/commit/bbf6c434d3d8425738f2a6b35547280e408f331a))
+- use modal z-index for the BottomSheet ([bbf6c43](https://github.com/nulogy/design-system/commit/bbf6c434d3d8425738f2a6b35547280e408f331a))
 
 ## [14.1.2](https://github.com/nulogy/design-system/compare/v14.1.1...v14.1.2) (2025-02-27)
 
-
 ### Bug Fixes
 
-* move Storybook back to devDependencies ([918f341](https://github.com/nulogy/design-system/commit/918f341bba069fec1ba019504477e546ff0fe42f))
+- move Storybook back to devDependencies ([918f341](https://github.com/nulogy/design-system/commit/918f341bba069fec1ba019504477e546ff0fe42f))
 
 ## [14.1.1](https://github.com/nulogy/design-system/compare/v14.1.0...v14.1.1) (2025-02-26)
 
-
 ### Bug Fixes
 
-* BottomSheet footer hiding container content ([1dbd6c0](https://github.com/nulogy/design-system/commit/1dbd6c0c8147d08ff53415034c0e493de1c1d1c6))
+- BottomSheet footer hiding container content ([1dbd6c0](https://github.com/nulogy/design-system/commit/1dbd6c0c8147d08ff53415034c0e493de1c1d1c6))
 
 # [14.1.0](https://github.com/nulogy/design-system/compare/v14.0.0...v14.1.0) (2025-02-26)
 
-
 ### Features
 
-* upgrade framer-motion to v6 ([38fabe8](https://github.com/nulogy/design-system/commit/38fabe8db64d5b79c0aceebd14c9075edd33d0e4))
+- upgrade framer-motion to v6 ([38fabe8](https://github.com/nulogy/design-system/commit/38fabe8db64d5b79c0aceebd14c9075edd33d0e4))
 
 # [14.0.0](https://github.com/nulogy/design-system/compare/v13.5.1...v14.0.0) (2025-02-24)
 

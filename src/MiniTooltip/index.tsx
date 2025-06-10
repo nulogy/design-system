@@ -11,7 +11,13 @@ type TooltipProps = {
   delayDuration?: number;
 };
 
-export function Tooltip({ children, content, sideOffset = 4, hideTooltip = false, delayDuration = 700 }: TooltipProps) {
+export function MiniTooltip({
+  children,
+  content,
+  sideOffset = 4,
+  hideTooltip = false,
+  delayDuration = 700,
+}: TooltipProps) {
   if (hideTooltip) {
     return <>{children}</>;
   }
