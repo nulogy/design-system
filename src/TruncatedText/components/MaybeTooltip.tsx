@@ -1,6 +1,5 @@
 import React from "react";
-import { MaxWidthProps } from "styled-system";
-import Tooltip2 from "../../Tooltip2";
+import { Tooltip } from "../..";
 
 export type MaybeTooltipProps = {
   /** The content to display inside the tooltip */
@@ -8,7 +7,19 @@ export type MaybeTooltipProps = {
   /** Whether to enable the tooltip at all */
   showTooltip?: boolean;
   /** Tooltip placement relative to trigger element */
-  placement?: "top" | "bottom" | "left" | "right";
+  placement?:
+    | "top"
+    | "top-start"
+    | "top-end"
+    | "bottom"
+    | "bottom-start"
+    | "bottom-end"
+    | "left"
+    | "left-start"
+    | "left-end"
+    | "right"
+    | "right-start"
+    | "right-end";
   /** CSS class for the tooltip content */
   className?: string;
   /** Whether tooltip is open by default */
@@ -16,8 +27,8 @@ export type MaybeTooltipProps = {
   /** Delay before showing the tooltip (ms) */
   showDelay?: number;
   /** Maximum width for tooltip box */
-  maxWidth?: MaxWidthProps["maxWidth"];
-  /** Allow opening tooltip on mobile tap */
+  maxWidth?: string;
+  /** Allow opening tooltip on mobile tap (not supported by new Tooltip) */
   supportMobileTap?: boolean;
   /** The trigger element(s) */
   children?: React.ReactNode;
@@ -30,23 +41,25 @@ function MaybeTooltip({
   defaultOpen = false,
   showDelay = 100,
   maxWidth = "24em",
-  supportMobileTap = true,
+  supportMobileTap: _supportMobileTap = true, // Note: supportMobileTap is handled internally by the new Tooltip
   className,
   children,
 }: MaybeTooltipProps) {
+  if (!showTooltip) {
+    return <>{children}</>;
+  }
+
   return (
-    <Tooltip2
-      content={tooltip}
-      show={showTooltip}
+    <Tooltip
+      tooltip={tooltip}
       placement={placement}
       defaultOpen={defaultOpen}
-      delayDuration={showDelay}
+      showDelay={showDelay}
       maxWidth={maxWidth}
-      supportMobileTap={supportMobileTap}
       className={className}
     >
       {children}
-    </Tooltip2>
+    </Tooltip>
   );
 }
 

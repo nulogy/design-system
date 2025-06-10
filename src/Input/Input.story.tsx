@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { action } from "@storybook/addon-actions";
-import { Input, Form, FormSection, PrimaryButton, Button, Flex, Heading1, Heading4 } from "../index";
+import { Input, Form, FormSection, PrimaryButton, Button, Flex, Heading4 } from "../index";
 
 const errorList = ["Error message 1", "Error message 2"];
 
@@ -162,7 +162,6 @@ export const WithIconTooltips = () => (
       iconRightTooltip="Scan barcode"
       iconRightTooltipProps={{
         placement: "left",
-        hideDelay: "1000",
       }}
       placeholder="Scan product"
       labelText="Hover over the barcode icon (left placement, 1s hide delay)"

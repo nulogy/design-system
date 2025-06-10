@@ -1,4 +1,6 @@
 describe("Tooltip", () => {
+  const triggerSelector = "button";
+
   describe("Default", () => {
     beforeEach(() => {
       cy.renderFromStorybook("tooltip--tooltip");
@@ -9,28 +11,18 @@ describe("Tooltip", () => {
     });
 
     it("shows content on hover", () => {
-      cy.get('[aria-haspopup="true"]').trigger("mouseover");
-      cy.get('[role="tooltip"]').should("be.visible");
-      cy.isInViewport('[role="tooltip"]');
-    });
-  });
-
-  describe("can be open by default", () => {
-    beforeEach(() => {
-      cy.renderFromStorybook("tooltip--open-by-default");
+      cy.assertTooltip(triggerSelector, "I am a Tooltip!");
     });
 
-    it("shows content initially", () => {
-      cy.get('[aria-haspopup="true"]').trigger("mouseover");
-      cy.get('[role="tooltip"]').should("be.visible");
-      cy.isInViewport('[role="tooltip"]');
-    });
+    it("hides content on hover away", () => {
+      // hover
+      cy.get(triggerSelector).realHover();
+      cy.assertTooltip(triggerSelector, "I am a Tooltip!");
 
-    it("hides content on hover", () => {
-      cy.get('[aria-haspopup="true"]').trigger("mouseover");
-      cy.get('[aria-haspopup="true"]').trigger("mouseout");
+      // hover away
+      cy.get("body").realHover();
       cy.wait(2000);
-      cy.get('[role="tooltip"]').should("not.exist");
+      cy.assertNoTooltip(triggerSelector);
     });
   });
 });

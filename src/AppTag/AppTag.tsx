@@ -2,7 +2,7 @@ import React from "react";
 import styled, { useTheme } from "styled-components";
 import { Text } from "../Type";
 import { APP_ABBREVIATIONS, APP_DISPLAY_NAMES, NulogyAppName } from "../types/NulogyApp";
-import { Tooltip } from "../Tooltip2";
+import { MiniTooltip } from "../MiniTooltip";
 import { LogoWrapper } from "./components/LogoWrapper";
 import NulogyLogo from "./components/NulogyLogo";
 import { appTagColors } from "./constants";
@@ -20,7 +20,7 @@ export default function AppTag({ app, type = "active", hideTooltip = false }: Ap
   const displayName = APP_DISPLAY_NAMES[app];
 
   return (
-    <Tooltip content={displayName} hideTooltip={hideTooltip}>
+    <MiniTooltip content={displayName} hideTooltip={hideTooltip}>
       <Wrapper $type={type}>
         <LogoWrapper $type={type}>
           <NulogyLogo width={theme.space.x1} height={theme.space.x1} />
@@ -37,7 +37,7 @@ export default function AppTag({ app, type = "active", hideTooltip = false }: Ap
           {abbreviation}
         </Text>
       </Wrapper>
-    </Tooltip>
+    </MiniTooltip>
   );
 }
 

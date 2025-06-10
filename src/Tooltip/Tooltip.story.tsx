@@ -116,7 +116,7 @@ WithPlacement.story = {
 };
 
 export const WithLinkPassedIn = () => (
-  <Tooltip placement="bottom" tooltip={<Link href="/"> Link </Link>}>
+  <Tooltip placement="bottom" tooltip={<Link href="/"> Link </Link>} defaultOpen>
     <Button> Button </Button>
   </Tooltip>
 );
@@ -126,7 +126,7 @@ WithLinkPassedIn.story = {
 };
 
 export const WithButtonPassedIn = () => (
-  <Tooltip placement="bottom" tooltip={<Button href="/"> Button </Button>}>
+  <Tooltip placement="bottom" tooltip={<Button href="/"> Button </Button>} defaultOpen>
     <Button> Button </Button>
   </Tooltip>
 );
@@ -143,16 +143,6 @@ export const WithCustomShowDelay = () => (
 
 WithCustomShowDelay.story = {
   name: "with custom showDelay",
-};
-
-export const WithCustomHideDelay = () => (
-  <Tooltip placement="bottom" tooltip="Tooltip" hideDelay="1000">
-    <Button> Button </Button>
-  </Tooltip>
-);
-
-WithCustomHideDelay.story = {
-  name: "with custom hideDelay",
 };
 
 export const WithOtherFocusableElements = () => (
@@ -194,26 +184,18 @@ OpenByDefault.story = {
 };
 
 export const WithCustomComponent = () => (
-  <Tooltip tooltip="See me on hover!">
+  <Tooltip tooltip="See me on hover!" defaultOpen>
     <CustomComponent />
   </Tooltip>
 );
 
-export const WithRef = () => {
-  const ref = React.useRef(null);
-
-  return (
-    <Tooltip tooltip="I am a Tooltip!" ref={ref}>
-      <Button> Button </Button>
-    </Tooltip>
-  );
-};
-
-const CustomComponent = React.forwardRef<HTMLDivElement, { [key: string]: any }>((props, forwardedRef) => (
-  <span ref={forwardedRef} {...props}>
-    <Text inline>This component uses the forwardedRef from the Tooltip wrapping it</Text>
-  </span>
-));
+const CustomComponent = React.forwardRef<HTMLSpanElement, React.HTMLAttributes<HTMLSpanElement>>(
+  (props, forwardedRef) => (
+    <span ref={forwardedRef} {...props}>
+      <Text inline>This component uses the forwardedRef from the Tooltip wrapping it</Text>
+    </span>
+  )
+);
 
 const CustomTooltip = () => (
   <Flex flexDirection="column" width="320px" p="x1_5">
@@ -256,7 +238,7 @@ export const WithCustomTooltip = () => (
       You can embed custom components in the tooltip
     </Text>
 
-    <Tooltip maxWidth="340px" tooltip={<CustomTooltip />}>
+    <Tooltip maxWidth="340px" tooltip={<CustomTooltip />} defaultOpen>
       <Icon icon="info" size="x3" color="darkGrey" />
     </Tooltip>
   </Flex>
