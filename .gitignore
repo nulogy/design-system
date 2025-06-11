@@ -96,3 +96,4 @@ yarn-error.log*
 
 # asdf version manager
 .tool-versions
+.cursor/
