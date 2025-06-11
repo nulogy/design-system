@@ -1,5 +1,17 @@
 import React, { useState } from "react";
-import { Box, Text, TopBar, Input, Card, DescriptionList, DescriptionTerm, DescriptionDetails, DescriptionGroup, Link, StatusIndicator, StatusIndicatorValues, IconicButton, Sidebar, Select, Divider, PrimaryButton, QuietButton, NDSProvider } from "../../../dist/src";
+import { Box } from "../../Box";
+import { Text } from "../../Type";
+import { TopBar } from "../../TopBar";
+import { Input } from "../../Input";
+import { Card } from "../../Card";
+import { DescriptionList, DescriptionTerm, DescriptionDetails, DescriptionGroup } from "../../DescriptionList";
+import { Link } from "../../Link";
+import { StatusIndicator, StatusIndicatorValues } from "../../StatusIndicator";
+import { IconicButton, PrimaryButton, QuietButton } from "../../Button";
+import { Sidebar } from "../../Layout";
+import { Select } from "../../Select";
+import { Divider } from "../../Divider";
+import { NDSProvider } from "../../NDSProvider";
 import styled from "styled-components";
 
 const Container = styled(Box)`
