@@ -1215,23 +1215,6 @@ export const WorkOrdersWithFilters = () => {
             <IconicButton icon="publish" tooltip="Export">
               Export
             </IconicButton>
-            <VerticalDivider />
-            <DropdownMenu trigger={() => <IconicButton icon="more" />}>
-              {selectedRows.length === 0 && (
-                <>
-                  <DropdownButton onClick={() => toast.success("Print Work Order Dockets clicked")}>
-                    Print Work Order Dockets
-                  </DropdownButton>
-                  <DropdownButton onClick={() => toast.success("Close clicked")}>Close</DropdownButton>
-                  <DropdownButton onClick={() => toast.success("Delete selected clicked")}>Delete</DropdownButton>
-                </>
-              )}
-              {selectedRows.length > 0 && (
-                <DropdownButton onClick={() => toast.success("Print Work Order Dockets clicked")}>
-                  Print Work Order Dockets
-                </DropdownButton>
-              )}
-            </DropdownMenu>
           </Flex>
         </Flex>
 
@@ -2734,3 +2717,853 @@ export const Customers = () => {
     </ApplicationFrame>
   );
 };
+
+export const WorkOrderPicking = () => {
+  const [selectedRows, setSelectedRows] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const rowsPerPage = 25;
+
+  const [pickListData, setPickListData] = useState([
+    {
+      id: "31374",
+      pickListNumber: "31374",
+      destination: "Line_1",
+      status: "Cancelled",
+    },
+    {
+      id: "31375",
+      pickListNumber: "31375",
+      destination: "Line_1",
+      status: "Cancelled",
+    },
+    {
+      id: "31378",
+      pickListNumber: "31378",
+      destination: "Line_1",
+      status: "Cancelled",
+    },
+    {
+      id: "31391",
+      pickListNumber: "31391",
+      destination: "SL_1",
+      status: "Cancelled",
+    },
+    {
+      id: "31407",
+      pickListNumber: "31407",
+      destination: "Line_1",
+      status: "Cancelled",
+    },
+    {
+      id: "31995",
+      pickListNumber: "31995",
+      destination: "Line_1",
+      status: "Cancelled",
+    },
+    {
+      id: "31999",
+      pickListNumber: "31999",
+      destination: "Line_1",
+      status: "Cancelled",
+    },
+    {
+      id: "32004",
+      pickListNumber: "32004",
+      destination: "Line_1",
+      status: "Cancelled",
+    },
+    {
+      id: "32287",
+      pickListNumber: "32287",
+      destination: "Line_1",
+      status: "Cancelled",
+    },
+    {
+      id: "32810",
+      pickListNumber: "32810",
+      destination: "Line_1",
+      status: "Cancelled",
+    },
+    {
+      id: "32811",
+      pickListNumber: "32811",
+      destination: "Line_1",
+      status: "Cancelled",
+    },
+    {
+      id: "32913",
+      pickListNumber: "32913",
+      destination: "Line_1",
+      status: "In-Progress",
+    },
+    {
+      id: "32914",
+      pickListNumber: "32914",
+      destination: "Line_2",
+      status: "Pending",
+    },
+  ]);
+
+  const handleCreatePickList = () => {
+    toast.success("Create pick list clicked");
+  };
+
+  const handleRowSelectionChange = (selectedRows) => {
+    setSelectedRows(selectedRows);
+    console.log("Selected rows:", selectedRows);
+  };
+
+  const handleCancel = (pickList) => {
+    toast.success(`Cancelled pick list ${pickList.pickListNumber}`);
+    setPickListData((prevData) =>
+      prevData.map((item) =>
+        item.id === pickList.id ? { ...item, status: "Cancelled" } : item
+      )
+    );
+  };
+
+  const handleMarkReady = (pickList) => {
+    toast.success(`Marked pick list ${pickList.pickListNumber} as ready to pick`);
+    setPickListData((prevData) =>
+      prevData.map((item) =>
+        item.id === pickList.id ? { ...item, status: "Ready" } : item
+      )
+    );
+  };
+
+  const handlePageSelect = (page) => {
+    setCurrentPage(page);
+  };
+
+  const pickListColumns = [
+    {
+      label: "Pick List #",
+      dataKey: "pickListNumber",
+      cellFormatter: (props) => (
+        <Link href={`#/pick-lists/${props.row.id}`} underline={false}>
+          {props.cellData}
+        </Link>
+      ),
+    },
+    { label: "Destination", dataKey: "destination" },
+    { label: "Status", dataKey: "status" },
+    {
+      dataKey: "markReady",
+      width: "40px",
+      cellFormatter: (props) => {
+        return props.row.status === "Pending" ? (
+          <IconicButton
+            icon="check"
+            tooltip="Mark as ready to pick"
+            onClick={() => handleMarkReady(props.row)}
+          />
+        ) : null;
+      },
+    },
+    {
+      dataKey: "cancel",
+      width: "40px",
+      cellFormatter: (props) => {
+        return props.row.status === "In-Progress" || props.row.status === "Pending" ? (
+          <IconicButton
+            icon="close"
+            tooltip="Cancel"
+            onClick={() => handleCancel(props.row)}
+          />
+        ) : null;
+      },
+    },
+  ];
+
+  const paginatedData = pickListData.slice((currentPage - 1) * rowsPerPage, currentPage * rowsPerPage);
+
+  const workOrderBreadcrumbs = (
+    <Breadcrumbs>
+      <Link href="#">Home</Link>
+      <Link href="#/work-orders">Work orders</Link>
+      <Link href="#/work-orders/194258">Work order #194258</Link>
+    </Breadcrumbs>
+  );
+
+  return (
+    <ApplicationFrame
+      navBar={
+        <Navigation
+          appSwitcher={{
+            apps: {
+              "production-scheduling": {
+                url: "https://nulogy.com/",
+              },
+              "supplier-collaboration": {
+                url: "https://nulogy.com/",
+              },
+            },
+          }}
+          primaryNavigation={[
+            {
+              key: "company",
+              label: "Company",
+              type: "link" as const,
+              props: { href: "#" },
+            },
+            {
+              key: "operations",
+              label: "Operations",
+              type: "link" as const,
+              props: { href: "#" },
+            },
+            {
+              key: "reports",
+              label: "Reports",
+              type: "link" as const,
+              props: { href: "#" },
+            },
+          ]}
+          secondaryNavigation={[
+            {
+              key: "create",
+              label: "Create",
+              type: "link" as const,
+              props: { href: "#" },
+            },
+          ]}
+        />
+      }
+    >
+      <ToastContainer />
+      <Page
+        fullHeight
+        breadcrumbs={workOrderBreadcrumbs}
+        renderHeader={() => (
+          <Header
+            renderBreadcrumbs={() => workOrderBreadcrumbs}
+            title="Manage Picking for Work Order #194258 - WO-Nov"
+          />
+        )}
+      >
+        {/* Work Order Details */}
+        <Box mb="x3">
+          <DescriptionList columns={{ small: 2, medium: 3, large: 6 }}>
+            <DescriptionGroup>
+              <DescriptionTerm>Start:</DescriptionTerm>
+              <DescriptionDetails>2024-Nov-22</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>End:</DescriptionTerm>
+              <DescriptionDetails>2024-Dec-06</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Finished Good:</DescriptionTerm>
+              <DescriptionDetails>FG-Nov</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Customer:</DescriptionTerm>
+              <DescriptionDetails>
+                <Link href="#/customers/sample-customer-7" underline={false}>
+                  Sample Customer 7
+                </Link>
+              </DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Expected Production:</DescriptionTerm>
+              <DescriptionDetails>500.0 ea</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Remaining Production:</DescriptionTerm>
+              <DescriptionDetails>500.0 ea</DescriptionDetails>
+            </DescriptionGroup>
+          </DescriptionList>
+        </Box>
+
+        {/* Tabs */}
+        <Tabs defaultSelectedIndex={1}>
+          <Tab label="Reservations">
+            <Box py="x3">
+              <Text>Reservations content would go here</Text>
+            </Box>
+          </Tab>
+          <Tab label="Pick Lists">
+            <Box py="x3">
+              {/* Action Bar - No bulk actions, so always right-aligned */}
+              <Flex gap="x2" px="x1" pb="x2" justifyContent="flex-end" alignItems="center">
+                <Button onClick={handleCreatePickList}>
+                  + Create Pick List
+                </Button>
+              </Flex>
+
+              <Table
+                columns={pickListColumns}
+                rows={paginatedData}
+                hasSelectableRows
+                keyField="id"
+                onRowSelectionChange={handleRowSelectionChange}
+                compact
+              />
+
+              <Divider />
+
+              <Pagination
+                justifyContent="flex-end"
+                currentPage={currentPage}
+                totalPages={Math.ceil(pickListData.length / rowsPerPage)}
+                onSelectPage={handlePageSelect}
+              />
+            </Box>
+          </Tab>
+          <Tab label="Assigned Inventory">
+            <Box py="x3">
+              <Text>Assigned Inventory content would go here</Text>
+            </Box>
+          </Tab>
+        </Tabs>
+      </Page>
+    </ApplicationFrame>
+  );
+};
+
+export const ItemLocator = () => {
+  const [selectedItemsToLocate, setSelectedItemsToLocate] = useState([]);
+  const [selectedLocationResults, setSelectedLocationResults] = useState([]);
+  const [isFilterSidebarOpen, setIsFilterSidebarOpen] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const rowsPerPage = 25;
+  const [hasSearched, setHasSearched] = useState(false);
+  const [filters, setFilters] = useState({
+    locationName: "",
+    workOrderId: "",
+    customerName: "",
+    locationCode: "",
+    workOrderCode: "",
+    itemCode: "",
+    palletNumber: "",
+    itemCategory: "",
+    lotCode: "",
+    palletInTransit: "All",
+    itemType: "",
+    expiryDate: null,
+    inventoryStatus: "All",
+    sortOrder: "Location Name",
+    itemFamily: "",
+    inventoryCategory: "All",
+    vendorName: "",
+    inventoryHolds: "All Inventory",
+  });
+
+  const [itemsToLocateData, setItemsToLocateData] = useState([]);
+
+  const [locationResultsData, setLocationResultsData] = useState([
+    {
+      id: "1",
+      location: "Door 8",
+      pallet: "10011",
+      item: "123",
+      itemDescription: "Strawberry Fruit Bar",
+      lot: "--",
+      expiry: "--",
+      status: "Available",
+      casesQty: "5.00 cs",
+      baseQty: "100.00 ea",
+    },
+    {
+      id: "2",
+      location: "Door 8",
+      pallet: "23424",
+      item: "123",
+      itemDescription: "Strawberry Fruit Bar",
+      lot: "--",
+      expiry: "--",
+      status: "Available",
+      casesQty: "50.00 cs",
+      baseQty: "1000.00 ea",
+    },
+    {
+      id: "3",
+      location: "Door 8",
+      pallet: "34312423",
+      item: "123",
+      itemDescription: "Strawberry Fruit Bar",
+      lot: "--",
+      expiry: "--",
+      status: "Available",
+      casesQty: "2.50 cs",
+      baseQty: "50.00 ea",
+    },
+    {
+      id: "4",
+      location: "Floor 2",
+      pallet: "0355",
+      item: "123",
+      itemDescription: "Strawberry Fruit Bar",
+      lot: "LotA1",
+      expiry: "01/11/2025",
+      status: "Available",
+      casesQty: "0.75 cs",
+      baseQty: "15.00 ea",
+    },
+    {
+      id: "5",
+      location: "Line_1",
+      pallet: "73648733",
+      item: "123",
+      itemDescription: "Strawberry Fruit Bar",
+      lot: "123",
+      expiry: "1234",
+      status: "Available",
+      casesQty: "4.00 cs",
+      baseQty: "80.00 ea",
+    },
+  ]);
+
+  const handleClearItemCart = () => {
+    toast.success("Item cart cleared");
+    setItemsToLocateData([]);
+  };
+
+  const handleViewItemCart = () => {
+    toast.success("View item cart clicked");
+  };
+
+  const handleFilterClick = () => {
+    setIsFilterSidebarOpen(true);
+  };
+
+  const handleItemsToLocateSelectionChange = (selectedRows) => {
+    setSelectedItemsToLocate(selectedRows);
+  };
+
+  const handleLocationResultsSelectionChange = (selectedRows) => {
+    setSelectedLocationResults(selectedRows);
+  };
+
+  const handleBulkDeleteItemsToLocate = () => {
+    toast.success(`Deleted ${selectedItemsToLocate.length} items`);
+    setItemsToLocateData((prevData) => 
+      prevData.filter((row) => !selectedItemsToLocate.some((selected) => selected.id === row.id))
+    );
+    setSelectedItemsToLocate([]);
+  };
+
+  const handleEditLocation = (location) => {
+    toast.success(`Edit location ${location.location} - ${location.pallet}`);
+  };
+
+  const handleAddPalletToCart = (location) => {
+    toast.success(`Added pallet ${location.pallet} to item cart`);
+  };
+
+  const handleAddQuantityToCart = (location) => {
+    toast.success(`Added quantity from ${location.pallet} to item cart`);
+  };
+
+  const handleRemoveFromCart = (location) => {
+    toast.success(`Removed ${location.pallet} from item cart`);
+  };
+
+  const handlePageSelect = (page) => {
+    setCurrentPage(page);
+  };
+
+  const itemsToLocateColumns = [
+    { label: "Item", dataKey: "item" },
+    { label: "Item Description", dataKey: "itemDescription" },
+    { label: "Full Plts Req'd", dataKey: "fullPltsReqd" },
+    { label: "Cases Req'd", dataKey: "casesReqd" },
+    { label: "Full Plts Sel'd", dataKey: "fullPltsSeld" },
+    { label: "Cases Sel'd", dataKey: "casesSeld" },
+    { label: "Full Plts Rem.", dataKey: "fullPltsRem" },
+    { label: "Cases Rem.", dataKey: "casesRem" },
+  ];
+
+  const locationResultsColumns = [
+    { label: "Location", dataKey: "location" },
+    { label: "Pallet", dataKey: "pallet" },
+    {
+      label: "Item",
+      dataKey: "item",
+      cellFormatter: (props) => (
+        <Link href={`#/items/${props.row.item}`} underline={false}>
+          {props.cellData}
+        </Link>
+      ),
+    },
+    { label: "Item Description", dataKey: "itemDescription" },
+    { label: "Lot", dataKey: "lot" },
+    { label: "Expiry", dataKey: "expiry" },
+    { label: "Status", dataKey: "status" },
+    { label: "Cases Qty", dataKey: "casesQty" },
+    { label: "Base Qty", dataKey: "baseQty" },
+    {
+      dataKey: "edit",
+      width: "40px",
+      cellFormatter: (props) => (
+        <IconicButton
+          icon="edit"
+          tooltip="Edit"
+          onClick={() => handleEditLocation(props.row)}
+        />
+      ),
+    },
+    {
+      dataKey: "addPallet",
+      width: "40px",
+      cellFormatter: (props) => (
+        <IconicButton
+          icon="add"
+          tooltip="Add pallet to item cart"
+          onClick={() => handleAddPalletToCart(props.row)}
+        />
+      ),
+    },
+    {
+      dataKey: "addQuantity",
+      width: "40px",
+      cellFormatter: (props) => (
+        <IconicButton
+          icon="add"
+          tooltip="Add quantity to item cart"
+          onClick={() => handleAddQuantityToCart(props.row)}
+        />
+      ),
+    },
+    {
+      dataKey: "remove",
+      width: "40px",
+      cellFormatter: (props) => (
+        <IconicButton
+          icon="delete"
+          tooltip="Remove item from item cart"
+          onClick={() => handleRemoveFromCart(props.row)}
+        />
+      ),
+    },
+  ];
+
+  const paginatedLocationResults = locationResultsData.slice((currentPage - 1) * rowsPerPage, currentPage * rowsPerPage);
+
+  const filterFields = [
+    {
+      key: "locationName",
+      label: "Location name",
+      type: "text" as const,
+    },
+    {
+      key: "workOrderId",
+      label: "Work Order ID",
+      type: "text" as const,
+    },
+    {
+      key: "customerName",
+      label: "Customer name",
+      type: "text" as const,
+    },
+    {
+      key: "locationCode",
+      label: "Location code",
+      type: "text" as const,
+    },
+    {
+      key: "workOrderCode",
+      label: "Work Order code",
+      type: "text" as const,
+    },
+    {
+      key: "itemCode",
+      label: "Item code",
+      type: "text" as const,
+    },
+    {
+      key: "palletNumber",
+      label: "Pallet number",
+      type: "text" as const,
+    },
+    {
+      key: "itemCategory",
+      label: "Item category",
+      type: "text" as const,
+    },
+    {
+      key: "lotCode",
+      label: "Lot code",
+      type: "text" as const,
+    },
+    {
+      key: "palletInTransit",
+      label: "Pallet in transit",
+      type: "select" as const,
+      options: [
+        { label: "All", value: "All" },
+        { label: "Yes", value: "Yes" },
+        { label: "No", value: "No" },
+      ],
+    },
+    {
+      key: "itemType",
+      label: "Item type",
+      type: "text" as const,
+    },
+    {
+      key: "expiryDate",
+      label: "Expiry date",
+      type: "date" as const,
+    },
+    {
+      key: "inventoryStatus",
+      label: "Inventory Status",
+      type: "select" as const,
+      options: [
+        { label: "All", value: "All" },
+        { label: "Available", value: "Available" },
+        { label: "Reserved", value: "Reserved" },
+      ],
+    },
+    {
+      key: "sortOrder",
+      label: "Sort Order",
+      type: "select" as const,
+      options: [
+        { label: "Location Name", value: "Location Name" },
+        { label: "Item Code", value: "Item Code" },
+        { label: "Expiry Date", value: "Expiry Date" },
+      ],
+    },
+    {
+      key: "itemFamily",
+      label: "Item family",
+      type: "text" as const,
+    },
+    {
+      key: "inventoryCategory",
+      label: "Inventory Category",
+      type: "select" as const,
+      options: [
+        { label: "All", value: "All" },
+        { label: "Raw Materials", value: "Raw Materials" },
+        { label: "Finished Goods", value: "Finished Goods" },
+      ],
+    },
+    {
+      key: "vendorName",
+      label: "Vendor name",
+      type: "text" as const,
+    },
+    {
+      key: "inventoryHolds",
+      label: "Inventory Holds",
+      type: "select" as const,
+      options: [
+        { label: "All Inventory", value: "All Inventory" },
+        { label: "No Holds", value: "No Holds" },
+        { label: "With Holds", value: "With Holds" },
+      ],
+    },
+  ];
+
+  const handleFilterApply = (newFilters) => {
+    setFilters(newFilters);
+    setIsFilterSidebarOpen(false);
+    setHasSearched(true);
+    toast.success("Search completed with filters");
+  };
+
+  return (
+    <ApplicationFrame
+      navBar={
+        <Navigation
+          appSwitcher={{
+            apps: {
+              "production-scheduling": {
+                url: "https://nulogy.com/",
+              },
+              "supplier-collaboration": {
+                url: "https://nulogy.com/",
+              },
+            },
+          }}
+          primaryNavigation={[
+            {
+              key: "company",
+              label: "Company",
+              type: "link" as const,
+              props: { href: "#" },
+            },
+            {
+              key: "operations",
+              label: "Operations",
+              type: "link" as const,
+              props: { href: "#" },
+            },
+            {
+              key: "reports",
+              label: "Reports",
+              type: "link" as const,
+              props: { href: "#" },
+            },
+          ]}
+          secondaryNavigation={[
+            {
+              key: "create",
+              label: "Create",
+              type: "link" as const,
+              props: { href: "#" },
+            },
+          ]}
+        />
+      }
+    >
+      <ToastContainer />
+      <Page
+        fullHeight
+        breadcrumbs={breadcrumbs}
+        renderHeader={() => (
+          <Header
+            renderBreadcrumbs={() => breadcrumbs}
+            title="Item Locator"
+            subtitle="Nulogy Site"
+            renderActions={() => (
+              <Flex gap="x2" alignItems="center">
+                <IconicButton icon="close" tooltip="Clear Item Cart" onClick={handleClearItemCart}>
+                  Clear Item Cart
+                </IconicButton>
+                <IconicButton icon="visibility" tooltip="View Item Cart" onClick={handleViewItemCart}>
+                  View Item Cart
+                </IconicButton>
+              </Flex>
+            )}
+          />
+        )}
+      >
+        {/* Items to Locate Section */}
+        <Box mb="x4">
+          <Heading3 mb="x2">Items to Locate</Heading3>
+          
+          <Flex
+            gap="x2"
+            px="x1"
+            pb="x2"
+            justifyContent={selectedItemsToLocate.length > 0 ? "space-between" : "flex-end"}
+            alignItems="center"
+          >
+            {/* Bulk Actions - Left Side */}
+            {selectedItemsToLocate.length > 0 && (
+              <Flex gap="x2" alignItems="center">
+                <Text mr="x2" color="darkGrey">
+                  {selectedItemsToLocate.length} selected
+                </Text>
+                <IconicButton icon="delete" tooltip="Delete" onClick={handleBulkDeleteItemsToLocate}>
+                  Delete
+                </IconicButton>
+              </Flex>
+            )}
+
+            {/* Regular Actions - Right Side */}
+            <Flex gap="x2" alignItems="center">
+              <IconicButton icon="getApp" tooltip="Quick Pallet Pick...">
+                Quick Pallet Pick...
+              </IconicButton>
+              <IconicButton icon="publish" tooltip="Export (Excel)">
+                Export (Excel)
+              </IconicButton>
+              <IconicButton icon="add" tooltip="Add Item...">
+                Add Item...
+              </IconicButton>
+              <IconicButton icon="delete" tooltip="Delete">
+                Delete
+              </IconicButton>
+            </Flex>
+          </Flex>
+
+          <Table
+            columns={itemsToLocateColumns}
+            rows={itemsToLocateData}
+            hasSelectableRows
+            keyField="id"
+            onRowSelectionChange={handleItemsToLocateSelectionChange}
+            compact
+            noRowsContent="No items to locate"
+          />
+        </Box>
+
+        {/* Locate Items Section */}
+        <Box>
+          <Heading3 mb="x2">Locate Items</Heading3>
+          
+          {/* Action Bar */}
+          <Flex gap="x2" px="x1" pb="x2" justifyContent="space-between" alignItems="center">
+            <Flex gap="x2" alignItems="center">
+              <IconicButton icon="add" tooltip="Create Move...">
+                Create Move...
+              </IconicButton>
+              <IconicButton icon="add" tooltip="Add to Shipment...">
+                Add to Shipment...
+              </IconicButton>
+            </Flex>
+
+            <Flex gap="x2" alignItems="center">
+              <IconicButton icon="filter" tooltip="Filter" onClick={handleFilterClick}>
+                Filter
+              </IconicButton>
+            </Flex>
+          </Flex>
+
+          {/* Location Results */}
+          <Heading3 mb="x2">Location Results</Heading3>
+
+          {hasSearched ? (
+            <>
+              {/* Location Results Action Bar */}
+              <Flex gap="x2" px="x1" pb="x2" justifyContent="flex-end" alignItems="center">
+                <IconicButton icon="add" tooltip="Assign pallets...">
+                  Assign pallets...
+                </IconicButton>
+                <IconicButton icon="edit" tooltip="Adjust inventory">
+                  Adjust inventory
+                </IconicButton>
+                <IconicButton icon="refresh" tooltip="Change Status...">
+                  Change Status...
+                </IconicButton>
+                <IconicButton icon="print" tooltip="Print Pallet Tags">
+                  Print Pallet Tags
+                </IconicButton>
+                <IconicButton icon="publish" tooltip="Export">
+                  Export
+                </IconicButton>
+              </Flex>
+
+              <Table
+                columns={locationResultsColumns}
+                rows={paginatedLocationResults}
+                hasSelectableRows
+                keyField="id"
+                onRowSelectionChange={handleLocationResultsSelectionChange}
+                compact
+              />
+
+              <Divider />
+
+              <Pagination
+                justifyContent="flex-end"
+                currentPage={currentPage}
+                totalPages={Math.ceil(locationResultsData.length / rowsPerPage)}
+                onSelectPage={handlePageSelect}
+              />
+            </>
+          ) : (
+            <Box py="x4" textAlign="center">
+              <Text color="darkGrey">Please apply filters to search for items.</Text>
+            </Box>
+          )}
+        </Box>
+
+        <FilterSidebar
+          isOpen={isFilterSidebarOpen}
+          onClose={() => setIsFilterSidebarOpen(false)}
+          onApply={handleFilterApply}
+          fields={filterFields}
+          initialFilters={filters}
+        />
+      </Page>
+    </ApplicationFrame>
+  );
+};
+
+
