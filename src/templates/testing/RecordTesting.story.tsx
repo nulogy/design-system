@@ -90,7 +90,7 @@ export const ShipOrderDetail = () => {
 
   const handleConfirmDelete = () => {
     if (selectedAttachment) {
-      setAttachments((prevAttachments) => 
+      setAttachments((prevAttachments) =>
         prevAttachments.filter((attachment) => attachment.id !== selectedAttachment.id)
       );
       handleCloseDeleteModal();
@@ -153,7 +153,7 @@ export const ShipOrderDetail = () => {
           },
           {
             key: "operations",
-            label: "Operations", 
+            label: "Operations",
             type: "link" as const,
             props: { href: "#" },
           },
@@ -305,7 +305,8 @@ export const ShipOrderDetail = () => {
           </Flex>
           <Box mb="x2">
             <Text fontSize="small" color="darkGrey">
-              ⓘ Modifications to order details are not available because this Ship Order is using case tracking and items have been added to Shipment 22770
+              ⓘ Modifications to order details are not available because this Ship Order is using case tracking and
+              items have been added to Shipment 22770
             </Text>
           </Box>
           <Table
@@ -417,11 +418,7 @@ export const ShipOrderDetail = () => {
                 dataKey: "delete",
                 width: "40px",
                 cellFormatter: (props) => (
-                  <IconicButton 
-                    icon="delete" 
-                    tooltip="Delete" 
-                    onClick={() => handleDeleteAttachment(props.row)}
-                  />
+                  <IconicButton icon="delete" tooltip="Delete" onClick={() => handleDeleteAttachment(props.row)} />
                 ),
               },
             ]}
@@ -478,9 +475,9 @@ export const ShipOrderDetail = () => {
             </Box>
             <Box pb="x3">
               <FieldLabel labelText="Ship to" helpText="Read-only - cannot be modified">
-                <Textarea 
-                  value="DHL Mississauga&#10;5671 Rolls drive&#10;Mississauga, Ontario&#10;M9C0A2&#10;CA" 
-                  disabled 
+                <Textarea
+                  value="DHL Mississauga&#10;5671 Rolls drive&#10;Mississauga, Ontario&#10;M9C0A2&#10;CA"
+                  disabled
                 />
               </FieldLabel>
             </Box>
@@ -588,8 +585,8 @@ export const ReceiveOrderDetail = () => {
   };
 
   const handleBulkDeleteItems = () => {
-    setOrderDetailsData(prevData => 
-      prevData.filter(item => !selectedOrderRows.some(selected => selected.id === item.id))
+    setOrderDetailsData((prevData) =>
+      prevData.filter((item) => !selectedOrderRows.some((selected) => selected.id === item.id))
     );
     toast.success(`Deleted ${selectedOrderRows.length} items`);
     setSelectedOrderRows([]);
@@ -608,7 +605,7 @@ export const ReceiveOrderDetail = () => {
   };
 
   const handleDeleteItem = (item) => {
-    setOrderDetailsData(prevData => prevData.filter(row => row.id !== item.id));
+    setOrderDetailsData((prevData) => prevData.filter((row) => row.id !== item.id));
     toast.success("Item deleted successfully");
   };
 
@@ -661,7 +658,7 @@ export const ReceiveOrderDetail = () => {
           },
           {
             key: "operations",
-            label: "Operations", 
+            label: "Operations",
             type: "link" as const,
             props: { href: "#" },
           },
@@ -792,22 +789,22 @@ export const ReceiveOrderDetail = () => {
               </IconicButton>
             </Flex>
           </Flex>
-          
+
           {/* Table Action Bar following new table rules */}
           <Flex gap="x2" px="x1" pb="x2" justifyContent="flex-end" alignItems="center">
             {/* Selection count on left when rows selected */}
-            {selectedOrderRows.length > 0 && (
-              <Text color="darkGrey">
-                {selectedOrderRows.length} selected
-              </Text>
-            )}
-            
+            {selectedOrderRows.length > 0 && <Text color="darkGrey">{selectedOrderRows.length} selected</Text>}
+
             {/* Actions on right - bulk actions replace regular actions when rows selected */}
             <Flex gap="x2" alignItems="center">
               {selectedOrderRows.length > 0 ? (
                 <>
                   {/* Bulk actions replace primary/secondary actions */}
-                  <IconicButton icon="edit" tooltip="Update expected delivery date" onClick={handleBulkUpdateDeliveryDate}>
+                  <IconicButton
+                    icon="edit"
+                    tooltip="Update expected delivery date"
+                    onClick={handleBulkUpdateDeliveryDate}
+                  >
                     Update expected delivery date
                   </IconicButton>
                   <IconicButton icon="delete" tooltip="Delete" onClick={handleBulkDeleteItems}>
@@ -824,7 +821,7 @@ export const ReceiveOrderDetail = () => {
               )}
             </Flex>
           </Flex>
-          
+
           <Table
             columns={[
               {
@@ -846,22 +843,14 @@ export const ReceiveOrderDetail = () => {
                 dataKey: "edit",
                 width: "40px",
                 cellFormatter: (props) => (
-                  <IconicButton 
-                    icon="edit" 
-                    tooltip="Edit" 
-                    onClick={() => handleEditItem(props.row)}
-                  />
+                  <IconicButton icon="edit" tooltip="Edit" onClick={() => handleEditItem(props.row)} />
                 ),
               },
               {
                 dataKey: "delete",
                 width: "40px",
                 cellFormatter: (props) => (
-                  <IconicButton 
-                    icon="delete" 
-                    tooltip="Delete" 
-                    onClick={() => handleDeleteItem(props.row)}
-                  />
+                  <IconicButton icon="delete" tooltip="Delete" onClick={() => handleDeleteItem(props.row)} />
                 ),
               },
             ]}
