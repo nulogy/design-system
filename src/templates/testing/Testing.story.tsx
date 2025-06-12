@@ -119,7 +119,7 @@ export const IndexTemplate = () => {
     plannedStart: null,
     plannedEnd: null,
   });
-  
+
   const [tableData, setTableData] = useState([
     {
       id: "1134",
@@ -330,7 +330,7 @@ export const IndexTemplate = () => {
             Export
           </IconicButton>
         </Flex>
-        
+
         <Table
           columns={tableColumns}
           rows={paginatedData}
@@ -339,9 +339,9 @@ export const IndexTemplate = () => {
           onRowSelectionChange={(selectedRows) => console.log("Selected rows:", selectedRows)}
           compact
         />
-        
+
         <Divider />
-        
+
         <Pagination
           justifyContent="flex-end"
           currentPage={currentPage}
@@ -435,7 +435,7 @@ export const RecordTemplate = () => {
     assignedTo: "",
     dueDate: null,
   });
-  
+
   const [tableData, setTableData] = useState([
     {
       id: "RD-001",
@@ -816,7 +816,7 @@ export const WorkOrdersWithFilters = () => {
     hasJobs: "All",
     longRunning: "All",
   });
-  
+
   const [tableData, setTableData] = useState([
     {
       id: "197155",
@@ -829,7 +829,7 @@ export const WorkOrdersWithFilters = () => {
       due: "--",
       expected: "400.00",
       remaining: "400.00",
-      unscheduled: "400.00"
+      unscheduled: "400.00",
     },
     {
       id: "194258",
@@ -842,7 +842,7 @@ export const WorkOrdersWithFilters = () => {
       due: "--",
       expected: "500.00",
       remaining: "500.00",
-      unscheduled: "500.00"
+      unscheduled: "500.00",
     },
     {
       id: "128576",
@@ -855,7 +855,7 @@ export const WorkOrdersWithFilters = () => {
       due: "--",
       expected: "0.00",
       remaining: "--",
-      unscheduled: "0.00"
+      unscheduled: "0.00",
     },
     {
       id: "79324",
@@ -868,7 +868,7 @@ export const WorkOrdersWithFilters = () => {
       due: "--",
       expected: "0.00",
       remaining: "-3.00",
-      unscheduled: "0.00"
+      unscheduled: "0.00",
     },
     {
       id: "78335",
@@ -881,7 +881,7 @@ export const WorkOrdersWithFilters = () => {
       due: "--",
       expected: "3840.00",
       remaining: "3840.00",
-      unscheduled: "3840.00"
+      unscheduled: "3840.00",
     },
     {
       id: "208248",
@@ -894,7 +894,7 @@ export const WorkOrdersWithFilters = () => {
       due: "2025-Apr-30",
       expected: "100.00",
       remaining: "100.00",
-      unscheduled: "100.00"
+      unscheduled: "100.00",
     },
     {
       id: "207338",
@@ -907,7 +907,7 @@ export const WorkOrdersWithFilters = () => {
       due: "2025-Apr-30",
       expected: "100.00",
       remaining: "100.00",
-      unscheduled: "100.00"
+      unscheduled: "100.00",
     },
     {
       id: "202958",
@@ -920,7 +920,7 @@ export const WorkOrdersWithFilters = () => {
       due: "2025-Feb-28",
       expected: "0.00",
       remaining: "0.00",
-      unscheduled: "0.00"
+      unscheduled: "0.00",
     },
     {
       id: "197541",
@@ -933,7 +933,7 @@ export const WorkOrdersWithFilters = () => {
       due: "2025-Jan-24",
       expected: "2000.00",
       remaining: "2000.00",
-      unscheduled: "2000.00"
+      unscheduled: "2000.00",
     },
     {
       id: "197540",
@@ -946,7 +946,7 @@ export const WorkOrdersWithFilters = () => {
       due: "2025-Jan-24",
       expected: "1000.00",
       remaining: "1000.00",
-      unscheduled: "1000.00"
+      unscheduled: "1000.00",
     },
     {
       id: "197542",
@@ -959,7 +959,7 @@ export const WorkOrdersWithFilters = () => {
       due: "2025-Jan-23",
       expected: "3000.00",
       remaining: "3000.00",
-      unscheduled: "3000.00"
+      unscheduled: "3000.00",
     },
     {
       id: "196169",
@@ -972,8 +972,8 @@ export const WorkOrdersWithFilters = () => {
       due: "2024-Dec-24",
       expected: "4000.00",
       remaining: "--",
-      unscheduled: "4000.00"
-    }
+      unscheduled: "4000.00",
+    },
   ]);
 
   const handleFilterClick = () => {
@@ -1013,9 +1013,7 @@ export const WorkOrdersWithFilters = () => {
 
   const handleBulkDelete = () => {
     toast.success(`Deleted ${selectedRows.length} work orders`);
-    setTableData((prevData) => 
-      prevData.filter((row) => !selectedRows.some((selected) => selected.id === row.id))
-    );
+    setTableData((prevData) => prevData.filter((row) => !selectedRows.some((selected) => selected.id === row.id)));
     setSelectedRows([]);
   };
 
@@ -1042,11 +1040,7 @@ export const WorkOrdersWithFilters = () => {
       dataKey: "actions",
       width: "40px",
       cellFormatter: (props) => (
-        <IconicButton 
-          icon="delete" 
-          tooltip="Delete" 
-          onClick={() => handleDeleteClick(props.row)}
-        />
+        <IconicButton icon="delete" tooltip="Delete" onClick={() => handleDeleteClick(props.row)} />
       ),
     },
   ];
@@ -1182,15 +1176,15 @@ export const WorkOrdersWithFilters = () => {
       <Page
         fullHeight
         breadcrumbs={breadcrumbs}
-        renderHeader={() => (
-          <Header
-            renderBreadcrumbs={() => breadcrumbs}
-            title="Work Orders"
-            subtitle="Nulogy Site"
-          />
-        )}
+        renderHeader={() => <Header renderBreadcrumbs={() => breadcrumbs} title="Work Orders" subtitle="Nulogy Site" />}
       >
-        <Flex gap="x2" px="x1" pb="x2" justifyContent={selectedRows.length > 0 ? "space-between" : "flex-end"} alignItems="center">
+        <Flex
+          gap="x2"
+          px="x1"
+          pb="x2"
+          justifyContent={selectedRows.length > 0 ? "space-between" : "flex-end"}
+          alignItems="center"
+        >
           {/* Bulk Actions - Left Side */}
           {selectedRows.length > 0 && (
             <Flex gap="x2" alignItems="center">
@@ -1205,7 +1199,7 @@ export const WorkOrdersWithFilters = () => {
               </IconicButton>
             </Flex>
           )}
-          
+
           {/* Regular Actions - Right Side */}
           <Flex gap="x2" alignItems="center">
             <IconicButton icon="add" tooltip="Create" onClick={handleCreateNewClick}>
@@ -1228,12 +1222,8 @@ export const WorkOrdersWithFilters = () => {
                   <DropdownButton onClick={() => toast.success("Print Work Order Dockets clicked")}>
                     Print Work Order Dockets
                   </DropdownButton>
-                  <DropdownButton onClick={() => toast.success("Close clicked")}>
-                    Close
-                  </DropdownButton>
-                  <DropdownButton onClick={() => toast.success("Delete selected clicked")}>
-                    Delete
-                  </DropdownButton>
+                  <DropdownButton onClick={() => toast.success("Close clicked")}>Close</DropdownButton>
+                  <DropdownButton onClick={() => toast.success("Delete selected clicked")}>Delete</DropdownButton>
                 </>
               )}
               {selectedRows.length > 0 && (
@@ -1244,7 +1234,7 @@ export const WorkOrdersWithFilters = () => {
             </DropdownMenu>
           </Flex>
         </Flex>
-        
+
         <Table
           columns={tableColumns}
           rows={paginatedData}
@@ -1253,9 +1243,9 @@ export const WorkOrdersWithFilters = () => {
           onRowSelectionChange={handleRowSelectionChange}
           compact
         />
-        
+
         <Divider />
-        
+
         <Pagination
           justifyContent="flex-end"
           currentPage={currentPage}
@@ -1304,7 +1294,7 @@ export const ItemList = () => {
     isFinishedGood: "Doesn't matter",
     itemCode: "",
   });
-  
+
   const [tableData, setTableData] = useState([
     {
       id: "1",
@@ -1314,17 +1304,17 @@ export const ItemList = () => {
       family: "--",
       type: "--",
       itemCategory: "--",
-      inactive: "No"
+      inactive: "No",
     },
     {
-      id: "2", 
+      id: "2",
       code: "B-TL700004-Q5",
       description: "B-TL700004-Q5",
       customer: "No customer",
       family: "--",
       type: "--",
       itemCategory: "--",
-      inactive: "No"
+      inactive: "No",
     },
     {
       id: "3",
@@ -1332,9 +1322,9 @@ export const ItemList = () => {
       description: "bundle of 5 peanut butter with coupon",
       customer: "Company ABC",
       family: "--",
-      type: "--", 
+      type: "--",
       itemCategory: "--",
-      inactive: "No"
+      inactive: "No",
     },
     {
       id: "4",
@@ -1343,8 +1333,8 @@ export const ItemList = () => {
       customer: "Peanut Butter Group",
       family: "--",
       type: "--",
-      itemCategory: "--", 
-      inactive: "No"
+      itemCategory: "--",
+      inactive: "No",
     },
     {
       id: "5",
@@ -1354,7 +1344,7 @@ export const ItemList = () => {
       family: "--",
       type: "--",
       itemCategory: "--",
-      inactive: "No"
+      inactive: "No",
     },
     {
       id: "6",
@@ -1364,7 +1354,7 @@ export const ItemList = () => {
       family: "--",
       type: "--",
       itemCategory: "--",
-      inactive: "No"
+      inactive: "No",
     },
     {
       id: "7",
@@ -1374,7 +1364,7 @@ export const ItemList = () => {
       family: "--",
       type: "--",
       itemCategory: "--",
-      inactive: "No"
+      inactive: "No",
     },
     {
       id: "8",
@@ -1384,7 +1374,7 @@ export const ItemList = () => {
       family: "--",
       type: "--",
       itemCategory: "--",
-      inactive: "No"
+      inactive: "No",
     },
     {
       id: "9",
@@ -1394,7 +1384,7 @@ export const ItemList = () => {
       family: "--",
       type: "--",
       itemCategory: "--",
-      inactive: "No"
+      inactive: "No",
     },
     {
       id: "10",
@@ -1404,7 +1394,7 @@ export const ItemList = () => {
       family: "--",
       type: "--",
       itemCategory: "--",
-      inactive: "No"
+      inactive: "No",
     },
     {
       id: "11",
@@ -1414,7 +1404,7 @@ export const ItemList = () => {
       family: "--",
       type: "--",
       itemCategory: "--",
-      inactive: "No"
+      inactive: "No",
     },
     {
       id: "12",
@@ -1424,7 +1414,7 @@ export const ItemList = () => {
       family: "--",
       type: "--",
       itemCategory: "--",
-      inactive: "No"
+      inactive: "No",
     },
     {
       id: "13",
@@ -1434,7 +1424,7 @@ export const ItemList = () => {
       family: "--",
       type: "--",
       itemCategory: "--",
-      inactive: "No"
+      inactive: "No",
     },
     {
       id: "14",
@@ -1444,7 +1434,7 @@ export const ItemList = () => {
       family: "--",
       type: "--",
       itemCategory: "--",
-      inactive: "No"
+      inactive: "No",
     },
     {
       id: "15",
@@ -1454,8 +1444,8 @@ export const ItemList = () => {
       family: "--",
       type: "--",
       itemCategory: "--",
-      inactive: "No"
-    }
+      inactive: "No",
+    },
   ]);
 
   const handleFilterClick = () => {
@@ -1524,11 +1514,7 @@ export const ItemList = () => {
       dataKey: "actions",
       width: "40px",
       cellFormatter: (props) => (
-        <IconicButton 
-          icon="delete" 
-          tooltip="Delete" 
-          onClick={() => handleDeleteClick(props.row)}
-        />
+        <IconicButton icon="delete" tooltip="Delete" onClick={() => handleDeleteClick(props.row)} />
       ),
     },
   ];
@@ -1653,15 +1639,15 @@ export const ItemList = () => {
       <Page
         fullHeight
         breadcrumbs={breadcrumbs}
-        renderHeader={() => (
-          <Header
-            renderBreadcrumbs={() => breadcrumbs}
-            title="Item List"
-            subtitle="Nulogy Site"
-          />
-        )}
+        renderHeader={() => <Header renderBreadcrumbs={() => breadcrumbs} title="Item List" subtitle="Nulogy Site" />}
       >
-        <Flex gap="x2" px="x1" pb="x2" justifyContent={selectedRows.length > 0 ? "space-between" : "flex-end"} alignItems="center">
+        <Flex
+          gap="x2"
+          px="x1"
+          pb="x2"
+          justifyContent={selectedRows.length > 0 ? "space-between" : "flex-end"}
+          alignItems="center"
+        >
           {/* Bulk Actions - Left Side */}
           {selectedRows.length > 0 && (
             <Flex gap="x2" alignItems="center">
@@ -1679,7 +1665,7 @@ export const ItemList = () => {
               </IconicButton>
             </Flex>
           )}
-          
+
           {/* Regular Actions - Right Side */}
           <Flex gap="x2" alignItems="center">
             <IconicButton icon="add" tooltip="Create" onClick={handleCreateNewClick}>
@@ -1699,9 +1685,7 @@ export const ItemList = () => {
             <DropdownMenu trigger={() => <IconicButton icon="more" />}>
               {selectedRows.length === 0 && (
                 <>
-                  <DropdownButton onClick={() => toast.success("Disable clicked")}>
-                    Disable
-                  </DropdownButton>
+                  <DropdownButton onClick={() => toast.success("Disable clicked")}>Disable</DropdownButton>
                   <DropdownButton onClick={() => toast.success("Update cost from BOM clicked")}>
                     Update cost from BOM
                   </DropdownButton>
@@ -1710,13 +1694,11 @@ export const ItemList = () => {
                   </DropdownButton>
                 </>
               )}
-              <DropdownButton onClick={() => toast.success("Delete selected clicked")}>
-                Delete
-              </DropdownButton>
+              <DropdownButton onClick={() => toast.success("Delete selected clicked")}>Delete</DropdownButton>
             </DropdownMenu>
           </Flex>
         </Flex>
-        
+
         <Table
           columns={tableColumns}
           rows={paginatedData}
@@ -1725,9 +1707,9 @@ export const ItemList = () => {
           onRowSelectionChange={handleRowSelectionChange}
           compact
         />
-        
+
         <Divider />
-        
+
         <Pagination
           justifyContent="flex-end"
           currentPage={currentPage}
@@ -1772,7 +1754,7 @@ export const ShipOrders = () => {
     referenceNumber: "",
     itemCode: "",
   });
-  
+
   const [tableData, setTableData] = useState([
     {
       id: "32",
@@ -1783,10 +1765,10 @@ export const ShipOrders = () => {
       expectedShip: "--",
       reference: "--",
       shipments: "0",
-      notes: "--"
+      notes: "--",
     },
     {
-      id: "3", 
+      id: "3",
       code: "345",
       customer: "Company ABC",
       shipped: "No",
@@ -1794,7 +1776,7 @@ export const ShipOrders = () => {
       expectedShip: "--",
       reference: "--",
       shipments: "1",
-      notes: "--"
+      notes: "--",
     },
     {
       id: "4",
@@ -1805,7 +1787,7 @@ export const ShipOrders = () => {
       expectedShip: "2021-Sep-09 04:39",
       reference: "--",
       shipments: "4",
-      notes: "--"
+      notes: "--",
     },
     {
       id: "2",
@@ -1816,7 +1798,7 @@ export const ShipOrders = () => {
       expectedShip: "2021-Aug-25 01:40",
       reference: "--",
       shipments: "1",
-      notes: "--"
+      notes: "--",
     },
     {
       id: "1",
@@ -1827,8 +1809,8 @@ export const ShipOrders = () => {
       expectedShip: "2021-Jul-28 11:46 AM",
       reference: "--",
       shipments: "1",
-      notes: "Learning about the BOL"
-    }
+      notes: "Learning about the BOL",
+    },
   ]);
 
   const handleFilterClick = () => {
@@ -1857,9 +1839,7 @@ export const ShipOrders = () => {
   const handleBulkDelete = () => {
     toast.success(`Deleted ${selectedRows.length} ship orders`);
     // Remove selected ship orders from table data
-    setTableData((prevData) => 
-      prevData.filter((row) => !selectedRows.some((selected) => selected.id === row.id))
-    );
+    setTableData((prevData) => prevData.filter((row) => !selectedRows.some((selected) => selected.id === row.id)));
     setSelectedRows([]); // Clear selection after action
   };
 
@@ -1877,8 +1857,8 @@ export const ShipOrders = () => {
         </Link>
       ),
     },
-    { 
-      label: "Customer", 
+    {
+      label: "Customer",
       dataKey: "customer",
       cellFormatter: (props) => (
         <Link href={`#/customers/${props.row.customer}`} underline={false}>
@@ -1887,8 +1867,8 @@ export const ShipOrders = () => {
       ),
     },
     { label: "Shipped", dataKey: "shipped" },
-    { 
-      label: "Ship To", 
+    {
+      label: "Ship To",
       dataKey: "shipTo",
       cellFormatter: (props) => (
         <Link href={`#/ship-to/${props.row.shipTo}`} underline={false}>
@@ -2002,15 +1982,15 @@ export const ShipOrders = () => {
       <Page
         fullHeight
         breadcrumbs={breadcrumbs}
-        renderHeader={() => (
-          <Header
-            renderBreadcrumbs={() => breadcrumbs}
-            title="Ship Orders"
-            subtitle="Nulogy Site"
-          />
-        )}
+        renderHeader={() => <Header renderBreadcrumbs={() => breadcrumbs} title="Ship Orders" subtitle="Nulogy Site" />}
       >
-        <Flex gap="x2" px="x1" pb="x2" justifyContent={selectedRows.length > 0 ? "space-between" : "flex-end"} alignItems="center">
+        <Flex
+          gap="x2"
+          px="x1"
+          pb="x2"
+          justifyContent={selectedRows.length > 0 ? "space-between" : "flex-end"}
+          alignItems="center"
+        >
           {/* Bulk Actions - Left Side */}
           {selectedRows.length > 0 && (
             <Flex gap="x2" alignItems="center">
@@ -2025,7 +2005,7 @@ export const ShipOrders = () => {
               </IconicButton>
             </Flex>
           )}
-          
+
           {/* Regular Actions - Right Side */}
           <Flex gap="x2" alignItems="center">
             <IconicButton icon="getApp" tooltip="Import (CSV)">
@@ -2036,7 +2016,7 @@ export const ShipOrders = () => {
             </IconicButton>
           </Flex>
         </Flex>
-        
+
         <Table
           columns={tableColumns}
           rows={paginatedData}
@@ -2045,9 +2025,9 @@ export const ShipOrders = () => {
           onRowSelectionChange={handleRowSelectionChange}
           compact
         />
-        
+
         <Divider />
-        
+
         <Pagination
           justifyContent="flex-end"
           currentPage={currentPage}
@@ -2086,7 +2066,7 @@ export const Jobs = () => {
     hasProduction: "All",
     reconciliationStatus: "All",
   });
-  
+
   const [tableData, setTableData] = useState([
     {
       id: "28756",
@@ -2101,7 +2081,7 @@ export const Jobs = () => {
       expectedPeople: "2.0",
       actualPeople: "0.0",
       line: "Line 1",
-      lineLeader: "--"
+      lineLeader: "--",
     },
     {
       id: "11",
@@ -2116,7 +2096,7 @@ export const Jobs = () => {
       expectedPeople: "5.0",
       actualPeople: "0.0",
       line: "Line 1",
-      lineLeader: "--"
+      lineLeader: "--",
     },
     {
       id: "10",
@@ -2131,7 +2111,7 @@ export const Jobs = () => {
       expectedPeople: "5.0",
       actualPeople: "0.0",
       line: "Line 1",
-      lineLeader: "--"
+      lineLeader: "--",
     },
     {
       id: "742",
@@ -2146,7 +2126,7 @@ export const Jobs = () => {
       expectedPeople: "0.0",
       actualPeople: "0.0",
       line: "Line 1",
-      lineLeader: "--"
+      lineLeader: "--",
     },
     {
       id: "240",
@@ -2161,7 +2141,7 @@ export const Jobs = () => {
       expectedPeople: "8.0",
       actualPeople: "0.0",
       line: "Line 1",
-      lineLeader: "--"
+      lineLeader: "--",
     },
     {
       id: "183",
@@ -2176,7 +2156,7 @@ export const Jobs = () => {
       expectedPeople: "5.0",
       actualPeople: "0.0",
       line: "Line 1",
-      lineLeader: "tammyn@nulo..."
+      lineLeader: "tammyn@nulo...",
     },
     {
       id: "49",
@@ -2191,8 +2171,8 @@ export const Jobs = () => {
       expectedPeople: "8.0",
       actualPeople: "0.0",
       line: "Line 1",
-      lineLeader: "saurabha@nul..."
-    }
+      lineLeader: "saurabha@nul...",
+    },
   ]);
 
   const handleFilterClick = () => {
@@ -2216,9 +2196,7 @@ export const Jobs = () => {
   const handleBulkDelete = () => {
     toast.success(`Deleted ${selectedRows.length} jobs`);
     // Remove selected jobs from table data
-    setTableData((prevData) => 
-      prevData.filter((row) => !selectedRows.some((selected) => selected.id === row.id))
-    );
+    setTableData((prevData) => prevData.filter((row) => !selectedRows.some((selected) => selected.id === row.id)));
     setSelectedRows([]); // Clear selection after action
   };
 
@@ -2242,7 +2220,7 @@ export const Jobs = () => {
       label: "Work Order",
       dataKey: "workOrder",
       cellFormatter: (props) => (
-        <Link href={`#/work-orders/${props.row.workOrder.split(' - ')[0]}`} underline={false}>
+        <Link href={`#/work-orders/${props.row.workOrder.split(" - ")[0]}`} underline={false}>
           {props.cellData}
         </Link>
       ),
@@ -2262,11 +2240,15 @@ export const Jobs = () => {
       cellFormatter: (props) => (
         <Box>
           <Box>
-            <Text fontSize="small" color="darkGrey">Expected:</Text>
+            <Text fontSize="small" color="darkGrey">
+              Expected:
+            </Text>
             <Text>{props.row.expectedQuantity}</Text>
           </Box>
           <Box pt="x1">
-            <Text fontSize="small" color="darkGrey">Actual:</Text>
+            <Text fontSize="small" color="darkGrey">
+              Actual:
+            </Text>
             <Text>{props.row.actualQuantity}</Text>
           </Box>
         </Box>
@@ -2278,11 +2260,15 @@ export const Jobs = () => {
       cellFormatter: (props) => (
         <Box>
           <Box>
-            <Text fontSize="small" color="darkGrey">Expected:</Text>
+            <Text fontSize="small" color="darkGrey">
+              Expected:
+            </Text>
             <Text>{props.row.expectedStart}</Text>
           </Box>
           <Box pt="x1">
-            <Text fontSize="small" color="darkGrey">Actual:</Text>
+            <Text fontSize="small" color="darkGrey">
+              Actual:
+            </Text>
             <Text>{props.row.actualStart}</Text>
           </Box>
         </Box>
@@ -2294,11 +2280,15 @@ export const Jobs = () => {
       cellFormatter: (props) => (
         <Box>
           <Box>
-            <Text fontSize="small" color="darkGrey">Expected:</Text>
+            <Text fontSize="small" color="darkGrey">
+              Expected:
+            </Text>
             <Text>{props.row.expectedEnd}</Text>
           </Box>
           <Box pt="x1">
-            <Text fontSize="small" color="darkGrey">Actual:</Text>
+            <Text fontSize="small" color="darkGrey">
+              Actual:
+            </Text>
             <Text>{props.row.actualEnd}</Text>
           </Box>
         </Box>
@@ -2310,11 +2300,15 @@ export const Jobs = () => {
       cellFormatter: (props) => (
         <Box>
           <Box>
-            <Text fontSize="small" color="darkGrey">Expected:</Text>
+            <Text fontSize="small" color="darkGrey">
+              Expected:
+            </Text>
             <Text>{props.row.expectedPeople}</Text>
           </Box>
           <Box pt="x1">
-            <Text fontSize="small" color="darkGrey">Actual:</Text>
+            <Text fontSize="small" color="darkGrey">
+              Actual:
+            </Text>
             <Text>{props.row.actualPeople}</Text>
           </Box>
         </Box>
@@ -2456,15 +2450,15 @@ export const Jobs = () => {
       <Page
         fullHeight
         breadcrumbs={breadcrumbs}
-        renderHeader={() => (
-          <Header
-            renderBreadcrumbs={() => breadcrumbs}
-            title="Jobs"
-            subtitle="Nulogy Site"
-          />
-        )}
+        renderHeader={() => <Header renderBreadcrumbs={() => breadcrumbs} title="Jobs" subtitle="Nulogy Site" />}
       >
-        <Flex gap="x2" px="x1" pb="x2" justifyContent={selectedRows.length > 0 ? "space-between" : "flex-end"} alignItems="center">
+        <Flex
+          gap="x2"
+          px="x1"
+          pb="x2"
+          justifyContent={selectedRows.length > 0 ? "space-between" : "flex-end"}
+          alignItems="center"
+        >
           {/* Bulk Actions - Left Side */}
           {selectedRows.length > 0 && (
             <Flex gap="x2" alignItems="center">
@@ -2479,7 +2473,7 @@ export const Jobs = () => {
               </IconicButton>
             </Flex>
           )}
-          
+
           {/* Regular Actions - Right Side */}
           <Flex gap="x2" alignItems="center">
             <IconicButton icon="getApp" tooltip="Import (CSV)">
@@ -2490,7 +2484,7 @@ export const Jobs = () => {
             </IconicButton>
           </Flex>
         </Flex>
-        
+
         <Table
           columns={tableColumns}
           rows={paginatedData}
@@ -2499,9 +2493,9 @@ export const Jobs = () => {
           onRowSelectionChange={handleRowSelectionChange}
           compact
         />
-        
+
         <Divider />
-        
+
         <Pagination
           justifyContent="flex-end"
           currentPage={currentPage}
@@ -2521,7 +2515,7 @@ export const Jobs = () => {
       </Page>
     </ApplicationFrame>
   );
-}; 
+};
 
 export const Customers = () => {
   const [isFilterSidebarOpen, setIsFilterSidebarOpen] = useState(false); // Closed by default
@@ -2533,50 +2527,50 @@ export const Customers = () => {
     description: "",
     inactive: "All",
   });
-  
+
   const [tableData, setTableData] = useState([
     {
       id: "1",
       name: "XYZ Manufacturing Corp",
       code: "123",
       description: "--",
-      inactive: "No"
+      inactive: "No",
     },
     {
       id: "2",
       name: "ABC Industries Ltd",
       code: "456",
       description: "--",
-      inactive: "Yes"
+      inactive: "Yes",
     },
     {
       id: "3",
       name: "Global Supply Solutions",
       code: "789",
       description: "Primary packaging supplier",
-      inactive: "No"
+      inactive: "No",
     },
     {
       id: "4",
       name: "Metro Food Distributors",
       code: "101",
       description: "Regional food distribution partner",
-      inactive: "No"
+      inactive: "No",
     },
     {
       id: "5",
       name: "Pacific Manufacturing Co",
       code: "202",
       description: "--",
-      inactive: "Yes"
+      inactive: "Yes",
     },
     {
       id: "6",
       name: "Eastern Logistics Group",
       code: "303",
       description: "Transportation and logistics services",
-      inactive: "No"
-    }
+      inactive: "No",
+    },
   ]);
 
   const handleFilterClick = () => {
@@ -2699,13 +2693,7 @@ export const Customers = () => {
       <Page
         fullHeight
         breadcrumbs={breadcrumbs}
-        renderHeader={() => (
-          <Header
-            renderBreadcrumbs={() => breadcrumbs}
-            title="Customers"
-            subtitle="Nulogy Site"
-          />
-        )}
+        renderHeader={() => <Header renderBreadcrumbs={() => breadcrumbs} title="Customers" subtitle="Nulogy Site" />}
       >
         <Flex gap="x2" px="x1" pb="x2" justifyContent="flex-end" alignItems="center">
           {/* Regular Actions - Right Side */}
@@ -2723,16 +2711,11 @@ export const Customers = () => {
             Export (CSV)
           </IconicButton>
         </Flex>
-        
-        <Table
-          columns={tableColumns}
-          rows={paginatedData}
-          keyField="id"
-          compact
-        />
-        
+
+        <Table columns={tableColumns} rows={paginatedData} keyField="id" compact />
+
         <Divider />
-        
+
         <Pagination
           justifyContent="flex-end"
           currentPage={currentPage}
@@ -2750,4 +2733,4 @@ export const Customers = () => {
       </Page>
     </ApplicationFrame>
   );
-}; 
+};

@@ -435,7 +435,13 @@ export const WithFilterOpen = () => {
           />
         )}
       >
-        <Flex gap="x2" px="x1" pb="x2" justifyContent={selectedRows.length > 0 ? "space-between" : "flex-end"} alignItems="center">
+        <Flex
+          gap="x2"
+          px="x1"
+          pb="x2"
+          justifyContent={selectedRows.length > 0 ? "space-between" : "flex-end"}
+          alignItems="center"
+        >
           {/* Bulk Actions - Left Side */}
           {selectedRows.length > 0 && (
             <Flex gap="x2" alignItems="center">
@@ -453,7 +459,7 @@ export const WithFilterOpen = () => {
               </IconicButton>
             </Flex>
           )}
-          
+
           {/* Regular Actions - Right Side */}
           <Flex gap="x2" alignItems="center">
             <IconicButton icon="add" tooltip="Create" onClick={handleCreateNewClick}>
@@ -656,4 +662,4 @@ export const WithFilterOpen = () => {
       </Page>
     </ApplicationFrame>
   );
-}; 
+};
