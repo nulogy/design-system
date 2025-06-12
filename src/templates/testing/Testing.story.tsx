@@ -2816,18 +2816,14 @@ export const WorkOrderPicking = () => {
   const handleCancel = (pickList) => {
     toast.success(`Cancelled pick list ${pickList.pickListNumber}`);
     setPickListData((prevData) =>
-      prevData.map((item) =>
-        item.id === pickList.id ? { ...item, status: "Cancelled" } : item
-      )
+      prevData.map((item) => (item.id === pickList.id ? { ...item, status: "Cancelled" } : item))
     );
   };
 
   const handleMarkReady = (pickList) => {
     toast.success(`Marked pick list ${pickList.pickListNumber} as ready to pick`);
     setPickListData((prevData) =>
-      prevData.map((item) =>
-        item.id === pickList.id ? { ...item, status: "Ready" } : item
-      )
+      prevData.map((item) => (item.id === pickList.id ? { ...item, status: "Ready" } : item))
     );
   };
 
@@ -2852,11 +2848,7 @@ export const WorkOrderPicking = () => {
       width: "40px",
       cellFormatter: (props) => {
         return props.row.status === "Pending" ? (
-          <IconicButton
-            icon="check"
-            tooltip="Mark as ready to pick"
-            onClick={() => handleMarkReady(props.row)}
-          />
+          <IconicButton icon="check" tooltip="Mark as ready to pick" onClick={() => handleMarkReady(props.row)} />
         ) : null;
       },
     },
@@ -2865,11 +2857,7 @@ export const WorkOrderPicking = () => {
       width: "40px",
       cellFormatter: (props) => {
         return props.row.status === "In-Progress" || props.row.status === "Pending" ? (
-          <IconicButton
-            icon="close"
-            tooltip="Cancel"
-            onClick={() => handleCancel(props.row)}
-          />
+          <IconicButton icon="close" tooltip="Cancel" onClick={() => handleCancel(props.row)} />
         ) : null;
       },
     },
@@ -2986,9 +2974,7 @@ export const WorkOrderPicking = () => {
             <Box py="x3">
               {/* Action Bar - No bulk actions, so always right-aligned */}
               <Flex gap="x2" px="x1" pb="x2" justifyContent="flex-end" alignItems="center">
-                <Button onClick={handleCreatePickList}>
-                  + Create Pick List
-                </Button>
+                <Button onClick={handleCreatePickList}>+ Create Pick List</Button>
               </Flex>
 
               <Table
@@ -3137,7 +3123,7 @@ export const ItemLocator = () => {
 
   const handleBulkDeleteItemsToLocate = () => {
     toast.success(`Deleted ${selectedItemsToLocate.length} items`);
-    setItemsToLocateData((prevData) => 
+    setItemsToLocateData((prevData) =>
       prevData.filter((row) => !selectedItemsToLocate.some((selected) => selected.id === row.id))
     );
     setSelectedItemsToLocate([]);
@@ -3196,22 +3182,14 @@ export const ItemLocator = () => {
       dataKey: "edit",
       width: "40px",
       cellFormatter: (props) => (
-        <IconicButton
-          icon="edit"
-          tooltip="Edit"
-          onClick={() => handleEditLocation(props.row)}
-        />
+        <IconicButton icon="edit" tooltip="Edit" onClick={() => handleEditLocation(props.row)} />
       ),
     },
     {
       dataKey: "addPallet",
       width: "40px",
       cellFormatter: (props) => (
-        <IconicButton
-          icon="add"
-          tooltip="Add pallet to item cart"
-          onClick={() => handleAddPalletToCart(props.row)}
-        />
+        <IconicButton icon="add" tooltip="Add pallet to item cart" onClick={() => handleAddPalletToCart(props.row)} />
       ),
     },
     {
@@ -3238,7 +3216,10 @@ export const ItemLocator = () => {
     },
   ];
 
-  const paginatedLocationResults = locationResultsData.slice((currentPage - 1) * rowsPerPage, currentPage * rowsPerPage);
+  const paginatedLocationResults = locationResultsData.slice(
+    (currentPage - 1) * rowsPerPage,
+    currentPage * rowsPerPage
+  );
 
   const filterFields = [
     {
@@ -3435,7 +3416,7 @@ export const ItemLocator = () => {
         {/* Items to Locate Section */}
         <Box mb="x4">
           <Heading3 mb="x2">Items to Locate</Heading3>
-          
+
           <Flex
             gap="x2"
             px="x1"
@@ -3486,7 +3467,7 @@ export const ItemLocator = () => {
         {/* Locate Items Section */}
         <Box>
           <Heading3 mb="x2">Locate Items</Heading3>
-          
+
           {/* Action Bar */}
           <Flex gap="x2" px="x1" pb="x2" justifyContent="space-between" alignItems="center">
             <Flex gap="x2" alignItems="center">
@@ -3565,5 +3546,3 @@ export const ItemLocator = () => {
     </ApplicationFrame>
   );
 };
-
-
