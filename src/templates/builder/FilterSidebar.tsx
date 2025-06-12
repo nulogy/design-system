@@ -16,6 +16,8 @@ interface FilterSidebarProps<T extends Record<string, any>> {
   onApply: (filters: T) => void;
   fields: FilterField[];
   initialFilters?: T;
+  overlay?: boolean | "show" | "hide" | "transparent";
+  closeOnOutsideClick?: boolean;
 }
 
 const FilterSidebar = <T extends Record<string, any>>({
@@ -24,6 +26,8 @@ const FilterSidebar = <T extends Record<string, any>>({
   onApply,
   fields,
   initialFilters = {} as T,
+  overlay = "show",
+  closeOnOutsideClick = true,
 }: FilterSidebarProps<T>) => {
   const [filters, setFilters] = useState<T>(initialFilters);
 
@@ -69,8 +73,8 @@ const FilterSidebar = <T extends Record<string, any>>({
           <QuietButton onClick={onClose}>Cancel</QuietButton>
         </Flex>
       }
-      overlay={false}
-      closeOnOutsideClick={false}
+      overlay={overlay}
+      closeOnOutsideClick={closeOnOutsideClick}
       width="400px"
     >
       <Flex gap="x3" flexDirection="column">

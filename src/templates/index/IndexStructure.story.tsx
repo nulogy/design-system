@@ -43,7 +43,6 @@ import {
   ToastContainer,
   toast,
 } from "../../index";
-import { InputField } from "../../Input/InputField";
 import type { TableColumnType } from "../../Table";
 import FilterSidebar from "../builder/FilterSidebar";
 import DeleteModal from "../builder/DeleteModal";
@@ -60,15 +59,8 @@ interface WorkOrder {
   plannedEnd: string;
 }
 
-const columns: TableColumnType<WorkOrder>[] = [
-  { dataKey: "id", label: "ID" },
-  { dataKey: "name", label: "Name" },
-  { dataKey: "status", label: "Status" },
-  { dataKey: "date", label: "Date" },
-];
-
 const meta = {
-  title: "Templates/Index/Default",
+  title: "Templates/Index",
   component: Page,
   parameters: {
     layout: "fullscreen",
@@ -83,8 +75,8 @@ const breadcrumbs = (
   </Breadcrumbs>
 );
 
-export const Default = () => {
-  const [isFilterSidebarOpen, setIsFilterSidebarOpen] = useState(false);
+export const WithFilterOpen = () => {
+  const [isFilterSidebarOpen, setIsFilterSidebarOpen] = useState(true);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isDetailsSidebarOpen, setIsDetailsSidebarOpen] = useState(false);
@@ -157,7 +149,7 @@ export const Default = () => {
     },
     {
       id: "20",
-      workOrderCode: "Bradon's Test Work Order",
+      workOrderCode: "Brandon's Test Work Order",
       customerName: "Company ABC",
       itemCode: "Brandon's Test Item",
       bomVersion: "",
@@ -367,64 +359,68 @@ export const Default = () => {
   };
 
   return (
-    <ApplicationFrame>
+    <ApplicationFrame
+      navBar={
+        <Navigation
+          appSwitcher={{
+            apps: {
+              "production-scheduling": {
+                url: "https://nulogy.com/",
+              },
+              "supplier-collaboration": {
+                url: "https://nulogy.com/",
+              },
+              "digital-quality-inspection": {
+                url: "https://nulogy.com/",
+              },
+              "shop-floor": {
+                url: "https://nulogy.com/",
+              },
+              "smart-factory": {
+                url: "https://nulogy.com/",
+              },
+              connections: {
+                url: "https://nulogy.com/",
+              },
+              data: {
+                url: "https://nulogy.com/",
+              },
+            },
+          }}
+          primaryNavigation={[
+            {
+              key: "home",
+              label: "Home",
+              type: "link" as const,
+              props: { href: "#" },
+            },
+            {
+              key: "records",
+              label: "Records",
+              type: "link" as const,
+              props: { href: "#" },
+            },
+          ]}
+          secondaryNavigation={[
+            {
+              key: "help",
+              label: "Help",
+              type: "link" as const,
+              props: { href: "#" },
+            },
+            {
+              key: "settings",
+              label: "Settings",
+              type: "link" as const,
+              props: { href: "#" },
+            },
+          ]}
+        />
+      }
+    >
       <ToastContainer />
-      <Navigation
-        appSwitcher={{
-          apps: {
-            "production-scheduling": {
-              url: "https://nulogy.com/",
-            },
-            "supplier-collaboration": {
-              url: "https://nulogy.com/",
-            },
-            "digital-quality-inspection": {
-              url: "https://nulogy.com/",
-            },
-            "shop-floor": {
-              url: "https://nulogy.com/",
-            },
-            "smart-factory": {
-              url: "https://nulogy.com/",
-            },
-            connections: {
-              url: "https://nulogy.com/",
-            },
-            data: {
-              url: "https://nulogy.com/",
-            },
-          },
-        }}
-        primaryNavigation={[
-          {
-            key: "home",
-            label: "Home",
-            type: "link" as const,
-            props: { href: "#" },
-          },
-          {
-            key: "records",
-            label: "Records",
-            type: "link" as const,
-            props: { href: "#" },
-          },
-        ]}
-        secondaryNavigation={[
-          {
-            key: "help",
-            label: "Help",
-            type: "link" as const,
-            props: { href: "#" },
-          },
-          {
-            key: "settings",
-            label: "Settings",
-            type: "link" as const,
-            props: { href: "#" },
-          },
-        ]}
-      />
       <Page
+        fullHeight
         breadcrumbs={breadcrumbs}
         renderHeader={() => (
           <Header
@@ -517,6 +513,8 @@ export const Default = () => {
           onApply={handleFilterApply}
           fields={filterFields}
           initialFilters={filters}
+          overlay={false}
+          closeOnOutsideClick={false}
         />
 
         <DeleteModal
@@ -658,4 +656,4 @@ export const Default = () => {
       </Page>
     </ApplicationFrame>
   );
-};
+}; 
