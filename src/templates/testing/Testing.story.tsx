@@ -1185,36 +1185,45 @@ export const WorkOrdersWithFilters = () => {
           justifyContent={selectedRows.length > 0 ? "space-between" : "flex-end"}
           alignItems="center"
         >
-          {/* Bulk Actions - Left Side */}
+          {/* Bulk Actions - Left Side (with selection count) */}
           {selectedRows.length > 0 && (
             <Flex gap="x2" alignItems="center">
               <Text mr="x2" color="darkGrey">
                 {selectedRows.length} selected
               </Text>
-              <IconicButton icon="close" tooltip="Close" onClick={handleBulkClose}>
-                Close
-              </IconicButton>
-              <IconicButton icon="delete" tooltip="Delete" onClick={handleBulkDelete}>
-                Delete
-              </IconicButton>
             </Flex>
           )}
 
-          {/* Regular Actions - Right Side */}
+          {/* Actions - Right Side (bulk actions replace regular actions when rows selected) */}
           <Flex gap="x2" alignItems="center">
-            <IconicButton icon="add" tooltip="Create" onClick={handleCreateNewClick}>
-              Create
-            </IconicButton>
-            <IconicButton icon="filter" tooltip="Filter" onClick={handleFilterClick}>
-              Filter
-            </IconicButton>
-            <VerticalDivider />
-            <IconicButton icon="getApp" tooltip="Import">
-              Import
-            </IconicButton>
-            <IconicButton icon="publish" tooltip="Export">
-              Export
-            </IconicButton>
+            {selectedRows.length > 0 ? (
+              <>
+                {/* Bulk actions replace primary/secondary actions */}
+                <IconicButton icon="close" tooltip="Close" onClick={handleBulkClose}>
+                  Close
+                </IconicButton>
+                <IconicButton icon="delete" tooltip="Delete" onClick={handleBulkDelete}>
+                  Delete
+                </IconicButton>
+              </>
+            ) : (
+              <>
+                {/* Regular table actions when no selection */}
+                <IconicButton icon="add" tooltip="Create" onClick={handleCreateNewClick}>
+                  Create
+                </IconicButton>
+                <IconicButton icon="filter" tooltip="Filter" onClick={handleFilterClick}>
+                  Filter
+                </IconicButton>
+                <VerticalDivider />
+                <IconicButton icon="getApp" tooltip="Import">
+                  Import
+                </IconicButton>
+                <IconicButton icon="publish" tooltip="Export">
+                  Export
+                </IconicButton>
+              </>
+            )}
           </Flex>
         </Flex>
 
@@ -2026,6 +2035,359 @@ export const ShipOrders = () => {
           initialFilters={filters}
           overlay={false}
           closeOnOutsideClick={false}
+        />
+      </Page>
+    </ApplicationFrame>
+  );
+};
+
+export const ShipOrdersV2 = () => {
+  const [isFilterSidebarOpen, setIsFilterSidebarOpen] = useState(false); // Closed by default
+  const [selectedRows, setSelectedRows] = useState([]); // Track selected rows
+  const [currentPage, setCurrentPage] = useState(1);
+  const rowsPerPage = 25;
+  const [filters, setFilters] = useState({
+    customerName: "",
+    shipped: "No", // Default to "No" as shown in image
+    shipTo: "",
+    expectedShipDateFrom: null,
+    expectedShipDateTo: null,
+    referenceNumber: "",
+    itemCode: "",
+  });
+
+  const [tableData, setTableData] = useState([
+    {
+      id: "59192",
+      code: "59192",
+      customer: "FRITO LAY",
+      shipped: "No",
+      shipTo: "DHL Mississauga",
+      expectedShip: "--",
+      reference: "--",
+      shipments: "1",
+      notes: "--",
+    },
+    {
+      id: "53633",
+      code: "aasa",
+      customer: "Colgate-Palmolive",
+      shipped: "No",
+      shipTo: "DHL Mississauga",
+      expectedShip: "--",
+      reference: "--",
+      shipments: "1",
+      notes: "--",
+    },
+    {
+      id: "18117",
+      code: "18117",
+      customer: "CPG",
+      shipped: "No",
+      shipTo: "DHL Mississauga",
+      expectedShip: "--",
+      reference: "--",
+      shipments: "1",
+      notes: "--",
+    },
+    {
+      id: "57415",
+      code: "CP001",
+      customer: "Colgate-Palmolive",
+      shipped: "No",
+      shipTo: "DHL Mississauga",
+      expectedShip: "2025-Jan-09 08:51",
+      reference: "--",
+      shipments: "0",
+      notes: "--",
+    },
+    {
+      id: "18758",
+      code: "AB-InDC",
+      customer: "CAB",
+      shipped: "No",
+      shipTo: "DHL Mississauga",
+      expectedShip: "2022-Apr-08 02:10",
+      reference: "--",
+      shipments: "1",
+      notes: "--",
+    },
+    {
+      id: "18053",
+      code: "18053",
+      customer: "CAB",
+      shipped: "No",
+      shipTo: "DHL Mississauga",
+      expectedShip: "2021-Sep-14 02:01",
+      reference: "--",
+      shipments: "0",
+      notes: "--",
+    },
+    {
+      id: "18052",
+      code: "18052",
+      customer: "CAB",
+      shipped: "No",
+      shipTo: "DHL Mississauga",
+      expectedShip: "2021-Sep-14 02:01",
+      reference: "--",
+      shipments: "0",
+      notes: "--",
+    },
+    {
+      id: "12182",
+      code: "999",
+      customer: "Sunshine Fruit Co.",
+      shipped: "No",
+      shipTo: "DHL Mississauga",
+      expectedShip: "2017-Dec-22 04:04",
+      reference: "--",
+      shipments: "3",
+      notes: "--",
+    },
+  ]);
+
+  const handleFilterClick = () => {
+    setIsFilterSidebarOpen(true);
+  };
+
+  const handlePageSelect = (page) => {
+    setCurrentPage(page);
+  };
+
+  const handleCreateNewClick = () => {
+    toast.success("Create ship order clicked");
+  };
+
+  // Bulk action handlers
+  const handleRowSelectionChange = (selectedRows) => {
+    setSelectedRows(selectedRows);
+    console.log("Selected rows:", selectedRows);
+  };
+
+  const handleBulkPrintShipOrderSheets = () => {
+    toast.success(`Print ship order sheets initiated for ${selectedRows.length} ship orders`);
+    setSelectedRows([]); // Clear selection after action
+  };
+
+  const handleBulkDelete = () => {
+    toast.success(`Deleted ${selectedRows.length} ship orders`);
+    // Remove selected ship orders from table data
+    setTableData((prevData) => prevData.filter((row) => !selectedRows.some((selected) => selected.id === row.id)));
+    setSelectedRows([]); // Clear selection after action
+  };
+
+  const tableColumns = [
+    {
+      label: "ID",
+      dataKey: "id",
+      cellFormatter: (props) => (
+        <Link href={`#/ship-orders/${props.row.id}`} underline={false}>
+          {props.cellData}
+        </Link>
+      ),
+    },
+    { label: "Code", dataKey: "code" },
+    {
+      label: "Customer",
+      dataKey: "customer",
+      cellFormatter: (props) => (
+        <Link href={`#/customers/${props.row.customer}`} underline={false}>
+          {props.cellData}
+        </Link>
+      ),
+    },
+    { label: "Shipped", dataKey: "shipped" },
+    {
+      label: "Ship to",
+      dataKey: "shipTo",
+      cellFormatter: (props) => (
+        <Link href={`#/ship-to/${props.row.shipTo}`} underline={false}>
+          {props.cellData}
+        </Link>
+      ),
+    },
+    { label: "Expected ship", dataKey: "expectedShip" },
+    { label: "Reference", dataKey: "reference" },
+    { label: "Shipments", dataKey: "shipments", align: "center" as const },
+    { label: "Notes", dataKey: "notes" },
+  ];
+
+  const paginatedData = tableData.slice((currentPage - 1) * rowsPerPage, currentPage * rowsPerPage);
+
+  const filterFields = [
+    {
+      key: "customerName",
+      label: "Customer name",
+      type: "text" as const,
+    },
+    {
+      key: "shipped",
+      label: "Shipped",
+      type: "select" as const,
+      options: [
+        { label: "No", value: "No" },
+        { label: "Yes", value: "Yes" },
+        { label: "All", value: "All" },
+      ],
+    },
+    {
+      key: "shipTo",
+      label: "Ship to",
+      type: "text" as const,
+    },
+    {
+      key: "expectedShipDateFrom",
+      label: "Expected ship date from",
+      type: "date" as const,
+    },
+    {
+      key: "expectedShipDateTo",
+      label: "Expected ship date to",
+      type: "date" as const,
+    },
+    {
+      key: "referenceNumber",
+      label: "Reference number",
+      type: "text" as const,
+    },
+    {
+      key: "itemCode",
+      label: "Item code",
+      type: "text" as const,
+    },
+  ];
+
+  const handleFilterApply = (newFilters) => {
+    setFilters(newFilters);
+    setIsFilterSidebarOpen(false);
+    toast.success("Filters applied successfully");
+  };
+
+  return (
+    <ApplicationFrame
+      navBar={
+        <Navigation
+          appSwitcher={{
+            apps: {
+              "production-scheduling": {
+                url: "https://nulogy.com/",
+              },
+              "supplier-collaboration": {
+                url: "https://nulogy.com/",
+              },
+            },
+          }}
+          primaryNavigation={[
+            {
+              key: "company",
+              label: "Company",
+              type: "link" as const,
+              props: { href: "#" },
+            },
+            {
+              key: "operations",
+              label: "Operations",
+              type: "link" as const,
+              props: { href: "#" },
+            },
+            {
+              key: "reports",
+              label: "Reports",
+              type: "link" as const,
+              props: { href: "#" },
+            },
+          ]}
+          secondaryNavigation={[
+            {
+              key: "create",
+              label: "Create",
+              type: "link" as const,
+              props: { href: "#" },
+            },
+          ]}
+        />
+      }
+    >
+      <ToastContainer />
+      <Page
+        fullHeight
+        breadcrumbs={breadcrumbs}
+        renderHeader={() => <Header renderBreadcrumbs={() => breadcrumbs} title="Ship orders" subtitle="Nulogy Site" />}
+      >
+        <Flex
+          gap="x2"
+          px="x1"
+          pb="x2"
+          justifyContent={selectedRows.length > 0 ? "space-between" : "flex-end"}
+          alignItems="center"
+        >
+          {/* Bulk Actions - Left Side (with selection count) */}
+          {selectedRows.length > 0 && (
+            <Flex gap="x2" alignItems="center">
+              <Text mr="x2" color="darkGrey">
+                {selectedRows.length} selected
+              </Text>
+            </Flex>
+          )}
+
+          {/* Actions - Right Side (bulk actions replace regular actions when rows selected) */}
+          <Flex gap="x2" alignItems="center">
+            {selectedRows.length > 0 ? (
+              <>
+                {/* Bulk actions replace primary/secondary actions */}
+                <IconicButton icon="print" tooltip="Print ship order sheets" onClick={handleBulkPrintShipOrderSheets}>
+                  Print ship order sheets
+                </IconicButton>
+                <IconicButton icon="delete" tooltip="Delete" onClick={handleBulkDelete}>
+                  Delete
+                </IconicButton>
+              </>
+            ) : (
+              <>
+                {/* Regular table actions when no selection */}
+                <IconicButton icon="add" tooltip="Create ship order" onClick={handleCreateNewClick}>
+                  Create ship order
+                </IconicButton>
+                <IconicButton icon="filter" tooltip="Filters" onClick={handleFilterClick}>
+                  Filters
+                </IconicButton>
+                <VerticalDivider />
+                <IconicButton icon="getApp" tooltip="Import (CSV)">
+                  Import (CSV)
+                </IconicButton>
+                <IconicButton icon="publish" tooltip="Export (CSV)">
+                  Export (CSV)
+                </IconicButton>
+              </>
+            )}
+          </Flex>
+        </Flex>
+
+        <Table
+          columns={tableColumns}
+          rows={paginatedData}
+          hasSelectableRows
+          keyField="id"
+          onRowSelectionChange={handleRowSelectionChange}
+          compact
+        />
+
+        <Divider />
+
+        <Pagination
+          justifyContent="flex-end"
+          currentPage={currentPage}
+          totalPages={Math.ceil(tableData.length / rowsPerPage)}
+          onSelectPage={handlePageSelect}
+        />
+
+        <FilterSidebar
+          isOpen={isFilterSidebarOpen}
+          onClose={() => setIsFilterSidebarOpen(false)}
+          onApply={handleFilterApply}
+          fields={filterFields}
+          initialFilters={filters}
         />
       </Page>
     </ApplicationFrame>
@@ -3534,6 +3896,359 @@ export const ItemLocator = () => {
             </Box>
           )}
         </Box>
+
+        <FilterSidebar
+          isOpen={isFilterSidebarOpen}
+          onClose={() => setIsFilterSidebarOpen(false)}
+          onApply={handleFilterApply}
+          fields={filterFields}
+          initialFilters={filters}
+        />
+      </Page>
+    </ApplicationFrame>
+  );
+};
+
+export const ShipOrdersV3 = () => {
+  const [isFilterSidebarOpen, setIsFilterSidebarOpen] = useState(false); // Closed by default
+  const [selectedRows, setSelectedRows] = useState([]); // Track selected rows
+  const [currentPage, setCurrentPage] = useState(1);
+  const rowsPerPage = 25;
+  const [filters, setFilters] = useState({
+    customerName: "",
+    shipped: "No", // Default to "No" as shown in image
+    shipTo: "",
+    expectedShipDateFrom: null,
+    expectedShipDateTo: null,
+    referenceNumber: "",
+    itemCode: "",
+  });
+
+  const [tableData, setTableData] = useState([
+    {
+      id: "59192",
+      code: "59192",
+      customer: "FRITO LAY",
+      shipped: "No",
+      shipTo: "DHL Mississauga",
+      expectedShip: "--",
+      reference: "--",
+      shipments: "1",
+      notes: "--",
+    },
+    {
+      id: "53633",
+      code: "aasa",
+      customer: "Colgate-Palmolive",
+      shipped: "No",
+      shipTo: "DHL Mississauga",
+      expectedShip: "--",
+      reference: "--",
+      shipments: "1",
+      notes: "--",
+    },
+    {
+      id: "18117",
+      code: "18117",
+      customer: "CPG",
+      shipped: "No",
+      shipTo: "DHL Mississauga",
+      expectedShip: "--",
+      reference: "--",
+      shipments: "1",
+      notes: "--",
+    },
+    {
+      id: "57415",
+      code: "CP001",
+      customer: "Colgate-Palmolive",
+      shipped: "No",
+      shipTo: "DHL Mississauga",
+      expectedShip: "2025-Jan-09 08:51",
+      reference: "--",
+      shipments: "0",
+      notes: "--",
+    },
+    {
+      id: "18758",
+      code: "AB-InDC",
+      customer: "CAB",
+      shipped: "No",
+      shipTo: "DHL Mississauga",
+      expectedShip: "2022-Apr-08 02:10",
+      reference: "--",
+      shipments: "1",
+      notes: "--",
+    },
+    {
+      id: "18053",
+      code: "18053",
+      customer: "CAB",
+      shipped: "No",
+      shipTo: "DHL Mississauga",
+      expectedShip: "2021-Sep-14 02:01",
+      reference: "--",
+      shipments: "0",
+      notes: "--",
+    },
+    {
+      id: "18052",
+      code: "18052",
+      customer: "CAB",
+      shipped: "No",
+      shipTo: "DHL Mississauga",
+      expectedShip: "2021-Sep-14 02:01",
+      reference: "--",
+      shipments: "0",
+      notes: "--",
+    },
+    {
+      id: "12182",
+      code: "999",
+      customer: "Sunshine Fruit Co.",
+      shipped: "No",
+      shipTo: "DHL Mississauga",
+      expectedShip: "2017-Dec-22 04:04",
+      reference: "--",
+      shipments: "3",
+      notes: "--",
+    },
+  ]);
+
+  const handleFilterClick = () => {
+    setIsFilterSidebarOpen(true);
+  };
+
+  const handlePageSelect = (page) => {
+    setCurrentPage(page);
+  };
+
+  const handleCreateNewClick = () => {
+    toast.success("Create ship order clicked");
+  };
+
+  // Bulk action handlers
+  const handleRowSelectionChange = (selectedRows) => {
+    setSelectedRows(selectedRows);
+    console.log("Selected rows:", selectedRows);
+  };
+
+  const handleBulkPrintShipOrderSheets = () => {
+    toast.success(`Print ship order sheets initiated for ${selectedRows.length} ship orders`);
+    setSelectedRows([]); // Clear selection after action
+  };
+
+  const handleBulkDelete = () => {
+    toast.success(`Deleted ${selectedRows.length} ship orders`);
+    // Remove selected ship orders from table data
+    setTableData((prevData) => prevData.filter((row) => !selectedRows.some((selected) => selected.id === row.id)));
+    setSelectedRows([]); // Clear selection after action
+  };
+
+  const tableColumns = [
+    {
+      label: "ID",
+      dataKey: "id",
+      cellFormatter: (props) => (
+        <Link href={`#/ship-orders/${props.row.id}`} underline={false}>
+          {props.cellData}
+        </Link>
+      ),
+    },
+    { label: "Code", dataKey: "code" },
+    {
+      label: "Customer",
+      dataKey: "customer",
+      cellFormatter: (props) => (
+        <Link href={`#/customers/${props.row.customer}`} underline={false}>
+          {props.cellData}
+        </Link>
+      ),
+    },
+    { label: "Shipped", dataKey: "shipped" },
+    {
+      label: "Ship to",
+      dataKey: "shipTo",
+      cellFormatter: (props) => (
+        <Link href={`#/ship-to/${props.row.shipTo}`} underline={false}>
+          {props.cellData}
+        </Link>
+      ),
+    },
+    { label: "Expected ship", dataKey: "expectedShip" },
+    { label: "Reference", dataKey: "reference" },
+    { label: "Shipments", dataKey: "shipments", align: "center" as const },
+    { label: "Notes", dataKey: "notes" },
+  ];
+
+  const paginatedData = tableData.slice((currentPage - 1) * rowsPerPage, currentPage * rowsPerPage);
+
+  const filterFields = [
+    {
+      key: "customerName",
+      label: "Customer name",
+      type: "text" as const,
+    },
+    {
+      key: "shipped",
+      label: "Shipped",
+      type: "select" as const,
+      options: [
+        { label: "No", value: "No" },
+        { label: "Yes", value: "Yes" },
+        { label: "All", value: "All" },
+      ],
+    },
+    {
+      key: "shipTo",
+      label: "Ship to",
+      type: "text" as const,
+    },
+    {
+      key: "expectedShipDateFrom",
+      label: "Expected ship date from",
+      type: "date" as const,
+    },
+    {
+      key: "expectedShipDateTo",
+      label: "Expected ship date to",
+      type: "date" as const,
+    },
+    {
+      key: "referenceNumber",
+      label: "Reference number",
+      type: "text" as const,
+    },
+    {
+      key: "itemCode",
+      label: "Item code",
+      type: "text" as const,
+    },
+  ];
+
+  const handleFilterApply = (newFilters) => {
+    setFilters(newFilters);
+    setIsFilterSidebarOpen(false);
+    toast.success("Filters applied successfully");
+  };
+
+  return (
+    <ApplicationFrame
+      navBar={
+        <Navigation
+          appSwitcher={{
+            apps: {
+              "production-scheduling": {
+                url: "https://nulogy.com/",
+              },
+              "supplier-collaboration": {
+                url: "https://nulogy.com/",
+              },
+            },
+          }}
+          primaryNavigation={[
+            {
+              key: "company",
+              label: "Company",
+              type: "link" as const,
+              props: { href: "#" },
+            },
+            {
+              key: "operations",
+              label: "Operations",
+              type: "link" as const,
+              props: { href: "#" },
+            },
+            {
+              key: "reports",
+              label: "Reports",
+              type: "link" as const,
+              props: { href: "#" },
+            },
+          ]}
+          secondaryNavigation={[
+            {
+              key: "create",
+              label: "Create",
+              type: "link" as const,
+              props: { href: "#" },
+            },
+          ]}
+        />
+      }
+    >
+      <ToastContainer />
+      <Page
+        fullHeight
+        breadcrumbs={breadcrumbs}
+        renderHeader={() => <Header renderBreadcrumbs={() => breadcrumbs} title="Ship orders" subtitle="Nulogy Site" />}
+      >
+        <Flex
+          gap="x2"
+          px="x1"
+          pb="x2"
+          justifyContent={selectedRows.length > 0 ? "space-between" : "flex-end"}
+          alignItems="center"
+        >
+          {/* Bulk Actions - Left Side (with selection count) */}
+          {selectedRows.length > 0 && (
+            <Flex gap="x2" alignItems="center">
+              <Text mr="x2" color="darkGrey">
+                {selectedRows.length} selected
+              </Text>
+            </Flex>
+          )}
+
+          {/* Actions - Right Side (bulk actions replace regular actions when rows selected) */}
+          <Flex gap="x2" alignItems="center">
+            {selectedRows.length > 0 ? (
+              <>
+                {/* Bulk actions replace primary actions */}
+                <IconicButton icon="print" tooltip="Print ship order sheets" onClick={handleBulkPrintShipOrderSheets}>
+                  Print ship order sheets
+                </IconicButton>
+                <IconicButton icon="delete" tooltip="Delete" onClick={handleBulkDelete}>
+                  Delete
+                </IconicButton>
+              </>
+            ) : (
+              <>
+                {/* Regular table actions when no selection */}
+                <IconicButton icon="add" tooltip="Create ship order" onClick={handleCreateNewClick}>
+                  Create ship order
+                </IconicButton>
+                <IconicButton icon="filter" tooltip="Filter" onClick={handleFilterClick}>
+                  Filter
+                </IconicButton>
+                <VerticalDivider />
+                <IconicButton icon="getApp" tooltip="Import (CSV)">
+                  Import (CSV)
+                </IconicButton>
+                <IconicButton icon="publish" tooltip="Export (CSV)">
+                  Export (CSV)
+                </IconicButton>
+              </>
+            )}
+          </Flex>
+        </Flex>
+
+        <Table
+          columns={tableColumns}
+          rows={paginatedData}
+          hasSelectableRows
+          keyField="id"
+          onRowSelectionChange={handleRowSelectionChange}
+          compact
+        />
+
+        <Divider />
+
+        <Pagination
+          justifyContent="flex-end"
+          currentPage={currentPage}
+          totalPages={Math.ceil(tableData.length / rowsPerPage)}
+          onSelectPage={handlePageSelect}
+        />
 
         <FilterSidebar
           isOpen={isFilterSidebarOpen}
