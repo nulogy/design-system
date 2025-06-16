@@ -262,30 +262,33 @@ export const IndexToRecordFlow = () => {
         </Page>
 
         <FilterSidebar
-          title="Filters"
           isOpen={isFilterSidebarOpen}
           onClose={() => setIsFilterSidebarOpen(false)}
           onApply={handleFilterApply}
           fields={filterFields}
         />
 
-        <Sidebar
-          isOpen={isCreateSidebarOpen}
-          onRequestClose={() => setIsCreateSidebarOpen(false)}
-          title="Create customer"
-        >
+        <Sidebar isOpen={isCreateSidebarOpen} onClose={() => setIsCreateSidebarOpen(false)} title="Create customer">
           <Form onSubmit={handleCreateCustomer}>
             <FormSection>
-              <FieldLabel htmlFor="name">Name</FieldLabel>
+              <FieldLabel labelText="Name" htmlFor="name">
+                Name
+              </FieldLabel>
               <Input id="name" name="name" required />
 
-              <FieldLabel htmlFor="code">Code</FieldLabel>
+              <FieldLabel labelText="Code" htmlFor="code">
+                Code
+              </FieldLabel>
               <Input id="code" name="code" required />
 
-              <FieldLabel htmlFor="description">Description</FieldLabel>
+              <FieldLabel labelText="Description" htmlFor="description">
+                Description
+              </FieldLabel>
               <Textarea id="description" name="description" />
 
-              <FieldLabel htmlFor="inactive">Status</FieldLabel>
+              <FieldLabel labelText="Status" htmlFor="inactive">
+                Status
+              </FieldLabel>
               <select id="inactive" name="inactive">
                 <option value="false">Active</option>
                 <option value="true">Inactive</option>
