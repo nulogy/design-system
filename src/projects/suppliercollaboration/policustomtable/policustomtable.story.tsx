@@ -36,7 +36,7 @@ import {
   Alert,
   List,
   ListItem,
-  } from "../../..";
+} from "../../..";
 
 export default {
   title: "Projects/Supplier Collaboration/POLI custom table",
@@ -72,7 +72,7 @@ export const CustomView = () => {
   // Validation errors state
   const [validationErrors, setValidationErrors] = useState({});
   const [savedView1ValidationErrors, setSavedView1ValidationErrors] = useState({});
-  
+
   // Submit validation state
   const [showValidationAlert, setShowValidationAlert] = useState(false);
   const [showSavedView1ValidationAlert, setShowSavedView1ValidationAlert] = useState(false);
@@ -81,7 +81,7 @@ export const CustomView = () => {
   const [savedView1TitleError, setSavedView1TitleError] = useState("");
   const [newViewErrorDetails, setNewViewErrorDetails] = useState({ titleError: false, rowErrors: [] });
   const [savedView1ErrorDetails, setSavedView1ErrorDetails] = useState({ titleError: false, rowErrors: [] });
-  
+
   // Focus tracking state
   const [focusedRowId, setFocusedRowId] = useState(null);
   const [savedView1FocusedRowId, setSavedView1FocusedRowId] = useState(null);
@@ -96,11 +96,11 @@ export const CustomView = () => {
     setTimeout(() => {
       const activeElement = document.activeElement;
       const isStillInSameRow = activeElement && activeElement.closest(`[data-row-id="${rowId}"]`);
-      
+
       if (!isStillInSameRow) {
         setFocusedRow(null);
         // Validate the row that lost focus
-        const currentRow = data.find(r => r.id === rowId);
+        const currentRow = data.find((r) => r.id === rowId);
         if (currentRow && isCustomRow(rowId)) {
           const errors = validateCustomRow(currentRow);
           updateValidationErrors(rowId, errors, setErrors);
@@ -112,38 +112,38 @@ export const CustomView = () => {
   // Validation functions
   const validateCustomRow = (row) => {
     if (isDefaultRow(row.id)) return {};
-    
-    const hasLabel = row['columnLabel'] && row['columnLabel'].trim() !== '';
-    const hasDatabase = row['databaseTable'] !== null && row['databaseTable'] !== undefined;
-    const isToggleEnabled = row['filterVisible'] === true;
+
+    const hasLabel = row["columnLabel"] && row["columnLabel"].trim() !== "";
+    const hasDatabase = row["databaseTable"] !== null && row["databaseTable"] !== undefined;
+    const isToggleEnabled = row["filterVisible"] === true;
     const errors = {};
-    
+
     // If toggle is enabled, both fields are required
     if (isToggleEnabled) {
-      if (!hasLabel) errors['columnLabel'] = 'Column label is required when filter is enabled';
-      if (!hasDatabase) errors['databaseTable'] = 'Database entity is required when filter is enabled';
+      if (!hasLabel) errors["columnLabel"] = "Column label is required when filter is enabled";
+      if (!hasDatabase) errors["databaseTable"] = "Database entity is required when filter is enabled";
     } else {
       // If toggle is disabled, but one field is filled, the other is required
       if ((hasLabel && !hasDatabase) || (hasDatabase && !hasLabel)) {
-        if (!hasLabel) errors['columnLabel'] = 'Column label is required';
-        if (!hasDatabase) errors['databaseTable'] = 'Database entity is required';
+        if (!hasLabel) errors["columnLabel"] = "Column label is required";
+        if (!hasDatabase) errors["databaseTable"] = "Database entity is required";
       }
     }
-    
+
     return errors;
   };
 
   const updateValidationErrors = (rowId, errors, setErrors) => {
-    setErrors(prev => ({
+    setErrors((prev) => ({
       ...prev,
-      [rowId]: errors
+      [rowId]: errors,
     }));
   };
 
   // Validate all custom rows
   const validateAllCustomRows = (data, setErrors) => {
     const allErrors = {};
-    data.forEach(row => {
+    data.forEach((row) => {
       if (isCustomRow(row.id)) {
         const errors = validateCustomRow(row);
         if (Object.keys(errors).length > 0) {
@@ -159,9 +159,9 @@ export const CustomView = () => {
     let isValid = true;
     let errorDetails = {
       titleError: false,
-      rowErrors: []
+      rowErrors: [],
     };
-    
+
     // Validate title
     if (!newViewTitle.trim()) {
       setNewViewTitleError("Title is required");
@@ -170,79 +170,83 @@ export const CustomView = () => {
     } else {
       setNewViewTitleError("");
     }
-    
+
     // Validate all custom rows and collect error details
-    tableRowsData.forEach(row => {
+    tableRowsData.forEach((row) => {
       if (isCustomRow(row.id)) {
         const rowErrors = validateCustomRow(row);
         if (Object.keys(rowErrors).length > 0) {
           const rowNumber = row.id - DEFAULT_ROWS_COUNT;
           const formattedRowNumber = rowNumber < 10 ? `0${rowNumber}` : rowNumber;
-          
-          if (rowErrors['columnLabel']) {
+
+          if (rowErrors["columnLabel"]) {
             errorDetails.rowErrors.push({
               rowId: row.id,
               rowNumber: formattedRowNumber,
-              type: 'label',
-              message: 'Enter a custom label'
+              type: "label",
+              message: "Enter a custom label",
             });
           }
-          if (rowErrors['databaseTable']) {
+          if (rowErrors["databaseTable"]) {
             errorDetails.rowErrors.push({
               rowId: row.id,
               rowNumber: formattedRowNumber,
-              type: 'database',
-              message: 'Select a database entity'
+              type: "database",
+              message: "Select a database entity",
             });
           }
           isValid = false;
         }
       }
     });
-    
+
     // Update validation errors state
     validateAllCustomRows(tableRowsData, setValidationErrors);
-    
+
     setShowValidationAlert(!isValid);
-    
+
     // Store error details for Alert component
     if (!isValid) {
       setNewViewErrorDetails(errorDetails);
-      
+
       // Scroll to top of modal if validation failed
       setTimeout(() => {
         // First try to find the Alert element
         const alertElement = document.querySelector('[role="alert"]');
-        
+
         if (alertElement) {
           // Find the scrollable parent container
           let scrollableParent = alertElement.parentElement;
           while (scrollableParent && scrollableParent !== document.body) {
             const style = window.getComputedStyle(scrollableParent);
-            if (style.overflow === 'auto' || style.overflow === 'scroll' || 
-                style.overflowY === 'auto' || style.overflowY === 'scroll') {
+            if (
+              style.overflow === "auto" ||
+              style.overflow === "scroll" ||
+              style.overflowY === "auto" ||
+              style.overflowY === "scroll"
+            ) {
               break;
             }
             scrollableParent = scrollableParent.parentElement;
           }
-          
+
           // Scroll the container to top
           if (scrollableParent && scrollableParent.scrollTo) {
-            scrollableParent.scrollTo({ top: 0, behavior: 'smooth' });
+            scrollableParent.scrollTo({ top: 0, behavior: "smooth" });
           } else {
             // Fallback: use scrollIntoView with different positioning
-            alertElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            alertElement.scrollIntoView({ behavior: "smooth", block: "nearest" });
           }
         } else {
           // Try to find modal and scroll to top
           const modalElement = document.querySelector('[role="dialog"]');
           if (modalElement && modalElement.scrollTo) {
-            modalElement.scrollTo({ top: 0, behavior: 'smooth' });
+            modalElement.scrollTo({ top: 0, behavior: "smooth" });
           }
         }
       }, 100);
     }
-    
+
     return isValid;
   };
 
@@ -250,9 +254,9 @@ export const CustomView = () => {
     let isValid = true;
     let errorDetails = {
       titleError: false,
-      rowErrors: []
+      rowErrors: [],
     };
-    
+
     // Validate title
     if (!savedView1Title.trim()) {
       setSavedView1TitleError("Title is required");
@@ -261,79 +265,83 @@ export const CustomView = () => {
     } else {
       setSavedView1TitleError("");
     }
-    
+
     // Validate all custom rows and collect error details
-    savedView1Data.forEach(row => {
+    savedView1Data.forEach((row) => {
       if (isCustomRow(row.id)) {
         const rowErrors = validateCustomRow(row);
         if (Object.keys(rowErrors).length > 0) {
           const rowNumber = row.id - DEFAULT_ROWS_COUNT;
           const formattedRowNumber = rowNumber < 10 ? `0${rowNumber}` : rowNumber;
-          
-          if (rowErrors['columnLabel']) {
+
+          if (rowErrors["columnLabel"]) {
             errorDetails.rowErrors.push({
               rowId: row.id,
               rowNumber: formattedRowNumber,
-              type: 'label',
-              message: 'Enter a custom label'
+              type: "label",
+              message: "Enter a custom label",
             });
           }
-          if (rowErrors['databaseTable']) {
+          if (rowErrors["databaseTable"]) {
             errorDetails.rowErrors.push({
               rowId: row.id,
               rowNumber: formattedRowNumber,
-              type: 'database',
-              message: 'Select a database entity'
+              type: "database",
+              message: "Select a database entity",
             });
           }
           isValid = false;
         }
       }
     });
-    
+
     // Update validation errors state
     validateAllCustomRows(savedView1Data, setSavedView1ValidationErrors);
-    
+
     setShowSavedView1ValidationAlert(!isValid);
-    
+
     // Store error details for Alert component
     if (!isValid) {
       setSavedView1ErrorDetails(errorDetails);
-      
+
       // Scroll to top of modal if validation failed
       setTimeout(() => {
         // First try to find the Alert element
         const alertElement = document.querySelector('[role="alert"]');
-        
+
         if (alertElement) {
           // Find the scrollable parent container
           let scrollableParent = alertElement.parentElement;
           while (scrollableParent && scrollableParent !== document.body) {
             const style = window.getComputedStyle(scrollableParent);
-            if (style.overflow === 'auto' || style.overflow === 'scroll' || 
-                style.overflowY === 'auto' || style.overflowY === 'scroll') {
+            if (
+              style.overflow === "auto" ||
+              style.overflow === "scroll" ||
+              style.overflowY === "auto" ||
+              style.overflowY === "scroll"
+            ) {
               break;
             }
             scrollableParent = scrollableParent.parentElement;
           }
-          
+
           // Scroll the container to top
           if (scrollableParent && scrollableParent.scrollTo) {
-            scrollableParent.scrollTo({ top: 0, behavior: 'smooth' });
+            scrollableParent.scrollTo({ top: 0, behavior: "smooth" });
           } else {
             // Fallback: use scrollIntoView with different positioning
-            alertElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            alertElement.scrollIntoView({ behavior: "smooth", block: "nearest" });
           }
         } else {
           // Try to find modal and scroll to top
           const modalElement = document.querySelector('[role="dialog"]');
           if (modalElement && modalElement.scrollTo) {
-            modalElement.scrollTo({ top: 0, behavior: 'smooth' });
+            modalElement.scrollTo({ top: 0, behavior: "smooth" });
           }
         }
       }, 100);
     }
-    
+
     return isValid;
   };
 
@@ -342,7 +350,7 @@ export const CustomView = () => {
     const titleInput = document.querySelector('input[placeholder="Enter custom view title"]') as HTMLInputElement;
     if (titleInput) {
       titleInput.focus();
-      titleInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      titleInput.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   };
 
@@ -350,31 +358,31 @@ export const CustomView = () => {
     const rowSelector = `[data-row-id="${rowId}"]`;
     const rowElement = document.querySelector(rowSelector);
     if (rowElement) {
-      if (type === 'label') {
-        const inputElement = rowElement.querySelector('input') as HTMLInputElement;
+      if (type === "label") {
+        const inputElement = rowElement.querySelector("input") as HTMLInputElement;
         if (inputElement) {
           inputElement.focus();
-          inputElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          inputElement.scrollIntoView({ behavior: "smooth", block: "center" });
         }
-      } else if (type === 'database') {
+      } else if (type === "database") {
         // First scroll the row into view
-        rowElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        
+        rowElement.scrollIntoView({ behavior: "smooth", block: "center" });
+
         setTimeout(() => {
           // Try clicking on the second column (database column)
           const allBoxes = rowElement.querySelectorAll('[class*="Box"]');
-          
+
           // Try to click the second Box (should be the database column)
           if (allBoxes.length >= 2) {
             (allBoxes[1] as HTMLElement).click();
             return;
           }
-          
+
           // Fallback: click somewhere in the right area of the row
           const rowRect = rowElement.getBoundingClientRect();
-          const clickX = rowRect.left + (rowRect.width * 0.7); // Click 70% across the row
-          const clickY = rowRect.top + (rowRect.height / 2); // Click middle height
-          
+          const clickX = rowRect.left + rowRect.width * 0.7; // Click 70% across the row
+          const clickY = rowRect.top + rowRect.height / 2; // Click middle height
+
           const elementAtPoint = document.elementFromPoint(clickX, clickY);
           if (elementAtPoint) {
             (elementAtPoint as HTMLElement).click();
@@ -386,13 +394,15 @@ export const CustomView = () => {
 
   // Helper function to render enhanced Alert content
   const renderAlertContent = (errorDetails, isNewView = true) => {
-    const focusTitle = isNewView ? focusTitleInput : () => {
-      const titleInput = document.querySelector(`input[value="${savedView1Title}"]`) as HTMLInputElement;
-      if (titleInput) {
-        titleInput.focus();
-        titleInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
-    };
+    const focusTitle = isNewView
+      ? focusTitleInput
+      : () => {
+          const titleInput = document.querySelector(`input[value="${savedView1Title}"]`) as HTMLInputElement;
+          if (titleInput) {
+            titleInput.focus();
+            titleInput.scrollIntoView({ behavior: "smooth", block: "center" });
+          }
+        };
 
     return (
       <Box>
@@ -400,19 +410,31 @@ export const CustomView = () => {
         <List>
           {errorDetails.titleError && (
             <ListItem>
-              Add a <Link href="#" onClick={(e) => { e.preventDefault(); focusTitle(); }}>
+              Add a{" "}
+              <Link
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  focusTitle();
+                }}
+              >
                 title
-              </Link>.
+              </Link>
+              .
             </ListItem>
           )}
           {errorDetails.rowErrors.map((error, index) => (
             <ListItem key={`row-${index}`}>
-              <Link 
-                href="#" 
-                onClick={(e) => { e.preventDefault(); focusRowInput(error.rowId, error.type); }}
+              <Link
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  focusRowInput(error.rowId, error.type);
+                }}
               >
                 Custom row {error.rowNumber}
-              </Link>: {error.message}.
+              </Link>
+              : {error.message}.
             </ListItem>
           ))}
         </List>
@@ -439,9 +461,14 @@ export const CustomView = () => {
   const [genericConfigErrorDetails, setGenericConfigErrorDetails] = useState({ titleError: false, rowErrors: [] });
   const [genericConfigFocusedRowId, setGenericConfigFocusedRowId] = useState(null);
   const [customViews, setCustomViews] = useState([
-    { id: "saved-view-1", title: "Saved view 1", description: "This view includes additional custom fields and priority levels for better project tracking and management." },
+    {
+      id: "saved-view-1",
+      title: "Saved view 1",
+      description:
+        "This view includes additional custom fields and priority levels for better project tracking and management.",
+    },
     { id: "saved-view-2", title: "Saved view 2", description: "" },
-    { id: "saved-view-3", title: "Saved view 3 with a little longer label", description: "" }
+    { id: "saved-view-3", title: "Saved view 3 with a little longer label", description: "" },
   ]);
   const [tableRowsData, setTableRowsData] = useState([
     {
@@ -985,7 +1012,7 @@ export const CustomView = () => {
       )
     );
     // Clear validation errors for this row
-    setValidationErrors(prev => {
+    setValidationErrors((prev) => {
       const newErrors = { ...prev };
       delete newErrors[id];
       return newErrors;
@@ -1009,7 +1036,7 @@ export const CustomView = () => {
       )
     );
     // Clear validation errors for this row
-    setSavedView1ValidationErrors(prev => {
+    setSavedView1ValidationErrors((prev) => {
       const newErrors = { ...prev };
       delete newErrors[id];
       return newErrors;
@@ -1023,13 +1050,13 @@ export const CustomView = () => {
   };
 
   const handleSavedView1ToggleChange = (id, field) => {
-    setSavedView1Data((prevRows) => 
+    setSavedView1Data((prevRows) =>
       prevRows.map((row) => (row.id === id ? { ...row, [field]: !row[field], isEdited: true } : row))
     );
   };
 
   const handleToggleChange = (id, field) => {
-    setTableRowsData((prevRows) => 
+    setTableRowsData((prevRows) =>
       prevRows.map((row) => (row.id === id ? { ...row, [field]: !row[field], isEdited: true } : row))
     );
   };
@@ -1042,27 +1069,27 @@ export const CustomView = () => {
     if (!validateNewViewSubmit()) {
       return;
     }
-    
+
     // Create new view object
     const newView = {
       id: `custom-view-${Date.now()}`,
       title: newViewTitle,
-      description: ""
+      description: "",
     };
-    
+
     // Add to custom views list
-    setCustomViews(prev => [...prev, newView]);
-    
+    setCustomViews((prev) => [...prev, newView]);
+
     // Set as selected view
     setSelectedView(newView.title);
-    
+
     // Close modal and reset state
     setIsModalOpen(false);
     setShowValidationAlert(false);
     setNewViewTitle("");
     setNewViewTitleError("");
     setNewViewErrorDetails({ titleError: false, rowErrors: [] });
-    
+
     toast.success(`Custom view saved and applied`);
   };
 
@@ -1070,24 +1097,24 @@ export const CustomView = () => {
     if (!validateNewViewSubmit()) {
       return;
     }
-    
+
     // Create new view object
     const newView = {
       id: `custom-view-${Date.now()}`,
       title: newViewTitle,
-      description: ""
+      description: "",
     };
-    
+
     // Add to custom views list
-    setCustomViews(prev => [...prev, newView]);
-    
+    setCustomViews((prev) => [...prev, newView]);
+
     // Close modal and reset state
     setIsModalOpen(false);
     setShowValidationAlert(false);
     setNewViewTitle("");
     setNewViewTitleError("");
     setNewViewErrorDetails({ titleError: false, rowErrors: [] });
-    
+
     toast.success(`Custom view saved`);
   };
 
@@ -1095,25 +1122,25 @@ export const CustomView = () => {
     if (!validateSavedView1Submit()) {
       return;
     }
-    
+
     // Update the existing view in the custom views list
-    setCustomViews(prev => prev.map(view => 
-      view.id === "saved-view-1" 
-        ? { ...view, title: savedView1Title, description: savedView1Description }
-        : view
-    ));
-    
+    setCustomViews((prev) =>
+      prev.map((view) =>
+        view.id === "saved-view-1" ? { ...view, title: savedView1Title, description: savedView1Description } : view
+      )
+    );
+
     // If this view is currently selected, update the selected view name
     if (selectedView === "Saved view 1") {
       setSelectedView(savedView1Title);
     }
-    
+
     // Close modal and reset state
     setIsSavedView1ModalOpen(false);
     setShowSavedView1ValidationAlert(false);
     setSavedView1TitleError("");
     setSavedView1ErrorDetails({ titleError: false, rowErrors: [] });
-    
+
     toast.success(`Custom view updated`);
   };
 
@@ -1125,18 +1152,18 @@ export const CustomView = () => {
   const handleConfirmDelete = () => {
     if (viewToDelete) {
       // Remove the view from the custom views list
-      setCustomViews(prev => prev.filter(view => view.id !== viewToDelete.id));
-      
+      setCustomViews((prev) => prev.filter((view) => view.id !== viewToDelete.id));
+
       // If the deleted view was selected, switch to Default
       if (selectedView === viewToDelete.title) {
         setSelectedView("Default");
       }
-      
+
       // Close all modals
       setIsDeleteConfirmationModalOpen(false);
       setIsSavedView1ModalOpen(false);
       setViewToDelete(null);
-      
+
       toast.success(`Custom view deleted`);
     }
   };
@@ -1153,7 +1180,7 @@ export const CustomView = () => {
   };
 
   const handleGenericConfigToggleChange = (id, field) => {
-    setGenericConfigData((prevRows) => 
+    setGenericConfigData((prevRows) =>
       prevRows.map((row) => (row.id === id ? { ...row, [field]: !row[field], isEdited: true } : row))
     );
   };
@@ -1175,7 +1202,7 @@ export const CustomView = () => {
       )
     );
     // Clear validation errors for this row
-    setGenericConfigValidationErrors(prev => {
+    setGenericConfigValidationErrors((prev) => {
       const newErrors = { ...prev };
       delete newErrors[id];
       return newErrors;
@@ -1186,9 +1213,9 @@ export const CustomView = () => {
     let isValid = true;
     let errorDetails = {
       titleError: false,
-      rowErrors: []
+      rowErrors: [],
     };
-    
+
     // Validate title
     if (!genericConfigTitle.trim()) {
       setGenericConfigTitleError("Title is required");
@@ -1197,46 +1224,46 @@ export const CustomView = () => {
     } else {
       setGenericConfigTitleError("");
     }
-    
+
     // Validate all custom rows and collect error details
-    genericConfigData.forEach(row => {
+    genericConfigData.forEach((row) => {
       if (isCustomRow(row.id)) {
         const rowErrors = validateCustomRow(row);
         if (Object.keys(rowErrors).length > 0) {
           const rowNumber = row.id - DEFAULT_ROWS_COUNT;
           const formattedRowNumber = rowNumber < 10 ? `0${rowNumber}` : rowNumber;
-          
-          if (rowErrors['columnLabel']) {
+
+          if (rowErrors["columnLabel"]) {
             errorDetails.rowErrors.push({
               rowId: row.id,
               rowNumber: formattedRowNumber,
-              type: 'label',
-              message: 'Enter a custom label'
+              type: "label",
+              message: "Enter a custom label",
             });
           }
-          if (rowErrors['databaseTable']) {
+          if (rowErrors["databaseTable"]) {
             errorDetails.rowErrors.push({
               rowId: row.id,
               rowNumber: formattedRowNumber,
-              type: 'database',
-              message: 'Select a database entity'
+              type: "database",
+              message: "Select a database entity",
             });
           }
           isValid = false;
         }
       }
     });
-    
+
     // Update validation errors state
     validateAllCustomRows(genericConfigData, setGenericConfigValidationErrors);
-    
+
     setShowGenericConfigValidationAlert(!isValid);
-    
+
     // Store error details for Alert component
     if (!isValid) {
       setGenericConfigErrorDetails(errorDetails);
     }
-    
+
     return isValid;
   };
 
@@ -1244,19 +1271,21 @@ export const CustomView = () => {
     if (!validateGenericConfigSubmit()) {
       return;
     }
-    
+
     // Update the existing view in the custom views list
-    setCustomViews(prev => prev.map(view => 
-      view.id === currentConfigView.id 
-        ? { ...view, title: genericConfigTitle, description: genericConfigDescription }
-        : view
-    ));
-    
+    setCustomViews((prev) =>
+      prev.map((view) =>
+        view.id === currentConfigView.id
+          ? { ...view, title: genericConfigTitle, description: genericConfigDescription }
+          : view
+      )
+    );
+
     // If this view is currently selected, update the selected view name
     if (selectedView === currentConfigView.title) {
       setSelectedView(genericConfigTitle);
     }
-    
+
     // Close modal and reset state
     setIsGenericConfigModalOpen(false);
     setShowGenericConfigValidationAlert(false);
@@ -1265,7 +1294,7 @@ export const CustomView = () => {
     setCurrentConfigView(null);
     setGenericConfigTitle("");
     setGenericConfigDescription("");
-    
+
     toast.success(`Custom view updated`);
   };
 
@@ -1410,7 +1439,9 @@ export const CustomView = () => {
                 value={row.columnLabel}
                 onChange={(e) => handleSavedView1InputChange(row.id, "columnLabel", e.target.value)}
                 onFocus={() => handleRowFocus(row.id, setSavedView1FocusedRowId)}
-                onBlur={() => handleRowBlur(row.id, savedView1Data, setSavedView1FocusedRowId, setSavedView1ValidationErrors)}
+                onBlur={() =>
+                  handleRowBlur(row.id, savedView1Data, setSavedView1FocusedRowId, setSavedView1ValidationErrors)
+                }
                 placeholder="Enter custom label"
                 error={hasError}
                 errorMessage={hasError}
@@ -1439,7 +1470,9 @@ export const CustomView = () => {
                   handleSavedView1InputChange(row.id, "databaseTable", selectedOption);
                 }}
                 onFocus={() => handleRowFocus(row.id, setSavedView1FocusedRowId)}
-                onBlur={() => handleRowBlur(row.id, savedView1Data, setSavedView1FocusedRowId, setSavedView1ValidationErrors)}
+                onBlur={() =>
+                  handleRowBlur(row.id, savedView1Data, setSavedView1FocusedRowId, setSavedView1ValidationErrors)
+                }
                 loadOptions={loadOptions}
                 placeholder="Select Table"
                 defaultOptions
@@ -1493,13 +1526,17 @@ export const CustomView = () => {
       <ButtonGroup>
         <PrimaryButton onClick={handleSaveAndApply}>Save and apply</PrimaryButton>
         <Button onClick={handleSaveOnly}>Save only</Button>
-        <QuietButton onClick={() => {
-          setIsModalOpen(false);
-          setShowValidationAlert(false);
-          setNewViewTitleError("");
-          setNewViewTitle("");
-          setNewViewErrorDetails({ titleError: false, rowErrors: [] });
-        }}>Cancel</QuietButton>
+        <QuietButton
+          onClick={() => {
+            setIsModalOpen(false);
+            setShowValidationAlert(false);
+            setNewViewTitleError("");
+            setNewViewTitle("");
+            setNewViewErrorDetails({ titleError: false, rowErrors: [] });
+          }}
+        >
+          Cancel
+        </QuietButton>
       </ButtonGroup>
     </Flex>
   );
@@ -1508,16 +1545,18 @@ export const CustomView = () => {
     <Flex alignItems="center" justifyContent="space-between" gap="x3">
       <ButtonGroup>
         <PrimaryButton onClick={handleSavedView1Save}>Save</PrimaryButton>
-        <QuietButton onClick={() => {
-          setIsSavedView1ModalOpen(false);
-          setShowSavedView1ValidationAlert(false);
-          setSavedView1TitleError("");
-          setSavedView1ErrorDetails({ titleError: false, rowErrors: [] });
-        }}>Cancel</QuietButton>
+        <QuietButton
+          onClick={() => {
+            setIsSavedView1ModalOpen(false);
+            setShowSavedView1ValidationAlert(false);
+            setSavedView1TitleError("");
+            setSavedView1ErrorDetails({ titleError: false, rowErrors: [] });
+          }}
+        >
+          Cancel
+        </QuietButton>
       </ButtonGroup>
-      <QuietButton 
-        onClick={() => handleDeleteView({ id: "saved-view-1", title: savedView1Title })}
-      >
+      <QuietButton onClick={() => handleDeleteView({ id: "saved-view-1", title: savedView1Title })}>
         Delete custom view
       </QuietButton>
     </Flex>
@@ -1557,7 +1596,14 @@ export const CustomView = () => {
                 value={row.columnLabel}
                 onChange={(e) => handleGenericConfigInputChange(row.id, "columnLabel", e.target.value)}
                 onFocus={() => handleRowFocus(row.id, setGenericConfigFocusedRowId)}
-                onBlur={() => handleRowBlur(row.id, genericConfigData, setGenericConfigFocusedRowId, setGenericConfigValidationErrors)}
+                onBlur={() =>
+                  handleRowBlur(
+                    row.id,
+                    genericConfigData,
+                    setGenericConfigFocusedRowId,
+                    setGenericConfigValidationErrors
+                  )
+                }
                 placeholder="Enter custom label"
                 error={hasError}
                 errorMessage={hasError}
@@ -1586,7 +1632,14 @@ export const CustomView = () => {
                   handleGenericConfigInputChange(row.id, "databaseTable", selectedOption);
                 }}
                 onFocus={() => handleRowFocus(row.id, setGenericConfigFocusedRowId)}
-                onBlur={() => handleRowBlur(row.id, genericConfigData, setGenericConfigFocusedRowId, setGenericConfigValidationErrors)}
+                onBlur={() =>
+                  handleRowBlur(
+                    row.id,
+                    genericConfigData,
+                    setGenericConfigFocusedRowId,
+                    setGenericConfigValidationErrors
+                  )
+                }
                 loadOptions={loadOptions}
                 placeholder="Select Table"
                 defaultOptions
@@ -1639,21 +1692,21 @@ export const CustomView = () => {
     <Flex alignItems="center" justifyContent="space-between" gap="x3">
       <ButtonGroup>
         <PrimaryButton onClick={handleGenericConfigSave}>Save</PrimaryButton>
-        <QuietButton onClick={() => {
-          setIsGenericConfigModalOpen(false);
-          setShowGenericConfigValidationAlert(false);
-          setGenericConfigTitleError("");
-          setGenericConfigErrorDetails({ titleError: false, rowErrors: [] });
-          setCurrentConfigView(null);
-          setGenericConfigTitle("");
-          setGenericConfigDescription("");
-        }}>Cancel</QuietButton>
+        <QuietButton
+          onClick={() => {
+            setIsGenericConfigModalOpen(false);
+            setShowGenericConfigValidationAlert(false);
+            setGenericConfigTitleError("");
+            setGenericConfigErrorDetails({ titleError: false, rowErrors: [] });
+            setCurrentConfigView(null);
+            setGenericConfigTitle("");
+            setGenericConfigDescription("");
+          }}
+        >
+          Cancel
+        </QuietButton>
       </ButtonGroup>
-      <QuietButton 
-        onClick={() => handleDeleteView(currentConfigView)}
-      >
-        Delete custom view
-      </QuietButton>
+      <QuietButton onClick={() => handleDeleteView(currentConfigView)}>Delete custom view</QuietButton>
     </Flex>
   );
 
@@ -1701,7 +1754,7 @@ export const CustomView = () => {
                 <Flex alignItems="center" justifyContent="space-between" gap="x3">
                   <Text>{view.title}</Text>
                   <Flex alignItems="center">
-                    <QuietButton 
+                    <QuietButton
                       size="small"
                       onClick={(e) => {
                         e.stopPropagation();
@@ -1723,13 +1776,15 @@ export const CustomView = () => {
               </DropdownButton>
             ))}
             <Divider my="x1" />
-            <DropdownButton onClick={() => {
-              setIsModalOpen(true);
-              setShowValidationAlert(false);
-              setNewViewTitleError("");
-              setNewViewTitle("");
-              setNewViewErrorDetails({ titleError: false, rowErrors: [] });
-            }}>
+            <DropdownButton
+              onClick={() => {
+                setIsModalOpen(true);
+                setShowValidationAlert(false);
+                setNewViewTitleError("");
+                setNewViewTitle("");
+                setNewViewErrorDetails({ titleError: false, rowErrors: [] });
+              }}
+            >
               <Flex alignItems="center" gap="x1">
                 <Icon icon="add" size="x2_5" />
                 Add new
@@ -1850,23 +1905,21 @@ export const CustomView = () => {
             </Flex>
           }
         >
-          <Text>
-            This action cannot be undone.
-          </Text>
+          <Text>This action cannot be undone.</Text>
         </Modal>
 
-                 <Modal
-           isOpen={isGenericConfigModalOpen}
-           onRequestClose={() => {
-             setIsGenericConfigModalOpen(false);
-             setShowGenericConfigValidationAlert(false);
-             setGenericConfigTitleError("");
-             setGenericConfigErrorDetails({ titleError: false, rowErrors: [] });
-             setCurrentConfigView(null);
-             setGenericConfigTitle("");
-             setGenericConfigDescription("");
-           }}
-           title={`${currentConfigView?.title || "Custom view"} configuration`}
+        <Modal
+          isOpen={isGenericConfigModalOpen}
+          onRequestClose={() => {
+            setIsGenericConfigModalOpen(false);
+            setShowGenericConfigValidationAlert(false);
+            setGenericConfigTitleError("");
+            setGenericConfigErrorDetails({ titleError: false, rowErrors: [] });
+            setCurrentConfigView(null);
+            setGenericConfigTitle("");
+            setGenericConfigDescription("");
+          }}
+          title={`${currentConfigView?.title || "Custom view"} configuration`}
           maxWidth="1232px"
           footerContent={genericConfigModalFooter}
         >
