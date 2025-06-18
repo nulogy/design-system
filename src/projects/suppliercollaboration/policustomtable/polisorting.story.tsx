@@ -1968,30 +1968,23 @@ export const CustomView = () => {
 
 CustomView.storyName = "Custom view";
 
+// Sorting criteria options constant
+const SORTING_OPTIONS = [
+  { value: "poNumber", label: "PO Number" },
+  { value: "supplier", label: "Supplier" },
+  { value: "dueDate", label: "Due Date" },
+  { value: "status", label: "Status" },
+  { value: "quantity", label: "Quantity" },
+];
+
+// Order options constant
+const ORDER_OPTIONS = [
+  { value: "ascending", label: "Ascending" },
+  { value: "descending", label: "Descending" },
+];
+
 export const Sorting = () => {
-  // Constants for row types
-  const DEFAULT_ROWS_COUNT = 15;
-  const isDefaultRow = (id) => id <= DEFAULT_ROWS_COUNT;
-  const isCustomRow = (id) => id > DEFAULT_ROWS_COUNT;
-
-  // Validation errors state
-  const [validationErrors, setValidationErrors] = useState({});
-  const [savedView1ValidationErrors, setSavedView1ValidationErrors] = useState({});
-
-  // Submit validation state
-  const [showValidationAlert, setShowValidationAlert] = useState(false);
-  const [showSavedView1ValidationAlert, setShowSavedView1ValidationAlert] = useState(false);
-  const [newViewTitle, setNewViewTitle] = useState("");
-  const [newViewTitleError, setNewViewTitleError] = useState("");
-  const [savedView1TitleError, setSavedView1TitleError] = useState("");
-  const [newViewErrorDetails, setNewViewErrorDetails] = useState({ titleError: false, rowErrors: [] });
-  const [savedView1ErrorDetails, setSavedView1ErrorDetails] = useState({ titleError: false, rowErrors: [] });
-
-  // Focus tracking state
-  const [focusedRowId, setFocusedRowId] = useState(null);
-  const [savedView1FocusedRowId, setSavedView1FocusedRowId] = useState(null);
-
-  // Sorting state for criteria and orders
+  // Core sorting state
   const [primaryCriteria, setPrimaryCriteria] = useState(null);
   const [primaryOrder, setPrimaryOrder] = useState("ascending");
   const [secondaryCriteria, setSecondaryCriteria] = useState(null);
@@ -1999,33 +1992,30 @@ export const Sorting = () => {
   const [tertiaryCriteria, setTertiaryCriteria] = useState(null);
   const [tertiaryOrder, setTertiaryOrder] = useState("ascending");
 
-  // Custom view state for dropdown functionality
+  // UI state
+  const [showSecondary, setShowSecondary] = useState(false);
+  const [showTertiary, setShowTertiary] = useState(false);
+  const [appliedCriteriaCount, setAppliedCriteriaCount] = useState(0);
+
+  // Custom view state
   const [selectedView, setSelectedView] = useState("Default");
-  const [customViews, setCustomViews] = useState([
+  const [customViews] = useState([
     { id: "saved-view-1", title: "Saved view 1", description: "" },
     { id: "saved-view-2", title: "Saved view 2", description: "" },
   ]);
 
   // Sidebar state
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [sidebarType, setSidebarType] = useState(null); // 'sort' or 'filters'
-
-  // Criteria visibility state
-  const [showSecondary, setShowSecondary] = useState(false);
-  const [showTertiary, setShowTertiary] = useState(false);
-
-  // Applied criteria count
-  const [appliedCriteriaCount, setAppliedCriteriaCount] = useState(0);
-  const [appliedFiltersCount, setAppliedFiltersCount] = useState(0);
+  const [sidebarType, setSidebarType] = useState(null);
 
   // Filter state
   const [poNumberFilter, setPoNumberFilter] = useState("");
   const [supplierFilter, setSupplierFilter] = useState("");
   const [statusFilter, setStatusFilter] = useState(null);
+  const [appliedFiltersCount, setAppliedFiltersCount] = useState(0);
 
-  const handleViewSelect = (viewName) => {
-    setSelectedView(viewName);
-  };
+  // Handlers
+  const handleViewSelect = (viewName) => setSelectedView(viewName);
 
   const handleOpenSidebar = (type) => {
     setSidebarType(type);
@@ -2045,30 +2035,32 @@ export const Sorting = () => {
     }
   };
 
-  const handleRemoveCriteria = () => {
-    if (showTertiary) {
-      setShowTertiary(false);
-      setTertiaryCriteria(null);
-      setTertiaryOrder("ascending");
-    } else if (showSecondary) {
+  const resetCriteria = (level) => {
+    if (level === "primary") {
+      setPrimaryCriteria(null);
+      setPrimaryOrder("ascending");
+      setAppliedCriteriaCount(0);
+    } else if (level === "secondary") {
       setShowSecondary(false);
       setSecondaryCriteria(null);
       setSecondaryOrder("ascending");
-    } else if (primaryCriteria) {
-      setPrimaryCriteria(null);
-      setPrimaryOrder("ascending");
+      setAppliedCriteriaCount(primaryCriteria ? 1 : 0);
+    } else if (level === "tertiary") {
+      setShowTertiary(false);
+      setTertiaryCriteria(null);
+      setTertiaryOrder("ascending");
+      const remainingCount = [primaryCriteria, secondaryCriteria].filter(Boolean).length;
+      setAppliedCriteriaCount(remainingCount);
     }
   };
 
   const handleApply = () => {
     handleCloseSidebar();
     if (sidebarType === "sort") {
-      // Count applied criteria
       const criteriaCount = [primaryCriteria, secondaryCriteria, tertiaryCriteria].filter(Boolean).length;
       setAppliedCriteriaCount(criteriaCount);
       toast.success("Sort criteria applied");
     } else if (sidebarType === "filters") {
-      // Count applied filters
       const filtersCount = [
         poNumberFilter && poNumberFilter.trim() !== "",
         supplierFilter && supplierFilter.trim() !== "",
@@ -2078,6 +2070,40 @@ export const Sorting = () => {
       toast.success("Filters applied");
     }
   };
+
+  // Render criteria selector
+  const renderCriteriaSelector = (criteria, setCriteria, order, setOrder, label, level, spacing) => (
+    <Flex gap="x1" alignItems="flex-end" mb={spacing}>
+      <Select
+        labelText={label}
+        placeholder="Sort by..."
+        options={SORTING_OPTIONS}
+        value={criteria}
+        onChange={setCriteria}
+      />
+      <Box width="272px">
+        <Select
+          placeholder="In order ..."
+          options={ORDER_OPTIONS}
+          value={order}
+          onChange={(value) => setOrder(String(value))}
+          disabled={!criteria}
+        />
+      </Box>
+      {((level === "primary" && criteria && !showSecondary) ||
+        (level === "secondary" && !showTertiary) ||
+        level === "tertiary") && (
+        <Box>
+          <IconicButton
+            icon="removeCircleOutline"
+            aria-label={`Remove ${level} criteria`}
+            tooltip="Remove"
+            onClick={() => resetCriteria(level)}
+          />
+        </Box>
+      )}
+    </Flex>
+  );
 
   return (
     <ApplicationFrame>
@@ -2150,6 +2176,7 @@ export const Sorting = () => {
             onClick={() => handleOpenSidebar("filters")}
           />
         </Flex>
+
         <Box mb="x3">
           <Text>
             Current sort:{" "}
@@ -2174,139 +2201,37 @@ export const Sorting = () => {
       >
         {sidebarType === "sort" && (
           <>
-            <Flex gap="x1" alignItems="flex-end" mb={showSecondary ? "x3" : "x1"}>
-              <Select
-                labelText="Primary criteria"
-                placeholder="Sort by..."
-                options={[
-                  { value: "poNumber", label: "PO Number" },
-                  { value: "supplier", label: "Supplier" },
-                  { value: "dueDate", label: "Due Date" },
-                  { value: "status", label: "Status" },
-                  { value: "quantity", label: "Quantity" },
-                ]}
-                value={primaryCriteria}
-                onChange={setPrimaryCriteria}
-              />
-              <Box width="272px">
-                <Select
-                  placeholder="In order ..."
-                  options={[
-                    { value: "ascending", label: "Ascending" },
-                    { value: "descending", label: "Descending" },
-                  ]}
-                  value={primaryOrder}
-                  onChange={(value) => setPrimaryOrder(String(value))}
-                  disabled={!primaryCriteria}
-                />
-              </Box>
-              {primaryCriteria && !showSecondary && (
-                <Box>
-                  <IconicButton
-                    icon="removeCircleOutline"
-                    aria-label="Remove primary criteria"
-                    tooltip="Remove"
-                    onClick={() => {
-                      setPrimaryCriteria(null);
-                      setPrimaryOrder("ascending");
-                      setAppliedCriteriaCount(0);
-                    }}
-                  />
-                </Box>
+            {renderCriteriaSelector(
+              primaryCriteria,
+              setPrimaryCriteria,
+              primaryOrder,
+              setPrimaryOrder,
+              "Primary criteria",
+              "primary",
+              showSecondary ? "x3" : "x1"
+            )}
+
+            {showSecondary &&
+              renderCriteriaSelector(
+                secondaryCriteria,
+                setSecondaryCriteria,
+                secondaryOrder,
+                setSecondaryOrder,
+                "Secondary criteria",
+                "secondary",
+                showTertiary ? "x3" : "x1"
               )}
-            </Flex>
 
-            {showSecondary && (
-              <Flex gap="x1" alignItems="flex-end" mb={showTertiary ? "x3" : "x1"}>
-                <Select
-                  labelText="Secondary criteria"
-                  placeholder="Sort by..."
-                  options={[
-                    { value: "poNumber", label: "PO Number" },
-                    { value: "supplier", label: "Supplier" },
-                    { value: "dueDate", label: "Due Date" },
-                    { value: "status", label: "Status" },
-                    { value: "quantity", label: "Quantity" },
-                  ]}
-                  value={secondaryCriteria}
-                  onChange={setSecondaryCriteria}
-                />
-                <Box width="272px">
-                  <Select
-                    placeholder="In order ..."
-                    options={[
-                      { value: "ascending", label: "Ascending" },
-                      { value: "descending", label: "Descending" },
-                    ]}
-                    value={secondaryOrder}
-                    onChange={(value) => setSecondaryOrder(String(value))}
-                    disabled={!secondaryCriteria}
-                  />
-                </Box>
-                {!showTertiary && (
-                  <Box>
-                    <IconicButton
-                      icon="removeCircleOutline"
-                      aria-label="Remove secondary criteria"
-                      tooltip="Remove"
-                      onClick={() => {
-                        setShowSecondary(false);
-                        setSecondaryCriteria(null);
-                        setSecondaryOrder("ascending");
-                        // Update count based on remaining criteria
-                        const remainingCount = primaryCriteria ? 1 : 0;
-                        setAppliedCriteriaCount(remainingCount);
-                      }}
-                    />
-                  </Box>
-                )}
-              </Flex>
-            )}
-
-            {showTertiary && (
-              <Flex gap="x1" alignItems="flex-end" mb="x1">
-                <Select
-                  labelText="Tertiary criteria"
-                  placeholder="Sort by..."
-                  options={[
-                    { value: "poNumber", label: "PO Number" },
-                    { value: "supplier", label: "Supplier" },
-                    { value: "dueDate", label: "Due Date" },
-                    { value: "status", label: "Status" },
-                    { value: "quantity", label: "Quantity" },
-                  ]}
-                  value={tertiaryCriteria}
-                  onChange={setTertiaryCriteria}
-                />
-                <Box width="272px">
-                  <Select
-                    placeholder="In order ..."
-                    options={[
-                      { value: "ascending", label: "Ascending" },
-                      { value: "descending", label: "Descending" },
-                    ]}
-                    value={tertiaryOrder}
-                    onChange={(value) => setTertiaryOrder(String(value))}
-                    disabled={!tertiaryCriteria}
-                  />
-                </Box>
-                <Box>
-                  <IconicButton
-                    icon="removeCircleOutline"
-                    aria-label="Remove tertiary criteria"
-                    tooltip="Remove"
-                    onClick={() => {
-                      setShowTertiary(false);
-                      setTertiaryCriteria(null);
-                      setTertiaryOrder("ascending");
-                      // Update count based on remaining criteria
-                      const remainingCount = [primaryCriteria, secondaryCriteria].filter(Boolean).length;
-                      setAppliedCriteriaCount(remainingCount);
-                    }}
-                  />
-                </Box>
-              </Flex>
-            )}
+            {showTertiary &&
+              renderCriteriaSelector(
+                tertiaryCriteria,
+                setTertiaryCriteria,
+                tertiaryOrder,
+                setTertiaryOrder,
+                "Tertiary criteria",
+                "tertiary",
+                "x1"
+              )}
 
             <Flex gap="x2">
               {((primaryCriteria && !showSecondary) || (showSecondary && secondaryCriteria && !showTertiary)) && (
