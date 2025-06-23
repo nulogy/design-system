@@ -1,3 +1,4 @@
+import { describe, it, expect, beforeEach, afterEach } from "vitest";
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import useMediaQuery from ".";
@@ -24,6 +25,7 @@ describe("useMediaQuery", () => {
     beforeEach(() => {
       window.matchMedia = undefined;
     });
+
     afterEach(() => {
       window.matchMedia = originalMatchMedia;
     });

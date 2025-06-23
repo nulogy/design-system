@@ -1,5 +1,6 @@
-import { getSubset, omitSubset } from "./subset";
+import { describe, it, expect } from "vitest";
 import propTypes from "@styled-system/prop-types";
+import { getSubset, omitSubset } from "./subset";
 
 describe("getSubset", () => {
   const testObject = {
