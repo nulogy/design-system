@@ -185,7 +185,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "yarn run check"
+      "pre-push": "pnpm run check"
     }
   },
   "jest": {

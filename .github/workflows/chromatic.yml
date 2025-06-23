@@ -10,16 +10,22 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
         with:
-          node-version-file: '.nvmrc'
+          run_install: false
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "pnpm"
 
       - name: Install dependencies
-        run: yarn
+        run: pnpm install --frozen-lockfile
 
       - name: Build Storybook
-        run: yarn build:storybook
+        run: pnpm run build:storybook
 
       - uses: chromaui/action@v1
         with:
