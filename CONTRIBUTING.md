@@ -7,24 +7,24 @@ Additionally, verify that the new component has already been added to the design
 
 ### Prerequisites
 
-1. Download and install the Node version in the `.nvmrc` file.
-2. Download and install the package manager [Yarn](https://yarnpkg.com/en/docs/install#mac-stable)
+1. Download and install the Node version in the `mise.toml` file.
+2. Download and install the package manager [pnpm](https://pnpm.io)
 
 ### Cloning the repo
 
 1. In the directory you want to install the design system, run `git clone git@github.com:nulogy/design-system.git && cd design-system`
-2. Run `yarn` to install dependencies
-3. Run `yarn build` to build the components for the first time
+2. Run `pnpm` to install dependencies
+3. Run `pnpm build` to build the components for the first time
 
 ## Writing components
 
-- `yarn start` will run a storybook at [localhost:9999](localhost:9999) for local development.
-- `yarn build` will rebuild the package exports for production.
-- `yarn start:cypress` will run the cypress test runner.
+- `pnpm start` will run a storybook at [localhost:9999](localhost:9999) for local development.
+- `pnpm build` will rebuild the package exports for production.
+- `pnpm start:cypress` will run the cypress test runner.
 
 To generate the files needed for a new component, you can use [Plop](https://plopjs.com/)
 
-- Run `yarn new ComponentName` (make sure your name is in PascalCase)
+- Run `pnpm new ComponentName` (make sure your name is in PascalCase)
 
 ## Coding standards
 
@@ -45,7 +45,7 @@ Note: NDS follows the [Conventional Commits](https://www.conventionalcommits.org
 ## Testing
 
 - To run everything:
-  - `yarn test`
+  - `pnpm test`
 
 ## Documentation
 
