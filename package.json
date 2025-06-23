@@ -52,6 +52,7 @@
   "files": [
     "/dist"
   ],
+  "packageManager": "pnpm@10.12.3",
   "peerDependencies": {
     "@nulogy/icons": "4",
     "react": ">=16.10.2 <19.0.0",
