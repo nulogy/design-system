@@ -1,7 +1,0 @@
-*.hbs
-*.yml
-.github
-package.json
-storybook-static
-dist
-*.md 
