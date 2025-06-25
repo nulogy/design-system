@@ -71,7 +71,9 @@ export function MenuSubItem({ item, level }: Props) {
             <SubMenuContent left={`calc(100% - ${theme.space.half})`} top={`calc(-1 * ${theme.space.x1})`}>
               <RadixNavigationMenu.Sub orientation="vertical">
                 <SubMenuList>
-                  {item.items?.map((subItem) => <MenuSubItem key={subItem.key} item={subItem} level={level + 1} />)}
+                  {item.items?.map((subItem) => (
+                    <MenuSubItem key={subItem.key} item={subItem} level={level + 1} />
+                  ))}
                 </SubMenuList>
               </RadixNavigationMenu.Sub>
             </SubMenuContent>

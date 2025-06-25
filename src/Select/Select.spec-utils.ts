@@ -1,8 +1,9 @@
+import { expect } from "vitest";
 import { fireEvent, Matcher, SelectorMatcherOptions } from "@testing-library/react";
 
 type QueryByText = (id: Matcher, options?: SelectorMatcherOptions) => HTMLElement;
 
-export const openDropdown = (element: HTMLElement, i: number) => {
+export const openDropdown = (element: HTMLElement, i: number): void => {
   fireEvent.focus(element.querySelectorAll("input")[i]);
 
   fireEvent.keyDown(element.querySelectorAll("input")[i], {
@@ -11,7 +12,7 @@ export const openDropdown = (element: HTMLElement, i: number) => {
   });
 };
 
-export const selectOption = (optionText: string, container: HTMLElement, queryByText: QueryByText, i = 0) => {
+export const selectOption = (optionText: string, container: HTMLElement, queryByText: QueryByText, i = 0): void => {
   expect(queryByText(optionText)).toBeNull();
 
   openDropdown(container, i);

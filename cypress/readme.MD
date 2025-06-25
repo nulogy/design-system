@@ -24,13 +24,13 @@ Stories within any component folder can be tested and additional stories just fo
 
 To test in the cypress runner (to see the tests run):
 
-- `yarn cypress:open`
+- `pnpm cypress:open`
   - Then run whichever file you want.
 
 CLI:
 
-- `yarn e2e:test`
+- `pnpm e2e:test`
 
 IN BROWSER:
 
-- `yarn e2e:start`
+- `pnpm e2e:start`
