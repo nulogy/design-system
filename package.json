@@ -27,7 +27,8 @@
     "test": "yarn test:components && yarn run test:cypress",
     "test:components": "jest",
     "test:cypress": "yarn build:storybook && yarn concurrently --success \"first\" --kill-others \"yarn http-server -p 9999 ./storybook-static\" \"yarn wait-on http://localhost:9999 && yarn cypress run\"",
-    "test:visual": "npx chromatic --project-token $CHROMATIC_TOKEN --exit-zero-on-changes"
+    "test:visual": "npx chromatic --project-token $CHROMATIC_TOKEN --exit-zero-on-changes",
+    "prepare": "husky"
   },
   "license": "MIT",
   "author": "Nulogy <info@nulogy.com> (https://github.com/nulogy)",
@@ -122,7 +123,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "graphql": "15.8.0",
     "http-server": "^14.0.0",
-    "husky": "^4.3.0",
+    "husky": "^9.1.7",
     "jest": "29.7.0",
     "jest-environment-jsdom": "^29.5.0",
     "jest-styled-components": "7",
@@ -182,11 +183,6 @@
     "smoothscroll-polyfill": "^0.4.4",
     "styled-system": "^5.1.4",
     "stylis": "^4.0.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "yarn run check"
-    }
   },
   "jest": {
     "testEnvironment": "jsdom",
