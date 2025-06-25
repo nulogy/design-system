@@ -759,18 +759,18 @@
     "@babel/helper-plugin-utils" "^7.14.5"
     "@babel/plugin-syntax-logical-assignment-operators" "^7.10.4"
 
-"@babel/plugin-proposal-nullish-coalescing-operator@^7.1.0", "@babel/plugin-proposal-nullish-coalescing-operator@^7.14.5":
-  version "7.14.5"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-nullish-coalescing-operator/-/plugin-proposal-nullish-coalescing-operator-7.14.5.tgz#ee38589ce00e2cc59b299ec3ea406fcd3a0fdaf6"
-  integrity sha512-gun/SOnMqjSb98Nkaq2rTKMwervfdAoz6NphdY0vTfuzMfryj+tDGb2n6UkDKwez+Y8PZDhE3D143v6Gepp4Hg==
-  dependencies:
-    "@babel/helper-plugin-utils" "^7.14.5"
-    "@babel/plugin-syntax-nullish-coalescing-operator" "^7.8.3"
-
 "@babel/plugin-proposal-nullish-coalescing-operator@^7.12.1":
   version "7.16.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-nullish-coalescing-operator/-/plugin-proposal-nullish-coalescing-operator-7.16.0.tgz#44e1cce08fe2427482cf446a91bb451528ed0596"
   integrity sha512-3bnHA8CAFm7cG93v8loghDYyQ8r97Qydf63BeYiGgYbjKKB/XP53W15wfRC7dvKfoiJ34f6Rbyyx2btExc8XsQ==
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.14.5"
+    "@babel/plugin-syntax-nullish-coalescing-operator" "^7.8.3"
+
+"@babel/plugin-proposal-nullish-coalescing-operator@^7.14.5":
+  version "7.14.5"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-nullish-coalescing-operator/-/plugin-proposal-nullish-coalescing-operator-7.14.5.tgz#ee38589ce00e2cc59b299ec3ea406fcd3a0fdaf6"
+  integrity sha512-gun/SOnMqjSb98Nkaq2rTKMwervfdAoz6NphdY0vTfuzMfryj+tDGb2n6UkDKwez+Y8PZDhE3D143v6Gepp4Hg==
   dependencies:
     "@babel/helper-plugin-utils" "^7.14.5"
     "@babel/plugin-syntax-nullish-coalescing-operator" "^7.8.3"
@@ -822,15 +822,6 @@
     "@babel/helper-plugin-utils" "^7.14.5"
     "@babel/plugin-syntax-optional-catch-binding" "^7.8.3"
 
-"@babel/plugin-proposal-optional-chaining@^7.1.0", "@babel/plugin-proposal-optional-chaining@^7.14.5":
-  version "7.14.5"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-optional-chaining/-/plugin-proposal-optional-chaining-7.14.5.tgz#fa83651e60a360e3f13797eef00b8d519695b603"
-  integrity sha512-ycz+VOzo2UbWNI1rQXxIuMOzrDdHGrI23fRiz/Si2R4kv2XZQ1BK8ccdHwehMKBlcH/joGW/tzrUmo67gbJHlQ==
-  dependencies:
-    "@babel/helper-plugin-utils" "^7.14.5"
-    "@babel/helper-skip-transparent-expression-wrappers" "^7.14.5"
-    "@babel/plugin-syntax-optional-chaining" "^7.8.3"
-
 "@babel/plugin-proposal-optional-chaining@^7.12.1", "@babel/plugin-proposal-optional-chaining@^7.12.7":
   version "7.21.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-optional-chaining/-/plugin-proposal-optional-chaining-7.21.0.tgz#886f5c8978deb7d30f678b2e24346b287234d3ea"
@@ -838,6 +829,15 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.20.2"
     "@babel/helper-skip-transparent-expression-wrappers" "^7.20.0"
+    "@babel/plugin-syntax-optional-chaining" "^7.8.3"
+
+"@babel/plugin-proposal-optional-chaining@^7.14.5":
+  version "7.14.5"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-optional-chaining/-/plugin-proposal-optional-chaining-7.14.5.tgz#fa83651e60a360e3f13797eef00b8d519695b603"
+  integrity sha512-ycz+VOzo2UbWNI1rQXxIuMOzrDdHGrI23fRiz/Si2R4kv2XZQ1BK8ccdHwehMKBlcH/joGW/tzrUmo67gbJHlQ==
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.14.5"
+    "@babel/helper-skip-transparent-expression-wrappers" "^7.14.5"
     "@babel/plugin-syntax-optional-chaining" "^7.8.3"
 
 "@babel/plugin-proposal-private-methods@^7.10.4", "@babel/plugin-proposal-private-methods@^7.12.1", "@babel/plugin-proposal-private-methods@^7.14.5":
@@ -1430,7 +1430,7 @@
     "@babel/helper-module-transforms" "^7.25.9"
     "@babel/helper-plugin-utils" "^7.25.9"
 
-"@babel/plugin-transform-modules-commonjs@^7.1.0", "@babel/plugin-transform-modules-commonjs@^7.14.5", "@babel/plugin-transform-modules-commonjs@^7.2.0":
+"@babel/plugin-transform-modules-commonjs@^7.14.5", "@babel/plugin-transform-modules-commonjs@^7.2.0":
   version "7.14.5"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-modules-commonjs/-/plugin-transform-modules-commonjs-7.14.5.tgz#7aaee0ea98283de94da98b28f8c35701429dad97"
   integrity sha512-en8GfBtgnydoao2PS+87mKyw62k02k7kJ9ltbKe0fXTHrQmG6QZZflYuGI1VVG7sVpx4E1n7KBpNlPb8m78J+A==
@@ -7570,7 +7570,7 @@ ast-types@0.13.3:
   resolved "https://registry.yarnpkg.com/ast-types/-/ast-types-0.13.3.tgz#50da3f28d17bdbc7969a3a2d83a0e4a72ae755a7"
   integrity sha512-XTZ7xGML849LkQP86sWdQzfhwbt3YwIO6MqbX9mUNYY98VKaaVZP7YNNm70IpwecbkkxmfC5IYAzOQ/2p29zRA==
 
-ast-types@0.14.2, ast-types@^0.14.2:
+ast-types@^0.14.2:
   version "0.14.2"
   resolved "https://registry.yarnpkg.com/ast-types/-/ast-types-0.14.2.tgz#600b882df8583e3cd4f2df5fa20fa83759d4bdfd"
   integrity sha512-O0yuUDnZeQDL+ncNGlJ78BiO4jnYI3bvMsD5prT0/nsgijG/LpNBIr63gTjVTNsiGkgQhiyCShTgxt8oXOrklA==
@@ -15101,31 +15101,6 @@ jsbn@~0.1.0:
   resolved "https://registry.yarnpkg.com/jsbn/-/jsbn-0.1.1.tgz#a5e654c2e5a2deb5f201d96cefbca80c0ef2f513"
   integrity sha1-peZUwuWi3rXyAdls77yoDA7y9RM=
 
-jscodeshift@^0.11.0:
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/jscodeshift/-/jscodeshift-0.11.0.tgz#4f95039408f3f06b0e39bb4d53bc3139f5330e2f"
-  integrity sha512-SdRK2C7jjs4k/kT2mwtO07KJN9RnjxtKn03d9JVj6c3j9WwaLcFYsICYDnLAzY0hp+wG2nxl+Cm2jWLiNVYb8g==
-  dependencies:
-    "@babel/core" "^7.1.6"
-    "@babel/parser" "^7.1.6"
-    "@babel/plugin-proposal-class-properties" "^7.1.0"
-    "@babel/plugin-proposal-nullish-coalescing-operator" "^7.1.0"
-    "@babel/plugin-proposal-optional-chaining" "^7.1.0"
-    "@babel/plugin-transform-modules-commonjs" "^7.1.0"
-    "@babel/preset-flow" "^7.0.0"
-    "@babel/preset-typescript" "^7.1.0"
-    "@babel/register" "^7.0.0"
-    babel-core "^7.0.0-bridge.0"
-    colors "^1.1.2"
-    flow-parser "0.*"
-    graceful-fs "^4.2.4"
-    micromatch "^3.1.10"
-    neo-async "^2.5.0"
-    node-dir "^0.1.17"
-    recast "^0.20.3"
-    temp "^0.8.1"
-    write-file-atomic "^2.3.0"
-
 jscodeshift@^0.7.0:
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/jscodeshift/-/jscodeshift-0.7.1.tgz#0236ad475d6f0770ca998a0160925d62b57d2507"
@@ -19681,16 +19656,6 @@ recast@^0.19.0:
     esprima "~4.0.0"
     private "^0.1.8"
     source-map "~0.6.1"
-
-recast@^0.20.3:
-  version "0.20.4"
-  resolved "https://registry.yarnpkg.com/recast/-/recast-0.20.4.tgz#db55983eac70c46b3fff96c8e467d65ffb4a7abc"
-  integrity sha512-6qLIBGGRcwjrTZGIiBpJVC/NeuXpogXNyRQpqU1zWPUigCphvApoCs9KIwDYh1eDuJ6dAFlQoi/QUyE5KQ6RBQ==
-  dependencies:
-    ast-types "0.14.2"
-    esprima "~4.0.0"
-    source-map "~0.6.1"
-    tslib "^2.0.1"
 
 rechoir@^0.6.2:
   version "0.6.2"
