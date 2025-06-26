@@ -291,11 +291,6 @@ export const MenuItems = () => {
               type: "link",
               element: <Link to="/finance" />,
             },
-            {
-              key: "nested-items",
-              label: "A menu item can have nested items",
-              type: "button",
-            },
           ],
         }}
       />
