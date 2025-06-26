@@ -1,3 +1,11 @@
+## [15.0.1](https://github.com/nulogy/design-system/compare/v15.0.0...v15.0.1) (2025-06-26)
+
+
+### Bug Fixes
+
+* Cypress tests work again ([f26c516](https://github.com/nulogy/design-system/commit/f26c516c41d66dc54d19f907dc91881075d3b3eb))
+* Update Github Actions workflows ([c506fd5](https://github.com/nulogy/design-system/commit/c506fd573fa114c8b1061bef479f4ecff6669521))
+
 # [15.0.0](https://github.com/nulogy/design-system/compare/v14.8.2...v15.0.0) (2025-06-10)
 
 
