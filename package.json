@@ -9,8 +9,9 @@
   "scripts": {
     "ci": "yarn && yarn build && yarn test && yarn run check",
     "new": "plop",
+    "start-server": "yarn build:storybook && yarn http-server -p 9999 ./storybook-static",
     "start": "concurrently \"yarn build:watch\" \"yarn start:storybook\"",
-    "start:cypress": "yarn concurrently --kill-others \"yarn start --ci\" \"yarn wait-on http://localhost:9999 && cypress open\"",
+    "start:cypress": "start-server-and-test start 9999 'cypress open'",
     "start:storybook": "start-storybook -p 9999",
     "clean:storybook": "rm -rf node_modules/.cache/storybook && rm -rf ./storybook-static",
     "build": "rollup -c",
@@ -26,7 +27,7 @@
     "fix:format": "prettier -w .",
     "test": "yarn test:components && yarn run test:cypress",
     "test:components": "jest",
-    "test:cypress": "yarn build:storybook && yarn concurrently --success \"first\" --kill-others \"yarn http-server -p 9999 ./storybook-static\" \"yarn wait-on http://localhost:9999 && yarn cypress run\"",
+    "test:cypress": "start-server-and-test start-server 9999 'cypress run'",
     "test:visual": "npx chromatic --project-token $CHROMATIC_TOKEN --exit-zero-on-changes",
     "prepare": "husky"
   },
@@ -111,7 +112,7 @@
     "babel-plugin-styled-components": "2.1.3",
     "babel-preset-react": "6.24.1",
     "chromatic": "^6.0.6",
-    "concurrently": "^5.2.0",
+    "concurrently": "^9.2.0",
     "css-mediaquery": "^0.1.2",
     "cypress": "^13.2.0",
     "cypress-enter-plugin": "^1.0.1",
@@ -143,13 +144,13 @@
     "rollup-plugin-typescript2": "^0.36.0",
     "semantic-release": "^17.2.1",
     "source-map-loader": "^1.0.1",
+    "start-server-and-test": "^2.0.12",
     "storybook-addon-performance": "^0.17.1",
     "styled-components": "^6.0.0",
     "svg-sprite-loader": "^6.0.11",
     "ts-jest": "^26.1.1",
     "typescript": "4.9.5",
-    "typescript-eslint": "^0.0.1-alpha.0",
-    "wait-on": "^5.1.0"
+    "typescript-eslint": "^0.0.1-alpha.0"
   },
   "dependencies": {
     "@babel/runtime": "^7.9.6",
