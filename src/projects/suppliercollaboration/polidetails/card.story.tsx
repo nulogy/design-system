@@ -131,6 +131,7 @@ export const DefaultCard = () => {
       bomReleaseDate: new Date("2025-02-28"),
       needByDate: new Date("2024-01-01"),
       shipTo: "MySupplier TO",
+
     },
   });
 
@@ -467,12 +468,12 @@ export const DefaultCard = () => {
       <Page>
         {/* Action bar above details */}
         <Flex justifyContent="flex-end" alignItems="center" gap="x2" mb="x3">
-          <IconicButton icon="chatBubble" aria-label="Comments" onClick={() => openSidebar("comments")}>
-            Comments
-          </IconicButton>
-          <VerticalDivider />
           <IconicButton icon="edit" aria-label="Edit" onClick={() => openSidebar("edit")}>
             Edit
+          </IconicButton>
+          <VerticalDivider />
+          <IconicButton icon="chatBubble" aria-label="Comments" onClick={() => openSidebar("comments")}>
+            Comments
           </IconicButton>
         </Flex>
         {/* Details section */}
@@ -756,114 +757,64 @@ export const DefaultCard = () => {
         <Sidebar
           isOpen={sidebarState.edit}
           onClose={() => closeSidebar("edit")}
-          title="Edit PO line item details"
+          title="Edit details"
           footer={
             <Flex gap="x2" justifyContent="flex-start">
-              <PrimaryButton onClick={() => closeSidebar("edit")}>Save</PrimaryButton>
+              <PrimaryButton 
+                onClick={() => {
+                  closeSidebar("edit");
+                  toast.success("PO line item details saved successfully");
+                }}
+              >
+                Save
+              </PrimaryButton>
               <QuietButton onClick={() => closeSidebar("edit")}>Cancel</QuietButton>
             </Flex>
           }
         >
           <Flex flexDirection="column" gap="x3" py="x1">
+            {/* Non-editable fields */}
             <FieldLabel labelText="PO number">
-              <Input
-                value={formData.edit.poNumber}
-                onChange={(e) =>
-                  setFormData({
-                    ...formData,
-                    edit: { ...formData.edit, poNumber: e.target.value },
-                  })
-                }
-              />
+              <Input value={formData.edit.poNumber} disabled />
             </FieldLabel>
-            <FieldLabel labelText="Customer's item code">
-              <Input
-                value={formData.edit.customerItemCode}
-                onChange={(e) =>
-                  setFormData({
-                    ...formData,
-                    edit: { ...formData.edit, customerItemCode: e.target.value },
-                  })
-                }
-              />
-            </FieldLabel>
-            <FieldLabel labelText="Customer's item description">
-              <Input
-                value={formData.edit.customerItemDescription}
-                onChange={(e) =>
-                  setFormData({
-                    ...formData,
-                    edit: { ...formData.edit, customerItemDescription: e.target.value },
-                  })
-                }
-              />
+            <FieldLabel labelText={userState.role === "supplier" ? "Customer's item code" : "Item code"}>
+              <Input value={formData.edit.customerItemCode} disabled />
             </FieldLabel>
             <FieldLabel labelText="Customer PO line item number">
-              <Input
-                value={formData.edit.customerPOLineItemNumber}
-                onChange={(e) =>
-                  setFormData({
-                    ...formData,
-                    edit: { ...formData.edit, customerPOLineItemNumber: e.target.value },
-                  })
-                }
-              />
+              <Input value={formData.edit.customerPOLineItemNumber} disabled />
             </FieldLabel>
             <FieldLabel labelText="Supplier PO line item number">
-              <Input
-                value={formData.edit.supplierPOLineItemNumber}
-                onChange={(e) =>
-                  setFormData({
-                    ...formData,
-                    edit: { ...formData.edit, supplierPOLineItemNumber: e.target.value },
-                  })
-                }
-              />
+              <Input value={formData.edit.supplierPOLineItemNumber} disabled />
             </FieldLabel>
             <FieldLabel labelText="Creation date">
-              <DatePicker
-                selected={formData.edit.creationDate}
-                onChange={(date) =>
-                  setFormData({
-                    ...formData,
-                    edit: { ...formData.edit, creationDate: date },
-                  })
-                }
-              />
+              <Input value={formatDateForDisplay(formData.edit.creationDate)} disabled />
             </FieldLabel>
-            <FieldLabel labelText="Customer">
-              <Input
-                value={formData.edit.customer}
-                onChange={(e) =>
-                  setFormData({
-                    ...formData,
-                    edit: { ...formData.edit, customer: e.target.value },
-                  })
-                }
-              />
+            <FieldLabel labelText={userState.role === "supplier" ? "Customer" : "Supplier"}>
+              <Input value={formData.edit.customer} disabled />
             </FieldLabel>
+            
+            {/* Editable fields */}
             <FieldLabel labelText="BOM revision">
-              <Input
+              <Select
+                options={[
+                  { value: "Revision 1", label: "Revision 1" },
+                  { value: "Revision 2", label: "Revision 2" },
+                  { value: "Revision 3", label: "Revision 3" },
+                  { value: "Revision 4", label: "Revision 4" },
+                ]}
                 value={formData.edit.bomRevision}
-                onChange={(e) =>
+                onChange={(option) =>
                   setFormData({
                     ...formData,
-                    edit: { ...formData.edit, bomRevision: e.target.value },
+                    edit: { ...formData.edit, bomRevision: String(option) },
                   })
                 }
               />
             </FieldLabel>
-            <FieldLabel labelText="BOM release date">
-              <DatePicker
-                selected={formData.edit.bomReleaseDate}
-                onChange={(date) =>
-                  setFormData({
-                    ...formData,
-                    edit: { ...formData.edit, bomReleaseDate: date },
-                  })
-                }
-              />
-            </FieldLabel>
+            
+
+            
+            {/* Editable fields */}
             <FieldLabel labelText="Need by date">
               <DatePicker
                 selected={formData.edit.needByDate}
@@ -875,16 +826,13 @@ export const DefaultCard = () => {
                 }
               />
             </FieldLabel>
+            
+            {/* Non-editable fields */}
             <FieldLabel labelText="Ship to">
-              <Input
-                value={formData.edit.shipTo}
-                onChange={(e) =>
-                  setFormData({
-                    ...formData,
-                    edit: { ...formData.edit, shipTo: e.target.value },
-                  })
-                }
-              />
+              <Input value={formData.edit.shipTo} disabled />
+            </FieldLabel>
+            <FieldLabel labelText="Item order type">
+              <Input value="Standard" disabled />
             </FieldLabel>
           </Flex>
         </Sidebar>
