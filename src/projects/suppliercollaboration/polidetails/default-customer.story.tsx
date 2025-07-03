@@ -333,28 +333,36 @@ export const Default = () => {
             </Flex>
           </Summary>
         )}
-              />
-        <Page>
-          {/* Action bar above details */}
-          <Flex justifyContent="flex-end" alignItems="center" gap="x2" mb="x3">
-            <IconicButton icon="chatBubble" aria-label="Comments" onClick={() => setIsCommentSidebarOpen(true)}>
-              Comments
-            </IconicButton>
-            <VerticalDivider />
-            <IconicButton icon="edit" aria-label="Edit" onClick={() => setIsEditSidebarOpen(true)}>
-              Edit
-            </IconicButton>
-          </Flex>
-          {/* Details section */}
-          <Box mb="x3" pl="x3">
-            <DescriptionList layout="stacked" columns={{extraSmall:1, small:2, medium:3, large:5}}>
-              <DescriptionGroup>
-                <DescriptionTerm>PO number</DescriptionTerm>
-                <DescriptionDetails><Link underline={false}>4000023874</Link></DescriptionDetails>
-              </DescriptionGroup>
-                          <DescriptionGroup>
+      />
+      <Page>
+        {/* Action bar above details */}
+        <Flex justifyContent="flex-end" alignItems="center" gap="x2" mb="x3">
+          <IconicButton icon="chatBubble" aria-label="Comments" onClick={() => setIsCommentSidebarOpen(true)}>
+            Comments
+          </IconicButton>
+          <VerticalDivider />
+          <IconicButton icon="edit" aria-label="Edit" onClick={() => setIsEditSidebarOpen(true)}>
+            Edit
+          </IconicButton>
+        </Flex>
+        {/* Details section */}
+        <Box mb="x3" pl="x3">
+          <DescriptionList layout="stacked" columns={{ extraSmall: 1, small: 2, medium: 3, large: 5 }}>
+            <DescriptionGroup>
+              <DescriptionTerm>PO number</DescriptionTerm>
+              <DescriptionDetails>
+                <Link underline={false}>4000023874</Link>
+              </DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
               <DescriptionTerm>Item code and description</DescriptionTerm>
-              <DescriptionDetails><Link underline={false}>12345678<br/>PR 24 SEPHORA ONLINE DELUXE OCT</Link></DescriptionDetails>
+              <DescriptionDetails>
+                <Link underline={false}>
+                  12345678
+                  <br />
+                  PR 24 SEPHORA ONLINE DELUXE OCT
+                </Link>
+              </DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>Customer PO line item number</DescriptionTerm>
@@ -364,277 +372,278 @@ export const Default = () => {
               <DescriptionTerm>Supplier PO line item number</DescriptionTerm>
               <DescriptionDetails>23453</DescriptionDetails>
             </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Creation date</DescriptionTerm>
-                <DescriptionDetails>2024-01-01</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Supplier</DescriptionTerm>
-                <DescriptionDetails>MySupplier</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>BOM revision and release date</DescriptionTerm>
-                <DescriptionDetails>Revision 2<br/>2025-Feb-28</DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>Need by date</DescriptionTerm>
-                <DescriptionDetails>2024-01-01</DescriptionDetails>
-              </DescriptionGroup>
-                          <DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Creation date</DescriptionTerm>
+              <DescriptionDetails>2024-01-01</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Supplier</DescriptionTerm>
+              <DescriptionDetails>MySupplier</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>BOM revision and release date</DescriptionTerm>
+              <DescriptionDetails>
+                Revision 2<br />
+                2025-Feb-28
+              </DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Need by date</DescriptionTerm>
+              <DescriptionDetails>2024-01-01</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
               <DescriptionTerm>Ship to</DescriptionTerm>
               <DescriptionDetails>MySupplier TO</DescriptionDetails>
             </DescriptionGroup>
-            </DescriptionList>
-          </Box>
-          <Tabs selectedIndex={selectedIndex} onTabClick={(e, index) => setSelectedIndex(index)}>
-        <Tab label="Request details">
-          <Box>
-            {/* Filters action bar */}
-            <Flex justifyContent="flex-end" alignItems="center" pt="x2">
-              <IconicButton icon="filter" aria-label="Filters" onClick={() => setIsSidebarOpen(true)}>
-                Filters
-              </IconicButton>
-            </Flex>
-            {/* Cards row with left inner shadow only if overflowing */}
-            
+          </DescriptionList>
+        </Box>
+        <Tabs selectedIndex={selectedIndex} onTabClick={(e, index) => setSelectedIndex(index)}>
+          <Tab label="Request details">
+            <Box>
+              {/* Filters action bar */}
+              <Flex justifyContent="flex-end" alignItems="center" pt="x2">
+                <IconicButton icon="filter" aria-label="Filters" onClick={() => setIsSidebarOpen(true)}>
+                  Filters
+                </IconicButton>
+              </Flex>
+              {/* Cards row with left inner shadow only if overflowing */}
+
               <Box position="relative">
-              <Box
-                ref={scrollContainerRef}
-                overflowX="auto"
-                width="100%"
-              >
-                <Flex
-                  ref={cardsRowRef}
-                  alignItems="stretch"
-                  width={calculateCardsWidth()}
-                  justifyContent="flex-end"
-                  py="x3"
-                  gap="x2"
-                >
-                  {/* Original request card. Card_type = regular. Can be filtered out. */}
-                  {appliedFilters.includeOriginalRequest && (
-                    <Card p="0" width="480px">
-                      <Box px="x2" py="x1_5" backgroundColor="whiteGrey">
-                        <Heading4 mb="0">Original request</Heading4>
-                        <Text fontSize="small" color="midGrey">
-                          by John Doe on 2024-Jan-01
-                        </Text>
-                      </Box>
-                      <Divider m="0" />
-                      <Box px="x2" py="x1" pb="x4">
-                        <DescriptionList layout="inline" showDivider descriptionTermMaxWidth="12em">
-                          {requestFields.map((field) => (
-                            <DescriptionGroup key={field.label}>
-                              <DescriptionTerm>{field.label}</DescriptionTerm>
-                              <DescriptionDetails>{field.value}</DescriptionDetails>
-                            </DescriptionGroup>
-                          ))}
-                        </DescriptionList>
-                      </Box>
-                    </Card>
-                  )}
-                  {/* Your request card. Card_style_type = regular. Can be filtered out.*/}
-                  {appliedFilters.includeOldRequestsAndProposals && (
-                    <Card p="0" width="480px">
-                      <Box px="x2" py="x1_5" backgroundColor="whiteGrey">
-                        <Heading4 mb="0">Your request</Heading4>
-                        <Text fontSize="small" color="midGrey">
-                          by you on 2024-Jan-02
-                        </Text>
-                      </Box>
-                      <Divider m="0" />
-                      <Box px="x2" py="x1" pb="x4">
-                        <DescriptionList layout="inline" showDivider descriptionTermMaxWidth="12em">
-                          {requestFields.map((field) => (
-                            <DescriptionGroup key={field.label}>
-                              <DescriptionTerm>{field.label}</DescriptionTerm>
-                              <DescriptionDetails>{field.value}</DescriptionDetails>
-                            </DescriptionGroup>
-                          ))}
-                        </DescriptionList>
-                      </Box>
-                    </Card>
-                  )}
-                  {/* Supplier proposal card. Card_style_type = regular. Can be filtered out. */}
-                  {appliedFilters.includeOldRequestsAndProposals && (
-                    <Card p="0" width="480px">
-                      <Box px="x2" py="x1_5" backgroundColor="whiteGrey">
-                        <Heading4 mb="0">Supplier proposal</Heading4>
-                        <Text fontSize="small" color="midGrey">
-                          by John Doe on 2024-Jan-03
-                        </Text>
-                      </Box>
-                      <Divider m="0" />
-                      <Box px="x2" py="x1" pb="x4">
-                        <DescriptionList layout="inline" showDivider descriptionTermMaxWidth="12em">
-                          {requestFields.map((field) => (
-                            <DescriptionGroup key={field.label}>
-                              <DescriptionTerm>{field.label}</DescriptionTerm>
-                              <DescriptionDetails>{field.value}</DescriptionDetails>
-                            </DescriptionGroup>
-                          ))}
-                        </DescriptionList>
-                      </Box>
-                    </Card>
-                  )}
-                  {/* Latest your request card. Card_style_type = regular. Can be filtered out */}
-                  {appliedFilters.includeLatestRequestAndProposal && (
-                    <Card p="0" width="480px">
-                      <Box px="x2" py="x1_5" backgroundColor="whiteGrey">
-                        <Heading4 mb="0">Your latest request</Heading4>
-                        <Text fontSize="small" color="midGrey">
-                          by you on 2024-Jan-01
-                        </Text>
-                      </Box>
-                      <Divider m="0" />
-                      <Box px="x2" py="x1" pb="x4">
-                        <DescriptionList layout="inline" showDivider descriptionTermMaxWidth="12em">
-                          {requestFields.map((field) => (
-                            <DescriptionGroup key={field.label}>
-                              <DescriptionTerm>{field.label}</DescriptionTerm>
-                              <DescriptionDetails>{field.value}</DescriptionDetails>
-                            </DescriptionGroup>
-                          ))}
-                        </DescriptionList>
-                      </Box>
-                    </Card>
-                  )}
-                  {/* Active proposal. Card_style_type = active. Displayed if the proposal is still active. */}
-                  {appliedFilters.includeLatestRequestAndProposal && collaborationStatus !== "accepted" && (
-                    <Card p="0" borderColor="yellow" overflow="hidden" width="480px">
-                      <Box px="x2" py="x1_5" pr="x1_5" backgroundColor="lightYellow">
-                        <Flex justifyContent="space-between">
+                <Box ref={scrollContainerRef} overflowX="auto" width="100%">
+                  <Flex
+                    ref={cardsRowRef}
+                    alignItems="stretch"
+                    width={calculateCardsWidth()}
+                    justifyContent="flex-end"
+                    py="x3"
+                    gap="x2"
+                  >
+                    {/* Original request card. Card_type = regular. Can be filtered out. */}
+                    {appliedFilters.includeOriginalRequest && (
+                      <Card p="0" width="480px">
+                        <Box px="x2" py="x1_5" backgroundColor="whiteGrey">
+                          <Heading4 mb="0">Original request</Heading4>
+                          <Text fontSize="small" color="midGrey">
+                            by John Doe on 2024-Jan-01
+                          </Text>
+                        </Box>
+                        <Divider m="0" />
+                        <Box px="x2" py="x1" pb="x4">
+                          <DescriptionList layout="inline" showDivider descriptionTermMaxWidth="12em">
+                            {requestFields.map((field) => (
+                              <DescriptionGroup key={field.label}>
+                                <DescriptionTerm>{field.label}</DescriptionTerm>
+                                <DescriptionDetails>{field.value}</DescriptionDetails>
+                              </DescriptionGroup>
+                            ))}
+                          </DescriptionList>
+                        </Box>
+                      </Card>
+                    )}
+                    {/* Your request card. Card_style_type = regular. Can be filtered out.*/}
+                    {appliedFilters.includeOldRequestsAndProposals && (
+                      <Card p="0" width="480px">
+                        <Box px="x2" py="x1_5" backgroundColor="whiteGrey">
+                          <Heading4 mb="0">Your request</Heading4>
+                          <Text fontSize="small" color="midGrey">
+                            by you on 2024-Jan-02
+                          </Text>
+                        </Box>
+                        <Divider m="0" />
+                        <Box px="x2" py="x1" pb="x4">
+                          <DescriptionList layout="inline" showDivider descriptionTermMaxWidth="12em">
+                            {requestFields.map((field) => (
+                              <DescriptionGroup key={field.label}>
+                                <DescriptionTerm>{field.label}</DescriptionTerm>
+                                <DescriptionDetails>{field.value}</DescriptionDetails>
+                              </DescriptionGroup>
+                            ))}
+                          </DescriptionList>
+                        </Box>
+                      </Card>
+                    )}
+                    {/* Supplier proposal card. Card_style_type = regular. Can be filtered out. */}
+                    {appliedFilters.includeOldRequestsAndProposals && (
+                      <Card p="0" width="480px">
+                        <Box px="x2" py="x1_5" backgroundColor="whiteGrey">
                           <Heading4 mb="0">Supplier proposal</Heading4>
-                          <Box backgroundColor="yellow" borderRadius="medium" p="x0_25" width="x3" height="x3">
-                            <Tooltip tooltip="Awaiting customer response">
-                              <Icon icon="accessTime" size="x2_5" color="darkGrey" />
-                            </Tooltip>
-                          </Box>
+                          <Text fontSize="small" color="midGrey">
+                            by John Doe on 2024-Jan-03
+                          </Text>
+                        </Box>
+                        <Divider m="0" />
+                        <Box px="x2" py="x1" pb="x4">
+                          <DescriptionList layout="inline" showDivider descriptionTermMaxWidth="12em">
+                            {requestFields.map((field) => (
+                              <DescriptionGroup key={field.label}>
+                                <DescriptionTerm>{field.label}</DescriptionTerm>
+                                <DescriptionDetails>{field.value}</DescriptionDetails>
+                              </DescriptionGroup>
+                            ))}
+                          </DescriptionList>
+                        </Box>
+                      </Card>
+                    )}
+                    {/* Latest your request card. Card_style_type = regular. Can be filtered out */}
+                    {appliedFilters.includeLatestRequestAndProposal && (
+                      <Card p="0" width="480px">
+                        <Box px="x2" py="x1_5" backgroundColor="whiteGrey">
+                          <Heading4 mb="0">Your latest request</Heading4>
+                          <Text fontSize="small" color="midGrey">
+                            by you on 2024-Jan-01
+                          </Text>
+                        </Box>
+                        <Divider m="0" />
+                        <Box px="x2" py="x1" pb="x4">
+                          <DescriptionList layout="inline" showDivider descriptionTermMaxWidth="12em">
+                            {requestFields.map((field) => (
+                              <DescriptionGroup key={field.label}>
+                                <DescriptionTerm>{field.label}</DescriptionTerm>
+                                <DescriptionDetails>{field.value}</DescriptionDetails>
+                              </DescriptionGroup>
+                            ))}
+                          </DescriptionList>
+                        </Box>
+                      </Card>
+                    )}
+                    {/* Active proposal. Card_style_type = active. Displayed if the proposal is still active. */}
+                    {appliedFilters.includeLatestRequestAndProposal && collaborationStatus !== "accepted" && (
+                      <Card p="0" borderColor="yellow" overflow="hidden" width="480px">
+                        <Box px="x2" py="x1_5" pr="x1_5" backgroundColor="lightYellow">
+                          <Flex justifyContent="space-between">
+                            <Heading4 mb="0">Supplier proposal</Heading4>
+                            <Box backgroundColor="yellow" borderRadius="medium" p="x0_25" width="x3" height="x3">
+                              <Tooltip tooltip="Awaiting customer response">
+                                <Icon icon="accessTime" size="x2_5" color="darkGrey" />
+                              </Tooltip>
+                            </Box>
+                          </Flex>
+                          <Text fontSize="small" color="midGrey" pr="x0_5">
+                            by John Doe on 2024-Jan-05
+                          </Text>
+                        </Box>
+                        <Divider m="0" />
+                        <Box px="x2" py="x1">
+                          <DescriptionList layout="inline" showDivider descriptionTermMaxWidth="12em">
+                            {requestFields.map((field) => (
+                              <DescriptionGroup key={field.label}>
+                                <DescriptionTerm>{field.label}</DescriptionTerm>
+                                <DescriptionDetails>{field.value}</DescriptionDetails>
+                              </DescriptionGroup>
+                            ))}
+                          </DescriptionList>
+                        </Box>
+                        <Box p="x2" pt="x1">
+                          <PrimaryButton
+                            fullWidth
+                            onClick={() => {
+                              setCollaborationStatus("accepted");
+                              setShowAcceptedCard(true);
+                              toast.success("Proposal accepted successfully");
+                            }}
+                          >
+                            Accept proposal
+                          </PrimaryButton>
+                        </Box>
+                      </Card>
+                    )}
+                    {/* Accepted card. Card_style_type = accepted. Displayed when proposal is accepted. */}
+                    {showAcceptedCard && (
+                      <Card p="0" borderColor="green" width="480px">
+                        <Box px="x2" py="x1_5" backgroundColor="lightGreen">
+                          <Flex justifyContent="space-between">
+                            <Heading4 mb="0">Accepted proposal</Heading4>
+                            <Box backgroundColor="green" borderRadius="medium" p="3px" width="24px" height="24px">
+                              <Icon icon="check" size="18px" color="lightGreen" />
+                            </Box>
+                          </Flex>
+                          <Text fontSize="small" color="midGrey">
+                            by John Doe on 2024-Jan-05
+                          </Text>
+                        </Box>
+                        <Divider m="0" />
+                        <Box px="x2" py="x1" pb="x4">
+                          <DescriptionList layout="inline" showDivider descriptionTermMaxWidth="12em">
+                            {requestFields.map((field) => (
+                              <DescriptionGroup key={field.label}>
+                                <DescriptionTerm>{field.label}</DescriptionTerm>
+                                <DescriptionDetails>{field.value}</DescriptionDetails>
+                              </DescriptionGroup>
+                            ))}
+                          </DescriptionList>
+                        </Box>
+                      </Card>
+                    )}
+                    {/* New requirements. Card_style_type = new. Displayed if the proposal is still active */}
+                    {collaborationStatus !== "accepted" && (
+                      <Card p="0" width="480px">
+                        <Flex justifyContent="center" alignItems="center" height="100%">
+                          <QuietButton onClick={() => setIsNewRequirementsSidebarOpen(true)}>
+                            New requirements
+                          </QuietButton>
                         </Flex>
-                        <Text fontSize="small" color="midGrey" pr="x0_5">
-                          by John Doe on 2024-Jan-05
-                        </Text>
-                      </Box>
-                      <Divider m="0" />
-                      <Box px="x2" py="x1">
-                        <DescriptionList layout="inline" showDivider descriptionTermMaxWidth="12em">
-                          {requestFields.map((field) => (
-                            <DescriptionGroup key={field.label}>
-                              <DescriptionTerm>{field.label}</DescriptionTerm>
-                              <DescriptionDetails>{field.value}</DescriptionDetails>
-                            </DescriptionGroup>
-                          ))}
-                        </DescriptionList>
-                      </Box>
-                      <Box p="x2" pt="x1">
-                        <PrimaryButton
-                          fullWidth
-                          onClick={() => {
-                            setCollaborationStatus("accepted");
-                            setShowAcceptedCard(true);
-                            toast.success("Proposal accepted successfully");
-                          }}
-                        >
-                          Accept proposal
-                        </PrimaryButton>
-                      </Box>
-                    </Card>
-                  )}
-                  {/* Accepted card. Card_style_type = accepted. Displayed when proposal is accepted. */}
-                  {showAcceptedCard && (
-                    <Card p="0" borderColor="green" width="480px">
-                      <Box px="x2" py="x1_5" backgroundColor="lightGreen">
-                        <Flex justifyContent="space-between">
-                          <Heading4 mb="0">Accepted proposal</Heading4>
-                          <Box backgroundColor="green" borderRadius="medium" p="3px" width="24px" height="24px">
-                            <Icon icon="check" size="18px" color="lightGreen" />
-                          </Box>
-                        </Flex>
-                        <Text fontSize="small" color="midGrey">
-                          by John Doe on 2024-Jan-05
-                        </Text>
-                      </Box>
-                      <Divider m="0" />
-                      <Box px="x2" py="x1" pb="x4">
-                        <DescriptionList layout="inline" showDivider descriptionTermMaxWidth="12em">
-                          {requestFields.map((field) => (
-                            <DescriptionGroup key={field.label}>
-                              <DescriptionTerm>{field.label}</DescriptionTerm>
-                              <DescriptionDetails>{field.value}</DescriptionDetails>
-                            </DescriptionGroup>
-                          ))}
-                        </DescriptionList>
-                      </Box>
-                    </Card>
-                  )}
-                  {/* New requirements. Card_style_type = new. Displayed if the proposal is still active */}
-                  {collaborationStatus !== "accepted" && (
-                    <Card p="0" width="480px">
-                      <Flex justifyContent="center" alignItems="center" height="100%">
-                        <QuietButton onClick={() => setIsNewRequirementsSidebarOpen(true)}>New requirements</QuietButton>
-                      </Flex>
-                    </Card>
-                  )}
-                </Flex>
-              </Box>
-              {/* Left gradient - shows when there's room to scroll left */}
-              {isOverflowing && scrollPosition > 10 && (
-                <Box
-                  position="absolute"
-                  top={0}
-                  left={0}
-                  bottom={0}
-                  width="48px"
-                  zIndex={1}
-                  height="100%"
-                  style={{
-                    pointerEvents: "none",
-                    background:
-                      "linear-gradient(to right, rgba(0,0,0,0.08) 0px, rgba(0,0,0,0.03) 16px, rgba(0,0,0,0) 48px)",
-                  }}
-                />
-              )}
-              {/* Right gradient - shows when there's room to scroll right */}
-              {isOverflowing && scrollPosition < (maxScrollLeft - 10) && (
-                <Box
-                  position="absolute"
-                  top={0}
-                  right={0}
-                  bottom={0}
-                  width="48px"
-                  zIndex={1}
-                  height="100%"
-                  style={{
-                    pointerEvents: "none",
-                    background:
-                      "linear-gradient(to left, rgba(0,0,0,0.08) 0px, rgba(0,0,0,0.03) 16px, rgba(0,0,0,0) 48px)",
-                  }}
-                />
-              )}
+                      </Card>
+                    )}
+                  </Flex>
+                </Box>
+                {/* Left gradient - shows when there's room to scroll left */}
+                {isOverflowing && scrollPosition > 10 && (
+                  <Box
+                    position="absolute"
+                    top={0}
+                    left={0}
+                    bottom={0}
+                    width="48px"
+                    zIndex={1}
+                    height="100%"
+                    style={{
+                      pointerEvents: "none",
+                      background:
+                        "linear-gradient(to right, rgba(0,0,0,0.08) 0px, rgba(0,0,0,0.03) 16px, rgba(0,0,0,0) 48px)",
+                    }}
+                  />
+                )}
+                {/* Right gradient - shows when there's room to scroll right */}
+                {isOverflowing && scrollPosition < maxScrollLeft - 10 && (
+                  <Box
+                    position="absolute"
+                    top={0}
+                    right={0}
+                    bottom={0}
+                    width="48px"
+                    zIndex={1}
+                    height="100%"
+                    style={{
+                      pointerEvents: "none",
+                      background:
+                        "linear-gradient(to left, rgba(0,0,0,0.08) 0px, rgba(0,0,0,0.03) 16px, rgba(0,0,0,0) 48px)",
+                    }}
+                  />
+                )}
               </Box>
             </Box>
-        </Tab>
-        <Tab label="Production records">
-          <Box p="x4">
-            <Text>Production records content goes here.</Text>
-          </Box>
-        </Tab>
-        <Tab label="Milestones performance">
-          <Box p="x4">
-            <Text>Milestones performance content goes here.</Text>
-          </Box>
-        </Tab>
-        <Tab label="Attachments (5)">
-          <Box p="x4">
-            <Text>Attachments content goes here.</Text>
-          </Box>
-        </Tab>
-        <Tab label="History log">
-          <Box p="x4">
-            <Text>History log content goes here.</Text>
-          </Box>
-        </Tab>
-              </Tabs>
+          </Tab>
+          <Tab label="Production records">
+            <Box p="x4">
+              <Text>Production records content goes here.</Text>
+            </Box>
+          </Tab>
+          <Tab label="Milestones performance">
+            <Box p="x4">
+              <Text>Milestones performance content goes here.</Text>
+            </Box>
+          </Tab>
+          <Tab label="Attachments (5)">
+            <Box p="x4">
+              <Text>Attachments content goes here.</Text>
+            </Box>
+          </Tab>
+          <Tab label="History log">
+            <Box p="x4">
+              <Text>History log content goes here.</Text>
+            </Box>
+          </Tab>
+        </Tabs>
         <Sidebar
           isOpen={isSidebarOpen}
           onClose={() => setIsSidebarOpen(false)}
@@ -845,4 +854,4 @@ export const Default = () => {
   );
 };
 
-Default.storyName = "Default"; 
+Default.storyName = "Default";
