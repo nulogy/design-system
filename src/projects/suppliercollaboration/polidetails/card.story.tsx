@@ -46,6 +46,7 @@ import {
   DatePicker,
   Switcher,
   Switch,
+  Checkbox,
 } from "../../..";
 import { POLICard } from "./components/POLICard";
 
@@ -108,6 +109,9 @@ export const DefaultCard = () => {
     viewMode: "supplier" as "supplier" | "customer",
   });
 
+  // Production complete state
+  const [productionComplete, setProductionComplete] = useState(false);
+
   // Form data
   const [formData, setFormData] = useState({
     newProposal: {
@@ -131,12 +135,14 @@ export const DefaultCard = () => {
       bomReleaseDate: new Date("2025-02-28"),
       needByDate: new Date("2024-01-01"),
       shipTo: "MySupplier TO",
+      carryOverSentTo: "",
+      shortCloseReason: "",
     },
   });
 
   // Filter state - using switcher instead of checkboxes
   const [filterState, setFilterState] = useState({
-    viewMode: "all" as "all" | "minimal",
+    viewMode: "minimal" as "all" | "minimal",
   });
 
   // Helper functions
@@ -145,74 +151,130 @@ export const DefaultCard = () => {
   };
 
   const calculateCardsWidth = () => {
-    const cardWidth = 480; // Keep fixed width for calculation
+    const cardWidth = 480; // Fixed width for each card
+    const cardBorderWidth = 2; // 1px left border + 1px right border
     const gapWidth = 16;
+    const effectiveGapWidth = gapWidth - 2; // Account for border overlap (1px from each card)
     let numberOfCards = 0;
+    let cardBreakdown = [];
 
     if (filterState.viewMode === "all") {
       // Show all cards
-      numberOfCards = 4; // Original + 3 old cards + user's latest
+      numberOfCards = 4; // Original + 3 old cards
+      cardBreakdown.push("Base 4 cards (Original + 3 old cards)");
+      
+      // User's latest request/proposal - shown in both views
+      numberOfCards++;
+      cardBreakdown.push("User's latest request/proposal");
 
       // Handle latest request/proposal cards
       if (collaborationState.status === "accepted") {
         // When accepted, show the previously active card as regular
-        if (collaborationState.activeCardAuthorRole) numberOfCards++;
+        if (collaborationState.activeCardAuthorRole) {
+          numberOfCards++;
+          cardBreakdown.push("Previously active card (accepted state)");
+        }
       } else {
         // When not accepted, show active card or previously active card
         if (collaborationState.activeCardAuthorRole) {
           if (collaborationState.hasNewCard) {
             // Show previously active as regular + new active card
             numberOfCards += 2;
+            cardBreakdown.push("Previously active card + new active card");
           } else {
             // Show current active card
             numberOfCards++;
+            cardBreakdown.push("Current active card");
           }
         }
       }
 
       // Handle accepted card
-      if (collaborationState.showAcceptedCard) numberOfCards++;
+      if (collaborationState.showAcceptedCard) {
+        numberOfCards++;
+        cardBreakdown.push("Accepted card");
+      }
     } else {
       // Minimal view: Original + User's latest + Latest + New proposal button
-      numberOfCards = 2; // Original + user's latest
+      numberOfCards = 1; // Original only
+      cardBreakdown.push("Base 1 card (Original only)");
+      
+      // User's latest request/proposal - shown in both views
+      numberOfCards++;
+      cardBreakdown.push("User's latest request/proposal");
 
       // Handle latest request/proposal cards
       if (collaborationState.status === "accepted") {
         // When accepted, show the previously active card as regular
-        if (collaborationState.activeCardAuthorRole) numberOfCards++;
+        if (collaborationState.activeCardAuthorRole) {
+          numberOfCards++;
+          cardBreakdown.push("Previously active card (accepted state)");
+        }
+        
+        // Handle accepted card in Limited mode
+        if (collaborationState.showAcceptedCard) {
+          numberOfCards++;
+          cardBreakdown.push("Accepted card (Limited mode)");
+        }
       } else {
         // When not accepted, show active card or previously active card
         if (collaborationState.activeCardAuthorRole) {
           if (collaborationState.hasNewCard) {
             // Show previously active as regular + new active card
             numberOfCards += 2;
+            cardBreakdown.push("Previously active card + new active card");
           } else {
             // Show current active card
             numberOfCards++;
+            cardBreakdown.push("Current active card");
           }
         }
       }
     }
 
     // Handle new proposal button card (always at the end when not accepted)
-    if (collaborationState.status !== "accepted") numberOfCards++;
+    if (collaborationState.status !== "accepted") {
+      numberOfCards++;
+      cardBreakdown.push("New proposal button");
+    }
 
-    console.log("Width calculation:", {
+    // Handle new active card created by current user
+    if (collaborationState.hasNewCard && collaborationState.activeCardAuthorRole === userState.role) {
+      numberOfCards++;
+      cardBreakdown.push("New active card by current user");
+    }
+
+    const totalWidth = (cardWidth + cardBorderWidth) * numberOfCards + effectiveGapWidth * (numberOfCards - 1);
+    
+    console.log("Width calculation breakdown:", {
       numberOfCards,
-      totalWidth: cardWidth * numberOfCards + gapWidth * (numberOfCards - 1),
+      cardWidth: cardWidth + cardBorderWidth,
+      totalWidth,
       status: collaborationState.status,
       showAccepted: collaborationState.showAcceptedCard,
       hasNewCard: collaborationState.hasNewCard,
       activeAuthor: collaborationState.activeCardAuthorRole,
       viewMode: filterState.viewMode,
+      cardBreakdown,
     });
 
-    return cardWidth * numberOfCards + gapWidth * (numberOfCards - 1);
+    return totalWidth;
   };
 
   // Force width recalculation
   const [widthKey, setWidthKey] = useState(0);
-  const [calculatedWidth, setCalculatedWidth] = useState(calculateCardsWidth());
+  const calculatedWidth = useMemo(() => {
+    const width = calculateCardsWidth();
+    console.log("Memoized width calculation:", width);
+    return width;
+  }, [
+    filterState.viewMode,
+    collaborationState.status,
+    collaborationState.showAcceptedCard,
+    collaborationState.hasNewCard,
+    collaborationState.activeCardAuthorRole,
+    userState.role,
+  ]);
 
   // Sidebar handlers
   const openSidebar = (sidebar: keyof typeof sidebarState) => {
@@ -281,6 +343,12 @@ export const DefaultCard = () => {
 
   // Initialize active card author role
   useEffect(() => {
+    console.log("Initializing active card author role:", {
+      status: collaborationState.status,
+      userRole: userState.role,
+      currentActiveAuthor: collaborationState.activeCardAuthorRole,
+    });
+    
     if (collaborationState.status === "accepted") {
       setCollaborationState((prev) => ({ ...prev, activeCardAuthorRole: null }));
     } else {
@@ -291,11 +359,17 @@ export const DefaultCard = () => {
     }
   }, [collaborationState.status, userState.role]);
 
-  // Recalculate width when cards change
+  // Update width key when cards change
   useEffect(() => {
-    // Recalculate the width whenever card-related state changes
-    const newWidth = calculateCardsWidth();
-    setCalculatedWidth(newWidth);
+    console.log("Width recalculation triggered by:", {
+      status: collaborationState.status,
+      showAccepted: collaborationState.showAcceptedCard,
+      hasNewCard: collaborationState.hasNewCard,
+      activeAuthor: collaborationState.activeCardAuthorRole,
+      viewMode: filterState.viewMode,
+      userRole: userState.role,
+    });
+
     setWidthKey((prev) => prev + 1);
 
     const scrollEl = scrollContainerRef.current;
@@ -320,7 +394,45 @@ export const DefaultCard = () => {
     collaborationState.hasNewCard,
     collaborationState.activeCardAuthorRole,
     filterState.viewMode,
+    userState.role,
   ]);
+
+  // Additional effect specifically for view mode changes
+  useEffect(() => {
+    console.log("View mode changed to:", filterState.viewMode);
+    setWidthKey((prev) => prev + 1);
+    
+    // Force a re-render after a short delay to ensure DOM updates
+    setTimeout(() => {
+      const scrollEl = scrollContainerRef.current;
+      if (scrollEl) {
+        scrollEl.scrollLeft = scrollEl.scrollWidth;
+        setScrollState((prev) => ({
+          ...prev,
+          scrollPosition: scrollEl.scrollLeft,
+          maxScrollLeft: scrollEl.scrollWidth - scrollEl.clientWidth,
+          isOverflowing: scrollEl.scrollWidth > scrollEl.clientWidth,
+        }));
+      }
+    }, 100);
+  }, [filterState.viewMode]);
+
+  // Force DOM update when calculated width changes
+  useEffect(() => {
+    const scrollEl = scrollContainerRef.current;
+    if (scrollEl) {
+      // Update scroll position
+      requestAnimationFrame(() => {
+        scrollEl.scrollLeft = scrollEl.scrollWidth;
+        setScrollState((prev) => ({
+          ...prev,
+          scrollPosition: scrollEl.scrollLeft,
+          maxScrollLeft: scrollEl.scrollWidth - scrollEl.clientWidth,
+          isOverflowing: scrollEl.scrollWidth > scrollEl.clientWidth,
+        }));
+      });
+    }
+  }, [calculatedWidth]);
 
   const tableColumns = [
     {
@@ -424,7 +536,7 @@ export const DefaultCard = () => {
           </Breadcrumbs>
         )}
         title="12345678"
-        subtitle="PR 24 SEPHORA ONLINE DELUXE OCT"
+        subtitle="12345678 – PR 24 SEPHORA ONLINE DELUXE OCT"
         renderSummary={() => (
           <Summary breakpoint={1200}>
             <Flex flexDirection="column">
@@ -432,9 +544,9 @@ export const DefaultCard = () => {
                 Production progress
               </Text>
               <Text fontWeight="medium" fontSize="heading4" lineHeight="heading4">
-                50%{" "}
+                {productionComplete ? "100%" : "50%"}{" "}
                 <Box as="span" fontSize="small" lineHeight="smallRelaxed" color="midGrey">
-                  (100,000/200,000)
+                  {productionComplete ? "(200,000/200,000)" : "(100,000/200,000)"}
                 </Box>
               </Text>
             </Flex>
@@ -445,20 +557,22 @@ export const DefaultCard = () => {
               </Text>
               <StatusIndicator
                 type={
-                  collaborationState.status === "accepted"
+                  productionComplete || collaborationState.status === "accepted"
                     ? "success"
                     : collaborationState.activeCardAuthorRole !== userState.role
                       ? "warning"
                       : "quiet"
                 }
               >
-                {collaborationState.status === "accepted"
+                {productionComplete
                   ? "Accepted"
-                  : collaborationState.activeCardAuthorRole !== userState.role
-                    ? "Awaiting your response"
-                    : userState.role === "supplier"
-                      ? "Awaiting customer response"
-                      : "Awaiting supplier response"}
+                  : collaborationState.status === "accepted"
+                    ? "Accepted"
+                    : collaborationState.activeCardAuthorRole !== userState.role
+                      ? "Awaiting your response"
+                      : userState.role === "supplier"
+                        ? "Awaiting customer response"
+                        : "Awaiting supplier response"}
               </StatusIndicator>
             </Flex>
           </Summary>
@@ -490,9 +604,7 @@ export const DefaultCard = () => {
               </DescriptionTerm>
               <DescriptionDetails>
                 <Link underline={false}>
-                  12345678
-                  <br />
-                  PR 24 SEPHORA ONLINE DELUXE OCT
+                  12345678 – PR 24 SEPHORA ONLINE DELUXE OCT
                 </Link>
               </DescriptionDetails>
             </DescriptionGroup>
@@ -515,8 +627,7 @@ export const DefaultCard = () => {
             <DescriptionGroup>
               <DescriptionTerm>BOM revision and release date</DescriptionTerm>
               <DescriptionDetails>
-                Revision 2<br />
-                2025-Feb-28
+                Revision 2 – 2025-Feb-28
               </DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
@@ -531,6 +642,18 @@ export const DefaultCard = () => {
               <DescriptionTerm>Item order type</DescriptionTerm>
               <DescriptionDetails>Standard</DescriptionDetails>
             </DescriptionGroup>
+            {productionComplete && (
+              <>
+                <DescriptionGroup>
+                  <DescriptionTerm>Carry over sent to</DescriptionTerm>
+                  <DescriptionDetails>{formData.edit.carryOverSentTo || "N/A"}</DescriptionDetails>
+                </DescriptionGroup>
+                <DescriptionGroup>
+                  <DescriptionTerm>Short close reason</DescriptionTerm>
+                  <DescriptionDetails>{formData.edit.shortCloseReason || "N/A"}</DescriptionDetails>
+                </DescriptionGroup>
+              </>
+            )}
           </DescriptionList>
         </Box>
         <Tabs selectedIndex={selectedIndex} onTabClick={(e, index) => setSelectedIndex(index)}>
@@ -538,7 +661,7 @@ export const DefaultCard = () => {
             <Box>
               {/* View mode switcher */}
               <Flex justifyContent="flex-end" alignItems="center" pt="x2" mb="x1">
-                {collaborationState.showAcceptedCard && (
+                {(collaborationState.showAcceptedCard || productionComplete) && !productionComplete && (
                   <>
                     <IconicButton
                       icon="add"
@@ -554,22 +677,23 @@ export const DefaultCard = () => {
                   selected={filterState.viewMode}
                   onChange={(value) => setFilterState((prev) => ({ ...prev, viewMode: value as "all" | "minimal" }))}
                 >
-                  <Switch value="all">All</Switch>
                   <Switch value="minimal">Limited</Switch>
+                  <Switch value="all">All</Switch>
                 </Switcher>
               </Flex>
               {/* Cards row with left inner shadow only if overflowing */}
-
               <Box position="relative">
                 <Box ref={scrollContainerRef} overflowX="auto" width="100%">
                   <Flex
                     ref={cardsRowRef}
                     alignItems="stretch"
-                    width={calculatedWidth}
                     justifyContent="flex-end"
-                    p="x2"
+                    py="x2"
                     gap="x2"
                     key={widthKey}
+                    style={{ 
+                      width: `${calculatedWidth}px`
+                    }}
                   >
                     {/* Original request card. Always shown in both views */}
                     <POLICard
@@ -579,6 +703,7 @@ export const DefaultCard = () => {
                       authorRole="customer"
                       userRole={userState.role}
                       date="2024-Jan-01"
+                      width="480px"
                     />
                     {/* Old cards - only shown in "all" view */}
                     {filterState.viewMode === "all" && (
@@ -591,6 +716,7 @@ export const DefaultCard = () => {
                           authorRole={userState.role}
                           userRole={userState.role}
                           date="2024-Jan-02"
+                          width="480px"
                         />
                         {/* Customer request card */}
                         <POLICard
@@ -600,6 +726,7 @@ export const DefaultCard = () => {
                           authorRole={userState.role === "supplier" ? "customer" : "supplier"}
                           userRole={userState.role}
                           date="2024-Jan-03"
+                          width="480px"
                         />
                         {/* Latest supplier request card */}
                         <POLICard
@@ -609,20 +736,25 @@ export const DefaultCard = () => {
                           authorRole={userState.role}
                           userRole={userState.role}
                           date="2024-Jan-01"
+                          width="480px"
                         />
                       </>
                     )}
-                    {/* User's latest request/proposal - shown in both views */}
-                    <POLICard
-                      type="regular"
-                      baseTitle={`latest ${userState.role === "supplier" ? "proposal" : "request"}`}
-                      author="you"
-                      authorRole={userState.role}
-                      userRole={userState.role}
-                      date="2024-Jan-04"
-                    />
-                    {/* Active proposal. Card_style_type = active. Displayed if the proposal is still active. */}
+                    {/* User's latest request/proposal - shown first */}
+                    {!collaborationState.hasNewCard && !productionComplete && (
+                      <POLICard
+                        type="regular"
+                        baseTitle={`latest ${userState.role === "supplier" ? "proposal" : "request"}`}
+                        author="you"
+                        authorRole={userState.role}
+                        userRole={userState.role}
+                        date="2024-Jan-04"
+                        width="480px"
+                      />
+                    )}
+                    {/* Customer's latest request - shown after user's proposal */}
                     {collaborationState.status !== "accepted" &&
+                      !productionComplete &&
                       collaborationState.activeCardAuthorRole &&
                       !collaborationState.hasNewCard && (
                         <POLICard
@@ -634,10 +766,12 @@ export const DefaultCard = () => {
                           date="2024-Jan-05"
                           onAccept={acceptRequest}
                           acceptButtonText={`Accept ${collaborationState.activeCardAuthorRole === "customer" ? "request" : "proposal"}`}
+                          width="480px"
                         />
                       )}
-                    {/* Previously active card converted to regular when new card is created */}
+                    {/* Customer's latest request converted to regular when new card is created */}
                     {collaborationState.status !== "accepted" &&
+                      !productionComplete &&
                       collaborationState.activeCardAuthorRole &&
                       collaborationState.hasNewCard && (
                         <POLICard
@@ -647,10 +781,11 @@ export const DefaultCard = () => {
                           authorRole={collaborationState.activeCardAuthorRole}
                           userRole={userState.role}
                           date="2024-Jan-05"
+                          width="480px"
                         />
                       )}
                     {/* Accepted card. Card_style_type = accepted. Displayed when request is accepted. */}
-                    {collaborationState.showAcceptedCard && !collaborationState.hasNewCard && (
+                    {(collaborationState.showAcceptedCard || productionComplete) && !collaborationState.hasNewCard && (
                       <POLICard
                         type="accepted"
                         baseTitle="accepted request"
@@ -658,10 +793,11 @@ export const DefaultCard = () => {
                         authorRole={userState.role === "supplier" ? "customer" : "supplier"}
                         userRole={userState.role}
                         date="2024-Jan-05"
+                        width="480px"
                       />
                     )}
                     {/* Regular accepted card when there's a new active card */}
-                    {collaborationState.showAcceptedCard && collaborationState.hasNewCard && (
+                    {(collaborationState.showAcceptedCard || productionComplete) && collaborationState.hasNewCard && (
                       <POLICard
                         type="regular"
                         baseTitle="accepted request"
@@ -669,21 +805,25 @@ export const DefaultCard = () => {
                         authorRole={userState.role === "supplier" ? "customer" : "supplier"}
                         userRole={userState.role}
                         date="2024-Jan-05"
+                        width="480px"
                       />
                     )}
                     {/* New active card created by current user - placed just before the New button */}
-                    {collaborationState.hasNewCard && collaborationState.activeCardAuthorRole === userState.role && (
-                      <POLICard
-                        type="active"
-                        baseTitle={`latest ${userState.role === "supplier" ? "proposal" : "request"}`}
-                        author="you"
-                        authorRole={userState.role}
-                        userRole={userState.role}
-                        date="2024-Jan-06"
-                      />
-                    )}
+                    {collaborationState.hasNewCard && 
+                      !productionComplete &&
+                      collaborationState.activeCardAuthorRole === userState.role && (
+                        <POLICard
+                          type="active"
+                          baseTitle={`latest ${userState.role === "supplier" ? "proposal" : "request"}`}
+                          author="you"
+                          authorRole={userState.role}
+                          userRole={userState.role}
+                          date="2024-Jan-06"
+                          width="480px"
+                        />
+                      )}
                     {/* New proposal/requirements. Card_style_type = new. Always at the end */}
-                    {collaborationState.status !== "accepted" && (
+                    {collaborationState.status !== "accepted" && !productionComplete && (
                       <Card p="0" width="480px">
                         <Flex justifyContent="center" alignItems="center" height="100%">
                           <QuietButton onClick={() => openSidebar("newProposal")}>
@@ -693,7 +833,7 @@ export const DefaultCard = () => {
                       </Card>
                     )}
                   </Flex>
-                </Box>
+                                </Box>
                 {/* Left gradient - shows when there's room to scroll left */}
                 {scrollState.isOverflowing && scrollState.scrollPosition > 10 && (
                   <Box
@@ -991,6 +1131,15 @@ export const DefaultCard = () => {
               placeholder="Select author role"
               menuPlacement="top"
               width="160px"
+            />
+          </Flex>
+          <VerticalDivider />
+          <Flex gap="x1" justifyContent="center" alignItems="center">
+            <Checkbox
+              id="productionComplete"
+              checked={productionComplete}
+              onChange={(e) => setProductionComplete(e.target.checked)}
+              labelText="Production complete"
             />
           </Flex>
         </Flex>

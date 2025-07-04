@@ -67,7 +67,7 @@ export const Default = () => {
       label: "",
       dataKey: "rowLabel",
       cellRenderer: ({ cellData }) => (
-        <Text fontSize="small" fontWeight="bold" color="midGrey">
+        <Text fontSize="small" fontWeight="bold" color="midGrey" pl="x2">
           {cellData}
         </Text>
       ),
@@ -136,7 +136,7 @@ export const Default = () => {
           breakpoints={{ medium: 1200 }}
           renderBreadcrumbs={() => breadcrumbs}
           title="12345678"
-          subtitle="PR 24 SEPHORA ONLINE DELUXE OCT"
+          subtitle="12345678 – PR 24 SEPHORA ONLINE DELUXE OCT"
           renderSummary={() => (
             <Summary breakpoint={1200}>
               <Flex flexDirection="column">
@@ -186,9 +186,7 @@ export const Default = () => {
                 <DescriptionTerm>Customer's item code and description</DescriptionTerm>
                 <DescriptionDetails>
                   <Link underline={false}>
-                    12345678
-                    <br />
-                    PR 24 SEPHORA ONLINE DELUXE OCT
+                    12345678 – PR 24 SEPHORA ONLINE DELUXE OCT
                   </Link>
                 </DescriptionDetails>
               </DescriptionGroup>
@@ -208,13 +206,12 @@ export const Default = () => {
                 <DescriptionTerm>Customer</DescriptionTerm>
                 <DescriptionDetails>MyCustomer</DescriptionDetails>
               </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>BOM revision and release date</DescriptionTerm>
-                <DescriptionDetails>
-                  Revision 2<br />
-                  2025-Feb-28
-                </DescriptionDetails>
-              </DescriptionGroup>
+                          <DescriptionGroup>
+              <DescriptionTerm>BOM revision and release date</DescriptionTerm>
+              <DescriptionDetails>
+                Revision 2 – 2025-Feb-28
+              </DescriptionDetails>
+            </DescriptionGroup>
               <DescriptionGroup>
                 <DescriptionTerm>Need by date</DescriptionTerm>
                 <DescriptionDetails>2024-01-01</DescriptionDetails>
@@ -245,14 +242,14 @@ export const Default = () => {
                     </>
                   )}
                 </Flex>
-                <Box px="x2">
-                  <Table columns={columns} rows={rows} keyField="id" />
-                </Box>
+             
+                <Table columns={columns} rows={rows} keyField="id" />
+                
 
                 {showNewRequest && (
                   /* Your proposal/request */
-                  <Flex mt="x2" alignItems="center" py="x1" px="x2" backgroundColor="lightBlue" borderRadius="medium">
-                    <Box width="20%" pr="x2">
+                  <Flex mt="x2" alignItems="center" py="x1" backgroundColor="lightBlue" borderRadius="medium">
+                    <Box width="20%" pl="x2">
                       <Text fontSize="small" fontWeight="bold" color="midGrey">
                         Your new request
                       </Text>
@@ -301,7 +298,7 @@ export const Default = () => {
                         ]}
                       />
                     </Box>
-                    <Box width="25%">
+                    <Box width="25%" pr="x2">
                       <Input placeholder="Enter note..." style={{ maxWidth: "100%", width: "100%" }} />
                     </Box>
                   </Flex>
@@ -313,12 +310,11 @@ export const Default = () => {
                     mt="x2"
                     alignItems="center"
                     py="x2"
-                    px="x2"
                     backgroundColor={isAccepted ? "whiteGrey" : "lightBlue"}
                     borderRadius="medium"
                   >
-                    <Box width="20%" pr="x2">
-                      <Flex alignItems="center" gap="x1">
+                    <Box width="20%" pl="x2">
+                      <Flex alignItems="center" gap="x1" flexWrap="wrap">
                         <Text fontSize="small" fontWeight="bold" color="midGrey">
                           Supplier's proposal
                         </Text>
