@@ -131,7 +131,6 @@ export const DefaultCard = () => {
       bomReleaseDate: new Date("2025-02-28"),
       needByDate: new Date("2024-01-01"),
       shipTo: "MySupplier TO",
-
     },
   });
 
@@ -760,7 +759,7 @@ export const DefaultCard = () => {
           title="Edit details"
           footer={
             <Flex gap="x2" justifyContent="flex-start">
-              <PrimaryButton 
+              <PrimaryButton
                 onClick={() => {
                   closeSidebar("edit");
                   toast.success("PO line item details saved successfully");
@@ -792,7 +791,7 @@ export const DefaultCard = () => {
             <FieldLabel labelText={userState.role === "supplier" ? "Customer" : "Supplier"}>
               <Input value={formData.edit.customer} disabled />
             </FieldLabel>
-            
+
             {/* Editable fields */}
             <FieldLabel labelText="BOM revision">
               <Select
@@ -811,9 +810,7 @@ export const DefaultCard = () => {
                 }
               />
             </FieldLabel>
-            
 
-            
             {/* Editable fields */}
             <FieldLabel labelText="Need by date">
               <DatePicker
@@ -826,7 +823,7 @@ export const DefaultCard = () => {
                 }
               />
             </FieldLabel>
-            
+
             {/* Non-editable fields */}
             <FieldLabel labelText="Ship to">
               <Input value={formData.edit.shipTo} disabled />
