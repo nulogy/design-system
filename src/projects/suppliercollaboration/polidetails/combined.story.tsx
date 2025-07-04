@@ -1,0 +1,1164 @@
+import React, { useState, useRef, useEffect, useMemo } from "react";
+import { toast } from "../../..";
+import {
+  Box,
+  Flex,
+  Text,
+  Heading2,
+  Heading3,
+  Heading4,
+  Icon,
+  QuietButton,
+  PrimaryButton,
+  Button,
+  DescriptionList,
+  DescriptionGroup,
+  DescriptionTerm,
+  DescriptionDetails,
+  Select,
+  FieldLabel,
+  ApplicationFrame,
+  Page,
+  Breadcrumbs,
+  Link,
+  Sidebar,
+  Modal,
+  ButtonGroup,
+  IconicButton,
+  VerticalDivider,
+  ToastContainer,
+  BrandedNavBar,
+  Divider,
+  Pagination,
+  Tab,
+  Tabs,
+  Table,
+  Input,
+  Textarea,
+  AsyncSelect,
+  Card,
+  StatusIndicator,
+  TruncatedText,
+  Header,
+  Summary,
+  SummaryItem,
+  SummaryDivider,
+  DatePicker,
+  Switcher,
+  Switch,
+  Checkbox,
+} from "../../..";
+import { POLICard } from "./components/POLICard";
+import { EditableRow } from "./components/EditableRow";
+
+export default {
+  title: "Projects/Supplier Collaboration/POLI details/Combined",
+  parameters: {
+    layout: "fullscreen",
+  },
+};
+
+const breadcrumbs = (
+  <Breadcrumbs>
+    <Link href="#">Home</Link>
+    <Link href="#">PO line items</Link>
+  </Breadcrumbs>
+);
+
+export const Default = () => {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const cardsRowRef = useRef(null);
+  const scrollContainerRef = useRef(null);
+
+  // Scroll state
+  const [scrollState, setScrollState] = useState({
+    scrollPosition: 0,
+    maxScrollLeft: 0,
+    isOverflowing: false,
+  });
+
+  // Sidebar stateSwitcher
+  const [sidebarState, setSidebarState] = useState({
+    filters: false,
+    edit: false,
+    comments: false,
+    newProposal: false,
+  });
+
+  // Collaboration state
+  const [collaborationState, setCollaborationState] = useState({
+    status: "awaiting" as "awaiting" | "accepted",
+    showAcceptedCard: false,
+    hasNewCard: false,
+    activeCardAuthorRole: "supplier" as "supplier" | "customer" | null,
+  });
+
+  // User state
+  const [userState, setUserState] = useState({
+    role: "supplier" as "supplier" | "customer",
+    viewMode: "supplier" as "supplier" | "customer",
+  });
+
+  // Production complete state
+  const [productionComplete, setProductionComplete] = useState(false);
+
+  // Form data
+  const [formData, setFormData] = useState({
+    newProposal: {
+      quantity: "100",
+      uom: "cases",
+      productionDueDate: new Date("2024-01-01"),
+      unitPrice: "2.99",
+      currency: "USD",
+      changeReason: "",
+      changeNote: "",
+    },
+    edit: {
+      poNumber: "4000023874",
+      customerItemCode: "12345678",
+      customerItemDescription: "PR 24 SEPHORA ONLINE DELUXE OCT",
+      customerPOLineItemNumber: "12345",
+      supplierPOLineItemNumber: "23453",
+      creationDate: new Date("2024-01-01"),
+      customer: "MyCustomer",
+      bomRevision: "Revision 2",
+      bomReleaseDate: new Date("2025-02-28"),
+      needByDate: new Date("2024-01-01"),
+      shipTo: "MySupplier TO",
+      carryOverSentTo: "",
+      shortCloseReason: "",
+    },
+  });
+
+  // Filter state - using switcher instead of checkboxes
+  const [filterState, setFilterState] = useState({
+    viewMode: "minimal" as "all" | "minimal",
+  });
+
+  // View mode state for Card/List switcher
+  const [viewMode, setViewMode] = useState("card" as "card" | "list");
+
+  // Table rows state
+  const [hiddenRows, setHiddenRows] = useState<any[]>([]);
+
+  // Helper functions
+  const formatDateForDisplay = (date: Date) => {
+    return date.toISOString().split("T")[0];
+  };
+
+  const calculateCardsWidth = () => {
+    const cardWidth = 480; // Fixed width for each card
+    const cardBorderWidth = 2; // 1px left border + 1px right border
+    const gapWidth = 16;
+    const effectiveGapWidth = gapWidth - 2; // Account for border overlap (1px from each card)
+    let numberOfCards = 0;
+    let cardBreakdown = [];
+
+    if (filterState.viewMode === "all") {
+      // Show all cards
+      numberOfCards = 4; // Original + 3 old cards
+      cardBreakdown.push("Base 4 cards (Original + 3 old cards)");
+
+      // User's latest request/proposal - shown in both views
+      numberOfCards++;
+      cardBreakdown.push("User's latest request/proposal");
+
+      // Handle latest request/proposal cards
+      if (collaborationState.status === "accepted") {
+        // When accepted, show the previously active card as regular
+        if (collaborationState.activeCardAuthorRole) {
+          numberOfCards++;
+          cardBreakdown.push("Previously active card (accepted state)");
+        }
+      } else {
+        // When not accepted, show active card or previously active card
+        if (collaborationState.activeCardAuthorRole) {
+          if (collaborationState.hasNewCard) {
+            // Show previously active as regular + new active card
+            numberOfCards += 2;
+            cardBreakdown.push("Previously active card + new active card");
+          } else {
+            // Show current active card
+            numberOfCards++;
+            cardBreakdown.push("Current active card");
+          }
+        }
+      }
+
+      // Handle accepted card
+      if (collaborationState.showAcceptedCard) {
+        numberOfCards++;
+        cardBreakdown.push("Accepted card");
+      }
+    } else {
+      // Minimal view: Original + User's latest + Latest + New proposal button
+      numberOfCards = 1; // Original only
+      cardBreakdown.push("Base 1 card (Original only)");
+
+      // User's latest request/proposal - shown in both views
+      numberOfCards++;
+      cardBreakdown.push("User's latest request/proposal");
+
+      // Handle latest request/proposal cards
+      if (collaborationState.status === "accepted") {
+        // When accepted, show the previously active card as regular
+        if (collaborationState.activeCardAuthorRole) {
+          numberOfCards++;
+          cardBreakdown.push("Previously active card (accepted state)");
+        }
+      } else {
+        // When not accepted, show active card or previously active card
+        if (collaborationState.activeCardAuthorRole) {
+          if (collaborationState.hasNewCard) {
+            // Show previously active as regular + new active card
+            numberOfCards += 2;
+            cardBreakdown.push("Previously active card + new active card");
+          } else {
+            // Show current active card
+            numberOfCards++;
+            cardBreakdown.push("Current active card");
+          }
+        }
+      }
+
+      // Handle accepted card
+      if (collaborationState.showAcceptedCard) {
+        numberOfCards++;
+        cardBreakdown.push("Accepted card");
+      }
+    }
+
+    // New proposal button - always at the end
+    if (collaborationState.status !== "accepted" && !productionComplete) {
+      numberOfCards++;
+      cardBreakdown.push("New proposal button");
+    }
+
+    const totalWidth = numberOfCards * cardWidth + (numberOfCards - 1) * effectiveGapWidth;
+    console.log("Card width calculation:", { numberOfCards, totalWidth, cardBreakdown });
+    return totalWidth;
+  };
+
+  const calculatedWidth = useMemo(calculateCardsWidth, [
+    filterState.viewMode,
+    collaborationState.status,
+    collaborationState.showAcceptedCard,
+    collaborationState.hasNewCard,
+    collaborationState.activeCardAuthorRole,
+    productionComplete,
+  ]);
+
+  const widthKey = useMemo(() => {
+    return `${filterState.viewMode}-${collaborationState.status}-${collaborationState.showAcceptedCard}-${collaborationState.hasNewCard}-${collaborationState.activeCardAuthorRole}-${productionComplete}`;
+  }, [
+    filterState.viewMode,
+    collaborationState.status,
+    collaborationState.showAcceptedCard,
+    collaborationState.hasNewCard,
+    collaborationState.activeCardAuthorRole,
+    productionComplete,
+  ]);
+
+  // Sidebar functions
+  const openSidebar = (sidebar: keyof typeof sidebarState) => {
+    setSidebarState((prev) => ({ ...prev, [sidebar]: true }));
+  };
+
+  const closeSidebar = (sidebar: keyof typeof sidebarState) => {
+    setSidebarState((prev) => ({ ...prev, [sidebar]: false }));
+  };
+
+  const acceptRequest = () => {
+    setCollaborationState((prev) => ({
+      ...prev,
+      status: "accepted",
+      showAcceptedCard: true,
+    }));
+    toast.success(
+      `${collaborationState.activeCardAuthorRole === "customer" ? "Request" : "Proposal"} accepted successfully`
+    );
+  };
+
+  const submitNewProposal = () => {
+    setCollaborationState((prev) => ({
+      ...prev,
+      status: "awaiting",
+      showAcceptedCard: false,
+      hasNewCard: true,
+      activeCardAuthorRole: userState.role,
+    }));
+    setSidebarState((prev) => ({ ...prev, newProposal: false }));
+    toast.success(`${userState.role === "supplier" ? "Proposal" : "Request"} submitted successfully`);
+  };
+
+  // Scroll effect
+  useEffect(() => {
+    const scrollContainer = scrollContainerRef.current;
+    if (scrollContainer) {
+      const handleScroll = () => {
+        const { scrollLeft, scrollWidth, clientWidth } = scrollContainer;
+        const maxScrollLeft = scrollWidth - clientWidth;
+        setScrollState({
+          scrollPosition: scrollLeft,
+          maxScrollLeft,
+          isOverflowing: scrollWidth > clientWidth,
+        });
+      };
+
+      handleScroll(); // Initial calculation
+      scrollContainer.addEventListener("scroll", handleScroll);
+      return () => scrollContainer.removeEventListener("scroll", handleScroll);
+    }
+  }, [calculatedWidth]);
+
+  // Table rows for list view
+  const tableRows = useMemo(() => {
+    const rows: any[] = [];
+
+    // Original request - always shown (first row, always authored by customer)
+    rows.push({
+      id: "original",
+      type: "regular",
+      rowLabel: userState.role === "customer" ? "Your original request" : "Customer's original request",
+      authorRole: "customer",
+      rowClassName: "table-row-regular",
+      quantity: "90",
+      uom: "cases",
+      dueDate: "2023-12-20",
+      unitPrice: "$2.80",
+      currency: "USD",
+      reason: "Initial order",
+      note: "Original customer request",
+    });
+
+    // Historical rows - shown in "all" view
+    if (filterState.viewMode === "all") {
+      // First supplier proposal
+      rows.push({
+        id: "supplier-proposal-1",
+        type: "regular",
+        rowLabel: userState.role === "supplier" ? "Your proposal" : "Supplier's proposal",
+        authorRole: "supplier",
+        rowClassName: "table-row-regular",
+        quantity: "95",
+        uom: "cases",
+        dueDate: "2023-12-25",
+        unitPrice: "$2.85",
+        currency: "USD",
+        reason: "Material availability",
+        note: "Initial supplier response",
+      });
+
+      // Customer counter-request
+      rows.push({
+        id: "customer-counter-1",
+        type: "regular",
+        rowLabel: userState.role === "customer" ? "Your request" : "Customer's request",
+        authorRole: "customer",
+        rowClassName: "table-row-regular",
+        quantity: "100",
+        uom: "cases",
+        dueDate: "2023-12-28",
+        unitPrice: "$2.90",
+        currency: "USD",
+        reason: "Volume discount",
+        note: "Requested quantity increase",
+      });
+
+      // Second supplier proposal
+      rows.push({
+        id: "supplier-proposal-2",
+        type: "regular",
+        rowLabel: userState.role === "supplier" ? "Your proposal" : "Supplier's proposal",
+        authorRole: "supplier",
+        rowClassName: "table-row-regular",
+        quantity: "100",
+        uom: "cases",
+        dueDate: "2023-12-30",
+        unitPrice: "$2.88",
+        currency: "USD",
+        reason: "Price negotiation",
+        note: "Compromise on pricing",
+      });
+    }
+
+    if (!collaborationState.hasNewCard && !productionComplete && filterState.viewMode === "all") {
+      rows.push({
+        id: "your-latest",
+        type: "regular",
+        rowLabel:
+          userState.role === "supplier" && collaborationState.activeCardAuthorRole === "supplier"
+            ? "Your proposal"
+            : collaborationState.activeCardAuthorRole === userState.role
+              ? `Your ${userState.role === "supplier" ? "proposal" : "request"}`
+              : `${collaborationState.activeCardAuthorRole === "supplier" ? "Supplier's" : "Customer's"} ${collaborationState.activeCardAuthorRole === "supplier" ? "proposal" : "request"}`,
+        authorRole: userState.role,
+        rowClassName: "table-row-regular",
+        quantity: "100",
+        uom: "cases",
+        dueDate: "2024-01-01",
+        unitPrice: "$2.99",
+        currency: "USD",
+        reason: "Material shortage",
+        note: "Initial proposal.",
+      });
+    }
+
+    if (collaborationState.status !== "accepted" && !productionComplete && collaborationState.activeCardAuthorRole) {
+      if (!collaborationState.hasNewCard && !sidebarState.newProposal) {
+        rows.push({
+          id: `${collaborationState.activeCardAuthorRole}-active`,
+          type: "active",
+          rowLabel:
+            collaborationState.activeCardAuthorRole === userState.role
+              ? `Your ${userState.role === "supplier" ? "proposal" : "request"}`
+              : `${collaborationState.activeCardAuthorRole === "supplier" ? "Supplier's" : "Customer's"} ${collaborationState.activeCardAuthorRole === "supplier" ? "proposal" : "request"}`,
+          authorRole: collaborationState.activeCardAuthorRole,
+          rowClassName:
+            userState.role === "supplier" ? "table-row-active-user-action" : "table-row-active-user-waiting",
+          quantity: "100",
+          uom: "cases",
+          dueDate: "2024-01-01",
+          unitPrice: "$2.99",
+          currency: "USD",
+          reason: "Material shortage",
+          note: "Initial proposal.",
+        });
+      } else {
+        rows.push({
+          id: `${collaborationState.activeCardAuthorRole}-regular`,
+          type: "regular",
+          rowLabel:
+            collaborationState.activeCardAuthorRole === userState.role
+              ? `Your ${userState.role === "supplier" ? "proposal" : "request"}`
+              : `${collaborationState.activeCardAuthorRole === "supplier" ? "Supplier's" : "Customer's"} ${collaborationState.activeCardAuthorRole === "supplier" ? "proposal" : "request"}`,
+          authorRole: collaborationState.activeCardAuthorRole,
+          rowClassName: "table-row-regular",
+          quantity: "100",
+          uom: "cases",
+          dueDate: "2024-01-01",
+          unitPrice: "$2.99",
+          currency: "USD",
+          reason: "Material shortage",
+          note: "Initial proposal.",
+        });
+      }
+    }
+
+    if (
+      collaborationState.hasNewCard &&
+      !productionComplete &&
+      collaborationState.activeCardAuthorRole === userState.role
+    ) {
+      rows.push({
+        id: "your-active",
+        type: "active",
+        rowLabel: userState.role === "supplier" ? "Your proposal" : "Your request",
+        authorRole: userState.role,
+        rowClassName: "table-row-active-user-waiting",
+        quantity: formData.newProposal.quantity,
+        uom: formData.newProposal.uom,
+        dueDate: formData.newProposal.productionDueDate,
+        unitPrice: formData.newProposal.unitPrice,
+        currency: formData.newProposal.currency,
+        reason: formData.newProposal.changeReason,
+        note: formData.newProposal.changeNote,
+      });
+    }
+
+    // Add hidden rows to the table
+    rows.push(...hiddenRows);
+
+    return rows;
+  }, [
+    collaborationState,
+    userState,
+    productionComplete,
+    formData,
+    hiddenRows,
+    sidebarState.newProposal,
+    filterState.viewMode,
+  ]);
+
+  const columns = [
+    {
+      label: "",
+      dataKey: "rowLabel",
+      cellRenderer: ({ row }) => (
+        <Flex alignItems="center" gap="x1" pl="x2">
+          {row.type === "active" && (
+            <Box
+              backgroundColor={row.authorRole !== userState.role ? "yellow" : "blue"}
+              borderRadius="medium"
+              p="x0_25"
+              width="x3"
+              height="x3"
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+            >
+              <Icon icon="accessTime" size="x2_5" color={row.authorRole !== userState.role ? "darkGrey" : "white"} />
+            </Box>
+          )}
+          {row.type === "accepted" && (
+            <Box
+              backgroundColor="green"
+              borderRadius="medium"
+              p="x0_25"
+              width="x3"
+              height="x3"
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+            >
+              <Icon icon="check" size="x2_5" color="lightGreen" />
+            </Box>
+          )}
+          <Text
+            fontSize="small"
+            fontWeight={row.type === "active" ? "bold" : "normal"}
+            color={row.type === "active" ? "blue" : row.type === "accepted" ? "green" : "midGrey"}
+          >
+            {row.rowLabel}
+          </Text>
+        </Flex>
+      ),
+      width: "20%",
+    },
+    {
+      label: "Quantity",
+      dataKey: "quantity",
+      width: "5%",
+      cellRenderer: ({ cellData }) => (
+        <Text textAlign="right" pr="x2">
+          {cellData}
+        </Text>
+      ),
+    },
+    { label: "UOM", dataKey: "uom", width: "10%" },
+    { label: "Due date", dataKey: "dueDate", width: "10%" },
+    {
+      label: "Unit price",
+      dataKey: "unitPrice",
+      width: "5%",
+      cellRenderer: ({ cellData }) => (
+        <Text textAlign="right" pr="x2">
+          {cellData}
+        </Text>
+      ),
+    },
+    { label: "Currency", dataKey: "currency", width: "10%" },
+    { label: "Reason", dataKey: "reason", width: "15%" },
+    { label: "Note", dataKey: "note", width: "25%" },
+  ];
+
+  const handleAcceptProposal = () => {
+    setCollaborationState((prev) => ({
+      ...prev,
+      status: "accepted",
+      showAcceptedCard: true,
+    }));
+    toast.success(
+      `${collaborationState.activeCardAuthorRole === "customer" ? "Request" : "Proposal"} accepted successfully`
+    );
+  };
+
+  const handleNewProposalClick = () => {
+    // Capture the content from the current active row that will be hidden
+    const currentActiveRow = tableRows.find((row) => row.type === "active" && row.authorRole === userState.role);
+
+    if (currentActiveRow) {
+      // Add the hidden row to the hiddenRows state
+      setHiddenRows((prev) => [
+        ...prev,
+        {
+          ...currentActiveRow,
+          id: `hidden-${Date.now()}`,
+          type: "regular",
+          rowLabel: `Your ${userState.role === "supplier" ? "proposal" : "request"}`,
+          rowClassName: "table-row-regular",
+        },
+      ]);
+    }
+
+    setSidebarState((prev) => ({ ...prev, newProposal: true }));
+  };
+
+  const handleSubmitNewProposal = () => {
+    setCollaborationState((prev) => ({
+      ...prev,
+      status: "awaiting",
+      showAcceptedCard: false,
+      hasNewCard: true,
+      activeCardAuthorRole: userState.role,
+    }));
+    setSidebarState((prev) => ({ ...prev, newProposal: false }));
+    toast.success(`${userState.role === "supplier" ? "Proposal" : "Request"} submitted successfully`);
+  };
+
+  return (
+    <>
+      <ApplicationFrame>
+        <Header
+          breakpoints={{ medium: 1200 }}
+          renderBreadcrumbs={() => breadcrumbs}
+          title="12345678"
+          subtitle="12345678 – PR 24 SEPHORA ONLINE DELUXE OCT"
+          renderSummary={() => (
+            <Summary breakpoint={1200}>
+              <Flex flexDirection="column">
+                <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
+                  Production progress
+                </Text>
+                <Text fontWeight="medium" fontSize="heading4" lineHeight="heading4">
+                  {productionComplete ? "100%" : "50%"}{" "}
+                  <Box as="span" fontSize="small" lineHeight="smallRelaxed" color="midGrey">
+                    {productionComplete ? "(200,000/200,000)" : "(100,000/200,000)"}
+                  </Box>
+                </Text>
+              </Flex>
+              <SummaryDivider />
+              <Flex flexDirection="column" gap="half">
+                <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
+                  Collaboration status
+                </Text>
+                <StatusIndicator
+                  type={
+                    productionComplete || collaborationState.status === "accepted"
+                      ? "success"
+                      : collaborationState.activeCardAuthorRole !== userState.role
+                        ? "warning"
+                        : "quiet"
+                  }
+                >
+                  {productionComplete || collaborationState.status === "accepted"
+                    ? "Accepted"
+                    : collaborationState.activeCardAuthorRole === userState.role
+                      ? `Awaiting ${userState.role === "supplier" ? "customer" : "supplier"} response`
+                      : "Awaiting your response"}
+                </StatusIndicator>
+              </Flex>
+            </Summary>
+          )}
+        />
+        <Page>
+          <Flex justifyContent="flex-end" alignItems="center" gap="x2" mb="x3">
+            <IconicButton icon="edit" aria-label="Edit">
+              Edit
+            </IconicButton>
+            <VerticalDivider />
+            <IconicButton icon="chatBubble" aria-label="Comments">
+              Comments
+            </IconicButton>
+          </Flex>
+          <Box mb="x3" pl="x3">
+            <DescriptionList layout="stacked" columns={{ extraSmall: 1, small: 2, medium: 3, large: 5 }}>
+              <DescriptionGroup>
+                <DescriptionTerm>PO number</DescriptionTerm>
+                <DescriptionDetails>
+                  <Link underline={false}>4000023874</Link>
+                </DescriptionDetails>
+              </DescriptionGroup>
+              <DescriptionGroup>
+                <DescriptionTerm>
+                  {userState.role === "supplier" ? "Customer's item code and description" : "Item code and description"}
+                </DescriptionTerm>
+                <DescriptionDetails>
+                  <Link underline={false}>12345678 – PR 24 SEPHORA ONLINE DELUXE OCT</Link>
+                </DescriptionDetails>
+              </DescriptionGroup>
+              <DescriptionGroup>
+                <DescriptionTerm>Customer PO line item number</DescriptionTerm>
+                <DescriptionDetails>12345</DescriptionDetails>
+              </DescriptionGroup>
+              <DescriptionGroup>
+                <DescriptionTerm>Supplier PO line item number</DescriptionTerm>
+                <DescriptionDetails>23453</DescriptionDetails>
+              </DescriptionGroup>
+              <DescriptionGroup>
+                <DescriptionTerm>Creation date</DescriptionTerm>
+                <DescriptionDetails>2024-01-01</DescriptionDetails>
+              </DescriptionGroup>
+              <DescriptionGroup>
+                <DescriptionTerm>{userState.role === "supplier" ? "Customer" : "Supplier"}</DescriptionTerm>
+                <DescriptionDetails>MyCustomer</DescriptionDetails>
+              </DescriptionGroup>
+              <DescriptionGroup>
+                <DescriptionTerm>BOM revision and release date</DescriptionTerm>
+                <DescriptionDetails>Revision 2 – 2025-Feb-28</DescriptionDetails>
+              </DescriptionGroup>
+              <DescriptionGroup>
+                <DescriptionTerm>Need by date</DescriptionTerm>
+                <DescriptionDetails>2024-01-01</DescriptionDetails>
+              </DescriptionGroup>
+              <DescriptionGroup>
+                <DescriptionTerm>Ship to</DescriptionTerm>
+                <DescriptionDetails>MySupplier TO</DescriptionDetails>
+              </DescriptionGroup>
+              <DescriptionGroup>
+                <DescriptionTerm>Item order type</DescriptionTerm>
+                <DescriptionDetails>Standard</DescriptionDetails>
+              </DescriptionGroup>
+              {productionComplete && (
+                <>
+                  <DescriptionGroup>
+                    <DescriptionTerm>Carry over sent to</DescriptionTerm>
+                    <DescriptionDetails>{formData.edit.carryOverSentTo || "N/A"}</DescriptionDetails>
+                  </DescriptionGroup>
+                  <DescriptionGroup>
+                    <DescriptionTerm>Short close reason</DescriptionTerm>
+                    <DescriptionDetails>{formData.edit.shortCloseReason || "N/A"}</DescriptionDetails>
+                  </DescriptionGroup>
+                </>
+              )}
+            </DescriptionList>
+          </Box>
+          <Tabs selectedIndex={selectedIndex} onTabClick={(e, index) => setSelectedIndex(index)}>
+            <Tab label="Request details">
+              <Box>
+                {/* View mode switcher */}
+                <Flex justifyContent="flex-end" alignItems="center" pt="x2" mb="x1" gap="x2">
+                  {/* Actions */}
+                  {!sidebarState.newProposal && (
+                    <>
+                      {collaborationState.activeCardAuthorRole &&
+                        collaborationState.activeCardAuthorRole !== userState.role &&
+                        !collaborationState.hasNewCard &&
+                        collaborationState.status !== "accepted" && (
+                          <PrimaryButton onClick={handleAcceptProposal}>
+                            Accept {collaborationState.activeCardAuthorRole === "customer" ? "request" : "proposal"}
+                          </PrimaryButton>
+                        )}
+                      <QuietButton onClick={handleNewProposalClick}>
+                        New {userState.role === "supplier" ? "proposal" : "request"}
+                      </QuietButton>
+                    </>
+                  )}
+                  {sidebarState.newProposal && (
+                    <>
+                      <PrimaryButton onClick={handleSubmitNewProposal}>
+                        Submit {userState.role === "supplier" ? "proposal" : "request"}
+                      </PrimaryButton>
+                      <QuietButton
+                        onClick={() => {
+                          setHiddenRows((prev) => prev.slice(0, -1));
+                          setSidebarState((prev) => ({ ...prev, newProposal: false }));
+                        }}
+                      >
+                        Cancel
+                      </QuietButton>
+                    </>
+                  )}
+                  <VerticalDivider />
+                  {/* Limited/All Switcher */}
+                  <Switcher
+                    selected={filterState.viewMode}
+                    onChange={(value) => setFilterState((prev) => ({ ...prev, viewMode: value as "all" | "minimal" }))}
+                  >
+                    <Switch value="minimal">Limited</Switch>
+                    <Switch value="all">All</Switch>
+                  </Switcher>
+                  <VerticalDivider />
+                  {/* Card/List Switcher with icons only */}
+                  <Flex gap="x1">
+                    <Box>
+                      <IconicButton
+                        icon="apps"
+                        onClick={() => {
+                          console.log("Card button clicked");
+                          setViewMode("card");
+                        }}
+                        labelHidden
+                        tooltip="Card view"
+                      />
+                    </Box>
+                    <Box>
+                      <IconicButton
+                        icon="more"
+                        onClick={() => {
+                          console.log("List button clicked");
+                          setViewMode("list");
+                        }}
+                        labelHidden
+                        tooltip="List view"
+                      />
+                    </Box>
+                  </Flex>
+                </Flex>
+
+                {/* Card View */}
+                {console.log("Current viewMode:", viewMode)}
+                {viewMode === "card" && (
+                  <Box position="relative">
+                    <Box ref={scrollContainerRef} overflowX="auto" width="100%">
+                      <Flex
+                        ref={cardsRowRef}
+                        alignItems="stretch"
+                        justifyContent="flex-end"
+                        py="x2"
+                        gap="x2"
+                        key={widthKey}
+                        style={{
+                          width: `${calculatedWidth}px`,
+                        }}
+                      >
+                        {/* Original request card. Always shown in both views */}
+                        <POLICard
+                          type="regular"
+                          baseTitle="original request"
+                          author="John Doe"
+                          authorRole="customer"
+                          userRole={userState.role}
+                          date="2024-Jan-01"
+                          width="480px"
+                        />
+                        {/* Old cards - only shown in "all" view */}
+                        {filterState.viewMode === "all" && (
+                          <>
+                            {/* Supplier request card */}
+                            <POLICard
+                              type="regular"
+                              baseTitle={userState.role === "supplier" ? "proposal" : "request"}
+                              author="you"
+                              authorRole={userState.role}
+                              userRole={userState.role}
+                              date="2024-Jan-02"
+                              width="480px"
+                            />
+                            {/* Customer request card */}
+                            <POLICard
+                              type="regular"
+                              baseTitle={userState.role === "supplier" ? "request" : "proposal"}
+                              author="John Doe"
+                              authorRole={userState.role === "supplier" ? "customer" : "supplier"}
+                              userRole={userState.role}
+                              date="2024-Jan-03"
+                              width="480px"
+                            />
+                            {/* Latest supplier request card */}
+                            <POLICard
+                              type="regular"
+                              baseTitle={userState.role === "supplier" ? "proposal" : "request"}
+                              author="you"
+                              authorRole={userState.role}
+                              userRole={userState.role}
+                              date="2024-Jan-01"
+                              width="480px"
+                            />
+                          </>
+                        )}
+                        {/* User's latest request/proposal - shown first */}
+                        {!collaborationState.hasNewCard && !productionComplete && (
+                          <POLICard
+                            type="regular"
+                            baseTitle={`latest ${userState.role === "supplier" ? "proposal" : "request"}`}
+                            author="you"
+                            authorRole={userState.role}
+                            userRole={userState.role}
+                            date="2024-Jan-04"
+                            width="480px"
+                          />
+                        )}
+                        {/* Customer's latest request - shown after user's proposal */}
+                        {collaborationState.status !== "accepted" &&
+                          !productionComplete &&
+                          collaborationState.activeCardAuthorRole &&
+                          !collaborationState.hasNewCard && (
+                            <POLICard
+                              type="active"
+                              baseTitle={`latest ${collaborationState.activeCardAuthorRole === "customer" ? "request" : "proposal"}`}
+                              author="John Doe"
+                              authorRole={collaborationState.activeCardAuthorRole}
+                              userRole={userState.role}
+                              date="2024-Jan-05"
+                              onAccept={acceptRequest}
+                              acceptButtonText={`Accept ${collaborationState.activeCardAuthorRole === "customer" ? "request" : "proposal"}`}
+                              width="480px"
+                            />
+                          )}
+                        {/* Customer's latest request converted to regular when new card is created */}
+                        {collaborationState.status !== "accepted" &&
+                          !productionComplete &&
+                          collaborationState.activeCardAuthorRole &&
+                          collaborationState.hasNewCard && (
+                            <POLICard
+                              type="regular"
+                              baseTitle={`latest ${collaborationState.activeCardAuthorRole === "customer" ? "request" : "proposal"}`}
+                              author="John Doe"
+                              authorRole={collaborationState.activeCardAuthorRole}
+                              userRole={userState.role}
+                              date="2024-Jan-05"
+                              width="480px"
+                            />
+                          )}
+                        {/* Accepted card. Card_style_type = accepted. Displayed when request is accepted. */}
+                        {(collaborationState.showAcceptedCard || productionComplete) &&
+                          !collaborationState.hasNewCard && (
+                            <POLICard
+                              type="accepted"
+                              baseTitle="accepted request"
+                              author="John Doe"
+                              authorRole={userState.role === "supplier" ? "customer" : "supplier"}
+                              userRole={userState.role}
+                              date="2024-Jan-05"
+                              width="480px"
+                            />
+                          )}
+                        {/* Regular accepted card when there's a new active card */}
+                        {(collaborationState.showAcceptedCard || productionComplete) &&
+                          collaborationState.hasNewCard && (
+                            <POLICard
+                              type="regular"
+                              baseTitle="accepted request"
+                              author="John Doe"
+                              authorRole={userState.role === "supplier" ? "customer" : "supplier"}
+                              userRole={userState.role}
+                              date="2024-Jan-05"
+                              width="480px"
+                            />
+                          )}
+                        {/* New active card created by current user - placed just before the New button */}
+                        {collaborationState.hasNewCard &&
+                          !productionComplete &&
+                          collaborationState.activeCardAuthorRole === userState.role && (
+                            <POLICard
+                              type="active"
+                              baseTitle={`latest ${userState.role === "supplier" ? "proposal" : "request"}`}
+                              author="you"
+                              authorRole={userState.role}
+                              userRole={userState.role}
+                              date="2024-Jan-06"
+                              width="480px"
+                            />
+                          )}
+                        {/* New proposal/requirements. Card_style_type = new. Always at the end */}
+                        {collaborationState.status !== "accepted" && !productionComplete && (
+                          <Card p="0" width="480px">
+                            <Flex justifyContent="center" alignItems="center" height="100%">
+                              <QuietButton onClick={() => openSidebar("newProposal")}>
+                                {userState.role === "supplier" ? "New proposal" : "New request"}
+                              </QuietButton>
+                            </Flex>
+                          </Card>
+                        )}
+                      </Flex>
+                    </Box>
+                    {/* Left gradient - shows when there's room to scroll left */}
+                    {scrollState.isOverflowing && scrollState.scrollPosition > 10 && (
+                      <Box
+                        position="absolute"
+                        top={0}
+                        left={0}
+                        bottom={0}
+                        width="x6"
+                        zIndex={1}
+                        height="100%"
+                        style={{
+                          pointerEvents: "none",
+                          background:
+                            "linear-gradient(to right, rgba(0,0,0,0.08) 0px, rgba(0,0,0,0.03) 16px, rgba(0,0,0,0) 48px)",
+                        }}
+                      />
+                    )}
+                    {/* Right gradient - shows when there's room to scroll right */}
+                    {scrollState.isOverflowing && scrollState.scrollPosition < scrollState.maxScrollLeft - 10 && (
+                      <Box
+                        position="absolute"
+                        top={0}
+                        right={0}
+                        bottom={0}
+                        width="x6"
+                        zIndex={1}
+                        height="100%"
+                        style={{
+                          pointerEvents: "none",
+                          background:
+                            "linear-gradient(to left, rgba(0,0,0,0.08) 0px, rgba(0,0,0,0.03) 16px, rgba(0,0,0,0) 48px)",
+                        }}
+                      />
+                    )}
+                  </Box>
+                )}
+
+                {/* List View */}
+                {console.log("Checking list view, viewMode:", viewMode)}
+                {viewMode === "list" && (
+                  <Box>
+                    <Table columns={columns} rows={tableRows.filter((row) => row.type !== "active")} keyField="id" />
+                    {/* Render single EditableRow component based on state */}
+                    {(() => {
+                      // Show accepted EditableRow when production is complete or when proposal is accepted
+                      if (productionComplete || collaborationState.status === "accepted") {
+                        return (
+                          <EditableRow
+                            type="accepted"
+                            userRole={userState.role}
+                            authorRole={collaborationState.activeCardAuthorRole}
+                            collaborationStatus={collaborationState.status}
+                            formData={{
+                              quantity: "100",
+                              uom: "cases",
+                              dueDate: "2024-01-01",
+                              unitPrice: "2.99",
+                              currency: "USD",
+                              reason: "Material shortage",
+                              note: "Initial proposal.",
+                            }}
+                          />
+                        );
+                      }
+
+                      // Show new EditableRow when creating new proposal
+                      if (!productionComplete && sidebarState.newProposal) {
+                        return (
+                          <EditableRow
+                            type="new"
+                            userRole={userState.role}
+                            authorRole={userState.role}
+                            formData={{
+                              quantity:
+                                collaborationState.activeCardAuthorRole === userState.role
+                                  ? tableRows.find((row) => row.type === "active")?.quantity ||
+                                    formData.newProposal.quantity
+                                  : formData.newProposal.quantity,
+                              uom:
+                                collaborationState.activeCardAuthorRole === userState.role
+                                  ? tableRows.find((row) => row.type === "active")?.uom || formData.newProposal.uom
+                                  : formData.newProposal.uom,
+                              dueDate:
+                                collaborationState.activeCardAuthorRole === userState.role
+                                  ? tableRows.find((row) => row.type === "active")?.dueDate ||
+                                    formData.newProposal.productionDueDate
+                                  : formData.newProposal.productionDueDate,
+                              unitPrice:
+                                collaborationState.activeCardAuthorRole === userState.role
+                                  ? (tableRows.find((row) => row.type === "active")?.unitPrice || "$2.99").replace(
+                                      "$",
+                                      ""
+                                    )
+                                  : formData.newProposal.unitPrice,
+                              currency: "USD",
+                              reason:
+                                collaborationState.activeCardAuthorRole === userState.role
+                                  ? tableRows.find((row) => row.type === "active")?.reason ||
+                                    formData.newProposal.changeReason
+                                  : formData.newProposal.changeReason,
+                              note:
+                                collaborationState.activeCardAuthorRole === userState.role
+                                  ? tableRows.find((row) => row.type === "active")?.note ||
+                                    formData.newProposal.changeNote
+                                  : formData.newProposal.changeNote,
+                            }}
+                            onFormDataChange={(field, value) => {
+                              setFormData((prev) => ({
+                                ...prev,
+                                newProposal: {
+                                  ...prev.newProposal,
+                                  [field === "dueDate"
+                                    ? "productionDueDate"
+                                    : field === "reason"
+                                      ? "changeReason"
+                                      : field === "note"
+                                        ? "changeNote"
+                                        : field]: value,
+                                },
+                              }));
+                            }}
+                          />
+                        );
+                      }
+
+                      // Show active EditableRow when there's an active collaboration
+                      const activeRow = tableRows.find((row) => row.type === "active");
+                      if (!productionComplete && activeRow && !sidebarState.newProposal) {
+                        return (
+                          <EditableRow
+                            key={activeRow.id}
+                            type="active"
+                            userRole={userState.role}
+                            authorRole={activeRow.authorRole}
+                            collaborationStatus={collaborationState.status}
+                            formData={{
+                              quantity: activeRow.quantity,
+                              uom: activeRow.uom,
+                              dueDate: activeRow.dueDate,
+                              unitPrice: activeRow.unitPrice.replace("$", ""),
+                              currency: activeRow.currency,
+                              reason: activeRow.reason,
+                              note: activeRow.note,
+                            }}
+                          />
+                        );
+                      }
+
+                      return null;
+                    })()}
+                  </Box>
+                )}
+              </Box>
+            </Tab>
+            <Tab label="Settings">
+              <Box p="x4">
+                <Text fontSize="heading3" fontWeight="bold" mb="x3">
+                  Collaboration Settings
+                </Text>
+                <Text color="midGrey" mb="x4">
+                  Configure user roles and collaboration parameters.
+                </Text>
+                <Flex gap="x4" flexWrap="wrap">
+                  <Box>
+                    <Text fontWeight="bold" mb="x2">
+                      User Role
+                    </Text>
+                    <Switcher
+                      selected={userState.role}
+                      onChange={(value) =>
+                        setUserState((prev) => ({ ...prev, role: value as "supplier" | "customer" }))
+                      }
+                    >
+                      <Switch value="supplier">Supplier</Switch>
+                      <Switch value="customer">Customer</Switch>
+                    </Switcher>
+                  </Box>
+                  <Box>
+                    <Text fontWeight="bold" mb="x2">
+                      Production Complete
+                    </Text>
+                    <Checkbox
+                      id="productionComplete"
+                      checked={productionComplete}
+                      onChange={(e) => setProductionComplete(e.target.checked)}
+                      labelText="Mark as complete"
+                    />
+                  </Box>
+                  <Box>
+                    <Text fontWeight="bold" mb="x2">
+                      Active Request Author
+                    </Text>
+                    <Select
+                      options={[
+                        { value: "supplier", label: "Supplier" },
+                        { value: "customer", label: "Customer" },
+                      ]}
+                      value={collaborationState.activeCardAuthorRole || "supplier"}
+                      onChange={(option) =>
+                        setCollaborationState((prev) => ({
+                          ...prev,
+                          activeCardAuthorRole: option as "supplier" | "customer",
+                        }))
+                      }
+                      placeholder="Select author role"
+                      menuPlacement="top"
+                      width="160px"
+                    />
+                  </Box>
+                </Flex>
+              </Box>
+            </Tab>
+          </Tabs>
+        </Page>
+        <ToastContainer />
+      </ApplicationFrame>
+    </>
+  );
+};
