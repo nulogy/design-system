@@ -67,7 +67,9 @@ export const Default = () => {
       label: "",
       dataKey: "rowLabel",
       cellRenderer: ({ cellData }) => (
-        <Text fontSize="small" fontWeight="bold" color="midGrey">{cellData}</Text>
+        <Text fontSize="small" fontWeight="bold" color="midGrey">
+          {cellData}
+        </Text>
       ),
       width: "20%",
     },
@@ -76,7 +78,9 @@ export const Default = () => {
       dataKey: "quantity",
       width: "5%",
       cellRenderer: ({ cellData }) => (
-        <Text textAlign="right" pr="x2">{cellData}</Text>
+        <Text textAlign="right" pr="x2">
+          {cellData}
+        </Text>
       ),
     },
     { label: "UOM", dataKey: "uom", width: "10%" },
@@ -86,7 +90,9 @@ export const Default = () => {
       dataKey: "unitPrice",
       width: "5%",
       cellRenderer: ({ cellData }) => (
-        <Text textAlign="right" pr="x2">{cellData}</Text>
+        <Text textAlign="right" pr="x2">
+          {cellData}
+        </Text>
       ),
     },
     { label: "Currency", dataKey: "currency", width: "10%" },
@@ -106,17 +112,21 @@ export const Default = () => {
       reason: "Initial order",
       note: "Original customer request",
     },
-    ...(showNewRequest ? [{
-      id: 1,
-      rowLabel: "Supplier's proposal",
-      quantity: "100",
-      uom: "cases",
-      dueDate: "2024-01-01",
-      unitPrice: "$2.99",
-      currency: "USD",
-      reason: "Material shortage",
-      note: "Initial proposal.",
-    }] : []),
+    ...(showNewRequest
+      ? [
+          {
+            id: 1,
+            rowLabel: "Supplier's proposal",
+            quantity: "100",
+            uom: "cases",
+            dueDate: "2024-01-01",
+            unitPrice: "$2.99",
+            currency: "USD",
+            reason: "Material shortage",
+            note: "Initial proposal.",
+          },
+        ]
+      : []),
   ];
 
   return (
@@ -134,7 +144,7 @@ export const Default = () => {
                   Production progress
                 </Text>
                 <Text fontWeight="medium" fontSize="heading4" lineHeight="heading4">
-                  50%{' '}
+                  50%{" "}
                   <Box as="span" fontSize="small" lineHeight="smallRelaxed" color="midGrey">
                     (100,000/200,000)
                   </Box>
@@ -155,9 +165,13 @@ export const Default = () => {
         <Page>
           {/* Action bar above details */}
           <Flex justifyContent="flex-end" alignItems="center" gap="x2" mb="x3">
-            <IconicButton icon="edit" aria-label="Edit">Edit</IconicButton>
+            <IconicButton icon="edit" aria-label="Edit">
+              Edit
+            </IconicButton>
             <VerticalDivider />
-            <IconicButton icon="chatBubble" aria-label="Comments">Comments</IconicButton>
+            <IconicButton icon="chatBubble" aria-label="Comments">
+              Comments
+            </IconicButton>
           </Flex>
           {/* Details section */}
           <Box mb="x3" pl="x3">
@@ -221,9 +235,7 @@ export const Default = () => {
                 <Flex gap="x2" my="x3" justifyContent="flex-end">
                   {!showNewRequest ? (
                     <>
-                      {!isAccepted && (
-                        <PrimaryButton onClick={handleAcceptProposal}>Accept proposal</PrimaryButton>
-                      )}
+                      {!isAccepted && <PrimaryButton onClick={handleAcceptProposal}>Accept proposal</PrimaryButton>}
                       <QuietButton onClick={() => setShowNewRequest(!showNewRequest)}>New request</QuietButton>
                     </>
                   ) : (
@@ -236,72 +248,80 @@ export const Default = () => {
                 <Box px="x2">
                   <Table columns={columns} rows={rows} keyField="id" />
                 </Box>
-                
+
                 {showNewRequest && (
                   /* Your proposal/request */
                   <Flex mt="x2" alignItems="center" py="x1" px="x2" backgroundColor="lightBlue" borderRadius="medium">
                     <Box width="20%" pr="x2">
-                      <Text fontSize="small" fontWeight="bold" color="midGrey">Your new request</Text>
+                      <Text fontSize="small" fontWeight="bold" color="midGrey">
+                        Your new request
+                      </Text>
                     </Box>
                     <Box width="5%" pr="x2">
-                      <Input 
-                        value={editRow.quantity} 
-                        onChange={(e) => setEditRow({...editRow, quantity: e.target.value})}
-                        style={{ maxWidth: '100%', width: '100%' }}
+                      <Input
+                        value={editRow.quantity}
+                        onChange={(e) => setEditRow({ ...editRow, quantity: e.target.value })}
+                        style={{ maxWidth: "100%", width: "100%" }}
                       />
                     </Box>
                     <Box width="10%" pr="x2">
-                      <Input 
-                        value={editRow.uom} 
-                        onChange={(e) => setEditRow({...editRow, uom: e.target.value})}
-                        style={{ maxWidth: '100%', width: '100%' }}
+                      <Input
+                        value={editRow.uom}
+                        onChange={(e) => setEditRow({ ...editRow, uom: e.target.value })}
+                        style={{ maxWidth: "100%", width: "100%" }}
                       />
                     </Box>
                     <Box width="10%" pr="x2">
-                      <Input 
-                        value={editRow.dueDate} 
-                        onChange={(e) => setEditRow({...editRow, dueDate: e.target.value})}
-                        style={{ maxWidth: '100%', width: '100%' }}
+                      <Input
+                        value={editRow.dueDate}
+                        onChange={(e) => setEditRow({ ...editRow, dueDate: e.target.value })}
+                        style={{ maxWidth: "100%", width: "100%" }}
                       />
                     </Box>
                     <Box width="5%" pr="x2">
-                      <Input 
-                        value={editRow.unitPrice} 
-                        onChange={(e) => setEditRow({...editRow, unitPrice: e.target.value})}
-                        style={{ maxWidth: '100%', width: '100%' }}
+                      <Input
+                        value={editRow.unitPrice}
+                        onChange={(e) => setEditRow({ ...editRow, unitPrice: e.target.value })}
+                        style={{ maxWidth: "100%", width: "100%" }}
                       />
                     </Box>
                     <Box width="10%" pr="x2">
                       <Text>USD</Text>
                     </Box>
                     <Box width="15%" pr="x2">
-                      <Select 
+                      <Select
                         value={editRow.reason}
-                        onChange={(value) => setEditRow({...editRow, reason: value as string})}
+                        onChange={(value) => setEditRow({ ...editRow, reason: value as string })}
                         options={[
                           { value: "", label: "Select reason..." },
                           { value: "Material shortage", label: "Material shortage" },
                           { value: "Price change", label: "Price change" },
                           { value: "Schedule change", label: "Schedule change" },
-                          { value: "Quality issue", label: "Quality issue" }
+                          { value: "Quality issue", label: "Quality issue" },
                         ]}
                       />
                     </Box>
                     <Box width="25%">
-                      <Input 
-                        placeholder="Enter note..." 
-                        style={{ maxWidth: '100%', width: '100%' }}
-                      />
+                      <Input placeholder="Enter note..." style={{ maxWidth: "100%", width: "100%" }} />
                     </Box>
                   </Flex>
                 )}
 
                 {!showNewRequest && (
                   /* Supplier's proposal */
-                  <Flex mt="x2" alignItems="center" py="x2" px="x2" backgroundColor={isAccepted ? "whiteGrey" : "lightBlue"} borderRadius="medium">
+                  <Flex
+                    mt="x2"
+                    alignItems="center"
+                    py="x2"
+                    px="x2"
+                    backgroundColor={isAccepted ? "whiteGrey" : "lightBlue"}
+                    borderRadius="medium"
+                  >
                     <Box width="20%" pr="x2">
                       <Flex alignItems="center" gap="x1">
-                        <Text fontSize="small" fontWeight="bold" color="midGrey">Supplier's proposal</Text>
+                        <Text fontSize="small" fontWeight="bold" color="midGrey">
+                          Supplier's proposal
+                        </Text>
                         <StatusIndicator type={isAccepted ? "success" : "warning"}>
                           {isAccepted ? "Accepted" : "Awaiting your response"}
                         </StatusIndicator>
