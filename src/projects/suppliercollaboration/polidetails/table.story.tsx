@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect, useMemo } from "react";
 import {
   Box,
   Flex,
@@ -28,7 +28,10 @@ import {
   Select,
   toast,
   ToastContainer,
+  Checkbox,
+  Icon,
 } from "../../..";
+import { EditableRow } from "./components/EditableRow";
 
 export default {
   title: "Projects/Supplier Collaboration/POLI details/Table",
@@ -46,30 +49,283 @@ const breadcrumbs = (
 
 export const Default = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [showNewRequest, setShowNewRequest] = useState(false);
-  const [isAccepted, setIsAccepted] = useState(false);
-  const [editRow, setEditRow] = useState({
-    quantity: "120",
-    uom: "cases",
-    dueDate: "2024-01-10",
-    unitPrice: "$3.10",
-    currency: "USD",
-    reason: "Price change",
+  const [sidebarState, setSidebarState] = useState({
+    filters: false,
+    edit: false,
+    comments: false,
+    newProposal: false,
+  });
+  const [collaborationState, setCollaborationState] = useState({
+    status: "awaiting" as "awaiting" | "accepted",
+    showAcceptedCard: false,
+    hasNewCard: false,
+    activeCardAuthorRole: "supplier" as "supplier" | "customer" | null,
+  });
+  const [userState, setUserState] = useState({
+    role: "supplier" as "supplier" | "customer",
+    viewMode: "supplier" as "supplier" | "customer",
+  });
+  const [productionComplete, setProductionComplete] = useState(false);
+  const [formData, setFormData] = useState({
+    newProposal: {
+      quantity: "100",
+      uom: "cases",
+      productionDueDate: "2024-01-01",
+      unitPrice: "2.99",
+      currency: "USD",
+      changeReason: "",
+      changeNote: "",
+    },
+    edit: {
+      poNumber: "4000023874",
+      customerItemCode: "12345678",
+      customerItemDescription: "PR 24 SEPHORA ONLINE DELUXE OCT",
+      customerPOLineItemNumber: "12345",
+      supplierPOLineItemNumber: "23453",
+      creationDate: "2024-01-01",
+      customer: "MyCustomer",
+      bomRevision: "Revision 2",
+      bomReleaseDate: "2025-02-28",
+      needByDate: "2024-01-01",
+      shipTo: "MySupplier TO",
+      carryOverSentTo: "",
+      shortCloseReason: "",
+    },
+  });
+  const [filterState, setFilterState] = useState({
+    viewMode: "minimal" as "all" | "minimal", // Limited is default
   });
 
-  const handleAcceptProposal = () => {
-    setIsAccepted(true);
-    toast.success("Proposal accepted successfully");
-  };
+  const [hiddenRows, setHiddenRows] = useState<any[]>([]);
+
+  const tableRows = useMemo(() => {
+    const rows: any[] = [];
+    
+    // Original request - always shown (first row, always authored by customer)
+    rows.push({
+      id: "original",
+      type: "regular",
+      rowLabel: userState.role === "customer" ? "Your original request" : "Customer's original request",
+      authorRole: "customer",
+      rowClassName: "table-row-regular",
+      quantity: "90",
+      uom: "cases",
+      dueDate: "2023-12-20",
+      unitPrice: "$2.80",
+      currency: "USD",
+      reason: "Initial order",
+      note: "Original customer request",
+    });
+
+
+
+    // Historical rows - shown in "all" view
+    if (filterState.viewMode === "all") {
+      // First supplier proposal
+      rows.push({
+        id: "supplier-proposal-1",
+        type: "regular",
+        rowLabel: userState.role === "supplier" ? "Your proposal" : "Supplier's proposal",
+        authorRole: "supplier",
+        rowClassName: "table-row-regular",
+        quantity: "95",
+        uom: "cases",
+        dueDate: "2023-12-25",
+        unitPrice: "$2.85",
+        currency: "USD",
+        reason: "Material availability",
+        note: "Initial supplier response",
+      });
+
+      // Customer counter-request
+      rows.push({
+        id: "customer-counter-1",
+        type: "regular",
+        rowLabel: userState.role === "customer" ? "Your request" : "Customer's request",
+        authorRole: "customer",
+        rowClassName: "table-row-regular",
+        quantity: "100",
+        uom: "cases",
+        dueDate: "2023-12-28",
+        unitPrice: "$2.90",
+        currency: "USD",
+        reason: "Volume discount",
+        note: "Requested quantity increase",
+      });
+
+      // Second supplier proposal
+      rows.push({
+        id: "supplier-proposal-2",
+        type: "regular",
+        rowLabel: userState.role === "supplier" ? "Your proposal" : "Supplier's proposal",
+        authorRole: "supplier",
+        rowClassName: "table-row-regular",
+        quantity: "100",
+        uom: "cases",
+        dueDate: "2023-12-30",
+        unitPrice: "$2.88",
+        currency: "USD",
+        reason: "Price negotiation",
+        note: "Compromise on pricing",
+      });
+
+      // Extra rows - only shown in "all" view
+      rows.push({
+        id: "extra-supplier-1",
+        type: "regular",
+        rowLabel: userState.role === "supplier" ? "Your proposal" : "Supplier's proposal",
+        authorRole: "supplier",
+        rowClassName: "table-row-regular",
+        quantity: "120",
+        uom: "cases",
+        dueDate: "2024-02-10",
+        unitPrice: "$3.10",
+        currency: "USD",
+        reason: "Bulk order",
+        note: "Supplier can deliver more.",
+      });
+      rows.push({
+        id: "extra-customer-1",
+        type: "regular",
+        rowLabel: userState.role === "customer" ? "Your request" : "Customer's request",
+        authorRole: "customer",
+        rowClassName: "table-row-regular",
+        quantity: "80",
+        uom: "cases",
+        dueDate: "2024-01-15",
+        unitPrice: "$2.70",
+        currency: "USD",
+        reason: "Short term need",
+        note: "Customer needs a small batch quickly.",
+      });
+    }
+    if (!collaborationState.hasNewCard && !productionComplete && filterState.viewMode === "all") {
+      rows.push({
+        id: "your-latest",
+        type: "regular",
+        rowLabel: (userState.role === "supplier" && collaborationState.activeCardAuthorRole === "supplier")
+          ? "Your proposal"
+          : (collaborationState.activeCardAuthorRole === userState.role 
+            ? `Your ${userState.role === "supplier" ? "proposal" : "request"}`
+            : `${collaborationState.activeCardAuthorRole === "supplier" ? "Supplier's" : "Customer's"} ${collaborationState.activeCardAuthorRole === "supplier" ? "proposal" : "request"}`),
+        authorRole: userState.role,
+        rowClassName: "table-row-regular",
+        quantity: "100",
+        uom: "cases",
+        dueDate: "2024-01-01",
+        unitPrice: "$2.99",
+        currency: "USD",
+        reason: "Material shortage",
+        note: "Initial proposal.",
+      });
+    }
+    if (collaborationState.status !== "accepted" && !productionComplete && collaborationState.activeCardAuthorRole) {
+      if (!collaborationState.hasNewCard && !sidebarState.newProposal) {
+        rows.push({
+          id: `${collaborationState.activeCardAuthorRole}-active`,
+          type: "active",
+          rowLabel: collaborationState.activeCardAuthorRole === userState.role 
+            ? `Your ${userState.role === "supplier" ? "proposal" : "request"}`
+            : `${collaborationState.activeCardAuthorRole === "supplier" ? "Supplier's" : "Customer's"} ${collaborationState.activeCardAuthorRole === "supplier" ? "proposal" : "request"}`,
+          authorRole: collaborationState.activeCardAuthorRole,
+          rowClassName: userState.role === "supplier" ? "table-row-active-user-action" : "table-row-active-user-waiting",
+          quantity: "100",
+          uom: "cases",
+          dueDate: "2024-01-01",
+          unitPrice: "$2.99",
+          currency: "USD",
+          reason: "Material shortage",
+          note: "Initial proposal.",
+        });
+      } else {
+        rows.push({
+          id: `${collaborationState.activeCardAuthorRole}-regular`,
+          type: "regular",
+          rowLabel: collaborationState.activeCardAuthorRole === userState.role 
+            ? `Your ${userState.role === "supplier" ? "proposal" : "request"}`
+            : `${collaborationState.activeCardAuthorRole === "supplier" ? "Supplier's" : "Customer's"} ${collaborationState.activeCardAuthorRole === "supplier" ? "proposal" : "request"}`,
+          authorRole: collaborationState.activeCardAuthorRole,
+          rowClassName: "table-row-regular",
+          quantity: "100",
+          uom: "cases",
+          dueDate: "2024-01-01",
+          unitPrice: "$2.99",
+          currency: "USD",
+          reason: "Material shortage",
+          note: "Initial proposal.",
+        });
+      }
+    }
+
+    if (collaborationState.hasNewCard && !productionComplete && collaborationState.activeCardAuthorRole === userState.role) {
+      rows.push({
+        id: "your-active",
+        type: "active",
+        rowLabel: userState.role === "supplier" ? "Your proposal" : "Your request",
+        authorRole: userState.role,
+        rowClassName: "table-row-active-user-waiting",
+        quantity: formData.newProposal.quantity,
+        uom: formData.newProposal.uom,
+        dueDate: formData.newProposal.productionDueDate,
+        unitPrice: formData.newProposal.unitPrice,
+        currency: formData.newProposal.currency,
+        reason: formData.newProposal.changeReason,
+        note: formData.newProposal.changeNote,
+      });
+    }
+
+    // Add hidden rows to the table
+    rows.push(...hiddenRows);
+
+    return rows;
+  }, [collaborationState, userState, productionComplete, formData, hiddenRows, sidebarState.newProposal, filterState.viewMode]);
 
   const columns = [
     {
       label: "",
       dataKey: "rowLabel",
-      cellRenderer: ({ cellData }) => (
-        <Text fontSize="small" fontWeight="bold" color="midGrey" pl="x2">
-          {cellData}
-        </Text>
+      cellRenderer: ({ row }) => (
+        <Flex alignItems="center" gap="x1" pl="x2">
+          {row.type === "active" && (
+            <Box 
+              backgroundColor={row.authorRole !== userState.role ? "yellow" : "blue"} 
+              borderRadius="medium" 
+              p="x0_25" 
+              width="x3" 
+              height="x3"
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+            >
+              {row.authorRole !== userState.role ? (
+                <Icon icon="accessTime" size="x2_5" color="darkGrey" />
+              ) : (
+                <Icon icon="accessTime" size="x2_5" color="white" />
+              )}
+            </Box>
+          )}
+          {row.type === "accepted" && (
+            <Box 
+              backgroundColor="green" 
+              borderRadius="medium" 
+              p="x0_25" 
+              width="x3" 
+              height="x3"
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+            >
+              <Icon icon="check" size="x2_5" color="lightGreen" />
+            </Box>
+          )}
+          <Text 
+            fontSize="small" 
+            fontWeight={row.type === "active" ? "bold" : "normal"} 
+            color={row.type === "active" ? "blue" : row.type === "accepted" ? "green" : "midGrey"}
+          >
+            {row.rowLabel}
+          </Text>
+        </Flex>
       ),
       width: "20%",
     },
@@ -100,37 +356,49 @@ export const Default = () => {
     { label: "Note", dataKey: "note", width: "25%" },
   ];
 
-  const rows = [
-    {
-      id: 0,
-      rowLabel: "Customer's original request",
-      quantity: "90",
-      uom: "cases",
-      dueDate: "2023-12-20",
-      unitPrice: "$2.80",
-      currency: "USD",
-      reason: "Initial order",
-      note: "Original customer request",
-    },
-    ...(showNewRequest
-      ? [
-          {
-            id: 1,
-            rowLabel: "Supplier's proposal",
-            quantity: "100",
-            uom: "cases",
-            dueDate: "2024-01-01",
-            unitPrice: "$2.99",
-            currency: "USD",
-            reason: "Material shortage",
-            note: "Initial proposal.",
-          },
-        ]
-      : []),
-  ];
+  const handleAcceptProposal = () => {
+    setCollaborationState((prev) => ({
+      ...prev,
+      status: "accepted",
+      showAcceptedCard: true,
+    }));
+    toast.success(`${collaborationState.activeCardAuthorRole === "customer" ? "Request" : "Proposal"} accepted successfully`);
+  };
+  const handleNewProposalClick = () => {
+    // Capture the content from the current active row that will be hidden
+    const currentActiveRow = tableRows.find(row => 
+      row.type === "active" && row.authorRole === userState.role
+    );
+    
+    if (currentActiveRow) {
+      // Add the hidden row to the hiddenRows state
+      setHiddenRows(prev => [...prev, {
+        ...currentActiveRow,
+        id: `hidden-${Date.now()}`,
+        type: "regular",
+        rowLabel: `Your ${userState.role === "supplier" ? "proposal" : "request"}`,
+        rowClassName: "table-row-regular",
+      }]);
+    }
+    
+    setSidebarState((prev) => ({ ...prev, newProposal: true }));
+  };
 
-  return (
+  const handleSubmitNewProposal = () => {
+    setCollaborationState((prev) => ({
+      ...prev,
+      status: "awaiting",
+      showAcceptedCard: false,
+      hasNewCard: true,
+      activeCardAuthorRole: userState.role,
+    }));
+    setSidebarState((prev) => ({ ...prev, newProposal: false }));
+    toast.success(`${userState.role === "supplier" ? "Proposal" : "Request"} submitted successfully`);
+  };
+
+    return (
     <>
+     
       <ApplicationFrame>
         <Header
           breakpoints={{ medium: 1200 }}
@@ -144,9 +412,9 @@ export const Default = () => {
                   Production progress
                 </Text>
                 <Text fontWeight="medium" fontSize="heading4" lineHeight="heading4">
-                  50%{" "}
+                  {productionComplete ? "100%" : "50%"} {" "}
                   <Box as="span" fontSize="small" lineHeight="smallRelaxed" color="midGrey">
-                    (100,000/200,000)
+                    {productionComplete ? "(200,000/200,000)" : "(100,000/200,000)"}
                   </Box>
                 </Text>
               </Flex>
@@ -155,15 +423,25 @@ export const Default = () => {
                 <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
                   Collaboration status
                 </Text>
-                <StatusIndicator type={isAccepted ? "success" : "warning"}>
-                  {isAccepted ? "Accepted" : "Awaiting your response"}
+                <StatusIndicator type={
+                  productionComplete || collaborationState.status === "accepted" 
+                    ? "success" 
+                    : collaborationState.activeCardAuthorRole !== userState.role 
+                      ? "warning"
+                      : "quiet"
+                }>
+                  {productionComplete || collaborationState.status === "accepted" 
+                    ? "Accepted" 
+                    : collaborationState.activeCardAuthorRole === userState.role 
+                      ? `Awaiting ${userState.role === "supplier" ? "customer" : "supplier"} response`
+                      : "Awaiting your response"
+                  }
                 </StatusIndicator>
               </Flex>
             </Summary>
           )}
         />
         <Page>
-          {/* Action bar above details */}
           <Flex justifyContent="flex-end" alignItems="center" gap="x2" mb="x3">
             <IconicButton icon="edit" aria-label="Edit">
               Edit
@@ -173,7 +451,6 @@ export const Default = () => {
               Comments
             </IconicButton>
           </Flex>
-          {/* Details section */}
           <Box mb="x3" pl="x3">
             <DescriptionList layout="stacked" columns={{ extraSmall: 1, small: 2, medium: 3, large: 5 }}>
               <DescriptionGroup>
@@ -183,7 +460,7 @@ export const Default = () => {
                 </DescriptionDetails>
               </DescriptionGroup>
               <DescriptionGroup>
-                <DescriptionTerm>Customer's item code and description</DescriptionTerm>
+                <DescriptionTerm>{userState.role === "supplier" ? "Customer's item code and description" : "Item code and description"}</DescriptionTerm>
                 <DescriptionDetails>
                   <Link underline={false}>
                     12345678 – PR 24 SEPHORA ONLINE DELUXE OCT
@@ -203,15 +480,15 @@ export const Default = () => {
                 <DescriptionDetails>2024-01-01</DescriptionDetails>
               </DescriptionGroup>
               <DescriptionGroup>
-                <DescriptionTerm>Customer</DescriptionTerm>
+                <DescriptionTerm>{userState.role === "supplier" ? "Customer" : "Supplier"}</DescriptionTerm>
                 <DescriptionDetails>MyCustomer</DescriptionDetails>
               </DescriptionGroup>
-                          <DescriptionGroup>
-              <DescriptionTerm>BOM revision and release date</DescriptionTerm>
-              <DescriptionDetails>
-                Revision 2 – 2025-Feb-28
-              </DescriptionDetails>
-            </DescriptionGroup>
+              <DescriptionGroup>
+                <DescriptionTerm>BOM revision and release date</DescriptionTerm>
+                <DescriptionDetails>
+                  Revision 2 – 2025-Feb-28
+                </DescriptionDetails>
+              </DescriptionGroup>
               <DescriptionGroup>
                 <DescriptionTerm>Need by date</DescriptionTerm>
                 <DescriptionDetails>2024-01-01</DescriptionDetails>
@@ -224,128 +501,160 @@ export const Default = () => {
                 <DescriptionTerm>Item order type</DescriptionTerm>
                 <DescriptionDetails>Standard</DescriptionDetails>
               </DescriptionGroup>
+              {productionComplete && (
+                <>
+                  <DescriptionGroup>
+                    <DescriptionTerm>Carry over sent to</DescriptionTerm>
+                    <DescriptionDetails>{formData.edit.carryOverSentTo || "N/A"}</DescriptionDetails>
+                  </DescriptionGroup>
+                  <DescriptionGroup>
+                    <DescriptionTerm>Short close reason</DescriptionTerm>
+                    <DescriptionDetails>{formData.edit.shortCloseReason || "N/A"}</DescriptionDetails>
+                  </DescriptionGroup>
+                </>
+              )}
             </DescriptionList>
           </Box>
           <Tabs selectedIndex={selectedIndex} onTabClick={(e, index) => setSelectedIndex(index)}>
             <Tab label="Request details">
               <Box>
-                <Flex gap="x2" my="x3" justifyContent="flex-end">
-                  {!showNewRequest ? (
+                <Flex gap="x2" my="x3" justifyContent="flex-end" alignItems="center">
+                  {!sidebarState.newProposal ? (
                     <>
-                      {!isAccepted && <PrimaryButton onClick={handleAcceptProposal}>Accept proposal</PrimaryButton>}
-                      <QuietButton onClick={() => setShowNewRequest(!showNewRequest)}>New request</QuietButton>
+                      {/* Show Accept button for active rows when user needs to act */}
+                      {collaborationState.activeCardAuthorRole && 
+                       collaborationState.activeCardAuthorRole !== userState.role && 
+                       !collaborationState.hasNewCard && 
+                       collaborationState.status !== "accepted" && (
+                        <PrimaryButton onClick={handleAcceptProposal}>
+                          Accept {collaborationState.activeCardAuthorRole === "customer" ? "request" : "proposal"}
+                        </PrimaryButton>
+                      )}
+                      <QuietButton onClick={handleNewProposalClick}>
+                        New {userState.role === "supplier" ? "proposal" : "request"}
+                      </QuietButton>
                     </>
                   ) : (
                     <>
-                      <PrimaryButton>Submit request</PrimaryButton>
-                      <QuietButton onClick={() => setShowNewRequest(false)}>Cancel</QuietButton>
+                      <PrimaryButton onClick={handleSubmitNewProposal}>
+                        Submit {userState.role === "supplier" ? "proposal" : "request"}
+                      </PrimaryButton>
+                      <QuietButton onClick={() => {
+                        // Remove the last hidden row (the one we just added)
+                        setHiddenRows(prev => prev.slice(0, -1));
+                        // Close the new proposal form
+                        setSidebarState((prev) => ({ ...prev, newProposal: false }));
+                      }}>Cancel</QuietButton>
                     </>
                   )}
-                </Flex>
-             
-                <Table columns={columns} rows={rows} keyField="id" />
-                
-
-                {showNewRequest && (
-                  /* Your proposal/request */
-                  <Flex mt="x2" alignItems="center" py="x1" backgroundColor="lightBlue" borderRadius="medium">
-                    <Box width="20%" pl="x2">
-                      <Text fontSize="small" fontWeight="bold" color="midGrey">
-                        Your new request
-                      </Text>
-                    </Box>
-                    <Box width="5%" pr="x2">
-                      <Input
-                        value={editRow.quantity}
-                        onChange={(e) => setEditRow({ ...editRow, quantity: e.target.value })}
-                        style={{ maxWidth: "100%", width: "100%" }}
-                      />
-                    </Box>
-                    <Box width="10%" pr="x2">
-                      <Input
-                        value={editRow.uom}
-                        onChange={(e) => setEditRow({ ...editRow, uom: e.target.value })}
-                        style={{ maxWidth: "100%", width: "100%" }}
-                      />
-                    </Box>
-                    <Box width="10%" pr="x2">
-                      <Input
-                        value={editRow.dueDate}
-                        onChange={(e) => setEditRow({ ...editRow, dueDate: e.target.value })}
-                        style={{ maxWidth: "100%", width: "100%" }}
-                      />
-                    </Box>
-                    <Box width="5%" pr="x2">
-                      <Input
-                        value={editRow.unitPrice}
-                        onChange={(e) => setEditRow({ ...editRow, unitPrice: e.target.value })}
-                        style={{ maxWidth: "100%", width: "100%" }}
-                      />
-                    </Box>
-                    <Box width="10%" pr="x2">
-                      <Text>USD</Text>
-                    </Box>
-                    <Box width="15%" pr="x2">
-                      <Select
-                        value={editRow.reason}
-                        onChange={(value) => setEditRow({ ...editRow, reason: value as string })}
-                        options={[
-                          { value: "", label: "Select reason..." },
-                          { value: "Material shortage", label: "Material shortage" },
-                          { value: "Price change", label: "Price change" },
-                          { value: "Schedule change", label: "Schedule change" },
-                          { value: "Quality issue", label: "Quality issue" },
-                        ]}
-                      />
-                    </Box>
-                    <Box width="25%" pr="x2">
-                      <Input placeholder="Enter note..." style={{ maxWidth: "100%", width: "100%" }} />
-                    </Box>
-                  </Flex>
-                )}
-
-                {!showNewRequest && (
-                  /* Supplier's proposal */
-                  <Flex
-                    mt="x2"
-                    alignItems="center"
-                    py="x2"
-                    backgroundColor={isAccepted ? "whiteGrey" : "lightBlue"}
-                    borderRadius="medium"
+                  <VerticalDivider />
+                  <Switcher
+                    selected={filterState.viewMode}
+                    onChange={(value) => setFilterState((prev) => ({ ...prev, viewMode: value as "all" | "minimal" }))}
                   >
-                    <Box width="20%" pl="x2">
-                      <Flex alignItems="center" gap="x1" flexWrap="wrap">
-                        <Text fontSize="small" fontWeight="bold" color="midGrey">
-                          Supplier's proposal
-                        </Text>
-                        <StatusIndicator type={isAccepted ? "success" : "warning"}>
-                          {isAccepted ? "Accepted" : "Awaiting your response"}
-                        </StatusIndicator>
-                      </Flex>
-                    </Box>
-                    <Box width="5%" pr="x2" textAlign="right">
-                      <Text>100</Text>
-                    </Box>
-                    <Box width="10%" pr="x2">
-                      <Text>cases</Text>
-                    </Box>
-                    <Box width="10%" pr="x2">
-                      <Text>2024-01-01</Text>
-                    </Box>
-                    <Box width="5%" pr="x2" textAlign="right">
-                      <Text>$2.99</Text>
-                    </Box>
-                    <Box width="10%" pr="x2">
-                      <Text>USD</Text>
-                    </Box>
-                    <Box width="15%" pr="x2">
-                      <Text>Material shortage</Text>
-                    </Box>
-                    <Box width="25%">
-                      <Text>Initial proposal.</Text>
-                    </Box>
-                  </Flex>
-                )}
+                    <Switch value="minimal">Limited view</Switch>
+                    <Switch value="all">Full</Switch>
+                  </Switcher>
+                </Flex>
+                <Table 
+                  columns={columns} 
+                  rows={tableRows.filter(row => row.type !== "active")} 
+                  keyField="id"
+                />
+                {/* Render single EditableRow component based on state */}
+                {(() => {
+                  // Show accepted EditableRow when production is complete or when proposal is accepted
+                  if (productionComplete || collaborationState.status === "accepted") {
+                    return (
+                      <EditableRow
+                        type="accepted"
+                        userRole={userState.role}
+                        authorRole={collaborationState.activeCardAuthorRole}
+                        collaborationStatus={collaborationState.status}
+                        formData={{
+                          quantity: "100",
+                          uom: "cases",
+                          dueDate: "2024-01-01",
+                          unitPrice: "2.99",
+                          currency: "USD",
+                          reason: "Material shortage",
+                          note: "Initial proposal.",
+                        }}
+                      />
+                    );
+                  }
+                  
+                  // Show new EditableRow when creating new proposal
+                  if (!productionComplete && sidebarState.newProposal) {
+                    return (
+                      <EditableRow
+                        type="new"
+                        userRole={userState.role}
+                        authorRole={userState.role}
+                        formData={{
+                          quantity: collaborationState.activeCardAuthorRole === userState.role ? 
+                            tableRows.find(row => row.type === "active")?.quantity || formData.newProposal.quantity :
+                            formData.newProposal.quantity,
+                          uom: collaborationState.activeCardAuthorRole === userState.role ? 
+                            tableRows.find(row => row.type === "active")?.uom || formData.newProposal.uom :
+                            formData.newProposal.uom,
+                          dueDate: collaborationState.activeCardAuthorRole === userState.role ? 
+                            tableRows.find(row => row.type === "active")?.dueDate || formData.newProposal.productionDueDate :
+                            formData.newProposal.productionDueDate,
+                          unitPrice: collaborationState.activeCardAuthorRole === userState.role ? 
+                            (tableRows.find(row => row.type === "active")?.unitPrice || "$2.99").replace("$", "") :
+                            formData.newProposal.unitPrice,
+                          currency: "USD",
+                          reason: collaborationState.activeCardAuthorRole === userState.role ? 
+                            tableRows.find(row => row.type === "active")?.reason || formData.newProposal.changeReason :
+                            formData.newProposal.changeReason,
+                          note: collaborationState.activeCardAuthorRole === userState.role ? 
+                            tableRows.find(row => row.type === "active")?.note || formData.newProposal.changeNote :
+                            formData.newProposal.changeNote,
+                        }}
+                        onFormDataChange={(field, value) => {
+                          setFormData(prev => ({
+                            ...prev,
+                            newProposal: {
+                              ...prev.newProposal,
+                              [field === "dueDate" ? "productionDueDate" : 
+                               field === "reason" ? "changeReason" : 
+                               field === "note" ? "changeNote" : field]: value,
+                            },
+                          }));
+                        }}
+                      />
+                    );
+                  }
+                  
+                  // Show active EditableRow when there's an active collaboration
+                  const activeRow = tableRows.find(row => row.type === "active");
+                  if (!productionComplete && activeRow && !sidebarState.newProposal) {
+                    return (
+                      <EditableRow
+                        key={activeRow.id}
+                        type="active"
+                        userRole={userState.role}
+                        authorRole={activeRow.authorRole}
+                        collaborationStatus={collaborationState.status}
+                        formData={{
+                          quantity: activeRow.quantity,
+                          uom: activeRow.uom,
+                          dueDate: activeRow.dueDate,
+                          unitPrice: activeRow.unitPrice.replace("$", ""),
+                          currency: activeRow.currency,
+                          reason: activeRow.reason,
+                          note: activeRow.note,
+                        }}
+                      />
+                    );
+                  }
+                  
+                  return null;
+                })()}
+
+
+
               </Box>
             </Tab>
             <Tab label="Production records">
@@ -370,8 +679,57 @@ export const Default = () => {
             </Tab>
           </Tabs>
         </Page>
+        <Box
+          position="fixed"
+          bottom="x1"
+          left="50%"
+          transform="translateX(-50%)"
+          zIndex={1000}
+          backgroundColor="white"
+          borderRadius="medium"
+          boxShadow="large"
+          p="x2"
+          border="1px solid"
+          borderColor="lightGrey"
+        >
+          <Flex alignItems="center" gap="x2">
+            <Checkbox
+              id="productionComplete"
+              checked={productionComplete}
+              onChange={(e) => setProductionComplete(e.target.checked)}
+              labelText="Production complete"
+            />
+            <VerticalDivider />
+            <Switcher
+              selected={userState.role}
+              onChange={(value) => setUserState(prev => ({ ...prev, role: value as "supplier" | "customer" }))}
+            >
+              <Switch value="supplier">Supplier</Switch>
+              <Switch value="customer">Customer</Switch>
+            </Switcher>
+            <VerticalDivider />
+            <Flex gap="x1" justifyContent="center" alignItems="center">
+              <Text fontSize="small" color="midGrey" width="120px" textAlign="right">
+                Active request by:
+              </Text>
+              <Select
+                options={[
+                  { value: "supplier", label: "Supplier" },
+                  { value: "customer", label: "Customer" },
+                ]}
+                value={collaborationState.activeCardAuthorRole || "supplier"}
+                onChange={(option) =>
+                  setCollaborationState((prev) => ({ ...prev, activeCardAuthorRole: option as "supplier" | "customer" }))
+                }
+                placeholder="Select author role"
+                menuPlacement="top"
+                width="160px"
+              />
+            </Flex>
+          </Flex>
+        </Box>
+        <ToastContainer />
       </ApplicationFrame>
-      <ToastContainer />
     </>
   );
 };
