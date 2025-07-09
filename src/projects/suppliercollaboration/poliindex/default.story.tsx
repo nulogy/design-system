@@ -22,7 +22,7 @@ export default {
 
 export const Default = () => {
   const [selectedRows, setSelectedRows] = useState<string[]>([]);
-  const [role, setRole] = useState("supplier");
+  const [role, setRole] = useState<"supplier" | "customer">("supplier");
 
   const handleRowSelectionChange = (selectedRowIds: string[]) => {
     setSelectedRows(selectedRowIds);
@@ -80,7 +80,7 @@ export const Default = () => {
           <Box width="100%" overflowX="auto">
             <Box width="6000px">
               <Table
-                columns={getPoliColumns(role)}
+                columns={getPoliColumns(role) as any}
                 rows={getPoliRows(role)}
                 hasSelectableRows
                 selectedRows={selectedRows}
@@ -107,7 +107,7 @@ export const Default = () => {
           alignItems="center"
         >
           <Text fontSize="small" mr="x2">View as:</Text>
-          <Switcher selected={role} onChange={setRole}>
+          <Switcher selected={role} onChange={(value: string) => setRole(value as "supplier" | "customer")}>
             <Switch value="supplier">Supplier</Switch>
             <Switch value="customer">Customer</Switch>
           </Switcher>
