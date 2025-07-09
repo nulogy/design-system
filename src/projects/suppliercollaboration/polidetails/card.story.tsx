@@ -140,11 +140,6 @@ export const DefaultCard = () => {
     },
   });
 
-  // Filter state - using switcher instead of checkboxes
-  const [filterState, setFilterState] = useState({
-    viewMode: "minimal" as "all" | "minimal",
-  });
-
   // Helper functions
   const formatDateForDisplay = (date: Date) => {
     return date.toISOString().split("T")[0];
@@ -158,76 +153,38 @@ export const DefaultCard = () => {
     let numberOfCards = 0;
     let cardBreakdown = [];
 
-    if (filterState.viewMode === "all") {
-      // Show all cards
-      numberOfCards = 4; // Original + 3 old cards
-      cardBreakdown.push("Base 4 cards (Original + 3 old cards)");
-      
-      // User's latest request/proposal - shown in both views
-      numberOfCards++;
-      cardBreakdown.push("User's latest request/proposal");
+    // Limited view: Original + User's latest + Latest + New proposal button
+    numberOfCards = 1; // Original only
+    cardBreakdown.push("Base 1 card (Original only)");
 
-      // Handle latest request/proposal cards
-      if (collaborationState.status === "accepted") {
-        // When accepted, show the previously active card as regular
-        if (collaborationState.activeCardAuthorRole) {
-          numberOfCards++;
-          cardBreakdown.push("Previously active card (accepted state)");
-        }
-      } else {
-        // When not accepted, show active card or previously active card
-        if (collaborationState.activeCardAuthorRole) {
-          if (collaborationState.hasNewCard) {
-            // Show previously active as regular + new active card
-            numberOfCards += 2;
-            cardBreakdown.push("Previously active card + new active card");
-          } else {
-            // Show current active card
-            numberOfCards++;
-            cardBreakdown.push("Current active card");
-          }
-        }
+    // User's latest request/proposal - shown in both views
+    numberOfCards++;
+    cardBreakdown.push("User's latest request/proposal");
+
+    // Handle latest request/proposal cards
+    if (collaborationState.status === "accepted") {
+      // When accepted, show the previously active card as regular
+      if (collaborationState.activeCardAuthorRole) {
+        numberOfCards++;
+        cardBreakdown.push("Previously active card (accepted state)");
       }
 
-      // Handle accepted card
+      // Handle accepted card in Limited mode
       if (collaborationState.showAcceptedCard) {
         numberOfCards++;
-        cardBreakdown.push("Accepted card");
+        cardBreakdown.push("Accepted card (Limited mode)");
       }
     } else {
-      // Minimal view: Original + User's latest + Latest + New proposal button
-      numberOfCards = 1; // Original only
-      cardBreakdown.push("Base 1 card (Original only)");
-      
-      // User's latest request/proposal - shown in both views
-      numberOfCards++;
-      cardBreakdown.push("User's latest request/proposal");
-
-      // Handle latest request/proposal cards
-      if (collaborationState.status === "accepted") {
-        // When accepted, show the previously active card as regular
-        if (collaborationState.activeCardAuthorRole) {
+      // When not accepted, show active card or previously active card
+      if (collaborationState.activeCardAuthorRole) {
+        if (collaborationState.hasNewCard) {
+          // Show previously active as regular + new active card
+          numberOfCards += 2;
+          cardBreakdown.push("Previously active card + new active card");
+        } else {
+          // Show current active card
           numberOfCards++;
-          cardBreakdown.push("Previously active card (accepted state)");
-        }
-        
-        // Handle accepted card in Limited mode
-        if (collaborationState.showAcceptedCard) {
-          numberOfCards++;
-          cardBreakdown.push("Accepted card (Limited mode)");
-        }
-      } else {
-        // When not accepted, show active card or previously active card
-        if (collaborationState.activeCardAuthorRole) {
-          if (collaborationState.hasNewCard) {
-            // Show previously active as regular + new active card
-            numberOfCards += 2;
-            cardBreakdown.push("Previously active card + new active card");
-          } else {
-            // Show current active card
-            numberOfCards++;
-            cardBreakdown.push("Current active card");
-          }
+          cardBreakdown.push("Current active card");
         }
       }
     }
@@ -245,7 +202,7 @@ export const DefaultCard = () => {
     }
 
     const totalWidth = (cardWidth + cardBorderWidth) * numberOfCards + effectiveGapWidth * (numberOfCards - 1);
-    
+
     console.log("Width calculation breakdown:", {
       numberOfCards,
       cardWidth: cardWidth + cardBorderWidth,
@@ -254,7 +211,6 @@ export const DefaultCard = () => {
       showAccepted: collaborationState.showAcceptedCard,
       hasNewCard: collaborationState.hasNewCard,
       activeAuthor: collaborationState.activeCardAuthorRole,
-      viewMode: filterState.viewMode,
       cardBreakdown,
     });
 
@@ -268,12 +224,11 @@ export const DefaultCard = () => {
     console.log("Memoized width calculation:", width);
     return width;
   }, [
-    filterState.viewMode,
+    userState.role,
     collaborationState.status,
     collaborationState.showAcceptedCard,
     collaborationState.hasNewCard,
     collaborationState.activeCardAuthorRole,
-    userState.role,
   ]);
 
   // Sidebar handlers
@@ -348,7 +303,7 @@ export const DefaultCard = () => {
       userRole: userState.role,
       currentActiveAuthor: collaborationState.activeCardAuthorRole,
     });
-    
+
     if (collaborationState.status === "accepted") {
       setCollaborationState((prev) => ({ ...prev, activeCardAuthorRole: null }));
     } else {
@@ -366,7 +321,6 @@ export const DefaultCard = () => {
       showAccepted: collaborationState.showAcceptedCard,
       hasNewCard: collaborationState.hasNewCard,
       activeAuthor: collaborationState.activeCardAuthorRole,
-      viewMode: filterState.viewMode,
       userRole: userState.role,
     });
 
@@ -393,29 +347,8 @@ export const DefaultCard = () => {
     collaborationState.showAcceptedCard,
     collaborationState.hasNewCard,
     collaborationState.activeCardAuthorRole,
-    filterState.viewMode,
     userState.role,
   ]);
-
-  // Additional effect specifically for view mode changes
-  useEffect(() => {
-    console.log("View mode changed to:", filterState.viewMode);
-    setWidthKey((prev) => prev + 1);
-    
-    // Force a re-render after a short delay to ensure DOM updates
-    setTimeout(() => {
-      const scrollEl = scrollContainerRef.current;
-      if (scrollEl) {
-        scrollEl.scrollLeft = scrollEl.scrollWidth;
-        setScrollState((prev) => ({
-          ...prev,
-          scrollPosition: scrollEl.scrollLeft,
-          maxScrollLeft: scrollEl.scrollWidth - scrollEl.clientWidth,
-          isOverflowing: scrollEl.scrollWidth > scrollEl.clientWidth,
-        }));
-      }
-    }, 100);
-  }, [filterState.viewMode]);
 
   // Force DOM update when calculated width changes
   useEffect(() => {
@@ -603,9 +536,7 @@ export const DefaultCard = () => {
                 {userState.role === "supplier" ? "Customer's item code and description" : "Item code and description"}
               </DescriptionTerm>
               <DescriptionDetails>
-                <Link underline={false}>
-                  12345678 – PR 24 SEPHORA ONLINE DELUXE OCT
-                </Link>
+                <Link underline={false}>12345678 – PR 24 SEPHORA ONLINE DELUXE OCT</Link>
               </DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
@@ -626,9 +557,7 @@ export const DefaultCard = () => {
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>BOM revision and release date</DescriptionTerm>
-              <DescriptionDetails>
-                Revision 2 – 2025-Feb-28
-              </DescriptionDetails>
+              <DescriptionDetails>Revision 2 – 2025-Feb-28</DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>Need by date</DescriptionTerm>
@@ -673,13 +602,6 @@ export const DefaultCard = () => {
                     <VerticalDivider />
                   </>
                 )}
-                <Switcher
-                  selected={filterState.viewMode}
-                  onChange={(value) => setFilterState((prev) => ({ ...prev, viewMode: value as "all" | "minimal" }))}
-                >
-                  <Switch value="minimal">Limited</Switch>
-                  <Switch value="all">All</Switch>
-                </Switcher>
               </Flex>
               {/* Cards row with left inner shadow only if overflowing */}
               <Box position="relative">
@@ -691,8 +613,8 @@ export const DefaultCard = () => {
                     py="x2"
                     gap="x2"
                     key={widthKey}
-                    style={{ 
-                      width: `${calculatedWidth}px`
+                    style={{
+                      width: `${calculatedWidth}px`,
                     }}
                   >
                     {/* Original request card. Always shown in both views */}
@@ -705,54 +627,8 @@ export const DefaultCard = () => {
                       date="2024-Jan-01"
                       width="480px"
                     />
-                    {/* Old cards - only shown in "all" view */}
-                    {filterState.viewMode === "all" && (
-                      <>
-                        {/* Supplier request card */}
-                        <POLICard
-                          type="regular"
-                          baseTitle={userState.role === "supplier" ? "proposal" : "request"}
-                          author="you"
-                          authorRole={userState.role}
-                          userRole={userState.role}
-                          date="2024-Jan-02"
-                          width="480px"
-                        />
-                        {/* Customer request card */}
-                        <POLICard
-                          type="regular"
-                          baseTitle={userState.role === "supplier" ? "request" : "proposal"}
-                          author="John Doe"
-                          authorRole={userState.role === "supplier" ? "customer" : "supplier"}
-                          userRole={userState.role}
-                          date="2024-Jan-03"
-                          width="480px"
-                        />
-                        {/* Latest supplier request card */}
-                        <POLICard
-                          type="regular"
-                          baseTitle={userState.role === "supplier" ? "proposal" : "request"}
-                          author="you"
-                          authorRole={userState.role}
-                          userRole={userState.role}
-                          date="2024-Jan-01"
-                          width="480px"
-                        />
-                      </>
-                    )}
-                    {/* User's latest request/proposal - shown first */}
-                    {!collaborationState.hasNewCard && !productionComplete && (
-                      <POLICard
-                        type="regular"
-                        baseTitle={`latest ${userState.role === "supplier" ? "proposal" : "request"}`}
-                        author="you"
-                        authorRole={userState.role}
-                        userRole={userState.role}
-                        date="2024-Jan-04"
-                        width="480px"
-                      />
-                    )}
-                    {/* Customer's latest request - shown after user's proposal */}
+
+                    {/* Customer's latest request - shown after original request */}
                     {collaborationState.status !== "accepted" &&
                       !productionComplete &&
                       collaborationState.activeCardAuthorRole &&
@@ -809,7 +685,7 @@ export const DefaultCard = () => {
                       />
                     )}
                     {/* New active card created by current user - placed just before the New button */}
-                    {collaborationState.hasNewCard && 
+                    {collaborationState.hasNewCard &&
                       !productionComplete &&
                       collaborationState.activeCardAuthorRole === userState.role && (
                         <POLICard
@@ -833,7 +709,7 @@ export const DefaultCard = () => {
                       </Card>
                     )}
                   </Flex>
-                                </Box>
+                </Box>
                 {/* Left gradient - shows when there's room to scroll left */}
                 {scrollState.isOverflowing && scrollState.scrollPosition > 10 && (
                   <Box

@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Flex,
-  Text,
-  Input,
-  Select,
-  Icon,
-} from "../../../..";
+import { Box, Flex, Text, Input, Select, Icon } from "../../../..";
 
 export type EditableRowType = "accepted" | "active" | "new";
 
@@ -44,7 +37,7 @@ export const EditableRow: React.FC<EditableRowProps> = ({
       case "active":
         // Light yellow if last action was by other role, light blue if by current role
         return {
-          backgroundColor: authorRole === userRole ? "lightBlue" as const : "lightYellow" as const,
+          backgroundColor: authorRole === userRole ? ("lightBlue" as const) : ("lightYellow" as const),
         };
       case "new":
         return {
@@ -57,11 +50,11 @@ export const EditableRow: React.FC<EditableRowProps> = ({
     if (type === "accepted") {
       // Accepted - show check icon
       return (
-        <Box 
-          backgroundColor="green" 
-          borderRadius="medium" 
-          p="x0_25" 
-          width="x3" 
+        <Box
+          backgroundColor="green"
+          borderRadius="medium"
+          p="x0_25"
+          width="x3"
           height="x3"
           display="flex"
           alignItems="center"
@@ -74,11 +67,11 @@ export const EditableRow: React.FC<EditableRowProps> = ({
     if (type === "active" && authorRole && authorRole !== userRole) {
       // User needs to act - show warning icon
       return (
-        <Box 
-          backgroundColor="yellow" 
-          borderRadius="medium" 
-          p="x0_25" 
-          width="x3" 
+        <Box
+          backgroundColor="yellow"
+          borderRadius="medium"
+          p="x0_25"
+          width="x3"
           height="x3"
           display="flex"
           alignItems="center"
@@ -117,8 +110,8 @@ export const EditableRow: React.FC<EditableRowProps> = ({
   const styles = getRowStyles();
 
   return (
-    <Flex 
-      alignItems="center" 
+    <Flex
+      alignItems="center"
       py={isEditable ? "x1" : "x2"}
       px="0"
       backgroundColor={styles.backgroundColor}
@@ -127,11 +120,7 @@ export const EditableRow: React.FC<EditableRowProps> = ({
       <Box width="20%" pl="x2">
         <Flex alignItems="center" gap="x1">
           {getStatusIcon()}
-          <Text 
-            fontSize="small" 
-            fontWeight="bold" 
-            color="darkGrey"
-          >
+          <Text fontSize="small" fontWeight="bold" color="darkGrey">
             {getTitle()}
           </Text>
         </Flex>
@@ -144,9 +133,7 @@ export const EditableRow: React.FC<EditableRowProps> = ({
             style={{ maxWidth: "100%", width: "100%" }}
           />
         ) : (
-          <Text textAlign="right" >
-            {formData?.quantity || "100"}
-          </Text>
+          <Text textAlign="right">{formData?.quantity || "100"}</Text>
         )}
       </Box>
       <Box width="10%" pr="x2">
@@ -179,9 +166,7 @@ export const EditableRow: React.FC<EditableRowProps> = ({
             style={{ maxWidth: "100%", width: "100%" }}
           />
         ) : (
-          <Text textAlign="right">
-            {formData?.unitPrice ? `$${formData.unitPrice}` : "$2.99"}
-          </Text>
+          <Text textAlign="right">{formData?.unitPrice ? `$${formData.unitPrice}` : "$2.99"}</Text>
         )}
       </Box>
       <Box width="10%" pr="x2">
@@ -218,4 +203,4 @@ export const EditableRow: React.FC<EditableRowProps> = ({
       </Box>
     </Flex>
   );
-}; 
+};
