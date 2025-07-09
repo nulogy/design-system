@@ -53,11 +53,7 @@ export const Default = () => {
         `}
       </style>
       <ApplicationFrame>
-        <Header
-          breakpoints={{ medium: 1200 }}
-          renderBreadcrumbs={() => breadcrumbs}
-          title="PO line items"
-        />
+        <Header breakpoints={{ medium: 1200 }} renderBreadcrumbs={() => breadcrumbs} title="PO line items" />
         <Page>
           <Flex justifyContent="flex-end" alignItems="center" mb="x3">
             <Flex gap="x2" alignItems="center">
@@ -106,7 +102,9 @@ export const Default = () => {
           display="flex"
           alignItems="center"
         >
-          <Text fontSize="small" mr="x2">View as:</Text>
+          <Text fontSize="small" mr="x2">
+            View as:
+          </Text>
           <Switcher selected={role} onChange={(value: string) => setRole(value as "supplier" | "customer")}>
             <Switch value="supplier">Supplier</Switch>
             <Switch value="customer">Customer</Switch>
@@ -115,4 +113,4 @@ export const Default = () => {
       </ApplicationFrame>
     </>
   );
-}; 
+};

@@ -37,77 +37,127 @@ export const poliColumns = [
     ),
   },
   {
-    label: <Box style={headerBoxStyle}><Text fontSize="small">PO number</Text></Box>,
+    label: (
+      <Box style={headerBoxStyle}>
+        <Text fontSize="small">PO number</Text>
+      </Box>
+    ),
     dataKey: "poNumber",
     width: "200px",
     cellRenderer: ({ cellData }: { cellData: string }) => (
       <Box px="half">
-        <Link href="#" fontSize="small" underline={false}>{cellData}</Link>
+        <Link href="#" fontSize="small" underline={false}>
+          {cellData}
+        </Link>
       </Box>
     ),
   },
   {
-    label: <Box style={headerBoxStyle}><Text fontSize="small">PO line item number</Text></Box>,
+    label: (
+      <Box style={headerBoxStyle}>
+        <Text fontSize="small">PO line item number</Text>
+      </Box>
+    ),
     dataKey: "poLineItemNumber",
     width: "200px",
     cellRenderer: ({ cellData }: { cellData: string }) => (
       <Box px="half">
-        <Link href="#" fontSize="small" underline={false}>{cellData}</Link>
+        <Link href="#" fontSize="small" underline={false}>
+          {cellData}
+        </Link>
       </Box>
     ),
   },
   {
-    label: <Box style={headerBoxStyle}><Text fontSize="small">Supplier PO line item number</Text></Box>,
+    label: (
+      <Box style={headerBoxStyle}>
+        <Text fontSize="small">Supplier PO line item number</Text>
+      </Box>
+    ),
     dataKey: "supplierPoLineItemNumber",
     width: "200px",
     cellRenderer: ({ cellData }: { cellData: string }) => (
-      <Box px="half"><Text fontSize="small">{cellData}</Text></Box>
+      <Box px="half">
+        <Text fontSize="small">{cellData}</Text>
+      </Box>
     ),
   },
   {
-    label: <Box style={headerBoxStyle}><Text fontSize="small">Created on</Text></Box>,
+    label: (
+      <Box style={headerBoxStyle}>
+        <Text fontSize="small">Created on</Text>
+      </Box>
+    ),
     dataKey: "createdOn",
     width: "200px",
     cellRenderer: ({ cellData }: { cellData: string }) => (
-      <Box px="half"><Text fontSize="small">{cellData}</Text></Box>
+      <Box px="half">
+        <Text fontSize="small">{cellData}</Text>
+      </Box>
     ),
   },
   {
-    label: <Box style={headerBoxStyle}><Text fontSize="small">Customer</Text></Box>,
+    label: (
+      <Box style={headerBoxStyle}>
+        <Text fontSize="small">Customer</Text>
+      </Box>
+    ),
     dataKey: "customer",
     width: "200px",
     cellRenderer: ({ cellData }: { cellData: string }) => (
-      <Box px="half"><Text fontSize="small">{cellData}</Text></Box>
+      <Box px="half">
+        <Text fontSize="small">{cellData}</Text>
+      </Box>
     ),
   },
   {
-    label: <Box style={headerBoxStyle}><Text fontSize="small">Customer's item code and description</Text></Box>,
+    label: (
+      <Box style={headerBoxStyle}>
+        <Text fontSize="small">Customer's item code and description</Text>
+      </Box>
+    ),
     dataKey: "customerItemCodeAndDescription",
     width: "300px",
     cellRenderer: ({ cellData }: { cellData: string }) => (
       <Box px="half">
-        <Link href="#" fontSize="small" underline={false}>{cellData}</Link>
+        <Link href="#" fontSize="small" underline={false}>
+          {cellData}
+        </Link>
       </Box>
     ),
   },
   {
-    label: <Box style={headerBoxStyle}><Text fontSize="small">Supplier's item code</Text></Box>,
+    label: (
+      <Box style={headerBoxStyle}>
+        <Text fontSize="small">Supplier's item code</Text>
+      </Box>
+    ),
     dataKey: "supplierItemCode",
     width: "200px",
     cellRenderer: ({ cellData }: { cellData: string }) => (
-      <Box px="half"><Text fontSize="small">{cellData}</Text></Box>
+      <Box px="half">
+        <Text fontSize="small">{cellData}</Text>
+      </Box>
     ),
   },
   {
-    label: <Box style={headerBoxStyle}><Text fontSize="small">Problems and risks</Text></Box>,
+    label: (
+      <Box style={headerBoxStyle}>
+        <Text fontSize="small">Problems and risks</Text>
+      </Box>
+    ),
     dataKey: "problemsAndRisks",
     width: "200px",
     cellRenderer: ({ cellData }: { cellData: string }) => (
       <Box px="half">
         {cellData === "At risk" ? (
-          <StatusIndicator type="warning" fontSize="small">At risk</StatusIndicator>
+          <StatusIndicator type="warning" fontSize="small">
+            At risk
+          </StatusIndicator>
         ) : cellData === "Late" ? (
-          <StatusIndicator type="danger" fontSize="small">Late</StatusIndicator>
+          <StatusIndicator type="danger" fontSize="small">
+            Late
+          </StatusIndicator>
         ) : (
           <Text fontSize="small">{cellData}</Text>
         )}
@@ -115,39 +165,67 @@ export const poliColumns = [
     ),
   },
   {
-    label: <Box style={headerBoxStyle}><Text fontSize="small">Tags</Text></Box>,
+    label: (
+      <Box style={headerBoxStyle}>
+        <Text fontSize="small">Tags</Text>
+      </Box>
+    ),
     dataKey: "tags",
     width: "150px",
     cellRenderer: ({ cellData }: { cellData: string }) => (
-      <Box px="half"><Text fontSize="small">{cellData}</Text></Box>
+      <Box px="half">
+        <Text fontSize="small">{cellData}</Text>
+      </Box>
     ),
   },
   {
-    label: <Box style={headerBoxStyle}><Text fontSize="small">Priority</Text></Box>,
+    label: (
+      <Box style={headerBoxStyle}>
+        <Text fontSize="small">Priority</Text>
+      </Box>
+    ),
     dataKey: "priority",
     width: "150px",
     cellRenderer: ({ cellData }: { cellData: string }) => (
-      <Box px="half"><Text fontSize="small">{cellData}</Text></Box>
+      <Box px="half">
+        <Text fontSize="small">{cellData}</Text>
+      </Box>
     ),
   },
   {
-    label: <Box style={headerBoxStyle}><Text fontSize="small">Production progress</Text></Box>,
+    label: (
+      <Box style={headerBoxStyle}>
+        <Text fontSize="small">Production progress</Text>
+      </Box>
+    ),
     dataKey: "productionProgress",
     width: "200px",
     cellRenderer: ({ cellData }: { cellData: string }) => (
-      <Box px="half"><Text fontSize="small">{cellData}%</Text></Box>
+      <Box px="half">
+        <Text fontSize="small">{cellData}%</Text>
+      </Box>
     ),
   },
   {
-    label: <Box style={headerBoxStyle}><Text fontSize="small">Last comment (Note)</Text></Box>,
+    label: (
+      <Box style={headerBoxStyle}>
+        <Text fontSize="small">Last comment (Note)</Text>
+      </Box>
+    ),
     dataKey: "lastComment",
     width: "250px",
     cellRenderer: ({ cellData }: { cellData: string }) => (
-      <Box px="half"><Text fontSize="small">{cellData}</Text></Box>
+      <Box px="half">
+        <Text fontSize="small">{cellData}</Text>
+      </Box>
     ),
   },
   {
-    label: <Box style={headerBoxStyle}><Text fontSize="small">Collaboration status</Text></Box>,
+    label: (
+      <Box style={headerBoxStyle}>
+        <Text fontSize="small">Collaboration status</Text>
+      </Box>
+    ),
     dataKey: "collaborationStatus",
     width: "200px",
     cellRenderer: ({ cellData }: { cellData: string }) => (
@@ -159,147 +237,255 @@ export const poliColumns = [
     ),
   },
   {
-    label: <Box style={headerBoxStyle}><Text fontSize="small">Quantity</Text></Box>,
+    label: (
+      <Box style={headerBoxStyle}>
+        <Text fontSize="small">Quantity</Text>
+      </Box>
+    ),
     dataKey: "quantity",
     width: "150px",
     cellRenderer: ({ cellData }: { cellData: string }) => (
-      <Box px="half"><Text fontSize="small">{cellData}</Text></Box>
+      <Box px="half">
+        <Text fontSize="small">{cellData}</Text>
+      </Box>
     ),
   },
   {
-    label: <Box style={headerBoxStyle}><Text fontSize="small">Production due date</Text></Box>,
+    label: (
+      <Box style={headerBoxStyle}>
+        <Text fontSize="small">Production due date</Text>
+      </Box>
+    ),
     dataKey: "productionDueDate",
     width: "200px",
     cellRenderer: ({ cellData }: { cellData: string }) => (
-      <Box px="half"><Text fontSize="small">{cellData}</Text></Box>
+      <Box px="half">
+        <Text fontSize="small">{cellData}</Text>
+      </Box>
     ),
   },
   {
-    label: <Box style={headerBoxStyle}><Text fontSize="small">Unit price</Text></Box>,
+    label: (
+      <Box style={headerBoxStyle}>
+        <Text fontSize="small">Unit price</Text>
+      </Box>
+    ),
     dataKey: "unitPrice",
     width: "150px",
     cellRenderer: ({ cellData }: { cellData: string }) => (
-      <Box px="half"><Text fontSize="small">{cellData}</Text></Box>
+      <Box px="half">
+        <Text fontSize="small">{cellData}</Text>
+      </Box>
     ),
   },
   {
-    label: <Box style={headerBoxStyle}><Text fontSize="small">Currency</Text></Box>,
+    label: (
+      <Box style={headerBoxStyle}>
+        <Text fontSize="small">Currency</Text>
+      </Box>
+    ),
     dataKey: "currency",
     width: "150px",
     cellRenderer: ({ cellData }: { cellData: string }) => (
-      <Box px="half"><Text fontSize="small">{cellData}</Text></Box>
+      <Box px="half">
+        <Text fontSize="small">{cellData}</Text>
+      </Box>
     ),
   },
   {
-    label: <Box style={headerBoxStyle}><Text fontSize="small">Reason</Text></Box>,
+    label: (
+      <Box style={headerBoxStyle}>
+        <Text fontSize="small">Reason</Text>
+      </Box>
+    ),
     dataKey: "reason",
     width: "200px",
     cellRenderer: ({ cellData }: { cellData: string }) => (
-      <Box px="half"><Text fontSize="small">{cellData}</Text></Box>
+      <Box px="half">
+        <Text fontSize="small">{cellData}</Text>
+      </Box>
     ),
   },
   {
-    label: <Box style={headerBoxStyle}><Text fontSize="small">Change note</Text></Box>,
+    label: (
+      <Box style={headerBoxStyle}>
+        <Text fontSize="small">Change note</Text>
+      </Box>
+    ),
     dataKey: "changeNote",
     width: "200px",
     cellRenderer: ({ cellData }: { cellData: string }) => (
-      <Box px="half"><Text fontSize="small">{cellData}</Text></Box>
+      <Box px="half">
+        <Text fontSize="small">{cellData}</Text>
+      </Box>
     ),
   },
   {
-    label: <Box style={headerBoxStyle}><Text fontSize="small">BOM revision and release date</Text></Box>,
+    label: (
+      <Box style={headerBoxStyle}>
+        <Text fontSize="small">BOM revision and release date</Text>
+      </Box>
+    ),
     dataKey: "bomRevisionAndReleaseDate",
     width: "250px",
     cellRenderer: ({ cellData }: { cellData: string }) => (
-      <Box px="half"><Text fontSize="small">{cellData}</Text></Box>
+      <Box px="half">
+        <Text fontSize="small">{cellData}</Text>
+      </Box>
     ),
   },
   {
-    label: <Box style={headerBoxStyle}><Text fontSize="small">Materials availability date</Text></Box>,
+    label: (
+      <Box style={headerBoxStyle}>
+        <Text fontSize="small">Materials availability date</Text>
+      </Box>
+    ),
     dataKey: "materialsAvailabilityDate",
     width: "200px",
     cellRenderer: ({ cellData }: { cellData: string }) => (
-      <Box px="half"><Text fontSize="small">{cellData}</Text></Box>
+      <Box px="half">
+        <Text fontSize="small">{cellData}</Text>
+      </Box>
     ),
   },
   {
-    label: <Box style={headerBoxStyle}><Text fontSize="small">Production start date</Text></Box>,
+    label: (
+      <Box style={headerBoxStyle}>
+        <Text fontSize="small">Production start date</Text>
+      </Box>
+    ),
     dataKey: "productionStartDate",
     width: "200px",
     cellRenderer: ({ cellData }: { cellData: string }) => (
-      <Box px="half"><Text fontSize="small">{cellData}</Text></Box>
+      <Box px="half">
+        <Text fontSize="small">{cellData}</Text>
+      </Box>
     ),
   },
   {
-    label: <Box style={headerBoxStyle}><Text fontSize="small">Can run (now)</Text></Box>,
+    label: (
+      <Box style={headerBoxStyle}>
+        <Text fontSize="small">Can run (now)</Text>
+      </Box>
+    ),
     dataKey: "canRunNow",
     width: "150px",
     cellRenderer: ({ cellData }: { cellData: string }) => (
-      <Box px="half"><Text fontSize="small">{cellData}</Text></Box>
+      <Box px="half">
+        <Text fontSize="small">{cellData}</Text>
+      </Box>
     ),
   },
   {
-    label: <Box style={headerBoxStyle}><Text fontSize="small">Can run (Production start date)</Text></Box>,
+    label: (
+      <Box style={headerBoxStyle}>
+        <Text fontSize="small">Can run (Production start date)</Text>
+      </Box>
+    ),
     dataKey: "canRunProductionStartDate",
     width: "250px",
     cellRenderer: ({ cellData }: { cellData: string }) => (
-      <Box px="half"><Text fontSize="small">{cellData}</Text></Box>
+      <Box px="half">
+        <Text fontSize="small">{cellData}</Text>
+      </Box>
     ),
   },
   {
-    label: <Box style={headerBoxStyle}><Text fontSize="small">Next production date</Text></Box>,
+    label: (
+      <Box style={headerBoxStyle}>
+        <Text fontSize="small">Next production date</Text>
+      </Box>
+    ),
     dataKey: "nextProductionDate",
     width: "200px",
     cellRenderer: ({ cellData }: { cellData: string }) => (
-      <Box px="half"><Text fontSize="small">{cellData}</Text></Box>
+      <Box px="half">
+        <Text fontSize="small">{cellData}</Text>
+      </Box>
     ),
   },
   {
-    label: <Box style={headerBoxStyle}><Text fontSize="small">Close production note</Text></Box>,
+    label: (
+      <Box style={headerBoxStyle}>
+        <Text fontSize="small">Close production note</Text>
+      </Box>
+    ),
     dataKey: "closeProductionNote",
     width: "200px",
     cellRenderer: ({ cellData }: { cellData: string }) => (
-      <Box px="half"><Text fontSize="small">{cellData}</Text></Box>
+      <Box px="half">
+        <Text fontSize="small">{cellData}</Text>
+      </Box>
     ),
   },
   {
-    label: <Box style={headerBoxStyle}><Text fontSize="small">Carry over sent to</Text></Box>,
+    label: (
+      <Box style={headerBoxStyle}>
+        <Text fontSize="small">Carry over sent to</Text>
+      </Box>
+    ),
     dataKey: "carryOverSentTo",
     width: "200px",
     cellRenderer: ({ cellData }: { cellData: string }) => (
-      <Box px="half"><Text fontSize="small">{cellData}</Text></Box>
+      <Box px="half">
+        <Text fontSize="small">{cellData}</Text>
+      </Box>
     ),
   },
   {
-    label: <Box style={headerBoxStyle}><Text fontSize="small">Need by date</Text></Box>,
+    label: (
+      <Box style={headerBoxStyle}>
+        <Text fontSize="small">Need by date</Text>
+      </Box>
+    ),
     dataKey: "needByDate",
     width: "200px",
     cellRenderer: ({ cellData }: { cellData: string }) => (
-      <Box px="half"><Text fontSize="small">{cellData}</Text></Box>
+      <Box px="half">
+        <Text fontSize="small">{cellData}</Text>
+      </Box>
     ),
   },
   {
-    label: <Box style={headerBoxStyle}><Text fontSize="small">Ship to</Text></Box>,
+    label: (
+      <Box style={headerBoxStyle}>
+        <Text fontSize="small">Ship to</Text>
+      </Box>
+    ),
     dataKey: "shipTo",
     width: "150px",
     cellRenderer: ({ cellData }: { cellData: string }) => (
-      <Box px="half"><Text fontSize="small">{cellData}</Text></Box>
+      <Box px="half">
+        <Text fontSize="small">{cellData}</Text>
+      </Box>
     ),
   },
   {
-    label: <Box style={headerBoxStyle}><Text fontSize="small">Shipped quantity</Text></Box>,
+    label: (
+      <Box style={headerBoxStyle}>
+        <Text fontSize="small">Shipped quantity</Text>
+      </Box>
+    ),
     dataKey: "shippedQuantity",
     width: "200px",
     cellRenderer: ({ cellData }: { cellData: string }) => (
-      <Box px="half"><Text fontSize="small">{cellData}</Text></Box>
+      <Box px="half">
+        <Text fontSize="small">{cellData}</Text>
+      </Box>
     ),
   },
   {
-    label: <Box style={headerBoxStyle}><Text fontSize="small">Received quantity</Text></Box>,
+    label: (
+      <Box style={headerBoxStyle}>
+        <Text fontSize="small">Received quantity</Text>
+      </Box>
+    ),
     dataKey: "receivedQuantity",
     width: "200px",
     cellRenderer: ({ cellData }: { cellData: string }) => (
-      <Box px="half"><Text fontSize="small">{cellData}</Text></Box>
+      <Box px="half">
+        <Text fontSize="small">{cellData}</Text>
+      </Box>
     ),
   },
 ];
@@ -487,58 +673,80 @@ export const poliRows = [
   },
 ];
 
-export function getPoliColumns(role: 'supplier' | 'customer') {
+export function getPoliColumns(role: "supplier" | "customer") {
   // Deep clone columns to avoid mutating the original
-  const columns = poliColumns.map(col => ({ ...col }));
+  const columns = poliColumns.map((col) => ({ ...col }));
 
-  if (role === 'customer') {
+  if (role === "customer") {
     // Replace 'Customer' column with 'Supplier's'
-    const customerIdx = columns.findIndex(col => col.dataKey === 'customer');
+    const customerIdx = columns.findIndex((col) => col.dataKey === "customer");
     if (customerIdx !== -1) {
       columns[customerIdx] = {
         ...columns[customerIdx],
-        label: <Box style={headerBoxStyle}><Text fontSize="small">Supplier's</Text></Box>,
-        dataKey: 'supplier',
+        label: (
+          <Box style={headerBoxStyle}>
+            <Text fontSize="small">Supplier's</Text>
+          </Box>
+        ),
+        dataKey: "supplier",
         cellRenderer: ({ cellData }: { cellData: string }) => (
-          <Box px="half"><Text fontSize="small">{cellData}</Text></Box>
+          <Box px="half">
+            <Text fontSize="small">{cellData}</Text>
+          </Box>
         ),
       };
     }
     // Change label and dataKey for 'Customer\'s item code and description'
-    const itemDescIdx = columns.findIndex(col => col.dataKey === 'customerItemCodeAndDescription');
+    const itemDescIdx = columns.findIndex((col) => col.dataKey === "customerItemCodeAndDescription");
     if (itemDescIdx !== -1) {
       columns[itemDescIdx] = {
         ...columns[itemDescIdx],
-        label: <Box style={headerBoxStyle}><Text fontSize="small">Item code and description</Text></Box>,
-        dataKey: 'itemCodeAndDescription',
+        label: (
+          <Box style={headerBoxStyle}>
+            <Text fontSize="small">Item code and description</Text>
+          </Box>
+        ),
+        dataKey: "itemCodeAndDescription",
         cellRenderer: columns[itemDescIdx].cellRenderer,
       };
     }
     // Change 'Supplier PO line item number' to 'Supplier's PO line item number' in customer view
-    const supplierPoLineItemIdx = columns.findIndex(col => col.dataKey === 'supplierPoLineItemNumber');
+    const supplierPoLineItemIdx = columns.findIndex((col) => col.dataKey === "supplierPoLineItemNumber");
     if (supplierPoLineItemIdx !== -1) {
       columns[supplierPoLineItemIdx] = {
         ...columns[supplierPoLineItemIdx],
-        label: <Box style={headerBoxStyle}><Text fontSize="small">Supplier's PO line item number</Text></Box>,
+        label: (
+          <Box style={headerBoxStyle}>
+            <Text fontSize="small">Supplier's PO line item number</Text>
+          </Box>
+        ),
         cellRenderer: columns[supplierPoLineItemIdx].cellRenderer,
       };
     }
-  } else if (role === 'supplier') {
+  } else if (role === "supplier") {
     // Change 'PO line item number' to 'Customer's PO line item number' in supplier view
-    const poLineItemIdx = columns.findIndex(col => col.dataKey === 'poLineItemNumber');
+    const poLineItemIdx = columns.findIndex((col) => col.dataKey === "poLineItemNumber");
     if (poLineItemIdx !== -1) {
       columns[poLineItemIdx] = {
         ...columns[poLineItemIdx],
-        label: <Box style={headerBoxStyle}><Text fontSize="small">Customer's PO line item number</Text></Box>,
+        label: (
+          <Box style={headerBoxStyle}>
+            <Text fontSize="small">Customer's PO line item number</Text>
+          </Box>
+        ),
         cellRenderer: columns[poLineItemIdx].cellRenderer,
       };
     }
     // Change 'Supplier PO line item number' to 'Supplier's PO line item number' in supplier view
-    const supplierPoLineItemIdx = columns.findIndex(col => col.dataKey === 'supplierPoLineItemNumber');
+    const supplierPoLineItemIdx = columns.findIndex((col) => col.dataKey === "supplierPoLineItemNumber");
     if (supplierPoLineItemIdx !== -1) {
       columns[supplierPoLineItemIdx] = {
         ...columns[supplierPoLineItemIdx],
-        label: <Box style={headerBoxStyle}><Text fontSize="small">Supplier's PO line item number</Text></Box>,
+        label: (
+          <Box style={headerBoxStyle}>
+            <Text fontSize="small">Supplier's PO line item number</Text>
+          </Box>
+        ),
         cellRenderer: columns[supplierPoLineItemIdx].cellRenderer,
       };
     }
@@ -546,14 +754,14 @@ export function getPoliColumns(role: 'supplier' | 'customer') {
   return columns;
 }
 
-export function getPoliRows(role: 'supplier' | 'customer') {
-  if (role === 'customer') {
+export function getPoliRows(role: "supplier" | "customer") {
+  if (role === "customer") {
     // Map the rows to use the correct data keys for customer view
-    return poliRows.map(row => ({
+    return poliRows.map((row) => ({
       ...row,
       supplier: row.customer, // Map customer data to supplier key
       itemCodeAndDescription: row.customerItemCodeAndDescription, // Map customer item data to item key
     }));
   }
   return poliRows;
-} 
+}
