@@ -47,6 +47,8 @@ import {
   Switcher,
   Switch,
   Checkbox,
+  List,
+  ListItem,
 } from "../../..";
 import { POLICard } from "./components/POLICard";
 
@@ -532,6 +534,22 @@ export const DefaultCard = () => {
               </DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
+              <DescriptionTerm>Customer's PO line item number</DescriptionTerm>
+              <DescriptionDetails>12345</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Supplier's PO line item number</DescriptionTerm>
+              <DescriptionDetails>23453</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Created on</DescriptionTerm>
+              <DescriptionDetails>2025-Feb-01</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>{userState.role === "supplier" ? "Customer" : "Supplier"}</DescriptionTerm>
+              <DescriptionDetails>{userState.role === "supplier" ? "MyCustomer" : "MySupplier"}</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
               <DescriptionTerm>
                 {userState.role === "supplier" ? "Customer's item code and description" : "Item code and description"}
               </DescriptionTerm>
@@ -540,53 +558,55 @@ export const DefaultCard = () => {
               </DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
-              <DescriptionTerm>Customer PO line item number</DescriptionTerm>
-              <DescriptionDetails>12345</DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>Supplier PO line item number</DescriptionTerm>
-              <DescriptionDetails>23453</DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>Creation date</DescriptionTerm>
-              <DescriptionDetails>2024-01-01</DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>{userState.role === "supplier" ? "Customer" : "Supplier"}</DescriptionTerm>
-              <DescriptionDetails>{userState.role === "supplier" ? "MyCustomer" : "MySupplier"}</DescriptionDetails>
+              <DescriptionTerm>Supplier's item code</DescriptionTerm>
+              <DescriptionDetails>SUP-123456</DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>BOM revision and release date</DescriptionTerm>
-              <DescriptionDetails>Revision 2 – 2025-Feb-28</DescriptionDetails>
+              <DescriptionDetails>
+                <Text color="lightGrey">Revision 2 – 2025-Feb-28</Text>
+              </DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Priority</DescriptionTerm>
+              <DescriptionDetails>
+                <Text color="lightGrey">?</Text>
+              </DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Materials availability date</DescriptionTerm>
+              <DescriptionDetails>
+                <Text color="lightGrey">2025-Feb-15</Text>
+              </DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>Production start date</DescriptionTerm>
+              <DescriptionDetails>
+                <Text color="lightGrey">2025-Feb-20</Text>
+              </DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>Need by date</DescriptionTerm>
-              <DescriptionDetails>2024-01-01</DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>Ship to</DescriptionTerm>
-              <DescriptionDetails>MySupplier TO</DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>Item order type</DescriptionTerm>
-              <DescriptionDetails>Standard</DescriptionDetails>
+              <DescriptionDetails>
+                <Text color="lightGrey">2025-Feb-28</Text>
+              </DescriptionDetails>
             </DescriptionGroup>
             {productionComplete && (
               <>
                 <DescriptionGroup>
-                  <DescriptionTerm>Carry over sent to</DescriptionTerm>
-                  <DescriptionDetails>{formData.edit.carryOverSentTo || "N/A"}</DescriptionDetails>
+                  <DescriptionTerm>Close production note</DescriptionTerm>
+                  <DescriptionDetails>Production completed successfully</DescriptionDetails>
                 </DescriptionGroup>
                 <DescriptionGroup>
-                  <DescriptionTerm>Short close reason</DescriptionTerm>
-                  <DescriptionDetails>{formData.edit.shortCloseReason || "N/A"}</DescriptionDetails>
+                  <DescriptionTerm>Carry over sent to</DescriptionTerm>
+                  <DescriptionDetails>{formData.edit.carryOverSentTo || "N/A"}</DescriptionDetails>
                 </DescriptionGroup>
               </>
             )}
           </DescriptionList>
         </Box>
         <Tabs selectedIndex={selectedIndex} onTabClick={(e, index) => setSelectedIndex(index)}>
-          <Tab label="Request details">
+          <Tab label="Collaboration">
             <Box>
               {/* View mode switcher */}
               <Flex justifyContent="flex-end" alignItems="center" pt="x2" mb="x1">
@@ -747,17 +767,58 @@ export const DefaultCard = () => {
               </Box>
             </Box>
           </Tab>
-          <Tab label="Production records">
+          <Tab label="Milestone performance">
             <Box p="x4">
-              <Text>Production records content goes here.</Text>
+              <Text>Milestone performance content goes here.</Text>
             </Box>
           </Tab>
-          <Tab label="Milestones performance">
+          <Tab label="Production/Materials planning">
             <Box p="x4">
-              <Text>Milestones performance content goes here.</Text>
+              <Text>Materials availability report that surfaces:</Text>
+              <List mt="x2">
+                <ListItem>Can run (now)</ListItem>
+                <ListItem>Can run (Production start date)</ListItem>
+                <ListItem>Materials availability date</ListItem>
+                <ListItem>Production start date</ListItem>
+                <ListItem>BOM revision and release date</ListItem>
+                <ListItem>Priority</ListItem>
+              </List>
             </Box>
           </Tab>
-          <Tab label="Attachments (5)">
+          <Tab label="Production execution/records">
+            <Box p="x4">
+              <Text>Record report that surfaces:</Text>
+              <List mt="x2">
+                <ListItem>Next production date</ListItem>
+                <ListItem>Close production note</ListItem>
+                <ListItem>Carry over sent to</ListItem>
+                <ListItem>Production start date</ListItem>
+              </List>
+            </Box>
+          </Tab>
+          <Tab label="Delivery">
+            <Box p="x4">
+              <DescriptionList layout="stacked" columns={{ extraSmall: 1, small: 2, medium: 3, large: 4 }}>
+                <DescriptionGroup>
+                  <DescriptionTerm>Need by date</DescriptionTerm>
+                  <DescriptionDetails>2025-Feb-28</DescriptionDetails>
+                </DescriptionGroup>
+                <DescriptionGroup>
+                  <DescriptionTerm>Ship to</DescriptionTerm>
+                  <DescriptionDetails>MySupplier TO</DescriptionDetails>
+                </DescriptionGroup>
+                <DescriptionGroup>
+                  <DescriptionTerm>Shipped quantity</DescriptionTerm>
+                  <DescriptionDetails>100 cases</DescriptionDetails>
+                </DescriptionGroup>
+                <DescriptionGroup>
+                  <DescriptionTerm>Received quantity</DescriptionTerm>
+                  <DescriptionDetails>95 cases</DescriptionDetails>
+                </DescriptionGroup>
+              </DescriptionList>
+            </Box>
+          </Tab>
+          <Tab label="Attachments">
             <Box p="x4">
               <Text>Attachments content goes here.</Text>
             </Box>
