@@ -19,6 +19,7 @@ import {
 } from "../../..";
 import { AppTag } from "../../../AppTag";
 import { poliRows } from "../utils/poliTableData";
+import { formatDateWithWeek } from "../utils/dateUtils";
 
 export default {
   title: "Projects/Supplier Collaboration/POLI index/Compact",
@@ -139,11 +140,16 @@ export const Compact = () => {
           <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Created on</Text>
         </Box>
       ),
-      cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Box px="x1" py="x0_75">
-          <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
-        </Box>
-      ),
+      cellRenderer: ({ cellData }: { cellData: any }) => {
+        const { formattedDate, weekNumber } = formatDateWithWeek(cellData);
+        
+        return (
+          <Flex px="x1" py="x0_75" gap="x0_5" alignItems="baseline">
+            <Text fontSize="small" lineHeight="smallTextCompressed">{formattedDate}</Text>
+            <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">(Week {weekNumber})</Text>
+          </Flex>
+        );
+      },
     },
     {
       label: role === "supplier" ? "Customer" : "Supplier",
@@ -171,7 +177,7 @@ export const Compact = () => {
         </Box>
       ),
       cellRenderer: ({ row }: { row: any }) => (
-        <Flex px="half" py="x0_75" gap="x0_25" flexDirection="column">
+        <Flex px="x1" py="x0_75" gap="x0_25" flexDirection="column">
           <Flex gap="half">
             <Link href="#" fontSize="small" lineHeight="smallTextCompressed" underline={false} color="black" hover="blue">
               {row.customerItemCode}
@@ -200,7 +206,6 @@ export const Compact = () => {
         <Flex flexWrap="wrap" gap="x0_25" px="x1" py="x0_75">
           {cellData === "At risk" && <StatusIndicator type="warning">{cellData}</StatusIndicator>}
           {cellData === "Late" && <StatusIndicator type="danger">{cellData}</StatusIndicator>}
-          {!cellData && <Text fontSize="small" lineHeight="smallTextCompressed">-</Text>}
         </Flex>
       ),
     },
@@ -215,7 +220,6 @@ export const Compact = () => {
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => (
         <Box px="x1" py="x0_75">
-          <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
         </Box>
       ),
     },
@@ -224,28 +228,41 @@ export const Compact = () => {
       dataKey: "priority",
       width: "150px",
       headerFormatter: () => (
-        <Box px="half" pt="x1_25" pb="x0_75">
+        <Box px="x1" pt="x1_25" pb="x0_75">
           <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Priority</Text>
         </Box>
       ),
-      cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Box px="half" py="x0_75">
-          <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
-        </Box>
-      ),
+      cellRenderer: ({ cellData }: { cellData: any }) => {
+        const getPriorityNumber = (priority: string) => {
+          switch (priority) {
+            case "High": return "1";
+            case "Medium": return "2";
+            case "Low": return "3";
+            default: return "1";
+          }
+        };
+
+        const priorityNumber = getPriorityNumber(cellData);
+        
+        return (
+          <Flex px="x1" py="x0_75" gap="x0_5" alignItems="center">
+            <StatusIndicator type="quiet">P{priorityNumber}</StatusIndicator>
+            <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
+          </Flex>
+        );
+      },
     },
     {
       label: "Production progress",
       dataKey: "productionProgress",
       width: "200px",
       headerFormatter: () => (
-        <Box px="half" pt="x1_25" pb="x0_75">
+        <Box px="x1" pt="x1_25" pb="x0_75">
           <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Production progress</Text>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Box px="half" py="x0_75">
-          <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
+        <Box px="x1" py="x0_75">
         </Box>
       ),
     },
@@ -254,38 +271,48 @@ export const Compact = () => {
       dataKey: "lastComment",
       width: "250px",
       headerFormatter: () => (
-        <Box px="half" pt="x1_25" pb="x0_75">
+        <Box px="x1" pt="x1_25" pb="x0_75">
           <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Latest comment</Text>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Flex px="half" py="x0_75" flexDirection="column" gap="x0_25">
+        <Flex px="x1" py="x0_75" flexDirection="column" gap="x0_25">
           <Link href="#" fontSize="small" lineHeight="smallTextCompressed" underline={false} color="black" hover="blue">
             <TruncatedText maxWidth="242px" fullWidth fontSize="small" lineHeight="smallTextCompressed">{cellData}</TruncatedText>
           </Link>
           <TruncatedText maxWidth="242px" fullWidth fontSize="smaller" lineHeight="smallerText" color="midGrey">by John A. on Jan 24, 2025 at 04:00pm</TruncatedText>
         </Flex>
-
-
-
-
-
-
-
       ),
     },
     {
       label: "Collaboration status",
       dataKey: "collaborationStatus",
-      width: "200px",
+      width: "240px",
       headerFormatter: () => (
-        <Box px="half" pt="x1_25" pb="x0_75">
+        <Box px="x1" pt="x1_25" pb="x0_75">
           <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Collaboration status</Text>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Box px="half" py="x0_75">
-          <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
+        <Flex px="x1" py="x0_75">
+          {cellData === "accepted" && <StatusIndicator type="success">Accepted</StatusIndicator>}
+          {cellData === "awaiting" && role === "supplier" && <StatusIndicator type="warning">Awaiting your response</StatusIndicator>}
+          {cellData === "awaiting" && role === "customer" && <StatusIndicator type="quiet">Awaiting Supplier response</StatusIndicator>}
+          {cellData === "draft" && <StatusIndicator type="quiet">Draft</StatusIndicator>}
+        </Flex>
+      ),
+    },
+    {
+      label: "",
+      dataKey: "newRequest",
+      width: "120px",
+      headerFormatter: () => (
+        <Box px="x1" pt="x1_25" pb="x0_75">
+        </Box>
+      ),
+      cellRenderer: () => (
+        <Box px="x1" py="x0_75">
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold" color="midGrey">Your new request</Text>
         </Box>
       ),
     },
@@ -294,12 +321,27 @@ export const Compact = () => {
       dataKey: "quantity",
       width: "150px",
       headerFormatter: () => (
-        <Box px="half" pt="x1_25" pb="x0_75">
+        <Box px="x1" pt="x1_25" pb="x0_75" textAlign="right">
           <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Quantity</Text>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Box px="half" py="x0_75">
+        <Box px="x1" py="x0_75" textAlign="right" pr="x2">
+          <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
+        </Box>
+      ),
+    },
+    {
+      label: "UOM",
+      dataKey: "uom",
+      width: "100px",
+      headerFormatter: () => (
+        <Box px="x1" pt="x1_25" pb="x0_75">
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">UOM</Text>
+        </Box>
+      ),
+      cellRenderer: ({ cellData }: { cellData: any }) => (
+        <Box px="x1" py="x0_75">
           <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
         </Box>
       ),
@@ -309,27 +351,32 @@ export const Compact = () => {
       dataKey: "productionDueDate",
       width: "200px",
       headerFormatter: () => (
-        <Box px="half" pt="x1_25" pb="x0_75">
+        <Box px="x1" pt="x1_25" pb="x0_75">
           <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Production due date</Text>
         </Box>
       ),
-      cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Box px="half" py="x0_75">
-          <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
-        </Box>
-      ),
+      cellRenderer: ({ cellData }: { cellData: any }) => {
+        const { formattedDate, weekNumber } = formatDateWithWeek(cellData);
+        
+        return (
+          <Flex px="x1" py="x0_75" gap="x0_5" alignItems="baseline">
+            <Text fontSize="small" lineHeight="smallTextCompressed">{formattedDate}</Text>
+            <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">(Week {weekNumber})</Text>
+          </Flex>
+        );
+      },
     },
     {
       label: "Unit price",
       dataKey: "unitPrice",
       width: "150px",
       headerFormatter: () => (
-        <Box px="half" pt="x1_25" pb="x0_75">
+        <Box px="x1" pt="x1_25" pb="x0_75" textAlign="right">
           <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Unit price</Text>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Box px="half" py="x0_75">
+        <Box px="x1" py="x0_75" textAlign="right" pr="x2">
           <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
         </Box>
       ),
@@ -339,12 +386,12 @@ export const Compact = () => {
       dataKey: "currency",
       width: "150px",
       headerFormatter: () => (
-        <Box px="half" pt="x1_25" pb="x0_75">
+        <Box px="x1" pt="x1_25" pb="x0_75">
           <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Currency</Text>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Box px="half" py="x0_75">
+        <Box px="x1" py="x0_75">
           <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
         </Box>
       ),
@@ -354,12 +401,12 @@ export const Compact = () => {
       dataKey: "reason",
       width: "200px",
       headerFormatter: () => (
-        <Box px="half" pt="x1_25" pb="x0_75">
+        <Box px="x1" pt="x1_25" pb="x0_75">
           <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Reason</Text>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Box px="half" py="x0_75">
+        <Box px="x1" py="x0_75">
           <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
         </Box>
       ),
@@ -369,12 +416,12 @@ export const Compact = () => {
       dataKey: "changeNote",
       width: "200px",
       headerFormatter: () => (
-        <Box px="half" pt="x1_25" pb="x0_75">
+        <Box px="x1" pt="x1_25" pb="x0_75">
           <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Change note</Text>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Box px="half" py="x0_75">
+        <Box px="x1" py="x0_75">
           <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
         </Box>
       ),
@@ -384,57 +431,81 @@ export const Compact = () => {
       dataKey: "bomRevisionAndReleaseDate",
       width: "250px",
       headerFormatter: () => (
-        <Box px="half" pt="x1_25" pb="x0_75">
+        <Box px="x1" pt="x1_25" pb="x0_75">
           <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">BOM revision and release date</Text>
         </Box>
       ),
-      cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Box px="half" py="x0_75">
-          <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
-        </Box>
-      ),
+      cellRenderer: ({ cellData }: { cellData: any }) => {
+        // Extract date from "Revision X - YYYY-MM-DD" format
+        const dateMatch = cellData.match(/(\d{4}-\d{2}-\d{2})/);
+        if (dateMatch) {
+          const { formattedDate } = formatDateWithWeek(dateMatch[1]);
+          return (
+            <Box px="x1" py="x0_75">
+              <Text fontSize="small" lineHeight="smallTextCompressed">{formattedDate}</Text>
+            </Box>
+          );
+        }
+        
+        // Fallback to original text if no date found
+        return (
+          <Box px="x1" py="x0_75">
+            <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
+          </Box>
+        );
+      },
     },
     {
       label: "Materials availability date",
       dataKey: "materialsAvailabilityDate",
       width: "200px",
       headerFormatter: () => (
-        <Box px="half" pt="x1_25" pb="x0_75">
+        <Box px="x1" pt="x1_25" pb="x0_75">
           <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Materials availability date</Text>
         </Box>
       ),
-      cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Box px="half" py="x0_75">
-          <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
-        </Box>
-      ),
+      cellRenderer: ({ cellData }: { cellData: any }) => {
+        const { formattedDate, weekNumber } = formatDateWithWeek(cellData);
+        
+        return (
+          <Flex px="x1" py="x0_75" gap="x0_5" alignItems="baseline">
+            <Text fontSize="small" lineHeight="smallTextCompressed">{formattedDate}</Text>
+            <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">(Week {weekNumber})</Text>
+          </Flex>
+        );
+      },
     },
     {
       label: "Production start date",
       dataKey: "productionStartDate",
       width: "200px",
       headerFormatter: () => (
-        <Box px="half" pt="x1_25" pb="x0_75">
+        <Box px="x1" pt="x1_25" pb="x0_75">
           <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Production start date</Text>
         </Box>
       ),
-      cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Box px="half" py="x0_75">
-          <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
-        </Box>
-      ),
+      cellRenderer: ({ cellData }: { cellData: any }) => {
+        const { formattedDate, weekNumber } = formatDateWithWeek(cellData);
+        
+        return (
+          <Flex px="x1" py="x0_75" gap="x0_5" alignItems="baseline">
+            <Text fontSize="small" lineHeight="smallTextCompressed">{formattedDate}</Text>
+            <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">(Week {weekNumber})</Text>
+          </Flex>
+        );
+      },
     },
     {
       label: "Can run now",
       dataKey: "canRunNow",
       width: "150px",
       headerFormatter: () => (
-        <Box px="half" pt="x1_25" pb="x0_75">
+        <Box px="x1" pt="x1_25" pb="x0_75" textAlign="right">
           <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Can run now</Text>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Box px="half" py="x0_75">
+        <Box px="x1" py="x0_75" textAlign="right" pr="x2">
           <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
         </Box>
       ),
@@ -444,12 +515,12 @@ export const Compact = () => {
       dataKey: "canRunProductionStartDate",
       width: "250px",
       headerFormatter: () => (
-        <Box px="half" pt="x1_25" pb="x0_75">
+        <Box px="x1" pt="x1_25" pb="x0_75" textAlign="right">
           <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Can run on production start date</Text>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Box px="half" py="x0_75">
+        <Box px="x1" py="x0_75" textAlign="right" pr="x2">
           <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
         </Box>
       ),
@@ -459,27 +530,32 @@ export const Compact = () => {
       dataKey: "nextProductionDate",
       width: "200px",
       headerFormatter: () => (
-        <Box px="half" pt="x1_25" pb="x0_75">
+        <Box px="x1" pt="x1_25" pb="x0_75">
           <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Next production date</Text>
         </Box>
       ),
-      cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Box px="half" py="x0_75">
-          <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
-        </Box>
-      ),
+      cellRenderer: ({ cellData }: { cellData: any }) => {
+        const { formattedDate, weekNumber } = formatDateWithWeek(cellData);
+        
+        return (
+          <Flex px="x1" py="x0_75" gap="x0_5" alignItems="baseline">
+            <Text fontSize="small" lineHeight="smallTextCompressed">{formattedDate}</Text>
+            <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">(Week {weekNumber})</Text>
+          </Flex>
+        );
+      },
     },
     {
       label: "Close production note",
       dataKey: "closeProductionNote",
       width: "200px",
       headerFormatter: () => (
-        <Box px="half" pt="x1_25" pb="x0_75">
+        <Box px="x1" pt="x1_25" pb="x0_75">
           <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Close production note</Text>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Box px="half" py="x0_75">
+        <Box px="x1" py="x0_75">
           <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
         </Box>
       ),
@@ -489,20 +565,16 @@ export const Compact = () => {
       dataKey: "carryOverSentTo",
       width: "200px",
       headerFormatter: () => (
-        <Box px="half" pt="x1_25" pb="x0_75">
+        <Box px="x1" pt="x1_25" pb="x0_75">
           <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Carry over sent to</Text>
         </Box>
       ),
-      cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Box px="half" py="x0_75">
-          {cellData === "N/A" ? (
-            <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
-          ) : (
-            <Link href="#" fontSize="small" lineHeight="smallTextCompressed" underline={false} color="black" hover="blue">
-              {cellData}
-            </Link>
-          )}
-        </Box>
+      cellRenderer: ({ row }: { row: any }) => (
+        <Flex px="half" py="x0_75">
+          <Link href="#" fontSize="small" lineHeight="smallTextCompressed" underline={false} color="black" hover="blue">
+            {row.poNumber}
+          </Link>
+        </Flex>
       ),
     },
     {
@@ -510,22 +582,27 @@ export const Compact = () => {
       dataKey: "needByDate",
       width: "200px",
       headerFormatter: () => (
-        <Box px="half" pt="x1_25" pb="x0_75">
+        <Box px="x1" pt="x1_25" pb="x0_75">
           <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Need by date</Text>
         </Box>
       ),
-      cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Box px="half" py="x0_75">
-          <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
-        </Box>
-      ),
+      cellRenderer: ({ cellData }: { cellData: any }) => {
+        const { formattedDate, weekNumber } = formatDateWithWeek(cellData);
+        
+        return (
+          <Flex px="half" py="x0_75" gap="x0_5" alignItems="baseline">
+            <Text fontSize="small" lineHeight="smallTextCompressed">{formattedDate}</Text>
+            <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">(Week {weekNumber})</Text>
+          </Flex>
+        );
+      },
     },
     {
       label: "Ship to",
       dataKey: "shipTo",
       width: "150px",
       headerFormatter: () => (
-        <Box px="half" pt="x1_25" pb="x0_75">
+        <Box px="x1" pt="x1_25" pb="x0_75">
           <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Ship to</Text>
         </Box>
       ),
@@ -540,12 +617,12 @@ export const Compact = () => {
       dataKey: "shippedQuantity",
       width: "200px",
       headerFormatter: () => (
-        <Box px="half" pt="x1_25" pb="x0_75">
+        <Box px="x1" pt="x1_25" pb="x0_75" textAlign="right">
           <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Shipped quantity</Text>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Box px="half" py="x0_75">
+        <Box px="x1" py="x0_75" textAlign="right" pr="x2">
           <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
         </Box>
       ),
@@ -555,12 +632,12 @@ export const Compact = () => {
       dataKey: "receivedQuantity",
       width: "200px",
       headerFormatter: () => (
-        <Box px="half" pt="x1_25" pb="x0_75">
+        <Box px="x1" pt="x1_25" pb="x0_75" textAlign="right">
           <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Received quantity</Text>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Box px="half" py="x0_75">
+        <Box px="x1" py="x0_75" textAlign="right" pr="x2">
           <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
         </Box>
       ),
