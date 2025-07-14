@@ -12,13 +12,15 @@ import {
   Link,
   Switcher,
   Switch,
+  Input,
+  Select,
   Text,
   Icon,
   StatusIndicator,
   TruncatedText,
 } from "../../..";
 import { AppTag } from "../../../AppTag";
-import { poliRows } from "../utils/poliTableData";
+import { poliRows, shouldShowEditBox } from "../utils/poliTableData";
 import { formatDateWithWeek } from "../utils/dateUtils";
 
 export default {
@@ -54,7 +56,9 @@ export const Compact = () => {
       ),
       cellRenderer: () => (
         <Box width="100%" textAlign="center" pr="x1" py="x0_75">
-          <Text fontSize="small" lineHeight="smallTextCompressed">0</Text>
+          <Text fontSize="small" lineHeight="smallTextCompressed">
+            0
+          </Text>
         </Box>
       ),
     },
@@ -71,7 +75,9 @@ export const Compact = () => {
       ),
       cellRenderer: () => (
         <Box width="100%" textAlign="center" pr="x1" py="x0_75">
-          <Text fontSize="small" lineHeight="smallTextCompressed">0</Text>
+          <Text fontSize="small" lineHeight="smallTextCompressed">
+            0
+          </Text>
         </Box>
       ),
     },
@@ -81,14 +87,34 @@ export const Compact = () => {
       width: "200px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">PO number</Text>
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            PO number
+          </Text>
         </Box>
       ),
-      cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Flex px="x1" py="x0_75">
-          <Link as="span" href="#" fontSize="small" lineHeight="smallTextCompressed" underline={false} color="black" hover="blue">
+      cellRenderer: ({ cellData, row }: { cellData: any; row: any }) => (
+        <Flex px="x1" py="x0_75" flexDirection="column" gap="x0_5" justifyContent="space-between" height="100%" alignItems="stretch">
+          <Link
+            as="span"
+            href="#"
+            fontSize="small"
+            lineHeight="smallTextCompressed"
+            underline={false}
+            color="black"
+            hover="blue"
+          >
             {cellData}
           </Link>
+          {shouldShowEditBox(row.id, selectedRows) && (
+            <Box px="x0_5" py="x0_5" backgroundColor="lightBlue" borderRadius="small">
+              <Input
+                value={cellData}
+                onChange={(e) => {
+                  console.log(e.target.value);
+                }}
+              />
+            </Box>
+          )}
         </Flex>
       ),
     },
@@ -98,13 +124,24 @@ export const Compact = () => {
       width: "200px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">PO line item number</Text>
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="normal" color="midGrey">Customer's / Supplier's</Text>
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            PO line item number
+          </Text>
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="normal" color="midGrey">
+            Customer's / Supplier's
+          </Text>
         </Box>
       ),
       cellRenderer: ({ row }: { row: any }) => (
         <Flex px="x1" py="x0_75" flexDirection="column" gap="x0_25">
-          <Link href="#" underline={false} fontSize="small" lineHeight="smallTextCompressed" color="black" title={row.poLineItemNumber}>
+          <Link
+            href="#"
+            underline={false}
+            fontSize="small"
+            lineHeight="smallTextCompressed"
+            color="black"
+            title={row.poLineItemNumber}
+          >
             {row.poLineItemNumber}
           </Link>
           <Flex gap="half" maxWidth="168px">
@@ -118,16 +155,38 @@ export const Compact = () => {
                 hover="blue"
                 forApp="shop-floor"
               >
-                
-                  <TruncatedText maxWidth="150px" fullWidth fontSize="small" lineHeight="smallTextCompressed" color="midGrey">{row.supplierPoLineItemNumber}</TruncatedText>
-                
+                <TruncatedText
+                  maxWidth="150px"
+                  fullWidth
+                  fontSize="small"
+                  lineHeight="smallTextCompressed"
+                  color="midGrey"
+                >
+                  {row.supplierPoLineItemNumber}
+                </TruncatedText>
               </Link>
             ) : (
-              <TruncatedText maxWidth="168px" fullWidth fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+              <TruncatedText
+                maxWidth="168px"
+                fullWidth
+                fontSize="small"
+                lineHeight="smallTextCompressed"
+                color="midGrey"
+              >
                 {row.supplierPoLineItemNumber}
               </TruncatedText>
             )}
           </Flex>
+          {shouldShowEditBox(row.id, selectedRows) && (
+            <Box px="x0_5" py="x0_5" backgroundColor="lightBlue" borderRadius="small">
+              <Input
+                value={row.poLineItemNumber}
+                onChange={(e) => {
+                  console.log(e.target.value);
+                }}
+              />
+            </Box>
+          )}
         </Flex>
       ),
     },
@@ -137,16 +196,29 @@ export const Compact = () => {
       width: "200px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Created on</Text>
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            Created on
+          </Text>
         </Box>
       ),
-      cellRenderer: ({ cellData }: { cellData: any }) => {
+      cellRenderer: ({ cellData, row }: { cellData: any; row: any }) => {
         const { formattedDate, weekNumber } = formatDateWithWeek(cellData);
-        
+
         return (
-          <Flex px="x1" py="x0_75" gap="x0_5" alignItems="baseline">
-            <Text fontSize="small" lineHeight="smallTextCompressed">{formattedDate}</Text>
-            <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">(Week {weekNumber})</Text>
+          <Flex px="x1" py="x0_75" gap="x0_5" alignItems="baseline" flexDirection="column">
+            <Flex gap="x0_5" alignItems="baseline">
+              <Text fontSize="small" lineHeight="smallTextCompressed">
+                {formattedDate}
+              </Text>
+              <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
+                (Week {weekNumber})
+              </Text>
+            </Flex>
+            {shouldShowEditBox(row.id, selectedRows) && (
+              <Box px="x0_5" py="x0_5" backgroundColor="lightBlue" borderRadius="small">
+                {/* Blank edit box for date column */}
+              </Box>
+            )}
           </Flex>
         );
       },
@@ -157,12 +229,16 @@ export const Compact = () => {
       width: "200px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">{role === "supplier" ? "Customer" : "Supplier"}</Text>
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            {role === "supplier" ? "Customer" : "Supplier"}
+          </Text>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => (
         <Box px="x1" py="x0_75">
-          <Text fontSize="small" lineHeight="smallTextCompressed">{role === "supplier" ? cellData : "MySupplier"}</Text>
+          <Text fontSize="small" lineHeight="smallTextCompressed">
+            {role === "supplier" ? cellData : "MySupplier"}
+          </Text>
         </Box>
       ),
     },
@@ -172,14 +248,25 @@ export const Compact = () => {
       width: "300px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Item code and description</Text>
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="normal" color="midGrey">Customer's / Supplier's</Text>
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            Item code and description
+          </Text>
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="normal" color="midGrey">
+            Customer's / Supplier's
+          </Text>
         </Box>
       ),
       cellRenderer: ({ row }: { row: any }) => (
         <Flex px="x1" py="x0_75" gap="x0_25" flexDirection="column">
           <Flex gap="half">
-            <Link href="#" fontSize="small" lineHeight="smallTextCompressed" underline={false} color="black" hover="blue">
+            <Link
+              href="#"
+              fontSize="small"
+              lineHeight="smallTextCompressed"
+              underline={false}
+              color="black"
+              hover="blue"
+            >
               {row.customerItemCode}
             </Link>{" "}
             <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
@@ -199,7 +286,9 @@ export const Compact = () => {
       width: "200px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Problems and risks</Text>
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            Problems and risks
+          </Text>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => (
@@ -215,13 +304,12 @@ export const Compact = () => {
       width: "150px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Tags</Text>
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            Tags
+          </Text>
         </Box>
       ),
-      cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Box px="x1" py="x0_75">
-        </Box>
-      ),
+      cellRenderer: ({ cellData }: { cellData: any }) => <Box px="x1" py="x0_75"></Box>,
     },
     {
       label: "Priority",
@@ -229,25 +317,50 @@ export const Compact = () => {
       width: "150px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Priority</Text>
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            Priority
+          </Text>
         </Box>
       ),
-      cellRenderer: ({ cellData }: { cellData: any }) => {
+      cellRenderer: ({ cellData, row }: { cellData: any; row: any }) => {
         const getPriorityNumber = (priority: string) => {
           switch (priority) {
-            case "High": return "1";
-            case "Medium": return "2";
-            case "Low": return "3";
-            default: return "1";
+            case "High":
+              return "1";
+            case "Medium":
+              return "2";
+            case "Low":
+              return "3";
+            default:
+              return "1";
           }
         };
 
         const priorityNumber = getPriorityNumber(cellData);
-        
+
         return (
-          <Flex px="x1" py="x0_75" gap="x0_5" alignItems="center">
-            <StatusIndicator type="quiet">P{priorityNumber}</StatusIndicator>
-            <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
+          <Flex px="x1" py="x0_75" gap="x0_5" flexDirection="column">
+            <Flex gap="x0_5">
+              <StatusIndicator type="quiet">P{priorityNumber}</StatusIndicator>
+              <Text fontSize="small" lineHeight="smallTextCompressed">
+                {cellData}
+              </Text>
+            </Flex>
+            {shouldShowEditBox(row.id, selectedRows) && (
+              <Box px="x0_5" py="x0_5" backgroundColor="lightBlue" borderRadius="small">
+                <Select
+                  value={cellData}
+                  options={[
+                    { value: "High", label: "High" },
+                    { value: "Medium", label: "Medium" },
+                    { value: "Low", label: "Low" },
+                  ]}
+                  onChange={(option) => {
+                    console.log(option);
+                  }}
+                />
+              </Box>
+            )}
           </Flex>
         );
       },
@@ -258,13 +371,12 @@ export const Compact = () => {
       width: "200px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Production progress</Text>
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            Production progress
+          </Text>
         </Box>
       ),
-      cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Box px="x1" py="x0_75">
-        </Box>
-      ),
+      cellRenderer: ({ cellData }: { cellData: any }) => <Box px="x1" py="x0_75"></Box>,
     },
     {
       label: "Latest comment",
@@ -272,15 +384,21 @@ export const Compact = () => {
       width: "250px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Latest comment</Text>
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            Latest comment
+          </Text>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => (
         <Flex px="x1" py="x0_75" flexDirection="column" gap="x0_25">
           <Link href="#" fontSize="small" lineHeight="smallTextCompressed" underline={false} color="black" hover="blue">
-            <TruncatedText maxWidth="242px" fullWidth fontSize="small" lineHeight="smallTextCompressed">{cellData}</TruncatedText>
+            <TruncatedText maxWidth="242px" fullWidth fontSize="small" lineHeight="smallTextCompressed">
+              {cellData}
+            </TruncatedText>
           </Link>
-          <TruncatedText maxWidth="242px" fullWidth fontSize="smaller" lineHeight="smallerText" color="midGrey">by John A. on Jan 24, 2025 at 04:00pm</TruncatedText>
+          <TruncatedText maxWidth="242px" fullWidth fontSize="smaller" lineHeight="smallerText" color="midGrey">
+            by John A. on Jan 24, 2025 at 04:00pm
+          </TruncatedText>
         </Flex>
       ),
     },
@@ -290,14 +408,20 @@ export const Compact = () => {
       width: "240px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Collaboration status</Text>
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            Collaboration status
+          </Text>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => (
         <Flex px="x1" py="x0_75">
           {cellData === "accepted" && <StatusIndicator type="success">Accepted</StatusIndicator>}
-          {cellData === "awaiting" && role === "supplier" && <StatusIndicator type="warning">Awaiting your response</StatusIndicator>}
-          {cellData === "awaiting" && role === "customer" && <StatusIndicator type="quiet">Awaiting Supplier response</StatusIndicator>}
+          {cellData === "awaiting" && role === "supplier" && (
+            <StatusIndicator type="warning">Awaiting your response</StatusIndicator>
+          )}
+          {cellData === "awaiting" && role === "customer" && (
+            <StatusIndicator type="quiet">Awaiting Supplier response</StatusIndicator>
+          )}
           {cellData === "draft" && <StatusIndicator type="quiet">Draft</StatusIndicator>}
         </Flex>
       ),
@@ -306,13 +430,12 @@ export const Compact = () => {
       label: "",
       dataKey: "newRequest",
       width: "120px",
-      headerFormatter: () => (
-        <Box px="x1" pt="x1_25" pb="x0_75">
-        </Box>
-      ),
+      headerFormatter: () => <Box px="x1" pt="x1_25" pb="x0_75"></Box>,
       cellRenderer: () => (
         <Box px="x1" py="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold" color="midGrey">Your new request</Text>
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold" color="midGrey">
+            Your new request
+          </Text>
         </Box>
       ),
     },
@@ -322,13 +445,30 @@ export const Compact = () => {
       width: "150px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75" textAlign="right">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Quantity</Text>
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            Quantity
+          </Text>
         </Box>
       ),
-      cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Box px="x1" py="x0_75" textAlign="right" pr="x2">
-          <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
-        </Box>
+      cellRenderer: ({ cellData, row }: { cellData: any; row: any }) => (
+        <Flex flexDirection="column" gap="x0_5">
+          <Box px="x1" py="x0_75" textAlign="right" pr="x2">
+            <Text fontSize="small" lineHeight="smallTextCompressed">
+              {cellData}
+            </Text>
+          </Box>
+          {shouldShowEditBox(row.id, selectedRows) && (
+            <Box px="x0_5" py="x0_5" backgroundColor="lightBlue" borderRadius="small">
+              <Input
+                type="number"
+                value={cellData}
+                onChange={(e) => {
+                  console.log(e.target.value);
+                }}
+              />
+            </Box>
+          )}
+        </Flex>
       ),
     },
     {
@@ -337,13 +477,32 @@ export const Compact = () => {
       width: "100px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">UOM</Text>
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            UOM
+          </Text>
         </Box>
       ),
-      cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Box px="x1" py="x0_75">
-          <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
-        </Box>
+      cellRenderer: ({ cellData, row }: { cellData: any; row: any }) => (
+        <Flex px="x1" py="x0_75" flexDirection="column" gap="x0_5">
+          <Text fontSize="small" lineHeight="smallTextCompressed">
+            {cellData}
+          </Text>
+          {shouldShowEditBox(row.id, selectedRows) && (
+            <Box px="x0_5" py="x0_5" backgroundColor="lightBlue" borderRadius="small">
+              <Select
+                value={cellData}
+                options={[
+                  { value: "cases", label: "cases" },
+                  { value: "eaches", label: "eaches" },
+                  { value: "pallets", label: "pallets" },
+                ]}
+                onChange={(option) => {
+                  console.log(option);
+                }}
+              />
+            </Box>
+          )}
+        </Flex>
       ),
     },
     {
@@ -352,16 +511,22 @@ export const Compact = () => {
       width: "200px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Production due date</Text>
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            Production due date
+          </Text>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => {
         const { formattedDate, weekNumber } = formatDateWithWeek(cellData);
-        
+
         return (
           <Flex px="x1" py="x0_75" gap="x0_5" alignItems="baseline">
-            <Text fontSize="small" lineHeight="smallTextCompressed">{formattedDate}</Text>
-            <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">(Week {weekNumber})</Text>
+            <Text fontSize="small" lineHeight="smallTextCompressed">
+              {formattedDate}
+            </Text>
+            <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
+              (Week {weekNumber})
+            </Text>
           </Flex>
         );
       },
@@ -372,12 +537,16 @@ export const Compact = () => {
       width: "150px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75" textAlign="right">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Unit price</Text>
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            Unit price
+          </Text>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => (
         <Box px="x1" py="x0_75" textAlign="right" pr="x2">
-          <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
+          <Text fontSize="small" lineHeight="smallTextCompressed">
+            {cellData}
+          </Text>
         </Box>
       ),
     },
@@ -387,12 +556,16 @@ export const Compact = () => {
       width: "150px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Currency</Text>
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            Currency
+          </Text>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => (
         <Box px="x1" py="x0_75">
-          <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
+          <Text fontSize="small" lineHeight="smallTextCompressed">
+            {cellData}
+          </Text>
         </Box>
       ),
     },
@@ -402,12 +575,16 @@ export const Compact = () => {
       width: "200px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Reason</Text>
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            Reason
+          </Text>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => (
         <Box px="x1" py="x0_75">
-          <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
+          <Text fontSize="small" lineHeight="smallTextCompressed">
+            {cellData}
+          </Text>
         </Box>
       ),
     },
@@ -417,12 +594,16 @@ export const Compact = () => {
       width: "200px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Change note</Text>
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            Change note
+          </Text>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => (
         <Box px="x1" py="x0_75">
-          <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
+          <Text fontSize="small" lineHeight="smallTextCompressed">
+            {cellData}
+          </Text>
         </Box>
       ),
     },
@@ -432,7 +613,9 @@ export const Compact = () => {
       width: "250px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">BOM revision and release date</Text>
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            BOM revision and release date
+          </Text>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => {
@@ -442,15 +625,19 @@ export const Compact = () => {
           const { formattedDate } = formatDateWithWeek(dateMatch[1]);
           return (
             <Box px="x1" py="x0_75">
-              <Text fontSize="small" lineHeight="smallTextCompressed">{formattedDate}</Text>
+              <Text fontSize="small" lineHeight="smallTextCompressed">
+                {formattedDate}
+              </Text>
             </Box>
           );
         }
-        
+
         // Fallback to original text if no date found
         return (
           <Box px="x1" py="x0_75">
-            <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
+            <Text fontSize="small" lineHeight="smallTextCompressed">
+              {cellData}
+            </Text>
           </Box>
         );
       },
@@ -461,16 +648,22 @@ export const Compact = () => {
       width: "200px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Materials availability date</Text>
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            Materials availability date
+          </Text>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => {
         const { formattedDate, weekNumber } = formatDateWithWeek(cellData);
-        
+
         return (
           <Flex px="x1" py="x0_75" gap="x0_5" alignItems="baseline">
-            <Text fontSize="small" lineHeight="smallTextCompressed">{formattedDate}</Text>
-            <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">(Week {weekNumber})</Text>
+            <Text fontSize="small" lineHeight="smallTextCompressed">
+              {formattedDate}
+            </Text>
+            <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
+              (Week {weekNumber})
+            </Text>
           </Flex>
         );
       },
@@ -481,16 +674,22 @@ export const Compact = () => {
       width: "200px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Production start date</Text>
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            Production start date
+          </Text>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => {
         const { formattedDate, weekNumber } = formatDateWithWeek(cellData);
-        
+
         return (
           <Flex px="x1" py="x0_75" gap="x0_5" alignItems="baseline">
-            <Text fontSize="small" lineHeight="smallTextCompressed">{formattedDate}</Text>
-            <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">(Week {weekNumber})</Text>
+            <Text fontSize="small" lineHeight="smallTextCompressed">
+              {formattedDate}
+            </Text>
+            <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
+              (Week {weekNumber})
+            </Text>
           </Flex>
         );
       },
@@ -501,12 +700,16 @@ export const Compact = () => {
       width: "150px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75" textAlign="right">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Can run now</Text>
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            Can run now
+          </Text>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => (
         <Box px="x1" py="x0_75" textAlign="right" pr="x2">
-          <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
+          <Text fontSize="small" lineHeight="smallTextCompressed">
+            {cellData}
+          </Text>
         </Box>
       ),
     },
@@ -516,12 +719,16 @@ export const Compact = () => {
       width: "250px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75" textAlign="right">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Can run on production start date</Text>
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            Can run on production start date
+          </Text>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => (
         <Box px="x1" py="x0_75" textAlign="right" pr="x2">
-          <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
+          <Text fontSize="small" lineHeight="smallTextCompressed">
+            {cellData}
+          </Text>
         </Box>
       ),
     },
@@ -531,16 +738,22 @@ export const Compact = () => {
       width: "200px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Next production date</Text>
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            Next production date
+          </Text>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => {
         const { formattedDate, weekNumber } = formatDateWithWeek(cellData);
-        
+
         return (
           <Flex px="x1" py="x0_75" gap="x0_5" alignItems="baseline">
-            <Text fontSize="small" lineHeight="smallTextCompressed">{formattedDate}</Text>
-            <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">(Week {weekNumber})</Text>
+            <Text fontSize="small" lineHeight="smallTextCompressed">
+              {formattedDate}
+            </Text>
+            <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
+              (Week {weekNumber})
+            </Text>
           </Flex>
         );
       },
@@ -551,12 +764,16 @@ export const Compact = () => {
       width: "200px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Close production note</Text>
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            Close production note
+          </Text>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => (
         <Box px="x1" py="x0_75">
-          <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
+          <Text fontSize="small" lineHeight="smallTextCompressed">
+            {cellData}
+          </Text>
         </Box>
       ),
     },
@@ -566,7 +783,9 @@ export const Compact = () => {
       width: "200px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Carry over sent to</Text>
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            Carry over sent to
+          </Text>
         </Box>
       ),
       cellRenderer: ({ row }: { row: any }) => (
@@ -583,16 +802,22 @@ export const Compact = () => {
       width: "200px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Need by date</Text>
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            Need by date
+          </Text>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => {
         const { formattedDate, weekNumber } = formatDateWithWeek(cellData);
-        
+
         return (
           <Flex px="half" py="x0_75" gap="x0_5" alignItems="baseline">
-            <Text fontSize="small" lineHeight="smallTextCompressed">{formattedDate}</Text>
-            <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">(Week {weekNumber})</Text>
+            <Text fontSize="small" lineHeight="smallTextCompressed">
+              {formattedDate}
+            </Text>
+            <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
+              (Week {weekNumber})
+            </Text>
           </Flex>
         );
       },
@@ -603,12 +828,16 @@ export const Compact = () => {
       width: "150px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Ship to</Text>
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            Ship to
+          </Text>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => (
         <Box px="half" py="x0_75">
-          <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
+          <Text fontSize="small" lineHeight="smallTextCompressed">
+            {cellData}
+          </Text>
         </Box>
       ),
     },
@@ -618,12 +847,16 @@ export const Compact = () => {
       width: "200px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75" textAlign="right">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Shipped quantity</Text>
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            Shipped quantity
+          </Text>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => (
         <Box px="x1" py="x0_75" textAlign="right" pr="x2">
-          <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
+          <Text fontSize="small" lineHeight="smallTextCompressed">
+            {cellData}
+          </Text>
         </Box>
       ),
     },
@@ -633,12 +866,16 @@ export const Compact = () => {
       width: "200px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75" textAlign="right">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">Received quantity</Text>
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            Received quantity
+          </Text>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => (
         <Box px="x1" py="x0_75" textAlign="right" pr="x2">
-          <Text fontSize="small" lineHeight="smallTextCompressed">{cellData}</Text>
+          <Text fontSize="small" lineHeight="smallTextCompressed">
+            {cellData}
+          </Text>
         </Box>
       ),
     },
