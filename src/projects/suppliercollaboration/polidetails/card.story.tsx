@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useMemo } from "react";
-import { toast } from "../../..";
+import { toast, Tooltip } from "../../..";
 import {
   Box,
   Flex,
@@ -474,23 +474,11 @@ export const DefaultCard = () => {
         subtitle="12345678 – PR 24 SEPHORA ONLINE DELUXE OCT"
         renderSummary={() => (
           <Summary breakpoint={1200}>
-            <Flex flexDirection="column">
-              <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                Production progress
-              </Text>
-              <Text fontWeight="medium" fontSize="heading4" lineHeight="heading4">
-                {productionComplete ? "100%" : "50%"}{" "}
-                <Box as="span" fontSize="small" lineHeight="smallRelaxed" color="midGrey">
-                  {productionComplete ? "(200,000/200,000)" : "(100,000/200,000)"}
-                </Box>
-              </Text>
-            </Flex>
-            <SummaryDivider />
-            <Flex flexDirection="column" gap="half">
+            <Flex flexDirection="column" gap="half" alignItems="center" width="200px" justifyContent="center">
               <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
                 Collaboration status
               </Text>
-              <StatusIndicator
+              <StatusIndicator alignSelf="center"
                 type={
                   productionComplete || collaborationState.status === "accepted"
                     ? "success"
@@ -499,16 +487,58 @@ export const DefaultCard = () => {
                       : "quiet"
                 }
               >
-                {productionComplete
+                {productionComplete || collaborationState.status === "accepted"
                   ? "Accepted"
-                  : collaborationState.status === "accepted"
-                    ? "Accepted"
-                    : collaborationState.activeCardAuthorRole !== userState.role
-                      ? "Awaiting your response"
-                      : userState.role === "supplier"
-                        ? "Awaiting customer response"
-                        : "Awaiting supplier response"}
+                  : collaborationState.activeCardAuthorRole === userState.role
+                    ? (
+                      <TruncatedText fontSize="smaller" lineHeight="smallerText" fullWidth maxWidth="184px">
+                        {`Awaiting ${userState.role === "supplier" ? "customer" : "supplier"} response`}
+                      </TruncatedText>
+                    )
+                    : "Awaiting your response"}
               </StatusIndicator>
+            </Flex>
+            <SummaryDivider />
+            <Flex flexDirection="column" gap="x0_5" width="200px" justifyContent="center" >
+              
+              
+            <Tooltip
+              tooltip={
+                <Box>
+                  <Text fontSize="small" lineHeight="smallRelaxed">12,000 / 15,000 eaches</Text>
+                 </Box>
+              }
+            >
+              <Box height="x1" mt="x1" mb="x0_25" width="100%" backgroundColor="blue" borderRadius="medium" />
+              </Tooltip>
+              
+              <Flex justifyContent={productionComplete ? "space-between" : "center"}>
+              
+              
+              <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
+                  <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">90%</Text> produced</Text>
+              
+              {productionComplete && <StatusIndicator type="quiet">Completed</StatusIndicator>}
+              </Flex>
+              
+            </Flex>
+            <SummaryDivider />
+            <Flex flexDirection="column" gap="half" width="200px" pt="x0_5" alignItems="center" justifyContent="center">
+              {productionComplete ? (
+                <>
+                  <StatusIndicator alignSelf="center" type="danger">Late</StatusIndicator>
+                  <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
+                    <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">7 days</Text> past due date
+                  </Text>
+                </>
+              ) : (
+                <>
+                  <StatusIndicator alignSelf="center" type="warning">At risk</StatusIndicator>
+                  <TruncatedText fullWidth fontSize="small" color="midGrey" lineHeight="smallRelaxed">
+                    Current milestone 10 days and previous 4 days late  
+                  </TruncatedText>
+                </>
+              )}
             </Flex>
           </Summary>
         )}
@@ -528,77 +558,113 @@ export const DefaultCard = () => {
         <Box mb="x3" pl="x3">
           <DescriptionList layout="stacked" columns={{ extraSmall: 1, small: 2, medium: 3, large: 5 }}>
             <DescriptionGroup>
-              <DescriptionTerm>PO number</DescriptionTerm>
+              <DescriptionTerm>
+                <Text color="darkGrey">PO number</Text>
+              </DescriptionTerm>
               <DescriptionDetails>
                 <Link underline={false}>4000023874</Link>
               </DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
-              <DescriptionTerm>Customer's PO line item number</DescriptionTerm>
+              <DescriptionTerm>
+                <Text color="darkGrey">Customer's PO line item number</Text>
+              </DescriptionTerm>
               <DescriptionDetails>12345</DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
-              <DescriptionTerm>Supplier's PO line item number</DescriptionTerm>
+              <DescriptionTerm>
+                <Text color="darkGrey">Supplier's PO line item number</Text>
+              </DescriptionTerm>
               <DescriptionDetails>23453</DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
-              <DescriptionTerm>Created on</DescriptionTerm>
+              <DescriptionTerm>
+                <Text color="darkGrey">Created on</Text>
+              </DescriptionTerm>
               <DescriptionDetails>2025-Feb-01</DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
-              <DescriptionTerm>{userState.role === "supplier" ? "Customer" : "Supplier"}</DescriptionTerm>
-              <DescriptionDetails>{userState.role === "supplier" ? "MyCustomer" : "MySupplier"}</DescriptionDetails>
+              <DescriptionTerm>
+                <Text color="darkGrey">{userState.role === "supplier" ? "Customer" : "Supplier"}</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>MyCustomer</DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
-                {userState.role === "supplier" ? "Customer's item code and description" : "Item code and description"}
+                <Text color="darkGrey">
+                  Customer's item code and description
+                </Text>
               </DescriptionTerm>
               <DescriptionDetails>
                 <Link underline={false}>12345678 – PR 24 SEPHORA ONLINE DELUXE OCT</Link>
               </DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
-              <DescriptionTerm>Supplier's item code</DescriptionTerm>
+              <DescriptionTerm>
+                <Text color="darkGrey">Supplier's item code</Text>
+              </DescriptionTerm>
               <DescriptionDetails>SUP-123456</DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
-              <DescriptionTerm>BOM revision and release date</DescriptionTerm>
+              <DescriptionTerm>
+                <Text color="darkGrey">Item order type</Text>
+              </DescriptionTerm>
               <DescriptionDetails>
-                <Text color="lightGrey">Revision 2 – 2025-Feb-28</Text>
+                <Text>Standard</Text>
               </DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
-              <DescriptionTerm>Priority</DescriptionTerm>
+              <DescriptionTerm>
+                <Text color="darkGrey">Priority</Text>
+              </DescriptionTerm>
               <DescriptionDetails>
-                <Text color="lightGrey">?</Text>
+                <Text>?</Text>
               </DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
-              <DescriptionTerm>Materials availability date</DescriptionTerm>
+              <DescriptionTerm>
+                <Text color="darkGrey">BOM revision and release date</Text>
+              </DescriptionTerm>
               <DescriptionDetails>
-                <Text color="lightGrey">2025-Feb-15</Text>
+                <Text>Revision 2 – 2025-Feb-28</Text>
               </DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
-              <DescriptionTerm>Production start date</DescriptionTerm>
+              <DescriptionTerm>
+                <Text color="darkGrey">Production start date</Text>
+              </DescriptionTerm>
               <DescriptionDetails>
-                <Text color="lightGrey">2025-Feb-20</Text>
+                <Text>2025-Feb-20</Text>
               </DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
-              <DescriptionTerm>Need by date</DescriptionTerm>
+              <DescriptionTerm>
+                <Text color="darkGrey">Ship to</Text>
+              </DescriptionTerm>
               <DescriptionDetails>
-                <Text color="lightGrey">2025-Feb-28</Text>
+                <Text>MySupplier TO</Text>
+              </DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
+                <Text color="darkGrey">Need by date</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>
+                <Text>2025-Feb-28</Text>
               </DescriptionDetails>
             </DescriptionGroup>
             {productionComplete && (
               <>
                 <DescriptionGroup>
-                  <DescriptionTerm>Close production note</DescriptionTerm>
+                  <DescriptionTerm>
+                    <Text color="darkGrey">Close production note</Text>
+                  </DescriptionTerm>
                   <DescriptionDetails>Production completed successfully</DescriptionDetails>
                 </DescriptionGroup>
                 <DescriptionGroup>
-                  <DescriptionTerm>Carry over sent to</DescriptionTerm>
+                  <DescriptionTerm>
+                    <Text color="darkGrey">Carry over sent to</Text>
+                  </DescriptionTerm>
                   <DescriptionDetails>{formData.edit.carryOverSentTo || "N/A"}</DescriptionDetails>
                 </DescriptionGroup>
               </>
@@ -767,25 +833,7 @@ export const DefaultCard = () => {
               </Box>
             </Box>
           </Tab>
-          <Tab label="Milestone performance">
-            <Box p="x4">
-              <Text>Milestone performance content goes here.</Text>
-            </Box>
-          </Tab>
-          <Tab label="Production/Materials planning">
-            <Box p="x4">
-              <Text>Materials availability report that surfaces:</Text>
-              <List mt="x2">
-                <ListItem>Can run (now)</ListItem>
-                <ListItem>Can run (Production start date)</ListItem>
-                <ListItem>Materials availability date</ListItem>
-                <ListItem>Production start date</ListItem>
-                <ListItem>BOM revision and release date</ListItem>
-                <ListItem>Priority</ListItem>
-              </List>
-            </Box>
-          </Tab>
-          <Tab label="Production execution/records">
+          <Tab label="Production records">
             <Box p="x4">
               <Text>Record report that surfaces:</Text>
               <List mt="x2">
@@ -796,36 +844,19 @@ export const DefaultCard = () => {
               </List>
             </Box>
           </Tab>
-          <Tab label="Delivery">
-            <Box p="x4">
-              <DescriptionList layout="stacked" columns={{ extraSmall: 1, small: 2, medium: 3, large: 4 }}>
-                <DescriptionGroup>
-                  <DescriptionTerm>Need by date</DescriptionTerm>
-                  <DescriptionDetails>2025-Feb-28</DescriptionDetails>
-                </DescriptionGroup>
-                <DescriptionGroup>
-                  <DescriptionTerm>Ship to</DescriptionTerm>
-                  <DescriptionDetails>MySupplier TO</DescriptionDetails>
-                </DescriptionGroup>
-                <DescriptionGroup>
-                  <DescriptionTerm>Shipped quantity</DescriptionTerm>
-                  <DescriptionDetails>100 cases</DescriptionDetails>
-                </DescriptionGroup>
-                <DescriptionGroup>
-                  <DescriptionTerm>Received quantity</DescriptionTerm>
-                  <DescriptionDetails>95 cases</DescriptionDetails>
-                </DescriptionGroup>
-              </DescriptionList>
-            </Box>
-          </Tab>
           <Tab label="Attachments">
             <Box p="x4">
-              <Text>Attachments content goes here.</Text>
+              <Text>No changes</Text>
+            </Box>
+          </Tab>
+          <Tab label="Milestone performance">
+            <Box p="x4">
+              <Text>No changes</Text>
             </Box>
           </Tab>
           <Tab label="History log">
             <Box p="x4">
-              <Text>History log content goes here.</Text>
+              <Text>No changes</Text>
             </Box>
           </Tab>
         </Tabs>
@@ -853,24 +884,49 @@ export const DefaultCard = () => {
             <FieldLabel labelText="PO number">
               <Input value={formData.edit.poNumber} disabled />
             </FieldLabel>
-            <FieldLabel labelText={userState.role === "supplier" ? "Customer's item code" : "Item code"}>
-              <Input value={formData.edit.customerItemCode} disabled />
-            </FieldLabel>
-            <FieldLabel labelText="Customer PO line item number">
+            <FieldLabel labelText="Customer's PO line item number">
               <Input value={formData.edit.customerPOLineItemNumber} disabled />
             </FieldLabel>
-            <FieldLabel labelText="Supplier PO line item number">
-              <Input value={formData.edit.supplierPOLineItemNumber} disabled />
-            </FieldLabel>
-            <FieldLabel labelText="Creation date">
+            {/* Supplier's PO line item number - editable only by supplier */}
+            {userState.role === "supplier" ? (
+              <FieldLabel labelText="Supplier's PO line item number">
+                <Input 
+                  value={formData.edit.supplierPOLineItemNumber}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      edit: { ...formData.edit, supplierPOLineItemNumber: e.target.value },
+                    })
+                  }
+                />
+              </FieldLabel>
+            ) : (
+              <FieldLabel labelText="Supplier's PO line item number">
+                <Input value={formData.edit.supplierPOLineItemNumber} disabled />
+              </FieldLabel>
+            )}
+            <FieldLabel labelText="Created on">
               <Input value={formatDateForDisplay(formData.edit.creationDate)} disabled />
             </FieldLabel>
             <FieldLabel labelText={userState.role === "supplier" ? "Customer" : "Supplier"}>
               <Input value={formData.edit.customer} disabled />
             </FieldLabel>
-
-            {/* Editable fields */}
-            <FieldLabel labelText="BOM revision">
+            <FieldLabel labelText="Customer's item code">
+              <Input value={formData.edit.customerItemCode} disabled />
+            </FieldLabel>
+            <FieldLabel labelText="Item description">
+              <Input value={formData.edit.customerItemDescription} disabled />
+            </FieldLabel>
+            <FieldLabel labelText="Supplier's item code">
+              <Input value="SUP-123456" disabled />
+            </FieldLabel>
+            <FieldLabel labelText="Item order type">
+              <Input value="Standard" disabled />
+            </FieldLabel>
+            <FieldLabel labelText="Priority">
+              <Input value="?" disabled />
+            </FieldLabel>
+            <FieldLabel labelText="BOM revision and release date">
               <Select
                 options={[
                   { value: "Revision 1", label: "Revision 1" },
@@ -887,8 +943,12 @@ export const DefaultCard = () => {
                 }
               />
             </FieldLabel>
-
-            {/* Editable fields */}
+            <FieldLabel labelText="Production start date">
+              <Input value="2025-Feb-20" disabled />
+            </FieldLabel>
+            <FieldLabel labelText="Ship to">
+              <Input value={formData.edit.shipTo} disabled />
+            </FieldLabel>
             <FieldLabel labelText="Need by date">
               <DatePicker
                 selected={formData.edit.needByDate}
@@ -900,14 +960,16 @@ export const DefaultCard = () => {
                 }
               />
             </FieldLabel>
-
-            {/* Non-editable fields */}
-            <FieldLabel labelText="Ship to">
-              <Input value={formData.edit.shipTo} disabled />
-            </FieldLabel>
-            <FieldLabel labelText="Item order type">
-              <Input value="Standard" disabled />
-            </FieldLabel>
+            {productionComplete && (
+              <>
+                <FieldLabel labelText="Close production note">
+                  <Input value="Production completed successfully" disabled />
+                </FieldLabel>
+                <FieldLabel labelText="Carry over sent to">
+                  <Input value={formData.edit.carryOverSentTo || "N/A"} disabled />
+                </FieldLabel>
+              </>
+            )}
           </Flex>
         </Sidebar>
         <Sidebar
