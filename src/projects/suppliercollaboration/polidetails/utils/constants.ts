@@ -147,4 +147,4 @@ export const SAMPLE_DATA = {
     reason: "Material shortage",
     note: "Initial proposal.",
   },
-} as const; 
+} as const;

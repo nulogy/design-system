@@ -612,7 +612,8 @@ export const Default = () => {
                 <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
                   Collaboration status
                 </Text>
-                <StatusIndicator alignSelf="center"
+                <StatusIndicator
+                  alignSelf="center"
                   type={
                     productionComplete || collaborationState.status === "accepted"
                       ? "success"
@@ -621,55 +622,70 @@ export const Default = () => {
                         : "quiet"
                   }
                 >
-                  {productionComplete || collaborationState.status === "accepted"
-                    ? "Accepted"
-                    : collaborationState.activeCardAuthorRole === userState.role
-                      ? (
-                        <TruncatedText fontSize="smaller" lineHeight="smallerText" fullWidth maxWidth="184px">
-                          {`Awaiting ${userState.role === "supplier" ? "customer" : "supplier"} response`}
-                        </TruncatedText>
-                      )
-                      : "Awaiting your response"}
+                  {productionComplete || collaborationState.status === "accepted" ? (
+                    "Accepted"
+                  ) : collaborationState.activeCardAuthorRole === userState.role ? (
+                    <TruncatedText fontSize="smaller" lineHeight="smallerText" fullWidth maxWidth="184px">
+                      {`Awaiting ${userState.role === "supplier" ? "customer" : "supplier"} response`}
+                    </TruncatedText>
+                  ) : (
+                    "Awaiting your response"
+                  )}
                 </StatusIndicator>
               </Flex>
               <SummaryDivider />
-              <Flex flexDirection="column" gap="x0_5" width="200px" justifyContent="center" >
-                
-                
-              <Tooltip
-                tooltip={
-                  <Box>
-                    <Text fontSize="small" lineHeight="smallRelaxed">12,000 / 15,000 eaches</Text>
-                  </Box>
-                }
-              >
-                <Box height="x1" mt="x1" mb="x0_25" width="100%" backgroundColor="blue" borderRadius="medium" />
+              <Flex flexDirection="column" gap="x0_5" width="200px" justifyContent="center">
+                <Tooltip
+                  tooltip={
+                    <Box>
+                      <Text fontSize="small" lineHeight="smallRelaxed">
+                        12,000 / 15,000 eaches
+                      </Text>
+                    </Box>
+                  }
+                >
+                  <Box height="x1" mt="x1" mb="x0_25" width="100%" backgroundColor="blue" borderRadius="medium" />
                 </Tooltip>
-                
+
                 <Flex justifyContent={productionComplete ? "space-between" : "center"}>
-                
-                
-                <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                    <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">90%</Text> produced</Text>
-                
-                {productionComplete && <StatusIndicator type="quiet">Completed</StatusIndicator>}
+                  <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
+                    <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
+                      90%
+                    </Text>{" "}
+                    produced
+                  </Text>
+
+                  {productionComplete && <StatusIndicator type="quiet">Completed</StatusIndicator>}
                 </Flex>
-                
               </Flex>
               <SummaryDivider />
-              <Flex flexDirection="column" gap="half" width="200px" pt="x0_5" alignItems="center" justifyContent="center">
+              <Flex
+                flexDirection="column"
+                gap="half"
+                width="200px"
+                pt="x0_5"
+                alignItems="center"
+                justifyContent="center"
+              >
                 {productionComplete ? (
                   <>
-                    <StatusIndicator alignSelf="center" type="danger">Late</StatusIndicator>
-                                          <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                        <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">7 days</Text> past due date
-                      </Text>
+                    <StatusIndicator alignSelf="center" type="danger">
+                      Late
+                    </StatusIndicator>
+                    <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
+                      <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
+                        7 days
+                      </Text>{" "}
+                      past due date
+                    </Text>
                   </>
                 ) : (
                   <>
-                    <StatusIndicator alignSelf="center" type="warning">At risk</StatusIndicator>
+                    <StatusIndicator alignSelf="center" type="warning">
+                      At risk
+                    </StatusIndicator>
                     <TruncatedText fullWidth fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                      Current milestone 10 days and previous 4 days late  
+                      Current milestone 10 days and previous 4 days late
                     </TruncatedText>
                   </>
                 )}
@@ -723,9 +739,7 @@ export const Default = () => {
               </DescriptionGroup>
               <DescriptionGroup>
                 <DescriptionTerm>
-                  <Text color="darkGrey">
-                    Customer's item code and description
-                  </Text>
+                  <Text color="darkGrey">Customer's item code and description</Text>
                 </DescriptionTerm>
                 <DescriptionDetails>
                   <Link underline={false}>12345678 – PR 24 SEPHORA ONLINE DELUXE OCT</Link>
@@ -1231,7 +1245,7 @@ export const Default = () => {
             <Flex alignItems="center" gap="x1">
               <Switcher
                 selected={userState.role}
-                onChange={(value) => setUserState((prev) => ({ ...prev, role: value as 'supplier' | 'customer' }))}
+                onChange={(value) => setUserState((prev) => ({ ...prev, role: value as "supplier" | "customer" }))}
               >
                 <Switch value="supplier">Supplier</Switch>
                 <Switch value="customer">Customer</Switch>
@@ -1243,14 +1257,14 @@ export const Default = () => {
                 </Text>
                 <Select
                   options={[
-                    { value: 'supplier', label: 'Supplier' },
-                    { value: 'customer', label: 'Customer' },
+                    { value: "supplier", label: "Supplier" },
+                    { value: "customer", label: "Customer" },
                   ]}
-                  value={collaborationState.activeCardAuthorRole || 'supplier'}
+                  value={collaborationState.activeCardAuthorRole || "supplier"}
                   onChange={(option) =>
                     setCollaborationState((prev) => ({
                       ...prev,
-                      activeCardAuthorRole: option as 'supplier' | 'customer',
+                      activeCardAuthorRole: option as "supplier" | "customer",
                     }))
                   }
                   placeholder="Select author role"
@@ -1270,7 +1284,7 @@ export const Default = () => {
             </Flex>
           </Box>
         </Page>
-        
+
         {/* Edit Sidebar */}
         <Sidebar
           isOpen={sidebarState.edit}
@@ -1297,19 +1311,23 @@ export const Default = () => {
                 labelText="Supplier's PO line item number"
                 id="supplierPOLineItemNumber"
                 value={formData.edit.supplierPOLineItemNumber}
-                onChange={(e) => setFormData((prev) => ({ ...prev, edit: { ...prev.edit, supplierPOLineItemNumber: e.target.value } }))}
+                onChange={(e) =>
+                  setFormData((prev) => ({ ...prev, edit: { ...prev.edit, supplierPOLineItemNumber: e.target.value } }))
+                }
               />
             )}
-            
+
             {/* BOM revision and release date - editable */}
             <Input
               labelText="BOM revision and release date - Use fancy 2 row select"
               id="bomRevision"
               autoFocus
               value={formData.edit.bomRevision}
-              onChange={(e) => setFormData((prev) => ({ ...prev, edit: { ...prev.edit, bomRevision: e.target.value } }))}
+              onChange={(e) =>
+                setFormData((prev) => ({ ...prev, edit: { ...prev.edit, bomRevision: e.target.value } }))
+              }
             />
-            
+
             {/* Need by date - editable */}
             <Flex flexDirection="column" gap="x1">
               <FieldLabel htmlFor="needByDate" labelText="Need by date" />
@@ -1321,7 +1339,7 @@ export const Default = () => {
                 />
               </Box>
             </Flex>
-            
+
             {/* Production complete fields */}
             {productionComplete && (
               <>
@@ -1330,13 +1348,15 @@ export const Default = () => {
                   labelText="Carry over sent to"
                   id="carryOverSentTo"
                   value={formData.edit.carryOverSentTo}
-                  onChange={(e) => setFormData((prev) => ({ ...prev, edit: { ...prev.edit, carryOverSentTo: e.target.value } }))}
+                  onChange={(e) =>
+                    setFormData((prev) => ({ ...prev, edit: { ...prev.edit, carryOverSentTo: e.target.value } }))
+                  }
                 />
               </>
             )}
           </Flex>
         </Sidebar>
-        
+
         <ToastContainer />
       </ApplicationFrame>
     </>

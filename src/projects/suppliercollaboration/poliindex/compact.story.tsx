@@ -93,7 +93,15 @@ export const Compact = () => {
         </Box>
       ),
       cellRenderer: ({ cellData, row }: { cellData: any; row: any }) => (
-        <Flex px="x1" py="x0_75" flexDirection="column" gap="x0_5" justifyContent="space-between" height="100%" alignItems="stretch">
+        <Flex
+          px="x1"
+          py="x0_75"
+          flexDirection="column"
+          gap="x0_5"
+          justifyContent="space-between"
+          height="100%"
+          alignItems="stretch"
+        >
           <Link
             as="span"
             href="#"
