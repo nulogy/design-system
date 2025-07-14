@@ -506,7 +506,8 @@ export const poliRows = [
     tags: "Urgent",
     priority: "High",
     productionProgress: "50",
-    lastComment: "Initial proposal submitted with detailed specifications and quality requirements for the SEPHORA ONLINE DELUXE OCT collection",
+    lastComment:
+      "Initial proposal submitted with detailed specifications and quality requirements for the SEPHORA ONLINE DELUXE OCT collection",
     collaborationStatus: "awaiting",
     quantity: "100",
     uom: "cases",
@@ -543,7 +544,8 @@ export const poliRows = [
     tags: "Standard",
     priority: "Medium",
     productionProgress: "100",
-    lastComment: "Production completed successfully with all quality checks passed and final inspection approved by quality assurance team",
+    lastComment:
+      "Production completed successfully with all quality checks passed and final inspection approved by quality assurance team",
     collaborationStatus: "accepted",
     quantity: "150",
     uom: "eaches",
@@ -580,7 +582,8 @@ export const poliRows = [
     tags: "Review",
     priority: "High",
     productionProgress: "25",
-    lastComment: "Quality review in progress - awaiting final approval from design team for color specifications and material composition",
+    lastComment:
+      "Quality review in progress - awaiting final approval from design team for color specifications and material composition",
     collaborationStatus: "draft",
     quantity: "75",
     uom: "pallets",
@@ -617,7 +620,8 @@ export const poliRows = [
     tags: "Standard",
     priority: "Low",
     productionProgress: "75",
-    lastComment: "Production proceeding as planned with all materials received and assembly line running at optimal efficiency",
+    lastComment:
+      "Production proceeding as planned with all materials received and assembly line running at optimal efficiency",
     collaborationStatus: "awaiting",
     quantity: "200",
     uom: "cases",
@@ -654,7 +658,8 @@ export const poliRows = [
     tags: "Urgent",
     priority: "High",
     productionProgress: "0",
-    lastComment: "Materials delayed due to supply chain issues - awaiting shipment confirmation from overseas supplier with updated delivery timeline",
+    lastComment:
+      "Materials delayed due to supply chain issues - awaiting shipment confirmation from overseas supplier with updated delivery timeline",
     collaborationStatus: "draft",
     quantity: "125",
     uom: "eaches",
@@ -770,3 +775,8 @@ export function getPoliRows(role: "supplier" | "customer") {
   }
   return poliRows;
 }
+
+// Utility function to check if edit boxes should be shown for a specific row
+export const shouldShowEditBox = (rowId: string, selectedRows: string[]): boolean => {
+  return selectedRows.includes(rowId);
+};

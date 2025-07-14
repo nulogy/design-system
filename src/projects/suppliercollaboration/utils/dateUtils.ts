@@ -23,8 +23,8 @@ export const getWeekNumber = (dateString: string): number => {
 export const formatDateToYYYYMonDD = (dateString: string): string => {
   const date = new Date(dateString);
   const year = date.getFullYear();
-  const month = date.toLocaleDateString('en-US', { month: 'short' });
-  const day = date.getDate().toString().padStart(2, '0');
+  const month = date.toLocaleDateString("en-US", { month: "short" });
+  const day = date.getDate().toString().padStart(2, "0");
   return `${year}-${month}-${day}`;
 };
 
@@ -37,4 +37,4 @@ export const formatDateWithWeek = (dateString: string): { formattedDate: string;
   const formattedDate = formatDateToYYYYMonDD(dateString);
   const weekNumber = getWeekNumber(dateString);
   return { formattedDate, weekNumber };
-}; 
+};
