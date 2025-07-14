@@ -478,7 +478,8 @@ export const DefaultCard = () => {
               <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
                 Collaboration status
               </Text>
-              <StatusIndicator alignSelf="center"
+              <StatusIndicator
+                alignSelf="center"
                 type={
                   productionComplete || collaborationState.status === "accepted"
                     ? "success"
@@ -487,55 +488,63 @@ export const DefaultCard = () => {
                       : "quiet"
                 }
               >
-                {productionComplete || collaborationState.status === "accepted"
-                  ? "Accepted"
-                  : collaborationState.activeCardAuthorRole === userState.role
-                    ? (
-                      <TruncatedText fontSize="smaller" lineHeight="smallerText" fullWidth maxWidth="184px">
-                        {`Awaiting ${userState.role === "supplier" ? "customer" : "supplier"} response`}
-                      </TruncatedText>
-                    )
-                    : "Awaiting your response"}
+                {productionComplete || collaborationState.status === "accepted" ? (
+                  "Accepted"
+                ) : collaborationState.activeCardAuthorRole === userState.role ? (
+                  <TruncatedText fontSize="smaller" lineHeight="smallerText" fullWidth maxWidth="184px">
+                    {`Awaiting ${userState.role === "supplier" ? "customer" : "supplier"} response`}
+                  </TruncatedText>
+                ) : (
+                  "Awaiting your response"
+                )}
               </StatusIndicator>
             </Flex>
             <SummaryDivider />
-            <Flex flexDirection="column" gap="x0_5" width="200px" justifyContent="center" >
-              
-              
-            <Tooltip
-              tooltip={
-                <Box>
-                  <Text fontSize="small" lineHeight="smallRelaxed">12,000 / 15,000 eaches</Text>
-                 </Box>
-              }
-            >
-              <Box height="x1" mt="x1" mb="x0_25" width="100%" backgroundColor="blue" borderRadius="medium" />
+            <Flex flexDirection="column" gap="x0_5" width="200px" justifyContent="center">
+              <Tooltip
+                tooltip={
+                  <Box>
+                    <Text fontSize="small" lineHeight="smallRelaxed">
+                      12,000 / 15,000 eaches
+                    </Text>
+                  </Box>
+                }
+              >
+                <Box height="x1" mt="x1" mb="x0_25" width="100%" backgroundColor="blue" borderRadius="medium" />
               </Tooltip>
-              
+
               <Flex justifyContent={productionComplete ? "space-between" : "center"}>
-              
-              
-              <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                  <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">90%</Text> produced</Text>
-              
-              {productionComplete && <StatusIndicator type="quiet">Completed</StatusIndicator>}
+                <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
+                  <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
+                    90%
+                  </Text>{" "}
+                  produced
+                </Text>
+
+                {productionComplete && <StatusIndicator type="quiet">Completed</StatusIndicator>}
               </Flex>
-              
             </Flex>
             <SummaryDivider />
             <Flex flexDirection="column" gap="half" width="200px" pt="x0_5" alignItems="center" justifyContent="center">
               {productionComplete ? (
                 <>
-                  <StatusIndicator alignSelf="center" type="danger">Late</StatusIndicator>
+                  <StatusIndicator alignSelf="center" type="danger">
+                    Late
+                  </StatusIndicator>
                   <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                    <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">7 days</Text> past due date
+                    <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
+                      7 days
+                    </Text>{" "}
+                    past due date
                   </Text>
                 </>
               ) : (
                 <>
-                  <StatusIndicator alignSelf="center" type="warning">At risk</StatusIndicator>
+                  <StatusIndicator alignSelf="center" type="warning">
+                    At risk
+                  </StatusIndicator>
                   <TruncatedText fullWidth fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                    Current milestone 10 days and previous 4 days late  
+                    Current milestone 10 days and previous 4 days late
                   </TruncatedText>
                 </>
               )}
@@ -591,9 +600,7 @@ export const DefaultCard = () => {
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
-                <Text color="darkGrey">
-                  Customer's item code and description
-                </Text>
+                <Text color="darkGrey">Customer's item code and description</Text>
               </DescriptionTerm>
               <DescriptionDetails>
                 <Link underline={false}>12345678 – PR 24 SEPHORA ONLINE DELUXE OCT</Link>
@@ -890,7 +897,7 @@ export const DefaultCard = () => {
             {/* Supplier's PO line item number - editable only by supplier */}
             {userState.role === "supplier" ? (
               <FieldLabel labelText="Supplier's PO line item number">
-                <Input 
+                <Input
                   value={formData.edit.supplierPOLineItemNumber}
                   onChange={(e) =>
                     setFormData({

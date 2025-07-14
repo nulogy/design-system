@@ -29,33 +29,28 @@ export const getInitialFormData = () => ({
 // Form validation utilities
 export const validateProposalForm = (formData: any) => {
   const errors: string[] = [];
-  
+
   if (!formData.quantity || formData.quantity <= 0) {
     errors.push("Quantity must be greater than 0");
   }
-  
+
   if (!formData.uom) {
     errors.push("UOM is required");
   }
-  
+
   if (!formData.productionDueDate) {
     errors.push("Production due date is required");
   }
-  
+
   if (!formData.unitPrice || formData.unitPrice <= 0) {
     errors.push("Unit price must be greater than 0");
   }
-  
+
   return errors;
 };
 
 // Form field update utilities
-export const updateFormField = (
-  formData: any,
-  section: 'newProposal' | 'edit',
-  field: string,
-  value: any
-) => {
+export const updateFormField = (formData: any, section: "newProposal" | "edit", field: string, value: any) => {
   return {
     ...formData,
     [section]: {
@@ -106,4 +101,4 @@ export const extractFormDataFromRow = (row: any) => {
     changeReason: row.reason,
     changeNote: row.note,
   };
-}; 
+};

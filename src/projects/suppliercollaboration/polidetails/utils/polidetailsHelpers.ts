@@ -10,7 +10,7 @@ export const requestFields = [
 
 // Date formatting utility
 export const formatDateForDisplay = (date: Date | string): string => {
-  if (typeof date === 'string') {
+  if (typeof date === "string") {
     return date;
   }
   return date.toISOString().split("T")[0];
@@ -110,12 +110,7 @@ export interface RowLabelParams {
   };
 }
 
-export const generateRowLabel = ({
-  userRole,
-  authorRole,
-  rowType,
-  collaborationState,
-}: RowLabelParams): string => {
+export const generateRowLabel = ({ userRole, authorRole, rowType, collaborationState }: RowLabelParams): string => {
   if (rowType === "original") {
     return userRole === "customer" ? "Your original request" : "Customer's original request";
   }
@@ -335,11 +330,7 @@ export const generateTableRows = ({
     }
   }
 
-  if (
-    collaborationState.hasNewCard &&
-    !productionComplete &&
-    collaborationState.activeCardAuthorRole === userRole
-  ) {
+  if (collaborationState.hasNewCard && !productionComplete && collaborationState.activeCardAuthorRole === userRole) {
     rows.push({
       id: "your-active",
       type: "active",
