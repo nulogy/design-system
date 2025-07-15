@@ -1329,7 +1329,9 @@ export const Default = () => {
                     { value: "Cancelled", label: "Cancelled" },
                   ]}
                   value={poStatus}
-                  onChange={(option) => setPoStatus(option as "Late" | "Completed" | "At risk" | "On time" | "Cancelled")}
+                  onChange={(option) =>
+                    setPoStatus(option as "Late" | "Completed" | "At risk" | "On time" | "Cancelled")
+                  }
                   placeholder="Select PO status"
                   menuPlacement="top"
                   width="160px"
