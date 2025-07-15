@@ -47,8 +47,11 @@ import {
   Switcher,
   Switch,
   Checkbox,
+  CheckboxGroup,
   List,
   ListItem,
+  DropdownMenu,
+  DropdownButton,
 } from "../../..";
 import { POLICard } from "./components/POLICard";
 import { EditableRow } from "./components/EditableRow";
@@ -103,6 +106,15 @@ export const Default = () => {
 
   // Production complete state
   const [productionComplete, setProductionComplete] = useState(false);
+
+  // Assigned tags state
+  const [assignedTags, setAssignedTags] = useState({
+    validatedForAssembly: false,
+    expressShipment: false,
+  });
+
+  // PO status state
+  const [poStatus, setPoStatus] = useState("At risk" as "Late" | "Completed" | "At risk" | "On time" | "Cancelled");
 
   // Form data
   const [formData, setFormData] = useState({
@@ -598,6 +610,10 @@ export const Default = () => {
     toast.success(`${userState.role === "supplier" ? "Proposal" : "Request"} submitted successfully`);
   };
 
+  const handleCancelPOLineItem = () => {
+    toast.success("PO line item cancelled successfully");
+  };
+
   return (
     <>
       <ApplicationFrame>
@@ -606,6 +622,14 @@ export const Default = () => {
           renderBreadcrumbs={() => breadcrumbs}
           title="12345678"
           subtitle="12345678 – PR 24 SEPHORA ONLINE DELUXE OCT"
+          renderActions={() => (
+            <Flex gap="x2" alignItems="center">
+              <IconicButton icon="chatBubble" aria-label="Comments" onClick={() => openSidebar("comments")} />
+              <DropdownMenu>
+                <DropdownButton onClick={handleCancelPOLineItem}>Cancel PO line item</DropdownButton>
+              </DropdownMenu>
+            </Flex>
+          )}
           renderSummary={() => (
             <Summary breakpoint={1200}>
               <Flex flexDirection="column" gap="half" alignItems="center" width="200px" justifyContent="center">
@@ -667,7 +691,7 @@ export const Default = () => {
                 alignItems="center"
                 justifyContent="center"
               >
-                {productionComplete ? (
+                {poStatus === "Late" && (
                   <>
                     <StatusIndicator alignSelf="center" type="danger">
                       Late
@@ -679,13 +703,44 @@ export const Default = () => {
                       past due date
                     </Text>
                   </>
-                ) : (
+                )}
+                {poStatus === "At risk" && (
                   <>
                     <StatusIndicator alignSelf="center" type="warning">
                       At risk
                     </StatusIndicator>
                     <TruncatedText fullWidth fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                      Current milestone 10 days and previous 4 days late
+                      Current milestone 5 days late, previous 10 days late.
+                    </TruncatedText>
+                  </>
+                )}
+                {poStatus === "Completed" && (
+                  <>
+                    <StatusIndicator alignSelf="center" type="quiet">
+                      Completed
+                    </StatusIndicator>
+                    <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
+                      on January 24, 2025
+                    </Text>
+                  </>
+                )}
+                {poStatus === "Cancelled" && (
+                  <>
+                    <StatusIndicator alignSelf="center" type="quiet">
+                      Cancelled
+                    </StatusIndicator>
+                    <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
+                      on February 22, 2025
+                    </Text>
+                  </>
+                )}
+                {poStatus === "On time" && (
+                  <>
+                    <StatusIndicator alignSelf="center" type="success">
+                      On time
+                    </StatusIndicator>
+                    <TruncatedText fullWidth fontSize="small" color="midGrey" lineHeight="smallRelaxed">
+                      Previous milestone completed 2 days ahead of time. Current milestone 12 days till due date.
                     </TruncatedText>
                   </>
                 )}
@@ -697,10 +752,6 @@ export const Default = () => {
           <Flex justifyContent="flex-end" alignItems="center" gap="x2" mb="x3">
             <IconicButton icon="edit" aria-label="Edit" onClick={() => openSidebar("edit")}>
               Edit
-            </IconicButton>
-            <VerticalDivider />
-            <IconicButton icon="chatBubble" aria-label="Comments">
-              Comments
             </IconicButton>
           </Flex>
           <Box mb="x3" pl="x3">
@@ -757,14 +808,6 @@ export const Default = () => {
                 </DescriptionTerm>
                 <DescriptionDetails>
                   <Text>Standard</Text>
-                </DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>
-                  <Text color="darkGrey">Priority</Text>
-                </DescriptionTerm>
-                <DescriptionDetails>
-                  <Text>?</Text>
                 </DescriptionDetails>
               </DescriptionGroup>
               <DescriptionGroup>
@@ -1274,6 +1317,26 @@ export const Default = () => {
               </Flex>
               <VerticalDivider />
               <Flex gap="x1" justifyContent="center" alignItems="center">
+                <Text fontSize="small" color="midGrey" width="80px" textAlign="right">
+                  PO status:
+                </Text>
+                <Select
+                  options={[
+                    { value: "Late", label: "Late" },
+                    { value: "Completed", label: "Completed" },
+                    { value: "At risk", label: "At risk" },
+                    { value: "On time", label: "On time" },
+                    { value: "Cancelled", label: "Cancelled" },
+                  ]}
+                  value={poStatus}
+                  onChange={(option) => setPoStatus(option as "Late" | "Completed" | "At risk" | "On time" | "Cancelled")}
+                  placeholder="Select PO status"
+                  menuPlacement="top"
+                  width="160px"
+                />
+              </Flex>
+              <VerticalDivider />
+              <Flex gap="x1" justifyContent="center" alignItems="center" width="200px">
                 <Checkbox
                   id="productionComplete"
                   checked={productionComplete}
@@ -1339,6 +1402,25 @@ export const Default = () => {
                 />
               </Box>
             </Flex>
+
+            {/* Assigned tags checkbox group */}
+            <CheckboxGroup
+              labelText="Assigned tags"
+              name="assignedTags"
+              checkedValue={[
+                ...(assignedTags.validatedForAssembly ? ["validatedForAssembly"] : []),
+                ...(assignedTags.expressShipment ? ["expressShipment"] : []),
+              ]}
+              onChange={(values) => {
+                setAssignedTags({
+                  validatedForAssembly: values.includes("validatedForAssembly"),
+                  expressShipment: values.includes("expressShipment"),
+                });
+              }}
+            >
+              <Checkbox value="validatedForAssembly" labelText="Validated for assembly" />
+              <Checkbox value="expressShipment" labelText="Express shipment" />
+            </CheckboxGroup>
 
             {/* Production complete fields */}
             {productionComplete && (

@@ -114,6 +114,9 @@ export const DefaultCard = () => {
   // Production complete state
   const [productionComplete, setProductionComplete] = useState(false);
 
+  // PO status state
+  const [poStatus, setPoStatus] = useState("At risk" as "Late" | "Completed" | "At risk" | "On time" | "Cancelled");
+
   // Form data
   const [formData, setFormData] = useState({
     newProposal: {
@@ -526,7 +529,7 @@ export const DefaultCard = () => {
             </Flex>
             <SummaryDivider />
             <Flex flexDirection="column" gap="half" width="200px" pt="x0_5" alignItems="center" justifyContent="center">
-              {productionComplete ? (
+              {poStatus === "Late" && (
                 <>
                   <StatusIndicator alignSelf="center" type="danger">
                     Late
@@ -538,13 +541,44 @@ export const DefaultCard = () => {
                     past due date
                   </Text>
                 </>
-              ) : (
+              )}
+              {poStatus === "At risk" && (
                 <>
                   <StatusIndicator alignSelf="center" type="warning">
                     At risk
                   </StatusIndicator>
                   <TruncatedText fullWidth fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                    Current milestone 10 days and previous 4 days late
+                    Current milestone 5 days late, previous 10 days late.
+                  </TruncatedText>
+                </>
+              )}
+              {poStatus === "Completed" && (
+                <>
+                  <StatusIndicator alignSelf="center" type="quiet">
+                    Completed
+                  </StatusIndicator>
+                  <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
+                    on January 24, 2025
+                  </Text>
+                </>
+              )}
+              {poStatus === "Cancelled" && (
+                <>
+                  <StatusIndicator alignSelf="center" type="quiet">
+                    Cancelled
+                  </StatusIndicator>
+                  <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
+                    on February 22, 2025
+                  </Text>
+                </>
+              )}
+              {poStatus === "On time" && (
+                <>
+                  <StatusIndicator alignSelf="center" type="success">
+                    On time
+                  </StatusIndicator>
+                  <TruncatedText fullWidth fontSize="small" color="midGrey" lineHeight="smallRelaxed">
+                    Previous milestone completed 2 days ahead of time. Current milestone 12 days till due date.
                   </TruncatedText>
                 </>
               )}
@@ -618,14 +652,6 @@ export const DefaultCard = () => {
               </DescriptionTerm>
               <DescriptionDetails>
                 <Text>Standard</Text>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Priority</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Text>?</Text>
               </DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
@@ -1135,6 +1161,26 @@ export const DefaultCard = () => {
                 setCollaborationState((prev) => ({ ...prev, activeCardAuthorRole: option as "supplier" | "customer" }))
               }
               placeholder="Select author role"
+              menuPlacement="top"
+              width="160px"
+            />
+          </Flex>
+          <VerticalDivider />
+          <Flex gap="x1" justifyContent="center" alignItems="center">
+            <Text fontSize="small" color="midGrey" width="120px" textAlign="right">
+              PO status:
+            </Text>
+            <Select
+              options={[
+                { value: "Late", label: "Late" },
+                { value: "Completed", label: "Completed" },
+                { value: "At risk", label: "At risk" },
+                { value: "On time", label: "On time" },
+                { value: "Cancelled", label: "Cancelled" },
+              ]}
+              value={poStatus}
+              onChange={(option) => setPoStatus(option as "Late" | "Completed" | "At risk" | "On time" | "Cancelled")}
+              placeholder="Select PO status"
               menuPlacement="top"
               width="160px"
             />
