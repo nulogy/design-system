@@ -10,7 +10,7 @@ import {
   TruncatedText,
   Card,
   Input,
-  Select
+  Select,
 } from "../../../..";
 import { border } from "styled-system";
 
@@ -43,35 +43,39 @@ export const CollaborationCard: React.FC<CollaborationCardProps> = ({
   data,
   onAccept,
   acceptButtonText = "Accept request",
-  buttonLabel
+  buttonLabel,
 }) => {
   const isFocus = type === "focus";
   const isQuiet = type === "quiet";
   const isReadOnly = type === "readOnly";
   const isEdit = type === "edit";
 
-  const cardProps = isFocus ? {
-    flexDirection: "column" as const,
-    width: "25%" as const,
-    p: "0" as const,
-    borderColor: "yellow" as const,
-    boxShadow: "medium" as const,
-    overflow: "hidden" as const
-  } : isEdit ? {
-    flexDirection: "column" as const,
-    width: "25%" as const,
-    p: "0" as const,
-    boxShadow: "focus" as const,
-    overflow: "hidden" as const,
-    border: "none" as const
-  } : {
-    flexDirection: "column" as const,
-    width: "25%" as const,
-    p: "0" as const,
-    overflow: "hidden" as const,
-    border: "none" as const,
-    boxShadow: "none" as const
-  };
+  const cardProps = isFocus
+    ? {
+        flexDirection: "column" as const,
+        width: "25%" as const,
+        p: "0" as const,
+        borderColor: "yellow" as const,
+        boxShadow: "medium" as const,
+        overflow: "hidden" as const,
+      }
+    : isEdit
+      ? {
+          flexDirection: "column" as const,
+          width: "25%" as const,
+          p: "0" as const,
+          boxShadow: "focus" as const,
+          overflow: "hidden" as const,
+          border: "none" as const,
+        }
+      : {
+          flexDirection: "column" as const,
+          width: "25%" as const,
+          p: "0" as const,
+          overflow: "hidden" as const,
+          border: "none" as const,
+          boxShadow: "none" as const,
+        };
 
   const bodyFlexProps = isFocus ? { px: "x1" as const } : {};
 
@@ -83,11 +87,19 @@ export const CollaborationCard: React.FC<CollaborationCardProps> = ({
   return (
     <Card {...cardProps}>
       {/* CARD HEADER */}
-      <Flex flexDirection="column" p="x2" backgroundColor={isFocus ? "lightYellow" : isEdit ? "lightBlue" : "transparent"}>
+      <Flex
+        flexDirection="column"
+        p="x2"
+        backgroundColor={isFocus ? "lightYellow" : isEdit ? "lightBlue" : "transparent"}
+      >
         <Flex justifyContent="space-between">
-          <Heading4 mb="0" color="darkGrey">{title}</Heading4>  
+          <Heading4 mb="0" color="darkGrey">
+            {title}
+          </Heading4>
         </Flex>
-        <Text fontSize="small" color="midGrey" lineHeight="smallCompressed">by {author} on {date}</Text>
+        <Text fontSize="small" color="midGrey" lineHeight="smallCompressed">
+          by {author} on {date}
+        </Text>
       </Flex>
       {/* CARD BODY */}
       <Flex flexDirection="column" {...bodyFlexProps}>
@@ -154,16 +166,24 @@ export const CollaborationCard: React.FC<CollaborationCardProps> = ({
         <Flex p="x2" gap="x1">
           {isEdit ? (
             <>
-              <PrimaryButton fullWidth onClick={onAccept}>Submit</PrimaryButton>
-              <QuietButton fullWidth onClick={() => {}}>Cancel</QuietButton>
+              <PrimaryButton fullWidth onClick={onAccept}>
+                Submit
+              </PrimaryButton>
+              <QuietButton fullWidth onClick={() => {}}>
+                Cancel
+              </QuietButton>
             </>
           ) : isFocus ? (
-            <PrimaryButton fullWidth onClick={onAccept}>{buttonLabel || acceptButtonText}</PrimaryButton>
+            <PrimaryButton fullWidth onClick={onAccept}>
+              {buttonLabel || acceptButtonText}
+            </PrimaryButton>
           ) : (
-            <QuietButton fullWidth onClick={onAccept}>{buttonLabel || acceptButtonText}</QuietButton>
+            <QuietButton fullWidth onClick={onAccept}>
+              {buttonLabel || acceptButtonText}
+            </QuietButton>
           )}
         </Flex>
       )}
     </Card>
   );
-}; 
+};

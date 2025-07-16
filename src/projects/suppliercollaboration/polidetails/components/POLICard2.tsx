@@ -146,15 +146,25 @@ export const POLICard2: React.FC<POLICard2Props> = ({
           <Divider m="0" />
         </>
       ) : (
-        <Box px="x2" py="x1_5" pr={type === "active" ? "x1_5" : "x2"} backgroundColor={styles.backgroundColor} height="x8" />
+        <Box
+          px="x2"
+          py="x1_5"
+          pr={type === "active" ? "x1_5" : "x2"}
+          backgroundColor={styles.backgroundColor}
+          height="x8"
+        />
       )}
       <Box px="x2" py="x1" pb={type === "active" || type === "accepted" ? "x1" : "x4"}>
         {emptyHeader ? (
           <DescriptionList layout="inline" showDivider descriptionTermMaxWidth="12em">
             {requestFields.map((field) => (
               <React.Fragment key={field.label}>
-                <Text fontWeight="bold" display="inline" mr="x1">{field.label}:</Text>
-                <Text display="inline" mr="x2">{field.value}</Text>
+                <Text fontWeight="bold" display="inline" mr="x1">
+                  {field.label}:
+                </Text>
+                <Text display="inline" mr="x2">
+                  {field.value}
+                </Text>
               </React.Fragment>
             ))}
           </DescriptionList>
@@ -202,4 +212,4 @@ export const POLICard2: React.FC<POLICard2Props> = ({
       )}
     </Card>
   );
-}; 
+};

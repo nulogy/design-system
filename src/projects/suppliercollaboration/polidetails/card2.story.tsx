@@ -28,7 +28,7 @@ import {
   Tabs,
   List,
   ListItem,
-  Card
+  Card,
 } from "../../..";
 import { CollaborationCard } from "./components/CollaborationCard";
 
@@ -51,9 +51,7 @@ export const DefaultCard2 = () => {
   const [productionComplete, setProductionComplete] = useState(false);
 
   // PO status state
-  const [poStatus, setPoStatus] = useState(
-    "At risk" as "Late" | "Completed" | "At risk" | "On time" | "Cancelled"
-  );
+  const [poStatus, setPoStatus] = useState("At risk" as "Late" | "Completed" | "At risk" | "On time" | "Cancelled");
 
   // Focused card state
   const [focusedCard, setFocusedCard] = useState<string | null>("customerLatestRequest");
@@ -319,112 +317,118 @@ export const DefaultCard2 = () => {
         <Tabs selectedIndex={selectedIndex} onTabClick={(e, index) => setSelectedIndex(index)}>
           <Tab label="Collaboration">
             <Flex p="x3">
-                              {/* Column headers */}
-                <Flex flexDirection="column" width="25%" pt="77px">
-                  <Divider m="0" />
-                  <Text px="x2" py="x1_5" fontWeight="bold" fontSize="small" lineHeight="smallRelaxed" color="darkGrey">
-                    Quantity
-                  </Text>
-                  <Divider m="0" />
-                  <Text px="x2" py="x1_5" fontWeight="bold" fontSize="small" lineHeight="smallRelaxed" color="darkGrey">
-                    UOM
-                  </Text>
-                  <Divider m="0" />
-                  <Text px="x2" py="x1_5" fontWeight="bold" fontSize="small" lineHeight="smallRelaxed" color="darkGrey">
-                    Production due date
-                  </Text>
-                  <Divider m="0" />
-                  <Text px="x2" py="x1_5" fontWeight="bold" fontSize="small" lineHeight="smallRelaxed" color="darkGrey">
-                    Unit price
-                  </Text>
-                  <Divider m="0" />
-                  <Text px="x2" py="x1_5" fontWeight="bold" fontSize="small" lineHeight="smallRelaxed" color="darkGrey">
-                    Currency
-                  </Text>
-                  <Divider m="0" />
-                  <Text px="x2" py="x1_5" fontWeight="bold" fontSize="small" lineHeight="smallRelaxed" color="darkGrey">
-                    Change reason
-                  </Text>
-                  <Divider m="0" />
-                  <Text px="x2" py="x1_5" fontWeight="bold" fontSize="small" lineHeight="smallRelaxed" color="darkGrey">
-                    Change note
-                  </Text>
-                  <Divider m="0" />
-                </Flex>
+              {/* Column headers */}
+              <Flex flexDirection="column" width="25%" pt="77px">
+                <Divider m="0" />
+                <Text px="x2" py="x1_5" fontWeight="bold" fontSize="small" lineHeight="smallRelaxed" color="darkGrey">
+                  Quantity
+                </Text>
+                <Divider m="0" />
+                <Text px="x2" py="x1_5" fontWeight="bold" fontSize="small" lineHeight="smallRelaxed" color="darkGrey">
+                  UOM
+                </Text>
+                <Divider m="0" />
+                <Text px="x2" py="x1_5" fontWeight="bold" fontSize="small" lineHeight="smallRelaxed" color="darkGrey">
+                  Production due date
+                </Text>
+                <Divider m="0" />
+                <Text px="x2" py="x1_5" fontWeight="bold" fontSize="small" lineHeight="smallRelaxed" color="darkGrey">
+                  Unit price
+                </Text>
+                <Divider m="0" />
+                <Text px="x2" py="x1_5" fontWeight="bold" fontSize="small" lineHeight="smallRelaxed" color="darkGrey">
+                  Currency
+                </Text>
+                <Divider m="0" />
+                <Text px="x2" py="x1_5" fontWeight="bold" fontSize="small" lineHeight="smallRelaxed" color="darkGrey">
+                  Change reason
+                </Text>
+                <Divider m="0" />
+                <Text px="x2" py="x1_5" fontWeight="bold" fontSize="small" lineHeight="smallRelaxed" color="darkGrey">
+                  Change note
+                </Text>
+                <Divider m="0" />
+              </Flex>
 
-                <CollaborationCard
-                  title="Customer's original request"
-                  author="John D."
-                  date="January 21, 2025"
-                  type="readOnly"
-                  data={{
-                    quantity: "200",
-                    uom: "UOM",
-                    dueDate: "24-Jan-2025",
-                    unitPrice: "$2.99",
-                    currency: "CAD",
-                    changeReason: "Some reason",
-                    changeNote: "Some note"
-                  }}
-                />
-                
-                <CollaborationCard
-                  title="Your latest proposal"
-                  author="Nick S."
-                  date="January 23, 2025"
-                  type={
-                    editingCard === "yourLatestProposal" ? "edit" :
-                    focusedCard === "yourLatestProposal" ? "focus" : "quiet"
-                  }
-                  buttonLabel="Update proposal"
-                  data={{
-                    quantity: "300",
-                    uom: "UOM",
-                    dueDate: "24-Jan-2025",
-                    unitPrice: "$2.99",
-                    currency: "CAD",
-                    changeReason: "Some reason",
-                    changeNote: "Some note",
-                  }}
-                  onAccept={() => {
-                    if (editingCard === "yourLatestProposal") {
-                      // Save changes and return to focus state
-                      handleFocusCard("yourLatestProposal");
-                    } else {
-                      // Enter edit mode
-                      handleEditCard("yourLatestProposal");
-                    }
-                  }}
-                />
+              <CollaborationCard
+                title="Customer's original request"
+                author="John D."
+                date="January 21, 2025"
+                type="readOnly"
+                data={{
+                  quantity: "200",
+                  uom: "UOM",
+                  dueDate: "24-Jan-2025",
+                  unitPrice: "$2.99",
+                  currency: "CAD",
+                  changeReason: "Some reason",
+                  changeNote: "Some note",
+                }}
+              />
 
-                {/* Collaboration card - Customer's latest request */}
-                <CollaborationCard
-                  title="Customer's latest request"
-                  author="John D."
-                  date="January 24, 2025"
-                  type={
-                    editingCard === "customerLatestRequest" ? "edit" :
-                    focusedCard === "customerLatestRequest" ? "focus" : "quiet"
+              <CollaborationCard
+                title="Your latest proposal"
+                author="Nick S."
+                date="January 23, 2025"
+                type={
+                  editingCard === "yourLatestProposal"
+                    ? "edit"
+                    : focusedCard === "yourLatestProposal"
+                      ? "focus"
+                      : "quiet"
+                }
+                buttonLabel="Update proposal"
+                data={{
+                  quantity: "300",
+                  uom: "UOM",
+                  dueDate: "24-Jan-2025",
+                  unitPrice: "$2.99",
+                  currency: "CAD",
+                  changeReason: "Some reason",
+                  changeNote: "Some note",
+                }}
+                onAccept={() => {
+                  if (editingCard === "yourLatestProposal") {
+                    // Save changes and return to focus state
+                    handleFocusCard("yourLatestProposal");
+                  } else {
+                    // Enter edit mode
+                    handleEditCard("yourLatestProposal");
                   }
-                  data={{
-                    quantity: "300",
-                    uom: "UOM",
-                    dueDate: "24-Jan-2025",
-                    unitPrice: "$2.99",
-                    currency: "CAD",
-                    changeReason: "Some reason",
-                    changeNote: "Some note"
-                  }}
-                  onAccept={() => {
-                    if (editingCard === "customerLatestRequest") {
-                      // Save changes and return to focus state
-                      handleFocusCard("customerLatestRequest");
-                    } else {
-                      // Enter edit mode
-                      handleEditCard("customerLatestRequest");
-                    }
-                  }}
-                />
+                }}
+              />
+
+              {/* Collaboration card - Customer's latest request */}
+              <CollaborationCard
+                title="Customer's latest request"
+                author="John D."
+                date="January 24, 2025"
+                type={
+                  editingCard === "customerLatestRequest"
+                    ? "edit"
+                    : focusedCard === "customerLatestRequest"
+                      ? "focus"
+                      : "quiet"
+                }
+                data={{
+                  quantity: "300",
+                  uom: "UOM",
+                  dueDate: "24-Jan-2025",
+                  unitPrice: "$2.99",
+                  currency: "CAD",
+                  changeReason: "Some reason",
+                  changeNote: "Some note",
+                }}
+                onAccept={() => {
+                  if (editingCard === "customerLatestRequest") {
+                    // Save changes and return to focus state
+                    handleFocusCard("customerLatestRequest");
+                  } else {
+                    // Enter edit mode
+                    handleEditCard("customerLatestRequest");
+                  }
+                }}
+              />
             </Flex>
           </Tab>
 
