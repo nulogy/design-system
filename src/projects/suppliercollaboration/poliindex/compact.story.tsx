@@ -39,12 +39,12 @@ export const Compact = () => {
   const shouldShowCustomerAwaitingBox = (row: any) => {
     if (role !== "customer") return false;
     const status = row.collaborationStatus;
-    
+
     // Check if the collaboration status would display "Awaiting your response"
     if (status === "draft") {
       return true; // draft status shows "Awaiting your response" for customer
     }
-    
+
     return false;
   };
 
@@ -52,12 +52,12 @@ export const Compact = () => {
   const shouldShowSupplierAwaitingBox = (row: any) => {
     if (role !== "supplier") return false;
     const status = row.collaborationStatus;
-    
+
     // Check if the collaboration status would display "Awaiting your response"
     if (status === "awaiting") {
       return true; // awaiting status shows "Awaiting your response" for supplier
     }
-    
+
     return false;
   };
 
@@ -193,7 +193,6 @@ export const Compact = () => {
               </TruncatedText>
             )}
           </Flex>
-
         </Flex>
       ),
     },
@@ -320,7 +319,9 @@ export const Compact = () => {
           <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
             Latest comment
           </Text>
-          <StatusIndicator type="danger" mt="x0_5">Ignore</StatusIndicator>
+          <StatusIndicator type="danger" mt="x0_5">
+            Ignore
+          </StatusIndicator>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => (
@@ -349,18 +350,30 @@ export const Compact = () => {
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => (
         <Flex px="x1" py="x0_25">
-          {cellData === "accepted" && <StatusIndicator type="quiet" mt="x0_5">Accepted</StatusIndicator>}
+          {cellData === "accepted" && (
+            <StatusIndicator type="quiet" mt="x0_5">
+              Accepted
+            </StatusIndicator>
+          )}
           {cellData === "awaiting" && role === "supplier" && (
-            <StatusIndicator type="warning" mt="x4" mb="x0_5">Awaiting your response</StatusIndicator>
+            <StatusIndicator type="warning" mt="x4" mb="x0_5">
+              Awaiting your response
+            </StatusIndicator>
           )}
           {cellData === "awaiting" && role === "customer" && (
-            <StatusIndicator type="quiet" mt="x0_5">Awaiting supplier response</StatusIndicator>
+            <StatusIndicator type="quiet" mt="x0_5">
+              Awaiting supplier response
+            </StatusIndicator>
           )}
           {cellData === "draft" && role === "supplier" && (
-            <StatusIndicator type="quiet" mt="x0_5">Awaiting customer response</StatusIndicator>
+            <StatusIndicator type="quiet" mt="x0_5">
+              Awaiting customer response
+            </StatusIndicator>
           )}
           {cellData === "draft" && role === "customer" && (
-            <StatusIndicator type="warning" mt="x4" mb="x0_5">Awaiting your response</StatusIndicator>
+            <StatusIndicator type="warning" mt="x4" mb="x0_5">
+              Awaiting your response
+            </StatusIndicator>
           )}
         </Flex>
       ),
@@ -373,7 +386,7 @@ export const Compact = () => {
       cellRenderer: ({ row }: { row: any }) => {
         const getLabelText = () => {
           const status = row.collaborationStatus;
-          
+
           // Get the collaboration status display text
           let collaborationStatusText = "";
           if (status === "accepted") {
@@ -391,7 +404,7 @@ export const Compact = () => {
               collaborationStatusText = "Awaiting your response";
             }
           }
-          
+
           // Determine label based on collaboration status text and role
           if (collaborationStatusText === "Accepted") {
             return "Accepted request";
@@ -404,7 +417,7 @@ export const Compact = () => {
           } else if (collaborationStatusText === "Awaiting your response" && role === "customer") {
             return "Supplier's latest proposal";
           }
-          
+
           return "Your new request";
         };
 
@@ -413,24 +426,28 @@ export const Compact = () => {
             {shouldShowCustomerAwaitingBox(row) && (
               <Box pl="x1" pr="x0_5" py="x0_5">
                 <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold" color="midGrey">
-                Your latest request
+                  Your latest request
                 </Text>
               </Box>
             )}
             {shouldShowSupplierAwaitingBox(row) && (
               <Box pl="x1" pr="x0_5" py="x0_5">
                 <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold" color="midGrey">
-                 Your latest proposal
+                  Your latest proposal
                 </Text>
               </Box>
             )}
-            <Box pl="x1" py="x0_5" backgroundColor={
-              shouldShowCustomerAwaitingBox(row) || shouldShowSupplierAwaitingBox(row) ? "lightYellow" : 
-              "transparent"
-            } borderRadius="medium">
-            <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold" color="midGrey">
-              {getLabelText()}
-            </Text>
+            <Box
+              pl="x1"
+              py="x0_5"
+              backgroundColor={
+                shouldShowCustomerAwaitingBox(row) || shouldShowSupplierAwaitingBox(row) ? "lightYellow" : "transparent"
+              }
+              borderRadius="medium"
+            >
+              <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold" color="midGrey">
+                {getLabelText()}
+              </Text>
             </Box>
           </Flex>
         );
@@ -495,25 +512,25 @@ export const Compact = () => {
       ),
       cellRenderer: ({ cellData, row }: { cellData: any; row: any }) => (
         <Flex flexDirection="column" py="x0_25" gap="x0_5">
-           <Box px="x1" py="x0_5">
+          <Box px="x1" py="x0_5">
             <Text fontSize="small" lineHeight="smallTextCompressed">
               {cellData}
             </Text>
           </Box>
           {shouldShowCustomerAwaitingBox(row) && (
-             <Box  px="x1" py="x0_5" backgroundColor="lightYellow" borderRadius="medium">
-               <Text fontSize="small" lineHeight="smallTextCompressed">
-                 eaches
-               </Text>
-             </Box>
-           )}
-           {shouldShowSupplierAwaitingBox(row) && (
-             <Box px="x1" py="x0_5" backgroundColor="lightYellow" borderRadius="medium">
-               <Text fontSize="small" lineHeight="smallTextCompressed">
-                 cases
-               </Text>
-             </Box>
-           )}
+            <Box px="x1" py="x0_5" backgroundColor="lightYellow" borderRadius="medium">
+              <Text fontSize="small" lineHeight="smallTextCompressed">
+                eaches
+              </Text>
+            </Box>
+          )}
+          {shouldShowSupplierAwaitingBox(row) && (
+            <Box px="x1" py="x0_5" backgroundColor="lightYellow" borderRadius="medium">
+              <Text fontSize="small" lineHeight="smallTextCompressed">
+                cases
+              </Text>
+            </Box>
+          )}
           {shouldShowEditBox(row.id, selectedRows) && (
             <Box p="x0_5" backgroundColor="lightBlue" borderRadius="medium">
               <Select

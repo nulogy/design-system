@@ -437,7 +437,10 @@ export const Default = () => {
         <Tabs selectedIndex={selectedIndex} onTabClick={(e, index) => setSelectedIndex(index)}>
           <Tab label="Collaboration">
             <Box p="x4">
-              <Text>Same as exisitng design with some label edits to reflect the lables on index page. Also Original request will be added.</Text>
+              <Text>
+                Same as exisitng design with some label edits to reflect the lables on index page. Also Original request
+                will be added.
+              </Text>
             </Box>
           </Tab>
           <Tab label="Production records">
@@ -525,9 +528,7 @@ export const Default = () => {
                   { value: "Cancelled", label: "Cancelled" },
                 ]}
                 value={poStatus}
-                onChange={(option) =>
-                  setPoStatus(option as "Late" | "Completed" | "At risk" | "On time" | "Cancelled")
-                }
+                onChange={(option) => setPoStatus(option as "Late" | "Completed" | "At risk" | "On time" | "Cancelled")}
                 placeholder="Select PO status"
                 menuPlacement="top"
                 width="160px"
@@ -584,9 +585,7 @@ export const Default = () => {
             id="bomRevision"
             autoFocus
             value={formData.edit.bomRevision}
-            onChange={(e) =>
-              setFormData((prev) => ({ ...prev, edit: { ...prev.edit, bomRevision: e.target.value } }))
-            }
+            onChange={(e) => setFormData((prev) => ({ ...prev, edit: { ...prev.edit, bomRevision: e.target.value } }))}
           />
 
           {/* Need by date - editable */}
@@ -619,4 +618,4 @@ export const Default = () => {
       </Sidebar>
     </ApplicationFrame>
   );
-}; 
+};
