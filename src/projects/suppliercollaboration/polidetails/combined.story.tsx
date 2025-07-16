@@ -879,7 +879,6 @@ export const Default = () => {
                             Accept {collaborationState.activeCardAuthorRole === "customer" ? "request" : "proposal"}
                           </PrimaryButton>
                         )}
-
                     </>
                   )}
                   {sidebarState.newProposal && (

@@ -694,22 +694,26 @@ export function getPoliColumns(role: "supplier" | "customer") {
       ...columns[collaborationStatusIdx],
       cellRenderer: ({ cellData }: { cellData: string }) => (
         <Box px="half">
-          <StatusIndicator type={
-            cellData === "accepted" ? "quiet" 
-            : cellData === "awaiting" ? "warning" 
-            : cellData === "draft" && role === "customer" ? "warning"
-            : "quiet"
-          }>
-            {cellData === "accepted" 
-              ? "Accepted" 
-              : cellData === "awaiting" 
-                ? "Awaiting response" 
+          <StatusIndicator
+            type={
+              cellData === "accepted"
+                ? "quiet"
+                : cellData === "awaiting"
+                  ? "warning"
+                  : cellData === "draft" && role === "customer"
+                    ? "warning"
+                    : "quiet"
+            }
+          >
+            {cellData === "accepted"
+              ? "Accepted"
+              : cellData === "awaiting"
+                ? "Awaiting response"
                 : cellData === "draft" && role === "supplier"
                   ? "Awaiting customer response"
                   : cellData === "draft" && role === "customer"
                     ? "Awaiting your response"
-                    : "Draft"
-            }
+                    : "Draft"}
           </StatusIndicator>
         </Box>
       ),
