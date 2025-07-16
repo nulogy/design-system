@@ -687,6 +687,35 @@ export function getPoliColumns(role: "supplier" | "customer") {
   // Deep clone columns to avoid mutating the original
   const columns = poliColumns.map((col) => ({ ...col }));
 
+  // Update collaboration status column based on role
+  const collaborationStatusIdx = columns.findIndex((col) => col.dataKey === "collaborationStatus");
+  if (collaborationStatusIdx !== -1) {
+    columns[collaborationStatusIdx] = {
+      ...columns[collaborationStatusIdx],
+      cellRenderer: ({ cellData }: { cellData: string }) => (
+        <Box px="half">
+          <StatusIndicator type={
+            cellData === "accepted" ? "quiet" 
+            : cellData === "awaiting" ? "warning" 
+            : cellData === "draft" && role === "customer" ? "warning"
+            : "quiet"
+          }>
+            {cellData === "accepted" 
+              ? "Accepted" 
+              : cellData === "awaiting" 
+                ? "Awaiting response" 
+                : cellData === "draft" && role === "supplier"
+                  ? "Awaiting customer response"
+                  : cellData === "draft" && role === "customer"
+                    ? "Awaiting your response"
+                    : "Draft"
+            }
+          </StatusIndicator>
+        </Box>
+      ),
+    };
+  }
+
   if (role === "customer") {
     // Replace 'Customer' column with 'Supplier's'
     const customerIdx = columns.findIndex((col) => col.dataKey === "customer");

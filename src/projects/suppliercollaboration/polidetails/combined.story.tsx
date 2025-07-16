@@ -633,9 +633,6 @@ export const Default = () => {
           renderSummary={() => (
             <Summary breakpoint={1200}>
               <Flex flexDirection="column" gap="half" alignItems="center" width="200px" justifyContent="center">
-                <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                  Collaboration status
-                </Text>
                 <StatusIndicator
                   alignSelf="center"
                   type={
@@ -656,6 +653,12 @@ export const Default = () => {
                     "Awaiting your response"
                   )}
                 </StatusIndicator>
+                <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
+                  For{" "}
+                  <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
+                    5 days
+                  </Text>
+                </Text>
               </Flex>
               <SummaryDivider />
               <Flex flexDirection="column" gap="x0_5" width="200px" justifyContent="center">
@@ -876,9 +879,7 @@ export const Default = () => {
                             Accept {collaborationState.activeCardAuthorRole === "customer" ? "request" : "proposal"}
                           </PrimaryButton>
                         )}
-                      <QuietButton onClick={handleNewProposalClick}>
-                        New {userState.role === "supplier" ? "proposal" : "request"}
-                      </QuietButton>
+
                     </>
                   )}
                   {sidebarState.newProposal && (

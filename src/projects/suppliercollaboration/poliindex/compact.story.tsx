@@ -35,6 +35,32 @@ export const Compact = () => {
     setSelectedRows(selectedRowIds);
   };
 
+  // Helper function to check if we should show additional box for customer awaiting response
+  const shouldShowCustomerAwaitingBox = (row: any) => {
+    if (role !== "customer") return false;
+    const status = row.collaborationStatus;
+    
+    // Check if the collaboration status would display "Awaiting your response"
+    if (status === "draft") {
+      return true; // draft status shows "Awaiting your response" for customer
+    }
+    
+    return false;
+  };
+
+  // Helper function to check if we should show additional box for supplier awaiting response
+  const shouldShowSupplierAwaitingBox = (row: any) => {
+    if (role !== "supplier") return false;
+    const status = row.collaborationStatus;
+    
+    // Check if the collaboration status would display "Awaiting your response"
+    if (status === "awaiting") {
+      return true; // awaiting status shows "Awaiting your response" for supplier
+    }
+    
+    return false;
+  };
+
   const breadcrumbs = (
     <Breadcrumbs>
       <Link href="#">Home</Link>
@@ -92,16 +118,8 @@ export const Compact = () => {
           </Text>
         </Box>
       ),
-      cellRenderer: ({ cellData, row }: { cellData: any; row: any }) => (
-        <Flex
-          px="x1"
-          py="x0_75"
-          flexDirection="column"
-          gap="x0_5"
-          justifyContent="space-between"
-          height="100%"
-          alignItems="stretch"
-        >
+      cellRenderer: ({ cellData }: { cellData: any }) => (
+        <Box px="x1" py="x0_75">
           <Link
             as="span"
             href="#"
@@ -113,17 +131,7 @@ export const Compact = () => {
           >
             {cellData}
           </Link>
-          {shouldShowEditBox(row.id, selectedRows) && (
-            <Box px="x0_5" py="x0_5" backgroundColor="lightBlue" borderRadius="small">
-              <Input
-                value={cellData}
-                onChange={(e) => {
-                  console.log(e.target.value);
-                }}
-              />
-            </Box>
-          )}
-        </Flex>
+        </Box>
       ),
     },
     {
@@ -185,16 +193,7 @@ export const Compact = () => {
               </TruncatedText>
             )}
           </Flex>
-          {shouldShowEditBox(row.id, selectedRows) && (
-            <Box px="x0_5" py="x0_5" backgroundColor="lightBlue" borderRadius="small">
-              <Input
-                value={row.poLineItemNumber}
-                onChange={(e) => {
-                  console.log(e.target.value);
-                }}
-              />
-            </Box>
-          )}
+
         </Flex>
       ),
     },
@@ -209,24 +208,17 @@ export const Compact = () => {
           </Text>
         </Box>
       ),
-      cellRenderer: ({ cellData, row }: { cellData: any; row: any }) => {
+      cellRenderer: ({ cellData }: { cellData: any }) => {
         const { formattedDate, weekNumber } = formatDateWithWeek(cellData);
 
         return (
-          <Flex px="x1" py="x0_75" gap="x0_5" alignItems="baseline" flexDirection="column">
-            <Flex gap="x0_5" alignItems="baseline">
-              <Text fontSize="small" lineHeight="smallTextCompressed">
-                {formattedDate}
-              </Text>
-              <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
-                (Week {weekNumber})
-              </Text>
-            </Flex>
-            {shouldShowEditBox(row.id, selectedRows) && (
-              <Box px="x0_5" py="x0_5" backgroundColor="lightBlue" borderRadius="small">
-                {/* Blank edit box for date column */}
-              </Box>
-            )}
+          <Flex px="x1" py="x0_75" gap="x0_5" alignItems="baseline">
+            <Text fontSize="small" lineHeight="smallTextCompressed">
+              {formattedDate}
+            </Text>
+            <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
+              (Week {weekNumber})
+            </Text>
           </Flex>
         );
       },
@@ -307,73 +299,6 @@ export const Compact = () => {
       ),
     },
     {
-      label: "Tags",
-      dataKey: "tags",
-      width: "150px",
-      headerFormatter: () => (
-        <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
-            Tags
-          </Text>
-        </Box>
-      ),
-      cellRenderer: ({ cellData }: { cellData: any }) => <Box px="x1" py="x0_75"></Box>,
-    },
-    {
-      label: "Priority",
-      dataKey: "priority",
-      width: "150px",
-      headerFormatter: () => (
-        <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
-            Priority
-          </Text>
-        </Box>
-      ),
-      cellRenderer: ({ cellData, row }: { cellData: any; row: any }) => {
-        const getPriorityNumber = (priority: string) => {
-          switch (priority) {
-            case "High":
-              return "1";
-            case "Medium":
-              return "2";
-            case "Low":
-              return "3";
-            default:
-              return "1";
-          }
-        };
-
-        const priorityNumber = getPriorityNumber(cellData);
-
-        return (
-          <Flex px="x1" py="x0_75" gap="x0_5" flexDirection="column">
-            <Flex gap="x0_5">
-              <StatusIndicator type="quiet">P{priorityNumber}</StatusIndicator>
-              <Text fontSize="small" lineHeight="smallTextCompressed">
-                {cellData}
-              </Text>
-            </Flex>
-            {shouldShowEditBox(row.id, selectedRows) && (
-              <Box px="x0_5" py="x0_5" backgroundColor="lightBlue" borderRadius="small">
-                <Select
-                  value={cellData}
-                  options={[
-                    { value: "High", label: "High" },
-                    { value: "Medium", label: "Medium" },
-                    { value: "Low", label: "Low" },
-                  ]}
-                  onChange={(option) => {
-                    console.log(option);
-                  }}
-                />
-              </Box>
-            )}
-          </Flex>
-        );
-      },
-    },
-    {
       label: "Production progress",
       dataKey: "productionProgress",
       width: "200px",
@@ -395,6 +320,7 @@ export const Compact = () => {
           <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
             Latest comment
           </Text>
+          <StatusIndicator type="danger" mt="x0_5">Ignore</StatusIndicator>
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => (
@@ -413,7 +339,7 @@ export const Compact = () => {
     {
       label: "Collaboration status",
       dataKey: "collaborationStatus",
-      width: "240px",
+      width: "200px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
           <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
@@ -422,51 +348,128 @@ export const Compact = () => {
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Flex px="x1" py="x0_75">
-          {cellData === "accepted" && <StatusIndicator type="success">Accepted</StatusIndicator>}
+        <Flex px="x1" py="x0_25">
+          {cellData === "accepted" && <StatusIndicator type="quiet" mt="x0_5">Accepted</StatusIndicator>}
           {cellData === "awaiting" && role === "supplier" && (
-            <StatusIndicator type="warning">Awaiting your response</StatusIndicator>
+            <StatusIndicator type="warning" mt="x4" mb="x0_5">Awaiting your response</StatusIndicator>
           )}
           {cellData === "awaiting" && role === "customer" && (
-            <StatusIndicator type="quiet">Awaiting Supplier response</StatusIndicator>
+            <StatusIndicator type="quiet" mt="x0_5">Awaiting supplier response</StatusIndicator>
           )}
-          {cellData === "draft" && <StatusIndicator type="quiet">Draft</StatusIndicator>}
+          {cellData === "draft" && role === "supplier" && (
+            <StatusIndicator type="quiet" mt="x0_5">Awaiting customer response</StatusIndicator>
+          )}
+          {cellData === "draft" && role === "customer" && (
+            <StatusIndicator type="warning" mt="x4" mb="x0_5">Awaiting your response</StatusIndicator>
+          )}
         </Flex>
       ),
     },
     {
       label: "",
       dataKey: "newRequest",
-      width: "120px",
-      headerFormatter: () => <Box px="x1" pt="x1_25" pb="x0_75"></Box>,
-      cellRenderer: () => (
-        <Box px="x1" py="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold" color="midGrey">
-            Your new request
-          </Text>
-        </Box>
-      ),
+      width: "200px",
+      headerFormatter: () => <Box pl="x1" pt="x1_25" pb="x0_75"></Box>,
+      cellRenderer: ({ row }: { row: any }) => {
+        const getLabelText = () => {
+          const status = row.collaborationStatus;
+          
+          // Get the collaboration status display text
+          let collaborationStatusText = "";
+          if (status === "accepted") {
+            collaborationStatusText = "Accepted";
+          } else if (status === "awaiting") {
+            if (role === "supplier") {
+              collaborationStatusText = "Awaiting your response";
+            } else {
+              collaborationStatusText = "Awaiting Supplier response";
+            }
+          } else if (status === "draft") {
+            if (role === "supplier") {
+              collaborationStatusText = "Awaiting customer response";
+            } else {
+              collaborationStatusText = "Awaiting your response";
+            }
+          }
+          
+          // Determine label based on collaboration status text and role
+          if (collaborationStatusText === "Accepted") {
+            return "Accepted request";
+          } else if (collaborationStatusText === "Awaiting Supplier response" && role === "customer") {
+            return "Your latest request";
+          } else if (collaborationStatusText === "Awaiting customer response" && role === "supplier") {
+            return "Your latest proposal";
+          } else if (collaborationStatusText === "Awaiting your response" && role === "supplier") {
+            return "Customer's latest request";
+          } else if (collaborationStatusText === "Awaiting your response" && role === "customer") {
+            return "Supplier's latest proposal";
+          }
+          
+          return "Your new request";
+        };
+
+        return (
+          <Flex pl="x1" py="x0_25" flexDirection="column" gap="x0_5">
+            {shouldShowCustomerAwaitingBox(row) && (
+              <Box pl="x1" pr="x0_5" py="x0_5">
+                <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold" color="midGrey">
+                Your latest request
+                </Text>
+              </Box>
+            )}
+            {shouldShowSupplierAwaitingBox(row) && (
+              <Box pl="x1" pr="x0_5" py="x0_5">
+                <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold" color="midGrey">
+                 Your latest proposal
+                </Text>
+              </Box>
+            )}
+            <Box pl="x1" py="x0_5" backgroundColor={
+              shouldShowCustomerAwaitingBox(row) || shouldShowSupplierAwaitingBox(row) ? "lightYellow" : 
+              "transparent"
+            } borderRadius="medium">
+            <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold" color="midGrey">
+              {getLabelText()}
+            </Text>
+            </Box>
+          </Flex>
+        );
+      },
     },
     {
       label: "Quantity",
       dataKey: "quantity",
       width: "150px",
       headerFormatter: () => (
-        <Box px="x1" pt="x1_25" pb="x0_75" textAlign="right">
+        <Box pt="x1_25" pb="x0_75" textAlign="right">
           <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
             Quantity
           </Text>
         </Box>
       ),
       cellRenderer: ({ cellData, row }: { cellData: any; row: any }) => (
-        <Flex flexDirection="column" gap="x0_5">
-          <Box px="x1" py="x0_75" textAlign="right" pr="x2">
+        <Flex flexDirection="column" py="x0_25" gap="x0_5">
+          <Box pl="x1" py="x0_5" textAlign="right" pr="x2">
             <Text fontSize="small" lineHeight="smallTextCompressed">
               {cellData}
             </Text>
           </Box>
+          {shouldShowCustomerAwaitingBox(row) && (
+            <Box py="x0_5" textAlign="right" pr="x2" backgroundColor="lightYellow" borderRadius="medium">
+              <Text fontSize="small" lineHeight="smallTextCompressed">
+                35
+              </Text>
+            </Box>
+          )}
+          {shouldShowSupplierAwaitingBox(row) && (
+            <Box py="x0_5" textAlign="right" pr="x2" backgroundColor="lightYellow" borderRadius="medium">
+              <Text fontSize="small" lineHeight="smallTextCompressed">
+                50
+              </Text>
+            </Box>
+          )}
           {shouldShowEditBox(row.id, selectedRows) && (
-            <Box px="x0_5" py="x0_5" backgroundColor="lightBlue" borderRadius="small">
+            <Box p="x0_5" backgroundColor="lightBlue" borderRadius="medium">
               <Input
                 type="number"
                 value={cellData}
@@ -491,12 +494,28 @@ export const Compact = () => {
         </Box>
       ),
       cellRenderer: ({ cellData, row }: { cellData: any; row: any }) => (
-        <Flex px="x1" py="x0_75" flexDirection="column" gap="x0_5">
-          <Text fontSize="small" lineHeight="smallTextCompressed">
-            {cellData}
-          </Text>
+        <Flex flexDirection="column" py="x0_25" gap="x0_5">
+           <Box px="x1" py="x0_5">
+            <Text fontSize="small" lineHeight="smallTextCompressed">
+              {cellData}
+            </Text>
+          </Box>
+          {shouldShowCustomerAwaitingBox(row) && (
+             <Box  px="x1" py="x0_5" backgroundColor="lightYellow" borderRadius="medium">
+               <Text fontSize="small" lineHeight="smallTextCompressed">
+                 eaches
+               </Text>
+             </Box>
+           )}
+           {shouldShowSupplierAwaitingBox(row) && (
+             <Box px="x1" py="x0_5" backgroundColor="lightYellow" borderRadius="medium">
+               <Text fontSize="small" lineHeight="smallTextCompressed">
+                 cases
+               </Text>
+             </Box>
+           )}
           {shouldShowEditBox(row.id, selectedRows) && (
-            <Box px="x0_5" py="x0_5" backgroundColor="lightBlue" borderRadius="small">
+            <Box p="x0_5" backgroundColor="lightBlue" borderRadius="medium">
               <Select
                 value={cellData}
                 options={[
@@ -524,17 +543,33 @@ export const Compact = () => {
           </Text>
         </Box>
       ),
-      cellRenderer: ({ cellData }: { cellData: any }) => {
+      cellRenderer: ({ cellData, row }: { cellData: any; row: any }) => {
         const { formattedDate, weekNumber } = formatDateWithWeek(cellData);
 
         return (
-          <Flex px="x1" py="x0_75" gap="x0_5" alignItems="baseline">
-            <Text fontSize="small" lineHeight="smallTextCompressed">
-              {formattedDate}
-            </Text>
-            <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
-              (Week {weekNumber})
-            </Text>
+          <Flex flexDirection="column" py="x0_25" gap="x0_5">
+            <Flex px="x1" py="x0_5" gap="x0_5" alignItems="baseline">
+              <Text fontSize="small" lineHeight="smallTextCompressed">
+                {formattedDate}
+              </Text>
+              <Text fontSize="smaller" lineHeight="1" color="midGrey">
+                (Week {weekNumber})
+              </Text>
+            </Flex>
+            {shouldShowCustomerAwaitingBox(row) && (
+              <Box px="x1" py="x0_5" backgroundColor="lightYellow" borderRadius="medium">
+                <Text fontSize="small" lineHeight="smallTextCompressed">
+                  2024-02-15
+                </Text>
+              </Box>
+            )}
+            {shouldShowSupplierAwaitingBox(row) && (
+              <Box px="x1" py="x0_5" backgroundColor="lightYellow" borderRadius="medium">
+                <Text fontSize="small" lineHeight="smallTextCompressed">
+                  2024-02-20
+                </Text>
+              </Box>
+            )}
           </Flex>
         );
       },
@@ -550,12 +585,28 @@ export const Compact = () => {
           </Text>
         </Box>
       ),
-      cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Box px="x1" py="x0_75" textAlign="right" pr="x2">
-          <Text fontSize="small" lineHeight="smallTextCompressed">
-            {cellData}
-          </Text>
-        </Box>
+      cellRenderer: ({ cellData, row }: { cellData: any; row: any }) => (
+        <Flex flexDirection="column" py="x0_25" gap="x0_5">
+          <Box px="x1" py="x0_5" textAlign="right" pr="x2">
+            <Text fontSize="small" lineHeight="smallTextCompressed">
+              {cellData}
+            </Text>
+          </Box>
+          {shouldShowCustomerAwaitingBox(row) && (
+            <Box py="x0_5" textAlign="right" pr="x2" backgroundColor="lightYellow" borderRadius="medium">
+              <Text fontSize="small" lineHeight="smallTextCompressed">
+                $3.50
+              </Text>
+            </Box>
+          )}
+          {shouldShowSupplierAwaitingBox(row) && (
+            <Box py="x0_5" textAlign="right" pr="x2" backgroundColor="lightYellow" borderRadius="medium">
+              <Text fontSize="small" lineHeight="smallTextCompressed">
+                $4.25
+              </Text>
+            </Box>
+          )}
+        </Flex>
       ),
     },
     {
@@ -569,12 +620,28 @@ export const Compact = () => {
           </Text>
         </Box>
       ),
-      cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Box px="x1" py="x0_75">
-          <Text fontSize="small" lineHeight="smallTextCompressed">
-            {cellData}
-          </Text>
-        </Box>
+      cellRenderer: ({ cellData, row }: { cellData: any; row: any }) => (
+        <Flex flexDirection="column" py="x0_25" gap="x0_5">
+          <Box px="x1" py="x0_5">
+            <Text fontSize="small" lineHeight="smallTextCompressed">
+              {cellData}
+            </Text>
+          </Box>
+          {shouldShowCustomerAwaitingBox(row) && (
+            <Box px="x1" py="x0_5" backgroundColor="lightYellow" borderRadius="medium">
+              <Text fontSize="small" lineHeight="smallTextCompressed">
+                EUR
+              </Text>
+            </Box>
+          )}
+          {shouldShowSupplierAwaitingBox(row) && (
+            <Box px="x1" py="x0_5" backgroundColor="lightYellow" borderRadius="medium">
+              <Text fontSize="small" lineHeight="smallTextCompressed">
+                CAD
+              </Text>
+            </Box>
+          )}
+        </Flex>
       ),
     },
     {
@@ -588,12 +655,28 @@ export const Compact = () => {
           </Text>
         </Box>
       ),
-      cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Box px="x1" py="x0_75">
-          <Text fontSize="small" lineHeight="smallTextCompressed">
-            {cellData}
-          </Text>
-        </Box>
+      cellRenderer: ({ cellData, row }: { cellData: any; row: any }) => (
+        <Flex flexDirection="column" py="x0_25" gap="x0_5">
+          <Box px="x1" py="x0_5">
+            <Text fontSize="small" lineHeight="smallTextCompressed">
+              {cellData}
+            </Text>
+          </Box>
+          {shouldShowCustomerAwaitingBox(row) && (
+            <Box px="x1" py="x0_5" backgroundColor="lightYellow" borderRadius="medium">
+              <Text fontSize="small" lineHeight="smallTextCompressed">
+                Quality improvement
+              </Text>
+            </Box>
+          )}
+          {shouldShowSupplierAwaitingBox(row) && (
+            <Box px="x1" py="x0_5" backgroundColor="lightYellow" borderRadius="medium">
+              <Text fontSize="small" lineHeight="smallTextCompressed">
+                Cost optimization
+              </Text>
+            </Box>
+          )}
+        </Flex>
       ),
     },
     {
@@ -607,10 +690,45 @@ export const Compact = () => {
           </Text>
         </Box>
       ),
+      cellRenderer: ({ cellData, row }: { cellData: any; row: any }) => (
+        <Flex flexDirection="column" py="x0_25" gap="x0_5">
+          <Box px="x1" py="x0_5">
+            <Text fontSize="small" lineHeight="smallTextCompressed">
+              {cellData}
+            </Text>
+          </Box>
+          {shouldShowCustomerAwaitingBox(row) && (
+            <Box px="x1" py="x0_5" backgroundColor="lightYellow" borderRadius="medium">
+              <Text fontSize="small" lineHeight="smallTextCompressed">
+                Updated specifications
+              </Text>
+            </Box>
+          )}
+          {shouldShowSupplierAwaitingBox(row) && (
+            <Box px="x1" py="x0_5" backgroundColor="lightYellow" borderRadius="medium">
+              <Text fontSize="small" lineHeight="smallTextCompressed">
+                Material change required
+              </Text>
+            </Box>
+          )}
+        </Flex>
+      ),
+    },
+    {
+      label: "Item order type",
+      dataKey: "itemOrderType",
+      width: "150px",
+      headerFormatter: () => (
+        <Box px="x1" pt="x1_25" pb="x0_75">
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            Item order type
+          </Text>
+        </Box>
+      ),
       cellRenderer: ({ cellData }: { cellData: any }) => (
         <Box px="x1" py="x0_75">
           <Text fontSize="small" lineHeight="smallTextCompressed">
-            {cellData}
+            {cellData || "Standard"}
           </Text>
         </Box>
       ),
@@ -650,96 +768,7 @@ export const Compact = () => {
         );
       },
     },
-    {
-      label: "Materials availability date",
-      dataKey: "materialsAvailabilityDate",
-      width: "200px",
-      headerFormatter: () => (
-        <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
-            Materials availability date
-          </Text>
-        </Box>
-      ),
-      cellRenderer: ({ cellData }: { cellData: any }) => {
-        const { formattedDate, weekNumber } = formatDateWithWeek(cellData);
 
-        return (
-          <Flex px="x1" py="x0_75" gap="x0_5" alignItems="baseline">
-            <Text fontSize="small" lineHeight="smallTextCompressed">
-              {formattedDate}
-            </Text>
-            <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
-              (Week {weekNumber})
-            </Text>
-          </Flex>
-        );
-      },
-    },
-    {
-      label: "Production start date",
-      dataKey: "productionStartDate",
-      width: "200px",
-      headerFormatter: () => (
-        <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
-            Production start date
-          </Text>
-        </Box>
-      ),
-      cellRenderer: ({ cellData }: { cellData: any }) => {
-        const { formattedDate, weekNumber } = formatDateWithWeek(cellData);
-
-        return (
-          <Flex px="x1" py="x0_75" gap="x0_5" alignItems="baseline">
-            <Text fontSize="small" lineHeight="smallTextCompressed">
-              {formattedDate}
-            </Text>
-            <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
-              (Week {weekNumber})
-            </Text>
-          </Flex>
-        );
-      },
-    },
-    {
-      label: "Can run now",
-      dataKey: "canRunNow",
-      width: "150px",
-      headerFormatter: () => (
-        <Box px="x1" pt="x1_25" pb="x0_75" textAlign="right">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
-            Can run now
-          </Text>
-        </Box>
-      ),
-      cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Box px="x1" py="x0_75" textAlign="right" pr="x2">
-          <Text fontSize="small" lineHeight="smallTextCompressed">
-            {cellData}
-          </Text>
-        </Box>
-      ),
-    },
-    {
-      label: "Can run on production start date",
-      dataKey: "canRunProductionStartDate",
-      width: "250px",
-      headerFormatter: () => (
-        <Box px="x1" pt="x1_25" pb="x0_75" textAlign="right">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
-            Can run on production start date
-          </Text>
-        </Box>
-      ),
-      cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Box px="x1" py="x0_75" textAlign="right" pr="x2">
-          <Text fontSize="small" lineHeight="smallTextCompressed">
-            {cellData}
-          </Text>
-        </Box>
-      ),
-    },
     {
       label: "Next production date",
       dataKey: "nextProductionDate",
@@ -843,44 +872,6 @@ export const Compact = () => {
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => (
         <Box px="half" py="x0_75">
-          <Text fontSize="small" lineHeight="smallTextCompressed">
-            {cellData}
-          </Text>
-        </Box>
-      ),
-    },
-    {
-      label: "Shipped quantity",
-      dataKey: "shippedQuantity",
-      width: "200px",
-      headerFormatter: () => (
-        <Box px="x1" pt="x1_25" pb="x0_75" textAlign="right">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
-            Shipped quantity
-          </Text>
-        </Box>
-      ),
-      cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Box px="x1" py="x0_75" textAlign="right" pr="x2">
-          <Text fontSize="small" lineHeight="smallTextCompressed">
-            {cellData}
-          </Text>
-        </Box>
-      ),
-    },
-    {
-      label: "Received quantity",
-      dataKey: "receivedQuantity",
-      width: "200px",
-      headerFormatter: () => (
-        <Box px="x1" pt="x1_25" pb="x0_75" textAlign="right">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
-            Received quantity
-          </Text>
-        </Box>
-      ),
-      cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Box px="x1" py="x0_75" textAlign="right" pr="x2">
           <Text fontSize="small" lineHeight="smallTextCompressed">
             {cellData}
           </Text>
