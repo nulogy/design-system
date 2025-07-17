@@ -81,15 +81,15 @@ export const CollaborationCard: React.FC<CollaborationCardProps> = ({
 
   const textPadding = isFocus ? "p" : "px";
   const textPaddingValue = isFocus ? "x1" : "x2";
-  const verticalPadding = isEdit ? "x0_5" : "x1_5";
-  const horizontalPadding = isEdit ? "x1" : textPaddingValue;
+  const verticalPadding = isEdit ? "x1" : "x2";
+  const horizontalPadding = isEdit ? "x3" : textPaddingValue;
 
   return (
     <Card {...cardProps}>
       {/* CARD HEADER */}
       <Flex
         flexDirection="column"
-        p="x2"
+        px="x3" py="x2"
         backgroundColor={isFocus ? "lightYellow" : isEdit ? "lightBlue" : "transparent"}
       >
         <Flex justifyContent="space-between">
@@ -102,59 +102,66 @@ export const CollaborationCard: React.FC<CollaborationCardProps> = ({
         </Text>
       </Flex>
       {/* CARD BODY */}
-      <Flex flexDirection="column" {...bodyFlexProps}>
-        {!isFocus && <Divider m="0" />}
+      <Flex flexDirection="column" {...bodyFlexProps} mt="x0_5">
+
         {isEdit ? (
           <>
             <Box px={horizontalPadding} py={verticalPadding}>
-              <Input value={data.quantity} mb="1px" />
+              <Input value={data.quantity} />
             </Box>
+            <Divider m="0" />
             <Box px={horizontalPadding} py={verticalPadding}>
-              <Input value={data.uom} mb="1px" />
+              <Input value={data.uom} />
             </Box>
+            <Divider m="0" />
             <Box px={horizontalPadding} py={verticalPadding}>
-              <Input value={data.dueDate} mb="1px" />
+              <Input value={data.dueDate} />
             </Box>
+            <Divider m="0" />
             <Box px={horizontalPadding} py={verticalPadding}>
-              <Input value={data.unitPrice} mb="1px" />
+              <Input value={data.unitPrice} />
             </Box>
+            <Divider m="0" />
             <Box px={horizontalPadding} py={verticalPadding}>
-              <Input value={data.currency} mb="1px" />
+              <Input value={data.currency} />
             </Box>
+            <Divider m="0" />
             <Box px={horizontalPadding} py={verticalPadding}>
-              <Input value={data.changeReason} mb="1px" />
+              <Input value={data.changeReason} />
             </Box>
+            <Divider m="0" />
             <Box px={horizontalPadding} py={verticalPadding}>
-              <Input value={data.changeNote} mb="1px" />
+              <Input value={data.changeNote} />
             </Box>
+            <Divider m="0" />
           </>
         ) : (
           <>
-            <Text {...{ [textPadding]: textPaddingValue }} py={verticalPadding}>
+            <Text {...{ [textPadding]: textPaddingValue }} py={verticalPadding} pl="x3">
               {data.quantity}
             </Text>
             <Divider m="0" />
-            <Text {...{ [textPadding]: textPaddingValue }} py={verticalPadding}>
+            <Text {...{ [textPadding]: textPaddingValue }} py={verticalPadding} pl="x3">
               {data.uom}
             </Text>
             <Divider m="0" />
-            <Text {...{ [textPadding]: textPaddingValue }} py={verticalPadding}>
+            <Text {...{ [textPadding]: textPaddingValue }} py={verticalPadding} pl="x3">
               {data.dueDate}
             </Text>
             <Divider m="0" />
-            <Text {...{ [textPadding]: textPaddingValue }} py={verticalPadding}>
+            <Text {...{ [textPadding]: textPaddingValue }} py={verticalPadding} pl="x3">
               {data.unitPrice}
             </Text>
             <Divider m="0" />
-            <Text {...{ [textPadding]: textPaddingValue }} py={verticalPadding}>
+            <Text {...{ [textPadding]: textPaddingValue }} py={verticalPadding} pl="x3">
               {data.currency}
             </Text>
             <Divider m="0" />
-            <Text {...{ [textPadding]: textPaddingValue }} py={verticalPadding}>
+            <Text  {...{ [textPadding]: textPaddingValue }} py={verticalPadding} pl="x3">
               {data.changeReason}
             </Text>
             <Divider m="0" />
-            <TruncatedText fullWidth {...{ [textPadding]: textPaddingValue }} py={verticalPadding}>
+            <TruncatedText fullWidth {...{ [textPadding]: textPaddingValue }} py={verticalPadding} pl="x3">
               {data.changeNote}
             </TruncatedText>
             <Divider m="0" />
@@ -163,7 +170,7 @@ export const CollaborationCard: React.FC<CollaborationCardProps> = ({
       </Flex>
       {/* CARD FOOTER */}
       {!isReadOnly && (
-        <Flex p="x2" gap="x1">
+        <Flex px={isEdit ? "x3" : "x3"} py="x2" gap="x1">
           {isEdit ? (
             <>
               <PrimaryButton fullWidth onClick={onAccept}>
