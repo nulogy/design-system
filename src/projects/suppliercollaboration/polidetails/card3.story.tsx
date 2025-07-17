@@ -30,16 +30,21 @@ import {
   ListItem,
   Card,
 } from "../../..";
-import { CollaborationCard } from "./components/CollaborationCard";
+import { 
+  CollaborationCard2, 
+  CollaborationCard2Header, 
+  CollaborationCard2Body, 
+  CollaborationCard2Footer 
+} from "./components/CollaborationCard2";
 
 export default {
-  title: "Projects/Supplier Collaboration/POLI details/Card2",
+  title: "Projects/Supplier Collaboration/POLI details/Card3",
   parameters: {
     layout: "fullscreen",
   },
 };
 
-export const DefaultCard2 = () => {
+export const DefaultCard3 = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   // User state
@@ -318,116 +323,159 @@ export const DefaultCard2 = () => {
           <Tab label="Collaboration">
             <Flex p="x3">
               {/* Column headers */}
-              <Flex flexDirection="column" width="25%" pt="81px">
-                <Text px="x2" py="x2" fontWeight="bold" fontSize="small" lineHeight="smallRelaxed" color="darkGrey">
-                  Quantity
-                </Text>
-                <Divider m="0" />
-                <Text px="x2" py="x2" fontWeight="bold" fontSize="small" lineHeight="smallRelaxed" color="darkGrey">
-                  UOM
-                </Text>
-                <Divider m="0" />
-                <Text px="x2" py="x2" fontWeight="bold" fontSize="small" lineHeight="smallRelaxed" color="darkGrey">
-                  Production due date
-                </Text>
-                <Divider m="0" />
-                <Text px="x2" py="x2" fontWeight="bold" fontSize="small" lineHeight="smallRelaxed" color="darkGrey">
-                  Unit price
-                </Text>
-                <Divider m="0" />
-                <Text px="x2" py="x2" fontWeight="bold" fontSize="small" lineHeight="smallRelaxed" color="darkGrey">
-                  Currency
-                </Text>
-                <Divider m="0" />
-                <Text px="x2" py="x2" fontWeight="bold" fontSize="small" lineHeight="smallRelaxed" color="darkGrey">
-                  Change reason
-                </Text>
-                <Divider m="0" />
-                <Text px="x2" py="x2" fontWeight="bold" fontSize="small" lineHeight="smallRelaxed" color="darkGrey">
-                  Change note
-                </Text>
-                <Divider m="0" />
-              </Flex>
+              <CollaborationCard2 type="label">
+                <CollaborationCard2Header title="Column Headers" />
+                <CollaborationCard2Body>
+                  <Text fontWeight="bold" fontSize="small" lineHeight="smallRelaxed" color="darkGrey">
+                    Quantity
+                  </Text>
+                  <Divider m="0" />
+                  <Text fontWeight="bold" fontSize="small" lineHeight="smallRelaxed" color="darkGrey">
+                    UOM
+                  </Text>
+                  <Divider m="0" />
+                  <Text fontWeight="bold" fontSize="small" lineHeight="smallRelaxed" color="darkGrey">
+                    Production due date
+                  </Text>
+                  <Divider m="0" />
+                  <Text fontWeight="bold" fontSize="small" lineHeight="smallRelaxed" color="darkGrey">
+                    Unit price
+                  </Text>
+                  <Divider m="0" />
+                  <Text fontWeight="bold" fontSize="small" lineHeight="smallRelaxed" color="darkGrey">
+                    Currency
+                  </Text>
+                  <Divider m="0" />
+                  <Text fontWeight="bold" fontSize="small" lineHeight="smallRelaxed" color="darkGrey">
+                    Change reason
+                  </Text>
+                  <Divider m="0" />
+                  <Text fontWeight="bold" fontSize="small" lineHeight="smallRelaxed" color="darkGrey">
+                    Change note
+                  </Text>
+                  <Divider m="0" />
+                </CollaborationCard2Body>
+              </CollaborationCard2>
 
-              <CollaborationCard
-                title="Customer's original request"
-                author="John D."
-                date="January 21, 2025"
-                type="readOnly"
-                data={{
-                  quantity: "200",
-                  uom: "UOM",
-                  dueDate: "24-Jan-2025",
-                  unitPrice: "$2.99",
-                  currency: "CAD",
-                  changeReason: "Some reason",
-                  changeNote: "Some note",
-                }}
-              />
+              {/* Customer's original request */}
+              <CollaborationCard2 type="readOnly">
+                <CollaborationCard2Header 
+                  title="Customer's original request" 
+                  meta="by John D. on January 21, 2025"
+                />
+                <CollaborationCard2Body>
+                  <Text>200</Text>
+                  <Divider m="0" />
+                  <Text>UOM</Text>
+                  <Divider m="0" />
+                  <Text>24-Jan-2025</Text>
+                  <Divider m="0" />
+                  <Text>$2.99</Text>
+                  <Divider m="0" />
+                  <Text>CAD</Text>
+                  <Divider m="0" />
+                  <Text>Some reason</Text>
+                  <Divider m="0" />
+                  <Text>Some note</Text>
+                  <Divider m="0" />
+                </CollaborationCard2Body>
+              </CollaborationCard2>
 
-              <CollaborationCard
-                title="Your latest proposal"
-                author="Nick S."
-                date="January 23, 2025"
+              {/* Your latest proposal */}
+              <CollaborationCard2 
                 type={
-                  editingCard === "yourLatestProposal"
-                    ? "edit"
-                    : focusedCard === "yourLatestProposal"
-                      ? "focus"
-                      : "quiet"
+                  editingCard === "yourLatestProposal" ? "edit" :
+                  focusedCard === "yourLatestProposal" ? "awaitingYou" : "awaitingOtherParty"
                 }
-                buttonLabel="Update proposal"
-                data={{
-                  quantity: "300",
-                  uom: "UOM",
-                  dueDate: "24-Jan-2025",
-                  unitPrice: "$2.99",
-                  currency: "CAD",
-                  changeReason: "Some reason",
-                  changeNote: "Some note",
-                }}
-                onAccept={() => {
-                  if (editingCard === "yourLatestProposal") {
-                    // Save changes and return to focus state
-                    handleFocusCard("yourLatestProposal");
-                  } else {
-                    // Enter edit mode
-                    handleEditCard("yourLatestProposal");
+              >
+                <CollaborationCard2Header 
+                  title="Your latest proposal" 
+                  meta="by Nick S. on January 23, 2025"
+                  icon={editingCard === "yourLatestProposal" ? "edit" : "info"}
+                />
+                <CollaborationCard2Body>
+                  <Text>300</Text>
+                  <Divider m="0" />
+                  <Text>UOM</Text>
+                  <Divider m="0" />
+                  <Text>24-Jan-2025</Text>
+                  <Divider m="0" />
+                  <Text>$2.99</Text>
+                  <Divider m="0" />
+                  <Text>CAD</Text>
+                  <Divider m="0" />
+                  <Text>Some reason</Text>
+                  <Divider m="0" />
+                  <Text>Some note</Text>
+                  <Divider m="0" />
+                </CollaborationCard2Body>
+                <CollaborationCard2Footer 
+                  primaryAction={
+                    editingCard === "yourLatestProposal" ? "Submit" : "Update proposal"
                   }
-                }}
-              />
+                  secondaryAction={editingCard === "yourLatestProposal" ? "Cancel" : undefined}
+                  onPrimaryAction={() => {
+                    if (editingCard === "yourLatestProposal") {
+                      handleFocusCard("yourLatestProposal");
+                    } else {
+                      handleEditCard("yourLatestProposal");
+                    }
+                  }}
+                  onSecondaryAction={() => {
+                    if (editingCard === "yourLatestProposal") {
+                      handleFocusCard("yourLatestProposal");
+                    }
+                  }}
+                />
+              </CollaborationCard2>
 
-              {/* Collaboration card - Customer's latest request */}
-              <CollaborationCard
-                title="Customer's latest request"
-                author="John D."
-                date="January 24, 2025"
+              {/* Customer's latest request */}
+              <CollaborationCard2 
                 type={
-                  editingCard === "customerLatestRequest"
-                    ? "edit"
-                    : focusedCard === "customerLatestRequest"
-                      ? "focus"
-                      : "quiet"
+                  editingCard === "customerLatestRequest" ? "edit" :
+                  focusedCard === "customerLatestRequest" ? "awaitingYou" : "awaitingOtherParty"
                 }
-                data={{
-                  quantity: "300",
-                  uom: "UOM",
-                  dueDate: "24-Jan-2025",
-                  unitPrice: "$2.99",
-                  currency: "CAD",
-                  changeReason: "Some reason",
-                  changeNote: "Some note",
-                }}
-                onAccept={() => {
-                  if (editingCard === "customerLatestRequest") {
-                    // Save changes and return to focus state
-                    handleFocusCard("customerLatestRequest");
-                  } else {
-                    // Enter edit mode
-                    handleEditCard("customerLatestRequest");
+              >
+                <CollaborationCard2Header 
+                  title="Customer's latest request" 
+                  meta="by John D. on January 24, 2025"
+                  icon={editingCard === "customerLatestRequest" ? "edit" : "info"}
+                />
+                <CollaborationCard2Body>
+                  <Text>300</Text>
+                  <Divider m="0" />
+                  <Text>UOM</Text>
+                  <Divider m="0" />
+                  <Text>24-Jan-2025</Text>
+                  <Divider m="0" />
+                  <Text>$2.99</Text>
+                  <Divider m="0" />
+                  <Text>CAD</Text>
+                  <Divider m="0" />
+                  <Text>Some reason</Text>
+                  <Divider m="0" />
+                  <Text>Some note</Text>
+                  <Divider m="0" />
+                </CollaborationCard2Body>
+                <CollaborationCard2Footer 
+                  primaryAction={
+                    editingCard === "customerLatestRequest" ? "Submit" : "Update proposal"
                   }
-                }}
-              />
+                  secondaryAction={editingCard === "customerLatestRequest" ? "Cancel" : undefined}
+                  onPrimaryAction={() => {
+                    if (editingCard === "customerLatestRequest") {
+                      handleFocusCard("customerLatestRequest");
+                    } else {
+                      handleEditCard("customerLatestRequest");
+                    }
+                  }}
+                  onSecondaryAction={() => {
+                    if (editingCard === "customerLatestRequest") {
+                      handleFocusCard("customerLatestRequest");
+                    }
+                  }}
+                />
+              </CollaborationCard2>
             </Flex>
           </Tab>
 
@@ -466,4 +514,4 @@ export const DefaultCard2 = () => {
   );
 };
 
-DefaultCard2.storyName = "Default";
+DefaultCard3.storyName = "Default"; 
