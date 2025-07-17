@@ -29,4 +29,4 @@ export interface CollaborationCard2FooterProps {
 
 export interface CollaborationCard2ContextProps {
   type: CollaborationCard2Type;
-} 
+}

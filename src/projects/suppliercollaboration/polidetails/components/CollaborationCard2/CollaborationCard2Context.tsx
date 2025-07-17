@@ -16,4 +16,4 @@ export const useCollaborationCard2Context = () => {
     throw new Error("useCollaborationCard2Context must be used within a CollaborationCard2Provider");
   }
   return context;
-}; 
+};

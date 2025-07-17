@@ -22,4 +22,4 @@ export function CollaborationCard2Header({ title, meta, icon, children }: Collab
       {children}
     </StyledHeader>
   );
-} 
+}

@@ -3,13 +3,13 @@ import { Flex, PrimaryButton, QuietButton, Text } from "../../../../..";
 import { CollaborationCard2Footer as StyledFooter } from "./CollaborationCard2.parts";
 import { CollaborationCard2FooterProps } from "./lib/types";
 
-export function CollaborationCard2Footer({ 
-  primaryAction, 
-  secondaryAction, 
-  meta, 
-  onPrimaryAction, 
-  onSecondaryAction, 
-  children 
+export function CollaborationCard2Footer({
+  primaryAction,
+  secondaryAction,
+  meta,
+  onPrimaryAction,
+  onSecondaryAction,
+  children,
 }: CollaborationCard2FooterProps) {
   return (
     <StyledFooter>
@@ -35,4 +35,4 @@ export function CollaborationCard2Footer({
       )}
     </StyledFooter>
   );
-} 
+}
