@@ -13,11 +13,14 @@ import {
   Switcher,
   Switch,
   Input,
-  Select,
+  AsyncSelect,
   Text,
   Icon,
   StatusIndicator,
   TruncatedText,
+  Sidebar,
+  Checkbox,
+  DateRange,
 } from "../../..";
 import { AppTag } from "../../../AppTag";
 import { poliRows, shouldShowEditBox } from "../utils/poliTableData";
@@ -30,9 +33,61 @@ export default {
 export const Compact = () => {
   const [selectedRows, setSelectedRows] = useState<string[]>([]);
   const [role, setRole] = useState("supplier");
+  const [isFilterSidebarOpen, setIsFilterSidebarOpen] = useState(false);
+  const [poLineItemNumbers, setPoLineItemNumbers] = useState<string[]>([]);
+  const [onlyBlankSupplierPo, setOnlyBlankSupplierPo] = useState(false);
+  const [items, setItems] = useState<string[]>([]);
+  const [creationDateRange, setCreationDateRange] = useState({ startDate: null, endDate: null });
 
   const handleRowSelectionChange = (selectedRowIds: string[]) => {
     setSelectedRows(selectedRowIds);
+  };
+
+  const handlePoLineItemNumbersChange = (selectedValues: any) => {
+    setPoLineItemNumbers(selectedValues || []);
+  };
+
+  const handleItemsChange = (selectedValues: any) => {
+    setItems(selectedValues || []);
+  };
+
+  const handleCreationDateRangeChange = (range: any) => {
+    setCreationDateRange({
+      startDate: range.startDate,
+      endDate: range.endDate,
+    });
+  };
+
+  const loadPoLineItemNumbers = async (inputValue: string) => {
+    // Simulate async search - in real app this would be an API call
+    const allOptions = [
+      { value: "PO-001-001", label: "PO-001-001" },
+      { value: "PO-001-002", label: "PO-001-002" },
+      { value: "PO-002-001", label: "PO-002-001" },
+      { value: "PO-002-002", label: "PO-002-002" },
+      { value: "PO-003-001", label: "PO-003-001" },
+      { value: "PO-003-002", label: "PO-003-002" },
+      { value: "PO-004-001", label: "PO-004-001" },
+      { value: "PO-004-002", label: "PO-004-002" },
+    ];
+
+    return allOptions.filter((option) => option.label.toLowerCase().includes(inputValue.toLowerCase()));
+  };
+
+  const loadItems = async (inputValue: string) => {
+    // Simulate async search - in real app this would be an API call
+    const allOptions = [
+      { value: "ITEM-001", label: "ITEM-001 - Widget A" },
+      { value: "ITEM-002", label: "ITEM-002 - Widget B" },
+      { value: "ITEM-003", label: "ITEM-003 - Component C" },
+      { value: "ITEM-004", label: "ITEM-004 - Part D" },
+      { value: "ITEM-005", label: "ITEM-005 - Assembly E" },
+      { value: "ITEM-006", label: "ITEM-006 - Module F" },
+      { value: "ITEM-007", label: "ITEM-007 - System G" },
+      { value: "ITEM-008", label: "ITEM-008 - Unit H" },
+    ];
+
+    return allOptions.filter((option) => option.label.toLowerCase().includes(inputValue.toLowerCase()));
   };
 
   // Helper function to check if we should show additional box for customer awaiting response
@@ -197,13 +252,13 @@ export const Compact = () => {
       ),
     },
     {
-      label: "Created on",
+      label: "Creation date",
       dataKey: "createdOn",
       width: "200px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
           <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
-            Created on
+            Creation date
           </Text>
         </Box>
       ),
@@ -732,25 +787,6 @@ export const Compact = () => {
       ),
     },
     {
-      label: "Item order type",
-      dataKey: "itemOrderType",
-      width: "150px",
-      headerFormatter: () => (
-        <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
-            Item order type
-          </Text>
-        </Box>
-      ),
-      cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Box px="x1" py="x0_75">
-          <Text fontSize="small" lineHeight="smallTextCompressed">
-            {cellData || "Standard"}
-          </Text>
-        </Box>
-      ),
-    },
-    {
       label: "BOM revision and release date",
       dataKey: "bomRevisionAndReleaseDate",
       width: "250px",
@@ -920,7 +956,7 @@ export const Compact = () => {
               Collaboration status
             </IconicButton>
             <VerticalDivider />
-            <IconicButton icon="filter" aria-label="Filters">
+            <IconicButton icon="filter" aria-label="Filters" onClick={() => setIsFilterSidebarOpen(true)}>
               Filters
             </IconicButton>
           </Flex>
@@ -954,6 +990,56 @@ export const Compact = () => {
           </Box>
         </Box>
       </Page>
+
+      {/* Filter Sidebar */}
+      <Sidebar isOpen={isFilterSidebarOpen} onClose={() => setIsFilterSidebarOpen(false)} title="Filters" width="xs">
+        <Flex flexDirection="column" gap="x3">
+          <Box>
+            <AsyncSelect
+              labelText="PO line item number"
+              helpText="Search by customer's or supplier's PO line item item number"
+              placeholder="Start typing"
+              loadOptions={loadPoLineItemNumbers}
+              multiselect
+              value={poLineItemNumbers}
+              onChange={handlePoLineItemNumbersChange}
+            />
+            <Checkbox
+              checked={onlyBlankSupplierPo}
+              onChange={(e) => setOnlyBlankSupplierPo(e.target.checked)}
+              labelText="Only line items with a blank supplier PO line item number"
+            />
+          </Box>
+          <Box>
+            <AsyncSelect
+              labelText="Item"
+              helpText="Search by customer's or supplier's item code, or item description"
+              placeholder="Start typing"
+              loadOptions={loadItems}
+              multiselect
+              value={items}
+              onChange={handleItemsChange}
+            />
+          </Box>
+          <Box>
+            <DateRange
+              labelProps={{
+                labelText: "Creation date range",
+              }}
+              startDateInputProps={{
+                placeholder: "YYYY-Mon-DD",
+                inputWidth: "168px",
+              }}
+              endDateInputProps={{
+                placeholder: "YYYY-Mon-DD",
+                inputWidth: "168px",
+              }}
+              onRangeChange={handleCreationDateRangeChange}
+            />
+          </Box>
+        </Flex>
+      </Sidebar>
+
       {/* Floating Supplier/Customer Switcher */}
       <Box
         position="fixed"
