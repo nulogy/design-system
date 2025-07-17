@@ -588,7 +588,7 @@ export const Compact = () => {
           )}
           {shouldShowEditBox(row.id, selectedRows) && (
             <Box p="x0_5" backgroundColor="lightBlue" borderRadius="medium">
-              <Select
+              <AsyncSelect
                 value={cellData}
                 options={[
                   { value: "cases", label: "cases" },
