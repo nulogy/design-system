@@ -4,4 +4,4 @@ import { CollaborationCard2BodyProps } from "./lib/types";
 
 export function CollaborationCard2Body({ children }: CollaborationCard2BodyProps) {
   return <StyledBody>{children}</StyledBody>;
-} 
+}

@@ -30,11 +30,11 @@ import {
   ListItem,
   Card,
 } from "../../..";
-import { 
-  CollaborationCard2, 
-  CollaborationCard2Header, 
-  CollaborationCard2Body, 
-  CollaborationCard2Footer 
+import {
+  CollaborationCard2,
+  CollaborationCard2Header,
+  CollaborationCard2Body,
+  CollaborationCard2Footer,
 } from "./components/CollaborationCard2";
 
 export default {
@@ -359,10 +359,7 @@ export const DefaultCard3 = () => {
 
               {/* Customer's original request */}
               <CollaborationCard2 type="readOnly">
-                <CollaborationCard2Header 
-                  title="Customer's original request" 
-                  meta="by John D. on January 21, 2025"
-                />
+                <CollaborationCard2Header title="Customer's original request" meta="by John D. on January 21, 2025" />
                 <CollaborationCard2Body>
                   <Text>200</Text>
                   <Divider m="0" />
@@ -382,14 +379,17 @@ export const DefaultCard3 = () => {
               </CollaborationCard2>
 
               {/* Your latest proposal */}
-              <CollaborationCard2 
+              <CollaborationCard2
                 type={
-                  editingCard === "yourLatestProposal" ? "edit" :
-                  focusedCard === "yourLatestProposal" ? "awaitingYou" : "awaitingOtherParty"
+                  editingCard === "yourLatestProposal"
+                    ? "edit"
+                    : focusedCard === "yourLatestProposal"
+                      ? "awaitingYou"
+                      : "awaitingOtherParty"
                 }
               >
-                <CollaborationCard2Header 
-                  title="Your latest proposal" 
+                <CollaborationCard2Header
+                  title="Your latest proposal"
                   meta="by Nick S. on January 23, 2025"
                   icon={editingCard === "yourLatestProposal" ? "edit" : "info"}
                 />
@@ -409,10 +409,8 @@ export const DefaultCard3 = () => {
                   <Text>Some note</Text>
                   <Divider m="0" />
                 </CollaborationCard2Body>
-                <CollaborationCard2Footer 
-                  primaryAction={
-                    editingCard === "yourLatestProposal" ? "Submit" : "Update proposal"
-                  }
+                <CollaborationCard2Footer
+                  primaryAction={editingCard === "yourLatestProposal" ? "Submit" : "Update proposal"}
                   secondaryAction={editingCard === "yourLatestProposal" ? "Cancel" : undefined}
                   onPrimaryAction={() => {
                     if (editingCard === "yourLatestProposal") {
@@ -430,14 +428,17 @@ export const DefaultCard3 = () => {
               </CollaborationCard2>
 
               {/* Customer's latest request */}
-              <CollaborationCard2 
+              <CollaborationCard2
                 type={
-                  editingCard === "customerLatestRequest" ? "edit" :
-                  focusedCard === "customerLatestRequest" ? "awaitingYou" : "awaitingOtherParty"
+                  editingCard === "customerLatestRequest"
+                    ? "edit"
+                    : focusedCard === "customerLatestRequest"
+                      ? "awaitingYou"
+                      : "awaitingOtherParty"
                 }
               >
-                <CollaborationCard2Header 
-                  title="Customer's latest request" 
+                <CollaborationCard2Header
+                  title="Customer's latest request"
                   meta="by John D. on January 24, 2025"
                   icon={editingCard === "customerLatestRequest" ? "edit" : "info"}
                 />
@@ -457,10 +458,8 @@ export const DefaultCard3 = () => {
                   <Text>Some note</Text>
                   <Divider m="0" />
                 </CollaborationCard2Body>
-                <CollaborationCard2Footer 
-                  primaryAction={
-                    editingCard === "customerLatestRequest" ? "Submit" : "Update proposal"
-                  }
+                <CollaborationCard2Footer
+                  primaryAction={editingCard === "customerLatestRequest" ? "Submit" : "Update proposal"}
                   secondaryAction={editingCard === "customerLatestRequest" ? "Cancel" : undefined}
                   onPrimaryAction={() => {
                     if (editingCard === "customerLatestRequest") {
@@ -514,4 +513,4 @@ export const DefaultCard3 = () => {
   );
 };
 
-DefaultCard3.storyName = "Default"; 
+DefaultCard3.storyName = "Default";

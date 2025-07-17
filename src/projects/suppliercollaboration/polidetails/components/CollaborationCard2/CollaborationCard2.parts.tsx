@@ -45,7 +45,7 @@ const getCardStyles = (type: CollaborationCard2Type) => {
 
 export const CollaborationCard2Container = styled.div<{ type: CollaborationCard2Type }>(({ theme, type }) => {
   const styles = getCardStyles(type);
-  
+
   return {
     display: "flex",
     flexDirection: "column",
@@ -77,4 +77,4 @@ export const CollaborationCard2Footer = styled.div(({ theme }) => {
     padding: theme.space.x2,
     borderTop: `1px solid ${theme.colors.lightGrey}`,
   };
-}); 
+});

@@ -6,9 +6,7 @@ import { CollaborationCard2Props } from "./lib/types";
 export default function CollaborationCard2({ type, children }: CollaborationCard2Props) {
   return (
     <CollaborationCard2Provider type={type}>
-      <CollaborationCard2Container type={type}>
-        {children}
-      </CollaborationCard2Container>
+      <CollaborationCard2Container type={type}>{children}</CollaborationCard2Container>
     </CollaborationCard2Provider>
   );
-} 
+}

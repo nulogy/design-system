@@ -89,7 +89,8 @@ export const CollaborationCard: React.FC<CollaborationCardProps> = ({
       {/* CARD HEADER */}
       <Flex
         flexDirection="column"
-        px="x3" py="x2"
+        px="x3"
+        py="x2"
         backgroundColor={isFocus ? "lightYellow" : isEdit ? "lightBlue" : "transparent"}
       >
         <Flex justifyContent="space-between">
@@ -103,7 +104,6 @@ export const CollaborationCard: React.FC<CollaborationCardProps> = ({
       </Flex>
       {/* CARD BODY */}
       <Flex flexDirection="column" {...bodyFlexProps} mt="x0_5">
-
         {isEdit ? (
           <>
             <Box px={horizontalPadding} py={verticalPadding}>
@@ -157,7 +157,7 @@ export const CollaborationCard: React.FC<CollaborationCardProps> = ({
               {data.currency}
             </Text>
             <Divider m="0" />
-            <Text  {...{ [textPadding]: textPaddingValue }} py={verticalPadding} pl="x3">
+            <Text {...{ [textPadding]: textPaddingValue }} py={verticalPadding} pl="x3">
               {data.changeReason}
             </Text>
             <Divider m="0" />
