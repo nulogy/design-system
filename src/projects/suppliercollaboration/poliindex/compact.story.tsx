@@ -427,15 +427,7 @@ export const Compact = () => {
               {cellData}
             </TruncatedText>
           </Link>
-          <TruncatedText
-            maxWidth="242px"
-            fullWidth
-            fontSize="smaller"
-            lineHeight="smallerText"
-            color="midGrey"
-            fullWidth
-            maxWidth="304px"
-          >
+          <TruncatedText maxWidth="242px" fullWidth fontSize="smaller" lineHeight="smallerText" color="midGrey">
             by John A. on Jan 24, 2025 at 04:00pm
           </TruncatedText>
         </Flex>
