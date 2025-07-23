@@ -189,18 +189,24 @@ export const Default = () => {
       request: { ...formData.request },
       proposal: { ...formData.proposal },
     });
+  };
+
+  // Function to submit updated proposal or request
+  const submitUpdate = (mode: "request" | "proposal") => {
+    exitEditMode();
     
-    // Reset acceptance status when entering edit mode
-    if (mode === "request" && acceptedItems.request) {
+    // Always reset acceptance status for the item being updated
+    if (mode === "request") {
       setAcceptedItems(prev => ({ ...prev, request: false }));
-      // Update collaboration state to show awaiting response from supplier
+      // Customer updated their request, now awaiting supplier's response
       setCollaborationState(prev => ({ ...prev, activeCardAuthorRole: "customer" }));
-    }
-    if (mode === "proposal" && acceptedItems.proposal) {
+    } else if (mode === "proposal") {
       setAcceptedItems(prev => ({ ...prev, proposal: false }));
-      // Update collaboration state to show awaiting response from customer
+      // Supplier updated their proposal, now awaiting customer's response
       setCollaborationState(prev => ({ ...prev, activeCardAuthorRole: "supplier" }));
     }
+    
+    toast.success(`${mode === "request" ? "Request" : "Proposal"} updated successfully`);
   };
 
   // Function to check if form has changes
@@ -491,7 +497,7 @@ export const Default = () => {
               <Flex flexDirection="column" gap="x2" justifyContent="space-between">
                 {/* Requested production vs Supplier's proposal comparison */}
                 <Flex gap="x3" p="x2">
-                  <Flex flexDirection="column" gap="x0_5" mt="x9" minWidth="180px">
+                  <Flex flexDirection="column" gap="x0_5" mt="x9" pl="x2_5" flex={1} maxWidth="440px" minWidth="256px">
                     <Text fontSize="small" lineHeight="smallRelaxed" fontWeight="bold" my="x1">
                       Quantity
                     </Text>
@@ -501,7 +507,7 @@ export const Default = () => {
                     <Text fontSize="small" lineHeight="smallRelaxed" fontWeight="bold" my="x1">
                       Unit price
                     </Text>
-                    <Text fontSize="small" lineHeight="smallRelaxed" fontWeight="bold" minHeight="72px" my="x1">
+                    <Text fontSize="small" lineHeight="smallRelaxed" fontWeight="bold" my="x1">
                       Note
                     </Text>
                   </Flex>
@@ -527,7 +533,7 @@ export const Default = () => {
                       <Text my="x1">1 square yards</Text>
                       <Text my="x1">Dec 12, 2024</Text>
                       <Text my="x1">1 USD</Text>
-                      <Text my="x1">Some note</Text>
+                      <Text my="x1" minHeight="88px">Some note</Text>
                     </Flex>
                   </Box>
 
@@ -677,7 +683,7 @@ export const Default = () => {
                           <Text my="x1">{formData.request.quantity} {formData.request.unit}</Text>
                           <Text my="x1">{formData.request.productionDueDate}</Text>
                           <Text my="x1">{formData.request.unitPrice} {formData.request.currency}</Text>
-                          <Text my="x1">{formData.request.note}</Text>
+                          <Text my="x1" minHeight="88px">{formData.request.note}</Text>
                         </>
                       )}
                     </Flex>
@@ -820,7 +826,7 @@ export const Default = () => {
                           <Text my="x1">-</Text>
                           <Text my="x1">-</Text>
                           <Text my="x1">-</Text>
-                          <Text my="x1">-</Text>
+                          <Text my="x1" minHeight="88px">-</Text>
                         </>
                       )}
                     </Flex>
@@ -834,10 +840,7 @@ export const Default = () => {
                   {editMode ? (
                     <>
                       <PrimaryButton 
-                        onClick={() => {
-                          exitEditMode();
-                          toast.success(`${editMode === "request" ? "Request" : "Proposal"} updated successfully`);
-                        }}
+                        onClick={() => submitUpdate(editMode)}
                         disabled={!hasChanges(editMode)}
                       >
                         {editMode === "request" ? "Submit request" : "Submit proposal"}
@@ -850,13 +853,23 @@ export const Default = () => {
                       {userState.role === "supplier" && (
                         <>
                           <QuietButton onClick={() => enterEditMode("proposal")}>Update proposal</QuietButton>
-                          <QuietButton onClick={acceptCustomerRequest}>Accept customer's latest request</QuietButton>
+                          <QuietButton 
+                            onClick={acceptCustomerRequest}
+                            disabled={acceptedItems.request}
+                          >
+                            Accept customer's latest request
+                          </QuietButton>
                         </>
                       )}
                       {userState.role === "customer" && (
                         <>
                           <QuietButton onClick={() => enterEditMode("request")}>Update request</QuietButton>
-                          <QuietButton onClick={acceptSupplierProposal}>Accept supplier's latest proposal</QuietButton>
+                          <QuietButton 
+                            onClick={acceptSupplierProposal}
+                            disabled={acceptedItems.proposal}
+                          >
+                            Accept supplier's latest proposal
+                          </QuietButton>
                         </>
                       )}
 
