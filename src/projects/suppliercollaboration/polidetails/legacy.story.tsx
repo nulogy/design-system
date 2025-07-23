@@ -194,28 +194,28 @@ export const Default = () => {
   // Function to submit updated proposal or request
   const submitUpdate = (mode: "request" | "proposal") => {
     exitEditMode();
-    
+
     // Always reset acceptance status for the item being updated
     if (mode === "request") {
-      setAcceptedItems(prev => ({ ...prev, request: false }));
+      setAcceptedItems((prev) => ({ ...prev, request: false }));
       // Customer updated their request, now awaiting supplier's response
-      setCollaborationState(prev => ({ ...prev, activeCardAuthorRole: "customer" }));
+      setCollaborationState((prev) => ({ ...prev, activeCardAuthorRole: "customer" }));
     } else if (mode === "proposal") {
-      setAcceptedItems(prev => ({ ...prev, proposal: false }));
+      setAcceptedItems((prev) => ({ ...prev, proposal: false }));
       // Supplier updated their proposal, now awaiting customer's response
-      setCollaborationState(prev => ({ ...prev, activeCardAuthorRole: "supplier" }));
+      setCollaborationState((prev) => ({ ...prev, activeCardAuthorRole: "supplier" }));
     }
-    
+
     toast.success(`${mode === "request" ? "Request" : "Proposal"} updated successfully`);
   };
 
   // Function to check if form has changes
   const hasChanges = (mode: "request" | "proposal") => {
     if (!originalFormValues) return false;
-    
+
     const currentValues = mode === "request" ? formData.request : formData.proposal;
     const originalValues = mode === "request" ? originalFormValues.request : originalFormValues.proposal;
-    
+
     return (
       currentValues.quantity !== originalValues.quantity ||
       currentValues.unit !== originalValues.unit ||
@@ -266,14 +266,20 @@ export const Default = () => {
               <StatusIndicator
                 alignSelf="center"
                 type={
-                  productionComplete || collaborationState.status === "accepted" || acceptedItems.request || acceptedItems.proposal
+                  productionComplete ||
+                  collaborationState.status === "accepted" ||
+                  acceptedItems.request ||
+                  acceptedItems.proposal
                     ? "success"
                     : collaborationState.activeCardAuthorRole !== userState.role
                       ? "warning"
                       : "quiet"
                 }
               >
-                {productionComplete || collaborationState.status === "accepted" || acceptedItems.request || acceptedItems.proposal ? (
+                {productionComplete ||
+                collaborationState.status === "accepted" ||
+                acceptedItems.request ||
+                acceptedItems.proposal ? (
                   "Accepted"
                 ) : collaborationState.activeCardAuthorRole === userState.role ? (
                   <TruncatedText fontSize="smaller" lineHeight="smallerText" fullWidth maxWidth="184px">
@@ -533,7 +539,9 @@ export const Default = () => {
                       <Text my="x1">1 square yards</Text>
                       <Text my="x1">Dec 12, 2024</Text>
                       <Text my="x1">1 USD</Text>
-                      <Text my="x1" minHeight="88px">Some note</Text>
+                      <Text my="x1" minHeight="88px">
+                        Some note
+                      </Text>
                     </Flex>
                   </Box>
 
@@ -562,38 +570,44 @@ export const Default = () => {
                           </Tooltip>
                         ) : (
                           <>
-                            {!acceptedItems.request && !acceptedItems.proposal && userState.role === "supplier" && collaborationState.activeCardAuthorRole === "customer" && (
-                              <Tooltip tooltip="Awaiting your response">
-                                <Box
-                                  backgroundColor="yellow"
-                                  borderRadius="medium"
-                                  p="x0_25"
-                                  width="x3"
-                                  height="x3"
-                                  display="flex"
-                                  alignItems="center"
-                                  justifyContent="center"
-                                >
-                                  <Icon icon="accessTime" size="x2_5" color="darkGrey" />
-                                </Box>
-                              </Tooltip>
-                            )}
-                            {!acceptedItems.request && !acceptedItems.proposal && userState.role === "customer" && collaborationState.activeCardAuthorRole === "customer" && (
-                              <Tooltip tooltip="Awaiting supplier's response">
-                                <Box
-                                  backgroundColor="whiteGrey"
-                                  borderRadius="medium"
-                                  p="x0_25"
-                                  width="x3"
-                                  height="x3"
-                                  display="flex"
-                                  alignItems="center"
-                                  justifyContent="center"
-                                >
-                                  <Icon icon="accessTime" size="x2_5" color="darkGrey" />
-                                </Box>
-                              </Tooltip>
-                            )}
+                            {!acceptedItems.request &&
+                              !acceptedItems.proposal &&
+                              userState.role === "supplier" &&
+                              collaborationState.activeCardAuthorRole === "customer" && (
+                                <Tooltip tooltip="Awaiting your response">
+                                  <Box
+                                    backgroundColor="yellow"
+                                    borderRadius="medium"
+                                    p="x0_25"
+                                    width="x3"
+                                    height="x3"
+                                    display="flex"
+                                    alignItems="center"
+                                    justifyContent="center"
+                                  >
+                                    <Icon icon="accessTime" size="x2_5" color="darkGrey" />
+                                  </Box>
+                                </Tooltip>
+                              )}
+                            {!acceptedItems.request &&
+                              !acceptedItems.proposal &&
+                              userState.role === "customer" &&
+                              collaborationState.activeCardAuthorRole === "customer" && (
+                                <Tooltip tooltip="Awaiting supplier's response">
+                                  <Box
+                                    backgroundColor="whiteGrey"
+                                    borderRadius="medium"
+                                    p="x0_25"
+                                    width="x3"
+                                    height="x3"
+                                    display="flex"
+                                    alignItems="center"
+                                    justifyContent="center"
+                                  >
+                                    <Icon icon="accessTime" size="x2_5" color="darkGrey" />
+                                  </Box>
+                                </Tooltip>
+                              )}
                           </>
                         )}
                       </Flex>
@@ -615,64 +629,89 @@ export const Default = () => {
                             <Box minWidth="140px" flex="1" maxWidth="280px">
                               <Input
                                 value={formData.request.quantity}
-                                onChange={(e) => setFormData(prev => ({ ...prev, request: { ...prev.request, quantity: e.target.value } }))}
+                                onChange={(e) =>
+                                  setFormData((prev) => ({
+                                    ...prev,
+                                    request: { ...prev.request, quantity: e.target.value },
+                                  }))
+                                }
                                 placeholder="Enter quantity"
                                 inputWidth="100%"
                               />
                             </Box>
-                            
-                              <Select
-                                options={[
-                                  { value: "square yards", label: "square yards" },
-                                  { value: "pieces", label: "pieces" },
-                                  { value: "meters", label: "meters" },
-                                  { value: "pounds", label: "pounds" },
-                                ]}
-                                value={formData.request.unit}
-                                onChange={(option) => setFormData(prev => ({ ...prev, request: { ...prev.request, unit: option as string } }))}
-                                width="100%"
-                                minWidth="100px"
-                                maxWidth="160px"
-                              />
-                            
+
+                            <Select
+                              options={[
+                                { value: "square yards", label: "square yards" },
+                                { value: "pieces", label: "pieces" },
+                                { value: "meters", label: "meters" },
+                                { value: "pounds", label: "pounds" },
+                              ]}
+                              value={formData.request.unit}
+                              onChange={(option) =>
+                                setFormData((prev) => ({
+                                  ...prev,
+                                  request: { ...prev.request, unit: option as string },
+                                }))
+                              }
+                              width="100%"
+                              minWidth="100px"
+                              maxWidth="160px"
+                            />
                           </Flex>
                           <Box width="100%">
                             <Input
                               value={formData.request.productionDueDate}
-                              onChange={(e) => setFormData(prev => ({ ...prev, request: { ...prev.request, productionDueDate: e.target.value } }))}
+                              onChange={(e) =>
+                                setFormData((prev) => ({
+                                  ...prev,
+                                  request: { ...prev.request, productionDueDate: e.target.value },
+                                }))
+                              }
                               placeholder="Enter production due date"
                               inputWidth="100%"
                             />
                           </Box>
                           <Flex gap="half" alignItems="center" width="100%">
-                          <Box minWidth="140px" maxWidth="280px" flex="1">
+                            <Box minWidth="140px" maxWidth="280px" flex="1">
                               <Input
                                 value={formData.request.unitPrice}
-                                onChange={(e) => setFormData(prev => ({ ...prev, request: { ...prev.request, unitPrice: e.target.value } }))}
+                                onChange={(e) =>
+                                  setFormData((prev) => ({
+                                    ...prev,
+                                    request: { ...prev.request, unitPrice: e.target.value },
+                                  }))
+                                }
                                 placeholder="Enter unit price"
                                 inputWidth="100%"
                               />
                             </Box>
-                           
-                              <Select
-                                options={[
-                                  { value: "USD", label: "USD" },
-                                  { value: "EUR", label: "EUR" },
-                                  { value: "GBP", label: "GBP" },
-                                  { value: "CAD", label: "CAD" },
-                                ]}
-                                value={formData.request.currency}
-                                onChange={(option) => setFormData(prev => ({ ...prev, request: { ...prev.request, currency: option as string } }))}
-                                width="100%"
-                                minWidth="100px"
-                                maxWidth="160px"
-                              />
 
+                            <Select
+                              options={[
+                                { value: "USD", label: "USD" },
+                                { value: "EUR", label: "EUR" },
+                                { value: "GBP", label: "GBP" },
+                                { value: "CAD", label: "CAD" },
+                              ]}
+                              value={formData.request.currency}
+                              onChange={(option) =>
+                                setFormData((prev) => ({
+                                  ...prev,
+                                  request: { ...prev.request, currency: option as string },
+                                }))
+                              }
+                              width="100%"
+                              minWidth="100px"
+                              maxWidth="160px"
+                            />
                           </Flex>
                           <Box width="100%">
                             <Input
                               value={formData.request.note}
-                              onChange={(e) => setFormData(prev => ({ ...prev, request: { ...prev.request, note: e.target.value } }))}
+                              onChange={(e) =>
+                                setFormData((prev) => ({ ...prev, request: { ...prev.request, note: e.target.value } }))
+                              }
                               placeholder="Enter note"
                               inputWidth="100%"
                             />
@@ -680,10 +719,16 @@ export const Default = () => {
                         </>
                       ) : (
                         <>
-                          <Text my="x1">{formData.request.quantity} {formData.request.unit}</Text>
+                          <Text my="x1">
+                            {formData.request.quantity} {formData.request.unit}
+                          </Text>
                           <Text my="x1">{formData.request.productionDueDate}</Text>
-                          <Text my="x1">{formData.request.unitPrice} {formData.request.currency}</Text>
-                          <Text my="x1" minHeight="88px">{formData.request.note}</Text>
+                          <Text my="x1">
+                            {formData.request.unitPrice} {formData.request.currency}
+                          </Text>
+                          <Text my="x1" minHeight="88px">
+                            {formData.request.note}
+                          </Text>
                         </>
                       )}
                     </Flex>
@@ -713,11 +758,27 @@ export const Default = () => {
                           </Tooltip>
                         ) : (
                           <>
-                            {!acceptedItems.request && !acceptedItems.proposal && (userState.role === "supplier" && collaborationState.activeCardAuthorRole === "supplier") || 
-                             (userState.role === "customer" && collaborationState.activeCardAuthorRole === "supplier") ? (
-                              <Tooltip tooltip={userState.role === "supplier" && collaborationState.activeCardAuthorRole === "supplier" ? "Awaiting customer's response" : "Awaiting your response"}>
+                            {(!acceptedItems.request &&
+                              !acceptedItems.proposal &&
+                              userState.role === "supplier" &&
+                              collaborationState.activeCardAuthorRole === "supplier") ||
+                            (userState.role === "customer" &&
+                              collaborationState.activeCardAuthorRole === "supplier") ? (
+                              <Tooltip
+                                tooltip={
+                                  userState.role === "supplier" &&
+                                  collaborationState.activeCardAuthorRole === "supplier"
+                                    ? "Awaiting customer's response"
+                                    : "Awaiting your response"
+                                }
+                              >
                                 <Box
-                                  backgroundColor={userState.role === "supplier" && collaborationState.activeCardAuthorRole === "supplier" ? "whiteGrey" : "yellow"}
+                                  backgroundColor={
+                                    userState.role === "supplier" &&
+                                    collaborationState.activeCardAuthorRole === "supplier"
+                                      ? "whiteGrey"
+                                      : "yellow"
+                                  }
                                   borderRadius="medium"
                                   p="x0_25"
                                   width="x3"
@@ -734,14 +795,35 @@ export const Default = () => {
                         )}
                       </Flex>
                       <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
-                        {supplierProposalMade 
-                          ? (userState.role === "customer" 
-                              ? <>by{" "}<Text as="span" fontSize="small" lineHeight="smallCompact" color="black">Supplier A.</Text>{" "}on{" "}<Text as="span" fontSize="small" lineHeight="smallCompact" color="black">February 6, 2025</Text></>
-                              : <>by{" "}<Text as="span" fontSize="small" lineHeight="smallCompact" color="black">you</Text>{" "}on{" "}<Text as="span" fontSize="small" lineHeight="smallCompact" color="black">February 6, 2025</Text></>)
-                          : (userState.role === "customer"
-                              ? "Supplier have not made a proposal yet"
-                              : "You have not made a proposal yet")
-                        }
+                        {supplierProposalMade ? (
+                          userState.role === "customer" ? (
+                            <>
+                              by{" "}
+                              <Text as="span" fontSize="small" lineHeight="smallCompact" color="black">
+                                Supplier A.
+                              </Text>{" "}
+                              on{" "}
+                              <Text as="span" fontSize="small" lineHeight="smallCompact" color="black">
+                                February 6, 2025
+                              </Text>
+                            </>
+                          ) : (
+                            <>
+                              by{" "}
+                              <Text as="span" fontSize="small" lineHeight="smallCompact" color="black">
+                                you
+                              </Text>{" "}
+                              on{" "}
+                              <Text as="span" fontSize="small" lineHeight="smallCompact" color="black">
+                                February 6, 2025
+                              </Text>
+                            </>
+                          )
+                        ) : userState.role === "customer" ? (
+                          "Supplier have not made a proposal yet"
+                        ) : (
+                          "You have not made a proposal yet"
+                        )}
                       </Text>
                     </Flex>
                     <Flex flexDirection="column" gap="x0_5">
@@ -751,12 +833,17 @@ export const Default = () => {
                             <Box minWidth="140px" flex="1" maxWidth="280px">
                               <Input
                                 value={formData.proposal.quantity}
-                                onChange={(e) => setFormData(prev => ({ ...prev, proposal: { ...prev.proposal, quantity: e.target.value } }))}
+                                onChange={(e) =>
+                                  setFormData((prev) => ({
+                                    ...prev,
+                                    proposal: { ...prev.proposal, quantity: e.target.value },
+                                  }))
+                                }
                                 placeholder="Enter quantity"
                                 inputWidth="100%"
                               />
                             </Box>
-                            
+
                             <Select
                               options={[
                                 { value: "square yards", label: "square yards" },
@@ -765,31 +852,45 @@ export const Default = () => {
                                 { value: "pounds", label: "pounds" },
                               ]}
                               value={formData.proposal.unit}
-                              onChange={(option) => setFormData(prev => ({ ...prev, proposal: { ...prev.proposal, unit: option as string } }))}
+                              onChange={(option) =>
+                                setFormData((prev) => ({
+                                  ...prev,
+                                  proposal: { ...prev.proposal, unit: option as string },
+                                }))
+                              }
                               width="100%"
                               minWidth="100px"
                               maxWidth="160px"
                             />
-                            
                           </Flex>
                           <Box width="100%">
                             <Input
                               value={formData.proposal.productionDueDate}
-                              onChange={(e) => setFormData(prev => ({ ...prev, proposal: { ...prev.proposal, productionDueDate: e.target.value } }))}
+                              onChange={(e) =>
+                                setFormData((prev) => ({
+                                  ...prev,
+                                  proposal: { ...prev.proposal, productionDueDate: e.target.value },
+                                }))
+                              }
                               placeholder="Enter production due date"
                               inputWidth="100%"
                             />
                           </Box>
                           <Flex gap="half" alignItems="center" width="100%">
-                           <Box minWidth="140px" maxWidth="280px" flex="1">
+                            <Box minWidth="140px" maxWidth="280px" flex="1">
                               <Input
                                 value={formData.proposal.unitPrice}
-                                onChange={(e) => setFormData(prev => ({ ...prev, proposal: { ...prev.proposal, unitPrice: e.target.value } }))}
+                                onChange={(e) =>
+                                  setFormData((prev) => ({
+                                    ...prev,
+                                    proposal: { ...prev.proposal, unitPrice: e.target.value },
+                                  }))
+                                }
                                 placeholder="Enter unit price"
                                 inputWidth="100%"
                               />
                             </Box>
-                            
+
                             <Select
                               options={[
                                 { value: "USD", label: "USD" },
@@ -798,17 +899,26 @@ export const Default = () => {
                                 { value: "CAD", label: "CAD" },
                               ]}
                               value={formData.proposal.currency}
-                              onChange={(option) => setFormData(prev => ({ ...prev, proposal: { ...prev.proposal, currency: option as string } }))}
+                              onChange={(option) =>
+                                setFormData((prev) => ({
+                                  ...prev,
+                                  proposal: { ...prev.proposal, currency: option as string },
+                                }))
+                              }
                               width="100%"
                               minWidth="100px"
                               maxWidth="160px"
                             />
- 
                           </Flex>
                           <Box width="100%">
                             <Input
                               value={formData.proposal.note}
-                              onChange={(e) => setFormData(prev => ({ ...prev, proposal: { ...prev.proposal, note: e.target.value } }))}
+                              onChange={(e) =>
+                                setFormData((prev) => ({
+                                  ...prev,
+                                  proposal: { ...prev.proposal, note: e.target.value },
+                                }))
+                              }
                               placeholder="Enter note"
                               inputWidth="100%"
                             />
@@ -816,9 +926,13 @@ export const Default = () => {
                         </>
                       ) : supplierProposalMade ? (
                         <>
-                          <Text my="x1">{formData.proposal.quantity} {formData.proposal.unit}</Text>
+                          <Text my="x1">
+                            {formData.proposal.quantity} {formData.proposal.unit}
+                          </Text>
                           <Text my="x1">{formData.proposal.productionDueDate}</Text>
-                          <Text my="x1">{formData.proposal.unitPrice} {formData.proposal.currency}</Text>
+                          <Text my="x1">
+                            {formData.proposal.unitPrice} {formData.proposal.currency}
+                          </Text>
                           <Text my="x1">{formData.proposal.note}</Text>
                         </>
                       ) : (
@@ -826,7 +940,9 @@ export const Default = () => {
                           <Text my="x1">-</Text>
                           <Text my="x1">-</Text>
                           <Text my="x1">-</Text>
-                          <Text my="x1" minHeight="88px">-</Text>
+                          <Text my="x1" minHeight="88px">
+                            -
+                          </Text>
                         </>
                       )}
                     </Flex>
@@ -839,10 +955,7 @@ export const Default = () => {
                 <Flex gap="x2" px="x2" pb="x1">
                   {editMode ? (
                     <>
-                      <PrimaryButton 
-                        onClick={() => submitUpdate(editMode)}
-                        disabled={!hasChanges(editMode)}
-                      >
+                      <PrimaryButton onClick={() => submitUpdate(editMode)} disabled={!hasChanges(editMode)}>
                         {editMode === "request" ? "Submit request" : "Submit proposal"}
                       </PrimaryButton>
                       <QuietButton onClick={exitEditMode}>Cancel</QuietButton>
@@ -853,10 +966,7 @@ export const Default = () => {
                       {userState.role === "supplier" && (
                         <>
                           <QuietButton onClick={() => enterEditMode("proposal")}>Update proposal</QuietButton>
-                          <QuietButton 
-                            onClick={acceptCustomerRequest}
-                            disabled={acceptedItems.request}
-                          >
+                          <QuietButton onClick={acceptCustomerRequest} disabled={acceptedItems.request}>
                             Accept customer's latest request
                           </QuietButton>
                         </>
@@ -864,15 +974,11 @@ export const Default = () => {
                       {userState.role === "customer" && (
                         <>
                           <QuietButton onClick={() => enterEditMode("request")}>Update request</QuietButton>
-                          <QuietButton 
-                            onClick={acceptSupplierProposal}
-                            disabled={acceptedItems.proposal}
-                          >
+                          <QuietButton onClick={acceptSupplierProposal} disabled={acceptedItems.proposal}>
                             Accept supplier's latest proposal
                           </QuietButton>
                         </>
                       )}
-
                     </>
                   )}
                 </Flex>
