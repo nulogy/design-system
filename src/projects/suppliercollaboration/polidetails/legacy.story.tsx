@@ -39,6 +39,8 @@ import {
   Checkbox,
   List,
   ListItem,
+  DropdownMenu,
+  DropdownButton,
 } from "../../..";
 import { POLICard } from "./components/POLICard";
 
@@ -232,6 +234,11 @@ export const Default = () => {
     setOriginalFormValues(null);
   };
 
+  // Function to handle cancel PO line item
+  const handleCancelPOLineItem = () => {
+    toast.success("PO line item cancelled successfully");
+  };
+
   return (
     <ApplicationFrame>
       <ToastContainer />
@@ -260,6 +267,14 @@ export const Default = () => {
         )}
         title="12345678"
         subtitle="12345678 – PR 24 SEPHORA ONLINE DELUXE OCT"
+        renderActions={() => (
+          <Flex gap="x2" alignItems="center">
+            <IconicButton icon="chatBubble" aria-label="Comments" onClick={() => openSidebar("comments")} />
+            <DropdownMenu>
+              <DropdownButton onClick={handleCancelPOLineItem}>Cancel PO line item</DropdownButton>
+            </DropdownMenu>
+          </Flex>
+        )}
         renderSummary={() => (
           <Summary breakpoint={1200}>
             <Flex flexDirection="column" gap="half" alignItems="center" width="200px" justifyContent="center">
@@ -385,10 +400,6 @@ export const Default = () => {
         <Flex justifyContent="flex-end" alignItems="center" gap="x2" mb="x3">
           <IconicButton icon="edit" aria-label="Edit" onClick={() => openSidebar("edit")}>
             Edit
-          </IconicButton>
-          <VerticalDivider />
-          <IconicButton icon="chatBubble" aria-label="Comments" onClick={() => openSidebar("comments")}>
-            Comments
           </IconicButton>
         </Flex>
         <Box mb="x3" pl="x3">
