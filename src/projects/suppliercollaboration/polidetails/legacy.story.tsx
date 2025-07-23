@@ -1,16 +1,13 @@
-import React, { useState, useRef, useEffect, useMemo } from "react";
+import React, { useState } from "react";
 import { toast, Tooltip } from "../../..";
 import {
   Box,
   Flex,
   Text,
-  Heading2,
-  Heading3,
   Heading4,
   Icon,
   QuietButton,
   PrimaryButton,
-  Button,
   DescriptionList,
   DescriptionGroup,
   DescriptionTerm,
@@ -22,26 +19,19 @@ import {
   Breadcrumbs,
   Link,
   Sidebar,
-  Modal,
-  ButtonGroup,
   IconicButton,
   VerticalDivider,
   ToastContainer,
   BrandedNavBar,
   Divider,
-  Pagination,
   Tab,
   Tabs,
-  Table,
   Input,
-  Textarea,
-  AsyncSelect,
   Card,
   StatusIndicator,
   TruncatedText,
   Header,
   Summary,
-  SummaryItem,
   SummaryDivider,
   DatePicker,
   Switcher,
@@ -79,69 +69,61 @@ const loadOptions = (inputValue, callback) => {
 
 export const Default = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const cardsRowRef = useRef(null);
-  const scrollContainerRef = useRef(null);
 
   // Sidebar state
   const [sidebarState, setSidebarState] = useState({
-    filters: false,
     edit: false,
     comments: false,
-    newProposal: false,
   });
 
   // Collaboration state
   const [collaborationState, setCollaborationState] = useState({
     status: "awaiting" as "awaiting" | "accepted",
-    showAcceptedCard: false,
-    hasNewCard: false,
-    activeCardAuthorRole: null as "supplier" | "customer" | null,
+    activeCardAuthorRole: "supplier" as "supplier" | "customer" | null,
   });
 
   // User state
   const [userState, setUserState] = useState({
     role: "supplier" as "supplier" | "customer",
-    viewMode: "supplier" as "supplier" | "customer",
   });
 
   // Production complete state
   const [productionComplete, setProductionComplete] = useState(false);
+
+  // Supplier's proposal made state
+  const [supplierProposalMade, setSupplierProposalMade] = useState(false);
+
+  // Edit mode state
+  const [editMode, setEditMode] = useState<"request" | "proposal" | null>(null);
 
   // PO status state
   const [poStatus, setPoStatus] = useState("At risk" as "Late" | "Completed" | "At risk" | "On time" | "Cancelled");
 
   // Form data
   const [formData, setFormData] = useState({
-    newProposal: {
-      quantity: "100",
-      uom: "cases",
-      productionDueDate: new Date("2024-01-01"),
-      unitPrice: "2.99",
-      currency: "USD",
-      changeReason: "",
-      changeNote: "",
-    },
     edit: {
-      poNumber: "4000023874",
-      customerItemCode: "12345678",
-      customerItemDescription: "PR 24 SEPHORA ONLINE DELUXE OCT",
-      customerPOLineItemNumber: "12345",
       supplierPOLineItemNumber: "23453",
-      creationDate: new Date("2024-01-01"),
-      customer: "MyCustomer",
       bomRevision: "Revision 2",
-      bomReleaseDate: new Date("2025-02-28"),
       needByDate: new Date("2024-01-01"),
-      shipTo: "MySupplier TO",
       carryOverSentTo: "",
-      shortCloseReason: "",
+    },
+    request: {
+      quantity: "1 square yards",
+      unit: "square yards",
+      productionDueDate: "Dec 12, 2024",
+      unitPrice: "1 USD",
+      currency: "USD",
+      note: "Some note",
+    },
+    proposal: {
+      quantity: "1.5 square yards",
+      unit: "square yards",
+      productionDueDate: "Dec 15, 2024",
+      unitPrice: "1.25 USD",
+      currency: "USD",
+      note: "Updated proposal with better pricing",
     },
   });
-
-  // Helper functions
-  const formatDateForDisplay = (date: Date) => {
-    return date.toISOString().split("T")[0];
-  };
 
   // Sidebar functions
   const openSidebar = (sidebar: keyof typeof sidebarState) => {
@@ -436,12 +418,316 @@ export const Default = () => {
         </Box>
         <Tabs selectedIndex={selectedIndex} onTabClick={(e, index) => setSelectedIndex(index)}>
           <Tab label="Collaboration">
-            <Box p="x4">
-              <Text>
-                Same as exisitng design with some label edits to reflect the lables on index page. Also Original request
-                will be added.
-              </Text>
-            </Box>
+            <Card p="x1" mt="x3">
+              <Flex flexDirection="column" gap="x2" justifyContent="space-between">
+                {/* Requested production vs Supplier's proposal comparison */}
+                <Flex gap="x4" p="x2">
+                  <Flex flexDirection="column" gap="x2_5" mt="x9" minWidth="180px">
+                    <Text fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
+                      Quantity
+                    </Text>
+                    <Text fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
+                      Production due date
+                    </Text>
+                    <Text fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
+                      Unit price
+                    </Text>
+                    <Text fontSize="small" lineHeight="smallRelaxed" fontWeight="bold" minHeight="72px">
+                      Note
+                    </Text>
+                  </Flex>
+
+                  {/* Original request */}
+                  <Box minWidth="440px">
+                    <Flex flexDirection="column" gap="x0_25" mb="x3">
+                      <Heading4 mb="0">
+                        {userState.role === "customer" ? "Your original request" : "Customer's original request"}
+                      </Heading4>
+                      <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
+                        by{" "}
+                        <Text as="span" fontSize="small" lineHeight="smallCompact" color="black">
+                          John D.
+                        </Text>{" "}
+                        on{" "}
+                        <Text as="span" fontSize="small" lineHeight="smallCompact" color="black">
+                          January 24, 2025
+                        </Text>
+                      </Text>
+                    </Flex>
+                    <Flex flexDirection="column" gap="x2_5">
+                      <Text>1 square yards</Text>
+                      <Text>Dec 12, 2024</Text>
+                      <Text>1 USD</Text>
+                      <Text>Some note</Text>
+                    </Flex>
+                  </Box>
+
+                  {/* Customer's latest request */}
+                  <Box minWidth="440px">
+                    <Flex flexDirection="column" gap="x0_25" mb="x3">
+                      <Flex alignItems="center" gap="x1">
+                        <Heading4 mb="0">
+                          {userState.role === "customer" ? "Your latest request" : "Customer's latest request"}
+                        </Heading4>
+
+                        {userState.role === "supplier" && collaborationState.activeCardAuthorRole === "customer" && (
+                          <Tooltip tooltip="Awaiting your response">
+                            <Box
+                              backgroundColor="yellow"
+                              borderRadius="medium"
+                              p="x0_25"
+                              width="x3"
+                              height="x3"
+                              display="flex"
+                              alignItems="center"
+                              justifyContent="center"
+                            >
+                              <Icon icon="accessTime" size="x2_5" color="darkGrey" />
+                            </Box>
+                          </Tooltip>
+                        )}
+                        {userState.role === "customer" && collaborationState.activeCardAuthorRole === "customer" && (
+                          <Tooltip tooltip="Awaiting supplier's response">
+                            <Box
+                              backgroundColor="whiteGrey"
+                              borderRadius="medium"
+                              p="x0_25"
+                              width="x3"
+                              height="x3"
+                              display="flex"
+                              alignItems="center"
+                              justifyContent="center"
+                            >
+                              <Icon icon="accessTime" size="x2_5" color="darkGrey" />
+                            </Box>
+                          </Tooltip>
+                        )}
+                      </Flex>
+                      <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
+                        by{" "}
+                        <Text as="span" fontSize="small" lineHeight="smallCompact" color="black">
+                          John D.
+                        </Text>{" "}
+                        on{" "}
+                        <Text as="span" fontSize="small" lineHeight="smallCompact" color="black">
+                          February 5, 2025
+                        </Text>
+                      </Text>
+                    </Flex>
+                    <Flex flexDirection="column" gap={editMode === "request" ? "x0_5" : "x2_5"}>
+                      {editMode === "request" ? (
+                        <>
+                          <Flex gap="half" alignItems="center">
+                            <Input
+                              value={formData.request.quantity}
+                              onChange={(e) => setFormData(prev => ({ ...prev, request: { ...prev.request, quantity: e.target.value } }))}
+                              placeholder="Enter quantity"
+                              width="61.8%"
+                            />
+                            <Select
+                              options={[
+                                { value: "square yards", label: "square yards" },
+                                { value: "pieces", label: "pieces" },
+                                { value: "meters", label: "meters" },
+                                { value: "pounds", label: "pounds" },
+                              ]}
+                              value={formData.request.unit}
+                              onChange={(option) => setFormData(prev => ({ ...prev, request: { ...prev.request, unit: option as string } }))}
+                              width="38.2%"
+                            />
+                          </Flex>
+                          <Input
+                            value={formData.request.productionDueDate}
+                            onChange={(e) => setFormData(prev => ({ ...prev, request: { ...prev.request, productionDueDate: e.target.value } }))}
+                            placeholder="Enter production due date"
+                          />
+                          <Flex gap="half" alignItems="center">
+                            <Input
+                              value={formData.request.unitPrice}
+                              onChange={(e) => setFormData(prev => ({ ...prev, request: { ...prev.request, unitPrice: e.target.value } }))}
+                              placeholder="Enter unit price"
+                              width="61.8%"
+                            />
+                            <Select
+                              options={[
+                                { value: "USD", label: "USD" },
+                                { value: "EUR", label: "EUR" },
+                                { value: "GBP", label: "GBP" },
+                                { value: "CAD", label: "CAD" },
+                              ]}
+                              value={formData.request.currency}
+                              onChange={(option) => setFormData(prev => ({ ...prev, request: { ...prev.request, currency: option as string } }))}
+                              width="38.2%"
+                            />
+                          </Flex>
+                          <Input
+                            value={formData.request.note}
+                            onChange={(e) => setFormData(prev => ({ ...prev, request: { ...prev.request, note: e.target.value } }))}
+                            placeholder="Enter note"
+                          />
+                        </>
+                      ) : (
+                        <>
+                          <Text>{formData.request.quantity} {formData.request.unit}</Text>
+                          <Text>{formData.request.productionDueDate}</Text>
+                          <Text>{formData.request.unitPrice} {formData.request.currency}</Text>
+                          <Text>{formData.request.note}</Text>
+                        </>
+                      )}
+                    </Flex>
+                  </Box>
+
+                  {/* Supplier's latest proposal */}
+                  <Box minWidth="440px">
+                    <Flex flexDirection="column" gap="x0_25" mb="x3">
+                      <Flex alignItems="center" gap="x1">
+                        <Heading4 mb="0">
+                          {userState.role === "customer" ? "Supplier's latest proposal" : "Your latest proposal"}
+                        </Heading4>
+                        {(userState.role === "supplier" && collaborationState.activeCardAuthorRole === "supplier") || 
+                         (userState.role === "customer" && collaborationState.activeCardAuthorRole === "supplier") ? (
+                          <Tooltip tooltip={userState.role === "supplier" && collaborationState.activeCardAuthorRole === "supplier" ? "Awaiting customer's response" : "Awaiting your response"}>
+                            <Box
+                              backgroundColor={userState.role === "supplier" && collaborationState.activeCardAuthorRole === "supplier" ? "whiteGrey" : "yellow"}
+                              borderRadius="medium"
+                              p="x0_25"
+                              width="x3"
+                              height="x3"
+                              display="flex"
+                              alignItems="center"
+                              justifyContent="center"
+                            >
+                              <Icon icon="accessTime" size="x2_5" color="darkGrey" />
+                            </Box>
+                          </Tooltip>
+                        ) : null}
+                      </Flex>
+                      <Text color="midGrey" fontSize="small" lineHeight="smallCompact" fontStyle="italic">
+                        {supplierProposalMade 
+                          ? (userState.role === "customer" 
+                              ? "by Supplier A. on February 6, 2025" 
+                              : "by you on February 6, 2025")
+                          : (userState.role === "customer"
+                              ? "Supplier have not made a proposal yet"
+                              : "You have not made a proposal yet")
+                        }
+                      </Text>
+                    </Flex>
+                    <Flex flexDirection="column" gap={editMode === "proposal" ? "x0_5" : "x2_5"}>
+                      {supplierProposalMade ? (
+                        editMode === "proposal" ? (
+                          <>
+                            <Flex gap="half" alignItems="center">
+                              <Input
+                                value={formData.proposal.quantity}
+                                onChange={(e) => setFormData(prev => ({ ...prev, proposal: { ...prev.proposal, quantity: e.target.value } }))}
+                                placeholder="Enter quantity"
+                                width="61.8%"
+                              />
+                              <Select
+                                options={[
+                                  { value: "square yards", label: "square yards" },
+                                  { value: "pieces", label: "pieces" },
+                                  { value: "meters", label: "meters" },
+                                  { value: "pounds", label: "pounds" },
+                                ]}
+                                value={formData.proposal.unit}
+                                onChange={(option) => setFormData(prev => ({ ...prev, proposal: { ...prev.proposal, unit: option as string } }))}
+                                width="38.2%"
+                              />
+                            </Flex>
+                            <Input
+                              value={formData.proposal.productionDueDate}
+                              onChange={(e) => setFormData(prev => ({ ...prev, proposal: { ...prev.proposal, productionDueDate: e.target.value } }))}
+                              placeholder="Enter production due date"
+                            />
+                            <Flex gap="half" alignItems="center">
+                              <Input
+                                value={formData.proposal.unitPrice}
+                                onChange={(e) => setFormData(prev => ({ ...prev, proposal: { ...prev.proposal, unitPrice: e.target.value } }))}
+                                placeholder="Enter unit price"
+                                width="61.8%"
+                              />
+                              <Select
+                                options={[
+                                  { value: "USD", label: "USD" },
+                                  { value: "EUR", label: "EUR" },
+                                  { value: "GBP", label: "GBP" },
+                                  { value: "CAD", label: "CAD" },
+                                ]}
+                                value={formData.proposal.currency}
+                                onChange={(option) => setFormData(prev => ({ ...prev, proposal: { ...prev.proposal, currency: option as string } }))}
+                                width="38.2%"
+                              />
+                            </Flex>
+                            <Input
+                              value={formData.proposal.note}
+                              onChange={(e) => setFormData(prev => ({ ...prev, proposal: { ...prev.proposal, note: e.target.value } }))}
+                              placeholder="Enter note"
+                            />
+                          </>
+                        ) : (
+                          <>
+                            <Text>{formData.proposal.quantity} {formData.proposal.unit}</Text>
+                            <Text>{formData.proposal.productionDueDate}</Text>
+                            <Text>{formData.proposal.unitPrice} {formData.proposal.currency}</Text>
+                            <Text>{formData.proposal.note}</Text>
+                          </>
+                        )
+                      ) : (
+                        <>
+                          <Text>-</Text>
+                          <Text>-</Text>
+                          <Text>-</Text>
+                          <Text>-</Text>
+                        </>
+                      )}
+                    </Flex>
+                  </Box>
+                </Flex>
+
+                <Divider m="0" p="0" />
+
+                {/* Action buttons */}
+                <Flex gap="x2" px="x2" pb="x1">
+                  {editMode ? (
+                    <>
+                      <PrimaryButton onClick={() => setEditMode(null)}>
+                        {editMode === "request" ? "Submit request" : "Submit proposal"}
+                      </PrimaryButton>
+                      <QuietButton onClick={() => setEditMode(null)}>Cancel</QuietButton>
+                    </>
+                  ) : (
+                    <>
+                      {userState.role === "supplier" && collaborationState.activeCardAuthorRole === "supplier" && (
+                        <>
+                          <QuietButton onClick={() => setEditMode("proposal")}>Update proposal</QuietButton>
+                          <QuietButton>Accept customer's latest request</QuietButton>
+                        </>
+                      )}
+                      {userState.role === "customer" && collaborationState.activeCardAuthorRole === "customer" && (
+                        <>
+                          <QuietButton onClick={() => setEditMode("request")}>Update request</QuietButton>
+                          <QuietButton>Accept supplier's latest proposal</QuietButton>
+                        </>
+                      )}
+                      {userState.role === "supplier" && collaborationState.activeCardAuthorRole === "customer" && (
+                        <>
+                          <PrimaryButton>Accept request</PrimaryButton>
+                          <QuietButton onClick={() => setEditMode("proposal")}>Update proposal</QuietButton>
+                        </>
+                      )}
+                      {userState.role === "customer" && collaborationState.activeCardAuthorRole === "supplier" && (
+                        <>
+                          <PrimaryButton>Accept proposal</PrimaryButton>
+                          <QuietButton onClick={() => setEditMode("request")}>Update request</QuietButton>
+                        </>
+                      )}
+                    </>
+                  )}
+                </Flex>
+              </Flex>
+            </Card>
           </Tab>
           <Tab label="Production records">
             <Box p="x4">
@@ -541,6 +827,15 @@ export const Default = () => {
                 checked={productionComplete}
                 onChange={(e) => setProductionComplete(e.target.checked)}
                 labelText="Production complete"
+              />
+            </Flex>
+            <VerticalDivider />
+            <Flex gap="x1" justifyContent="center" alignItems="center" width="200px">
+              <Checkbox
+                id="supplierProposalMade"
+                checked={supplierProposalMade}
+                onChange={(e) => setSupplierProposalMade(e.target.checked)}
+                labelText="Supplier's proposal made"
               />
             </Flex>
           </Flex>
