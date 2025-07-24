@@ -1152,38 +1152,36 @@ export const Default = () => {
             onChange={(e) => setFormData((prev) => ({ ...prev, edit: { ...prev.edit, bomRevision: e.target.value } }))}
           />
 
-                      {/* Need by date - editable */}
-            <Flex flexDirection="column" gap="x1">
-              <FieldLabel htmlFor="needByDate" labelText="Need by date" />
-              <Box>
-                <DatePicker
-                  id="needByDate"
-                  selected={formData.edit.needByDate}
-                  onChange={(date) => setFormData((prev) => ({ ...prev, edit: { ...prev.edit, needByDate: date } }))}
-                />
-              </Box>
-            </Flex>
+          {/* Need by date - editable */}
+          <Flex flexDirection="column" gap="x1">
+            <FieldLabel htmlFor="needByDate" labelText="Need by date" />
+            <Box>
+              <DatePicker
+                id="needByDate"
+                selected={formData.edit.needByDate}
+                onChange={(date) => setFormData((prev) => ({ ...prev, edit: { ...prev.edit, needByDate: date } }))}
+              />
+            </Box>
+          </Flex>
 
-            {/* Assigned tags checkbox group */}
-            <CheckboxGroup
-              labelText="Assigned tags"
-              name="assignedTags"
-              checkedValue={[
-                ...(assignedTags.validatedForAssembly ? ["validatedForAssembly"] : []),
-                ...(assignedTags.expressShipment ? ["expressShipment"] : []),
-              ]}
-              onChange={(values) => {
-                setAssignedTags({
-                  validatedForAssembly: values.includes("validatedForAssembly"),
-                  expressShipment: values.includes("expressShipment"),
-                });
-              }}
-            >
-              <Checkbox value="validatedForAssembly" labelText="Validated for assembly" />
-              <Checkbox value="expressShipment" labelText="Express shipment" />
-            </CheckboxGroup>
-
-
+          {/* Assigned tags checkbox group */}
+          <CheckboxGroup
+            labelText="Assigned tags"
+            name="assignedTags"
+            checkedValue={[
+              ...(assignedTags.validatedForAssembly ? ["validatedForAssembly"] : []),
+              ...(assignedTags.expressShipment ? ["expressShipment"] : []),
+            ]}
+            onChange={(values) => {
+              setAssignedTags({
+                validatedForAssembly: values.includes("validatedForAssembly"),
+                expressShipment: values.includes("expressShipment"),
+              });
+            }}
+          >
+            <Checkbox value="validatedForAssembly" labelText="Validated for assembly" />
+            <Checkbox value="expressShipment" labelText="Express shipment" />
+          </CheckboxGroup>
         </Flex>
       </Sidebar>
     </ApplicationFrame>
