@@ -41,6 +41,8 @@ import {
   ListItem,
   DropdownMenu,
   DropdownButton,
+  CheckboxGroup,
+  Textarea,
 } from "../../..";
 import { POLICard } from "./components/POLICard";
 
@@ -113,6 +115,12 @@ export const Default = () => {
     proposal: false,
   });
 
+  // Assigned tags state
+  const [assignedTags, setAssignedTags] = useState({
+    validatedForAssembly: false,
+    expressShipment: false,
+  });
+
   // PO status state
   const [poStatus, setPoStatus] = useState("At risk" as "Late" | "Completed" | "At risk" | "On time" | "Cancelled");
 
@@ -122,7 +130,7 @@ export const Default = () => {
       supplierPOLineItemNumber: "23453",
       bomRevision: "Revision 2",
       needByDate: new Date("2024-01-01"),
-      carryOverSentTo: "",
+      closeProductionNote: "Production completed successfully",
     },
     request: {
       quantity: "1 square yards",
@@ -305,10 +313,10 @@ export const Default = () => {
                 )}
               </StatusIndicator>
               <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
+                For{" "}
                 <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
                   2 days
-                </Text>{" "}
-                ago
+                </Text>
               </Text>
             </Flex>
             <SummaryDivider />
@@ -498,12 +506,6 @@ export const Default = () => {
                   </DescriptionTerm>
                   <DescriptionDetails>Production completed successfully</DescriptionDetails>
                 </DescriptionGroup>
-                <DescriptionGroup>
-                  <DescriptionTerm>
-                    <Text color="darkGrey">Carry over sent to</Text>
-                  </DescriptionTerm>
-                  <DescriptionDetails>{formData.edit.carryOverSentTo || "N/A"}</DescriptionDetails>
-                </DescriptionGroup>
               </>
             )}
           </DescriptionList>
@@ -513,7 +515,7 @@ export const Default = () => {
             <Card p="x1" mt="x3">
               <Flex flexDirection="column" gap="x2" justifyContent="space-between">
                 {/* Requested production vs Supplier's proposal comparison */}
-                <Flex gap="x3" p="x2">
+                <Flex gap="x3" p="x2" pb="0">
                   <Flex flexDirection="column" gap="x0_5" mt="x9" pl="x2_5" flex={1} maxWidth="440px" minWidth="256px">
                     <Text fontSize="small" lineHeight="smallRelaxed" fontWeight="bold" my="x1">
                       Quantity
@@ -718,13 +720,13 @@ export const Default = () => {
                             />
                           </Flex>
                           <Box width="100%">
-                            <Input
+                            <Textarea
                               value={formData.request.note}
                               onChange={(e) =>
                                 setFormData((prev) => ({ ...prev, request: { ...prev.request, note: e.target.value } }))
                               }
                               placeholder="Enter note"
-                              inputWidth="100%"
+                              rows={4}
                             />
                           </Box>
                         </>
@@ -922,7 +924,7 @@ export const Default = () => {
                             />
                           </Flex>
                           <Box width="100%">
-                            <Input
+                            <Textarea
                               value={formData.proposal.note}
                               onChange={(e) =>
                                 setFormData((prev) => ({
@@ -931,7 +933,7 @@ export const Default = () => {
                                 }))
                               }
                               placeholder="Enter note"
-                              inputWidth="100%"
+                              rows={4}
                             />
                           </Box>
                         </>
@@ -1150,32 +1152,38 @@ export const Default = () => {
             onChange={(e) => setFormData((prev) => ({ ...prev, edit: { ...prev.edit, bomRevision: e.target.value } }))}
           />
 
-          {/* Need by date - editable */}
-          <Flex flexDirection="column" gap="x1">
-            <FieldLabel htmlFor="needByDate" labelText="Need by date" />
-            <Box>
-              <DatePicker
-                id="needByDate"
-                selected={formData.edit.needByDate}
-                onChange={(date) => setFormData((prev) => ({ ...prev, edit: { ...prev.edit, needByDate: date } }))}
-              />
-            </Box>
-          </Flex>
+                      {/* Need by date - editable */}
+            <Flex flexDirection="column" gap="x1">
+              <FieldLabel htmlFor="needByDate" labelText="Need by date" />
+              <Box>
+                <DatePicker
+                  id="needByDate"
+                  selected={formData.edit.needByDate}
+                  onChange={(date) => setFormData((prev) => ({ ...prev, edit: { ...prev.edit, needByDate: date } }))}
+                />
+              </Box>
+            </Flex>
 
-          {/* Production complete fields */}
-          {productionComplete && (
-            <>
-              {/* Carry over sent to - editable */}
-              <Input
-                labelText="Carry over sent to"
-                id="carryOverSentTo"
-                value={formData.edit.carryOverSentTo}
-                onChange={(e) =>
-                  setFormData((prev) => ({ ...prev, edit: { ...prev.edit, carryOverSentTo: e.target.value } }))
-                }
-              />
-            </>
-          )}
+            {/* Assigned tags checkbox group */}
+            <CheckboxGroup
+              labelText="Assigned tags"
+              name="assignedTags"
+              checkedValue={[
+                ...(assignedTags.validatedForAssembly ? ["validatedForAssembly"] : []),
+                ...(assignedTags.expressShipment ? ["expressShipment"] : []),
+              ]}
+              onChange={(values) => {
+                setAssignedTags({
+                  validatedForAssembly: values.includes("validatedForAssembly"),
+                  expressShipment: values.includes("expressShipment"),
+                });
+              }}
+            >
+              <Checkbox value="validatedForAssembly" labelText="Validated for assembly" />
+              <Checkbox value="expressShipment" labelText="Express shipment" />
+            </CheckboxGroup>
+
+
         </Flex>
       </Sidebar>
     </ApplicationFrame>
