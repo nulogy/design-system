@@ -131,6 +131,7 @@ export const Default = () => {
       bomRevision: "Revision 2",
       needByDate: new Date("2024-01-01"),
       closeProductionNote: "Production completed successfully",
+      carryOverSentTo: "",
     },
     request: {
       quantity: "1 square yards",
@@ -505,6 +506,12 @@ export const Default = () => {
                     <Text color="darkGrey">Close production note</Text>
                   </DescriptionTerm>
                   <DescriptionDetails>Production completed successfully</DescriptionDetails>
+                </DescriptionGroup>
+                <DescriptionGroup>
+                  <DescriptionTerm>
+                    <Text color="darkGrey">Carry over sent to</Text>
+                  </DescriptionTerm>
+                  <DescriptionDetails>{formData.edit.carryOverSentTo || "-"}</DescriptionDetails>
                 </DescriptionGroup>
               </>
             )}
