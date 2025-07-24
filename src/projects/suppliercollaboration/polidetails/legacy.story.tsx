@@ -136,7 +136,7 @@ export const Default = () => {
     request: {
       quantity: "1 square yards",
       unit: "square yards",
-      productionDueDate: "Dec 12, 2024",
+      productionDueDate: "2024-Dec-12",
       unitPrice: "1 USD",
       currency: "USD",
       note: "Some note",
@@ -144,7 +144,7 @@ export const Default = () => {
     proposal: {
       quantity: "1.5 square yards",
       unit: "square yards",
-      productionDueDate: "Dec 15, 2024",
+      productionDueDate: "2024-Dec-15",
       unitPrice: "1.25 USD",
       currency: "USD",
       note: "Updated proposal with better pricing",
@@ -557,7 +557,7 @@ export const Default = () => {
                     </Flex>
                     <Flex flexDirection="column" gap="x0_5">
                       <Text my="x1">1 square yards</Text>
-                      <Text my="x1">Dec 12, 2024</Text>
+                      <Text my="x1">2024-Dec-12</Text>
                       <Text my="x1">1 USD</Text>
                       <Text my="x1" minHeight="88px">
                         Some note
@@ -645,8 +645,43 @@ export const Default = () => {
                     <Flex flexDirection="column" gap="x0_5">
                       {editMode === "request" ? (
                         <>
-                          <Flex gap="half" alignItems="center" width="100%">
-                            <Box minWidth="140px" flex="1" maxWidth="280px">
+                          {userState.role === "supplier" ? (
+                            <Flex gap="half" alignItems="center" width="100%">
+                              <Box minWidth="140px" flex="1" maxWidth="280px">
+                                <Input
+                                  value={formData.request.quantity}
+                                  onChange={(e) =>
+                                    setFormData((prev) => ({
+                                      ...prev,
+                                      request: { ...prev.request, quantity: e.target.value },
+                                    }))
+                                  }
+                                  placeholder="Enter quantity"
+                                  inputWidth="100%"
+                                />
+                              </Box>
+
+                              <Select
+                                options={[
+                                  { value: "square yards", label: "square yards" },
+                                  { value: "pieces", label: "pieces" },
+                                  { value: "meters", label: "meters" },
+                                  { value: "pounds", label: "pounds" },
+                                ]}
+                                value={formData.request.unit}
+                                onChange={(option) =>
+                                  setFormData((prev) => ({
+                                    ...prev,
+                                    request: { ...prev.request, unit: option as string },
+                                  }))
+                                }
+                                width="100%"
+                                minWidth="100px"
+                                maxWidth="160px"
+                              />
+                            </Flex>
+                          ) : (
+                            <Box width="100%">
                               <Input
                                 value={formData.request.quantity}
                                 onChange={(e) =>
@@ -656,29 +691,11 @@ export const Default = () => {
                                   }))
                                 }
                                 placeholder="Enter quantity"
-                                inputWidth="100%"
+                                suffix={formData.request.unit}
+                                suffixWidth="160px"
                               />
                             </Box>
-
-                            <Select
-                              options={[
-                                { value: "square yards", label: "square yards" },
-                                { value: "pieces", label: "pieces" },
-                                { value: "meters", label: "meters" },
-                                { value: "pounds", label: "pounds" },
-                              ]}
-                              value={formData.request.unit}
-                              onChange={(option) =>
-                                setFormData((prev) => ({
-                                  ...prev,
-                                  request: { ...prev.request, unit: option as string },
-                                }))
-                              }
-                              width="100%"
-                              minWidth="100px"
-                              maxWidth="160px"
-                            />
-                          </Flex>
+                          )}
                           <Box width="100%">
                             <Input
                               value={formData.request.productionDueDate}
@@ -692,40 +709,20 @@ export const Default = () => {
                               inputWidth="100%"
                             />
                           </Box>
-                          <Flex gap="half" alignItems="center" width="100%">
-                            <Box minWidth="140px" maxWidth="280px" flex="1">
-                              <Input
-                                value={formData.request.unitPrice}
-                                onChange={(e) =>
-                                  setFormData((prev) => ({
-                                    ...prev,
-                                    request: { ...prev.request, unitPrice: e.target.value },
-                                  }))
-                                }
-                                placeholder="Enter unit price"
-                                inputWidth="100%"
-                              />
-                            </Box>
-
-                            <Select
-                              options={[
-                                { value: "USD", label: "USD" },
-                                { value: "EUR", label: "EUR" },
-                                { value: "GBP", label: "GBP" },
-                                { value: "CAD", label: "CAD" },
-                              ]}
-                              value={formData.request.currency}
-                              onChange={(option) =>
+                          <Box width="100%">
+                            <Input
+                              value={formData.request.unitPrice}
+                              onChange={(e) =>
                                 setFormData((prev) => ({
                                   ...prev,
-                                  request: { ...prev.request, currency: option as string },
+                                  request: { ...prev.request, unitPrice: e.target.value },
                                 }))
                               }
-                              width="100%"
-                              minWidth="100px"
-                              maxWidth="160px"
+                              placeholder="Enter unit price"
+                              suffix={formData.request.currency}
+                              suffixWidth="160px"
                             />
-                          </Flex>
+                          </Box>
                           <Box width="100%">
                             <Textarea
                               value={formData.request.note}
@@ -849,8 +846,43 @@ export const Default = () => {
                     <Flex flexDirection="column" gap="x0_5">
                       {editMode === "proposal" ? (
                         <>
-                          <Flex gap="half" alignItems="center" width="100%">
-                            <Box minWidth="140px" flex="1" maxWidth="280px">
+                          {userState.role === "supplier" ? (
+                            <Flex gap="half" alignItems="center" width="100%">
+                              <Box minWidth="140px" flex="1" maxWidth="280px">
+                                <Input
+                                  value={formData.proposal.quantity}
+                                  onChange={(e) =>
+                                    setFormData((prev) => ({
+                                      ...prev,
+                                      proposal: { ...prev.proposal, quantity: e.target.value },
+                                    }))
+                                  }
+                                  placeholder="Enter quantity"
+                                  inputWidth="100%"
+                                />
+                              </Box>
+
+                              <Select
+                                options={[
+                                  { value: "square yards", label: "square yards" },
+                                  { value: "pieces", label: "pieces" },
+                                  { value: "meters", label: "meters" },
+                                  { value: "pounds", label: "pounds" },
+                                ]}
+                                value={formData.proposal.unit}
+                                onChange={(option) =>
+                                  setFormData((prev) => ({
+                                    ...prev,
+                                    proposal: { ...prev.proposal, unit: option as string },
+                                  }))
+                                }
+                                width="100%"
+                                minWidth="100px"
+                                maxWidth="160px"
+                              />
+                            </Flex>
+                          ) : (
+                            <Box width="100%">
                               <Input
                                 value={formData.proposal.quantity}
                                 onChange={(e) =>
@@ -860,29 +892,11 @@ export const Default = () => {
                                   }))
                                 }
                                 placeholder="Enter quantity"
-                                inputWidth="100%"
+                                suffix={formData.proposal.unit}
+                                suffixWidth="160px"
                               />
                             </Box>
-
-                            <Select
-                              options={[
-                                { value: "square yards", label: "square yards" },
-                                { value: "pieces", label: "pieces" },
-                                { value: "meters", label: "meters" },
-                                { value: "pounds", label: "pounds" },
-                              ]}
-                              value={formData.proposal.unit}
-                              onChange={(option) =>
-                                setFormData((prev) => ({
-                                  ...prev,
-                                  proposal: { ...prev.proposal, unit: option as string },
-                                }))
-                              }
-                              width="100%"
-                              minWidth="100px"
-                              maxWidth="160px"
-                            />
-                          </Flex>
+                          )}
                           <Box width="100%">
                             <Input
                               value={formData.proposal.productionDueDate}
@@ -896,40 +910,20 @@ export const Default = () => {
                               inputWidth="100%"
                             />
                           </Box>
-                          <Flex gap="half" alignItems="center" width="100%">
-                            <Box minWidth="140px" maxWidth="280px" flex="1">
-                              <Input
-                                value={formData.proposal.unitPrice}
-                                onChange={(e) =>
-                                  setFormData((prev) => ({
-                                    ...prev,
-                                    proposal: { ...prev.proposal, unitPrice: e.target.value },
-                                  }))
-                                }
-                                placeholder="Enter unit price"
-                                inputWidth="100%"
-                              />
-                            </Box>
-
-                            <Select
-                              options={[
-                                { value: "USD", label: "USD" },
-                                { value: "EUR", label: "EUR" },
-                                { value: "GBP", label: "GBP" },
-                                { value: "CAD", label: "CAD" },
-                              ]}
-                              value={formData.proposal.currency}
-                              onChange={(option) =>
+                          <Box width="100%">
+                            <Input
+                              value={formData.proposal.unitPrice}
+                              onChange={(e) =>
                                 setFormData((prev) => ({
                                   ...prev,
-                                  proposal: { ...prev.proposal, currency: option as string },
+                                  proposal: { ...prev.proposal, unitPrice: e.target.value },
                                 }))
                               }
-                              width="100%"
-                              minWidth="100px"
-                              maxWidth="160px"
+                              placeholder="Enter unit price"
+                              suffix={formData.proposal.currency}
+                              suffixWidth="160px"
                             />
-                          </Flex>
+                          </Box>
                           <Box width="100%">
                             <Textarea
                               value={formData.proposal.note}
@@ -1159,36 +1153,40 @@ export const Default = () => {
             onChange={(e) => setFormData((prev) => ({ ...prev, edit: { ...prev.edit, bomRevision: e.target.value } }))}
           />
 
-          {/* Need by date - editable */}
-          <Flex flexDirection="column" gap="x1">
-            <FieldLabel htmlFor="needByDate" labelText="Need by date" />
-            <Box>
-              <DatePicker
-                id="needByDate"
-                selected={formData.edit.needByDate}
-                onChange={(date) => setFormData((prev) => ({ ...prev, edit: { ...prev.edit, needByDate: date } }))}
-              />
-            </Box>
-          </Flex>
+          {/* Need by date - editable only by customer */}
+          {userState.role === "customer" && (
+            <Flex flexDirection="column" gap="x1">
+              <FieldLabel htmlFor="needByDate" labelText="Need by date" />
+              <Box>
+                <DatePicker
+                  id="needByDate"
+                  selected={formData.edit.needByDate}
+                  onChange={(date) => setFormData((prev) => ({ ...prev, edit: { ...prev.edit, needByDate: date } }))}
+                />
+              </Box>
+            </Flex>
+          )}
 
-          {/* Assigned tags checkbox group */}
-          <CheckboxGroup
-            labelText="Assigned tags"
-            name="assignedTags"
-            checkedValue={[
-              ...(assignedTags.validatedForAssembly ? ["validatedForAssembly"] : []),
-              ...(assignedTags.expressShipment ? ["expressShipment"] : []),
-            ]}
-            onChange={(values) => {
-              setAssignedTags({
-                validatedForAssembly: values.includes("validatedForAssembly"),
-                expressShipment: values.includes("expressShipment"),
-              });
-            }}
-          >
-            <Checkbox value="validatedForAssembly" labelText="Validated for assembly" />
-            <Checkbox value="expressShipment" labelText="Express shipment" />
-          </CheckboxGroup>
+          {/* Assigned tags checkbox group - editable only by customer */}
+          {userState.role === "customer" && (
+            <CheckboxGroup
+              labelText="Assigned tags"
+              name="assignedTags"
+              checkedValue={[
+                ...(assignedTags.validatedForAssembly ? ["validatedForAssembly"] : []),
+                ...(assignedTags.expressShipment ? ["expressShipment"] : []),
+              ]}
+              onChange={(values) => {
+                setAssignedTags({
+                  validatedForAssembly: values.includes("validatedForAssembly"),
+                  expressShipment: values.includes("expressShipment"),
+                });
+              }}
+            >
+              <Checkbox value="validatedForAssembly" labelText="Validated for assembly" />
+              <Checkbox value="expressShipment" labelText="Express shipment" />
+            </CheckboxGroup>
+          )}
         </Flex>
       </Sidebar>
     </ApplicationFrame>
