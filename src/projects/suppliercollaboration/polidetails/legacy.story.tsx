@@ -134,18 +134,18 @@ export const Default = () => {
       carryOverSentTo: "",
     },
     request: {
-      quantity: "1 square yards",
+      quantity: "1",
       unit: "square yards",
       productionDueDate: "2024-Dec-12",
-      unitPrice: "1 USD",
+      unitPrice: "1",
       currency: "USD",
       note: "Some note",
     },
     proposal: {
-      quantity: "1.5 square yards",
+      quantity: "1.5",
       unit: "square yards",
       productionDueDate: "2024-Dec-15",
-      unitPrice: "1.25 USD",
+      unitPrice: "1.25",
       currency: "USD",
       note: "Updated proposal with better pricing",
     },
@@ -656,7 +656,7 @@ export const Default = () => {
                                       request: { ...prev.request, quantity: e.target.value },
                                     }))
                                   }
-                                  placeholder="Enter quantity"
+                                  placeholder="1"
                                   inputWidth="100%"
                                 />
                               </Box>
@@ -690,7 +690,7 @@ export const Default = () => {
                                     request: { ...prev.request, quantity: e.target.value },
                                   }))
                                 }
-                                placeholder="Enter quantity"
+                                placeholder="1"
                                 suffix={formData.request.unit}
                                 suffixWidth="160px"
                               />
@@ -718,7 +718,7 @@ export const Default = () => {
                                   request: { ...prev.request, unitPrice: e.target.value },
                                 }))
                               }
-                              placeholder="Enter unit price"
+                              placeholder="1"
                               suffix={formData.request.currency}
                               suffixWidth="160px"
                             />
@@ -857,7 +857,7 @@ export const Default = () => {
                                       proposal: { ...prev.proposal, quantity: e.target.value },
                                     }))
                                   }
-                                  placeholder="Enter quantity"
+                                  placeholder="1"
                                   inputWidth="100%"
                                 />
                               </Box>
@@ -891,7 +891,7 @@ export const Default = () => {
                                     proposal: { ...prev.proposal, quantity: e.target.value },
                                   }))
                                 }
-                                placeholder="Enter quantity"
+                                placeholder="1"
                                 suffix={formData.proposal.unit}
                                 suffixWidth="160px"
                               />
@@ -919,7 +919,7 @@ export const Default = () => {
                                   proposal: { ...prev.proposal, unitPrice: e.target.value },
                                 }))
                               }
-                              placeholder="Enter unit price"
+                              placeholder="1"
                               suffix={formData.proposal.currency}
                               suffixWidth="160px"
                             />
