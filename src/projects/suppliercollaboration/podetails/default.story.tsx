@@ -43,6 +43,7 @@ import {
   DropdownButton,
   CheckboxGroup,
   Textarea,
+  Table,
 } from "../../..";
 
 export default {
@@ -55,7 +56,7 @@ export default {
 const breadcrumbs = (
   <Breadcrumbs>
     <Link href="#">Home</Link>
-    <Link href="#">PO line items</Link>
+    <Link href="#">Purchase orders</Link>
   </Breadcrumbs>
 );
 
@@ -73,30 +74,24 @@ const loadOptions = (inputValue, callback) => {
 export const Default = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
-  // Sidebar state
   const [sidebarState, setSidebarState] = useState({
     edit: false,
     comments: false,
   });
 
-  // User state
   const [userState, setUserState] = useState({
     role: "supplier" as "supplier" | "customer",
   });
 
-  // Production complete state
   const [productionComplete, setProductionComplete] = useState(false);
 
-  // Assigned tags state
   const [assignedTags, setAssignedTags] = useState({
     validatedForAssembly: false,
     expressShipment: false,
   });
 
-  // PO status state
   const [poStatus, setPoStatus] = useState("At risk" as "Late" | "Completed" | "At risk" | "On time" | "Cancelled");
 
-  // Form data
   const [formData, setFormData] = useState({
     edit: {
       supplierPOLineItemNumber: "23453",
@@ -107,7 +102,194 @@ export const Default = () => {
     },
   });
 
-  // Sidebar functions
+  const lineItemsColumns = [
+    {
+      label: "",
+      dataKey: "comments",
+      width: "40px",
+      headerFormatter: () => (
+        <Box width="100%" textAlign="center" px="x0_5" py="x1">
+          <Text fontSize="smaller" fontWeight="bold">
+            <Icon icon="chatBubble" size="x2_5" />
+          </Text>
+        </Box>
+      ),
+      cellRenderer: () => (
+        <Box width="100%" textAlign="center" pr="x0_5" py="x0_75">
+          <Text fontSize="small" lineHeight="smallTextCompressed">
+            0
+          </Text>
+        </Box>
+      ),
+    },
+    {
+      label: "",
+      dataKey: "attachments",
+      width: "40px",
+      headerFormatter: () => (
+        <Box width="100%" textAlign="center" px="x0_5" py="x1">
+          <Text fontSize="smaller" fontWeight="bold">
+            <Icon icon="attachment" size="x2_5" />
+          </Text>
+        </Box>
+      ),
+      cellRenderer: () => (
+        <Box width="100%" textAlign="center" pr="x0_5" py="x0_75">
+          <Text fontSize="small" lineHeight="smallTextCompressed">
+            0
+          </Text>
+        </Box>
+      ),
+    },
+    {
+      label: "PO line item number",
+      dataKey: "poLineItemNumber",
+      width: "200px",
+      headerFormatter: () => (
+        <Box px="x1" pt="x1_25" pb="x0_75">
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            PO line item number
+          </Text>
+        </Box>
+      ),
+      cellRenderer: ({ cellData }: { cellData: any }) => (
+        <Box px="x1" py="x0_75" width="100%">
+          <Link href="#" underline={false} color="black" hover="blue">
+            <TruncatedText
+              fontSize="small"
+              lineHeight="smallTextCompressed"
+              maxCharacters={100}
+              style={{
+                display: "-webkit-box",
+                WebkitLineClamp: 2,
+                WebkitBoxOrient: "vertical",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+                width: "100%",
+                maxHeight: "32px",
+                cursor: "pointer",
+                lineHeight: "16px",
+                position: "relative",
+              }}
+            >
+              {cellData}
+            </TruncatedText>
+          </Link>
+        </Box>
+      ),
+    },
+    {
+      label: "Item code and description",
+      dataKey: "itemCodeAndDescription",
+      width: "320px",
+      headerFormatter: () => (
+        <Box px="x1" pt="x1_25" pb="x0_75">
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            Item code and description
+          </Text>
+        </Box>
+      ),
+      cellRenderer: ({ row }: { row: any }) => (
+        <Flex px="x1" py="x0_75" gap="x0_25" flexDirection="column">
+          <Link href="#" underline={false} color="black" hover="blue" style={{ display: "block", maxWidth: "152px" }}>
+            <TruncatedText fullWidth width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
+              {row.customerItemCode}
+            </TruncatedText>
+          </Link>
+          <TruncatedText maxWidth="304px" fullWidth fontSize="small" lineHeight="smallTextCompressed">
+            {row.customerItemDescription}
+          </TruncatedText>
+        </Flex>
+      ),
+    },
+    {
+      label: "Problems and risks",
+      dataKey: "problemsAndRisks",
+      width: "184px",
+      headerFormatter: () => (
+        <Box px="x1" pt="x1_25" pb="x0_75">
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            Problems and risks
+          </Text>
+        </Box>
+      ),
+      cellRenderer: ({ cellData }: { cellData: any }) => (
+        <Flex flexWrap="wrap" gap="x0_25" px="x1" py="x0_75">
+          {cellData === "At risk" && <StatusIndicator type="warning">{cellData}</StatusIndicator>}
+          {cellData === "Late" && <StatusIndicator type="danger">{cellData}</StatusIndicator>}
+        </Flex>
+      ),
+    },
+    {
+      label: "Collaboration status",
+      dataKey: "collaborationStatus",
+      width: "200px",
+      headerFormatter: () => (
+        <Box px="x1" pt="x1_25" pb="x0_75">
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            Collaboration status
+          </Text>
+        </Box>
+      ),
+      cellRenderer: ({ cellData }: { cellData: any }) => (
+        <Flex px="x1" py="x0_25" width="100%">
+          {cellData === "accepted" && (
+            <StatusIndicator type="quiet" mt="x0_5">
+              Accepted
+            </StatusIndicator>
+          )}
+          {cellData === "awaiting" && userState.role === "supplier" && (
+            <StatusIndicator type="warning" mt="x4" mb="x0_5">
+              Awaiting your response
+            </StatusIndicator>
+          )}
+          {cellData === "awaiting" && userState.role === "customer" && (
+            <StatusIndicator type="quiet" mt="x0_5">
+              Awaiting supplier response
+            </StatusIndicator>
+          )}
+          {cellData === "draft" && userState.role === "supplier" && (
+            <StatusIndicator type="quiet" mt="x0_5">
+              Awaiting customer response
+            </StatusIndicator>
+          )}
+          {cellData === "draft" && userState.role === "customer" && (
+            <StatusIndicator type="warning" mt="x4" mb="x0_5">
+              Awaiting your response
+            </StatusIndicator>
+          )}
+        </Flex>
+      ),
+    },
+  ];
+
+  const lineItemsRows = [
+    {
+      id: "1",
+      poLineItemNumber: "PO-2024-001-12345",
+      customerItemCode: "12345678",
+      customerItemDescription: "PR 24 SEPHORA ONLINE DELUXE OCT",
+      problemsAndRisks: "At risk",
+      collaborationStatus: "awaiting",
+    },
+    {
+      id: "2",
+      poLineItemNumber: "PO-2024-002-12346",
+      customerItemCode: "87654321",
+      customerItemDescription: "PR 24 SEPHORA ONLINE DELUXE NOV",
+      problemsAndRisks: "",
+      collaborationStatus: "accepted",
+    },
+    {
+      id: "3",
+      poLineItemNumber: "PO-2024-003-12347",
+      customerItemCode: "11111111",
+      customerItemDescription: "PR 24 SEPHORA ONLINE DELUXE DEC",
+      problemsAndRisks: "Late",
+      collaborationStatus: "draft",
+    },
+  ];
+
   const openSidebar = (sidebar: keyof typeof sidebarState) => {
     setSidebarState((prev) => ({ ...prev, [sidebar]: true }));
   };
@@ -116,7 +298,6 @@ export const Default = () => {
     setSidebarState((prev) => ({ ...prev, [sidebar]: false }));
   };
 
-  // Function to handle cancel PO line item
   const handleCancelPOLineItem = () => {
     toast.success("PO line item cancelled successfully");
   };
@@ -144,14 +325,12 @@ export const Default = () => {
         renderBreadcrumbs={() => (
           <Breadcrumbs>
             <Link href="#">Home</Link>
-            <Link href="#">PO line items</Link>
+            <Link href="#">Purchase orders</Link>
           </Breadcrumbs>
         )}
         title="12345678"
-        subtitle="12345678 – PR 24 SEPHORA ONLINE DELUXE OCT"
         renderActions={() => (
           <Flex gap="x2" alignItems="center">
-            <IconicButton icon="chatBubble" aria-label="Comments" onClick={() => openSidebar("comments")} />
             <DropdownMenu>
               <DropdownButton onClick={handleCancelPOLineItem}>Cancel PO line item</DropdownButton>
             </DropdownMenu>
@@ -160,8 +339,8 @@ export const Default = () => {
         renderSummary={() => (
           <Summary breakpoint={1200}>
             <Flex flexDirection="column" gap="half" alignItems="center" width="200px" justifyContent="center">
-              <StatusIndicator alignSelf="center" type={productionComplete ? "success" : "quiet"}>
-                {productionComplete ? "Completed" : "In Progress"}
+              <StatusIndicator alignSelf="center" type="warning">
+                Requires your response
               </StatusIndicator>
               <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
                 For{" "}
@@ -170,237 +349,72 @@ export const Default = () => {
                 </Text>
               </Text>
             </Flex>
-            <SummaryDivider />
-            <Flex flexDirection="column" gap="x0_5" width="200px" justifyContent="center">
-              <Tooltip
-                tooltip={
-                  <Box>
-                    <Text fontSize="small" lineHeight="smallRelaxed">
-                      12,000 / 15,000 eaches
-                    </Text>
-                  </Box>
-                }
-              >
-                <Box height="x1" mt="x1" mb="x0_25" width="100%" backgroundColor="blue" borderRadius="medium" />
-              </Tooltip>
-
-              <Flex justifyContent={productionComplete ? "space-between" : "center"}>
-                <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                  <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
-                    90%
-                  </Text>{" "}
-                  produced
-                </Text>
-
-                {productionComplete && <StatusIndicator type="quiet">Completed</StatusIndicator>}
-              </Flex>
-            </Flex>
-            <SummaryDivider />
-            <Flex flexDirection="column" gap="half" width="200px" pt="x0_5" alignItems="center" justifyContent="center">
-              {poStatus === "Late" && (
-                <>
-                  <StatusIndicator alignSelf="center" type="danger">
-                    Late
-                  </StatusIndicator>
-                  <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                    <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
-                      7 days
-                    </Text>{" "}
-                    past due date
-                  </Text>
-                </>
-              )}
-              {poStatus === "At risk" && (
-                <>
-                  <StatusIndicator alignSelf="center" type="warning">
-                    At risk
-                  </StatusIndicator>
-                  <TruncatedText fullWidth fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                    Current milestone 5 days late, previous 10 days late.
-                  </TruncatedText>
-                </>
-              )}
-              {poStatus === "Completed" && (
-                <>
-                  <StatusIndicator alignSelf="center" type="quiet">
-                    Completed
-                  </StatusIndicator>
-                  <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                    on 2025-Jan-24
-                  </Text>
-                </>
-              )}
-              {poStatus === "Cancelled" && (
-                <>
-                  <StatusIndicator alignSelf="center" type="quiet">
-                    Cancelled
-                  </StatusIndicator>
-                  <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                    on 2025-Feb-22
-                  </Text>
-                </>
-              )}
-              {poStatus === "On time" && (
-                <>
-                  <StatusIndicator alignSelf="center" type="success">
-                    On time
-                  </StatusIndicator>
-                  <TruncatedText fullWidth fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                    Previous milestone completed 2 days ahead of time. Current milestone 12 days till due date.
-                  </TruncatedText>
-                </>
-              )}
-            </Flex>
           </Summary>
         )}
       />
       <Page>
-        {/* Action bar above details */}
         <Flex justifyContent="flex-end" alignItems="center" gap="x2" mb="x3">
           <IconicButton icon="edit" aria-label="Edit" onClick={() => openSidebar("edit")}>
             Edit
           </IconicButton>
         </Flex>
         <Box mb="x3" pl="x3">
-          <DescriptionList layout="stacked" columns={{ extraSmall: 1, small: 2, medium: 3, large: 5 }}>
+          <DescriptionList layout="stacked" columns={{ extraSmall: 1, small: 2, medium: 3, large: 6 }}>
             <DescriptionGroup>
               <DescriptionTerm>
-                <Text color="darkGrey">PO number</Text>
+                <Text color="darkGrey">Purchase order number</Text>
               </DescriptionTerm>
-              <DescriptionDetails>
-                <Link underline={false}>4000023874</Link>
-              </DescriptionDetails>
+              <DescriptionDetails>12345678</DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
-                <Text color="darkGrey">Customer's PO line item number</Text>
+                <Text color="darkGrey">External ID</Text>
               </DescriptionTerm>
-              <DescriptionDetails>12345</DescriptionDetails>
+              <DescriptionDetails>TestNov29b</DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
-                <Text color="darkGrey">Supplier's PO line item number</Text>
+                <Text color="darkGrey">Type</Text>
               </DescriptionTerm>
-              <DescriptionDetails>23453</DescriptionDetails>
+              <DescriptionDetails>FIRM</DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
-                <Text color="darkGrey">Created on</Text>
+                <Text color="darkGrey">Supplier</Text>
               </DescriptionTerm>
-              <DescriptionDetails>2025-Feb-01</DescriptionDetails>
+              <DescriptionDetails>Cosmetics Manufacturer 2</DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
-                <Text color="darkGrey">{userState.role === "supplier" ? "Customer" : "Supplier"}</Text>
+                <Text color="darkGrey">Currency</Text>
               </DescriptionTerm>
-              <DescriptionDetails>MyCustomer</DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Customer's item code and description</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Link underline={false}>12345678 – PR 24 SEPHORA ONLINE DELUXE OCT</Link>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Supplier's item code</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>SUP-123456</DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Item order type</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Text>Standard</Text>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">BOM revision and release date</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Text>Revision 2 – 2025-Feb-28</Text>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Production start date</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Text>2025-Feb-20</Text>
-              </DescriptionDetails>
+              <DescriptionDetails>USD</DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
                 <Text color="darkGrey">Ship to</Text>
               </DescriptionTerm>
-              <DescriptionDetails>
-                <Text>MySupplier TO</Text>
-              </DescriptionDetails>
+              <DescriptionDetails>-</DescriptionDetails>
             </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Need by date</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Text>2025-Feb-28</Text>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            {productionComplete && (
-              <>
-                <DescriptionGroup>
-                  <DescriptionTerm>
-                    <Text color="darkGrey">Close production note</Text>
-                  </DescriptionTerm>
-                  <DescriptionDetails>Production completed successfully</DescriptionDetails>
-                </DescriptionGroup>
-                <DescriptionGroup>
-                  <DescriptionTerm>
-                    <Text color="darkGrey">Carry over sent to</Text>
-                  </DescriptionTerm>
-                  <DescriptionDetails>{formData.edit.carryOverSentTo || "-"}</DescriptionDetails>
-                </DescriptionGroup>
-              </>
-            )}
           </DescriptionList>
         </Box>
         <Tabs selectedIndex={selectedIndex} onTabClick={(e, index) => setSelectedIndex(index)}>
-          <Tab label="Collaboration">
+          <Tab label="Line items">
             <Box p="x4">
-              <Text>Collaboration content will go here</Text>
-            </Box>
-          </Tab>
-          <Tab label="Production records">
-            <Box p="x4">
-              <Text>Record report that surfaces:</Text>
-              <List mt="x2">
-                <ListItem>Next production date</ListItem>
-                <ListItem>Close production note</ListItem>
-                <ListItem>Carry over sent to</ListItem>
-                <ListItem>Production start date</ListItem>
-              </List>
-            </Box>
-          </Tab>
-          <Tab label="Attachments">
-            <Box p="x4">
-              <Text>No changes</Text>
-            </Box>
-          </Tab>
-          <Tab label="Milestone performance">
-            <Box p="x4">
-              <Text>No changes</Text>
+              <Table columns={lineItemsColumns} rows={lineItemsRows} compact rowBorder />
             </Box>
           </Tab>
           <Tab label="History log">
             <Box p="x4">
-              <Text>No changes</Text>
+              <Text>History log content will go here</Text>
+            </Box>
+          </Tab>
+          <Tab label="Attachments">
+            <Box p="x4">
+              <Text>Attachments content will go here</Text>
             </Box>
           </Tab>
         </Tabs>
-        {/* Floating Settings Panel */}
         <Box
           position="fixed"
           bottom="x1"
@@ -426,7 +440,6 @@ export const Default = () => {
         </Box>
       </Page>
 
-      {/* Edit Sidebar */}
       <Sidebar
         isOpen={sidebarState.edit}
         onClose={() => closeSidebar("edit")}
@@ -446,7 +459,6 @@ export const Default = () => {
         }
       >
         <Flex flexDirection="column" gap="x3" py="x1">
-          {/* Supplier's PO line item number - editable only by supplier */}
           {userState.role === "supplier" && (
             <Input
               labelText="Supplier's PO line item number"
@@ -458,7 +470,6 @@ export const Default = () => {
             />
           )}
 
-          {/* BOM revision and release date - editable */}
           <Input
             labelText="BOM revision and release date - Use fancy 2 row select"
             id="bomRevision"
@@ -467,7 +478,6 @@ export const Default = () => {
             onChange={(e) => setFormData((prev) => ({ ...prev, edit: { ...prev.edit, bomRevision: e.target.value } }))}
           />
 
-          {/* Need by date - editable only by customer */}
           {userState.role === "customer" && (
             <Flex flexDirection="column" gap="x1">
               <FieldLabel htmlFor="needByDate" labelText="Need by date" />
@@ -481,7 +491,6 @@ export const Default = () => {
             </Flex>
           )}
 
-          {/* Assigned tags checkbox group - editable only by customer */}
           {userState.role === "customer" && (
             <CheckboxGroup
               labelText="Assigned tags"
