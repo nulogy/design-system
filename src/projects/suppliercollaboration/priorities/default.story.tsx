@@ -34,7 +34,7 @@ import {
   Tab,
   Alert,
   Modal,
-  BrandedNavBar
+  BrandedNavBar,
 } from "../../..";
 
 export default {
@@ -63,7 +63,7 @@ const PrioritiesPage = () => {
       status: "Active",
       priorityDisplay: { priority: 1, status: "Active" },
       descriptionDisplay: { description: "Critical", status: "Active" },
-      statusDisplay: { status: "Active" }
+      statusDisplay: { status: "Active" },
     },
     {
       id: "2",
@@ -72,7 +72,7 @@ const PrioritiesPage = () => {
       status: "Active",
       priorityDisplay: { priority: 2, status: "Active" },
       descriptionDisplay: { description: "High", status: "Active" },
-      statusDisplay: { status: "Active" }
+      statusDisplay: { status: "Active" },
     },
     {
       id: "3",
@@ -81,7 +81,7 @@ const PrioritiesPage = () => {
       status: "Inactive",
       priorityDisplay: { priority: 3, status: "Inactive" },
       descriptionDisplay: { description: "Wwwwwwwwwwwwwwwwwwwwwwwwwwwwww", status: "Inactive" },
-      statusDisplay: { status: "Inactive" }
+      statusDisplay: { status: "Inactive" },
     },
     {
       id: "4",
@@ -90,7 +90,7 @@ const PrioritiesPage = () => {
       status: "Inactive",
       priorityDisplay: { priority: 4, status: "Inactive" },
       descriptionDisplay: { description: "Low", status: "Inactive" },
-      statusDisplay: { status: "Inactive" }
+      statusDisplay: { status: "Inactive" },
     },
     {
       id: "5",
@@ -99,7 +99,7 @@ const PrioritiesPage = () => {
       status: "Active",
       priorityDisplay: { priority: 5, status: "Active" },
       descriptionDisplay: { description: "Very Low", status: "Active" },
-      statusDisplay: { status: "Active" }
+      statusDisplay: { status: "Active" },
     },
     {
       id: "6",
@@ -108,7 +108,7 @@ const PrioritiesPage = () => {
       status: "Inactive",
       priorityDisplay: { priority: 6, status: "Inactive" },
       descriptionDisplay: { description: "Minimal", status: "Inactive" },
-      statusDisplay: { status: "Inactive" }
+      statusDisplay: { status: "Inactive" },
     },
     {
       id: "7",
@@ -117,7 +117,7 @@ const PrioritiesPage = () => {
       status: "Active",
       priorityDisplay: { priority: 7, status: "Active" },
       descriptionDisplay: { description: "Routine", status: "Active" },
-      statusDisplay: { status: "Active" }
+      statusDisplay: { status: "Active" },
     },
     {
       id: "8",
@@ -126,7 +126,7 @@ const PrioritiesPage = () => {
       status: "Active",
       priorityDisplay: { priority: 8, status: "Active" },
       descriptionDisplay: { description: "Standard", status: "Active" },
-      statusDisplay: { status: "Active" }
+      statusDisplay: { status: "Active" },
     },
     {
       id: "9",
@@ -135,7 +135,7 @@ const PrioritiesPage = () => {
       status: "Active",
       priorityDisplay: { priority: 9, status: "Active" },
       descriptionDisplay: { description: "Basic", status: "Active" },
-      statusDisplay: { status: "Active" }
+      statusDisplay: { status: "Active" },
     },
     {
       id: "10",
@@ -144,8 +144,8 @@ const PrioritiesPage = () => {
       status: "Active",
       priorityDisplay: { priority: 10, status: "Active" },
       descriptionDisplay: { description: "Optional", status: "Active" },
-      statusDisplay: { status: "Active" }
-    }
+      statusDisplay: { status: "Active" },
+    },
   ]);
 
   const [editingPriority, setEditingPriority] = useState<WorkOrderPriority | null>(null);
@@ -161,13 +161,7 @@ const PrioritiesPage = () => {
 
   const handleSavePriority = () => {
     if (editingPriority) {
-      setPriorities(prev => 
-        prev.map(p => 
-          p.id === editingPriority.id 
-            ? editingPriority
-            : p
-        )
-      );
+      setPriorities((prev) => prev.map((p) => (p.id === editingPriority.id ? editingPriority : p)));
       setEditingPriority(null);
       setShowEditSidebar(false);
       toast.success("Priority updated successfully");
@@ -198,23 +192,23 @@ const PrioritiesPage = () => {
       setShowDeactivateModal(true);
     } else {
       // Activate immediately
-      setPriorities(prev =>
-        prev.map(p =>
+      setPriorities((prev) =>
+        prev.map((p) =>
           p.id === priority.id
             ? {
                 ...p,
                 status: "Active",
-                priorityDisplay: { 
-                  priority: p.priority, 
-                  status: "Active" 
+                priorityDisplay: {
+                  priority: p.priority,
+                  status: "Active",
                 },
-                descriptionDisplay: { 
-                  description: p.description, 
-                  status: "Active" 
+                descriptionDisplay: {
+                  description: p.description,
+                  status: "Active",
                 },
-                statusDisplay: { 
-                  status: "Active" 
-                }
+                statusDisplay: {
+                  status: "Active",
+                },
               }
             : p
         )
@@ -225,23 +219,23 @@ const PrioritiesPage = () => {
 
   const handleConfirmDeactivate = () => {
     if (deactivatingPriority) {
-      setPriorities(prev =>
-        prev.map(p =>
+      setPriorities((prev) =>
+        prev.map((p) =>
           p.id === deactivatingPriority.id
             ? {
                 ...p,
                 status: "Inactive",
-                priorityDisplay: { 
-                  priority: p.priority, 
-                  status: "Inactive" 
+                priorityDisplay: {
+                  priority: p.priority,
+                  status: "Inactive",
                 },
-                descriptionDisplay: { 
-                  description: p.description, 
-                  status: "Inactive" 
+                descriptionDisplay: {
+                  description: p.description,
+                  status: "Inactive",
                 },
-                statusDisplay: { 
-                  status: "Inactive" 
-                }
+                statusDisplay: {
+                  status: "Inactive",
+                },
               }
             : p
         )
@@ -265,7 +259,7 @@ const PrioritiesPage = () => {
       status: "Inactive",
       priorityDisplay: { priority: 1, status: "Inactive" },
       descriptionDisplay: { description: "P1", status: "Inactive" },
-      statusDisplay: { status: "Inactive" }
+      statusDisplay: { status: "Inactive" },
     },
     {
       id: "2",
@@ -274,7 +268,7 @@ const PrioritiesPage = () => {
       status: "Inactive",
       priorityDisplay: { priority: 2, status: "Inactive" },
       descriptionDisplay: { description: "P2", status: "Inactive" },
-      statusDisplay: { status: "Inactive" }
+      statusDisplay: { status: "Inactive" },
     },
     {
       id: "3",
@@ -283,7 +277,7 @@ const PrioritiesPage = () => {
       status: "Inactive",
       priorityDisplay: { priority: 3, status: "Inactive" },
       descriptionDisplay: { description: "P3", status: "Inactive" },
-      statusDisplay: { status: "Inactive" }
+      statusDisplay: { status: "Inactive" },
     },
     {
       id: "4",
@@ -292,7 +286,7 @@ const PrioritiesPage = () => {
       status: "Inactive",
       priorityDisplay: { priority: 4, status: "Inactive" },
       descriptionDisplay: { description: "P4", status: "Inactive" },
-      statusDisplay: { status: "Inactive" }
+      statusDisplay: { status: "Inactive" },
     },
     {
       id: "5",
@@ -301,7 +295,7 @@ const PrioritiesPage = () => {
       status: "Inactive",
       priorityDisplay: { priority: 5, status: "Inactive" },
       descriptionDisplay: { description: "P5", status: "Inactive" },
-      statusDisplay: { status: "Inactive" }
+      statusDisplay: { status: "Inactive" },
     },
     {
       id: "6",
@@ -310,7 +304,7 @@ const PrioritiesPage = () => {
       status: "Inactive",
       priorityDisplay: { priority: 6, status: "Inactive" },
       descriptionDisplay: { description: "P6", status: "Inactive" },
-      statusDisplay: { status: "Inactive" }
+      statusDisplay: { status: "Inactive" },
     },
     {
       id: "7",
@@ -319,7 +313,7 @@ const PrioritiesPage = () => {
       status: "Inactive",
       priorityDisplay: { priority: 7, status: "Inactive" },
       descriptionDisplay: { description: "P7", status: "Inactive" },
-      statusDisplay: { status: "Inactive" }
+      statusDisplay: { status: "Inactive" },
     },
     {
       id: "8",
@@ -328,7 +322,7 @@ const PrioritiesPage = () => {
       status: "Inactive",
       priorityDisplay: { priority: 8, status: "Inactive" },
       descriptionDisplay: { description: "P8", status: "Inactive" },
-      statusDisplay: { status: "Inactive" }
+      statusDisplay: { status: "Inactive" },
     },
     {
       id: "9",
@@ -337,7 +331,7 @@ const PrioritiesPage = () => {
       status: "Inactive",
       priorityDisplay: { priority: 9, status: "Inactive" },
       descriptionDisplay: { description: "P9", status: "Inactive" },
-      statusDisplay: { status: "Inactive" }
+      statusDisplay: { status: "Inactive" },
     },
     {
       id: "10",
@@ -346,8 +340,8 @@ const PrioritiesPage = () => {
       status: "Inactive",
       priorityDisplay: { priority: 10, status: "Inactive" },
       descriptionDisplay: { description: "P10", status: "Inactive" },
-      statusDisplay: { status: "Inactive" }
-    }
+      statusDisplay: { status: "Inactive" },
+    },
   ];
 
   const navigation = (
@@ -376,89 +370,62 @@ const PrioritiesPage = () => {
   );
 
   const priorityColumns = [
-            {
-          label: "Priority",
-          dataKey: "priorityDisplay",
-          width: "120px",
-          cellFormatter: (props: { cellData: { priority: number; status: "Active" | "Inactive" } }) => (
-            <Text color={props.cellData.status === "Active" ? undefined : "midGrey"}>
-              {props.cellData.priority}
-            </Text>
-          )
-        },
-            {
-          label: "Label",
-          dataKey: "descriptionDisplay",
-          width: "auto",
-          cellFormatter: (props: { cellData: { description: string; status: "Active" | "Inactive" } }) => (
-            <Text color={props.cellData.status === "Active" ? undefined : "midGrey"}>
-              {props.cellData.description || "-"}
-            </Text>
-          )
-        },
+    {
+      label: "Priority",
+      dataKey: "priorityDisplay",
+      width: "120px",
+      cellFormatter: (props: { cellData: { priority: number; status: "Active" | "Inactive" } }) => (
+        <Text color={props.cellData.status === "Active" ? undefined : "midGrey"}>{props.cellData.priority}</Text>
+      ),
+    },
+    {
+      label: "Label",
+      dataKey: "descriptionDisplay",
+      width: "auto",
+      cellFormatter: (props: { cellData: { description: string; status: "Active" | "Inactive" } }) => (
+        <Text color={props.cellData.status === "Active" ? undefined : "midGrey"}>
+          {props.cellData.description || "-"}
+        </Text>
+      ),
+    },
     {
       label: "Status",
       dataKey: "statusDisplay",
       width: "170px",
       cellFormatter: (props: { cellData: { status: "Active" | "Inactive" } }) => (
-        <Text color={props.cellData.status === "Active" ? undefined : "midGrey"}>
-          {props.cellData.status}
-        </Text>
-      )
+        <Text color={props.cellData.status === "Active" ? undefined : "midGrey"}>{props.cellData.status}</Text>
+      ),
     },
     {
       label: "",
       dataKey: "actions",
       width: "40px",
       cellFormatter: (props: { row: WorkOrderPriority }) => (
-        <DropdownMenu
-          trigger={() => (
-            <IconicButton
-              icon="more"
-              aria-label="More actions"
-            />
-          )}
-        >
-          <DropdownButton onClick={() => handleEditPriority(props.row)}>
-            Edit
-          </DropdownButton>
+        <DropdownMenu trigger={() => <IconicButton icon="more" aria-label="More actions" />}>
+          <DropdownButton onClick={() => handleEditPriority(props.row)}>Edit</DropdownButton>
           <Divider my="x1" />
           {props.row.status === "Active" ? (
-            <DropdownButton onClick={() => handleToggleStatus(props.row)}>
-              Deactivate
-            </DropdownButton>
+            <DropdownButton onClick={() => handleToggleStatus(props.row)}>Deactivate</DropdownButton>
           ) : (
-            <DropdownButton onClick={() => handleToggleStatus(props.row)}>
-              Activate
-            </DropdownButton>
+            <DropdownButton onClick={() => handleToggleStatus(props.row)}>Activate</DropdownButton>
           )}
         </DropdownMenu>
-      )
-    }
+      ),
+    },
   ];
 
   return (
     <ApplicationFrame>
       <ToastContainer />
       {navigation}
-      <Page
-        fullHeight
-        breadcrumbs={breadcrumbs}
-        title="PO line items configuration"
-      >
-
-                      <Tabs defaultSelectedIndex={0}>
-              <Tab label="Priorities">
-                <Box maxWidth="720px" mx="auto" mt="x3">
-                  <Table
-                    columns={priorityColumns}
-                    rows={isBlankSlate ? blankSlatePriorities : priorities}
-                    compact
-                  />
-                </Box>
-              </Tab>
-            </Tabs>
-
+      <Page fullHeight breadcrumbs={breadcrumbs} title="PO line items configuration">
+        <Tabs defaultSelectedIndex={0}>
+          <Tab label="Priorities">
+            <Box maxWidth="720px" mx="auto" mt="x3">
+              <Table columns={priorityColumns} rows={isBlankSlate ? blankSlatePriorities : priorities} compact />
+            </Box>
+          </Tab>
+        </Tabs>
 
         {/* Edit Sidebar */}
         <Sidebar
@@ -473,12 +440,8 @@ const PrioritiesPage = () => {
           helpText={editingPriority ? `Priority level ${editingPriority.priority}` : undefined}
           footer={
             <Flex gap="x2">
-              <PrimaryButton onClick={handleSavePriority}>
-                Save
-              </PrimaryButton>
-              <QuietButton onClick={handleCancelEdit}>
-                Cancel
-              </QuietButton>
+              <PrimaryButton onClick={handleSavePriority}>Save</PrimaryButton>
+              <QuietButton onClick={handleCancelEdit}>Cancel</QuietButton>
             </Flex>
           }
         >
@@ -487,7 +450,12 @@ const PrioritiesPage = () => {
               <FormSection>
                 <Box pb="x3">
                   <Field>
-                    <FieldLabel labelText="Label" pb="x1" helpText="This label will be displayed in the application instead of the priority level name." requirementText="(Required)" />
+                    <FieldLabel
+                      labelText="Label"
+                      pb="x1"
+                      helpText="This label will be displayed in the application instead of the priority level name."
+                      requirementText="(Required)"
+                    />
                     <Input
                       value={editingPriority.description}
                       onChange={(e) => handleDescriptionChange(e.target.value)}
@@ -499,7 +467,11 @@ const PrioritiesPage = () => {
                 </Box>
                 <Box pb="x3">
                   <Field>
-                    <FieldLabel labelText="Status" pb="x1" helpText="Toggle to activate or deactivate the use of this priority level in the application." />
+                    <FieldLabel
+                      labelText="Status"
+                      pb="x1"
+                      helpText="Toggle to activate or deactivate the use of this priority level in the application."
+                    />
                     <Toggle
                       toggled={editingPriority.status === "Active"}
                       onChange={(e) => handleStatusChange(e.target.checked)}
@@ -543,28 +515,23 @@ const PrioritiesPage = () => {
           onRequestClose={handleCancelDeactivate}
           footerContent={
             <Flex gap="x2" justifyContent="flex-start">
-              <PrimaryButton onClick={handleConfirmDeactivate}>
-                Yes, deactivate priority
-              </PrimaryButton>
-              <QuietButton onClick={handleCancelDeactivate}>
-                No, cancel
-              </QuietButton>
+              <PrimaryButton onClick={handleConfirmDeactivate}>Yes, deactivate priority</PrimaryButton>
+              <QuietButton onClick={handleCancelDeactivate}>No, cancel</QuietButton>
             </Flex>
           }
         >
           {deactivatingPriority && (
             <Text mb="x2">
-              This Priority {deactivatingPriority.priority} ({deactivatingPriority.description}) is currently assigned to an active PO line item.
-              Disabling the priority will retain its assignment on this item, but it will no longer be available for reassignment to this or any other PO line item.
+              This Priority {deactivatingPriority.priority} ({deactivatingPriority.description}) is currently assigned
+              to an active PO line item. Disabling the priority will retain its assignment on this item, but it will no
+              longer be available for reassignment to this or any other PO line item.
             </Text>
           )}
-          <Text>
-            Are you sure you want to deactivate this priority?
-          </Text>
+          <Text>Are you sure you want to deactivate this priority?</Text>
         </Modal>
       </Page>
     </ApplicationFrame>
   );
 };
 
-export const Default = () => <PrioritiesPage />; 
+export const Default = () => <PrioritiesPage />;
