@@ -14,6 +14,7 @@ import {
   Switch,
   Input,
   AsyncSelect,
+  Select,
   Text,
   Icon,
   StatusIndicator,
@@ -96,16 +97,11 @@ export const Compact = () => {
     return allOptions.filter((option) => option.label.toLowerCase().includes(inputValue.toLowerCase()));
   };
 
-  const loadPriorities = async (inputValue: string) => {
-    // Simulate async search - in real app this would be an API call
-    const allOptions = [
-      { value: "High", label: "High" },
-      { value: "Medium", label: "Medium" },
-      { value: "Low", label: "Low" },
-    ];
-
-    return allOptions.filter((option) => option.label.toLowerCase().includes(inputValue.toLowerCase()));
-  };
+  const priorityOptions = [
+    { value: "High", label: "High" },
+    { value: "Medium", label: "Medium" },
+    { value: "Low", label: "Low" },
+  ];
 
   // Helper function to check if we should show additional box for customer awaiting response
   const shouldShowCustomerAwaitingBox = (row: any) => {
@@ -1162,11 +1158,11 @@ export const Compact = () => {
             />
           </Box>
           <Box>
-            <AsyncSelect
+            <Select
               labelText="Priority"
               helpText="Filter by priority level"
-              placeholder="Start typing"
-              loadOptions={loadPriorities}
+              placeholder="Please select priority"
+              options={priorityOptions}
               multiselect
               value={priorities}
               onChange={handlePrioritiesChange}
