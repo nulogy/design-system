@@ -38,6 +38,7 @@ export const Compact = () => {
   const [poLineItemNumbers, setPoLineItemNumbers] = useState<string[]>([]);
   const [onlyBlankSupplierPo, setOnlyBlankSupplierPo] = useState(false);
   const [items, setItems] = useState<string[]>([]);
+  const [priorities, setPriorities] = useState<string[]>([]);
   const [creationDateRange, setCreationDateRange] = useState({ startDate: null, endDate: null });
 
   const handleRowSelectionChange = (selectedRowIds: string[]) => {
@@ -50,6 +51,10 @@ export const Compact = () => {
 
   const handleItemsChange = (selectedValues: any) => {
     setItems(selectedValues || []);
+  };
+
+  const handlePrioritiesChange = (selectedValues: any) => {
+    setPriorities(selectedValues || []);
   };
 
   const handleCreationDateRangeChange = (range: any) => {
@@ -86,6 +91,17 @@ export const Compact = () => {
       { value: "ITEM-006", label: "ITEM-006 - Module F" },
       { value: "ITEM-007", label: "ITEM-007 - System G" },
       { value: "ITEM-008", label: "ITEM-008 - Unit H" },
+    ];
+
+    return allOptions.filter((option) => option.label.toLowerCase().includes(inputValue.toLowerCase()));
+  };
+
+  const loadPriorities = async (inputValue: string) => {
+    // Simulate async search - in real app this would be an API call
+    const allOptions = [
+      { value: "High", label: "High" },
+      { value: "Medium", label: "Medium" },
+      { value: "Low", label: "Low" },
     ];
 
     return allOptions.filter((option) => option.label.toLowerCase().includes(inputValue.toLowerCase()));
@@ -1143,6 +1159,17 @@ export const Compact = () => {
               multiselect
               value={items}
               onChange={handleItemsChange}
+            />
+          </Box>
+          <Box>
+            <AsyncSelect
+              labelText="Priority"
+              helpText="Filter by priority level"
+              placeholder="Start typing"
+              loadOptions={loadPriorities}
+              multiselect
+              value={priorities}
+              onChange={handlePrioritiesChange}
             />
           </Box>
           <Box>
