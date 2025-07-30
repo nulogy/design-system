@@ -404,29 +404,21 @@ export const Compact = () => {
           </Text>
         </Box>
       ),
-      cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Box px="x1" py="x0_75" width="100%">
+            cellRenderer: ({ cellData, row }: { cellData: any; row: any }) => (
+        <Flex px="x1" py="x0_75" gap="x0_25" flexDirection="column">
           <TruncatedText
+            fullWidth
+            width="auto"
+            maxWidth="160px"
             fontSize="small"
             lineHeight="smallTextCompressed"
-            maxCharacters={100}
-            style={{
-              display: "-webkit-box",
-              WebkitLineClamp: 2,
-              WebkitBoxOrient: "vertical",
-              overflow: "hidden",
-              textOverflow: "ellipsis",
-              width: "100%",
-              maxHeight: "32px",
-              cursor: "pointer",
-              /* Cross-browser fallback */
-              lineHeight: "16px",
-              position: "relative",
-            }}
           >
-            {cellData}
+           {cellData}
           </TruncatedText>
-        </Box>
+          {row.priorityDeactivated && (
+            <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">(Deactivated)</Text>
+          )}
+        </Flex>
       ),
     },
     {
