@@ -34,7 +34,7 @@ import {
   Tab,
   Alert,
   Modal,
-  BrandedNavBar
+  BrandedNavBar,
 } from "../../..";
 
 export default {
@@ -80,9 +80,7 @@ const PrioritiesPage = () => {
 
   // Helper function to update priority with display objects
   const updatePriority = (id: string, updates: Partial<WorkOrderPriority>) => {
-    setPriorities(prev => 
-      prev.map(p => p.id === id ? { ...p, ...updates } : p)
-    );
+    setPriorities((prev) => prev.map((p) => (p.id === id ? { ...p, ...updates } : p)));
   };
 
   const handleEditPriority = (priority: WorkOrderPriority) => {
@@ -192,7 +190,7 @@ const PrioritiesPage = () => {
             {display.priorityDisplay.priority}
           </Text>
         );
-      }
+      },
     },
     {
       label: "Label",
@@ -205,7 +203,7 @@ const PrioritiesPage = () => {
             {display.descriptionDisplay.description || "-"}
           </Text>
         );
-      }
+      },
     },
     {
       label: "Status",
@@ -218,56 +216,35 @@ const PrioritiesPage = () => {
             {display.statusDisplay.status}
           </Text>
         );
-      }
+      },
     },
     {
       label: "",
       dataKey: "actions",
       width: "40px",
       cellFormatter: (props: { row: WorkOrderPriority }) => (
-        <DropdownMenu
-          trigger={() => (
-            <IconicButton
-              icon="more"
-              aria-label="More actions"
-            />
-          )}
-        >
-          <DropdownButton onClick={() => handleEditPriority(props.row)}>
-            Edit
-          </DropdownButton>
+        <DropdownMenu trigger={() => <IconicButton icon="more" aria-label="More actions" />}>
+          <DropdownButton onClick={() => handleEditPriority(props.row)}>Edit</DropdownButton>
           <Divider my="x1" />
           {props.row.status === "Active" ? (
-            <DropdownButton onClick={() => handleToggleStatus(props.row)}>
-              Deactivate
-            </DropdownButton>
+            <DropdownButton onClick={() => handleToggleStatus(props.row)}>Deactivate</DropdownButton>
           ) : (
-            <DropdownButton onClick={() => handleToggleStatus(props.row)}>
-              Activate
-            </DropdownButton>
+            <DropdownButton onClick={() => handleToggleStatus(props.row)}>Activate</DropdownButton>
           )}
         </DropdownMenu>
-      )
-    }
+      ),
+    },
   ];
 
   return (
     <ApplicationFrame>
       <ToastContainer />
       {navigation}
-      <Page
-        fullHeight
-        breadcrumbs={breadcrumbs}
-        title="PO line items configuration"
-      >
+      <Page fullHeight breadcrumbs={breadcrumbs} title="PO line items configuration">
         <Tabs defaultSelectedIndex={0}>
           <Tab label="Priorities">
             <Box maxWidth="976px" mx="auto" mt="x3">
-              <Table
-                columns={priorityColumns}
-                rows={currentPriorities}
-                compact
-              />
+              <Table columns={priorityColumns} rows={currentPriorities} compact />
             </Box>
           </Tab>
         </Tabs>
@@ -282,15 +259,11 @@ const PrioritiesPage = () => {
           closeOnOutsideClick={true}
           overlay="show"
           disableScroll={true}
-          helpText={editingPriority ? `Priority level ${editingPriority.priority}` : undefined}
+          helpText={editingPriority ? `Priority ${editingPriority.priority}` : undefined}
           footer={
             <Flex gap="x2">
-              <PrimaryButton onClick={handleSavePriority}>
-                Save
-              </PrimaryButton>
-              <QuietButton onClick={handleCancelEdit}>
-                Cancel
-              </QuietButton>
+              <PrimaryButton onClick={handleSavePriority}>Save</PrimaryButton>
+              <QuietButton onClick={handleCancelEdit}>Cancel</QuietButton>
             </Flex>
           }
         >
@@ -299,7 +272,12 @@ const PrioritiesPage = () => {
               <FormSection>
                 <Box pb="x3">
                   <Field>
-                    <FieldLabel labelText="Label" pb="x1" helpText="This label will be displayed in the application instead of the priority level name." requirementText="(Required)" />
+                    <FieldLabel
+                      labelText="Label"
+                      pb="x1"
+                      helpText="This label will be displayed throughout the application."
+                      requirementText="(Required)"
+                    />
                     <Input
                       value={editingPriority.description}
                       onChange={(e) => handleDescriptionChange(e.target.value)}
@@ -311,7 +289,11 @@ const PrioritiesPage = () => {
                 </Box>
                 <Box pb="x3">
                   <Field>
-                    <FieldLabel labelText="Status" pb="x1" helpText="Toggle to activate or deactivate the use of this priority level in the application." />
+                    <FieldLabel
+                      labelText="Status"
+                      pb="x1"
+                      helpText="Toggle to activate or deactivate the the priority in the application."
+                    />
                     <Toggle
                       toggled={editingPriority.status === "Active"}
                       onChange={(e) => handleStatusChange(e.target.checked)}
@@ -355,24 +337,19 @@ const PrioritiesPage = () => {
           onRequestClose={handleCancelDeactivate}
           footerContent={
             <Flex gap="x2" justifyContent="flex-start">
-              <PrimaryButton onClick={handleConfirmDeactivate}>
-                Yes, deactivate priority
-              </PrimaryButton>
-              <QuietButton onClick={handleCancelDeactivate}>
-                No, cancel
-              </QuietButton>
+              <PrimaryButton onClick={handleConfirmDeactivate}>Yes, deactivate priority</PrimaryButton>
+              <QuietButton onClick={handleCancelDeactivate}>No, cancel</QuietButton>
             </Flex>
           }
         >
           {deactivatingPriority && (
             <Text mb="x2">
-              This Priority {deactivatingPriority.priority} ({deactivatingPriority.description}) is currently assigned to an active PO line item.
-              Disabling the priority will retain its assignment on this item, but it will no longer be available for reassignment to this or any other PO line item.
+              This Priority {deactivatingPriority.priority} ({deactivatingPriority.description}) is currently assigned
+              to an active PO line item. Disabling the priority will retain its assignment on this item, but it will no
+              longer be available for reassignment to this or any other PO line item.
             </Text>
           )}
-          <Text>
-            Are you sure you want to deactivate this priority?
-          </Text>
+          <Text>Are you sure you want to deactivate this priority?</Text>
         </Modal>
       </Page>
     </ApplicationFrame>
