@@ -252,7 +252,7 @@ const PrioritiesPage = () => {
         {/* Edit Sidebar */}
         <Sidebar
           isOpen={showEditSidebar && !!editingPriority}
-          title="Edit"
+          title="Edit priority"
           onClose={handleCancelEdit}
           width="400px"
           duration={0.25}
