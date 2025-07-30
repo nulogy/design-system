@@ -461,6 +461,14 @@ export const Default = () => {
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
+                <Text color="darkGrey">Priority</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>
+                <Text>P4 <Text as="span" color="midGrey" fontSize="small" lineHeight="smallRelaxed">(Deactivated)</Text></Text>
+              </DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
                 <Text color="darkGrey">Item order type</Text>
               </DescriptionTerm>
               <DescriptionDetails>
@@ -480,7 +488,7 @@ export const Default = () => {
                 <Text color="darkGrey">Production start date</Text>
               </DescriptionTerm>
               <DescriptionDetails>
-                <Text>2025-Feb-20</Text>
+                <Text>2025-Feb-20 <Text as="span" color="midGrey" fontSize="small" lineHeight="smallRelaxed">(Week 8)</Text></Text>
               </DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
@@ -496,7 +504,7 @@ export const Default = () => {
                 <Text color="darkGrey">Need by date</Text>
               </DescriptionTerm>
               <DescriptionDetails>
-                <Text>2025-Feb-28</Text>
+                <Text>2025-Feb-28 <Text as="span" color="midGrey" fontSize="small" lineHeight="smallRelaxed">(Week 8)</Text></Text>
               </DescriptionDetails>
             </DescriptionGroup>
             {productionComplete && (
