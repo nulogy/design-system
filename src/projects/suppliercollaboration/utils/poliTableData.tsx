@@ -628,7 +628,8 @@ export const poliRows = [
     supplierItemCode: "SUP-004",
     problemsAndRisks: "",
     tags: "Standard",
-    priority: "P4 (Deactivated)",
+    priority: "Some very long priority label that is deactivated",
+    priorityDeactivated: true,
     productionProgress: "75",
     lastComment:
       "Production proceeding as planned with all materials received and assembly line running at optimal efficiency",
@@ -671,7 +672,8 @@ export const poliRows = [
       "SUP-005-EXTREMELY-LONG-SUPPLIER-ITEM-CODE-THAT-WILL-TRIGGER-TEXT-TRUNCATION-IN-THE-TABLE-CELL-TO-DEMONSTRATE-THE-TRUNCATEDTEXT-COMPONENT-WORKING-PROPERLY-WITH-ELLIPSIS",
     problemsAndRisks: "At risk",
     tags: "Urgent",
-    priority: "P4 (Deactivated)",
+    priority: "P4",
+    priorityDeactivated: true,
     productionProgress: "0",
     lastComment:
       "Materials delayed due to supply chain issues - awaiting shipment confirmation from overseas supplier with updated delivery timeline",
