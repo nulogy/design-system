@@ -1159,8 +1159,7 @@ export const Compact = () => {
           </Box>
           <Box>
             <Select
-              labelText="Priority"
-              helpText="Filter by priority level"
+              labelText="Priorities"
               placeholder="Please select priority"
               options={priorityOptions}
               multiselect
