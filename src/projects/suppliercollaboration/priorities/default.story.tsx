@@ -344,7 +344,9 @@ const PrioritiesPage = () => {
         >
           {deactivatingPriority && (
             <Text mb="x2">
-              Priority {deactivatingPriority.priority} ({deactivatingPriority.description}) is currently assigned to at least one "In progress" PO line item. Deactivating this priority will retain its assignment on existing line item(s), but it will no longer be available for new assignments.
+              Priority {deactivatingPriority.priority} ({deactivatingPriority.description}) is currently assigned to at
+              least one "In progress" PO line item. Deactivating this priority will retain its assignment on existing
+              line item(s), but it will no longer be available for new assignments.
             </Text>
           )}
           <Text>Are you sure you want to deactivate this priority?</Text>
