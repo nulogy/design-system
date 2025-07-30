@@ -404,19 +404,15 @@ export const Compact = () => {
           </Text>
         </Box>
       ),
-            cellRenderer: ({ cellData, row }: { cellData: any; row: any }) => (
+      cellRenderer: ({ cellData, row }: { cellData: any; row: any }) => (
         <Flex px="x1" py="x0_75" gap="x0_25" flexDirection="column">
-          <TruncatedText
-            fullWidth
-            width="auto"
-            maxWidth="160px"
-            fontSize="small"
-            lineHeight="smallTextCompressed"
-          >
-           {cellData}
+          <TruncatedText fullWidth width="auto" maxWidth="160px" fontSize="small" lineHeight="smallTextCompressed">
+            {cellData}
           </TruncatedText>
           {row.priorityDeactivated && (
-            <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">(Deactivated)</Text>
+            <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
+              (Deactivated)
+            </Text>
           )}
         </Flex>
       ),
