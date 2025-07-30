@@ -394,6 +394,42 @@ export const Compact = () => {
       ),
     },
     {
+      label: "Priority",
+      dataKey: "priority",
+      width: "184px",
+      headerFormatter: () => (
+        <Box px="x1" pt="x1_25" pb="x0_75">
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            Priority
+          </Text>
+        </Box>
+      ),
+      cellRenderer: ({ cellData }: { cellData: any }) => (
+        <Box px="x1" py="x0_75" width="100%">
+          <TruncatedText
+            fontSize="small"
+            lineHeight="smallTextCompressed"
+            maxCharacters={100}
+            style={{
+              display: "-webkit-box",
+              WebkitLineClamp: 2,
+              WebkitBoxOrient: "vertical",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+              width: "100%",
+              maxHeight: "32px",
+              cursor: "pointer",
+              /* Cross-browser fallback */
+              lineHeight: "16px",
+              position: "relative",
+            }}
+          >
+            {cellData}
+          </TruncatedText>
+        </Box>
+      ),
+    },
+    {
       label: "Production progress",
       dataKey: "productionProgress",
       width: "240px",
