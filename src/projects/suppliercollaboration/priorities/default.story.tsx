@@ -333,7 +333,7 @@ const PrioritiesPage = () => {
         {/* Deactivate Confirmation Modal */}
         <Modal
           isOpen={showDeactivateModal}
-          title="Priority assigned in an active PO line item"
+          title="Priority assigned in a PO line item"
           onRequestClose={handleCancelDeactivate}
           footerContent={
             <Flex gap="x2" justifyContent="flex-start">
@@ -344,9 +344,7 @@ const PrioritiesPage = () => {
         >
           {deactivatingPriority && (
             <Text mb="x2">
-              This Priority {deactivatingPriority.priority} ({deactivatingPriority.description}) is currently assigned
-              to an active PO line item. Disabling the priority will retain its assignment on this item, but it will no
-              longer be available for reassignment to this or any other PO line item.
+              Priority {deactivatingPriority.priority} ({deactivatingPriority.description}) is currently assigned to at least one "In progress" PO line item. Deactivating this priority will retain its assignment on existing line item(s), but it will no longer be available for new assignments.
             </Text>
           )}
           <Text>Are you sure you want to deactivate this priority?</Text>
