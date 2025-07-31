@@ -465,7 +465,7 @@ export const Default = () => {
               </DescriptionTerm>
               <DescriptionDetails>
                 <Text>
-                  P4{" "}
+                  3 - Low{" "}
                   <Text as="span" color="midGrey" fontSize="small" lineHeight="smallRelaxed">
                     (Deactivated)
                   </Text>
