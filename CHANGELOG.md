@@ -1,23 +1,20 @@
 ## [15.0.1](https://github.com/nulogy/design-system/compare/v15.0.0...v15.0.1) (2025-06-26)
 
-
 ### Bug Fixes
 
-* Cypress tests work again ([f26c516](https://github.com/nulogy/design-system/commit/f26c516c41d66dc54d19f907dc91881075d3b3eb))
-* Update Github Actions workflows ([c506fd5](https://github.com/nulogy/design-system/commit/c506fd573fa114c8b1061bef479f4ecff6669521))
+- Cypress tests work again ([f26c516](https://github.com/nulogy/design-system/commit/f26c516c41d66dc54d19f907dc91881075d3b3eb))
+- Update Github Actions workflows ([c506fd5](https://github.com/nulogy/design-system/commit/c506fd573fa114c8b1061bef479f4ecff6669521))
 
 # [15.0.0](https://github.com/nulogy/design-system/compare/v14.8.2...v15.0.0) (2025-06-10)
 
-
 ### Features
 
-* replace the underlying component of the Tooltip ([84711fb](https://github.com/nulogy/design-system/commit/84711fb531dde2b288581712d94b980bc973dd64))
-
+- replace the underlying component of the Tooltip ([84711fb](https://github.com/nulogy/design-system/commit/84711fb531dde2b288581712d94b980bc973dd64))
 
 ### BREAKING CHANGES
 
-* * Removes the ability to pass a ref to the Tooltip component
-* Removes the hideDelay prop on the Tooltip
+- Removes the ability to pass a ref to the Tooltip component
+- Removes the hideDelay prop on the Tooltip
 
 ## [14.8.2](https://github.com/nulogy/design-system/compare/v14.8.1...v14.8.2) (2025-05-30)
 

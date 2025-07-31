@@ -1,14 +1,14 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { ZIndexProps } from "styled-system";
 import Box from "../Box/Box";
 import Flex, { FlexProps } from "../Flex/Flex";
 import EnvironmentBanner from "../Navigation/components/EnvironmentBanner/EnvironmentBanner";
 
-type ApplicationFrameProps = FlexProps & {
-  navBar?: React.ReactNode;
+interface ApplicationFrameProps extends FlexProps {
+  navBar?: ReactNode;
   environment?: string;
-  children?: React.ReactNode;
-};
+  children?: ReactNode;
+}
 
 const ApplicationFrame = ({ navBar, children, environment, ...props }: ApplicationFrameProps) => {
   return (
