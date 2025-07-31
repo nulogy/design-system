@@ -1,27 +1,19 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { Box } from "../Box";
 import { Flex } from "../Flex";
 import { FlexProps } from "../Flex/Flex";
 import Header from "./Header";
 
-type PageProps = FlexProps & {
-  breadcrumbs?: React.ReactNode;
+interface PageProps extends FlexProps {
+  breadcrumbs?: ReactNode;
   title?: string;
-  children?: React.ReactNode;
-  headerContent?: React.ReactNode;
+  children?: ReactNode;
+  headerContent?: ReactNode;
   fullHeight?: boolean;
-  renderHeader?: () => JSX.Element;
-};
+  renderHeader?: () => ReactNode;
+}
 
-export const Page: React.FC<React.PropsWithChildren<PageProps>> = ({
-  breadcrumbs,
-  title,
-  children,
-  headerContent,
-  fullHeight,
-  renderHeader,
-  ...rest
-}) => (
+export const Page = ({ breadcrumbs, title, children, headerContent, fullHeight, renderHeader, ...rest }: PageProps) => (
   <Flex flexDirection="column" flexGrow={fullHeight ? 1 : 0} {...rest}>
     {renderHeader
       ? renderHeader()

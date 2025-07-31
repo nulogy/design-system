@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { useTheme } from "styled-components";
 import { Flex } from "../Flex";
 import { Heading1, Text } from "../Type";
@@ -9,20 +9,21 @@ import { BoxProps } from "../Box";
 
 type Breakpoint = string | number;
 
-type HeaderProps = BoxProps & {
-  renderBreadcrumbs?: () => React.ReactNode;
+interface HeaderProps extends BoxProps {
+  renderBreadcrumbs?: () => ReactNode;
   title?: string;
   subtitle?: string;
   undecorated?: boolean;
-  renderActions?: () => React.ReactNode;
-  renderSummary?: () => React.ReactNode;
+  renderActions?: () => ReactNode;
+  renderSummary?: () => ReactNode;
   breakpoints?: {
     small?: Breakpoint;
     medium?: Breakpoint;
   };
-};
+  children?: ReactNode;
+}
 
-const Header: React.FC<React.PropsWithChildren<HeaderProps>> = ({
+const Header = ({
   background,
   renderBreadcrumbs,
   title,
@@ -33,7 +34,7 @@ const Header: React.FC<React.PropsWithChildren<HeaderProps>> = ({
   renderActions,
   renderSummary,
   ...rest
-}) => {
+}: HeaderProps) => {
   const theme = useTheme();
 
   const smallBreakpoint = numberFromDimension(breakpoints?.small ?? theme.breakpoints.small);
