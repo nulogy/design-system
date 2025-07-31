@@ -173,6 +173,7 @@ const PrioritiesPage = () => {
       <Link href="/app/supplier-collaboration" underline={false}>
         Home
       </Link>
+      <Text>Configuration</Text>
     </Breadcrumbs>
   );
 
@@ -240,7 +241,7 @@ const PrioritiesPage = () => {
     <ApplicationFrame>
       <ToastContainer />
       {navigation}
-      <Page fullHeight breadcrumbs={breadcrumbs} title="PO line items configuration">
+      <Page fullHeight breadcrumbs={breadcrumbs} title="PO line items">
         <Tabs defaultSelectedIndex={0}>
           <Tab label="Priorities">
             <Box maxWidth="976px" mx="auto" mt="x3">
