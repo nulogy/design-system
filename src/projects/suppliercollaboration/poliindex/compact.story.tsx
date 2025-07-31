@@ -101,7 +101,10 @@ export const Compact = () => {
     { value: "1 - High", label: "1 - High" },
     { value: "2 - Medium", label: "2 - Medium" },
     { value: "3 - Low", label: "3 - Low" },
-    { value: "7 - Some very long priority label that is deactivated", label: "7 - Some very long priority label that is deactivated" },
+    {
+      value: "7 - Some very long priority label that is deactivated",
+      label: "7 - Some very long priority label that is deactivated",
+    },
     { value: "4", label: "4" },
   ];
 
