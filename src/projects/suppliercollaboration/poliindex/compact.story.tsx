@@ -98,9 +98,11 @@ export const Compact = () => {
   };
 
   const priorityOptions = [
-    { value: "High", label: "High" },
-    { value: "Medium", label: "Medium" },
-    { value: "Low", label: "Low" },
+    { value: "1 - High", label: "1 - High" },
+    { value: "2 - Medium", label: "2 - Medium" },
+    { value: "3 - Low", label: "3 - Low" },
+    { value: "7 - Some very long priority label that is deactivated", label: "7 - Some very long priority label that is deactivated" },
+    { value: "4", label: "4" },
   ];
 
   // Helper function to check if we should show additional box for customer awaiting response

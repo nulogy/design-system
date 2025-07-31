@@ -142,13 +142,13 @@ const PrioritiesPage = () => {
     { id: "1", priority: 1, description: "High", status: "Active" },
     { id: "2", priority: 2, description: "Medium", status: "Active" },
     { id: "3", priority: 3, description: "Low", status: "Active" },
-    { id: "4", priority: 4, description: "P4", status: "Deactivated" },
-    { id: "5", priority: 5, description: "P5", status: "Deactivated" },
-    { id: "6", priority: 6, description: "P6", status: "Deactivated" },
-    { id: "7", priority: 7, description: "P7", status: "Deactivated" },
-    { id: "8", priority: 8, description: "P8", status: "Deactivated" },
-    { id: "9", priority: 9, description: "P9", status: "Deactivated" },
-    { id: "10", priority: 10, description: "P10", status: "Deactivated" },
+    { id: "4", priority: 4, description: "-", status: "Deactivated" },
+    { id: "5", priority: 5, description: "-", status: "Deactivated" },
+    { id: "6", priority: 6, description: "-", status: "Deactivated" },
+    { id: "7", priority: 7, description: "-", status: "Deactivated" },
+    { id: "8", priority: 8, description: "-", status: "Deactivated" },
+    { id: "9", priority: 9, description: "-", status: "Deactivated" },
+    { id: "10", priority: 10, description: "-", status: "Deactivated" },
   ];
 
   const navigation = (
@@ -193,7 +193,7 @@ const PrioritiesPage = () => {
       },
     },
     {
-      label: "Label",
+      label: "Description",
       dataKey: "description",
       width: "auto",
       cellFormatter: (props: { row: WorkOrderPriority }) => {
@@ -273,16 +273,14 @@ const PrioritiesPage = () => {
                 <Box pb="x3">
                   <Field>
                     <FieldLabel
-                      labelText="Label"
+                      labelText="Description"
                       pb="x1"
-                      helpText="This label will be displayed throughout the application."
-                      requirementText="(Required)"
+                      helpText="Description will be displayed throughout the application in addition to the priority number."
                     />
                     <Input
                       value={editingPriority.description}
                       onChange={(e) => handleDescriptionChange(e.target.value)}
-                      placeholder="Enter priority label"
-                      required
+                      placeholder="Enter priority description"
                       autoFocus
                     />
                   </Field>
@@ -344,7 +342,7 @@ const PrioritiesPage = () => {
         >
           {deactivatingPriority && (
             <Text mb="x2">
-              Priority {deactivatingPriority.priority} ({deactivatingPriority.description}) is currently assigned to at
+              Priority <Text as="span" fontWeight="medium">{deactivatingPriority.priority} - {deactivatingPriority.description}</Text> is currently assigned to at
               least one "In progress" PO line item. Deactivating this priority will retain its assignment on existing
               line item(s), but it will no longer be available for new assignments.
             </Text>

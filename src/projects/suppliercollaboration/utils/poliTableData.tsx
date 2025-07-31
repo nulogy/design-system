@@ -506,7 +506,7 @@ export const poliRows = [
     supplierItemCode: "SUP-001",
     problemsAndRisks: "At risk",
     tags: "Urgent",
-    priority: "Medium",
+    priority: "2 - Medium",
     productionProgress: "50",
     lastComment:
       "Initial proposal submitted with detailed specifications and quality requirements for the SEPHORA ONLINE DELUXE OCT collection",
@@ -548,7 +548,7 @@ export const poliRows = [
     supplierItemCode: "SUP-002",
     problemsAndRisks: "",
     tags: "Standard",
-    priority: "High",
+    priority: "1 - High",
     productionProgress: "100",
     lastComment:
       "Production completed successfully with all quality checks passed and final inspection approved by quality assurance team",
@@ -588,7 +588,7 @@ export const poliRows = [
     supplierItemCode: "SUP-003",
     problemsAndRisks: "Late",
     tags: "Review",
-    priority: "Low",
+    priority: "3 - Low",
     productionProgress: "25",
     lastComment:
       "Quality review in progress - awaiting final approval from design team for color specifications and material composition",
@@ -628,7 +628,7 @@ export const poliRows = [
     supplierItemCode: "SUP-004",
     problemsAndRisks: "",
     tags: "Standard",
-    priority: "Some very long priority label that is deactivated",
+    priority: "7 - Some very long priority label that is deactivated",
     priorityDeactivated: true,
     productionProgress: "75",
     lastComment:
@@ -672,7 +672,7 @@ export const poliRows = [
       "SUP-005-EXTREMELY-LONG-SUPPLIER-ITEM-CODE-THAT-WILL-TRIGGER-TEXT-TRUNCATION-IN-THE-TABLE-CELL-TO-DEMONSTRATE-THE-TRUNCATEDTEXT-COMPONENT-WORKING-PROPERLY-WITH-ELLIPSIS",
     problemsAndRisks: "At risk",
     tags: "Urgent",
-    priority: "P4",
+    priority: "4",
     priorityDeactivated: true,
     productionProgress: "0",
     lastComment:
