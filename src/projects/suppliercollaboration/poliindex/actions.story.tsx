@@ -358,27 +358,27 @@ export const Actions = () => {
       ),
       cellRenderer: ({ row }: { row: any }) => (
         <Box px="x1" py="x0_75">
-                      <DropdownMenu>
-              <DropdownButton size="small">
-                <Icon icon="more" size="x2" />
-              </DropdownButton>
-              <DropdownItem onClick={() => console.log("Edit", row.id)}>
-                <Icon icon="edit" size="x2" />
-                Edit
-              </DropdownItem>
-              <DropdownItem onClick={() => console.log("View details", row.id)}>
-                <Icon icon="visibility" size="x2" />
-                View details
-              </DropdownItem>
-              <DropdownItem onClick={() => console.log("Duplicate", row.id)}>
-                <Icon icon="copy" size="x2" />
-                Duplicate
-              </DropdownItem>
-              <DropdownItem onClick={() => setIsModalOpen(true)}>
-                <Icon icon="delete" size="x2" />
-                Delete
-              </DropdownItem>
-            </DropdownMenu>
+          <DropdownMenu>
+            <DropdownButton size="small">
+              <Icon icon="more" size="x2" />
+            </DropdownButton>
+            <DropdownItem onClick={() => console.log("Edit", row.id)}>
+              <Icon icon="edit" size="x2" />
+              Edit
+            </DropdownItem>
+            <DropdownItem onClick={() => console.log("View details", row.id)}>
+              <Icon icon="visibility" size="x2" />
+              View details
+            </DropdownItem>
+            <DropdownItem onClick={() => console.log("Duplicate", row.id)}>
+              <Icon icon="copy" size="x2" />
+              Duplicate
+            </DropdownItem>
+            <DropdownItem onClick={() => setIsModalOpen(true)}>
+              <Icon icon="delete" size="x2" />
+              Delete
+            </DropdownItem>
+          </DropdownMenu>
         </Box>
       ),
     },
@@ -406,7 +406,10 @@ export const Actions = () => {
                     <Text fontSize="small" color="midGrey">
                       {selectedRows.length} item{selectedRows.length !== 1 ? "s" : ""} selected
                     </Text>
-                    <Text fontSize="small" color="midGrey"> • </Text>
+                    <Text fontSize="small" color="midGrey">
+                      {" "}
+                      •{" "}
+                    </Text>
                     <Text fontSize="small" color="midGrey">
                       {editedItemsCount} item{editedItemsCount !== 1 ? "s" : ""} edited
                     </Text>
@@ -429,37 +432,47 @@ export const Actions = () => {
               <Flex gap="x2" alignItems="center">
                 {isEditMode ? (
                   <>
-                    <Button onClick={() => setIsEditMode(false)}>
-                      Quit editing
-                    </Button>
-                    <PrimaryButton onClick={() => {
-                      setBulkAction("save");
-                      setIsEditMode(false);
-                      setEditedItemsCount(0);
-                    }}>
+                    <Button onClick={() => setIsEditMode(false)}>Quit editing</Button>
+                    <PrimaryButton
+                      onClick={() => {
+                        setBulkAction("save");
+                        setIsEditMode(false);
+                        setEditedItemsCount(0);
+                      }}
+                    >
                       Save
                     </PrimaryButton>
                   </>
                 ) : (
                   <>
-                    <IconicButton icon="check" onClick={() => setBulkAction("accept")} aria-label="Accept PO line item(s)">
+                    <IconicButton
+                      icon="check"
+                      onClick={() => setBulkAction("accept")}
+                      aria-label="Accept PO line item(s)"
+                    >
                       Accept PO line item(s)
                     </IconicButton>
-                    <IconicButton icon="close" onClick={() => setBulkAction("cancel")} aria-label="Cancel PO line item(s)">
+                    <IconicButton
+                      icon="close"
+                      onClick={() => setBulkAction("cancel")}
+                      aria-label="Cancel PO line item(s)"
+                    >
                       Cancel PO line item(s)
                     </IconicButton>
-                                    <IconicButton icon="edit" onClick={() => {
-                  setBulkAction("edit");
-                  setIsEditMode(true);
-                  setEditedItemsCount(selectedRows.length);
-                }} aria-label="Edit PO line item(s)">
-                  Edit PO line item(s)
-                </IconicButton>
+                    <IconicButton
+                      icon="edit"
+                      onClick={() => {
+                        setBulkAction("edit");
+                        setIsEditMode(true);
+                        setEditedItemsCount(selectedRows.length);
+                      }}
+                      aria-label="Edit PO line item(s)"
+                    >
+                      Edit PO line item(s)
+                    </IconicButton>
                     <VerticalDivider />
                     <DropdownMenu>
-                      <DropdownButton size="small">
-                        More actions
-                      </DropdownButton>
+                      <DropdownButton size="small">More actions</DropdownButton>
                       <DropdownItem onClick={() => setBulkAction("export")}>
                         <Icon icon="getApp" size="x2" />
                         Export
@@ -582,17 +595,16 @@ export const Actions = () => {
       </Sidebar>
 
       {/* Delete Confirmation Modal */}
-      <Modal
-        isOpen={isModalOpen}
-        title="Delete PO Line Item"
-        maxWidth="400px"
-      >
+      <Modal isOpen={isModalOpen} title="Delete PO Line Item" maxWidth="400px">
         <Box p="x4">
           <Text>Are you sure you want to delete this PO line item? This action cannot be undone.</Text>
         </Box>
         <ButtonGroup>
           <Button onClick={() => setIsModalOpen(false)}>Cancel</Button>
-          <Button onClick={() => setIsModalOpen(false)} style={{ backgroundColor: "#d32f2f", color: "white", borderColor: "#d32f2f" }}>
+          <Button
+            onClick={() => setIsModalOpen(false)}
+            style={{ backgroundColor: "#d32f2f", color: "white", borderColor: "#d32f2f" }}
+          >
             Delete
           </Button>
         </ButtonGroup>
