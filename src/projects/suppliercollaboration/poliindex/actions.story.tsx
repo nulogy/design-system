@@ -432,7 +432,7 @@ export const Actions = () => {
               <Flex gap="x2" alignItems="center">
                 {isEditMode ? (
                   <>
-                    <Button onClick={() => setIsEditMode(false)}>Quit editing</Button>
+                    <QuietButton onClick={() => setIsEditMode(false)}>Quit editing</QuietButton>
                     <PrimaryButton
                       onClick={() => {
                         setBulkAction("save");
