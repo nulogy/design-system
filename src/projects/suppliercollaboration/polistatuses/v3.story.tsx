@@ -29,10 +29,10 @@ import { poliRows, shouldShowEditBox } from "../utils/poliTableData";
 import { formatDateWithWeek } from "../utils/dateUtils";
 
 export default {
-  title: "Projects/Supplier Collaboration/POLI index/Compact",
+  title: "Projects/Supplier Collaboration/PO line item statuses/V3",
 };
 
-export const Compact = () => {
+export const V3 = () => {
   const [selectedRows, setSelectedRows] = useState<string[]>([]);
   const [role, setRole] = useState("supplier");
   const [isFilterSidebarOpen, setIsFilterSidebarOpen] = useState(false);
@@ -40,6 +40,7 @@ export const Compact = () => {
   const [onlyBlankSupplierPo, setOnlyBlankSupplierPo] = useState(false);
   const [items, setItems] = useState<string[]>([]);
   const [priorities, setPriorities] = useState<string[]>([]);
+  const [statuses, setStatuses] = useState<string[]>(["Open", "Completed"]);
   const [creationDateRange, setCreationDateRange] = useState({ startDate: null, endDate: null });
 
   const handleRowSelectionChange = (selectedRowIds: string[]) => {
@@ -61,6 +62,10 @@ export const Compact = () => {
 
   const handlePrioritiesChange = (selectedValues: any) => {
     setPriorities(selectedValues || []);
+  };
+
+  const handleStatusesChange = (selectedValues: any) => {
+    setStatuses(selectedValues || []);
   };
 
   const handleCreationDateRangeChange = (range: any) => {
@@ -111,6 +116,12 @@ export const Compact = () => {
       label: "7 - Some very long priority label that is deactivated",
     },
     { value: "4", label: "4" },
+  ];
+
+  const statusOptions = [
+    { value: "Open", label: "Open" },
+    { value: "Completed", label: "Completed" },
+    { value: "Canceled", label: "Canceled" },
   ];
 
   // Helper function to check if we should show additional box for customer awaiting response
@@ -294,37 +305,6 @@ export const Compact = () => {
       ),
     },
     {
-      label: "Status",
-      dataKey: "status",
-      width: "160px",
-      headerFormatter: () => (
-        <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
-            Status
-          </Text>
-        </Box>
-      ),
-      cellRenderer: ({ row }: { row: any }) => {
-        // Generate status based on row ID for variety
-        const statuses = ["Open", "Completed", "Canceled"];
-        const status = statuses[parseInt(row.id) % 3];
-        
-        // Determine StatusIndicator type based on status
-        let indicatorType: "quiet" | "neutral" = "quiet";
-        if (status === "Completed" || status === "Canceled") {
-          indicatorType = "neutral";
-        }
-        
-        return (
-          <Flex flexWrap="wrap" gap="x0_25" px="x1" py="x0_75">
-            <StatusIndicator type={indicatorType}>
-              {status}
-            </StatusIndicator>
-          </Flex>
-        );
-      },
-    },
-    {
       label: "Creation date",
       dataKey: "createdOn",
       width: "152px",
@@ -436,24 +416,6 @@ export const Compact = () => {
       ),
     },
     {
-      label: "Problems and risks",
-      dataKey: "problemsAndRisks",
-      width: "184px",
-      headerFormatter: () => (
-        <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
-            Problems and risks
-          </Text>
-        </Box>
-      ),
-      cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Flex flexWrap="wrap" gap="x0_25" px="x1" py="x0_75">
-          {cellData === "At risk" && <StatusIndicator type="warning">{cellData}</StatusIndicator>}
-          {cellData === "Late" && <StatusIndicator type="danger">{cellData}</StatusIndicator>}
-        </Flex>
-      ),
-    },
-    {
       label: "Priority",
       dataKey: "priority",
       width: "184px",
@@ -478,6 +440,55 @@ export const Compact = () => {
       ),
     },
     {
+      label: "Problems and risks",
+      dataKey: "problemsAndRisks",
+      width: "184px",
+      headerFormatter: () => (
+        <Box px="x1" pt="x1_25" pb="x0_75">
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            Problems and risks
+          </Text>
+        </Box>
+      ),
+      cellRenderer: ({ cellData }: { cellData: any }) => (
+        <Flex flexWrap="wrap" gap="x0_25" px="x1" py="x0_75">
+          {cellData === "At risk" && <StatusIndicator type="warning">{cellData}</StatusIndicator>}
+          {cellData === "Late" && <StatusIndicator type="danger">{cellData}</StatusIndicator>}
+        </Flex>
+      ),
+    },
+    {
+      label: "PO line item status",
+      dataKey: "status",
+      width: "160px",
+      headerFormatter: () => (
+        <Box px="x1" pt="x1_25" pb="x0_75">
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            PO line item status
+          </Text>
+        </Box>
+      ),
+      cellRenderer: ({ row }: { row: any }) => {
+        // Generate status based on row ID for variety
+        const statuses = ["Open", "Completed", "Canceled"];
+        const status = statuses[parseInt(row.id) % 3];
+        
+        // Determine StatusIndicator type based on status
+        let indicatorType: "quiet" | "neutral" = "quiet";
+        if (status === "Completed" || status === "Canceled") {
+          indicatorType = "neutral";
+        }
+        
+        return (
+          <Flex flexWrap="wrap" gap="x0_25" px="x1" py="x0_75">
+            <StatusIndicator type={indicatorType}>
+              {status}
+            </StatusIndicator>
+          </Flex>
+        );
+      },
+    },
+    {
       label: "Production progress",
       dataKey: "productionProgress",
       width: "240px",
@@ -489,33 +500,6 @@ export const Compact = () => {
         </Box>
       ),
       cellRenderer: ({ cellData }: { cellData: any }) => <Box px="x1" py="x0_75"></Box>,
-    },
-    {
-      label: "Latest comment",
-      dataKey: "lastComment",
-      width: "320px",
-      headerFormatter: () => (
-        <Flex px="x1" pt="x1_25" pb="x0_75" gap="x0_25" alignItems="center">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
-            Latest comment
-          </Text>
-          <StatusIndicator type="danger" mt="x0_5">
-            Ignore
-          </StatusIndicator>
-        </Flex>
-      ),
-      cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Flex px="x1" py="x0_75" flexDirection="column" gap="x0_25">
-          <Link href="#" fontSize="small" lineHeight="smallTextCompressed" underline={false} color="black" hover="blue">
-            <TruncatedText fontSize="small" lineHeight="smallTextCompressed" fullWidth maxWidth="304px">
-              {cellData}
-            </TruncatedText>
-          </Link>
-          <TruncatedText maxWidth="242px" fullWidth fontSize="smaller" lineHeight="smallerText" color="midGrey">
-            by John A. on Jan 24, 2025 at 04:00pm
-          </TruncatedText>
-        </Flex>
-      ),
     },
     {
       label: "Collaboration status",
@@ -1130,7 +1114,7 @@ export const Compact = () => {
 
   return (
     <ApplicationFrame>
-      <Header breakpoints={{ medium: 1200 }} renderBreadcrumbs={() => breadcrumbs} title="PO line items" />
+      <Header breakpoints={{ medium: 1200 }} renderBreadcrumbs={() => breadcrumbs} title="PO line item statuses" />
       <Page>
         <Flex justifyContent="flex-end" alignItems="center" mb="x3">
           <Flex gap="x2" alignItems="center">
@@ -1151,7 +1135,7 @@ export const Compact = () => {
           </Flex>
         </Flex>
         <Box width="100%" overflowX="auto">
-          <Box width="5100px">
+          <Box width="4940px">
             <style>
               {`
                 tr {border-bottom: solid 1px #e4e7eb;} /* Needed because of Table bug - RowBorder not working */
@@ -1161,8 +1145,8 @@ export const Compact = () => {
                 table th:nth-child(4) {
                   border-left: 1px solid #E0E0E0 !important;
                 }
-                table td:nth-child(10),
-                table th:nth-child(10) {
+                table td:nth-child(9),
+                table th:nth-child(9) {
                   border-left: 1px solid #E0E0E0 !important;
                 }
                 /* Style for canceled rows */
@@ -1182,6 +1166,7 @@ export const Compact = () => {
                   pointer-events: none;
                   opacity: 0.5;
                 }
+
               `}
             </style>
             <Table
@@ -1214,6 +1199,17 @@ export const Compact = () => {
               checked={onlyBlankSupplierPo}
               onChange={(e) => setOnlyBlankSupplierPo(e.target.checked)}
               labelText="Only line items with a blank supplier PO line item number"
+            />
+          </Box>
+          <Box>
+            <Select
+              labelText="Status"
+              helpText="Search by PO line item statuses"
+              placeholder="Select"
+              options={statusOptions}
+              multiselect
+              value={statuses}
+              onChange={handleStatusesChange}
             />
           </Box>
           <Box>
