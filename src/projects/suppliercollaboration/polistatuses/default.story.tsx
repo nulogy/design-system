@@ -1266,7 +1266,8 @@ export const Default = () => {
         display="flex"
         borderRadius="rounded"
       >
-        <Tooltip maxWidth="480px"
+        <Tooltip
+          maxWidth="480px"
           tooltip={
             <Box width="480px" p="x2">
               <Text fontSize="small" pb="x1">
