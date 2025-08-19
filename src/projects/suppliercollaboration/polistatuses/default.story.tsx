@@ -1276,14 +1276,10 @@ export const Default = () => {
               </Text>
               <List mb="x3">
                 <ListItem>
-                  <Text fontSize="small">
-                    Column width is 160px
-                  </Text>
+                  <Text fontSize="small">Column width is 160px</Text>
                 </ListItem>
                 <ListItem>
-                  <Text fontSize="small">
-                    Values: Open, Completed, Canceled
-                  </Text>
+                  <Text fontSize="small">Values: Open, Completed, Canceled</Text>
                 </ListItem>
               </List>
               <Text fontSize="small" pb="x1">
@@ -1291,19 +1287,13 @@ export const Default = () => {
               </Text>
               <List mb="x3">
                 <ListItem>
-                  <Text fontSize="small">
-                    New "Statuses" multiselect filter after PO line items filter
-                  </Text>
+                  <Text fontSize="small">New "Statuses" multiselect filter after PO line items filter</Text>
                 </ListItem>
                 <ListItem>
-                  <Text fontSize="small">
-                    "Open" is preselected
-                  </Text>
+                  <Text fontSize="small">"Open" is preselected</Text>
                 </ListItem>
                 <ListItem>
-                  <Text fontSize="small">
-                    "Canceled line items" filter is removed
-                  </Text>
+                  <Text fontSize="small">"Canceled line items" filter is removed</Text>
                 </ListItem>
               </List>
               <Text fontSize="small" pb="x1">
@@ -1311,13 +1301,10 @@ export const Default = () => {
               </Text>
               <List mb="x3">
                 <ListItem>
-                  <Text fontSize="small">
-                    Background colour: lightGrey
-                  </Text>
+                  <Text fontSize="small">Background colour: lightGrey</Text>
                 </ListItem>
               </List>
-              </Box>
-
+            </Box>
           }
         >
           <Text fontWeight="bold" color="purple" fontSize="small">
