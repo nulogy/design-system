@@ -23,6 +23,9 @@ import {
   Checkbox,
   DateRange,
   Tooltip,
+  QuietButton,
+  List,
+  ListItem,
 } from "../../..";
 import { AppTag } from "../../../AppTag";
 import { poliRows, shouldShowEditBox } from "../utils/poliTableData";
@@ -40,7 +43,7 @@ export const Default = () => {
   const [onlyBlankSupplierPo, setOnlyBlankSupplierPo] = useState(false);
   const [items, setItems] = useState<string[]>([]);
   const [priorities, setPriorities] = useState<string[]>([]);
-  const [statuses, setStatuses] = useState<string[]>(["Open", "Completed"]);
+  const [statuses, setStatuses] = useState<string[]>(["Open"]);
   const [creationDateRange, setCreationDateRange] = useState({ startDate: null, endDate: null });
 
   const handleRowSelectionChange = (selectedRowIds: string[]) => {
@@ -1201,8 +1204,7 @@ export const Default = () => {
           </Box>
           <Box>
             <Select
-              labelText="Status"
-              helpText="Search by PO line item statuses"
+              labelText="Statuses"
               placeholder="Select"
               options={statusOptions}
               multiselect
@@ -1250,7 +1252,7 @@ export const Default = () => {
         </Flex>
       </Sidebar>
 
-      {/* Floating Supplier/Customer Switcher */}
+      {/* Floating What's New Link */}
       <Box
         position="fixed"
         bottom="x2"
@@ -1266,13 +1268,62 @@ export const Default = () => {
         display="flex"
         alignItems="center"
       >
-        <Text fontSize="small" mr="x2">
-          View as:
-        </Text>
-        <Switcher selected={role} onChange={setRole}>
-          <Switch value="supplier">Supplier</Switch>
-          <Switch value="customer">Customer</Switch>
-        </Switcher>
+        <Tooltip
+          tooltip={
+            <Box width="480px" p="x2">
+              <Text fontSize="small" pb="x1">
+                <strong>Status column</strong>
+              </Text>
+              <List mb="x3">
+                <ListItem>
+                  <Text fontSize="small">
+                    Column width is 160px
+                  </Text>
+                </ListItem>
+                <ListItem>
+                  <Text fontSize="small">
+                    Values: Open, Completed, Canceled
+                  </Text>
+                </ListItem>
+              </List>
+              <Text fontSize="small" pb="x1">
+                <strong>Filter update</strong>
+              </Text>
+              <List mb="x3">
+                <ListItem>
+                  <Text fontSize="small">
+                    New "Statuses" multiselect filter after PO line items filter
+                  </Text>
+                </ListItem>
+                <ListItem>
+                  <Text fontSize="small">
+                    "Open" is preselected
+                  </Text>
+                </ListItem>
+                <ListItem>
+                  <Text fontSize="small">
+                    "Canceled line items" filter is removed
+                  </Text>
+                </ListItem>
+              </List>
+              <Text fontSize="small" pb="x1">
+                <strong>Canceled row styles</strong>
+              </Text>
+              <List mb="x3">
+                <ListItem>
+                  <Text fontSize="small">
+                    Background colour: lightGrey
+                  </Text>
+                </ListItem>
+              </List>
+              </Box>
+
+          }
+        >
+          <Text fontWeight="bold" color="purple" fontSize="small">
+            What's new?
+          </Text>
+        </Tooltip>
       </Box>
     </ApplicationFrame>
   );
