@@ -1256,25 +1256,23 @@ export const Default = () => {
       <Box
         position="fixed"
         bottom="x2"
-        left="50%"
-        transform="translateX(-50%)"
+        right="x2"
         zIndex={1000}
         backgroundColor="white"
-        borderRadius="medium"
         boxShadow="large"
         p="x2"
         border="1px solid"
         borderColor="lightGrey"
         display="flex"
-        alignItems="center"
+        borderRadius="rounded"
       >
-        <Tooltip
+        <Tooltip maxWidth="480px"
           tooltip={
             <Box width="480px" p="x2">
               <Text fontSize="small" pb="x1">
                 <strong>Status column</strong>
               </Text>
-              <List mb="x3">
+              <List mb="x2" pl="x2">
                 <ListItem>
                   <Text fontSize="small">Column width is 160px</Text>
                 </ListItem>
@@ -1285,7 +1283,7 @@ export const Default = () => {
               <Text fontSize="small" pb="x1">
                 <strong>Filter update</strong>
               </Text>
-              <List mb="x3">
+              <List mb="x2" pl="x2">
                 <ListItem>
                   <Text fontSize="small">New "Statuses" multiselect filter after PO line items filter</Text>
                 </ListItem>
@@ -1295,11 +1293,14 @@ export const Default = () => {
                 <ListItem>
                   <Text fontSize="small">"Canceled line items" filter is removed</Text>
                 </ListItem>
+                <ListItem>
+                  <Text fontSize="small">Preselected values for "Production progress ststuses" filter are removed</Text>
+                </ListItem>
               </List>
               <Text fontSize="small" pb="x1">
                 <strong>Canceled row styles</strong>
               </Text>
-              <List mb="x3">
+              <List mb="x1" pl="x2">
                 <ListItem>
                   <Text fontSize="small">Background colour: lightGrey</Text>
                 </ListItem>
