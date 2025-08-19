@@ -45,8 +45,8 @@ export const Default = () => {
 
   const handleRowSelectionChange = (selectedRowIds: string[]) => {
     // Filter out canceled rows from selection
-    const filteredSelectedRows = selectedRowIds.filter(rowId => {
-      const row = compactRows.find(r => r.id === rowId);
+    const filteredSelectedRows = selectedRowIds.filter((rowId) => {
+      const row = compactRows.find((r) => r.id === rowId);
       return row && !isRowCanceled(row);
     });
     setSelectedRows(filteredSelectedRows);
@@ -319,18 +319,16 @@ export const Default = () => {
         // Generate status based on row ID for variety
         const statuses = ["Open", "Completed", "Canceled"];
         const status = statuses[parseInt(row.id) % 3];
-        
+
         // Determine StatusIndicator type based on status
         let indicatorType: "quiet" | "neutral" = "quiet";
         if (status === "Completed" || status === "Canceled") {
           indicatorType = "neutral";
         }
-        
+
         return (
           <Flex flexWrap="wrap" gap="x0_25" px="x1" py="x0_75">
-            <StatusIndicator type={indicatorType}>
-              {status}
-            </StatusIndicator>
+            <StatusIndicator type={indicatorType}>{status}</StatusIndicator>
           </Flex>
         );
       },
@@ -1110,7 +1108,7 @@ export const Default = () => {
   }));
 
   // Create a filtered list of selectable rows (excluding canceled rows)
-  const selectableRows = compactRows.filter(row => !isRowCanceled(row));
+  const selectableRows = compactRows.filter((row) => !isRowCanceled(row));
 
   return (
     <ApplicationFrame>
