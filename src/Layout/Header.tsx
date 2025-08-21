@@ -9,9 +9,9 @@ import { BoxProps } from "../Box";
 
 type Breakpoint = string | number;
 
-interface HeaderProps extends BoxProps {
+interface HeaderProps extends Omit<BoxProps, "title"> {
   renderBreadcrumbs?: () => ReactNode;
-  title?: string;
+  title?: ReactNode;
   subtitle?: string;
   undecorated?: boolean;
   renderActions?: () => ReactNode;
@@ -65,7 +65,7 @@ const Header = ({
               gap={!sm ? "x2" : undefined}
               flexDirection={!sm ? "row" : "column"}
             >
-              {title && <Heading1 mb="0">{title}</Heading1>}
+              {title && typeof title === "string" ? <Heading1 mb="0">{title}</Heading1> : title}
               {subtitle && (
                 <Text pl={!sm ? "x2" : undefined} borderLeft={!sm ? "1px solid" : "none"} my="half" borderColor="grey">
                   {subtitle}

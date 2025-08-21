@@ -11,6 +11,8 @@ import {
   StatusIndicator,
   Header,
   Text,
+  Heading1,
+  Icon,
 } from "..";
 import Summary from "../Summary/Summary";
 import SummaryItem from "../Summary/SummaryItem";
@@ -28,6 +30,22 @@ export const Default = () => (
       </Breadcrumbs>
     )}
     title="Materials Overview"
+  />
+);
+
+export const TitleAsReactElement = () => (
+  <Header
+    renderBreadcrumbs={() => (
+      <Breadcrumbs>
+        <Link href="/">Home</Link>
+        <Link href="/">Materials</Link>
+      </Breadcrumbs>
+    )}
+    title={
+      <Heading1 mb="0">
+        Bacon <Icon icon="info" />
+      </Heading1>
+    }
   />
 );
 
