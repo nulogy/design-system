@@ -3,10 +3,9 @@ description: File a request that you don't know how to classify
 labels: ["miscellaneous-request"]
 projects: ["NDS work requests"]
 assignees:
-  - haideralsh
   - nikola-nulogy
 body:
-  - type: markdown 
+  - type: markdown
     attributes:
       value: |
         Thanks for taking the time to fill out the request!
@@ -25,8 +24,8 @@ body:
     attributes:
       label: Who would you like to address the problem?
       options:
-      - label: Myself
-      - label: DesignOps
+        - label: Myself
+        - label: DesignOps
       description: Please check the current Design Ops' [estimated completion time](https://github.com/nulogy/design-system/wiki/How-to-file-NDS-work-request#process) before selecting
   - type: input
     id: due-date
