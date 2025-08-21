@@ -1,3 +1,10 @@
+# [15.1.0](https://github.com/nulogy/design-system/compare/v15.0.1...v15.1.0) (2025-08-21)
+
+
+### Features
+
+* Improved Header title prop ([b9f8a9d](https://github.com/nulogy/design-system/commit/b9f8a9d3d96067e66d2f37f326077ff867f83c4c))
+
 ## [15.0.1](https://github.com/nulogy/design-system/compare/v15.0.0...v15.0.1) (2025-06-26)
 
 ### Bug Fixes
