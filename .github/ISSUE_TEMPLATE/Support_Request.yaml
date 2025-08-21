@@ -3,10 +3,9 @@ description: File a request for a implementation/functionality/design consultati
 labels: ["support-request"]
 projects: ["NDS work requests"]
 assignees:
-  - haideralsh
   - nikola-nulogy
 body:
-  - type: markdown 
+  - type: markdown
     attributes:
       value: |
         Thanks for taking the time to fill out the support request!

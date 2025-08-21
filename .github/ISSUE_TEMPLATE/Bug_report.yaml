@@ -3,10 +3,9 @@ description: File a bug report
 labels: ["bug"]
 projects: ["NDS work requests"]
 assignees:
-  - haideralsh
   - nikola-nulogy
 body:
-  - type: markdown 
+  - type: markdown
     attributes:
       value: |
         Thanks for taking the time to fill out the bug report!
@@ -35,8 +34,8 @@ body:
     attributes:
       label: Who would you like to fix the bug?
       options:
-      - label: Myself
-      - label: DesignOps
+        - label: Myself
+        - label: DesignOps
       description: Please check the current Design Ops' [estimated completion time](https://github.com/nulogy/design-system/wiki/How-to-file-NDS-work-request#process) before selecting
   - type: input
     id: due-date
