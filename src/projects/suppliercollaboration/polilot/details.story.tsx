@@ -473,9 +473,7 @@ export const Details = () => {
                           {userState.role === "customer" ? "Your latest request" : "Customer's latest request"}
                         </Heading4>
 
-                        {acceptedItems.request && (
-                          <StatusIndicator type="success">Accepted</StatusIndicator>
-                        )}
+                        {acceptedItems.request && <StatusIndicator type="success">Accepted</StatusIndicator>}
                       </Flex>
                       <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
                         by{" "}
@@ -489,9 +487,13 @@ export const Details = () => {
                       </Text>
                     </Flex>
                     <Flex flexDirection="column" gap="x0_5">
-                      <Text my="x1">{formData.request.quantity} {formData.request.unit}</Text>
+                      <Text my="x1">
+                        {formData.request.quantity} {formData.request.unit}
+                      </Text>
                       <Text my="x1">{formData.request.productionDueDate}</Text>
-                      <Text my="x1">{formData.request.unitPrice} {formData.request.currency}</Text>
+                      <Text my="x1">
+                        {formData.request.unitPrice} {formData.request.currency}
+                      </Text>
                       <Text my="x1" minHeight="88px">
                         {formData.request.note}
                       </Text>
@@ -506,9 +508,7 @@ export const Details = () => {
                           {userState.role === "supplier" ? "Your proposal" : "Supplier's proposal"}
                         </Heading4>
 
-                        {acceptedItems.proposal && (
-                          <StatusIndicator type="success">Accepted</StatusIndicator>
-                        )}
+                        {acceptedItems.proposal && <StatusIndicator type="success">Accepted</StatusIndicator>}
                       </Flex>
                       <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
                         by{" "}
@@ -522,9 +522,13 @@ export const Details = () => {
                       </Text>
                     </Flex>
                     <Flex flexDirection="column" gap="x0_5">
-                      <Text my="x1">{formData.proposal.quantity} {formData.proposal.unit}</Text>
+                      <Text my="x1">
+                        {formData.proposal.quantity} {formData.proposal.unit}
+                      </Text>
                       <Text my="x1">{formData.proposal.productionDueDate}</Text>
-                      <Text my="x1">{formData.proposal.unitPrice} {formData.proposal.currency}</Text>
+                      <Text my="x1">
+                        {formData.proposal.unitPrice} {formData.proposal.currency}
+                      </Text>
                       <Text my="x1" minHeight="88px">
                         {formData.proposal.note}
                       </Text>
