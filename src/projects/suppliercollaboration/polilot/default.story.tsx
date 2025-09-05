@@ -90,7 +90,7 @@ export const Default = () => {
   const [isLotCodeHidden, setIsLotCodeHidden] = useState(false);
   const [filterVisibilityStates, setFilterVisibilityStates] = useState<Record<number, boolean>>({});
   const [lotCodes, setLotCodes] = useState<string[]>([]);
-  
+
   // Saved view 1 state
   const [savedView1Title, setSavedView1Title] = useState("Saved view 1");
   const [savedView1Description, setSavedView1Description] = useState(
@@ -1242,7 +1242,6 @@ export const Default = () => {
       databaseTable: "OrderLines",
       filterVisible: true,
       isEdited: false,
-
     },
     {
       id: 3,
@@ -1252,7 +1251,6 @@ export const Default = () => {
       databaseTable: "Statuses",
       filterVisible: true,
       isEdited: false,
-
     },
     {
       id: 4,
@@ -1486,7 +1484,12 @@ export const Default = () => {
     setFocusedRowId(id);
   };
 
-  const handleRowBlur = (id: number, data: any[], setFocusedRowId: (id: number | null) => void, setValidationErrors: (errors: any) => void) => {
+  const handleRowBlur = (
+    id: number,
+    data: any[],
+    setFocusedRowId: (id: number | null) => void,
+    setValidationErrors: (errors: any) => void
+  ) => {
     setFocusedRowId(null);
   };
 
@@ -1599,7 +1602,7 @@ export const Default = () => {
           // All default rows get a toggle, but only LOT code is enabled
           const isEnabled = row.id === 19;
           const isToggled = row.id === 19 ? !isLotCodeHidden : true;
-          
+
           return (
             <Box py="half">
               <Toggle
@@ -1726,8 +1729,6 @@ export const Default = () => {
         </Flex>
         <Box width="100%" overflowX="auto">
           <Box width="5100px">
-
-             
             <Box className="main-table-container">
               <Table
                 columns={compactColumns}
@@ -1756,9 +1757,7 @@ export const Default = () => {
               value={lotCodes}
               onChange={handleLotCodesChange}
             />
-            <Box mt="x2" p="x2" backgroundColor="lightPurple" borderRadius="medium">
-              
-            </Box>
+            <Box mt="x2" p="x2" backgroundColor="lightPurple" borderRadius="medium"></Box>
           </Box>
         </Flex>
       </Sidebar>
@@ -1810,7 +1809,7 @@ export const Default = () => {
             />
             <Toggle mt="x6" onText="Set as default view" offText="Not set as default view" onChange={() => {}} />
           </Flex>
-          <Box >
+          <Box>
             <Textarea
               labelText="Description"
               placeholder="Enter custom view description"
