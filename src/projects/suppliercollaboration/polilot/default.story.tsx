@@ -1757,14 +1757,7 @@ export const Default = () => {
               onChange={handleLotCodesChange}
             />
             <Box mt="x2" p="x2" backgroundColor="lightPurple" borderRadius="medium">
-              <Text fontSize="small" color="purple">
-                Options should be formatted the same way as 'Items' options
-                <br />
-                <br />
-                [Customer's LOT] - [Supplier LOT]
-                <br />
-                [Expiry date]
-              </Text>
+              
             </Box>
           </Box>
         </Flex>
