@@ -1610,7 +1610,6 @@ export const Default = () => {
                   }
                 }}
                 disabled={!isEnabled}
-                size="small"
               />
             </Box>
           );
