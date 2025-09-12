@@ -133,7 +133,13 @@ export const Details4 = () => {
                 <td style={{ width: "280px", padding: "8px" }}>
                   {fieldConfig.lotCodeRequired ? (
                     <Flex gap="x0_25" flexDirection="column">
-                      <TruncatedText fullWidth width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
+                      <TruncatedText
+                        fullWidth
+                        width="auto"
+                        maxWidth="152px"
+                        fontSize="small"
+                        lineHeight="smallTextCompressed"
+                      >
                         LOT-2025-001
                       </TruncatedText>
                       {fieldConfig.sanofiRequired && (
@@ -174,7 +180,10 @@ export const Details4 = () => {
                   )}
                 </td>
                 <td style={{ width: "auto", padding: "8px" }}>
-                  <Tooltip tooltip="Production details for this lot - additional information about the manufacturing process, quality checks, and any special handling requirements" placement="top">
+                  <Tooltip
+                    tooltip="Production details for this lot - additional information about the manufacturing process, quality checks, and any special handling requirements"
+                    placement="top"
+                  >
                     <Text
                       fontSize="small"
                       lineHeight="smallTextCompressed"
@@ -188,7 +197,8 @@ export const Details4 = () => {
                         cursor: "help",
                       }}
                     >
-                      Production details for this lot - additional information about the manufacturing process, quality checks, and any special handling requirements
+                      Production details for this lot - additional information about the manufacturing process, quality
+                      checks, and any special handling requirements
                     </Text>
                   </Tooltip>
                 </td>
@@ -202,7 +212,13 @@ export const Details4 = () => {
                 <td style={{ width: "280px", padding: "8px" }}>
                   {fieldConfig.lotCodeRequired ? (
                     <Flex gap="x0_25" flexDirection="column">
-                      <TruncatedText fullWidth width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
+                      <TruncatedText
+                        fullWidth
+                        width="auto"
+                        maxWidth="152px"
+                        fontSize="small"
+                        lineHeight="smallTextCompressed"
+                      >
                         LOT-2025-001A
                       </TruncatedText>
                       {fieldConfig.sanofiRequired && (
@@ -271,7 +287,13 @@ export const Details4 = () => {
                 <td style={{ width: "280px", padding: "8px" }}>
                   {fieldConfig.lotCodeRequired ? (
                     <Flex gap="x0_25" flexDirection="column">
-                      <TruncatedText fullWidth width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
+                      <TruncatedText
+                        fullWidth
+                        width="auto"
+                        maxWidth="152px"
+                        fontSize="small"
+                        lineHeight="smallTextCompressed"
+                      >
                         LOT-2025-001B
                       </TruncatedText>
                       {fieldConfig.sanofiRequired && (
@@ -372,7 +394,13 @@ export const Details4 = () => {
                 <td style={{ width: "280px", padding: "8px" }}>
                   {fieldConfig.lotCodeRequired ? (
                     <Flex gap="x0_25" flexDirection="column">
-                      <TruncatedText fullWidth width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
+                      <TruncatedText
+                        fullWidth
+                        width="auto"
+                        maxWidth="152px"
+                        fontSize="small"
+                        lineHeight="smallTextCompressed"
+                      >
                         LOT-2025-005A
                       </TruncatedText>
                       {fieldConfig.sanofiRequired && (
@@ -441,7 +469,13 @@ export const Details4 = () => {
                 <td style={{ width: "280px", padding: "8px" }}>
                   {fieldConfig.lotCodeRequired ? (
                     <Flex gap="x0_25" flexDirection="column">
-                      <TruncatedText fullWidth width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
+                      <TruncatedText
+                        fullWidth
+                        width="auto"
+                        maxWidth="152px"
+                        fontSize="small"
+                        lineHeight="smallTextCompressed"
+                      >
                         LOT-2025-005B
                       </TruncatedText>
                       {fieldConfig.sanofiRequired && (
@@ -530,7 +564,13 @@ export const Details4 = () => {
                 <td style={{ width: "280px", padding: "8px" }}>
                   {fieldConfig.lotCodeRequired ? (
                     <Flex gap="x0_25" flexDirection="column">
-                      <TruncatedText fullWidth width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
+                      <TruncatedText
+                        fullWidth
+                        width="auto"
+                        maxWidth="152px"
+                        fontSize="small"
+                        lineHeight="smallTextCompressed"
+                      >
                         LOT-2025-006A
                       </TruncatedText>
                       {fieldConfig.sanofiRequired && (
@@ -599,7 +639,13 @@ export const Details4 = () => {
                 <td style={{ width: "280px", padding: "8px" }}>
                   {fieldConfig.lotCodeRequired ? (
                     <Flex gap="x0_25" flexDirection="column">
-                      <TruncatedText fullWidth width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
+                      <TruncatedText
+                        fullWidth
+                        width="auto"
+                        maxWidth="152px"
+                        fontSize="small"
+                        lineHeight="smallTextCompressed"
+                      >
                         LOT-2025-006B
                       </TruncatedText>
                       {fieldConfig.sanofiRequired && (
@@ -688,7 +734,13 @@ export const Details4 = () => {
                 <td style={{ width: "280px", padding: "8px" }}>
                   {fieldConfig.lotCodeRequired ? (
                     <Flex gap="x0_25" flexDirection="column">
-                      <TruncatedText fullWidth width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
+                      <TruncatedText
+                        fullWidth
+                        width="auto"
+                        maxWidth="152px"
+                        fontSize="small"
+                        lineHeight="smallTextCompressed"
+                      >
                         LOT-2025-007A
                       </TruncatedText>
                       {fieldConfig.sanofiRequired && (
@@ -757,7 +809,13 @@ export const Details4 = () => {
                 <td style={{ width: "280px", padding: "8px" }}>
                   {fieldConfig.lotCodeRequired ? (
                     <Flex gap="x0_25" flexDirection="column">
-                      <TruncatedText fullWidth width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
+                      <TruncatedText
+                        fullWidth
+                        width="auto"
+                        maxWidth="152px"
+                        fontSize="small"
+                        lineHeight="smallTextCompressed"
+                      >
                         LOT-2025-007B
                       </TruncatedText>
                       {fieldConfig.sanofiRequired && (
@@ -859,9 +917,7 @@ export const Details4 = () => {
       width: "280px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text>
-            Lot code
-          </Text>
+          <Text>Lot code</Text>
           {fieldConfig.sanofiRequired && (
             <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
               Customer's / Supplier's
@@ -880,12 +936,12 @@ export const Details4 = () => {
             </Flex>
           );
         }
-        
+
         // If all lot codes are empty, don't render anything
         if (!row.customerLotCode && !row.supplierLotCode) {
           return null;
         }
-        
+
         return (
           <Flex px="x1" py="x0_75" gap="x0_25" flexDirection="column">
             <TruncatedText fullWidth width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
@@ -922,12 +978,12 @@ export const Details4 = () => {
             </Flex>
           );
         }
-        
+
         // If expiry date is empty, don't render anything
         if (!row.expiryDate) {
           return null;
         }
-        
+
         return formatDateToYYYYMonDD(row.expiryDate);
       },
     },
@@ -946,12 +1002,12 @@ export const Details4 = () => {
             </Flex>
           );
         }
-        
+
         // If pallet number is empty, don't render anything
         if (!row.palletNumber) {
           return null;
         }
-        
+
         return row.palletNumber;
       },
     },
@@ -964,7 +1020,7 @@ export const Details4 = () => {
         if (!row.note) {
           return null;
         }
-        
+
         return (
           <Box px="x1" py="x0_75">
             <Tooltip tooltip={row.note} placement="top">
@@ -996,10 +1052,7 @@ export const Details4 = () => {
       cellFormatter: (props: { row: any }) => {
         // Show Edit action for all rows
         return (
-          <DropdownMenu 
-            trigger={() => <IconicButton icon="more" aria-label="More actions" />}
-            placement="bottom-end"
-          >
+          <DropdownMenu trigger={() => <IconicButton icon="more" aria-label="More actions" />} placement="bottom-end">
             <DropdownButton onClick={() => setShowProductionSidebar(true)}>Edit</DropdownButton>
           </DropdownMenu>
         );
@@ -1020,27 +1073,21 @@ export const Details4 = () => {
       note: "",
       producedQuantity: "",
     };
-    setProductionBatches(prev => [...prev, newBatch]);
+    setProductionBatches((prev) => [...prev, newBatch]);
   };
 
   const handleRemoveBatch = (batchId) => {
-    setProductionBatches(prev => prev.filter(batch => batch.id !== batchId));
+    setProductionBatches((prev) => prev.filter((batch) => batch.id !== batchId));
   };
 
   const handleBatchFieldChange = (batchId, field, value) => {
-    setProductionBatches(prev => 
-      prev.map(batch => 
-        batch.id === batchId 
-          ? { ...batch, [field]: value }
-          : batch
-      )
-    );
+    setProductionBatches((prev) => prev.map((batch) => (batch.id === batchId ? { ...batch, [field]: value } : batch)));
   };
 
   const handleFieldConfigChange = (field, value) => {
-    setFieldConfig(prev => ({
+    setFieldConfig((prev) => ({
       ...prev,
-      [field]: value
+      [field]: value,
     }));
   };
 
@@ -1084,23 +1131,22 @@ export const Details4 = () => {
   };
 
   const handleProductionFieldChange = (field: string, value: string) => {
-    setProductionRecord(prev => ({
+    setProductionRecord((prev) => ({
       ...prev,
-      [field]: value
+      [field]: value,
     }));
   };
 
   const handleActualFieldChange = (field: string, value: string) => {
-    setActualRecord(prev => ({
+    setActualRecord((prev) => ({
       ...prev,
-      [field]: value
+      [field]: value,
     }));
   };
 
   return (
     <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
       <Page>
-
         <Tabs selectedIndex={selectedIndex} onTabClick={(e, index) => setSelectedIndex(index)}>
           <Tab id="overview" label="Overview">
             <Box p="x4">
@@ -1156,23 +1202,22 @@ export const Details4 = () => {
           disableScroll={true}
           footer={
             <Flex gap="x2">
-              <PrimaryButton type="button" onClick={handleSaveProduction}>Save</PrimaryButton>
-              <QuietButton type="button" onClick={handleCloseProductionSidebar}>Cancel</QuietButton>
+              <PrimaryButton type="button" onClick={handleSaveProduction}>
+                Save
+              </PrimaryButton>
+              <QuietButton type="button" onClick={handleCloseProductionSidebar}>
+                Cancel
+              </QuietButton>
             </Flex>
           }
         >
           <Form>
             <FormSection>
-                <Heading4 mb="x2">Production summary</Heading4>
+              <Heading4 mb="x2">Production summary</Heading4>
 
-              
               <Box pb="x3">
                 <Field>
-                  <FieldLabel
-                    labelText="Date"
-                    requirementText="(Required)"
-                    pb="x1"
-                  />
+                  <FieldLabel labelText="Date" requirementText="(Required)" pb="x1" />
                   <DatePicker
                     onChange={(date) => handleProductionFieldChange("date", date?.toISOString() || "")}
                     autoFocus
@@ -1181,11 +1226,7 @@ export const Details4 = () => {
               </Box>
               <Box pb="x3">
                 <Field>
-                  <FieldLabel
-                    labelText="UOM"
-                    requirementText="(Required)"
-                    pb="x1"
-                  />
+                  <FieldLabel labelText="UOM" requirementText="(Required)" pb="x1" />
                   <Select
                     value={productionRecord.uom}
                     onChange={(option) => handleProductionFieldChange("uom", String(option || ""))}
@@ -1196,10 +1237,7 @@ export const Details4 = () => {
               </Box>
               <Box pb="x3">
                 <Field>
-                  <FieldLabel
-                    labelText="Expected quantity"
-                    pb="x1"
-                  />
+                  <FieldLabel labelText="Expected quantity" pb="x1" />
                   <Input
                     type="number"
                     value={productionRecord.expectedQuantity}
@@ -1210,10 +1248,7 @@ export const Details4 = () => {
               </Box>
               <Box pb="x1">
                 <Field>
-                  <FieldLabel
-                    labelText="Note"
-                    pb="x1"
-                  />
+                  <FieldLabel labelText="Note" pb="x1" />
                   <Textarea
                     value={productionRecord.note}
                     onChange={(e) => handleProductionFieldChange("note", e.target.value)}
@@ -1221,22 +1256,14 @@ export const Details4 = () => {
                   />
                 </Field>
               </Box>
-              
-         
-                <Divider />
-         
-              
 
-                <Heading4 mb="x2">Production batch details</Heading4>
+              <Divider />
 
-              
+              <Heading4 mb="x2">Production batch details</Heading4>
+
               <Box pb="x3">
                 <Field>
-                  <FieldLabel
-                    labelText="Produced quantity"
-                    requirementText="(Required)"
-                    pb="x1"
-                  />
+                  <FieldLabel labelText="Produced quantity" requirementText="(Required)" pb="x1" />
                   <Input
                     type="number"
                     value={productionRecord.producedQuantity}
@@ -1289,10 +1316,7 @@ export const Details4 = () => {
               </Box>
               <Box pb="x1">
                 <Field>
-                  <FieldLabel
-                    labelText="Note"
-                    pb="x1"
-                  />
+                  <FieldLabel labelText="Note" pb="x1" />
                   <Textarea
                     value={productionRecord.note}
                     onChange={(e) => handleProductionFieldChange("note", e.target.value)}
@@ -1300,31 +1324,25 @@ export const Details4 = () => {
                   />
                 </Field>
               </Box>
-              
-                <Divider />
 
+              <Divider />
 
               {/* Additional Production Batch Sections */}
               {productionBatches.map((batch, index) => (
                 <React.Fragment key={batch.id}>
+                  <Flex justifyContent="space-between" alignItems="center" mb="x1">
+                    <Heading4>Production batch {index + 2} details</Heading4>
+                    <IconicButton
+                      icon="removeCircleOutline"
+                      aria-label="Remove batch"
+                      tooltip="Remove"
+                      onClick={() => handleRemoveBatch(batch.id)}
+                    />
+                  </Flex>
 
-                    <Flex justifyContent="space-between" alignItems="center" mb="x1">
-                      <Heading4>Production batch {index + 2} details</Heading4>
-                      <IconicButton
-                        icon="removeCircleOutline"
-                        aria-label="Remove batch"
-                        tooltip="Remove"
-                        onClick={() => handleRemoveBatch(batch.id)}
-                      />
-                    </Flex>
-
-                  
                   <Box pb="x3">
                     <Field>
-                      <FieldLabel
-                        labelText="Produced quantity"
-                        pb="x1"
-                      />
+                      <FieldLabel labelText="Produced quantity" pb="x1" />
                       <Input
                         type="number"
                         value={batch.producedQuantity}
@@ -1333,7 +1351,7 @@ export const Details4 = () => {
                       />
                     </Field>
                   </Box>
-                  
+
                   <Box pb="x3">
                     <Field>
                       <FieldLabel
@@ -1348,7 +1366,7 @@ export const Details4 = () => {
                       />
                     </Field>
                   </Box>
-                  
+
                   <Box pb="x3">
                     <Field>
                       <FieldLabel
@@ -1363,7 +1381,7 @@ export const Details4 = () => {
                       />
                     </Field>
                   </Box>
-                  
+
                   <Box pb="x3">
                     <Field>
                       <FieldLabel
@@ -1378,13 +1396,10 @@ export const Details4 = () => {
                       />
                     </Field>
                   </Box>
-                  
+
                   <Box pb="x1">
                     <Field>
-                      <FieldLabel
-                        labelText="Note"
-                        pb="x1"
-                      />
+                      <FieldLabel labelText="Note" pb="x1" />
                       <Textarea
                         value={batch.note}
                         onChange={(e) => handleBatchFieldChange(batch.id, "note", e.target.value)}
@@ -1392,15 +1407,18 @@ export const Details4 = () => {
                       />
                     </Field>
                   </Box>
-                  
 
-                    <Divider />
-
+                  <Divider />
                 </React.Fragment>
               ))}
 
               <Box pb="x3">
-                <IconicButton type="button" icon="addCircleOutline" aria-label="Add another production batch" onClick={handleAddAnotherProduction}>
+                <IconicButton
+                  type="button"
+                  icon="addCircleOutline"
+                  aria-label="Add another production batch"
+                  onClick={handleAddAnotherProduction}
+                >
                   Add another production batch
                 </IconicButton>
               </Box>
@@ -1420,8 +1438,12 @@ export const Details4 = () => {
           disableScroll={true}
           footer={
             <Flex gap="x2">
-              <PrimaryButton type="button" onClick={handleSaveActual}>Save</PrimaryButton>
-              <QuietButton type="button" onClick={handleCloseActualSidebar}>Cancel</QuietButton>
+              <PrimaryButton type="button" onClick={handleSaveActual}>
+                Save
+              </PrimaryButton>
+              <QuietButton type="button" onClick={handleCloseActualSidebar}>
+                Cancel
+              </QuietButton>
             </Flex>
           }
         >
@@ -1429,10 +1451,7 @@ export const Details4 = () => {
             <FormSection>
               <Box pb="x3">
                 <Field>
-                  <FieldLabel
-                    labelText="Date"
-                    pb="x1"
-                  />
+                  <FieldLabel labelText="Date" pb="x1" />
                   <DatePicker
                     onChange={(date) => handleActualFieldChange("date", date?.toISOString() || "")}
                     autoFocus
@@ -1441,10 +1460,7 @@ export const Details4 = () => {
               </Box>
               <Box pb="x3">
                 <Field>
-                  <FieldLabel
-                    labelText="UOM"
-                    pb="x1"
-                  />
+                  <FieldLabel labelText="UOM" pb="x1" />
                   <Select
                     value={actualRecord.uom}
                     onChange={(option) => handleActualFieldChange("uom", String(option || ""))}
@@ -1455,10 +1471,7 @@ export const Details4 = () => {
               </Box>
               <Box pb="x3">
                 <Field>
-                  <FieldLabel
-                    labelText="Actual Quantity"
-                    pb="x1"
-                  />
+                  <FieldLabel labelText="Actual Quantity" pb="x1" />
                   <Input
                     type="number"
                     value={actualRecord.actualQuantity}
@@ -1469,10 +1482,7 @@ export const Details4 = () => {
               </Box>
               <Box pb="x3">
                 <Field>
-                  <FieldLabel
-                    labelText="Lot Code"
-                    pb="x1"
-                  />
+                  <FieldLabel labelText="Lot Code" pb="x1" />
                   <Input
                     value={actualRecord.lotCode}
                     onChange={(e) => handleActualFieldChange("lotCode", e.target.value)}
@@ -1482,10 +1492,7 @@ export const Details4 = () => {
               </Box>
               <Box pb="x3">
                 <Field>
-                  <FieldLabel
-                    labelText="Expiry Date"
-                    pb="x1"
-                  />
+                  <FieldLabel labelText="Expiry Date" pb="x1" />
                   <Input
                     value={actualRecord.expiryDate}
                     onChange={(e) => handleActualFieldChange("expiryDate", e.target.value)}
@@ -1495,10 +1502,7 @@ export const Details4 = () => {
               </Box>
               <Box pb="x3">
                 <Field>
-                  <FieldLabel
-                    labelText="Note"
-                    pb="x1"
-                  />
+                  <FieldLabel labelText="Note" pb="x1" />
                   <Textarea
                     value={actualRecord.note}
                     onChange={(e) => handleActualFieldChange("note", e.target.value)}
@@ -1535,21 +1539,27 @@ export const Details4 = () => {
               />
             </Flex>
             <Flex alignItems="center" gap="x1">
-              <Text fontSize="x0_25" color="midGrey">Expiry date</Text>
+              <Text fontSize="x0_25" color="midGrey">
+                Expiry date
+              </Text>
               <Toggle
                 toggled={fieldConfig.expiryDateRequired}
                 onChange={(e) => handleFieldConfigChange("expiryDateRequired", e.target.checked)}
               />
             </Flex>
             <Flex alignItems="center" gap="x1">
-              <Text fontSize="x0_25" color="midGrey">Pallet</Text>
+              <Text fontSize="x0_25" color="midGrey">
+                Pallet
+              </Text>
               <Toggle
                 toggled={fieldConfig.palletNumberRequired}
                 onChange={(e) => handleFieldConfigChange("palletNumberRequired", e.target.checked)}
               />
             </Flex>
             <Flex alignItems="center" gap="x1">
-              <Text fontSize="x0_25" color="midGrey">SANOFI req</Text>
+              <Text fontSize="x0_25" color="midGrey">
+                SANOFI req
+              </Text>
               <Toggle
                 toggled={fieldConfig.sanofiRequired}
                 onChange={(e) => handleFieldConfigChange("sanofiRequired", e.target.checked)}
