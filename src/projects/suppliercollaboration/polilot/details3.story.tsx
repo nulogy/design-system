@@ -159,13 +159,7 @@ export const Details3 = () => {
         ];
 
         return (
-          <Table
-            columns={nestedTableColumns}
-            rows={nestedTableData}
-            keyField="id"
-            compact={true}
-            rowBorder={true}
-          />
+          <Table columns={nestedTableColumns} rows={nestedTableData} keyField="id" compact={true} rowBorder={true} />
         );
       },
     },
@@ -216,13 +210,7 @@ export const Details3 = () => {
         ];
 
         return (
-          <Table
-            columns={nestedTableColumns}
-            rows={nestedTableData}
-            keyField="id"
-            compact={true}
-            rowBorder={true}
-          />
+          <Table columns={nestedTableColumns} rows={nestedTableData} keyField="id" compact={true} rowBorder={true} />
         );
       },
     },
@@ -273,13 +261,7 @@ export const Details3 = () => {
         ];
 
         return (
-          <Table
-            columns={nestedTableColumns}
-            rows={nestedTableData}
-            keyField="id"
-            compact={true}
-            rowBorder={true}
-          />
+          <Table columns={nestedTableColumns} rows={nestedTableData} keyField="id" compact={true} rowBorder={true} />
         );
       },
     },
@@ -300,13 +282,15 @@ export const Details3 = () => {
         // If this is an expanded content row, render the expanded content spanning all columns
         if (row.isExpandedContent) {
           return (
-            <Box style={{ 
-              width: "100%",
-              backgroundColor: "white",
-              border: "1px solid #ddd",
-              padding: "8px",
-              marginTop: "8px"
-            }}>
+            <Box
+              style={{
+                width: "100%",
+                backgroundColor: "white",
+                border: "1px solid #ddd",
+                padding: "8px",
+                marginTop: "8px",
+              }}
+            >
               {row.expandedContent()}
             </Box>
           );
@@ -335,7 +319,7 @@ export const Details3 = () => {
       cellProps: ({ row }: { row: any }) => {
         // If this is an expanded content row, don't render this cell (spanned by first column)
         if (row.isExpandedContent) {
-          return { style: { display: 'none' } };
+          return { style: { display: "none" } };
         }
         return {};
       },
@@ -354,7 +338,7 @@ export const Details3 = () => {
       cellProps: ({ row }: { row: any }) => {
         // If this is an expanded content row, don't render this cell (spanned by first column)
         if (row.isExpandedContent) {
-          return { style: { display: 'none' } };
+          return { style: { display: "none" } };
         }
         return {};
       },
@@ -369,24 +353,22 @@ export const Details3 = () => {
         if (props.row.isExpandedContent) {
           return null;
         }
-        
+
         // Only show expand/collapse button for rows with expandedContent
         if (!props.row.expandedContent) {
           return null;
         }
-        
+
         const isExpanded = expandedRows.includes(props.row.id);
-        
+
         return (
           <Box style={{ display: "flex", justifyContent: "center" }}>
             <ControlIcon
               icon={isExpanded ? "upArrow" : "downArrow"}
               label={isExpanded ? "Collapse row" : "Expand row"}
               onClick={() => {
-                setExpandedRows(prev => 
-                  prev.includes(props.row.id) 
-                    ? prev.filter(id => id !== props.row.id)
-                    : [...prev, props.row.id]
+                setExpandedRows((prev) =>
+                  prev.includes(props.row.id) ? prev.filter((id) => id !== props.row.id) : [...prev, props.row.id]
                 );
               }}
             />
@@ -396,7 +378,7 @@ export const Details3 = () => {
       cellProps: ({ row }: { row: any }) => {
         // If this is an expanded content row, don't render this cell (spanned by first column)
         if (row.isExpandedContent) {
-          return { style: { display: 'none' } };
+          return { style: { display: "none" } };
         }
         return {};
       },
@@ -411,13 +393,12 @@ export const Details3 = () => {
         if (props.row.isExpandedContent) {
           return null;
         }
-        
+
         return (
-          <DropdownMenu 
-            trigger={() => <IconicButton icon="more" aria-label="More actions" />}
-            placement="bottom-end"
-          >
-            <DropdownButton onClick={() => setShowExpectedSidebar(true)}>Edit expected production details</DropdownButton>
+          <DropdownMenu trigger={() => <IconicButton icon="more" aria-label="More actions" />} placement="bottom-end">
+            <DropdownButton onClick={() => setShowExpectedSidebar(true)}>
+              Edit expected production details
+            </DropdownButton>
             <DropdownButton onClick={() => setShowActualSidebar(true)}>Edit actual production details</DropdownButton>
             <DropdownButton onClick={() => console.log("Delete clicked")}>Delete</DropdownButton>
           </DropdownMenu>
@@ -426,11 +407,11 @@ export const Details3 = () => {
       cellProps: ({ row }: { row: any }) => {
         // If this is an expanded content row, don't render this cell (spanned by first column)
         if (row.isExpandedContent) {
-          return { style: { display: 'none' } };
+          return { style: { display: "none" } };
         }
         return {};
       },
-    }
+    },
   ];
 
   const handleExpectedProduction = () => {
@@ -463,16 +444,16 @@ export const Details3 = () => {
   };
 
   const handleExpectedFieldChange = (field: string, value: string) => {
-    setExpectedRecord(prev => ({
+    setExpectedRecord((prev) => ({
       ...prev,
-      [field]: value
+      [field]: value,
     }));
   };
 
   const handleActualFieldChange = (field: string, value: string) => {
-    setActualRecord(prev => ({
+    setActualRecord((prev) => ({
       ...prev,
-      [field]: value
+      [field]: value,
     }));
   };
 
@@ -491,7 +472,6 @@ export const Details3 = () => {
   return (
     <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
       <Page>
-
         <Tabs selectedIndex={selectedIndex} onTabClick={(e, index) => setSelectedIndex(index)}>
           <Tab id="overview" label="Overview">
             <Box p="x4">
@@ -525,8 +505,12 @@ export const Details3 = () => {
           <Tab id="production-records" label="Production Records">
             <Box p="x4">
               <Flex justifyContent="flex-end" mb="x3">
-                <DropdownMenu 
-                  trigger={() => <IconicButton icon="add" aria-label="Add production">Add production</IconicButton>}
+                <DropdownMenu
+                  trigger={() => (
+                    <IconicButton icon="add" aria-label="Add production">
+                      Add production
+                    </IconicButton>
+                  )}
                   placement="bottom-end"
                 >
                   <DropdownButton onClick={handleExpectedProduction}>Expected details</DropdownButton>
@@ -536,23 +520,25 @@ export const Details3 = () => {
 
               <Table
                 columns={productionRecordsColumns}
-                rows={productionRecordsData.map(row => {
-                  const result = [row];
-                  
-                  // If this row is expanded, add the expanded content as a "row" below it
-                  if (expandedRows.includes(row.id) && row.expandedContent) {
-                    result.push({
-                      id: `${row.id}-expanded`,
-                      expandedContent: row.expandedContent,
-                      // Add empty cells to match the column structure
-                      date: "",
-                      expectedQuantity: "",
-                      actualQuantity: "",
-                    });
-                  }
-                  
-                  return result;
-                }).flat()}
+                rows={productionRecordsData
+                  .map((row) => {
+                    const result = [row];
+
+                    // If this row is expanded, add the expanded content as a "row" below it
+                    if (expandedRows.includes(row.id) && row.expandedContent) {
+                      result.push({
+                        id: `${row.id}-expanded`,
+                        expandedContent: row.expandedContent,
+                        // Add empty cells to match the column structure
+                        date: "",
+                        expectedQuantity: "",
+                        actualQuantity: "",
+                      });
+                    }
+
+                    return result;
+                  })
+                  .flat()}
                 keyField="id"
                 rowBorder={true}
                 compact={true}
@@ -591,10 +577,7 @@ export const Details3 = () => {
             <FormSection>
               <Box pb="x3">
                 <Field>
-                  <FieldLabel
-                    labelText="Date"
-                    pb="x1"
-                  />
+                  <FieldLabel labelText="Date" pb="x1" />
                   <DatePicker
                     onChange={(date) => handleExpectedFieldChange("date", date?.toISOString() || "")}
                     autoFocus
@@ -603,10 +586,7 @@ export const Details3 = () => {
               </Box>
               <Box pb="x3">
                 <Field>
-                  <FieldLabel
-                    labelText="UOM"
-                    pb="x1"
-                  />
+                  <FieldLabel labelText="UOM" pb="x1" />
                   <Select
                     value={expectedRecord.uom}
                     onChange={(option) => handleExpectedFieldChange("uom", String(option || ""))}
@@ -617,10 +597,7 @@ export const Details3 = () => {
               </Box>
               <Box pb="x3">
                 <Field>
-                  <FieldLabel
-                    labelText="Expected Quantity"
-                    pb="x1"
-                  />
+                  <FieldLabel labelText="Expected Quantity" pb="x1" />
                   <Input
                     type="number"
                     value={expectedRecord.expectedQuantity}
@@ -654,10 +631,7 @@ export const Details3 = () => {
             <FormSection>
               <Box pb="x3">
                 <Field>
-                  <FieldLabel
-                    labelText="Date"
-                    pb="x1"
-                  />
+                  <FieldLabel labelText="Date" pb="x1" />
                   <DatePicker
                     onChange={(date) => handleActualFieldChange("date", date?.toISOString() || "")}
                     autoFocus
@@ -666,10 +640,7 @@ export const Details3 = () => {
               </Box>
               <Box pb="x3">
                 <Field>
-                  <FieldLabel
-                    labelText="UOM"
-                    pb="x1"
-                  />
+                  <FieldLabel labelText="UOM" pb="x1" />
                   <Select
                     value={actualRecord.uom}
                     onChange={(option) => handleActualFieldChange("uom", String(option || ""))}
@@ -680,10 +651,7 @@ export const Details3 = () => {
               </Box>
               <Box pb="x3">
                 <Field>
-                  <FieldLabel
-                    labelText="Actual Quantity"
-                    pb="x1"
-                  />
+                  <FieldLabel labelText="Actual Quantity" pb="x1" />
                   <Input
                     type="number"
                     value={actualRecord.actualQuantity}
@@ -694,10 +662,7 @@ export const Details3 = () => {
               </Box>
               <Box pb="x3">
                 <Field>
-                  <FieldLabel
-                    labelText="Lot Code"
-                    pb="x1"
-                  />
+                  <FieldLabel labelText="Lot Code" pb="x1" />
                   <Input
                     value={actualRecord.lotCode}
                     onChange={(e) => handleActualFieldChange("lotCode", e.target.value)}
@@ -707,10 +672,7 @@ export const Details3 = () => {
               </Box>
               <Box pb="x3">
                 <Field>
-                  <FieldLabel
-                    labelText="Expiry Date"
-                    pb="x1"
-                  />
+                  <FieldLabel labelText="Expiry Date" pb="x1" />
                   <Input
                     value={actualRecord.expiryDate}
                     onChange={(e) => handleActualFieldChange("expiryDate", e.target.value)}
@@ -720,10 +682,7 @@ export const Details3 = () => {
               </Box>
               <Box pb="x3">
                 <Field>
-                  <FieldLabel
-                    labelText="Note"
-                    pb="x1"
-                  />
+                  <FieldLabel labelText="Note" pb="x1" />
                   <Textarea
                     value={actualRecord.note}
                     onChange={(e) => handleActualFieldChange("note", e.target.value)}
