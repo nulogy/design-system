@@ -1245,13 +1245,14 @@ export const Details6 = () => {
   }: {
     materials: Array<{ item: string; lotCode: string; expiryDate: string; palletNumber: string; quantity: string }>;
   }) => (
-    <Box my="x1" ml="x7">
-      <Table columns={consumptionTableColumns} rows={materials} keyField="item" compact={true} rowBorder={true} />
-      <Flex justifyContent="flex-end" mt="x2">
+    <Box my="x1" border="1px solid #ddd" borderRadius="4px" p="x2">
+      <Flex justifyContent="space-between" alignItems="center" mb="x2">
+        <Heading4>Consumption details</Heading4>
         <DropdownMenu trigger={() => <IconicButton icon="more" aria-label="More actions" />} placement="bottom-end">
           <DropdownButton onClick={() => handleOpenConsumptionSidebar(materials)}>Edit consumption</DropdownButton>
         </DropdownMenu>
       </Flex>
+      <Table columns={consumptionTableColumns} rows={materials} keyField="item" compact={true} rowBorder={true} />
     </Box>
   );
 
