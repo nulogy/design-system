@@ -51,6 +51,7 @@ export default {
 export const Details5 = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [showProductionSidebar, setShowProductionSidebar] = useState(false);
+  const [showConsumptionSidebar, setShowConsumptionSidebar] = useState(false);
   const [expandedRows, setExpandedRows] = useState<string[]>([]);
   const [nestedExpandedRows, setNestedExpandedRows] = useState<string[]>([]);
   const [productionRecord, setProductionRecord] = useState({
@@ -65,6 +66,7 @@ export const Details5 = () => {
     note: "",
   });
   const [productionBatches, setProductionBatches] = useState([]);
+  const [consumptionMaterials, setConsumptionMaterials] = useState([]);
   const [fieldConfig, setFieldConfig] = useState({
     lotCodeRequired: false,
     palletNumberRequired: false,
@@ -90,6 +92,16 @@ export const Details5 = () => {
     { label: "Pounds (lbs)", value: "lbs" },
     { label: "Meters (m)", value: "m" },
     { label: "Feet (ft)", value: "ft" },
+  ];
+
+  const unitOptions = [
+    { label: "kg", value: "kg" },
+    { label: "g", value: "g" },
+    { label: "mg", value: "mg" },
+    { label: "lbs", value: "lbs" },
+    { label: "oz", value: "oz" },
+    { label: "ml", value: "ml" },
+    { label: "l", value: "l" },
   ];
 
   // Nested table data for each expandable row
@@ -668,23 +680,23 @@ export const Details5 = () => {
         );
       },
     },
-    {
-      label: "",
-      dataKey: "actions",
-      width: "60px",
-      headerFormatter: () => null,
-      cellFormatter: (props: { row: any }) => {
-        // Show Edit action for all rows
-        return (
-          <DropdownMenu
-            trigger={() => <IconicButton icon="more" aria-label="More actions" />}
-            placement="bottom-end"
-          >
-            <DropdownButton onClick={() => setShowProductionSidebar(true)}>Edit</DropdownButton>
-          </DropdownMenu>
-        );
+      {
+        label: "",
+        dataKey: "actions",
+        width: "32px",
+        headerFormatter: () => null,
+        cellFormatter: (props: { row: any }) => {
+          // Show Edit action for all rows
+          return (
+            <DropdownMenu
+              trigger={() => <IconicButton icon="more" aria-label="More actions" />}
+              placement="bottom-end"
+            >
+              <DropdownButton onClick={() => setShowProductionSidebar(true)}>Edit production</DropdownButton>
+            </DropdownMenu>
+          );
+        },
       },
-    },
   ];
 
   const handleAddProduction = () => {
@@ -746,6 +758,39 @@ export const Details5 = () => {
   const handleSaveProduction = () => {
     toast.success("Production record saved successfully!");
     handleCloseProductionSidebar();
+  };
+
+  const handleOpenConsumptionSidebar = (materials: Array<{ label: string; value: string; quantity: string }>) => {
+    // Parse materials and set up consumption state
+    const parsedMaterials = materials.map((material, index) => {
+      const parts = material.quantity.split(' ');
+      return {
+        id: `material-${index}`,
+        name: material.value,
+        quantity: parts[0] || '',
+        unit: parts[1] || 'kg'
+      };
+    });
+    setConsumptionMaterials(parsedMaterials);
+    setShowConsumptionSidebar(true);
+  };
+
+  const handleCloseConsumptionSidebar = () => {
+    setShowConsumptionSidebar(false);
+    setConsumptionMaterials([]);
+  };
+
+  const handleConsumptionFieldChange = (materialId: string, field: string, value: string) => {
+    setConsumptionMaterials(prev =>
+      prev.map(material =>
+        material.id === materialId ? { ...material, [field]: value } : material
+      )
+    );
+  };
+
+  const handleSaveConsumption = () => {
+    toast.success("Consumption details saved successfully!");
+    handleCloseConsumptionSidebar();
   };
 
   // Materials data for consumption reports
@@ -838,14 +883,14 @@ export const Details5 = () => {
   ];
 
   // Reusable Consumption Report Component
-  const ConsumptionReport = ({ materials }: { materials: Array<{ label: string; value: string }> }) => (
+  const ConsumptionReport = ({ materials }: { materials: Array<{ label: string; value: string; quantity: string }> }) => (
     
       <Flex justifyContent="space-between" alignItems="flex-start" my="x1" ml="x7">
         <DescriptionList density="compact" columns={4} fontSize="small">
           {materials.map((material, index) => (
             <DescriptionGroup key={index}>
-              <DescriptionTerm>{material.label}</DescriptionTerm>
-              <DescriptionDetails>{material.value}</DescriptionDetails>
+              <DescriptionTerm>{material.value}</DescriptionTerm>
+              <DescriptionDetails>{material.quantity}</DescriptionDetails>
             </DescriptionGroup>
           ))}
         </DescriptionList>
@@ -854,8 +899,8 @@ export const Details5 = () => {
           placement="bottom-end"
           mr="x1"
         >
-          <DropdownButton onClick={() => setShowProductionSidebar(true)}>
-            Edit consumption details
+          <DropdownButton onClick={() => handleOpenConsumptionSidebar(materials)}>
+            Edit consumption
           </DropdownButton>
         </DropdownMenu>
       </Flex>
@@ -892,32 +937,9 @@ export const Details5 = () => {
       </style>
       <Page>
         <Tabs selectedIndex={selectedIndex} onTabClick={(e, index) => setSelectedIndex(index)}>
-          <Tab id="overview" label="Overview">
-            <Box py="x4">
-              <Flex justifyContent="flex-end" mb="x3">
-                <IconicButton icon="add" aria-label="Add production" onClick={handleAddProduction}>
-                  Add production
-                </IconicButton>
-              </Flex>
-
-              <Box minWidth="1236px">
-                <Table
-                  columns={productionRecordsColumns}
-                  rows={productionRecordsData}
-                  hasExpandableRows={true}
-                  expandedRows={expandedRows}
-                  onRowExpansionChange={setExpandedRows}
-                  keyField="id"
-                  rowBorder={true}
-                  compact={true}
-                  className="parent-table"
-                />
-              </Box>
-            </Box>
-          </Tab>
-          <Tab id="production-record" label="Production record">
-            <Box py="x4">
-              <Flex justifyContent="flex-end" mb="x3">
+            <Tab id="overview" label="Production record">
+            <Box>
+              <Flex justifyContent="flex-end" mb="x1">
                 <IconicButton icon="add" aria-label="Add production" onClick={handleAddProduction}>
                   Add production
                 </IconicButton>
@@ -944,66 +966,67 @@ export const Details5 = () => {
         <Sidebar
           isOpen={showProductionSidebar}
           onClose={handleCloseProductionSidebar}
-          title="Production record"
+          title="Create production record"
           width="600px"
+          duration={0.25}
+          closeOnOutsideClick={true}
+          overlay="show"
+          disableScroll={true}
+          footer={
+            <Flex gap="x2">
+              <PrimaryButton type="button" onClick={handleSaveProduction}>
+                Save
+              </PrimaryButton>
+              <QuietButton type="button" onClick={handleCloseProductionSidebar}>
+                Cancel
+              </QuietButton>
+            </Flex>
+          }
         >
           <Form>
             <FormSection>
-              <Box pb="x3">
+              <Heading4 mt="x1" mb="x2">Production summary</Heading4>
+
+
                 <Field>
-                  <FieldLabel labelText="Production summary" pb="x1" />
+                  <FieldLabel labelText="Date" pb="x1" requirementText={fieldConfig.lotCodeRequired ? "(Required)" : undefined} />
+                  <DatePicker
+                    onChange={(date) => handleProductionFieldChange("date", date?.toISOString() || "")}
+                    selected={productionRecord.date ? new Date(productionRecord.date) : undefined}
+                    inputProps={{ disabled: true }}
+                  />
                 </Field>
-                <Box pb="x3">
-                  <Field>
-                    <FieldLabel labelText="Date" pb="x1" requirementText={fieldConfig.lotCodeRequired ? "(Required)" : undefined} />
-                    <DatePicker
-                      onChange={(date) => handleProductionFieldChange("date", date?.toISOString() || "")}
-                      selected={productionRecord.date ? new Date(productionRecord.date) : undefined}
-                      inputProps={{ disabled: true }}
-                    />
-                  </Field>
-                </Box>
-                <Box pb="x3">
-                  <Field>
-                    <FieldLabel labelText="UOM" pb="x1" requirementText={fieldConfig.lotCodeRequired ? "(Required)" : undefined} />
-                    <Select
-                      value={productionRecord.uom}
-                      onChange={(value) => handleProductionFieldChange("uom", String(value))}
-                      options={uomOptions}
-                    />
-                  </Field>
-                </Box>
-                <Box pb="x3">
-                  <Field>
-                    <FieldLabel labelText="Expected quantity" pb="x1" />
-                    <Input
-                      type="number"
-                      value={productionRecord.expectedQuantity}
-                      onChange={(e) => handleProductionFieldChange("expectedQuantity", e.target.value)}
-                    />
-                  </Field>
-                </Box>
-                <Box pb="x3">
-                  <Field>
-                    <FieldLabel labelText="Note" pb="x1" />
-                    <Textarea
-                      value={productionRecord.note}
-                      onChange={(e) => handleProductionFieldChange("note", e.target.value)}
-                    />
-                  </Field>
-                </Box>
-              </Box>
 
-              <Box pb="x3">
-                <Divider />
-              </Box>
+                <Field width="50%">
+                  <FieldLabel labelText="UOM" pb="x1" requirementText={fieldConfig.lotCodeRequired ? "(Required)" : undefined} />
+                  <Select
+                    value={productionRecord.uom}
+                    onChange={(value) => handleProductionFieldChange("uom", String(value))}
+                    options={uomOptions}
+                  />
+                </Field>
 
-              <Box pb="x3">
+
+                <Field width="50%" pb="x1">
+                  <FieldLabel labelText="Expected quantity" pb="x1" />
+                  <Input
+                    type="number"
+                    value={productionRecord.expectedQuantity}
+                    onChange={(e) => handleProductionFieldChange("expectedQuantity", e.target.value)}
+                  />
+                </Field>
+
+
+
+                <Divider mb="x3" />
+
+
+              
                 <Flex justifyContent="space-between" alignItems="center" mb="x2">
-                  <Heading4 mb="x2">Production batch details</Heading4>
+                  <Heading4>Production details: Batch 1</Heading4>
                 </Flex>
-                <Box pb="x3">
-                  <Field>
+
+                  <Field width="50%">
                     <FieldLabel labelText="Produced quantity" pb="x1" requirementText={fieldConfig.lotCodeRequired ? "(Required)" : undefined} />
                     <Input
                       type="number"
@@ -1011,8 +1034,8 @@ export const Details5 = () => {
                       onChange={(e) => handleProductionFieldChange("producedQuantity", e.target.value)}
                     />
                   </Field>
-                </Box>
-                <Box pb="x3">
+
+
                   <Field>
                     <FieldLabel labelText="Lot code" pb="x1" requirementText={fieldConfig.lotCodeRequired ? "(Required)" : undefined} />
                     <Input
@@ -1020,17 +1043,17 @@ export const Details5 = () => {
                       onChange={(e) => handleProductionFieldChange("lotCode", e.target.value)}
                     />
                   </Field>
-                </Box>
-                <Box pb="x3">
+
+
                   <Field>
-                    <FieldLabel labelText="Expiry date" pb="x1" requirementText={fieldConfig.expiryDateRequired ? "(Required)" : undefined} />
-                    <Input
-                      value={productionRecord.expiryDate}
-                      onChange={(e) => handleProductionFieldChange("expiryDate", e.target.value)}
-                    />
+                    <FieldLabel labelText="Expiry date" pb="x1" requirementText={fieldConfig.expiryDateRequired ? "(Required)" : undefined} />         
+                  <DatePicker
+                    onChange={(date) => handleProductionFieldChange("date", date?.toISOString() || "")}
+                    selected={productionRecord.date ? new Date(productionRecord.date) : undefined}
+                  />
                   </Field>
-                </Box>
-                <Box pb="x3">
+
+
                   <Field>
                     <FieldLabel labelText="Pallet number" pb="x1" requirementText={fieldConfig.palletNumberRequired ? "(Required)" : undefined} />
                     <Input
@@ -1038,26 +1061,22 @@ export const Details5 = () => {
                       onChange={(e) => handleProductionFieldChange("palletNumber", e.target.value)}
                     />
                   </Field>
-                </Box>
-                <Box pb="x3">
-                  <Field>
+
+                  <Field pb="x1">
                     <FieldLabel labelText="Note" pb="x1" />
                     <Textarea
                       value={productionRecord.note}
                       onChange={(e) => handleProductionFieldChange("note", e.target.value)}
                     />
-                  </Field>
-                </Box>
-              </Box>
+                  </Field>            
 
               {productionBatches.map((batch, index) => (
-                <Box key={batch.id} pb="x3">
-                  <Box pb="x3">
-                    <Divider />
-                  </Box>
-                  <Box pb="x3">
+                <Box key={batch.id}>
+
+                    <Divider mb="x2_5" />
+
                     <Flex justifyContent="space-between" alignItems="center" mb="x2">
-                      <Heading4 mb="x2">Production batch {index + 2} details</Heading4>
+                      <Heading4 pb="0">Production details: batch {index + 2}</Heading4>
                       <IconicButton
                         icon="removeCircleOutline"
                         aria-label="Remove batch"
@@ -1065,7 +1084,7 @@ export const Details5 = () => {
                         type="button"
                       />
                     </Flex>
-                    <Box pb="x3">
+
                       <Field>
                         <FieldLabel labelText="Produced quantity" pb="x1" requirementText={fieldConfig.lotCodeRequired ? "(Required)" : undefined} />
                         <Input
@@ -1074,8 +1093,8 @@ export const Details5 = () => {
                           onChange={(e) => handleBatchFieldChange(batch.id, "producedQuantity", e.target.value)}
                         />
                       </Field>
-                    </Box>
-                    <Box pb="x3">
+                   
+
                       <Field>
                         <FieldLabel labelText="Lot code" pb="x1" requirementText={fieldConfig.lotCodeRequired ? "(Required)" : undefined} />
                         <Input
@@ -1083,8 +1102,8 @@ export const Details5 = () => {
                           onChange={(e) => handleBatchFieldChange(batch.id, "lotCode", e.target.value)}
                         />
                       </Field>
-                    </Box>
-                    <Box pb="x3">
+                   
+
                       <Field>
                         <FieldLabel labelText="Expiry date" pb="x1" requirementText={fieldConfig.expiryDateRequired ? "(Required)" : undefined} />
                         <Input
@@ -1092,8 +1111,8 @@ export const Details5 = () => {
                           onChange={(e) => handleBatchFieldChange(batch.id, "expiryDate", e.target.value)}
                         />
                       </Field>
-                    </Box>
-                    <Box pb="x3">
+                   
+
                       <Field>
                         <FieldLabel labelText="Pallet number" pb="x1" requirementText={fieldConfig.palletNumberRequired ? "(Required)" : undefined} />
                         <Input
@@ -1101,23 +1120,20 @@ export const Details5 = () => {
                           onChange={(e) => handleBatchFieldChange(batch.id, "palletNumber", e.target.value)}
                         />
                       </Field>
-                    </Box>
-                    <Box pb="x3">
-                      <Field>
+            
+                      <Field pb="x1">
                         <FieldLabel labelText="Note" pb="x1" />
                         <Textarea
                           value={batch.note}
                           onChange={(e) => handleBatchFieldChange(batch.id, "note", e.target.value)}
                         />
                       </Field>
-                    </Box>
+
                   </Box>
-                </Box>
+
               ))}
 
-              <Box pb="x3">
-                <Divider />
-              </Box>
+                <Divider mb="x3" />
 
               <Box pb="x3">
                 <QuietButton
@@ -1131,12 +1147,62 @@ export const Details5 = () => {
                 </QuietButton>
               </Box>
 
-              <Flex gap="x2" justifyContent="flex-end">
-                <Button onClick={handleCloseProductionSidebar}>Cancel</Button>
-                <PrimaryButton onClick={handleSaveProduction} type="button">
-                  Save
-                </PrimaryButton>
-              </Flex>
+            </FormSection>
+          </Form>
+        </Sidebar>
+
+        {/* Consumption Details Sidebar */}
+        <Sidebar
+          isOpen={showConsumptionSidebar}
+          onClose={handleCloseConsumptionSidebar}
+          title="Edit consumption details"
+          width="600px"
+          duration={0.25}
+          closeOnOutsideClick={true}
+          overlay="show"
+          disableScroll={true}
+          footer={
+            <Flex gap="x2">
+              <PrimaryButton type="button" onClick={handleSaveConsumption}>
+                Save
+              </PrimaryButton>
+              <QuietButton type="button" onClick={handleCloseConsumptionSidebar}>
+                Cancel
+              </QuietButton>
+            </Flex>
+          }
+        >
+          <Form>
+            <FormSection>
+              {consumptionMaterials.map((material, index) => (
+                <Box key={material.id} pb="x3">
+                  <Field>
+                    <FieldLabel labelText="Consumed material" pb="x1" />
+                    <Input
+                      value={material.name}
+                      onChange={(e) => handleConsumptionFieldChange(material.id, "name", e.target.value)}
+                    />
+                  </Field>
+                  <Flex gap="x1">
+                    <Field width="50%">
+                      <FieldLabel labelText="Quantity" pb="x1" />
+                      <Input
+                        type="number"
+                        value={material.quantity}
+                        onChange={(e) => handleConsumptionFieldChange(material.id, "quantity", e.target.value)}
+                      />
+                    </Field>
+                    <Field width="50%">
+                      <FieldLabel labelText="Unit" pb="x1" />
+                      <Select
+                        value={material.unit}
+                        onChange={(value) => handleConsumptionFieldChange(material.id, "unit", String(value))}
+                        options={unitOptions}
+                      />
+                    </Field>
+                  </Flex>
+                </Box>
+              ))}
             </FormSection>
           </Form>
         </Sidebar>
@@ -1154,30 +1220,30 @@ export const Details5 = () => {
           boxShadow="medium"
         >
           <Flex alignItems="center" gap="x2" px="x2" py="x1">
-            <Text fontSize="x0_5">Tracking:</Text>
-            <Flex alignItems="center" gap="x1">
-              <Text fontSize="x0_25" color="midGrey">Lot code</Text>
+            <Text fontSize="small">Tracking:</Text>
+            <Flex alignItems="center" gap="x1" width="200px">
+              <Text width="100px" fontSize="small" color="midGrey">Lot code</Text>
               <Toggle
                 toggled={fieldConfig.lotCodeRequired}
                 onChange={(e) => handleFieldConfigChange("lotCodeRequired", e.target.checked)}
               />
             </Flex>
-            <Flex alignItems="center" gap="x1">
-              <Text fontSize="x0_25" color="midGrey">Expiry date</Text>
+            <Flex alignItems="center" gap="x1" width="200px">
+              <Text width="150px" fontSize="small" color="midGrey">Expiry date</Text>
               <Toggle
                 toggled={fieldConfig.expiryDateRequired}
                 onChange={(e) => handleFieldConfigChange("expiryDateRequired", e.target.checked)}
               />
             </Flex>
-            <Flex alignItems="center" gap="x1">
-              <Text fontSize="x0_25" color="midGrey">Pallet</Text>
+            <Flex alignItems="center" gap="x1" width="200px">
+              <Text width="100px" fontSize="small" color="midGrey">Pallet</Text>
               <Toggle
                 toggled={fieldConfig.palletNumberRequired}
                 onChange={(e) => handleFieldConfigChange("palletNumberRequired", e.target.checked)}
               />
             </Flex>
-            <Flex alignItems="center" gap="x1">
-              <Text fontSize="x0_25" color="midGrey">SANOFI req</Text>
+            <Flex alignItems="center" gap="x1" width="200px">
+              <Text width="150px" fontSize="small" color="midGrey">SANOFI req</Text>
               <Toggle
                 toggled={fieldConfig.sanofiRequired}
                 onChange={(e) => handleFieldConfigChange("sanofiRequired", e.target.checked)}
