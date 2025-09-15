@@ -755,7 +755,9 @@ export const Details6 = () => {
     handleCloseProductionSidebar();
   };
 
-  const handleOpenConsumptionSidebar = (materials: Array<{ item: string; lotCode: string; expiryDate: string; palletNumber: string; quantity: string }>) => {
+  const handleOpenConsumptionSidebar = (
+    materials: Array<{ item: string; lotCode: string; expiryDate: string; palletNumber: string; quantity: string }>
+  ) => {
     // Parse materials and set up consumption state
     const parsedMaterials = materials.map((material, index) => {
       const parts = material.quantity.split(" ");
@@ -791,77 +793,383 @@ export const Details6 = () => {
 
   // Materials data for consumption reports
   const materialsData1 = [
-    { item: "Acetaminophen 500mg", lotCode: "LOT-ACET-001", expiryDate: "2026-03-15", palletNumber: "PAL-001", quantity: "2.5 kg" },
-    { item: "Microcrystalline cellulose", lotCode: "LOT-MCC-001", expiryDate: "2026-04-20", palletNumber: "PAL-002", quantity: "1.2 kg" },
-    { item: "Croscarmellose sodium", lotCode: "LOT-CCS-001", expiryDate: "2026-05-10", palletNumber: "PAL-003", quantity: "0.3 kg" },
-    { item: "Magnesium stearate", lotCode: "LOT-MS-001", expiryDate: "2026-06-15", palletNumber: "PAL-004", quantity: "0.1 kg" },
-    { item: "Hydroxypropyl methylcellulose", lotCode: "LOT-HPMC-001", expiryDate: "2026-07-20", palletNumber: "PAL-005", quantity: "0.8 kg" },
-    { item: "Talc powder", lotCode: "LOT-TALC-001", expiryDate: "2026-08-25", palletNumber: "PAL-006", quantity: "0.5 kg" },
-    { item: "FD&C Blue #2", lotCode: "LOT-BLUE-001", expiryDate: "2026-09-30", palletNumber: "PAL-007", quantity: "0.02 kg" },
-    { item: "Sodium benzoate", lotCode: "LOT-SB-001", expiryDate: "2026-10-15", palletNumber: "PAL-008", quantity: "0.05 kg" },
+    {
+      item: "Acetaminophen 500mg",
+      lotCode: "LOT-ACET-001",
+      expiryDate: "2026-03-15",
+      palletNumber: "PAL-001",
+      quantity: "2.5 kg",
+    },
+    {
+      item: "Microcrystalline cellulose",
+      lotCode: "LOT-MCC-001",
+      expiryDate: "2026-04-20",
+      palletNumber: "PAL-002",
+      quantity: "1.2 kg",
+    },
+    {
+      item: "Croscarmellose sodium",
+      lotCode: "LOT-CCS-001",
+      expiryDate: "2026-05-10",
+      palletNumber: "PAL-003",
+      quantity: "0.3 kg",
+    },
+    {
+      item: "Magnesium stearate",
+      lotCode: "LOT-MS-001",
+      expiryDate: "2026-06-15",
+      palletNumber: "PAL-004",
+      quantity: "0.1 kg",
+    },
+    {
+      item: "Hydroxypropyl methylcellulose",
+      lotCode: "LOT-HPMC-001",
+      expiryDate: "2026-07-20",
+      palletNumber: "PAL-005",
+      quantity: "0.8 kg",
+    },
+    {
+      item: "Talc powder",
+      lotCode: "LOT-TALC-001",
+      expiryDate: "2026-08-25",
+      palletNumber: "PAL-006",
+      quantity: "0.5 kg",
+    },
+    {
+      item: "FD&C Blue #2",
+      lotCode: "LOT-BLUE-001",
+      expiryDate: "2026-09-30",
+      palletNumber: "PAL-007",
+      quantity: "0.02 kg",
+    },
+    {
+      item: "Sodium benzoate",
+      lotCode: "LOT-SB-001",
+      expiryDate: "2026-10-15",
+      palletNumber: "PAL-008",
+      quantity: "0.05 kg",
+    },
   ];
 
   const materialsData2 = [
-    { item: "Ibuprofen 200mg", lotCode: "LOT-IBU-002", expiryDate: "2026-04-10", palletNumber: "PAL-009", quantity: "1.8 kg" },
-    { item: "Povidone K30", lotCode: "LOT-PVP-002", expiryDate: "2026-05-15", palletNumber: "PAL-010", quantity: "0.9 kg" },
-    { item: "Sodium starch glycolate", lotCode: "LOT-SSG-002", expiryDate: "2026-06-20", palletNumber: "PAL-011", quantity: "0.4 kg" },
-    { item: "Stearic acid", lotCode: "LOT-SA-002", expiryDate: "2026-07-25", palletNumber: "PAL-012", quantity: "0.2 kg" },
-    { item: "FD&C Red #40", lotCode: "LOT-RED-002", expiryDate: "2026-08-30", palletNumber: "PAL-013", quantity: "0.05 kg" },
-    { item: "Silicon dioxide", lotCode: "LOT-SD-002", expiryDate: "2026-09-15", palletNumber: "PAL-014", quantity: "0.3 kg" },
-    { item: "Aspartame", lotCode: "LOT-ASP-002", expiryDate: "2026-10-20", palletNumber: "PAL-015", quantity: "0.1 kg" },
-    { item: "Mint flavor", lotCode: "LOT-MF-002", expiryDate: "2026-11-25", palletNumber: "PAL-016", quantity: "0.02 kg" },
+    {
+      item: "Ibuprofen 200mg",
+      lotCode: "LOT-IBU-002",
+      expiryDate: "2026-04-10",
+      palletNumber: "PAL-009",
+      quantity: "1.8 kg",
+    },
+    {
+      item: "Povidone K30",
+      lotCode: "LOT-PVP-002",
+      expiryDate: "2026-05-15",
+      palletNumber: "PAL-010",
+      quantity: "0.9 kg",
+    },
+    {
+      item: "Sodium starch glycolate",
+      lotCode: "LOT-SSG-002",
+      expiryDate: "2026-06-20",
+      palletNumber: "PAL-011",
+      quantity: "0.4 kg",
+    },
+    {
+      item: "Stearic acid",
+      lotCode: "LOT-SA-002",
+      expiryDate: "2026-07-25",
+      palletNumber: "PAL-012",
+      quantity: "0.2 kg",
+    },
+    {
+      item: "FD&C Red #40",
+      lotCode: "LOT-RED-002",
+      expiryDate: "2026-08-30",
+      palletNumber: "PAL-013",
+      quantity: "0.05 kg",
+    },
+    {
+      item: "Silicon dioxide",
+      lotCode: "LOT-SD-002",
+      expiryDate: "2026-09-15",
+      palletNumber: "PAL-014",
+      quantity: "0.3 kg",
+    },
+    {
+      item: "Aspartame",
+      lotCode: "LOT-ASP-002",
+      expiryDate: "2026-10-20",
+      palletNumber: "PAL-015",
+      quantity: "0.1 kg",
+    },
+    {
+      item: "Mint flavor",
+      lotCode: "LOT-MF-002",
+      expiryDate: "2026-11-25",
+      palletNumber: "PAL-016",
+      quantity: "0.02 kg",
+    },
   ];
 
   const materialsData5A = [
-    { item: "Ibuprofen 200mg", lotCode: "LOT-IBU-005A", expiryDate: "2026-05-10", palletNumber: "PAL-017", quantity: "1.8 kg" },
-    { item: "Povidone K30", lotCode: "LOT-PVP-005A", expiryDate: "2026-06-15", palletNumber: "PAL-018", quantity: "0.9 kg" },
-    { item: "Sodium starch glycolate", lotCode: "LOT-SSG-005A", expiryDate: "2026-07-20", palletNumber: "PAL-019", quantity: "0.4 kg" },
-    { item: "Stearic acid", lotCode: "LOT-SA-005A", expiryDate: "2026-08-25", palletNumber: "PAL-020", quantity: "0.2 kg" },
-    { item: "FD&C Red #40", lotCode: "LOT-RED-005A", expiryDate: "2026-09-30", palletNumber: "PAL-021", quantity: "0.05 kg" },
-    { item: "Silicon dioxide", lotCode: "LOT-SD-005A", expiryDate: "2026-10-15", palletNumber: "PAL-022", quantity: "0.3 kg" },
-    { item: "Aspartame", lotCode: "LOT-ASP-005A", expiryDate: "2026-11-20", palletNumber: "PAL-023", quantity: "0.1 kg" },
-    { item: "Mint flavor", lotCode: "LOT-MF-005A", expiryDate: "2026-12-25", palletNumber: "PAL-024", quantity: "0.02 kg" },
+    {
+      item: "Ibuprofen 200mg",
+      lotCode: "LOT-IBU-005A",
+      expiryDate: "2026-05-10",
+      palletNumber: "PAL-017",
+      quantity: "1.8 kg",
+    },
+    {
+      item: "Povidone K30",
+      lotCode: "LOT-PVP-005A",
+      expiryDate: "2026-06-15",
+      palletNumber: "PAL-018",
+      quantity: "0.9 kg",
+    },
+    {
+      item: "Sodium starch glycolate",
+      lotCode: "LOT-SSG-005A",
+      expiryDate: "2026-07-20",
+      palletNumber: "PAL-019",
+      quantity: "0.4 kg",
+    },
+    {
+      item: "Stearic acid",
+      lotCode: "LOT-SA-005A",
+      expiryDate: "2026-08-25",
+      palletNumber: "PAL-020",
+      quantity: "0.2 kg",
+    },
+    {
+      item: "FD&C Red #40",
+      lotCode: "LOT-RED-005A",
+      expiryDate: "2026-09-30",
+      palletNumber: "PAL-021",
+      quantity: "0.05 kg",
+    },
+    {
+      item: "Silicon dioxide",
+      lotCode: "LOT-SD-005A",
+      expiryDate: "2026-10-15",
+      palletNumber: "PAL-022",
+      quantity: "0.3 kg",
+    },
+    {
+      item: "Aspartame",
+      lotCode: "LOT-ASP-005A",
+      expiryDate: "2026-11-20",
+      palletNumber: "PAL-023",
+      quantity: "0.1 kg",
+    },
+    {
+      item: "Mint flavor",
+      lotCode: "LOT-MF-005A",
+      expiryDate: "2026-12-25",
+      palletNumber: "PAL-024",
+      quantity: "0.02 kg",
+    },
   ];
 
   const materialsData5B = [
-    { item: "Ibuprofen 200mg", lotCode: "LOT-IBU-005B", expiryDate: "2026-05-10", palletNumber: "PAL-025", quantity: "0.9 kg" },
-    { item: "Povidone K30", lotCode: "LOT-PVP-005B", expiryDate: "2026-06-15", palletNumber: "PAL-026", quantity: "0.45 kg" },
-    { item: "Sodium starch glycolate", lotCode: "LOT-SSG-005B", expiryDate: "2026-07-20", palletNumber: "PAL-027", quantity: "0.2 kg" },
-    { item: "Stearic acid", lotCode: "LOT-SA-005B", expiryDate: "2026-08-25", palletNumber: "PAL-028", quantity: "0.1 kg" },
-    { item: "FD&C Red #40", lotCode: "LOT-RED-005B", expiryDate: "2026-09-30", palletNumber: "PAL-029", quantity: "0.025 kg" },
-    { item: "Silicon dioxide", lotCode: "LOT-SD-005B", expiryDate: "2026-10-15", palletNumber: "PAL-030", quantity: "0.15 kg" },
-    { item: "Aspartame", lotCode: "LOT-ASP-005B", expiryDate: "2026-11-20", palletNumber: "PAL-031", quantity: "0.05 kg" },
-    { item: "Mint flavor", lotCode: "LOT-MF-005B", expiryDate: "2026-12-25", palletNumber: "PAL-032", quantity: "0.01 kg" },
+    {
+      item: "Ibuprofen 200mg",
+      lotCode: "LOT-IBU-005B",
+      expiryDate: "2026-05-10",
+      palletNumber: "PAL-025",
+      quantity: "0.9 kg",
+    },
+    {
+      item: "Povidone K30",
+      lotCode: "LOT-PVP-005B",
+      expiryDate: "2026-06-15",
+      palletNumber: "PAL-026",
+      quantity: "0.45 kg",
+    },
+    {
+      item: "Sodium starch glycolate",
+      lotCode: "LOT-SSG-005B",
+      expiryDate: "2026-07-20",
+      palletNumber: "PAL-027",
+      quantity: "0.2 kg",
+    },
+    {
+      item: "Stearic acid",
+      lotCode: "LOT-SA-005B",
+      expiryDate: "2026-08-25",
+      palletNumber: "PAL-028",
+      quantity: "0.1 kg",
+    },
+    {
+      item: "FD&C Red #40",
+      lotCode: "LOT-RED-005B",
+      expiryDate: "2026-09-30",
+      palletNumber: "PAL-029",
+      quantity: "0.025 kg",
+    },
+    {
+      item: "Silicon dioxide",
+      lotCode: "LOT-SD-005B",
+      expiryDate: "2026-10-15",
+      palletNumber: "PAL-030",
+      quantity: "0.15 kg",
+    },
+    {
+      item: "Aspartame",
+      lotCode: "LOT-ASP-005B",
+      expiryDate: "2026-11-20",
+      palletNumber: "PAL-031",
+      quantity: "0.05 kg",
+    },
+    {
+      item: "Mint flavor",
+      lotCode: "LOT-MF-005B",
+      expiryDate: "2026-12-25",
+      palletNumber: "PAL-032",
+      quantity: "0.01 kg",
+    },
   ];
 
   const materialsData6A = [
-    { item: "Acetaminophen 500mg", lotCode: "LOT-ACET-006A", expiryDate: "2026-06-15", palletNumber: "PAL-033", quantity: "3.2 kg" },
-    { item: "Microcrystalline cellulose", lotCode: "LOT-MCC-006A", expiryDate: "2026-07-20", palletNumber: "PAL-034", quantity: "1.5 kg" },
-    { item: "Croscarmellose sodium", lotCode: "LOT-CCS-006A", expiryDate: "2026-08-25", palletNumber: "PAL-035", quantity: "0.4 kg" },
-    { item: "Magnesium stearate", lotCode: "LOT-MS-006A", expiryDate: "2026-09-30", palletNumber: "PAL-036", quantity: "0.15 kg" },
-    { item: "Hydroxypropyl methylcellulose", lotCode: "LOT-HPMC-006A", expiryDate: "2026-10-15", palletNumber: "PAL-037", quantity: "1.0 kg" },
-    { item: "Talc powder", lotCode: "LOT-TALC-006A", expiryDate: "2026-11-20", palletNumber: "PAL-038", quantity: "0.6 kg" },
-    { item: "FD&C Blue #2", lotCode: "LOT-BLUE-006A", expiryDate: "2026-12-25", palletNumber: "PAL-039", quantity: "0.03 kg" },
-    { item: "Sodium benzoate", lotCode: "LOT-SB-006A", expiryDate: "2027-01-30", palletNumber: "PAL-040", quantity: "0.08 kg" },
+    {
+      item: "Acetaminophen 500mg",
+      lotCode: "LOT-ACET-006A",
+      expiryDate: "2026-06-15",
+      palletNumber: "PAL-033",
+      quantity: "3.2 kg",
+    },
+    {
+      item: "Microcrystalline cellulose",
+      lotCode: "LOT-MCC-006A",
+      expiryDate: "2026-07-20",
+      palletNumber: "PAL-034",
+      quantity: "1.5 kg",
+    },
+    {
+      item: "Croscarmellose sodium",
+      lotCode: "LOT-CCS-006A",
+      expiryDate: "2026-08-25",
+      palletNumber: "PAL-035",
+      quantity: "0.4 kg",
+    },
+    {
+      item: "Magnesium stearate",
+      lotCode: "LOT-MS-006A",
+      expiryDate: "2026-09-30",
+      palletNumber: "PAL-036",
+      quantity: "0.15 kg",
+    },
+    {
+      item: "Hydroxypropyl methylcellulose",
+      lotCode: "LOT-HPMC-006A",
+      expiryDate: "2026-10-15",
+      palletNumber: "PAL-037",
+      quantity: "1.0 kg",
+    },
+    {
+      item: "Talc powder",
+      lotCode: "LOT-TALC-006A",
+      expiryDate: "2026-11-20",
+      palletNumber: "PAL-038",
+      quantity: "0.6 kg",
+    },
+    {
+      item: "FD&C Blue #2",
+      lotCode: "LOT-BLUE-006A",
+      expiryDate: "2026-12-25",
+      palletNumber: "PAL-039",
+      quantity: "0.03 kg",
+    },
+    {
+      item: "Sodium benzoate",
+      lotCode: "LOT-SB-006A",
+      expiryDate: "2027-01-30",
+      palletNumber: "PAL-040",
+      quantity: "0.08 kg",
+    },
   ];
 
   const materialsData6B = [
-    { item: "Acetaminophen 500mg", lotCode: "LOT-ACET-006B", expiryDate: "2026-06-15", palletNumber: "PAL-041", quantity: "1.7 kg" },
-    { item: "Microcrystalline cellulose", lotCode: "LOT-MCC-006B", expiryDate: "2026-07-20", palletNumber: "PAL-042", quantity: "0.8 kg" },
-    { item: "Croscarmellose sodium", lotCode: "LOT-CCS-006B", expiryDate: "2026-08-25", palletNumber: "PAL-043", quantity: "0.2 kg" },
-    { item: "Magnesium stearate", lotCode: "LOT-MS-006B", expiryDate: "2026-09-30", palletNumber: "PAL-044", quantity: "0.08 kg" },
-    { item: "Hydroxypropyl methylcellulose", lotCode: "LOT-HPMC-006B", expiryDate: "2026-10-15", palletNumber: "PAL-045", quantity: "0.5 kg" },
-    { item: "Talc powder", lotCode: "LOT-TALC-006B", expiryDate: "2026-11-20", palletNumber: "PAL-046", quantity: "0.3 kg" },
-    { item: "FD&C Blue #2", lotCode: "LOT-BLUE-006B", expiryDate: "2026-12-25", palletNumber: "PAL-047", quantity: "0.015 kg" },
-    { item: "Sodium benzoate", lotCode: "LOT-SB-006B", expiryDate: "2027-01-30", palletNumber: "PAL-048", quantity: "0.04 kg" },
+    {
+      item: "Acetaminophen 500mg",
+      lotCode: "LOT-ACET-006B",
+      expiryDate: "2026-06-15",
+      palletNumber: "PAL-041",
+      quantity: "1.7 kg",
+    },
+    {
+      item: "Microcrystalline cellulose",
+      lotCode: "LOT-MCC-006B",
+      expiryDate: "2026-07-20",
+      palletNumber: "PAL-042",
+      quantity: "0.8 kg",
+    },
+    {
+      item: "Croscarmellose sodium",
+      lotCode: "LOT-CCS-006B",
+      expiryDate: "2026-08-25",
+      palletNumber: "PAL-043",
+      quantity: "0.2 kg",
+    },
+    {
+      item: "Magnesium stearate",
+      lotCode: "LOT-MS-006B",
+      expiryDate: "2026-09-30",
+      palletNumber: "PAL-044",
+      quantity: "0.08 kg",
+    },
+    {
+      item: "Hydroxypropyl methylcellulose",
+      lotCode: "LOT-HPMC-006B",
+      expiryDate: "2026-10-15",
+      palletNumber: "PAL-045",
+      quantity: "0.5 kg",
+    },
+    {
+      item: "Talc powder",
+      lotCode: "LOT-TALC-006B",
+      expiryDate: "2026-11-20",
+      palletNumber: "PAL-046",
+      quantity: "0.3 kg",
+    },
+    {
+      item: "FD&C Blue #2",
+      lotCode: "LOT-BLUE-006B",
+      expiryDate: "2026-12-25",
+      palletNumber: "PAL-047",
+      quantity: "0.015 kg",
+    },
+    {
+      item: "Sodium benzoate",
+      lotCode: "LOT-SB-006B",
+      expiryDate: "2027-01-30",
+      palletNumber: "PAL-048",
+      quantity: "0.04 kg",
+    },
   ];
 
   const materialsData7A = [
     { item: "Pending - Acetaminophen 500mg", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
-    { item: "Pending - Microcrystalline cellulose", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
-    { item: "Pending - Croscarmellose sodium", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    {
+      item: "Pending - Microcrystalline cellulose",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+    },
+    {
+      item: "Pending - Croscarmellose sodium",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+    },
     { item: "Pending - Magnesium stearate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
-    { item: "Pending - Hydroxypropyl methylcellulose", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    {
+      item: "Pending - Hydroxypropyl methylcellulose",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+    },
     { item: "Pending - Talc powder", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
     { item: "Pending - FD&C Blue #2", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
     { item: "Pending - Sodium benzoate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
@@ -869,10 +1177,28 @@ export const Details6 = () => {
 
   const materialsData7B = [
     { item: "Pending - Acetaminophen 500mg", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
-    { item: "Pending - Microcrystalline cellulose", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
-    { item: "Pending - Croscarmellose sodium", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    {
+      item: "Pending - Microcrystalline cellulose",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+    },
+    {
+      item: "Pending - Croscarmellose sodium",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+    },
     { item: "Pending - Magnesium stearate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
-    { item: "Pending - Hydroxypropyl methylcellulose", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    {
+      item: "Pending - Hydroxypropyl methylcellulose",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+    },
     { item: "Pending - Talc powder", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
     { item: "Pending - FD&C Blue #2", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
     { item: "Pending - Sodium benzoate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
@@ -920,18 +1246,9 @@ export const Details6 = () => {
     materials: Array<{ item: string; lotCode: string; expiryDate: string; palletNumber: string; quantity: string }>;
   }) => (
     <Box my="x1" ml="x7">
-      <Table
-        columns={consumptionTableColumns}
-        rows={materials}
-        keyField="item"
-        compact={true}
-        rowBorder={true}
-      />
+      <Table columns={consumptionTableColumns} rows={materials} keyField="item" compact={true} rowBorder={true} />
       <Flex justifyContent="flex-end" mt="x2">
-        <DropdownMenu
-          trigger={() => <IconicButton icon="more" aria-label="More actions" />}
-          placement="bottom-end"
-        >
+        <DropdownMenu trigger={() => <IconicButton icon="more" aria-label="More actions" />} placement="bottom-end">
           <DropdownButton onClick={() => handleOpenConsumptionSidebar(materials)}>Edit consumption</DropdownButton>
         </DropdownMenu>
       </Flex>
@@ -1260,8 +1577,18 @@ export const Details6 = () => {
                     <Field width="50%">
                       <FieldLabel labelText="Expiry date" pb="x1" />
                       <DatePicker
-                        onChange={(date) => handleConsumptionFieldChange(material.id, "expiryDate", date?.toISOString().split('T')[0] || "")}
-                        selected={material.expiryDate && material.expiryDate !== "TBD" ? new Date(material.expiryDate) : undefined}
+                        onChange={(date) =>
+                          handleConsumptionFieldChange(
+                            material.id,
+                            "expiryDate",
+                            date?.toISOString().split("T")[0] || ""
+                          )
+                        }
+                        selected={
+                          material.expiryDate && material.expiryDate !== "TBD"
+                            ? new Date(material.expiryDate)
+                            : undefined
+                        }
                       />
                     </Field>
                     <Field width="50%">
