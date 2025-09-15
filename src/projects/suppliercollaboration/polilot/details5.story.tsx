@@ -839,47 +839,47 @@ export const Details5 = () => {
   ];
 
   const materialsData6A = [
-    { label: "Active Ingredient", value: "Acetaminophen 500mg - 3.2 kg" },
-    { label: "Binder", value: "Microcrystalline cellulose - 1.5 kg" },
-    { label: "Disintegrant", value: "Croscarmellose sodium - 0.4 kg" },
-    { label: "Lubricant", value: "Magnesium stearate - 0.15 kg" },
-    { label: "Coating", value: "Hydroxypropyl methylcellulose - 1.0 kg" },
-    { label: "Glidant", value: "Talc powder - 0.6 kg" },
-    { label: "Colorant", value: "FD&C Blue #2 - 0.03 kg" },
-    { label: "Preservative", value: "Sodium benzoate - 0.08 kg" },
+    { label: "Active Ingredient", value: "Acetaminophen 500mg", quantity: "3.2 kg" },
+    { label: "Binder", value: "Microcrystalline cellulose", quantity: "1.5 kg" },
+    { label: "Disintegrant", value: "Croscarmellose sodium", quantity: "0.4 kg" },
+    { label: "Lubricant", value: "Magnesium stearate", quantity: "0.15 kg" },
+    { label: "Coating", value: "Hydroxypropyl methylcellulose", quantity: "1.0 kg" },
+    { label: "Glidant", value: "Talc powder", quantity: "0.6 kg" },
+    { label: "Colorant", value: "FD&C Blue #2", quantity: "0.03 kg" },
+    { label: "Preservative", value: "Sodium benzoate", quantity: "0.08 kg" },
   ];
 
   const materialsData6B = [
-    { label: "Active Ingredient", value: "Acetaminophen 500mg - 1.7 kg" },
-    { label: "Binder", value: "Microcrystalline cellulose - 0.8 kg" },
-    { label: "Disintegrant", value: "Croscarmellose sodium - 0.2 kg" },
-    { label: "Lubricant", value: "Magnesium stearate - 0.08 kg" },
-    { label: "Coating", value: "Hydroxypropyl methylcellulose - 0.5 kg" },
-    { label: "Glidant", value: "Talc powder - 0.3 kg" },
-    { label: "Colorant", value: "FD&C Blue #2 - 0.015 kg" },
-    { label: "Preservative", value: "Sodium benzoate - 0.04 kg" },
+    { label: "Active Ingredient", value: "Acetaminophen 500mg", quantity: "1.7 kg" },
+    { label: "Binder", value: "Microcrystalline cellulose", quantity: "0.8 kg" },
+    { label: "Disintegrant", value: "Croscarmellose sodium", quantity: "0.2 kg" },
+    { label: "Lubricant", value: "Magnesium stearate", quantity: "0.08 kg" },
+    { label: "Coating", value: "Hydroxypropyl methylcellulose", quantity: "0.5 kg" },
+    { label: "Glidant", value: "Talc powder", quantity: "0.3 kg" },
+    { label: "Colorant", value: "FD&C Blue #2", quantity: "0.015 kg" },
+    { label: "Preservative", value: "Sodium benzoate", quantity: "0.04 kg" },
   ];
 
   const materialsData7A = [
-    { label: "Active Ingredient", value: "Pending - Acetaminophen 500mg" },
-    { label: "Binder", value: "Pending - Microcrystalline cellulose" },
-    { label: "Disintegrant", value: "Pending - Croscarmellose sodium" },
-    { label: "Lubricant", value: "Pending - Magnesium stearate" },
-    { label: "Coating", value: "Pending - Hydroxypropyl methylcellulose" },
-    { label: "Glidant", value: "Pending - Talc powder" },
-    { label: "Colorant", value: "Pending - FD&C Blue #2" },
-    { label: "Preservative", value: "Pending - Sodium benzoate" },
+    { label: "Active Ingredient", value: "Pending - Acetaminophen 500mg", quantity: "TBD" },
+    { label: "Binder", value: "Pending - Microcrystalline cellulose", quantity: "TBD" },
+    { label: "Disintegrant", value: "Pending - Croscarmellose sodium", quantity: "TBD" },
+    { label: "Lubricant", value: "Pending - Magnesium stearate", quantity: "TBD" },
+    { label: "Coating", value: "Pending - Hydroxypropyl methylcellulose", quantity: "TBD" },
+    { label: "Glidant", value: "Pending - Talc powder", quantity: "TBD" },
+    { label: "Colorant", value: "Pending - FD&C Blue #2", quantity: "TBD" },
+    { label: "Preservative", value: "Pending - Sodium benzoate", quantity: "TBD" },
   ];
 
   const materialsData7B = [
-    { label: "Active Ingredient", value: "Pending - Acetaminophen 500mg" },
-    { label: "Binder", value: "Pending - Microcrystalline cellulose" },
-    { label: "Disintegrant", value: "Pending - Croscarmellose sodium" },
-    { label: "Lubricant", value: "Pending - Magnesium stearate" },
-    { label: "Coating", value: "Pending - Hydroxypropyl methylcellulose" },
-    { label: "Glidant", value: "Pending - Talc powder" },
-    { label: "Colorant", value: "Pending - FD&C Blue #2" },
-    { label: "Preservative", value: "Pending - Sodium benzoate" },
+    { label: "Active Ingredient", value: "Pending - Acetaminophen 500mg", quantity: "TBD" },
+    { label: "Binder", value: "Pending - Microcrystalline cellulose", quantity: "TBD" },
+    { label: "Disintegrant", value: "Pending - Croscarmellose sodium", quantity: "TBD" },
+    { label: "Lubricant", value: "Pending - Magnesium stearate", quantity: "TBD" },
+    { label: "Coating", value: "Pending - Hydroxypropyl methylcellulose", quantity: "TBD" },
+    { label: "Glidant", value: "Pending - Talc powder", quantity: "TBD" },
+    { label: "Colorant", value: "Pending - FD&C Blue #2", quantity: "TBD" },
+    { label: "Preservative", value: "Pending - Sodium benzoate", quantity: "TBD" },
   ];
 
   // Reusable Consumption Report Component
