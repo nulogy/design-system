@@ -52,7 +52,9 @@ export const Details7 = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [showProductionSidebar, setShowProductionSidebar] = useState(false);
   const [showConsumptionSidebar, setShowConsumptionSidebar] = useState(false);
-  const [selectedConsumptionData, setSelectedConsumptionData] = useState<Array<{ item: string; lotCode: string; expiryDate: string; palletNumber: string; quantity: string }>>([]);
+  const [selectedConsumptionData, setSelectedConsumptionData] = useState<
+    Array<{ item: string; lotCode: string; expiryDate: string; palletNumber: string; quantity: string }>
+  >([]);
   const [expandedRows, setExpandedRows] = useState<string[]>([]);
   const [nestedExpandedRows, setNestedExpandedRows] = useState<string[]>([]);
   const [productionRecord, setProductionRecord] = useState({
@@ -247,9 +249,7 @@ export const Details7 = () => {
       cellRenderer: ({ row }: { row: any }) => {
         return (
           <Flex py="x2" mr="x1">
-            <Text>
-              {row.actualQuantity}
-            </Text>
+            <Text>{row.actualQuantity}</Text>
           </Flex>
         );
       },
@@ -386,11 +386,11 @@ export const Details7 = () => {
         if (!row.consumptionData || row.consumptionData.length === 0) return null;
         return (
           <Flex justifyContent="center" py="x0_75" pr="x1">
-                        <IconicButton
-                          icon="arrowForward"
-                          aria-label="Consumption details"
-                          onClick={() => handleOpenConsumptionSidebar(row.consumptionData)}
-                        />
+            <IconicButton
+              icon="arrowForward"
+              aria-label="Consumption details"
+              onClick={() => handleOpenConsumptionSidebar(row.consumptionData)}
+            />
           </Flex>
         );
       },
@@ -629,9 +629,7 @@ export const Details7 = () => {
       cellRenderer: ({ row }: { row: any }) => {
         return (
           <Flex py="x0_75" mr="x1">
-            <Text>
-              {row.actualQuantity}
-            </Text>
+            <Text>{row.actualQuantity}</Text>
           </Flex>
         );
       },
@@ -781,13 +779,14 @@ export const Details7 = () => {
     handleCloseProductionSidebar();
   };
 
-
   const handleCloseConsumptionSidebar = () => {
     setShowConsumptionSidebar(false);
     setConsumptionMaterials([]);
   };
 
-  const handleOpenConsumptionSidebar = (materials: Array<{ item: string; lotCode: string; expiryDate: string; palletNumber: string; quantity: string }>) => {
+  const handleOpenConsumptionSidebar = (
+    materials: Array<{ item: string; lotCode: string; expiryDate: string; palletNumber: string; quantity: string }>
+  ) => {
     setSelectedConsumptionData(materials);
     setShowConsumptionSidebar(true);
   };
@@ -804,7 +803,6 @@ export const Details7 = () => {
   };
 
   // Materials data for consumption reports
-
 
   // Consumption table columns
   const consumptionTableColumns = [
@@ -840,7 +838,6 @@ export const Details7 = () => {
       width: "100px",
     },
   ];
-
 
   return (
     <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
@@ -1151,15 +1148,13 @@ export const Details7 = () => {
           overlay="show"
           disableScroll={true}
         >
-
-            <Table 
-              columns={consumptionTableColumns} 
-              rows={selectedConsumptionData} 
-              keyField="item" 
-              compact={true} 
-              rowBorder={true}
-            />
-
+          <Table
+            columns={consumptionTableColumns}
+            rows={selectedConsumptionData}
+            keyField="item"
+            compact={true}
+            rowBorder={true}
+          />
         </Sidebar>
 
         {/* Floating Configuration */}
