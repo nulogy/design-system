@@ -52,6 +52,17 @@ export const Details6 = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [showProductionSidebar, setShowProductionSidebar] = useState(false);
   const [showConsumptionSidebar, setShowConsumptionSidebar] = useState(false);
+  const [showAddConsumptionSidebar, setShowAddConsumptionSidebar] = useState(false);
+  const [consumptionItems, setConsumptionItems] = useState([
+    {
+      id: "consumption-item-1",
+      item: "",
+      lotCode: "",
+      expiryDate: null as Date | null,
+      palletNumber: "",
+      consumedQuantity: "",
+    },
+  ]);
   const [expandedRows, setExpandedRows] = useState<string[]>([]);
   const [nestedExpandedRows, setNestedExpandedRows] = useState<string[]>([]);
   const [productionRecord, setProductionRecord] = useState({
@@ -60,6 +71,7 @@ export const Details6 = () => {
     expectedQuantity: "",
     actualQuantity: "",
     lotCode: "",
+    supplierLotCode: "",
     expiryDate: "",
     palletNumber: "",
     producedQuantity: "",
@@ -71,7 +83,7 @@ export const Details6 = () => {
     lotCodeRequired: false,
     palletNumberRequired: false,
     expiryDateRequired: false,
-    sanofiRequired: false,
+    sanofiRequired: true,
   });
 
   const primaryMenu = [
@@ -242,7 +254,7 @@ export const Details6 = () => {
       expiryDate: "2026-05-10",
       palletNumber: "PAL-007B",
       note: "Delayed batch - material shortage",
-      expandedContent: () => <ConsumptionReport materials={materialsData7B} />,
+      expandedContent: () => <EmptyConsumptionReport />,
     },
   ];
 
@@ -681,14 +693,8 @@ export const Details6 = () => {
         </Box>
       ),
       cellRenderer: ({ row }: { row: any }) => {
-        // Always show "-" for parent table rows since detailed info is in nested tables
-        return (
-          <Flex py="x0_75">
-            <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
-              -
-            </Text>
-          </Flex>
-        );
+        // Always show blank for parent table rows since detailed info is in nested tables
+          return null;
       },
     },
     {
@@ -696,14 +702,8 @@ export const Details6 = () => {
       dataKey: "expiryDate",
       width: "150px",
       cellRenderer: ({ row }: { row: any }) => {
-        // Always show "-" for parent table rows since detailed info is in nested tables
-        return (
-          <Flex py="x0_75">
-            <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
-              -
-            </Text>
-          </Flex>
-        );
+        // Always show blank for parent table rows since detailed info is in nested tables
+          return null;
       },
     },
     {
@@ -711,14 +711,8 @@ export const Details6 = () => {
       dataKey: "palletNumber",
       width: "180px",
       cellRenderer: ({ row }: { row: any }) => {
-        // Always show "-" for parent table rows since detailed info is in nested tables
-        return (
-          <Flex py="x0_75">
-            <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
-              -
-            </Text>
-          </Flex>
-        );
+        // Always show blank for parent table rows since detailed info is in nested tables
+          return null;
       },
     },
     {
@@ -726,14 +720,8 @@ export const Details6 = () => {
       dataKey: "note",
       width: "auto",
       cellRenderer: ({ row }: { row: any }) => {
-        // Always show "-" for parent table rows since detailed info is in nested tables
-        return (
-          <Flex py="x0_75">
-            <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
-              -
-            </Text>
-          </Flex>
-        );
+        // Always show blank for parent table rows since detailed info is in nested tables
+          return null;
       },
     },
     {
@@ -764,6 +752,7 @@ export const Details6 = () => {
       expectedQuantity: "",
       actualQuantity: "",
       lotCode: "",
+      supplierLotCode: "",
       expiryDate: "",
       palletNumber: "",
       producedQuantity: "",
@@ -783,6 +772,7 @@ export const Details6 = () => {
     const newBatch = {
       id: `batch-${Date.now()}`,
       lotCode: "",
+      supplierLotCode: "",
       expiryDate: "",
       palletNumber: "",
       producedQuantity: "",
@@ -846,6 +836,52 @@ export const Details6 = () => {
     toast.success("Consumption details saved successfully!");
     handleCloseConsumptionSidebar();
   };
+
+  const handleAddConsumptionReport = () => {
+    setShowAddConsumptionSidebar(true);
+  };
+
+  const handleCloseAddConsumptionSidebar = () => {
+    setShowAddConsumptionSidebar(false);
+    setConsumptionItems([
+      {
+        id: "consumption-item-1",
+        item: "",
+        lotCode: "",
+        expiryDate: null,
+        palletNumber: "",
+        consumedQuantity: "",
+      },
+    ]);
+  };
+
+  const handleSaveAddConsumption = () => {
+    toast.success("Consumption details added successfully!");
+    handleCloseAddConsumptionSidebar();
+  };
+
+  const handleAddConsumptionItem = () => {
+    const newItem = {
+      id: `consumption-item-${Date.now()}`,
+      item: "",
+      lotCode: "",
+      expiryDate: null as Date | null,
+      palletNumber: "",
+      consumedQuantity: "",
+    };
+    setConsumptionItems((prev) => [...prev, newItem]);
+  };
+
+  const handleRemoveConsumptionItem = (itemId) => {
+    setConsumptionItems((prev) => prev.filter((item) => item.id !== itemId));
+  };
+
+  const handleConsumptionItemFieldChange = (itemId, field, value) => {
+    setConsumptionItems((prev) =>
+      prev.map((item) => (item.id === itemId ? { ...item, [field]: value } : item))
+    );
+  };
+
 
   // Materials data for consumption reports
   const materialsData1 = [
@@ -3501,10 +3537,43 @@ export const Details6 = () => {
     );
   };
 
+  const EmptyConsumptionReport = () => {
+    return (
+      <Box
+        mx="28px"
+        mb="x2"
+        border="1px solid #ddd"
+        borderTop="none"
+        borderTopLeftRadius="0"
+        borderTopRightRadius="0"
+        borderBottomLeftRadius="large"
+        borderBottomRightRadius="large"
+        p="x2"
+      >
+        <Heading4 mb="x2" ml="x1">
+          Consumption details
+        </Heading4>
+        <Box py="x4" textAlign="center">
+          <Text color="midGrey" fontSize="small" mb="x2">
+            No consumption data available
+          </Text>
+          <PrimaryButton onClick={handleAddConsumptionReport}>
+            Add consumption details
+          </PrimaryButton>
+        </Box>
+      </Box>
+    );
+  };
+
   return (
     <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
       <style>
         {`
+          /* Remove Storybook's default padding */
+          .sb-show-main {
+            padding: 0 !important;
+          }
+          
           /* Hide 2nd level nested table headers (1st tier nested) */
           .nested-table thead {
             height: 0 !important;
@@ -3666,7 +3735,7 @@ export const Details6 = () => {
 
               <Field>
                 <FieldLabel
-                  labelText="Lot code"
+                  labelText={fieldConfig.sanofiRequired ? "Customer's lot code" : "Lot code"}
                   pb="x1"
                   requirementText={fieldConfig.lotCodeRequired ? "(Required)" : undefined}
                 />
@@ -3675,6 +3744,19 @@ export const Details6 = () => {
                   onChange={(e) => handleProductionFieldChange("lotCode", e.target.value)}
                 />
               </Field>
+
+              {fieldConfig.sanofiRequired && (
+                <Field>
+                  <FieldLabel
+                    labelText="Supplier's lot code"
+                    pb="x1"
+                  />
+                  <Input
+                    value={productionRecord.supplierLotCode}
+                    onChange={(e) => handleProductionFieldChange("supplierLotCode", e.target.value)}
+                  />
+                </Field>
+              )}
 
               <Field>
                 <FieldLabel
@@ -3692,7 +3774,6 @@ export const Details6 = () => {
                 <FieldLabel
                   labelText="Pallet number"
                   pb="x1"
-                  requirementText={fieldConfig.palletNumberRequired ? "(Required)" : undefined}
                 />
                 <Input
                   value={productionRecord.palletNumber}
@@ -3737,7 +3818,7 @@ export const Details6 = () => {
 
                   <Field>
                     <FieldLabel
-                      labelText="Lot code"
+                      labelText={fieldConfig.sanofiRequired ? "Customer's lot code" : "Lot code"}
                       pb="x1"
                       requirementText={fieldConfig.lotCodeRequired ? "(Required)" : undefined}
                     />
@@ -3746,6 +3827,19 @@ export const Details6 = () => {
                       onChange={(e) => handleBatchFieldChange(batch.id, "lotCode", e.target.value)}
                     />
                   </Field>
+
+                  {fieldConfig.sanofiRequired && (
+                    <Field>
+                      <FieldLabel
+                        labelText="Supplier's lot code"
+                        pb="x1"
+                      />
+                      <Input
+                        value={batch.supplierLotCode}
+                        onChange={(e) => handleBatchFieldChange(batch.id, "supplierLotCode", e.target.value)}
+                      />
+                    </Field>
+                  )}
 
                   <Field>
                     <FieldLabel
@@ -3763,7 +3857,6 @@ export const Details6 = () => {
                     <FieldLabel
                       labelText="Pallet number"
                       pb="x1"
-                      requirementText={fieldConfig.palletNumberRequired ? "(Required)" : undefined}
                     />
                     <Input
                       value={batch.palletNumber}
@@ -3874,15 +3967,127 @@ export const Details6 = () => {
                     </Field>
                   </Flex>
                   <Field>
-                    <FieldLabel labelText="Unit" pb="x1" />
-                    <Select
-                      value={material.unit}
-                      onChange={(value) => handleConsumptionFieldChange(material.id, "unit", String(value))}
-                      options={unitOptions}
-                    />
-                  </Field>
+                      <FieldLabel labelText="Unit" pb="x1" />
+                      <Select
+                        value={material.unit}
+                        onChange={(value) => handleConsumptionFieldChange(material.id, "unit", String(value))}
+                        options={unitOptions}
+                      />
+                    </Field>
                 </Box>
               ))}
+            </FormSection>
+          </Form>
+        </Sidebar>
+
+        {/* Add Consumption Details Sidebar */}
+        <Sidebar
+          isOpen={showAddConsumptionSidebar}
+          onClose={handleCloseAddConsumptionSidebar}
+          title="Consumption record"
+          helpText={`Consumption for ${consumptionItems[0]?.consumedQuantity || '[Actual quantity]'} on ${consumptionItems[0]?.expiryDate ? consumptionItems[0].expiryDate.toLocaleDateString() : '[Date]'}`}
+          width="600px"
+          duration={0.25}
+          closeOnOutsideClick={true}
+          overlay="show"
+          disableScroll={true}
+          footer={
+            <Flex gap="x2">
+              <PrimaryButton type="button" onClick={handleSaveAddConsumption}>
+                Save
+              </PrimaryButton>
+              <QuietButton type="button" onClick={handleCloseAddConsumptionSidebar}>
+                Cancel
+              </QuietButton>
+            </Flex>
+          }
+        >
+          <Form>
+            <FormSection>
+              {consumptionItems.map((item, index) => (
+                <Box key={item.id}>
+                  {index > 0 && <Divider mb="x2_5" />}
+                  
+                  <Flex justifyContent="space-between" alignItems="center" mb="x2">
+                    <Heading4 pb="0">Consumption details: item {index + 1}</Heading4>
+                    {consumptionItems.length > 1 && (
+                      <IconicButton
+                        icon="removeCircleOutline"
+                        aria-label="Remove consumption item"
+                        onClick={() => handleRemoveConsumptionItem(item.id)}
+                        type="button"
+                      />
+                    )}
+                  </Flex>
+                  
+                  <Box pb="x3">
+                    <Field>
+                      <FieldLabel labelText="Item" pb="x1" />
+                      <Input
+                        value={item.item}
+                        onChange={(e) => handleConsumptionItemFieldChange(item.id, "item", e.target.value)}
+                        placeholder="Enter item name"
+                      />
+                    </Field>
+                  </Box>
+                  
+                  <Box pb="x3">
+                    <Field>
+                      <FieldLabel labelText="Lot code" pb="x1" />
+                      <Input
+                        value={item.lotCode}
+                        onChange={(e) => handleConsumptionItemFieldChange(item.id, "lotCode", e.target.value)}
+                        placeholder="Enter lot code"
+                      />
+                    </Field>
+                  </Box>
+                  
+                  <Box pb="x3">
+                    <Field>
+                      <FieldLabel labelText="Expiry date" pb="x1" />
+                      <DatePicker
+                        selected={item.expiryDate}
+                        onChange={(date) => handleConsumptionItemFieldChange(item.id, "expiryDate", date)}
+                      />
+                    </Field>
+                  </Box>
+                  
+                  <Box pb="x3">
+                    <Field>
+                      <FieldLabel labelText="Pallet number" pb="x1" />
+                      <Input
+                        value={item.palletNumber}
+                        onChange={(e) => handleConsumptionItemFieldChange(item.id, "palletNumber", e.target.value)}
+                        placeholder="Enter pallet number"
+                      />
+                    </Field>
+                  </Box>
+                  
+                  <Box pb="x3">
+                    <Field>
+                      <FieldLabel labelText="Consumed quantity" pb="x1" />
+                      <Input
+                        type="number"
+                        value={item.consumedQuantity}
+                        onChange={(e) => handleConsumptionItemFieldChange(item.id, "consumedQuantity", e.target.value)}
+                        placeholder="Enter consumed quantity"
+                      />
+                    </Field>
+                  </Box>
+                </Box>
+              ))}
+              
+              <Box>
+                <QuietButton
+                  type="button"
+                  icon="add"
+                  iconSide="left"
+                  fullWidth
+                  onClick={handleAddConsumptionItem}
+                >
+                  Add another consumption item details
+                </QuietButton>
+              </Box>
             </FormSection>
           </Form>
         </Sidebar>
@@ -3901,6 +4106,7 @@ export const Details6 = () => {
         >
           <Flex alignItems="center" gap="x2" px="x2" py="x1">
             <Text fontSize="small">Tracking:</Text>
+            <Tooltip tooltip="Controled by item setting. Makes the filed mandatory" placement="top">
             <Flex alignItems="center" gap="x1" width="200px">
               <Text width="100px" fontSize="small" color="midGrey">
                 Lot code
@@ -3910,6 +4116,8 @@ export const Details6 = () => {
                 onChange={(e) => handleFieldConfigChange("lotCodeRequired", e.target.checked)}
               />
             </Flex>
+            </Tooltip>
+            <Tooltip tooltip="Controled by item setting. Makes the filed mandatory" placement="top">
             <Flex alignItems="center" gap="x1" width="200px">
               <Text width="150px" fontSize="small" color="midGrey">
                 Expiry date
@@ -3919,6 +4127,7 @@ export const Details6 = () => {
                 onChange={(e) => handleFieldConfigChange("expiryDateRequired", e.target.checked)}
               />
             </Flex>
+            </Tooltip>
             <Flex alignItems="center" gap="x1" width="200px">
               <Text width="100px" fontSize="small" color="midGrey">
                 Pallet
@@ -3928,6 +4137,7 @@ export const Details6 = () => {
                 onChange={(e) => handleFieldConfigChange("palletNumberRequired", e.target.checked)}
               />
             </Flex>
+            <Tooltip tooltip="Controled by Org POLI setting. Controls the display and batch production creation fileds." placement="top">
             <Flex alignItems="center" gap="x1" width="200px">
               <Text width="150px" fontSize="small" color="midGrey">
                 SANOFI req
@@ -3937,6 +4147,7 @@ export const Details6 = () => {
                 onChange={(e) => handleFieldConfigChange("sanofiRequired", e.target.checked)}
               />
             </Flex>
+            </Tooltip>
           </Flex>
         </Box>
 
