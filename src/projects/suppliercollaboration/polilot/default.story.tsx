@@ -90,6 +90,21 @@ export const Default = () => {
   const [isLotCodeHidden, setIsLotCodeHidden] = useState(false);
   const [filterVisibilityStates, setFilterVisibilityStates] = useState<Record<number, boolean>>({});
   const [lotCodes, setLotCodes] = useState<string[]>([]);
+  const [customerLotCodes, setCustomerLotCodes] = useState<string[]>([]);
+  const [supplierLotCodes, setSupplierLotCodes] = useState<string[]>([]);
+  const [selectedCustomTags, setSelectedCustomTags] = useState<string[]>([]);
+  const [selectedTags, setSelectedTags] = useState<Record<string, string[]>>({
+    "1": ["neutral"],
+    "2": ["success"],
+    "3": ["neutral", "success"],
+    "4": ["success"],
+    "5": ["neutral"],
+    "6": ["success"],
+    "7": ["neutral"],
+    "8": ["success"],
+    "9": ["neutral"],
+    "10": ["success"],
+  });
 
   // Saved view 1 state
   const [savedView1Title, setSavedView1Title] = useState("Saved view 1");
@@ -169,6 +184,34 @@ export const Default = () => {
     },
     { value: "4", label: "4" },
   ];
+
+  const tagOptions = [
+    { value: "neutral", label: "Express shipment" },
+    { value: "success", label: "Validated for assembly" },
+  ];
+
+  const getStatusIndicatorType = (type: string) => {
+    return type as any; // Type corresponds directly to StatusIndicator type
+  };
+
+  const handleTagChange = (rowId: string, selectedTagValues: string[]) => {
+    setSelectedTags((prev) => ({
+      ...prev,
+      [rowId]: selectedTagValues,
+    }));
+  };
+
+  const handleCustomerLotCodesChange = (values: any) => {
+    setCustomerLotCodes(values || []);
+  };
+
+  const handleSupplierLotCodesChange = (values: any) => {
+    setSupplierLotCodes(values || []);
+  };
+
+  const handleCustomTagsChange = (values: any) => {
+    setSelectedCustomTags(values || []);
+  };
 
   // Helper function to check if we should show additional box for customer awaiting response
   const shouldShowCustomerAwaitingBox = (row: any) => {
@@ -967,43 +1010,51 @@ export const Default = () => {
       ),
     },
     {
-      label: "Lot code and expiry date",
-      dataKey: "lotCodeAndExpiry",
-      width: "320px",
+      label: "Lot code",
+      dataKey: "lotCode",
+      width: "200px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
           <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
-            Lot code and expiry date
-          </Text>
-          <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
-            Customer's / Supplier's
+            Lot code
           </Text>
         </Box>
       ),
       cellRenderer: ({ row }: { row: any }) => (
         <Flex px="x1" py="x0_75" gap="x0_25" flexDirection="column">
-          <Flex gap="half">
-            <TruncatedText fullWidth width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
-              {row.customerLotCode || "-"}
-            </TruncatedText>
-            <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
-              /
-            </Text>
-            <TruncatedText
-              fullWidth
-              width="auto"
-              maxWidth="152px"
-              fontSize="small"
-              lineHeight="smallTextCompressed"
-              color="midGrey"
-            >
-              {row.supplierLotCode || "-"}
-            </TruncatedText>
-          </Flex>
-          <TruncatedText maxWidth="304px" fullWidth fontSize="small" lineHeight="smallTextCompressed">
-            {row.expiryDate ? formatDateToYYYYMonDD(row.expiryDate) : "-"}
+          <TruncatedText fullWidth width="auto" maxWidth="180px" fontSize="small" lineHeight="smallTextCompressed">
+            {row.customerLotCode || "-"}
+          </TruncatedText>
+          <TruncatedText
+            fullWidth
+            width="auto"
+            maxWidth="180px"
+            fontSize="small"
+            lineHeight="smallTextCompressed"
+            color="midGrey"
+          >
+            {row.supplierLotCode || "-"}
           </TruncatedText>
         </Flex>
+      ),
+    },
+    {
+      label: "Expiry date",
+      dataKey: "expiryDate",
+      width: "120px",
+      headerFormatter: () => (
+        <Box px="x1" pt="x1_25" pb="x0_75">
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            Expiry date
+          </Text>
+        </Box>
+      ),
+      cellRenderer: ({ row }: { row: any }) => (
+        <Box px="x1" py="x0_75">
+          <TruncatedText maxWidth="100px" fullWidth fontSize="small" lineHeight="smallTextCompressed">
+            {row.expiryDate ? formatDateToYYYYMonDD(row.expiryDate) : "-"}
+          </TruncatedText>
+        </Box>
       ),
     },
     {
@@ -1209,6 +1260,56 @@ export const Default = () => {
           </TruncatedText>
         </Box>
       ),
+    },
+    {
+      label: "Tags",
+      dataKey: "tags",
+      width: "400px",
+      headerFormatter: () => (
+        <Box px="x1" pt="x1_25" pb="x0_75">
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+            Tags
+          </Text>
+        </Box>
+      ),
+      cellRenderer: ({ row }: { row: any }) => {
+        const rowTags = selectedTags[row.id] || [];
+        const isEditing = savedView1FocusedRowId === parseInt(row.id);
+
+        if (isEditing) {
+          return (
+            <Box px="x1" py="x0_75">
+              <Select
+                value={rowTags[0] || ""}
+                onChange={(value) => {
+                  const newTags = value ? [value as string] : [];
+                  handleTagChange(row.id, newTags);
+                }}
+                options={tagOptions}
+                placeholder="Select tag..."
+                size="small"
+              />
+            </Box>
+          );
+        }
+
+        if (rowTags.length === 0) return null;
+
+        return (
+          <Flex px="x1" py="x0_75" gap="x0_5" flexWrap="wrap">
+            {rowTags.map((tagType: string, index: number) => {
+              const tagOption = tagOptions.find((option) => option.value === tagType);
+              if (!tagOption) return null;
+
+              return (
+                <StatusIndicator key={index} type={getStatusIndicatorType(tagType)}>
+                  {tagOption.label}
+                </StatusIndicator>
+              );
+            })}
+          </Flex>
+        );
+      },
     },
   ];
 
@@ -1450,6 +1551,15 @@ export const Default = () => {
       filterVisible: true,
       isEdited: false,
     },
+    {
+      id: 26,
+      isEditable: true,
+      columnLabel: "Tags",
+      database: "TagsDB",
+      databaseTable: "Tags",
+      filterVisible: true,
+      isEdited: false,
+    },
   ];
 
   const DEFAULT_ROWS_COUNT = 25;
@@ -1514,6 +1624,30 @@ export const Default = () => {
     ];
 
     return mockLotCodes.filter((option) => option.label.toLowerCase().includes(inputValue.toLowerCase()));
+  };
+
+  const loadCustomerLotCodes = async (inputValue: string) => {
+    const mockCustomerLotCodes = [
+      { value: "CUST001", label: "CUST001" },
+      { value: "CUST002", label: "CUST002" },
+      { value: "CUST003", label: "CUST003" },
+      { value: "CUST004", label: "CUST004" },
+      { value: "CUST005", label: "CUST005" },
+    ];
+
+    return mockCustomerLotCodes.filter((option) => option.label.toLowerCase().includes(inputValue.toLowerCase()));
+  };
+
+  const loadSupplierLotCodes = async (inputValue: string) => {
+    const mockSupplierLotCodes = [
+      { value: "SUP001", label: "SUP001" },
+      { value: "SUP002", label: "SUP002" },
+      { value: "SUP003", label: "SUP003" },
+      { value: "SUP004", label: "SUP004" },
+      { value: "SUP005", label: "SUP005" },
+    ];
+
+    return mockSupplierLotCodes.filter((option) => option.label.toLowerCase().includes(inputValue.toLowerCase()));
   };
 
   // Modal footer content
@@ -1749,15 +1883,35 @@ export const Default = () => {
         <Flex flexDirection="column" gap="x3">
           <Box>
             <AsyncSelect
-              labelText="Lot codes"
-              helpText="Search by customer's or supplier's Lot code"
+              labelText="Customer's lot codes"
               placeholder="Start typing"
-              loadOptions={loadLotCodes}
+              loadOptions={loadCustomerLotCodes}
               multiselect
-              value={lotCodes}
-              onChange={handleLotCodesChange}
+              value={customerLotCodes}
+              onChange={handleCustomerLotCodesChange}
             />
-            <Box mt="x2" p="x2" backgroundColor="lightPurple" borderRadius="medium"></Box>
+          </Box>
+
+          <Box>
+            <AsyncSelect
+              labelText="Supplier's lot codes"
+              placeholder="Start typing"
+              loadOptions={loadSupplierLotCodes}
+              multiselect
+              value={supplierLotCodes}
+              onChange={handleSupplierLotCodesChange}
+            />
+          </Box>
+
+          <Box>
+            <Select
+              labelText="Custom tags"
+              placeholder="Select tags..."
+              options={tagOptions}
+              multiselect
+              value={selectedCustomTags}
+              onChange={handleCustomTagsChange}
+            />
           </Box>
         </Flex>
       </Sidebar>
