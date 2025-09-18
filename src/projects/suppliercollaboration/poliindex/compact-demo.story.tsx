@@ -791,13 +791,13 @@ export const CompactDemo = () => {
             checked={selectedRows.includes(row.id)}
             onChange={() => {
               const newSelectedRows = selectedRows.includes(row.id)
-                ? selectedRows.filter(id => id !== row.id)
+                ? selectedRows.filter((id) => id !== row.id)
                 : [...selectedRows, row.id];
               handleRowSelectionChange(newSelectedRows);
             }}
             style={{
-              verticalAlign: 'top',
-              marginTop: '2px'
+              verticalAlign: "top",
+              marginTop: "2px",
             }}
           />
         </Box>
@@ -823,14 +823,7 @@ export const CompactDemo = () => {
               <Text fontSize="small" lineHeight="smallTextCompressed">
                 {commentCount}
               </Text>
-              {hasBlueDot && (
-                <Box
-                  width="6px"
-                  height="6px"
-                  borderRadius="50%"
-                  backgroundColor="blue"
-                />
-              )}
+              {hasBlueDot && <Box width="6px" height="6px" borderRadius="50%" backgroundColor="blue" />}
             </Flex>
           </Box>
         );
@@ -920,13 +913,7 @@ export const CompactDemo = () => {
             </TruncatedText>
           </Link>
           <Flex gap="half" maxWidth="184px">
-            <TruncatedText
-              maxWidth="184px"
-              fullWidth
-              fontSize="small"
-              lineHeight="smallTextCompressed"
-              color="midGrey"
-            >
+            <TruncatedText maxWidth="184px" fullWidth fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
               {row.supplierPoLineItemNumber}
             </TruncatedText>
           </Flex>
@@ -948,7 +935,7 @@ export const CompactDemo = () => {
         // Mix of statuses: some completed, one canceled, rest open
         let status = "Open";
         let indicatorType: "quiet" | "neutral" = "quiet";
-        
+
         if (row.id === "2" || row.id === "6" || row.id === "11" || row.id === "19") {
           status = "Completed";
           indicatorType = "neutral";
@@ -1289,24 +1276,14 @@ export const CompactDemo = () => {
                 }
               `}
             </style>
-            <Table
-              columns={compactColumns}
-              rows={currentRows}
-              compact
-              rowBorder
-            />
+            <Table columns={compactColumns} rows={currentRows} compact rowBorder />
           </Box>
         </Box>
-        
+
         <Box mt="x4" display="flex" justifyContent="flex-end">
-          <Pagination
-            currentPage={currentPage}
-            totalPages={totalPages}
-            onChange={handlePageChange}
-          />
+          <Pagination currentPage={currentPage} totalPages={totalPages} onChange={handlePageChange} />
         </Box>
       </Page>
-
     </ApplicationFrame>
   );
 };
