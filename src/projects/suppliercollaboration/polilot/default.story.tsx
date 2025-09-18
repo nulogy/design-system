@@ -1042,7 +1042,7 @@ export const Default = () => {
         // If only supplier lot code exists, that's allowed
         const hasCustomerLot = row.customerLotCode && row.customerLotCode !== "-";
         const hasSupplierLot = row.supplierLotCode && row.supplierLotCode !== "-";
-        
+
         // If customer lot exists but supplier lot doesn't, show both as "-"
         if (hasCustomerLot && !hasSupplierLot) {
           return (
@@ -1063,7 +1063,7 @@ export const Default = () => {
             </Flex>
           );
         }
-        
+
         return (
           <Flex px="x1" py="x0_75" gap="x0_25" flexDirection="column">
             <TruncatedText fullWidth width="auto" maxWidth="180px" fontSize="small" lineHeight="smallTextCompressed">
@@ -1612,9 +1612,7 @@ export const Default = () => {
   };
 
   const loadSupplierLotCodes = async (inputValue: string) => {
-    const mockSupplierLotCodes = [
-      { value: "SUP-LOT-001", label: "SUP-LOT-001" },
-    ];
+    const mockSupplierLotCodes = [{ value: "SUP-LOT-001", label: "SUP-LOT-001" }];
 
     return mockSupplierLotCodes.filter((option) => option.label.toLowerCase().includes(inputValue.toLowerCase()));
   };
@@ -1852,17 +1850,15 @@ export const Default = () => {
       </Page>
 
       {/* Filter Sidebar */}
-      <Sidebar 
-        isOpen={isFilterSidebarOpen} 
-        onClose={() => setIsFilterSidebarOpen(false)} 
-        title="Filters" 
+      <Sidebar
+        isOpen={isFilterSidebarOpen}
+        onClose={() => setIsFilterSidebarOpen(false)}
+        title="Filters"
         width="xs"
         footer={
           <Flex gap="x2">
-            <PrimaryButton onClick={() => setIsFilterSidebarOpen(false)}>
-              Apply
-            </PrimaryButton>
-            <QuietButton 
+            <PrimaryButton onClick={() => setIsFilterSidebarOpen(false)}>Apply</PrimaryButton>
+            <QuietButton
               onClick={() => {
                 setCustomerLotCodes([]);
                 setSupplierLotCodes([]);

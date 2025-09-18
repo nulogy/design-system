@@ -72,26 +72,26 @@ export const Details6 = () => {
   const [selectedIndex, setSelectedIndex] = useState(1); // Production records tab is index 1
   const [showProductionSidebar, setShowProductionSidebar] = useState(false);
   const [isEditingProduction, setIsEditingProduction] = useState(false);
-  
+
   // Header and Summary state
   const [userState] = useState({ role: "supplier" });
   const [productionComplete] = useState(false);
-  const [collaborationState] = useState({ 
-    status: "awaiting", 
-    activeCardAuthorRole: "customer" 
+  const [collaborationState] = useState({
+    status: "awaiting",
+    activeCardAuthorRole: "customer",
   });
   const [acceptedItems] = useState({ request: false, proposal: false });
   const [poStatus] = useState("On time");
-  
+
   // Edit state
   const [showEditSidebar, setShowEditSidebar] = useState(false);
   const [editFormData, setEditFormData] = useState({
     supplierPOLineItemNumber: "SPLI-001",
     bomRevision: "Rev 1.2 – 2025-Jan-10",
     needByDate: new Date("2025-02-15"),
-    carryOverSentTo: ""
+    carryOverSentTo: "",
   });
-  
+
   // Details data
   const [detailsData] = useState({
     poNumber: "PO-2025-001",
@@ -109,33 +109,30 @@ export const Details6 = () => {
     bomRevision: "Rev 1.2 – 2025-Jan-10",
     productionStartDate: "2025-Feb-01",
     shipTo: "Global Manufacturing Co. Distribution Center",
-    needByDate: "2025-Feb-15"
+    needByDate: "2025-Feb-15",
   });
-  
+
   // SummaryDivider component
-  const SummaryDivider = () => (
-    <Box width="1px" height="x6" backgroundColor="lightGrey" mx="x2" />
-  );
-  
+  const SummaryDivider = () => <Box width="1px" height="x6" backgroundColor="lightGrey" mx="x2" />;
+
   // Handler functions
   const handleCancelPOLineItem = () => {
     console.log("Cancel PO line item");
   };
-  
+
   const handleEditDetails = () => {
     setShowEditSidebar(true);
   };
-  
+
   const handleCloseEditSidebar = () => {
     setShowEditSidebar(false);
   };
-  
+
   const handleSaveEditDetails = () => {
     setShowEditSidebar(false);
     toast.success("PO line item details saved successfully");
   };
-  
-  
+
   const [showConsumptionSidebar, setShowConsumptionSidebar] = useState(false);
   const [showAddConsumptionSidebar, setShowAddConsumptionSidebar] = useState(false);
   const [consumptionItems, setConsumptionItems] = useState([
@@ -214,7 +211,9 @@ export const Details6 = () => {
       expiryDate: "2026-Feb-12",
       palletNumber: "PAL-001",
       note: "Production details for this lot - additional information about the manufacturing process, quality checks, and any special handling requirements",
-      expandedContent: () => <ConsumptionReport materials={[]} parentData={{ date: "2025-Feb-12", actualQuantity: "0 cases" }} />,
+      expandedContent: () => (
+        <ConsumptionReport materials={[]} parentData={{ date: "2025-Feb-12", actualQuantity: "0 cases" }} />
+      ),
     },
     {
       id: "1-2",
@@ -224,7 +223,9 @@ export const Details6 = () => {
       expiryDate: "2026-Feb-12",
       palletNumber: "PAL-001A",
       note: "Additional batch from same production run",
-      expandedContent: () => <ConsumptionReport materials={materialsData2} parentData={{ date: "2025-Feb-12", actualQuantity: "5 cases" }} />,
+      expandedContent: () => (
+        <ConsumptionReport materials={materialsData2} parentData={{ date: "2025-Feb-12", actualQuantity: "5 cases" }} />
+      ),
     },
     {
       id: "1-3",
@@ -234,7 +235,9 @@ export const Details6 = () => {
       expiryDate: "2026-Feb-12",
       palletNumber: "PAL-001B",
       note: "Final batch completion",
-      expandedContent: () => <ConsumptionReport materials={materialsData1} parentData={{ date: "2025-Feb-12", actualQuantity: "3 cases" }} />,
+      expandedContent: () => (
+        <ConsumptionReport materials={materialsData1} parentData={{ date: "2025-Feb-12", actualQuantity: "3 cases" }} />
+      ),
     },
   ];
 
@@ -247,7 +250,12 @@ export const Details6 = () => {
       expiryDate: "2026-03-15",
       palletNumber: "PAL-002",
       note: "Standard production run with normal quality metrics",
-      expandedContent: () => <ConsumptionReport materials={materialsData1} parentData={{ date: "2025-Mar-15", actualQuantity: "12 cases" }} />,
+      expandedContent: () => (
+        <ConsumptionReport
+          materials={materialsData1}
+          parentData={{ date: "2025-Mar-15", actualQuantity: "12 cases" }}
+        />
+      ),
     },
   ];
 
@@ -260,7 +268,12 @@ export const Details6 = () => {
       expiryDate: "2026-04-20",
       palletNumber: "PAL-003",
       note: "High volume production batch for major customer order",
-      expandedContent: () => <ConsumptionReport materials={materialsData1} parentData={{ date: "2025-Apr-20", actualQuantity: "25 cases" }} />,
+      expandedContent: () => (
+        <ConsumptionReport
+          materials={materialsData1}
+          parentData={{ date: "2025-Apr-20", actualQuantity: "25 cases" }}
+        />
+      ),
     },
   ];
 
@@ -273,7 +286,9 @@ export const Details6 = () => {
       expiryDate: "2026-08-08",
       palletNumber: "PAL-004",
       note: "Equipment maintenance scheduled, production line optimization in progress",
-      expandedContent: () => <ConsumptionReport materials={[]} parentData={{ date: "2025-Aug-08", actualQuantity: "0 cases" }} />,
+      expandedContent: () => (
+        <ConsumptionReport materials={[]} parentData={{ date: "2025-Aug-08", actualQuantity: "0 cases" }} />
+      ),
     },
   ];
 
@@ -286,7 +301,12 @@ export const Details6 = () => {
       expiryDate: "2026-03-15",
       palletNumber: "PAL-005A",
       note: "First batch from production run",
-      expandedContent: () => <ConsumptionReport materials={materialsData5A} parentData={{ date: "2025-May-15", actualQuantity: "8 cases" }} />,
+      expandedContent: () => (
+        <ConsumptionReport
+          materials={materialsData5A}
+          parentData={{ date: "2025-May-15", actualQuantity: "8 cases" }}
+        />
+      ),
     },
     {
       id: "5-2",
@@ -296,7 +316,12 @@ export const Details6 = () => {
       expiryDate: "2026-03-15",
       palletNumber: "PAL-005B",
       note: "Second batch completion",
-      expandedContent: () => <ConsumptionReport materials={materialsData5B} parentData={{ date: "2025-May-15", actualQuantity: "4 cases" }} />,
+      expandedContent: () => (
+        <ConsumptionReport
+          materials={materialsData5B}
+          parentData={{ date: "2025-May-15", actualQuantity: "4 cases" }}
+        />
+      ),
     },
   ];
 
@@ -309,7 +334,12 @@ export const Details6 = () => {
       expiryDate: "2026-04-22",
       palletNumber: "PAL-006A",
       note: "Quality approved batch",
-      expandedContent: () => <ConsumptionReport materials={materialsData6A} parentData={{ date: "2025-Apr-22", actualQuantity: "10 cases" }} />,
+      expandedContent: () => (
+        <ConsumptionReport
+          materials={materialsData6A}
+          parentData={{ date: "2025-Apr-22", actualQuantity: "10 cases" }}
+        />
+      ),
     },
     {
       id: "6-2",
@@ -753,7 +783,7 @@ export const Details6 = () => {
       ),
       cellRenderer: ({ row }: { row: any }) => {
         // Always show blank for parent table rows since detailed info is in nested tables
-          return null;
+        return null;
       },
     },
     {
@@ -762,7 +792,7 @@ export const Details6 = () => {
       width: "150px",
       cellRenderer: ({ row }: { row: any }) => {
         // Always show blank for parent table rows since detailed info is in nested tables
-          return null;
+        return null;
       },
     },
     {
@@ -771,7 +801,7 @@ export const Details6 = () => {
       width: "180px",
       cellRenderer: ({ row }: { row: any }) => {
         // Always show blank for parent table rows since detailed info is in nested tables
-          return null;
+        return null;
       },
     },
     {
@@ -780,7 +810,7 @@ export const Details6 = () => {
       width: "auto",
       cellRenderer: ({ row }: { row: any }) => {
         // Always show blank for parent table rows since detailed info is in nested tables
-          return null;
+        return null;
       },
     },
     {
@@ -820,7 +850,7 @@ export const Details6 = () => {
       producedQuantity: rowData.actualQuantity ? rowData.actualQuantity.split(" ")[0] || "" : "",
       note: rowData.note || "",
     });
-    
+
     // Populate production batches based on the row's nested data
     let nestedData = [];
     switch (rowData.id) {
@@ -842,20 +872,21 @@ export const Details6 = () => {
       default:
         nestedData = [];
     }
-    
+
     // Convert nested data to production batches format (only show additional batches if more than 1 exists)
-    const batches = nestedData.length > 1 
-      ? nestedData.slice(1).map((batch, index) => ({
-          id: batch.id,
-          lotCode: batch.lotCode || "",
-          supplierLotCode: batch.supplierLotCode || "",
-          expiryDate: batch.expiryDate || "",
-          palletNumber: batch.palletNumber || "",
-          producedQuantity: batch.actualQuantity ? batch.actualQuantity.split(" ")[0] || "" : "",
-          note: batch.note || "",
-        }))
-      : [];
-    
+    const batches =
+      nestedData.length > 1
+        ? nestedData.slice(1).map((batch, index) => ({
+            id: batch.id,
+            lotCode: batch.lotCode || "",
+            supplierLotCode: batch.supplierLotCode || "",
+            expiryDate: batch.expiryDate || "",
+            palletNumber: batch.palletNumber || "",
+            producedQuantity: batch.actualQuantity ? batch.actualQuantity.split(" ")[0] || "" : "",
+            note: batch.note || "",
+          }))
+        : [];
+
     setProductionBatches(batches);
     setShowProductionSidebar(true);
   };
@@ -3919,33 +3950,25 @@ export const Details6 = () => {
               <DescriptionTerm>
                 <Text color="darkGrey">Customer's PO line item number</Text>
               </DescriptionTerm>
-              <DescriptionDetails>
-                {detailsData.customerPoLineItem}
-              </DescriptionDetails>
+              <DescriptionDetails>{detailsData.customerPoLineItem}</DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
                 <Text color="darkGrey">Supplier's PO line item number</Text>
               </DescriptionTerm>
-              <DescriptionDetails>
-                {detailsData.supplierPoLineItem}
-              </DescriptionDetails>
+              <DescriptionDetails>{detailsData.supplierPoLineItem}</DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
                 <Text color="darkGrey">Created on</Text>
               </DescriptionTerm>
-              <DescriptionDetails>
-                {detailsData.createdOn}
-              </DescriptionDetails>
+              <DescriptionDetails>{detailsData.createdOn}</DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
                 <Text color="darkGrey">{role === "supplier" ? "Customer" : "Supplier"}</Text>
               </DescriptionTerm>
-              <DescriptionDetails>
-                {detailsData.supplier}
-              </DescriptionDetails>
+              <DescriptionDetails>{detailsData.supplier}</DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
@@ -3959,9 +3982,7 @@ export const Details6 = () => {
               <DescriptionTerm>
                 <Text color="darkGrey">Supplier's item code</Text>
               </DescriptionTerm>
-              <DescriptionDetails>
-                {detailsData.supplierItemCode}
-              </DescriptionDetails>
+              <DescriptionDetails>{detailsData.supplierItemCode}</DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
@@ -4363,7 +4384,10 @@ export const Details6 = () => {
 
                   {fieldConfig.sanofiRequired && (
                     <Field>
-                      <FieldLabel labelText={role === "supplier" ? "Supplier's lot code" : "Customer's lot code"} pb="x1" />
+                      <FieldLabel
+                        labelText={role === "supplier" ? "Supplier's lot code" : "Customer's lot code"}
+                        pb="x1"
+                      />
                       <Input
                         value={batch.supplierLotCode}
                         onChange={(e) => handleBatchFieldChange(batch.id, "supplierLotCode", e.target.value)}
@@ -4496,13 +4520,13 @@ export const Details6 = () => {
                     </Field>
                   </Flex>
                   <Field>
-                      <FieldLabel labelText="Unit" pb="x1" />
-                      <Select
-                        value={material.unit}
-                        onChange={(value) => handleConsumptionFieldChange(material.id, "unit", String(value))}
-                        options={unitOptions}
-                      />
-                    </Field>
+                    <FieldLabel labelText="Unit" pb="x1" />
+                    <Select
+                      value={material.unit}
+                      onChange={(value) => handleConsumptionFieldChange(material.id, "unit", String(value))}
+                      options={unitOptions}
+                    />
+                  </Field>
                 </Box>
               ))}
             </FormSection>
@@ -4513,7 +4537,9 @@ export const Details6 = () => {
         <Sidebar
           isOpen={showAddConsumptionSidebar}
           onClose={handleCloseAddConsumptionSidebar}
-          title={consumptionItems.length > 0 && consumptionItems[0].item ? "Edit consumption details" : "Consumption record"}
+          title={
+            consumptionItems.length > 0 && consumptionItems[0].item ? "Edit consumption details" : "Consumption record"
+          }
           helpText={`Consumption for ${consumptionItems[0]?.parentActualQuantity || "[Actual quantity]"} on ${consumptionItems[0]?.parentDate || "[Date]"}`}
           width="600px"
           duration={0.25}
@@ -4528,7 +4554,7 @@ export const Details6 = () => {
               <QuietButton type="button" onClick={handleCloseAddConsumptionSidebar}>
                 Cancel
               </QuietButton>
-                  </Flex>
+            </Flex>
           }
         >
           <Form>
@@ -4630,26 +4656,26 @@ export const Details6 = () => {
           <Flex alignItems="center" gap="x2" px="x2" py="x1">
             <Text fontSize="small">Tracking:</Text>
             <Tooltip tooltip="Controled by item setting. Makes the filed mandatory" placement="top">
-            <Flex alignItems="center" gap="x1" width="200px">
-              <Text width="100px" fontSize="small" color="midGrey">
-                Lot code
-              </Text>
-              <Toggle
-                toggled={fieldConfig.lotCodeRequired}
-                onChange={(e) => handleFieldConfigChange("lotCodeRequired", e.target.checked)}
-              />
-            </Flex>
+              <Flex alignItems="center" gap="x1" width="200px">
+                <Text width="100px" fontSize="small" color="midGrey">
+                  Lot code
+                </Text>
+                <Toggle
+                  toggled={fieldConfig.lotCodeRequired}
+                  onChange={(e) => handleFieldConfigChange("lotCodeRequired", e.target.checked)}
+                />
+              </Flex>
             </Tooltip>
             <Tooltip tooltip="Controled by item setting. Makes the filed mandatory" placement="top">
-            <Flex alignItems="center" gap="x1" width="200px">
-              <Text width="150px" fontSize="small" color="midGrey">
-                Expiry date
-              </Text>
-              <Toggle
-                toggled={fieldConfig.expiryDateRequired}
-                onChange={(e) => handleFieldConfigChange("expiryDateRequired", e.target.checked)}
-              />
-            </Flex>
+              <Flex alignItems="center" gap="x1" width="200px">
+                <Text width="150px" fontSize="small" color="midGrey">
+                  Expiry date
+                </Text>
+                <Toggle
+                  toggled={fieldConfig.expiryDateRequired}
+                  onChange={(e) => handleFieldConfigChange("expiryDateRequired", e.target.checked)}
+                />
+              </Flex>
             </Tooltip>
             <Flex alignItems="center" gap="x1" width="200px">
               <Text width="100px" fontSize="small" color="midGrey">
@@ -4664,15 +4690,15 @@ export const Details6 = () => {
               tooltip="Controled by Org POLI setting. Controls the display and batch production creation fileds."
               placement="top"
             >
-            <Flex alignItems="center" gap="x1" width="200px">
-              <Text width="150px" fontSize="small" color="midGrey">
-                SANOFI req
-              </Text>
-              <Toggle
-                toggled={fieldConfig.sanofiRequired}
-                onChange={(e) => handleFieldConfigChange("sanofiRequired", e.target.checked)}
-              />
-            </Flex>
+              <Flex alignItems="center" gap="x1" width="200px">
+                <Text width="150px" fontSize="small" color="midGrey">
+                  SANOFI req
+                </Text>
+                <Toggle
+                  toggled={fieldConfig.sanofiRequired}
+                  onChange={(e) => handleFieldConfigChange("sanofiRequired", e.target.checked)}
+                />
+              </Flex>
             </Tooltip>
             <Flex alignItems="center" gap="x1" width="275px">
               <Text width="125px" fontSize="small" color="midGrey">
@@ -4693,9 +4719,7 @@ export const Details6 = () => {
           title="Edit details"
           footer={
             <Flex gap="x2" justifyContent="flex-start">
-              <PrimaryButton onClick={handleSaveEditDetails}>
-                Save
-              </PrimaryButton>
+              <PrimaryButton onClick={handleSaveEditDetails}>Save</PrimaryButton>
               <QuietButton onClick={handleCloseEditSidebar}>Cancel</QuietButton>
             </Flex>
           }
@@ -4707,9 +4731,7 @@ export const Details6 = () => {
                 labelText="Supplier's PO line item number"
                 id="supplierPOLineItemNumber"
                 value={editFormData.supplierPOLineItemNumber}
-                onChange={(e) =>
-                  setEditFormData((prev) => ({ ...prev, supplierPOLineItemNumber: e.target.value }))
-                }
+                onChange={(e) => setEditFormData((prev) => ({ ...prev, supplierPOLineItemNumber: e.target.value }))}
               />
             )}
 
@@ -4719,9 +4741,7 @@ export const Details6 = () => {
               id="bomRevision"
               autoFocus
               value={editFormData.bomRevision}
-              onChange={(e) =>
-                setEditFormData((prev) => ({ ...prev, bomRevision: e.target.value }))
-              }
+              onChange={(e) => setEditFormData((prev) => ({ ...prev, bomRevision: e.target.value }))}
             />
 
             {/* Need by date - editable */}
@@ -4744,9 +4764,7 @@ export const Details6 = () => {
                   labelText="Carry over sent to"
                   id="carryOverSentTo"
                   value={editFormData.carryOverSentTo}
-                  onChange={(e) =>
-                    setEditFormData((prev) => ({ ...prev, carryOverSentTo: e.target.value }))
-                  }
+                  onChange={(e) => setEditFormData((prev) => ({ ...prev, carryOverSentTo: e.target.value }))}
                 />
               </>
             )}
