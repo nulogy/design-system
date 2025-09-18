@@ -4545,7 +4545,7 @@ export const Details8 = () => {
                             {rowNotes[row.id] !== undefined && (
                               <Box border="1px solid" borderColor="lightGrey" borderRadius="large" p="x2">
                                 <Field>
-                                  <FieldLabel labelText="Note" pb="x1" fontSize="small" />
+                                  <FieldLabel labelText="Note" pb="x1" />
                                   <Textarea
                                     value={rowNotes[row.id]}
                                     onChange={(e) => handleNoteChange(row.id, e.target.value)}
