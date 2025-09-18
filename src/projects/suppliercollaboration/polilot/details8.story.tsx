@@ -79,10 +79,15 @@ export const Details8 = () => {
   const [productionEntryType, setProductionEntryType] = useState<"quick" | "detailed">("quick");
   const [actualQuantity, setActualQuantity] = useState("");
   const [productionRows, setProductionRows] = useState([
-    { id: "row-1", palletNumber: "", lotCode: "", expiryDate: "", quantity: "" }
+    { id: "row-1", palletNumber: "", lotCode: "", expiryDate: "", quantity: "" },
   ]);
   const [rowNotes, setRowNotes] = useState<Record<string, string>>({});
-  const [rowConsumptions, setRowConsumptions] = useState<Record<string, Array<{ id: string; item: string; lotCode: string; expiryDate: string; palletNumber: string; quantity: string }>>>({});
+  const [rowConsumptions, setRowConsumptions] = useState<
+    Record<
+      string,
+      Array<{ id: string; item: string; lotCode: string; expiryDate: string; palletNumber: string; quantity: string }>
+    >
+  >({});
 
   // Header and Summary state
   const [userState] = useState({ role: "supplier" });
@@ -966,9 +971,7 @@ export const Details8 = () => {
   };
 
   const handleProductionRowChange = (rowId: string, field: string, value: string) => {
-    setProductionRows(prev => prev.map(row => 
-      row.id === rowId ? { ...row, [field]: value } : row
-    ));
+    setProductionRows((prev) => prev.map((row) => (row.id === rowId ? { ...row, [field]: value } : row)));
   };
 
   const handleAddProductionRow = () => {
@@ -977,46 +980,47 @@ export const Details8 = () => {
       palletNumber: "",
       lotCode: "",
       expiryDate: "",
-      quantity: ""
+      quantity: "",
     };
-    setProductionRows(prev => [...prev, newRow]);
+    setProductionRows((prev) => [...prev, newRow]);
   };
 
   const handleRemoveProductionRow = (rowId: string) => {
     if (productionRows.length > 1) {
-      setProductionRows(prev => prev.filter(row => row.id !== rowId));
+      setProductionRows((prev) => prev.filter((row) => row.id !== rowId));
     }
   };
 
   const handleAddNote = (rowId: string) => {
-    setRowNotes(prev => ({
+    setRowNotes((prev) => ({
       ...prev,
-      [rowId]: prev[rowId] || ""
+      [rowId]: prev[rowId] || "",
     }));
   };
 
   const handleNoteChange = (rowId: string, value: string) => {
-    setRowNotes(prev => ({
+    setRowNotes((prev) => ({
       ...prev,
-      [rowId]: value
+      [rowId]: value,
     }));
   };
 
   const handleAddConsumptionForRow = (rowId: string) => {
-    setRowConsumptions(prev => ({
+    setRowConsumptions((prev) => ({
       ...prev,
-      [rowId]: prev[rowId] || [{ id: `consumption-${Date.now()}`, item: "", lotCode: "", expiryDate: "", palletNumber: "", quantity: "" }]
+      [rowId]: prev[rowId] || [
+        { id: `consumption-${Date.now()}`, item: "", lotCode: "", expiryDate: "", palletNumber: "", quantity: "" },
+      ],
     }));
   };
 
   const handleConsumptionRowChange = (rowId: string, consumptionId: string, field: string, value: string) => {
-    setRowConsumptions(prev => ({
+    setRowConsumptions((prev) => ({
       ...prev,
-      [rowId]: prev[rowId]?.map(consumption => 
-        consumption.id === consumptionId 
-          ? { ...consumption, [field]: value }
-          : consumption
-      ) || []
+      [rowId]:
+        prev[rowId]?.map((consumption) =>
+          consumption.id === consumptionId ? { ...consumption, [field]: value } : consumption
+        ) || [],
     }));
   };
 
@@ -1027,18 +1031,18 @@ export const Details8 = () => {
       lotCode: "",
       expiryDate: "",
       palletNumber: "",
-      quantity: ""
+      quantity: "",
     };
-    setRowConsumptions(prev => ({
+    setRowConsumptions((prev) => ({
       ...prev,
-      [rowId]: [...(prev[rowId] || []), newConsumption]
+      [rowId]: [...(prev[rowId] || []), newConsumption],
     }));
   };
 
   const handleRemoveConsumptionRow = (rowId: string, consumptionId: string) => {
-    setRowConsumptions(prev => ({
+    setRowConsumptions((prev) => ({
       ...prev,
-      [rowId]: prev[rowId]?.filter(consumption => consumption.id !== consumptionId) || []
+      [rowId]: prev[rowId]?.filter((consumption) => consumption.id !== consumptionId) || [],
     }));
   };
 
@@ -3815,7 +3819,9 @@ export const Details8 = () => {
             No consumption data available
           </Text>
           {role === "supplier" && (
-            <PrimaryButton type="button" onClick={handleAddConsumptionReport}>Add consumption details</PrimaryButton>
+            <PrimaryButton type="button" onClick={handleAddConsumptionReport}>
+              Add consumption details
+            </PrimaryButton>
           )}
         </Box>
       </Box>
@@ -3831,8 +3837,12 @@ export const Details8 = () => {
         }}
         renderBreadcrumbs={() => (
           <Breadcrumbs>
-            <Link href="#" onClick={(e) => e.preventDefault()}>Home</Link>
-            <Link href="#" onClick={(e) => e.preventDefault()}>PO line items</Link>
+            <Link href="#" onClick={(e) => e.preventDefault()}>
+              Home
+            </Link>
+            <Link href="#" onClick={(e) => e.preventDefault()}>
+              PO line items
+            </Link>
           </Breadcrumbs>
         )}
         title="PO-2025-001"
@@ -4243,8 +4253,12 @@ export const Details8 = () => {
                     </Text>
                   </Flex>
                   <Flex gap="x2">
-                    <Button type="button" size="small">View full proposal</Button>
-                    <PrimaryButton type="button" size="small">Create new proposal</PrimaryButton>
+                    <Button type="button" size="small">
+                      View full proposal
+                    </Button>
+                    <PrimaryButton type="button" size="small">
+                      Create new proposal
+                    </PrimaryButton>
                   </Flex>
                 </Flex>
               </Flex>
@@ -4336,9 +4350,7 @@ export const Details8 = () => {
 
               <Divider mb="x3" />
 
-              <Heading4 mb="x2">
-                Production details
-              </Heading4>
+              <Heading4 mb="x2">Production details</Heading4>
 
               <Box mb="x3">
                 <FieldLabel labelText="Enter production" pb="x2" />
@@ -4348,8 +4360,12 @@ export const Details8 = () => {
                     setProductionEntryType(value as "quick" | "detailed");
                   }}
                 >
-                  <Switch value="quick" type="button">Quick</Switch>
-                  <Switch value="detailed" type="button">Detailed</Switch>
+                  <Switch value="quick" type="button">
+                    Quick
+                  </Switch>
+                  <Switch value="detailed" type="button">
+                    Detailed
+                  </Switch>
                 </Switcher>
               </Box>
 
@@ -4366,77 +4382,112 @@ export const Details8 = () => {
                 <Box>
                   {/* Custom table structure with nested rows */}
                   <Box>
-                     {/* Table Header */}
-                     <Box display="flex" borderBottom="1px solid" borderColor="lightGrey" pb="x1">
-                       <Box flex="1" fontWeight="bold" fontSize="small" px="x1">Pallet number</Box>
-                       <Box flex="1" fontWeight="bold" fontSize="small" px="x1">Lot code</Box>
-                       <Box flex="1" fontWeight="bold" fontSize="small" px="x1">Expiry date</Box>
-                       <Box flex="1" fontWeight="bold" fontSize="small" px="x1">Quantity</Box>
-                       <Box width="88px" px="x1"></Box>
-                     </Box>
+                    {/* Table Header */}
+                    <Box display="flex" borderBottom="1px solid" borderColor="lightGrey" pb="x1">
+                      <Box flex="1" fontWeight="bold" fontSize="small" px="x1">
+                        Pallet number
+                      </Box>
+                      <Box flex="1" fontWeight="bold" fontSize="small" px="x1">
+                        Lot code
+                      </Box>
+                      <Box flex="1" fontWeight="bold" fontSize="small" px="x1">
+                        Expiry date
+                      </Box>
+                      <Box flex="1" fontWeight="bold" fontSize="small" px="x1">
+                        Quantity
+                      </Box>
+                      <Box width="88px" px="x1"></Box>
+                    </Box>
 
                     {/* Table Rows with nested content */}
                     {productionRows.map((row, index) => (
                       <Box key={row.id}>
-                         {/* Main Production Row */}
-                         <Box display="flex" alignItems="center" py="x0">
-                           <Box flex="1">
-                             <Input
-                               value={row.palletNumber}
-                               onChange={(e) => handleProductionRowChange(row.id, "palletNumber", e.target.value)}
-                               placeholder="Enter pallet number"
-                               p="x1"
-                             />
-                           </Box>
-                           <Box flex="1">
-                             <Input
-                               value={row.lotCode}
-                               onChange={(e) => handleProductionRowChange(row.id, "lotCode", e.target.value)}
-                               placeholder="Enter lot code"
-                               p="x1"
-                             />
-                           </Box>
-                           <Box flex="1">
-                             <Input
-                               value={row.expiryDate}
-                               onChange={(e) => handleProductionRowChange(row.id, "expiryDate", e.target.value)}
-                               placeholder="Enter expiry date"
-                               p="x1"
-                             />
-                           </Box>
-                           <Box flex="1">
-                             <Input
-                               value={row.quantity}
-                               onChange={(e) => handleProductionRowChange(row.id, "quantity", e.target.value)}
-                               placeholder="Enter quantity"
-                               p="x1"
-                             />
-                           </Box>
-                           <Box width="88px">
-                             <Flex gap="x1" alignItems="center">
-                               <DropdownMenu trigger={() => <IconicButton icon="more" aria-label="More actions" />} placement="bottom-end">
-                                 <DropdownButton onClick={(e) => { e.preventDefault(); handleAddConsumptionForRow(row.id); }}>Add subcomponent consumption</DropdownButton>
-                                 <DropdownButton onClick={(e) => { e.preventDefault(); handleAddNote(row.id); }}>Add note</DropdownButton>
-                               </DropdownMenu>
-                               {productionRows.length > 1 && (
-                                 <IconicButton
-                                   icon="removeCircleOutline"
-                                   aria-label="Remove row"
-                                   onClick={() => handleRemoveProductionRow(row.id)}
-                                   type="button"
-                                 />
-                               )}
-                             </Flex>
-                           </Box>
-                         </Box>
+                        {/* Main Production Row */}
+                        <Box display="flex" alignItems="center" py="x0">
+                          <Box flex="1">
+                            <Input
+                              value={row.palletNumber}
+                              onChange={(e) => handleProductionRowChange(row.id, "palletNumber", e.target.value)}
+                              placeholder="Enter pallet number"
+                              p="x1"
+                            />
+                          </Box>
+                          <Box flex="1">
+                            <Input
+                              value={row.lotCode}
+                              onChange={(e) => handleProductionRowChange(row.id, "lotCode", e.target.value)}
+                              placeholder="Enter lot code"
+                              p="x1"
+                            />
+                          </Box>
+                          <Box flex="1">
+                            <Input
+                              value={row.expiryDate}
+                              onChange={(e) => handleProductionRowChange(row.id, "expiryDate", e.target.value)}
+                              placeholder="Enter expiry date"
+                              p="x1"
+                            />
+                          </Box>
+                          <Box flex="1">
+                            <Input
+                              value={row.quantity}
+                              onChange={(e) => handleProductionRowChange(row.id, "quantity", e.target.value)}
+                              placeholder="Enter quantity"
+                              p="x1"
+                            />
+                          </Box>
+                          <Box width="88px">
+                            <Flex gap="x1" alignItems="center">
+                              <DropdownMenu
+                                trigger={() => <IconicButton icon="more" aria-label="More actions" />}
+                                placement="bottom-end"
+                              >
+                                <DropdownButton
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    handleAddConsumptionForRow(row.id);
+                                  }}
+                                >
+                                  Add subcomponent consumption
+                                </DropdownButton>
+                                <DropdownButton
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    handleAddNote(row.id);
+                                  }}
+                                >
+                                  Add note
+                                </DropdownButton>
+                              </DropdownMenu>
+                              {productionRows.length > 1 && (
+                                <IconicButton
+                                  icon="removeCircleOutline"
+                                  aria-label="Remove row"
+                                  onClick={() => handleRemoveProductionRow(row.id)}
+                                  type="button"
+                                />
+                              )}
+                            </Flex>
+                          </Box>
+                        </Box>
 
                         {/* Container for Consumption Details and Note */}
-                        {(rowConsumptions[row.id] && rowConsumptions[row.id].length > 0) || rowNotes[row.id] !== undefined ? (
+                        {(rowConsumptions[row.id] && rowConsumptions[row.id].length > 0) ||
+                        rowNotes[row.id] !== undefined ? (
                           <Box p="x1" borderBottom="1px solid" borderBottomColor="lightGrey">
                             {/* Subcomponent consumption - Nested below this specific row */}
                             {rowConsumptions[row.id] && rowConsumptions[row.id].length > 0 && (
-                              <Box border="1px solid" borderColor="lightGrey" borderRadius="large" p="x2" mb="x1" mt="x0">
-                                <Heading4 mb="x1" fontSize="small">Subcomponent consumption</Heading4>
+                              <Box
+                                border="1px solid"
+                                borderColor="lightGrey"
+                                borderRadius="large"
+                                p="x2"
+                                mb="x1"
+                                mt="x0"
+                              >
+                                <Heading4 mb="x1" fontSize="small">
+                                  Subcomponent consumption
+                                </Heading4>
                                 <Table
                                   columns={[
                                     {
@@ -4446,7 +4497,14 @@ export const Details8 = () => {
                                       cellRenderer: ({ row }: { row: any }) => (
                                         <Input
                                           value={row.item}
-                                          onChange={(e) => handleConsumptionRowChange(row.id, row.consumptionId, "item", e.target.value)}
+                                          onChange={(e) =>
+                                            handleConsumptionRowChange(
+                                              row.id,
+                                              row.consumptionId,
+                                              "item",
+                                              e.target.value
+                                            )
+                                          }
                                           placeholder="Enter item"
                                           p="x1"
                                         />
@@ -4459,7 +4517,14 @@ export const Details8 = () => {
                                       cellRenderer: ({ row }: { row: any }) => (
                                         <Input
                                           value={row.lotCode}
-                                          onChange={(e) => handleConsumptionRowChange(row.id, row.consumptionId, "lotCode", e.target.value)}
+                                          onChange={(e) =>
+                                            handleConsumptionRowChange(
+                                              row.id,
+                                              row.consumptionId,
+                                              "lotCode",
+                                              e.target.value
+                                            )
+                                          }
                                           placeholder="Enter lot code"
                                           p="x1"
                                         />
@@ -4472,7 +4537,14 @@ export const Details8 = () => {
                                       cellRenderer: ({ row }: { row: any }) => (
                                         <Input
                                           value={row.expiryDate}
-                                          onChange={(e) => handleConsumptionRowChange(row.id, row.consumptionId, "expiryDate", e.target.value)}
+                                          onChange={(e) =>
+                                            handleConsumptionRowChange(
+                                              row.id,
+                                              row.consumptionId,
+                                              "expiryDate",
+                                              e.target.value
+                                            )
+                                          }
                                           placeholder="Enter expiry date"
                                           p="x1"
                                         />
@@ -4485,7 +4557,14 @@ export const Details8 = () => {
                                       cellRenderer: ({ row }: { row: any }) => (
                                         <Input
                                           value={row.palletNumber}
-                                          onChange={(e) => handleConsumptionRowChange(row.id, row.consumptionId, "palletNumber", e.target.value)}
+                                          onChange={(e) =>
+                                            handleConsumptionRowChange(
+                                              row.id,
+                                              row.consumptionId,
+                                              "palletNumber",
+                                              e.target.value
+                                            )
+                                          }
                                           placeholder="Enter pallet number"
                                           p="x1"
                                         />
@@ -4498,7 +4577,14 @@ export const Details8 = () => {
                                       cellRenderer: ({ row }: { row: any }) => (
                                         <Input
                                           value={row.quantity}
-                                          onChange={(e) => handleConsumptionRowChange(row.id, row.consumptionId, "quantity", e.target.value)}
+                                          onChange={(e) =>
+                                            handleConsumptionRowChange(
+                                              row.id,
+                                              row.consumptionId,
+                                              "quantity",
+                                              e.target.value
+                                            )
+                                          }
                                           placeholder="Enter quantity"
                                           p="x1"
                                         />
@@ -4518,10 +4604,10 @@ export const Details8 = () => {
                                       ),
                                     },
                                   ]}
-                                  rows={rowConsumptions[row.id].map(consumption => ({
+                                  rows={rowConsumptions[row.id].map((consumption) => ({
                                     ...consumption,
                                     id: `${row.id}-${consumption.id}`,
-                                    consumptionId: consumption.id
+                                    consumptionId: consumption.id,
                                   }))}
                                   keyField="id"
                                   compact={true}
@@ -4575,7 +4661,6 @@ export const Details8 = () => {
                   </Box>
                 </Box>
               )}
-
             </FormSection>
           </Form>
         </Sidebar>
@@ -4855,8 +4940,12 @@ export const Details8 = () => {
           title="Edit details"
           footer={
             <Flex gap="x2" justifyContent="flex-start">
-              <PrimaryButton type="button" onClick={handleSaveEditDetails}>Save</PrimaryButton>
-              <QuietButton type="button" onClick={handleCloseEditSidebar}>Cancel</QuietButton>
+              <PrimaryButton type="button" onClick={handleSaveEditDetails}>
+                Save
+              </PrimaryButton>
+              <QuietButton type="button" onClick={handleCloseEditSidebar}>
+                Cancel
+              </QuietButton>
             </Flex>
           }
         >
