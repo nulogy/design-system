@@ -3925,7 +3925,7 @@ export const Details6 = () => {
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
-                <Text color="darkGrey">{role === "supplier" ? "Customer's" : "Supplier's"} PO line item number</Text>
+                <Text color="darkGrey">Supplier's PO line item number</Text>
               </DescriptionTerm>
               <DescriptionDetails>
                 {detailsData.supplierPoLineItem}
@@ -3957,7 +3957,7 @@ export const Details6 = () => {
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
-                <Text color="darkGrey">{role === "supplier" ? "Customer's" : "Supplier's"} item code</Text>
+                <Text color="darkGrey">Supplier's item code</Text>
               </DescriptionTerm>
               <DescriptionDetails>
                 {detailsData.supplierItemCode}
