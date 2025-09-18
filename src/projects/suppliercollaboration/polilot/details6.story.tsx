@@ -4367,6 +4367,7 @@ export const Details6 = () => {
                       type="number"
                       value={batch.producedQuantity}
                       onChange={(e) => handleBatchFieldChange(batch.id, "producedQuantity", e.target.value)}
+                      disabled={role === "customer" && isEditingProduction}
                     />
                   </Field>
 
@@ -4391,6 +4392,7 @@ export const Details6 = () => {
                       <Input
                         value={batch.supplierLotCode}
                         onChange={(e) => handleBatchFieldChange(batch.id, "supplierLotCode", e.target.value)}
+                        disabled={role === "customer" && isEditingProduction}
                       />
                     </Field>
                   )}
@@ -4404,6 +4406,7 @@ export const Details6 = () => {
                     <Input
                       value={batch.expiryDate}
                       onChange={(e) => handleBatchFieldChange(batch.id, "expiryDate", e.target.value)}
+                      disabled={role === "customer" && isEditingProduction}
                     />
                   </Field>
 
@@ -4412,6 +4415,7 @@ export const Details6 = () => {
                     <Input
                       value={batch.palletNumber}
                       onChange={(e) => handleBatchFieldChange(batch.id, "palletNumber", e.target.value)}
+                      disabled={role === "customer" && isEditingProduction}
                     />
                   </Field>
 
@@ -4420,6 +4424,7 @@ export const Details6 = () => {
                     <Textarea
                       value={batch.note}
                       onChange={(e) => handleBatchFieldChange(batch.id, "note", e.target.value)}
+                      disabled={role === "customer" && isEditingProduction}
                     />
                   </Field>
                 </Box>
