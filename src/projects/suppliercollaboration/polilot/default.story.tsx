@@ -220,7 +220,7 @@ export const Default = () => {
   };
 
   const handleCustomTagsChange = (values: any) => {
-    setSelectedCustomTags(values || []);
+    setSelectedTags(values || []);
   };
 
   const handleActionsChange = (values: any) => {
