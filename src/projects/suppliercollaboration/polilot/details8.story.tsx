@@ -79,7 +79,7 @@ export const Details8 = () => {
   const [productionEntryType, setProductionEntryType] = useState<"quick" | "detailed">("quick");
   const [actualQuantity, setActualQuantity] = useState("");
   const [productionRows, setProductionRows] = useState([
-    { id: "row-1", palletNumber: "", lotCode: "", expiryDate: "", quantity: "" },
+    { id: "row-1", palletNumber: "", customerLotCode: "", supplierLotCode: "", expiryDate: "", quantity: "" },
   ]);
   const [rowNotes, setRowNotes] = useState<Record<string, string>>({});
   const [rowConsumptions, setRowConsumptions] = useState<
@@ -180,10 +180,11 @@ export const Details8 = () => {
   const [productionBatches, setProductionBatches] = useState([]);
   const [consumptionMaterials, setConsumptionMaterials] = useState([]);
   const [role, setRole] = useState("customer");
+  const [showConfigBar, setShowConfigBar] = useState(true);
   const [fieldConfig, setFieldConfig] = useState({
-    lotCodeRequired: false,
-    palletNumberRequired: false,
-    expiryDateRequired: false,
+    lotCodeRequired: true,
+    palletNumberRequired: true,
+    expiryDateRequired: true,
     sanofiRequired: true,
   });
 
@@ -848,11 +849,25 @@ export const Details8 = () => {
   const handleAddProduction = () => {
     setIsEditingProduction(false);
     setProductionBatches([]); // Clear batches when adding new production
+    setProductionRecord({
+      date: "",
+      uom: "",
+      expectedQuantity: "",
+      actualQuantity: "",
+      lotCode: "",
+      supplierLotCode: "",
+      expiryDate: "",
+      palletNumber: "",
+      producedQuantity: "",
+      note: "",
+    });
     setShowProductionSidebar(true);
   };
 
   const handleEditProduction = (rowData: any) => {
     setIsEditingProduction(true);
+    setProductionEntryType("detailed"); // Set to detailed mode for editing
+    
     // Map row data to production record format
     setProductionRecord({
       date: rowData.date || "",
@@ -867,7 +882,7 @@ export const Details8 = () => {
       note: rowData.note || "",
     });
 
-    // Populate production batches based on the row's nested data
+    // Populate production rows based on the row's nested data
     let nestedData = [];
     switch (rowData.id) {
       case "1":
@@ -889,21 +904,26 @@ export const Details8 = () => {
         nestedData = [];
     }
 
-    // Convert nested data to production batches format (only show additional batches if more than 1 exists)
-    const batches =
-      nestedData.length > 1
-        ? nestedData.slice(1).map((batch, index) => ({
-            id: batch.id,
-            lotCode: batch.lotCode || "",
-            supplierLotCode: batch.supplierLotCode || "",
-            expiryDate: batch.expiryDate || "",
-            palletNumber: batch.palletNumber || "",
-            producedQuantity: batch.actualQuantity ? batch.actualQuantity.split(" ")[0] || "" : "",
-            note: batch.note || "",
-          }))
-        : [];
+    // Convert nested data to production rows format
+    const rows = nestedData.map((batch, index) => ({
+      id: `row-${index + 1}`,
+      palletNumber: batch.palletNumber || "",
+      customerLotCode: batch.customerLotCode || "",
+      supplierLotCode: batch.supplierLotCode || "",
+      expiryDate: batch.expiryDate || "",
+      quantity: batch.actualQuantity ? batch.actualQuantity.split(" ")[0] || "" : "",
+    }));
 
-    setProductionBatches(batches);
+    // Populate notes from nested data
+    const notes: Record<string, string> = {};
+    nestedData.forEach((batch, index) => {
+      if (batch.note) {
+        notes[`row-${index + 1}`] = batch.note;
+      }
+    });
+
+    setProductionRows(rows);
+    setRowNotes(notes);
     setShowProductionSidebar(true);
   };
 
@@ -978,7 +998,8 @@ export const Details8 = () => {
     const newRow = {
       id: `row-${Date.now()}`,
       palletNumber: "",
-      lotCode: "",
+      customerLotCode: "",
+      supplierLotCode: "",
       expiryDate: "",
       quantity: "",
     };
@@ -1040,10 +1061,16 @@ export const Details8 = () => {
   };
 
   const handleRemoveConsumptionRow = (rowId: string, consumptionId: string) => {
-    setRowConsumptions((prev) => ({
-      ...prev,
-      [rowId]: prev[rowId]?.filter((consumption) => consumption.id !== consumptionId) || [],
-    }));
+    console.log("Removing consumption row:", rowId, consumptionId);
+    setRowConsumptions((prev) => {
+      const currentConsumptions = prev[rowId] || [];
+      const filteredConsumptions = currentConsumptions.filter((consumption) => consumption.id !== consumptionId);
+      console.log("Before:", currentConsumptions.length, "After:", filteredConsumptions.length);
+      return {
+        ...prev,
+        [rowId]: filteredConsumptions,
+      };
+    });
   };
 
   const handleOpenConsumptionSidebar = (
@@ -1081,7 +1108,7 @@ export const Details8 = () => {
   };
 
   const handleSaveConsumption = () => {
-    toast.success("Consumption details saved successfully!");
+    toast.success("Subcomponent consumption saved successfully!");
     handleCloseConsumptionSidebar();
   };
 
@@ -1106,7 +1133,7 @@ export const Details8 = () => {
   };
 
   const handleSaveAddConsumption = () => {
-    toast.success("Consumption details added successfully!");
+    toast.success("Subcomponent consumption added successfully!");
     handleCloseAddConsumptionSidebar();
   };
 
@@ -3766,7 +3793,7 @@ export const Details8 = () => {
         p="x2"
       >
         <Flex justifyContent="space-between" alignItems="center" mb="x2" ml="x1">
-          <Heading4 mb="0">Consumption details</Heading4>
+          <Heading4 mb="0">Subcomponent consumption</Heading4>
           {role === "supplier" && !isEmpty && (
             <IconicButton
               icon="edit"
@@ -3812,7 +3839,7 @@ export const Details8 = () => {
         p="x2"
       >
         <Heading4 mb="x2" ml="x1">
-          Consumption details
+          Subcomponent consumption
         </Heading4>
         <Box py="x4" textAlign="center">
           <Text color="midGrey" fontSize="small" mb="x2">
@@ -4001,11 +4028,18 @@ export const Details8 = () => {
           }
           .consumption-table thead th {
             height: auto !important;
-            padding: 8px 12px !important;
+            padding: 0 0 8px 8px !important;
             border: none !important;
             border-bottom: 1px solid #e0e0e0 !important;
             line-height: normal !important;
-            font-size: 14px !important;
+            font-size: 12px !important;
+            font-weight: bold !important;
+            color: inherit !important;
+          }
+          
+          /* Add extra padding-left to columns 2+ */
+          .consumption-table thead th:nth-child(n+2) {
+            padding-left: 16px !important;
           }
           
           /* Match consumption table column widths */
@@ -4333,70 +4367,115 @@ export const Details8 = () => {
                 Production summary
               </Heading4>
 
+              <Field>
+                <FieldLabel labelText="Date" pb="x1" />
+                <DatePicker
+                  onChange={(date) => setProductionRecord(prev => ({ ...prev, date: date ? date.toISOString().split('T')[0] : "" }))}
+                  selected={productionRecord.date ? new Date(productionRecord.date) : null}
+                  inputProps={{ disabled: role === "customer" && isEditingProduction }}
+                />
+              </Field>
+
               <Flex gap="x2">
-                <Field flex="1">
-                  <FieldLabel labelText="Date" pb="x1" />
-                  <Input value="March 15, 2024" />
-                </Field>
-                <Field flex="1">
-                  <FieldLabel labelText="UOM" pb="x1" />
-                  <Input value="kg" />
-                </Field>
-                <Field flex="1">
-                  <FieldLabel labelText="Expected quantity" pb="x1" />
-                  <Input value="1,000" />
-                </Field>
+                <Box width="20em">
+                  <Field>
+                    <FieldLabel labelText="Expected quantity" pb="x1" />
+                    <Input 
+                      value={productionRecord.expectedQuantity}
+                      onChange={(e) => setProductionRecord(prev => ({ ...prev, expectedQuantity: e.target.value }))}
+                      disabled={role === "customer" && isEditingProduction}
+                    />
+                  </Field>
+                </Box>
+                <Box width="10em">
+                  <Field>
+                    <FieldLabel labelText="UOM" pb="x1" />
+                    <Select
+                      value={productionRecord.uom}
+                      onChange={(value) => setProductionRecord(prev => ({ ...prev, uom: value }))}
+                      disabled={role === "customer" && isEditingProduction}
+                      options={[
+                        { value: "kg", label: "kg" },
+                        { value: "lb", label: "lb" },
+                        { value: "g", label: "g" },
+                        { value: "oz", label: "oz" },
+                        { value: "cases", label: "cases" }
+                      ]}
+                    />
+                  </Field>
+                </Box>
               </Flex>
 
               <Divider mb="x3" />
 
-              <Heading4 mb="x2">Production details</Heading4>
-
-              <Box mb="x3">
-                <FieldLabel labelText="Enter production" pb="x2" />
-                <Switcher
-                  selected={productionEntryType}
-                  onChange={(value) => {
-                    setProductionEntryType(value as "quick" | "detailed");
-                  }}
-                >
-                  <Switch value="quick" type="button">
-                    Quick
-                  </Switch>
-                  <Switch value="detailed" type="button">
-                    Detailed
-                  </Switch>
-                </Switcher>
-              </Box>
+              <Flex justifyContent="space-between" alignItems="center" mb="x2">
+                <Heading4>Production details</Heading4>
+                {role === "supplier" && (
+                  <Switcher
+                    selected={productionEntryType}
+                    onChange={(value) => {
+                      setProductionEntryType(value as "quick" | "detailed");
+                    }}
+                  >
+                    <Switch value="quick" type="button">
+                      Quick mode
+                    </Switch>
+                    <Switch value="detailed" type="button">
+                      Detailed mode
+                    </Switch>
+                  </Switcher>
+                )}
+              </Flex>
 
               {productionEntryType === "quick" ? (
-                <Field>
-                  <FieldLabel labelText="Actual quantity" pb="x1" />
-                  <Input
-                    value={actualQuantity}
-                    onChange={(e) => setActualQuantity(e.target.value)}
-                    placeholder="Enter total production quantity"
-                  />
-                </Field>
+                <Box width="21em">
+                  <Field>
+                    <FieldLabel labelText="Actual quantity" pb="x1" />
+                    <Input
+                      value={actualQuantity}
+                      onChange={(e) => setActualQuantity(e.target.value)}
+                      placeholder="Enter total production quantity"
+                      suffix="kg"
+                    />
+                  </Field>
+                </Box>
               ) : (
                 <Box>
                   {/* Custom table structure with nested rows */}
                   <Box>
                     {/* Table Header */}
                     <Box display="flex" borderBottom="1px solid" borderColor="lightGrey" pb="x1">
-                      <Box flex="1" fontWeight="bold" fontSize="small" px="x1">
+                      <Box flex="1" pb="x1" pl="x1" fontWeight="bold" fontSize="small">
                         Pallet number
+                        {role === "supplier" && fieldConfig.palletNumberRequired && (
+                          <Text inline ml="x0_5" fontSize="smaller" color="darkGrey">
+                            (Required)
+                          </Text>
+                        )}
                       </Box>
-                      <Box flex="1" fontWeight="bold" fontSize="small" px="x1">
-                        Lot code
+                      <Box flex="1" pb="x1" pl="x1" fontWeight="bold" fontSize="small">
+                        Customer's lot code
                       </Box>
-                      <Box flex="1" fontWeight="bold" fontSize="small" px="x1">
+                      <Box flex="1" pb="x1" pl="x1" fontWeight="bold" fontSize="small">
+                        Supplier's lot code
+                        {role === "supplier" && fieldConfig.lotCodeRequired && (
+                          <Text inline ml="x0_5" fontSize="smaller" color="darkGrey">
+                            (Required)
+                          </Text>
+                        )}
+                      </Box>
+                      <Box flex="1" pb="x1" pl="x1" fontWeight="bold" fontSize="small">
                         Expiry date
+                        {role === "supplier" && fieldConfig.expiryDateRequired && (
+                          <Text inline ml="x0_5" fontSize="smaller" color="darkGrey">
+                            (Required)
+                          </Text>
+                        )}
                       </Box>
-                      <Box flex="1" fontWeight="bold" fontSize="small" px="x1">
+                      <Box flex="1" pb="x1" pl="x1" fontWeight="bold" fontSize="small">
                         Quantity
                       </Box>
-                      <Box width="88px" px="x1"></Box>
+                      {role === "supplier" && <Box width="88px" pb="x1" pl="x1"></Box>}
                     </Box>
 
                     {/* Table Rows with nested content */}
@@ -4410,14 +4489,25 @@ export const Details8 = () => {
                               onChange={(e) => handleProductionRowChange(row.id, "palletNumber", e.target.value)}
                               placeholder="Enter pallet number"
                               p="x1"
+                              disabled={role === "customer" && isEditingProduction}
                             />
                           </Box>
                           <Box flex="1">
                             <Input
-                              value={row.lotCode}
-                              onChange={(e) => handleProductionRowChange(row.id, "lotCode", e.target.value)}
-                              placeholder="Enter lot code"
+                              value={row.customerLotCode || ""}
+                              onChange={(e) => handleProductionRowChange(row.id, "customerLotCode", e.target.value)}
+                              placeholder="Enter customer's lot code"
                               p="x1"
+                              disabled={role === "supplier"}
+                            />
+                          </Box>
+                          <Box flex="1">
+                            <Input
+                              value={row.supplierLotCode || ""}
+                              onChange={(e) => handleProductionRowChange(row.id, "supplierLotCode", e.target.value)}
+                              placeholder="Enter supplier's lot code"
+                              p="x1"
+                              disabled={role === "customer"}
                             />
                           </Box>
                           <Box flex="1">
@@ -4426,6 +4516,7 @@ export const Details8 = () => {
                               onChange={(e) => handleProductionRowChange(row.id, "expiryDate", e.target.value)}
                               placeholder="Enter expiry date"
                               p="x1"
+                              disabled={role === "customer" && isEditingProduction}
                             />
                           </Box>
                           <Box flex="1">
@@ -4434,41 +4525,44 @@ export const Details8 = () => {
                               onChange={(e) => handleProductionRowChange(row.id, "quantity", e.target.value)}
                               placeholder="Enter quantity"
                               p="x1"
+                              disabled={role === "customer" && isEditingProduction}
                             />
                           </Box>
-                          <Box width="88px">
-                            <Flex gap="x1" alignItems="center">
-                              <DropdownMenu
-                                trigger={() => <IconicButton icon="more" aria-label="More actions" />}
-                                placement="bottom-end"
-                              >
-                                <DropdownButton
-                                  onClick={(e) => {
-                                    e.preventDefault();
-                                    handleAddConsumptionForRow(row.id);
-                                  }}
+                          {role === "supplier" && (
+                            <Box width="88px">
+                              <Flex gap="x1" alignItems="center">
+                                <DropdownMenu
+                                  trigger={() => <IconicButton icon="more" aria-label="More actions" />}
+                                  placement="bottom-end"
                                 >
-                                  Add subcomponent consumption
-                                </DropdownButton>
-                                <DropdownButton
-                                  onClick={(e) => {
-                                    e.preventDefault();
-                                    handleAddNote(row.id);
-                                  }}
-                                >
-                                  Add note
-                                </DropdownButton>
-                              </DropdownMenu>
-                              {productionRows.length > 1 && (
-                                <IconicButton
-                                  icon="removeCircleOutline"
-                                  aria-label="Remove row"
-                                  onClick={() => handleRemoveProductionRow(row.id)}
-                                  type="button"
-                                />
-                              )}
-                            </Flex>
-                          </Box>
+                                  <DropdownButton
+                                    onClick={(e) => {
+                                      e.preventDefault();
+                                      handleAddConsumptionForRow(row.id);
+                                    }}
+                                  >
+                                    Add subcomponent consumption
+                                  </DropdownButton>
+                                  <DropdownButton
+                                    onClick={(e) => {
+                                      e.preventDefault();
+                                      handleAddNote(row.id);
+                                    }}
+                                  >
+                                    Add note
+                                  </DropdownButton>
+                                </DropdownMenu>
+                                {productionRows.length > 1 && (
+                                  <IconicButton
+                                    icon="removeCircleOutline"
+                                    aria-label="Remove row"
+                                    onClick={() => handleRemoveProductionRow(row.id)}
+                                    type="button"
+                                  />
+                                )}
+                              </Flex>
+                            </Box>
+                          )}
                         </Box>
 
                         {/* Container for Consumption Details and Note */}
@@ -4593,12 +4687,15 @@ export const Details8 = () => {
                                     {
                                       label: "",
                                       dataKey: "actions",
-                                      width: "50px",
+                                      width: "56px",
                                       cellRenderer: ({ row }: { row: any }) => (
                                         <IconicButton
                                           icon="removeCircleOutline"
                                           aria-label="Remove consumption row"
-                                          onClick={() => handleRemoveConsumptionRow(row.id, row.consumptionId)}
+                                          onClick={(e) => {
+                                            e.preventDefault();
+                                            handleRemoveConsumptionRow(row.id, row.consumptionId);
+                                          }}
                                           type="button"
                                         />
                                       ),
@@ -4612,6 +4709,7 @@ export const Details8 = () => {
                                   keyField="id"
                                   compact={true}
                                   rowBorder={true}
+                                  className="consumption-table"
                                 />
                                 <Box mt="x1">
                                   <QuietButton
@@ -4636,6 +4734,7 @@ export const Details8 = () => {
                                     value={rowNotes[row.id]}
                                     onChange={(e) => handleNoteChange(row.id, e.target.value)}
                                     placeholder="Enter note for this row"
+                                    disabled={role === "customer" && isEditingProduction}
                                   />
                                 </Field>
                               </Box>
@@ -4648,17 +4747,19 @@ export const Details8 = () => {
                     ))}
                   </Box>
 
-                  <Box mt="x1">
-                    <QuietButton
-                      icon="addCircleOutline"
-                      iconSide="left"
-                      fullWidth
-                      onClick={handleAddProductionRow}
-                      type="button"
-                    >
-                      Add row
-                    </QuietButton>
-                  </Box>
+                  {role === "supplier" && (
+                    <Box mt="x1">
+                      <QuietButton
+                        icon="addCircleOutline"
+                        iconSide="left"
+                        fullWidth
+                        onClick={handleAddProductionRow}
+                        type="button"
+                      >
+                        Add row
+                      </QuietButton>
+                    </Box>
+                  )}
                 </Box>
               )}
             </FormSection>
@@ -4785,7 +4886,7 @@ export const Details8 = () => {
                   {index > 0 && <Divider mb="x2_5" />}
 
                   <Flex justifyContent="space-between" alignItems="center" mb="x2">
-                    <Heading4 pb="0">Consumption details: item {index + 1}</Heading4>
+                    <Heading4 pb="0">Subcomponent consumption: item {index + 1}</Heading4>
                     {consumptionItems.length > 1 && (
                       <IconicButton
                         icon="removeCircleOutline"
@@ -4863,75 +4964,83 @@ export const Details8 = () => {
         </Sidebar>
 
         {/* Floating Configuration */}
-        <Box
-          position="fixed"
-          bottom="x4"
-          left="50%"
-          transform="translateX(-50%)"
-          backgroundColor="white"
-          border="1px solid"
-          borderColor="lightGrey"
-          borderRadius="x1"
-          boxShadow="medium"
-        >
-          <Flex alignItems="center" gap="x2" px="x2" py="x1">
-            <Text fontSize="small">Tracking:</Text>
-            <Tooltip tooltip="Controled by item setting. Makes the filed mandatory" placement="top">
+        {showConfigBar && (
+          <Box
+            position="fixed"
+            bottom="x4"
+            left="50%"
+            transform="translateX(-50%)"
+            backgroundColor="white"
+            border="1px solid"
+            borderColor="lightGrey"
+            borderRadius="x1"
+            boxShadow="medium"
+          >
+            <Flex alignItems="center" gap="x2" px="x2" py="x1">
+              <Text fontSize="small">Tracking:</Text>
+              <Tooltip tooltip="Controled by item setting. Makes the filed mandatory" placement="top">
+                <Flex alignItems="center" gap="x1" width="200px">
+                  <Text width="100px" fontSize="small" color="midGrey">
+                    Lot code
+                  </Text>
+                  <Toggle
+                    toggled={fieldConfig.lotCodeRequired}
+                    onChange={(e) => handleFieldConfigChange("lotCodeRequired", e.target.checked)}
+                  />
+                </Flex>
+              </Tooltip>
+              <Tooltip tooltip="Controled by item setting. Makes the filed mandatory" placement="top">
+                <Flex alignItems="center" gap="x1" width="200px">
+                  <Text width="150px" fontSize="small" color="midGrey">
+                    Expiry date
+                  </Text>
+                  <Toggle
+                    toggled={fieldConfig.expiryDateRequired}
+                    onChange={(e) => handleFieldConfigChange("expiryDateRequired", e.target.checked)}
+                  />
+                </Flex>
+              </Tooltip>
               <Flex alignItems="center" gap="x1" width="200px">
                 <Text width="100px" fontSize="small" color="midGrey">
-                  Lot code
+                  Pallet
                 </Text>
                 <Toggle
-                  toggled={fieldConfig.lotCodeRequired}
-                  onChange={(e) => handleFieldConfigChange("lotCodeRequired", e.target.checked)}
+                  toggled={fieldConfig.palletNumberRequired}
+                  onChange={(e) => handleFieldConfigChange("palletNumberRequired", e.target.checked)}
                 />
               </Flex>
-            </Tooltip>
-            <Tooltip tooltip="Controled by item setting. Makes the filed mandatory" placement="top">
-              <Flex alignItems="center" gap="x1" width="200px">
-                <Text width="150px" fontSize="small" color="midGrey">
-                  Expiry date
+              <Tooltip
+                tooltip="Controled by Org POLI setting. Controls the display and batch production creation fileds."
+                placement="top"
+              >
+                <Flex alignItems="center" gap="x1" width="200px">
+                  <Text width="150px" fontSize="small" color="midGrey">
+                    SANOFI req
+                  </Text>
+                  <Toggle
+                    toggled={fieldConfig.sanofiRequired}
+                    onChange={(e) => handleFieldConfigChange("sanofiRequired", e.target.checked)}
+                  />
+                </Flex>
+              </Tooltip>
+              <Flex alignItems="center" gap="x1" width="275px">
+                <Text width="125px" fontSize="small" color="midGrey">
+                  View as:
                 </Text>
-                <Toggle
-                  toggled={fieldConfig.expiryDateRequired}
-                  onChange={(e) => handleFieldConfigChange("expiryDateRequired", e.target.checked)}
-                />
+                <Switcher selected={role} onChange={setRole}>
+                  <Switch value="supplier">Supplier</Switch>
+                  <Switch value="customer">Customer</Switch>
+                </Switcher>
               </Flex>
-            </Tooltip>
-            <Flex alignItems="center" gap="x1" width="200px">
-              <Text width="100px" fontSize="small" color="midGrey">
-                Pallet
-              </Text>
-              <Toggle
-                toggled={fieldConfig.palletNumberRequired}
-                onChange={(e) => handleFieldConfigChange("palletNumberRequired", e.target.checked)}
+              <IconicButton
+                icon="close"
+                aria-label="Close configuration"
+                onClick={() => setShowConfigBar(false)}
+                type="button"
               />
             </Flex>
-            <Tooltip
-              tooltip="Controled by Org POLI setting. Controls the display and batch production creation fileds."
-              placement="top"
-            >
-              <Flex alignItems="center" gap="x1" width="200px">
-                <Text width="150px" fontSize="small" color="midGrey">
-                  SANOFI req
-                </Text>
-                <Toggle
-                  toggled={fieldConfig.sanofiRequired}
-                  onChange={(e) => handleFieldConfigChange("sanofiRequired", e.target.checked)}
-                />
-              </Flex>
-            </Tooltip>
-            <Flex alignItems="center" gap="x1" width="275px">
-              <Text width="125px" fontSize="small" color="midGrey">
-                View as:
-              </Text>
-              <Switcher selected={role} onChange={setRole}>
-                <Switch value="supplier">Supplier</Switch>
-                <Switch value="customer">Customer</Switch>
-              </Switcher>
-            </Flex>
-          </Flex>
-        </Box>
+          </Box>
+        )}
 
         {/* Edit Details Sidebar */}
         <Sidebar
