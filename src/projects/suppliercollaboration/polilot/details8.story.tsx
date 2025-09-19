@@ -932,7 +932,7 @@ export const Details8 = () => {
     setIsEditingProduction(false);
     setProductionEntryType("quick");
     setActualQuantity("");
-    setProductionRows([{ id: "row-1", palletNumber: "", lotCode: "", expiryDate: "", quantity: "" }]);
+    setProductionRows([{ id: "row-1", palletNumber: "", customerLotCode: "", supplierLotCode: "", expiryDate: "", quantity: "" }]);
     setRowNotes({});
     setRowConsumptions({});
     setProductionRecord({
@@ -4392,7 +4392,7 @@ export const Details8 = () => {
                     <FieldLabel labelText="UOM" pb="x1" />
                     <Select
                       value={productionRecord.uom}
-                      onChange={(value) => setProductionRecord(prev => ({ ...prev, uom: value }))}
+                      onChange={(value) => setProductionRecord(prev => ({ ...prev, uom: String(value) }))}
                       disabled={role === "customer" && isEditingProduction}
                       options={[
                         { value: "kg", label: "kg" },
