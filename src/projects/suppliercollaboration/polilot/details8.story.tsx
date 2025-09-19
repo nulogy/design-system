@@ -867,7 +867,7 @@ export const Details8 = () => {
   const handleEditProduction = (rowData: any) => {
     setIsEditingProduction(true);
     setProductionEntryType("detailed"); // Set to detailed mode for editing
-    
+
     // Map row data to production record format
     setProductionRecord({
       date: rowData.date || "",
@@ -932,7 +932,9 @@ export const Details8 = () => {
     setIsEditingProduction(false);
     setProductionEntryType("quick");
     setActualQuantity("");
-    setProductionRows([{ id: "row-1", palletNumber: "", customerLotCode: "", supplierLotCode: "", expiryDate: "", quantity: "" }]);
+    setProductionRows([
+      { id: "row-1", palletNumber: "", customerLotCode: "", supplierLotCode: "", expiryDate: "", quantity: "" },
+    ]);
     setRowNotes({});
     setRowConsumptions({});
     setProductionRecord({
@@ -4370,7 +4372,9 @@ export const Details8 = () => {
               <Field>
                 <FieldLabel labelText="Date" pb="x1" />
                 <DatePicker
-                  onChange={(date) => setProductionRecord(prev => ({ ...prev, date: date ? date.toISOString().split('T')[0] : "" }))}
+                  onChange={(date) =>
+                    setProductionRecord((prev) => ({ ...prev, date: date ? date.toISOString().split("T")[0] : "" }))
+                  }
                   selected={productionRecord.date ? new Date(productionRecord.date) : null}
                   inputProps={{ disabled: role === "customer" && isEditingProduction }}
                 />
@@ -4380,9 +4384,9 @@ export const Details8 = () => {
                 <Box width="20em">
                   <Field>
                     <FieldLabel labelText="Expected quantity" pb="x1" />
-                    <Input 
+                    <Input
                       value={productionRecord.expectedQuantity}
-                      onChange={(e) => setProductionRecord(prev => ({ ...prev, expectedQuantity: e.target.value }))}
+                      onChange={(e) => setProductionRecord((prev) => ({ ...prev, expectedQuantity: e.target.value }))}
                       disabled={role === "customer" && isEditingProduction}
                     />
                   </Field>
@@ -4392,14 +4396,14 @@ export const Details8 = () => {
                     <FieldLabel labelText="UOM" pb="x1" />
                     <Select
                       value={productionRecord.uom}
-                      onChange={(value) => setProductionRecord(prev => ({ ...prev, uom: String(value) }))}
+                      onChange={(value) => setProductionRecord((prev) => ({ ...prev, uom: String(value) }))}
                       disabled={role === "customer" && isEditingProduction}
                       options={[
                         { value: "kg", label: "kg" },
                         { value: "lb", label: "lb" },
                         { value: "g", label: "g" },
                         { value: "oz", label: "oz" },
-                        { value: "cases", label: "cases" }
+                        { value: "cases", label: "cases" },
                       ]}
                     />
                   </Field>
