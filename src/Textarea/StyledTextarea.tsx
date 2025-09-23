@@ -55,7 +55,6 @@ const StyledTextarea = styled.textarea<StyledTextareaProps>(
     fontSize: theme.fontSizes.base,
     lineHeight: theme.lineHeights.base,
     minHeight: theme.space.x5,
-    minWidth: "20em",
     resize: isResizeable ? null : "none",
     "&:focus": {
       outline: "none",

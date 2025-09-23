@@ -6,7 +6,7 @@ const ModalStyleOverride = createGlobalStyle<{ locale?: string }>(({ theme, loca
     ":root": {
       "--reach-dialog": 1,
     },
-    ".ReactModal__Content, [data-reach-dialog-content]": {
+    ".ReactModal__Content, [data-reach-dialog-content], [data-radix-popper-content-wrapper]": {
       "-webkit-font-smoothing": "antialiased",
       "-moz-osx-font-smoothing": "grayscale",
       "*": { boxSizing: "border-box" },

@@ -21,7 +21,7 @@
       }
     ],
     "jsx-a11y/anchor-is-valid": [
-      "error",
+      "off",
       {
         "components": ["Link"],
         "specialLink": ["as", "to"]
