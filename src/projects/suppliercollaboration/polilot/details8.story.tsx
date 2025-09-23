@@ -85,7 +85,7 @@ export const Details8 = () => {
   const [rowConsumptions, setRowConsumptions] = useState<
     Record<
       string,
-      Array<{ id: string; item: string; lotCode: string; expiryDate: string; palletNumber: string; quantity: string }>
+      Array<{ id: string; item: string; lotCode: string; expiryDate: string; palletNumber: string; quantity: string; uom: string }>
     >
   >({});
 
@@ -159,6 +159,7 @@ export const Details8 = () => {
       expiryDate: null as Date | null,
       palletNumber: "",
       consumedQuantity: "",
+      uom: "",
       parentDate: undefined as string | undefined,
       parentActualQuantity: undefined as string | undefined,
     },
@@ -924,6 +925,31 @@ export const Details8 = () => {
 
     setProductionRows(rows);
     setRowNotes(notes);
+    
+    // Extract consumption materials data for each production row
+    const newRowConsumptions: Record<string, Array<{ id: string; item: string; lotCode: string; expiryDate: string; palletNumber: string; quantity: string; uom: string }>> = {};
+    
+    // For each production row, try to find corresponding consumption data
+    rows.forEach((row, index) => {
+      // Try to find consumption data from the corresponding batch
+      const batch = nestedData[index];
+      if (batch && batch.expandedContent && typeof batch.expandedContent === 'function') {
+        try {
+          const expandedContent = batch.expandedContent();
+          if (expandedContent && expandedContent.props && expandedContent.props.materials && expandedContent.props.materials.length > 0) {
+            newRowConsumptions[row.id] = expandedContent.props.materials.map((material: any, materialIndex: number) => ({
+              ...material,
+              id: material.id || `consumption-${Date.now()}-${index}-${materialIndex}`,
+            }));
+          }
+        } catch (error) {
+          console.log(`Error extracting consumption materials for row ${index}:`, error);
+        }
+      }
+    });
+    
+    console.log('Extracted consumption materials for rows:', newRowConsumptions);
+    setRowConsumptions(newRowConsumptions);
     setShowProductionSidebar(true);
   };
 
@@ -1032,7 +1058,7 @@ export const Details8 = () => {
     setRowConsumptions((prev) => ({
       ...prev,
       [rowId]: prev[rowId] || [
-        { id: `consumption-${Date.now()}`, item: "", lotCode: "", expiryDate: "", palletNumber: "", quantity: "" },
+        { id: `consumption-${Date.now()}`, item: "", lotCode: "", expiryDate: "", palletNumber: "", quantity: "", uom: "" },
       ],
     }));
   };
@@ -1055,6 +1081,7 @@ export const Details8 = () => {
       expiryDate: "",
       palletNumber: "",
       quantity: "",
+      uom: "",
     };
     setRowConsumptions((prev) => ({
       ...prev,
@@ -1089,6 +1116,7 @@ export const Details8 = () => {
         expiryDate: material.expiryDate ? new Date(material.expiryDate) : null,
         palletNumber: material.palletNumber,
         consumedQuantity: parts[0] || "",
+        uom: parts[1] || "",
         // Store parent data for help text
         parentDate: parentData?.date,
         parentActualQuantity: parentData?.actualQuantity,
@@ -1128,6 +1156,7 @@ export const Details8 = () => {
         expiryDate: null,
         palletNumber: "",
         consumedQuantity: "",
+        uom: "",
         parentDate: undefined,
         parentActualQuantity: undefined,
       },
@@ -1147,6 +1176,7 @@ export const Details8 = () => {
       expiryDate: null as Date | null,
       palletNumber: "",
       consumedQuantity: "",
+      uom: "",
       parentDate: undefined as string | undefined,
       parentActualQuantity: undefined as string | undefined,
     };
@@ -1168,56 +1198,64 @@ export const Details8 = () => {
       lotCode: "LOT-ACET-001",
       expiryDate: "2026-03-15",
       palletNumber: "PAL-001",
-      quantity: "2.5 kg",
+      quantity: "2.5",
+      uom: "kg",
     },
     {
       item: "Microcrystalline cellulose",
       lotCode: "LOT-MCC-001",
       expiryDate: "2026-04-20",
       palletNumber: "PAL-002",
-      quantity: "1.2 kg",
+      quantity: "1.2",
+      uom: "kg",
     },
     {
       item: "Croscarmellose sodium",
       lotCode: "LOT-CCS-001",
       expiryDate: "2026-05-10",
       palletNumber: "PAL-003",
-      quantity: "0.3 kg",
+      quantity: "0.3",
+      uom: "kg",
     },
     {
       item: "Magnesium stearate",
       lotCode: "LOT-MS-001",
       expiryDate: "2026-06-15",
       palletNumber: "PAL-004",
-      quantity: "0.1 kg",
+      quantity: "0.1",
+      uom: "kg",
     },
     {
       item: "Hydroxypropyl methylcellulose",
       lotCode: "LOT-HPMC-001",
       expiryDate: "2026-07-20",
       palletNumber: "PAL-005",
-      quantity: "0.8 kg",
+      quantity: "0.8",
+      uom: "kg",
     },
     {
       item: "Talc powder",
       lotCode: "LOT-TALC-001",
       expiryDate: "2026-08-25",
       palletNumber: "PAL-006",
-      quantity: "0.5 kg",
+      quantity: "0.5",
+      uom: "kg",
     },
     {
       item: "FD&C Blue #2",
       lotCode: "LOT-BLUE-001",
       expiryDate: "2026-09-30",
       palletNumber: "PAL-007",
-      quantity: "0.02 kg",
+      quantity: "0.02",
+      uom: "kg",
     },
     {
       item: "Sodium benzoate",
       lotCode: "LOT-SB-001",
       expiryDate: "2026-10-15",
       palletNumber: "PAL-008",
-      quantity: "0.05 kg",
+      quantity: "0.05",
+      uom: "kg",
     },
   ];
 
@@ -1227,56 +1265,64 @@ export const Details8 = () => {
       lotCode: "LOT-IBU-002",
       expiryDate: "2026-04-10",
       palletNumber: "PAL-009",
-      quantity: "1.8 kg",
+      quantity: "1.8",
+      uom: "kg",
     },
     {
       item: "Povidone K30",
       lotCode: "LOT-PVP-002",
       expiryDate: "2026-05-15",
       palletNumber: "PAL-010",
-      quantity: "0.9 kg",
+      quantity: "0.9",
+      uom: "kg",
     },
     {
       item: "Sodium starch glycolate",
       lotCode: "LOT-SSG-002",
       expiryDate: "2026-06-20",
       palletNumber: "PAL-011",
-      quantity: "0.4 kg",
+      quantity: "0.4",
+      uom: "kg",
     },
     {
       item: "Stearic acid",
       lotCode: "LOT-SA-002",
       expiryDate: "2026-07-25",
       palletNumber: "PAL-012",
-      quantity: "0.2 kg",
+      quantity: "0.2",
+      uom: "kg",
     },
     {
       item: "FD&C Red #40",
       lotCode: "LOT-RED-002",
       expiryDate: "2026-08-30",
       palletNumber: "PAL-013",
-      quantity: "0.05 kg",
+      quantity: "0.05",
+      uom: "kg",
     },
     {
       item: "Silicon dioxide",
       lotCode: "LOT-SD-002",
       expiryDate: "2026-09-15",
       palletNumber: "PAL-014",
-      quantity: "0.3 kg",
+      quantity: "0.3",
+      uom: "kg",
     },
     {
       item: "Aspartame",
       lotCode: "LOT-ASP-002",
       expiryDate: "2026-10-20",
       palletNumber: "PAL-015",
-      quantity: "0.1 kg",
+      quantity: "0.1",
+      uom: "kg",
     },
     {
       item: "Mint flavor",
       lotCode: "LOT-MF-002",
       expiryDate: "2026-11-25",
       palletNumber: "PAL-016",
-      quantity: "0.02 kg",
+      quantity: "0.02",
+      uom: "kg",
     },
   ];
 
@@ -1286,56 +1332,64 @@ export const Details8 = () => {
       lotCode: "LOT-IBU-005A",
       expiryDate: "2026-05-10",
       palletNumber: "PAL-017",
-      quantity: "1.8 kg",
+      quantity: "1.8",
+      uom: "kg",
     },
     {
       item: "Povidone K30",
       lotCode: "LOT-PVP-005A",
       expiryDate: "2026-06-15",
       palletNumber: "PAL-018",
-      quantity: "0.9 kg",
+      quantity: "0.9",
+      uom: "kg",
     },
     {
       item: "Sodium starch glycolate",
       lotCode: "LOT-SSG-005A",
       expiryDate: "2026-07-20",
       palletNumber: "PAL-019",
-      quantity: "0.4 kg",
+      quantity: "0.4",
+      uom: "kg",
     },
     {
       item: "Stearic acid",
       lotCode: "LOT-SA-005A",
       expiryDate: "2026-08-25",
       palletNumber: "PAL-020",
-      quantity: "0.2 kg",
+      quantity: "0.2",
+      uom: "kg",
     },
     {
       item: "FD&C Red #40",
       lotCode: "LOT-RED-005A",
       expiryDate: "2026-09-30",
       palletNumber: "PAL-021",
-      quantity: "0.05 kg",
+      quantity: "0.05",
+      uom: "kg",
     },
     {
       item: "Silicon dioxide",
       lotCode: "LOT-SD-005A",
       expiryDate: "2026-10-15",
       palletNumber: "PAL-022",
-      quantity: "0.3 kg",
+      quantity: "0.3",
+      uom: "kg",
     },
     {
       item: "Aspartame",
       lotCode: "LOT-ASP-005A",
       expiryDate: "2026-11-20",
       palletNumber: "PAL-023",
-      quantity: "0.1 kg",
+      quantity: "0.1",
+      uom: "kg",
     },
     {
       item: "Mint flavor",
       lotCode: "LOT-MF-005A",
       expiryDate: "2026-12-25",
       palletNumber: "PAL-024",
-      quantity: "0.02 kg",
+      quantity: "0.02",
+      uom: "kg",
     },
   ];
 
@@ -1345,56 +1399,64 @@ export const Details8 = () => {
       lotCode: "LOT-IBU-005B",
       expiryDate: "2026-05-10",
       palletNumber: "PAL-025",
-      quantity: "0.9 kg",
+      quantity: "0.9",
+      uom: "kg",
     },
     {
       item: "Povidone K30",
       lotCode: "LOT-PVP-005B",
       expiryDate: "2026-06-15",
       palletNumber: "PAL-026",
-      quantity: "0.45 kg",
+      quantity: "0.45",
+      uom: "kg",
     },
     {
       item: "Sodium starch glycolate",
       lotCode: "LOT-SSG-005B",
       expiryDate: "2026-07-20",
       palletNumber: "PAL-027",
-      quantity: "0.2 kg",
+      quantity: "0.2",
+      uom: "kg",
     },
     {
       item: "Stearic acid",
       lotCode: "LOT-SA-005B",
       expiryDate: "2026-08-25",
       palletNumber: "PAL-028",
-      quantity: "0.1 kg",
+      quantity: "0.1",
+      uom: "kg",
     },
     {
       item: "FD&C Red #40",
       lotCode: "LOT-RED-005B",
       expiryDate: "2026-09-30",
       palletNumber: "PAL-029",
-      quantity: "0.025 kg",
+      quantity: "0.025",
+      uom: "kg",
     },
     {
       item: "Silicon dioxide",
       lotCode: "LOT-SD-005B",
       expiryDate: "2026-10-15",
       palletNumber: "PAL-030",
-      quantity: "0.15 kg",
+      quantity: "0.15",
+      uom: "kg",
     },
     {
       item: "Aspartame",
       lotCode: "LOT-ASP-005B",
       expiryDate: "2026-11-20",
       palletNumber: "PAL-031",
-      quantity: "0.05 kg",
+      quantity: "0.05",
+      uom: "kg",
     },
     {
       item: "Mint flavor",
       lotCode: "LOT-MF-005B",
       expiryDate: "2026-12-25",
       palletNumber: "PAL-032",
-      quantity: "0.01 kg",
+      quantity: "0.01",
+      uom: "kg",
     },
   ];
 
@@ -1404,56 +1466,64 @@ export const Details8 = () => {
       lotCode: "LOT-ACET-006A",
       expiryDate: "2026-06-15",
       palletNumber: "PAL-033",
-      quantity: "3.2 kg",
+      quantity: "3.2",
+      uom: "kg",
     },
     {
       item: "Microcrystalline cellulose",
       lotCode: "LOT-MCC-006A",
       expiryDate: "2026-07-20",
       palletNumber: "PAL-034",
-      quantity: "1.5 kg",
+      quantity: "1.5",
+      uom: "kg",
     },
     {
       item: "Croscarmellose sodium",
       lotCode: "LOT-CCS-006A",
       expiryDate: "2026-08-25",
       palletNumber: "PAL-035",
-      quantity: "0.4 kg",
+      quantity: "0.4",
+      uom: "kg",
     },
     {
       item: "Magnesium stearate",
       lotCode: "LOT-MS-006A",
       expiryDate: "2026-09-30",
       palletNumber: "PAL-036",
-      quantity: "0.15 kg",
+      quantity: "0.15",
+      uom: "kg",
     },
     {
       item: "Hydroxypropyl methylcellulose",
       lotCode: "LOT-HPMC-006A",
       expiryDate: "2026-10-15",
       palletNumber: "PAL-037",
-      quantity: "1.0 kg",
+      quantity: "1.0",
+      uom: "kg",
     },
     {
       item: "Talc powder",
       lotCode: "LOT-TALC-006A",
       expiryDate: "2026-11-20",
       palletNumber: "PAL-038",
-      quantity: "0.6 kg",
+      quantity: "0.6",
+      uom: "kg",
     },
     {
       item: "FD&C Blue #2",
       lotCode: "LOT-BLUE-006A",
       expiryDate: "2026-12-25",
       palletNumber: "PAL-039",
-      quantity: "0.03 kg",
+      quantity: "0.03",
+      uom: "kg",
     },
     {
       item: "Sodium benzoate",
       lotCode: "LOT-SB-006A",
       expiryDate: "2027-01-30",
       palletNumber: "PAL-040",
-      quantity: "0.08 kg",
+      quantity: "0.08",
+      uom: "kg",
     },
   ];
 
@@ -1463,67 +1533,76 @@ export const Details8 = () => {
       lotCode: "LOT-ACET-006B",
       expiryDate: "2026-06-15",
       palletNumber: "PAL-041",
-      quantity: "1.7 kg",
+      quantity: "1.7",
+      uom: "kg",
     },
     {
       item: "Microcrystalline cellulose",
       lotCode: "LOT-MCC-006B",
       expiryDate: "2026-07-20",
       palletNumber: "PAL-042",
-      quantity: "0.8 kg",
+      quantity: "0.8",
+      uom: "kg",
     },
     {
       item: "Croscarmellose sodium",
       lotCode: "LOT-CCS-006B",
       expiryDate: "2026-08-25",
       palletNumber: "PAL-043",
-      quantity: "0.2 kg",
+      quantity: "0.2",
+      uom: "kg",
     },
     {
       item: "Magnesium stearate",
       lotCode: "LOT-MS-006B",
       expiryDate: "2026-09-30",
       palletNumber: "PAL-044",
-      quantity: "0.08 kg",
+      quantity: "0.08",
+      uom: "kg",
     },
     {
       item: "Hydroxypropyl methylcellulose",
       lotCode: "LOT-HPMC-006B",
       expiryDate: "2026-10-15",
       palletNumber: "PAL-045",
-      quantity: "0.5 kg",
+      quantity: "0.5",
+      uom: "kg",
     },
     {
       item: "Talc powder",
       lotCode: "LOT-TALC-006B",
       expiryDate: "2026-11-20",
       palletNumber: "PAL-046",
-      quantity: "0.3 kg",
+      quantity: "0.3",
+      uom: "kg",
     },
     {
       item: "FD&C Blue #2",
       lotCode: "LOT-BLUE-006B",
       expiryDate: "2026-12-25",
       palletNumber: "PAL-047",
-      quantity: "0.015 kg",
+      quantity: "0.015",
+      uom: "kg",
     },
     {
       item: "Sodium benzoate",
       lotCode: "LOT-SB-006B",
       expiryDate: "2027-01-30",
       palletNumber: "PAL-048",
-      quantity: "0.04 kg",
+      quantity: "0.04",
+      uom: "kg",
     },
   ];
 
   const materialsData7A = [
-    { item: "Pending - Acetaminophen 500mg", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Acetaminophen 500mg", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD", uom: "TBD" },
     {
       item: "Pending - Microcrystalline cellulose",
       lotCode: "TBD",
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Croscarmellose sodium",
@@ -1531,29 +1610,32 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
-    { item: "Pending - Magnesium stearate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Magnesium stearate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD", uom: "TBD" },
     {
       item: "Pending - Hydroxypropyl methylcellulose",
       lotCode: "TBD",
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
-    { item: "Pending - Talc powder", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
-    { item: "Pending - FD&C Blue #2", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
-    { item: "Pending - Sodium benzoate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Talc powder", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD", uom: "TBD" },
+    { item: "Pending - FD&C Blue #2", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD", uom: "TBD" },
+    { item: "Pending - Sodium benzoate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD", uom: "TBD" },
   ];
 
   const materialsData7B = [
     // Base materials (8 items)
-    { item: "Pending - Acetaminophen 500mg", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Acetaminophen 500mg", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD", uom: "TBD" },
     {
       item: "Pending - Microcrystalline cellulose",
       lotCode: "TBD",
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Croscarmellose sodium",
@@ -1561,36 +1643,40 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
-    { item: "Pending - Magnesium stearate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Magnesium stearate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD", uom: "TBD" },
     {
       item: "Pending - Hydroxypropyl methylcellulose",
       lotCode: "TBD",
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
-    { item: "Pending - Talc powder", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
-    { item: "Pending - FD&C Blue #2", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
-    { item: "Pending - Sodium benzoate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Talc powder", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD", uom: "TBD" },
+    { item: "Pending - FD&C Blue #2", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD", uom: "TBD" },
+    { item: "Pending - Sodium benzoate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD", uom: "TBD" },
 
     // Additional materials to reach 120 rows
-    { item: "Pending - Lactose monohydrate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
-    { item: "Pending - Povidone K30", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Lactose monohydrate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD", uom: "TBD" },
+    { item: "Pending - Povidone K30", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD", uom: "TBD" },
     {
       item: "Pending - Colloidal silicon dioxide",
       lotCode: "TBD",
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
-    { item: "Pending - Stearic acid", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Stearic acid", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD", uom: "TBD" },
     {
       item: "Pending - Sodium starch glycolate",
       lotCode: "TBD",
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Croscarmellose sodium",
@@ -1598,6 +1684,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Hydroxypropyl cellulose",
@@ -1605,6 +1692,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     { item: "Pending - Ethylcellulose", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
     { item: "Pending - Methylcellulose", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
@@ -1614,6 +1702,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Polyethylene glycol 4000",
@@ -1621,6 +1710,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Polyethylene glycol 6000",
@@ -1628,6 +1718,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     { item: "Pending - Polysorbate 80", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
     { item: "Pending - Polysorbate 20", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
@@ -1649,6 +1740,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Sodium phosphate monobasic",
@@ -1656,6 +1748,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     { item: "Pending - Citric acid", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
     { item: "Pending - Sodium citrate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
@@ -1669,6 +1762,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     { item: "Pending - Potassium carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
     { item: "Pending - Calcium carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
@@ -1708,6 +1802,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Dodecanedioate carbonate",
@@ -1715,6 +1810,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Tridecanedioate carbonate",
@@ -1722,6 +1818,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Tetradecanedioate carbonate",
@@ -1729,6 +1826,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Pentadecanedioate carbonate",
@@ -1736,6 +1834,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Hexadecanedioate carbonate",
@@ -1743,6 +1842,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Heptadecanedioate carbonate",
@@ -1750,6 +1850,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Octadecanedioate carbonate",
@@ -1757,6 +1858,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Nonadecanedioate carbonate",
@@ -1764,6 +1866,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Eicosanedioate carbonate",
@@ -1771,6 +1874,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Heneicosanedioate carbonate",
@@ -1778,6 +1882,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Docosanedioate carbonate",
@@ -1785,6 +1890,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Tricosanedioate carbonate",
@@ -1792,6 +1898,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Tetracosanedioate carbonate",
@@ -1799,6 +1906,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Pentacosanedioate carbonate",
@@ -1806,6 +1914,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Hexacosanedioate carbonate",
@@ -1813,6 +1922,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Heptacosanedioate carbonate",
@@ -1820,6 +1930,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Octacosanedioate carbonate",
@@ -1827,6 +1938,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Nonacosanedioate carbonate",
@@ -1834,6 +1946,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Triacontanedioate carbonate",
@@ -1841,6 +1954,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Hentriacontanedioate carbonate",
@@ -1848,6 +1962,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Dotriacontanedioate carbonate",
@@ -1855,6 +1970,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Tritriacontanedioate carbonate",
@@ -1862,6 +1978,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Tetratriacontanedioate carbonate",
@@ -1869,6 +1986,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Pentatriacontanedioate carbonate",
@@ -1876,6 +1994,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Hexatriacontanedioate carbonate",
@@ -1883,6 +2002,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Heptatriacontanedioate carbonate",
@@ -1890,6 +2010,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Octatriacontanedioate carbonate",
@@ -1897,6 +2018,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Nonatriacontanedioate carbonate",
@@ -1904,6 +2026,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Tetracontanedioate carbonate",
@@ -1911,6 +2034,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Hentetracontanedioate carbonate",
@@ -1918,6 +2042,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Dotetracontanedioate carbonate",
@@ -1925,6 +2050,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Tritetracontanedioate carbonate",
@@ -1932,6 +2058,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Tetratetracontanedioate carbonate",
@@ -1939,6 +2066,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Pentatetracontanedioate carbonate",
@@ -1946,6 +2074,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Hexatetracontanedioate carbonate",
@@ -1953,6 +2082,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Heptatetracontanedioate carbonate",
@@ -1960,6 +2090,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Octatetracontanedioate carbonate",
@@ -1967,6 +2098,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Nonatetracontanedioate carbonate",
@@ -1974,6 +2106,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Pentacontanedioate carbonate",
@@ -1981,6 +2114,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Henpentacontanedioate carbonate",
@@ -1988,6 +2122,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Dopentacontanedioate carbonate",
@@ -1995,6 +2130,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Tripentacontanedioate carbonate",
@@ -2002,6 +2138,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Tetrapentacontanedioate carbonate",
@@ -2009,6 +2146,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Pentapentacontanedioate carbonate",
@@ -2016,6 +2154,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Hexapentacontanedioate carbonate",
@@ -2023,6 +2162,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Heptapentacontanedioate carbonate",
@@ -2030,6 +2170,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Octapentacontanedioate carbonate",
@@ -2037,6 +2178,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Nonapentacontanedioate carbonate",
@@ -2044,6 +2186,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Hexacontanedioate carbonate",
@@ -2051,6 +2194,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Henhexacontanedioate carbonate",
@@ -2058,6 +2202,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Dohexacontanedioate carbonate",
@@ -2065,6 +2210,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Trihexacontanedioate carbonate",
@@ -2072,6 +2218,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Tetrahexacontanedioate carbonate",
@@ -2079,6 +2226,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Pentahexacontanedioate carbonate",
@@ -2086,6 +2234,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Hexahexacontanedioate carbonate",
@@ -2093,6 +2242,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Heptahexacontanedioate carbonate",
@@ -2100,6 +2250,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Octahexacontanedioate carbonate",
@@ -2107,6 +2258,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Nonahexacontanedioate carbonate",
@@ -2114,6 +2266,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Heptacontanedioate carbonate",
@@ -2121,6 +2274,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Henheptacontanedioate carbonate",
@@ -2128,6 +2282,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Doheptacontanedioate carbonate",
@@ -2135,6 +2290,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Triheptacontanedioate carbonate",
@@ -2142,6 +2298,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Tetraheptacontanedioate carbonate",
@@ -2149,6 +2306,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Pentaheptacontanedioate carbonate",
@@ -2156,6 +2314,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Hexaheptacontanedioate carbonate",
@@ -2163,6 +2322,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Heptaheptacontanedioate carbonate",
@@ -2170,6 +2330,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Octaheptacontanedioate carbonate",
@@ -2177,6 +2338,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Nonaheptacontanedioate carbonate",
@@ -2184,6 +2346,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Octacontanedioate carbonate",
@@ -2191,6 +2354,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Henoctacontanedioate carbonate",
@@ -2198,6 +2362,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Dooctacontanedioate carbonate",
@@ -2205,6 +2370,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Trioctacontanedioate carbonate",
@@ -2212,6 +2378,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Tetraoctacontanedioate carbonate",
@@ -2219,6 +2386,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Pentaoctacontanedioate carbonate",
@@ -2226,6 +2394,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Hexaoctacontanedioate carbonate",
@@ -2233,6 +2402,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Heptaoctacontanedioate carbonate",
@@ -2240,6 +2410,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Octaoctacontanedioate carbonate",
@@ -2247,6 +2418,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Nonaoctacontanedioate carbonate",
@@ -2254,6 +2426,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Nonacontanedioate carbonate",
@@ -2261,6 +2434,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Hennonacontanedioate carbonate",
@@ -2268,6 +2442,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Dononacontanedioate carbonate",
@@ -2275,6 +2450,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Trinonacontanedioate carbonate",
@@ -2282,6 +2458,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Tetranonacontanedioate carbonate",
@@ -2289,6 +2466,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Pentanonacontanedioate carbonate",
@@ -2296,6 +2474,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Hexanonacontanedioate carbonate",
@@ -2303,6 +2482,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Heptanonacontanedioate carbonate",
@@ -2310,6 +2490,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Octanonacontanedioate carbonate",
@@ -2317,6 +2498,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Nonanonacontanedioate carbonate",
@@ -2324,6 +2506,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Hectanedioate carbonate",
@@ -2331,6 +2514,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
 
     // Additional materials to make it super long (200+ more items)
@@ -2340,6 +2524,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 002",
@@ -2347,6 +2532,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 003",
@@ -2354,6 +2540,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 004",
@@ -2361,6 +2548,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 005",
@@ -2368,6 +2556,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 006",
@@ -2375,6 +2564,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 007",
@@ -2382,6 +2572,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 008",
@@ -2389,6 +2580,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 009",
@@ -2396,6 +2588,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 010",
@@ -2403,6 +2596,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 011",
@@ -2410,6 +2604,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 012",
@@ -2417,6 +2612,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 013",
@@ -2424,6 +2620,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 014",
@@ -2431,6 +2628,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 015",
@@ -2438,6 +2636,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 016",
@@ -2445,6 +2644,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 017",
@@ -2452,6 +2652,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 018",
@@ -2459,6 +2660,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 019",
@@ -2466,6 +2668,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 020",
@@ -2473,6 +2676,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 021",
@@ -2480,6 +2684,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 022",
@@ -2487,6 +2692,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 023",
@@ -2494,6 +2700,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 024",
@@ -2501,6 +2708,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 025",
@@ -2508,6 +2716,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 026",
@@ -2515,6 +2724,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 027",
@@ -2522,6 +2732,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 028",
@@ -2529,6 +2740,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 029",
@@ -2536,6 +2748,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 030",
@@ -2543,6 +2756,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 031",
@@ -2550,6 +2764,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 032",
@@ -2557,6 +2772,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 033",
@@ -2564,6 +2780,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 034",
@@ -2571,6 +2788,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 035",
@@ -2578,6 +2796,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 036",
@@ -2585,6 +2804,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 037",
@@ -2592,6 +2812,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 038",
@@ -2599,6 +2820,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 039",
@@ -2606,6 +2828,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 040",
@@ -2613,6 +2836,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 041",
@@ -2620,6 +2844,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 042",
@@ -2627,6 +2852,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 043",
@@ -2634,6 +2860,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 044",
@@ -2641,6 +2868,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 045",
@@ -2648,6 +2876,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 046",
@@ -2655,6 +2884,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 047",
@@ -2662,6 +2892,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 048",
@@ -2669,6 +2900,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 049",
@@ -2676,6 +2908,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 050",
@@ -2683,6 +2916,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 051",
@@ -2690,6 +2924,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 052",
@@ -2697,6 +2932,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 053",
@@ -2704,6 +2940,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 054",
@@ -2711,6 +2948,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 055",
@@ -2718,6 +2956,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 056",
@@ -2725,6 +2964,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 057",
@@ -2732,6 +2972,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 058",
@@ -2739,6 +2980,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 059",
@@ -2746,6 +2988,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 060",
@@ -2753,6 +2996,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 061",
@@ -2760,6 +3004,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 062",
@@ -2767,6 +3012,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 063",
@@ -2774,6 +3020,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 064",
@@ -2781,6 +3028,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 065",
@@ -2788,6 +3036,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 066",
@@ -2795,6 +3044,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 067",
@@ -2802,6 +3052,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 068",
@@ -2809,6 +3060,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 069",
@@ -2816,6 +3068,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 070",
@@ -2823,6 +3076,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 071",
@@ -2830,6 +3084,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 072",
@@ -2837,6 +3092,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 073",
@@ -2844,6 +3100,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 074",
@@ -2851,6 +3108,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 075",
@@ -2858,6 +3116,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 076",
@@ -2865,6 +3124,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 077",
@@ -2872,6 +3132,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 078",
@@ -2879,6 +3140,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 079",
@@ -2886,6 +3148,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 080",
@@ -2893,6 +3156,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 081",
@@ -2900,6 +3164,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 082",
@@ -2907,6 +3172,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 083",
@@ -2914,6 +3180,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 084",
@@ -2921,6 +3188,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 085",
@@ -2928,6 +3196,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 086",
@@ -2935,6 +3204,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 087",
@@ -2942,6 +3212,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 088",
@@ -2949,6 +3220,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 089",
@@ -2956,6 +3228,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 090",
@@ -2963,6 +3236,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 091",
@@ -2970,6 +3244,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 092",
@@ -2977,6 +3252,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 093",
@@ -2984,6 +3260,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 094",
@@ -2991,6 +3268,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 095",
@@ -2998,6 +3276,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 096",
@@ -3005,6 +3284,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 097",
@@ -3012,6 +3292,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 098",
@@ -3019,6 +3300,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 099",
@@ -3026,6 +3308,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 100",
@@ -3033,6 +3316,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 101",
@@ -3040,6 +3324,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 102",
@@ -3047,6 +3332,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 103",
@@ -3054,6 +3340,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 104",
@@ -3061,6 +3348,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 105",
@@ -3068,6 +3356,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 106",
@@ -3075,6 +3364,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 107",
@@ -3082,6 +3372,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 108",
@@ -3089,6 +3380,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 109",
@@ -3096,6 +3388,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 110",
@@ -3103,6 +3396,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 111",
@@ -3110,6 +3404,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 112",
@@ -3117,6 +3412,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 113",
@@ -3124,6 +3420,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 114",
@@ -3131,6 +3428,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 115",
@@ -3138,6 +3436,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 116",
@@ -3145,6 +3444,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 117",
@@ -3152,6 +3452,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 118",
@@ -3159,6 +3460,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 119",
@@ -3166,6 +3468,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 120",
@@ -3173,6 +3476,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 121",
@@ -3180,6 +3484,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 122",
@@ -3187,6 +3492,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 123",
@@ -3194,6 +3500,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 124",
@@ -3201,6 +3508,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 125",
@@ -3208,6 +3516,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 126",
@@ -3215,6 +3524,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 127",
@@ -3222,6 +3532,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 128",
@@ -3229,6 +3540,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 129",
@@ -3236,6 +3548,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 130",
@@ -3243,6 +3556,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 131",
@@ -3250,6 +3564,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 132",
@@ -3257,6 +3572,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 133",
@@ -3264,6 +3580,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 134",
@@ -3271,6 +3588,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 135",
@@ -3278,6 +3596,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 136",
@@ -3285,6 +3604,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 137",
@@ -3292,6 +3612,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 138",
@@ -3299,6 +3620,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 139",
@@ -3306,6 +3628,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 140",
@@ -3313,6 +3636,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 141",
@@ -3320,6 +3644,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 142",
@@ -3327,6 +3652,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 143",
@@ -3334,6 +3660,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 144",
@@ -3341,6 +3668,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 145",
@@ -3348,6 +3676,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 146",
@@ -3355,6 +3684,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 147",
@@ -3362,6 +3692,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 148",
@@ -3369,6 +3700,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 149",
@@ -3376,6 +3708,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 150",
@@ -3383,6 +3716,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 151",
@@ -3390,6 +3724,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 152",
@@ -3397,6 +3732,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 153",
@@ -3404,6 +3740,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 154",
@@ -3411,6 +3748,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 155",
@@ -3418,6 +3756,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 156",
@@ -3425,6 +3764,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 157",
@@ -3432,6 +3772,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 158",
@@ -3439,6 +3780,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 159",
@@ -3446,6 +3788,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 160",
@@ -3453,6 +3796,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 161",
@@ -3460,6 +3804,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 162",
@@ -3467,6 +3812,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 163",
@@ -3474,6 +3820,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 164",
@@ -3481,6 +3828,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 165",
@@ -3488,6 +3836,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 166",
@@ -3495,6 +3844,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 167",
@@ -3502,6 +3852,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 168",
@@ -3509,6 +3860,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 169",
@@ -3516,6 +3868,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 170",
@@ -3523,6 +3876,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 171",
@@ -3530,6 +3884,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 172",
@@ -3537,6 +3892,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 173",
@@ -3544,6 +3900,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 174",
@@ -3551,6 +3908,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 175",
@@ -3558,6 +3916,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 176",
@@ -3565,6 +3924,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 177",
@@ -3572,6 +3932,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 178",
@@ -3579,6 +3940,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 179",
@@ -3586,6 +3948,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 180",
@@ -3593,6 +3956,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 181",
@@ -3600,6 +3964,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 182",
@@ -3607,6 +3972,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 183",
@@ -3614,6 +3980,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 184",
@@ -3621,6 +3988,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 185",
@@ -3628,6 +3996,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 186",
@@ -3635,6 +4004,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 187",
@@ -3642,6 +4012,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 188",
@@ -3649,6 +4020,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 189",
@@ -3656,6 +4028,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 190",
@@ -3663,6 +4036,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 191",
@@ -3670,6 +4044,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 192",
@@ -3677,6 +4052,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 193",
@@ -3684,6 +4060,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 194",
@@ -3691,6 +4068,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 195",
@@ -3698,6 +4076,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 196",
@@ -3705,6 +4084,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 197",
@@ -3712,6 +4092,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 198",
@@ -3719,6 +4100,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 199",
@@ -3726,6 +4108,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 200",
@@ -3733,6 +4116,7 @@ export const Details8 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
+      uom: "TBD",
     },
   ];
 
@@ -3767,7 +4151,12 @@ export const Details8 = () => {
     {
       label: "Quantity",
       dataKey: "quantity",
-      width: "100px",
+      width: "80px",
+    },
+    {
+      label: "UOM",
+      dataKey: "uom",
+      width: "60px",
     },
   ];
 
@@ -3776,7 +4165,7 @@ export const Details8 = () => {
     materials,
     parentData,
   }: {
-    materials: Array<{ item: string; lotCode: string; expiryDate: string; palletNumber: string; quantity: string }>;
+    materials: Array<{ item: string; lotCode: string; expiryDate: string; palletNumber: string; quantity: string; uom: string }>;
     parentData?: { date: string; actualQuantity: string };
   }) => {
     // Check if materials array is empty or all items have "TBD" quantities (indicating 0 production)
@@ -3796,16 +4185,6 @@ export const Details8 = () => {
       >
         <Flex justifyContent="space-between" alignItems="center" mb="x2" ml="x1">
           <Heading4 mb="0">Subcomponent consumption</Heading4>
-          {role === "supplier" && !isEmpty && (
-            <IconicButton
-              icon="edit"
-              aria-label="Edit consumption details"
-              onClick={() => handleOpenConsumptionSidebar(materials, parentData)}
-              type="button"
-            >
-              Edit
-            </IconicButton>
-          )}
         </Flex>
         {isEmpty ? (
           <Box py="x4" textAlign="center">
@@ -4587,111 +4966,144 @@ export const Details8 = () => {
                                   Subcomponent consumption
                                 </Heading4>
                                 <Table
-                                  columns={[
+                                    columns={[
                                     {
                                       label: "Item",
                                       dataKey: "item",
-                                      width: "120px",
                                       cellRenderer: ({ row }: { row: any }) => (
-                                        <Input
-                                          value={row.item}
-                                          onChange={(e) =>
-                                            handleConsumptionRowChange(
-                                              row.id,
-                                              row.consumptionId,
-                                              "item",
-                                              e.target.value
-                                            )
-                                          }
-                                          placeholder="Enter item"
-                                          p="x1"
-                                        />
+                                        <Box py="x1" pr="x2" minWidth="8em" width="100%">
+                                          <Input
+                                            value={row.item}
+                                            onChange={(e) =>
+                                              handleConsumptionRowChange(
+                                                row.id,
+                                                row.consumptionId,
+                                                "item",
+                                                e.target.value
+                                              )
+                                            }
+                                            placeholder="Item"
+                                            disabled={role === "customer"}
+                                          />
+                                        </Box>
                                       ),
                                     },
                                     {
-                                      label: "Lot code",
+                                      label: "Lot",
                                       dataKey: "lotCode",
-                                      width: "120px",
                                       cellRenderer: ({ row }: { row: any }) => (
-                                        <Input
-                                          value={row.lotCode}
-                                          onChange={(e) =>
-                                            handleConsumptionRowChange(
-                                              row.id,
-                                              row.consumptionId,
-                                              "lotCode",
-                                              e.target.value
-                                            )
-                                          }
-                                          placeholder="Enter lot code"
-                                          p="x1"
-                                        />
+                                        <Box py="x1" pr="x2" minWidth="8em" width="100%">
+                                          <Input
+                                            value={row.lotCode}
+                                            onChange={(e) =>
+                                              handleConsumptionRowChange(
+                                                row.id,
+                                                row.consumptionId,
+                                                "lotCode",
+                                                e.target.value
+                                              )
+                                            }
+                                            placeholder="Lot"
+                                            disabled={role === "customer"}
+                                          />
+                                        </Box>
                                       ),
                                     },
                                     {
-                                      label: "Expiry date",
+                                      label: "Expiry",
                                       dataKey: "expiryDate",
-                                      width: "120px",
                                       cellRenderer: ({ row }: { row: any }) => (
-                                        <Input
-                                          value={row.expiryDate}
-                                          onChange={(e) =>
-                                            handleConsumptionRowChange(
-                                              row.id,
-                                              row.consumptionId,
-                                              "expiryDate",
-                                              e.target.value
-                                            )
-                                          }
-                                          placeholder="Enter expiry date"
-                                          p="x1"
-                                        />
+                                        <Box py="x1" pr="x2" minWidth="8em" width="100%">
+                                          <Input
+                                            value={row.expiryDate}
+                                            onChange={(e) =>
+                                              handleConsumptionRowChange(
+                                                row.id,
+                                                row.consumptionId,
+                                                "expiryDate",
+                                                e.target.value
+                                              )
+                                            }
+                                            placeholder="Expiry"
+                                            disabled={role === "customer"}
+                                          />
+                                        </Box>
                                       ),
                                     },
                                     {
-                                      label: "Pallet number",
+                                      label: "Pallet",
                                       dataKey: "palletNumber",
-                                      width: "120px",
                                       cellRenderer: ({ row }: { row: any }) => (
-                                        <Input
-                                          value={row.palletNumber}
-                                          onChange={(e) =>
-                                            handleConsumptionRowChange(
-                                              row.id,
-                                              row.consumptionId,
-                                              "palletNumber",
-                                              e.target.value
-                                            )
-                                          }
-                                          placeholder="Enter pallet number"
-                                          p="x1"
-                                        />
+                                        <Box py="x1" pr="x2" minWidth="8em" width="100%">
+                                          <Input
+                                            value={row.palletNumber}
+                                            onChange={(e) =>
+                                              handleConsumptionRowChange(
+                                                row.id,
+                                                row.consumptionId,
+                                                "palletNumber",
+                                                e.target.value
+                                              )
+                                            }
+                                            placeholder="Pallet"
+                                            disabled={role === "customer"}
+                                          />
+                                        </Box>
                                       ),
                                     },
                                     {
-                                      label: "Quantity",
+                                      label: "Qty",
                                       dataKey: "quantity",
+                                      cellRenderer: ({ row }: { row: any }) => (
+                                        <Box py="x1" pr="x2" minWidth="8em" width="100%">
+                                          <Input
+                                            value={row.quantity}
+                                            onChange={(e) =>
+                                              handleConsumptionRowChange(
+                                                row.id,
+                                                row.consumptionId,
+                                                "quantity",
+                                                e.target.value
+                                              )
+                                            }
+                                            placeholder="Qty"
+                                            disabled={role === "customer"}
+                                          />
+                                        </Box>
+                                      ),
+                                    },
+                                    {
+                                      label: "UOM",
+                                      dataKey: "uom",
                                       width: "100px",
                                       cellRenderer: ({ row }: { row: any }) => (
-                                        <Input
-                                          value={row.quantity}
-                                          onChange={(e) =>
-                                            handleConsumptionRowChange(
-                                              row.id,
-                                              row.consumptionId,
-                                              "quantity",
-                                              e.target.value
-                                            )
-                                          }
-                                          placeholder="Enter quantity"
-                                          p="x1"
-                                        />
+                                        <Box py="x1" pr="x2" minWidth="8em" width="100%" maxWidth="16em">
+                                          <Select
+                                            value={row.uom}
+                                            onChange={(value) =>
+                                              handleConsumptionRowChange(
+                                                row.id,
+                                                row.consumptionId,
+                                                "uom",
+                                                String(value)
+                                              )
+                                            }
+                                            options={[
+                                              { value: "kg", label: "kg" },
+                                              { value: "lb", label: "lb" },
+                                              { value: "g", label: "g" },
+                                              { value: "oz", label: "oz" },
+                                              { value: "cases", label: "cases" },
+                                            ]}
+                                            disabled={role === "customer"}
+                                          />
+                                        </Box>
                                       ),
                                     },
-                                    {
+                                    ...(role === "supplier" ? [{
                                       label: "",
                                       dataKey: "actions",
-                                      width: "56px",
+                                      width: "40px",
                                       cellRenderer: ({ row }: { row: any }) => (
                                         <IconicButton
                                           icon="removeCircleOutline"
@@ -4701,9 +5113,11 @@ export const Details8 = () => {
                                             handleRemoveConsumptionRow(row.id, row.consumptionId);
                                           }}
                                           type="button"
+                                          pr="x2"
+                                          py="x1"
                                         />
                                       ),
-                                    },
+                                    }] : []),
                                   ]}
                                   rows={rowConsumptions[row.id].map((consumption) => ({
                                     ...consumption,
@@ -4713,19 +5127,21 @@ export const Details8 = () => {
                                   keyField="id"
                                   compact={true}
                                   rowBorder={true}
-                                  className="consumption-table"
+                                  className="subcomponent-consumption-edit-table"
                                 />
-                                <Box mt="x1">
-                                  <QuietButton
-                                    icon="addCircleOutline"
-                                    iconSide="left"
-                                    fullWidth
-                                    onClick={() => handleAddConsumptionRow(row.id)}
-                                    type="button"
-                                  >
-                                    Add row
-                                  </QuietButton>
-                                </Box>
+                                {role === "supplier" && (
+                                  <Box mt="x1">
+                                    <QuietButton
+                                      icon="addCircleOutline"
+                                      iconSide="left"
+                                      fullWidth
+                                      onClick={() => handleAddConsumptionRow(row.id)}
+                                      type="button"
+                                    >
+                                      Add row
+                                    </QuietButton>
+                                  </Box>
+                                )}
                               </Box>
                             )}
 
@@ -4766,6 +5182,8 @@ export const Details8 = () => {
                   )}
                 </Box>
               )}
+
+
             </FormSection>
           </Form>
         </Sidebar>
@@ -4846,11 +5264,17 @@ export const Details8 = () => {
                     </Field>
                   </Flex>
                   <Field>
-                    <FieldLabel labelText="Unit" pb="x1" />
+                    <FieldLabel labelText="UOM" pb="x1" />
                     <Select
-                      value={material.unit}
-                      onChange={(value) => handleConsumptionFieldChange(material.id, "unit", String(value))}
-                      options={unitOptions}
+                      value={material.uom}
+                      onChange={(value) => handleConsumptionFieldChange(material.id, "uom", String(value))}
+                      options={[
+                        { value: "kg", label: "kg" },
+                        { value: "lb", label: "lb" },
+                        { value: "g", label: "g" },
+                        { value: "oz", label: "oz" },
+                        { value: "cases", label: "cases" },
+                      ]}
                     />
                   </Field>
                 </Box>
@@ -4944,17 +5368,35 @@ export const Details8 = () => {
                     </Field>
                   </Box>
 
-                  <Box pb="x3">
-                    <Field>
-                      <FieldLabel labelText="Quantity" pb="x1" />
-                      <Input
-                        type="number"
-                        value={item.consumedQuantity}
-                        onChange={(e) => handleConsumptionItemFieldChange(item.id, "consumedQuantity", e.target.value)}
-                        placeholder="Enter consumed quantity"
-                      />
-                    </Field>
-                  </Box>
+                  <Flex gap="x1">
+                    <Box flex="1" pb="x3">
+                      <Field>
+                        <FieldLabel labelText="Quantity" pb="x1" />
+                        <Input
+                          type="number"
+                          value={item.consumedQuantity}
+                          onChange={(e) => handleConsumptionItemFieldChange(item.id, "consumedQuantity", e.target.value)}
+                          placeholder="Enter consumed quantity"
+                        />
+                      </Field>
+                    </Box>
+                    <Box flex="1" pb="x3">
+                      <Field>
+                        <FieldLabel labelText="UOM" pb="x1" />
+                        <Select
+                          value={item.uom}
+                          onChange={(value) => handleConsumptionItemFieldChange(item.id, "uom", String(value))}
+                          options={[
+                            { value: "kg", label: "kg" },
+                            { value: "lb", label: "lb" },
+                            { value: "g", label: "g" },
+                            { value: "oz", label: "oz" },
+                            { value: "cases", label: "cases" },
+                          ]}
+                        />
+                      </Field>
+                    </Box>
+                  </Flex>
                 </Box>
               ))}
 
