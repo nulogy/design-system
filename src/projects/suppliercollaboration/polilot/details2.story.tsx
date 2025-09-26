@@ -387,10 +387,10 @@ export const Details2 = () => {
       width: "280px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Lot code
           </Text>
-          <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
+          <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
             Customer's / Supplier's / Vendor's
           </Text>
         </Box>
@@ -491,7 +491,7 @@ export const Details2 = () => {
       dataKey: "actions",
       width: "60px",
       headerFormatter: () => null,
-      cellFormatter: (props: { row: any }) => {
+      cellRenderer: (props: { row: any }) => {
         // Show different actions based on whether row is collapsible
         if (props.row.expandedContent) {
           // Collapsible rows: only "Edit expected production details"

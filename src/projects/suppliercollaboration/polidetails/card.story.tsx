@@ -491,7 +491,7 @@ export const DefaultCard = () => {
                 {productionComplete || collaborationState.status === "accepted" ? (
                   "Accepted"
                 ) : collaborationState.activeCardAuthorRole === userState.role ? (
-                  <TruncatedText fontSize="smaller" lineHeight="smallerText" fullWidth maxWidth="184px">
+                  <TruncatedText fontSize="small" lineHeight="smallTextCompressed" fullWidth maxWidth="184px">
                     {`Awaiting ${userState.role === "supplier" ? "customer" : "supplier"} response`}
                   </TruncatedText>
                 ) : (

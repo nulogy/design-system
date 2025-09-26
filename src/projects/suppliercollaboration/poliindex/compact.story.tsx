@@ -160,7 +160,7 @@ export const Compact = () => {
       width: "40px",
       headerFormatter: () => (
         <Box width="100%" textAlign="center" px="x0_5" py="x1">
-          <Text fontSize="smaller" fontWeight="bold">
+          <Text fontSize="small" fontWeight="bold">
             <Icon icon="chatBubble" size="x2_5" />
           </Text>
         </Box>
@@ -179,7 +179,7 @@ export const Compact = () => {
       width: "40px",
       headerFormatter: () => (
         <Box width="100%" textAlign="center" px="x0_5" py="x1">
-          <Text fontSize="smaller" fontWeight="bold">
+          <Text fontSize="small" fontWeight="bold">
             <Icon icon="attachment" size="x2_5" />
           </Text>
         </Box>
@@ -198,7 +198,7 @@ export const Compact = () => {
       width: "184px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             PO number
           </Text>
         </Box>
@@ -236,10 +236,10 @@ export const Compact = () => {
       width: "200px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             PO line item number
           </Text>
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="normal" color="midGrey">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="normal" color="midGrey">
             Customer's / Supplier's
           </Text>
         </Box>
@@ -299,7 +299,7 @@ export const Compact = () => {
       width: "160px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Status
           </Text>
         </Box>
@@ -328,7 +328,7 @@ export const Compact = () => {
       width: "152px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Creation date
           </Text>
         </Box>
@@ -341,7 +341,7 @@ export const Compact = () => {
             <Text fontSize="small" lineHeight="smallTextCompressed">
               {formattedDate}
             </Text>
-            <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
+            <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
               (Week {weekNumber})
             </Text>
           </Flex>
@@ -354,7 +354,7 @@ export const Compact = () => {
       width: "200px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             {role === "supplier" ? "Customer" : "Supplier"}
           </Text>
         </Box>
@@ -389,10 +389,10 @@ export const Compact = () => {
       width: "320px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Item code and description
           </Text>
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="normal" color="midGrey">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="normal" color="midGrey">
             Customer's / Supplier's
           </Text>
         </Box>
@@ -439,7 +439,7 @@ export const Compact = () => {
       width: "184px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Problems and risks
           </Text>
         </Box>
@@ -457,7 +457,7 @@ export const Compact = () => {
       width: "184px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Priority
           </Text>
         </Box>
@@ -468,7 +468,7 @@ export const Compact = () => {
             {cellData}
           </TruncatedText>
           {row.priorityDeactivated && (
-            <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
+            <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
               (Deactivated)
             </Text>
           )}
@@ -481,7 +481,7 @@ export const Compact = () => {
       width: "240px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Production progress
           </Text>
         </Box>
@@ -494,7 +494,7 @@ export const Compact = () => {
       width: "320px",
       headerFormatter: () => (
         <Flex px="x1" pt="x1_25" pb="x0_75" gap="x0_25" alignItems="center">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Latest comment
           </Text>
           <StatusIndicator type="danger" mt="x0_5">
@@ -509,7 +509,7 @@ export const Compact = () => {
               {cellData}
             </TruncatedText>
           </Link>
-          <TruncatedText maxWidth="242px" fullWidth fontSize="smaller" lineHeight="smallerText" color="midGrey">
+          <TruncatedText maxWidth="242px" fullWidth fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
             by John A. on Jan 24, 2025 at 04:00pm
           </TruncatedText>
         </Flex>
@@ -521,7 +521,7 @@ export const Compact = () => {
       width: "320px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Collaboration status
           </Text>
         </Box>
@@ -603,14 +603,14 @@ export const Compact = () => {
           <Flex pl="x1" py="x0_25" flexDirection="column" gap="x0_5">
             {shouldShowCustomerAwaitingBox(row) && (
               <Box pl="x1" pr="x0_5" py="x0_5">
-                <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold" color="midGrey">
+                <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold" color="midGrey">
                   Your latest request
                 </Text>
               </Box>
             )}
             {shouldShowSupplierAwaitingBox(row) && (
               <Box pl="x1" pr="x0_5" py="x0_5">
-                <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold" color="midGrey">
+                <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold" color="midGrey">
                   Your latest proposal
                 </Text>
               </Box>
@@ -623,7 +623,7 @@ export const Compact = () => {
               }
               borderRadius="medium"
             >
-              <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold" color="midGrey">
+              <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold" color="midGrey">
                 {getLabelText()}
               </Text>
             </Box>
@@ -637,7 +637,7 @@ export const Compact = () => {
       width: "184px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75" textAlign="right">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Quantity
           </Text>
         </Box>
@@ -683,7 +683,7 @@ export const Compact = () => {
       width: "120px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             UOM
           </Text>
         </Box>
@@ -733,7 +733,7 @@ export const Compact = () => {
       width: "224px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Production due date
           </Text>
         </Box>
@@ -747,7 +747,7 @@ export const Compact = () => {
               <Text fontSize="small" lineHeight="smallTextCompressed">
                 {formattedDate}
               </Text>
-              <Text fontSize="smaller" lineHeight="1" color="midGrey">
+              <Text fontSize="small" lineHeight="1" color="midGrey">
                 (Week {weekNumber})
               </Text>
             </Flex>
@@ -775,7 +775,7 @@ export const Compact = () => {
       width: "184px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75" textAlign="right">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Unit price
           </Text>
         </Box>
@@ -810,7 +810,7 @@ export const Compact = () => {
       width: "120px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Currency
           </Text>
         </Box>
@@ -845,7 +845,7 @@ export const Compact = () => {
       width: "320px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Reason
           </Text>
         </Box>
@@ -880,7 +880,7 @@ export const Compact = () => {
       width: "320px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Change note
           </Text>
         </Box>
@@ -915,7 +915,7 @@ export const Compact = () => {
       width: "200px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             BOM revision and release date
           </Text>
         </Box>
@@ -956,7 +956,7 @@ export const Compact = () => {
       width: "152px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Next production date
           </Text>
         </Box>
@@ -969,7 +969,7 @@ export const Compact = () => {
             <Text fontSize="small" lineHeight="smallTextCompressed">
               {formattedDate}
             </Text>
-            <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
+            <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
               (Week {weekNumber})
             </Text>
           </Flex>
@@ -982,7 +982,7 @@ export const Compact = () => {
       width: "320px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Close production note
           </Text>
         </Box>
@@ -1018,7 +1018,7 @@ export const Compact = () => {
       width: "200px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Carry over sent to
           </Text>
         </Box>
@@ -1057,7 +1057,7 @@ export const Compact = () => {
       width: "152px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Need by date
           </Text>
         </Box>
@@ -1070,7 +1070,7 @@ export const Compact = () => {
             <Text fontSize="small" lineHeight="smallTextCompressed">
               {formattedDate}
             </Text>
-            <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
+            <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
               (Week {weekNumber})
             </Text>
           </Flex>
@@ -1083,7 +1083,7 @@ export const Compact = () => {
       width: "200px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Ship to
           </Text>
         </Box>

@@ -85,7 +85,15 @@ export const Details8 = () => {
   const [rowConsumptions, setRowConsumptions] = useState<
     Record<
       string,
-      Array<{ id: string; item: string; lotCode: string; expiryDate: string; palletNumber: string; quantity: string; uom: string }>
+      Array<{
+        id: string;
+        item: string;
+        lotCode: string;
+        expiryDate: string;
+        palletNumber: string;
+        quantity: string;
+        uom: string;
+      }>
     >
   >({});
 
@@ -928,30 +936,48 @@ export const Details8 = () => {
 
     setProductionRows(rows);
     setRowNotes(notes);
-    
+
     // Extract consumption materials data for each production row
-    const newRowConsumptions: Record<string, Array<{ id: string; item: string; lotCode: string; expiryDate: string; palletNumber: string; quantity: string; uom: string }>> = {};
-    
+    const newRowConsumptions: Record<
+      string,
+      Array<{
+        id: string;
+        item: string;
+        lotCode: string;
+        expiryDate: string;
+        palletNumber: string;
+        quantity: string;
+        uom: string;
+      }>
+    > = {};
+
     // For each production row, try to find corresponding consumption data
     rows.forEach((row, index) => {
       // Try to find consumption data from the corresponding batch
       const batch = nestedData[index];
-      if (batch && batch.expandedContent && typeof batch.expandedContent === 'function') {
+      if (batch && batch.expandedContent && typeof batch.expandedContent === "function") {
         try {
           const expandedContent = batch.expandedContent();
-          if (expandedContent && expandedContent.props && expandedContent.props.materials && expandedContent.props.materials.length > 0) {
-            newRowConsumptions[row.id] = expandedContent.props.materials.map((material: any, materialIndex: number) => ({
-              ...material,
-              id: material.id || `consumption-${Date.now()}-${index}-${materialIndex}`,
-            }));
+          if (
+            expandedContent &&
+            expandedContent.props &&
+            expandedContent.props.materials &&
+            expandedContent.props.materials.length > 0
+          ) {
+            newRowConsumptions[row.id] = expandedContent.props.materials.map(
+              (material: any, materialIndex: number) => ({
+                ...material,
+                id: material.id || `consumption-${Date.now()}-${index}-${materialIndex}`,
+              })
+            );
           }
         } catch (error) {
           console.log(`Error extracting consumption materials for row ${index}:`, error);
         }
       }
     });
-    
-    console.log('Extracted consumption materials for rows:', newRowConsumptions);
+
+    console.log("Extracted consumption materials for rows:", newRowConsumptions);
     setRowConsumptions(newRowConsumptions);
     setShowProductionSidebar(true);
   };
@@ -1061,7 +1087,15 @@ export const Details8 = () => {
     setRowConsumptions((prev) => ({
       ...prev,
       [rowId]: prev[rowId] || [
-        { id: `consumption-${Date.now()}`, item: "", lotCode: "", expiryDate: "", palletNumber: "", quantity: "", uom: "" },
+        {
+          id: `consumption-${Date.now()}`,
+          item: "",
+          lotCode: "",
+          expiryDate: "",
+          palletNumber: "",
+          quantity: "",
+          uom: "",
+        },
       ],
     }));
   };
@@ -1598,7 +1632,14 @@ export const Details8 = () => {
   ];
 
   const materialsData7A = [
-    { item: "Pending - Acetaminophen 500mg", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD", uom: "TBD" },
+    {
+      item: "Pending - Acetaminophen 500mg",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
     {
       item: "Pending - Microcrystalline cellulose",
       lotCode: "TBD",
@@ -1615,7 +1656,14 @@ export const Details8 = () => {
       quantity: "TBD",
       uom: "TBD",
     },
-    { item: "Pending - Magnesium stearate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD", uom: "TBD" },
+    {
+      item: "Pending - Magnesium stearate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
     {
       item: "Pending - Hydroxypropyl methylcellulose",
       lotCode: "TBD",
@@ -1624,14 +1672,42 @@ export const Details8 = () => {
       quantity: "TBD",
       uom: "TBD",
     },
-    { item: "Pending - Talc powder", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD", uom: "TBD" },
-    { item: "Pending - FD&C Blue #2", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD", uom: "TBD" },
-    { item: "Pending - Sodium benzoate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD", uom: "TBD" },
+    {
+      item: "Pending - Talc powder",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - FD&C Blue #2",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Sodium benzoate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
   ];
 
   const materialsData7B = [
     // Base materials (8 items)
-    { item: "Pending - Acetaminophen 500mg", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD", uom: "TBD" },
+    {
+      item: "Pending - Acetaminophen 500mg",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
     {
       item: "Pending - Microcrystalline cellulose",
       lotCode: "TBD",
@@ -1648,7 +1724,14 @@ export const Details8 = () => {
       quantity: "TBD",
       uom: "TBD",
     },
-    { item: "Pending - Magnesium stearate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD", uom: "TBD" },
+    {
+      item: "Pending - Magnesium stearate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
     {
       item: "Pending - Hydroxypropyl methylcellulose",
       lotCode: "TBD",
@@ -1657,13 +1740,48 @@ export const Details8 = () => {
       quantity: "TBD",
       uom: "TBD",
     },
-    { item: "Pending - Talc powder", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD", uom: "TBD" },
-    { item: "Pending - FD&C Blue #2", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD", uom: "TBD" },
-    { item: "Pending - Sodium benzoate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD", uom: "TBD" },
+    {
+      item: "Pending - Talc powder",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - FD&C Blue #2",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Sodium benzoate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
 
     // Additional materials to reach 120 rows
-    { item: "Pending - Lactose monohydrate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD", uom: "TBD" },
-    { item: "Pending - Povidone K30", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD", uom: "TBD" },
+    {
+      item: "Pending - Lactose monohydrate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Povidone K30",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
     {
       item: "Pending - Colloidal silicon dioxide",
       lotCode: "TBD",
@@ -1672,7 +1790,14 @@ export const Details8 = () => {
       quantity: "TBD",
       uom: "TBD",
     },
-    { item: "Pending - Stearic acid", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD", uom: "TBD" },
+    {
+      item: "Pending - Stearic acid",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
     {
       item: "Pending - Sodium starch glycolate",
       lotCode: "TBD",
@@ -4169,7 +4294,14 @@ export const Details8 = () => {
     materials,
     parentData,
   }: {
-    materials: Array<{ item: string; lotCode: string; expiryDate: string; palletNumber: string; quantity: string; uom: string }>;
+    materials: Array<{
+      item: string;
+      lotCode: string;
+      expiryDate: string;
+      palletNumber: string;
+      quantity: string;
+      uom: string;
+    }>;
     parentData?: { date: string; actualQuantity: string };
   }) => {
     // Check if materials array is empty or all items have "TBD" quantities (indicating 0 production)
@@ -4970,7 +5102,7 @@ export const Details8 = () => {
                                   Subcomponent consumption
                                 </Heading4>
                                 <Table
-                                    columns={[
+                                  columns={[
                                     {
                                       label: "Item",
                                       dataKey: "item",
@@ -5104,24 +5236,28 @@ export const Details8 = () => {
                                         </Box>
                                       ),
                                     },
-                                    ...(role === "supplier" ? [{
-                                      label: "",
-                                      dataKey: "actions",
-                                      width: "40px",
-                                      cellRenderer: ({ row }: { row: any }) => (
-                                        <IconicButton
-                                          icon="removeCircleOutline"
-                                          aria-label="Remove consumption row"
-                                          onClick={(e) => {
-                                            e.preventDefault();
-                                            handleRemoveConsumptionRow(row.id, row.consumptionId);
-                                          }}
-                                          type="button"
-                                          pr="x2"
-                                          py="x1"
-                                        />
-                                      ),
-                                    }] : []),
+                                    ...(role === "supplier"
+                                      ? [
+                                          {
+                                            label: "",
+                                            dataKey: "actions",
+                                            width: "40px",
+                                            cellRenderer: ({ row }: { row: any }) => (
+                                              <IconicButton
+                                                icon="removeCircleOutline"
+                                                aria-label="Remove consumption row"
+                                                onClick={(e) => {
+                                                  e.preventDefault();
+                                                  handleRemoveConsumptionRow(row.id, row.consumptionId);
+                                                }}
+                                                type="button"
+                                                pr="x2"
+                                                py="x1"
+                                              />
+                                            ),
+                                          },
+                                        ]
+                                      : []),
                                   ]}
                                   rows={rowConsumptions[row.id].map((consumption) => ({
                                     ...consumption,
@@ -5186,8 +5322,6 @@ export const Details8 = () => {
                   )}
                 </Box>
               )}
-
-
             </FormSection>
           </Form>
         </Sidebar>
@@ -5356,7 +5490,9 @@ export const Details8 = () => {
                       <FieldLabel labelText="Expiry date" pb="x1" />
                       <DatePicker
                         selected={item.expiryDate}
-                        onChange={(date) => handleConsumptionItemFieldChange(item.id, "expiryDate", date?.toISOString())}
+                        onChange={(date) =>
+                          handleConsumptionItemFieldChange(item.id, "expiryDate", date?.toISOString())
+                        }
                       />
                     </Field>
                   </Box>
@@ -5379,7 +5515,9 @@ export const Details8 = () => {
                         <Input
                           type="number"
                           value={item.consumedQuantity}
-                          onChange={(e) => handleConsumptionItemFieldChange(item.id, "consumedQuantity", e.target.value)}
+                          onChange={(e) =>
+                            handleConsumptionItemFieldChange(item.id, "consumedQuantity", e.target.value)
+                          }
                           placeholder="Enter consumed quantity"
                         />
                       </Field>

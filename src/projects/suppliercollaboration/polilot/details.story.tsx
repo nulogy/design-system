@@ -925,7 +925,7 @@ export const Details = () => {
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
           <Text>Lot code</Text>
-          <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
+          <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
             Customer's / Supplier's / Vendor's
           </Text>
         </Box>
@@ -1032,7 +1032,7 @@ export const Details = () => {
       dataKey: "actions",
       width: "60px",
       headerFormatter: () => null,
-      cellFormatter: (props: { row: any }) => {
+      cellRenderer: (props: { row: any }) => {
         // Only show actions for non-expandable rows
         if (props.row.expandedContent) {
           return null;
@@ -1144,7 +1144,7 @@ export const Details = () => {
                 acceptedItems.proposal ? (
                   "Accepted"
                 ) : collaborationState.activeCardAuthorRole === userState.role ? (
-                  <TruncatedText fontSize="smaller" lineHeight="smallerText" fullWidth maxWidth="184px">
+                  <TruncatedText fontSize="small" lineHeight="smallTextCompressed" fullWidth maxWidth="184px">
                     {`Awaiting ${userState.role === "supplier" ? "customer" : "supplier"} response`}
                   </TruncatedText>
                 ) : (

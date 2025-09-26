@@ -348,7 +348,7 @@ export const Details3 = () => {
       dataKey: "spacer",
       width: "auto",
       headerFormatter: () => null,
-      cellFormatter: (props: { row: any }) => {
+      cellRenderer: (props: { row: any }) => {
         // Don't show expand/collapse button for expanded content rows
         if (props.row.isExpandedContent) {
           return null;
@@ -388,7 +388,7 @@ export const Details3 = () => {
       dataKey: "actions",
       width: "56px",
       headerFormatter: () => null,
-      cellFormatter: (props: { row: any }) => {
+      cellRenderer: (props: { row: any }) => {
         // Don't show actions for expanded content rows
         if (props.row.isExpandedContent) {
           return null;

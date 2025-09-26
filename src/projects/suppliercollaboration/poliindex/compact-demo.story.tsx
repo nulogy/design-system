@@ -809,7 +809,7 @@ export const CompactDemo = () => {
       width: "40px",
       headerFormatter: () => (
         <Box width="100%" textAlign="center" px="x0_5" py="x1">
-          <Text fontSize="smaller" fontWeight="bold">
+          <Text fontSize="small" fontWeight="bold">
             <Icon icon="chatBubble" size="x2_5" />
           </Text>
         </Box>
@@ -835,7 +835,7 @@ export const CompactDemo = () => {
       width: "40px",
       headerFormatter: () => (
         <Box width="100%" textAlign="center" px="x0_5" py="x1">
-          <Text fontSize="smaller" fontWeight="bold">
+          <Text fontSize="small" fontWeight="bold">
             <Icon icon="attachment" size="x2_5" />
           </Text>
         </Box>
@@ -854,7 +854,7 @@ export const CompactDemo = () => {
       width: "120px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             PO number
           </Text>
         </Box>
@@ -891,10 +891,10 @@ export const CompactDemo = () => {
       width: "150px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             PO line item number
           </Text>
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="normal" color="midGrey">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="normal" color="midGrey">
             Customer's / Supplier's
           </Text>
         </Box>
@@ -926,7 +926,7 @@ export const CompactDemo = () => {
       width: "100px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Status
           </Text>
         </Box>
@@ -957,7 +957,7 @@ export const CompactDemo = () => {
       width: "120px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Creation date
           </Text>
         </Box>
@@ -970,7 +970,7 @@ export const CompactDemo = () => {
             <Text fontSize="small" lineHeight="smallTextCompressed">
               {formattedDate}
             </Text>
-            <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
+            <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
               (Week {weekNumber})
             </Text>
           </Flex>
@@ -983,7 +983,7 @@ export const CompactDemo = () => {
       width: "150px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Customer
           </Text>
         </Box>
@@ -1017,10 +1017,10 @@ export const CompactDemo = () => {
       width: "250px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Item code and description
           </Text>
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="normal" color="midGrey">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="normal" color="midGrey">
             Customer's / Supplier's
           </Text>
         </Box>
@@ -1067,7 +1067,7 @@ export const CompactDemo = () => {
       width: "120px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Problems and risks
           </Text>
         </Box>
@@ -1085,7 +1085,7 @@ export const CompactDemo = () => {
       width: "100px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Priority
           </Text>
         </Box>
@@ -1104,7 +1104,7 @@ export const CompactDemo = () => {
       width: "80px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75" textAlign="right">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Quantity
           </Text>
         </Box>
@@ -1123,7 +1123,7 @@ export const CompactDemo = () => {
       width: "60px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             UOM
           </Text>
         </Box>
@@ -1142,7 +1142,7 @@ export const CompactDemo = () => {
       width: "80px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75" textAlign="right">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Unit Price
           </Text>
         </Box>
@@ -1161,7 +1161,7 @@ export const CompactDemo = () => {
       width: "60px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Currency
           </Text>
         </Box>
@@ -1180,7 +1180,7 @@ export const CompactDemo = () => {
       width: "120px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Production Due Date
           </Text>
         </Box>
@@ -1192,7 +1192,7 @@ export const CompactDemo = () => {
             <Text fontSize="small" lineHeight="smallTextCompressed">
               {formattedDate}
             </Text>
-            <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
+            <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
               (Week {weekNumber})
             </Text>
           </Flex>
@@ -1205,7 +1205,7 @@ export const CompactDemo = () => {
       width: "270px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Collaboration Status
           </Text>
         </Box>

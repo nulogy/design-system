@@ -103,7 +103,7 @@ export const Simplified = () => {
             <Box my="x2" mt="x4">
               <Flex mx="x1" flexDirection="column" maxWidth="1280px" mb="x2">
                 <Text>Event / Modification</Text>
-                <Text color="midGrey" fontSize="smaller" lineHeight="smallerText">
+                <Text color="midGrey" fontSize="small" lineHeight="smallTextCompressed">
                   User, date, and time
                 </Text>
               </Flex>
@@ -651,7 +651,7 @@ export const Colourful = () => {
             <Box my="x2" mt="x4">
               <Flex mx="x1" flexDirection="column" maxWidth="1280px" mb="x2">
                 <Text>Event / Modification</Text>
-                <Text color="midGrey" fontSize="smaller" lineHeight="smallerText">
+                <Text color="midGrey" fontSize="small" lineHeight="smallTextCompressed">
                   User, date, and time
                 </Text>
               </Flex>
