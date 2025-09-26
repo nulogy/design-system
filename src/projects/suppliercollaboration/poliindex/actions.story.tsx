@@ -153,7 +153,7 @@ export const Actions = () => {
       width: "40px",
       headerFormatter: () => (
         <Box width="100%" textAlign="center" px="x0_5" py="x1">
-          <Text fontSize="smaller" fontWeight="bold">
+          <Text fontSize="small" fontWeight="bold">
             <Icon icon="chatBubble" size="x2_5" />
           </Text>
         </Box>
@@ -172,7 +172,7 @@ export const Actions = () => {
       width: "40px",
       headerFormatter: () => (
         <Box width="100%" textAlign="center" px="x0_5" py="x1">
-          <Text fontSize="smaller" fontWeight="bold">
+          <Text fontSize="small" fontWeight="bold">
             <Icon icon="attachment" size="x2_5" />
           </Text>
         </Box>
@@ -191,7 +191,7 @@ export const Actions = () => {
       width: "184px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             PO number
           </Text>
         </Box>
@@ -228,10 +228,10 @@ export const Actions = () => {
       width: "200px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             PO line item number
           </Text>
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="normal" color="midGrey">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="normal" color="midGrey">
             Customer's / Supplier's
           </Text>
         </Box>
@@ -291,7 +291,7 @@ export const Actions = () => {
       width: "152px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Creation date
           </Text>
         </Box>
@@ -304,7 +304,7 @@ export const Actions = () => {
             <Text fontSize="small" lineHeight="smallTextCompressed">
               {formattedDate}
             </Text>
-            <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
+            <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
               (Week {weekNumber})
             </Text>
           </Flex>
@@ -317,7 +317,7 @@ export const Actions = () => {
       width: "200px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             {role === "supplier" ? "Customer" : "Supplier"}
           </Text>
         </Box>
@@ -351,7 +351,7 @@ export const Actions = () => {
       width: "120px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Actions
           </Text>
         </Box>

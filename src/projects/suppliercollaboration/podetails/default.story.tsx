@@ -47,7 +47,7 @@ import {
 } from "../../..";
 
 export default {
-  title: "Projects/Supplier Collaboration/PO details/Default",
+  title: "Projects/Supplier Collaboration/PO details/Default (Standalone)",
   parameters: {
     layout: "fullscreen",
   },
@@ -109,7 +109,7 @@ export const Default = () => {
       width: "40px",
       headerFormatter: () => (
         <Box width="100%" textAlign="center" px="x0_5" py="x1">
-          <Text fontSize="smaller" fontWeight="bold">
+          <Text fontSize="small" fontWeight="bold">
             <Icon icon="chatBubble" size="x2_5" />
           </Text>
         </Box>
@@ -128,7 +128,7 @@ export const Default = () => {
       width: "40px",
       headerFormatter: () => (
         <Box width="100%" textAlign="center" px="x0_5" py="x1">
-          <Text fontSize="smaller" fontWeight="bold">
+          <Text fontSize="small" fontWeight="bold">
             <Icon icon="attachment" size="x2_5" />
           </Text>
         </Box>
@@ -147,7 +147,7 @@ export const Default = () => {
       width: "200px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             PO line item number
           </Text>
         </Box>
@@ -184,7 +184,7 @@ export const Default = () => {
       width: "320px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Item code and description
           </Text>
         </Box>
@@ -208,7 +208,7 @@ export const Default = () => {
       width: "184px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Problems and risks
           </Text>
         </Box>
@@ -226,7 +226,7 @@ export const Default = () => {
       width: "200px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
+          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
             Collaboration status
           </Text>
         </Box>

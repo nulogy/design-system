@@ -202,7 +202,7 @@ export const Default = () => {
 
   const handleAcceptanceConfirm = () => {
     setAcceptedItems((prev) => ({ ...prev, proposal: true }));
-    
+
     if (acceptanceOption === "without-flagging") {
       // Update quantity in customer's requested production to match supplier's proposal
       setFormData((prev) => ({
@@ -218,7 +218,7 @@ export const Default = () => {
       setIsFlagged(true);
       toast.success("Proposal accepted with flagging");
     }
-    
+
     setIsAcceptanceModalOpen(false);
   };
 
@@ -347,9 +347,7 @@ export const Default = () => {
                   ) : (
                     "Requires your response"
                   )}
-                  {acceptedItems.proposal && isFlagged && (
-                    <Icon icon="error" size="x1_75" color="white" />
-                  )}
+                  {acceptedItems.proposal && isFlagged && <Icon icon="error" size="x1_75" color="white" />}
                 </Flex>
               </StatusIndicator>
               <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
@@ -469,7 +467,11 @@ export const Default = () => {
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
-                <Text color="darkGrey">{userState.role === "customer" ? "Your item code and description" : "Customer's item code and description"}</Text>
+                <Text color="darkGrey">
+                  {userState.role === "customer"
+                    ? "Your item code and description"
+                    : "Customer's item code and description"}
+                </Text>
               </DescriptionTerm>
               <DescriptionDetails>
                 <Link underline={false}>TEST_ITEM_OPT_2 - this is the description of the item 2</Link>
@@ -485,7 +487,9 @@ export const Default = () => {
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
-                <Text color="darkGrey">{userState.role === "supplier" ? "Your PO line item number" : "Supplier's PO line item number"}</Text>
+                <Text color="darkGrey">
+                  {userState.role === "supplier" ? "Your PO line item number" : "Supplier's PO line item number"}
+                </Text>
               </DescriptionTerm>
               <DescriptionDetails>-</DescriptionDetails>
             </DescriptionGroup>
@@ -1191,9 +1195,7 @@ export const Default = () => {
         maxWidth="649px"
         footerContent={
           <Flex justifyContent="flex-start" gap="x2">
-            <PrimaryButton onClick={handleAcceptanceConfirm}>
-              Accept proposal
-            </PrimaryButton>
+            <PrimaryButton onClick={handleAcceptanceConfirm}>Accept proposal</PrimaryButton>
             <QuietButton onClick={handleAcceptanceCancel}>Cancel</QuietButton>
           </Flex>
         }
@@ -1228,7 +1230,6 @@ export const Default = () => {
           </Flex>
         </Box>
       </Modal>
-
     </ApplicationFrame>
   );
 };

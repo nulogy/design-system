@@ -173,7 +173,7 @@ export const Default = () => {
   // Acceptance modal handlers
   const handleAcceptanceConfirm = () => {
     setAcceptedItems((prev) => ({ ...prev, proposal: true }));
-    
+
     if (acceptanceOption === "without-flagging") {
       toast.success("PO line items accepted successfully");
     } else {
@@ -699,9 +699,7 @@ export const Default = () => {
             <StatusIndicator type="quiet" mt="x0_5">
               <Flex alignItems="center" gap="x0_5">
                 Accepted
-                {acceptedItems.proposal && isFlagged && (
-                  <Icon icon="error" size="x1_75" color="darkGrey" />
-                )}
+                {acceptedItems.proposal && isFlagged && <Icon icon="error" size="x1_75" color="darkGrey" />}
               </Flex>
             </StatusIndicator>
           )}
@@ -1799,15 +1797,9 @@ export const Default = () => {
           <Flex gap="x2" alignItems="center">
             {selectedRows.length > 0 ? (
               <>
-                <Button onClick={() => setIsAcceptanceModalOpen(true)}>
-                  Accept supplier's proposals
-                </Button>
-                <Button>
-                  Cancel PO line items
-                </Button>
-                <Button>
-                  Edit PO line items
-                </Button>
+                <Button onClick={() => setIsAcceptanceModalOpen(true)}>Accept supplier's proposals</Button>
+                <Button>Cancel PO line items</Button>
+                <Button>Edit PO line items</Button>
                 <IconicButton icon="more" aria-label="More actions">
                   More actions
                 </IconicButton>
@@ -2047,16 +2039,15 @@ export const Default = () => {
         maxWidth="649px"
         footerContent={
           <Flex justifyContent="flex-start" gap="x2">
-            <PrimaryButton onClick={handleAcceptanceConfirm}>
-              Accept proposal
-            </PrimaryButton>
+            <PrimaryButton onClick={handleAcceptanceConfirm}>Accept proposal</PrimaryButton>
             <QuietButton onClick={handleAcceptanceCancel}>Cancel</QuietButton>
           </Flex>
         }
       >
         <Box px="half">
           <Text mb="x3" fontSize="medium" lineHeight="mediumRelaxed">
-            You are about to accept the supplier's proposals for {selectedRows.length} items. To proceed, your organization requires you to select an acceptance method. Please make a selection to continue.
+            You are about to accept the supplier's proposals for {selectedRows.length} items. To proceed, your
+            organization requires you to select an acceptance method. Please make a selection to continue.
           </Text>
           <Flex flexDirection="column" gap="x1">
             <Box mb="x1">

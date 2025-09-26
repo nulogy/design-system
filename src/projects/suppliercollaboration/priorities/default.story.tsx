@@ -184,7 +184,7 @@ const PrioritiesPage = () => {
       label: "Priority",
       dataKey: "priority",
       width: "160px",
-      cellFormatter: (props: { row: WorkOrderPriority }) => {
+      cellRenderer: (props: { row: WorkOrderPriority }) => {
         const display = createDisplayObjects(props.row);
         return (
           <Text color={display.priorityDisplay.status === "Active" ? undefined : "midGrey"}>
@@ -197,7 +197,7 @@ const PrioritiesPage = () => {
       label: "Description",
       dataKey: "description",
       width: "auto",
-      cellFormatter: (props: { row: WorkOrderPriority }) => {
+      cellRenderer: (props: { row: WorkOrderPriority }) => {
         const display = createDisplayObjects(props.row);
         return (
           <Text color={display.descriptionDisplay.status === "Active" ? undefined : "midGrey"}>
@@ -210,7 +210,7 @@ const PrioritiesPage = () => {
       label: "Status",
       dataKey: "status",
       width: "220px",
-      cellFormatter: (props: { row: WorkOrderPriority }) => {
+      cellRenderer: (props: { row: WorkOrderPriority }) => {
         const display = createDisplayObjects(props.row);
         return (
           <Text color={display.statusDisplay.status === "Active" ? undefined : "midGrey"}>
@@ -223,7 +223,7 @@ const PrioritiesPage = () => {
       label: "",
       dataKey: "actions",
       width: "40px",
-      cellFormatter: (props: { row: WorkOrderPriority }) => (
+      cellRenderer: (props: { row: WorkOrderPriority }) => (
         <DropdownMenu trigger={() => <IconicButton icon="more" aria-label="More actions" />}>
           <DropdownButton onClick={() => handleEditPriority(props.row)}>Edit</DropdownButton>
           <Divider my="x1" />

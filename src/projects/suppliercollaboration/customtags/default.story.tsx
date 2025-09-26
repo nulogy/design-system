@@ -308,7 +308,7 @@ const CustomTagsPage = () => {
       label: "Priority",
       dataKey: "priority",
       width: "160px",
-      cellFormatter: (props: { row: WorkOrderPriority }) => {
+      cellRenderer: (props: { row: WorkOrderPriority }) => {
         const display = createDisplayObjects(props.row);
         return (
           <Text color={display.priorityDisplay.status === "Active" ? undefined : "midGrey"}>
@@ -321,7 +321,7 @@ const CustomTagsPage = () => {
       label: "Description",
       dataKey: "description",
       width: "auto",
-      cellFormatter: (props: { row: WorkOrderPriority }) => {
+      cellRenderer: (props: { row: WorkOrderPriority }) => {
         const display = createDisplayObjects(props.row);
         return (
           <Text color={display.descriptionDisplay.status === "Active" ? undefined : "midGrey"}>
@@ -334,7 +334,7 @@ const CustomTagsPage = () => {
       label: "Status",
       dataKey: "status",
       width: "220px",
-      cellFormatter: (props: { row: WorkOrderPriority }) => {
+      cellRenderer: (props: { row: WorkOrderPriority }) => {
         const display = createDisplayObjects(props.row);
         return (
           <Text color={display.statusDisplay.status === "Active" ? undefined : "midGrey"}>
@@ -347,7 +347,7 @@ const CustomTagsPage = () => {
       label: "",
       dataKey: "actions",
       width: "40px",
-      cellFormatter: (props: { row: WorkOrderPriority }) => (
+      cellRenderer: (props: { row: WorkOrderPriority }) => (
         <DropdownMenu trigger={() => <IconicButton icon="more" aria-label="More actions" />}>
           <DropdownButton onClick={() => handleEditPriority(props.row)}>Edit</DropdownButton>
           <Divider my="x1" />
@@ -366,7 +366,7 @@ const CustomTagsPage = () => {
       label: "Custom tag",
       dataKey: "customTag",
       width: "auto",
-      cellFormatter: (props: { row: CustomTag }) => {
+      cellRenderer: (props: { row: CustomTag }) => {
         const getStatusIndicatorType = (type: string) => {
           return type as any; // Type corresponds directly to StatusIndicator type
         };
@@ -387,7 +387,7 @@ const CustomTagsPage = () => {
       label: "Status",
       dataKey: "status",
       width: "220px",
-      cellFormatter: (props: { row: CustomTag }) => (
+      cellRenderer: (props: { row: CustomTag }) => (
         <Text color={props.row.status === "Active" ? undefined : "midGrey"}>{props.row.status}</Text>
       ),
     },
@@ -395,7 +395,7 @@ const CustomTagsPage = () => {
       label: "",
       dataKey: "actions",
       width: "40px",
-      cellFormatter: (props: { row: CustomTag }) => (
+      cellRenderer: (props: { row: CustomTag }) => (
         <DropdownMenu trigger={() => <IconicButton icon="more" aria-label="More actions" />}>
           <DropdownButton onClick={() => handleEditTag(props.row)}>Edit</DropdownButton>
           <Divider my="x1" />

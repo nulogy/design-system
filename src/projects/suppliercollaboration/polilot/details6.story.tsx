@@ -775,7 +775,7 @@ export const Details6 = () => {
         <Box pt="x1_25" pb="x0_75">
           <Text>Lot code</Text>
           {fieldConfig.sanofiRequired && (
-            <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
+            <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
               Customer's / Supplier's
             </Text>
           )}
@@ -818,7 +818,7 @@ export const Details6 = () => {
       dataKey: "actions",
       width: "32px",
       headerFormatter: () => null,
-      cellFormatter: (props: { row: any }) => {
+      cellRenderer: (props: { row: any }) => {
         // Show Edit action for all rows
         return (
           <DropdownMenu trigger={() => <IconicButton icon="more" aria-label="More actions" />} placement="bottom-end">
@@ -3773,7 +3773,7 @@ export const Details6 = () => {
                 acceptedItems.proposal ? (
                   "Accepted"
                 ) : collaborationState.activeCardAuthorRole === userState.role ? (
-                  <TruncatedText fontSize="smaller" lineHeight="smallerText" fullWidth maxWidth="184px">
+                  <TruncatedText fontSize="small" lineHeight="smallTextCompressed" fullWidth maxWidth="184px">
                     {`Awaiting ${userState.role === "supplier" ? "customer" : "supplier"} response`}
                   </TruncatedText>
                 ) : (
