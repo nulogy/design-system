@@ -129,11 +129,13 @@ export const Details8 = () => {
   });
 
   // SummaryDivider component
-  const SummaryDivider = () => <Box width="1px" height="x6" backgroundColor="lightGrey" mx="x2" />;
+  const SummaryDivider = () => <Box width="x1" height="x6" backgroundColor="lightGrey" mx="x2" />;
 
   // Handler functions
   const handleCancelPOLineItem = () => {
     console.log("Cancel PO line item");
+    // Add proper modal handling here if needed
+    toast.success("PO line item cancellation initiated");
   };
 
   const handleEditDetails = () => {
@@ -484,7 +486,8 @@ export const Details8 = () => {
           return null;
         }
 
-        return formatDateToYYYYMonDD(row.expiryDate);
+        const formattedDate = formatDateToYYYYMonDD(row.expiryDate);
+        return <Text>{formattedDate}</Text>;
       },
     },
     {
@@ -793,7 +796,7 @@ export const Details8 = () => {
         <Box pt="x1_25" pb="x0_75">
           <Text>Lot code</Text>
           {fieldConfig.sanofiRequired && (
-            <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
+            <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
               Customer's / Supplier's
             </Text>
           )}
@@ -836,7 +839,7 @@ export const Details8 = () => {
       dataKey: "actions",
       width: "32px",
       headerFormatter: () => null,
-      cellFormatter: (props: { row: any }) => {
+      cellRenderer: (props: { row: any }) => {
         // Show Edit action for all rows
         return (
           <DropdownMenu trigger={() => <IconicButton icon="more" aria-label="More actions" />} placement="bottom-end">
@@ -1183,11 +1186,11 @@ export const Details8 = () => {
     setConsumptionItems((prev) => [...prev, newItem]);
   };
 
-  const handleRemoveConsumptionItem = (itemId) => {
+  const handleRemoveConsumptionItem = (itemId: string) => {
     setConsumptionItems((prev) => prev.filter((item) => item.id !== itemId));
   };
 
-  const handleConsumptionItemFieldChange = (itemId, field, value) => {
+  const handleConsumptionItemFieldChange = (itemId: string, field: string, value: string) => {
     setConsumptionItems((prev) => prev.map((item) => (item.id === itemId ? { ...item, [field]: value } : item)));
   };
 
@@ -4140,7 +4143,8 @@ export const Details8 = () => {
         if (row.expiryDate === "TBD") {
           return <Text color="midGrey">TBD</Text>;
         }
-        return formatDateToYYYYMonDD(row.expiryDate);
+        const formattedDate = formatDateToYYYYMonDD(row.expiryDate);
+        return <Text>{formattedDate}</Text>;
       },
     },
     {
@@ -4284,7 +4288,7 @@ export const Details8 = () => {
                 acceptedItems.proposal ? (
                   "Accepted"
                 ) : collaborationState.activeCardAuthorRole === userState.role ? (
-                  <TruncatedText fontSize="smaller" lineHeight="smallerText" fullWidth maxWidth="184px">
+                  <TruncatedText fontSize="small" lineHeight="smallTextCompressed" fullWidth maxWidth="184px">
                     {`Awaiting ${userState.role === "supplier" ? "customer" : "supplier"} response`}
                   </TruncatedText>
                 ) : (
@@ -4831,7 +4835,7 @@ export const Details8 = () => {
                       <Box flex="1" pb="x1" pl="x1" fontWeight="bold" fontSize="small">
                         Pallet number
                         {role === "supplier" && fieldConfig.palletNumberRequired && (
-                          <Text inline ml="x0_5" fontSize="smaller" color="darkGrey">
+                          <Text inline ml="x0_5" fontSize="small" color="darkGrey">
                             (Required)
                           </Text>
                         )}
@@ -4842,7 +4846,7 @@ export const Details8 = () => {
                       <Box flex="1" pb="x1" pl="x1" fontWeight="bold" fontSize="small">
                         Supplier's lot code
                         {role === "supplier" && fieldConfig.lotCodeRequired && (
-                          <Text inline ml="x0_5" fontSize="smaller" color="darkGrey">
+                          <Text inline ml="x0_5" fontSize="small" color="darkGrey">
                             (Required)
                           </Text>
                         )}
@@ -4850,7 +4854,7 @@ export const Details8 = () => {
                       <Box flex="1" pb="x1" pl="x1" fontWeight="bold" fontSize="small">
                         Expiry date
                         {role === "supplier" && fieldConfig.expiryDateRequired && (
-                          <Text inline ml="x0_5" fontSize="smaller" color="darkGrey">
+                          <Text inline ml="x0_5" fontSize="small" color="darkGrey">
                             (Required)
                           </Text>
                         )}
@@ -5352,7 +5356,7 @@ export const Details8 = () => {
                       <FieldLabel labelText="Expiry date" pb="x1" />
                       <DatePicker
                         selected={item.expiryDate}
-                        onChange={(date) => handleConsumptionItemFieldChange(item.id, "expiryDate", date)}
+                        onChange={(date) => handleConsumptionItemFieldChange(item.id, "expiryDate", date?.toISOString())}
                       />
                     </Field>
                   </Box>
