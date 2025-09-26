@@ -1797,7 +1797,9 @@ export const Default = () => {
           <Flex gap="x2" alignItems="center">
             {selectedRows.length > 0 ? (
               <>
-                <Button onClick={() => setIsAcceptanceModalOpen(true)}>Accept supplier's proposals</Button>
+                <Button onClick={() => setIsAcceptanceModalOpen(true)}>
+                  Accept supplier's proposal{selectedRows.length !== 1 ? 's' : ''}
+                </Button>
                 <Button>Cancel PO line items</Button>
                 <Button>Edit PO line items</Button>
                 <IconicButton icon="more" aria-label="More actions">
@@ -2035,20 +2037,18 @@ export const Default = () => {
       <Modal
         isOpen={isAcceptanceModalOpen}
         onRequestClose={handleAcceptanceCancel}
-        title="Accept supplier's proposal"
+        title={`Accept ${selectedRows.length} supplier's proposal${selectedRows.length !== 1 ? 's' : ''}`}
         maxWidth="649px"
         footerContent={
           <Flex justifyContent="flex-start" gap="x2">
-            <PrimaryButton onClick={handleAcceptanceConfirm}>Accept proposal</PrimaryButton>
+            <PrimaryButton onClick={handleAcceptanceConfirm}>
+              Accept proposal{selectedRows.length !== 1 ? 's' : ''}
+            </PrimaryButton>
             <QuietButton onClick={handleAcceptanceCancel}>Cancel</QuietButton>
           </Flex>
         }
       >
         <Box px="half">
-          <Text mb="x3" fontSize="medium" lineHeight="mediumRelaxed">
-            You are about to accept the supplier's proposals for {selectedRows.length} items. To proceed, your
-            organization requires you to select an acceptance method. Please make a selection to continue.
-          </Text>
           <Flex flexDirection="column" gap="x1">
             <Box mb="x1">
               <Radio
