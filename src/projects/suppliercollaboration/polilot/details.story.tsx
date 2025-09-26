@@ -1250,58 +1250,37 @@ export const Details = () => {
                 <Text color="darkGrey">PO number</Text>
               </DescriptionTerm>
               <DescriptionDetails>
-                <Link underline={false}>4000023874</Link>
+                <Link underline={false}>PO-00000004</Link>
               </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Customer's PO line item number</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>12345</DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Supplier's PO line item number</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>23453</DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Created on</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>2025-Feb-01</DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">{userState.role === "supplier" ? "Customer" : "Supplier"}</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>MyCustomer</DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
                 <Text color="darkGrey">Customer's item code and description</Text>
               </DescriptionTerm>
               <DescriptionDetails>
-                <Link underline={false}>12345678 – PR 24 SEPHORA ONLINE DELUXE OCT</Link>
+                <Link underline={false}>TEST_ITEM_OPT_2 - this is the description of the item 2</Link>
               </DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
-                <Text color="darkGrey">Supplier's item code</Text>
+                <Text color="darkGrey">BOM revision and release date</Text>
               </DescriptionTerm>
-              <DescriptionDetails>SUP-123456</DescriptionDetails>
+              <DescriptionDetails>
+                <Text>-</Text>
+              </DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
+                <Text color="darkGrey">Supplier's PO line item number</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>-</DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
                 <Text color="darkGrey">Priority</Text>
               </DescriptionTerm>
               <DescriptionDetails>
-                <Text>
-                  3 - Low{" "}
-                  <Text as="span" color="midGrey" fontSize="small" lineHeight="smallRelaxed">
-                    (Deactivated)
-                  </Text>
-                </Text>
+                <Text>-</Text>
               </DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
@@ -1309,7 +1288,7 @@ export const Details = () => {
                 <Text color="darkGrey">Item order type</Text>
               </DescriptionTerm>
               <DescriptionDetails>
-                <Text>Standard</Text>
+                <Text>Supplier</Text>
               </DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
@@ -1330,70 +1309,18 @@ export const Details = () => {
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
-                <Text color="darkGrey">Expiry date</Text>
+                <Text color="darkGrey">{userState.role === "supplier" ? "Customer" : "Supplier"}</Text>
               </DescriptionTerm>
-              <DescriptionDetails>
-                <Text>{formatDateToYYYYMonDD("2025-12-31")}</Text>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">BOM revision and release date</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Text>Revision 2 – 2025-Feb-28</Text>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Production start date</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Text>
-                  2025-Feb-20{" "}
-                  <Text as="span" color="midGrey" fontSize="small" lineHeight="smallRelaxed">
-                    (Week 8)
-                  </Text>
-                </Text>
-              </DescriptionDetails>
+              <DescriptionDetails>Claudia Supplier</DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
                 <Text color="darkGrey">Ship to</Text>
               </DescriptionTerm>
               <DescriptionDetails>
-                <Text>MySupplier TO</Text>
+                <Text>-</Text>
               </DescriptionDetails>
             </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Need by date</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Text>
-                  2025-Feb-28{" "}
-                  <Text as="span" color="midGrey" fontSize="small" lineHeight="smallRelaxed">
-                    (Week 8)
-                  </Text>
-                </Text>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            {productionComplete && (
-              <>
-                <DescriptionGroup>
-                  <DescriptionTerm>
-                    <Text color="darkGrey">Close production note</Text>
-                  </DescriptionTerm>
-                  <DescriptionDetails>Production completed successfully</DescriptionDetails>
-                </DescriptionGroup>
-                <DescriptionGroup>
-                  <DescriptionTerm>
-                    <Text color="darkGrey">Carry over sent to</Text>
-                  </DescriptionTerm>
-                  <DescriptionDetails>{formData.edit.carryOverSentTo || "-"}</DescriptionDetails>
-                </DescriptionGroup>
-              </>
-            )}
           </DescriptionList>
         </Box>
         <Tabs selectedIndex={selectedIndex} onTabClick={(e, index) => setSelectedIndex(index)}>
