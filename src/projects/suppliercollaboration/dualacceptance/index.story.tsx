@@ -1798,7 +1798,7 @@ export const Default = () => {
             {selectedRows.length > 0 ? (
               <>
                 <Button onClick={() => setIsAcceptanceModalOpen(true)}>
-                  Accept supplier's proposal{selectedRows.length !== 1 ? 's' : ''}
+                  Accept supplier's proposal{selectedRows.length !== 1 ? "s" : ""}
                 </Button>
                 <Button>Cancel PO line items</Button>
                 <Button>Edit PO line items</Button>
@@ -2037,12 +2037,12 @@ export const Default = () => {
       <Modal
         isOpen={isAcceptanceModalOpen}
         onRequestClose={handleAcceptanceCancel}
-        title={`Accept ${selectedRows.length} supplier's proposal${selectedRows.length !== 1 ? 's' : ''}`}
+        title={`Accept ${selectedRows.length} supplier's proposal${selectedRows.length !== 1 ? "s" : ""}`}
         maxWidth="649px"
         footerContent={
           <Flex justifyContent="flex-start" gap="x2">
             <PrimaryButton onClick={handleAcceptanceConfirm}>
-              Accept proposal{selectedRows.length !== 1 ? 's' : ''}
+              Accept proposal{selectedRows.length !== 1 ? "s" : ""}
             </PrimaryButton>
             <QuietButton onClick={handleAcceptanceCancel}>Cancel</QuietButton>
           </Flex>
