@@ -1797,9 +1797,7 @@ export const Default = () => {
           <Flex gap="x2" alignItems="center">
             {selectedRows.length > 0 ? (
               <>
-                <Button onClick={() => setIsAcceptanceModalOpen(true)}>
-                  Accept supplier's proposal{selectedRows.length !== 1 ? "s" : ""}
-                </Button>
+                <Button onClick={() => setIsAcceptanceModalOpen(true)}>Accept PO line items</Button>
                 <Button>Cancel PO line items</Button>
                 <Button>Edit PO line items</Button>
                 <IconicButton icon="more" aria-label="More actions">
@@ -2037,13 +2035,11 @@ export const Default = () => {
       <Modal
         isOpen={isAcceptanceModalOpen}
         onRequestClose={handleAcceptanceCancel}
-        title={`Accept ${selectedRows.length} supplier's proposal${selectedRows.length !== 1 ? "s" : ""}`}
+        title={`Accept ${selectedRows.length} PO line item${selectedRows.length !== 1 ? "s" : ""}`}
         maxWidth="649px"
         footerContent={
           <Flex justifyContent="flex-start" gap="x2">
-            <PrimaryButton onClick={handleAcceptanceConfirm}>
-              Accept proposal{selectedRows.length !== 1 ? "s" : ""}
-            </PrimaryButton>
+            <PrimaryButton onClick={handleAcceptanceConfirm}>Accept</PrimaryButton>
             <QuietButton onClick={handleAcceptanceCancel}>Cancel</QuietButton>
           </Flex>
         }
@@ -2054,7 +2050,7 @@ export const Default = () => {
               <Radio
                 name="acceptance-option"
                 value="without-flagging"
-                labelText="With standard/non-consequential acceptance"
+                labelText="With standard acceptance"
                 checked={acceptanceOption === "without-flagging"}
                 onChange={() => setAcceptanceOption("without-flagging")}
               />
@@ -2067,7 +2063,7 @@ export const Default = () => {
               <Radio
                 name="acceptance-option"
                 value="with-flagging"
-                labelText="With flagged/consequential/exceptional/... acceptance"
+                labelText="With flagged acceptance"
                 checked={acceptanceOption === "with-flagging"}
                 onChange={() => setAcceptanceOption("with-flagging")}
               />

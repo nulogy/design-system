@@ -469,7 +469,7 @@ export const Default = () => {
               <DescriptionTerm>
                 <Text color="darkGrey">
                   {userState.role === "customer"
-                    ? "Your item code and description"
+                    ? "Supplier's item code and description"
                     : "Customer's item code and description"}
                 </Text>
               </DescriptionTerm>
@@ -488,7 +488,7 @@ export const Default = () => {
             <DescriptionGroup>
               <DescriptionTerm>
                 <Text color="darkGrey">
-                  {userState.role === "supplier" ? "Your PO line item number" : "Supplier's PO line item number"}
+                  {userState.role === "supplier" ? "Supplier's PO line item number" : "Customer's PO line item number"}
                 </Text>
               </DescriptionTerm>
               <DescriptionDetails>-</DescriptionDetails>
@@ -511,7 +511,9 @@ export const Default = () => {
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
-                <Text color="darkGrey">{userState.role === "customer" ? "Your lot code" : "Customer's lot code"}</Text>
+                <Text color="darkGrey">
+                  {userState.role === "customer" ? "Supplier's lot code" : "Customer's lot code"}
+                </Text>
               </DescriptionTerm>
               <DescriptionDetails>
                 <Text>LOT-2024-001</Text>
@@ -519,7 +521,9 @@ export const Default = () => {
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
-                <Text color="darkGrey">{userState.role === "supplier" ? "Your lot code" : "Supplier's lot code"}</Text>
+                <Text color="darkGrey">
+                  {userState.role === "supplier" ? "Supplier's lot code" : "Customer's lot code"}
+                </Text>
               </DescriptionTerm>
               <DescriptionDetails>
                 <Text>SUP-LOT-001</Text>
@@ -527,7 +531,7 @@ export const Default = () => {
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
-                <Text color="darkGrey">Customer</Text>
+                <Text color="darkGrey">{userState.role === "customer" ? "Supplier" : "Customer"}</Text>
               </DescriptionTerm>
               <DescriptionDetails>Claudia Supplier</DescriptionDetails>
             </DescriptionGroup>
@@ -567,7 +571,7 @@ export const Default = () => {
                     <Flex flexDirection="column" gap="x0_25" mb="x3">
                       <Flex alignItems="center" gap="x1">
                         <Heading4 mb="0">
-                          {userState.role === "customer" ? "Your request" : "Customer's request"}
+                          {userState.role === "customer" ? "Supplier's request" : "Customer's request"}
                         </Heading4>
 
                         {acceptedItems.request ? (
@@ -753,7 +757,7 @@ export const Default = () => {
                     <Flex flexDirection="column" gap="x0_25" mb="x3">
                       <Flex alignItems="center" gap="x1">
                         <Heading4 mb="0">
-                          {userState.role === "customer" ? "Supplier's proposal" : "Your proposal"}
+                          {userState.role === "customer" ? "Supplier's proposal" : "Supplier's proposal"}
                         </Heading4>
                         {acceptedItems.proposal ? (
                           <Tooltip tooltip="Accepted">
@@ -1206,7 +1210,7 @@ export const Default = () => {
               <Radio
                 name="acceptance-option"
                 value="without-flagging"
-                labelText="With standard/non-consequential acceptance"
+                labelText="With standard acceptance"
                 checked={acceptanceOption === "without-flagging"}
                 onChange={() => setAcceptanceOption("without-flagging")}
               />
@@ -1219,7 +1223,7 @@ export const Default = () => {
               <Radio
                 name="acceptance-option"
                 value="with-flagging"
-                labelText="With flagged/consequential/exceptional/... acceptance"
+                labelText="With flagged acceptance"
                 checked={acceptanceOption === "with-flagging"}
                 onChange={() => setAcceptanceOption("with-flagging")}
               />
