@@ -79,6 +79,8 @@ export const Default = () => {
       receivedQuantity: "-",
       freightClass: "-",
       notes: "-",
+      expectedShipDate: "-",
+      expectedReceiveDate: "-",
       nestedData: [
         {
           id: "1-1",
@@ -95,6 +97,8 @@ export const Default = () => {
           receivedQuantity: "-",
           freightClass: "-",
           notes: "-",
+          expectedShipDate: "-",
+          expectedReceiveDate: "-",
         },
         {
           id: "1-2",
@@ -111,6 +115,8 @@ export const Default = () => {
           receivedQuantity: "-",
           freightClass: "-",
           notes: "-",
+          expectedShipDate: "-",
+          expectedReceiveDate: "-",
         },
         {
           id: "1-3",
@@ -127,6 +133,8 @@ export const Default = () => {
           receivedQuantity: "-",
           freightClass: "-",
           notes: "-",
+          expectedShipDate: "-",
+          expectedReceiveDate: "-",
         },
       ],
     },
@@ -145,6 +153,8 @@ export const Default = () => {
       receivedQuantity: "-",
       freightClass: "-",
       notes: "-",
+      expectedShipDate: "-",
+      expectedReceiveDate: "-",
       nestedData: [
         {
           id: "2-1",
@@ -161,6 +171,8 @@ export const Default = () => {
           receivedQuantity: "-",
           freightClass: "-",
           notes: "-",
+          expectedShipDate: "-",
+          expectedReceiveDate: "-",
         },
         {
           id: "2-2",
@@ -177,6 +189,8 @@ export const Default = () => {
           receivedQuantity: "-",
           freightClass: "-",
           notes: "-",
+          expectedShipDate: "-",
+          expectedReceiveDate: "-",
         },
         {
           id: "2-3",
@@ -193,132 +207,118 @@ export const Default = () => {
           receivedQuantity: "-",
           freightClass: "-",
           notes: "-",
+          expectedShipDate: "-",
+          expectedReceiveDate: "-",
         },
       ],
     },
   ];
 
-  // Table columns
-  const tableColumns = [
+  // Table columns for Details tab
+  const detailsTableColumns = [
     {
       label: "Customer's item code and description",
       dataKey: "item",
       width: "200px",
-      cellRenderer: ({ row }: { row: any }) => (
-        <Flex alignItems="center" height="100%">
-          <Text>{row.item}</Text>
-        </Flex>
-      ),
     },
     {
       label: "PO number",
       dataKey: "poNumber",
       width: "120px",
-      cellRenderer: ({ row }: { row: any }) => (
-        <Flex alignItems="center" height="100%">
-          <Text>{row.poNumber}</Text>
-        </Flex>
-      ),
     },
     {
       label: "Customer's PO line item number",
       dataKey: "customerPoLineItem",
       width: "200px",
-      cellRenderer: ({ row }: { row: any }) => (
-        <Flex alignItems="center" height="100%">
-          <Text>{row.customerPoLineItem}</Text>
-        </Flex>
-      ),
     },
     {
-      label: "Pallet number",
-      dataKey: "palletNumber",
+      label: "Expected ship date",
+      dataKey: "expectedShipDate",
       width: "150px",
-      cellRenderer: ({ row }: { row: any }) => (
-        <Flex alignItems="center" height="100%">
-          <Text>{row.palletNumber}</Text>
-        </Flex>
-      ),
     },
     {
-      label: "Lot code",
-      dataKey: "lotCode",
-      width: "120px",
-      cellRenderer: ({ row }: { row: any }) => (
-        <Flex alignItems="center" height="100%">
-          <Text>{row.lotCode}</Text>
-        </Flex>
-      ),
-    },
-    {
-      label: "Expiry date",
-      dataKey: "expiryDate",
-      width: "120px",
-      cellRenderer: ({ row }: { row: any }) => (
-        <Flex alignItems="center" height="100%">
-          <Text>{row.expiryDate}</Text>
-        </Flex>
-      ),
-    },
-    {
-      label: "Shipped pallet quantity",
-      dataKey: "shippedPalletQuantity",
-      width: "180px",
-      cellRenderer: ({ row }: { row: any }) => (
-        <Flex alignItems="center" height="100%">
-          <Text>{row.shippedPalletQuantity}</Text>
-        </Flex>
-      ),
+      label: "Expected receive date",
+      dataKey: "expectedReceiveDate",
+      width: "150px",
     },
     {
       label: "Required quantity",
       dataKey: "requiredQuantity",
       width: "150px",
-      cellRenderer: ({ row }: { row: any }) => (
-        <Flex alignItems="center" height="100%">
-          <Text>{row.requiredQuantity}</Text>
-        </Flex>
-      ),
     },
     {
       label: "Shipped quantity",
       dataKey: "shippedQuantity",
       width: "150px",
-      cellRenderer: ({ row }: { row: any }) => (
-        <Flex alignItems="center" height="100%">
-          <Text>{row.shippedQuantity}</Text>
-        </Flex>
-      ),
     },
     {
       label: "Received quantity",
       dataKey: "receivedQuantity",
       width: "150px",
-      cellRenderer: ({ row }: { row: any }) => (
-        <Flex alignItems="center" height="100%">
-          <Text>{row.receivedQuantity}</Text>
-        </Flex>
-      ),
+    },
+  ];
+
+  // Table columns for Deliveries tab
+  const deliveriesTableColumns = [
+    {
+      label: "Customer's item code and description",
+      dataKey: "item",
+      width: "200px",
+    },
+    {
+      label: "PO number",
+      dataKey: "poNumber",
+      width: "120px",
+    },
+    {
+      label: "Customer's PO line item number",
+      dataKey: "customerPoLineItem",
+      width: "200px",
+    },
+    {
+      label: "Pallet number",
+      dataKey: "palletNumber",
+      width: "150px",
+    },
+    {
+      label: "Lot code",
+      dataKey: "lotCode",
+      width: "120px",
+    },
+    {
+      label: "Expiry date",
+      dataKey: "expiryDate",
+      width: "120px",
+    },
+    {
+      label: "Shipped pallet quantity",
+      dataKey: "shippedPalletQuantity",
+      width: "180px",
+    },
+    {
+      label: "Required quantity",
+      dataKey: "requiredQuantity",
+      width: "150px",
+    },
+    {
+      label: "Shipped quantity",
+      dataKey: "shippedQuantity",
+      width: "150px",
+    },
+    {
+      label: "Received quantity",
+      dataKey: "receivedQuantity",
+      width: "150px",
     },
     {
       label: "Freight class",
       dataKey: "freightClass",
       width: "120px",
-      cellRenderer: ({ row }: { row: any }) => (
-        <Flex alignItems="center" height="100%">
-          <Text>{row.freightClass}</Text>
-        </Flex>
-      ),
     },
     {
       label: "Notes",
       dataKey: "notes",
       width: "auto",
-      cellRenderer: ({ row }: { row: any }) => (
-        <Flex alignItems="center" height="100%">
-          <Text>{row.notes}</Text>
-        </Flex>
-      ),
     },
   ];
 
@@ -350,14 +350,37 @@ export const Default = () => {
 
       <Box p="x2">
         <Tabs selectedIndex={selectedTab} onTabClick={(e, index) => setSelectedTab(index)}>
-          <Tab label="Details"></Tab>
+          <Tab label="Details">
+            <Box>
+              <Box p="x3">
+                <Box mb="x3" py="x1" px="x2">
+                  <DescriptionList layout="stacked" columns={{ extraSmall: 1, small: 2, medium: 3, large: 3 }}>
+                    <DescriptionGroup>
+                      <DescriptionTerm>PO number</DescriptionTerm>
+                      <DescriptionDetails>PO-12345</DescriptionDetails>
+                    </DescriptionGroup>
+                    <DescriptionGroup>
+                      <DescriptionTerm>Customer</DescriptionTerm>
+                      <DescriptionDetails>Acme Manufacturing Co.</DescriptionDetails>
+                    </DescriptionGroup>
+                    <DescriptionGroup>
+                      <DescriptionTerm>Supplier</DescriptionTerm>
+                      <DescriptionDetails>Global Supply Solutions</DescriptionDetails>
+                    </DescriptionGroup>
+                  </DescriptionList>
+                </Box>
+
+                <Table columns={detailsTableColumns} rows={tableRows} keyField="id" />
+              </Box>
+            </Box>
+          </Tab>
           <Tab label="Deliveries">
             <Box>
               <Card>
                 <Box p="x1">
-                  <Heading3 mb="x1">Delivery 12345</Heading3>
+                  <Heading3 mb="x1" px="x2">Delivery 12345</Heading3>
 
-                  <Box mb="x3">
+                  <Box mb="x3" py="x1" px="x2">
                     <DescriptionList layout="stacked" columns={{ extraSmall: 1, small: 2, medium: 3, large: 3 }}>
                       <DescriptionGroup>
                         <DescriptionTerm>
@@ -450,9 +473,7 @@ export const Default = () => {
                     </DescriptionList>
                   </Box>
 
-                  <Divider mb="x3" />
-
-                  <Table columns={tableColumns} rows={tableRows} keyField="id" compact />
+                  <Table columns={deliveriesTableColumns} rows={tableRows} keyField="id" />
                 </Box>
               </Card>
             </Box>
@@ -463,57 +484,6 @@ export const Default = () => {
             </Box>
           </Tab>
         </Tabs>
-
-        <Box mt="x3">
-          <Card>
-            <Box p="x3">
-              <Flex justifyContent="space-between" alignItems="center" mb="x3">
-                <Box>
-                  <Heading4>Delivery status</Heading4>
-                </Box>
-                <Flex gap="x1">
-                  <IconicButton icon="refresh" aria-label="Refresh" />
-                  <IconicButton icon="filter" aria-label="Filter" />
-                </Flex>
-              </Flex>
-
-              <Box mb="x3">
-                <DescriptionList>
-                  <DescriptionGroup>
-                    <DescriptionTerm>PO number</DescriptionTerm>
-                    <DescriptionDetails>PO-12345</DescriptionDetails>
-                  </DescriptionGroup>
-                  <DescriptionGroup>
-                    <DescriptionTerm>Customer</DescriptionTerm>
-                    <DescriptionDetails>Acme Manufacturing Co.</DescriptionDetails>
-                  </DescriptionGroup>
-                  <DescriptionGroup>
-                    <DescriptionTerm>Supplier</DescriptionTerm>
-                    <DescriptionDetails>Global Supply Solutions</DescriptionDetails>
-                  </DescriptionGroup>
-                  <DescriptionGroup>
-                    <DescriptionTerm>Total expected quantity</DescriptionTerm>
-                    <DescriptionDetails>55 cases</DescriptionDetails>
-                  </DescriptionGroup>
-                  <DescriptionGroup>
-                    <DescriptionTerm>Total delivered quantity</DescriptionTerm>
-                    <DescriptionDetails>54 cases</DescriptionDetails>
-                  </DescriptionGroup>
-                  <DescriptionGroup>
-                    <DescriptionTerm>Delivery completion</DescriptionTerm>
-                    <DescriptionDetails>
-                      <StatusIndicator type="warning">98% complete</StatusIndicator>
-                    </DescriptionDetails>
-                  </DescriptionGroup>
-                </DescriptionList>
-              </Box>
-
-              <Divider mb="x3" />
-
-              <Table columns={tableColumns} rows={tableRows} keyField="id" compact />
-            </Box>
-          </Card>
-        </Box>
       </Box>
     </ApplicationFrame>
   );
