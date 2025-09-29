@@ -457,18 +457,16 @@ export const Details8 = () => {
             <TruncatedText fullWidth width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
               {row.lotCode || ""}
             </TruncatedText>
-            {fieldConfig.sanofiRequired && (
-              <TruncatedText
-                fullWidth
-                width="auto"
-                maxWidth="152px"
-                fontSize="small"
-                lineHeight="smallTextCompressed"
-                color="midGrey"
-              >
-                {row.supplierLotCode || ""}
-              </TruncatedText>
-            )}
+            <TruncatedText
+              fullWidth
+              width="auto"
+              maxWidth="152px"
+              fontSize="small"
+              lineHeight="smallTextCompressed"
+              color="midGrey"
+            >
+              {row.supplierLotCode || ""}
+            </TruncatedText>
           </Flex>
         );
       },
@@ -803,11 +801,9 @@ export const Details8 = () => {
       headerFormatter: () => (
         <Box pt="x1_25" pb="x0_75">
           <Text>Lot code</Text>
-          {fieldConfig.sanofiRequired && (
-            <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
-              Customer's / Supplier's
-            </Text>
-          )}
+          <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+            Customer's / Supplier's
+          </Text>
         </Box>
       ),
       cellRenderer: ({ row }: { row: any }) => {
@@ -848,7 +844,11 @@ export const Details8 = () => {
       width: "32px",
       headerFormatter: () => null,
       cellRenderer: (props: { row: any }) => {
-        // Show Edit action for all rows
+        // Hide the entire dropdown when Sanofi ref ID is off
+        if (!fieldConfig.sanofiRequired) {
+          return null;
+        }
+
         return (
           <DropdownMenu trigger={() => <IconicButton icon="more" aria-label="More actions" />} placement="bottom-end">
             <DropdownButton onClick={() => handleEditProduction(props.row)}>Edit production</DropdownButton>
