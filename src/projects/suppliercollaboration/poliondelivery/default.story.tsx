@@ -378,7 +378,9 @@ export const Default = () => {
             <Box>
               <Card>
                 <Box p="x1">
-                  <Heading3 mb="x1" px="x2">Delivery 12345</Heading3>
+                  <Heading3 mb="x1" px="x2">
+                    Delivery 12345
+                  </Heading3>
 
                   <Box mb="x3" py="x1" px="x2">
                     <DescriptionList layout="stacked" columns={{ extraSmall: 1, small: 2, medium: 3, large: 3 }}>
