@@ -467,11 +467,7 @@ export const Default = () => {
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
-                <Text color="darkGrey">
-                  {userState.role === "customer"
-                    ? "Supplier's item code and description"
-                    : "Customer's item code and description"}
-                </Text>
+                <Text color="darkGrey">Customer's item code and description</Text>
               </DescriptionTerm>
               <DescriptionDetails>
                 <Link underline={false}>TEST_ITEM_OPT_2 - this is the description of the item 2</Link>
@@ -487,9 +483,7 @@ export const Default = () => {
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
-                <Text color="darkGrey">
-                  {userState.role === "supplier" ? "Supplier's PO line item number" : "Customer's PO line item number"}
-                </Text>
+                <Text color="darkGrey">Supplier's PO line item number</Text>
               </DescriptionTerm>
               <DescriptionDetails>-</DescriptionDetails>
             </DescriptionGroup>
@@ -511,9 +505,7 @@ export const Default = () => {
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
-                <Text color="darkGrey">
-                  {userState.role === "customer" ? "Supplier's lot code" : "Customer's lot code"}
-                </Text>
+                <Text color="darkGrey">Customer's lot code</Text>
               </DescriptionTerm>
               <DescriptionDetails>
                 <Text>LOT-2024-001</Text>
@@ -521,9 +513,7 @@ export const Default = () => {
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
-                <Text color="darkGrey">
-                  {userState.role === "supplier" ? "Supplier's lot code" : "Customer's lot code"}
-                </Text>
+                <Text color="darkGrey">Supplier's lot code</Text>
               </DescriptionTerm>
               <DescriptionDetails>
                 <Text>SUP-LOT-001</Text>
@@ -531,7 +521,7 @@ export const Default = () => {
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
-                <Text color="darkGrey">{userState.role === "customer" ? "Supplier" : "Customer"}</Text>
+                <Text color="darkGrey">{userState.role === "customer" ? "Customer" : "Supplier"}</Text>
               </DescriptionTerm>
               <DescriptionDetails>Claudia Supplier</DescriptionDetails>
             </DescriptionGroup>
@@ -571,7 +561,7 @@ export const Default = () => {
                     <Flex flexDirection="column" gap="x0_25" mb="x3">
                       <Flex alignItems="center" gap="x1">
                         <Heading4 mb="0">
-                          {userState.role === "customer" ? "Supplier's request" : "Customer's request"}
+                          {userState.role === "customer" ? "Your request" : "Customer's request"}
                         </Heading4>
 
                         {acceptedItems.request ? (
@@ -757,7 +747,7 @@ export const Default = () => {
                     <Flex flexDirection="column" gap="x0_25" mb="x3">
                       <Flex alignItems="center" gap="x1">
                         <Heading4 mb="0">
-                          {userState.role === "customer" ? "Supplier's proposal" : "Supplier's proposal"}
+                          {userState.role === "customer" ? "Supplier's proposal" : "Your proposal"}
                         </Heading4>
                         {acceptedItems.proposal ? (
                           <Tooltip tooltip="Accepted">
