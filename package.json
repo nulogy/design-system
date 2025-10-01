@@ -91,7 +91,7 @@
     "@storybook/codemod": "^6.1.9",
     "@storybook/react": "6.3.12",
     "@storybook/theming": "^6.1.9",
-    "@testing-library/jest-dom": "5.11.5",
+    "@testing-library/jest-dom": "6.9.0",
     "@testing-library/react": "^12.1.5",
     "@types/css-mediaquery": "^0.1.4",
     "@types/deep-equal": "^1.0.4",
