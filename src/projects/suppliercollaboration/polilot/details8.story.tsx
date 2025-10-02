@@ -45,10 +45,10 @@ import {
   Switch,
   Checkbox,
   CheckboxGroup,
-    Radio,
-    RadioGroup,
-    Pagination,
-  } from "../../..";
+  Radio,
+  RadioGroup,
+  Pagination,
+} from "../../..";
 import { formatDateToYYYYMonDD, formatDateWithWeek } from "../utils/dateUtils";
 
 export default {
@@ -4322,7 +4322,12 @@ export const Details8 = () => {
         p="x2"
       >
         <Flex justifyContent="space-between" alignItems="center" mb="x2" ml="x1">
-          <Heading4 mb="0">Subcomponent consumption</Heading4>
+          <Flex alignItems="baseline" gap="x1">
+            <Heading4 mb="0">Subcomponent consumption</Heading4>
+            <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
+              BOM revision 2.1
+            </Text>
+          </Flex>
         </Flex>
         {isEmpty ? (
           <Box py="x4" textAlign="center">
@@ -4873,7 +4878,7 @@ export const Details8 = () => {
               </Flex>
               <Divider m="0" />
             </Box>
-            
+
             {/* Log */}
             <Flex flexDirection="column">
               {/* Group 1: January 29, 2025 */}
@@ -4882,698 +4887,1014 @@ export const Details8 = () => {
                   {/* Header */}
                   <Box mb="half">
                     <Text fontSize="small" lineHeight="smallCompact">
-                      <Box as="span" color="black" fontWeight="bold">Production record</Box>
-                      <Box as="span" color="midGrey" mx="half">{" "}for{" "}</Box>
-                      <Box as="span" color="black" fontWeight="bold">January 29, 2025</Box>
+                      <Box as="span" color="black" fontWeight="bold">
+                        Production record
+                      </Box>
+                      <Box as="span" color="midGrey" mx="half">
+                        {" "}
+                        for{" "}
+                      </Box>
+                      <Box as="span" color="black" fontWeight="bold">
+                        January 29, 2025
+                      </Box>
                     </Text>
                   </Box>
-                  
+
                   {/* DescriptionList */}
                   <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Actual quantity modified</Box>
+                        <Box as="span" color="black">
+                          Actual quantity modified
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">1,000 cases</Box>
+                          <Box as="span" color="midGrey">
+                            1,000 cases
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">1,200 cases</Box>
+                          <Box as="span" color="black">
+                            1,200 cases
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Lot code modified</Box>
+                        <Box as="span" color="black">
+                          Lot code modified
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">LOT-2025-001-001</Box>
+                          <Box as="span" color="midGrey">
+                            LOT-2025-001-001
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">LOT-2025-001-001A</Box>
+                          <Box as="span" color="black">
+                            LOT-2025-001-001A
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Customer's lot code modified</Box>
+                        <Box as="span" color="black">
+                          Customer's lot code modified
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">CUST-LOT-001</Box>
+                          <Box as="span" color="midGrey">
+                            CUST-LOT-001
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">CUST-LOT-001A</Box>
+                          <Box as="span" color="black">
+                            CUST-LOT-001A
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Supplier's lot code modified</Box>
+                        <Box as="span" color="black">
+                          Supplier's lot code modified
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">SUP-LOT-001</Box>
+                          <Box as="span" color="midGrey">
+                            SUP-LOT-001
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">SUP-LOT-001B</Box>
+                          <Box as="span" color="black">
+                            SUP-LOT-001B
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Expiry date modified</Box>
+                        <Box as="span" color="black">
+                          Expiry date modified
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">March 15, 2026</Box>
+                          <Box as="span" color="midGrey">
+                            March 15, 2026
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">March 20, 2026</Box>
+                          <Box as="span" color="black">
+                            March 20, 2026
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Pallet number modified</Box>
+                        <Box as="span" color="black">
+                          Pallet number modified
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">PAL-001</Box>
+                          <Box as="span" color="midGrey">
+                            PAL-001
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">PAL-002</Box>
+                          <Box as="span" color="black">
+                            PAL-002
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Note modified</Box>
+                        <Box as="span" color="black">
+                          Note modified
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">Standard production run</Box>
+                          <Box as="span" color="midGrey">
+                            Standard production run
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">Special handling required for temperature control</Box>
+                          <Box as="span" color="black">
+                            Special handling required for temperature control
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                   </DescriptionList>
-                  
+
                   {/* Footer */}
                   <Box mt="half">
                     <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
                       by
-                      <Box as="span" color="black" fontWeight="normal" mx="half">sarah.johnson@supplier.com</Box>
+                      <Box as="span" color="black" fontWeight="normal" mx="half">
+                        sarah.johnson@supplier.com
+                      </Box>
                       on
-                      <Box as="span" color="black" fontWeight="normal" mx="half">January 29th, 2025</Box>
+                      <Box as="span" color="black" fontWeight="normal" mx="half">
+                        January 29th, 2025
+                      </Box>
                       at
-                      <Box as="span" color="black" fontWeight="normal" mx="half">02:30:15PM</Box>
+                      <Box as="span" color="black" fontWeight="normal" mx="half">
+                        02:30:15PM
+                      </Box>
                     </Text>
                   </Box>
                 </Flex>
               )}
-              
+
               {/* Divider between Group 1 and Group 2 */}
-              {(historyLogFilter === "All" || historyLogFilter === "Production record") && (
-                <Divider m="0" />
-              )}
-            
+              {(historyLogFilter === "All" || historyLogFilter === "Production record") && <Divider m="0" />}
+
               {/* Group 2: January 28, 2025 */}
               {(historyLogFilter === "All" || historyLogFilter === "Production record") && (
                 <Flex flexDirection="column" gap="x1" maxWidth="1280px" mx="x1" pt="x2_5" pb="x2_5">
                   {/* Header */}
                   <Box mb="half">
                     <Text fontSize="small" lineHeight="smallCompact">
-                      <Box as="span" color="black" fontWeight="bold">Production record</Box>
-                      <Box as="span" color="midGrey" mx="half">{" "}for{" "}</Box>
-                      <Box as="span" color="black" fontWeight="bold">January 28, 2025</Box>
+                      <Box as="span" color="black" fontWeight="bold">
+                        Production record
+                      </Box>
+                      <Box as="span" color="midGrey" mx="half">
+                        {" "}
+                        for{" "}
+                      </Box>
+                      <Box as="span" color="black" fontWeight="bold">
+                        January 28, 2025
+                      </Box>
                     </Text>
                   </Box>
-                  
+
                   {/* DescriptionList */}
                   <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Date modified</Box>
+                        <Box as="span" color="black">
+                          Date modified
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">January 25, 2025</Box>
+                          <Box as="span" color="midGrey">
+                            January 25, 2025
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">January 28, 2025</Box>
+                          <Box as="span" color="black">
+                            January 28, 2025
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Expected quantity modified</Box>
+                        <Box as="span" color="black">
+                          Expected quantity modified
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">1,000 cases</Box>
+                          <Box as="span" color="midGrey">
+                            1,000 cases
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">1,200 cases</Box>
+                          <Box as="span" color="black">
+                            1,200 cases
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                   </DescriptionList>
-                  
+
                   {/* Footer */}
                   <Box mt="half">
                     <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
                       by
-                      <Box as="span" color="black" fontWeight="normal" mx="half">system@nulogy.com</Box>
+                      <Box as="span" color="black" fontWeight="normal" mx="half">
+                        system@nulogy.com
+                      </Box>
                       on
-                      <Box as="span" color="black" fontWeight="normal" mx="half">January 28th, 2025</Box>
+                      <Box as="span" color="black" fontWeight="normal" mx="half">
+                        January 28th, 2025
+                      </Box>
                       at
-                      <Box as="span" color="black" fontWeight="normal" mx="half">09:15:42AM</Box>
+                      <Box as="span" color="black" fontWeight="normal" mx="half">
+                        09:15:42AM
+                      </Box>
                     </Text>
                   </Box>
                 </Flex>
               )}
-              
+
               {/* Divider between Group 2 and Group 3 */}
-              {(historyLogFilter === "All" || historyLogFilter === "Production record") && (
-                <Divider m="0" />
-              )}
-              
+              {(historyLogFilter === "All" || historyLogFilter === "Production record") && <Divider m="0" />}
+
               {/* Group 3: Collaboration */}
               {(historyLogFilter === "All" || historyLogFilter === "Collaboration") && (
                 <Flex flexDirection="column" gap="x1" maxWidth="1280px" mx="x1" pt="x2_5" pb="x2_5">
                   {/* Header */}
                   <Box mb="half">
                     <Text fontSize="small" lineHeight="smallCompact">
-                      <Box as="span" color="black" fontWeight="bold">Collaboration</Box>
+                      <Box as="span" color="black" fontWeight="bold">
+                        Collaboration
+                      </Box>
                     </Text>
                   </Box>
-                  
+
                   {/* DescriptionList */}
                   <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Supplier UOM modified</Box>
+                        <Box as="span" color="black">
+                          Supplier UOM modified
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">Cases</Box>
+                          <Box as="span" color="midGrey">
+                            Cases
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">Pallets</Box>
+                          <Box as="span" color="black">
+                            Pallets
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Cost per unit modified</Box>
+                        <Box as="span" color="black">
+                          Cost per unit modified
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">US $45.50</Box>
+                          <Box as="span" color="midGrey">
+                            US $45.50
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">US $48.75</Box>
+                          <Box as="span" color="black">
+                            US $48.75
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Lead time modified</Box>
+                        <Box as="span" color="black">
+                          Lead time modified
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">14 days</Box>
+                          <Box as="span" color="midGrey">
+                            14 days
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">18 days</Box>
+                          <Box as="span" color="black">
+                            18 days
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                   </DescriptionList>
-                  
+
                   {/* Footer */}
                   <Box mt="half">
                     <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
                       by
-                      <Box as="span" color="black" fontWeight="normal" mx="half">tom.wilson@artisan.com</Box>
+                      <Box as="span" color="black" fontWeight="normal" mx="half">
+                        tom.wilson@artisan.com
+                      </Box>
                       on
-                      <Box as="span" color="black" fontWeight="normal" mx="half">January 27th, 2025</Box>
+                      <Box as="span" color="black" fontWeight="normal" mx="half">
+                        January 27th, 2025
+                      </Box>
                       at
-                      <Box as="span" color="black" fontWeight="normal" mx="half">11:45:30AM</Box>
+                      <Box as="span" color="black" fontWeight="normal" mx="half">
+                        11:45:30AM
+                      </Box>
                     </Text>
                   </Box>
                 </Flex>
               )}
-              
+
               {/* Divider between Group 3 and Group 4 */}
-              {(historyLogFilter === "All" || historyLogFilter === "Collaboration") && (
-                <Divider m="0" />
-              )}
-              
+              {(historyLogFilter === "All" || historyLogFilter === "Collaboration") && <Divider m="0" />}
+
               {/* Group 4: January 26, 2025 */}
               {(historyLogFilter === "All" || historyLogFilter === "Production record") && (
                 <Flex flexDirection="column" gap="x1" maxWidth="1280px" mx="x1" pt="x2_5" pb="x2_5">
                   {/* Header */}
                   <Box mb="half">
                     <Text fontSize="small" lineHeight="smallCompact">
-                      <Box as="span" color="black" fontWeight="bold">Production record</Box>
-                      <Box as="span" color="midGrey" mx="half">{" "}for{" "}</Box>
-                      <Box as="span" color="black" fontWeight="bold">January 26, 2025</Box>
+                      <Box as="span" color="black" fontWeight="bold">
+                        Production record
+                      </Box>
+                      <Box as="span" color="midGrey" mx="half">
+                        {" "}
+                        for{" "}
+                      </Box>
+                      <Box as="span" color="black" fontWeight="bold">
+                        January 26, 2025
+                      </Box>
                     </Text>
                   </Box>
-                  
+
                   {/* DescriptionList */}
                   <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Date modified</Box>
+                        <Box as="span" color="black">
+                          Date modified
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">January 24, 2025</Box>
+                          <Box as="span" color="midGrey">
+                            January 24, 2025
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">January 26, 2025</Box>
+                          <Box as="span" color="black">
+                            January 26, 2025
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Expected quantity modified</Box>
+                        <Box as="span" color="black">
+                          Expected quantity modified
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">800 cases</Box>
+                          <Box as="span" color="midGrey">
+                            800 cases
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">900 cases</Box>
+                          <Box as="span" color="black">
+                            900 cases
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                   </DescriptionList>
-                  
+
                   {/* Footer */}
                   <Box mt="half">
                     <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
                       by
-                      <Box as="span" color="black" fontWeight="normal" mx="half">quality.team@nulogy.com</Box>
+                      <Box as="span" color="black" fontWeight="normal" mx="half">
+                        quality.team@nulogy.com
+                      </Box>
                       on
-                      <Box as="span" color="black" fontWeight="normal" mx="half">January 26th, 2025</Box>
+                      <Box as="span" color="black" fontWeight="normal" mx="half">
+                        January 26th, 2025
+                      </Box>
                       at
-                      <Box as="span" color="black" fontWeight="normal" mx="half">03:20:18PM</Box>
+                      <Box as="span" color="black" fontWeight="normal" mx="half">
+                        03:20:18PM
+                      </Box>
                     </Text>
                   </Box>
                 </Flex>
               )}
-              
+
               {/* Divider between Group 4 and Group 5 */}
-              {(historyLogFilter === "All" || historyLogFilter === "Production record") && (
-                <Divider m="0" />
-              )}
-              
+              {(historyLogFilter === "All" || historyLogFilter === "Production record") && <Divider m="0" />}
+
               {/* Group 5: PO line item details */}
               {(historyLogFilter === "All" || historyLogFilter === "PO line item details") && (
                 <Flex flexDirection="column" gap="x1" maxWidth="1280px" mx="x1" pt="x2_5" pb="x2_5">
                   {/* Header */}
                   <Box mb="half">
                     <Text fontSize="small" lineHeight="smallCompact">
-                      <Box as="span" color="black" fontWeight="bold">PO line item details</Box>
+                      <Box as="span" color="black" fontWeight="bold">
+                        PO line item details
+                      </Box>
                     </Text>
                   </Box>
-                  
+
                   {/* DescriptionList */}
                   <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">PO number modified</Box>
+                        <Box as="span" color="black">
+                          PO number modified
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">PO-2025-001-001</Box>
+                          <Box as="span" color="midGrey">
+                            PO-2025-001-001
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">PO-2025-001-002</Box>
+                          <Box as="span" color="black">
+                            PO-2025-001-002
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Customer's PO line item number modified</Box>
+                        <Box as="span" color="black">
+                          Customer's PO line item number modified
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">CUST-LINE-001</Box>
+                          <Box as="span" color="midGrey">
+                            CUST-LINE-001
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">CUST-LINE-001A</Box>
+                          <Box as="span" color="black">
+                            CUST-LINE-001A
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Priority modified</Box>
+                        <Box as="span" color="black">
+                          Priority modified
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">Medium</Box>
+                          <Box as="span" color="midGrey">
+                            Medium
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">High</Box>
+                          <Box as="span" color="black">
+                            High
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                   </DescriptionList>
-                  
+
                   {/* Footer */}
                   <Box mt="half">
                     <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
                       by
-                      <Box as="span" color="black" fontWeight="normal" mx="half">jennifer.martinez@customer.com</Box>
+                      <Box as="span" color="black" fontWeight="normal" mx="half">
+                        jennifer.martinez@customer.com
+                      </Box>
                       on
-                      <Box as="span" color="black" fontWeight="normal" mx="half">January 25th, 2025</Box>
+                      <Box as="span" color="black" fontWeight="normal" mx="half">
+                        January 25th, 2025
+                      </Box>
                       at
-                      <Box as="span" color="black" fontWeight="normal" mx="half">10:15:25AM</Box>
+                      <Box as="span" color="black" fontWeight="normal" mx="half">
+                        10:15:25AM
+                      </Box>
                     </Text>
                   </Box>
                 </Flex>
               )}
-              
+
               {/* Divider between Group 5 and Group 6 */}
-              {(historyLogFilter === "All" || historyLogFilter === "PO line item details") && (
-                <Divider m="0" />
-              )}
-              
+              {(historyLogFilter === "All" || historyLogFilter === "PO line item details") && <Divider m="0" />}
+
               {/* Group 6: January 30, 2025 (Combined) */}
               {(historyLogFilter === "All" || historyLogFilter === "Production record") && (
                 <Flex flexDirection="column" gap="x1" maxWidth="1280px" mx="x1" pt="x2_5" pb="x2_5">
                   {/* Header */}
                   <Box mb="half">
                     <Text fontSize="small" lineHeight="smallCompact">
-                      <Box as="span" color="black" fontWeight="bold">Production record</Box>
-                      <Box as="span" color="midGrey" mx="half">{" "}for{" "}</Box>
-                      <Box as="span" color="black" fontWeight="bold">January 30, 2025</Box>
+                      <Box as="span" color="black" fontWeight="bold">
+                        Production record
+                      </Box>
+                      <Box as="span" color="midGrey" mx="half">
+                        {" "}
+                        for{" "}
+                      </Box>
+                      <Box as="span" color="black" fontWeight="bold">
+                        January 30, 2025
+                      </Box>
                     </Text>
                   </Box>
-                  
+
                   {/* DescriptionList */}
                   <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Date modified</Box>
+                        <Box as="span" color="black">
+                          Date modified
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">January 29, 2025</Box>
+                          <Box as="span" color="midGrey">
+                            January 29, 2025
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">January 30, 2025</Box>
+                          <Box as="span" color="black">
+                            January 30, 2025
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Expected quantity modified</Box>
+                        <Box as="span" color="black">
+                          Expected quantity modified
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">750 cases</Box>
+                          <Box as="span" color="midGrey">
+                            750 cases
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">850 cases</Box>
+                          <Box as="span" color="black">
+                            850 cases
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                   </DescriptionList>
-                  
+
                   {/* Second DescriptionList for details */}
                   <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Actual quantity modified</Box>
+                        <Box as="span" color="black">
+                          Actual quantity modified
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">800 cases</Box>
+                          <Box as="span" color="midGrey">
+                            800 cases
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">950 cases</Box>
+                          <Box as="span" color="black">
+                            950 cases
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Lot code modified</Box>
+                        <Box as="span" color="black">
+                          Lot code modified
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">LOT-2025-001-002</Box>
+                          <Box as="span" color="midGrey">
+                            LOT-2025-001-002
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">LOT-2025-001-002B</Box>
+                          <Box as="span" color="black">
+                            LOT-2025-001-002B
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Customer's lot code modified</Box>
+                        <Box as="span" color="black">
+                          Customer's lot code modified
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">CUST-LOT-002</Box>
+                          <Box as="span" color="midGrey">
+                            CUST-LOT-002
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">CUST-LOT-002A</Box>
+                          <Box as="span" color="black">
+                            CUST-LOT-002A
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Supplier's lot code modified</Box>
+                        <Box as="span" color="black">
+                          Supplier's lot code modified
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">SUP-LOT-002</Box>
+                          <Box as="span" color="midGrey">
+                            SUP-LOT-002
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">SUP-LOT-002B</Box>
+                          <Box as="span" color="black">
+                            SUP-LOT-002B
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Expiry date modified</Box>
+                        <Box as="span" color="black">
+                          Expiry date modified
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">March 18, 2026</Box>
+                          <Box as="span" color="midGrey">
+                            March 18, 2026
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">March 22, 2026</Box>
+                          <Box as="span" color="black">
+                            March 22, 2026
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Pallet number modified</Box>
+                        <Box as="span" color="black">
+                          Pallet number modified
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">PAL-003</Box>
+                          <Box as="span" color="midGrey">
+                            PAL-003
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">PAL-004</Box>
+                          <Box as="span" color="black">
+                            PAL-004
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Note modified</Box>
+                        <Box as="span" color="black">
+                          Note modified
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">Standard batch processing</Box>
+                          <Box as="span" color="midGrey">
+                            Standard batch processing
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">Enhanced quality control procedures applied</Box>
+                          <Box as="span" color="black">
+                            Enhanced quality control procedures applied
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                   </DescriptionList>
-                  
+
                   {/* Footer */}
                   <Box mt="half">
                     <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
                       by
-                      <Box as="span" color="black" fontWeight="normal" mx="half">sarah.johnson@supplier.com</Box>
+                      <Box as="span" color="black" fontWeight="normal" mx="half">
+                        sarah.johnson@supplier.com
+                      </Box>
                       on
-                      <Box as="span" color="black" fontWeight="normal" mx="half">January 30th, 2025</Box>
+                      <Box as="span" color="black" fontWeight="normal" mx="half">
+                        January 30th, 2025
+                      </Box>
                       at
-                      <Box as="span" color="black" fontWeight="normal" mx="half">01:45:30PM</Box>
+                      <Box as="span" color="black" fontWeight="normal" mx="half">
+                        01:45:30PM
+                      </Box>
                     </Text>
                   </Box>
                 </Flex>
               )}
-              
+
               {/* Divider between Group 6 and Group 7 */}
-              {(historyLogFilter === "All" || historyLogFilter === "Production record") && (
-                <Divider m="0" />
-              )}
-              
+              {(historyLogFilter === "All" || historyLogFilter === "Production record") && <Divider m="0" />}
+
               {/* Group 7: January 31, 2025 (Combined) */}
               {(historyLogFilter === "All" || historyLogFilter === "Production record") && (
                 <Flex flexDirection="column" gap="x1" maxWidth="1280px" mx="x1" pt="x2_5" pb="x2_5">
                   <Box mb="half">
                     <Text fontSize="small" lineHeight="smallCompact">
-                      <Box as="span" color="black" fontWeight="bold">Production record</Box>
-                      <Box as="span" color="midGrey" mx="half">{" "}for{" "}</Box>
-                      <Box as="span" color="black" fontWeight="bold">January 31, 2025</Box>
+                      <Box as="span" color="black" fontWeight="bold">
+                        Production record
+                      </Box>
+                      <Box as="span" color="midGrey" mx="half">
+                        {" "}
+                        for{" "}
+                      </Box>
+                      <Box as="span" color="black" fontWeight="bold">
+                        January 31, 2025
+                      </Box>
                     </Text>
                   </Box>
                   <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Date modified</Box>
+                        <Box as="span" color="black">
+                          Date modified
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">January 30, 2025</Box>
+                          <Box as="span" color="midGrey">
+                            January 30, 2025
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">January 31, 2025</Box>
+                          <Box as="span" color="black">
+                            January 31, 2025
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Expected quantity modified</Box>
+                        <Box as="span" color="black">
+                          Expected quantity modified
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">850 cases</Box>
+                          <Box as="span" color="midGrey">
+                            850 cases
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">900 cases</Box>
+                          <Box as="span" color="black">
+                            900 cases
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                   </DescriptionList>
- 
+
                   <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Actual quantity modified</Box>
-                        <Box as="span" fontSize="small" color="black">{" "}– Batch #03</Box>
+                        <Box as="span" color="black">
+                          Actual quantity modified
+                        </Box>
+                        <Box as="span" fontSize="small" color="black">
+                          {" "}
+                          – Batch #03
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">950 cases</Box>
+                          <Box as="span" color="midGrey">
+                            950 cases
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">1,000 cases</Box>
+                          <Box as="span" color="black">
+                            1,000 cases
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
-                    
+
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Lot code modified</Box>
-                        <Box as="span" fontSize="small" color="black">{" "}– Batch #01</Box>
+                        <Box as="span" color="black">
+                          Lot code modified
+                        </Box>
+                        <Box as="span" fontSize="small" color="black">
+                          {" "}
+                          – Batch #01
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">LOT-2025-001-001</Box>
+                          <Box as="span" color="midGrey">
+                            LOT-2025-001-001
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">LOT-2025-001-001A</Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">Lot code modified</Box>
-                        <Box as="span" fontSize="small" color="black">{" "}– Batch #02</Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">LOT-2025-001-002</Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">LOT-2025-001-002A</Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">Lot code modified</Box>
-                        <Box as="span" fontSize="small" color="black">{" "}– Batch #03</Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">LOT-2025-001-003</Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">LOT-2025-001-003A</Box>
+                          <Box as="span" color="black">
+                            LOT-2025-001-001A
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Customer's lot code modified</Box>
-                        <Box as="span" fontSize="small" color="black">{" "}– Batch #03</Box>
+                        <Box as="span" color="black">
+                          Lot code modified
+                        </Box>
+                        <Box as="span" fontSize="small" color="black">
+                          {" "}
+                          – Batch #02
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">CUST-LOT-003</Box>
+                          <Box as="span" color="midGrey">
+                            LOT-2025-001-002
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">CUST-LOT-003A</Box>
+                          <Box as="span" color="black">
+                            LOT-2025-001-002A
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Supplier's lot code modified</Box>
-                        <Box as="span" fontSize="small" color="black">{" "}– Batch #03</Box>
+                        <Box as="span" color="black">
+                          Lot code modified
+                        </Box>
+                        <Box as="span" fontSize="small" color="black">
+                          {" "}
+                          – Batch #03
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">SUP-LOT-003</Box>
+                          <Box as="span" color="midGrey">
+                            LOT-2025-001-003
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">SUP-LOT-003B</Box>
+                          <Box as="span" color="black">
+                            LOT-2025-001-003A
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Expiry date modified</Box>
-                        <Box as="span" fontSize="small" color="black">{" "}– Batch #03</Box>
+                        <Box as="span" color="black">
+                          Customer's lot code modified
+                        </Box>
+                        <Box as="span" fontSize="small" color="black">
+                          {" "}
+                          – Batch #03
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">March 22, 2026</Box>
+                          <Box as="span" color="midGrey">
+                            CUST-LOT-003
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">March 25, 2026</Box>
+                          <Box as="span" color="black">
+                            CUST-LOT-003A
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Pallet number modified</Box>
-                        <Box as="span" fontSize="small" color="black">{" "}– Batch #03</Box>
+                        <Box as="span" color="black">
+                          Supplier's lot code modified
+                        </Box>
+                        <Box as="span" fontSize="small" color="black">
+                          {" "}
+                          – Batch #03
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">PAL-005</Box>
+                          <Box as="span" color="midGrey">
+                            SUP-LOT-003
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">PAL-006</Box>
+                          <Box as="span" color="black">
+                            SUP-LOT-003B
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Note modified</Box>
-                        <Box as="span" fontSize="small" color="black">{" "}– Batch #03</Box>
+                        <Box as="span" color="black">
+                          Expiry date modified
+                        </Box>
+                        <Box as="span" fontSize="small" color="black">
+                          {" "}
+                          – Batch #03
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">Enhanced quality control procedures applied</Box>
+                          <Box as="span" color="midGrey">
+                            March 22, 2026
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">Final quality approval and packaging instructions updated</Box>
+                          <Box as="span" color="black">
+                            March 25, 2026
+                          </Box>
+                        </Flex>
+                      </DescriptionDetails>
+                    </DescriptionGroup>
+                    <DescriptionGroup>
+                      <DescriptionTerm>
+                        <Box as="span" color="black">
+                          Pallet number modified
+                        </Box>
+                        <Box as="span" fontSize="small" color="black">
+                          {" "}
+                          – Batch #03
+                        </Box>
+                      </DescriptionTerm>
+                      <DescriptionDetails>
+                        <Flex as="span" alignItems="center" gap="half">
+                          <Box as="span" color="midGrey">
+                            PAL-005
+                          </Box>
+                          <Icon icon="arrowForward" color="grey" size="x2_5" />
+                          <Box as="span" color="black">
+                            PAL-006
+                          </Box>
+                        </Flex>
+                      </DescriptionDetails>
+                    </DescriptionGroup>
+                    <DescriptionGroup>
+                      <DescriptionTerm>
+                        <Box as="span" color="black">
+                          Note modified
+                        </Box>
+                        <Box as="span" fontSize="small" color="black">
+                          {" "}
+                          – Batch #03
+                        </Box>
+                      </DescriptionTerm>
+                      <DescriptionDetails>
+                        <Flex as="span" alignItems="center" gap="half">
+                          <Box as="span" color="midGrey">
+                            Enhanced quality control procedures applied
+                          </Box>
+                          <Icon icon="arrowForward" color="grey" size="x2_5" />
+                          <Box as="span" color="black">
+                            Final quality approval and packaging instructions updated
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                   </DescriptionList>
-                  
+
                   <Box mt="half">
                     <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
                       by
-                      <Box as="span" color="black" fontWeight="normal" mx="half">mike.rodriguez@supplier.com</Box>
+                      <Box as="span" color="black" fontWeight="normal" mx="half">
+                        mike.rodriguez@supplier.com
+                      </Box>
                       on
-                      <Box as="span" color="black" fontWeight="normal" mx="half">January 31st, 2025</Box>
+                      <Box as="span" color="black" fontWeight="normal" mx="half">
+                        January 31st, 2025
+                      </Box>
                       at
-                      <Box as="span" color="black" fontWeight="normal" mx="half">03:15:45PM</Box>
+                      <Box as="span" color="black" fontWeight="normal" mx="half">
+                        03:15:45PM
+                      </Box>
                     </Text>
                   </Box>
                 </Flex>
               )}
-              
+
               {/* Divider between Group 7 and Group 8 */}
-              {(historyLogFilter === "All" || historyLogFilter === "Production record") && (
-                <Divider m="0" />
-              )}
-              
+              {(historyLogFilter === "All" || historyLogFilter === "Production record") && <Divider m="0" />}
+
               {/* Group 8: No header group */}
               {(historyLogFilter === "All" || historyLogFilter === "Production record") && (
                 <Flex flexDirection="column" gap="x1" maxWidth="1280px" mx="x1" pt="x2_5" pb="x2_5">
@@ -5581,48 +5902,64 @@ export const Details8 = () => {
                   <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Batch status modified</Box>
+                        <Box as="span" color="black">
+                          Batch status modified
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">In Progress</Box>
+                          <Box as="span" color="midGrey">
+                            In Progress
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">Completed</Box>
+                          <Box as="span" color="black">
+                            Completed
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">Quality check modified</Box>
+                        <Box as="span" color="black">
+                          Quality check modified
+                        </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">Pending</Box>
+                          <Box as="span" color="midGrey">
+                            Pending
+                          </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">Passed</Box>
+                          <Box as="span" color="black">
+                            Passed
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                   </DescriptionList>
-                  
+
                   {/* Footer */}
                   <Box mt="half">
                     <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
                       by
-                      <Box as="span" color="black" fontWeight="normal" mx="half">quality.assurance@supplier.com</Box>
+                      <Box as="span" color="black" fontWeight="normal" mx="half">
+                        quality.assurance@supplier.com
+                      </Box>
                       on
-                      <Box as="span" color="black" fontWeight="normal" mx="half">February 1st, 2025</Box>
+                      <Box as="span" color="black" fontWeight="normal" mx="half">
+                        February 1st, 2025
+                      </Box>
                       at
-                      <Box as="span" color="black" fontWeight="normal" mx="half">08:30:15AM</Box>
+                      <Box as="span" color="black" fontWeight="normal" mx="half">
+                        08:30:15AM
+                      </Box>
                     </Text>
                   </Box>
                 </Flex>
               )}
-              
+
               {/* Divider after the last group */}
-              {(historyLogFilter === "All" || historyLogFilter === "Production record") && (
-                <Divider m="0" />
-              )}
+              {(historyLogFilter === "All" || historyLogFilter === "Production record") && <Divider m="0" />}
             </Flex>
             <Pagination currentPage={1} totalPages={5} justifyContent="flex-end" pt="x1" />
           </Tab>

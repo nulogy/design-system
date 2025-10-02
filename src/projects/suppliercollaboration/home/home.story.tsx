@@ -65,43 +65,60 @@ export const Home = () => {
             </Heading4>
             <Flex gap="x4">
               <Box flex="1">
-                <Card p="x2" boxShadow="none" style={{ cursor: 'pointer' }}>
+                <Card p="x2" boxShadow="none" style={{ cursor: "pointer" }}>
                   <Flex alignItems="center" gap="x3">
                     <Icon icon="check" size="x4" color="darkBlue" />
-                    <Text fontSize="medium" fontWeight="medium">Purchase orders</Text>
+                    <Text fontSize="medium" fontWeight="medium">
+                      Purchase orders
+                    </Text>
                   </Flex>
                 </Card>
               </Box>
               <Box flex="1">
-                <Card p="x2" boxShadow="none" style={{ cursor: 'pointer' }}>
+                <Card p="x2" boxShadow="none" style={{ cursor: "pointer" }}>
                   <Flex alignItems="center" gap="x3">
                     <Icon icon="check" size="x4" color="darkBlue" />
-                    <Text fontSize="medium" fontWeight="medium">Forecast collaboration</Text>
+                    <Text fontSize="medium" fontWeight="medium">
+                      Forecast collaboration
+                    </Text>
                   </Flex>
                 </Card>
               </Box>
             </Flex>
             <Flex gap="x4" mt="x3">
               <Box flex="1">
-                <Card p="x2" boxShadow="none" style={{ cursor: 'pointer' }}>
+                <Card p="x2" boxShadow="none" style={{ cursor: "pointer" }}>
                   <Flex alignItems="center" gap="x3">
                     <Icon icon="check" size="x4" color="darkBlue" />
-                    <Text fontSize="medium" fontWeight="medium">PO line items</Text>
+                    <Text fontSize="medium" fontWeight="medium">
+                      PO line items
+                    </Text>
                   </Flex>
                 </Card>
               </Box>
               <Box flex="1">
-                <Card p="x2" boxShadow="none" backgroundColor="whiteGrey" style={{ cursor: 'pointer' }}>
+                <Card p="x2" boxShadow="none" backgroundColor="whiteGrey" style={{ cursor: "pointer" }}>
                   <Flex alignItems="center" gap="x3">
                     <Icon icon="check" size="x4" color="midGrey" />
                     <Flex alignItems="center" justifyContent="space-between" gap="x2" width="100%">
-                     
-                      <Text fontSize="medium" fontWeight="medium" color="midGrey">PO line items</Text>
-                
-                       
-                       <Tooltip tooltip="This feature will be deprecated on January 15, 2026. To ensure a smooth transition, please transition to New PO line items before this date.">
-                         <Flex gap="half"><Icon icon="warning" size="x2_5" color="midGrey" /><Text color="midGrey" fontSize="small" lineHeight="smallText" fontWeight="medium" alignItems="center">Deprication alert</Text></Flex>
-                       </Tooltip>
+                      <Text fontSize="medium" fontWeight="medium" color="midGrey">
+                        PO line items
+                      </Text>
+
+                      <Tooltip tooltip="This feature will be deprecated on January 15, 2026. To ensure a smooth transition, please transition to New PO line items before this date.">
+                        <Flex gap="half">
+                          <Icon icon="warning" size="x2_5" color="midGrey" />
+                          <Text
+                            color="midGrey"
+                            fontSize="small"
+                            lineHeight="smallText"
+                            fontWeight="medium"
+                            alignItems="center"
+                          >
+                            Deprication alert
+                          </Text>
+                        </Flex>
+                      </Tooltip>
                     </Flex>
                   </Flex>
                 </Card>
@@ -116,18 +133,22 @@ export const Home = () => {
             </Heading4>
             <Flex gap="x4">
               <Box flex="1">
-                <Card p="x2" boxShadow="none" style={{ cursor: 'pointer' }}>
+                <Card p="x2" boxShadow="none" style={{ cursor: "pointer" }}>
                   <Flex alignItems="center" gap="x3">
                     <Icon icon="check" size="x4" color="darkBlue" />
-                    <Text fontSize="medium" fontWeight="medium">Historical orders</Text>
+                    <Text fontSize="medium" fontWeight="medium">
+                      Historical orders
+                    </Text>
                   </Flex>
                 </Card>
               </Box>
               <Box flex="1">
-                <Card p="x2" boxShadow="none" style={{ cursor: 'pointer' }}>
+                <Card p="x2" boxShadow="none" style={{ cursor: "pointer" }}>
                   <Flex alignItems="center" gap="x3">
-                              <Icon icon="check" size="x4" color="darkBlue" />
-                    <Text fontSize="medium" fontWeight="medium">Scorecards</Text>
+                    <Icon icon="check" size="x4" color="darkBlue" />
+                    <Text fontSize="medium" fontWeight="medium">
+                      Scorecards
+                    </Text>
                   </Flex>
                 </Card>
               </Box>
@@ -140,10 +161,12 @@ export const Home = () => {
               INVENTORY MANAGEMENT
             </Heading4>
             <Box maxWidth="400px">
-              <Card p="x2" boxShadow="none" style={{ cursor: 'pointer' }}>
+              <Card p="x2" boxShadow="none" style={{ cursor: "pointer" }}>
                 <Flex alignItems="center" gap="x3">
-                    <Icon icon="check" size="x4" color="darkBlue" />
-                  <Text fontSize="medium" fontWeight="medium">Materials overview</Text>
+                  <Icon icon="check" size="x4" color="darkBlue" />
+                  <Text fontSize="medium" fontWeight="medium">
+                    Materials overview
+                  </Text>
                 </Flex>
               </Card>
             </Box>
@@ -155,10 +178,12 @@ export const Home = () => {
               MASTER DATA
             </Heading4>
             <Box maxWidth="400px">
-              <Card p="x2" boxShadow="none" style={{ cursor: 'pointer' }}>
+              <Card p="x2" boxShadow="none" style={{ cursor: "pointer" }}>
                 <Flex alignItems="center" gap="x3">
-                    <Icon icon="check" size="x4" color="darkBlue" />
-                  <Text fontSize="medium" fontWeight="medium">Items</Text>
+                  <Icon icon="check" size="x4" color="darkBlue" />
+                  <Text fontSize="medium" fontWeight="medium">
+                    Items
+                  </Text>
                 </Flex>
               </Card>
             </Box>

@@ -33,7 +33,7 @@ export const OrgSettings = () => {
   const [organizationCode, setOrganizationCode] = useState("7050017");
   const [timeZone, setTimeZone] = useState("(GMT-05:00) Eastern Time (US & Canada)");
   const [logoFile, setLogoFile] = useState(null);
-  
+
   // Module access states
   const [enableInvoices, setEnableInvoices] = useState(true);
   const [enableOrderManagement, setEnableOrderManagement] = useState(true);
@@ -45,24 +45,24 @@ export const OrgSettings = () => {
   const [enableHistoricalOrders, setEnableHistoricalOrders] = useState(true);
   const [enableInventoryReconciliation, setEnableInventoryReconciliation] = useState(false);
   const [enableNotificationsForNewUsers, setEnableNotificationsForNewUsers] = useState(false);
-  
+
   // In-transit configuration
   const [inTransitShipmentCSV, setInTransitShipmentCSV] = useState("No Validation");
-  
+
   // Items configuration
   const [enableItemSpec, setEnableItemSpec] = useState(false);
-  
+
   // BOM explosion configuration
   const [bomExplosionMethod, setBomExplosionMethod] = useState("full-tree");
   const [enableItemLevelOverrides, setEnableItemLevelOverrides] = useState(false);
-  
+
   // Shop Floor integration
   const [enableShopFloorDataModelAlignment, setEnableShopFloorDataModelAlignment] = useState(false);
-  
+
   // Pallet tracking configuration
   const [enforcePalletTracking, setEnforcePalletTracking] = useState(false);
   const [enablePalletItemLevelOverrides, setEnablePalletItemLevelOverrides] = useState(false);
-  
+
   // Item traceability configuration
   const [enforceLotTracking, setEnforceLotTracking] = useState(false);
   const [enableLotItemLevelOverrides, setEnableLotItemLevelOverrides] = useState(false);
@@ -70,7 +70,7 @@ export const OrgSettings = () => {
   const [enableExpiryDateItemLevelOverrides, setEnableExpiryDateItemLevelOverrides] = useState(false);
   const [enforcePalletTrackingNew, setEnforcePalletTrackingNew] = useState(false);
   const [enablePalletItemLevelOverridesNew, setEnablePalletItemLevelOverridesNew] = useState(false);
-  
+
   // Nulogy configuration
   const [createIntegrationEvents, setCreateIntegrationEvents] = useState(true);
   const [quickSightDashboardId, setQuickSightDashboardId] = useState("");
@@ -89,52 +89,56 @@ export const OrgSettings = () => {
         <Box maxWidth="800px" mx="auto" p="x4">
           <Form>
             {/* Organization Details */}
-            <FormSection style={{ filter: 'blur(3px)', pointerEvents: 'none' }}>
+            <FormSection style={{ filter: "blur(3px)", pointerEvents: "none" }}>
               <Heading3 mb="x3">Organization Details</Heading3>
-              
+
               <Field mb="x3">
                 <FieldLabel labelText="Name" mb="x1" />
-                <Input
-                  value={organizationName}
-                  onChange={(e) => setOrganizationName(e.target.value)}
-                />
-              </Field> 
-              
+                <Input value={organizationName} onChange={(e) => setOrganizationName(e.target.value)} />
+              </Field>
+
               <Field mb="x3">
                 <FieldLabel labelText="Code" mb="x1" />
-                <Input
-                  value={organizationCode}
-                  onChange={(e) => setOrganizationCode(e.target.value)}
-                />
+                <Input value={organizationCode} onChange={(e) => setOrganizationCode(e.target.value)} />
               </Field>
-              
+
               <Field mb="x3">
                 <FieldLabel labelText="Time Zone" mb="x1" />
                 <Select
                   value={timeZone}
                   onChange={(value) => setTimeZone(String(value))}
                   options={[
-                    { value: "(GMT-05:00) Eastern Time (US & Canada)", label: "(GMT-05:00) Eastern Time (US & Canada)" },
-                    { value: "(GMT-06:00) Central Time (US & Canada)", label: "(GMT-06:00) Central Time (US & Canada)" },
-                    { value: "(GMT-07:00) Mountain Time (US & Canada)", label: "(GMT-07:00) Mountain Time (US & Canada)" },
-                    { value: "(GMT-08:00) Pacific Time (US & Canada)", label: "(GMT-08:00) Pacific Time (US & Canada)" },
+                    {
+                      value: "(GMT-05:00) Eastern Time (US & Canada)",
+                      label: "(GMT-05:00) Eastern Time (US & Canada)",
+                    },
+                    {
+                      value: "(GMT-06:00) Central Time (US & Canada)",
+                      label: "(GMT-06:00) Central Time (US & Canada)",
+                    },
+                    {
+                      value: "(GMT-07:00) Mountain Time (US & Canada)",
+                      label: "(GMT-07:00) Mountain Time (US & Canada)",
+                    },
+                    {
+                      value: "(GMT-08:00) Pacific Time (US & Canada)",
+                      label: "(GMT-08:00) Pacific Time (US & Canada)",
+                    },
                   ]}
                 />
               </Field>
-              
+
               <Field mb="x3">
                 <FieldLabel labelText="Logo" mb="x1" />
                 <Box>
                   <input
                     type="file"
                     onChange={(e) => setLogoFile(e.target.files?.[0] || null)}
-                    style={{ display: 'none' }}
+                    style={{ display: "none" }}
                     id="logo-upload"
                   />
-                  <label htmlFor="logo-upload" style={{ cursor: 'pointer' }}>
-                    <Button size="small">
-                      Choose File
-                    </Button>
+                  <label htmlFor="logo-upload" style={{ cursor: "pointer" }}>
+                    <Button size="small">Choose File</Button>
                   </label>
                   <Text ml="x2" color="midGrey" fontSize="small">
                     {logoFile ? logoFile.name : "No file chosen"}
@@ -146,16 +150,16 @@ export const OrgSettings = () => {
             <Divider my="x4" />
 
             {/* Module access */}
-            <FormSection style={{ filter: 'blur(3px)', pointerEvents: 'none' }}>
+            <FormSection style={{ filter: "blur(3px)", pointerEvents: "none" }}>
               <Heading3 mb="x3">Module access</Heading3>
               <Box mb="x2">
                 <Checkbox
                   checked={enableInvoices}
                   onChange={(e) => setEnableInvoices(e.target.checked)}
-                  labelText="Enable Invoices"   
+                  labelText="Enable Invoices"
                 />
               </Box>
-              
+
               <Box mb="x2">
                 <Checkbox
                   checked={enableOrderManagement}
@@ -163,7 +167,7 @@ export const OrgSettings = () => {
                   labelText="Enable Order Management"
                 />
               </Box>
-              
+
               <Box mb="x2">
                 <Checkbox
                   checked={enableOrderCollaboration}
@@ -181,7 +185,7 @@ export const OrgSettings = () => {
                     </Box>
                     <Box mb="x1">
                       <Checkbox
-                            checked={enableCapacityManagement}
+                        checked={enableCapacityManagement}
                         onChange={(e) => setEnableCapacityManagement(e.target.checked)}
                         labelText="Enable Capacity Management"
                       />
@@ -196,7 +200,7 @@ export const OrgSettings = () => {
                   </Box>
                 )}
               </Box>
-              
+
               <Box mb="x2">
                 <Checkbox
                   checked={enableScorecards}
@@ -204,7 +208,7 @@ export const OrgSettings = () => {
                   labelText="Enable Scorecards"
                 />
               </Box>
-              
+
               <Box mb="x2">
                 <Checkbox
                   checked={enableMaterialsOverview}
@@ -212,7 +216,7 @@ export const OrgSettings = () => {
                   labelText="Enable Materials Overview"
                 />
               </Box>
-              
+
               <Box mb="x2">
                 <Checkbox
                   checked={enableHistoricalOrders}
@@ -220,7 +224,7 @@ export const OrgSettings = () => {
                   labelText="Enable Historical Orders"
                 />
               </Box>
-              
+
               <Box mb="x2">
                 <Checkbox
                   checked={enableInventoryReconciliation}
@@ -228,7 +232,7 @@ export const OrgSettings = () => {
                   labelText="Enable Inventory Reconciliation"
                 />
               </Box>
-              
+
               <Box mb="x2">
                 <Checkbox
                   checked={enableNotificationsForNewUsers}
@@ -241,9 +245,9 @@ export const OrgSettings = () => {
             <Divider my="x4" />
 
             {/* In-transit configuration */}
-            <FormSection style={{ filter: 'blur(3px)', pointerEvents: 'none' }}>
+            <FormSection style={{ filter: "blur(3px)", pointerEvents: "none" }}>
               <Heading3 mb="x3">In-transit configuration</Heading3>
-              
+
               <Field mb="x3">
                 <FieldLabel labelText="In Transit Shipment CSV import" mb="x1" />
                 <Select
@@ -263,7 +267,7 @@ export const OrgSettings = () => {
             {/* Items configuration */}
             <FormSection>
               <Heading3 mb="x3">Items configuration</Heading3>
-              
+
               <Box mb="x2">
                 <Checkbox
                   checked={enableItemSpec}
@@ -271,7 +275,7 @@ export const OrgSettings = () => {
                   labelText="Enable Item Spec"
                 />
               </Box>
-              
+
               <Box mb="x2">
                 <Checkbox
                   checked={enforcePalletTracking}
@@ -282,7 +286,7 @@ export const OrgSettings = () => {
                   Require pallet tracking for all ...
                 </Text>
               </Box>
-              
+
               {enforcePalletTracking && (
                 <Box mb="x2" ml="x3">
                   <Checkbox
@@ -302,11 +306,11 @@ export const OrgSettings = () => {
             {/* Items configuration - New */}
             <FormSection>
               <Heading3 mb="x3">Items configuration</Heading3>
-              
+
               {/* Item traceability subsection */}
               <Box mb="x2">
                 <Heading4 mb="x2">Item traceability</Heading4>
-                
+
                 <Box mb="x2">
                   <Checkbox
                     checked={enforceLotTracking}
@@ -329,7 +333,7 @@ export const OrgSettings = () => {
                     </Box>
                   )}
                 </Box>
-                
+
                 <Box mb="x2">
                   <Checkbox
                     checked={enforceExpiryDateTracking}
@@ -352,7 +356,7 @@ export const OrgSettings = () => {
                     </Box>
                   )}
                 </Box>
-                
+
                 <Box mb="x2">
                   <Checkbox
                     checked={enforcePalletTrackingNew}
@@ -381,47 +385,51 @@ export const OrgSettings = () => {
             <Divider my="x4" />
 
             {/* BOM explosion configuration */}
-            <FormSection style={{ filter: 'blur(3px)', pointerEvents: 'none' }}>
+            <FormSection style={{ filter: "blur(3px)", pointerEvents: "none" }}>
               <Heading4 mb="x3">BOM explosion configuration</Heading4>
-              
+
               <Text mb="x2" color="midGrey" fontSize="small">
                 Determines how the system calculates material requirements from the BOM.
               </Text>
-              
+
               <Box mb="x3" p="x2" backgroundColor="lightYellow" borderRadius="medium">
                 <Text fontSize="small" fontWeight="bold" color="warning">
-                  WARNING: Once item-level overrides are enabled, the selected BOM explosion method will only apply to newly created items. If item-level overrides remain disabled, the BOM explosion method applies to both existing and new items.
+                  WARNING: Once item-level overrides are enabled, the selected BOM explosion method will only apply to
+                  newly created items. If item-level overrides remain disabled, the BOM explosion method applies to both
+                  existing and new items.
                 </Text>
               </Box>
-              
+
               <Box>
                 <Box mb="x3">
-                  <Radio 
+                  <Radio
                     name="bomExplosionMethod"
-                    value="full-tree" 
+                    value="full-tree"
                     checked={bomExplosionMethod === "full-tree"}
                     onChange={(e) => setBomExplosionMethod(e.target.value)}
-                    labelText="Full-tree BOM explosion" 
+                    labelText="Full-tree BOM explosion"
                   />
                   <Text ml="x3" mt="quarter" color="midGrey" fontSize="small">
-                    Explodes the BOM through all levels. Ensures full material requirement coverage when PO line items are not issued for subassemblies.
+                    Explodes the BOM through all levels. Ensures full material requirement coverage when PO line items
+                    are not issued for subassemblies.
                   </Text>
                 </Box>
-                
+
                 <Box mb="x3">
-                  <Radio 
+                  <Radio
                     name="bomExplosionMethod"
-                    value="single-level" 
+                    value="single-level"
                     checked={bomExplosionMethod === "single-level"}
                     onChange={(e) => setBomExplosionMethod(e.target.value)}
-                    labelText="Single-level BOM explosion" 
+                    labelText="Single-level BOM explosion"
                   />
                   <Text ml="x3" mt="quarter" color="midGrey" fontSize="small">
-                    Explodes only the first level of the BOM specified on PO line item. Prevents double-counting when PO line items exist for both finished goods and their subassemblies.
+                    Explodes only the first level of the BOM specified on PO line item. Prevents double-counting when PO
+                    line items exist for both finished goods and their subassemblies.
                   </Text>
                 </Box>
               </Box>
-              
+
               <Box mb="x2">
                 <Checkbox
                   checked={enableItemLevelOverrides}
@@ -439,17 +447,16 @@ export const OrgSettings = () => {
               </Box>
             </FormSection>
 
-
             {/* Shop Floor integration configuration */}
-            <FormSection style={{ filter: 'blur(3px)', pointerEvents: 'none' }}>
+            <FormSection style={{ filter: "blur(3px)", pointerEvents: "none" }}>
               <Heading3 mb="x3">Shop Floor integration configuration</Heading3>
-              
+
               <Box mb="x3" p="x2" backgroundColor="lightYellow" borderRadius="medium">
                 <Text fontSize="small" color="midGrey">
                   Only enable if the supplier is already integrated with Shop Floor
                 </Text>
               </Box>
-              
+
               <Box mb="x2">
                 <Checkbox
                   checked={enableShopFloorDataModelAlignment}
@@ -462,9 +469,9 @@ export const OrgSettings = () => {
             <Divider my="x4" />
 
             {/* Nulogy configuration */}
-            <FormSection style={{ filter: 'blur(3px)', pointerEvents: 'none' }}>
+            <FormSection style={{ filter: "blur(3px)", pointerEvents: "none" }}>
               <Heading3 mb="x3">Nulogy configuration</Heading3>
-              
+
               <Box mb="x3">
                 <Checkbox
                   checked={createIntegrationEvents}
@@ -472,7 +479,7 @@ export const OrgSettings = () => {
                   labelText="Create integration events"
                 />
               </Box>
-              
+
               <Field mb="x3">
                 <FieldLabel labelText="QuickSight Dashboard ID" mb="x1" />
                 <Input
@@ -481,7 +488,7 @@ export const OrgSettings = () => {
                   placeholder="Enter QuickSight Dashboard ID"
                 />
               </Field>
-              
+
               <Box mt="x2" p="x2" backgroundColor="lightYellow" borderRadius="medium">
                 <Text fontSize="small" fontWeight="bold" color="warning">
                   Warning: changing this value will erase the user saved controls for the scorecards page.
@@ -490,7 +497,7 @@ export const OrgSettings = () => {
             </FormSection>
 
             {/* Action Buttons */}
-            <Flex justifyContent="flex-end" gap="x2" mt="x6" style={{ filter: 'blur(3px)', pointerEvents: 'none' }}>
+            <Flex justifyContent="flex-end" gap="x2" mt="x6" style={{ filter: "blur(3px)", pointerEvents: "none" }}>
               <Button>Cancel</Button>
               <Button>Create Organization</Button>
             </Flex>
