@@ -100,19 +100,19 @@ export const Home = () => {
                 <Card p="x2" boxShadow="none" backgroundColor="whiteGrey" style={{ cursor: "pointer" }}>
                   <Flex alignItems="center" gap="x3">
                     <Icon icon="check" size="x4" color="midGrey" />
-                    <Flex alignItems="center" justifyContent="space-between" gap="x2" width="100%">
+                    <Flex alignItems="center" justifyContent="space-between" gap="x2" width="100%" pr="x1">
                       <Text fontSize="medium" fontWeight="medium" color="midGrey">
-                        PO line items
+                        PO line items <StatusIndicator type="neutral">Legacy</StatusIndicator>
                       </Text>
 
-                      <Tooltip tooltip="This feature will be deprecated on January 15, 2026. To ensure a smooth transition, please transition to New PO line items before this date.">
+                      <Tooltip tooltip="This feature will be deprecated on January 15, 2026. To ensure a smooth transition, please transition to new PO line items before this date.">
                         <Flex gap="half">
-                          <Icon icon="warning" size="x2_5" color="midGrey" />
+                          <Icon icon="warning" size="x2" color="midGrey" />
                           <Text
                             color="midGrey"
-                            fontSize="small"
-                            lineHeight="smallText"
-                            fontWeight="medium"
+                            fontSize="smaller"
+                            lineHeight="smallerText"
+                            fontWeight="bold"
                             alignItems="center"
                           >
                             Deprication alert
