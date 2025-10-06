@@ -25,55 +25,55 @@ export default {
 export const Home = () => {
   // Reusable hover functions
   const handleCardHover = (e: React.MouseEvent<HTMLDivElement>) => {
-    e.currentTarget.style.backgroundColor = '#1a365d';
-    e.currentTarget.style.borderColor = '#1a365d';
-    const icons = e.currentTarget.querySelectorAll('svg');
-    const texts = e.currentTarget.querySelectorAll('p, span');
-    icons.forEach(icon => {
-      (icon as any).style.color = 'white';
-      (icon as any).style.fill = 'white';
+    e.currentTarget.style.backgroundColor = "#1a365d";
+    e.currentTarget.style.borderColor = "#1a365d";
+    const icons = e.currentTarget.querySelectorAll("svg");
+    const texts = e.currentTarget.querySelectorAll("p, span");
+    icons.forEach((icon) => {
+      (icon as any).style.color = "white";
+      (icon as any).style.fill = "white";
     });
-    texts.forEach(text => (text as HTMLElement).style.color = 'white');
-    
+    texts.forEach((text) => ((text as HTMLElement).style.color = "white"));
+
     // Prevent link underline on hover
-    const link = e.currentTarget.closest('a');
+    const link = e.currentTarget.closest("a");
     if (link) {
-      link.style.textDecoration = 'none';
+      link.style.textDecoration = "none";
     }
   };
 
   const handleCardLeave = (e: React.MouseEvent<HTMLDivElement>) => {
-    e.currentTarget.style.backgroundColor = '';
-    e.currentTarget.style.borderColor = '';
-    const icons = e.currentTarget.querySelectorAll('svg');
-    const texts = e.currentTarget.querySelectorAll('p, span');
-    icons.forEach(icon => {
-      (icon as any).style.color = '#1a365d';
-      (icon as any).style.fill = '#1a365d';
+    e.currentTarget.style.backgroundColor = "";
+    e.currentTarget.style.borderColor = "";
+    const icons = e.currentTarget.querySelectorAll("svg");
+    const texts = e.currentTarget.querySelectorAll("p, span");
+    icons.forEach((icon) => {
+      (icon as any).style.color = "#1a365d";
+      (icon as any).style.fill = "#1a365d";
     });
-    texts.forEach(text => (text as HTMLElement).style.color = '');
-    
+    texts.forEach((text) => ((text as HTMLElement).style.color = ""));
+
     // Restore link underline behavior
-    const link = e.currentTarget.closest('a');
+    const link = e.currentTarget.closest("a");
     if (link) {
-      link.style.textDecoration = '';
+      link.style.textDecoration = "";
     }
   };
 
   // Special hover function for deprecated tile (no visual changes, just prevent underlines)
   const handleDeprecatedCardHover = (e: React.MouseEvent<HTMLDivElement>) => {
     // Prevent link underline on hover
-    const link = e.currentTarget.closest('a');
+    const link = e.currentTarget.closest("a");
     if (link) {
-      link.style.textDecoration = 'none';
+      link.style.textDecoration = "none";
     }
   };
 
   const handleDeprecatedCardLeave = (e: React.MouseEvent<HTMLDivElement>) => {
     // Restore link underline behavior
-    const link = e.currentTarget.closest('a');
+    const link = e.currentTarget.closest("a");
     if (link) {
-      link.style.textDecoration = '';
+      link.style.textDecoration = "";
     }
   };
 
@@ -84,14 +84,14 @@ export const Home = () => {
         { name: "Purchase orders", href: "/supplier-collaboration/purchase-orders" },
         { name: "Order collaboration", href: "/supplier-collaboration/order-collaboration" },
         { name: "PO line items", href: "/supplier-collaboration/po-line-items" },
-        { 
+        {
           name: (
             <Flex alignItems="center" gap="half">
               <Text>PO line items</Text>
               <StatusIndicator type="neutral">Legacy</StatusIndicator>
             </Flex>
-          ), 
-          href: "/supplier-collaboration/po-line-items-legacy" 
+          ),
+          href: "/supplier-collaboration/po-line-items-legacy",
         },
       ],
     },
@@ -104,15 +104,11 @@ export const Home = () => {
     },
     {
       name: "Inventory management",
-      items: [
-        { name: "Materials overview", href: "/supplier-collaboration/materials-overview" },
-      ],
+      items: [{ name: "Materials overview", href: "/supplier-collaboration/materials-overview" }],
     },
     {
       name: "Items",
-      items: [
-        { name: "Items", href: "/supplier-collaboration/items" },
-      ],
+      items: [{ name: "Items", href: "/supplier-collaboration/items" }],
     },
     {
       name: "Import and exports",
@@ -154,14 +150,14 @@ export const Home = () => {
             <Flex gap="x2">
               <Box flex="1">
                 <Link href="/supplier-collaboration/purchase-orders" underline={false} color="darkBlue">
-                  <Card 
+                  <Card
                     pl="x2"
-                    pr="x1_5" 
-                    py="x2" 
+                    pr="x1_5"
+                    py="x2"
                     boxShadow="none"
                     style={{
-                      transition: 'all 0.2s ease',
-                      cursor: 'pointer'
+                      transition: "all 0.2s ease",
+                      cursor: "pointer",
                     }}
                     onMouseEnter={handleCardHover}
                     onMouseLeave={handleCardLeave}
@@ -177,14 +173,14 @@ export const Home = () => {
               </Box>
               <Box flex="1">
                 <Link href="/supplier-collaboration/forecast-collaboration" underline={false} color="darkBlue">
-                  <Card 
+                  <Card
                     pl="x2"
-                    pr="x1_5" 
-                    py="x2" 
+                    pr="x1_5"
+                    py="x2"
                     boxShadow="none"
                     style={{
-                      transition: 'all 0.2s ease',
-                      cursor: 'pointer'
+                      transition: "all 0.2s ease",
+                      cursor: "pointer",
                     }}
                     onMouseEnter={handleCardHover}
                     onMouseLeave={handleCardLeave}
@@ -202,14 +198,14 @@ export const Home = () => {
             <Flex gap="x2" mt="x2">
               <Box flex="1">
                 <Link href="/supplier-collaboration/po-line-items" underline={false} color="darkBlue">
-                  <Card 
+                  <Card
                     pl="x2"
-                    pr="x1_5" 
-                    py="x2" 
+                    pr="x1_5"
+                    py="x2"
                     boxShadow="none"
                     style={{
-                      transition: 'all 0.2s ease',
-                      cursor: 'pointer'
+                      transition: "all 0.2s ease",
+                      cursor: "pointer",
                     }}
                     onMouseEnter={handleCardHover}
                     onMouseLeave={handleCardLeave}
@@ -225,16 +221,16 @@ export const Home = () => {
               </Box>
               <Box flex="1">
                 <Link href="/supplier-collaboration/po-line-items-legacy" underline={false} color="darkBlue">
-                  <Card 
+                  <Card
                     pl="x2"
-                    pr="x1_5" 
-                    py="x1_5" 
-                    boxShadow="none" 
+                    pr="x1_5"
+                    py="x1_5"
+                    boxShadow="none"
                     backgroundColor="white"
                     borderColor="whiteGrey"
                     style={{
-                      cursor: 'pointer',
-                      textDecoration: 'none'
+                      cursor: "pointer",
+                      textDecoration: "none",
                     }}
                     onMouseEnter={handleDeprecatedCardHover}
                     onMouseLeave={handleDeprecatedCardLeave}
@@ -246,12 +242,7 @@ export const Home = () => {
                           PO line items <StatusIndicator type="neutral">Legacy</StatusIndicator>
                         </Text>
 
-                        <Box 
-                          backgroundColor="whiteGrey" 
-                          px="x2" 
-                          py="x1" 
-                          borderRadius="medium"
-                        >
+                        <Box backgroundColor="whiteGrey" px="x2" py="x1" borderRadius="medium">
                           <Tooltip tooltip="This feature will be deprecated on January 19, 2026. To ensure a smooth transition, please transition to new PO line items before this date.">
                             <Flex gap="half">
                               <Icon icon="warning" size="x2" color="midGrey" />
@@ -283,14 +274,14 @@ export const Home = () => {
             <Flex gap="x2">
               <Box flex="1">
                 <Link href="/supplier-collaboration/historical-orders" underline={false} color="darkBlue">
-                  <Card 
+                  <Card
                     pl="x2"
-                    pr="x1_5" 
-                    py="x2" 
+                    pr="x1_5"
+                    py="x2"
                     boxShadow="none"
                     style={{
-                      transition: 'all 0.125s ease',
-                      cursor: 'pointer'
+                      transition: "all 0.125s ease",
+                      cursor: "pointer",
                     }}
                     onMouseEnter={handleCardHover}
                     onMouseLeave={handleCardLeave}
@@ -306,14 +297,14 @@ export const Home = () => {
               </Box>
               <Box flex="1">
                 <Link href="/supplier-collaboration/scorecards" underline={false} color="darkBlue">
-                  <Card 
+                  <Card
                     pl="x2"
-                    pr="x1_5" 
-                    py="x2" 
+                    pr="x1_5"
+                    py="x2"
                     boxShadow="none"
                     style={{
-                      transition: 'all 0.2s ease',
-                      cursor: 'pointer'
+                      transition: "all 0.2s ease",
+                      cursor: "pointer",
                     }}
                     onMouseEnter={handleCardHover}
                     onMouseLeave={handleCardLeave}
@@ -337,14 +328,14 @@ export const Home = () => {
             </Heading4>
             <Box maxWidth="50%">
               <Link href="/supplier-collaboration/materials-overview" underline={false} color="darkBlue">
-                <Card 
+                <Card
                   pl="x2"
-                  pr="x1_5" 
-                  py="x2" 
+                  pr="x1_5"
+                  py="x2"
                   boxShadow="none"
                   style={{
-                    transition: 'all 0.2s ease',
-                    cursor: 'pointer'
+                    transition: "all 0.2s ease",
+                    cursor: "pointer",
                   }}
                   onMouseEnter={handleCardHover}
                   onMouseLeave={handleCardLeave}
@@ -367,14 +358,14 @@ export const Home = () => {
             </Heading4>
             <Box maxWidth="50%">
               <Link href="/supplier-collaboration/items" underline={false} color="darkBlue">
-                <Card 
+                <Card
                   pl="x2"
-                  pr="x1_5" 
-                  py="x2" 
+                  pr="x1_5"
+                  py="x2"
                   boxShadow="none"
                   style={{
-                    transition: 'all 0.2s ease',
-                    cursor: 'pointer'
+                    transition: "all 0.2s ease",
+                    cursor: "pointer",
                   }}
                   onMouseEnter={handleCardHover}
                   onMouseLeave={handleCardLeave}
@@ -391,11 +382,19 @@ export const Home = () => {
           </Box>
 
           {/* Warning Message */}
-          <Box mt="x6" p="x3" backgroundColor="lightYellow" borderRadius="medium" border="1px solid" borderColor="warning">
+          <Box
+            mt="x6"
+            p="x3"
+            backgroundColor="lightYellow"
+            borderRadius="medium"
+            border="1px solid"
+            borderColor="warning"
+          >
             <Flex alignItems="center" gap="x2">
               <Icon icon="warning" size="x2" color="warning" />
               <Text fontSize="small" color="warning" fontWeight="medium">
-                <strong>Dev warning:</strong> Do not change the original icons on this page. The current randomized icons are for demonstration purposes only.
+                <strong>Dev warning:</strong> Do not change the original icons on this page. The current randomized
+                icons are for demonstration purposes only.
               </Text>
             </Flex>
           </Box>
