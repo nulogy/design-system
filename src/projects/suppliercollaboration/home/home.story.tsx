@@ -243,15 +243,18 @@ export const Home = () => {
                         </Text>
 
                         <Box backgroundColor="whiteGrey" px="x2" py="x1" borderRadius="medium">
-                          <Tooltip 
+                          <Tooltip
                             tooltip={
                               <Box>
-
                                 <Text fontSize="small" lineHeight="smallerText" mb="x1">
-                                  The PO line items (legacy) page will be retired on <Text as="span" fontSize="small" lineHeight="smallerText" fontWeight="bold">January 19, 2026.</Text>
+                                  The PO line items (legacy) page will be retired on{" "}
+                                  <Text as="span" fontSize="small" lineHeight="smallerText" fontWeight="bold">
+                                    January 19, 2026.
+                                  </Text>
                                 </Text>
                                 <Text fontSize="small" lineHeight="smallerText">
-                                  To ensure a seamless transition, please begin using the new and improved PO line items page before that date.
+                                  To ensure a seamless transition, please begin using the new and improved PO line items
+                                  page before that date.
                                 </Text>
                               </Box>
                             }
