@@ -60,7 +60,7 @@ import {
   materialsData7A,
   materialsData7B,
 } from "./details11/materialsData";
-import { uomOptions, unitOptions, detailsData, userState, collaborationState, acceptedItems, poStatus, editFormData } from "./details11/optionsData";
+import { uomOptions, unitOptions, detailsData, userState, collaborationState, acceptedItems, poStatus, editFormData, productionRecord } from "./details11/optionsData";
 
 export default {
   title: "Projects/Supplier Collaboration/POLI lot/Details11",
@@ -210,18 +210,8 @@ export const Details11 = () => {
   ]);
   const [expandedRows, setExpandedRows] = useState<string[]>([]);
   const [nestedExpandedRows, setNestedExpandedRows] = useState<string[]>([]);
-  const [productionRecord, setProductionRecord] = useState({
-    date: "",
-    uom: "",
-    expectedQuantity: "",
-    actualQuantity: "",
-    lotCode: "",
-    supplierLotCode: "",
-    expiryDate: "",
-    palletNumber: "",
-    producedQuantity: "",
-    note: "",
-  });
+  // productionRecord now imported from optionsData.tsx
+  const [productionRecordState, setProductionRecordState] = useState(productionRecord);
   const [productionBatches, setProductionBatches] = useState([]);
   const [consumptionMaterials, setConsumptionMaterials] = useState([]);
   const [role, setRole] = useState("customer");
@@ -6060,7 +6050,7 @@ export const Details11 = () => {
                   onChange={(date) =>
                     setProductionRecord((prev) => ({ ...prev, date: date ? date.toISOString().split("T")[0] : "" }))
                   }
-                  selected={productionRecord.date ? new Date(productionRecord.date) : null}
+                  selected={productionRecordState.date ? new Date(productionRecordState.date) : null}
                   inputProps={{ disabled: role === "customer" && isEditingProduction }}
                 />
               </Field>
@@ -6070,7 +6060,7 @@ export const Details11 = () => {
                   <Field>
                     <FieldLabel labelText="Expected quantity" pb="x1" />
                     <Input
-                      value={productionRecord.expectedQuantity}
+                      value={productionRecordState.expectedQuantity}
                       onChange={(e) => setProductionRecord((prev) => ({ ...prev, expectedQuantity: e.target.value }))}
                       disabled={role === "customer" && isEditingProduction}
                     />
@@ -6080,7 +6070,7 @@ export const Details11 = () => {
                   <Field>
                     <FieldLabel labelText="UOM" pb="x1" />
                     <Select
-                      value={productionRecord.uom}
+                      value={productionRecordState.uom}
                       onChange={(value) => setProductionRecord((prev) => ({ ...prev, uom: String(value) }))}
                       disabled={role === "customer" && isEditingProduction}
                       options={[
