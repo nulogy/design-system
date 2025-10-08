@@ -514,6 +514,30 @@ export const Details11 = () => {
       dataKey: "palletNumber",
       width: "180px",
       cellRenderer: ({ row }: { row: any }) => {
+        // If pallet number is not required in config, show "-"
+        if (!fieldConfig.palletNumberRequired) {
+          return (
+            <Flex py="x0_75">
+              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                -
+              </Text>
+            </Flex>
+          );
+        }
+
+        // If pallet number is empty, don't render anything
+        if (!row.palletNumber) {
+          return null;
+        }
+
+        return row.palletNumber;
+      },
+    },
+    {
+      label: "Lot code",
+      dataKey: "lotCode",
+      width: "180px",
+      cellRenderer: ({ row }: { row: any }) => {
         // If lot code is not required in config, show "-"
         if (!fieldConfig.lotCodeRequired) {
           return (
