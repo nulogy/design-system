@@ -489,8 +489,8 @@ export const Details11 = () => {
     },
   ];
 
-  // Nested table columns configuration
-  const nestedTableColumns = [
+  // Actual production report columns configuration
+  const actualProductionReportColumns = [
     {
       label: "Number",
       dataKey: "actualProductionRecordNumber",
@@ -596,30 +596,6 @@ export const Details11 = () => {
 
         const formattedDate = formatDateToYYYYMonDD(row.expiryDate);
         return <Text>{formattedDate}</Text>;
-      },
-    },
-    {
-      label: "Pallet number",
-      dataKey: "palletNumber",
-      width: "180px",
-      cellRenderer: ({ row }: { row: any }) => {
-        // If pallet number is not required in config, show "-"
-        if (!fieldConfig.palletNumberRequired) {
-          return (
-            <Flex py="x0_75">
-              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
-                -
-              </Text>
-            </Flex>
-          );
-        }
-
-        // If pallet number is empty, don't render anything
-        if (!row.palletNumber) {
-          return null;
-        }
-
-        return row.palletNumber;
       },
     },
     {
@@ -1106,7 +1082,7 @@ export const Details11 = () => {
         <Box style={{ paddingLeft: "-56px" }}>
           <Box style={{ paddingLeft: "298px" }}>
             <Table
-              columns={nestedTableColumns}
+              columns={actualProductionReportColumns}
               rows={nestedTableData1}
               keyField="id"
               rowBorder={true}
@@ -1135,7 +1111,7 @@ export const Details11 = () => {
         <Box style={{ paddingLeft: "-56px" }}>
           <Box style={{ paddingLeft: "298px" }}>
             <Table
-              columns={nestedTableColumns}
+              columns={actualProductionReportColumns}
               rows={nestedTableData2}
               keyField="id"
               rowBorder={true}
@@ -1164,7 +1140,7 @@ export const Details11 = () => {
         <Box style={{ paddingLeft: "-56px" }}>
           <Box style={{ paddingLeft: "298px" }}>
             <Table
-              columns={nestedTableColumns}
+              columns={actualProductionReportColumns}
               rows={nestedTableData3}
               keyField="id"
               rowBorder={true}
@@ -1770,73 +1746,7 @@ export const Details11 = () => {
 
   // materialsData6B now imported from materialsData.tsx
 
-  const materialsData7A = [
-    {
-      subcomponentConsumptionRecordItem: "001",
-      item: "Pending - Acetaminophen 500mg",
-      lotCode: "TBD",
-      expiryDate: "TBD",
-      palletNumber: "TBD",
-      quantity: "TBD",
-      uom: "TBD",
-    },
-    {
-      item: "Pending - Microcrystalline cellulose",
-      lotCode: "TBD",
-      expiryDate: "TBD",
-      palletNumber: "TBD",
-      quantity: "TBD",
-      uom: "TBD",
-    },
-    {
-      item: "Pending - Croscarmellose sodium",
-      lotCode: "TBD",
-      expiryDate: "TBD",
-      palletNumber: "TBD",
-      quantity: "TBD",
-      uom: "TBD",
-    },
-    {
-      item: "Pending - Magnesium stearate",
-      lotCode: "TBD",
-      expiryDate: "TBD",
-      palletNumber: "TBD",
-      quantity: "TBD",
-      uom: "TBD",
-    },
-    {
-      item: "Pending - Hydroxypropyl methylcellulose",
-      lotCode: "TBD",
-      expiryDate: "TBD",
-      palletNumber: "TBD",
-      quantity: "TBD",
-      uom: "TBD",
-    },
-    {
-      item: "Pending - Talc powder",
-      lotCode: "TBD",
-      expiryDate: "TBD",
-      palletNumber: "TBD",
-      quantity: "TBD",
-      uom: "TBD",
-    },
-    {
-      item: "Pending - FD&C Blue #2",
-      lotCode: "TBD",
-      expiryDate: "TBD",
-      palletNumber: "TBD",
-      quantity: "TBD",
-      uom: "TBD",
-    },
-    {
-      item: "Pending - Sodium benzoate",
-      lotCode: "TBD",
-      expiryDate: "TBD",
-      palletNumber: "TBD",
-      quantity: "TBD",
-      uom: "TBD",
-    },
-  ];
+  // materialsData7A now imported from materialsData.tsx
 
   const materialsData7B = [
     // Base materials (8 items)
