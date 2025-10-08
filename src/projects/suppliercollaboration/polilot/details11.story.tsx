@@ -1768,75 +1768,7 @@ export const Details11 = () => {
 
   // materialsData6A now imported from materialsData.tsx
 
-  const materialsData6B = [
-    {
-      subcomponentConsumptionRecordItem: "001",
-      item: "Acetaminophen 500mg",
-      lotCode: "LOT-ACET-006B",
-      expiryDate: "2026-06-15",
-      palletNumber: "PAL-041",
-      quantity: "1.7",
-      uom: "kg",
-    },
-    {
-      subcomponentConsumptionRecordItem: "002",
-      item: "Microcrystalline cellulose",
-      lotCode: "LOT-MCC-006B",
-      expiryDate: "2026-07-20",
-      palletNumber: "PAL-042",
-      quantity: "0.8",
-      uom: "kg",
-    },
-    {
-      subcomponentConsumptionRecordItem: "003",
-      item: "Croscarmellose sodium",
-      lotCode: "LOT-CCS-006B",
-      expiryDate: "2026-08-25",
-      palletNumber: "PAL-043",
-      quantity: "0.2",
-      uom: "kg",
-    },
-    {
-      item: "Magnesium stearate",
-      lotCode: "LOT-MS-006B",
-      expiryDate: "2026-09-30",
-      palletNumber: "PAL-044",
-      quantity: "0.08",
-      uom: "kg",
-    },
-    {
-      item: "Hydroxypropyl methylcellulose",
-      lotCode: "LOT-HPMC-006B",
-      expiryDate: "2026-10-15",
-      palletNumber: "PAL-045",
-      quantity: "0.5",
-      uom: "kg",
-    },
-    {
-      item: "Talc powder",
-      lotCode: "LOT-TALC-006B",
-      expiryDate: "2026-11-20",
-      palletNumber: "PAL-046",
-      quantity: "0.3",
-      uom: "kg",
-    },
-    {
-      item: "FD&C Blue #2",
-      lotCode: "LOT-BLUE-006B",
-      expiryDate: "2026-12-25",
-      palletNumber: "PAL-047",
-      quantity: "0.015",
-      uom: "kg",
-    },
-    {
-      item: "Sodium benzoate",
-      lotCode: "LOT-SB-006B",
-      expiryDate: "2027-01-30",
-      palletNumber: "PAL-048",
-      quantity: "0.04",
-      uom: "kg",
-    },
-  ];
+  // materialsData6B now imported from materialsData.tsx
 
   const materialsData7A = [
     {
