@@ -48,3 +48,10 @@ export const collaborationState = {
 export const acceptedItems = { request: false, proposal: false };
 
 export const poStatus = "On time";
+
+export const editFormData = {
+  supplierPOLineItemNumber: "SPLI-001",
+  bomRevision: "Rev 1.2 – 2025-Jan-10",
+  needByDate: new Date("2025-02-15"),
+  carryOverSentTo: "",
+};
