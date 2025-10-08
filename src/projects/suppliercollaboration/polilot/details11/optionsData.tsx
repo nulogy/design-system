@@ -1,5 +1,16 @@
 // Simple options data for dropdowns and selects
 
+export const primaryMenu = [
+  { label: "Dashboard", href: "/dashboard" },
+  { label: "Orders", href: "/orders" },
+  { label: "Inventory", href: "/inventory" },
+];
+
+export const secondaryMenu = [
+  { label: "Settings", href: "/settings" },
+  { label: "Help", href: "/help" },
+];
+
 export const uomOptions = [
   { label: "Cases (cs)", value: "cs" },
   { label: "Pieces (pcs)", value: "pcs" },

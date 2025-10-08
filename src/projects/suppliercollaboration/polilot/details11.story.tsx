@@ -260,16 +260,7 @@ export const Details11 = () => {
     sanofiRequired: true,
   });
 
-  const primaryMenu = [
-    { label: "Dashboard", href: "/dashboard" },
-    { label: "Orders", href: "/orders" },
-    { label: "Inventory", href: "/inventory" },
-  ];
-
-  const secondaryMenu = [
-    { label: "Settings", href: "/settings" },
-    { label: "Help", href: "/help" },
-  ];
+  // primaryMenu and secondaryMenu now imported from optionsData.tsx
 
   // uomOptions and unitOptions now imported from optionsData.tsx
 
