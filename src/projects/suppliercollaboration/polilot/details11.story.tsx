@@ -59,6 +59,7 @@ import {
   materialsData6B,
   materialsData7A,
 } from "./details11/materialsData";
+import { createNestedTableData } from "./details11/nestedTableData";
 import { uomOptions, unitOptions, detailsData, userState, collaborationState, acceptedItems, poStatus, editFormData, productionRecord, fieldConfig } from "./details11/optionsData";
 
 export default {
@@ -223,205 +224,7 @@ export const Details11 = () => {
 
   // uomOptions and unitOptions now imported from optionsData.tsx
 
-  // Nested table data for each expandable row
-  const nestedTableData1 = [
-    {
-      id: "1-1",
-      actualQuantity: "0 cases",
-      actualProductionRecordNumber: "001",
-      lotCode: "LOT-2025-001",
-      supplierLotCode: "SUP-LOT-001",
-      expiryDate: "2026-Feb-12",
-      palletNumber: "PAL-001",
-      note: "Production details for this lot - additional information about the manufacturing process, quality checks, and any special handling requirements",
-      expandedContent: () => (
-        <ConsumptionReport materials={[]} parentData={{ date: "2025-Feb-12", actualQuantity: "0 cases" }} />
-      ),
-    },
-    {
-      id: "1-2",
-      actualQuantity: "5 cases",
-      actualProductionRecordNumber: "002",
-      lotCode: "LOT-2025-001A",
-      supplierLotCode: "SUP-LOT-001A",
-      expiryDate: "2026-Feb-12",
-      palletNumber: "PAL-001A",
-      note: "Additional batch from same production run",
-      expandedContent: () => (
-        <ConsumptionReport materials={materialsData2} parentData={{ date: "2025-Feb-12", actualQuantity: "5 cases" }} />
-      ),
-    },
-    {
-      id: "1-3",
-      actualQuantity: "3 cases",
-      actualProductionRecordNumber: "003",
-      lotCode: "LOT-2025-001B",
-      supplierLotCode: "SUP-LOT-001B",
-      expiryDate: "2026-Feb-12",
-      palletNumber: "PAL-001B",
-      note: "Final batch completion",
-      expandedContent: () => (
-        <ConsumptionReport materials={materialsData1} parentData={{ date: "2025-Feb-12", actualQuantity: "3 cases" }} />
-      ),
-    },
-  ];
-
-  const nestedTableData2 = [
-    {
-      id: "2-1",
-      actualQuantity: "12 cases",
-      actualProductionRecordNumber: "001",
-      lotCode: "LOT-2025-002",
-      supplierLotCode: "SUP-LOT-002",
-      expiryDate: "2026-03-15",
-      palletNumber: "PAL-002",
-      note: "Standard production run with normal quality metrics",
-      expandedContent: () => (
-        <ConsumptionReport
-          materials={materialsData1}
-          parentData={{ date: "2025-Mar-15", actualQuantity: "12 cases" }}
-        />
-      ),
-    },
-  ];
-
-  const nestedTableData3 = [
-    {
-      id: "3-1",
-      actualQuantity: "25 cases",
-      actualProductionRecordNumber: "001",
-      lotCode: "LOT-2025-003",
-      supplierLotCode: "SUP-LOT-003",
-      expiryDate: "2026-04-20",
-      palletNumber: "PAL-003",
-      note: "High volume production batch for major customer order",
-      expandedContent: () => (
-        <ConsumptionReport
-          materials={materialsData1}
-          parentData={{ date: "2025-Apr-20", actualQuantity: "25 cases" }}
-        />
-      ),
-    },
-  ];
-
-  const nestedTableData4 = [
-    {
-      id: "4-1",
-      actualQuantity: "0 cases",
-      actualProductionRecordNumber: "001",
-      lotCode: "LOT-2025-004",
-      supplierLotCode: "SUP-LOT-004",
-      expiryDate: "2026-08-08",
-      palletNumber: "PAL-004",
-      note: "Equipment maintenance scheduled, production line optimization in progress",
-      expandedContent: () => (
-        <ConsumptionReport materials={[]} parentData={{ date: "2025-Aug-08", actualQuantity: "0 cases" }} />
-      ),
-    },
-  ];
-
-  const nestedTableData5 = [
-    {
-      id: "5-1",
-      actualQuantity: "8 cases",
-      actualProductionRecordNumber: "Output #001",
-      lotCode: "LOT-2025-005A",
-      supplierLotCode: "SUP-LOT-005A",
-      expiryDate: "2026-03-15",
-      palletNumber: "PAL-005A",
-      note: "First batch from production run",
-      expandedContent: () => (
-        <ConsumptionReport
-          materials={materialsData5A}
-          parentData={{ date: "2025-May-15", actualQuantity: "8 cases" }}
-        />
-      ),
-    },
-    {
-      id: "5-2",
-      actualQuantity: "4 cases",
-      actualProductionRecordNumber: "Output #002",
-      lotCode: "LOT-2025-005B",
-      supplierLotCode: "SUP-LOT-005B",
-      expiryDate: "2026-03-15",
-      palletNumber: "PAL-005B",
-      note: "Second batch completion",
-      expandedContent: () => (
-        <ConsumptionReport
-          materials={materialsData5B}
-          parentData={{ date: "2025-May-15", actualQuantity: "4 cases" }}
-        />
-      ),
-    },
-  ];
-
-  const nestedTableData6 = [
-    {
-      id: "6-1",
-      actualQuantity: "15 cases",
-      actualProductionRecordNumber: "Actual production record #001",
-      lotCode: "LOT-2025-006A",
-      supplierLotCode: "SUP-LOT-006A",
-      expiryDate: "2026-04-22",
-      palletNumber: "PAL-006A",
-      note: "Quality approved batch",
-      expandedContent: () => (
-        <ConsumptionReport
-          materials={materialsData6A}
-          parentData={{ date: "2025-Apr-22", actualQuantity: "10 cases" }}
-        />
-      ),
-    },
-    {
-      id: "6-2",
-      actualQuantity: "8 cases",
-      actualProductionRecordNumber: "Actual production record #002",
-      lotCode: "LOT-2025-006B",
-      supplierLotCode: "SUP-LOT-006B",
-      expiryDate: "2026-04-22",
-      palletNumber: "PAL-006B",
-      note: "Partial batch with quality issues",
-      expandedContent: () => <ConsumptionReport materials={materialsData6B} />,
-    },
-  ];
-
-  const nestedTableData7 = [
-    {
-      id: "7-1",
-      actualQuantity: "0 cases",
-      actualProductionRecordNumber: "001",
-      lotCode: "LOT-2025-007A",
-      supplierLotCode: "SUP-LOT-007A",
-      expiryDate: "2026-05-10",
-      palletNumber: "PAL-007A",
-      note: "Production on hold - awaiting materials",
-      expandedContent: () => <ConsumptionReport materials={materialsData7A} />,
-    },
-    {
-      id: "7-2",
-      actualQuantity: "0 cases",
-      actualProductionRecordNumber: "002",
-      lotCode: "LOT-2025-007B",
-      supplierLotCode: "SUP-LOT-007B",
-      expiryDate: "2026-05-10",
-      palletNumber: "PAL-007B",
-      note: "Delayed batch - material shortage",
-      expandedContent: () => <EmptyConsumptionReport />,
-    },
-  ];
-
-  const nestedTableData8 = [
-    {
-      id: "8-1",
-      actualQuantity: "15 cases",
-      lotCode: "LOT-2025-008",
-      supplierLotCode: "SUP-LOT-008",
-      expiryDate: "2026-06-05",
-      palletNumber: "PAL-008",
-      note: "Special order for premium customer, expedited processing",
-      expandedContent: () => <ConsumptionReport materials={materialsData1} />,
-    },
-  ];
+  // Nested table data now imported from nestedTableData.tsx
 
   // Actual production report columns configuration
   const actualProductionReportColumns = [
@@ -980,11 +783,11 @@ export const Details11 = () => {
             <TruncatedText
               pr="x2"
               py="x1"
-              fontSize="small"
-              lineHeight="smallTextCompressed"
+                fontSize="small"
+                lineHeight="smallTextCompressed"
               maxCharacters={98}
-            >
-              {row.note}
+              >
+                {row.note}
             </TruncatedText>
           </Box>
         );
@@ -1682,7 +1485,7 @@ export const Details11 = () => {
 
   // materialsData7A now imported from materialsData.tsx
 
-  // materialsData7B removed - it was unused dead code (2500+ lines)
+
 
   // Consumption table columns
   const consumptionTableColumns = [
@@ -1807,95 +1610,10 @@ export const Details11 = () => {
     },
   ];
 
-  // Reusable Consumption Report Component
-  const ConsumptionReport = ({
-    materials,
-    parentData,
-  }: {
-    materials: Array<{
-      item: string;
-      lotCode: string;
-      expiryDate: string;
-      palletNumber: string;
-      quantity: string;
-      uom: string;
-    }>;
-    parentData?: { date: string; actualQuantity: string };
-  }) => {
-    // Check if materials array is empty or all items have "TBD" quantities (indicating 0 production)
-    const isEmpty = materials.length === 0 || materials.every((material) => material.quantity === "TBD");
+  // Create nested table data with consumption table columns
+  const { nestedTableData1, nestedTableData2, nestedTableData3, nestedTableData4, nestedTableData5, nestedTableData6, nestedTableData7, nestedTableData8 } = createNestedTableData(consumptionTableColumns);
 
-    return (
-      <Box
-        mx="28px"
-        mb="x2"
-        border="1px solid"
-        borderColor="lightGrey"
-        borderTop="none"
-        borderTopLeftRadius="0"
-        borderTopRightRadius="0"
-        borderBottomLeftRadius="large"
-        borderBottomRightRadius="large"
-        p="half"
-      >
-        <Flex backgroundColor="whiteGrey" px="x2" py="x1" mb="x1" borderRadius="small">
-
-            <Text fontSize="small" fontWeight="bold" lineHeight="smallCompact">Subcomponent consumption <Text as="span" color="midGrey" mx="x1" >&bull;</Text> <Text  as="span" color="midGrey" fontSize="small" fontWeight="bold" lineHeight="smallCompact" fontWeight="normal" >BOM revision 2.1</Text></Text>
-        
-        </Flex>
-        {isEmpty ? (
-          <Box py="x4" textAlign="center">
-            <Text color="midGrey" fontSize="small">
-              No consumption data available
-            </Text>
-          </Box>
-        ) : (
-          <Box mx="x1">
-          <Table
-            columns={consumptionTableColumns}
-            rows={materials}
-            keyField="item"
-            compact={true}
-            rowBorder={true}
-            className="subcomponent-consumption-record-table"
-            mb="x1"
-            width="100%"
-          />
-          </Box>
-        )}
-      </Box>
-    );
-  };
-
-  const EmptyConsumptionReport = () => {
-    return (
-      <Box
-        mx="28px"
-        mb="x2"
-        border="1px solid #ddd"
-        borderTop="none"
-        borderTopLeftRadius="0"
-        borderTopRightRadius="0"
-        borderBottomLeftRadius="large"
-        borderBottomRightRadius="large"
-        p="x2"
-      >
-        <Heading4 mb="x2" ml="x1">
-          Subcomponent consumption
-        </Heading4>
-        <Box py="x4" textAlign="center">
-          <Text color="midGrey" fontSize="small" mb="x2">
-            No consumption data available
-          </Text>
-          {role === "supplier" && (
-            <PrimaryButton type="button" onClick={handleAddConsumptionReport}>
-              Add consumption details
-            </PrimaryButton>
-          )}
-        </Box>
-      </Box>
-    );
-  };
+  // ConsumptionReport and EmptyConsumptionReport components now imported from components.tsx
 
   return (
     <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
