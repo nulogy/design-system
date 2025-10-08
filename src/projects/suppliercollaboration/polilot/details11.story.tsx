@@ -1,30 +1,6 @@
 import React, { useState } from "react";
 import { toast, Tooltip } from "../../..";
 import {
-  materialsData1,
-  materialsData2,
-  materialsData5A,
-  materialsData5B,
-  materialsData6A,
-  materialsData6B,
-  materialsData7A,
-  materialsData7B,
-  productionRecordsData,
-  nestedTableData1,
-  nestedTableData2,
-  nestedTableData3,
-  nestedTableData4,
-  nestedTableData5,
-  nestedTableData6,
-  nestedTableData7,
-  nestedTableData8,
-  nestedTableColumns,
-  nestedTableColumns4th,
-  nestedTableColumns567,
-  productionRecordsColumns,
-  consumptionTableColumns,
-} from "./details11";
-import {
   Box,
   Flex,
   Text,
@@ -74,6 +50,16 @@ import {
   Pagination,
 } from "../../..";
 import { formatDateToYYYYMonDD, formatDateWithWeek } from "../utils/dateUtils";
+import {
+  materialsData1,
+  materialsData2,
+  materialsData5A,
+  materialsData5B,
+  materialsData6A,
+  materialsData6B,
+  materialsData7A,
+  materialsData7B,
+} from "./details11/materialsData";
 
 export default {
   title: "Projects/Supplier Collaboration/POLI lot/Details11",
@@ -304,6 +290,734 @@ export const Details11 = () => {
   ];
 
   // Nested table data for each expandable row
+  const nestedTableData1 = [
+    {
+      id: "1-1",
+      actualQuantity: "0 cases",
+      actualProductionRecordNumber: "001",
+      lotCode: "LOT-2025-001",
+      supplierLotCode: "SUP-LOT-001",
+      expiryDate: "2026-Feb-12",
+      palletNumber: "PAL-001",
+      note: "Production details for this lot - additional information about the manufacturing process, quality checks, and any special handling requirements",
+      expandedContent: () => (
+        <ConsumptionReport materials={[]} parentData={{ date: "2025-Feb-12", actualQuantity: "0 cases" }} />
+      ),
+    },
+    {
+      id: "1-2",
+      actualQuantity: "5 cases",
+      actualProductionRecordNumber: "002",
+      lotCode: "LOT-2025-001A",
+      supplierLotCode: "SUP-LOT-001A",
+      expiryDate: "2026-Feb-12",
+      palletNumber: "PAL-001A",
+      note: "Additional batch from same production run",
+      expandedContent: () => (
+        <ConsumptionReport materials={materialsData2} parentData={{ date: "2025-Feb-12", actualQuantity: "5 cases" }} />
+      ),
+    },
+    {
+      id: "1-3",
+      actualQuantity: "3 cases",
+      actualProductionRecordNumber: "003",
+      lotCode: "LOT-2025-001B",
+      supplierLotCode: "SUP-LOT-001B",
+      expiryDate: "2026-Feb-12",
+      palletNumber: "PAL-001B",
+      note: "Final batch completion",
+      expandedContent: () => (
+        <ConsumptionReport materials={materialsData1} parentData={{ date: "2025-Feb-12", actualQuantity: "3 cases" }} />
+      ),
+    },
+  ];
+
+  const nestedTableData2 = [
+    {
+      id: "2-1",
+      actualQuantity: "12 cases",
+      actualProductionRecordNumber: "001",
+      lotCode: "LOT-2025-002",
+      supplierLotCode: "SUP-LOT-002",
+      expiryDate: "2026-03-15",
+      palletNumber: "PAL-002",
+      note: "Standard production run with normal quality metrics",
+      expandedContent: () => (
+        <ConsumptionReport
+          materials={materialsData1}
+          parentData={{ date: "2025-Mar-15", actualQuantity: "12 cases" }}
+        />
+      ),
+    },
+  ];
+
+  const nestedTableData3 = [
+    {
+      id: "3-1",
+      actualQuantity: "25 cases",
+      actualProductionRecordNumber: "001",
+      lotCode: "LOT-2025-003",
+      supplierLotCode: "SUP-LOT-003",
+      expiryDate: "2026-04-20",
+      palletNumber: "PAL-003",
+      note: "High volume production batch for major customer order",
+      expandedContent: () => (
+        <ConsumptionReport
+          materials={materialsData1}
+          parentData={{ date: "2025-Apr-20", actualQuantity: "25 cases" }}
+        />
+      ),
+    },
+  ];
+
+  const nestedTableData4 = [
+    {
+      id: "4-1",
+      actualQuantity: "0 cases",
+      actualProductionRecordNumber: "001",
+      lotCode: "LOT-2025-004",
+      supplierLotCode: "SUP-LOT-004",
+      expiryDate: "2026-08-08",
+      palletNumber: "PAL-004",
+      note: "Equipment maintenance scheduled, production line optimization in progress",
+      expandedContent: () => (
+        <ConsumptionReport materials={[]} parentData={{ date: "2025-Aug-08", actualQuantity: "0 cases" }} />
+      ),
+    },
+  ];
+
+  const nestedTableData5 = [
+    {
+      id: "5-1",
+      actualQuantity: "8 cases",
+      actualProductionRecordNumber: "Output #001",
+      lotCode: "LOT-2025-005A",
+      supplierLotCode: "SUP-LOT-005A",
+      expiryDate: "2026-03-15",
+      palletNumber: "PAL-005A",
+      note: "First batch from production run",
+      expandedContent: () => (
+        <ConsumptionReport
+          materials={materialsData5A}
+          parentData={{ date: "2025-May-15", actualQuantity: "8 cases" }}
+        />
+      ),
+    },
+    {
+      id: "5-2",
+      actualQuantity: "4 cases",
+      actualProductionRecordNumber: "Output #002",
+      lotCode: "LOT-2025-005B",
+      supplierLotCode: "SUP-LOT-005B",
+      expiryDate: "2026-03-15",
+      palletNumber: "PAL-005B",
+      note: "Second batch completion",
+      expandedContent: () => (
+        <ConsumptionReport
+          materials={materialsData5B}
+          parentData={{ date: "2025-May-15", actualQuantity: "4 cases" }}
+        />
+      ),
+    },
+  ];
+
+  const nestedTableData6 = [
+    {
+      id: "6-1",
+      actualQuantity: "15 cases",
+      actualProductionRecordNumber: "Actual production record #001",
+      lotCode: "LOT-2025-006A",
+      supplierLotCode: "SUP-LOT-006A",
+      expiryDate: "2026-04-22",
+      palletNumber: "PAL-006A",
+      note: "Quality approved batch",
+      expandedContent: () => (
+        <ConsumptionReport
+          materials={materialsData6A}
+          parentData={{ date: "2025-Apr-22", actualQuantity: "10 cases" }}
+        />
+      ),
+    },
+    {
+      id: "6-2",
+      actualQuantity: "8 cases",
+      actualProductionRecordNumber: "Actual production record #002",
+      lotCode: "LOT-2025-006B",
+      supplierLotCode: "SUP-LOT-006B",
+      expiryDate: "2026-04-22",
+      palletNumber: "PAL-006B",
+      note: "Partial batch with quality issues",
+      expandedContent: () => <ConsumptionReport materials={materialsData6B} />,
+    },
+  ];
+
+  const nestedTableData7 = [
+    {
+      id: "7-1",
+      actualQuantity: "0 cases",
+      actualProductionRecordNumber: "001",
+      lotCode: "LOT-2025-007A",
+      supplierLotCode: "SUP-LOT-007A",
+      expiryDate: "2026-05-10",
+      palletNumber: "PAL-007A",
+      note: "Production on hold - awaiting materials",
+      expandedContent: () => <ConsumptionReport materials={materialsData7A} />,
+    },
+    {
+      id: "7-2",
+      actualQuantity: "0 cases",
+      actualProductionRecordNumber: "002",
+      lotCode: "LOT-2025-007B",
+      supplierLotCode: "SUP-LOT-007B",
+      expiryDate: "2026-05-10",
+      palletNumber: "PAL-007B",
+      note: "Delayed batch - material shortage",
+      expandedContent: () => <EmptyConsumptionReport />,
+    },
+  ];
+
+  const nestedTableData8 = [
+    {
+      id: "8-1",
+      actualQuantity: "15 cases",
+      lotCode: "LOT-2025-008",
+      supplierLotCode: "SUP-LOT-008",
+      expiryDate: "2026-06-05",
+      palletNumber: "PAL-008",
+      note: "Special order for premium customer, expedited processing",
+      expandedContent: () => <ConsumptionReport materials={materialsData1} />,
+    },
+  ];
+
+  // Nested table columns configuration
+  const nestedTableColumns = [
+    {
+      label: "Number",
+      dataKey: "actualProductionRecordNumber",
+      width: "0px",
+      cellRenderer: ({ row }: { row: any }) => <ActualProductionRecordNumberPill actualProductionRecordNumber={row.actualProductionRecordNumber} />,
+    },
+    {
+      label: "Actual quantity",
+      dataKey: "actualQuantity",
+      width: "180px",
+      cellRenderer: ({ row }: { row: any }) => {
+        return (
+          <Flex py="x0_75" mr="x1">
+            <Text>{row.actualQuantity}</Text>
+          </Flex>
+        );
+      },
+    },
+    {
+      label: "Pallet number",
+      dataKey: "palletNumber",
+      width: "180px",
+      cellRenderer: ({ row }: { row: any }) => {
+        // If lot code is not required in config, show "-"
+        if (!fieldConfig.lotCodeRequired) {
+          return (
+            <Flex py="x0_75">
+              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                -
+              </Text>
+            </Flex>
+          );
+        }
+
+        // If all lot codes are empty, don't render anything
+        if (!row.lotCode && !row.supplierLotCode) {
+          return null;
+        }
+
+        return (
+          <Flex py="x0_75" gap="x0_25" flexDirection="column">
+            <TruncatedText fullWidth width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
+              {row.lotCode || ""}
+            </TruncatedText>
+            <TruncatedText
+              fullWidth
+              width="auto"
+              maxWidth="152px"
+              fontSize="small"
+              lineHeight="smallTextCompressed"
+              color="midGrey"
+            >
+              {row.supplierLotCode || ""}
+            </TruncatedText>
+          </Flex>
+        );
+      },
+    },
+    {
+      label: "Expiry date",
+      dataKey: "expiryDate",
+      width: "150px",
+      cellRenderer: ({ row }: { row: any }) => {
+        // If expiry date is not required in config, show "-"
+        if (!fieldConfig.expiryDateRequired) {
+          return (
+            <Flex py="x0_75">
+              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                -
+              </Text>
+            </Flex>
+          );
+        }
+
+        // If expiry date is empty, don't render anything
+        if (!row.expiryDate) {
+          return null;
+        }
+
+        const formattedDate = formatDateToYYYYMonDD(row.expiryDate);
+        return <Text>{formattedDate}</Text>;
+      },
+    },
+    {
+      label: "Pallet number",
+      dataKey: "palletNumber",
+      width: "180px",
+      cellRenderer: ({ row }: { row: any }) => {
+        // If pallet number is not required in config, show "-"
+        if (!fieldConfig.palletNumberRequired) {
+          return (
+            <Flex py="x0_75">
+              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                -
+              </Text>
+            </Flex>
+          );
+        }
+
+        // If pallet number is empty, don't render anything
+        if (!row.palletNumber) {
+          return null;
+        }
+
+        return row.palletNumber;
+      },
+    },
+    {
+      label: "Note",
+      dataKey: "note",
+      width: "auto",
+      cellRenderer: ({ row }: { row: any }) => {
+        // If note is empty, don't render anything
+        if (!row.note) {
+          return null;
+        }
+
+        return (
+          <Box py="x0_375">
+            <TruncatedText
+              pr="x2"
+              py="x1"
+              fontSize="small"
+              lineHeight="smallTextCompressed"
+              maxCharacters={98}
+            >
+              {row.note}
+            </TruncatedText>
+          </Box>
+        );
+      },
+    },
+    {
+      label: "",
+      dataKey: "spacer",
+      width: "48px",
+      headerFormatter: () => null,
+      cellRenderer: () => null,
+    },
+  ];
+
+  // Custom nested table columns for 5th, 6th, 7th tables (Number column first)
+  const nestedTableColumns567 = [
+    {
+      label: "Number",
+      dataKey: "actualProductionRecordNumber",
+      width: "0px",
+      cellRenderer: ({ row }: { row: any }) => {
+        // Check if this is from nestedTableData5 (id starts with "5-")
+        const isFifthTable = row.id && row.id.startsWith("5-");
+        // Check if this is from nestedTableData6 (id starts with "6-")
+        const isSixthTable = row.id && row.id.startsWith("6-");
+        
+        let marginLeft = "-146px"; // Default for row 7 (was -96px)
+        
+        if (isFifthTable) {
+          marginLeft = "-170px"; // More space for "Output #001", "Output #002" (was -120px)
+        } else if (isSixthTable) {
+          marginLeft = "-300px"; // Much more space for "Actual production record #001", "Actual production record #002" (was -250px)
+        }
+        
+        return (
+          <Flex py="x0_75" mr="x1" justifyContent="flex-start" ml={marginLeft}>
+            <Box 
+              backgroundColor={isSixthTable ? "white" : "midGrey"}
+              borderColor={isSixthTable ? "whiteGrey" : undefined}
+              borderWidth={isSixthTable ? "1px" : undefined}
+              borderStyle={isSixthTable ? "solid" : undefined}
+              px="half" 
+              borderRadius={isSixthTable ? "medium" : "small"}
+              style={isSixthTable ? { border: "1px solid #E5E5E5" } : undefined}
+            >
+              <Text 
+                color={isSixthTable ? "midGrey" : "white"}
+                fontSize="smaller" 
+                lineHeight="smallerText"
+                fontWeight="bold"
+                textTransform="uppercase"
+                letterSpacing=".05em"
+              >
+                {row.actualProductionRecordNumber}
+              </Text>
+            </Box>
+          </Flex>
+        );
+      },
+    },
+    {
+      label: "Actual quantity",
+      dataKey: "actualQuantity",
+      width: "180px",
+      cellRenderer: ({ row }: { row: any }) => {
+        return (
+          <Flex py="x0_75" mr="x1">
+            <Text>{row.actualQuantity}</Text>
+          </Flex>
+        );
+      },
+    },
+    {
+      label: "Lot code",
+      dataKey: "lotCode",
+      width: "180px",
+      cellRenderer: ({ row }: { row: any }) => {
+        // If lot code is not required in config, show "-"
+        if (!fieldConfig.lotCodeRequired) {
+          return (
+            <Flex py="x0_75">
+              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                -
+              </Text>
+            </Flex>
+          );
+        }
+
+        // If all lot codes are empty, don't render anything
+        if (!row.lotCode && !row.supplierLotCode) {
+          return null;
+        }
+
+        return (
+          <Flex py="x0_75" gap="x0_25" flexDirection="column">
+            <TruncatedText fullWidth width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
+              {row.lotCode || ""}
+            </TruncatedText>
+            <TruncatedText
+              fullWidth
+              width="auto"
+              maxWidth="152px"
+              fontSize="small"
+              lineHeight="smallTextCompressed"
+              color="midGrey"
+            >
+              {row.supplierLotCode || ""}
+            </TruncatedText>
+          </Flex>
+        );
+      },
+    },
+    {
+      label: "Customer's lot code",
+      dataKey: "customerLotCode",
+      width: "180px",
+      cellRenderer: ({ row }: { row: any }) => {
+        // If customer lot code is empty, don't render anything
+        if (!row.customerLotCode) {
+          return null;
+        }
+
+        return (
+          <Flex py="x2">
+            <TruncatedText fullWidth width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
+              {row.customerLotCode}
+            </TruncatedText>
+          </Flex>
+        );
+      },
+    },
+    {
+      label: "Supplier's lot code",
+      dataKey: "supplierLotCode",
+      width: "180px",
+      cellRenderer: ({ row }: { row: any }) => {
+        // If supplier lot code is empty, don't render anything
+        if (!row.supplierLotCode) {
+          return null;
+        }
+
+        return (
+          <Flex py="x2">
+            <TruncatedText fullWidth width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
+              {row.supplierLotCode}
+            </TruncatedText>
+          </Flex>
+        );
+      },
+    },
+    {
+      label: "Expiry date",
+      dataKey: "expiryDate",
+      width: "150px",
+      cellRenderer: ({ row }: { row: any }) => {
+        // If expiry date is not required in config, show "-"
+        if (!fieldConfig.expiryDateRequired) {
+          return (
+            <Flex py="x0_75">
+              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                -
+              </Text>
+            </Flex>
+          );
+        }
+
+        // If expiry date is empty, don't render anything
+        if (!row.expiryDate) {
+          return null;
+        }
+
+        const formattedDate = formatDateToYYYYMonDD(row.expiryDate);
+        return <Text>{formattedDate}</Text>;
+      },
+    },
+    {
+      label: "Pallet number",
+      dataKey: "palletNumber",
+      width: "180px",
+      cellRenderer: ({ row }: { row: any }) => {
+        // If pallet number is not required in config, show "-"
+        if (!fieldConfig.palletNumberRequired) {
+          return (
+            <Flex py="x0_75">
+              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                -
+              </Text>
+            </Flex>
+          );
+        }
+
+        // If pallet number is empty, don't render anything
+        if (!row.palletNumber) {
+          return null;
+        }
+
+        return row.palletNumber;
+      },
+    },
+    {
+      label: "Note",
+      dataKey: "note",
+      width: "auto",
+      cellRenderer: ({ row }: { row: any }) => {
+        // If note is empty, don't render anything
+        if (!row.note) {
+          return null;
+        }
+
+        return (
+          <Box py="x0_375">
+            <TruncatedText
+              pr="x2"
+              py="x1"
+              fontSize="small"
+              lineHeight="smallTextCompressed"
+              maxCharacters={98}
+            >
+              {row.note}
+            </TruncatedText>
+          </Box>
+        );
+      },
+    },
+    {
+      label: "",
+      dataKey: "spacer",
+      width: "48px",
+      headerFormatter: () => null,
+      cellRenderer: () => null,
+    },
+  ];
+
+  // Custom nested table columns for 4th table (Number column first)
+  const nestedTableColumns4th = [
+    {
+      label: "Number",
+      dataKey: "actualProductionRecordNumber",
+      width: "0px",
+      cellRenderer: ({ row }: { row: any }) => {
+        return (
+          <Flex py="x0_75" mr="x1" justifyContent="flex-start" ml="-96px">
+            <Tooltip tooltip="Actual production record #001" placement="top">
+              <Box 
+                backgroundColor="midGrey" 
+                px="half" 
+                borderRadius="small"
+              >
+                <Text 
+                  color="white" 
+                  fontSize="smaller" 
+                  lineHeight="smallerText"
+                  fontWeight="bold"
+                  textTransform="uppercase"
+                  letterSpacing=".05em"
+                >
+                  {row.actualProductionRecordNumber}
+                </Text>
+              </Box>
+            </Tooltip>
+          </Flex>
+        );
+      },
+    },
+    {
+      label: "Actual quantity",
+      dataKey: "actualQuantity",
+      width: "180px",
+      cellRenderer: ({ row }: { row: any }) => {
+        return (
+          <Flex py="x0_75" mr="x1">
+            <Text>{row.actualQuantity}</Text>
+          </Flex>
+        );
+      },
+    },
+    {
+      label: "Lot code",
+      dataKey: "lotCode",
+      width: "180px",
+      cellRenderer: ({ row }: { row: any }) => {
+        // If lot code is not required in config, show "-"
+        if (!fieldConfig.lotCodeRequired) {
+          return (
+            <Flex py="x0_75">
+              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                -
+              </Text>
+            </Flex>
+          );
+        }
+
+        // If all lot codes are empty, don't render anything
+        if (!row.lotCode && !row.supplierLotCode) {
+          return null;
+        }
+
+        return (
+          <Flex py="x0_75" gap="x0_25" flexDirection="column">
+            <TruncatedText fullWidth width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
+              {row.lotCode || ""}
+            </TruncatedText>
+            <TruncatedText
+              fullWidth
+              width="auto"
+              maxWidth="152px"
+              fontSize="small"
+              lineHeight="smallTextCompressed"
+              color="midGrey"
+            >
+              {row.supplierLotCode || ""}
+            </TruncatedText>
+          </Flex>
+        );
+      },
+    },
+    {
+      label: "Expiry date",
+      dataKey: "expiryDate",
+      width: "150px",
+      cellRenderer: ({ row }: { row: any }) => {
+        // If expiry date is not required in config, show "-"
+        if (!fieldConfig.expiryDateRequired) {
+          return (
+            <Flex py="x0_75">
+              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                -
+              </Text>
+            </Flex>
+          );
+        }
+
+        // If expiry date is empty, don't render anything
+        if (!row.expiryDate) {
+          return null;
+        }
+
+        const formattedDate = formatDateToYYYYMonDD(row.expiryDate);
+        return <Text>{formattedDate}</Text>;
+      },
+    },
+    {
+      label: "Pallet number",
+      dataKey: "palletNumber",
+      width: "180px",
+      cellRenderer: ({ row }: { row: any }) => {
+        // If pallet number is not required in config, show "-"
+        if (!fieldConfig.palletNumberRequired) {
+          return (
+            <Flex py="x0_75">
+              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                -
+              </Text>
+            </Flex>
+          );
+        }
+
+        // If pallet number is empty, don't render anything
+        if (!row.palletNumber) {
+          return null;
+        }
+
+        return row.palletNumber;
+      },
+    },
+    {
+      label: "Note",
+      dataKey: "note",
+      width: "auto",
+      cellRenderer: ({ row }: { row: any }) => {
+        // If note is empty, don't render anything
+        if (!row.note) {
+          return null;
+        }
+
+        return (
+          <Box py="x0_375">
+            <TruncatedText
+              pr="x2"
+              py="x1"
+              fontSize="small"
+              lineHeight="smallTextCompressed"
+              maxCharacters={98}
+            >
+              {row.note}
+            </TruncatedText>
+          </Box>
+        );
+      },
+    },
+    {
+      label: "",
+      dataKey: "spacer",
+      width: "48px",
+      headerFormatter: () => null,
+      cellRenderer: () => null,
+    },
+  ];
+
+  // Production records data
   const productionRecordsData = [
     {
       id: "1",
@@ -510,6 +1224,3569 @@ export const Details11 = () => {
     },
   ];
 
+  const productionRecordsColumns = [
+    {
+      label: "Date",
+      dataKey: "date",
+      width: "120px",
+      minWidth: "120px",
+    },
+    {
+      label: "Expected quantity",
+      dataKey: "expectedQuantity",
+      width: "180px",
+      minWidth: "180px",
+    },
+    {
+      label: "Actual quantity",
+      dataKey: "actualQuantity",
+      width: "180px",
+      cellRenderer: ({ row }: { row: any }) => {
+        return (
+          <Flex py="x0_75" mr="x1">
+            <Text>{row.actualQuantity}</Text>
+          </Flex>
+        );
+      },
+    },
+    {
+      label: "Lot code",
+      dataKey: "lotCode",
+      width: "180px",
+      headerFormatter: () => (
+        <Box pt="x1_25" pb="x0_75">
+          <Text>Lot code</Text>
+          <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+            Customer's / Supplier's
+          </Text>
+        </Box>
+      ),
+      cellRenderer: ({ row }: { row: any }) => {
+        // Always show blank for parent table rows since detailed info is in nested tables
+        return null;
+      },
+    },
+    {
+      label: "Expiry date",
+      dataKey: "expiryDate",
+      width: "150px",
+      cellRenderer: ({ row }: { row: any }) => {
+        // Always show blank for parent table rows since detailed info is in nested tables
+        return null;
+      },
+    },
+    {
+      label: "Pallet number",
+      dataKey: "palletNumber",
+      width: "180px",
+      cellRenderer: ({ row }: { row: any }) => {
+        // Always show blank for parent table rows since detailed info is in nested tables
+        return null;
+      },
+    },
+    {
+      label: "Note",
+      dataKey: "note",
+      width: "auto",
+      cellRenderer: ({ row }: { row: any }) => {
+        // Always show blank for parent table rows since detailed info is in nested tables
+        return null;
+      },
+    },
+    {
+      label: "",
+      dataKey: "actions",
+      width: "32px",
+      headerFormatter: () => null,
+      cellRenderer: (props: { row: any }) => {
+        // Hide the entire dropdown when Sanofi ref ID is off
+        if (!fieldConfig.sanofiRequired) {
+          return null;
+        }
+
+        return (
+          <Box pr="x1">
+            <DropdownMenu trigger={() => <IconicButton icon="more" aria-label="More actions" />} placement="bottom-end">
+              <DropdownButton onClick={() => handleEditProduction(props.row)}>Edit production</DropdownButton>
+            </DropdownMenu>
+          </Box>
+        );
+      },
+    },
+  ];
+
+  const handleAddProduction = () => {
+    setIsEditingProduction(false);
+    setProductionBatches([]); // Clear batches when adding new production
+    setProductionRecord({
+      date: "",
+      uom: "",
+      expectedQuantity: "",
+      actualQuantity: "",
+      lotCode: "",
+      supplierLotCode: "",
+      expiryDate: "",
+      palletNumber: "",
+      producedQuantity: "",
+      note: "",
+    });
+    setShowProductionSidebar(true);
+  };
+
+  const handleEditProduction = (rowData: any) => {
+    setIsEditingProduction(true);
+    setProductionEntryType("detailed"); // Set to detailed mode for editing
+
+    // Map row data to production record format
+    setProductionRecord({
+      date: rowData.date || "",
+      uom: rowData.expectedQuantity ? rowData.expectedQuantity.split(" ")[1] || "" : "",
+      expectedQuantity: rowData.expectedQuantity ? rowData.expectedQuantity.split(" ")[0] || "" : "",
+      actualQuantity: rowData.actualQuantity ? rowData.actualQuantity.split(" ")[0] || "" : "",
+      lotCode: rowData.customerLotCode || "",
+      supplierLotCode: rowData.supplierLotCode || "",
+      expiryDate: rowData.expiryDate || "",
+      palletNumber: rowData.palletNumber || "",
+      producedQuantity: rowData.actualQuantity ? rowData.actualQuantity.split(" ")[0] || "" : "",
+      note: rowData.note || "",
+    });
+
+    // Populate production rows based on the row's nested data
+    let nestedData = [];
+    switch (rowData.id) {
+      case "1":
+        nestedData = nestedTableData1;
+        break;
+      case "2":
+        nestedData = nestedTableData2;
+        break;
+      case "3":
+        nestedData = nestedTableData3;
+        break;
+      case "4":
+        nestedData = nestedTableData4;
+        break;
+      case "5":
+        nestedData = nestedTableData5;
+        break;
+      default:
+        nestedData = [];
+    }
+
+    // Convert nested data to production rows format
+    const rows = nestedData.map((batch, index) => ({
+      id: `row-${index + 1}`,
+      palletNumber: batch.palletNumber || "",
+      customerLotCode: batch.customerLotCode || "",
+      supplierLotCode: batch.supplierLotCode || "",
+      expiryDate: batch.expiryDate || "",
+      quantity: batch.actualQuantity ? batch.actualQuantity.split(" ")[0] || "" : "",
+    }));
+
+    // Populate notes from nested data
+    const notes: Record<string, string> = {};
+    nestedData.forEach((batch, index) => {
+      if (batch.note) {
+        notes[`row-${index + 1}`] = batch.note;
+      }
+    });
+
+    setProductionRows(rows);
+    setRowNotes(notes);
+
+    // Extract consumption materials data for each production row
+    const newRowConsumptions: Record<
+      string,
+      Array<{
+        id: string;
+        item: string;
+        lotCode: string;
+        expiryDate: string;
+        palletNumber: string;
+        quantity: string;
+        uom: string;
+      }>
+    > = {};
+
+    // For each production row, try to find corresponding consumption data
+    rows.forEach((row, index) => {
+      // Try to find consumption data from the corresponding batch
+      const batch = nestedData[index];
+      if (batch && batch.expandedContent && typeof batch.expandedContent === "function") {
+        try {
+          const expandedContent = batch.expandedContent();
+          if (
+            expandedContent &&
+            expandedContent.props &&
+            expandedContent.props.materials &&
+            expandedContent.props.materials.length > 0
+          ) {
+            newRowConsumptions[row.id] = expandedContent.props.materials.map(
+              (material: any, materialIndex: number) => ({
+                ...material,
+                id: material.id || `consumption-${Date.now()}-${index}-${materialIndex}`,
+              })
+            );
+          }
+        } catch (error) {
+          console.log(`Error extracting consumption materials for row ${index}:`, error);
+        }
+      }
+    });
+
+    console.log("Extracted consumption materials for rows:", newRowConsumptions);
+    setRowConsumptions(newRowConsumptions);
+    setShowProductionSidebar(true);
+  };
+
+  const handleCloseProductionSidebar = () => {
+    setShowProductionSidebar(false);
+    setIsEditingProduction(false);
+    setProductionEntryType("quick");
+    setActualQuantity("");
+    setProductionRows([
+      { id: "row-1", palletNumber: "", customerLotCode: "", supplierLotCode: "", expiryDate: "", quantity: "" },
+    ]);
+    setRowNotes({});
+    setRowConsumptions({});
+    setProductionRecord({
+      date: "",
+      uom: "",
+      expectedQuantity: "",
+      actualQuantity: "",
+      lotCode: "",
+      supplierLotCode: "",
+      expiryDate: "",
+      palletNumber: "",
+      producedQuantity: "",
+      note: "",
+    });
+    setProductionBatches([]);
+  };
+
+  const handleProductionFieldChange = (field: string, value: string) => {
+    setProductionRecord((prev) => ({
+      ...prev,
+      [field]: value,
+    }));
+  };
+
+  const handleAddAnotherProduction = () => {
+    const newBatch = {
+      id: `batch-${Date.now()}`,
+      lotCode: "",
+      supplierLotCode: "",
+      expiryDate: "",
+      palletNumber: "",
+      producedQuantity: "",
+      note: "",
+    };
+    setProductionBatches((prev) => [...prev, newBatch]);
+  };
+
+  const handleRemoveBatch = (batchId: string) => {
+    setProductionBatches((prev) => prev.filter((batch) => batch.id !== batchId));
+  };
+
+  const handleBatchFieldChange = (batchId: string, field: string, value: string) => {
+    setProductionBatches((prev) => prev.map((batch) => (batch.id === batchId ? { ...batch, [field]: value } : batch)));
+  };
+
+  const handleFieldConfigChange = (field: string, value: boolean) => {
+    setFieldConfig((prev) => ({
+      ...prev,
+      [field]: value,
+    }));
+  };
+
+  const handleSaveProduction = () => {
+    toast.success("Production record saved successfully!");
+    handleCloseProductionSidebar();
+  };
+
+  const handleProductionRowChange = (rowId: string, field: string, value: string) => {
+    setProductionRows((prev) => prev.map((row) => (row.id === rowId ? { ...row, [field]: value } : row)));
+  };
+
+  const handleAddProductionRow = () => {
+    const newRow = {
+      id: `row-${Date.now()}`,
+      palletNumber: "",
+      customerLotCode: "",
+      supplierLotCode: "",
+      expiryDate: "",
+      quantity: "",
+    };
+    setProductionRows((prev) => [...prev, newRow]);
+  };
+
+  const handleRemoveProductionRow = (rowId: string) => {
+    if (productionRows.length > 1) {
+      setProductionRows((prev) => prev.filter((row) => row.id !== rowId));
+    }
+  };
+
+  const handleAddNote = (rowId: string) => {
+    setRowNotes((prev) => ({
+      ...prev,
+      [rowId]: prev[rowId] || "",
+    }));
+  };
+
+  const handleNoteChange = (rowId: string, value: string) => {
+    setRowNotes((prev) => ({
+      ...prev,
+      [rowId]: value,
+    }));
+  };
+
+  const handleAddConsumptionForRow = (rowId: string) => {
+    setRowConsumptions((prev) => ({
+      ...prev,
+      [rowId]: prev[rowId] || [
+        {
+          id: `consumption-${Date.now()}`,
+          item: "",
+          lotCode: "",
+          expiryDate: "",
+          palletNumber: "",
+          quantity: "",
+          uom: "",
+        },
+      ],
+    }));
+  };
+
+  const handleConsumptionRowChange = (rowId: string, consumptionId: string, field: string, value: string) => {
+    setRowConsumptions((prev) => ({
+      ...prev,
+      [rowId]:
+        prev[rowId]?.map((consumption) =>
+          consumption.id === consumptionId ? { ...consumption, [field]: value } : consumption
+        ) || [],
+    }));
+  };
+
+  const handleAddConsumptionRow = (rowId: string) => {
+    const newConsumption = {
+      id: `consumption-${Date.now()}`,
+      item: "",
+      lotCode: "",
+      expiryDate: "",
+      palletNumber: "",
+      quantity: "",
+      uom: "",
+    };
+    setRowConsumptions((prev) => ({
+      ...prev,
+      [rowId]: [...(prev[rowId] || []), newConsumption],
+    }));
+  };
+
+  const handleRemoveConsumptionRow = (rowId: string, consumptionId: string) => {
+    console.log("Removing consumption row:", rowId, consumptionId);
+    setRowConsumptions((prev) => {
+      const currentConsumptions = prev[rowId] || [];
+      const filteredConsumptions = currentConsumptions.filter((consumption) => consumption.id !== consumptionId);
+      console.log("Before:", currentConsumptions.length, "After:", filteredConsumptions.length);
+      return {
+        ...prev,
+        [rowId]: filteredConsumptions,
+      };
+    });
+  };
+
+  const handleOpenConsumptionSidebar = (
+    materials: Array<{ item: string; lotCode: string; expiryDate: string; palletNumber: string; quantity: string }>,
+    parentData?: { date: string; actualQuantity: string }
+  ) => {
+    // Parse materials and set up consumption items for the add consumption form
+    const parsedItems = materials.map((material, index) => {
+      const parts = material.quantity.split(" ");
+      return {
+        id: `consumption-item-${index + 1}`,
+        item: material.item,
+        lotCode: material.lotCode,
+        expiryDate: material.expiryDate ? new Date(material.expiryDate) : null,
+        palletNumber: material.palletNumber,
+        consumedQuantity: parts[0] || "",
+        uom: parts[1] || "",
+        // Store parent data for help text
+        parentDate: parentData?.date,
+        parentActualQuantity: parentData?.actualQuantity,
+      };
+    });
+    setConsumptionItems(parsedItems);
+    setShowAddConsumptionSidebar(true);
+  };
+
+  const handleCloseConsumptionSidebar = () => {
+    setShowConsumptionSidebar(false);
+    setConsumptionMaterials([]);
+  };
+
+  const handleConsumptionFieldChange = (materialId: string, field: string, value: string) => {
+    setConsumptionMaterials((prev) =>
+      prev.map((material) => (material.id === materialId ? { ...material, [field]: value } : material))
+    );
+  };
+
+  const handleSaveConsumption = () => {
+    toast.success("Subcomponent consumption saved successfully!");
+    handleCloseConsumptionSidebar();
+  };
+
+  const handleAddConsumptionReport = () => {
+    setShowAddConsumptionSidebar(true);
+  };
+
+  const handleCloseAddConsumptionSidebar = () => {
+    setShowAddConsumptionSidebar(false);
+    setConsumptionItems([
+      {
+        id: "consumption-item-1",
+        item: "",
+        lotCode: "",
+        expiryDate: null,
+        palletNumber: "",
+        consumedQuantity: "",
+        uom: "",
+        parentDate: undefined,
+        parentActualQuantity: undefined,
+      },
+    ]);
+  };
+
+  const handleSaveAddConsumption = () => {
+    toast.success("Subcomponent consumption added successfully!");
+    handleCloseAddConsumptionSidebar();
+  };
+
+  const handleAddConsumptionItem = () => {
+    const newItem = {
+      id: `consumption-item-${Date.now()}`,
+      item: "",
+      lotCode: "",
+      expiryDate: null as Date | null,
+      palletNumber: "",
+      consumedQuantity: "",
+      uom: "",
+      parentDate: undefined as string | undefined,
+      parentActualQuantity: undefined as string | undefined,
+    };
+    setConsumptionItems((prev) => [...prev, newItem]);
+  };
+
+  const handleRemoveConsumptionItem = (itemId: string) => {
+    setConsumptionItems((prev) => prev.filter((item) => item.id !== itemId));
+  };
+
+  const handleConsumptionItemFieldChange = (itemId: string, field: string, value: string) => {
+    setConsumptionItems((prev) => prev.map((item) => (item.id === itemId ? { ...item, [field]: value } : item)));
+  };
+
+  // Materials data for consumption reports
+  // materialsData1 now imported from materialsData.tsx
+
+  const materialsData2 = [
+    {
+      subcomponentConsumptionRecordItem: "001",
+      item: "Ibuprofen 200mg",
+      lotCode: "LOT-IBU-002",
+      expiryDate: "2026-04-10",
+      palletNumber: "PAL-009",
+      quantity: "1.8",
+      uom: "kg",
+    },
+    {
+      item: "Povidone K30",
+      lotCode: "LOT-PVP-002",
+      expiryDate: "2026-05-15",
+      palletNumber: "PAL-010",
+      quantity: "0.9",
+      uom: "kg",
+    },
+    {
+      item: "Sodium starch glycolate",
+      lotCode: "LOT-SSG-002",
+      expiryDate: "2026-06-20",
+      palletNumber: "PAL-011",
+      quantity: "0.4",
+      uom: "kg",
+    },
+    {
+      item: "Stearic acid",
+      lotCode: "LOT-SA-002",
+      expiryDate: "2026-07-25",
+      palletNumber: "PAL-012",
+      quantity: "0.2",
+      uom: "kg",
+    },
+    {
+      item: "FD&C Red #40",
+      lotCode: "LOT-RED-002",
+      expiryDate: "2026-08-30",
+      palletNumber: "PAL-013",
+      quantity: "0.05",
+      uom: "kg",
+    },
+    {
+      item: "Silicon dioxide",
+      lotCode: "LOT-SD-002",
+      expiryDate: "2026-09-15",
+      palletNumber: "PAL-014",
+      quantity: "0.3",
+      uom: "kg",
+    },
+    {
+      item: "Aspartame",
+      lotCode: "LOT-ASP-002",
+      expiryDate: "2026-10-20",
+      palletNumber: "PAL-015",
+      quantity: "0.1",
+      uom: "kg",
+    },
+    {
+      item: "Mint flavor",
+      lotCode: "LOT-MF-002",
+      expiryDate: "2026-11-25",
+      palletNumber: "PAL-016",
+      quantity: "0.02",
+      uom: "kg",
+    },
+  ];
+
+  const materialsData5A = [
+    {
+      subcomponentConsumptionRecordItem: "001",
+      item: "Ibuprofen 200mg",
+      lotCode: "LOT-IBU-005A",
+      expiryDate: "2026-05-10",
+      palletNumber: "PAL-017",
+      quantity: "1.8",
+      uom: "kg",
+    },
+    {
+      subcomponentConsumptionRecordItem: "002",
+      item: "Povidone K30",
+      lotCode: "LOT-PVP-005A",
+      expiryDate: "2026-06-15",
+      palletNumber: "PAL-018",
+      quantity: "0.9",
+      uom: "kg",
+    },
+    {
+      subcomponentConsumptionRecordItem: "003",
+      item: "Sodium starch glycolate",
+      lotCode: "LOT-SSG-005A",
+      expiryDate: "2026-07-20",
+      palletNumber: "PAL-019",
+      quantity: "0.4",
+      uom: "kg",
+    },
+    {
+      subcomponentConsumptionRecordItem: "004",
+      item: "Stearic acid",
+      lotCode: "LOT-SA-005A",
+      expiryDate: "2026-08-25",
+      palletNumber: "PAL-020",
+      quantity: "0.2",
+      uom: "kg",
+    },
+    {
+      subcomponentConsumptionRecordItem: "005",
+      item: "FD&C Red #40",
+      lotCode: "LOT-RED-005A",
+      expiryDate: "2026-09-30",
+      palletNumber: "PAL-021",
+      quantity: "0.05",
+      uom: "kg",
+    },
+    {
+      subcomponentConsumptionRecordItem: "006",
+      item: "Silicon dioxide",
+      lotCode: "LOT-SD-005A",
+      expiryDate: "2026-10-15",
+      palletNumber: "PAL-022",
+      quantity: "0.3",
+      uom: "kg",
+    },
+    {
+      subcomponentConsumptionRecordItem: "007",
+      item: "Aspartame",
+      lotCode: "LOT-ASP-005A",
+      expiryDate: "2026-11-20",
+      palletNumber: "PAL-023",
+      quantity: "0.1",
+      uom: "kg",
+    },
+    {
+      subcomponentConsumptionRecordItem: "008",
+      item: "Mint flavor",
+      lotCode: "LOT-MF-005A",
+      expiryDate: "2026-12-25",
+      palletNumber: "PAL-024",
+      quantity: "0.02",
+      uom: "kg",
+    },
+  ];
+
+  const materialsData5B = [
+    {
+      subcomponentConsumptionRecordItem: "001",
+      item: "Ibuprofen 200mg",
+      lotCode: "LOT-IBU-005B",
+      expiryDate: "2026-05-10",
+      palletNumber: "PAL-025",
+      quantity: "0.9",
+      uom: "kg",
+    },
+    {
+      subcomponentConsumptionRecordItem: "002",
+      item: "Povidone K30",
+      lotCode: "LOT-PVP-005B",
+      expiryDate: "2026-06-15",
+      palletNumber: "PAL-026",
+      quantity: "0.45",
+      uom: "kg",
+    },
+    {
+      subcomponentConsumptionRecordItem: "003",
+      item: "Sodium starch glycolate",
+      lotCode: "LOT-SSG-005B",
+      expiryDate: "2026-07-20",
+      palletNumber: "PAL-027",
+      quantity: "0.2",
+      uom: "kg",
+    },
+    {
+      subcomponentConsumptionRecordItem: "004",
+      item: "Stearic acid",
+      lotCode: "LOT-SA-005B",
+      expiryDate: "2026-08-25",
+      palletNumber: "PAL-028",
+      quantity: "0.1",
+      uom: "kg",
+    },
+    {
+      subcomponentConsumptionRecordItem: "005",
+      item: "FD&C Red #40",
+      lotCode: "LOT-RED-005B",
+      expiryDate: "2026-09-30",
+      palletNumber: "PAL-029",
+      quantity: "0.025",
+      uom: "kg",
+    },
+    {
+      subcomponentConsumptionRecordItem: "006",
+      item: "Silicon dioxide",
+      lotCode: "LOT-SD-005B",
+      expiryDate: "2026-10-15",
+      palletNumber: "PAL-030",
+      quantity: "0.15",
+      uom: "kg",
+    },
+    {
+      subcomponentConsumptionRecordItem: "007",
+      item: "Aspartame",
+      lotCode: "LOT-ASP-005B",
+      expiryDate: "2026-11-20",
+      palletNumber: "PAL-031",
+      quantity: "0.05",
+      uom: "kg",
+    },
+    {
+      subcomponentConsumptionRecordItem: "008",
+      item: "Mint flavor",
+      lotCode: "LOT-MF-005B",
+      expiryDate: "2026-12-25",
+      palletNumber: "PAL-032",
+      quantity: "0.01",
+      uom: "kg",
+    },
+  ];
+
+  const materialsData6A = [
+    {
+      subcomponentConsumptionRecordItem: "001",
+      item: "Acetaminophen 500mg",
+      lotCode: "LOT-ACET-006A",
+      expiryDate: "2026-06-15",
+      palletNumber: "PAL-033",
+      quantity: "3.2",
+      uom: "kg",
+    },
+    {
+      subcomponentConsumptionRecordItem: "002",
+      item: "Microcrystalline cellulose",
+      lotCode: "LOT-MCC-006A",
+      expiryDate: "2026-07-20",
+      palletNumber: "PAL-034",
+      quantity: "1.5",
+      uom: "kg",
+    },
+    {
+      subcomponentConsumptionRecordItem: "003",
+      item: "Croscarmellose sodium",
+      lotCode: "LOT-CCS-006A",
+      expiryDate: "2026-08-25",
+      palletNumber: "PAL-035",
+      quantity: "0.4",
+      uom: "kg",
+    },
+    {
+      subcomponentConsumptionRecordItem: "004",
+      item: "Magnesium stearate",
+      lotCode: "LOT-MS-006A",
+      expiryDate: "2026-09-30",
+      palletNumber: "PAL-036",
+      quantity: "0.15",
+      uom: "kg",
+    },
+    {
+      item: "Hydroxypropyl methylcellulose",
+      lotCode: "LOT-HPMC-006A",
+      expiryDate: "2026-10-15",
+      palletNumber: "PAL-037",
+      quantity: "1.0",
+      uom: "kg",
+    },
+    {
+      item: "Talc powder",
+      lotCode: "LOT-TALC-006A",
+      expiryDate: "2026-11-20",
+      palletNumber: "PAL-038",
+      quantity: "0.6",
+      uom: "kg",
+    },
+    {
+      item: "FD&C Blue #2",
+      lotCode: "LOT-BLUE-006A",
+      expiryDate: "2026-12-25",
+      palletNumber: "PAL-039",
+      quantity: "0.03",
+      uom: "kg",
+    },
+    {
+      item: "Sodium benzoate",
+      lotCode: "LOT-SB-006A",
+      expiryDate: "2027-01-30",
+      palletNumber: "PAL-040",
+      quantity: "0.08",
+      uom: "kg",
+    },
+  ];
+
+  const materialsData6B = [
+    {
+      subcomponentConsumptionRecordItem: "001",
+      item: "Acetaminophen 500mg",
+      lotCode: "LOT-ACET-006B",
+      expiryDate: "2026-06-15",
+      palletNumber: "PAL-041",
+      quantity: "1.7",
+      uom: "kg",
+    },
+    {
+      subcomponentConsumptionRecordItem: "002",
+      item: "Microcrystalline cellulose",
+      lotCode: "LOT-MCC-006B",
+      expiryDate: "2026-07-20",
+      palletNumber: "PAL-042",
+      quantity: "0.8",
+      uom: "kg",
+    },
+    {
+      subcomponentConsumptionRecordItem: "003",
+      item: "Croscarmellose sodium",
+      lotCode: "LOT-CCS-006B",
+      expiryDate: "2026-08-25",
+      palletNumber: "PAL-043",
+      quantity: "0.2",
+      uom: "kg",
+    },
+    {
+      item: "Magnesium stearate",
+      lotCode: "LOT-MS-006B",
+      expiryDate: "2026-09-30",
+      palletNumber: "PAL-044",
+      quantity: "0.08",
+      uom: "kg",
+    },
+    {
+      item: "Hydroxypropyl methylcellulose",
+      lotCode: "LOT-HPMC-006B",
+      expiryDate: "2026-10-15",
+      palletNumber: "PAL-045",
+      quantity: "0.5",
+      uom: "kg",
+    },
+    {
+      item: "Talc powder",
+      lotCode: "LOT-TALC-006B",
+      expiryDate: "2026-11-20",
+      palletNumber: "PAL-046",
+      quantity: "0.3",
+      uom: "kg",
+    },
+    {
+      item: "FD&C Blue #2",
+      lotCode: "LOT-BLUE-006B",
+      expiryDate: "2026-12-25",
+      palletNumber: "PAL-047",
+      quantity: "0.015",
+      uom: "kg",
+    },
+    {
+      item: "Sodium benzoate",
+      lotCode: "LOT-SB-006B",
+      expiryDate: "2027-01-30",
+      palletNumber: "PAL-048",
+      quantity: "0.04",
+      uom: "kg",
+    },
+  ];
+
+  const materialsData7A = [
+    {
+      subcomponentConsumptionRecordItem: "001",
+      item: "Pending - Acetaminophen 500mg",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Microcrystalline cellulose",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Croscarmellose sodium",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Magnesium stearate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Hydroxypropyl methylcellulose",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Talc powder",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - FD&C Blue #2",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Sodium benzoate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+  ];
+
+  const materialsData7B = [
+    // Base materials (8 items)
+    {
+      item: "Pending - Acetaminophen 500mg",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Microcrystalline cellulose",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Croscarmellose sodium",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Magnesium stearate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Hydroxypropyl methylcellulose",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Talc powder",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - FD&C Blue #2",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Sodium benzoate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+
+    // Additional materials to reach 120 rows
+    {
+      item: "Pending - Lactose monohydrate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Povidone K30",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Colloidal silicon dioxide",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Stearic acid",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Sodium starch glycolate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Croscarmellose sodium",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Hydroxypropyl cellulose",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    { item: "Pending - Ethylcellulose", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Methylcellulose", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    {
+      item: "Pending - Carboxymethylcellulose sodium",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Polyethylene glycol 4000",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Polyethylene glycol 6000",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    { item: "Pending - Polysorbate 80", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Polysorbate 20", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Sorbitan monooleate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Lecithin", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Glycerin", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Propylene glycol", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Ethanol", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Isopropanol", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Water for injection", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Purified water", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Sodium chloride", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Potassium chloride", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Calcium chloride", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Magnesium chloride", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    {
+      item: "Pending - Sodium phosphate dibasic",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Sodium phosphate monobasic",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    { item: "Pending - Citric acid", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Sodium citrate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Trisodium citrate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Sodium acetate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Sodium bicarbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Sodium carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    {
+      item: "Pending - Potassium bicarbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    { item: "Pending - Potassium carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Calcium carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Magnesium carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Zinc carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Iron carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Copper carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Manganese carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Chromium carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Nickel carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Cobalt carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Molybdenum carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Selenium carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Iodine carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Fluoride carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Chloride carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Bromide carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Iodide carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Sulfate carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Nitrate carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Phosphate carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Acetate carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Citrate carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Lactate carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Malate carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Fumarate carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Succinate carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Glutarate carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Adipate carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Pimelate carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Suberate carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Azelate carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Sebacate carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    {
+      item: "Pending - Undecanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Dodecanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Tridecanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Tetradecanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Pentadecanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Hexadecanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Heptadecanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Octadecanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Nonadecanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Eicosanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Heneicosanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Docosanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Tricosanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Tetracosanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Pentacosanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Hexacosanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Heptacosanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Octacosanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Nonacosanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Triacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Hentriacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Dotriacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Tritriacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Tetratriacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Pentatriacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Hexatriacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Heptatriacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Octatriacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Nonatriacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Tetracontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Hentetracontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Dotetracontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Tritetracontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Tetratetracontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Pentatetracontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Hexatetracontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Heptatetracontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Octatetracontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Nonatetracontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Pentacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Henpentacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Dopentacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Tripentacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Tetrapentacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Pentapentacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Hexapentacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Heptapentacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Octapentacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Nonapentacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Hexacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Henhexacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Dohexacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Trihexacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Tetrahexacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Pentahexacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Hexahexacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Heptahexacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Octahexacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Nonahexacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Heptacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Henheptacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Doheptacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Triheptacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Tetraheptacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Pentaheptacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Hexaheptacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Heptaheptacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Octaheptacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Nonaheptacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Octacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Henoctacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Dooctacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Trioctacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Tetraoctacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Pentaoctacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Hexaoctacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Heptaoctacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Octaoctacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Nonaoctacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Nonacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Hennonacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Dononacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Trinonacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Tetranonacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Pentanonacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Hexanonacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Heptanonacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Octanonacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Nonanonacontanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Hectanedioate carbonate",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+
+    // Additional materials to make it super long (200+ more items)
+    {
+      item: "Pending - Additional Material 001",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 002",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 003",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 004",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 005",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 006",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 007",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 008",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 009",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 010",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 011",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 012",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 013",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 014",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 015",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 016",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 017",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 018",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 019",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 020",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 021",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 022",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 023",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 024",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 025",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 026",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 027",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 028",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 029",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 030",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 031",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 032",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 033",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 034",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 035",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 036",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 037",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 038",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 039",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 040",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 041",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 042",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 043",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 044",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 045",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 046",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 047",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 048",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 049",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 050",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 051",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 052",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 053",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 054",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 055",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 056",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 057",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 058",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 059",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 060",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 061",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 062",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 063",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 064",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 065",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 066",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 067",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 068",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 069",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 070",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 071",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 072",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 073",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 074",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 075",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 076",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 077",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 078",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 079",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 080",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 081",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 082",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 083",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 084",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 085",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 086",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 087",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 088",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 089",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 090",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 091",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 092",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 093",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 094",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 095",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 096",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 097",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 098",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 099",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 100",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 101",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 102",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 103",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 104",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 105",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 106",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 107",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 108",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 109",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 110",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 111",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 112",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 113",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 114",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 115",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 116",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 117",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 118",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 119",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 120",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 121",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 122",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 123",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 124",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 125",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 126",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 127",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 128",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 129",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 130",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 131",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 132",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 133",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 134",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 135",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 136",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 137",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 138",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 139",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 140",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 141",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 142",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 143",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 144",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 145",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 146",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 147",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 148",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 149",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 150",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 151",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 152",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 153",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 154",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 155",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 156",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 157",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 158",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 159",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 160",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 161",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 162",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 163",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 164",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 165",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 166",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 167",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 168",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 169",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 170",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 171",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 172",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 173",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 174",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 175",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 176",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 177",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 178",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 179",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 180",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 181",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 182",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 183",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 184",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 185",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 186",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 187",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 188",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 189",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 190",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 191",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 192",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 193",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 194",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 195",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 196",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 197",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 198",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 199",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+    {
+      item: "Pending - Additional Material 200",
+      lotCode: "TBD",
+      expiryDate: "TBD",
+      palletNumber: "TBD",
+      quantity: "TBD",
+      uom: "TBD",
+    },
+  ];
+
+  // Consumption table columns
+  const consumptionTableColumns = [
+    {
+      label: "#",
+      dataKey: "subcomponentConsumptionRecordItem",
+      width: "3em",
+      cellRenderer: ({ row }: { row: any }) => (
+        <Box py="x0_75" mr="x1" pl="half" display="flex" justifyContent="flex-start">
+          <Tooltip tooltip={`Subcomponent consumption record #${row.subcomponentConsumptionRecordItem}`} placement="left">
+            <Box
+              backgroundColor="lightGrey"
+              px="half"
+              borderRadius="small"
+              flexShrink={0}
+            >
+              <Text
+                color="darkGrey"
+                fontSize="smaller"
+                lineHeight="smallerText"
+                fontWeight="bold"
+                textTransform="uppercase"
+                letterSpacing=".05em"
+                whiteSpace="nowrap"
+              >
+                {row.subcomponentConsumptionRecordItem}
+              </Text>
+            </Box>
+          </Tooltip>
+        </Box>
+      ),
+    },
+    {
+      label: "Item",
+      dataKey: "item",
+      width: "auto",
+      headerFormatter: ({ label }: { label: string }) => (
+        <Text fontSize="small" lineHeight="smallCompressed">
+          {label}
+        </Text>
+      ),
+      cellFormatter: ({ cellData }: { cellData: string }) => (
+        <Text fontSize="small" lineHeight="smallCompressed">
+          {cellData}
+        </Text>
+      ),
+    },
+    {
+      label: "Lot code",
+      dataKey: "lotCode",
+      width: "auto",
+      headerFormatter: ({ label }: { label: string }) => (
+        <Text fontSize="small" lineHeight="smallCompressed">
+          {label}
+        </Text>
+      ),
+      cellFormatter: ({ cellData }: { cellData: string }) => (
+        <Text fontSize="small" lineHeight="smallCompressed">
+          {cellData}
+        </Text>
+      ),
+    },
+    {
+      label: "Expiry date",
+      dataKey: "expiryDate",
+      width: "auto",
+      headerFormatter: ({ label }: { label: string }) => (
+        <Text fontSize="small" lineHeight="smallCompressed" >
+          {label}
+        </Text>
+      ),
+      cellFormatter: ({ cellData }: { cellData: string }) => (
+        <Text fontSize="small" lineHeight="smallCompressed">
+          {cellData}
+        </Text>
+      ),
+    },
+    {
+      label: "Pallet number",
+      dataKey: "palletNumber",
+      width: "auto",
+      headerFormatter: ({ label }: { label: string }) => (
+        <Text fontSize="small" lineHeight="smallCompressed" >
+          {label}
+        </Text>
+      ),
+      cellFormatter: ({ cellData }: { cellData: string }) => (
+        <Text fontSize="small" lineHeight="smallCompressed">
+          {cellData}
+        </Text>
+      ),
+    },
+    {
+      label: "Quantity",
+      dataKey: "quantity",
+      width: "auto",
+      headerFormatter: ({ label }: { label: string }) => (
+        <Text fontSize="small" lineHeight="smallCompressed">
+          {label}
+        </Text>
+      ),
+      cellFormatter: ({ cellData }: { cellData: string }) => (
+        <Text fontSize="small" lineHeight="smallCompressed">
+          {cellData}
+        </Text>
+      ),
+    },
+    {
+      label: "UOM",
+      dataKey: "uom",
+      width: "auto",
+      headerFormatter: ({ label }: { label: string }) => (
+        <Text fontSize="small" lineHeight="smallCompressed" >
+          {label}
+        </Text>
+      ),
+      cellFormatter: ({ cellData }: { cellData: string }) => (
+        <Text fontSize="small" lineHeight="smallCompressed">
+          {cellData}
+        </Text>
+      ),
+    },
+  ];
 
   // Reusable Consumption Report Component
   const ConsumptionReport = ({
