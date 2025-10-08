@@ -60,7 +60,7 @@ import {
   materialsData7A,
   materialsData7B,
 } from "./details11/materialsData";
-import { uomOptions, unitOptions, detailsData, userState, collaborationState, acceptedItems, poStatus, editFormData, productionRecord } from "./details11/optionsData";
+import { uomOptions, unitOptions, detailsData, userState, collaborationState, acceptedItems, poStatus, editFormData, productionRecord, fieldConfig } from "./details11/optionsData";
 
 export default {
   title: "Projects/Supplier Collaboration/POLI lot/Details11",
@@ -216,12 +216,8 @@ export const Details11 = () => {
   const [consumptionMaterials, setConsumptionMaterials] = useState([]);
   const [role, setRole] = useState("customer");
   const [showConfigBar, setShowConfigBar] = useState(true);
-  const [fieldConfig, setFieldConfig] = useState({
-    lotCodeRequired: true,
-    palletNumberRequired: true,
-    expiryDateRequired: true,
-    sanofiRequired: true,
-  });
+  // fieldConfig now imported from optionsData.tsx
+  const [fieldConfigState, setFieldConfigState] = useState(fieldConfig);
 
   // primaryMenu and secondaryMenu now imported from optionsData.tsx
 
@@ -453,7 +449,7 @@ export const Details11 = () => {
       width: "180px",
       cellRenderer: ({ row }: { row: any }) => {
         // If pallet number is not required in config, show "-"
-        if (!fieldConfig.palletNumberRequired) {
+        if (!fieldConfigState.palletNumberRequired) {
           return (
             <Flex py="x0_75">
               <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
@@ -477,7 +473,7 @@ export const Details11 = () => {
       width: "180px",
       cellRenderer: ({ row }: { row: any }) => {
         // If lot code is not required in config, show "-"
-        if (!fieldConfig.lotCodeRequired) {
+        if (!fieldConfigState.lotCodeRequired) {
           return (
             <Flex py="x0_75">
               <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
@@ -517,7 +513,7 @@ export const Details11 = () => {
       width: "150px",
       cellRenderer: ({ row }: { row: any }) => {
         // If expiry date is not required in config, show "-"
-        if (!fieldConfig.expiryDateRequired) {
+        if (!fieldConfigState.expiryDateRequired) {
           return (
             <Flex py="x0_75">
               <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
@@ -634,7 +630,7 @@ export const Details11 = () => {
       width: "180px",
       cellRenderer: ({ row }: { row: any }) => {
         // If pallet number is not required in config, show "-"
-        if (!fieldConfig.palletNumberRequired) {
+        if (!fieldConfigState.palletNumberRequired) {
           return (
             <Flex py="x0_75">
               <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
@@ -658,7 +654,7 @@ export const Details11 = () => {
       width: "180px",
       cellRenderer: ({ row }: { row: any }) => {
         // If lot code is not required in config, show "-"
-        if (!fieldConfig.lotCodeRequired) {
+        if (!fieldConfigState.lotCodeRequired) {
           return (
             <Flex py="x0_75">
               <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
@@ -736,7 +732,7 @@ export const Details11 = () => {
       width: "150px",
       cellRenderer: ({ row }: { row: any }) => {
         // If expiry date is not required in config, show "-"
-        if (!fieldConfig.expiryDateRequired) {
+        if (!fieldConfigState.expiryDateRequired) {
           return (
             <Flex py="x0_75">
               <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
@@ -761,7 +757,7 @@ export const Details11 = () => {
       width: "180px",
       cellRenderer: ({ row }: { row: any }) => {
         // If pallet number is not required in config, show "-"
-        if (!fieldConfig.palletNumberRequired) {
+        if (!fieldConfigState.palletNumberRequired) {
           return (
             <Flex py="x0_75">
               <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
@@ -862,7 +858,7 @@ export const Details11 = () => {
       width: "180px",
       cellRenderer: ({ row }: { row: any }) => {
         // If pallet number is not required in config, show "-"
-        if (!fieldConfig.palletNumberRequired) {
+        if (!fieldConfigState.palletNumberRequired) {
           return (
             <Flex py="x0_75">
               <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
@@ -886,7 +882,7 @@ export const Details11 = () => {
       width: "180px",
       cellRenderer: ({ row }: { row: any }) => {
         // If lot code is not required in config, show "-"
-        if (!fieldConfig.lotCodeRequired) {
+        if (!fieldConfigState.lotCodeRequired) {
           return (
             <Flex py="x0_75">
               <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
@@ -926,7 +922,7 @@ export const Details11 = () => {
       width: "150px",
       cellRenderer: ({ row }: { row: any }) => {
         // If expiry date is not required in config, show "-"
-        if (!fieldConfig.expiryDateRequired) {
+        if (!fieldConfigState.expiryDateRequired) {
           return (
             <Flex py="x0_75">
               <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
@@ -951,7 +947,7 @@ export const Details11 = () => {
       width: "180px",
       cellRenderer: ({ row }: { row: any }) => {
         // If pallet number is not required in config, show "-"
-        if (!fieldConfig.palletNumberRequired) {
+        if (!fieldConfigState.palletNumberRequired) {
           return (
             <Flex py="x0_75">
               <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
@@ -1286,7 +1282,7 @@ export const Details11 = () => {
       headerFormatter: () => null,
       cellRenderer: (props: { row: any }) => {
         // Hide the entire dropdown when Sanofi ref ID is off
-        if (!fieldConfig.sanofiRequired) {
+        if (!fieldConfigState.sanofiRequired) {
           return null;
         }
 
@@ -6126,7 +6122,7 @@ export const Details11 = () => {
                     <Box display="flex" borderBottom="1px solid" borderColor="lightGrey" pb="x1">
                       <Box flex="1" pb="x1" pl="x1" fontWeight="bold" fontSize="small">
                         Pallet number
-                        {role === "supplier" && fieldConfig.palletNumberRequired && (
+                        {role === "supplier" && fieldConfigState.palletNumberRequired && (
                           <Text inline ml="x0_5" fontSize="small" color="darkGrey">
                             (Required)
                           </Text>
@@ -6137,7 +6133,7 @@ export const Details11 = () => {
                       </Box>
                       <Box flex="1" pb="x1" pl="x1" fontWeight="bold" fontSize="small">
                         Supplier's lot code
-                        {role === "supplier" && fieldConfig.lotCodeRequired && (
+                        {role === "supplier" && fieldConfigState.lotCodeRequired && (
                           <Text inline ml="x0_5" fontSize="small" color="darkGrey">
                             (Required)
                           </Text>
@@ -6145,7 +6141,7 @@ export const Details11 = () => {
                       </Box>
                       <Box flex="1" pb="x1" pl="x1" fontWeight="bold" fontSize="small">
                         Expiry date
-                        {role === "supplier" && fieldConfig.expiryDateRequired && (
+                        {role === "supplier" && fieldConfigState.expiryDateRequired && (
                           <Text inline ml="x0_5" fontSize="small" color="darkGrey">
                             (Required)
                           </Text>
@@ -6732,7 +6728,7 @@ export const Details11 = () => {
                     Lot code
                   </Text>
                   <Toggle
-                    toggled={fieldConfig.lotCodeRequired}
+                    toggled={fieldConfigState.lotCodeRequired}
                     onChange={(e) => handleFieldConfigChange("lotCodeRequired", e.target.checked)}
                   />
                 </Flex>
@@ -6743,7 +6739,7 @@ export const Details11 = () => {
                     Expiry date
                   </Text>
                   <Toggle
-                    toggled={fieldConfig.expiryDateRequired}
+                    toggled={fieldConfigState.expiryDateRequired}
                     onChange={(e) => handleFieldConfigChange("expiryDateRequired", e.target.checked)}
                   />
                 </Flex>
@@ -6753,7 +6749,7 @@ export const Details11 = () => {
                   Pallet
                 </Text>
                 <Toggle
-                  toggled={fieldConfig.palletNumberRequired}
+                  toggled={fieldConfigState.palletNumberRequired}
                   onChange={(e) => handleFieldConfigChange("palletNumberRequired", e.target.checked)}
                 />
               </Flex>
@@ -6766,7 +6762,7 @@ export const Details11 = () => {
                     SANOFI req
                   </Text>
                   <Toggle
-                    toggled={fieldConfig.sanofiRequired}
+                    toggled={fieldConfigState.sanofiRequired}
                     onChange={(e) => handleFieldConfigChange("sanofiRequired", e.target.checked)}
                   />
                 </Flex>

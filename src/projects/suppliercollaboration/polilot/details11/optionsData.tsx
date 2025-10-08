@@ -68,3 +68,10 @@ export const productionRecord = {
   producedQuantity: "",
   note: "",
 };
+
+export const fieldConfig = {
+  lotCodeRequired: true,
+  palletNumberRequired: true,
+  expiryDateRequired: true,
+  sanofiRequired: true,
+};
