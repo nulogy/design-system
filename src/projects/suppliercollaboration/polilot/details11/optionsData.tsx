@@ -55,3 +55,16 @@ export const editFormData = {
   needByDate: new Date("2025-02-15"),
   carryOverSentTo: "",
 };
+
+export const productionRecord = {
+  date: "",
+  uom: "",
+  expectedQuantity: "",
+  actualQuantity: "",
+  lotCode: "",
+  supplierLotCode: "",
+  expiryDate: "",
+  palletNumber: "",
+  producedQuantity: "",
+  note: "",
+};
