@@ -60,7 +60,7 @@ import {
   materialsData7A,
   materialsData7B,
 } from "./details11/materialsData";
-import { uomOptions, unitOptions, detailsData, userState, collaborationState, acceptedItems, poStatus } from "./details11/optionsData";
+import { uomOptions, unitOptions, detailsData, userState, collaborationState, acceptedItems, poStatus, editFormData } from "./details11/optionsData";
 
 export default {
   title: "Projects/Supplier Collaboration/POLI lot/Details11",
@@ -116,12 +116,8 @@ export const Details11 = () => {
 
   // Edit state
   const [showEditSidebar, setShowEditSidebar] = useState(false);
-  const [editFormData, setEditFormData] = useState({
-    supplierPOLineItemNumber: "SPLI-001",
-    bomRevision: "Rev 1.2 – 2025-Jan-10",
-    needByDate: new Date("2025-02-15"),
-    carryOverSentTo: "",
-  });
+  // editFormData now imported from optionsData.tsx
+  const [editFormDataState, setEditFormDataState] = useState(editFormData);
 
   // Details data
   // detailsData now imported from optionsData.tsx
@@ -6826,7 +6822,7 @@ export const Details11 = () => {
               <Input
                 labelText="Supplier's PO line item number"
                 id="supplierPOLineItemNumber"
-                value={editFormData.supplierPOLineItemNumber}
+                value={editFormDataState.supplierPOLineItemNumber}
                 onChange={(e) => setEditFormData((prev) => ({ ...prev, supplierPOLineItemNumber: e.target.value }))}
               />
             )}
@@ -6836,7 +6832,7 @@ export const Details11 = () => {
               labelText="BOM revision and release date"
               id="bomRevision"
               autoFocus
-              value={editFormData.bomRevision}
+              value={editFormDataState.bomRevision}
               onChange={(e) => setEditFormData((prev) => ({ ...prev, bomRevision: e.target.value }))}
             />
 
@@ -6846,7 +6842,7 @@ export const Details11 = () => {
               <Box>
                 <DatePicker
                   id="needByDate"
-                  selected={editFormData.needByDate}
+                  selected={editFormDataState.needByDate}
                   onChange={(date) => setEditFormData((prev) => ({ ...prev, needByDate: date }))}
                 />
               </Box>
@@ -6859,7 +6855,7 @@ export const Details11 = () => {
                 <Input
                   labelText="Carry over sent to"
                   id="carryOverSentTo"
-                  value={editFormData.carryOverSentTo}
+                  value={editFormDataState.carryOverSentTo}
                   onChange={(e) => setEditFormData((prev) => ({ ...prev, carryOverSentTo: e.target.value }))}
                 />
               </>
