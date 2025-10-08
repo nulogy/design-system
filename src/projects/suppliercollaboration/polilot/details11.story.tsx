@@ -691,6 +691,30 @@ export const Details11 = () => {
       },
     },
     {
+      label: "Pallet number",
+      dataKey: "palletNumber",
+      width: "180px",
+      cellRenderer: ({ row }: { row: any }) => {
+        // If pallet number is not required in config, show "-"
+        if (!fieldConfig.palletNumberRequired) {
+          return (
+            <Flex py="x0_75">
+              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                -
+              </Text>
+            </Flex>
+          );
+        }
+
+        // If pallet number is empty, don't render anything
+        if (!row.palletNumber) {
+          return null;
+        }
+
+        return row.palletNumber;
+      },
+    },
+    {
       label: "Lot code",
       dataKey: "lotCode",
       width: "180px",
@@ -892,6 +916,30 @@ export const Details11 = () => {
             <Text>{row.actualQuantity}</Text>
           </Flex>
         );
+      },
+    },
+    {
+      label: "Pallet number",
+      dataKey: "palletNumber",
+      width: "180px",
+      cellRenderer: ({ row }: { row: any }) => {
+        // If pallet number is not required in config, show "-"
+        if (!fieldConfig.palletNumberRequired) {
+          return (
+            <Flex py="x0_75">
+              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                -
+              </Text>
+            </Flex>
+          );
+        }
+
+        // If pallet number is empty, don't render anything
+        if (!row.palletNumber) {
+          return null;
+        }
+
+        return row.palletNumber;
       },
     },
     {
@@ -1250,6 +1298,15 @@ export const Details11 = () => {
       },
     },
     {
+      label: "Pallet number",
+      dataKey: "palletNumber",
+      width: "180px",
+      cellRenderer: ({ row }: { row: any }) => {
+        // Always show blank for parent table rows since detailed info is in nested tables
+        return null;
+      },
+    },
+    {
       label: "Lot code",
       dataKey: "lotCode",
       width: "180px",
@@ -1270,15 +1327,6 @@ export const Details11 = () => {
       label: "Expiry date",
       dataKey: "expiryDate",
       width: "150px",
-      cellRenderer: ({ row }: { row: any }) => {
-        // Always show blank for parent table rows since detailed info is in nested tables
-        return null;
-      },
-    },
-    {
-      label: "Pallet number",
-      dataKey: "palletNumber",
-      width: "180px",
       cellRenderer: ({ row }: { row: any }) => {
         // Always show blank for parent table rows since detailed info is in nested tables
         return null;
