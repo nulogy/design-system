@@ -60,7 +60,7 @@ import {
   materialsData7A,
   materialsData7B,
 } from "./details11/materialsData";
-import { uomOptions, unitOptions, detailsData } from "./details11/optionsData";
+import { uomOptions, unitOptions, detailsData, userState, collaborationState, acceptedItems, poStatus } from "./details11/optionsData";
 
 export default {
   title: "Projects/Supplier Collaboration/POLI lot/Details11",
@@ -111,14 +111,8 @@ export const Details11 = () => {
   >({});
 
   // Header and Summary state
-  const [userState] = useState({ role: "supplier" });
+  // userState, collaborationState, acceptedItems, poStatus now imported from optionsData.tsx
   const [productionComplete] = useState(false);
-  const [collaborationState] = useState({
-    status: "awaiting",
-    activeCardAuthorRole: "customer",
-  });
-  const [acceptedItems] = useState({ request: false, proposal: false });
-  const [poStatus] = useState("On time");
 
   // Edit state
   const [showEditSidebar, setShowEditSidebar] = useState(false);
