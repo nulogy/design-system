@@ -52,7 +52,7 @@ import {
 import { formatDateToYYYYMonDD, formatDateWithWeek } from "../utils/dateUtils";
 
 export default {
-  title: "Projects/Supplier Collaboration/POLI lot/Details 8",
+  title: "Projects/Supplier Collaboration/POLI lot/Details10",
 };
 
 const primaryMenu = [
@@ -73,7 +73,7 @@ const secondaryMenu = [
   },
 ];
 
-export const Details8 = () => {
+export const Details10 = () => {
   const [selectedIndex, setSelectedIndex] = useState(1); // Production records tab is index 1
   const [showProductionSidebar, setShowProductionSidebar] = useState(false);
   const [isEditingProduction, setIsEditingProduction] = useState(false);
@@ -140,6 +140,30 @@ export const Details8 = () => {
 
   // SummaryDivider component
   const SummaryDivider = () => <Box width="1px" height="x6" backgroundColor="lightGrey" mx="x2" />;
+
+  // OutputNumberPill component
+  const OutputNumberPill = ({ outputNumber }: { outputNumber: string }) => (
+    <Flex py="x0_75" mr="x1" justifyContent="flex-start" ml="-96px">
+      <Tooltip tooltip={`Actual production record #${outputNumber}`} placement="left">
+        <Box
+          backgroundColor="lightGrey"
+          px="half"
+          borderRadius="small"
+        >
+          <Text
+            color="darkGrey"
+            fontSize="smaller"
+            lineHeight="smallerText"
+            fontWeight="bold"
+            textTransform="uppercase"
+            letterSpacing=".05em"
+          >
+            {outputNumber}
+          </Text>
+        </Box>
+      </Tooltip>
+    </Flex>
+  );
 
   // Handler functions
   const handleCancelPOLineItem = () => {
@@ -236,6 +260,7 @@ export const Details8 = () => {
     {
       id: "1-1",
       actualQuantity: "0 cases",
+      outputNumber: "001",
       lotCode: "LOT-2025-001",
       supplierLotCode: "SUP-LOT-001",
       expiryDate: "2026-Feb-12",
@@ -248,6 +273,7 @@ export const Details8 = () => {
     {
       id: "1-2",
       actualQuantity: "5 cases",
+      outputNumber: "002",
       lotCode: "LOT-2025-001A",
       supplierLotCode: "SUP-LOT-001A",
       expiryDate: "2026-Feb-12",
@@ -260,6 +286,7 @@ export const Details8 = () => {
     {
       id: "1-3",
       actualQuantity: "3 cases",
+      outputNumber: "003",
       lotCode: "LOT-2025-001B",
       supplierLotCode: "SUP-LOT-001B",
       expiryDate: "2026-Feb-12",
@@ -275,6 +302,7 @@ export const Details8 = () => {
     {
       id: "2-1",
       actualQuantity: "12 cases",
+      outputNumber: "001",
       lotCode: "LOT-2025-002",
       supplierLotCode: "SUP-LOT-002",
       expiryDate: "2026-03-15",
@@ -293,6 +321,7 @@ export const Details8 = () => {
     {
       id: "3-1",
       actualQuantity: "25 cases",
+      outputNumber: "001",
       lotCode: "LOT-2025-003",
       supplierLotCode: "SUP-LOT-003",
       expiryDate: "2026-04-20",
@@ -311,6 +340,7 @@ export const Details8 = () => {
     {
       id: "4-1",
       actualQuantity: "0 cases",
+      outputNumber: "001",
       lotCode: "LOT-2025-004",
       supplierLotCode: "SUP-LOT-004",
       expiryDate: "2026-08-08",
@@ -326,6 +356,7 @@ export const Details8 = () => {
     {
       id: "5-1",
       actualQuantity: "8 cases",
+      outputNumber: "Output #001",
       lotCode: "LOT-2025-005A",
       supplierLotCode: "SUP-LOT-005A",
       expiryDate: "2026-03-15",
@@ -341,6 +372,7 @@ export const Details8 = () => {
     {
       id: "5-2",
       actualQuantity: "4 cases",
+      outputNumber: "Output #002",
       lotCode: "LOT-2025-005B",
       supplierLotCode: "SUP-LOT-005B",
       expiryDate: "2026-03-15",
@@ -359,6 +391,7 @@ export const Details8 = () => {
     {
       id: "6-1",
       actualQuantity: "15 cases",
+      outputNumber: "Actual production record #001",
       lotCode: "LOT-2025-006A",
       supplierLotCode: "SUP-LOT-006A",
       expiryDate: "2026-04-22",
@@ -374,6 +407,7 @@ export const Details8 = () => {
     {
       id: "6-2",
       actualQuantity: "8 cases",
+      outputNumber: "Actual production record #002",
       lotCode: "LOT-2025-006B",
       supplierLotCode: "SUP-LOT-006B",
       expiryDate: "2026-04-22",
@@ -387,6 +421,7 @@ export const Details8 = () => {
     {
       id: "7-1",
       actualQuantity: "0 cases",
+      outputNumber: "001",
       lotCode: "LOT-2025-007A",
       supplierLotCode: "SUP-LOT-007A",
       expiryDate: "2026-05-10",
@@ -397,6 +432,7 @@ export const Details8 = () => {
     {
       id: "7-2",
       actualQuantity: "0 cases",
+      outputNumber: "002",
       lotCode: "LOT-2025-007B",
       supplierLotCode: "SUP-LOT-007B",
       expiryDate: "2026-05-10",
@@ -422,12 +458,18 @@ export const Details8 = () => {
   // Nested table columns configuration
   const nestedTableColumns = [
     {
+      label: "Number",
+      dataKey: "outputNumber",
+      width: "0px",
+      cellRenderer: ({ row }: { row: any }) => <OutputNumberPill outputNumber={row.outputNumber} />,
+    },
+    {
       label: "Actual quantity",
       dataKey: "actualQuantity",
       width: "180px",
       cellRenderer: ({ row }: { row: any }) => {
         return (
-          <Flex py="x2" mr="x1">
+          <Flex py="x0_75" mr="x1">
             <Text>{row.actualQuantity}</Text>
           </Flex>
         );
@@ -533,24 +575,470 @@ export const Details8 = () => {
         }
 
         return (
-          <Box py="x1">
-            <Tooltip tooltip={row.note} placement="top">
-              <Text
-                fontSize="small"
-                lineHeight="smallTextCompressed"
-                style={{
-                  display: "-webkit-box",
-                  WebkitLineClamp: 2,
-                  WebkitBoxOrient: "vertical",
-                  overflow: "hidden",
-                  textOverflow: "ellipsis",
-                  maxHeight: "2.4em", // 2 lines * 1.2em line height
-                  cursor: "help",
-                }}
+          <Box py="x0_375">
+            <TruncatedText
+              pr="x2"
+              py="x1"
+              fontSize="small"
+              lineHeight="smallTextCompressed"
+              maxCharacters={98}
+            >
+              {row.note}
+            </TruncatedText>
+          </Box>
+        );
+      },
+    },
+    {
+      label: "",
+      dataKey: "spacer",
+      width: "48px",
+      headerFormatter: () => null,
+      cellRenderer: () => null,
+    },
+    {
+      label: "Number",
+      dataKey: "outputNumber",
+      width: "48px",
+      cellRenderer: ({ row }: { row: any }) => {
+        // Check if this is from nestedTableData2 (id starts with "2-")
+        const isSecondTable = row.id && row.id.startsWith("2-");
+        // Check if this is from nestedTableData3 (id starts with "3-")
+        const isThirdTable = row.id && row.id.startsWith("3-");
+        
+        if (isSecondTable) {
+          return (
+            <Flex py="x2" mr="x1" justifyContent="flex-end">
+              <Box 
+                backgroundColor="midGrey" 
+                px="half" 
+                borderRadius="small"
               >
-                {row.note}
+                <Text 
+                  color="white" 
+                  fontSize="smaller" 
+                  lineHeight="smallerText"
+                  fontWeight="bold"
+                  textTransform="uppercase"
+                  letterSpacing=".05em"
+                >
+                  {row.outputNumber}
+                </Text>
+              </Box>
+            </Flex>
+          );
+        }
+        
+        if (isThirdTable) {
+          return (
+            <Flex pb="x2" mr="x1" justifyContent="flex-end" alignItems="flex-start">
+              <Box 
+                backgroundColor="midGrey" 
+                px="half" 
+                borderTopLeftRadius="0"
+                borderTopRightRadius="0"
+                borderBottomLeftRadius="small"
+                borderBottomRightRadius="small"
+                mt="-28px"
+              >
+                <Text 
+                  color="white" 
+                  fontSize="smaller" 
+                  lineHeight="smallerText"
+                  fontWeight="bold"
+                  textTransform="uppercase"
+                  letterSpacing=".05em"
+                >
+                  {row.outputNumber}
+                </Text>
+              </Box>
+            </Flex>
+          );
+        }
+        
+        return (
+          <Flex py="x2" mr="x1" justifyContent="flex-end">
+            <Text color="midGrey" fontSize="small">
+              {row.outputNumber}
+            </Text>
+          </Flex>
+        );
+      },
+    },
+  ];
+
+  // Custom nested table columns for 5th, 6th, 7th tables (Number column first)
+  const nestedTableColumns567 = [
+    {
+      label: "Number",
+      dataKey: "outputNumber",
+      width: "0px",
+      cellRenderer: ({ row }: { row: any }) => {
+        // Check if this is from nestedTableData5 (id starts with "5-")
+        const isFifthTable = row.id && row.id.startsWith("5-");
+        // Check if this is from nestedTableData6 (id starts with "6-")
+        const isSixthTable = row.id && row.id.startsWith("6-");
+        
+        let marginLeft = "-146px"; // Default for row 7 (was -96px)
+        
+        if (isFifthTable) {
+          marginLeft = "-170px"; // More space for "Output #001", "Output #002" (was -120px)
+        } else if (isSixthTable) {
+          marginLeft = "-300px"; // Much more space for "Actual production record #001", "Actual production record #002" (was -250px)
+        }
+        
+        return (
+          <Flex py="x2" mr="x1" justifyContent="flex-start" ml={marginLeft}>
+            <Box 
+              backgroundColor={isSixthTable ? "white" : "midGrey"}
+              borderColor={isSixthTable ? "whiteGrey" : undefined}
+              borderWidth={isSixthTable ? "1px" : undefined}
+              borderStyle={isSixthTable ? "solid" : undefined}
+              px="half" 
+              borderRadius={isSixthTable ? "medium" : "small"}
+              style={isSixthTable ? { border: "1px solid #E5E5E5" } : undefined}
+            >
+              <Text 
+                color={isSixthTable ? "midGrey" : "white"}
+                fontSize="smaller" 
+                lineHeight="smallerText"
+                fontWeight="bold"
+                textTransform="uppercase"
+                letterSpacing=".05em"
+              >
+                {row.outputNumber}
               </Text>
+            </Box>
+          </Flex>
+        );
+      },
+    },
+    {
+      label: "Actual quantity",
+      dataKey: "actualQuantity",
+      width: "180px",
+      cellRenderer: ({ row }: { row: any }) => {
+        return (
+          <Flex py="x0_75" mr="x1">
+            <Text>{row.actualQuantity}</Text>
+          </Flex>
+        );
+      },
+    },
+    {
+      label: "Lot code",
+      dataKey: "lotCode",
+      width: "180px",
+      cellRenderer: ({ row }: { row: any }) => {
+        // If lot code is not required in config, show "-"
+        if (!fieldConfig.lotCodeRequired) {
+          return (
+            <Flex py="x2">
+              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                -
+              </Text>
+            </Flex>
+          );
+        }
+
+        // If all lot codes are empty, don't render anything
+        if (!row.lotCode && !row.supplierLotCode) {
+          return null;
+        }
+
+        return (
+          <Flex py="x2" gap="x0_25" flexDirection="column">
+            <TruncatedText fullWidth width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
+              {row.lotCode || ""}
+            </TruncatedText>
+            <TruncatedText
+              fullWidth
+              width="auto"
+              maxWidth="152px"
+              fontSize="small"
+              lineHeight="smallTextCompressed"
+              color="midGrey"
+            >
+              {row.supplierLotCode || ""}
+            </TruncatedText>
+          </Flex>
+        );
+      },
+    },
+    {
+      label: "Customer's lot code",
+      dataKey: "customerLotCode",
+      width: "180px",
+      cellRenderer: ({ row }: { row: any }) => {
+        // If customer lot code is empty, don't render anything
+        if (!row.customerLotCode) {
+          return null;
+        }
+
+        return (
+          <Flex py="x2">
+            <TruncatedText fullWidth width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
+              {row.customerLotCode}
+            </TruncatedText>
+          </Flex>
+        );
+      },
+    },
+    {
+      label: "Supplier's lot code",
+      dataKey: "supplierLotCode",
+      width: "180px",
+      cellRenderer: ({ row }: { row: any }) => {
+        // If supplier lot code is empty, don't render anything
+        if (!row.supplierLotCode) {
+          return null;
+        }
+
+        return (
+          <Flex py="x2">
+            <TruncatedText fullWidth width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
+              {row.supplierLotCode}
+            </TruncatedText>
+          </Flex>
+        );
+      },
+    },
+    {
+      label: "Expiry date",
+      dataKey: "expiryDate",
+      width: "150px",
+      cellRenderer: ({ row }: { row: any }) => {
+        // If expiry date is not required in config, show "-"
+        if (!fieldConfig.expiryDateRequired) {
+          return (
+            <Flex py="x2">
+              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                -
+              </Text>
+            </Flex>
+          );
+        }
+
+        // If expiry date is empty, don't render anything
+        if (!row.expiryDate) {
+          return null;
+        }
+
+        const formattedDate = formatDateToYYYYMonDD(row.expiryDate);
+        return <Text>{formattedDate}</Text>;
+      },
+    },
+    {
+      label: "Pallet number",
+      dataKey: "palletNumber",
+      width: "180px",
+      cellRenderer: ({ row }: { row: any }) => {
+        // If pallet number is not required in config, show "-"
+        if (!fieldConfig.palletNumberRequired) {
+          return (
+            <Flex py="x2">
+              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                -
+              </Text>
+            </Flex>
+          );
+        }
+
+        // If pallet number is empty, don't render anything
+        if (!row.palletNumber) {
+          return null;
+        }
+
+        return row.palletNumber;
+      },
+    },
+    {
+      label: "Note",
+      dataKey: "note",
+      width: "auto",
+      cellRenderer: ({ row }: { row: any }) => {
+        // If note is empty, don't render anything
+        if (!row.note) {
+          return null;
+        }
+
+        return (
+          <Box py="x0_375">
+            <TruncatedText
+              pr="x2"
+              py="x1"
+              fontSize="small"
+              lineHeight="smallTextCompressed"
+              maxCharacters={98}
+            >
+              {row.note}
+            </TruncatedText>
+          </Box>
+        );
+      },
+    },
+    {
+      label: "",
+      dataKey: "spacer",
+      width: "48px",
+      headerFormatter: () => null,
+      cellRenderer: () => null,
+    },
+  ];
+
+  // Custom nested table columns for 4th table (Number column first)
+  const nestedTableColumns4th = [
+    {
+      label: "Number",
+      dataKey: "outputNumber",
+      width: "0px",
+      cellRenderer: ({ row }: { row: any }) => {
+        return (
+          <Flex py="x2" mr="x1" justifyContent="flex-start" ml="-96px">
+            <Tooltip tooltip="Actual production record #001" placement="top">
+              <Box 
+                backgroundColor="midGrey" 
+                px="half" 
+                borderRadius="small"
+              >
+                <Text 
+                  color="white" 
+                  fontSize="smaller" 
+                  lineHeight="smallerText"
+                  fontWeight="bold"
+                  textTransform="uppercase"
+                  letterSpacing=".05em"
+                >
+                  {row.outputNumber}
+                </Text>
+              </Box>
             </Tooltip>
+          </Flex>
+        );
+      },
+    },
+    {
+      label: "Actual quantity",
+      dataKey: "actualQuantity",
+      width: "180px",
+      cellRenderer: ({ row }: { row: any }) => {
+        return (
+          <Flex py="x0_75" mr="x1">
+            <Text>{row.actualQuantity}</Text>
+          </Flex>
+        );
+      },
+    },
+    {
+      label: "Lot code",
+      dataKey: "lotCode",
+      width: "180px",
+      cellRenderer: ({ row }: { row: any }) => {
+        // If lot code is not required in config, show "-"
+        if (!fieldConfig.lotCodeRequired) {
+          return (
+            <Flex py="x2">
+              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                -
+              </Text>
+            </Flex>
+          );
+        }
+
+        // If all lot codes are empty, don't render anything
+        if (!row.lotCode && !row.supplierLotCode) {
+          return null;
+        }
+
+        return (
+          <Flex py="x2" gap="x0_25" flexDirection="column">
+            <TruncatedText fullWidth width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
+              {row.lotCode || ""}
+            </TruncatedText>
+            <TruncatedText
+              fullWidth
+              width="auto"
+              maxWidth="152px"
+              fontSize="small"
+              lineHeight="smallTextCompressed"
+              color="midGrey"
+            >
+              {row.supplierLotCode || ""}
+            </TruncatedText>
+          </Flex>
+        );
+      },
+    },
+    {
+      label: "Expiry date",
+      dataKey: "expiryDate",
+      width: "150px",
+      cellRenderer: ({ row }: { row: any }) => {
+        // If expiry date is not required in config, show "-"
+        if (!fieldConfig.expiryDateRequired) {
+          return (
+            <Flex py="x2">
+              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                -
+              </Text>
+            </Flex>
+          );
+        }
+
+        // If expiry date is empty, don't render anything
+        if (!row.expiryDate) {
+          return null;
+        }
+
+        const formattedDate = formatDateToYYYYMonDD(row.expiryDate);
+        return <Text>{formattedDate}</Text>;
+      },
+    },
+    {
+      label: "Pallet number",
+      dataKey: "palletNumber",
+      width: "180px",
+      cellRenderer: ({ row }: { row: any }) => {
+        // If pallet number is not required in config, show "-"
+        if (!fieldConfig.palletNumberRequired) {
+          return (
+            <Flex py="x2">
+              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                -
+              </Text>
+            </Flex>
+          );
+        }
+
+        // If pallet number is empty, don't render anything
+        if (!row.palletNumber) {
+          return null;
+        }
+
+        return row.palletNumber;
+      },
+    },
+    {
+      label: "Note",
+      dataKey: "note",
+      width: "auto",
+      cellRenderer: ({ row }: { row: any }) => {
+        // If note is empty, don't render anything
+        if (!row.note) {
+          return null;
+        }
+
+        return (
+          <Box py="x0_375">
+            <TruncatedText
+              pr="x2"
+              py="x1"
+              fontSize="small"
+              lineHeight="smallTextCompressed"
+              maxCharacters={98}
+            >
+              {row.note}
+            </TruncatedText>
           </Box>
         );
       },
@@ -579,13 +1067,13 @@ export const Details8 = () => {
       note: "Initial production batch with quality control checks completed",
       expandedContent: () => (
         <Box style={{ paddingLeft: "-56px" }}>
-          <Box style={{ paddingLeft: "300px" }}>
+          <Box style={{ paddingLeft: "298px" }}>
             <Table
               columns={nestedTableColumns}
               rows={nestedTableData1}
               keyField="id"
               rowBorder={true}
-              className="nested-table"
+              className="actual-production-record-table"
               compact={true}
               hasExpandableRows={true}
               expandedRows={nestedExpandedRows}
@@ -608,13 +1096,13 @@ export const Details8 = () => {
       note: "Standard production run with normal quality metrics",
       expandedContent: () => (
         <Box style={{ paddingLeft: "-56px" }}>
-          <Box style={{ paddingLeft: "300px" }}>
+          <Box style={{ paddingLeft: "298px" }}>
             <Table
               columns={nestedTableColumns}
               rows={nestedTableData2}
               keyField="id"
               rowBorder={true}
-              className="nested-table"
+              className="actual-production-record-table"
               compact={true}
               hasExpandableRows={true}
               expandedRows={nestedExpandedRows}
@@ -637,13 +1125,13 @@ export const Details8 = () => {
       note: "High volume production batch for major customer order",
       expandedContent: () => (
         <Box style={{ paddingLeft: "-56px" }}>
-          <Box style={{ paddingLeft: "300px" }}>
+          <Box style={{ paddingLeft: "298px" }}>
             <Table
               columns={nestedTableColumns}
               rows={nestedTableData3}
               keyField="id"
               rowBorder={true}
-              className="nested-table"
+              className="actual-production-record-table"
               compact={true}
               hasExpandableRows={true}
               expandedRows={nestedExpandedRows}
@@ -656,7 +1144,7 @@ export const Details8 = () => {
     {
       id: "4",
       date: "2025-Aug-08",
-      lotCodeAndExpiry: "LOT-2025-004",
+      //lotCodeAndExpiry: "LOT-2025-004",
       customerLotCode: "LOT-2025-004",
       supplierLotCode: "SUP-LOT-004",
       expiryDate: "2026-08-08",
@@ -666,13 +1154,13 @@ export const Details8 = () => {
       note: "Equipment maintenance scheduled, production line optimization in progress",
       expandedContent: () => (
         <Box style={{ paddingLeft: "-56px" }}>
-          <Box style={{ paddingLeft: "300px" }}>
+          <Box style={{ paddingLeft: "298px" }}>
             <Table
-              columns={nestedTableColumns}
+              columns={nestedTableColumns4th}
               rows={nestedTableData4}
               keyField="id"
               rowBorder={true}
-              className="nested-table"
+              className="actual-production-record-table"
               compact={true}
               hasExpandableRows={true}
               expandedRows={nestedExpandedRows}
@@ -695,13 +1183,13 @@ export const Details8 = () => {
       note: "Multi-batch production run with quality variations",
       expandedContent: () => (
         <Box style={{ paddingLeft: "-56px" }}>
-          <Box style={{ paddingLeft: "300px" }}>
+          <Box style={{ paddingLeft: "298px" }}>
             <Table
-              columns={nestedTableColumns}
+              columns={nestedTableColumns567}
               rows={nestedTableData5}
               keyField="id"
               rowBorder={true}
-              className="nested-table"
+              className="actual-production-record-table"
               compact={true}
               hasExpandableRows={true}
               expandedRows={nestedExpandedRows}
@@ -724,13 +1212,13 @@ export const Details8 = () => {
       note: "Quality control batch with mixed results",
       expandedContent: () => (
         <Box style={{ paddingLeft: "-56px" }}>
-          <Box style={{ paddingLeft: "300px" }}>
+          <Box style={{ paddingLeft: "298px" }}>
             <Table
-              columns={nestedTableColumns}
+              columns={nestedTableColumns567}
               rows={nestedTableData6}
               keyField="id"
               rowBorder={true}
-              className="nested-table"
+              className="actual-production-record-table"
               compact={true}
               hasExpandableRows={true}
               expandedRows={nestedExpandedRows}
@@ -753,13 +1241,13 @@ export const Details8 = () => {
       note: "Production on hold due to material shortage and supply chain delays",
       expandedContent: () => (
         <Box style={{ paddingLeft: "-56px" }}>
-          <Box style={{ paddingLeft: "300px" }}>
+          <Box style={{ paddingLeft: "298px" }}>
             <Table
-              columns={nestedTableColumns}
+              columns={nestedTableColumns567}
               rows={nestedTableData7}
               keyField="id"
               rowBorder={true}
-              className="nested-table"
+              className="actual-production-record-table"
               compact={true}
               hasExpandableRows={true}
               expandedRows={nestedExpandedRows}
@@ -4342,7 +4830,7 @@ export const Details8 = () => {
             keyField="item"
             compact={true}
             rowBorder={true}
-            className="consumption-table"
+            className="subcomponent-consumption-record-table"
           />
         )}
       </Box>
@@ -4533,11 +5021,11 @@ export const Details8 = () => {
           }
           
           /* Hide 2nd level nested table headers (1st tier nested) */
-          .nested-table thead {
+          .actual-production-record-table thead {
             height: 0 !important;
             overflow: hidden !important;
           }
-          .nested-table thead th {
+          .actual-production-record-table thead th {
             height: 0 !important;
             padding: 0 !important;
             border: none !important;
@@ -4546,11 +5034,11 @@ export const Details8 = () => {
           }
           
           /* Show headers for consumption tables (3rd level) */
-          .consumption-table thead {
+          .subcomponent-consumption-record-table thead {
             height: auto !important;
             overflow: visible !important;
           }
-          .consumption-table thead th {
+          .subcomponent-consumption-record-table thead th {
             height: auto !important;
             padding: 0 0 8px 8px !important;
             border: none !important;
@@ -4562,29 +5050,29 @@ export const Details8 = () => {
           }
           
           /* Add extra padding-left to columns 2+ */
-          .consumption-table thead th:nth-child(n+2) {
+          .subcomponent-consumption-record-table thead th:nth-child(n+2) {
             padding-left: 16px !important;
           }
           
           /* Match consumption table column widths */
-          .consumption-table thead th:nth-child(1) { width: 200px !important; }
-          .consumption-table thead th:nth-child(2) { width: 150px !important; }
-          .consumption-table thead th:nth-child(3) { width: 120px !important; }
-          .consumption-table thead th:nth-child(4) { width: 120px !important; }
-          .consumption-table thead th:nth-child(5) { width: 100px !important; }
+          .subcomponent-consumption-record-table thead th:nth-child(1) { width: 200px !important; }
+          .subcomponent-consumption-record-table thead th:nth-child(2) { width: 150px !important; }
+          .subcomponent-consumption-record-table thead th:nth-child(3) { width: 120px !important; }
+          .subcomponent-consumption-record-table thead th:nth-child(4) { width: 120px !important; }
+          .subcomponent-consumption-record-table thead th:nth-child(5) { width: 100px !important; }
           
           /* Style consumption table body cells */
-          .consumption-table tbody td {
+          .subcomponent-consumption-record-table tbody td {
             padding: 8px 12px !important;
             font-size: 14px !important;
             line-height: 24px !important;
           }
           
           /* Ensure parent table row borders are visible */
-          .parent-table tbody tr {
+          .production-record-table tbody tr {
             border-bottom: 1px solid #e0e0e0 !important;
           }
-          .parent-table tbody tr:last-child {
+          .production-record-table tbody tr:last-child {
             border-bottom: none !important;
           }
           
@@ -4842,7 +5330,7 @@ export const Details8 = () => {
                   keyField="id"
                   rowBorder={true}
                   compact={true}
-                  className="parent-table"
+                  className="production-record-table"
                 />
               </Box>
             </Box>
