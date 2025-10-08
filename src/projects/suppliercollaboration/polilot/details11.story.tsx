@@ -60,6 +60,7 @@ import {
   materialsData7A,
   materialsData7B,
 } from "./details11/materialsData";
+import { uomOptions, unitOptions } from "./details11/optionsData";
 
 export default {
   title: "Projects/Supplier Collaboration/POLI lot/Details11",
@@ -270,24 +271,7 @@ export const Details11 = () => {
     { label: "Help", href: "/help" },
   ];
 
-  const uomOptions = [
-    { label: "Cases (cs)", value: "cs" },
-    { label: "Pieces (pcs)", value: "pcs" },
-    { label: "Kilograms (kg)", value: "kg" },
-    { label: "Pounds (lbs)", value: "lbs" },
-    { label: "Meters (m)", value: "m" },
-    { label: "Feet (ft)", value: "ft" },
-  ];
-
-  const unitOptions = [
-    { label: "kg", value: "kg" },
-    { label: "g", value: "g" },
-    { label: "mg", value: "mg" },
-    { label: "lbs", value: "lbs" },
-    { label: "oz", value: "oz" },
-    { label: "ml", value: "ml" },
-    { label: "l", value: "l" },
-  ];
+  // uomOptions and unitOptions now imported from optionsData.tsx
 
   // Nested table data for each expandable row
   const nestedTableData1 = [
