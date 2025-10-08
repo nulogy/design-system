@@ -37,3 +37,14 @@ export const detailsData = {
   shipTo: "Global Manufacturing Co. Distribution Center",
   needByDate: "2025-Feb-15",
 };
+
+export const userState = { role: "supplier" };
+
+export const collaborationState = {
+  status: "awaiting",
+  activeCardAuthorRole: "customer",
+};
+
+export const acceptedItems = { request: false, proposal: false };
+
+export const poStatus = "On time";
