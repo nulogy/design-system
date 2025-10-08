@@ -1,16 +1,5 @@
 // Simple options data for dropdowns and selects
 
-export const primaryMenu = [
-  { label: "Dashboard", href: "/dashboard" },
-  { label: "Orders", href: "/orders" },
-  { label: "Inventory", href: "/inventory" },
-];
-
-export const secondaryMenu = [
-  { label: "Settings", href: "/settings" },
-  { label: "Help", href: "/help" },
-];
-
 export const uomOptions = [
   { label: "Cases (cs)", value: "cs" },
   { label: "Pieces (pcs)", value: "pcs" },
@@ -29,3 +18,22 @@ export const unitOptions = [
   { label: "ml", value: "ml" },
   { label: "l", value: "l" },
 ];
+
+export const detailsData = {
+  poNumber: "PO-2025-001",
+  customerPoLineItem: "PLI-001",
+  supplierPoLineItem: "SPLI-001",
+  createdOn: "2025-Jan-15",
+  supplier: "Global Manufacturing Co.",
+  customerItemCode: "ITEM-001 – Premium Packaging Solution",
+  supplierItemCode: "GMC-001",
+  priority: "2 - Medium",
+  itemOrderType: "Standard",
+  customerLotCode: "LOT-2025-001",
+  supplierLotCode: "GMC-LOT-001",
+  expiryDate: "2026-01-15",
+  bomRevision: "Rev 1.2 – 2025-Jan-10",
+  productionStartDate: "2025-Feb-01",
+  shipTo: "Global Manufacturing Co. Distribution Center",
+  needByDate: "2025-Feb-15",
+};
