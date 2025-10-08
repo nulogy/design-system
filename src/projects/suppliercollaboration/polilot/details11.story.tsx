@@ -60,7 +60,7 @@ import {
   materialsData7A,
   materialsData7B,
 } from "./details11/materialsData";
-import { uomOptions, unitOptions } from "./details11/optionsData";
+import { uomOptions, unitOptions, detailsData } from "./details11/optionsData";
 
 export default {
   title: "Projects/Supplier Collaboration/POLI lot/Details11",
@@ -130,24 +130,7 @@ export const Details11 = () => {
   });
 
   // Details data
-  const [detailsData] = useState({
-    poNumber: "PO-2025-001",
-    customerPoLineItem: "PLI-001",
-    supplierPoLineItem: "SPLI-001",
-    createdOn: "2025-Jan-15",
-    supplier: "Global Manufacturing Co.",
-    customerItemCode: "ITEM-001 – Premium Packaging Solution",
-    supplierItemCode: "GMC-001",
-    priority: "2 - Medium",
-    itemOrderType: "Standard",
-    customerLotCode: "LOT-2025-001",
-    supplierLotCode: "GMC-LOT-001",
-    expiryDate: "2026-01-15",
-    bomRevision: "Rev 1.2 – 2025-Jan-10",
-    productionStartDate: "2025-Feb-01",
-    shipTo: "Global Manufacturing Co. Distribution Center",
-    needByDate: "2025-Feb-15",
-  });
+  // detailsData now imported from optionsData.tsx
 
   // SummaryDivider component
   const SummaryDivider = () => <Box width="1px" height="x6" backgroundColor="lightGrey" mx="x2" />;
