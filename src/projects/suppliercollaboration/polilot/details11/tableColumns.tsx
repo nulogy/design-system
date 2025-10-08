@@ -1,5 +1,6 @@
 // Table column configurations
 
+import React from "react";
 import { Text, Box, Tooltip } from "../../../index";
 
 // Nested table columns configuration

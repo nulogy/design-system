@@ -1,5 +1,9 @@
 // Nested table data for each expandable row
 
+import React from "react";
+import { Box, Table } from "../../../index";
+import { consumptionTableColumns, materialsData1, materialsData2, materialsData5A, materialsData5B, materialsData6A, materialsData6B, materialsData7A } from "./materialsData";
+
 export interface NestedTableRow {
   id: string;
   actualProductionRecordNumber: string;
