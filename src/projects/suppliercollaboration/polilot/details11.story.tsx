@@ -1760,73 +1760,7 @@ export const Details11 = () => {
   // Materials data for consumption reports
   // materialsData1 now imported from materialsData.tsx
 
-  const materialsData2 = [
-    {
-      subcomponentConsumptionRecordItem: "001",
-      item: "Ibuprofen 200mg",
-      lotCode: "LOT-IBU-002",
-      expiryDate: "2026-04-10",
-      palletNumber: "PAL-009",
-      quantity: "1.8",
-      uom: "kg",
-    },
-    {
-      item: "Povidone K30",
-      lotCode: "LOT-PVP-002",
-      expiryDate: "2026-05-15",
-      palletNumber: "PAL-010",
-      quantity: "0.9",
-      uom: "kg",
-    },
-    {
-      item: "Sodium starch glycolate",
-      lotCode: "LOT-SSG-002",
-      expiryDate: "2026-06-20",
-      palletNumber: "PAL-011",
-      quantity: "0.4",
-      uom: "kg",
-    },
-    {
-      item: "Stearic acid",
-      lotCode: "LOT-SA-002",
-      expiryDate: "2026-07-25",
-      palletNumber: "PAL-012",
-      quantity: "0.2",
-      uom: "kg",
-    },
-    {
-      item: "FD&C Red #40",
-      lotCode: "LOT-RED-002",
-      expiryDate: "2026-08-30",
-      palletNumber: "PAL-013",
-      quantity: "0.05",
-      uom: "kg",
-    },
-    {
-      item: "Silicon dioxide",
-      lotCode: "LOT-SD-002",
-      expiryDate: "2026-09-15",
-      palletNumber: "PAL-014",
-      quantity: "0.3",
-      uom: "kg",
-    },
-    {
-      item: "Aspartame",
-      lotCode: "LOT-ASP-002",
-      expiryDate: "2026-10-20",
-      palletNumber: "PAL-015",
-      quantity: "0.1",
-      uom: "kg",
-    },
-    {
-      item: "Mint flavor",
-      lotCode: "LOT-MF-002",
-      expiryDate: "2026-11-25",
-      palletNumber: "PAL-016",
-      quantity: "0.02",
-      uom: "kg",
-    },
-  ];
+  // materialsData2 now imported from materialsData.tsx
 
   const materialsData5A = [
     {
