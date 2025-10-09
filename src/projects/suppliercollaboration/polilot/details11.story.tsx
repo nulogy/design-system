@@ -43,8 +43,6 @@ import {
   Toggle,
   Switcher,
   Switch,
-  Checkbox,
-  CheckboxGroup,
   Radio,
   RadioGroup,
   Pagination,
@@ -61,6 +59,7 @@ import {
 } from "./details11/materialsData";
 import { createNestedTableData } from "./details11/nestedTableData";
 import { uomOptions, unitOptions, detailsData, userState, collaborationState, acceptedItems, poStatus, editFormData, productionRecord, fieldConfig } from "./details11/optionsData";
+import { productionRecordsData, productionRecordsColumns } from "./details11/productionRecordsData";
 
 export default {
   title: "Projects/Supplier Collaboration/POLI lot/Details11",
@@ -117,7 +116,7 @@ export const Details11 = () => {
   // Edit state
   const [showEditSidebar, setShowEditSidebar] = useState(false);
   // editFormData now imported from optionsData.tsx
-  const [editFormDataState, setEditFormDataStateState] = useState(editFormData);
+  const [editFormDataState, setEditFormDataState] = useState(editFormData);
 
   // Details data
   // detailsData now imported from optionsData.tsx
@@ -125,57 +124,68 @@ export const Details11 = () => {
   // SummaryDivider component
   const SummaryDivider = () => <Box width="1px" height="x6" backgroundColor="lightGrey" mx="x2" />;
 
-  // ActualProductionRecordNumberPill component
+  // Reusable RecordNumberPill component
+  const RecordNumberPill = ({ 
+    number, 
+    tooltip, 
+    placement = "auto",
+    fontSize = "smaller",
+    style,
+    mr
+  }: { 
+    number: string; 
+    tooltip: string; 
+    placement?: "left" | "right" | "top" | "bottom" | "auto";
+    fontSize?: "smaller" | "small" ;
+    style?: React.CSSProperties;
+    mr?: string;
+  }) => (
+    <Tooltip tooltip={tooltip} placement={placement}>
+      <Box
+        backgroundColor="lightGrey"
+        px="half"
+        borderRadius="small"
+        width="fit-content"
+        mr={mr}
+        style={{ display: 'inline-block' }}
+      >
+        <Text
+          color="darkGrey"
+          fontSize={fontSize}
+          fontWeight="bold"
+          textTransform="uppercase"
+          letterSpacing=".05em"
+          style={style}
+        >
+          {number}
+        </Text>
+      </Box>
+    </Tooltip>
+  );
+
+  // ActualProductionRecordNumberPill component (using the reusable component)
   const ActualProductionRecordNumberPill = ({ actualProductionRecordNumber }: { actualProductionRecordNumber: string }) => (
     <Flex py="x0_75" mr="x1" justifyContent="flex-start" ml="-96px">
-      <Tooltip tooltip={`Actual production record #${actualProductionRecordNumber}`} placement="left">
-        <Box
-          backgroundColor="lightGrey"
-          px="half"
-          borderRadius="small"
-        >
-          <Text
-            color="darkGrey"
-            fontSize="smaller"
-            lineHeight="smallerText"
-            fontWeight="bold"
-            textTransform="uppercase"
-            letterSpacing=".05em"
-          >
-            {actualProductionRecordNumber}
-          </Text>
-        </Box>
-      </Tooltip>
+      <RecordNumberPill 
+        number={actualProductionRecordNumber}
+        tooltip={`Actual production record #${actualProductionRecordNumber}`}
+        placement="left"
+      />
     </Flex>
   );
 
-  // SubcomponentConsumptionRecordNumberPill component
+  // SubcomponentConsumptionRecordNumberPill component (using the reusable component)
   const SubcomponentConsumptionRecordNumberPill = ({ subcomponentConsumptionRecordItem }: { subcomponentConsumptionRecordItem: string }) => (
-    <Flex py="x0_75" mr="x1" justifyContent="flex-start" ml="-96px">
-      <Tooltip tooltip={`Subcomponent consumption record #${subcomponentConsumptionRecordItem}`} placement="left">
-        <Box
-          backgroundColor="lightGrey"
-          px="half"
-          borderRadius="small"
-        >
-          <Text
-            color="darkGrey"
-            fontSize="smaller"
-            lineHeight="smallerText"
-            fontWeight="bold"
-            textTransform="uppercase"
-            letterSpacing=".05em"
-          >
-            {subcomponentConsumptionRecordItem}
-          </Text>
-        </Box>
-      </Tooltip>
-    </Flex>
+
+      <RecordNumberPill 
+        number={subcomponentConsumptionRecordItem}
+        tooltip={`Subcomponent consumption record #${subcomponentConsumptionRecordItem}`}
+        placement="left" />
+
   );
 
   // Handler functions
   const handleCancelPOLineItem = () => {
-    console.log("Cancel PO line item");
     // Add proper modal handling here if needed
     toast.success("PO line item cancellation initiated");
   };
@@ -213,7 +223,6 @@ export const Details11 = () => {
   const [nestedExpandedRows, setNestedExpandedRows] = useState<string[]>([]);
   // productionRecord now imported from optionsData.tsx
   const [productionRecordState, setProductionRecordState] = useState(productionRecord);
-  const [productionBatches, setProductionBatches] = useState([]);
   const [consumptionMaterials, setConsumptionMaterials] = useState([]);
   const [role, setRole] = useState("customer");
   const [showConfigBar, setShowConfigBar] = useState(true);
@@ -402,8 +411,8 @@ export const Details11 = () => {
             >
               <Text 
                 color={isSixthTable ? "midGrey" : "white"}
-                fontSize="smaller" 
-                lineHeight="smallerText"
+                fontSize="small" 
+                lineHeight="smallCompressed"
                 fontWeight="bold"
                 textTransform="uppercase"
                 letterSpacing=".05em"
@@ -621,24 +630,11 @@ export const Details11 = () => {
       cellRenderer: ({ row }: { row: any }) => {
         return (
           <Flex py="x0_75" mr="x1" justifyContent="flex-start" ml="-96px">
-            <Tooltip tooltip="Actual production record #001" placement="top">
-              <Box 
-                backgroundColor="midGrey" 
-                px="half" 
-                borderRadius="small"
-              >
-                <Text 
-                  color="white" 
-                  fontSize="smaller" 
-                  lineHeight="smallerText"
-                  fontWeight="bold"
-                  textTransform="uppercase"
-                  letterSpacing=".05em"
-                >
-                  {row.actualProductionRecordNumber}
-              </Text>
-              </Box>
-            </Tooltip>
+            <RecordNumberPill 
+              number={row.actualProductionRecordNumber}
+              tooltip="Actual production record #001"
+              placement="top"
+            />
           </Flex>
         );
       },
@@ -688,16 +684,16 @@ export const Details11 = () => {
         if (!fieldConfigState.lotCodeRequired) {
           return (
             <Flex py="x0_75">
-              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+          <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
                 -
-              </Text>
+          </Text>
             </Flex>
           );
         }
 
         // If all lot codes are empty, don't render anything
         if (!row.lotCode && !row.supplierLotCode) {
-          return null;
+        return null;
         }
 
         return (
@@ -737,7 +733,7 @@ export const Details11 = () => {
 
         // If expiry date is empty, don't render anything
         if (!row.expiryDate) {
-          return null;
+        return null;
         }
 
         const formattedDate = formatDateToYYYYMonDD(row.expiryDate);
@@ -762,7 +758,7 @@ export const Details11 = () => {
 
         // If pallet number is empty, don't render anything
         if (!row.palletNumber) {
-          return null;
+        return null;
         }
 
         return row.palletNumber;
@@ -802,307 +798,40 @@ export const Details11 = () => {
     },
   ];
 
-  // Production records data
-  const productionRecordsData = [
-    {
-      id: "1",
-      date: "2025-Feb-12",
-      lotCodeAndExpiry: "",
-      customerLotCode: "LOT-2025-001",
-      supplierLotCode: "SUP-LOT-001",
-      expiryDate: "2026-Feb-12",
-      palletNumber: "PAL-001",
-      expectedQuantity: "18 cases",
-      actualQuantity: "8 cases",
-      note: "Initial production batch with quality control checks completed",
-      expandedContent: () => (
-        <Box style={{ paddingLeft: "-56px" }}>
-          <Box style={{ paddingLeft: "298px" }}>
-            <Table
-              columns={actualProductionReportColumns}
-              rows={nestedTableData1}
-              keyField="id"
-              rowBorder={true}
-              className="actual-production-record-table"
-              compact={true}
-              hasExpandableRows={true}
-              expandedRows={nestedExpandedRows}
-              onRowExpansionChange={setNestedExpandedRows}
-            />
-          </Box>
+  // Production records data now imported from productionRecordsData.tsx
+  // Add expandedContent functions to the imported data
+  const productionRecordsDataWithExpandedContent = productionRecordsData.map((record) => ({
+    ...record,
+    expandedContent: () => (
+      <Box style={{ paddingLeft: "-56px" }}>
+        <Box style={{ paddingLeft: "298px" }}>
+          <Table
+            columns={actualProductionReportColumns}
+            rows={record.id === "1" ? nestedTableData1 : 
+                  record.id === "2" ? nestedTableData2 :
+                  record.id === "3" ? nestedTableData3 :
+                  record.id === "4" ? nestedTableData4 :
+                  record.id === "5" ? nestedTableData5 :
+                  record.id === "6" ? nestedTableData6 :
+                  record.id === "7" ? nestedTableData7 :
+                  nestedTableData8}
+            keyField="id"
+            rowBorder={true}
+            className="actual-production-record-table"
+            compact={true}
+            hasExpandableRows={true}
+            expandedRows={nestedExpandedRows}
+            onRowExpansionChange={setNestedExpandedRows}
+          />
         </Box>
-      ),
-    },
-    {
-      id: "2",
-      date: "2025-Mar-15",
-      lotCodeAndExpiry: "LOT-2025-002",
-      customerLotCode: "LOT-2025-002",
-      supplierLotCode: "SUP-LOT-002",
-      expiryDate: "2026-03-15",
-      palletNumber: "PAL-002",
-      expectedQuantity: "12 cases",
-      actualQuantity: "12 cases",
-      note: "Standard production run with normal quality metrics",
-      expandedContent: () => (
-        <Box style={{ paddingLeft: "-56px" }}>
-          <Box style={{ paddingLeft: "298px" }}>
-            <Table
-              columns={actualProductionReportColumns}
-              rows={nestedTableData2}
-              keyField="id"
-              rowBorder={true}
-              className="actual-production-record-table"
-              compact={true}
-              hasExpandableRows={true}
-              expandedRows={nestedExpandedRows}
-              onRowExpansionChange={setNestedExpandedRows}
-            />
-          </Box>
-        </Box>
-      ),
-    },
-    {
-      id: "3",
-      date: "2025-Apr-20",
-      lotCodeAndExpiry: "LOT-2025-003",
-      customerLotCode: "LOT-2025-003",
-      supplierLotCode: "SUP-LOT-003",
-      expiryDate: "2026-04-20",
-      palletNumber: "PAL-003",
-      expectedQuantity: "25 cases",
-      actualQuantity: "25 cases",
-      note: "High volume production batch for major customer order",
-      expandedContent: () => (
-        <Box style={{ paddingLeft: "-56px" }}>
-          <Box style={{ paddingLeft: "298px" }}>
-            <Table
-              columns={actualProductionReportColumns}
-              rows={nestedTableData3}
-              keyField="id"
-              rowBorder={true}
-              className="actual-production-record-table"
-              compact={true}
-              hasExpandableRows={true}
-              expandedRows={nestedExpandedRows}
-              onRowExpansionChange={setNestedExpandedRows}
-            />
-          </Box>
-        </Box>
-      ),
-    },
-    {
-      id: "4",
-      date: "2025-Aug-08",
-      //lotCodeAndExpiry: "LOT-2025-004",
-      customerLotCode: "LOT-2025-004",
-      supplierLotCode: "SUP-LOT-004",
-      expiryDate: "2026-08-08",
-      palletNumber: "PAL-004",
-      expectedQuantity: "0 cases",
-      actualQuantity: "0 cases",
-      note: "Equipment maintenance scheduled, production line optimization in progress",
-      expandedContent: () => (
-        <Box style={{ paddingLeft: "-56px" }}>
-          <Box style={{ paddingLeft: "298px" }}>
-            <Table
-              columns={nestedTableColumns4th}
-              rows={nestedTableData4}
-              keyField="id"
-              rowBorder={true}
-              className="actual-production-record-table"
-              compact={true}
-              hasExpandableRows={true}
-              expandedRows={nestedExpandedRows}
-              onRowExpansionChange={setNestedExpandedRows}
-            />
-          </Box>
-        </Box>
-      ),
-    },
-    {
-      id: "5",
-      date: "2025-Mar-15",
-      lotCodeAndExpiry: "",
-      customerLotCode: "LOT-2025-005",
-      supplierLotCode: "SUP-LOT-005",
-      expiryDate: "2026-03-15",
-      palletNumber: "PAL-005",
-      expectedQuantity: "12 cases",
-      actualQuantity: "12 cases",
-      note: "Multi-batch production run with quality variations",
-      expandedContent: () => (
-        <Box style={{ paddingLeft: "-56px" }}>
-          <Box style={{ paddingLeft: "298px" }}>
-            <Table
-              columns={nestedTableColumns567}
-              rows={nestedTableData5}
-              keyField="id"
-              rowBorder={true}
-              className="actual-production-record-table"
-              compact={true}
-              hasExpandableRows={true}
-              expandedRows={nestedExpandedRows}
-              onRowExpansionChange={setNestedExpandedRows}
-            />
-          </Box>
-        </Box>
-      ),
-    },
-    {
-      id: "6",
-      date: "2025-Apr-22",
-      lotCodeAndExpiry: "",
-      customerLotCode: "LOT-2025-006",
-      supplierLotCode: "SUP-LOT-006",
-      expiryDate: "2026-04-22",
-      palletNumber: "PAL-006",
-      expectedQuantity: "23 cases",
-      actualQuantity: "23 cases",
-      note: "Quality control batch with mixed results",
-      expandedContent: () => (
-        <Box style={{ paddingLeft: "-56px" }}>
-          <Box style={{ paddingLeft: "298px" }}>
-            <Table
-              columns={nestedTableColumns567}
-              rows={nestedTableData6}
-              keyField="id"
-              rowBorder={true}
-              className="actual-production-record-table"
-              compact={true}
-              hasExpandableRows={true}
-              expandedRows={nestedExpandedRows}
-              onRowExpansionChange={setNestedExpandedRows}
-            />
-          </Box>
-        </Box>
-      ),
-    },
-    {
-      id: "7",
-      date: "2025-May-10",
-      lotCodeAndExpiry: "",
-      customerLotCode: "LOT-2025-007",
-      supplierLotCode: "SUP-LOT-007",
-      expiryDate: "2026-05-10",
-      palletNumber: "PAL-007",
-      expectedQuantity: "0 cases",
-      actualQuantity: "0 cases",
-      note: "Production on hold due to material shortage and supply chain delays",
-      expandedContent: () => (
-        <Box style={{ paddingLeft: "-56px" }}>
-          <Box style={{ paddingLeft: "298px" }}>
-            <Table
-              columns={nestedTableColumns567}
-              rows={nestedTableData7}
-              keyField="id"
-              rowBorder={true}
-              className="actual-production-record-table"
-              compact={true}
-              hasExpandableRows={true}
-              expandedRows={nestedExpandedRows}
-              onRowExpansionChange={setNestedExpandedRows}
-            />
-          </Box>
-        </Box>
-      ),
-    },
-  ];
+      </Box>
+    ),
+  }));
 
-  const productionRecordsColumns = [
-    {
-      label: "Date",
-      dataKey: "date",
-      width: "120px",
-      minWidth: "120px",
-    },
-    {
-      label: "Expected quantity",
-      dataKey: "expectedQuantity",
-      width: "180px",
-      minWidth: "180px",
-    },
-    {
-      label: "Actual quantity",
-      dataKey: "actualQuantity",
-      width: "180px",
-      cellRenderer: ({ row }: { row: any }) => {
-        return (
-          <Flex py="x0_75" mr="x1">
-            <Text>{row.actualQuantity}</Text>
-          </Flex>
-        );
-      },
-    },
-    {
-      label: "Pallet number",
-      dataKey: "palletNumber",
-      width: "180px",
-      cellRenderer: ({ row }: { row: any }) => {
-        // Always show blank for parent table rows since detailed info is in nested tables
-        return null;
-      },
-    },
-    {
-      label: "Lot code",
-      dataKey: "lotCode",
-      width: "180px",
-      headerFormatter: () => (
-        <Box pt="x1_25" pb="x0_75">
-          <Text>Lot code</Text>
-          <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
-            Customer's / Supplier's
-          </Text>
-        </Box>
-      ),
-      cellRenderer: ({ row }: { row: any }) => {
-        // Always show blank for parent table rows since detailed info is in nested tables
-        return null;
-      },
-    },
-    {
-      label: "Expiry date",
-      dataKey: "expiryDate",
-      width: "150px",
-      cellRenderer: ({ row }: { row: any }) => {
-        // Always show blank for parent table rows since detailed info is in nested tables
-        return null;
-      },
-    },
-    {
-      label: "Note",
-      dataKey: "note",
-      width: "auto",
-      cellRenderer: ({ row }: { row: any }) => {
-        // Always show blank for parent table rows since detailed info is in nested tables
-        return null;
-      },
-    },
-    {
-      label: "",
-      dataKey: "actions",
-      width: "32px",
-      headerFormatter: () => null,
-      cellRenderer: (props: { row: any }) => {
-        // Hide the entire dropdown when Sanofi ref ID is off
-        if (!fieldConfigState.sanofiRequired) {
-          return null;
-        }
-
-        return (
-          <Box pr="x1">
-          <DropdownMenu trigger={() => <IconicButton icon="more" aria-label="More actions" />} placement="bottom-end">
-            <DropdownButton onClick={() => handleEditProduction(props.row)}>Edit production</DropdownButton>
-          </DropdownMenu>
-          </Box>
-        );
-      },
-    },
-  ];
+  // Production records columns now imported from productionRecordsData.tsx
 
   const handleAddProduction = () => {
     setIsEditingProduction(false);
-    setProductionBatches([]); // Clear batches when adding new production
     setProductionRecordState({
       date: "",
       uom: "",
@@ -1214,12 +943,10 @@ export const Details11 = () => {
             );
           }
         } catch (error) {
-          console.log(`Error extracting consumption materials for row ${index}:`, error);
         }
       }
     });
 
-    console.log("Extracted consumption materials for rows:", newRowConsumptions);
     setRowConsumptions(newRowConsumptions);
     setShowProductionSidebar(true);
   };
@@ -1246,7 +973,6 @@ export const Details11 = () => {
       producedQuantity: "",
       note: "",
     });
-    setProductionBatches([]);
   };
 
   const handleProductionFieldChange = (field: string, value: string) => {
@@ -1266,15 +992,14 @@ export const Details11 = () => {
       producedQuantity: "",
       note: "",
     };
-    setProductionBatches((prev) => [...prev, newBatch]);
   };
 
   const handleRemoveBatch = (batchId: string) => {
-    setProductionBatches((prev) => prev.filter((batch) => batch.id !== batchId));
+    // Batch removal functionality removed
   };
 
   const handleBatchFieldChange = (batchId: string, field: string, value: string) => {
-    setProductionBatches((prev) => prev.map((batch) => (batch.id === batchId ? { ...batch, [field]: value } : batch)));
+    // Batch field change functionality removed
   };
 
   const handleFieldConfigChange = (field: string, value: boolean) => {
@@ -1369,11 +1094,9 @@ export const Details11 = () => {
   };
 
   const handleRemoveConsumptionRow = (rowId: string, consumptionId: string) => {
-    console.log("Removing consumption row:", rowId, consumptionId);
     setRowConsumptions((prev) => {
       const currentConsumptions = prev[rowId] || [];
       const filteredConsumptions = currentConsumptions.filter((consumption) => consumption.id !== consumptionId);
-      console.log("Before:", currentConsumptions.length, "After:", filteredConsumptions.length);
       return {
         ...prev,
         [rowId]: filteredConsumptions,
@@ -1470,6 +1193,23 @@ export const Details11 = () => {
     setConsumptionItems((prev) => prev.map((item) => (item.id === itemId ? { ...item, [field]: value } : item)));
   };
 
+  // Add cellRenderer to production records columns
+  const productionRecordsColumnsWithRenderer = productionRecordsColumns.map(column => {
+    if (column.dataKey === "actions") {
+      return {
+        ...column,
+        cellRenderer: ({ row }: { row: any }) => (
+          <Box pr="x1">
+            <DropdownMenu trigger={() => <IconicButton icon="more" aria-label="More actions" />} placement="bottom-end">
+              <DropdownButton onClick={() => handleEditProduction(row.id)}>Edit production</DropdownButton>
+            </DropdownMenu>
+          </Box>
+        ),
+      };
+    }
+    return column;
+  });
+
   // Materials data for consumption reports
   // materialsData1 now imported from materialsData.tsx
 
@@ -1495,26 +1235,11 @@ export const Details11 = () => {
       width: "3em",
       cellRenderer: ({ row }: { row: any }) => (
         <Box py="x0_75" mr="x1" pl="half" display="flex" justifyContent="flex-start">
-          <Tooltip tooltip={`Subcomponent consumption record #${row.subcomponentConsumptionRecordItem}`} placement="left">
-            <Box
-              backgroundColor="lightGrey"
-              px="half"
-              borderRadius="small"
-              flexShrink={0}
-            >
-              <Text
-                color="darkGrey"
-                fontSize="smaller"
-                lineHeight="smallerText"
-                fontWeight="bold"
-                textTransform="uppercase"
-                letterSpacing=".05em"
-                whiteSpace="nowrap"
-              >
-                {row.subcomponentConsumptionRecordItem}
-              </Text>
-            </Box>
-          </Tooltip>
+          <RecordNumberPill 
+            number={row.subcomponentConsumptionRecordItem}
+            tooltip={`Subcomponent consumption record #${row.subcomponentConsumptionRecordItem}`}
+            placement="left"
+          />
         </Box>
       ),
     },
@@ -1704,7 +1429,7 @@ export const Details11 = () => {
             </Flex>
             <SummaryDivider />
             <Flex flexDirection="column" gap="half" width="200px" pt="x0_5" alignItems="center" justifyContent="center">
-              {poStatus === "Late" && (
+              {poStatus === "Late" as any && (
                 <>
                   <StatusIndicator alignSelf="center" type="danger">
                     Late
@@ -1717,7 +1442,7 @@ export const Details11 = () => {
                   </Text>
                 </>
               )}
-              {poStatus === "At risk" && (
+              {poStatus === "At risk" as any && (
                 <>
                   <StatusIndicator alignSelf="center" type="warning">
                     At risk
@@ -1727,7 +1452,7 @@ export const Details11 = () => {
                   </TruncatedText>
                 </>
               )}
-              {poStatus === "Completed" && (
+              {poStatus === "Completed" as any && (
                 <>
                   <StatusIndicator alignSelf="center" type="quiet">
                     Completed
@@ -1737,7 +1462,7 @@ export const Details11 = () => {
                   </Text>
                 </>
               )}
-              {poStatus === "Cancelled" && (
+              {poStatus === "Cancelled" as any && (
                 <>
                   <StatusIndicator alignSelf="center" type="quiet">
                     Cancelled
@@ -2029,10 +1754,10 @@ export const Details11 = () => {
                     </Text>
                   </Flex>
                   <Flex gap="x2">
-                    <Button type="button" size="small">
+                    <Button type="button" size="x2_5">
                       View full proposal
                     </Button>
-                    <PrimaryButton type="button" size="small">
+                    <PrimaryButton type="button" size="x2_5">
                       Create new proposal
                     </PrimaryButton>
                   </Flex>
@@ -2052,8 +1777,8 @@ export const Details11 = () => {
 
               <Box minWidth="1236px">
                 <Table
-                  columns={productionRecordsColumns}
-                  rows={productionRecordsData}
+                  columns={productionRecordsColumnsWithRenderer}
+                  rows={productionRecordsDataWithExpandedContent}
                   hasExpandableRows={true}
                   expandedRows={expandedRows}
                   onRowExpansionChange={setExpandedRows}
@@ -2089,6 +1814,7 @@ export const Details11 = () => {
                   <Switcher selected={historyLogFilter} onChange={(value) => setHistoryLogFilter(value)}>
                     <Switch value="All">All</Switch>
                     <Switch value="Production record">Production record</Switch>
+                    <Switch value="Subcomponent consumption">Subcomponent consumption</Switch>
                     <Switch value="Collaboration">Collaboration</Switch>
                     <Switch value="PO line item details">PO line item details</Switch>
                   </Switcher>
@@ -2099,448 +1825,9 @@ export const Details11 = () => {
 
             {/* Log */}
             <Flex flexDirection="column">
-              {/* Group 1: January 29, 2025 */}
-              {(historyLogFilter === "All" || historyLogFilter === "Production record") && (
-                <Flex flexDirection="column" gap="x1" maxWidth="1280px" mx="x1" pt="x2_5" pb="x2_5">
-                  {/* Header */}
-                  <Box mb="half">
-                    <Text fontSize="small" lineHeight="smallCompact">
-                      <Box as="span" color="black" fontWeight="bold">
-                        Production record
-                      </Box>
-                      <Box as="span" color="midGrey" mx="half">
-                        {" "}
-                        for{" "}
-                      </Box>
-                      <Box as="span" color="black" fontWeight="bold">
-                        January 29, 2025
-                      </Box>
-                    </Text>
-                  </Box>
-
-                  {/* DescriptionList */}
-                  <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Actual quantity modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            1,000 cases
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            1,200 cases
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Lot code modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            LOT-2025-001-001
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            LOT-2025-001-001A
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Customer's lot code modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            CUST-LOT-001
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            CUST-LOT-001A
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Supplier's lot code modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            SUP-LOT-001
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            SUP-LOT-001B
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Expiry date modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            March 15, 2026
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            March 20, 2026
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Pallet number modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            PAL-001
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            PAL-002
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Note modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            Standard production run
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            Special handling required for temperature control
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                  </DescriptionList>
-
-                  {/* Footer */}
-                  <Box mt="half">
-                    <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
-                      by
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        sarah.johnson@supplier.com
-                      </Box>
-                      on
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        January 29th, 2025
-                      </Box>
-                      at
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        02:30:15PM
-                      </Box>
-                    </Text>
-                  </Box>
-                </Flex>
-              )}
-
-              {/* Divider between Group 1 and Group 2 */}
-              {(historyLogFilter === "All" || historyLogFilter === "Production record") && <Divider m="0" />}
-
-              {/* Group 2: January 28, 2025 */}
-              {(historyLogFilter === "All" || historyLogFilter === "Production record") && (
-                <Flex flexDirection="column" gap="x1" maxWidth="1280px" mx="x1" pt="x2_5" pb="x2_5">
-                  {/* Header */}
-                  <Box mb="half">
-                    <Text fontSize="small" lineHeight="smallCompact">
-                      <Box as="span" color="black" fontWeight="bold">
-                        Production record
-                      </Box>
-                      <Box as="span" color="midGrey" mx="half">
-                        {" "}
-                        for{" "}
-                      </Box>
-                      <Box as="span" color="black" fontWeight="bold">
-                        January 28, 2025
-                      </Box>
-                    </Text>
-                  </Box>
-
-                  {/* DescriptionList */}
-                  <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Date modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            January 25, 2025
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            January 28, 2025
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Expected quantity modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            1,000 cases
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            1,200 cases
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                  </DescriptionList>
-
-                  {/* Footer */}
-                  <Box mt="half">
-                    <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
-                      by
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        system@nulogy.com
-                      </Box>
-                      on
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        January 28th, 2025
-                      </Box>
-                      at
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        09:15:42AM
-                      </Box>
-                    </Text>
-                  </Box>
-                </Flex>
-              )}
-
-              {/* Divider between Group 2 and Group 3 */}
-              {(historyLogFilter === "All" || historyLogFilter === "Production record") && <Divider m="0" />}
-
-              {/* Group 3: Collaboration */}
-              {(historyLogFilter === "All" || historyLogFilter === "Collaboration") && (
-                <Flex flexDirection="column" gap="x1" maxWidth="1280px" mx="x1" pt="x2_5" pb="x2_5">
-                  {/* Header */}
-                  <Box mb="half">
-                    <Text fontSize="small" lineHeight="smallCompact">
-                      <Box as="span" color="black" fontWeight="bold">
-                        Collaboration
-                      </Box>
-                    </Text>
-                  </Box>
-
-                  {/* DescriptionList */}
-                  <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Supplier UOM modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            Cases
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            Pallets
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Cost per unit modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            US $45.50
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            US $48.75
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Lead time modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            14 days
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            18 days
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                  </DescriptionList>
-
-                  {/* Footer */}
-                  <Box mt="half">
-                    <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
-                      by
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        tom.wilson@artisan.com
-                      </Box>
-                      on
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        January 27th, 2025
-                      </Box>
-                      at
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        11:45:30AM
-                      </Box>
-                    </Text>
-                  </Box>
-                </Flex>
-              )}
-
-              {/* Divider between Group 3 and Group 4 */}
-              {(historyLogFilter === "All" || historyLogFilter === "Collaboration") && <Divider m="0" />}
-
-              {/* Group 4: January 26, 2025 */}
-              {(historyLogFilter === "All" || historyLogFilter === "Production record") && (
-                <Flex flexDirection="column" gap="x1" maxWidth="1280px" mx="x1" pt="x2_5" pb="x2_5">
-                  {/* Header */}
-                  <Box mb="half">
-                    <Text fontSize="small" lineHeight="smallCompact">
-                      <Box as="span" color="black" fontWeight="bold">
-                        Production record
-                      </Box>
-                      <Box as="span" color="midGrey" mx="half">
-                        {" "}
-                        for{" "}
-                      </Box>
-                      <Box as="span" color="black" fontWeight="bold">
-                        January 26, 2025
-                      </Box>
-                    </Text>
-                  </Box>
-
-                  {/* DescriptionList */}
-                  <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Date modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            January 24, 2025
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            January 26, 2025
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Expected quantity modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            800 cases
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            900 cases
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                  </DescriptionList>
-
-                  {/* Footer */}
-                  <Box mt="half">
-                    <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
-                      by
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        quality.team@nulogy.com
-                      </Box>
-                      on
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        January 26th, 2025
-                      </Box>
-                      at
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        03:20:18PM
-                      </Box>
-                    </Text>
-                  </Box>
-                </Flex>
-              )}
-
-              {/* Divider between Group 4 and Group 5 */}
-              {(historyLogFilter === "All" || historyLogFilter === "Production record") && <Divider m="0" />}
-
-              {/* Group 5: PO line item details */}
+              {/* PO Line Item Details Entry (no header) */}
               {(historyLogFilter === "All" || historyLogFilter === "PO line item details") && (
                 <Flex flexDirection="column" gap="x1" maxWidth="1280px" mx="x1" pt="x2_5" pb="x2_5">
-                  {/* Header */}
-                  <Box mb="half">
-                    <Text fontSize="small" lineHeight="smallCompact">
-                      <Box as="span" color="black" fontWeight="bold">
-                        PO line item details
-                      </Box>
-                    </Text>
-                  </Box>
-
-                  {/* DescriptionList */}
                   <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
                     <DescriptionGroup>
                       <DescriptionTerm>
@@ -2598,7 +1885,6 @@ export const Details11 = () => {
                     </DescriptionGroup>
                   </DescriptionList>
 
-                  {/* Footer */}
                   <Box mt="half">
                     <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
                       by
@@ -2618,12 +1904,12 @@ export const Details11 = () => {
                 </Flex>
               )}
 
-              {/* Divider between Group 5 and Group 6 */}
+              {/* Divider */}
               {(historyLogFilter === "All" || historyLogFilter === "PO line item details") && <Divider m="0" />}
 
-              {/* Group 6: January 30, 2025 (Combined) */}
+              {/* Production Record Entry */}
               {(historyLogFilter === "All" || historyLogFilter === "Production record") && (
-                <Flex flexDirection="column" gap="x1" maxWidth="1280px" mx="x1" pt="x2_5" pb="x2_5">
+                <Flex flexDirection="column" gap="x2" maxWidth="1280px" mx="x1" pt="x2_5" pb="x2_5">
                   {/* Header */}
                   <Box mb="half">
                     <Text fontSize="small" lineHeight="smallCompact">
@@ -2635,12 +1921,12 @@ export const Details11 = () => {
                         for{" "}
                       </Box>
                       <Box as="span" color="black" fontWeight="bold">
-                        January 30, 2025
+                        January 29, 2025
                       </Box>
                     </Text>
                   </Box>
 
-                  {/* DescriptionList */}
+                  {/* First Group */}
                   <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
                     <DescriptionGroup>
                       <DescriptionTerm>
@@ -2651,12 +1937,12 @@ export const Details11 = () => {
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
                           <Box as="span" color="midGrey">
+                            January 28, 2025
+                          </Box>
+                          <Icon icon="arrowForward" color="grey" size="x2_5" />
+                          <Box as="span" color="black">
                             January 29, 2025
                           </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            January 30, 2025
-                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
@@ -2669,259 +1955,86 @@ export const Details11 = () => {
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
                           <Box as="span" color="midGrey">
-                            750 cases
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            850 cases
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                  </DescriptionList>
-
-                  {/* Second DescriptionList for details */}
-                  <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Actual quantity modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            800 cases
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            950 cases
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Lot code modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            LOT-2025-001-002
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            LOT-2025-001-002B
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Customer's lot code modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            CUST-LOT-002
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            CUST-LOT-002A
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Supplier's lot code modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            SUP-LOT-002
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            SUP-LOT-002B
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Expiry date modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            March 18, 2026
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            March 22, 2026
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Pallet number modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            PAL-003
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            PAL-004
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Note modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            Standard batch processing
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            Enhanced quality control procedures applied
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                  </DescriptionList>
-
-                  {/* Footer */}
-                  <Box mt="half">
-                    <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
-                      by
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        sarah.johnson@supplier.com
-                      </Box>
-                      on
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        January 30th, 2025
-                      </Box>
-                      at
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        01:45:30PM
-                      </Box>
-                    </Text>
-                  </Box>
-                </Flex>
-              )}
-
-              {/* Divider between Group 6 and Group 7 */}
-              {(historyLogFilter === "All" || historyLogFilter === "Production record") && <Divider m="0" />}
-
-              {/* Group 7: January 31, 2025 (Combined) */}
-              {(historyLogFilter === "All" || historyLogFilter === "Production record") && (
-                <Flex flexDirection="column" gap="x1" maxWidth="1280px" mx="x1" pt="x2_5" pb="x2_5">
-                  <Box mb="half">
-                    <Text fontSize="small" lineHeight="smallCompact">
-                      <Box as="span" color="black" fontWeight="bold">
-                        Production record
-                      </Box>
-                      <Box as="span" color="midGrey" mx="half">
-                        {" "}
-                        for{" "}
-                      </Box>
-                      <Box as="span" color="black" fontWeight="bold">
-                        January 31, 2025
-                      </Box>
-                    </Text>
-                  </Box>
-                  <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Date modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            January 30, 2025
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            January 31, 2025
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Expected quantity modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            850 cases
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            900 cases
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                  </DescriptionList>
-
-                  <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Actual quantity modified
-                        </Box>
-                        <Box as="span" fontSize="small" color="black">
-                          {" "}
-                          – Batch #03
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            950 cases
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
                             1,000 cases
                           </Box>
+                          <Icon icon="arrowForward" color="grey" size="x2_5" />
+                          <Box as="span" color="black">
+                            1,200 cases
+                          </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
+                  </DescriptionList>
 
+                  {/* Second Group */}
+                  <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
                     <DescriptionGroup>
                       <DescriptionTerm>
+                        <Flex alignItems="center" gap="half">
+                          <RecordNumberPill 
+                            number="001"
+                            tooltip="Actual production record #001"
+                            style={{ fontSize: '12px' }} // Find more elegant way for this
+                            mr="x1"
+                          />
+                        <Box as="span" color="black">
+                            Actual quantity modified
+                        </Box>
+
+                          
+                        </Flex>
+                      </DescriptionTerm>
+                      <DescriptionDetails>
+                        <Flex as="span" alignItems="center" gap="half">
+                          <Box as="span" color="midGrey">
+                            950 cases
+                          </Box>
+                          <Icon icon="arrowForward" color="grey" size="x2_5" />
+                          <Box as="span" color="black">
+                            1,150 cases
+                          </Box>
+                        </Flex>
+                      </DescriptionDetails>
+                    </DescriptionGroup>
+                    <DescriptionGroup>
+                      <DescriptionTerm>
+                        <Flex alignItems="center" gap="half">
+                          <RecordNumberPill 
+                            number="001"
+                            tooltip="Actual production record #001"
+                            style={{ fontSize: '12px' }}
+                            mr="x1"
+                          />
+                        <Box as="span" color="black">
+                            Pallet number modified
+                        </Box>
+                        </Flex>
+                      </DescriptionTerm>
+                      <DescriptionDetails>
+                        <Flex as="span" alignItems="center" gap="half">
+                          <Box as="span" color="midGrey">
+                            PAL-001
+                          </Box>
+                          <Icon icon="arrowForward" color="grey" size="x2_5" />
+                          <Box as="span" color="black">
+                            PAL-002
+                          </Box>
+                        </Flex>
+                      </DescriptionDetails>
+                    </DescriptionGroup>
+                    <DescriptionGroup>
+                      <DescriptionTerm>
+                        <Flex alignItems="center" gap="half">
+                          <RecordNumberPill 
+                            number="001"
+                            tooltip="Actual production record #001"
+                            style={{ fontSize: '12px' }}
+                            mr="x1"
+                          />
                         <Box as="span" color="black">
                           Lot code modified
                         </Box>
-                        <Box as="span" fontSize="small" color="black">
-                          {" "}
-                          – Batch #01
-                        </Box>
+                        </Flex>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
@@ -2937,154 +2050,156 @@ export const Details11 = () => {
                     </DescriptionGroup>
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Lot code modified
-                        </Box>
-                        <Box as="span" fontSize="small" color="black">
-                          {" "}
-                          – Batch #02
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            LOT-2025-001-002
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            LOT-2025-001-002A
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Lot code modified
-                        </Box>
-                        <Box as="span" fontSize="small" color="black">
-                          {" "}
-                          – Batch #03
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            LOT-2025-001-003
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            LOT-2025-001-003A
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
+                        <Flex alignItems="center" gap="half">
+                          <RecordNumberPill 
+                            number="001"
+                            tooltip="Actual production record #001"
+                            style={{ fontSize: '12px' }}
+                            mr="x1"
+                          />
                         <Box as="span" color="black">
                           Customer's lot code modified
                         </Box>
-                        <Box as="span" fontSize="small" color="black">
-                          {" "}
-                          – Batch #03
-                        </Box>
+                        </Flex>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
                           <Box as="span" color="midGrey">
-                            CUST-LOT-003
+                            CUST-LOT-001
                           </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
                           <Box as="span" color="black">
-                            CUST-LOT-003A
+                            CUST-LOT-001A
                           </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                     <DescriptionGroup>
                       <DescriptionTerm>
+                        <Flex alignItems="center" gap="half">
+                          <RecordNumberPill 
+                            number="001"
+                            tooltip="Actual production record #001"
+                            style={{ fontSize: '12px' }}
+                            mr="x1"
+                          />
                         <Box as="span" color="black">
                           Supplier's lot code modified
                         </Box>
-                        <Box as="span" fontSize="small" color="black">
-                          {" "}
-                          – Batch #03
-                        </Box>
+                        </Flex>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
                           <Box as="span" color="midGrey">
-                            SUP-LOT-003
+                            SUP-LOT-001
                           </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
                           <Box as="span" color="black">
-                            SUP-LOT-003B
+                            SUP-LOT-001B
                           </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                     <DescriptionGroup>
                       <DescriptionTerm>
+                        <Flex alignItems="center" gap="half">
+                          <RecordNumberPill 
+                            number="001"
+                            tooltip="Actual production record #001"
+                            style={{ fontSize: '12px' }}
+                            mr="x1"
+                          />
                         <Box as="span" color="black">
                           Expiry date modified
-                        </Box>
-                        <Box as="span" fontSize="small" color="black">
-                          {" "}
-                          – Batch #03
-                        </Box>
+                  </Box>
+                </Flex>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
                           <Box as="span" color="midGrey">
-                            March 22, 2026
-                          </Box>
+                            March 15, 2026
+                      </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
                           <Box as="span" color="black">
-                            March 25, 2026
-                          </Box>
+                            March 20, 2026
+                  </Box>
                         </Flex>
                       </DescriptionDetails>
                     </DescriptionGroup>
                     <DescriptionGroup>
                       <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Pallet number modified
-                        </Box>
-                        <Box as="span" fontSize="small" color="black">
-                          {" "}
-                          – Batch #03
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            PAL-005
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            PAL-006
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
+                        <Flex alignItems="center" gap="half">
+                          <RecordNumberPill 
+                            number="001"
+                            tooltip="Actual production record #001"
+                            style={{ fontSize: '12px' }}
+                            mr="x1"
+                          />
                         <Box as="span" color="black">
                           Note modified
                         </Box>
-                        <Box as="span" fontSize="small" color="black">
-                          {" "}
-                          – Batch #03
-                        </Box>
+                        </Flex>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
                           <Box as="span" color="midGrey">
-                            Enhanced quality control procedures applied
+                            Standard production run
                           </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
                           <Box as="span" color="black">
-                            Final quality approval and packaging instructions updated
+                            Special handling required for temperature control
+                          </Box>
+                        </Flex>
+                      </DescriptionDetails>
+                    </DescriptionGroup>
+                    <DescriptionGroup>
+                      <DescriptionTerm>
+                        <Flex alignItems="center" gap="half">
+                          <RecordNumberPill 
+                            number="002"
+                            tooltip="Actual production record #002"
+                            style={{ fontSize: '12px' }}
+                            mr="x1"
+                          />
+                        <Box as="span" color="black">
+                            Actual quantity modified
+                        </Box>
+                        </Flex>
+                      </DescriptionTerm>
+                      <DescriptionDetails>
+                        <Flex as="span" alignItems="center" gap="half">
+                          <Box as="span" color="midGrey">
+                            850 cases
+                          </Box>
+                          <Icon icon="arrowForward" color="grey" size="x2_5" />
+                          <Box as="span" color="black">
+                            920 cases
+                          </Box>
+                        </Flex>
+                      </DescriptionDetails>
+                    </DescriptionGroup>
+                    <DescriptionGroup>
+                      <DescriptionTerm>
+                        <Flex alignItems="center" gap="half">
+                          <RecordNumberPill 
+                            number="002"
+                            tooltip="Actual production record #002"
+                            style={{ fontSize: '12px' }}
+                            mr="x1"
+                          />
+                        <Box as="span" color="black">
+                            Pallet number modified
+                        </Box>
+                        </Flex>
+                      </DescriptionTerm>
+                      <DescriptionDetails>
+                        <Flex as="span" alignItems="center" gap="half">
+                          <Box as="span" color="midGrey">
+                            PAL-003
+                          </Box>
+                          <Icon icon="arrowForward" color="grey" size="x2_5" />
+                          <Box as="span" color="black">
+                            PAL-004
                           </Box>
                         </Flex>
                       </DescriptionDetails>
@@ -3095,43 +2210,423 @@ export const Details11 = () => {
                     <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
                       by
                       <Box as="span" color="black" fontWeight="normal" mx="half">
-                        mike.rodriguez@supplier.com
+                        sarah.johnson@supplier.com
                       </Box>
                       on
                       <Box as="span" color="black" fontWeight="normal" mx="half">
-                        January 31st, 2025
+                        January 29th, 2025
                       </Box>
                       at
                       <Box as="span" color="black" fontWeight="normal" mx="half">
-                        03:15:45PM
+                        02:30:15PM
                       </Box>
                     </Text>
                   </Box>
                 </Flex>
               )}
 
-              {/* Divider between Group 7 and Group 8 */}
+              {/* Divider */}
               {(historyLogFilter === "All" || historyLogFilter === "Production record") && <Divider m="0" />}
 
-              {/* Group 8: No header group */}
-              {(historyLogFilter === "All" || historyLogFilter === "Production record") && (
+              {/* Subcomponent Consumption Record Entry */}
+              {(historyLogFilter === "All" || historyLogFilter === "Subcomponent consumption") && (
                 <Flex flexDirection="column" gap="x1" maxWidth="1280px" mx="x1" pt="x2_5" pb="x2_5">
+                  {/* Header */}
+                  <Flex mb="half">
+                    <Text fontSize="small" lineHeight="smallCompact">
+                      <Box as="span" color="black" fontWeight="bold">
+                        Subcomponent consumption record
+                      </Box>
+
+
+                      <Box as="span" color="midGrey" mx="half">
+                        {" "}
+                        –{" "}
+                      </Box>
+
+                      <RecordNumberPill 
+                        number="004"
+                        tooltip="Actual production record #004"
+                        mx="half"
+                      />
+
+
+                      <Box as="span" color="black" fontWeight="bold">
+                            January 29, 2025
+                          </Box>
+                      <Box as="span" color="midGrey" mx="half"></Box>
+                      
+ 
+                      
+                    
+                    </Text>
+                        </Flex>
+
+                  <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
+                    <DescriptionGroup>
+                      <DescriptionTerm>
+                        <Flex alignItems="center" gap="half">
+                          <RecordNumberPill 
+                            number="001"
+                            tooltip="Subcomponent consumption record #001"
+                            style={{ fontSize: '12px' }}
+                            mr="x1"
+                          />
+                        <Box as="span" color="black">
+                            Item modified
+                        </Box>
+                        </Flex>
+                      </DescriptionTerm>
+                      <DescriptionDetails>
+                        <Flex as="span" alignItems="center" gap="half">
+                          <Box as="span" color="midGrey">
+                            Raw Material A
+                          </Box>
+                          <Icon icon="arrowForward" color="grey" size="x2_5" />
+                          <Box as="span" color="black">
+                            Raw Material A (Grade 2)
+                          </Box>
+                        </Flex>
+                      </DescriptionDetails>
+                    </DescriptionGroup>
+                    <DescriptionGroup>
+                      <DescriptionTerm>
+                        <Flex alignItems="center" gap="half">
+                          <RecordNumberPill 
+                            number="001"
+                            tooltip="Actual production record #001"
+                            style={{ fontSize: '12px' }}
+                            mr="x1"
+                          />
+                        <Box as="span" color="black">
+                          Lot code modified
+                          </Box>
+                        </Flex>
+                      </DescriptionTerm>
+                      <DescriptionDetails>
+                        <Flex as="span" alignItems="center" gap="half">
+                          <Box as="span" color="midGrey">
+                            RM-2025-001
+                          </Box>
+                          <Icon icon="arrowForward" color="grey" size="x2_5" />
+                          <Box as="span" color="black">
+                            RM-2025-001A
+                          </Box>
+                        </Flex>
+                      </DescriptionDetails>
+                    </DescriptionGroup>
+                    <DescriptionGroup>
+                      <DescriptionTerm>
+                        <Flex alignItems="center" gap="half">
+                          <RecordNumberPill 
+                            number="001"
+                            tooltip="Actual production record #001"
+                            style={{ fontSize: '12px' }}
+                            mr="x1"
+                          />
+                        <Box as="span" color="black">
+                          Expiry date modified
+                        </Box>
+                        </Flex>
+                      </DescriptionTerm>
+                      <DescriptionDetails>
+                        <Flex as="span" alignItems="center" gap="half">
+                          <Box as="span" color="midGrey">
+                            March 10, 2026
+                          </Box>
+                          <Icon icon="arrowForward" color="grey" size="x2_5" />
+                          <Box as="span" color="black">
+                            March 15, 2026
+                          </Box>
+                        </Flex>
+                      </DescriptionDetails>
+                    </DescriptionGroup>
+                    <DescriptionGroup>
+                      <DescriptionTerm>
+                        <Flex alignItems="center" gap="half">
+                          <RecordNumberPill 
+                            number="001"
+                            tooltip="Actual production record #001"
+                            style={{ fontSize: '12px' }}
+                            mr="x1"
+                          />
+                        <Box as="span" color="black">
+                          Pallet number modified
+                          </Box>
+                        </Flex>
+                      </DescriptionTerm>
+                      <DescriptionDetails>
+                        <Flex as="span" alignItems="center" gap="half">
+                          <Box as="span" color="midGrey">
+                            PAL-RM-001
+                          </Box>
+                          <Icon icon="arrowForward" color="grey" size="x2_5" />
+                          <Box as="span" color="black">
+                            PAL-RM-002
+                          </Box>
+                        </Flex>
+                      </DescriptionDetails>
+                    </DescriptionGroup>
+                    <DescriptionGroup>
+                      <DescriptionTerm>
+                        <Flex alignItems="center" gap="half">
+                          <RecordNumberPill 
+                            number="001"
+                            tooltip="Subcomponent consumption record #001"
+                            style={{ fontSize: '12px' }}
+                            mr="x1"
+                          />
+                        <Box as="span" color="black">
+                            Quantity modified
+                          </Box>
+                        </Flex>
+                      </DescriptionTerm>
+                      <DescriptionDetails>
+                        <Flex as="span" alignItems="center" gap="half">
+                          <Box as="span" color="midGrey">
+                            500 kg
+                          </Box>
+                          <Icon icon="arrowForward" color="grey" size="x2_5" />
+                          <Box as="span" color="black">
+                            550 kg
+                          </Box>
+                        </Flex>
+                      </DescriptionDetails>
+                    </DescriptionGroup>
+                    <DescriptionGroup>
+                      <DescriptionTerm>
+                        <Flex alignItems="center" gap="half">
+                          <RecordNumberPill 
+                            number="001"
+                            tooltip="Subcomponent consumption record #001"
+                            style={{ fontSize: '12px' }}
+                            mr="x1"
+                          />
+                        <Box as="span" color="black">
+                            UOM modified
+                          </Box>
+                        </Flex>
+                      </DescriptionTerm>
+                      <DescriptionDetails>
+                        <Flex as="span" alignItems="center" gap="half">
+                          <Box as="span" color="midGrey">
+                            kg
+                          </Box>
+                          <Icon icon="arrowForward" color="grey" size="x2_5" />
+                          <Box as="span" color="black">
+                            kg
+                          </Box>
+                        </Flex>
+                      </DescriptionDetails>
+                    </DescriptionGroup>
+                    <DescriptionGroup>
+                      <DescriptionTerm>
+                        <Flex alignItems="center" gap="half">
+                          <RecordNumberPill 
+                            number="002"
+                            tooltip="Subcomponent consumption record #002"
+                            style={{ fontSize: '12px' }}
+                            mr="x1"
+                          />
+                        <Box as="span" color="black">
+                            Item modified
+                        </Box>
+                        </Flex>
+                      </DescriptionTerm>
+                      <DescriptionDetails>
+                        <Flex as="span" alignItems="center" gap="half">
+                          <Box as="span" color="midGrey">
+                            Raw Material B
+                          </Box>
+                          <Icon icon="arrowForward" color="grey" size="x2_5" />
+                          <Box as="span" color="black">
+                            Raw Material B (Premium Grade)
+                          </Box>
+                        </Flex>
+                      </DescriptionDetails>
+                    </DescriptionGroup>
+                    <DescriptionGroup>
+                      <DescriptionTerm>
+                        <Flex alignItems="center" gap="half">
+                          <RecordNumberPill 
+                            number="002"
+                            tooltip="Subcomponent consumption record #002"
+                            style={{ fontSize: '12px' }}
+                            mr="x1"
+                          />
+                        <Box as="span" color="black">
+                          Lot code modified
+                        </Box>
+                        </Flex>
+                      </DescriptionTerm>
+                      <DescriptionDetails>
+                        <Flex as="span" alignItems="center" gap="half">
+                          <Box as="span" color="midGrey">
+                            LOT-B-001
+                          </Box>
+                          <Icon icon="arrowForward" color="grey" size="x2_5" />
+                          <Box as="span" color="black">
+                            LOT-B-002
+                          </Box>
+                        </Flex>
+                      </DescriptionDetails>
+                    </DescriptionGroup>
+                    <DescriptionGroup>
+                      <DescriptionTerm>
+                        <Flex alignItems="center" gap="half">
+                          <RecordNumberPill 
+                            number="002"
+                            tooltip="Subcomponent consumption record #002"
+                            style={{ fontSize: '12px' }}
+                            mr="x1"
+                          />
+                        <Box as="span" color="black">
+                            Quantity modified
+                        </Box>
+                        </Flex>
+                      </DescriptionTerm>
+                      <DescriptionDetails>
+                        <Flex as="span" alignItems="center" gap="half">
+                          <Box as="span" color="midGrey">
+                            150 kg
+                          </Box>
+                          <Icon icon="arrowForward" color="grey" size="x2_5" />
+                          <Box as="span" color="black">
+                            175 kg
+                          </Box>
+                        </Flex>
+                      </DescriptionDetails>
+                    </DescriptionGroup>
+                    <DescriptionGroup>
+                      <DescriptionTerm>
+                        <Flex alignItems="center" gap="half">
+                          <RecordNumberPill 
+                            number="004"
+                            tooltip="Subcomponent consumption record #004"
+                            style={{ fontSize: '12px' }}
+                            mr="x1"
+                          />
+                        <Box as="span" color="black">
+                            Item modified
+                        </Box>
+                        </Flex>
+                      </DescriptionTerm>
+                      <DescriptionDetails>
+                        <Flex as="span" alignItems="center" gap="half">
+                          <Box as="span" color="midGrey">
+                            Raw Material C
+                          </Box>
+                          <Icon icon="arrowForward" color="grey" size="x2_5" />
+                          <Box as="span" color="black">
+                            Raw Material C (Enhanced Grade)
+                          </Box>
+                        </Flex>
+                      </DescriptionDetails>
+                    </DescriptionGroup>
+                    <DescriptionGroup>
+                      <DescriptionTerm>
+                        <Flex alignItems="center" gap="half">
+                          <RecordNumberPill 
+                            number="004"
+                            tooltip="Subcomponent consumption record #004"
+                            style={{ fontSize: '12px' }}
+                            mr="x1"
+                          />
+                        <Box as="span" color="black">
+                          Expiry date modified
+                          </Box>
+                        </Flex>
+                      </DescriptionTerm>
+                      <DescriptionDetails>
+                        <Flex as="span" alignItems="center" gap="half">
+                          <Box as="span" color="midGrey">
+                            March 15, 2025
+                          </Box>
+                          <Icon icon="arrowForward" color="grey" size="x2_5" />
+                          <Box as="span" color="black">
+                            March 20, 2025
+                          </Box>
+                        </Flex>
+                      </DescriptionDetails>
+                    </DescriptionGroup>
+                    <DescriptionGroup>
+                      <DescriptionTerm>
+                        <Flex alignItems="center" gap="half">
+                          <RecordNumberPill 
+                            number="004"
+                            tooltip="Subcomponent consumption record #004"
+                            style={{ fontSize: '12px' }}
+                            mr="x1"
+                          />
+                        <Box as="span" color="black">
+                            UOM modified
+                        </Box>
+                        </Flex>
+                      </DescriptionTerm>
+                      <DescriptionDetails>
+                        <Flex as="span" alignItems="center" gap="half">
+                          <Box as="span" color="midGrey">
+                            lbs
+                          </Box>
+                          <Icon icon="arrowForward" color="grey" size="x2_5" />
+                          <Box as="span" color="black">
+                            kg
+                          </Box>
+                        </Flex>
+                      </DescriptionDetails>
+                    </DescriptionGroup>
+                  </DescriptionList>
+
+                  <Box mt="half">
+                    <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
+                      by
+                      <Box as="span" color="black" fontWeight="normal" mx="half">
+                        production.manager@supplier.com
+                      </Box>
+                      on
+                      <Box as="span" color="black" fontWeight="normal" mx="half">
+                        January 30th, 2025
+                      </Box>
+                      at
+                      <Box as="span" color="black" fontWeight="normal" mx="half">
+                        09:15:45AM
+                      </Box>
+                    </Text>
+                  </Box>
+                </Flex>
+              )}
+
+              {/* Divider */}
+              {(historyLogFilter === "All" || historyLogFilter === "Subcomponent consumption") && <Divider m="0" />}
+
+              {/* Group 3: Collaboration */}
+              {(historyLogFilter === "All" || historyLogFilter === "Collaboration") && (
+                <Flex flexDirection="column" gap="x1" maxWidth="1280px" mx="x1" pt="x2_5" pb="x2_5">
+                  {/* Header */}
+                  <Box mb="half">
+                    <Text fontSize="small" lineHeight="smallCompact">
+                      <Box as="span" color="black" fontWeight="bold">
+                        Collaboration
+                      </Box>
+                    </Text>
+                  </Box>
+
                   {/* DescriptionList */}
                   <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
                     <DescriptionGroup>
                       <DescriptionTerm>
                         <Box as="span" color="black">
-                          Batch status modified
+                          Quantity modified
                         </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
                           <Box as="span" color="midGrey">
-                            In Progress
+                            1,000 cases
                           </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
                           <Box as="span" color="black">
-                            Completed
+                            1,200 cases
                           </Box>
                         </Flex>
                       </DescriptionDetails>
@@ -3139,17 +2634,35 @@ export const Details11 = () => {
                     <DescriptionGroup>
                       <DescriptionTerm>
                         <Box as="span" color="black">
-                          Quality check modified
+                          Unit price modified
                         </Box>
                       </DescriptionTerm>
                       <DescriptionDetails>
                         <Flex as="span" alignItems="center" gap="half">
                           <Box as="span" color="midGrey">
-                            Pending
+                            US $45.50
                           </Box>
                           <Icon icon="arrowForward" color="grey" size="x2_5" />
                           <Box as="span" color="black">
-                            Passed
+                            US $48.75
+                          </Box>
+                        </Flex>
+                      </DescriptionDetails>
+                    </DescriptionGroup>
+                    <DescriptionGroup>
+                      <DescriptionTerm>
+                        <Box as="span" color="black">
+                          Lead time modified
+                        </Box>
+                      </DescriptionTerm>
+                      <DescriptionDetails>
+                        <Flex as="span" alignItems="center" gap="half">
+                          <Box as="span" color="midGrey">
+                            14 days
+                          </Box>
+                          <Icon icon="arrowForward" color="grey" size="x2_5" />
+                          <Box as="span" color="black">
+                            18 days
                           </Box>
                         </Flex>
                       </DescriptionDetails>
@@ -3161,15 +2674,15 @@ export const Details11 = () => {
                     <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
                       by
                       <Box as="span" color="black" fontWeight="normal" mx="half">
-                        quality.assurance@supplier.com
+                        tom.wilson@artisan.com
                       </Box>
                       on
                       <Box as="span" color="black" fontWeight="normal" mx="half">
-                        February 1st, 2025
+                        January 27th, 2025
                       </Box>
                       at
                       <Box as="span" color="black" fontWeight="normal" mx="half">
-                        08:30:15AM
+                        11:45:30AM
                       </Box>
                     </Text>
                   </Box>
@@ -3177,7 +2690,8 @@ export const Details11 = () => {
               )}
 
               {/* Divider after the last group */}
-              {(historyLogFilter === "All" || historyLogFilter === "Production record") && <Divider m="0" />}
+              {(historyLogFilter === "All" || historyLogFilter === "Collaboration") && <Divider m="0" />}
+
             </Flex>
             <Pagination currentPage={1} totalPages={5} justifyContent="flex-end" pt="x1" />
           </Tab>
@@ -3424,9 +2938,14 @@ export const Details11 = () => {
                                 mb="x1"
                                 mt="x0"
                               >
-                                <Heading4 mb="x1" fontSize="small">
-                                  Subcomponent consumption
-                                </Heading4>
+                                <Flex justifyContent="space-between" alignItems="center" mb="x2" ml="x1">
+                                  <Flex alignItems="baseline" gap="x1">
+                                    <Heading4 mb="0">Subcomponent consumption</Heading4>
+                                    <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
+                                      BOM revision 2.1
+                                    </Text>
+                                  </Flex>
+                                </Flex>
                                 <Table
                                   columns={[
                                     {
