@@ -38,7 +38,13 @@ export const ConsumptionReport = ({
     >
       <Flex backgroundColor="whiteGrey" px="x2" py="x1" mb="x1" borderRadius="small">
         <Text fontSize="small" fontWeight="bold" lineHeight="smallCompact">
-          Subcomponent consumption <Text as="span" color="midGrey" mx="x1">&bull;</Text> <Text as="span" color="midGrey" fontSize="small" fontWeight="normal" lineHeight="smallCompact">BOM revision 2.1</Text>
+          Subcomponent consumption{" "}
+          <Text as="span" color="midGrey" mx="x1">
+            &bull;
+          </Text>{" "}
+          <Text as="span" color="midGrey" fontSize="small" fontWeight="normal" lineHeight="smallCompact">
+            BOM revision 2.1
+          </Text>
         </Text>
       </Flex>
       {isEmpty ? (

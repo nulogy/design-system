@@ -58,7 +58,18 @@ import {
   materialsData7A,
 } from "./details11/materialsData";
 import { createNestedTableData } from "./details11/nestedTableData";
-import { uomOptions, unitOptions, detailsData, userState, collaborationState, acceptedItems, poStatus, editFormData, productionRecord, fieldConfig } from "./details11/optionsData";
+import {
+  uomOptions,
+  unitOptions,
+  detailsData,
+  userState,
+  collaborationState,
+  acceptedItems,
+  poStatus,
+  editFormData,
+  productionRecord,
+  fieldConfig,
+} from "./details11/optionsData";
 import { productionRecordsData, productionRecordsColumns } from "./details11/productionRecordsData";
 
 export default {
@@ -125,18 +136,18 @@ export const Details11 = () => {
   const SummaryDivider = () => <Box width="1px" height="x6" backgroundColor="lightGrey" mx="x2" />;
 
   // Reusable RecordNumberPill component
-  const RecordNumberPill = ({ 
-    number, 
-    tooltip, 
+  const RecordNumberPill = ({
+    number,
+    tooltip,
     placement = "top",
     fontSize = "smaller",
     style,
-    mr
+    mr,
   }: {
     number: string;
     tooltip?: string;
     placement?: "left" | "right" | "top" | "bottom";
-    fontSize?: "smaller" | "small" ;
+    fontSize?: "smaller" | "small";
     style?: React.CSSProperties;
     mr?: string;
   }) => {
@@ -147,7 +158,7 @@ export const Details11 = () => {
         borderRadius="small"
         width="fit-content"
         mr={mr}
-        style={{ display: 'inline-block' }}
+        style={{ display: "inline-block" }}
       >
         <Text
           color="darkGrey"
@@ -167,13 +178,19 @@ export const Details11 = () => {
       <Tooltip tooltip={tooltip} placement={placement}>
         {pillContent}
       </Tooltip>
-    ) : pillContent;
+    ) : (
+      pillContent
+    );
   };
 
   // ActualProductionRecordNumberPill component (using the reusable component)
-  const ActualProductionRecordNumberPill = ({ actualProductionRecordNumber }: { actualProductionRecordNumber: string }) => (
+  const ActualProductionRecordNumberPill = ({
+    actualProductionRecordNumber,
+  }: {
+    actualProductionRecordNumber: string;
+  }) => (
     <Flex py="x0_75" mr="x1" justifyContent="flex-start" ml="-96px">
-      <RecordNumberPill 
+      <RecordNumberPill
         number={actualProductionRecordNumber}
         tooltip={`Actual production record #${actualProductionRecordNumber}`}
         placement="left"
@@ -182,13 +199,16 @@ export const Details11 = () => {
   );
 
   // SubcomponentConsumptionRecordNumberPill component (using the reusable component)
-  const SubcomponentConsumptionRecordNumberPill = ({ subcomponentConsumptionRecordItem }: { subcomponentConsumptionRecordItem: string }) => (
-
-      <RecordNumberPill 
-        number={subcomponentConsumptionRecordItem}
-        tooltip={`Subcomponent consumption record #${subcomponentConsumptionRecordItem}`}
-        placement="left" />
-
+  const SubcomponentConsumptionRecordNumberPill = ({
+    subcomponentConsumptionRecordItem,
+  }: {
+    subcomponentConsumptionRecordItem: string;
+  }) => (
+    <RecordNumberPill
+      number={subcomponentConsumptionRecordItem}
+      tooltip={`Subcomponent consumption record #${subcomponentConsumptionRecordItem}`}
+      placement="left"
+    />
   );
 
   // Handler functions
@@ -248,7 +268,9 @@ export const Details11 = () => {
       label: "Number",
       dataKey: "actualProductionRecordNumber",
       width: "0px",
-      cellRenderer: ({ row }: { row: any }) => <ActualProductionRecordNumberPill actualProductionRecordNumber={row.actualProductionRecordNumber} />,
+      cellRenderer: ({ row }: { row: any }) => (
+        <ActualProductionRecordNumberPill actualProductionRecordNumber={row.actualProductionRecordNumber} />
+      ),
     },
     {
       label: "Actual quantity",
@@ -363,13 +385,7 @@ export const Details11 = () => {
 
         return (
           <Box py="x0_375">
-            <TruncatedText
-              pr="x2"
-              py="x1"
-              fontSize="small"
-              lineHeight="smallTextCompressed"
-              maxCharacters={98}
-            >
+            <TruncatedText pr="x2" py="x1" fontSize="small" lineHeight="smallTextCompressed" maxCharacters={98}>
               {row.note}
             </TruncatedText>
           </Box>
@@ -396,29 +412,29 @@ export const Details11 = () => {
         const isFifthTable = row.id && row.id.startsWith("5-");
         // Check if this is from nestedTableData6 (id starts with "6-")
         const isSixthTable = row.id && row.id.startsWith("6-");
-        
+
         let marginLeft = "-146px"; // Default for row 7 (was -96px)
-        
+
         if (isFifthTable) {
           marginLeft = "-170px"; // More space for "Output #001", "Output #002" (was -120px)
         } else if (isSixthTable) {
           marginLeft = "-300px"; // Much more space for "Actual production record #001", "Actual production record #002" (was -250px)
         }
-        
+
         return (
           <Flex py="x0_75" mr="x1" justifyContent="flex-start" ml={marginLeft}>
-            <Box 
+            <Box
               backgroundColor={isSixthTable ? "white" : "midGrey"}
               borderColor={isSixthTable ? "whiteGrey" : undefined}
               borderWidth={isSixthTable ? "1px" : undefined}
               borderStyle={isSixthTable ? "solid" : undefined}
-              px="half" 
+              px="half"
               borderRadius={isSixthTable ? "medium" : "small"}
               style={isSixthTable ? { border: "1px solid #E5E5E5" } : undefined}
             >
-              <Text 
+              <Text
                 color={isSixthTable ? "midGrey" : "white"}
-                fontSize="small" 
+                fontSize="small"
                 lineHeight="smallCompressed"
                 fontWeight="bold"
                 textTransform="uppercase"
@@ -517,8 +533,8 @@ export const Details11 = () => {
           return null;
         }
 
-          return (
-            <Flex py="x2">
+        return (
+          <Flex py="x2">
             <TruncatedText fullWidth width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
               {row.customerLotCode}
             </TruncatedText>
@@ -606,14 +622,8 @@ export const Details11 = () => {
 
         return (
           <Box py="x0_375">
-            <TruncatedText
-              pr="x2"
-              py="x1"
-                fontSize="small"
-                lineHeight="smallTextCompressed"
-              maxCharacters={98}
-              >
-                {row.note}
+            <TruncatedText pr="x2" py="x1" fontSize="small" lineHeight="smallTextCompressed" maxCharacters={98}>
+              {row.note}
             </TruncatedText>
           </Box>
         );
@@ -637,10 +647,7 @@ export const Details11 = () => {
       cellRenderer: ({ row }: { row: any }) => {
         return (
           <Flex py="x0_75" mr="x1" justifyContent="flex-start" ml="-96px">
-            <RecordNumberPill 
-              number={row.actualProductionRecordNumber}
-              placement="top"
-            />
+            <RecordNumberPill number={row.actualProductionRecordNumber} placement="top" />
           </Flex>
         );
       },
@@ -690,16 +697,16 @@ export const Details11 = () => {
         if (!fieldConfigState.lotCodeRequired) {
           return (
             <Flex py="x0_75">
-          <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
                 -
-          </Text>
+              </Text>
             </Flex>
           );
         }
 
         // If all lot codes are empty, don't render anything
         if (!row.lotCode && !row.supplierLotCode) {
-        return null;
+          return null;
         }
 
         return (
@@ -739,7 +746,7 @@ export const Details11 = () => {
 
         // If expiry date is empty, don't render anything
         if (!row.expiryDate) {
-        return null;
+          return null;
         }
 
         const formattedDate = formatDateToYYYYMonDD(row.expiryDate);
@@ -764,7 +771,7 @@ export const Details11 = () => {
 
         // If pallet number is empty, don't render anything
         if (!row.palletNumber) {
-        return null;
+          return null;
         }
 
         return row.palletNumber;
@@ -782,14 +789,8 @@ export const Details11 = () => {
 
         return (
           <Box py="x0_375">
-            <TruncatedText
-              pr="x2"
-              py="x1"
-                fontSize="small"
-                lineHeight="smallTextCompressed"
-              maxCharacters={98}
-              >
-                {row.note}
+            <TruncatedText pr="x2" py="x1" fontSize="small" lineHeight="smallTextCompressed" maxCharacters={98}>
+              {row.note}
             </TruncatedText>
           </Box>
         );
@@ -813,14 +814,23 @@ export const Details11 = () => {
         <Box style={{ paddingLeft: "298px" }}>
           <Table
             columns={actualProductionReportColumns}
-            rows={record.id === "1" ? nestedTableData1 : 
-                  record.id === "2" ? nestedTableData2 :
-                  record.id === "3" ? nestedTableData3 :
-                  record.id === "4" ? nestedTableData4 :
-                  record.id === "5" ? nestedTableData5 :
-                  record.id === "6" ? nestedTableData6 :
-                  record.id === "7" ? nestedTableData7 :
-                  nestedTableData8}
+            rows={
+              record.id === "1"
+                ? nestedTableData1
+                : record.id === "2"
+                  ? nestedTableData2
+                  : record.id === "3"
+                    ? nestedTableData3
+                    : record.id === "4"
+                      ? nestedTableData4
+                      : record.id === "5"
+                        ? nestedTableData5
+                        : record.id === "6"
+                          ? nestedTableData6
+                          : record.id === "7"
+                            ? nestedTableData7
+                            : nestedTableData8
+            }
             keyField="id"
             rowBorder={true}
             className="actual-production-record-table"
@@ -948,8 +958,7 @@ export const Details11 = () => {
               })
             );
           }
-        } catch (error) {
-        }
+        } catch (error) {}
       }
     });
 
@@ -1200,7 +1209,7 @@ export const Details11 = () => {
   };
 
   // Add cellRenderer to production records columns
-  const productionRecordsColumnsWithRenderer = productionRecordsColumns.map(column => {
+  const productionRecordsColumnsWithRenderer = productionRecordsColumns.map((column) => {
     if (column.dataKey === "actions") {
       return {
         ...column,
@@ -1231,8 +1240,6 @@ export const Details11 = () => {
 
   // materialsData7A now imported from materialsData.tsx
 
-
-
   // Consumption table columns
   const consumptionTableColumns = [
     {
@@ -1241,7 +1248,7 @@ export const Details11 = () => {
       width: "3em",
       cellRenderer: ({ row }: { row: any }) => (
         <Box py="x0_75" mr="x1" pl="half" display="flex" justifyContent="flex-start">
-          <SubcomponentConsumptionRecordNumberPill 
+          <SubcomponentConsumptionRecordNumberPill
             subcomponentConsumptionRecordItem={row.subcomponentConsumptionRecordItem}
           />
         </Box>
@@ -1279,7 +1286,7 @@ export const Details11 = () => {
       cellRenderer: ({ row }: { row: any }) => {
         const hasCustomerLot = row.customerLotCode && row.customerLotCode !== "-";
         const hasSupplierLot = row.supplierLotCode && row.supplierLotCode !== "-";
-        
+
         if (!hasCustomerLot && !hasSupplierLot) {
           return (
             <Flex py="x0_5">
@@ -1289,7 +1296,7 @@ export const Details11 = () => {
             </Flex>
           );
         }
-        
+
         return (
           <Flex py="x0_5" flexDirection="column" gap="x0_25">
             {hasCustomerLot && (
@@ -1311,7 +1318,7 @@ export const Details11 = () => {
       dataKey: "expiryDate",
       width: "auto",
       headerFormatter: ({ label }: { label: string }) => (
-        <Text fontSize="small" lineHeight="smallCompressed" >
+        <Text fontSize="small" lineHeight="smallCompressed">
           {label}
         </Text>
       ),
@@ -1326,7 +1333,7 @@ export const Details11 = () => {
       dataKey: "palletNumber",
       width: "auto",
       headerFormatter: ({ label }: { label: string }) => (
-        <Text fontSize="small" lineHeight="smallCompressed" >
+        <Text fontSize="small" lineHeight="smallCompressed">
           {label}
         </Text>
       ),
@@ -1356,7 +1363,7 @@ export const Details11 = () => {
       dataKey: "uom",
       width: "auto",
       headerFormatter: ({ label }: { label: string }) => (
-        <Text fontSize="small" lineHeight="smallCompressed" >
+        <Text fontSize="small" lineHeight="smallCompressed">
           {label}
         </Text>
       ),
@@ -1369,7 +1376,16 @@ export const Details11 = () => {
   ];
 
   // Create nested table data with consumption table columns
-  const { nestedTableData1, nestedTableData2, nestedTableData3, nestedTableData4, nestedTableData5, nestedTableData6, nestedTableData7, nestedTableData8 } = createNestedTableData(consumptionTableColumns);
+  const {
+    nestedTableData1,
+    nestedTableData2,
+    nestedTableData3,
+    nestedTableData4,
+    nestedTableData5,
+    nestedTableData6,
+    nestedTableData7,
+    nestedTableData8,
+  } = createNestedTableData(consumptionTableColumns);
 
   // ConsumptionReport and EmptyConsumptionReport components now imported from components.tsx
 
@@ -1462,7 +1478,7 @@ export const Details11 = () => {
             </Flex>
             <SummaryDivider />
             <Flex flexDirection="column" gap="half" width="200px" pt="x0_5" alignItems="center" justifyContent="center">
-              {poStatus === "Late" as any && (
+              {poStatus === ("Late" as any) && (
                 <>
                   <StatusIndicator alignSelf="center" type="danger">
                     Late
@@ -1475,7 +1491,7 @@ export const Details11 = () => {
                   </Text>
                 </>
               )}
-              {poStatus === "At risk" as any && (
+              {poStatus === ("At risk" as any) && (
                 <>
                   <StatusIndicator alignSelf="center" type="warning">
                     At risk
@@ -1485,7 +1501,7 @@ export const Details11 = () => {
                   </TruncatedText>
                 </>
               )}
-              {poStatus === "Completed" as any && (
+              {poStatus === ("Completed" as any) && (
                 <>
                   <StatusIndicator alignSelf="center" type="quiet">
                     Completed
@@ -1495,7 +1511,7 @@ export const Details11 = () => {
                   </Text>
                 </>
               )}
-              {poStatus === "Cancelled" as any && (
+              {poStatus === ("Cancelled" as any) && (
                 <>
                   <StatusIndicator alignSelf="center" type="quiet">
                     Cancelled
@@ -1930,18 +1946,18 @@ export const Details11 = () => {
                       by
                       <Box as="span" color="black" fontWeight="normal" mx="half">
                         jennifer.martinez@customer.com
-                        </Box>
+                      </Box>
                       on
                       <Box as="span" color="black" fontWeight="normal" mx="half">
                         January 25th, 2025
-                          </Box>
+                      </Box>
                       at
                       <Box as="span" color="black" fontWeight="normal" mx="half">
                         10:15:25AM
-                          </Box>
+                      </Box>
                     </Text>
-                          </Box>
-                        </Flex>
+                  </Box>
+                </Flex>
               )}
 
               {/* Divider */}
@@ -1963,7 +1979,7 @@ export const Details11 = () => {
                         January 29, 2025
                       </Box>
                     </Flex>
-                          </Box>
+                  </Box>
 
                   <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
                     <DescriptionGroup>
@@ -2004,9 +2020,7 @@ export const Details11 = () => {
                       <Box as="span" color="black" fontWeight="bold">
                         Actual production record
                       </Box>
-                      <RecordNumberPill 
-                        number="001"
-                      />
+                      <RecordNumberPill number="001" />
                     </Flex>
                   </Box>
                   <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
@@ -2156,9 +2170,7 @@ export const Details11 = () => {
                       <Box as="span" color="black" fontWeight="bold">
                         Actual production record
                       </Box>
-                      <RecordNumberPill 
-                        number="002"
-                      />
+                      <RecordNumberPill number="002" />
                     </Flex>
                   </Box>
                   <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
@@ -2243,18 +2255,14 @@ export const Details11 = () => {
                       <Box as="span" color="black" fontWeight="bold">
                         Actual production record
                       </Box>
-                      <RecordNumberPill 
-                        number="001"
-                      />
+                      <RecordNumberPill number="001" />
                       <Box as="span" color="midGrey">
                         –
                       </Box>
                       <Box as="span" color="black" fontWeight="bold">
                         Subcomponent consumption record
                       </Box>
-                      <RecordNumberPill 
-                        number="001"
-                      />
+                      <RecordNumberPill number="001" />
                     </Flex>
                   </Box>
 
@@ -2387,20 +2395,16 @@ export const Details11 = () => {
                       <Box as="span" color="black" fontWeight="bold">
                         Actual production record
                       </Box>
-                      <RecordNumberPill 
-                        number="002"
-                      />
+                      <RecordNumberPill number="002" />
                       <Box as="span" color="midGrey">
                         –
                       </Box>
                       <Box as="span" color="black" fontWeight="bold">
                         Subcomponent consumption record
                       </Box>
-                      <RecordNumberPill 
-                        number="002"
-                      />
+                      <RecordNumberPill number="002" />
                     </Flex>
-                          </Box>
+                  </Box>
                   <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
                     <DescriptionGroup>
                       <DescriptionTerm>
@@ -2476,18 +2480,14 @@ export const Details11 = () => {
                       <Box as="span" color="black" fontWeight="bold">
                         Actual production record
                       </Box>
-                      <RecordNumberPill 
-                        number="004"
-                      />
+                      <RecordNumberPill number="004" />
                       <Box as="span" color="midGrey">
                         –
                       </Box>
                       <Box as="span" color="black" fontWeight="bold">
                         Subcomponent consumption record
                       </Box>
-                      <RecordNumberPill 
-                        number="004"
-                      />
+                      <RecordNumberPill number="004" />
                     </Flex>
                   </Box>
                   <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
@@ -2645,18 +2645,18 @@ export const Details11 = () => {
                       by
                       <Box as="span" color="black" fontWeight="normal" mx="half">
                         tom.wilson@artisan.com
-                        </Box>
+                      </Box>
                       on
                       <Box as="span" color="black" fontWeight="normal" mx="half">
                         January 27th, 2025
-                        </Box>
+                      </Box>
                       at
                       <Box as="span" color="black" fontWeight="normal" mx="half">
                         11:45:30AM
-                          </Box>
+                      </Box>
                     </Text>
-                          </Box>
-                        </Flex>
+                  </Box>
+                </Flex>
               )}
 
               {/* Divider after the last group */}
@@ -2680,26 +2680,26 @@ export const Details11 = () => {
                             February 1, 2025
                           </Box>
                         </Flex>
-                        </Box>
+                      </Box>
                       <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
+                        <DescriptionGroup>
+                          <DescriptionTerm>
+                            <Box as="span" color="black">
                               Expected quantity modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
+                            </Box>
+                          </DescriptionTerm>
+                          <DescriptionDetails>
+                            <Flex as="span" alignItems="center" gap="half">
+                              <Box as="span" color="midGrey">
                                 1,200 cases
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
+                              </Box>
+                              <Icon icon="arrowForward" color="grey" size="x2_5" />
+                              <Box as="span" color="black">
                                 1,500 cases
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
+                              </Box>
+                            </Flex>
+                          </DescriptionDetails>
+                        </DescriptionGroup>
                       </DescriptionList>
                     </>
                   )}
@@ -2724,49 +2724,47 @@ export const Details11 = () => {
                           <Box as="span" color="black" fontWeight="bold">
                             Actual production record
                           </Box>
-                          <RecordNumberPill 
-                            number="003"
-                          />
+                          <RecordNumberPill number="003" />
                         </Flex>
                       </Box>
                       <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
+                        <DescriptionGroup>
+                          <DescriptionTerm>
+                            <Box as="span" color="black">
                               Actual quantity modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
+                            </Box>
+                          </DescriptionTerm>
+                          <DescriptionDetails>
+                            <Flex as="span" alignItems="center" gap="half">
+                              <Box as="span" color="midGrey">
                                 1,150 cases
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
+                              </Box>
+                              <Icon icon="arrowForward" color="grey" size="x2_5" />
+                              <Box as="span" color="black">
                                 1,480 cases
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Pallet number modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
+                              </Box>
+                            </Flex>
+                          </DescriptionDetails>
+                        </DescriptionGroup>
+                        <DescriptionGroup>
+                          <DescriptionTerm>
+                            <Box as="span" color="black">
+                              Pallet number modified
+                            </Box>
+                          </DescriptionTerm>
+                          <DescriptionDetails>
+                            <Flex as="span" alignItems="center" gap="half">
+                              <Box as="span" color="midGrey">
                                 PAL-004
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
+                              </Box>
+                              <Icon icon="arrowForward" color="grey" size="x2_5" />
+                              <Box as="span" color="black">
                                 PAL-005
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                  </DescriptionList>
+                              </Box>
+                            </Flex>
+                          </DescriptionDetails>
+                        </DescriptionGroup>
+                      </DescriptionList>
                     </>
                   )}
 
@@ -2790,58 +2788,54 @@ export const Details11 = () => {
                           <Box as="span" color="black" fontWeight="bold">
                             Actual production record
                           </Box>
-                          <RecordNumberPill 
-                            number="003"
-                          />
+                          <RecordNumberPill number="003" />
                           <Box as="span" color="midGrey">
                             –
                           </Box>
                           <Box as="span" color="black" fontWeight="bold">
                             Subcomponent consumption record
                           </Box>
-                          <RecordNumberPill 
-                            number="005"
-                          />
+                          <RecordNumberPill number="005" />
                         </Flex>
-                  </Box>
-                  <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
+                      </Box>
+                      <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
+                        <DescriptionGroup>
+                          <DescriptionTerm>
+                            <Box as="span" color="black">
                               Item modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
+                            </Box>
+                          </DescriptionTerm>
+                          <DescriptionDetails>
+                            <Flex as="span" alignItems="center" gap="half">
+                              <Box as="span" color="midGrey">
                                 Raw Material D
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
+                              </Box>
+                              <Icon icon="arrowForward" color="grey" size="x2_5" />
+                              <Box as="span" color="black">
                                 Raw Material D (Premium Grade)
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
+                              </Box>
+                            </Flex>
+                          </DescriptionDetails>
+                        </DescriptionGroup>
+                        <DescriptionGroup>
+                          <DescriptionTerm>
+                            <Box as="span" color="black">
                               Quantity modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
+                            </Box>
+                          </DescriptionTerm>
+                          <DescriptionDetails>
+                            <Flex as="span" alignItems="center" gap="half">
+                              <Box as="span" color="midGrey">
                                 200 kg
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
+                              </Box>
+                              <Icon icon="arrowForward" color="grey" size="x2_5" />
+                              <Box as="span" color="black">
                                 250 kg
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                  </DescriptionList>
+                              </Box>
+                            </Flex>
+                          </DescriptionDetails>
+                        </DescriptionGroup>
+                      </DescriptionList>
                     </>
                   )}
 
@@ -2867,7 +2861,6 @@ export const Details11 = () => {
 
               {/* Divider after the combined entry */}
               {(historyLogFilter === "All" || historyLogFilter === "Production record") && <Divider m="0" />}
-
             </Flex>
             <Pagination currentPage={1} totalPages={5} justifyContent="flex-end" pt="x1" />
           </Tab>
@@ -2904,7 +2897,10 @@ export const Details11 = () => {
                 <FieldLabel labelText="Date" pb="x1" />
                 <DatePicker
                   onChange={(date) =>
-                    setProductionRecordState((prev) => ({ ...prev, date: date ? date.toISOString().split("T")[0] : "" }))
+                    setProductionRecordState((prev) => ({
+                      ...prev,
+                      date: date ? date.toISOString().split("T")[0] : "",
+                    }))
                   }
                   selected={productionRecordState.date ? new Date(productionRecordState.date) : null}
                   inputProps={{ disabled: role === "customer" && isEditingProduction }}
@@ -2917,7 +2913,9 @@ export const Details11 = () => {
                     <FieldLabel labelText="Expected quantity" pb="x1" />
                     <Input
                       value={productionRecordState.expectedQuantity}
-                      onChange={(e) => setProductionRecordState((prev) => ({ ...prev, expectedQuantity: e.target.value }))}
+                      onChange={(e) =>
+                        setProductionRecordState((prev) => ({ ...prev, expectedQuantity: e.target.value }))
+                      }
                       disabled={role === "customer" && isEditingProduction}
                     />
                   </Field>
@@ -3674,7 +3672,9 @@ export const Details11 = () => {
                 labelText="Supplier's PO line item number"
                 id="supplierPOLineItemNumber"
                 value={editFormDataState.supplierPOLineItemNumber}
-                onChange={(e) => setEditFormDataState((prev) => ({ ...prev, supplierPOLineItemNumber: e.target.value }))}
+                onChange={(e) =>
+                  setEditFormDataState((prev) => ({ ...prev, supplierPOLineItemNumber: e.target.value }))
+                }
               />
             )}
 
@@ -3719,4 +3719,3 @@ export const Details11 = () => {
     </ApplicationFrame>
   );
 };
-

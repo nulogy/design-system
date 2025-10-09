@@ -423,7 +423,7 @@ export const ConsumptionReport = ({
   parentData?: { date: string; actualQuantity: string };
 }) => {
   const isEmpty = materials.length === 0;
-  
+
   const consumptionTableColumns = [
     {
       label: "#",
@@ -431,13 +431,11 @@ export const ConsumptionReport = ({
       width: "3em",
       cellRenderer: ({ row }: { row: any }) => (
         <Flex py="x0_75" mr="x1" pl="half" display="flex" justifyContent="flex-start">
-          <Tooltip tooltip={`Subcomponent consumption record #${row.subcomponentConsumptionRecordItem}`} placement="left">
-            <Flex
-              backgroundColor="lightGrey"
-              px="half"
-              borderRadius="small"
-              flexShrink={0}
-            >
+          <Tooltip
+            tooltip={`Subcomponent consumption record #${row.subcomponentConsumptionRecordItem}`}
+            placement="left"
+          >
+            <Flex backgroundColor="lightGrey" px="half" borderRadius="small" flexShrink={0}>
               <Text
                 color="darkGrey"
                 fontSize="smaller"
@@ -550,7 +548,8 @@ export const ConsumptionReport = ({
     <Box pt="x2" pb="x1">
       <Flex backgroundColor="whiteGrey" px="x2" py="x1" mb="x1" borderRadius="small">
         <Text fontSize="small" fontWeight="bold" lineHeight="smallCompact">
-          Subcomponent consumption <Text as="span" color="midGrey" mx="x1">
+          Subcomponent consumption{" "}
+          <Text as="span" color="midGrey" mx="x1">
             &bull;
           </Text>{" "}
           <Text as="span" color="midGrey" fontSize="small" lineHeight="smallCompact" fontWeight="normal">
@@ -634,10 +633,7 @@ export const nestedTableData2 = [
     palletNumber: "PAL-002",
     note: "Standard production run with normal quality metrics",
     expandedContent: () => (
-      <ConsumptionReport
-        materials={materialsData1}
-        parentData={{ date: "2025-Mar-15", actualQuantity: "12 cases" }}
-      />
+      <ConsumptionReport materials={materialsData1} parentData={{ date: "2025-Mar-15", actualQuantity: "12 cases" }} />
     ),
   },
 ];
@@ -653,10 +649,7 @@ export const nestedTableData3 = [
     palletNumber: "PAL-003",
     note: "Third production run with minor adjustments",
     expandedContent: () => (
-      <ConsumptionReport
-        materials={materialsData1}
-        parentData={{ date: "2025-Apr-20", actualQuantity: "25 cases" }}
-      />
+      <ConsumptionReport materials={materialsData1} parentData={{ date: "2025-Apr-20", actualQuantity: "25 cases" }} />
     ),
   },
 ];
@@ -688,10 +681,7 @@ export const nestedTableData5 = [
     palletNumber: "PAL-005",
     note: "Fifth production run with full quantity produced",
     expandedContent: () => (
-      <ConsumptionReport
-        materials={materialsData5A}
-        parentData={{ date: "2025-May-15", actualQuantity: "8 cases" }}
-      />
+      <ConsumptionReport materials={materialsData5A} parentData={{ date: "2025-May-15", actualQuantity: "8 cases" }} />
     ),
   },
   {
@@ -704,10 +694,7 @@ export const nestedTableData5 = [
     palletNumber: "PAL-005",
     note: "Additional batch from same production run",
     expandedContent: () => (
-      <ConsumptionReport
-        materials={materialsData5B}
-        parentData={{ date: "2025-May-15", actualQuantity: "4 cases" }}
-      />
+      <ConsumptionReport materials={materialsData5B} parentData={{ date: "2025-May-15", actualQuantity: "4 cases" }} />
     ),
   },
 ];
@@ -723,10 +710,7 @@ export const nestedTableData6 = [
     palletNumber: "PAL-006A",
     note: "Sixth production run with full quantity produced",
     expandedContent: () => (
-      <ConsumptionReport
-        materials={materialsData6A}
-        parentData={{ date: "2025-Apr-22", actualQuantity: "10 cases" }}
-      />
+      <ConsumptionReport materials={materialsData6A} parentData={{ date: "2025-Apr-22", actualQuantity: "10 cases" }} />
     ),
   },
   {

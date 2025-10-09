@@ -145,11 +145,7 @@ export const Details10 = () => {
   const OutputNumberPill = ({ outputNumber }: { outputNumber: string }) => (
     <Flex py="x0_75" mr="x1" justifyContent="flex-start" ml="-96px">
       <Tooltip tooltip={`Actual production record #${outputNumber}`} placement="left">
-        <Box
-          backgroundColor="lightGrey"
-          px="half"
-          borderRadius="small"
-        >
+        <Box backgroundColor="lightGrey" px="half" borderRadius="small">
           <Text
             color="darkGrey"
             fontSize="smaller"
@@ -576,13 +572,7 @@ export const Details10 = () => {
 
         return (
           <Box py="x0_375">
-            <TruncatedText
-              pr="x2"
-              py="x1"
-              fontSize="small"
-              lineHeight="smallTextCompressed"
-              maxCharacters={98}
-            >
+            <TruncatedText pr="x2" py="x1" fontSize="small" lineHeight="smallTextCompressed" maxCharacters={98}>
               {row.note}
             </TruncatedText>
           </Box>
@@ -605,18 +595,14 @@ export const Details10 = () => {
         const isSecondTable = row.id && row.id.startsWith("2-");
         // Check if this is from nestedTableData3 (id starts with "3-")
         const isThirdTable = row.id && row.id.startsWith("3-");
-        
+
         if (isSecondTable) {
           return (
             <Flex py="x2" mr="x1" justifyContent="flex-end">
-              <Box 
-                backgroundColor="midGrey" 
-                px="half" 
-                borderRadius="small"
-              >
-                <Text 
-                  color="white" 
-                  fontSize="smaller" 
+              <Box backgroundColor="midGrey" px="half" borderRadius="small">
+                <Text
+                  color="white"
+                  fontSize="smaller"
                   lineHeight="smallerText"
                   fontWeight="bold"
                   textTransform="uppercase"
@@ -628,22 +614,22 @@ export const Details10 = () => {
             </Flex>
           );
         }
-        
+
         if (isThirdTable) {
           return (
             <Flex pb="x2" mr="x1" justifyContent="flex-end" alignItems="flex-start">
-              <Box 
-                backgroundColor="midGrey" 
-                px="half" 
+              <Box
+                backgroundColor="midGrey"
+                px="half"
                 borderTopLeftRadius="0"
                 borderTopRightRadius="0"
                 borderBottomLeftRadius="small"
                 borderBottomRightRadius="small"
                 mt="-28px"
               >
-                <Text 
-                  color="white" 
-                  fontSize="smaller" 
+                <Text
+                  color="white"
+                  fontSize="smaller"
                   lineHeight="smallerText"
                   fontWeight="bold"
                   textTransform="uppercase"
@@ -655,7 +641,7 @@ export const Details10 = () => {
             </Flex>
           );
         }
-        
+
         return (
           <Flex py="x2" mr="x1" justifyContent="flex-end">
             <Text color="midGrey" fontSize="small">
@@ -678,29 +664,29 @@ export const Details10 = () => {
         const isFifthTable = row.id && row.id.startsWith("5-");
         // Check if this is from nestedTableData6 (id starts with "6-")
         const isSixthTable = row.id && row.id.startsWith("6-");
-        
+
         let marginLeft = "-146px"; // Default for row 7 (was -96px)
-        
+
         if (isFifthTable) {
           marginLeft = "-170px"; // More space for "Output #001", "Output #002" (was -120px)
         } else if (isSixthTable) {
           marginLeft = "-300px"; // Much more space for "Actual production record #001", "Actual production record #002" (was -250px)
         }
-        
+
         return (
           <Flex py="x2" mr="x1" justifyContent="flex-start" ml={marginLeft}>
-            <Box 
+            <Box
               backgroundColor={isSixthTable ? "white" : "midGrey"}
               borderColor={isSixthTable ? "whiteGrey" : undefined}
               borderWidth={isSixthTable ? "1px" : undefined}
               borderStyle={isSixthTable ? "solid" : undefined}
-              px="half" 
+              px="half"
               borderRadius={isSixthTable ? "medium" : "small"}
               style={isSixthTable ? { border: "1px solid #E5E5E5" } : undefined}
             >
-              <Text 
+              <Text
                 color={isSixthTable ? "midGrey" : "white"}
-                fontSize="smaller" 
+                fontSize="smaller"
                 lineHeight="smallerText"
                 fontWeight="bold"
                 textTransform="uppercase"
@@ -864,13 +850,7 @@ export const Details10 = () => {
 
         return (
           <Box py="x0_375">
-            <TruncatedText
-              pr="x2"
-              py="x1"
-              fontSize="small"
-              lineHeight="smallTextCompressed"
-              maxCharacters={98}
-            >
+            <TruncatedText pr="x2" py="x1" fontSize="small" lineHeight="smallTextCompressed" maxCharacters={98}>
               {row.note}
             </TruncatedText>
           </Box>
@@ -896,14 +876,10 @@ export const Details10 = () => {
         return (
           <Flex py="x2" mr="x1" justifyContent="flex-start" ml="-96px">
             <Tooltip tooltip="Actual production record #001" placement="top">
-              <Box 
-                backgroundColor="midGrey" 
-                px="half" 
-                borderRadius="small"
-              >
-                <Text 
-                  color="white" 
-                  fontSize="smaller" 
+              <Box backgroundColor="midGrey" px="half" borderRadius="small">
+                <Text
+                  color="white"
+                  fontSize="smaller"
                   lineHeight="smallerText"
                   fontWeight="bold"
                   textTransform="uppercase"
@@ -1030,13 +1006,7 @@ export const Details10 = () => {
 
         return (
           <Box py="x0_375">
-            <TruncatedText
-              pr="x2"
-              py="x1"
-              fontSize="small"
-              lineHeight="smallTextCompressed"
-              maxCharacters={98}
-            >
+            <TruncatedText pr="x2" py="x1" fontSize="small" lineHeight="smallTextCompressed" maxCharacters={98}>
               {row.note}
             </TruncatedText>
           </Box>
