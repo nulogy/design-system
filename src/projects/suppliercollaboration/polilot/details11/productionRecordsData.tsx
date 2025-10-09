@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text } from "../../../../..";
+import { Box, Text } from "../../../..";
 
 // Production records data - basic data without expandedContent functions
 export const productionRecordsData = [

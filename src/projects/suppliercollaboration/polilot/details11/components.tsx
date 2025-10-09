@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Flex, Text, Heading4, Table } from "../../../../..";
+import { Box, Flex, Text, Heading4, Table } from "../../../..";
 
 // ConsumptionReport component
 export const ConsumptionReport = ({
@@ -9,7 +9,9 @@ export const ConsumptionReport = ({
 }: {
   materials: Array<{
     item: string;
-    lotCode: string;
+    customerLotCode?: string;
+    supplierLotCode?: string;
+    lotCode?: string;
     expiryDate: string;
     palletNumber: string;
     quantity: string;

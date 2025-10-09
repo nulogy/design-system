@@ -975,6 +975,7 @@ export const Details9 = () => {
     // Convert nested data to production rows format
     const rows = nestedData.map((batch, index) => ({
       id: `row-${index + 1}`,
+      outputNumber: batch.outputNumber || "",
       palletNumber: batch.palletNumber || "",
       customerLotCode: batch.customerLotCode || "",
       supplierLotCode: batch.supplierLotCode || "",
@@ -1044,7 +1045,7 @@ export const Details9 = () => {
     setProductionEntryType("quick");
     setActualQuantity("");
     setProductionRows([
-      { id: "row-1", palletNumber: "", customerLotCode: "", supplierLotCode: "", expiryDate: "", quantity: "" },
+      { id: "row-1", outputNumber: "", palletNumber: "", customerLotCode: "", supplierLotCode: "", expiryDate: "", quantity: "" },
     ]);
     setRowNotes({});
     setRowConsumptions({});
