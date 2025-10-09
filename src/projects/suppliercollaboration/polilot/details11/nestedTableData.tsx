@@ -28,7 +28,7 @@ export const createNestedTableData = (consumptionTableColumns: any) => {
     palletNumber: "PAL-001A",
     note: "Additional batch from same production run",
     expandedContent: () => (
-      <ConsumptionReport materials={materialsData2} parentData={{ date: "2025-Feb-12", actualQuantity: "5 cases" }} />
+      <ConsumptionReport consumptionTableColumns={consumptionTableColumns} materials={materialsData2} parentData={{ date: "2025-Feb-12", actualQuantity: "5 cases" }} />
     ),
   },
   {
@@ -41,7 +41,7 @@ export const createNestedTableData = (consumptionTableColumns: any) => {
     palletNumber: "PAL-001B",
     note: "Final batch completion",
     expandedContent: () => (
-      <ConsumptionReport materials={materialsData1} parentData={{ date: "2025-Feb-12", actualQuantity: "3 cases" }} />
+      <ConsumptionReport consumptionTableColumns={consumptionTableColumns} materials={materialsData1} parentData={{ date: "2025-Feb-12", actualQuantity: "3 cases" }} />
     ),
   },
   ];
@@ -58,6 +58,7 @@ export const createNestedTableData = (consumptionTableColumns: any) => {
     note: "Standard production run with normal quality metrics",
     expandedContent: () => (
       <ConsumptionReport
+        consumptionTableColumns={consumptionTableColumns}
         materials={materialsData1}
         parentData={{ date: "2025-Mar-15", actualQuantity: "12 cases" }}
       />
@@ -77,6 +78,7 @@ export const createNestedTableData = (consumptionTableColumns: any) => {
     note: "High volume production batch for major customer order",
     expandedContent: () => (
       <ConsumptionReport
+        consumptionTableColumns={consumptionTableColumns}
         materials={materialsData1}
         parentData={{ date: "2025-Apr-20", actualQuantity: "25 cases" }}
       />
@@ -95,7 +97,7 @@ export const createNestedTableData = (consumptionTableColumns: any) => {
     palletNumber: "PAL-004",
     note: "Equipment maintenance scheduled, production line optimization in progress",
     expandedContent: () => (
-      <ConsumptionReport materials={[]} parentData={{ date: "2025-Aug-08", actualQuantity: "0 cases" }} />
+      <ConsumptionReport consumptionTableColumns={consumptionTableColumns} materials={[]} parentData={{ date: "2025-Aug-08", actualQuantity: "0 cases" }} />
     ),
   },
   ];
@@ -112,6 +114,7 @@ export const createNestedTableData = (consumptionTableColumns: any) => {
     note: "First batch from production run",
     expandedContent: () => (
       <ConsumptionReport
+        consumptionTableColumns={consumptionTableColumns}
         materials={materialsData5A}
         parentData={{ date: "2025-May-15", actualQuantity: "8 cases" }}
       />
@@ -128,6 +131,7 @@ export const createNestedTableData = (consumptionTableColumns: any) => {
     note: "Second batch completion",
     expandedContent: () => (
       <ConsumptionReport
+        consumptionTableColumns={consumptionTableColumns}
         materials={materialsData5B}
         parentData={{ date: "2025-May-15", actualQuantity: "4 cases" }}
       />
@@ -147,6 +151,7 @@ export const createNestedTableData = (consumptionTableColumns: any) => {
     note: "Quality approved batch",
     expandedContent: () => (
       <ConsumptionReport
+        consumptionTableColumns={consumptionTableColumns}
         materials={materialsData6A}
         parentData={{ date: "2025-Apr-22", actualQuantity: "10 cases" }}
       />
@@ -161,7 +166,7 @@ export const createNestedTableData = (consumptionTableColumns: any) => {
     expiryDate: "2026-04-22",
     palletNumber: "PAL-006B",
     note: "Partial batch with quality issues",
-    expandedContent: () => <ConsumptionReport materials={materialsData6B} />,
+    expandedContent: () => <ConsumptionReport consumptionTableColumns={consumptionTableColumns} materials={materialsData6B} />,
   },
   ];
 
@@ -175,7 +180,7 @@ export const createNestedTableData = (consumptionTableColumns: any) => {
     expiryDate: "2026-05-10",
     palletNumber: "PAL-007A",
     note: "Production on hold - awaiting materials",
-    expandedContent: () => <ConsumptionReport materials={materialsData7A} />,
+    expandedContent: () => <ConsumptionReport materials={materialsData7A} consumptionTableColumns={consumptionTableColumns} />,
   },
   {
     id: "7-2",
@@ -199,7 +204,7 @@ export const createNestedTableData = (consumptionTableColumns: any) => {
     expiryDate: "2026-06-05",
     palletNumber: "PAL-008",
     note: "Special order for premium customer, expedited processing",
-    expandedContent: () => <ConsumptionReport materials={materialsData1} />,
+    expandedContent: () => <ConsumptionReport materials={materialsData1} consumptionTableColumns={consumptionTableColumns} />,
   },
   ];
 

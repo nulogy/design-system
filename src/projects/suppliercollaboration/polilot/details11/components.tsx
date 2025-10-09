@@ -47,16 +47,16 @@ export const ConsumptionReport = ({
         </Box>
       ) : (
         <Box mx="x1">
-          <Table
-            columns={consumptionTableColumns}
-            rows={materials}
-            keyField="item"
-            compact={true}
-            rowBorder={true}
-            className="subcomponent-consumption-record-table"
-            mb="x1"
-            width="100%"
-          />
+          <Box mb="x1">
+            <Table
+              columns={consumptionTableColumns}
+              rows={materials}
+              keyField="item"
+              compact={true}
+              rowBorder={true}
+              className="subcomponent-consumption-record-table"
+            />
+          </Box>
         </Box>
       )}
     </Box>
