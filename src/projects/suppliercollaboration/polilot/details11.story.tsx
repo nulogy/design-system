@@ -128,14 +128,14 @@ export const Details11 = () => {
   const RecordNumberPill = ({ 
     number, 
     tooltip, 
-    placement = "auto",
+    placement = "top",
     fontSize = "smaller",
     style,
     mr
   }: {
     number: string;
     tooltip?: string;
-    placement?: "left" | "right" | "top" | "bottom" | "auto";
+    placement?: "left" | "right" | "top" | "bottom";
     fontSize?: "smaller" | "small" ;
     style?: React.CSSProperties;
     mr?: string;

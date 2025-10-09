@@ -1,6 +1,6 @@
 import React from "react";
-import { Box, Table, Flex, Text, Tooltip, TruncatedText } from "../../../index";
-import { ColumnType, CellInfoType } from "../../../Table/Table.types";
+import { Box, Table, Flex, Text, Tooltip, TruncatedText } from "../../../..";
+import { ColumnType, CellInfoType } from "../../../../Table/Table.types";
 
 // Materials data for consumption reports
 export const materialsData1 = [
