@@ -3,7 +3,8 @@ export const materialsData1 = [
   {
     subcomponentConsumptionRecordItem: "001",
     item: "Acetaminophen 500mg",
-    lotCode: "LOT-ACET-001",
+    customerLotCode: "LOT-123",
+    supplierLotCode: "SUP-123",
     expiryDate: "2026-03-15",
     palletNumber: "PAL-001",
     quantity: "2.5",
@@ -12,7 +13,8 @@ export const materialsData1 = [
   {
     subcomponentConsumptionRecordItem: "002",
     item: "Microcrystalline cellulose",
-    lotCode: "LOT-MCC-001",
+    customerLotCode: "LOT-456",
+    supplierLotCode: "SUP-456",
     expiryDate: "2026-04-20",
     palletNumber: "PAL-002",
     quantity: "1.2",
@@ -21,7 +23,8 @@ export const materialsData1 = [
   {
     subcomponentConsumptionRecordItem: "003",
     item: "Croscarmellose sodium",
-    lotCode: "LOT-CCS-001",
+    customerLotCode: "LOT-789",
+    supplierLotCode: "SUP-789",
     expiryDate: "2026-05-10",
     palletNumber: "PAL-003",
     quantity: "0.3",
@@ -30,7 +33,8 @@ export const materialsData1 = [
   {
     subcomponentConsumptionRecordItem: "004",
     item: "Magnesium stearate",
-    lotCode: "LOT-MS-001",
+    customerLotCode: "LOT-012",
+    supplierLotCode: "SUP-012",
     expiryDate: "2026-06-15",
     palletNumber: "PAL-004",
     quantity: "0.1",
@@ -39,7 +43,8 @@ export const materialsData1 = [
   {
     subcomponentConsumptionRecordItem: "005",
     item: "Hydroxypropyl methylcellulose",
-    lotCode: "LOT-HPMC-001",
+    customerLotCode: "LOT-345",
+    supplierLotCode: "SUP-345",
     expiryDate: "2026-07-20",
     palletNumber: "PAL-005",
     quantity: "0.8",
@@ -48,7 +53,8 @@ export const materialsData1 = [
   {
     subcomponentConsumptionRecordItem: "006",
     item: "Talc powder",
-    lotCode: "LOT-TALC-001",
+    customerLotCode: "LOT-678",
+    supplierLotCode: "SUP-678",
     expiryDate: "2026-08-25",
     palletNumber: "PAL-006",
     quantity: "0.5",
@@ -57,7 +63,8 @@ export const materialsData1 = [
   {
     subcomponentConsumptionRecordItem: "007",
     item: "FD&C Blue #2",
-    lotCode: "LOT-BLUE-001",
+    customerLotCode: "LOT-901",
+    supplierLotCode: "SUP-901",
     expiryDate: "2026-09-30",
     palletNumber: "PAL-007",
     quantity: "0.02",
@@ -66,7 +73,8 @@ export const materialsData1 = [
   {
     subcomponentConsumptionRecordItem: "008",
     item: "Sodium benzoate",
-    lotCode: "LOT-SB-001",
+    customerLotCode: "LOT-234",
+    supplierLotCode: "SUP-234",
     expiryDate: "2026-10-15",
     palletNumber: "PAL-008",
     quantity: "0.05",
@@ -78,7 +86,8 @@ export const materialsData2 = [
   {
     subcomponentConsumptionRecordItem: "001",
     item: "Ibuprofen 200mg",
-    lotCode: "LOT-IBU-002",
+    customerLotCode: "LOT-567",
+    supplierLotCode: "SUP-567",
     expiryDate: "2026-04-10",
     palletNumber: "PAL-009",
     quantity: "1.8",
@@ -87,7 +96,8 @@ export const materialsData2 = [
   {
     subcomponentConsumptionRecordItem: "002",
     item: "Lactose monohydrate",
-    lotCode: "LOT-LM-002",
+    customerLotCode: "LOT-890",
+    supplierLotCode: "SUP-890",
     expiryDate: "2026-05-15",
     palletNumber: "PAL-010",
     quantity: "2.1",
@@ -96,7 +106,8 @@ export const materialsData2 = [
   {
     subcomponentConsumptionRecordItem: "003",
     item: "Pregelatinized starch",
-    lotCode: "LOT-PS-002",
+    customerLotCode: "LOT-123",
+    supplierLotCode: "SUP-123",
     expiryDate: "2026-06-20",
     palletNumber: "PAL-011",
     quantity: "0.4",
