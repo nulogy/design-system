@@ -2979,6 +2979,17 @@ export const Details11 = () => {
                 />
               </Field>
 
+              <Field>
+                <FieldLabel labelText="BOM revision and release date" pb="x1" />
+                <Input
+                  value={productionRecordState.bomRevision || ""}
+                  onChange={(e) =>
+                    setProductionRecordState((prev) => ({ ...prev, bomRevision: e.target.value }))
+                  }
+                  disabled={role === "customer" && isEditingProduction}
+                />
+              </Field>
+
               <Flex gap="x1_5">
                 <Box width="20em">
                   <Field>
@@ -3213,15 +3224,17 @@ export const Details11 = () => {
                                   <Text as="span" color="midGrey" mx="x1">
                                     &bull;
                                   </Text>{" "}
-                                  <Text
-                                    as="span"
+                                  <Link
+                                    href="/bom/revision/2.1"
+                                    openInNewTab
+                                    underline={false}
                                     color="midGrey"
                                     fontSize="small"
                                     fontWeight="normal"
                                     lineHeight="smallCompact"
                                   >
                                     BOM revision 2.1
-                                  </Text>
+                                  </Link>
                                 </Text>
                               </Flex>
                               <Box px="x1_5" pb="x1">
