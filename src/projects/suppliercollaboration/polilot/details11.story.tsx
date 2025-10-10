@@ -39,6 +39,7 @@ import {
   QuietButton,
   DatePicker,
   Select,
+  AsyncSelect,
   Textarea,
   Toggle,
   Switcher,
@@ -102,7 +103,7 @@ export const Details11 = () => {
   const [historyLogFilter, setHistoryLogFilter] = useState("All");
   const [actualQuantity, setActualQuantity] = useState("");
   const [productionRows, setProductionRows] = useState([
-    { id: "row-1", palletNumber: "", customerLotCode: "", supplierLotCode: "", expiryDate: "", quantity: "" },
+    { id: "row-1", palletNumber: "", customerLotCode: "", supplierLotCode: "", expiryDate: "", quantity: "", uom: "" },
   ]);
   const [rowNotes, setRowNotes] = useState<Record<string, string>>({});
   const [rowConsumptions, setRowConsumptions] = useState<
@@ -111,11 +112,13 @@ export const Details11 = () => {
       Array<{
         id: string;
         item: string;
-        lotCode: string;
+        customerLotCode: string;
+        supplierLotCode: string;
         expiryDate: string;
         palletNumber: string;
         quantity: string;
         uom: string;
+        pillNumber?: string;
       }>
     >
   >({});
@@ -237,7 +240,8 @@ export const Details11 = () => {
     {
       id: "consumption-item-1",
       item: "",
-      lotCode: "",
+      customerLotCode: "",
+      supplierLotCode: "",
       expiryDate: null as Date | null,
       palletNumber: "",
       consumedQuantity: "",
@@ -911,6 +915,7 @@ export const Details11 = () => {
       supplierLotCode: batch.supplierLotCode || "",
       expiryDate: batch.expiryDate || "",
       quantity: batch.actualQuantity ? batch.actualQuantity.split(" ")[0] || "" : "",
+      uom: batch.actualQuantity ? batch.actualQuantity.split(" ")[1] || "" : "",
     }));
 
     // Populate notes from nested data
@@ -930,11 +935,13 @@ export const Details11 = () => {
       Array<{
         id: string;
         item: string;
-        lotCode: string;
+        customerLotCode: string;
+        supplierLotCode: string;
         expiryDate: string;
         palletNumber: string;
         quantity: string;
         uom: string;
+        pillNumber?: string;
       }>
     > = {};
 
@@ -955,6 +962,10 @@ export const Details11 = () => {
               (material: any, materialIndex: number) => ({
                 ...material,
                 id: material.id || `consumption-${Date.now()}-${index}-${materialIndex}`,
+                customerLotCode: material.lotCode || material.customerLotCode || "",
+                supplierLotCode: material.supplierLotCode || "",
+                // Remove the old lotCode field if it exists
+                lotCode: undefined,
               })
             );
           }
@@ -972,7 +983,15 @@ export const Details11 = () => {
     setProductionEntryType("quick");
     setActualQuantity("");
     setProductionRows([
-      { id: "row-1", palletNumber: "", customerLotCode: "", supplierLotCode: "", expiryDate: "", quantity: "" },
+      {
+        id: "row-1",
+        palletNumber: "",
+        customerLotCode: "",
+        supplierLotCode: "",
+        expiryDate: "",
+        quantity: "",
+        uom: "",
+      },
     ]);
     setRowNotes({});
     setRowConsumptions({});
@@ -1041,6 +1060,7 @@ export const Details11 = () => {
       supplierLotCode: "",
       expiryDate: "",
       quantity: "",
+      uom: "",
     };
     setProductionRows((prev) => [...prev, newRow]);
   };
@@ -1065,49 +1085,100 @@ export const Details11 = () => {
     }));
   };
 
+  const handleRemoveNote = (rowId: string) => {
+    setRowNotes((prev) => {
+      const newNotes = { ...prev };
+      delete newNotes[rowId];
+      return newNotes;
+    });
+  };
+
   const handleAddConsumptionForRow = (rowId: string) => {
-    setRowConsumptions((prev) => ({
-      ...prev,
-      [rowId]: prev[rowId] || [
-        {
-          id: `consumption-${Date.now()}`,
-          item: "",
-          lotCode: "",
-          expiryDate: "",
-          palletNumber: "",
-          quantity: "",
-          uom: "",
-        },
-      ],
-    }));
+    console.log("Adding consumption for row:", rowId);
+    setRowConsumptions((prev) => {
+      const newConsumption = {
+        id: `consumption-${Date.now()}`,
+        item: "",
+        customerLotCode: "",
+        supplierLotCode: "",
+        expiryDate: "",
+        palletNumber: "",
+        quantity: "",
+        uom: "",
+        pillNumber: "001",
+      };
+
+      const updatedConsumptions = [...(prev[rowId] || []), newConsumption];
+      console.log("Updated consumptions for row:", rowId, updatedConsumptions);
+
+      return {
+        ...prev,
+        [rowId]: updatedConsumptions,
+      };
+    });
   };
 
   const handleConsumptionRowChange = (rowId: string, consumptionId: string, field: string, value: string) => {
-    setRowConsumptions((prev) => ({
-      ...prev,
-      [rowId]:
-        prev[rowId]?.map((consumption) =>
-          consumption.id === consumptionId ? { ...consumption, [field]: value } : consumption
-        ) || [],
-    }));
+    console.log("handleConsumptionRowChange called:", { rowId, consumptionId, field, value });
+
+    // Extract the actual row ID from the combined ID (e.g., "row-1-consumption-123" -> "row-1")
+    const actualRowId = rowId.includes("-consumption-") ? rowId.split("-consumption-")[0] : rowId;
+    console.log("Actual row ID:", actualRowId);
+
+    setRowConsumptions((prev) => {
+      const currentConsumptions = prev[actualRowId] || [];
+      console.log("Current consumptions for row:", actualRowId, currentConsumptions);
+
+      const updatedConsumptions = currentConsumptions.map((consumption) => {
+        if (consumption.id === consumptionId) {
+          console.log("Updating consumption:", consumption.id, "field:", field, "value:", value);
+          // Ensure the consumption object has the new field structure
+          const updatedConsumption = { ...consumption, [field]: value };
+          // If updating lotCode field, map it to customerLotCode for backward compatibility
+          if (field === "lotCode" && !updatedConsumption.customerLotCode) {
+            updatedConsumption.customerLotCode = value;
+          }
+          return updatedConsumption;
+        }
+        return consumption;
+      });
+
+      console.log("Updated consumptions:", updatedConsumptions);
+
+      return {
+        ...prev,
+        [actualRowId]: updatedConsumptions,
+      };
+    });
   };
 
   const handleAddConsumptionRow = (rowId: string) => {
+    console.log("Adding consumption row for:", rowId);
     const currentConsumptions = rowConsumptions[rowId] || [];
     const newConsumption = {
       id: `consumption-${Date.now()}`,
       item: "",
-      lotCode: "",
+      customerLotCode: "",
+      supplierLotCode: "",
       expiryDate: "",
       palletNumber: "",
       quantity: "",
       uom: "",
       pillNumber: `${String(currentConsumptions.length + 1).padStart(3, "0")}`,
     };
-    setRowConsumptions((prev) => ({
-      ...prev,
-      [rowId]: [...(prev[rowId] || []), newConsumption],
-    }));
+
+    console.log("New consumption item:", newConsumption);
+    console.log("Current consumptions before adding:", currentConsumptions);
+
+    setRowConsumptions((prev) => {
+      const updatedConsumptions = [...(prev[rowId] || []), newConsumption];
+      console.log("Updated consumptions after adding:", updatedConsumptions);
+
+      return {
+        ...prev,
+        [rowId]: updatedConsumptions,
+      };
+    });
   };
 
   const handleRemoveConsumptionRow = (rowId: string, consumptionId: string) => {
@@ -1131,7 +1202,8 @@ export const Details11 = () => {
       return {
         id: `consumption-item-${index + 1}`,
         item: material.item,
-        lotCode: material.lotCode,
+        customerLotCode: material.lotCode, // Map existing lotCode to customerLotCode for backward compatibility
+        supplierLotCode: "",
         expiryDate: material.expiryDate ? new Date(material.expiryDate) : null,
         palletNumber: material.palletNumber,
         consumedQuantity: parts[0] || "",
@@ -1171,7 +1243,8 @@ export const Details11 = () => {
       {
         id: "consumption-item-1",
         item: "",
-        lotCode: "",
+        customerLotCode: "",
+        supplierLotCode: "",
         expiryDate: null,
         palletNumber: "",
         consumedQuantity: "",
@@ -1191,7 +1264,8 @@ export const Details11 = () => {
     const newItem = {
       id: `consumption-item-${Date.now()}`,
       item: "",
-      lotCode: "",
+      customerLotCode: "",
+      supplierLotCode: "",
       expiryDate: null as Date | null,
       palletNumber: "",
       consumedQuantity: "",
@@ -2942,47 +3016,50 @@ export const Details11 = () => {
               <Heading4 mb="x2">Actual production</Heading4>
 
               <Box>
-                  {/* Custom table structure with nested rows */}
-                  <Box>
-                    {/* Table Header */}
-                    <Box display="flex" borderBottom="1px solid" borderColor="lightGrey" pb="x1">
-                      <Box width="3em" pb="x1" pl="x1"></Box>
-                      <Box flex="1" pb="x1" pl="x1" fontWeight="bold" fontSize="small">
-                        Pallet number
-                        {role === "supplier" && fieldConfigState.palletNumberRequired && (
-                          <Text inline ml="x0_5" fontSize="small" color="darkGrey">
-                            (Required)
-                          </Text>
-                        )}
-                      </Box>
-                      <Box flex="1" pb="x1" pl="x1" fontWeight="bold" fontSize="small">
-                        Customer's lot code
-                      </Box>
-                      <Box flex="1" pb="x1" pl="x1" fontWeight="bold" fontSize="small">
-                        Supplier's lot code
-                        {role === "supplier" && fieldConfigState.lotCodeRequired && (
-                          <Text inline ml="x0_5" fontSize="small" color="darkGrey">
-                            (Required)
-                          </Text>
-                        )}
-                      </Box>
-                      <Box flex="1" pb="x1" pl="x1" fontWeight="bold" fontSize="small">
-                        Expiry date
-                        {role === "supplier" && fieldConfigState.expiryDateRequired && (
-                          <Text inline ml="x0_5" fontSize="small" color="darkGrey">
-                            (Required)
-                          </Text>
-                        )}
-                      </Box>
-                      <Box flex="1" pb="x1" pl="x1" fontWeight="bold" fontSize="small">
-                        Quantity
-                      </Box>
-                      {role === "supplier" && <Box width="88px" pb="x1" pl="x1"></Box>}
+                {/* Custom table structure with nested rows */}
+                <Box>
+                  {/* Table Header */}
+                  <Box display="flex" borderBottom="1px solid" borderColor="lightGrey" pb="x1">
+                    <Box width="3em" pb="x1" pl="x1"></Box>
+                    <Box flex="1" pb="x1" pl="x1" fontWeight="bold" fontSize="small">
+                      Pallet number
+                      {role === "supplier" && fieldConfigState.palletNumberRequired && (
+                        <Text inline ml="x0_5" fontSize="small" color="darkGrey">
+                          (Required)
+                        </Text>
+                      )}
                     </Box>
+                    <Box flex="1" pb="x1" pl="x1" fontWeight="bold" fontSize="small">
+                      Customer's lot code
+                    </Box>
+                    <Box flex="1" pb="x1" pl="x1" fontWeight="bold" fontSize="small">
+                      Supplier's lot code
+                      {role === "supplier" && fieldConfigState.lotCodeRequired && (
+                        <Text inline ml="x0_5" fontSize="small" color="darkGrey">
+                          (Required)
+                        </Text>
+                      )}
+                    </Box>
+                    <Box flex="1" pb="x1" pl="x1" fontWeight="bold" fontSize="small">
+                      Expiry date
+                      {role === "supplier" && fieldConfigState.expiryDateRequired && (
+                        <Text inline ml="x0_5" fontSize="small" color="darkGrey">
+                          (Required)
+                        </Text>
+                      )}
+                    </Box>
+                    <Box flex="1" pb="x1" pl="x1" fontWeight="bold" fontSize="small">
+                      Quantity
+                    </Box>
+                    <Box flex="1" pb="x1" pl="x1" fontWeight="bold" fontSize="small">
+                      UOM
+                    </Box>
+                    {role === "supplier" && <Box width="88px" pb="x1" pl="x1"></Box>}
+                  </Box>
 
-                    {/* Table Rows with nested content */}
-                    {productionRows.map((row, index) => (
-                      <Box key={row.id}>
+                  {/* Table Rows with nested content */}
+                  {productionRows.map((row, index) => (
+                    <Box key={row.id}>
                       {/* Main Production Row */}
                       <Box display="flex" alignItems="center" py="x0">
                         <Box width="3em" display="flex" alignItems="center" justifyContent="center" pl="x1">
@@ -2992,155 +3069,274 @@ export const Details11 = () => {
                           <Input
                             value={row.palletNumber}
                             onChange={(e) => handleProductionRowChange(row.id, "palletNumber", e.target.value)}
-                            placeholder="Enter pallet number"
                             p="x1"
                             disabled={role === "customer" && isEditingProduction}
                           />
                         </Box>
-                          <Box flex="1">
-                            <Input
-                              value={row.customerLotCode || ""}
-                              onChange={(e) => handleProductionRowChange(row.id, "customerLotCode", e.target.value)}
-                              placeholder="Enter customer's lot code"
-                              p="x1"
-                              disabled={role === "supplier"}
-                            />
-                          </Box>
-                          <Box flex="1">
-                            <Input
-                              value={row.supplierLotCode || ""}
-                              onChange={(e) => handleProductionRowChange(row.id, "supplierLotCode", e.target.value)}
-                              placeholder="Enter supplier's lot code"
-                              p="x1"
-                              disabled={role === "customer"}
-                            />
-                          </Box>
-                          <Box flex="1">
-                            <Input
-                              value={row.expiryDate}
-                              onChange={(e) => handleProductionRowChange(row.id, "expiryDate", e.target.value)}
-                              placeholder="Enter expiry date"
-                              p="x1"
-                              disabled={role === "customer" && isEditingProduction}
-                            />
-                          </Box>
-                          <Box flex="1">
-                            <Input
-                              value={row.quantity}
-                              onChange={(e) => handleProductionRowChange(row.id, "quantity", e.target.value)}
-                              placeholder="Enter quantity"
-                              p="x1"
-                              disabled={role === "customer" && isEditingProduction}
-                            />
-                          </Box>
-                          {role === "supplier" && (
-                            <Box width="88px">
-                              <Flex gap="x1" alignItems="center">
-                                <DropdownMenu
-                                  trigger={() => <IconicButton icon="more" aria-label="More actions" />}
-                                  placement="bottom-end"
+                        <Box flex="1">
+                          <Input
+                            value={row.customerLotCode || ""}
+                            onChange={(e) => handleProductionRowChange(row.id, "customerLotCode", e.target.value)}
+                            p="x1"
+                            disabled={role === "supplier"}
+                          />
+                        </Box>
+                        <Box flex="1">
+                          <Input
+                            value={row.supplierLotCode || ""}
+                            onChange={(e) => handleProductionRowChange(row.id, "supplierLotCode", e.target.value)}
+                            p="x1"
+                            disabled={role === "customer"}
+                          />
+                        </Box>
+                        <Box flex="1">
+                          <Input
+                            value={row.expiryDate}
+                            onChange={(e) => handleProductionRowChange(row.id, "expiryDate", e.target.value)}
+                            p="x1"
+                            disabled={role === "customer" && isEditingProduction}
+                          />
+                        </Box>
+                        <Box flex="1">
+                          <Input
+                            value={row.quantity}
+                            onChange={(e) => handleProductionRowChange(row.id, "quantity", e.target.value)}
+                            p="x1"
+                            disabled={role === "customer" && isEditingProduction}
+                          />
+                        </Box>
+                        <Box flex="1">
+                          <Select
+                            value={row.uom}
+                            onChange={(value) => handleProductionRowChange(row.id, "uom", String(value))}
+                            options={uomOptions}
+                            disabled={role === "customer" && isEditingProduction}
+                          />
+                        </Box>
+                        {role === "supplier" && (
+                          <Box width="88px">
+                            <Flex gap="x1" alignItems="center">
+                              <DropdownMenu
+                                trigger={() => <IconicButton icon="more" aria-label="More actions" />}
+                                placement="bottom-end"
+                              >
+                                <DropdownButton
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    handleAddConsumptionForRow(row.id);
+                                  }}
                                 >
-                                  <DropdownButton
-                                    onClick={(e) => {
-                                      e.preventDefault();
-                                      handleAddConsumptionForRow(row.id);
-                                    }}
-                                  >
-                                    Add subcomponent consumption
-                                  </DropdownButton>
-                                  <DropdownButton
-                                    onClick={(e) => {
-                                      e.preventDefault();
-                                      handleAddNote(row.id);
-                                    }}
-                                  >
-                                    Add note
-                                  </DropdownButton>
-                                </DropdownMenu>
-                                {productionRows.length > 1 && (
+                                  Add subcomponent consumption
+                                </DropdownButton>
+                                <DropdownButton
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    handleAddNote(row.id);
+                                  }}
+                                >
+                                  Add note
+                                </DropdownButton>
+                              </DropdownMenu>
+                              {productionRows.length > 1 && (
+                                <IconicButton
+                                  icon="removeCircleOutline"
+                                  aria-label="Remove actual production record"
+                                  onClick={() => handleRemoveProductionRow(row.id)}
+                                  tooltip="Remove actual production record"
+                                />
+                              )}
+                            </Flex>
+                          </Box>
+                        )}
+                      </Box>
+
+                      {/* Container for Consumption Details and Note */}
+                      {(rowConsumptions[row.id] && rowConsumptions[row.id].length > 0) ||
+                      rowNotes[row.id] !== undefined ? (
+                        <Box pl="x7" pr="x1" borderBottom="1px solid" borderBottomColor="lightGrey">
+                          {/* Note - Nested below this specific row */}
+                          {rowNotes[row.id] !== undefined && (
+                            <Box
+                              border="1px solid"
+                              borderColor="lightGrey"
+                              borderRadius="medium"
+                              p="x0_25"
+                              mb="x1"
+                              pb="x1"
+                            >
+                              <Flex
+                                backgroundColor="whiteGrey"
+                                pl="x2"
+                                pr="x1"
+                                mb="x1"
+                                borderRadius="small"
+                                justifyContent="space-between"
+                                alignItems="center"
+                              >
+                                <Text fontSize="small" fontWeight="bold" lineHeight="smallCompact">
+                                  Note
+                                </Text>
+                                {role === "supplier" && (
                                   <IconicButton
                                     icon="removeCircleOutline"
-                                    aria-label="Remove row"
-                                    onClick={() => handleRemoveProductionRow(row.id)}
-                                    type="button"
+                                    aria-label="Remove note"
+                                    onClick={(e) => {
+                                      e.preventDefault();
+                                      handleRemoveNote(row.id);
+                                    }}
+                                    tooltip="Remove note"
                                   />
                                 )}
                               </Flex>
+                              <Box px="x1_5">
+                                <Textarea
+                                  value={rowNotes[row.id]}
+                                  onChange={(e) => handleNoteChange(row.id, e.target.value)}
+                                  disabled={role === "customer" && isEditingProduction}
+                                />
+                              </Box>
                             </Box>
                           )}
-                        </Box>
-
-                        {/* Container for Consumption Details and Note */}
-                        {(rowConsumptions[row.id] && rowConsumptions[row.id].length > 0) ||
-                        rowNotes[row.id] !== undefined ? (
-                          <Box p="x1" borderBottom="1px solid" borderBottomColor="lightGrey">
-                            {/* Subcomponent consumption - Nested below this specific row */}
-                            {rowConsumptions[row.id] && rowConsumptions[row.id].length > 0 && (
-                              <Box
-                                border="1px solid"
-                                borderColor="lightGrey"
-                                borderRadius="large"
-                                p="x2"
-                                mb="x1"
-                                mt="x0"
-                              >
-                                <Flex justifyContent="space-between" alignItems="center" mb="x2" ml="x1">
-                                  <Flex alignItems="baseline" gap="x1">
-                                    <Heading4 mb="0">Subcomponent consumption</Heading4>
-                                    <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
-                                      BOM revision 2.1
-                                    </Text>
-                                  </Flex>
-                                </Flex>
-                              <Table
-                                columns={[
-                                  {
-                                    dataKey: "pill",
-                                    width: "3em",
-                                    cellRenderer: ({ row }: { row: any }) => (
-                                      <Box py="x1" pr="x2" display="flex" alignItems="center" justifyContent="center">
-                                        <RecordNumberPill number={row.pillNumber || "001"} />
-                                      </Box>
-                                    ),
-                                  },
-                                  {
-                                    label: "Item",
-                                    dataKey: "item",
+                          {/* Subcomponent consumption - Nested below this specific row */}
+                          {rowConsumptions[row.id] && rowConsumptions[row.id].length > 0 && (
+                            <Box
+                              border="1px solid"
+                              borderColor="lightGrey"
+                              borderRadius="medium"
+                              p="x0_25"
+                              mb="x1"
+                              mt="x0"
+                            >
+                              <Flex backgroundColor="whiteGrey" px="x2" py="x1" mb="x1" borderRadius="small">
+                                <Text fontSize="small" fontWeight="bold" lineHeight="smallCompact">
+                                  Subcomponent consumption{" "}
+                                  <Text as="span" color="midGrey" mx="x1">
+                                    &bull;
+                                  </Text>{" "}
+                                  <Text
+                                    as="span"
+                                    color="midGrey"
+                                    fontSize="small"
+                                    fontWeight="normal"
+                                    lineHeight="smallCompact"
+                                  >
+                                    BOM revision 2.1
+                                  </Text>
+                                </Text>
+                              </Flex>
+                              <Box px="x1_5" pb="x1">
+                                <Table
+                                  columns={[
+                                    {
+                                      label: "#",
+                                      dataKey: "recordNumber",
+                                      width: "40px",
+                                      headerFormatter: () => (
+                                        <Box py="x0_25">
+                                          <Text fontSize="small" lineHeight="smallCompressed">
+                                            #
+                                          </Text>
+                                        </Box>
+                                      ),
                                       cellRenderer: ({ row }: { row: any }) => (
-                                        <Box py="x1" pr="x2" minWidth="8em" width="100%">
-                                          <Input
+                                        <Box py="x1" px="x1" display="flex" alignItems="center" justifyContent="center">
+                                          <RecordNumberPill number={row.pillNumber || "001"} />
+                                        </Box>
+                                      ),
+                                    },
+                                    {
+                                      label: "Item",
+                                      dataKey: "item",
+                                      headerFormatter: () => (
+                                        <Box py="x0_25">
+                                          <Text fontSize="small" lineHeight="smallCompressed">
+                                            Item
+                                          </Text>
+                                        </Box>
+                                      ),
+                                      cellRenderer: ({ row }: { row: any }) => (
+                                        <Box py="x0_5" pr="x1" width="12em">
+                                          <AsyncSelect
                                             value={row.item}
-                                            onChange={(e) =>
+                                            onChange={(value) =>
                                               handleConsumptionRowChange(
                                                 row.id,
                                                 row.consumptionId,
                                                 "item",
-                                                e.target.value
+                                                String(value)
                                               )
                                             }
-                                            placeholder="Item"
                                             disabled={role === "customer"}
+                                            width="100%"
+                                            loadOptions={async (inputValue) => {
+                                              // Mock async search - replace with actual API call
+                                              const mockItems = [
+                                                { value: "Raw Material A", label: "Raw Material A" },
+                                                { value: "Raw Material B", label: "Raw Material B" },
+                                                { value: "Raw Material C", label: "Raw Material C" },
+                                                { value: "Component X", label: "Component X" },
+                                                { value: "Component Y", label: "Component Y" },
+                                              ];
+                                              return mockItems.filter((item) =>
+                                                item.label.toLowerCase().includes(inputValue.toLowerCase())
+                                              );
+                                            }}
                                           />
                                         </Box>
                                       ),
                                     },
                                     {
-                                      label: "Lot",
-                                      dataKey: "lotCode",
+                                      label: "Customer's lot code",
+                                      dataKey: "customerLotCode",
+                                      headerFormatter: () => (
+                                        <Box py="x0_25">
+                                          <Text fontSize="small" lineHeight="smallCompressed">
+                                            Customer's lot code
+                                          </Text>
+                                        </Box>
+                                      ),
                                       cellRenderer: ({ row }: { row: any }) => (
-                                        <Box py="x1" pr="x2" minWidth="8em" width="100%">
+                                        <Box py="x0_5" pr="x1">
                                           <Input
-                                            value={row.lotCode}
+                                            value={row.customerLotCode || ""}
                                             onChange={(e) =>
                                               handleConsumptionRowChange(
                                                 row.id,
                                                 row.consumptionId,
-                                                "lotCode",
+                                                "customerLotCode",
                                                 e.target.value
                                               )
                                             }
-                                            placeholder="Lot"
+                                            disabled={role === "supplier"}
+                                            inputWidth="100%"
+                                          />
+                                        </Box>
+                                      ),
+                                    },
+                                    {
+                                      label: "Supplier's lot code",
+                                      dataKey: "supplierLotCode",
+                                      headerFormatter: () => (
+                                        <Box py="x0_25">
+                                          <Text fontSize="small" lineHeight="smallCompressed">
+                                            Supplier's lot code
+                                          </Text>
+                                        </Box>
+                                      ),
+                                      cellRenderer: ({ row }: { row: any }) => (
+                                        <Box py="x0_5" pr="x1">
+                                          <Input
+                                            value={row.supplierLotCode || ""}
+                                            onChange={(e) =>
+                                              handleConsumptionRowChange(
+                                                row.id,
+                                                row.consumptionId,
+                                                "supplierLotCode",
+                                                e.target.value
+                                              )
+                                            }
                                             disabled={role === "customer"}
+                                            inputWidth="100%"
                                           />
                                         </Box>
                                       ),
@@ -3148,8 +3344,15 @@ export const Details11 = () => {
                                     {
                                       label: "Expiry",
                                       dataKey: "expiryDate",
+                                      headerFormatter: () => (
+                                        <Box py="x0_25">
+                                          <Text fontSize="small" lineHeight="smallCompressed">
+                                            Expiry
+                                          </Text>
+                                        </Box>
+                                      ),
                                       cellRenderer: ({ row }: { row: any }) => (
-                                        <Box py="x1" pr="x2" minWidth="8em" width="100%">
+                                        <Box py="x0_5" pr="x1">
                                           <Input
                                             value={row.expiryDate}
                                             onChange={(e) =>
@@ -3160,8 +3363,8 @@ export const Details11 = () => {
                                                 e.target.value
                                               )
                                             }
-                                            placeholder="Expiry"
                                             disabled={role === "customer"}
+                                            inputWidth="100%"
                                           />
                                         </Box>
                                       ),
@@ -3169,8 +3372,15 @@ export const Details11 = () => {
                                     {
                                       label: "Pallet",
                                       dataKey: "palletNumber",
+                                      headerFormatter: () => (
+                                        <Box py="x0_25">
+                                          <Text fontSize="small" lineHeight="smallCompressed">
+                                            Pallet
+                                          </Text>
+                                        </Box>
+                                      ),
                                       cellRenderer: ({ row }: { row: any }) => (
-                                        <Box py="x1" pr="x2" minWidth="8em" width="100%">
+                                        <Box py="x0_5" pr="x1">
                                           <Input
                                             value={row.palletNumber}
                                             onChange={(e) =>
@@ -3181,18 +3391,26 @@ export const Details11 = () => {
                                                 e.target.value
                                               )
                                             }
-                                            placeholder="Pallet"
                                             disabled={role === "customer"}
+                                            inputWidth="100%"
                                           />
                                         </Box>
                                       ),
                                     },
                                     {
-                                      label: "Qty",
+                                      label: "Quantity",
                                       dataKey: "quantity",
+                                      headerFormatter: () => (
+                                        <Box py="x0_25">
+                                          <Text fontSize="small" lineHeight="smallCompressed">
+                                            Quantity
+                                          </Text>
+                                        </Box>
+                                      ),
                                       cellRenderer: ({ row }: { row: any }) => (
-                                        <Box py="x1" pr="x2" minWidth="8em" width="100%">
+                                        <Box py="x0_5" pr="x1">
                                           <Input
+                                            type="number"
                                             value={row.quantity}
                                             onChange={(e) =>
                                               handleConsumptionRowChange(
@@ -3202,8 +3420,8 @@ export const Details11 = () => {
                                                 e.target.value
                                               )
                                             }
-                                            placeholder="Qty"
                                             disabled={role === "customer"}
+                                            inputWidth="100%"
                                           />
                                         </Box>
                                       ),
@@ -3212,8 +3430,15 @@ export const Details11 = () => {
                                       label: "UOM",
                                       dataKey: "uom",
                                       width: "100px",
+                                      headerFormatter: () => (
+                                        <Box py="x0_25">
+                                          <Text fontSize="small" lineHeight="smallCompressed">
+                                            UOM
+                                          </Text>
+                                        </Box>
+                                      ),
                                       cellRenderer: ({ row }: { row: any }) => (
-                                        <Box py="x1" pr="x2" minWidth="8em" width="100%" maxWidth="16em">
+                                        <Box py="x0_5" pr="x1" width="7em">
                                           <Select
                                             value={row.uom}
                                             onChange={(value) =>
@@ -3232,6 +3457,7 @@ export const Details11 = () => {
                                               { value: "cases", label: "cases" },
                                             ]}
                                             disabled={role === "customer"}
+                                            width="100%"
                                           />
                                         </Box>
                                       ),
@@ -3242,16 +3468,17 @@ export const Details11 = () => {
                                             label: "",
                                             dataKey: "actions",
                                             width: "40px",
+                                            headerFormatter: () => null,
                                             cellRenderer: ({ row }: { row: any }) => (
                                               <IconicButton
                                                 icon="removeCircleOutline"
-                                                aria-label="Remove consumption row"
+                                                aria-label="Remove subcomponent consumption record"
                                                 onClick={(e) => {
                                                   e.preventDefault();
                                                   handleRemoveConsumptionRow(row.id, row.consumptionId);
                                                 }}
-                                                type="button"
-                                                pr="x2"
+                                                tooltip="Remove subcomponent consumption record"
+                                                pr="x1"
                                                 py="x1"
                                               />
                                             ),
@@ -3283,32 +3510,18 @@ export const Details11 = () => {
                                   </Box>
                                 )}
                               </Box>
-                            )}
+                            </Box>
+                          )}
+                        </Box>
+                      ) : (
+                        <Box borderBottom="1px solid" borderColor="lightGrey" />
+                      )}
+                    </Box>
+                  ))}
+                </Box>
 
-                            {/* Note - Nested below this specific row */}
-                            {rowNotes[row.id] !== undefined && (
-                              <Box border="1px solid" borderColor="lightGrey" borderRadius="large" p="x2">
-                                <Field>
-                                  <FieldLabel labelText="Note" pb="x1" />
-                                  <Textarea
-                                    value={rowNotes[row.id]}
-                                    onChange={(e) => handleNoteChange(row.id, e.target.value)}
-                                    placeholder="Enter note for this row"
-                                    disabled={role === "customer" && isEditingProduction}
-                                  />
-                                </Field>
-                              </Box>
-                            )}
-                          </Box>
-                        ) : (
-                          <Box borderBottom="1px solid" borderColor="lightGrey" />
-                        )}
-                      </Box>
-                    ))}
-                  </Box>
-
-                  {role === "supplier" && (
-                    <Box mt="x1">
+                {role === "supplier" && (
+                  <Box mt="x1">
                     <QuietButton
                       icon="addCircleOutline"
                       iconSide="left"
@@ -3318,9 +3531,9 @@ export const Details11 = () => {
                     >
                       Add actual production record
                     </QuietButton>
-                    </Box>
-                  )}
-                </Box>
+                  </Box>
+                )}
+              </Box>
             </FormSection>
           </Form>
         </Sidebar>
@@ -3455,9 +3668,9 @@ export const Details11 = () => {
                     {consumptionItems.length > 1 && (
                       <IconicButton
                         icon="removeCircleOutline"
-                        aria-label="Remove consumption item"
+                        aria-label="Remove subcomponent consumption record"
                         onClick={() => handleRemoveConsumptionItem(item.id)}
-                        type="button"
+                        tooltip="Remove subcomponent consumption record"
                       />
                     )}
                   </Flex>
@@ -3468,18 +3681,26 @@ export const Details11 = () => {
                       <Input
                         value={item.item}
                         onChange={(e) => handleConsumptionItemFieldChange(item.id, "item", e.target.value)}
-                        placeholder="Enter item name"
                       />
                     </Field>
                   </Box>
 
                   <Box pb="x3">
                     <Field>
-                      <FieldLabel labelText="Lot code" pb="x1" />
+                      <FieldLabel labelText="Customer's lot code" pb="x1" />
                       <Input
-                        value={item.lotCode}
-                        onChange={(e) => handleConsumptionItemFieldChange(item.id, "lotCode", e.target.value)}
-                        placeholder="Enter lot code"
+                        value={item.customerLotCode || ""}
+                        onChange={(e) => handleConsumptionItemFieldChange(item.id, "customerLotCode", e.target.value)}
+                      />
+                    </Field>
+                  </Box>
+
+                  <Box pb="x3">
+                    <Field>
+                      <FieldLabel labelText="Supplier's lot code" pb="x1" />
+                      <Input
+                        value={item.supplierLotCode || ""}
+                        onChange={(e) => handleConsumptionItemFieldChange(item.id, "supplierLotCode", e.target.value)}
                       />
                     </Field>
                   </Box>
@@ -3502,7 +3723,6 @@ export const Details11 = () => {
                       <Input
                         value={item.palletNumber}
                         onChange={(e) => handleConsumptionItemFieldChange(item.id, "palletNumber", e.target.value)}
-                        placeholder="Enter pallet number"
                       />
                     </Field>
                   </Box>
@@ -3517,7 +3737,6 @@ export const Details11 = () => {
                           onChange={(e) =>
                             handleConsumptionItemFieldChange(item.id, "consumedQuantity", e.target.value)
                           }
-                          placeholder="Enter consumed quantity"
                         />
                       </Field>
                     </Box>
