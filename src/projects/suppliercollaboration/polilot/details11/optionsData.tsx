@@ -58,6 +58,7 @@ export const editFormData = {
 
 export const productionRecord = {
   date: "",
+  bomRevision: "",
   uom: "",
   expectedQuantity: "",
   actualQuantity: "",
