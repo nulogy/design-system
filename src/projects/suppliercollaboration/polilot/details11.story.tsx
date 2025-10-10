@@ -1093,6 +1093,7 @@ export const Details11 = () => {
   };
 
   const handleAddConsumptionRow = (rowId: string) => {
+    const currentConsumptions = rowConsumptions[rowId] || [];
     const newConsumption = {
       id: `consumption-${Date.now()}`,
       item: "",
@@ -1101,6 +1102,7 @@ export const Details11 = () => {
       palletNumber: "",
       quantity: "",
       uom: "",
+      pillNumber: `${String(currentConsumptions.length + 1).padStart(3, "0")}`,
     };
     setRowConsumptions((prev) => ({
       ...prev,
@@ -2889,10 +2891,6 @@ export const Details11 = () => {
         >
           <Form>
             <FormSection>
-              <Heading4 mt="x1" mb="x2">
-                Production summary
-              </Heading4>
-
               <Field>
                 <FieldLabel labelText="Date" pb="x1" />
                 <DatePicker
@@ -2941,43 +2939,14 @@ export const Details11 = () => {
 
               <Divider mb="x3" />
 
-              <Flex justifyContent="space-between" alignItems="center" mb="x2">
-                <Heading4>Production details</Heading4>
-                {role === "supplier" && (
-                  <Switcher
-                    selected={productionEntryType}
-                    onChange={(value) => {
-                      setProductionEntryType(value as "quick" | "detailed");
-                    }}
-                  >
-                    <Switch value="quick" type="button">
-                      Quick mode
-                    </Switch>
-                    <Switch value="detailed" type="button">
-                      Detailed mode
-                    </Switch>
-                  </Switcher>
-                )}
-              </Flex>
+              <Heading4 mb="x2">Actual production</Heading4>
 
-              {productionEntryType === "quick" ? (
-                <Box width="21em">
-                  <Field>
-                    <FieldLabel labelText="Actual quantity" pb="x1" />
-                    <Input
-                      value={actualQuantity}
-                      onChange={(e) => setActualQuantity(e.target.value)}
-                      placeholder="Enter total production quantity"
-                      suffix="kg"
-                    />
-                  </Field>
-                </Box>
-              ) : (
-                <Box>
+              <Box>
                   {/* Custom table structure with nested rows */}
                   <Box>
                     {/* Table Header */}
                     <Box display="flex" borderBottom="1px solid" borderColor="lightGrey" pb="x1">
+                      <Box width="3em" pb="x1" pl="x1"></Box>
                       <Box flex="1" pb="x1" pl="x1" fontWeight="bold" fontSize="small">
                         Pallet number
                         {role === "supplier" && fieldConfigState.palletNumberRequired && (
@@ -3014,17 +2983,20 @@ export const Details11 = () => {
                     {/* Table Rows with nested content */}
                     {productionRows.map((row, index) => (
                       <Box key={row.id}>
-                        {/* Main Production Row */}
-                        <Box display="flex" alignItems="center" py="x0">
-                          <Box flex="1">
-                            <Input
-                              value={row.palletNumber}
-                              onChange={(e) => handleProductionRowChange(row.id, "palletNumber", e.target.value)}
-                              placeholder="Enter pallet number"
-                              p="x1"
-                              disabled={role === "customer" && isEditingProduction}
-                            />
-                          </Box>
+                      {/* Main Production Row */}
+                      <Box display="flex" alignItems="center" py="x0">
+                        <Box width="3em" display="flex" alignItems="center" justifyContent="center" pl="x1">
+                          <RecordNumberPill number={`${String(index + 1).padStart(3, "0")}`} />
+                        </Box>
+                        <Box flex="1">
+                          <Input
+                            value={row.palletNumber}
+                            onChange={(e) => handleProductionRowChange(row.id, "palletNumber", e.target.value)}
+                            placeholder="Enter pallet number"
+                            p="x1"
+                            disabled={role === "customer" && isEditingProduction}
+                          />
+                        </Box>
                           <Box flex="1">
                             <Input
                               value={row.customerLotCode || ""}
@@ -3120,11 +3092,20 @@ export const Details11 = () => {
                                     </Text>
                                   </Flex>
                                 </Flex>
-                                <Table
-                                  columns={[
-                                    {
-                                      label: "Item",
-                                      dataKey: "item",
+                              <Table
+                                columns={[
+                                  {
+                                    dataKey: "pill",
+                                    width: "3em",
+                                    cellRenderer: ({ row }: { row: any }) => (
+                                      <Box py="x1" pr="x2" display="flex" alignItems="center" justifyContent="center">
+                                        <RecordNumberPill number={row.pillNumber || "001"} />
+                                      </Box>
+                                    ),
+                                  },
+                                  {
+                                    label: "Item",
+                                    dataKey: "item",
                                       cellRenderer: ({ row }: { row: any }) => (
                                         <Box py="x1" pr="x2" minWidth="8em" width="100%">
                                           <Input
@@ -3297,7 +3278,7 @@ export const Details11 = () => {
                                       onClick={() => handleAddConsumptionRow(row.id)}
                                       type="button"
                                     >
-                                      Add row
+                                      Add subcomponent consumption record
                                     </QuietButton>
                                   </Box>
                                 )}
@@ -3328,19 +3309,18 @@ export const Details11 = () => {
 
                   {role === "supplier" && (
                     <Box mt="x1">
-                      <QuietButton
-                        icon="addCircleOutline"
-                        iconSide="left"
-                        fullWidth
-                        onClick={handleAddProductionRow}
-                        type="button"
-                      >
-                        Add row
-                      </QuietButton>
+                    <QuietButton
+                      icon="addCircleOutline"
+                      iconSide="left"
+                      fullWidth
+                      onClick={handleAddProductionRow}
+                      type="button"
+                    >
+                      Add actual production record
+                    </QuietButton>
                     </Box>
                   )}
                 </Box>
-              )}
             </FormSection>
           </Form>
         </Sidebar>
