@@ -41,7 +41,7 @@ import {
 } from "../../..";
 
 export default {
-  title: "Projects/Supplier Collaboration/POLI custom table",
+  title: "Projects/Supplier Collaboration/POLI custom table/Sorting",
   parameters: {
     layout: "fullscreen",
   },
