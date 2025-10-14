@@ -854,6 +854,7 @@ export const Details11 = () => {
     setIsEditingProduction(false);
     setProductionRecordState({
       date: "",
+      bomRevision: "",
       uom: "",
       expectedQuantity: "",
       actualQuantity: "",
@@ -874,6 +875,7 @@ export const Details11 = () => {
     // Map row data to production record format
     setProductionRecordState({
       date: rowData.date || "",
+      bomRevision: rowData.bomRevision || "",
       uom: rowData.expectedQuantity ? rowData.expectedQuantity.split(" ")[1] || "" : "",
       expectedQuantity: rowData.expectedQuantity ? rowData.expectedQuantity.split(" ")[0] || "" : "",
       actualQuantity: rowData.actualQuantity ? rowData.actualQuantity.split(" ")[0] || "" : "",
@@ -997,6 +999,7 @@ export const Details11 = () => {
     setRowConsumptions({});
     setProductionRecordState({
       date: "",
+      bomRevision: "",
       uom: "",
       expectedQuantity: "",
       actualQuantity: "",
@@ -2979,19 +2982,8 @@ export const Details11 = () => {
                 />
               </Field>
 
-              <Field>
-                <FieldLabel labelText="BOM revision and release date" pb="x1" />
-                <Input
-                  value={productionRecordState.bomRevision || ""}
-                  onChange={(e) =>
-                    setProductionRecordState((prev) => ({ ...prev, bomRevision: e.target.value }))
-                  }
-                  disabled={role === "customer" && isEditingProduction}
-                />
-              </Field>
-
               <Flex gap="x1_5">
-                <Box width="20em">
+                <Box width="11.5em">
                   <Field>
                     <FieldLabel labelText="Expected quantity" pb="x1" />
                     <Input
@@ -3000,10 +2992,11 @@ export const Details11 = () => {
                         setProductionRecordState((prev) => ({ ...prev, expectedQuantity: e.target.value }))
                       }
                       disabled={role === "customer" && isEditingProduction}
+                      inputWidth="11.5em"
                     />
                   </Field>
                 </Box>
-                <Box width="10em">
+                <Box width="8em">
                   <Field>
                     <FieldLabel labelText="UOM" pb="x1" />
                     <Select
@@ -3280,7 +3273,6 @@ export const Details11 = () => {
                                               )
                                             }
                                             disabled={role === "customer"}
-                                            width="100%"
                                             loadOptions={async (inputValue) => {
                                               // Mock async search - replace with actual API call
                                               const mockItems = [
