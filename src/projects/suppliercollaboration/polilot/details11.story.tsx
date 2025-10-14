@@ -439,7 +439,7 @@ export const Details11 = () => {
               <Text
                 color={isSixthTable ? "midGrey" : "white"}
                 fontSize="small"
-                lineHeight="smallCompressed"
+                lineHeight="smallTextCompressed"
                 fontWeight="bold"
                 textTransform="uppercase"
                 letterSpacing=".05em"
@@ -872,19 +872,19 @@ export const Details11 = () => {
     setIsEditingProduction(true);
     setProductionEntryType("detailed"); // Set to detailed mode for editing
 
-    // Map row data to production record format
+    // Map row data to production record format with sample data
     setProductionRecordState({
-      date: rowData.date || "",
-      bomRevision: rowData.bomRevision || "",
-      uom: rowData.expectedQuantity ? rowData.expectedQuantity.split(" ")[1] || "" : "",
-      expectedQuantity: rowData.expectedQuantity ? rowData.expectedQuantity.split(" ")[0] || "" : "",
-      actualQuantity: rowData.actualQuantity ? rowData.actualQuantity.split(" ")[0] || "" : "",
-      lotCode: rowData.customerLotCode || "",
-      supplierLotCode: rowData.supplierLotCode || "",
-      expiryDate: rowData.expiryDate || "",
-      palletNumber: rowData.palletNumber || "",
-      producedQuantity: rowData.actualQuantity ? rowData.actualQuantity.split(" ")[0] || "" : "",
-      note: rowData.note || "",
+      date: rowData.date || "2024-01-15",
+      bomRevision: rowData.bomRevision || "BOM-2024-001",
+      uom: rowData.expectedQuantity ? rowData.expectedQuantity.split(" ")[1] || "kg" : "kg",
+      expectedQuantity: rowData.expectedQuantity ? rowData.expectedQuantity.split(" ")[0] || "100" : "100",
+      actualQuantity: rowData.actualQuantity ? rowData.actualQuantity.split(" ")[0] || "95" : "95",
+      lotCode: rowData.customerLotCode || "CUST-LOT-001",
+      supplierLotCode: rowData.supplierLotCode || "SUPP-LOT-001",
+      expiryDate: rowData.expiryDate || "2025-12-31",
+      palletNumber: rowData.palletNumber || "PAL-001",
+      producedQuantity: rowData.actualQuantity ? rowData.actualQuantity.split(" ")[0] || "95" : "95",
+      note: rowData.note || "Production completed successfully with minor adjustments.",
     });
 
     // Populate production rows based on the row's nested data
@@ -909,24 +909,49 @@ export const Details11 = () => {
         nestedData = [];
     }
 
-    // Convert nested data to production rows format
-    const rows = nestedData.map((batch, index) => ({
+    // Convert nested data to production rows format with sample data
+    const rows = nestedData.length > 0 ? nestedData.map((batch, index) => ({
       id: `row-${index + 1}`,
-      palletNumber: batch.palletNumber || "",
-      customerLotCode: batch.customerLotCode || "",
-      supplierLotCode: batch.supplierLotCode || "",
-      expiryDate: batch.expiryDate || "",
-      quantity: batch.actualQuantity ? batch.actualQuantity.split(" ")[0] || "" : "",
-      uom: batch.actualQuantity ? batch.actualQuantity.split(" ")[1] || "" : "",
-    }));
+      palletNumber: batch.palletNumber || `PAL-${String(index + 1).padStart(3, "0")}`,
+      customerLotCode: batch.customerLotCode || `CUST-${String(index + 1).padStart(3, "0")}`,
+      supplierLotCode: batch.supplierLotCode || `SUPP-${String(index + 1).padStart(3, "0")}`,
+      expiryDate: batch.expiryDate || "2025-12-31",
+      quantity: batch.actualQuantity ? batch.actualQuantity.split(" ")[0] || "50" : "50",
+      uom: batch.actualQuantity ? batch.actualQuantity.split(" ")[1] || "kg" : "kg",
+    })) : [
+      {
+        id: "row-1",
+        palletNumber: "PAL-001",
+        customerLotCode: "CUST-001",
+        supplierLotCode: "SUPP-001",
+        expiryDate: "2025-12-31",
+        quantity: "50",
+        uom: "kg",
+      },
+      {
+        id: "row-2",
+        palletNumber: "PAL-002",
+        customerLotCode: "CUST-002",
+        supplierLotCode: "SUPP-002",
+        expiryDate: "2025-12-31",
+        quantity: "45",
+        uom: "kg",
+      },
+    ];
 
-    // Populate notes from nested data
+    // Populate notes from nested data with sample notes
     const notes: Record<string, string> = {};
-    nestedData.forEach((batch, index) => {
-      if (batch.note) {
-        notes[`row-${index + 1}`] = batch.note;
-      }
-    });
+    if (nestedData.length > 0) {
+      nestedData.forEach((batch, index) => {
+        if (batch.note) {
+          notes[`row-${index + 1}`] = batch.note;
+        }
+      });
+    } else {
+      // Add sample notes for the default rows
+      notes["row-1"] = "First production batch completed successfully. Quality checks passed.";
+      notes["row-2"] = "Second batch had minor temperature variations but within acceptable range.";
+    }
 
     setProductionRows(rows);
     setRowNotes(notes);
@@ -974,6 +999,58 @@ export const Details11 = () => {
         } catch (error) {}
       }
     });
+
+    // If no consumption data was found, add sample consumption data
+    if (Object.keys(newRowConsumptions).length === 0) {
+      newRowConsumptions["row-1"] = [
+        {
+          id: "consumption-1-1",
+          item: "Raw Material A",
+          customerLotCode: "RM-A-001",
+          supplierLotCode: "RM-A-SUP-001",
+          expiryDate: "2025-06-30",
+          palletNumber: "RM-PAL-001",
+          quantity: "25",
+          uom: "kg",
+          pillNumber: "001",
+        },
+        {
+          id: "consumption-1-2",
+          item: "Raw Material B",
+          customerLotCode: "RM-B-001",
+          supplierLotCode: "RM-B-SUP-001",
+          expiryDate: "2025-08-15",
+          palletNumber: "RM-PAL-002",
+          quantity: "15",
+          uom: "kg",
+          pillNumber: "002",
+        },
+      ];
+      newRowConsumptions["row-2"] = [
+        {
+          id: "consumption-2-1",
+          item: "Raw Material A",
+          customerLotCode: "RM-A-002",
+          supplierLotCode: "RM-A-SUP-002",
+          expiryDate: "2025-06-30",
+          palletNumber: "RM-PAL-003",
+          quantity: "20",
+          uom: "kg",
+          pillNumber: "003",
+        },
+        {
+          id: "consumption-2-2",
+          item: "Component X",
+          customerLotCode: "COMP-X-001",
+          supplierLotCode: "COMP-X-SUP-001",
+          expiryDate: "2025-09-20",
+          palletNumber: "COMP-PAL-001",
+          quantity: "10",
+          uom: "kg",
+          pillNumber: "004",
+        },
+      ];
+    }
 
     setRowConsumptions(newRowConsumptions);
     setShowProductionSidebar(true);
@@ -1295,7 +1372,7 @@ export const Details11 = () => {
         cellRenderer: ({ row }: { row: any }) => (
           <Box pr="x1">
             <DropdownMenu trigger={() => <IconicButton icon="more" aria-label="More actions" />} placement="bottom-end">
-              <DropdownButton onClick={() => handleEditProduction(row.id)}>Edit production</DropdownButton>
+              <DropdownButton onClick={() => handleEditProduction(row.id)}>Edit production record</DropdownButton>
             </DropdownMenu>
           </Box>
         ),
@@ -1338,12 +1415,12 @@ export const Details11 = () => {
       dataKey: "item",
       width: "auto",
       headerFormatter: ({ label }: { label: string }) => (
-        <Text fontSize="small" lineHeight="smallCompressed">
+        <Text fontSize="small" lineHeight="smallTextCompressed">
           {label}
         </Text>
       ),
       cellFormatter: ({ cellData }: { cellData: string }) => (
-        <Text fontSize="small" lineHeight="smallCompressed">
+        <Text fontSize="small" lineHeight="smallTextCompressed">
           {cellData}
         </Text>
       ),
@@ -1354,7 +1431,7 @@ export const Details11 = () => {
       width: "180px",
       headerFormatter: ({ label }: { label: string }) => (
         <Flex flexDirection="column">
-          <Text fontSize="small" lineHeight="smallCompressed">
+          <Text fontSize="small" lineHeight="smallTextCompressed">
             {label}
           </Text>
           <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
@@ -1397,12 +1474,12 @@ export const Details11 = () => {
       dataKey: "expiryDate",
       width: "auto",
       headerFormatter: ({ label }: { label: string }) => (
-        <Text fontSize="small" lineHeight="smallCompressed">
+        <Text fontSize="small" lineHeight="smallTextCompressed">
           {label}
         </Text>
       ),
       cellFormatter: ({ cellData }: { cellData: string }) => (
-        <Text fontSize="small" lineHeight="smallCompressed">
+        <Text fontSize="small" lineHeight="smallTextCompressed">
           {cellData}
         </Text>
       ),
@@ -1412,12 +1489,12 @@ export const Details11 = () => {
       dataKey: "palletNumber",
       width: "auto",
       headerFormatter: ({ label }: { label: string }) => (
-        <Text fontSize="small" lineHeight="smallCompressed">
+        <Text fontSize="small" lineHeight="smallTextCompressed">
           {label}
         </Text>
       ),
       cellFormatter: ({ cellData }: { cellData: string }) => (
-        <Text fontSize="small" lineHeight="smallCompressed">
+        <Text fontSize="small" lineHeight="smallTextCompressed">
           {cellData}
         </Text>
       ),
@@ -1427,12 +1504,12 @@ export const Details11 = () => {
       dataKey: "quantity",
       width: "auto",
       headerFormatter: ({ label }: { label: string }) => (
-        <Text fontSize="small" lineHeight="smallCompressed">
+        <Text fontSize="small" lineHeight="smallTextCompressed">
           {label}
         </Text>
       ),
       cellFormatter: ({ cellData }: { cellData: string }) => (
-        <Text fontSize="small" lineHeight="smallCompressed">
+        <Text fontSize="small" lineHeight="smallTextCompressed">
           {cellData}
         </Text>
       ),
@@ -1442,12 +1519,12 @@ export const Details11 = () => {
       dataKey: "uom",
       width: "auto",
       headerFormatter: ({ label }: { label: string }) => (
-        <Text fontSize="small" lineHeight="smallCompressed">
+        <Text fontSize="small" lineHeight="smallTextCompressed">
           {label}
         </Text>
       ),
       cellFormatter: ({ cellData }: { cellData: string }) => (
-        <Text fontSize="small" lineHeight="smallCompressed">
+        <Text fontSize="small" lineHeight="smallTextCompressed">
           {cellData}
         </Text>
       ),
@@ -2967,7 +3044,7 @@ export const Details11 = () => {
           }
         >
           <Form>
-            <FormSection>
+            <Box py="x2">
               <Field>
                 <FieldLabel labelText="Date" pb="x1" />
                 <DatePicker
@@ -3014,6 +3091,7 @@ export const Details11 = () => {
                   </Field>
                 </Box>
               </Flex>
+              </Box>
 
               <Divider mb="x3" />
 
@@ -3023,103 +3101,108 @@ export const Details11 = () => {
                 {/* Custom table structure with nested rows */}
                 <Box>
                   {/* Table Header */}
-                  <Box display="flex" borderBottom="1px solid" borderColor="lightGrey" pb="x1">
-                    <Box width="3em" pb="x1" pl="x1"></Box>
-                    <Box flex="1" pb="x1" pl="x1" fontWeight="bold" fontSize="small">
+                  <Flex borderBottom="1px solid" borderColor="lightGrey" pr="56px" pb="x1" pl="52px" gap="x1">
+                    
+                    <Box width="100%">
                       Pallet number
                       {role === "supplier" && fieldConfigState.palletNumberRequired && (
-                        <Text inline ml="x0_5" fontSize="small" color="darkGrey">
+                        <Text fontSize="small" inline ml="x0_5"  color="darkGrey">
                           (Required)
                         </Text>
                       )}
                     </Box>
-                    <Box flex="1" pb="x1" pl="x1" fontWeight="bold" fontSize="small">
+                    <Box width="100%" >
                       Customer's lot code
                     </Box>
-                    <Box flex="1" pb="x1" pl="x1" fontWeight="bold" fontSize="small">
+                    <Box width="100%" >
                       Supplier's lot code
                       {role === "supplier" && fieldConfigState.lotCodeRequired && (
-                        <Text inline ml="x0_5" fontSize="small" color="darkGrey">
+                        <Text fontSize="small" inline ml="x0_5"  color="darkGrey">
                           (Required)
                         </Text>
                       )}
                     </Box>
-                    <Box flex="1" pb="x1" pl="x1" fontWeight="bold" fontSize="small">
+                    <Box width="100%" >
                       Expiry date
                       {role === "supplier" && fieldConfigState.expiryDateRequired && (
-                        <Text inline ml="x0_5" fontSize="small" color="darkGrey">
+                        <Text fontSize="small" inline ml="x0_5"  color="darkGrey">
                           (Required)
                         </Text>
                       )}
                     </Box>
-                    <Box flex="1" pb="x1" pl="x1" fontWeight="bold" fontSize="small">
+                    <Box width="100%" >
                       Quantity
                     </Box>
-                    <Box flex="1" pb="x1" pl="x1" fontWeight="bold" fontSize="small">
+                    <Box width="75%" >
                       UOM
                     </Box>
-                    {role === "supplier" && <Box width="88px" pb="x1" pl="x1"></Box>}
-                  </Box>
+                  </Flex>
 
                   {/* Table Rows with nested content */}
                   {productionRows.map((row, index) => (
                     <Box key={row.id}>
                       {/* Main Production Row */}
-                      <Box display="flex" alignItems="center" py="x0">
-                        <Box width="3em" display="flex" alignItems="center" justifyContent="center" pl="x1">
+                      <Flex alignItems="center" py="x0" gap="x1">
+                        <Flex width="3em" alignItems="center" justifyContent="center" ml="x1" mr="x0_5">
                           <RecordNumberPill number={`${String(index + 1).padStart(3, "0")}`} />
-                        </Box>
-                        <Box flex="1">
+                        </Flex>
+                        <Box width="100%">
                           <Input
                             value={row.palletNumber}
                             onChange={(e) => handleProductionRowChange(row.id, "palletNumber", e.target.value)}
-                            p="x1"
+                            py="x1"
                             disabled={role === "customer" && isEditingProduction}
+                            fullWidth
                           />
                         </Box>
-                        <Box flex="1">
+                        <Box width="100%">
                           <Input
                             value={row.customerLotCode || ""}
                             onChange={(e) => handleProductionRowChange(row.id, "customerLotCode", e.target.value)}
-                            p="x1"
+                            py="x1"
                             disabled={role === "supplier"}
+                            fullWidth
                           />
                         </Box>
-                        <Box flex="1">
+                        <Box width="100%">
                           <Input
                             value={row.supplierLotCode || ""}
                             onChange={(e) => handleProductionRowChange(row.id, "supplierLotCode", e.target.value)}
-                            p="x1"
+                            py="x1"
                             disabled={role === "customer"}
+                            fullWidth
                           />
                         </Box>
-                        <Box flex="1">
+                        <Box width="100%">
                           <Input
                             value={row.expiryDate}
                             onChange={(e) => handleProductionRowChange(row.id, "expiryDate", e.target.value)}
-                            p="x1"
+                            py="x1"
                             disabled={role === "customer" && isEditingProduction}
-                          />
+                            fullWidth
+                                />
                         </Box>
-                        <Box flex="1">
+                        <Box width="100%">
                           <Input
                             value={row.quantity}
                             onChange={(e) => handleProductionRowChange(row.id, "quantity", e.target.value)}
-                            p="x1"
+                            py="x1"
                             disabled={role === "customer" && isEditingProduction}
+                            fullWidth
                           />
                         </Box>
-                        <Box flex="1">
+                        <Box width="100%">
                           <Select
                             value={row.uom}
                             onChange={(value) => handleProductionRowChange(row.id, "uom", String(value))}
                             options={uomOptions}
                             disabled={role === "customer" && isEditingProduction}
+                            fullWidth
                           />
                         </Box>
                         {role === "supplier" && (
-                          <Box width="88px">
-                            <Flex gap="x1" alignItems="center">
+                          <Box width="68px" mx="x1">
+                            <Flex gap="x0_5" alignItems="center">
                               <DropdownMenu
                                 trigger={() => <IconicButton icon="more" aria-label="More actions" />}
                                 placement="bottom-end"
@@ -3152,12 +3235,12 @@ export const Details11 = () => {
                             </Flex>
                           </Box>
                         )}
-                      </Box>
+                      </Flex>
 
                       {/* Container for Consumption Details and Note */}
                       {(rowConsumptions[row.id] && rowConsumptions[row.id].length > 0) ||
                       rowNotes[row.id] !== undefined ? (
-                        <Box pl="x7" pr="x1" borderBottom="1px solid" borderBottomColor="lightGrey">
+                        <Box pl="52px" borderBottom="1px solid" borderBottomColor="lightGrey">
                           {/* Note - Nested below this specific row */}
                           {rowNotes[row.id] !== undefined && (
                             <Box
@@ -3171,13 +3254,14 @@ export const Details11 = () => {
                               <Flex
                                 backgroundColor="whiteGrey"
                                 pl="x2"
-                                pr="x1"
+                                pr="x0_5"
+                                py={role === "supplier" ? "0" : "x1"}
                                 mb="x1"
                                 borderRadius="small"
                                 justifyContent="space-between"
                                 alignItems="center"
                               >
-                                <Text fontSize="small" fontWeight="bold" lineHeight="smallCompact">
+                                <Text fontSize="small" fontWeight="bold" lineHeight="smallTextBase">
                                   Note
                                 </Text>
                                 {role === "supplier" && (
@@ -3192,7 +3276,7 @@ export const Details11 = () => {
                                   />
                                 )}
                               </Flex>
-                              <Box px="x1_5">
+                              <Box px="x1">
                                 <Textarea
                                   value={rowNotes[row.id]}
                                   onChange={(e) => handleNoteChange(row.id, e.target.value)}
@@ -3212,7 +3296,7 @@ export const Details11 = () => {
                               mt="x0"
                             >
                               <Flex backgroundColor="whiteGrey" px="x2" py="x1" mb="x1" borderRadius="small">
-                                <Text fontSize="small" fontWeight="bold" lineHeight="smallCompact">
+                                <Text fontSize="small" fontWeight="bold" lineHeight="smallTextBase">
                                   Subcomponent consumption{" "}
                                   <Text as="span" color="midGrey" mx="x1">
                                     &bull;
@@ -3224,7 +3308,7 @@ export const Details11 = () => {
                                     color="midGrey"
                                     fontSize="small"
                                     fontWeight="normal"
-                                    lineHeight="smallCompact"
+                                    lineHeight="smallTextCompressed"
                                   >
                                     BOM revision 2.1
                                   </Link>
@@ -3239,7 +3323,7 @@ export const Details11 = () => {
                                       width: "40px",
                                       headerFormatter: () => (
                                         <Box py="x0_25">
-                                          <Text fontSize="small" lineHeight="smallCompressed">
+                                          <Text fontSize="small" lineHeight="smallTextCompressed">
                                             #
                                           </Text>
                                         </Box>
@@ -3255,7 +3339,7 @@ export const Details11 = () => {
                                       dataKey: "item",
                                       headerFormatter: () => (
                                         <Box py="x0_25">
-                                          <Text fontSize="small" lineHeight="smallCompressed">
+                                          <Text fontSize="small" lineHeight="smallTextCompressed">
                                             Item
                                           </Text>
                                         </Box>
@@ -3295,7 +3379,7 @@ export const Details11 = () => {
                                       dataKey: "customerLotCode",
                                       headerFormatter: () => (
                                         <Box py="x0_25">
-                                          <Text fontSize="small" lineHeight="smallCompressed">
+                                          <Text fontSize="small" lineHeight="smallTextCompressed">
                                             Customer's lot code
                                           </Text>
                                         </Box>
@@ -3323,7 +3407,7 @@ export const Details11 = () => {
                                       dataKey: "supplierLotCode",
                                       headerFormatter: () => (
                                         <Box py="x0_25">
-                                          <Text fontSize="small" lineHeight="smallCompressed">
+                                          <Text fontSize="small" lineHeight="smallTextCompressed">
                                             Supplier's lot code
                                           </Text>
                                         </Box>
@@ -3351,7 +3435,7 @@ export const Details11 = () => {
                                       dataKey: "expiryDate",
                                       headerFormatter: () => (
                                         <Box py="x0_25">
-                                          <Text fontSize="small" lineHeight="smallCompressed">
+                                          <Text fontSize="small" lineHeight="smallTextCompressed">
                                             Expiry
                                           </Text>
                                         </Box>
@@ -3379,7 +3463,7 @@ export const Details11 = () => {
                                       dataKey: "palletNumber",
                                       headerFormatter: () => (
                                         <Box py="x0_25">
-                                          <Text fontSize="small" lineHeight="smallCompressed">
+                                          <Text fontSize="small" lineHeight="smallTextCompressed">
                                             Pallet
                                           </Text>
                                         </Box>
@@ -3407,7 +3491,7 @@ export const Details11 = () => {
                                       dataKey: "quantity",
                                       headerFormatter: () => (
                                         <Box py="x0_25">
-                                          <Text fontSize="small" lineHeight="smallCompressed">
+                                          <Text fontSize="small" lineHeight="smallTextCompressed">
                                             Quantity
                                           </Text>
                                         </Box>
@@ -3437,7 +3521,7 @@ export const Details11 = () => {
                                       width: "100px",
                                       headerFormatter: () => (
                                         <Box py="x0_25">
-                                          <Text fontSize="small" lineHeight="smallCompressed">
+                                          <Text fontSize="small" lineHeight="smallTextCompressed">
                                             UOM
                                           </Text>
                                         </Box>
@@ -3526,7 +3610,7 @@ export const Details11 = () => {
                 </Box>
 
                 {role === "supplier" && (
-                  <Box mt="x1">
+                  <Box mt="x1" pl="52px">
                     <QuietButton
                       icon="addCircleOutline"
                       iconSide="left"
@@ -3539,7 +3623,7 @@ export const Details11 = () => {
                   </Box>
                 )}
               </Box>
-            </FormSection>
+
           </Form>
         </Sidebar>
 
