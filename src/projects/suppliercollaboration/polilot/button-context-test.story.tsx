@@ -5,6 +5,9 @@ import {
   ApplicationFrame,
   Table,
   Button,
+  Flex,
+  PrimaryButton,
+  DangerButton,
 } from "../../..";
 
 export default {
@@ -43,10 +46,9 @@ export const ButtonContextTest = () => {
       label: "Actions",
       dataKey: "actions",
       cellRenderer: ({ row }) => (
-        <Box display="flex" gap="x2">
-          <Button
+        <Flex gap="x2">
+          <PrimaryButton
             size="small"
-            variant="primary"
             onClick={() => {
               const newSubItemId = `${row.id}-${Date.now()}`;
               const newSubItem = {
@@ -71,18 +73,17 @@ export const ButtonContextTest = () => {
             }}
           >
             Add subcomponent consumption report
-          </Button>
-          <Button
+          </PrimaryButton>
+          <DangerButton
             size="small"
-            variant="danger"
             onClick={() => {
               setData(prevData => prevData.filter(item => item.id !== row.id));
               setExpandedRows(prev => prev.filter(id => id !== row.id));
             }}
           >
             Remove
-          </Button>
-        </Box>
+          </DangerButton>
+        </Flex>
       ),
     },
   ];
@@ -104,9 +105,8 @@ export const ButtonContextTest = () => {
       label: "Actions",
       dataKey: "actions",
       cellRenderer: ({ row: subRow, parentRow }) => (
-        <Button
+        <DangerButton
           size="small"
-          variant="danger"
           onClick={() => {
             setData(prevData => 
               prevData.map(item => 
@@ -121,7 +121,7 @@ export const ButtonContextTest = () => {
           }}
         >
           Remove
-        </Button>
+        </DangerButton>
       ),
     },
   ];
@@ -189,8 +189,7 @@ export const ButtonContextTest = () => {
         />
         
         <Box mt="x3">
-          <Button
-            variant="primary"
+          <PrimaryButton
             onClick={() => {
               const newId = `${Date.now()}`;
               const newRow = {
@@ -203,7 +202,7 @@ export const ButtonContextTest = () => {
             }}
           >
             Add Actual production record
-          </Button>
+          </PrimaryButton>
         </Box>
       </Box>
     </ApplicationFrame>
