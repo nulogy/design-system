@@ -29,6 +29,7 @@ import {
   DropdownButton,
   Table,
   Button,
+  ButtonGroup,
   Sidebar,
   Form,
   FormSection,
@@ -47,6 +48,7 @@ import {
   Radio,
   RadioGroup,
   Pagination,
+  Modal,
 } from "../../..";
 import { formatDateToYYYYMonDD, formatDateWithWeek } from "../utils/dateUtils";
 import {
@@ -105,9 +107,7 @@ export const Details11 = () => {
   const [productionEntryType, setProductionEntryType] = useState<"quick" | "detailed">("quick");
   const [historyLogFilter, setHistoryLogFilter] = useState("All");
   const [actualQuantity, setActualQuantity] = useState("");
-  const [productionRows, setProductionRows] = useState([
-    { id: "row-1", palletNumber: "", customerLotCode: "", supplierLotCode: "", expiryDate: "", quantity: "", uom: "" },
-  ]);
+  const [productionRows, setProductionRows] = useState([]);
   const [rowNotes, setRowNotes] = useState<Record<string, string>>({});
   const [rowConsumptions, setRowConsumptions] = useState<
     Record<
@@ -258,8 +258,12 @@ export const Details11 = () => {
   // productionRecord now imported from optionsData.tsx
   const [productionRecordState, setProductionRecordState] = useState(productionRecord);
   const [consumptionMaterials, setConsumptionMaterials] = useState([]);
-  const [role, setRole] = useState("customer");
+  const [role, setRole] = useState("supplier");
   const [showConfigBar, setShowConfigBar] = useState(true);
+  const [showExistingRecordModal, setShowExistingRecordModal] = useState(false);
+  const [showDataLossModal, setShowDataLossModal] = useState(false);
+  const [hasAugust8thData, setHasAugust8thData] = useState(false);
+  const [pendingDate, setPendingDate] = useState<string | null>(null);
   // fieldConfig now imported from optionsData.tsx
   const [fieldConfigState, setFieldConfigState] = useState(fieldConfig);
 
@@ -910,7 +914,7 @@ export const Details11 = () => {
     }
 
     // Convert nested data to production rows format with sample data
-    const rows = nestedData.length > 0 ? nestedData.map((batch, index) => ({
+    const rows: Array<{id: string; palletNumber: string; customerLotCode: string; supplierLotCode: string; expiryDate: string; quantity: string; uom: string; verticalAlign: string}> = nestedData.length > 0 ? nestedData.map((batch, index) => ({
       id: `row-${index + 1}`,
       palletNumber: batch.palletNumber || `PAL-${String(index + 1).padStart(3, "0")}`,
       customerLotCode: batch.customerLotCode || `CUST-${String(index + 1).padStart(3, "0")}`,
@@ -918,6 +922,7 @@ export const Details11 = () => {
       expiryDate: batch.expiryDate || "2025-12-31",
       quantity: batch.actualQuantity ? batch.actualQuantity.split(" ")[0] || "50" : "50",
       uom: batch.actualQuantity ? batch.actualQuantity.split(" ")[1] || "kg" : "kg",
+      verticalAlign: "top",
     })) : [
       {
         id: "row-1",
@@ -927,6 +932,7 @@ export const Details11 = () => {
         expiryDate: "2025-12-31",
         quantity: "50",
         uom: "kg",
+        verticalAlign: "top",
       },
       {
         id: "row-2",
@@ -936,6 +942,7 @@ export const Details11 = () => {
         expiryDate: "2025-12-31",
         quantity: "45",
         uom: "kg",
+        verticalAlign: "top",
       },
     ];
 
@@ -1061,17 +1068,7 @@ export const Details11 = () => {
     setIsEditingProduction(false);
     setProductionEntryType("quick");
     setActualQuantity("");
-    setProductionRows([
-      {
-        id: "row-1",
-        palletNumber: "",
-        customerLotCode: "",
-        supplierLotCode: "",
-        expiryDate: "",
-        quantity: "",
-        uom: "",
-      },
-    ]);
+    setProductionRows([]);
     setRowNotes({});
     setRowConsumptions({});
     setProductionRecordState({
@@ -1124,7 +1121,7 @@ export const Details11 = () => {
   };
 
   const handleSaveProduction = () => {
-    toast.success("Production record saved successfully!");
+    toast.success("Production record saved!");
     handleCloseProductionSidebar();
   };
 
@@ -1141,6 +1138,7 @@ export const Details11 = () => {
       expiryDate: "",
       quantity: "",
       uom: "",
+      verticalAlign: "top",
     };
     setProductionRows((prev) => [...prev, newRow]);
   };
@@ -1309,7 +1307,7 @@ export const Details11 = () => {
   };
 
   const handleSaveConsumption = () => {
-    toast.success("Subcomponent consumption saved successfully!");
+    toast.success("Subcomponent consumption saved!");
     handleCloseConsumptionSidebar();
   };
 
@@ -1336,7 +1334,7 @@ export const Details11 = () => {
   };
 
   const handleSaveAddConsumption = () => {
-    toast.success("Subcomponent consumption added successfully!");
+    toast.success("Subcomponent consumption added!");
     handleCloseAddConsumptionSidebar();
   };
 
@@ -3048,12 +3046,53 @@ export const Details11 = () => {
               <Field>
                 <FieldLabel labelText="Date" pb="x1" />
                 <DatePicker
-                  onChange={(date) =>
+                  onChange={(date) => {
+                    const dateString = date ? date.toISOString().split("T")[0] : "";
+                    
+                    // Check if user is changing from August 8th to another date
+                    if (hasAugust8thData && dateString !== "2025-08-08" && dateString !== "") {
+                      setPendingDate(dateString);
+                      setShowDataLossModal(true);
+                      return; // Don't update the date yet
+                    }
+                    
                     setProductionRecordState((prev) => ({
                       ...prev,
-                      date: date ? date.toISOString().split("T")[0] : "",
-                    }))
-                  }
+                      date: dateString,
+                    }));
+                    
+                    // Check if August 8th is selected
+                    if (dateString === "2025-08-08") {
+                      setShowExistingRecordModal(true);
+                      setHasAugust8thData(true);
+                      // Update actual production record with existing data
+                      setProductionRows([
+                        {
+                          id: "row-1",
+                          palletNumber: "PAL-001",
+                          customerLotCode: "CUST-LOT-001",
+                          supplierLotCode: "SUPP-LOT-001",
+                          expiryDate: "2025-08-08",
+                          quantity: "1000",
+                          uom: "cs",
+                          verticalAlign: "top",
+                        },
+                        {
+                          id: "row-2",
+                          palletNumber: "PAL-002",
+                          customerLotCode: "CUST-LOT-002",
+                          supplierLotCode: "SUPP-LOT-002",
+                          expiryDate: "2025-08-08",
+                          quantity: "750",
+                          uom: "cs",
+                          verticalAlign: "top",
+                        },
+                      ]);
+                    } else if (dateString !== "2025-08-08") {
+                      // Reset August 8th data flag when selecting other dates
+                      setHasAugust8thData(false);
+                    }
+                  }}
                   selected={productionRecordState.date ? new Date(productionRecordState.date) : null}
                   inputProps={{ disabled: role === "customer" && isEditingProduction, autoFocus: true }}
                 />
@@ -3075,7 +3114,13 @@ export const Details11 = () => {
                 </Box>
                 <Box width="8em">
                   <Field>
-                    <FieldLabel labelText="UOM" pb="x1" />
+                    <FieldLabel 
+                      labelText="UOM" 
+                      pb="x1" 
+                      hint="Only UOMs with conversion ratios to the order UOM may be selected.
+
+Additional UOM conversion ratios may be imported on the Items page by the customer. Contact the customer to continue."
+                    />
                     <Select
                       value={productionRecordState.uom}
                       onChange={(value) => setProductionRecordState((prev) => ({ ...prev, uom: String(value) }))}
@@ -3095,51 +3140,62 @@ export const Details11 = () => {
 
               <Divider mb="x3" />
 
-              <Heading4 mb="x2">Actual production</Heading4>
+              {productionRows.length > 0 && (
+                <Heading4 mb="x2">Actual production</Heading4>
+              )}
 
               <Box>
                 {/* Custom table structure with nested rows */}
-                <Box>
-                  {/* Table Header */}
-                  <Flex borderBottom="1px solid" borderColor="lightGrey" pr="56px" pb="x1" pl="52px" gap="x1">
-                    
-                    <Box width="100%">
-                      Pallet number
-                      {role === "supplier" && fieldConfigState.palletNumberRequired && (
-                        <Text fontSize="small" inline ml="x0_5"  color="darkGrey">
+                {productionRows.length > 0 && (
+                  <Box>
+                    {/* Table Header */}
+                    <Flex borderBottom="1px solid" borderColor="lightGrey" pr="56px" pb="x1" gap="x1">
+                      <Flex minWidth="32px" ml="x1" mr="x0_5">
+                        #
+                      </Flex>
+                      <Box width="100%">
+                        Pallet number
+                        {role === "supplier" && fieldConfigState.palletNumberRequired && (
+                          <Text fontSize="small" inline ml="x0_5"  color="darkGrey">
+                            (Required)
+                          </Text>
+                        )}
+                      </Box>
+                      <Box width="100%" >
+                        Customer's lot code
+                      </Box>
+                      <Box width="100%" >
+                        Supplier's lot code
+                        {role === "supplier" && fieldConfigState.lotCodeRequired && (
+                          <Text fontSize="small" inline ml="x0_5"  color="darkGrey">
+                            (Required)
+                          </Text>
+                        )}
+                      </Box>
+                      <Box width="100%" >
+                        Expiry date
+                        {role === "supplier" && fieldConfigState.expiryDateRequired && (
+                          <Text fontSize="small" inline ml="x0_5"  color="darkGrey">
+                            (Required)
+                          </Text>
+                        )}
+                      </Box>
+                      <Box width="100%" >
+                        Quantity
+                        <Text fontSize="small" inline ml="x0_5" color="darkGrey">
                           (Required)
                         </Text>
-                      )}
-                    </Box>
-                    <Box width="100%" >
-                      Customer's lot code
-                    </Box>
-                    <Box width="100%" >
-                      Supplier's lot code
-                      {role === "supplier" && fieldConfigState.lotCodeRequired && (
-                        <Text fontSize="small" inline ml="x0_5"  color="darkGrey">
+                      </Box>
+                      <Box width="75%" >
+                        UOM
+                        <Text fontSize="small" inline ml="x0_5" color="darkGrey">
                           (Required)
                         </Text>
-                      )}
-                    </Box>
-                    <Box width="100%" >
-                      Expiry date
-                      {role === "supplier" && fieldConfigState.expiryDateRequired && (
-                        <Text fontSize="small" inline ml="x0_5"  color="darkGrey">
-                          (Required)
-                        </Text>
-                      )}
-                    </Box>
-                    <Box width="100%" >
-                      Quantity
-                    </Box>
-                    <Box width="75%" >
-                      UOM
-                    </Box>
-                  </Flex>
+                      </Box>
+                    </Flex>
 
-                  {/* Table Rows with nested content */}
-                  {productionRows.map((row, index) => (
+                    {/* Table Rows with nested content */}
+                    {productionRows.map((row, index) => (
                     <Box key={row.id}>
                       {/* Main Production Row */}
                       <Flex alignItems="center" py="x0" gap="x1">
@@ -3160,7 +3216,7 @@ export const Details11 = () => {
                             value={row.customerLotCode || ""}
                             onChange={(e) => handleProductionRowChange(row.id, "customerLotCode", e.target.value)}
                             py="x1"
-                            disabled={role === "supplier" || (!productionRecordState.date && isInCreateEditMode)}
+                            disabled={!productionRecordState.date && isInCreateEditMode}
                             width="100%"
                           />
                         </Box>
@@ -3204,7 +3260,7 @@ export const Details11 = () => {
                           <Box width="68px" mx="x1">
                             <Flex gap="x0_5" alignItems="center">
                               <DropdownMenu
-                                trigger={() => <IconicButton icon="more" aria-label="More actions" disabled={!productionRecordState.date && isInCreateEditMode} />}
+                                trigger={() => <IconicButton icon="more" aria-label="More actions" disabled={!productionRecordState.date} />}
                                 placement="bottom-end"
                               >
                                 <DropdownButton
@@ -3398,7 +3454,7 @@ export const Details11 = () => {
                                                 e.target.value
                                               )
                                             }
-                                            disabled={role === "supplier"}
+                                            disabled={false}
                                             inputWidth="100%"
                                           />
                                         </Box>
@@ -3610,8 +3666,9 @@ export const Details11 = () => {
                         <Box borderBottom="1px solid" borderColor="lightGrey" />
                       )}
                     </Box>
-                  ))}
-                </Box>
+                    ))}
+                  </Box>
+                )}
 
                 {role === "supplier" && (
                   <Box mt="x1" pl="52px">
@@ -4010,6 +4067,67 @@ export const Details11 = () => {
 
         <ToastContainer />
       </Page>
+
+      {/* Modal for existing production record */}
+      <Modal
+        isOpen={showExistingRecordModal}
+        onRequestClose={() => setShowExistingRecordModal(false)}
+        title="Existing production record found"
+        footerContent={
+          <ButtonGroup>
+            <PrimaryButton onClick={() => setShowExistingRecordModal(false)}>
+              Continue
+            </PrimaryButton>
+            <QuietButton onClick={() => setShowExistingRecordModal(false)}>
+              Cancel
+            </QuietButton>
+          </ButtonGroup>
+        }
+      >
+        <Text>
+          There is already an existing production record for August 8th, 2025. The production record form will be prepopulated with the existing data.
+        </Text>
+      </Modal>
+
+      {/* Modal for data loss warning */}
+      <Modal
+        isOpen={showDataLossModal}
+        onRequestClose={() => {
+          setShowDataLossModal(false);
+          setPendingDate(null);
+        }}
+        title="Change date?"
+        footerContent={
+          <ButtonGroup>
+            <PrimaryButton onClick={() => {
+              // Proceed with date change
+              if (pendingDate) {
+                setProductionRecordState((prev) => ({
+                  ...prev,
+                  date: pendingDate,
+                }));
+                setHasAugust8thData(false);
+                // Reset production rows to default
+                setProductionRows([]);
+              }
+              setShowDataLossModal(false);
+              setPendingDate(null);
+            }}>
+              Change date
+            </PrimaryButton>
+            <QuietButton onClick={() => {
+              setShowDataLossModal(false);
+              setPendingDate(null);
+            }}>
+              Cancel
+            </QuietButton>
+          </ButtonGroup>
+        }
+      >
+        <Text>
+          Changing the date without saving will discard all unsaved changes to the production record for {productionRecordState.date}.
+        </Text>
+      </Modal>
     </ApplicationFrame>
   );
 };

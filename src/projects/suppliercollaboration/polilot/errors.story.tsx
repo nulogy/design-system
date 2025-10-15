@@ -3140,6 +3140,7 @@ export const Details11 = () => {
                   }
                   selected={productionRecordState.date ? new Date(productionRecordState.date) : null}
                   inputProps={{ disabled: role === "customer" && isEditingProduction, autoFocus: true }}
+                  errorMessage="Required"
                 />
               </Field>
 
