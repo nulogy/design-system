@@ -1,14 +1,5 @@
 import React, { useState } from "react";
-import {
-  Box,
-  Text,
-  ApplicationFrame,
-  Table,
-  Button,
-  Flex,
-  PrimaryButton,
-  DangerButton,
-} from "../../..";
+import { Box, Text, ApplicationFrame, Table, Button, Flex, PrimaryButton, DangerButton } from "../../..";
 
 export default {
   title: "Projects/Supplier Collaboration/POLI lot/Button Context Test",
@@ -22,7 +13,7 @@ const testData = [
     subItems: [],
   },
   {
-    id: "2", 
+    id: "2",
     name: "Actual production record 2",
     value: "Value 2",
     subItems: [],
@@ -39,7 +30,7 @@ export const ButtonContextTest = () => {
       dataKey: "name",
     },
     {
-      label: "Value", 
+      label: "Value",
       dataKey: "value",
     },
     {
@@ -57,14 +48,12 @@ export const ButtonContextTest = () => {
                 quantity: "0",
                 uom: "kg",
               };
-              setData(prevData => 
-                prevData.map(item => 
-                  item.id === row.id 
-                    ? { ...item, subItems: [...item.subItems, newSubItem] }
-                    : item
+              setData((prevData) =>
+                prevData.map((item) =>
+                  item.id === row.id ? { ...item, subItems: [...item.subItems, newSubItem] } : item
                 )
               );
-              setExpandedRows(prev => {
+              setExpandedRows((prev) => {
                 if (!prev.includes(row.id)) {
                   return [...prev, row.id];
                 }
@@ -77,8 +66,8 @@ export const ButtonContextTest = () => {
           <DangerButton
             size="small"
             onClick={() => {
-              setData(prevData => prevData.filter(item => item.id !== row.id));
-              setExpandedRows(prev => prev.filter(id => id !== row.id));
+              setData((prevData) => prevData.filter((item) => item.id !== row.id));
+              setExpandedRows((prev) => prev.filter((id) => id !== row.id));
             }}
           >
             Remove
@@ -108,12 +97,12 @@ export const ButtonContextTest = () => {
         <DangerButton
           size="small"
           onClick={() => {
-            setData(prevData => 
-              prevData.map(item => 
-                item.id === parentRow.id 
-                  ? { 
-                      ...item, 
-                      subItems: item.subItems.filter(subItem => subItem.id !== subRow.id)
+            setData((prevData) =>
+              prevData.map((item) =>
+                item.id === parentRow.id
+                  ? {
+                      ...item,
+                      subItems: item.subItems.filter((subItem) => subItem.id !== subRow.id),
                     }
                   : item
               )
@@ -131,14 +120,17 @@ export const ButtonContextTest = () => {
     expanded: expandedRows.includes(row.id),
     expandedContent: ({ row: expandedRow }) => (
       <Box p="x3" backgroundColor="lightGray">
-        <Text mb="x2" fontWeight="bold">Subcomponent consumption for {expandedRow.name}</Text>
-        
+        <Text mb="x2" fontWeight="bold">
+          Subcomponent consumption for {expandedRow.name}
+        </Text>
+
         {expandedRow.subItems && expandedRow.subItems.length > 0 && (
           <Table
-            columns={subColumns.map(col => ({
+            columns={subColumns.map((col) => ({
               ...col,
-              cellRenderer: col.cellRenderer ? ({ row: subRow }: { row: any }) => 
-                col.cellRenderer!({ row: subRow, parentRow: expandedRow }) : undefined
+              cellRenderer: col.cellRenderer
+                ? ({ row: subRow }: { row: any }) => col.cellRenderer!({ row: subRow, parentRow: expandedRow })
+                : undefined,
             }))}
             rows={expandedRow.subItems}
             keyField="id"
@@ -146,30 +138,30 @@ export const ButtonContextTest = () => {
             rowBorder={true}
           />
         )}
-        
+
         <Box mt="x3">
-          <Button onClick={() => {
-            const newSubItemId = `${expandedRow.id}-${Date.now()}`;
-            const newSubItem = {
-              id: newSubItemId,
-              name: `New Material ${expandedRow.subItems.length + 1}`,
-              quantity: "0",
-              uom: "kg",
-            };
-            setData(prevData => 
-              prevData.map(item => 
-                item.id === expandedRow.id 
-                  ? { ...item, subItems: [...item.subItems, newSubItem] }
-                  : item
-              )
-            );
-            setExpandedRows(prev => {
-              if (!prev.includes(expandedRow.id)) {
-                return [...prev, expandedRow.id];
-              }
-              return prev;
-            });
-          }}>
+          <Button
+            onClick={() => {
+              const newSubItemId = `${expandedRow.id}-${Date.now()}`;
+              const newSubItem = {
+                id: newSubItemId,
+                name: `New Material ${expandedRow.subItems.length + 1}`,
+                quantity: "0",
+                uom: "kg",
+              };
+              setData((prevData) =>
+                prevData.map((item) =>
+                  item.id === expandedRow.id ? { ...item, subItems: [...item.subItems, newSubItem] } : item
+                )
+              );
+              setExpandedRows((prev) => {
+                if (!prev.includes(expandedRow.id)) {
+                  return [...prev, expandedRow.id];
+                }
+                return prev;
+              });
+            }}
+          >
             Add subcomponent consumption
           </Button>
         </Box>
@@ -187,7 +179,7 @@ export const ButtonContextTest = () => {
           expandedRows={expandedRows}
           onRowExpansionChange={setExpandedRows}
         />
-        
+
         <Box mt="x3">
           <PrimaryButton
             onClick={() => {
@@ -198,7 +190,7 @@ export const ButtonContextTest = () => {
                 value: `Value ${data.length + 1}`,
                 subItems: [],
               };
-              setData(prevData => [...prevData, newRow]);
+              setData((prevData) => [...prevData, newRow]);
             }}
           >
             Add Actual production record
