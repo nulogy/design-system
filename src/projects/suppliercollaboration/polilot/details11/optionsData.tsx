@@ -1,12 +1,12 @@
 // Simple options data for dropdowns and selects
 
 export const uomOptions = [
-  { label: "Cases (cs)", value: "cs" },
-  { label: "Pieces (pcs)", value: "pcs" },
-  { label: "Kilograms (kg)", value: "kg" },
-  { label: "Pounds (lbs)", value: "lbs" },
-  { label: "Meters (m)", value: "m" },
-  { label: "Feet (ft)", value: "ft" },
+  { label: "cs", value: "cs" },
+  { label: "pcs", value: "pcs" },
+  { label: "kg", value: "kg" },
+  { label: "lbs", value: "lbs" },
+  { label: "m", value: "m" },
+  { label: "ft", value: "ft" },
 ];
 
 export const unitOptions = [

@@ -99,6 +99,9 @@ export const Details11 = () => {
   const [selectedIndex, setSelectedIndex] = useState(1); // Production records tab is index 1
   const [showProductionSidebar, setShowProductionSidebar] = useState(false);
   const [isEditingProduction, setIsEditingProduction] = useState(false);
+  
+  // Helper to determine if we're in create/edit mode (should apply date dependency)
+  const isInCreateEditMode = showProductionSidebar || isEditingProduction;
   const [productionEntryType, setProductionEntryType] = useState<"quick" | "detailed">("quick");
   const [historyLogFilter, setHistoryLogFilter] = useState("All");
   const [actualQuantity, setActualQuantity] = useState("");
@@ -335,11 +338,10 @@ export const Details11 = () => {
 
         return (
           <Flex py="x0_75" gap="x0_25" flexDirection="column">
-            <TruncatedText fullWidth width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
+            <TruncatedText width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
               {row.lotCode || ""}
             </TruncatedText>
             <TruncatedText
-              fullWidth
               width="auto"
               maxWidth="152px"
               fontSize="small"
@@ -510,11 +512,10 @@ export const Details11 = () => {
 
         return (
           <Flex py="x0_75" gap="x0_25" flexDirection="column">
-            <TruncatedText fullWidth width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
+            <TruncatedText width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
               {row.lotCode || ""}
             </TruncatedText>
             <TruncatedText
-              fullWidth
               width="auto"
               maxWidth="152px"
               fontSize="small"
@@ -539,7 +540,7 @@ export const Details11 = () => {
 
         return (
           <Flex py="x2">
-            <TruncatedText fullWidth width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
+            <TruncatedText width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
               {row.customerLotCode}
             </TruncatedText>
           </Flex>
@@ -558,7 +559,7 @@ export const Details11 = () => {
 
         return (
           <Flex py="x2">
-            <TruncatedText fullWidth width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
+            <TruncatedText width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
               {row.supplierLotCode}
             </TruncatedText>
           </Flex>
@@ -715,11 +716,10 @@ export const Details11 = () => {
 
         return (
           <Flex py="x0_75" gap="x0_25" flexDirection="column">
-            <TruncatedText fullWidth width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
+            <TruncatedText width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
               {row.lotCode || ""}
             </TruncatedText>
             <TruncatedText
-              fullWidth
               width="auto"
               maxWidth="152px"
               fontSize="small"
@@ -932,7 +932,7 @@ export const Details11 = () => {
         id: "row-2",
         palletNumber: "PAL-002",
         customerLotCode: "CUST-002",
-        supplierLotCode: "SUPP-002",
+        supplierLotCode: "",
         expiryDate: "2025-12-31",
         quantity: "45",
         uom: "kg",
@@ -1371,7 +1371,7 @@ export const Details11 = () => {
         ...column,
         cellRenderer: ({ row }: { row: any }) => (
           <Box pr="x1">
-            <DropdownMenu trigger={() => <IconicButton icon="more" aria-label="More actions" />} placement="bottom-end">
+            <DropdownMenu trigger={() => <IconicButton icon="more" aria-label="More actions" disabled={!productionRecordState.date} />} placement="bottom-end">
               <DropdownButton onClick={() => handleEditProduction(row.id)}>Edit production record</DropdownButton>
             </DropdownMenu>
           </Box>
@@ -1593,7 +1593,7 @@ export const Details11 = () => {
                 acceptedItems.proposal ? (
                   "Accepted"
                 ) : collaborationState.activeCardAuthorRole === userState.role ? (
-                  <TruncatedText fontSize="small" lineHeight="smallTextCompressed" fullWidth maxWidth="184px">
+                  <TruncatedText fontSize="small" lineHeight="smallTextCompressed" width="100%" maxWidth="184px">
                     {`Awaiting ${userState.role === "supplier" ? "customer" : "supplier"} response`}
                   </TruncatedText>
                 ) : (
@@ -1652,7 +1652,7 @@ export const Details11 = () => {
                   <StatusIndicator alignSelf="center" type="warning">
                     At risk
                   </StatusIndicator>
-                  <TruncatedText fullWidth fontSize="small" color="midGrey" lineHeight="smallRelaxed">
+                  <TruncatedText width="100%" fontSize="small" color="midGrey" lineHeight="smallRelaxed">
                     Current milestone 5 days late, previous 10 days late.
                   </TruncatedText>
                 </>
@@ -1682,7 +1682,7 @@ export const Details11 = () => {
                   <StatusIndicator alignSelf="center" type="success">
                     On time
                   </StatusIndicator>
-                  <TruncatedText fullWidth fontSize="small" color="midGrey" lineHeight="smallRelaxed">
+                  <TruncatedText width="100%" fontSize="small" color="midGrey" lineHeight="smallRelaxed">
                     Previous milestone completed 2 days ahead of time. Current milestone 12 days till due date.
                   </TruncatedText>
                 </>
@@ -1741,7 +1741,7 @@ export const Details11 = () => {
       </style>
       <Page>
         <Flex justifyContent="flex-end" alignItems="center" gap="x1_5" mb="x1">
-          <IconicButton icon="edit" aria-label="Edit" onClick={handleEditDetails}>
+          <IconicButton icon="edit" aria-label="Edit" onClick={handleEditDetails} disabled={!productionRecordState.date && isInCreateEditMode}>
             Edit
           </IconicButton>
         </Flex>
@@ -1974,7 +1974,7 @@ export const Details11 = () => {
             <Box>
               {role === "supplier" && (
                 <Flex justifyContent="flex-end" mt="x3" mb="x1">
-                  <IconicButton icon="add" aria-label="Add production" onClick={handleAddProduction}>
+                  <IconicButton icon="add" aria-label="Add production" onClick={handleAddProduction} disabled={!productionRecordState.date && isInCreateEditMode}>
                     Add production
                   </IconicButton>
                 </Flex>
@@ -3055,7 +3055,7 @@ export const Details11 = () => {
                     }))
                   }
                   selected={productionRecordState.date ? new Date(productionRecordState.date) : null}
-                  inputProps={{ disabled: role === "customer" && isEditingProduction }}
+                  inputProps={{ disabled: role === "customer" && isEditingProduction, autoFocus: true }}
                 />
               </Field>
 
@@ -3068,7 +3068,7 @@ export const Details11 = () => {
                       onChange={(e) =>
                         setProductionRecordState((prev) => ({ ...prev, expectedQuantity: e.target.value }))
                       }
-                      disabled={role === "customer" && isEditingProduction}
+                      disabled={role === "customer" && isEditingProduction || (!productionRecordState.date && isInCreateEditMode)}
                       inputWidth="11.5em"
                     />
                   </Field>
@@ -3079,7 +3079,7 @@ export const Details11 = () => {
                     <Select
                       value={productionRecordState.uom}
                       onChange={(value) => setProductionRecordState((prev) => ({ ...prev, uom: String(value) }))}
-                      disabled={role === "customer" && isEditingProduction}
+                      disabled={role === "customer" && isEditingProduction || (!productionRecordState.date && isInCreateEditMode)}
                       options={[
                         { value: "kg", label: "kg" },
                         { value: "lb", label: "lb" },
@@ -3151,8 +3151,8 @@ export const Details11 = () => {
                             value={row.palletNumber}
                             onChange={(e) => handleProductionRowChange(row.id, "palletNumber", e.target.value)}
                             py="x1"
-                            disabled={role === "customer" && isEditingProduction}
-                            fullWidth
+                            disabled={role === "customer" && isEditingProduction || (!productionRecordState.date && isInCreateEditMode)}
+                            width="100%"
                           />
                         </Box>
                         <Box width="100%">
@@ -3160,8 +3160,8 @@ export const Details11 = () => {
                             value={row.customerLotCode || ""}
                             onChange={(e) => handleProductionRowChange(row.id, "customerLotCode", e.target.value)}
                             py="x1"
-                            disabled={role === "supplier"}
-                            fullWidth
+                            disabled={role === "supplier" || (!productionRecordState.date && isInCreateEditMode)}
+                            width="100%"
                           />
                         </Box>
                         <Box width="100%">
@@ -3169,8 +3169,8 @@ export const Details11 = () => {
                             value={row.supplierLotCode || ""}
                             onChange={(e) => handleProductionRowChange(row.id, "supplierLotCode", e.target.value)}
                             py="x1"
-                            disabled={role === "customer"}
-                            fullWidth
+                            disabled={role === "customer" || (!productionRecordState.date && isInCreateEditMode)}
+                            width="100%"
                           />
                         </Box>
                         <Box width="100%">
@@ -3178,8 +3178,8 @@ export const Details11 = () => {
                             value={row.expiryDate}
                             onChange={(e) => handleProductionRowChange(row.id, "expiryDate", e.target.value)}
                             py="x1"
-                            disabled={role === "customer" && isEditingProduction}
-                            fullWidth
+                            disabled={role === "customer" && isEditingProduction || (!productionRecordState.date && isInCreateEditMode)}
+                            width="100%"
                                 />
                         </Box>
                         <Box width="100%">
@@ -3187,8 +3187,8 @@ export const Details11 = () => {
                             value={row.quantity}
                             onChange={(e) => handleProductionRowChange(row.id, "quantity", e.target.value)}
                             py="x1"
-                            disabled={role === "customer" && isEditingProduction}
-                            fullWidth
+                            disabled={role === "customer" && isEditingProduction || (!productionRecordState.date && isInCreateEditMode)}
+                            width="100%"
                           />
                         </Box>
                         <Box width="100%">
@@ -3196,15 +3196,15 @@ export const Details11 = () => {
                             value={row.uom}
                             onChange={(value) => handleProductionRowChange(row.id, "uom", String(value))}
                             options={uomOptions}
-                            disabled={role === "customer" && isEditingProduction}
-                            fullWidth
+                            disabled={role === "customer" && isEditingProduction || (!productionRecordState.date && isInCreateEditMode)}
+                            width="100%"
                           />
                         </Box>
                         {role === "supplier" && (
                           <Box width="68px" mx="x1">
                             <Flex gap="x0_5" alignItems="center">
                               <DropdownMenu
-                                trigger={() => <IconicButton icon="more" aria-label="More actions" />}
+                                trigger={() => <IconicButton icon="more" aria-label="More actions" disabled={!productionRecordState.date && isInCreateEditMode} />}
                                 placement="bottom-end"
                               >
                                 <DropdownButton
@@ -3230,6 +3230,7 @@ export const Details11 = () => {
                                   aria-label="Remove actual production record"
                                   onClick={() => handleRemoveProductionRow(row.id)}
                                   tooltip="Remove actual production record"
+                                  disabled={!productionRecordState.date && isInCreateEditMode}
                                 />
                               )}
                             </Flex>
@@ -3272,6 +3273,7 @@ export const Details11 = () => {
                                       e.preventDefault();
                                       handleRemoveNote(row.id);
                                     }}
+                                    disabled={!productionRecordState.date && isInCreateEditMode}
                                     tooltip="Remove note"
                                   />
                                 )}
@@ -3280,7 +3282,7 @@ export const Details11 = () => {
                                 <Textarea
                                   value={rowNotes[row.id]}
                                   onChange={(e) => handleNoteChange(row.id, e.target.value)}
-                                  disabled={role === "customer" && isEditingProduction}
+                                  disabled={role === "customer" && isEditingProduction || (!productionRecordState.date && isInCreateEditMode)}
                                 />
                               </Box>
                             </Box>
@@ -3356,7 +3358,7 @@ export const Details11 = () => {
                                                 String(value)
                                               )
                                             }
-                                            disabled={role === "customer"}
+                                            disabled={role === "customer" || (!productionRecordState.date && isInCreateEditMode)}
                                             loadOptions={async (inputValue) => {
                                               // Mock async search - replace with actual API call
                                               const mockItems = [
@@ -3424,7 +3426,7 @@ export const Details11 = () => {
                                                 e.target.value
                                               )
                                             }
-                                            disabled={role === "customer"}
+                                            disabled={role === "customer" || (!productionRecordState.date && isInCreateEditMode)}
                                             inputWidth="100%"
                                           />
                                         </Box>
@@ -3452,7 +3454,7 @@ export const Details11 = () => {
                                                 e.target.value
                                               )
                                             }
-                                            disabled={role === "customer"}
+                                            disabled={role === "customer" || (!productionRecordState.date && isInCreateEditMode)}
                                             inputWidth="100%"
                                           />
                                         </Box>
@@ -3480,7 +3482,7 @@ export const Details11 = () => {
                                                 e.target.value
                                               )
                                             }
-                                            disabled={role === "customer"}
+                                            disabled={role === "customer" || (!productionRecordState.date && isInCreateEditMode)}
                                             inputWidth="100%"
                                           />
                                         </Box>
@@ -3509,7 +3511,7 @@ export const Details11 = () => {
                                                 e.target.value
                                               )
                                             }
-                                            disabled={role === "customer"}
+                                            disabled={role === "customer" || (!productionRecordState.date && isInCreateEditMode)}
                                             inputWidth="100%"
                                           />
                                         </Box>
@@ -3545,7 +3547,7 @@ export const Details11 = () => {
                                               { value: "oz", label: "oz" },
                                               { value: "cases", label: "cases" },
                                             ]}
-                                            disabled={role === "customer"}
+                                            disabled={role === "customer" || (!productionRecordState.date && isInCreateEditMode)}
                                             width="100%"
                                           />
                                         </Box>
@@ -3566,6 +3568,7 @@ export const Details11 = () => {
                                                   e.preventDefault();
                                                   handleRemoveConsumptionRow(row.id, row.consumptionId);
                                                 }}
+                                                disabled={!productionRecordState.date && isInCreateEditMode}
                                                 tooltip="Remove subcomponent consumption record"
                                                 pr="x1"
                                                 py="x1"
@@ -3593,6 +3596,7 @@ export const Details11 = () => {
                                       fullWidth
                                       onClick={() => handleAddConsumptionRow(row.id)}
                                       type="button"
+                                      disabled={!productionRecordState.date && isInCreateEditMode}
                                     >
                                       Add subcomponent consumption record
                                     </QuietButton>
@@ -3617,6 +3621,7 @@ export const Details11 = () => {
                       fullWidth
                       onClick={handleAddProductionRow}
                       type="button"
+                      disabled={!productionRecordState.date && isInCreateEditMode}
                     >
                       Add actual production record
                     </QuietButton>
@@ -3760,6 +3765,7 @@ export const Details11 = () => {
                         aria-label="Remove subcomponent consumption record"
                         onClick={() => handleRemoveConsumptionItem(item.id)}
                         tooltip="Remove subcomponent consumption record"
+                        disabled={!productionRecordState.date && isInCreateEditMode}
                       />
                     )}
                   </Flex>
@@ -4007,3 +4013,4 @@ export const Details11 = () => {
     </ApplicationFrame>
   );
 };
+

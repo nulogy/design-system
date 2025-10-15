@@ -18,7 +18,7 @@ export const materialsData1 = [
     expiryDate: "2026-04-20",
     palletNumber: "PAL-002",
     quantity: "1.2",
-    uom: "kg",
+    uom: "",
   },
   {
     subcomponentConsumptionRecordItem: "003",
