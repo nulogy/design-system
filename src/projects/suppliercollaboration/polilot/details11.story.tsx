@@ -101,7 +101,7 @@ export const Details11 = () => {
   const [selectedIndex, setSelectedIndex] = useState(1); // Production records tab is index 1
   const [showProductionSidebar, setShowProductionSidebar] = useState(false);
   const [isEditingProduction, setIsEditingProduction] = useState(false);
-  
+
   // Helper to determine if we're in create/edit mode (should apply date dependency)
   const isInCreateEditMode = showProductionSidebar || isEditingProduction;
   const [productionEntryType, setProductionEntryType] = useState<"quick" | "detailed">("quick");
@@ -914,37 +914,49 @@ export const Details11 = () => {
     }
 
     // Convert nested data to production rows format with sample data
-    const rows: Array<{id: string; palletNumber: string; customerLotCode: string; supplierLotCode: string; expiryDate: string; quantity: string; uom: string; verticalAlign: string}> = nestedData.length > 0 ? nestedData.map((batch, index) => ({
-      id: `row-${index + 1}`,
-      palletNumber: batch.palletNumber || `PAL-${String(index + 1).padStart(3, "0")}`,
-      customerLotCode: batch.customerLotCode || `CUST-${String(index + 1).padStart(3, "0")}`,
-      supplierLotCode: batch.supplierLotCode || `SUPP-${String(index + 1).padStart(3, "0")}`,
-      expiryDate: batch.expiryDate || "2025-12-31",
-      quantity: batch.actualQuantity ? batch.actualQuantity.split(" ")[0] || "50" : "50",
-      uom: batch.actualQuantity ? batch.actualQuantity.split(" ")[1] || "kg" : "kg",
-      verticalAlign: "top",
-    })) : [
-      {
-        id: "row-1",
-        palletNumber: "PAL-001",
-        customerLotCode: "CUST-001",
-        supplierLotCode: "SUPP-001",
-        expiryDate: "2025-12-31",
-        quantity: "50",
-        uom: "kg",
-        verticalAlign: "top",
-      },
-      {
-        id: "row-2",
-        palletNumber: "PAL-002",
-        customerLotCode: "CUST-002",
-        supplierLotCode: "",
-        expiryDate: "2025-12-31",
-        quantity: "45",
-        uom: "kg",
-        verticalAlign: "top",
-      },
-    ];
+    const rows: Array<{
+      id: string;
+      palletNumber: string;
+      customerLotCode: string;
+      supplierLotCode: string;
+      expiryDate: string;
+      quantity: string;
+      uom: string;
+      verticalAlign: string;
+    }> =
+      nestedData.length > 0
+        ? nestedData.map((batch, index) => ({
+            id: `row-${index + 1}`,
+            palletNumber: batch.palletNumber || `PAL-${String(index + 1).padStart(3, "0")}`,
+            customerLotCode: batch.customerLotCode || `CUST-${String(index + 1).padStart(3, "0")}`,
+            supplierLotCode: batch.supplierLotCode || `SUPP-${String(index + 1).padStart(3, "0")}`,
+            expiryDate: batch.expiryDate || "2025-12-31",
+            quantity: batch.actualQuantity ? batch.actualQuantity.split(" ")[0] || "50" : "50",
+            uom: batch.actualQuantity ? batch.actualQuantity.split(" ")[1] || "kg" : "kg",
+            verticalAlign: "top",
+          }))
+        : [
+            {
+              id: "row-1",
+              palletNumber: "PAL-001",
+              customerLotCode: "CUST-001",
+              supplierLotCode: "SUPP-001",
+              expiryDate: "2025-12-31",
+              quantity: "50",
+              uom: "kg",
+              verticalAlign: "top",
+            },
+            {
+              id: "row-2",
+              palletNumber: "PAL-002",
+              customerLotCode: "CUST-002",
+              supplierLotCode: "",
+              expiryDate: "2025-12-31",
+              quantity: "45",
+              uom: "kg",
+              verticalAlign: "top",
+            },
+          ];
 
     // Populate notes from nested data with sample notes
     const notes: Record<string, string> = {};
@@ -1369,7 +1381,12 @@ export const Details11 = () => {
         ...column,
         cellRenderer: ({ row }: { row: any }) => (
           <Box pr="x1">
-            <DropdownMenu trigger={() => <IconicButton icon="more" aria-label="More actions" disabled={!productionRecordState.date} />} placement="bottom-end">
+            <DropdownMenu
+              trigger={() => (
+                <IconicButton icon="more" aria-label="More actions" disabled={!productionRecordState.date} />
+              )}
+              placement="bottom-end"
+            >
               <DropdownButton onClick={() => handleEditProduction(row.id)}>Edit production record</DropdownButton>
             </DropdownMenu>
           </Box>
@@ -1739,7 +1756,12 @@ export const Details11 = () => {
       </style>
       <Page>
         <Flex justifyContent="flex-end" alignItems="center" gap="x1_5" mb="x1">
-          <IconicButton icon="edit" aria-label="Edit" onClick={handleEditDetails} disabled={!productionRecordState.date && isInCreateEditMode}>
+          <IconicButton
+            icon="edit"
+            aria-label="Edit"
+            onClick={handleEditDetails}
+            disabled={!productionRecordState.date && isInCreateEditMode}
+          >
             Edit
           </IconicButton>
         </Flex>
@@ -1972,7 +1994,12 @@ export const Details11 = () => {
             <Box>
               {role === "supplier" && (
                 <Flex justifyContent="flex-end" mt="x3" mb="x1">
-                  <IconicButton icon="add" aria-label="Add production" onClick={handleAddProduction} disabled={!productionRecordState.date && isInCreateEditMode}>
+                  <IconicButton
+                    icon="add"
+                    aria-label="Add production"
+                    onClick={handleAddProduction}
+                    disabled={!productionRecordState.date && isInCreateEditMode}
+                  >
                     Add production
                   </IconicButton>
                 </Flex>
@@ -3048,19 +3075,19 @@ export const Details11 = () => {
                 <DatePicker
                   onChange={(date) => {
                     const dateString = date ? date.toISOString().split("T")[0] : "";
-                    
+
                     // Check if user is changing from August 8th to another date
                     if (hasAugust8thData && dateString !== "2025-08-08" && dateString !== "") {
                       setPendingDate(dateString);
                       setShowDataLossModal(true);
                       return; // Don't update the date yet
                     }
-                    
+
                     setProductionRecordState((prev) => ({
                       ...prev,
                       date: dateString,
                     }));
-                    
+
                     // Check if August 8th is selected
                     if (dateString === "2025-08-08") {
                       setShowExistingRecordModal(true);
@@ -3107,16 +3134,19 @@ export const Details11 = () => {
                       onChange={(e) =>
                         setProductionRecordState((prev) => ({ ...prev, expectedQuantity: e.target.value }))
                       }
-                      disabled={role === "customer" && isEditingProduction || (!productionRecordState.date && isInCreateEditMode)}
+                      disabled={
+                        (role === "customer" && isEditingProduction) ||
+                        (!productionRecordState.date && isInCreateEditMode)
+                      }
                       inputWidth="11.5em"
                     />
                   </Field>
                 </Box>
                 <Box width="8em">
                   <Field>
-                    <FieldLabel 
-                      labelText="UOM" 
-                      pb="x1" 
+                    <FieldLabel
+                      labelText="UOM"
+                      pb="x1"
                       hint="Only UOMs with conversion ratios to the order UOM may be selected.
 
 Additional UOM conversion ratios may be imported on the Items page by the customer. Contact the customer to continue."
@@ -3124,7 +3154,10 @@ Additional UOM conversion ratios may be imported on the Items page by the custom
                     <Select
                       value={productionRecordState.uom}
                       onChange={(value) => setProductionRecordState((prev) => ({ ...prev, uom: String(value) }))}
-                      disabled={role === "customer" && isEditingProduction || (!productionRecordState.date && isInCreateEditMode)}
+                      disabled={
+                        (role === "customer" && isEditingProduction) ||
+                        (!productionRecordState.date && isInCreateEditMode)
+                      }
                       options={[
                         { value: "kg", label: "kg" },
                         { value: "lb", label: "lb" },
@@ -3136,66 +3169,62 @@ Additional UOM conversion ratios may be imported on the Items page by the custom
                   </Field>
                 </Box>
               </Flex>
-              </Box>
+            </Box>
 
-              <Divider mb="x3" />
+            <Divider mb="x3" />
 
+            {productionRows.length > 0 && <Heading4 mb="x2">Actual production</Heading4>}
+
+            <Box>
+              {/* Custom table structure with nested rows */}
               {productionRows.length > 0 && (
-                <Heading4 mb="x2">Actual production</Heading4>
-              )}
-
-              <Box>
-                {/* Custom table structure with nested rows */}
-                {productionRows.length > 0 && (
-                  <Box>
-                    {/* Table Header */}
-                    <Flex borderBottom="1px solid" borderColor="lightGrey" pr="56px" pb="x1" gap="x1">
-                      <Flex minWidth="32px" ml="x1" mr="x0_5">
-                        #
-                      </Flex>
-                      <Box width="100%">
-                        Pallet number
-                        {role === "supplier" && fieldConfigState.palletNumberRequired && (
-                          <Text fontSize="small" inline ml="x0_5"  color="darkGrey">
-                            (Required)
-                          </Text>
-                        )}
-                      </Box>
-                      <Box width="100%" >
-                        Customer's lot code
-                      </Box>
-                      <Box width="100%" >
-                        Supplier's lot code
-                        {role === "supplier" && fieldConfigState.lotCodeRequired && (
-                          <Text fontSize="small" inline ml="x0_5"  color="darkGrey">
-                            (Required)
-                          </Text>
-                        )}
-                      </Box>
-                      <Box width="100%" >
-                        Expiry date
-                        {role === "supplier" && fieldConfigState.expiryDateRequired && (
-                          <Text fontSize="small" inline ml="x0_5"  color="darkGrey">
-                            (Required)
-                          </Text>
-                        )}
-                      </Box>
-                      <Box width="100%" >
-                        Quantity
-                        <Text fontSize="small" inline ml="x0_5" color="darkGrey">
-                          (Required)
-                        </Text>
-                      </Box>
-                      <Box width="75%" >
-                        UOM
-                        <Text fontSize="small" inline ml="x0_5" color="darkGrey">
-                          (Required)
-                        </Text>
-                      </Box>
+                <Box>
+                  {/* Table Header */}
+                  <Flex borderBottom="1px solid" borderColor="lightGrey" pr="56px" pb="x1" gap="x1">
+                    <Flex minWidth="32px" ml="x1" mr="x0_5">
+                      #
                     </Flex>
+                    <Box width="100%">
+                      Pallet number
+                      {role === "supplier" && fieldConfigState.palletNumberRequired && (
+                        <Text fontSize="small" inline ml="x0_5" color="darkGrey">
+                          (Required)
+                        </Text>
+                      )}
+                    </Box>
+                    <Box width="100%">Customer's lot code</Box>
+                    <Box width="100%">
+                      Supplier's lot code
+                      {role === "supplier" && fieldConfigState.lotCodeRequired && (
+                        <Text fontSize="small" inline ml="x0_5" color="darkGrey">
+                          (Required)
+                        </Text>
+                      )}
+                    </Box>
+                    <Box width="100%">
+                      Expiry date
+                      {role === "supplier" && fieldConfigState.expiryDateRequired && (
+                        <Text fontSize="small" inline ml="x0_5" color="darkGrey">
+                          (Required)
+                        </Text>
+                      )}
+                    </Box>
+                    <Box width="100%">
+                      Quantity
+                      <Text fontSize="small" inline ml="x0_5" color="darkGrey">
+                        (Required)
+                      </Text>
+                    </Box>
+                    <Box width="75%">
+                      UOM
+                      <Text fontSize="small" inline ml="x0_5" color="darkGrey">
+                        (Required)
+                      </Text>
+                    </Box>
+                  </Flex>
 
-                    {/* Table Rows with nested content */}
-                    {productionRows.map((row, index) => (
+                  {/* Table Rows with nested content */}
+                  {productionRows.map((row, index) => (
                     <Box key={row.id}>
                       {/* Main Production Row */}
                       <Flex alignItems="center" py="x0" gap="x1">
@@ -3207,7 +3236,10 @@ Additional UOM conversion ratios may be imported on the Items page by the custom
                             value={row.palletNumber}
                             onChange={(e) => handleProductionRowChange(row.id, "palletNumber", e.target.value)}
                             py="x1"
-                            disabled={role === "customer" && isEditingProduction || (!productionRecordState.date && isInCreateEditMode)}
+                            disabled={
+                              (role === "customer" && isEditingProduction) ||
+                              (!productionRecordState.date && isInCreateEditMode)
+                            }
                             width="100%"
                           />
                         </Box>
@@ -3234,16 +3266,22 @@ Additional UOM conversion ratios may be imported on the Items page by the custom
                             value={row.expiryDate}
                             onChange={(e) => handleProductionRowChange(row.id, "expiryDate", e.target.value)}
                             py="x1"
-                            disabled={role === "customer" && isEditingProduction || (!productionRecordState.date && isInCreateEditMode)}
+                            disabled={
+                              (role === "customer" && isEditingProduction) ||
+                              (!productionRecordState.date && isInCreateEditMode)
+                            }
                             width="100%"
-                                />
+                          />
                         </Box>
                         <Box width="100%">
                           <Input
                             value={row.quantity}
                             onChange={(e) => handleProductionRowChange(row.id, "quantity", e.target.value)}
                             py="x1"
-                            disabled={role === "customer" && isEditingProduction || (!productionRecordState.date && isInCreateEditMode)}
+                            disabled={
+                              (role === "customer" && isEditingProduction) ||
+                              (!productionRecordState.date && isInCreateEditMode)
+                            }
                             width="100%"
                           />
                         </Box>
@@ -3252,7 +3290,10 @@ Additional UOM conversion ratios may be imported on the Items page by the custom
                             value={row.uom}
                             onChange={(value) => handleProductionRowChange(row.id, "uom", String(value))}
                             options={uomOptions}
-                            disabled={role === "customer" && isEditingProduction || (!productionRecordState.date && isInCreateEditMode)}
+                            disabled={
+                              (role === "customer" && isEditingProduction) ||
+                              (!productionRecordState.date && isInCreateEditMode)
+                            }
                             width="100%"
                           />
                         </Box>
@@ -3260,7 +3301,13 @@ Additional UOM conversion ratios may be imported on the Items page by the custom
                           <Box width="68px" mx="x1">
                             <Flex gap="x0_5" alignItems="center">
                               <DropdownMenu
-                                trigger={() => <IconicButton icon="more" aria-label="More actions" disabled={!productionRecordState.date} />}
+                                trigger={() => (
+                                  <IconicButton
+                                    icon="more"
+                                    aria-label="More actions"
+                                    disabled={!productionRecordState.date}
+                                  />
+                                )}
                                 placement="bottom-end"
                               >
                                 <DropdownButton
@@ -3338,7 +3385,10 @@ Additional UOM conversion ratios may be imported on the Items page by the custom
                                 <Textarea
                                   value={rowNotes[row.id]}
                                   onChange={(e) => handleNoteChange(row.id, e.target.value)}
-                                  disabled={role === "customer" && isEditingProduction || (!productionRecordState.date && isInCreateEditMode)}
+                                  disabled={
+                                    (role === "customer" && isEditingProduction) ||
+                                    (!productionRecordState.date && isInCreateEditMode)
+                                  }
                                 />
                               </Box>
                             </Box>
@@ -3414,7 +3464,9 @@ Additional UOM conversion ratios may be imported on the Items page by the custom
                                                 String(value)
                                               )
                                             }
-                                            disabled={role === "customer" || (!productionRecordState.date && isInCreateEditMode)}
+                                            disabled={
+                                              role === "customer" || (!productionRecordState.date && isInCreateEditMode)
+                                            }
                                             loadOptions={async (inputValue) => {
                                               // Mock async search - replace with actual API call
                                               const mockItems = [
@@ -3482,7 +3534,9 @@ Additional UOM conversion ratios may be imported on the Items page by the custom
                                                 e.target.value
                                               )
                                             }
-                                            disabled={role === "customer" || (!productionRecordState.date && isInCreateEditMode)}
+                                            disabled={
+                                              role === "customer" || (!productionRecordState.date && isInCreateEditMode)
+                                            }
                                             inputWidth="100%"
                                           />
                                         </Box>
@@ -3510,7 +3564,9 @@ Additional UOM conversion ratios may be imported on the Items page by the custom
                                                 e.target.value
                                               )
                                             }
-                                            disabled={role === "customer" || (!productionRecordState.date && isInCreateEditMode)}
+                                            disabled={
+                                              role === "customer" || (!productionRecordState.date && isInCreateEditMode)
+                                            }
                                             inputWidth="100%"
                                           />
                                         </Box>
@@ -3538,7 +3594,9 @@ Additional UOM conversion ratios may be imported on the Items page by the custom
                                                 e.target.value
                                               )
                                             }
-                                            disabled={role === "customer" || (!productionRecordState.date && isInCreateEditMode)}
+                                            disabled={
+                                              role === "customer" || (!productionRecordState.date && isInCreateEditMode)
+                                            }
                                             inputWidth="100%"
                                           />
                                         </Box>
@@ -3567,7 +3625,9 @@ Additional UOM conversion ratios may be imported on the Items page by the custom
                                                 e.target.value
                                               )
                                             }
-                                            disabled={role === "customer" || (!productionRecordState.date && isInCreateEditMode)}
+                                            disabled={
+                                              role === "customer" || (!productionRecordState.date && isInCreateEditMode)
+                                            }
                                             inputWidth="100%"
                                           />
                                         </Box>
@@ -3603,7 +3663,9 @@ Additional UOM conversion ratios may be imported on the Items page by the custom
                                               { value: "oz", label: "oz" },
                                               { value: "cases", label: "cases" },
                                             ]}
-                                            disabled={role === "customer" || (!productionRecordState.date && isInCreateEditMode)}
+                                            disabled={
+                                              role === "customer" || (!productionRecordState.date && isInCreateEditMode)
+                                            }
                                             width="100%"
                                           />
                                         </Box>
@@ -3666,26 +3728,25 @@ Additional UOM conversion ratios may be imported on the Items page by the custom
                         <Box borderBottom="1px solid" borderColor="lightGrey" />
                       )}
                     </Box>
-                    ))}
-                  </Box>
-                )}
+                  ))}
+                </Box>
+              )}
 
-                {role === "supplier" && (
-                  <Box mt="x1" pl="52px">
-                    <QuietButton
-                      icon="addCircleOutline"
-                      iconSide="left"
-                      fullWidth
-                      onClick={handleAddProductionRow}
-                      type="button"
-                      disabled={!productionRecordState.date && isInCreateEditMode}
-                    >
-                      Add actual production record
-                    </QuietButton>
-                  </Box>
-                )}
-              </Box>
-
+              {role === "supplier" && (
+                <Box mt="x1" pl="52px">
+                  <QuietButton
+                    icon="addCircleOutline"
+                    iconSide="left"
+                    fullWidth
+                    onClick={handleAddProductionRow}
+                    type="button"
+                    disabled={!productionRecordState.date && isInCreateEditMode}
+                  >
+                    Add actual production record
+                  </QuietButton>
+                </Box>
+              )}
+            </Box>
           </Form>
         </Sidebar>
 
@@ -4075,17 +4136,14 @@ Additional UOM conversion ratios may be imported on the Items page by the custom
         title="Existing production record found"
         footerContent={
           <ButtonGroup>
-            <PrimaryButton onClick={() => setShowExistingRecordModal(false)}>
-              Continue
-            </PrimaryButton>
-            <QuietButton onClick={() => setShowExistingRecordModal(false)}>
-              Cancel
-            </QuietButton>
+            <PrimaryButton onClick={() => setShowExistingRecordModal(false)}>Continue</PrimaryButton>
+            <QuietButton onClick={() => setShowExistingRecordModal(false)}>Cancel</QuietButton>
           </ButtonGroup>
         }
       >
         <Text>
-          There is already an existing production record for August 8th, 2025. The production record form will be prepopulated with the existing data.
+          There is already an existing production record for August 8th, 2025. The production record form will be
+          prepopulated with the existing data.
         </Text>
       </Modal>
 
@@ -4099,36 +4157,40 @@ Additional UOM conversion ratios may be imported on the Items page by the custom
         title="Change date?"
         footerContent={
           <ButtonGroup>
-            <PrimaryButton onClick={() => {
-              // Proceed with date change
-              if (pendingDate) {
-                setProductionRecordState((prev) => ({
-                  ...prev,
-                  date: pendingDate,
-                }));
-                setHasAugust8thData(false);
-                // Reset production rows to default
-                setProductionRows([]);
-              }
-              setShowDataLossModal(false);
-              setPendingDate(null);
-            }}>
+            <PrimaryButton
+              onClick={() => {
+                // Proceed with date change
+                if (pendingDate) {
+                  setProductionRecordState((prev) => ({
+                    ...prev,
+                    date: pendingDate,
+                  }));
+                  setHasAugust8thData(false);
+                  // Reset production rows to default
+                  setProductionRows([]);
+                }
+                setShowDataLossModal(false);
+                setPendingDate(null);
+              }}
+            >
               Change date
             </PrimaryButton>
-            <QuietButton onClick={() => {
-              setShowDataLossModal(false);
-              setPendingDate(null);
-            }}>
+            <QuietButton
+              onClick={() => {
+                setShowDataLossModal(false);
+                setPendingDate(null);
+              }}
+            >
               Cancel
             </QuietButton>
           </ButtonGroup>
         }
       >
         <Text>
-          Changing the date without saving will discard all unsaved changes to the production record for {productionRecordState.date}.
+          Changing the date without saving will discard all unsaved changes to the production record for{" "}
+          {productionRecordState.date}.
         </Text>
       </Modal>
     </ApplicationFrame>
   );
 };
-
