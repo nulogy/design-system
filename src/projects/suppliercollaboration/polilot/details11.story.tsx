@@ -255,6 +255,7 @@ export const Details11 = () => {
   ]);
   const [expandedRows, setExpandedRows] = useState<string[]>([]);
   const [nestedExpandedRows, setNestedExpandedRows] = useState<string[]>([]);
+  const [subcomponentConsumptionExpanded, setSubcomponentConsumptionExpanded] = useState<Record<string, boolean>>({});
   // productionRecord now imported from optionsData.tsx
   const [productionRecordState, setProductionRecordState] = useState(productionRecord);
   const [consumptionMaterials, setConsumptionMaterials] = useState([]);
@@ -1996,11 +1997,11 @@ export const Details11 = () => {
                 <Flex justifyContent="flex-end" mt="x3" mb="x1">
                   <IconicButton
                     icon="add"
-                    aria-label="Add production"
+                    aria-label="Create production record"
                     onClick={handleAddProduction}
                     disabled={!productionRecordState.date && isInCreateEditMode}
                   >
-                    Add production
+                    Create production record
                   </IconicButton>
                 </Flex>
               )}
@@ -3130,6 +3131,7 @@ export const Details11 = () => {
                   <Field>
                     <FieldLabel labelText="Expected quantity" pb="x1" />
                     <Input
+                      type="number"
                       value={productionRecordState.expectedQuantity}
                       onChange={(e) =>
                         setProductionRecordState((prev) => ({ ...prev, expectedQuantity: e.target.value }))
@@ -3147,9 +3149,7 @@ export const Details11 = () => {
                     <FieldLabel
                       labelText="UOM"
                       pb="x1"
-                      hint="Only UOMs with conversion ratios to the order UOM may be selected.
-
-Additional UOM conversion ratios may be imported on the Items page by the customer. Contact the customer to continue."
+                      hint="Only UOMs with conversion ratios defined by the customer are available."
                     />
                     <Select
                       value={productionRecordState.uom}
@@ -3158,13 +3158,7 @@ Additional UOM conversion ratios may be imported on the Items page by the custom
                         (role === "customer" && isEditingProduction) ||
                         (!productionRecordState.date && isInCreateEditMode)
                       }
-                      options={[
-                        { value: "kg", label: "kg" },
-                        { value: "lb", label: "lb" },
-                        { value: "g", label: "g" },
-                        { value: "oz", label: "oz" },
-                        { value: "cases", label: "cases" },
-                      ]}
+                      options={uomOptions}
                     />
                   </Field>
                 </Box>
@@ -3173,7 +3167,7 @@ Additional UOM conversion ratios may be imported on the Items page by the custom
 
             <Divider mb="x3" />
 
-            {productionRows.length > 0 && <Heading4 mb="x2">Actual production</Heading4>}
+            {productionRows.length > 0 && <Heading4 mb="x3">Actual production</Heading4>}
 
             <Box>
               {/* Custom table structure with nested rows */}
@@ -3186,11 +3180,6 @@ Additional UOM conversion ratios may be imported on the Items page by the custom
                     </Flex>
                     <Box width="100%">
                       Pallet number
-                      {role === "supplier" && fieldConfigState.palletNumberRequired && (
-                        <Text fontSize="small" inline ml="x0_5" color="darkGrey">
-                          (Required)
-                        </Text>
-                      )}
                     </Box>
                     <Box width="100%">Customer's lot code</Box>
                     <Box width="100%">
@@ -3358,7 +3347,7 @@ Additional UOM conversion ratios may be imported on the Items page by the custom
                               <Flex
                                 backgroundColor="whiteGrey"
                                 pl="x2"
-                                pr="x0_5"
+                                pr="x0_75"
                                 py={role === "supplier" ? "0" : "x1"}
                                 mb="x1"
                                 borderRadius="small"
@@ -3403,12 +3392,14 @@ Additional UOM conversion ratios may be imported on the Items page by the custom
                               mb="x1"
                               mt="x0"
                             >
-                              <Flex backgroundColor="whiteGrey" px="x2" py="x1" mb="x1" borderRadius="small">
-                                <Text fontSize="small" fontWeight="bold" lineHeight="smallTextBase">
-                                  Subcomponent consumption{" "}
-                                  <Text as="span" color="midGrey" mx="x1">
+                              <Flex backgroundColor="whiteGrey" pl="x2" pr="x0_75" borderRadius="small" alignItems="center" justifyContent="space-between">
+                                <Flex alignItems="center" gap="x1">
+                                  <Text fontSize="small" fontWeight="bold" lineHeight="smallTextBase">
+                                    Subcomponent consumption
+                                  </Text>
+                                  <Text as="span" color="midGrey" fontSize="small">
                                     &bull;
-                                  </Text>{" "}
+                                  </Text>
                                   <Link
                                     href="/bom/revision/2.1"
                                     openInNewTab
@@ -3417,15 +3408,30 @@ Additional UOM conversion ratios may be imported on the Items page by the custom
                                     fontSize="small"
                                     fontWeight="normal"
                                     lineHeight="smallTextCompressed"
+                                    onClick={(e) => e.stopPropagation()}
                                   >
                                     BOM revision 2.1
                                   </Link>
-                                </Text>
+                                </Flex>
+                                <IconicButton
+                                  icon={subcomponentConsumptionExpanded[row.id] === false ? "downArrow" : "upArrow"}
+                                  aria-label={subcomponentConsumptionExpanded[row.id] === false ? "Expand subcomponent consumption" : "Collapse subcomponent consumption"}
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    setSubcomponentConsumptionExpanded(prev => ({
+                                      ...prev,
+                                      [row.id]: !prev[row.id]
+                                    }));
+                                  }}
+                                />
                               </Flex>
-                              <Box px="x1_5" pb="x1">
-                                <Table
-                                  columns={[
-                                    {
+                              {subcomponentConsumptionExpanded[row.id] !== false && (
+                                <Box px="x1_5" py="x1">
+                                  <Table
+                                  
+                                    columns={[
+                                      {
                                       label: "#",
                                       dataKey: "recordNumber",
                                       width: "40px",
@@ -3543,12 +3549,12 @@ Additional UOM conversion ratios may be imported on the Items page by the custom
                                       ),
                                     },
                                     {
-                                      label: "Expiry",
+                                      label: "Expiry date",
                                       dataKey: "expiryDate",
                                       headerFormatter: () => (
                                         <Box py="x0_25">
                                           <Text fontSize="small" lineHeight="smallTextCompressed">
-                                            Expiry
+                                            Expiry date
                                           </Text>
                                         </Box>
                                       ),
@@ -3720,7 +3726,8 @@ Additional UOM conversion ratios may be imported on the Items page by the custom
                                     </QuietButton>
                                   </Box>
                                 )}
-                              </Box>
+                                </Box>
+                              )}
                             </Box>
                           )}
                         </Box>
@@ -3733,7 +3740,7 @@ Additional UOM conversion ratios may be imported on the Items page by the custom
               )}
 
               {role === "supplier" && (
-                <Box mt="x1" pl="52px">
+                <Box mt="x1">
                   <QuietButton
                     icon="addCircleOutline"
                     iconSide="left"
@@ -4019,29 +4026,6 @@ Additional UOM conversion ratios may be imported on the Items page by the custom
                   />
                 </Flex>
               </Tooltip>
-              <Flex alignItems="center" gap="x1" width="200px">
-                <Text width="100px" fontSize="small" color="midGrey">
-                  Pallet
-                </Text>
-                <Toggle
-                  toggled={fieldConfigState.palletNumberRequired}
-                  onChange={(e) => handleFieldConfigChange("palletNumberRequired", e.target.checked)}
-                />
-              </Flex>
-              <Tooltip
-                tooltip="Controled by Org POLI setting. Controls the display and batch production creation fileds."
-                placement="top"
-              >
-                <Flex alignItems="center" gap="x1" width="200px">
-                  <Text width="150px" fontSize="small" color="midGrey">
-                    SANOFI req
-                  </Text>
-                  <Toggle
-                    toggled={fieldConfigState.sanofiRequired}
-                    onChange={(e) => handleFieldConfigChange("sanofiRequired", e.target.checked)}
-                  />
-                </Flex>
-              </Tooltip>
               <Flex alignItems="center" gap="x1" width="275px">
                 <Text width="125px" fontSize="small" color="midGrey">
                   View as:
@@ -4142,7 +4126,7 @@ Additional UOM conversion ratios may be imported on the Items page by the custom
         }
       >
         <Text>
-          There is already an existing production record for August 8th, 2025. The production record form will be
+          There is already an existing production record for August 8th, 2025. The production record values will be
           prepopulated with the existing data.
         </Text>
       </Modal>
