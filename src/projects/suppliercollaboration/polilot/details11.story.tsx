@@ -256,6 +256,7 @@ export const Details11 = () => {
   const [expandedRows, setExpandedRows] = useState<string[]>([]);
   const [nestedExpandedRows, setNestedExpandedRows] = useState<string[]>([]);
   const [subcomponentConsumptionExpanded, setSubcomponentConsumptionExpanded] = useState<Record<string, boolean>>({});
+  const [noteExpanded, setNoteExpanded] = useState<Record<string, boolean>>({});
   // productionRecord now imported from optionsData.tsx
   const [productionRecordState, setProductionRecordState] = useState(productionRecord);
   const [consumptionMaterials, setConsumptionMaterials] = useState([]);
@@ -265,6 +266,10 @@ export const Details11 = () => {
   const [showDataLossModal, setShowDataLossModal] = useState(false);
   const [hasAugust8thData, setHasAugust8thData] = useState(false);
   const [pendingDate, setPendingDate] = useState<string | null>(null);
+  const [showRemoveNoteModal, setShowRemoveNoteModal] = useState(false);
+  const [showRemoveSubcomponentModal, setShowRemoveSubcomponentModal] = useState(false);
+  const [showRemoveProductionModal, setShowRemoveProductionModal] = useState(false);
+  const [pendingRemoveRowId, setPendingRemoveRowId] = useState<string | null>(null);
   // fieldConfig now imported from optionsData.tsx
   const [fieldConfigState, setFieldConfigState] = useState(fieldConfig);
 
@@ -1157,9 +1162,16 @@ export const Details11 = () => {
   };
 
   const handleRemoveProductionRow = (rowId: string) => {
-    if (productionRows.length > 1) {
-      setProductionRows((prev) => prev.filter((row) => row.id !== rowId));
+    setPendingRemoveRowId(rowId);
+    setShowRemoveProductionModal(true);
+  };
+
+  const confirmRemoveProductionRow = () => {
+    if (pendingRemoveRowId && productionRows.length > 1) {
+      setProductionRows((prev) => prev.filter((row) => row.id !== pendingRemoveRowId));
     }
+    setShowRemoveProductionModal(false);
+    setPendingRemoveRowId(null);
   };
 
   const handleAddNote = (rowId: string) => {
@@ -1177,11 +1189,37 @@ export const Details11 = () => {
   };
 
   const handleRemoveNote = (rowId: string) => {
-    setRowNotes((prev) => {
-      const newNotes = { ...prev };
-      delete newNotes[rowId];
-      return newNotes;
-    });
+    setPendingRemoveRowId(rowId);
+    setShowRemoveNoteModal(true);
+  };
+
+  const handleRemoveSubcomponentConsumption = (rowId: string) => {
+    setPendingRemoveRowId(rowId);
+    setShowRemoveSubcomponentModal(true);
+  };
+
+  const confirmRemoveNote = () => {
+    if (pendingRemoveRowId) {
+      setRowNotes((prev) => {
+        const newNotes = { ...prev };
+        delete newNotes[pendingRemoveRowId];
+        return newNotes;
+      });
+    }
+    setShowRemoveNoteModal(false);
+    setPendingRemoveRowId(null);
+  };
+
+  const confirmRemoveSubcomponentConsumption = () => {
+    if (pendingRemoveRowId) {
+      setRowConsumptions((prev) => {
+        const newConsumptions = { ...prev };
+        delete newConsumptions[pendingRemoveRowId];
+        return newConsumptions;
+      });
+    }
+    setShowRemoveSubcomponentModal(false);
+    setPendingRemoveRowId(null);
   };
 
   const handleAddConsumptionForRow = (rowId: string) => {
@@ -3320,7 +3358,11 @@ export const Details11 = () => {
                                 <IconicButton
                                   icon="removeCircleOutline"
                                   aria-label="Remove actual production record"
-                                  onClick={() => handleRemoveProductionRow(row.id)}
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    handleRemoveProductionRow(row.id);
+                                  }}
                                   tooltip="Remove actual production record"
                                   disabled={!productionRecordState.date && isInCreateEditMode}
                                 />
@@ -3342,14 +3384,13 @@ export const Details11 = () => {
                               borderRadius="medium"
                               p="x0_25"
                               mb="x1"
-                              pb="x1"
+                              
                             >
                               <Flex
                                 backgroundColor="whiteGrey"
                                 pl="x2"
                                 pr="x0_75"
-                                py={role === "supplier" ? "0" : "x1"}
-                                mb="x1"
+                                
                                 borderRadius="small"
                                 justifyContent="space-between"
                                 alignItems="center"
@@ -3357,29 +3398,48 @@ export const Details11 = () => {
                                 <Text fontSize="small" fontWeight="bold" lineHeight="smallTextBase">
                                   Note
                                 </Text>
-                                {role === "supplier" && (
+                                <Flex alignItems="center" gap="x0_5">
                                   <IconicButton
-                                    icon="removeCircleOutline"
-                                    aria-label="Remove note"
+                                    icon={noteExpanded[row.id] === false ? "downArrow" : "upArrow"}
+                                    aria-label={noteExpanded[row.id] === false ? "Expand note" : "Collapse note"}
+                                    tooltip={noteExpanded[row.id] === false ? "Expand note" : "Collapse note"}
                                     onClick={(e) => {
                                       e.preventDefault();
-                                      handleRemoveNote(row.id);
+                                      e.stopPropagation();
+                                      setNoteExpanded(prev => ({
+                                        ...prev,
+                                        [row.id]: !prev[row.id]
+                                      }));
                                     }}
-                                    disabled={!productionRecordState.date && isInCreateEditMode}
-                                    tooltip="Remove note"
                                   />
-                                )}
+                                  {role === "supplier" && (
+                                    <IconicButton
+                                      icon="removeCircleOutline"
+                                      aria-label="Remove note"
+                                      onClick={(e) => {
+                                        e.preventDefault();
+                                        handleRemoveNote(row.id);
+                                      }}
+                                      disabled={!productionRecordState.date && isInCreateEditMode}
+                                      tooltip="Remove note"
+                                    />
+                                  )}
+                                </Flex>
                               </Flex>
-                              <Box px="x1">
-                                <Textarea
-                                  value={rowNotes[row.id]}
-                                  onChange={(e) => handleNoteChange(row.id, e.target.value)}
-                                  disabled={
-                                    (role === "customer" && isEditingProduction) ||
-                                    (!productionRecordState.date && isInCreateEditMode)
-                                  }
-                                />
-                              </Box>
+                              {noteExpanded[row.id] !== false && (
+                                <Box px="x1" py="x1">
+                                  <Textarea
+                                    value={rowNotes[row.id]}
+                                    onChange={(e) => handleNoteChange(row.id, e.target.value)}
+                                    disabled={
+                                      (role === "customer" && isEditingProduction) ||
+                                      (!productionRecordState.date && isInCreateEditMode)
+                                    }
+                                    placeholder="Add a note..."
+                                    rows={3}
+                                  />
+                                </Box>
+                              )}
                             </Box>
                           )}
                           {/* Subcomponent consumption - Nested below this specific row */}
@@ -3413,18 +3473,33 @@ export const Details11 = () => {
                                     BOM revision 2.1
                                   </Link>
                                 </Flex>
-                                <IconicButton
-                                  icon={subcomponentConsumptionExpanded[row.id] === false ? "downArrow" : "upArrow"}
-                                  aria-label={subcomponentConsumptionExpanded[row.id] === false ? "Expand subcomponent consumption" : "Collapse subcomponent consumption"}
-                                  onClick={(e) => {
-                                    e.preventDefault();
-                                    e.stopPropagation();
-                                    setSubcomponentConsumptionExpanded(prev => ({
-                                      ...prev,
-                                      [row.id]: !prev[row.id]
-                                    }));
-                                  }}
-                                />
+                                <Flex alignItems="center" gap="x0_5">
+                                  <IconicButton
+                                    icon={subcomponentConsumptionExpanded[row.id] === false ? "downArrow" : "upArrow"}
+                                    aria-label={subcomponentConsumptionExpanded[row.id] === false ? "Expand subcomponent consumption" : "Collapse subcomponent consumption"}
+                                    tooltip={subcomponentConsumptionExpanded[row.id] === false ? "Expand subcomponent consumption" : "Collapse subcomponent consumption"}
+                                    onClick={(e) => {
+                                      e.preventDefault();
+                                      e.stopPropagation();
+                                      setSubcomponentConsumptionExpanded(prev => ({
+                                        ...prev,
+                                        [row.id]: !prev[row.id]
+                                      }));
+                                    }}
+                                  />
+                                  {role === "supplier" && (
+                                    <IconicButton
+                                      icon="removeCircleOutline"
+                                      aria-label="Remove subcomponent consumption"
+                                      onClick={(e) => {
+                                        e.preventDefault();
+                                        handleRemoveSubcomponentConsumption(row.id);
+                                      }}
+                                      disabled={!productionRecordState.date && isInCreateEditMode}
+                                      tooltip="Remove subcomponent consumption"
+                                    />
+                                  )}
+                                </Flex>
                               </Flex>
                               {subcomponentConsumptionExpanded[row.id] !== false && (
                                 <Box px="x1_5" py="x1">
@@ -3690,7 +3765,7 @@ export const Details11 = () => {
                                                 aria-label="Remove subcomponent consumption record"
                                                 onClick={(e) => {
                                                   e.preventDefault();
-                                                  handleRemoveConsumptionRow(row.id, row.consumptionId);
+                                                  handleRemoveConsumptionRow(row.id.split('-')[0], row.consumptionId);
                                                 }}
                                                 disabled={!productionRecordState.date && isInCreateEditMode}
                                                 tooltip="Remove subcomponent consumption record"
@@ -4174,6 +4249,81 @@ export const Details11 = () => {
           Changing the date without saving will discard all unsaved changes to the production record for{" "}
           {productionRecordState.date}.
         </Text>
+      </Modal>
+
+      {/* Modal for remove note confirmation */}
+      <Modal
+        isOpen={showRemoveNoteModal}
+        onRequestClose={() => {
+          setShowRemoveNoteModal(false);
+          setPendingRemoveRowId(null);
+        }}
+        title="Remove note?"
+        footerContent={
+          <ButtonGroup>
+            <QuietButton onClick={confirmRemoveNote}>Remove</QuietButton>
+            <QuietButton
+              onClick={() => {
+                setShowRemoveNoteModal(false);
+                setPendingRemoveRowId(null);
+              }}
+            >
+              Cancel
+            </QuietButton>
+          </ButtonGroup>
+        }
+      >
+        <Text>The note will be removed if you continue with this action.</Text>
+      </Modal>
+
+      {/* Modal for remove subcomponent consumption confirmation */}
+      <Modal
+        isOpen={showRemoveSubcomponentModal}
+        onRequestClose={() => {
+          setShowRemoveSubcomponentModal(false);
+          setPendingRemoveRowId(null);
+        }}
+        title="Remove subcomponent consumption?"
+        footerContent={
+          <ButtonGroup>
+            <QuietButton onClick={confirmRemoveSubcomponentConsumption}>Remove</QuietButton>
+            <QuietButton
+              onClick={() => {
+                setShowRemoveSubcomponentModal(false);
+                setPendingRemoveRowId(null);
+              }}
+            >
+              Cancel
+            </QuietButton>
+          </ButtonGroup>
+        }
+      >
+        <Text>The subcomponent consumption will be removed if you continue with this action.</Text>
+      </Modal>
+
+      {/* Modal for remove actual production record confirmation */}
+      <Modal
+        isOpen={showRemoveProductionModal}
+        onRequestClose={() => {
+          setShowRemoveProductionModal(false);
+          setPendingRemoveRowId(null);
+        }}
+        title="Remove actual production record?"
+        footerContent={
+          <ButtonGroup>
+            <QuietButton onClick={confirmRemoveProductionRow}>Remove</QuietButton>
+            <QuietButton
+              onClick={() => {
+                setShowRemoveProductionModal(false);
+                setPendingRemoveRowId(null);
+              }}
+            >
+              Cancel
+            </QuietButton>
+          </ButtonGroup>
+        }
+      >
+        <Text>The actual production record will be removed if you continue with this action.</Text>
       </Modal>
     </ApplicationFrame>
   );
