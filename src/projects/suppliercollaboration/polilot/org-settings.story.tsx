@@ -264,45 +264,6 @@ export const OrgSettings = () => {
 
             <Divider my="x4" />
 
-            {/* Items configuration */}
-            <FormSection>
-              <Heading3 mb="x3">Items configuration</Heading3>
-
-              <Box mb="x2">
-                <Checkbox
-                  checked={enableItemSpec}
-                  onChange={(e) => setEnableItemSpec(e.target.checked)}
-                  labelText="Enable Item Spec"
-                />
-              </Box>
-
-              <Box mb="x2">
-                <Checkbox
-                  checked={enforcePalletTracking}
-                  onChange={(e) => setEnforcePalletTracking(e.target.checked)}
-                  labelText="Enforce pallet tracking"
-                />
-                <Text ml="x3" mt="quarter" color="midGrey" fontSize="small">
-                  Require pallet tracking for all ...
-                </Text>
-              </Box>
-
-              {enforcePalletTracking && (
-                <Box mb="x2" ml="x3">
-                  <Checkbox
-                    checked={enablePalletItemLevelOverrides}
-                    onChange={(e) => setEnablePalletItemLevelOverrides(e.target.checked)}
-                    labelText="Enable item level overrides"
-                  />
-                  <Text ml="x3" mt="quarter" color="midGrey" fontSize="small">
-                    TBD
-                  </Text>
-                </Box>
-              )}
-            </FormSection>
-
-            <Divider my="x4" />
-
             {/* Items configuration - New */}
             <FormSection>
               <Heading3 mb="x3">Items configuration</Heading3>
@@ -357,28 +318,29 @@ export const OrgSettings = () => {
                   )}
                 </Box>
 
-                <Box mb="x2">
-                  <Checkbox
-                    checked={enforcePalletTrackingNew}
-                    onChange={(e) => setEnforcePalletTrackingNew(e.target.checked)}
-                    labelText="Enforce pallet tracking"
-                  />
-                  <Text ml="x3" mt="quarter" color="midGrey" fontSize="small">
-                    Require pallet tracking for all ...
-                  </Text>
-                  {enforcePalletTrackingNew && (
-                    <Box mb="x2" ml="x3" mt="x1">
-                      <Checkbox
-                        checked={enablePalletItemLevelOverridesNew}
-                        onChange={(e) => setEnablePalletItemLevelOverridesNew(e.target.checked)}
-                        labelText="Enable item-level overrides"
-                      />
-                      <Text ml="x3" mt="quarter" color="midGrey" fontSize="small">
-                        TBD
-                      </Text>
-                    </Box>
-                  )}
-                </Box>
+              </Box>
+
+              <Box mb="x2">
+                <Checkbox
+                  checked={enforcePalletTrackingNew}
+                  onChange={(e) => setEnforcePalletTrackingNew(e.target.checked)}
+                  labelText="Enforce pallet tracking"
+                />
+                <Text ml="x3" mt="quarter" color="midGrey" fontSize="small">
+                  Require pallet tracking for all ...
+                </Text>
+                {enforcePalletTrackingNew && (
+                  <Box mb="x2" ml="x3" mt="x1">
+                    <Checkbox
+                      checked={enablePalletItemLevelOverridesNew}
+                      onChange={(e) => setEnablePalletItemLevelOverridesNew(e.target.checked)}
+                      labelText="Enable item-level overrides"
+                    />
+                    <Text ml="x3" mt="quarter" color="midGrey" fontSize="small">
+                      TBD
+                    </Text>
+                  </Box>
+                )}
               </Box>
             </FormSection>
 
