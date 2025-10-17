@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { toast, Tooltip } from "../../..";
 import {
   Box,
@@ -270,6 +270,10 @@ export const Details11 = () => {
   const [showRemoveSubcomponentModal, setShowRemoveSubcomponentModal] = useState(false);
   const [showRemoveProductionModal, setShowRemoveProductionModal] = useState(false);
   const [pendingRemoveRowId, setPendingRemoveRowId] = useState<string | null>(null);
+  const [newlyAddedRowId, setNewlyAddedRowId] = useState<string | null>(null);
+  const [newlyAddedNoteId, setNewlyAddedNoteId] = useState<string | null>(null);
+  const [newlyAddedConsumptionId, setNewlyAddedConsumptionId] = useState<string | null>(null);
+  const [showUnsavedChangesModal, setShowUnsavedChangesModal] = useState(false);
   // fieldConfig now imported from optionsData.tsx
   const [fieldConfigState, setFieldConfigState] = useState(fieldConfig);
 
@@ -278,6 +282,22 @@ export const Details11 = () => {
   // uomOptions and unitOptions now imported from optionsData.tsx
 
   // Nested table data now imported from nestedTableData.tsx
+
+  // Ref for the Date field
+  const dateFieldRef = useRef<HTMLInputElement>(null);
+
+  // Focus Date field when production sidebar opens
+  useEffect(() => {
+    if (showProductionSidebar) {
+      // Small delay to ensure the sidebar is fully rendered
+      const timer = setTimeout(() => {
+        if (dateFieldRef.current) {
+          dateFieldRef.current.focus();
+        }
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [showProductionSidebar]);
 
   // Actual production report columns configuration
   const actualProductionReportColumns = [
@@ -865,8 +885,8 @@ export const Details11 = () => {
     setProductionRecordState({
       date: "",
       bomRevision: "",
-      uom: "",
-      expectedQuantity: "",
+      uom: "cs",
+      expectedQuantity: "0",
       actualQuantity: "",
       lotCode: "",
       supplierLotCode: "",
@@ -1082,6 +1102,10 @@ export const Details11 = () => {
   };
 
   const handleCloseProductionSidebar = () => {
+    setShowUnsavedChangesModal(true);
+  };
+
+  const handleConfirmCloseProductionSidebar = () => {
     setShowProductionSidebar(false);
     setIsEditingProduction(false);
     setProductionEntryType("quick");
@@ -1089,11 +1113,12 @@ export const Details11 = () => {
     setProductionRows([]);
     setRowNotes({});
     setRowConsumptions({});
+    setHasAugust8thData(false);
     setProductionRecordState({
       date: "",
       bomRevision: "",
-      uom: "",
-      expectedQuantity: "",
+      uom: "cs",
+      expectedQuantity: "0",
       actualQuantity: "",
       lotCode: "",
       supplierLotCode: "",
@@ -1102,6 +1127,7 @@ export const Details11 = () => {
       producedQuantity: "",
       note: "",
     });
+    setShowUnsavedChangesModal(false);
   };
 
   const handleProductionFieldChange = (field: string, value: string) => {
@@ -1154,11 +1180,12 @@ export const Details11 = () => {
       customerLotCode: "",
       supplierLotCode: "",
       expiryDate: "",
-      quantity: "",
-      uom: "",
+      quantity: "0",
+      uom: "cs",
       verticalAlign: "top",
     };
     setProductionRows((prev) => [...prev, newRow]);
+    setNewlyAddedRowId(newRow.id);
   };
 
   const handleRemoveProductionRow = (rowId: string) => {
@@ -1179,6 +1206,7 @@ export const Details11 = () => {
       ...prev,
       [rowId]: prev[rowId] || "",
     }));
+    setNewlyAddedNoteId(rowId);
   };
 
   const handleNoteChange = (rowId: string, value: string) => {
@@ -1232,13 +1260,16 @@ export const Details11 = () => {
         supplierLotCode: "",
         expiryDate: "",
         palletNumber: "",
-        quantity: "",
-        uom: "",
+        quantity: "0",
+        uom: "cs",
         pillNumber: "001",
       };
 
       const updatedConsumptions = [...(prev[rowId] || []), newConsumption];
       console.log("Updated consumptions for row:", rowId, updatedConsumptions);
+
+      // Set the newly added consumption ID for autofocus
+      setNewlyAddedConsumptionId(newConsumption.id);
 
       return {
         ...prev,
@@ -1311,13 +1342,19 @@ export const Details11 = () => {
   };
 
   const handleRemoveConsumptionRow = (rowId: string, consumptionId: string) => {
+    console.log("handleRemoveConsumptionRow called with:", { rowId, consumptionId });
     setRowConsumptions((prev) => {
+      console.log("Current rowConsumptions:", prev);
       const currentConsumptions = prev[rowId] || [];
+      console.log("Current consumptions for rowId:", rowId, currentConsumptions);
       const filteredConsumptions = currentConsumptions.filter((consumption) => consumption.id !== consumptionId);
-      return {
+      console.log("Filtered consumptions:", filteredConsumptions);
+      const result = {
         ...prev,
         [rowId]: filteredConsumptions,
       };
+      console.log("New rowConsumptions:", result);
+      return result;
     });
   };
 
@@ -1355,6 +1392,36 @@ export const Details11 = () => {
     setConsumptionMaterials((prev) =>
       prev.map((material) => (material.id === materialId ? { ...material, [field]: value } : material))
     );
+  };
+
+  const handleAddConsumptionMaterial = () => {
+    const newMaterial = {
+      id: `consumption-material-${Date.now()}`,
+      item: "",
+      lotCode: "",
+      expiryDate: "",
+      palletNumber: "",
+      quantity: "0",
+      uom: "cs",
+    };
+    setConsumptionMaterials((prev) => [...prev, newMaterial]);
+  };
+
+  const handleOpenConsumptionDetailsSidebar = () => {
+    // Initialize with a default consumption material if none exist
+    if (consumptionMaterials.length === 0) {
+      const defaultMaterial = {
+        id: `consumption-material-${Date.now()}`,
+        item: "",
+        lotCode: "",
+        expiryDate: "",
+        palletNumber: "",
+        quantity: "0",
+        uom: "cs",
+      };
+      setConsumptionMaterials([defaultMaterial]);
+    }
+    setShowConsumptionSidebar(true);
   };
 
   const handleSaveConsumption = () => {
@@ -1397,8 +1464,8 @@ export const Details11 = () => {
       supplierLotCode: "",
       expiryDate: null as Date | null,
       palletNumber: "",
-      consumedQuantity: "",
-      uom: "",
+      consumedQuantity: "0",
+      uom: "cs",
       parentDate: undefined as string | undefined,
       parentActualQuantity: undefined as string | undefined,
     };
@@ -3094,7 +3161,6 @@ export const Details11 = () => {
           width="1280px"
           duration={0.25}
           closeOnOutsideClick={true}
-          overlay="show"
           disableScroll={true}
           footer={
             <Flex gap="x1_5">
@@ -3160,7 +3226,7 @@ export const Details11 = () => {
                     }
                   }}
                   selected={productionRecordState.date ? new Date(productionRecordState.date) : null}
-                  inputProps={{ disabled: role === "customer" && isEditingProduction, autoFocus: true }}
+                  inputProps={{ disabled: role === "customer" && isEditingProduction, ref: dateFieldRef }}
                 />
               </Field>
 
@@ -3261,13 +3327,20 @@ export const Details11 = () => {
                         <Box width="100%">
                           <Input
                             value={row.palletNumber}
-                            onChange={(e) => handleProductionRowChange(row.id, "palletNumber", e.target.value)}
+                            onChange={(e) => {
+                              handleProductionRowChange(row.id, "palletNumber", e.target.value);
+                              // Clear the newly added row ID after user starts typing
+                              if (newlyAddedRowId === row.id) {
+                                setNewlyAddedRowId(null);
+                              }
+                            }}
                             py="x1"
                             disabled={
                               (role === "customer" && isEditingProduction) ||
                               (!productionRecordState.date && isInCreateEditMode)
                             }
                             width="100%"
+                            autoFocus={newlyAddedRowId === row.id}
                           />
                         </Box>
                         <Box width="100%">
@@ -3289,14 +3362,9 @@ export const Details11 = () => {
                           />
                         </Box>
                         <Box width="100%">
-                          <Input
-                            value={row.expiryDate}
-                            onChange={(e) => handleProductionRowChange(row.id, "expiryDate", e.target.value)}
-                            py="x1"
-                            disabled={
-                              (role === "customer" && isEditingProduction) ||
-                              (!productionRecordState.date && isInCreateEditMode)
-                            }
+                          <DatePicker
+                            selected={row.expiryDate ? new Date(row.expiryDate) : null}
+                            onChange={(date) => handleProductionRowChange(row.id, "expiryDate", date?.toISOString().split("T")[0] || "")}
                             width="100%"
                           />
                         </Box>
@@ -3340,18 +3408,18 @@ export const Details11 = () => {
                                 <DropdownButton
                                   onClick={(e) => {
                                     e.preventDefault();
-                                    handleAddConsumptionForRow(row.id);
-                                  }}
-                                >
-                                  Add subcomponent consumption
-                                </DropdownButton>
-                                <DropdownButton
-                                  onClick={(e) => {
-                                    e.preventDefault();
                                     handleAddNote(row.id);
                                   }}
                                 >
                                   Add note
+                                </DropdownButton>
+                                <DropdownButton
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    handleAddConsumptionForRow(row.id);
+                                  }}
+                                >
+                                  Add subcomponent consumption
                                 </DropdownButton>
                               </DropdownMenu>
                               {productionRows.length > 1 && (
@@ -3430,13 +3498,20 @@ export const Details11 = () => {
                                 <Box px="x1" py="x1">
                                   <Textarea
                                     value={rowNotes[row.id]}
-                                    onChange={(e) => handleNoteChange(row.id, e.target.value)}
+                                    onChange={(e) => {
+                                      handleNoteChange(row.id, e.target.value);
+                                      // Clear the newly added note ID after user starts typing
+                                      if (newlyAddedNoteId === row.id) {
+                                        setNewlyAddedNoteId(null);
+                                      }
+                                    }}
                                     disabled={
                                       (role === "customer" && isEditingProduction) ||
                                       (!productionRecordState.date && isInCreateEditMode)
                                     }
                                     placeholder="Add a note..."
                                     rows={3}
+                                    autoFocus={newlyAddedNoteId === row.id}
                                   />
                                 </Box>
                               )}
@@ -3537,17 +3612,22 @@ export const Details11 = () => {
                                         <Box py="x0_5" pr="x1" width="12em">
                                           <AsyncSelect
                                             value={row.item}
-                                            onChange={(value) =>
+                                            onChange={(value) => {
                                               handleConsumptionRowChange(
                                                 row.id,
                                                 row.consumptionId,
                                                 "item",
                                                 String(value)
-                                              )
-                                            }
+                                              );
+                                              // Clear the newly added consumption ID after user starts typing
+                                              if (newlyAddedConsumptionId === row.consumptionId) {
+                                                setNewlyAddedConsumptionId(null);
+                                              }
+                                            }}
                                             disabled={
                                               role === "customer" || (!productionRecordState.date && isInCreateEditMode)
                                             }
+                                            autoFocus={newlyAddedConsumptionId === row.consumptionId}
                                             loadOptions={async (inputValue) => {
                                               // Mock async search - replace with actual API call
                                               const mockItems = [
@@ -3635,20 +3715,17 @@ export const Details11 = () => {
                                       ),
                                       cellRenderer: ({ row }: { row: any }) => (
                                         <Box py="x0_5" pr="x1">
-                                          <Input
-                                            value={row.expiryDate}
-                                            onChange={(e) =>
+                                          <DatePicker
+                                            selected={row.expiryDate ? new Date(row.expiryDate) : null}
+                                            onChange={(date) =>
                                               handleConsumptionRowChange(
                                                 row.id,
                                                 row.consumptionId,
                                                 "expiryDate",
-                                                e.target.value
+                                                date?.toISOString().split("T")[0] || ""
                                               )
                                             }
-                                            disabled={
-                                              role === "customer" || (!productionRecordState.date && isInCreateEditMode)
-                                            }
-                                            inputWidth="100%"
+                                            width="100%"
                                           />
                                         </Box>
                                       ),
@@ -3737,13 +3814,7 @@ export const Details11 = () => {
                                                 String(value)
                                               )
                                             }
-                                            options={[
-                                              { value: "kg", label: "kg" },
-                                              { value: "lb", label: "lb" },
-                                              { value: "g", label: "g" },
-                                              { value: "oz", label: "oz" },
-                                              { value: "cases", label: "cases" },
-                                            ]}
+                                            options={uomOptions}
                                             disabled={
                                               role === "customer" || (!productionRecordState.date && isInCreateEditMode)
                                             }
@@ -3765,7 +3836,12 @@ export const Details11 = () => {
                                                 aria-label="Remove subcomponent consumption record"
                                                 onClick={(e) => {
                                                   e.preventDefault();
-                                                  handleRemoveConsumptionRow(row.id.split('-')[0], row.consumptionId);
+                                                  console.log("Remove button clicked, row:", row);
+                                                  // Extract the parent row ID by removing the consumption ID suffix
+                                                  const parentRowId = row.id.replace(`-${row.consumptionId}`, '');
+                                                  console.log("Extracted parentRowId:", parentRowId);
+                                                  console.log("consumptionId:", row.consumptionId);
+                                                  handleRemoveConsumptionRow(parentRowId, row.consumptionId);
                                                 }}
                                                 disabled={!productionRecordState.date && isInCreateEditMode}
                                                 tooltip="Remove subcomponent consumption record"
@@ -3840,7 +3916,6 @@ export const Details11 = () => {
           width="600px"
           duration={0.25}
           closeOnOutsideClick={true}
-          overlay="show"
           disableScroll={true}
           footer={
             <Flex gap="x1_5">
@@ -3912,17 +3987,17 @@ export const Details11 = () => {
                     <Select
                       value={material.uom}
                       onChange={(value) => handleConsumptionFieldChange(material.id, "uom", String(value))}
-                      options={[
-                        { value: "kg", label: "kg" },
-                        { value: "lb", label: "lb" },
-                        { value: "g", label: "g" },
-                        { value: "oz", label: "oz" },
-                        { value: "cases", label: "cases" },
-                      ]}
+                      options={uomOptions}
                     />
                   </Field>
                 </Box>
               ))}
+              
+              <Box>
+                <QuietButton type="button" icon="add" iconSide="left" fullWidth onClick={handleAddConsumptionMaterial}>
+                  Add consumption material
+                </QuietButton>
+              </Box>
             </FormSection>
           </Form>
         </Sidebar>
@@ -3938,7 +4013,6 @@ export const Details11 = () => {
           width="600px"
           duration={0.25}
           closeOnOutsideClick={true}
-          overlay="show"
           disableScroll={true}
           footer={
             <Flex gap="x1_5">
@@ -4041,13 +4115,7 @@ export const Details11 = () => {
                         <Select
                           value={item.uom}
                           onChange={(value) => handleConsumptionItemFieldChange(item.id, "uom", String(value))}
-                          options={[
-                            { value: "kg", label: "kg" },
-                            { value: "lb", label: "lb" },
-                            { value: "g", label: "g" },
-                            { value: "oz", label: "oz" },
-                            { value: "cases", label: "cases" },
-                          ]}
+                          options={uomOptions}
                         />
                       </Field>
                     </Box>
@@ -4324,6 +4392,21 @@ export const Details11 = () => {
         }
       >
         <Text>The actual production record will be removed if you continue with this action.</Text>
+      </Modal>
+
+      {/* Modal for unsaved changes warning */}
+      <Modal
+        isOpen={showUnsavedChangesModal}
+        onRequestClose={() => setShowUnsavedChangesModal(false)}
+        title="Discard unsaved changes?"
+        footerContent={
+          <ButtonGroup>
+            <QuietButton onClick={handleConfirmCloseProductionSidebar}>Discard</QuietButton>
+            <QuietButton onClick={() => setShowUnsavedChangesModal(false)}>Keep editing</QuietButton>
+          </ButtonGroup>
+        }
+      >
+        <Text>The production record has unsaved changes that will be discarded if you continue without saving.</Text>
       </Modal>
     </ApplicationFrame>
   );
