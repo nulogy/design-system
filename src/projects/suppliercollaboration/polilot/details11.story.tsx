@@ -3282,9 +3282,7 @@ export const Details11 = () => {
                     <Flex minWidth="32px" ml="x1" mr="x0_5">
                       #
                     </Flex>
-                    <Box width="100%">
-                      Pallet number
-                    </Box>
+                    <Box width="100%">Pallet number</Box>
                     <Box width="100%">Customer's lot code</Box>
                     <Box width="100%">
                       Supplier's lot code
@@ -3364,7 +3362,9 @@ export const Details11 = () => {
                         <Box width="100%">
                           <DatePicker
                             selected={row.expiryDate ? new Date(row.expiryDate) : null}
-                            onChange={(date) => handleProductionRowChange(row.id, "expiryDate", date?.toISOString().split("T")[0] || "")}
+                            onChange={(date) =>
+                              handleProductionRowChange(row.id, "expiryDate", date?.toISOString().split("T")[0] || "")
+                            }
                             width="100%"
                           />
                         </Box>
@@ -3446,19 +3446,11 @@ export const Details11 = () => {
                         <Box pl="52px" borderBottom="1px solid" borderBottomColor="lightGrey">
                           {/* Note - Nested below this specific row */}
                           {rowNotes[row.id] !== undefined && (
-                            <Box
-                              border="1px solid"
-                              borderColor="lightGrey"
-                              borderRadius="medium"
-                              p="x0_25"
-                              mb="x1"
-                              
-                            >
+                            <Box border="1px solid" borderColor="lightGrey" borderRadius="medium" p="x0_25" mb="x1">
                               <Flex
                                 backgroundColor="whiteGrey"
                                 pl="x2"
                                 pr="x0_75"
-                                
                                 borderRadius="small"
                                 justifyContent="space-between"
                                 alignItems="center"
@@ -3474,9 +3466,9 @@ export const Details11 = () => {
                                     onClick={(e) => {
                                       e.preventDefault();
                                       e.stopPropagation();
-                                      setNoteExpanded(prev => ({
+                                      setNoteExpanded((prev) => ({
                                         ...prev,
-                                        [row.id]: !prev[row.id]
+                                        [row.id]: !prev[row.id],
                                       }));
                                     }}
                                   />
@@ -3527,7 +3519,14 @@ export const Details11 = () => {
                               mb="x1"
                               mt="x0"
                             >
-                              <Flex backgroundColor="whiteGrey" pl="x2" pr="x0_75" borderRadius="small" alignItems="center" justifyContent="space-between">
+                              <Flex
+                                backgroundColor="whiteGrey"
+                                pl="x2"
+                                pr="x0_75"
+                                borderRadius="small"
+                                alignItems="center"
+                                justifyContent="space-between"
+                              >
                                 <Flex alignItems="center" gap="x1">
                                   <Text fontSize="small" fontWeight="bold" lineHeight="smallTextBase">
                                     Subcomponent consumption
@@ -3551,14 +3550,22 @@ export const Details11 = () => {
                                 <Flex alignItems="center" gap="x0_5">
                                   <IconicButton
                                     icon={subcomponentConsumptionExpanded[row.id] === false ? "downArrow" : "upArrow"}
-                                    aria-label={subcomponentConsumptionExpanded[row.id] === false ? "Expand subcomponent consumption" : "Collapse subcomponent consumption"}
-                                    tooltip={subcomponentConsumptionExpanded[row.id] === false ? "Expand subcomponent consumption" : "Collapse subcomponent consumption"}
+                                    aria-label={
+                                      subcomponentConsumptionExpanded[row.id] === false
+                                        ? "Expand subcomponent consumption"
+                                        : "Collapse subcomponent consumption"
+                                    }
+                                    tooltip={
+                                      subcomponentConsumptionExpanded[row.id] === false
+                                        ? "Expand subcomponent consumption"
+                                        : "Collapse subcomponent consumption"
+                                    }
                                     onClick={(e) => {
                                       e.preventDefault();
                                       e.stopPropagation();
-                                      setSubcomponentConsumptionExpanded(prev => ({
+                                      setSubcomponentConsumptionExpanded((prev) => ({
                                         ...prev,
-                                        [row.id]: !prev[row.id]
+                                        [row.id]: !prev[row.id],
                                       }));
                                     }}
                                   />
@@ -3579,304 +3586,314 @@ export const Details11 = () => {
                               {subcomponentConsumptionExpanded[row.id] !== false && (
                                 <Box px="x1_5" py="x1">
                                   <Table
-                                  
                                     columns={[
                                       {
-                                      label: "#",
-                                      dataKey: "recordNumber",
-                                      width: "40px",
-                                      headerFormatter: () => (
-                                        <Box py="x0_25">
-                                          <Text fontSize="small" lineHeight="smallTextCompressed">
-                                            #
-                                          </Text>
-                                        </Box>
-                                      ),
-                                      cellRenderer: ({ row }: { row: any }) => (
-                                        <Box py="x1" px="x1" display="flex" alignItems="center" justifyContent="center">
-                                          <RecordNumberPill number={row.pillNumber || "001"} />
-                                        </Box>
-                                      ),
-                                    },
-                                    {
-                                      label: "Item",
-                                      dataKey: "item",
-                                      headerFormatter: () => (
-                                        <Box py="x0_25">
-                                          <Text fontSize="small" lineHeight="smallTextCompressed">
-                                            Item
-                                          </Text>
-                                        </Box>
-                                      ),
-                                      cellRenderer: ({ row }: { row: any }) => (
-                                        <Box py="x0_5" pr="x1" width="12em">
-                                          <AsyncSelect
-                                            value={row.item}
-                                            onChange={(value) => {
-                                              handleConsumptionRowChange(
-                                                row.id,
-                                                row.consumptionId,
-                                                "item",
-                                                String(value)
-                                              );
-                                              // Clear the newly added consumption ID after user starts typing
-                                              if (newlyAddedConsumptionId === row.consumptionId) {
-                                                setNewlyAddedConsumptionId(null);
+                                        label: "#",
+                                        dataKey: "recordNumber",
+                                        width: "40px",
+                                        headerFormatter: () => (
+                                          <Box py="x0_25">
+                                            <Text fontSize="small" lineHeight="smallTextCompressed">
+                                              #
+                                            </Text>
+                                          </Box>
+                                        ),
+                                        cellRenderer: ({ row }: { row: any }) => (
+                                          <Box
+                                            py="x1"
+                                            px="x1"
+                                            display="flex"
+                                            alignItems="center"
+                                            justifyContent="center"
+                                          >
+                                            <RecordNumberPill number={row.pillNumber || "001"} />
+                                          </Box>
+                                        ),
+                                      },
+                                      {
+                                        label: "Item",
+                                        dataKey: "item",
+                                        headerFormatter: () => (
+                                          <Box py="x0_25">
+                                            <Text fontSize="small" lineHeight="smallTextCompressed">
+                                              Item
+                                            </Text>
+                                          </Box>
+                                        ),
+                                        cellRenderer: ({ row }: { row: any }) => (
+                                          <Box py="x0_5" pr="x1" width="12em">
+                                            <AsyncSelect
+                                              value={row.item}
+                                              onChange={(value) => {
+                                                handleConsumptionRowChange(
+                                                  row.id,
+                                                  row.consumptionId,
+                                                  "item",
+                                                  String(value)
+                                                );
+                                                // Clear the newly added consumption ID after user starts typing
+                                                if (newlyAddedConsumptionId === row.consumptionId) {
+                                                  setNewlyAddedConsumptionId(null);
+                                                }
+                                              }}
+                                              disabled={
+                                                role === "customer" ||
+                                                (!productionRecordState.date && isInCreateEditMode)
                                               }
-                                            }}
-                                            disabled={
-                                              role === "customer" || (!productionRecordState.date && isInCreateEditMode)
-                                            }
-                                            autoFocus={newlyAddedConsumptionId === row.consumptionId}
-                                            loadOptions={async (inputValue) => {
-                                              // Mock async search - replace with actual API call
-                                              const mockItems = [
-                                                { value: "Raw Material A", label: "Raw Material A" },
-                                                { value: "Raw Material B", label: "Raw Material B" },
-                                                { value: "Raw Material C", label: "Raw Material C" },
-                                                { value: "Component X", label: "Component X" },
-                                                { value: "Component Y", label: "Component Y" },
-                                              ];
-                                              return mockItems.filter((item) =>
-                                                item.label.toLowerCase().includes(inputValue.toLowerCase())
-                                              );
-                                            }}
-                                          />
-                                        </Box>
-                                      ),
-                                    },
-                                    {
-                                      label: "Customer's lot code",
-                                      dataKey: "customerLotCode",
-                                      headerFormatter: () => (
-                                        <Box py="x0_25">
-                                          <Text fontSize="small" lineHeight="smallTextCompressed">
-                                            Customer's lot code
-                                          </Text>
-                                        </Box>
-                                      ),
-                                      cellRenderer: ({ row }: { row: any }) => (
-                                        <Box py="x0_5" pr="x1">
-                                          <Input
-                                            value={row.customerLotCode || ""}
-                                            onChange={(e) =>
-                                              handleConsumptionRowChange(
-                                                row.id,
-                                                row.consumptionId,
-                                                "customerLotCode",
-                                                e.target.value
-                                              )
-                                            }
-                                            disabled={false}
-                                            inputWidth="100%"
-                                          />
-                                        </Box>
-                                      ),
-                                    },
-                                    {
-                                      label: "Supplier's lot code",
-                                      dataKey: "supplierLotCode",
-                                      headerFormatter: () => (
-                                        <Box py="x0_25">
-                                          <Text fontSize="small" lineHeight="smallTextCompressed">
-                                            Supplier's lot code
-                                          </Text>
-                                        </Box>
-                                      ),
-                                      cellRenderer: ({ row }: { row: any }) => (
-                                        <Box py="x0_5" pr="x1">
-                                          <Input
-                                            value={row.supplierLotCode || ""}
-                                            onChange={(e) =>
-                                              handleConsumptionRowChange(
-                                                row.id,
-                                                row.consumptionId,
-                                                "supplierLotCode",
-                                                e.target.value
-                                              )
-                                            }
-                                            disabled={
-                                              role === "customer" || (!productionRecordState.date && isInCreateEditMode)
-                                            }
-                                            inputWidth="100%"
-                                          />
-                                        </Box>
-                                      ),
-                                    },
-                                    {
-                                      label: "Expiry date",
-                                      dataKey: "expiryDate",
-                                      headerFormatter: () => (
-                                        <Box py="x0_25">
-                                          <Text fontSize="small" lineHeight="smallTextCompressed">
-                                            Expiry date
-                                          </Text>
-                                        </Box>
-                                      ),
-                                      cellRenderer: ({ row }: { row: any }) => (
-                                        <Box py="x0_5" pr="x1">
-                                          <DatePicker
-                                            selected={row.expiryDate ? new Date(row.expiryDate) : null}
-                                            onChange={(date) =>
-                                              handleConsumptionRowChange(
-                                                row.id,
-                                                row.consumptionId,
-                                                "expiryDate",
-                                                date?.toISOString().split("T")[0] || ""
-                                              )
-                                            }
-                                            width="100%"
-                                          />
-                                        </Box>
-                                      ),
-                                    },
-                                    {
-                                      label: "Pallet",
-                                      dataKey: "palletNumber",
-                                      headerFormatter: () => (
-                                        <Box py="x0_25">
-                                          <Text fontSize="small" lineHeight="smallTextCompressed">
-                                            Pallet
-                                          </Text>
-                                        </Box>
-                                      ),
-                                      cellRenderer: ({ row }: { row: any }) => (
-                                        <Box py="x0_5" pr="x1">
-                                          <Input
-                                            value={row.palletNumber}
-                                            onChange={(e) =>
-                                              handleConsumptionRowChange(
-                                                row.id,
-                                                row.consumptionId,
-                                                "palletNumber",
-                                                e.target.value
-                                              )
-                                            }
-                                            disabled={
-                                              role === "customer" || (!productionRecordState.date && isInCreateEditMode)
-                                            }
-                                            inputWidth="100%"
-                                          />
-                                        </Box>
-                                      ),
-                                    },
-                                    {
-                                      label: "Quantity",
-                                      dataKey: "quantity",
-                                      headerFormatter: () => (
-                                        <Box py="x0_25">
-                                          <Text fontSize="small" lineHeight="smallTextCompressed">
-                                            Quantity
-                                          </Text>
-                                        </Box>
-                                      ),
-                                      cellRenderer: ({ row }: { row: any }) => (
-                                        <Box py="x0_5" pr="x1">
-                                          <Input
-                                            type="number"
-                                            value={row.quantity}
-                                            onChange={(e) =>
-                                              handleConsumptionRowChange(
-                                                row.id,
-                                                row.consumptionId,
-                                                "quantity",
-                                                e.target.value
-                                              )
-                                            }
-                                            disabled={
-                                              role === "customer" || (!productionRecordState.date && isInCreateEditMode)
-                                            }
-                                            inputWidth="100%"
-                                          />
-                                        </Box>
-                                      ),
-                                    },
-                                    {
-                                      label: "UOM",
-                                      dataKey: "uom",
-                                      width: "100px",
-                                      headerFormatter: () => (
-                                        <Box py="x0_25">
-                                          <Text fontSize="small" lineHeight="smallTextCompressed">
-                                            UOM
-                                          </Text>
-                                        </Box>
-                                      ),
-                                      cellRenderer: ({ row }: { row: any }) => (
-                                        <Box py="x0_5" pr="x1" width="7em">
-                                          <Select
-                                            value={row.uom}
-                                            onChange={(value) =>
-                                              handleConsumptionRowChange(
-                                                row.id,
-                                                row.consumptionId,
-                                                "uom",
-                                                String(value)
-                                              )
-                                            }
-                                            options={uomOptions}
-                                            disabled={
-                                              role === "customer" || (!productionRecordState.date && isInCreateEditMode)
-                                            }
-                                            width="100%"
-                                          />
-                                        </Box>
-                                      ),
-                                    },
-                                    ...(role === "supplier"
-                                      ? [
-                                          {
-                                            label: "",
-                                            dataKey: "actions",
-                                            width: "40px",
-                                            headerFormatter: () => null,
-                                            cellRenderer: ({ row }: { row: any }) => (
-                                              <IconicButton
-                                                icon="removeCircleOutline"
-                                                aria-label="Remove subcomponent consumption record"
-                                                onClick={(e) => {
-                                                  e.preventDefault();
-                                                  console.log("Remove button clicked, row:", row);
-                                                  // Extract the parent row ID by removing the consumption ID suffix
-                                                  const parentRowId = row.id.replace(`-${row.consumptionId}`, '');
-                                                  console.log("Extracted parentRowId:", parentRowId);
-                                                  console.log("consumptionId:", row.consumptionId);
-                                                  handleRemoveConsumptionRow(parentRowId, row.consumptionId);
-                                                }}
-                                                disabled={!productionRecordState.date && isInCreateEditMode}
-                                                tooltip="Remove subcomponent consumption record"
-                                                pr="x1"
-                                                py="x1"
-                                              />
-                                            ),
-                                          },
-                                        ]
-                                      : []),
-                                  ]}
-                                  rows={rowConsumptions[row.id].map((consumption) => ({
-                                    ...consumption,
-                                    id: `${row.id}-${consumption.id}`,
-                                    consumptionId: consumption.id,
-                                  }))}
-                                  keyField="id"
-                                  compact={true}
-                                  rowBorder={true}
-                                  className="subcomponent-consumption-edit-table"
-                                />
-                                {role === "supplier" && (
-                                  <Box mt="x1">
-                                    <QuietButton
-                                      icon="addCircleOutline"
-                                      iconSide="left"
-                                      fullWidth
-                                      onClick={() => handleAddConsumptionRow(row.id)}
-                                      type="button"
-                                      disabled={!productionRecordState.date && isInCreateEditMode}
-                                    >
-                                      Add subcomponent consumption record
-                                    </QuietButton>
-                                  </Box>
-                                )}
+                                              autoFocus={newlyAddedConsumptionId === row.consumptionId}
+                                              loadOptions={async (inputValue) => {
+                                                // Mock async search - replace with actual API call
+                                                const mockItems = [
+                                                  { value: "Raw Material A", label: "Raw Material A" },
+                                                  { value: "Raw Material B", label: "Raw Material B" },
+                                                  { value: "Raw Material C", label: "Raw Material C" },
+                                                  { value: "Component X", label: "Component X" },
+                                                  { value: "Component Y", label: "Component Y" },
+                                                ];
+                                                return mockItems.filter((item) =>
+                                                  item.label.toLowerCase().includes(inputValue.toLowerCase())
+                                                );
+                                              }}
+                                            />
+                                          </Box>
+                                        ),
+                                      },
+                                      {
+                                        label: "Customer's lot code",
+                                        dataKey: "customerLotCode",
+                                        headerFormatter: () => (
+                                          <Box py="x0_25">
+                                            <Text fontSize="small" lineHeight="smallTextCompressed">
+                                              Customer's lot code
+                                            </Text>
+                                          </Box>
+                                        ),
+                                        cellRenderer: ({ row }: { row: any }) => (
+                                          <Box py="x0_5" pr="x1">
+                                            <Input
+                                              value={row.customerLotCode || ""}
+                                              onChange={(e) =>
+                                                handleConsumptionRowChange(
+                                                  row.id,
+                                                  row.consumptionId,
+                                                  "customerLotCode",
+                                                  e.target.value
+                                                )
+                                              }
+                                              disabled={false}
+                                              inputWidth="100%"
+                                            />
+                                          </Box>
+                                        ),
+                                      },
+                                      {
+                                        label: "Supplier's lot code",
+                                        dataKey: "supplierLotCode",
+                                        headerFormatter: () => (
+                                          <Box py="x0_25">
+                                            <Text fontSize="small" lineHeight="smallTextCompressed">
+                                              Supplier's lot code
+                                            </Text>
+                                          </Box>
+                                        ),
+                                        cellRenderer: ({ row }: { row: any }) => (
+                                          <Box py="x0_5" pr="x1">
+                                            <Input
+                                              value={row.supplierLotCode || ""}
+                                              onChange={(e) =>
+                                                handleConsumptionRowChange(
+                                                  row.id,
+                                                  row.consumptionId,
+                                                  "supplierLotCode",
+                                                  e.target.value
+                                                )
+                                              }
+                                              disabled={
+                                                role === "customer" ||
+                                                (!productionRecordState.date && isInCreateEditMode)
+                                              }
+                                              inputWidth="100%"
+                                            />
+                                          </Box>
+                                        ),
+                                      },
+                                      {
+                                        label: "Expiry date",
+                                        dataKey: "expiryDate",
+                                        headerFormatter: () => (
+                                          <Box py="x0_25">
+                                            <Text fontSize="small" lineHeight="smallTextCompressed">
+                                              Expiry date
+                                            </Text>
+                                          </Box>
+                                        ),
+                                        cellRenderer: ({ row }: { row: any }) => (
+                                          <Box py="x0_5" pr="x1">
+                                            <DatePicker
+                                              selected={row.expiryDate ? new Date(row.expiryDate) : null}
+                                              onChange={(date) =>
+                                                handleConsumptionRowChange(
+                                                  row.id,
+                                                  row.consumptionId,
+                                                  "expiryDate",
+                                                  date?.toISOString().split("T")[0] || ""
+                                                )
+                                              }
+                                              width="100%"
+                                            />
+                                          </Box>
+                                        ),
+                                      },
+                                      {
+                                        label: "Pallet",
+                                        dataKey: "palletNumber",
+                                        headerFormatter: () => (
+                                          <Box py="x0_25">
+                                            <Text fontSize="small" lineHeight="smallTextCompressed">
+                                              Pallet
+                                            </Text>
+                                          </Box>
+                                        ),
+                                        cellRenderer: ({ row }: { row: any }) => (
+                                          <Box py="x0_5" pr="x1">
+                                            <Input
+                                              value={row.palletNumber}
+                                              onChange={(e) =>
+                                                handleConsumptionRowChange(
+                                                  row.id,
+                                                  row.consumptionId,
+                                                  "palletNumber",
+                                                  e.target.value
+                                                )
+                                              }
+                                              disabled={
+                                                role === "customer" ||
+                                                (!productionRecordState.date && isInCreateEditMode)
+                                              }
+                                              inputWidth="100%"
+                                            />
+                                          </Box>
+                                        ),
+                                      },
+                                      {
+                                        label: "Quantity",
+                                        dataKey: "quantity",
+                                        headerFormatter: () => (
+                                          <Box py="x0_25">
+                                            <Text fontSize="small" lineHeight="smallTextCompressed">
+                                              Quantity
+                                            </Text>
+                                          </Box>
+                                        ),
+                                        cellRenderer: ({ row }: { row: any }) => (
+                                          <Box py="x0_5" pr="x1">
+                                            <Input
+                                              type="number"
+                                              value={row.quantity}
+                                              onChange={(e) =>
+                                                handleConsumptionRowChange(
+                                                  row.id,
+                                                  row.consumptionId,
+                                                  "quantity",
+                                                  e.target.value
+                                                )
+                                              }
+                                              disabled={
+                                                role === "customer" ||
+                                                (!productionRecordState.date && isInCreateEditMode)
+                                              }
+                                              inputWidth="100%"
+                                            />
+                                          </Box>
+                                        ),
+                                      },
+                                      {
+                                        label: "UOM",
+                                        dataKey: "uom",
+                                        width: "100px",
+                                        headerFormatter: () => (
+                                          <Box py="x0_25">
+                                            <Text fontSize="small" lineHeight="smallTextCompressed">
+                                              UOM
+                                            </Text>
+                                          </Box>
+                                        ),
+                                        cellRenderer: ({ row }: { row: any }) => (
+                                          <Box py="x0_5" pr="x1" width="7em">
+                                            <Select
+                                              value={row.uom}
+                                              onChange={(value) =>
+                                                handleConsumptionRowChange(
+                                                  row.id,
+                                                  row.consumptionId,
+                                                  "uom",
+                                                  String(value)
+                                                )
+                                              }
+                                              options={uomOptions}
+                                              disabled={
+                                                role === "customer" ||
+                                                (!productionRecordState.date && isInCreateEditMode)
+                                              }
+                                              width="100%"
+                                            />
+                                          </Box>
+                                        ),
+                                      },
+                                      ...(role === "supplier"
+                                        ? [
+                                            {
+                                              label: "",
+                                              dataKey: "actions",
+                                              width: "40px",
+                                              headerFormatter: () => null,
+                                              cellRenderer: ({ row }: { row: any }) => (
+                                                <IconicButton
+                                                  icon="removeCircleOutline"
+                                                  aria-label="Remove subcomponent consumption record"
+                                                  onClick={(e) => {
+                                                    e.preventDefault();
+                                                    console.log("Remove button clicked, row:", row);
+                                                    // Extract the parent row ID by removing the consumption ID suffix
+                                                    const parentRowId = row.id.replace(`-${row.consumptionId}`, "");
+                                                    console.log("Extracted parentRowId:", parentRowId);
+                                                    console.log("consumptionId:", row.consumptionId);
+                                                    handleRemoveConsumptionRow(parentRowId, row.consumptionId);
+                                                  }}
+                                                  disabled={!productionRecordState.date && isInCreateEditMode}
+                                                  tooltip="Remove subcomponent consumption record"
+                                                  pr="x1"
+                                                  py="x1"
+                                                />
+                                              ),
+                                            },
+                                          ]
+                                        : []),
+                                    ]}
+                                    rows={rowConsumptions[row.id].map((consumption) => ({
+                                      ...consumption,
+                                      id: `${row.id}-${consumption.id}`,
+                                      consumptionId: consumption.id,
+                                    }))}
+                                    keyField="id"
+                                    compact={true}
+                                    rowBorder={true}
+                                    className="subcomponent-consumption-edit-table"
+                                  />
+                                  {role === "supplier" && (
+                                    <Box mt="x1">
+                                      <QuietButton
+                                        icon="addCircleOutline"
+                                        iconSide="left"
+                                        fullWidth
+                                        onClick={() => handleAddConsumptionRow(row.id)}
+                                        type="button"
+                                        disabled={!productionRecordState.date && isInCreateEditMode}
+                                      >
+                                        Add subcomponent consumption record
+                                      </QuietButton>
+                                    </Box>
+                                  )}
                                 </Box>
                               )}
                             </Box>
@@ -3992,7 +4009,7 @@ export const Details11 = () => {
                   </Field>
                 </Box>
               ))}
-              
+
               <Box>
                 <QuietButton type="button" icon="add" iconSide="left" fullWidth onClick={handleAddConsumptionMaterial}>
                   Add consumption material

@@ -317,7 +317,6 @@ export const OrgSettings = () => {
                     </Box>
                   )}
                 </Box>
-
               </Box>
 
               <Box mb="x2">
