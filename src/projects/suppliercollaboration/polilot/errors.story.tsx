@@ -3158,7 +3158,7 @@ export const Details11 = () => {
                     }))
                   }
                   selected={productionRecordState.date ? new Date(productionRecordState.date) : null}
-                  inputProps={{ disabled: role === "customer" && isEditingProduction, autoFocus: true }}
+                  inputProps={{ disabled: role === "customer" && isEditingProduction }}
                   errorMessage="Required"
                 />
               </Field>
@@ -4065,7 +4065,6 @@ export const Details11 = () => {
             <Input
               labelText="BOM revision and release date"
               id="bomRevision"
-              autoFocus
               value={editFormDataState.bomRevision}
               onChange={(e) => setEditFormDataState((prev) => ({ ...prev, bomRevision: e.target.value }))}
             />
@@ -4495,7 +4494,7 @@ const Details11Default2 = () => {
                   }))
                 }
                 selected={productionRecordState.date ? new Date(productionRecordState.date) : null}
-                inputProps={{ disabled: role === "customer" && isEditingProduction, autoFocus: true }}
+                inputProps={{ disabled: role === "customer" && isEditingProduction }}
               />
             </Field>
 
