@@ -95,6 +95,54 @@ const secondaryMenu = [
   },
 ];
 
+// Reusable RecordNumberPill component
+const RecordNumberPill = ({
+  number,
+  tooltip,
+  placement = "top",
+  fontSize = "smaller",
+  style,
+  mr,
+}: {
+  number: string;
+  tooltip?: string;
+  placement?: "left" | "right" | "top" | "bottom";
+  fontSize?: "smaller" | "small";
+  style?: React.CSSProperties;
+  mr?: string;
+}) => {
+  const pillContent = (
+    <Box
+      backgroundColor="lightGrey"
+      px="half"
+      borderRadius="small"
+      width="fit-content"
+      mr={mr}
+      style={{ display: "inline-block" }}
+    >
+      <Text
+        color="darkGrey"
+        fontSize={fontSize}
+        fontWeight="bold"
+        textTransform="uppercase"
+        letterSpacing=".05em"
+        lineHeight="smallerText"
+        style={style}
+      >
+        {number}
+      </Text>
+    </Box>
+  );
+
+  return tooltip ? (
+    <Tooltip tooltip={tooltip} placement={placement}>
+      {pillContent}
+    </Tooltip>
+  ) : (
+    pillContent
+  );
+};
+
 export const Details11 = () => {
   const [selectedIndex, setSelectedIndex] = useState(1); // Production records tab is index 1
   const [showProductionSidebar, setShowProductionSidebar] = useState(true); // Open by default for errors
@@ -137,6 +185,56 @@ export const Details11 = () => {
       uom: "kg",
       verticalAlign: "top",
     }, // Empty supplier lot code for error
+    {
+      id: "row-3",
+      palletNumber: "PAL-003",
+      customerLotCode: "CUST-003",
+      supplierLotCode: "SUPP-003",
+      expiryDate: "2025-11-15",
+      quantity: "75",
+      uom: "cs",
+      verticalAlign: "top",
+    },
+    {
+      id: "row-4",
+      palletNumber: "PAL-004",
+      customerLotCode: "CUST-004",
+      supplierLotCode: "SUPP-004",
+      expiryDate: "2025-10-20",
+      quantity: "30",
+      uom: "lb",
+      verticalAlign: "top",
+    },
+    {
+      id: "row-5",
+      palletNumber: "PAL-005",
+      customerLotCode: "CUST-005",
+      supplierLotCode: "",
+      expiryDate: "2025-09-10",
+      quantity: "60",
+      uom: "ea",
+      verticalAlign: "top",
+    }, // Empty supplier lot code for error
+    {
+      id: "row-6",
+      palletNumber: "PAL-006",
+      customerLotCode: "CUST-006",
+      supplierLotCode: "SUPP-006",
+      expiryDate: "2025-08-25",
+      quantity: "90",
+      uom: "g",
+      verticalAlign: "top",
+    },
+    {
+      id: "row-7",
+      palletNumber: "PAL-007",
+      customerLotCode: "CUST-007",
+      supplierLotCode: "SUPP-007",
+      expiryDate: "2025-07-30",
+      quantity: "120",
+      uom: "kg",
+      verticalAlign: "top",
+    },
   ]);
   const [rowNotes, setRowNotes] = useState<Record<string, string>>({});
   const [rowConsumptions, setRowConsumptions] = useState<
@@ -183,6 +281,61 @@ export const Details11 = () => {
           uom: "", // Empty for error demonstration
           verticalAlign: "top",
         },
+        {
+          id: "consumption-1-3",
+          item: "Component B",
+          customerLotCode: "CUST-LOT-003",
+          supplierLotCode: "SUPP-LOT-003",
+          expiryDate: "2025-11-15",
+          palletNumber: "PAL-003",
+          quantity: "40",
+          uom: "cs",
+          verticalAlign: "top",
+        },
+        {
+          id: "consumption-1-4",
+          item: "Raw Material C",
+          customerLotCode: "CUST-LOT-004",
+          supplierLotCode: "SUPP-LOT-004",
+          expiryDate: "2025-10-20",
+          palletNumber: "PAL-004",
+          quantity: "30",
+          uom: "lb",
+          verticalAlign: "top",
+        },
+        {
+          id: "consumption-1-5",
+          item: "", // Empty for error demonstration
+          customerLotCode: "CUST-LOT-005",
+          supplierLotCode: "SUPP-LOT-005",
+          expiryDate: "2025-09-10",
+          palletNumber: "PAL-005",
+          quantity: "20",
+          uom: "ea",
+          verticalAlign: "top",
+        },
+        {
+          id: "consumption-1-6",
+          item: "Component D",
+          customerLotCode: "CUST-LOT-006",
+          supplierLotCode: "SUPP-LOT-006",
+          expiryDate: "2025-08-25",
+          palletNumber: "PAL-006",
+          quantity: "35",
+          uom: "g",
+          verticalAlign: "top",
+        },
+        {
+          id: "consumption-1-7",
+          item: "Raw Material E",
+          customerLotCode: "CUST-LOT-007",
+          supplierLotCode: "SUPP-LOT-007",
+          expiryDate: "2025-07-30",
+          palletNumber: "PAL-007",
+          quantity: "50",
+          uom: "kg",
+          verticalAlign: "top",
+        },
       ],
     });
   }, []);
@@ -202,53 +355,6 @@ export const Details11 = () => {
   // SummaryDivider component
   const SummaryDivider = () => <Box width="1px" height="x6" backgroundColor="lightGrey" mx="x2" />;
 
-  // Reusable RecordNumberPill component
-  const RecordNumberPill = ({
-    number,
-    tooltip,
-    placement = "top",
-    fontSize = "smaller",
-    style,
-    mr,
-  }: {
-    number: string;
-    tooltip?: string;
-    placement?: "left" | "right" | "top" | "bottom";
-    fontSize?: "smaller" | "small";
-    style?: React.CSSProperties;
-    mr?: string;
-  }) => {
-    const pillContent = (
-      <Box
-        backgroundColor="lightGrey"
-        px="half"
-        borderRadius="small"
-        width="fit-content"
-        mr={mr}
-        style={{ display: "inline-block" }}
-      >
-        <Text
-          color="darkGrey"
-          fontSize={fontSize}
-          fontWeight="bold"
-          textTransform="uppercase"
-          letterSpacing=".05em"
-          lineHeight="smallerText"
-          style={style}
-        >
-          {number}
-        </Text>
-      </Box>
-    );
-
-    return tooltip ? (
-      <Tooltip tooltip={tooltip} placement={placement}>
-        {pillContent}
-      </Tooltip>
-    ) : (
-      pillContent
-    );
-  };
 
   // ActualProductionRecordNumberPill component (using the reusable component)
   const ActualProductionRecordNumberPill = ({
@@ -1645,6 +1751,31 @@ export const Details11 = () => {
         .actual-production-edit-table .flex-row .nds-select {
           vertical-align: top !important;
         }
+        
+        /* Remove border-bottom for rows with has-error class */
+        .subcomponent-consumption-edit-table tbody tr.has-error {
+          border-bottom: none !important;
+        }
+        
+        /* Remove border-bottom for rows followed by error box */
+        .subcomponent-consumption-edit-table tbody tr:has(+ tr.error-message-row) {
+          border-bottom: none !important;
+        }
+        
+        /* Alternative approach: remove border from rows that are followed by InlineValidation */
+        .subcomponent-consumption-edit-table tbody tr:last-child {
+          border-bottom: none !important;
+        }
+        
+        /* Remove border-bottom for actual production rows followed by error box */
+        .actual-production-edit-table .flex-row:has(+ .error-message-box) {
+          border-bottom: none !important;
+        }
+        
+        /* Remove border-bottom from production rows that have errors */
+        .actual-production-edit-table .flex-row.has-error {
+          border-bottom: none !important;
+        }
         `}
       </style>
       <ToastContainer />
@@ -1836,6 +1967,11 @@ export const Details11 = () => {
           }
           .subcomponent-consumption-record-table tbody tr {
             border-bottom: 1px solid #e4e7eb !important;
+          }
+          
+          /* Remove border-bottom for rows with has-error class */
+          .subcomponent-consumption-edit-table tbody tr.has-error {
+            border-bottom: none !important;
           }
         `}
       </style>
@@ -3437,6 +3573,7 @@ export const Details11 = () => {
                                   {
                                     label: "Item",
                                     dataKey: "item",
+                                    width: "400px",
                                     headerFormatter: () => (
                                       <Box py="x0_25">
                                         <Text fontSize="small" lineHeight="smallTextCompressed">
@@ -3445,7 +3582,7 @@ export const Details11 = () => {
                                       </Box>
                                     ),
                                     cellRenderer: ({ row }: { row: any }) => (
-                                      <Box py="x0_5" pr="x1" width="12em">
+                                      <Box py="x0_5" pr="x1">
                                         <AsyncSelect
                                           value={row.item}
                                           onChange={(value) =>
@@ -3614,7 +3751,7 @@ export const Details11 = () => {
                                   {
                                     label: "UOM",
                                     dataKey: "uom",
-                                    width: "100px",
+                                    width: "240px",
                                     headerFormatter: () => (
                                       <Box py="x0_25">
                                         <Text fontSize="small" lineHeight="smallTextCompressed">
@@ -3623,7 +3760,7 @@ export const Details11 = () => {
                                       </Box>
                                     ),
                                     cellRenderer: ({ row }: { row: any }) => (
-                                      <Box py="x0_5" pr="x1" width="7em">
+                                      <Box py="x0_5" pr="x1">
                                         <Select
                                           value={row.uom}
                                           onChange={(value) =>
@@ -4110,6 +4247,54 @@ export const Default = () => (
 
 // Default2 component with InlineValidation error boxes (old approach)
 const Details11Default2 = () => {
+  // Reusable RecordNumberPill component for Default2
+  const RecordNumberPill = ({
+    number,
+    tooltip,
+    placement = "top",
+    fontSize = "smaller",
+    style,
+    mr,
+  }: {
+    number: string;
+    tooltip?: string;
+    placement?: "left" | "right" | "top" | "bottom";
+    fontSize?: "smaller" | "small";
+    style?: React.CSSProperties;
+    mr?: string;
+  }) => {
+    const pillContent = (
+      <Box
+        backgroundColor="lightGrey"
+        px="half"
+        borderRadius="small"
+        width="fit-content"
+        mr={mr}
+        style={{ display: "inline-block" }}
+      >
+        <Text
+          color="darkGrey"
+          fontSize={fontSize}
+          fontWeight="bold"
+          textTransform="uppercase"
+          letterSpacing=".05em"
+          lineHeight="smallerText"
+          style={style}
+        >
+          {number}
+        </Text>
+      </Box>
+    );
+
+    return tooltip ? (
+      <Tooltip tooltip={tooltip} placement={placement}>
+        {pillContent}
+      </Tooltip>
+    ) : (
+      pillContent
+    );
+  };
+
   // Copy all the state and handlers from Details11
   const [showProductionSidebar, setShowProductionSidebar] = useState(true); // Open by default for errors
   const [isEditingProduction, setIsEditingProduction] = useState(false);
@@ -4151,6 +4336,56 @@ const Details11Default2 = () => {
       uom: "kg",
       verticalAlign: "top",
     }, // Empty supplier lot code for error
+    {
+      id: "row-3",
+      palletNumber: "PAL-003",
+      customerLotCode: "CUST-003",
+      supplierLotCode: "SUPP-003",
+      expiryDate: "2025-11-15",
+      quantity: "75",
+      uom: "cs",
+      verticalAlign: "top",
+    },
+    {
+      id: "row-4",
+      palletNumber: "PAL-004",
+      customerLotCode: "CUST-004",
+      supplierLotCode: "SUPP-004",
+      expiryDate: "2025-10-20",
+      quantity: "30",
+      uom: "lb",
+      verticalAlign: "top",
+    },
+    {
+      id: "row-5",
+      palletNumber: "PAL-005",
+      customerLotCode: "CUST-005",
+      supplierLotCode: "",
+      expiryDate: "2025-09-10",
+      quantity: "60",
+      uom: "ea",
+      verticalAlign: "top",
+    }, // Empty supplier lot code for error
+    {
+      id: "row-6",
+      palletNumber: "PAL-006",
+      customerLotCode: "CUST-006",
+      supplierLotCode: "SUPP-006",
+      expiryDate: "2025-08-25",
+      quantity: "90",
+      uom: "g",
+      verticalAlign: "top",
+    },
+    {
+      id: "row-7",
+      palletNumber: "PAL-007",
+      customerLotCode: "CUST-007",
+      supplierLotCode: "SUPP-007",
+      expiryDate: "2025-07-30",
+      quantity: "120",
+      uom: "kg",
+      verticalAlign: "top",
+    },
   ]);
   const [rowNotes, setRowNotes] = useState<Record<string, string>>({});
   const [rowConsumptions, setRowConsumptions] = useState<
@@ -4197,6 +4432,61 @@ const Details11Default2 = () => {
           uom: "", // Empty for error demonstration
           verticalAlign: "top",
         },
+        {
+          id: "consumption-1-3",
+          item: "Component B",
+          customerLotCode: "CUST-LOT-003",
+          supplierLotCode: "SUPP-LOT-003",
+          expiryDate: "2025-11-15",
+          palletNumber: "PAL-003",
+          quantity: "40",
+          uom: "cs",
+          verticalAlign: "top",
+        },
+        {
+          id: "consumption-1-4",
+          item: "Raw Material C",
+          customerLotCode: "CUST-LOT-004",
+          supplierLotCode: "SUPP-LOT-004",
+          expiryDate: "2025-10-20",
+          palletNumber: "PAL-004",
+          quantity: "30",
+          uom: "lb",
+          verticalAlign: "top",
+        },
+        {
+          id: "consumption-1-5",
+          item: "", // Empty for error demonstration
+          customerLotCode: "CUST-LOT-005",
+          supplierLotCode: "SUPP-LOT-005",
+          expiryDate: "2025-09-10",
+          palletNumber: "PAL-005",
+          quantity: "20",
+          uom: "ea",
+          verticalAlign: "top",
+        },
+        {
+          id: "consumption-1-6",
+          item: "Component D",
+          customerLotCode: "CUST-LOT-006",
+          supplierLotCode: "SUPP-LOT-006",
+          expiryDate: "2025-08-25",
+          palletNumber: "PAL-006",
+          quantity: "35",
+          uom: "g",
+          verticalAlign: "top",
+        },
+        {
+          id: "consumption-1-7",
+          item: "Raw Material E",
+          customerLotCode: "CUST-LOT-007",
+          supplierLotCode: "SUPP-LOT-007",
+          expiryDate: "2025-07-30",
+          palletNumber: "PAL-007",
+          quantity: "50",
+          uom: "kg",
+          verticalAlign: "top",
+        },
       ],
     });
   }, []);
@@ -4227,36 +4517,6 @@ const Details11Default2 = () => {
   };
 
   // Define RecordNumberPill locally for Default2 (not exported from NDS)
-  const RecordNumberPill = ({
-    number,
-    tooltip,
-    placement,
-  }: {
-    number: string;
-    tooltip?: string;
-    placement?: string;
-  }) => (
-    <Box
-      backgroundColor="midGrey"
-      borderColor="whiteGrey"
-      borderWidth="1px"
-      borderStyle="solid"
-      px="half"
-      borderRadius="small"
-      style={{ border: "1px solid #E5E5E5" }}
-    >
-      <Text
-        color="white"
-        fontSize="small"
-        lineHeight="smallTextCompressed"
-        fontWeight="bold"
-        textTransform="uppercase"
-        letterSpacing=".05em"
-      >
-        {number}
-      </Text>
-    </Box>
-  );
 
   // Copy the main page content from Details11 but with InlineValidation error boxes
   return (
@@ -4288,6 +4548,31 @@ const Details11Default2 = () => {
         .actual-production-edit-table .flex-row .nds-input,
         .actual-production-edit-table .flex-row .nds-select {
           vertical-align: top !important;
+        }
+        
+        /* Remove border-bottom for rows with has-error class */
+        .subcomponent-consumption-edit-table tbody tr.has-error {
+          border-bottom: none !important;
+        }
+        
+        /* Remove border-bottom for rows followed by error box */
+        .subcomponent-consumption-edit-table tbody tr:has(+ tr.error-message-row) {
+          border-bottom: none !important;
+        }
+        
+        /* Alternative approach: remove border from rows that are followed by InlineValidation */
+        .subcomponent-consumption-edit-table tbody tr:last-child {
+          border-bottom: none !important;
+        }
+        
+        /* Remove border-bottom for actual production rows followed by error box */
+        .actual-production-edit-table .flex-row:has(+ .error-message-box) {
+          border-bottom: none !important;
+        }
+        
+        /* Remove border-bottom from production rows that have errors */
+        .actual-production-edit-table .flex-row.has-error {
+          border-bottom: none !important;
         }
         `}
       </style>
@@ -4446,11 +4731,11 @@ const Details11Default2 = () => {
               </Box>
 
               {/* Error validation boxes */}
-              <Box mt="x2">
+              <Box mt="x0_5" pb="x1_5" pl="x1_5" borderBottom="solid 1px" borderColor="lightGrey">
                 <InlineValidation errorMessage="Supplier's lot code is required for PAL-002" />
               </Box>
 
-              <Box mt="x2">
+              <Box mt="x2" pl="x2">
                 <InlineValidation errorMessage="Item and UOM are required for consumption record #002" />
               </Box>
             </Box>
@@ -4535,28 +4820,28 @@ const Details11Default2 = () => {
 
             <Heading4 mb="x2">Actual production</Heading4>
 
-            <Box>
+            <Box borderBottom="solid 1px" borderColor="lightGrey">
               {/* Table Header */}
-              <Flex py="x1" px="x1" backgroundColor="lightGrey" borderRadius="medium" mb="x1" gap="x1">
-                <Box width="3em" textAlign="center" fontWeight="bold">
+              <Flex py="x1" px="x1" borderBottom="solid 1px" borderColor="lightGrey" gap="x1">
+                <Box width="18%">
                   #
                 </Box>
-                <Box width="100%" fontWeight="bold">
+                <Box width="100%">
                   Pallet number
                 </Box>
-                <Box width="100%" fontWeight="bold">
+                <Box width="100%">
                   Customer's lot code
                 </Box>
-                <Box width="100%" fontWeight="bold">
+                <Box width="100%">
                   Supplier's lot code
                 </Box>
-                <Box width="100%" fontWeight="bold">
+                <Box width="100%">
                   Expiry date
                 </Box>
-                <Box width="100%" fontWeight="bold">
+                <Box width="100%">
                   Quantity
                 </Box>
-                <Box width="75%" fontWeight="bold">
+                <Box width="100%">
                   UOM
                 </Box>
               </Flex>
@@ -4565,8 +4850,15 @@ const Details11Default2 = () => {
               {productionRows.map((row, index) => (
                 <Box key={row.id}>
                   {/* Main Production Row */}
-                  <Flex alignItems="center" py="x0" gap="x1" className="flex-row">
-                    <Flex width="3em" alignItems="center" justifyContent="center" ml="x1" mr="x0_5" pt="x2">
+                  <Flex 
+                    alignItems="center" 
+                    py="x0" 
+                    gap="x1" 
+                    className={`flex-row ${row.supplierLotCode === "" ? "has-error" : ""}`} 
+                    borderBottom={row.supplierLotCode === "" ? "none" : "solid 1px"} 
+                    borderColor="lightGrey"
+                  >
+                    <Flex width="3em" alignItems="center" justifyContent="center" ml="x1" mr="x0_5">
                       <RecordNumberPill number={`${String(index + 1).padStart(3, "0")}`} />
                     </Flex>
                     <Box width="100%">
@@ -4574,7 +4866,6 @@ const Details11Default2 = () => {
                         value={row.palletNumber}
                         onChange={(e) => handleProductionRowChange(row.id, "palletNumber", e.target.value)}
                         py="x1"
-                        disabled={role === "customer" && isEditingProduction}
                         width="100%"
                       />
                     </Box>
@@ -4583,7 +4874,7 @@ const Details11Default2 = () => {
                         value={row.customerLotCode || ""}
                         onChange={(e) => handleProductionRowChange(row.id, "customerLotCode", e.target.value)}
                         py="x1"
-                        disabled={role === "supplier"}
+
                         width="100%"
                       />
                     </Box>
@@ -4591,10 +4882,7 @@ const Details11Default2 = () => {
                       <Input
                         value={row.supplierLotCode || ""}
                         onChange={(e) => handleProductionRowChange(row.id, "supplierLotCode", e.target.value)}
-                        py="x1"
-                        disabled={role === "customer"}
                         width="100%"
-                        // NO errorMessage prop - using InlineValidation instead
                       />
                     </Box>
                     <Box width="100%">
@@ -4602,7 +4890,7 @@ const Details11Default2 = () => {
                         value={row.expiryDate}
                         onChange={(e) => handleProductionRowChange(row.id, "expiryDate", e.target.value)}
                         py="x1"
-                        disabled={role === "customer" && isEditingProduction}
+
                         width="100%"
                       />
                     </Box>
@@ -4611,11 +4899,11 @@ const Details11Default2 = () => {
                         value={row.quantity}
                         onChange={(e) => handleProductionRowChange(row.id, "quantity", e.target.value)}
                         py="x1"
-                        disabled={role === "customer" && isEditingProduction}
+
                         width="100%"
                       />
                     </Box>
-                    <Box width="100%" pt="x1">
+                    <Box width="100%">
                       <Select
                         value={row.uom}
                         onChange={(value) => handleProductionRowChange(row.id, "uom", String(value))}
@@ -4626,133 +4914,236 @@ const Details11Default2 = () => {
                           { value: "oz", label: "oz" },
                           { value: "cases", label: "cases" },
                         ]}
-                        disabled={role === "customer" && isEditingProduction}
                         width="100%"
-                        // NO errorMessage prop - using InlineValidation instead
                       />
                     </Box>
                   </Flex>
 
                   {/* InlineValidation error box for supplier lot code */}
-                  {row.id === "row-2" && row.supplierLotCode === "" && (
-                    <Box mt="x1" mb="x2">
+                  {(row.id === "row-2" || row.id === "row-5") && row.supplierLotCode === "" && (
+                    <Box pt="x0_5" pb="x1_5" pl="x1_5" borderBottom="solid 1px" borderColor="lightGrey" className="error-message-box">
                       <InlineValidation errorMessage="Supplier's lot code is required" />
                     </Box>
                   )}
 
                   {/* Subcomponent Consumption Table */}
                   {rowConsumptions[row.id] && rowConsumptions[row.id].length > 0 && (
-                    <Box ml="x4" mt="x2" mb="x2">
+                    <Box ml="x4">
                       <Table
-                        rows={rowConsumptions[row.id].map((consumption, index) => ({
+                        rows={rowConsumptions[row.id].map((consumption) => ({
                           ...consumption,
-                          subcomponentConsumptionRecordItem: String(index + 1).padStart(3, "0"),
+                          id: `${row.id}-${consumption.id}`,
+                          consumptionId: consumption.id,
                         }))}
                         columns={[
                           {
                             label: "#",
-                            dataKey: "subcomponentConsumptionRecordItem",
-                            width: "3em",
+                            dataKey: "recordNumber",
+                            width: "40px",
+                            headerFormatter: () => (
+                              <Box py="x0_25">
+                                <Text fontSize="small" lineHeight="smallTextCompressed">
+                                  #
+                                </Text>
+                              </Box>
+                            ),
                             cellRenderer: ({ row }: { row: any }) => (
-                              <Box py="x0_75" mr="x1" pl="half" display="flex" justifyContent="flex-start">
-                                <RecordNumberPill number={row.subcomponentConsumptionRecordItem} />
+                              <Box
+                                py="x2"
+                                px="x0_5"
+                                display="flex"
+                                alignItems="center"
+                                justifyContent="center"
+                              >
+                                <RecordNumberPill number={row.pillNumber || "001"} />
                               </Box>
                             ),
                           },
                           {
                             label: "Item",
                             dataKey: "item",
-                            width: "auto",
-                            headerFormatter: (column: any) => (
-                              <Text fontSize="small" lineHeight="smallTextCompressed">
-                                {column.label}
-                              </Text>
+                            width: "140px",
+                            headerFormatter: () => (
+                              <Box py="x0_25">
+                                <Text fontSize="small" lineHeight="smallTextCompressed">
+                                  Item
+                                </Text>
+                              </Box>
                             ),
                             cellRenderer: ({ row }: { row: any }) => (
-                              <Box py="x0_75" mr="x1" pl="half">
-                                <Text
-                                  fontSize="small"
-                                  lineHeight="smallTextCompressed"
-                                  color={row.item === "" ? "red" : "black"}
-                                >
-                                  {row.item || "Missing"}
-                                </Text>
+                              <Box py="x0_5" pr="x0_5" width="140px">
+                                <AsyncSelect
+                                  value={row.item}
+                                  onChange={(value) => {
+                                    // Handle item change
+                                    console.log("Item changed:", value);
+                                  }}
+                                  loadOptions={async (inputValue) => {
+                                    // Mock async search - replace with actual API call
+                                    const mockItems = [
+                                      { value: "Raw Material A", label: "Raw Material A" },
+                                      { value: "Raw Material B", label: "Raw Material B" },
+                                      { value: "Raw Material C", label: "Raw Material C" },
+                                      { value: "Component X", label: "Component X" },
+                                      { value: "Component Y", label: "Component Y" },
+                                    ];
+                                    return mockItems.filter((item) =>
+                                      item.label.toLowerCase().includes(inputValue.toLowerCase())
+                                    );
+                                  }}
+                                />
                               </Box>
                             ),
                           },
                           {
                             label: "Customer's lot code",
                             dataKey: "customerLotCode",
-                            width: "180px",
-                            cellRenderer: ({ row }: { row: any }) => (
-                              <Box py="x0_75" mr="x1" pl="half">
+                            width: "160px",
+                            headerFormatter: () => (
+                              <Box py="x0_25">
                                 <Text fontSize="small" lineHeight="smallTextCompressed">
-                                  {row.customerLotCode}
+                                  Customer's lot code
                                 </Text>
+                              </Box>
+                            ),
+                            cellRenderer: ({ row }: { row: any }) => (
+                              <Box py="x0_5" pr="x0_5">
+                                <Input
+                                inputWidth="160px"
+                                  value={row.customerLotCode || ""}
+                                  onChange={(e) => {
+                                    // Handle customer lot code change
+                                    console.log("Customer lot code changed:", e.target.value);
+                                  }}
+                                />
                               </Box>
                             ),
                           },
                           {
                             label: "Supplier's lot code",
                             dataKey: "supplierLotCode",
-                            width: "180px",
-                            cellRenderer: ({ row }: { row: any }) => (
-                              <Box py="x0_75" mr="x1" pl="half">
+                            width: "160px",
+                            headerFormatter: () => (
+                              <Box py="x0_25">
                                 <Text fontSize="small" lineHeight="smallTextCompressed">
-                                  {row.supplierLotCode}
+                                  Supplier's lot code
                                 </Text>
+                              </Box>
+                            ),
+                            cellRenderer: ({ row }: { row: any }) => (
+                              <Box py="x0_5" pr="x0_5">
+                                <Input
+                                inputWidth="160px"
+                                  value={row.supplierLotCode || ""}
+                                  onChange={(e) => {
+                                    // Handle supplier lot code change
+                                    console.log("Supplier lot code changed:", e.target.value);
+                                  }}
+                                />
                               </Box>
                             ),
                           },
                           {
                             label: "Expiry date",
                             dataKey: "expiryDate",
-                            width: "120px",
-                            cellRenderer: ({ row }: { row: any }) => (
-                              <Box py="x0_75" mr="x1" pl="half">
+                            width: "140px",
+                            headerFormatter: () => (
+                              <Box py="x0_25">
                                 <Text fontSize="small" lineHeight="smallTextCompressed">
-                                  {row.expiryDate}
+                                  Expiry date
                                 </Text>
+                              </Box>
+                            ),
+                            cellRenderer: ({ row }: { row: any }) => (
+                              <Box py="x0_5" pr="x0_5">
+                                <DatePicker
+
+                                  selected={row.expiryDate ? new Date(row.expiryDate) : null}
+                                  onChange={(date) => {
+                                    // Handle expiry date change
+                                    console.log("Expiry date changed:", date);
+                                  }}
+                                />
                               </Box>
                             ),
                           },
                           {
                             label: "Pallet number",
                             dataKey: "palletNumber",
-                            width: "120px",
-                            cellRenderer: ({ row }: { row: any }) => (
-                              <Box py="x0_75" mr="x1" pl="half">
+                            width: "140px",
+                            headerFormatter: () => (
+                              <Box py="x0_25">
                                 <Text fontSize="small" lineHeight="smallTextCompressed">
-                                  {row.palletNumber}
+                                  Pallet number
                                 </Text>
+                              </Box>
+                            ),
+                            cellRenderer: ({ row }: { row: any }) => (
+                              <Box py="x0_5" pr="x0_5">
+                                <Input
+                                inputWidth="140px"
+                                  value={row.palletNumber || ""}
+                                  onChange={(e) => {
+                                    // Handle pallet number change
+                                    console.log("Pallet number changed:", e.target.value);
+                                  }}
+                                />
                               </Box>
                             ),
                           },
                           {
                             label: "Quantity",
                             dataKey: "quantity",
-                            width: "100px",
-                            cellRenderer: ({ row }: { row: any }) => (
-                              <Box py="x0_75" mr="x1" pl="half">
+                            width: "140px",
+                            headerFormatter: () => (
+                              <Box py="x0_25">
                                 <Text fontSize="small" lineHeight="smallTextCompressed">
-                                  {row.quantity}
+                                  Quantity
                                 </Text>
+                              </Box>
+                            ),
+                            cellRenderer: ({ row }: { row: any }) => (
+                              <Box py="x0_5" pr="x0_5">
+                                <Input
+                                inputWidth="140px"
+                                  type="number"
+                                  min="0"
+                                  value={row.quantity || ""}
+                                  onChange={(e) => {
+                                    // Handle quantity change
+                                    console.log("Quantity changed:", e.target.value);
+                                  }}
+                                />
                               </Box>
                             ),
                           },
                           {
                             label: "UOM",
                             dataKey: "uom",
-                            width: "80px",
-                            cellRenderer: ({ row }: { row: any }) => (
-                              <Box py="x0_75" mr="x1" pl="half">
-                                <Text
-                                  fontSize="small"
-                                  lineHeight="smallTextCompressed"
-                                  color={row.uom === "" ? "red" : "black"}
-                                >
-                                  {row.uom || "Missing"}
+                            width: "140px",
+                            headerFormatter: () => (
+                              <Box py="x0_25">
+                                <Text fontSize="small" lineHeight="smallTextCompressed">
+                                  UOM
                                 </Text>
+                              </Box>
+                            ),
+                            cellRenderer: ({ row }: { row: any }) => (
+                              <Box py="x0_5" pr="x0_5" width="140px">
+                                <Select
+                                      value={row.uom || ""}
+                                  onChange={(value) => {
+                                    // Handle UOM change
+                                    console.log("UOM changed:", value);
+                                  }}
+                                  options={[
+                                    { value: "kg", label: "kg" },
+                                    { value: "lb", label: "lb" },
+                                    { value: "cs", label: "cs" },
+                                    { value: "ea", label: "ea" },
+                                    { value: "g", label: "g" },
+                                  ]}
+                                />
                               </Box>
                             ),
                           },
@@ -4767,7 +5158,7 @@ const Details11Default2 = () => {
                       {rowConsumptions[row.id].some(
                         (consumption) => consumption.item === "" || consumption.uom === ""
                       ) && (
-                        <Box mt="x1" mb="x2">
+                        <Box mt="x0_5" pb="x1_5" pl="x1_5" borderBottom="solid 1px" borderColor="lightGrey">
                           <InlineValidation errorMessage="Item and UOM are required for consumption records" />
                         </Box>
                       )}
