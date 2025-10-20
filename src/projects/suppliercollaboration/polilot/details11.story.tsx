@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { toast, Tooltip } from "../../..";
 import {
   Box,
@@ -108,6 +108,9 @@ export const Details11 = () => {
   const [historyLogFilter, setHistoryLogFilter] = useState("All");
   const [actualQuantity, setActualQuantity] = useState("");
   const [productionRows, setProductionRows] = useState([]);
+  const [initialProductionRows, setInitialProductionRows] = useState([]);
+  const [initialRowConsumptions, setInitialRowConsumptions] = useState<Record<string, any[]>>({});
+  const [initialRowNotes, setInitialRowNotes] = useState<Record<string, string>>({});
   const [rowNotes, setRowNotes] = useState<Record<string, string>>({});
   const [rowConsumptions, setRowConsumptions] = useState<
     Record<
@@ -283,21 +286,6 @@ export const Details11 = () => {
 
   // Nested table data now imported from nestedTableData.tsx
 
-  // Ref for the Date field
-  const dateFieldRef = useRef<HTMLInputElement>(null);
-
-  // Focus Date field when production sidebar opens
-  useEffect(() => {
-    if (showProductionSidebar) {
-      // Small delay to ensure the sidebar is fully rendered
-      const timer = setTimeout(() => {
-        if (dateFieldRef.current) {
-          dateFieldRef.current.focus();
-        }
-      }, 100);
-      return () => clearTimeout(timer);
-    }
-  }, [showProductionSidebar]);
 
   // Actual production report columns configuration
   const actualProductionReportColumns = [
@@ -999,7 +987,9 @@ export const Details11 = () => {
     }
 
     setProductionRows(rows);
+    setInitialProductionRows(rows);
     setRowNotes(notes);
+    setInitialRowNotes(notes);
 
     // Extract consumption materials data for each production row
     const newRowConsumptions: Record<
@@ -1098,6 +1088,7 @@ export const Details11 = () => {
     }
 
     setRowConsumptions(newRowConsumptions);
+    setInitialRowConsumptions(newRowConsumptions);
     setShowProductionSidebar(true);
   };
 
@@ -1111,8 +1102,11 @@ export const Details11 = () => {
     setProductionEntryType("quick");
     setActualQuantity("");
     setProductionRows([]);
+    setInitialProductionRows([]);
     setRowNotes({});
+    setInitialRowNotes({});
     setRowConsumptions({});
+    setInitialRowConsumptions({});
     setHasAugust8thData(false);
     setProductionRecordState({
       date: "",
@@ -1195,7 +1189,11 @@ export const Details11 = () => {
 
   const confirmRemoveProductionRow = () => {
     if (pendingRemoveRowId && productionRows.length > 1) {
-      setProductionRows((prev) => prev.filter((row) => row.id !== pendingRemoveRowId));
+      // Only allow removal if it's a newly added row (not in initial rows)
+      const isNewlyAdded = !initialProductionRows.some(row => row.id === pendingRemoveRowId);
+      if (isNewlyAdded) {
+        setProductionRows((prev) => prev.filter((row) => row.id !== pendingRemoveRowId));
+      }
     }
     setShowRemoveProductionModal(false);
     setPendingRemoveRowId(null);
@@ -1228,11 +1226,15 @@ export const Details11 = () => {
 
   const confirmRemoveNote = () => {
     if (pendingRemoveRowId) {
-      setRowNotes((prev) => {
-        const newNotes = { ...prev };
-        delete newNotes[pendingRemoveRowId];
-        return newNotes;
-      });
+      // Only allow removal if it's a newly added note (not in initial notes)
+      const isNewlyAdded = !(pendingRemoveRowId in initialRowNotes);
+      if (isNewlyAdded) {
+        setRowNotes((prev) => {
+          const newNotes = { ...prev };
+          delete newNotes[pendingRemoveRowId];
+          return newNotes;
+        });
+      }
     }
     setShowRemoveNoteModal(false);
     setPendingRemoveRowId(null);
@@ -1240,11 +1242,15 @@ export const Details11 = () => {
 
   const confirmRemoveSubcomponentConsumption = () => {
     if (pendingRemoveRowId) {
-      setRowConsumptions((prev) => {
-        const newConsumptions = { ...prev };
-        delete newConsumptions[pendingRemoveRowId];
-        return newConsumptions;
-      });
+      // Only allow removal if it's a newly added consumption report (not in initial consumptions)
+      const isNewlyAdded = !(pendingRemoveRowId in initialRowConsumptions);
+      if (isNewlyAdded) {
+        setRowConsumptions((prev) => {
+          const newConsumptions = { ...prev };
+          delete newConsumptions[pendingRemoveRowId];
+          return newConsumptions;
+        });
+      }
     }
     setShowRemoveSubcomponentModal(false);
     setPendingRemoveRowId(null);
@@ -1261,7 +1267,7 @@ export const Details11 = () => {
         expiryDate: "",
         palletNumber: "",
         quantity: "0",
-        uom: "cs",
+        uom: "",
         pillNumber: "001",
       };
 
@@ -1343,19 +1349,26 @@ export const Details11 = () => {
 
   const handleRemoveConsumptionRow = (rowId: string, consumptionId: string) => {
     console.log("handleRemoveConsumptionRow called with:", { rowId, consumptionId });
-    setRowConsumptions((prev) => {
-      console.log("Current rowConsumptions:", prev);
-      const currentConsumptions = prev[rowId] || [];
-      console.log("Current consumptions for rowId:", rowId, currentConsumptions);
-      const filteredConsumptions = currentConsumptions.filter((consumption) => consumption.id !== consumptionId);
-      console.log("Filtered consumptions:", filteredConsumptions);
-      const result = {
-        ...prev,
-        [rowId]: filteredConsumptions,
-      };
-      console.log("New rowConsumptions:", result);
-      return result;
-    });
+    
+    // Only allow removal if it's a newly added consumption row (not in initial consumptions)
+    const initialConsumptions = initialRowConsumptions[rowId] || [];
+    const isNewlyAdded = !initialConsumptions.some(consumption => consumption.id === consumptionId);
+    
+    if (isNewlyAdded) {
+      setRowConsumptions((prev) => {
+        console.log("Current rowConsumptions:", prev);
+        const currentConsumptions = prev[rowId] || [];
+        console.log("Current consumptions for rowId:", rowId, currentConsumptions);
+        const filteredConsumptions = currentConsumptions.filter((consumption) => consumption.id !== consumptionId);
+        console.log("Filtered consumptions:", filteredConsumptions);
+        const result = {
+          ...prev,
+          [rowId]: filteredConsumptions,
+        };
+        console.log("New rowConsumptions:", result);
+        return result;
+      });
+    }
   };
 
   const handleOpenConsumptionSidebar = (
@@ -1402,7 +1415,7 @@ export const Details11 = () => {
       expiryDate: "",
       palletNumber: "",
       quantity: "0",
-      uom: "cs",
+      uom: "",
     };
     setConsumptionMaterials((prev) => [...prev, newMaterial]);
   };
@@ -1417,7 +1430,7 @@ export const Details11 = () => {
         expiryDate: "",
         palletNumber: "",
         quantity: "0",
-        uom: "cs",
+        uom: "",
       };
       setConsumptionMaterials([defaultMaterial]);
     }
@@ -1465,7 +1478,7 @@ export const Details11 = () => {
       expiryDate: null as Date | null,
       palletNumber: "",
       consumedQuantity: "0",
-      uom: "cs",
+      uom: "",
       parentDate: undefined as string | undefined,
       parentActualQuantity: undefined as string | undefined,
     };
@@ -3226,7 +3239,7 @@ export const Details11 = () => {
                     }
                   }}
                   selected={productionRecordState.date ? new Date(productionRecordState.date) : null}
-                  inputProps={{ disabled: role === "customer" && isEditingProduction, ref: dateFieldRef }}
+                  inputProps={{ disabled: role === "customer" && isEditingProduction }}
                 />
               </Field>
 
@@ -3236,6 +3249,7 @@ export const Details11 = () => {
                     <FieldLabel labelText="Expected quantity" pb="x1" />
                     <Input
                       type="number"
+                      min="0"
                       value={productionRecordState.expectedQuantity}
                       onChange={(e) =>
                         setProductionRecordState((prev) => ({ ...prev, expectedQuantity: e.target.value }))
@@ -3253,7 +3267,7 @@ export const Details11 = () => {
                     <FieldLabel
                       labelText="UOM"
                       pb="x1"
-                      hint="Only UOMs with conversion ratios defined by the customer are available."
+                      hint="Only UOMs with defined conversion ratios to the PO line item's requested quantity UOM are available. Upon submission, quantities are converted and displayed in the PO line item's requested quantity UOM."
                     />
                     <Select
                       value={productionRecordState.uom}
@@ -3370,6 +3384,8 @@ export const Details11 = () => {
                         </Box>
                         <Box width="100%">
                           <Input
+                            type="number"
+                            min="0"
                             value={row.quantity}
                             onChange={(e) => handleProductionRowChange(row.id, "quantity", e.target.value)}
                             py="x1"
@@ -3423,17 +3439,23 @@ export const Details11 = () => {
                                 </DropdownButton>
                               </DropdownMenu>
                               {productionRows.length > 1 && (
-                                <IconicButton
-                                  icon="removeCircleOutline"
-                                  aria-label="Remove actual production record"
-                                  onClick={(e) => {
-                                    e.preventDefault();
-                                    e.stopPropagation();
-                                    handleRemoveProductionRow(row.id);
-                                  }}
-                                  tooltip="Remove actual production record"
-                                  disabled={!productionRecordState.date && isInCreateEditMode}
-                                />
+                                <>
+                                  {!(isEditingProduction && initialProductionRows.some(initialRow => initialRow.id === row.id)) ? (
+                                    <IconicButton
+                                      icon="removeCircleOutline"
+                                      aria-label="Remove actual production record"
+                                      onClick={(e) => {
+                                        e.preventDefault();
+                                        e.stopPropagation();
+                                        handleRemoveProductionRow(row.id);
+                                      }}
+                                      tooltip="Remove actual production record"
+                                      disabled={!productionRecordState.date && isInCreateEditMode}
+                                    />
+                                  ) : (
+                                    <Box width="32px" height="32px" />
+                                  )}
+                                </>
                               )}
                             </Flex>
                           </Box>
@@ -3472,7 +3494,8 @@ export const Details11 = () => {
                                       }));
                                     }}
                                   />
-                                  {role === "supplier" && (
+                                  {role === "supplier" && 
+                                   !(isEditingProduction && row.id in initialRowNotes) && (
                                     <IconicButton
                                       icon="removeCircleOutline"
                                       aria-label="Remove note"
@@ -3569,7 +3592,8 @@ export const Details11 = () => {
                                       }));
                                     }}
                                   />
-                                  {role === "supplier" && (
+                                  {role === "supplier" && 
+                                   !(isEditingProduction && row.id in initialRowConsumptions) && (
                                     <IconicButton
                                       icon="removeCircleOutline"
                                       aria-label="Remove subcomponent consumption"
@@ -3789,6 +3813,7 @@ export const Details11 = () => {
                                           <Box py="x0_5" pr="x1">
                                             <Input
                                               type="number"
+                                              min="0"
                                               value={row.quantity}
                                               onChange={(e) =>
                                                 handleConsumptionRowChange(
@@ -3847,25 +3872,29 @@ export const Details11 = () => {
                                               dataKey: "actions",
                                               width: "40px",
                                               headerFormatter: () => null,
-                                              cellRenderer: ({ row }: { row: any }) => (
-                                                <IconicButton
-                                                  icon="removeCircleOutline"
-                                                  aria-label="Remove subcomponent consumption record"
-                                                  onClick={(e) => {
-                                                    e.preventDefault();
-                                                    console.log("Remove button clicked, row:", row);
-                                                    // Extract the parent row ID by removing the consumption ID suffix
-                                                    const parentRowId = row.id.replace(`-${row.consumptionId}`, "");
-                                                    console.log("Extracted parentRowId:", parentRowId);
-                                                    console.log("consumptionId:", row.consumptionId);
-                                                    handleRemoveConsumptionRow(parentRowId, row.consumptionId);
-                                                  }}
-                                                  disabled={!productionRecordState.date && isInCreateEditMode}
-                                                  tooltip="Remove subcomponent consumption record"
-                                                  pr="x1"
-                                                  py="x1"
-                                                />
-                                              ),
+                                              cellRenderer: ({ row }: { row: any }) => {
+                                                const parentRowId = row.id.replace(`-${row.consumptionId}`, "");
+                                                const isExistingConsumption = isEditingProduction && 
+                                                  initialRowConsumptions[parentRowId]?.some(initialConsumption => initialConsumption.id === row.consumptionId);
+                                                
+                                                return !isExistingConsumption ? (
+                                                  <IconicButton
+                                                    icon="removeCircleOutline"
+                                                    aria-label="Remove subcomponent consumption record"
+                                                    onClick={(e) => {
+                                                      e.preventDefault();
+                                                      console.log("Remove button clicked, row:", row);
+                                                      console.log("Extracted parentRowId:", parentRowId);
+                                                      console.log("consumptionId:", row.consumptionId);
+                                                      handleRemoveConsumptionRow(parentRowId, row.consumptionId);
+                                                    }}
+                                                    disabled={!productionRecordState.date && isInCreateEditMode}
+                                                    tooltip="Remove subcomponent consumption record"
+                                                    pr="x1"
+                                                    py="x1"
+                                                  />
+                                                ) : null;
+                                              },
                                             },
                                           ]
                                         : []),
@@ -3994,6 +4023,7 @@ export const Details11 = () => {
                       <FieldLabel labelText="Quantity" pb="x1" />
                       <Input
                         type="number"
+                        min="0"
                         value={material.quantity}
                         onChange={(e) => handleConsumptionFieldChange(material.id, "quantity", e.target.value)}
                       />
@@ -4119,6 +4149,7 @@ export const Details11 = () => {
                         <FieldLabel labelText="Quantity" pb="x1" />
                         <Input
                           type="number"
+                          min="0"
                           value={item.consumedQuantity}
                           onChange={(e) =>
                             handleConsumptionItemFieldChange(item.id, "consumedQuantity", e.target.value)
