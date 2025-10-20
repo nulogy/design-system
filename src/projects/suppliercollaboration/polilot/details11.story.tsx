@@ -286,7 +286,6 @@ export const Details11 = () => {
 
   // Nested table data now imported from nestedTableData.tsx
 
-
   // Actual production report columns configuration
   const actualProductionReportColumns = [
     {
@@ -1190,7 +1189,7 @@ export const Details11 = () => {
   const confirmRemoveProductionRow = () => {
     if (pendingRemoveRowId && productionRows.length > 1) {
       // Only allow removal if it's a newly added row (not in initial rows)
-      const isNewlyAdded = !initialProductionRows.some(row => row.id === pendingRemoveRowId);
+      const isNewlyAdded = !initialProductionRows.some((row) => row.id === pendingRemoveRowId);
       if (isNewlyAdded) {
         setProductionRows((prev) => prev.filter((row) => row.id !== pendingRemoveRowId));
       }
@@ -1349,11 +1348,11 @@ export const Details11 = () => {
 
   const handleRemoveConsumptionRow = (rowId: string, consumptionId: string) => {
     console.log("handleRemoveConsumptionRow called with:", { rowId, consumptionId });
-    
+
     // Only allow removal if it's a newly added consumption row (not in initial consumptions)
     const initialConsumptions = initialRowConsumptions[rowId] || [];
-    const isNewlyAdded = !initialConsumptions.some(consumption => consumption.id === consumptionId);
-    
+    const isNewlyAdded = !initialConsumptions.some((consumption) => consumption.id === consumptionId);
+
     if (isNewlyAdded) {
       setRowConsumptions((prev) => {
         console.log("Current rowConsumptions:", prev);
@@ -3440,7 +3439,10 @@ export const Details11 = () => {
                               </DropdownMenu>
                               {productionRows.length > 1 && (
                                 <>
-                                  {!(isEditingProduction && initialProductionRows.some(initialRow => initialRow.id === row.id)) ? (
+                                  {!(
+                                    isEditingProduction &&
+                                    initialProductionRows.some((initialRow) => initialRow.id === row.id)
+                                  ) ? (
                                     <IconicButton
                                       icon="removeCircleOutline"
                                       aria-label="Remove actual production record"
@@ -3494,8 +3496,7 @@ export const Details11 = () => {
                                       }));
                                     }}
                                   />
-                                  {role === "supplier" && 
-                                   !(isEditingProduction && row.id in initialRowNotes) && (
+                                  {role === "supplier" && !(isEditingProduction && row.id in initialRowNotes) && (
                                     <IconicButton
                                       icon="removeCircleOutline"
                                       aria-label="Remove note"
@@ -3592,19 +3593,19 @@ export const Details11 = () => {
                                       }));
                                     }}
                                   />
-                                  {role === "supplier" && 
-                                   !(isEditingProduction && row.id in initialRowConsumptions) && (
-                                    <IconicButton
-                                      icon="removeCircleOutline"
-                                      aria-label="Remove subcomponent consumption"
-                                      onClick={(e) => {
-                                        e.preventDefault();
-                                        handleRemoveSubcomponentConsumption(row.id);
-                                      }}
-                                      disabled={!productionRecordState.date && isInCreateEditMode}
-                                      tooltip="Remove subcomponent consumption"
-                                    />
-                                  )}
+                                  {role === "supplier" &&
+                                    !(isEditingProduction && row.id in initialRowConsumptions) && (
+                                      <IconicButton
+                                        icon="removeCircleOutline"
+                                        aria-label="Remove subcomponent consumption"
+                                        onClick={(e) => {
+                                          e.preventDefault();
+                                          handleRemoveSubcomponentConsumption(row.id);
+                                        }}
+                                        disabled={!productionRecordState.date && isInCreateEditMode}
+                                        tooltip="Remove subcomponent consumption"
+                                      />
+                                    )}
                                 </Flex>
                               </Flex>
                               {subcomponentConsumptionExpanded[row.id] !== false && (
@@ -3874,9 +3875,12 @@ export const Details11 = () => {
                                               headerFormatter: () => null,
                                               cellRenderer: ({ row }: { row: any }) => {
                                                 const parentRowId = row.id.replace(`-${row.consumptionId}`, "");
-                                                const isExistingConsumption = isEditingProduction && 
-                                                  initialRowConsumptions[parentRowId]?.some(initialConsumption => initialConsumption.id === row.consumptionId);
-                                                
+                                                const isExistingConsumption =
+                                                  isEditingProduction &&
+                                                  initialRowConsumptions[parentRowId]?.some(
+                                                    (initialConsumption) => initialConsumption.id === row.consumptionId
+                                                  );
+
                                                 return !isExistingConsumption ? (
                                                   <IconicButton
                                                     icon="removeCircleOutline"
