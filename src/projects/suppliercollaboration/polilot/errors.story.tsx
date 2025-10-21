@@ -4005,7 +4005,7 @@ export const Details11 = () => {
               {consumptionMaterials.map((material, index) => (
                 <Box key={material.id} pb="x3">
                   <Field>
-                    <FieldLabel labelText="Item" pb="x1" />
+                    <FieldLabel labelText="Item code" pb="x1" />
                     <Input
                       value={material.item}
                       onChange={(e) => handleConsumptionFieldChange(material.id, "item", e.target.value)}
@@ -4119,7 +4119,7 @@ export const Details11 = () => {
 
                   <Box pb="x3">
                     <Field>
-                      <FieldLabel labelText="Item" pb="x1" />
+                      <FieldLabel labelText="Item code" pb="x1" />
                       <Input
                         value={item.item}
                         onChange={(e) => handleConsumptionItemFieldChange(item.id, "item", e.target.value)}
@@ -5261,7 +5261,7 @@ const Details11Default2 = () => {
                         </Text>
                       </Box>
                       <Box pr="x6">
-                        <InlineValidation errorMessage="Expiry date mismatch detected (#008). All actual production records sharing the same supplier lot code must have identical expiry dates." />
+                        <InlineValidation errorMessage="Expiry date mismatch detected (#008). All actual production records sharing the same lot code must have identical expiry dates." />
                       </Box>
                     </Box>
                   )}
@@ -5295,7 +5295,7 @@ const Details11Default2 = () => {
                         </Tooltip>
                       <Box pr="x6">
                         <InlineValidation 
-                            errorMessage={`Duplicate actual production record detected (#002). Each record must have an unique combination of supplier lot code, expiry date, and pallet number.`}
+                            errorMessage={`Duplicate actual production record detected (#002). Each record must have an unique combination of lot code, expiry date, and pallet number.`}
                         />
                       </Box>
                     </Box>
@@ -5318,7 +5318,7 @@ const Details11Default2 = () => {
                           <Text fontSize="small" fontWeight="bold">#</Text>
                         </Box>
                         <Box width="140px">
-                          <Text fontSize="small" fontWeight="bold">Item</Text>
+                          <Text fontSize="small" fontWeight="bold">Item code</Text>
                         </Box>
                         <Box width="160px">
                           <Text fontSize="small" fontWeight="bold">Customer's lot code</Text>
@@ -5431,7 +5431,7 @@ const Details11Default2 = () => {
                               </Box>
                               <Box pr="x6">
                                 <InlineValidation 
-                                  errorMessage={`Duplicate subcomponent consumption record detected (#002). Each record must have an unique combination of item code, supplier lot code, expiry date, and pallet number.`} 
+                                  errorMessage={`Duplicate subcomponent consumption record detected (#002). Each record must have an unique combination of item code, lot code, expiry date, and pallet number.`} 
                                 />
                               </Box>
                             </Box>
@@ -5458,7 +5458,7 @@ const Details11Default2 = () => {
                                 justifyContent="center"
                                 zIndex={1}
                                 cursor="pointer"
-                                title="If there are multiple subcomponent consumption records for the same item and supplier's lot code, the expiry dates across them (if they are specified) must match. Validated on blur. When the condition is met the error is displayed below the 2nd row that meets the criteria."
+                                title="If there are multiple subcomponent consumption records for the same item code and supplier's lot code, the expiry dates across them (if they are specified) must match. Validated on blur. When the condition is met the error is displayed below the 2nd row that meets the criteria."
                               >
                                 <Text fontSize="small" color="white" fontWeight="bold">
                                   5
@@ -5466,7 +5466,7 @@ const Details11Default2 = () => {
                               </Box>
                               <Box pr="x6">
                                 <InlineValidation 
-                                  errorMessage="Expiry date mismatch detected (#005). All subcomponent consumption records sharing the same item code and supplier lot code must have identical expiry dates." 
+                                  errorMessage="Expiry date mismatch detected (#005). All subcomponent consumption records sharing the same item code and lot code must have identical expiry dates." 
                                 />
                               </Box>
                             </Box>
