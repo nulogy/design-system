@@ -1544,7 +1544,7 @@ export const Details11 = () => {
       ),
     },
     {
-      label: "Item",
+      label: "Item code",
       dataKey: "item",
       width: "auto",
       headerFormatter: ({ label }: { label: string }) => (
@@ -3636,12 +3636,12 @@ export const Details11 = () => {
                                         ),
                                       },
                                       {
-                                        label: "Item",
+                                        label: "Item code",
                                         dataKey: "item",
                                         headerFormatter: () => (
                                           <Box py="x0_25">
                                             <Text fontSize="small" lineHeight="smallTextCompressed">
-                                              Item
+                                              Item code
                                             </Text>
                                           </Box>
                                         ),
@@ -3983,7 +3983,7 @@ export const Details11 = () => {
               {consumptionMaterials.map((material, index) => (
                 <Box key={material.id} pb="x3">
                   <Field>
-                    <FieldLabel labelText="Item" pb="x1" />
+                    <FieldLabel labelText="Item code" pb="x1" />
                     <Input
                       value={material.item}
                       onChange={(e) => handleConsumptionFieldChange(material.id, "item", e.target.value)}
@@ -4097,7 +4097,7 @@ export const Details11 = () => {
 
                   <Box pb="x3">
                     <Field>
-                      <FieldLabel labelText="Item" pb="x1" />
+                      <FieldLabel labelText="Item code" pb="x1" />
                       <Input
                         value={item.item}
                         onChange={(e) => handleConsumptionItemFieldChange(item.id, "item", e.target.value)}
