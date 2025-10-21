@@ -280,7 +280,7 @@ export const Details11 = () => {
   const getDuplicateRecords = () => {
     const duplicates = [];
     const seen = new Map();
-    
+
     productionRows.forEach((row, index) => {
       const key = `${row.palletNumber}-${row.supplierLotCode}-${row.expiryDate}`;
       if (seen.has(key)) {
@@ -293,18 +293,20 @@ export const Details11 = () => {
         seen.set(key, index);
       }
     });
-    
+
     // Return only duplicate instances (not the first one)
-    const firstInstances = duplicates.filter((index, pos) => duplicates.indexOf(index) === pos && duplicates.indexOf(index) === 0);
-    const duplicateInstances = duplicates.filter(index => !firstInstances.includes(index));
-    return duplicateInstances.map(index => String(index + 1).padStart(3, "0"));
+    const firstInstances = duplicates.filter(
+      (index, pos) => duplicates.indexOf(index) === pos && duplicates.indexOf(index) === 0
+    );
+    const duplicateInstances = duplicates.filter((index) => !firstInstances.includes(index));
+    return duplicateInstances.map((index) => String(index + 1).padStart(3, "0"));
   };
 
   // Function to check if a specific row is a duplicate
   const isRowDuplicate = (rowIndex) => {
     const duplicates = [];
     const seen = new Map();
-    
+
     productionRows.forEach((row, index) => {
       const key = `${row.palletNumber}-${row.supplierLotCode}-${row.expiryDate}`;
       if (seen.has(key)) {
@@ -317,10 +319,12 @@ export const Details11 = () => {
         seen.set(key, index);
       }
     });
-    
+
     // Only return true for duplicate instances (not the first one)
-    const firstInstances = duplicates.filter((index, pos) => duplicates.indexOf(index) === pos && duplicates.indexOf(index) === 0);
-    const duplicateInstances = duplicates.filter(index => !firstInstances.includes(index));
+    const firstInstances = duplicates.filter(
+      (index, pos) => duplicates.indexOf(index) === pos && duplicates.indexOf(index) === 0
+    );
+    const duplicateInstances = duplicates.filter((index) => !firstInstances.includes(index));
     return duplicateInstances.includes(rowIndex);
   };
 
@@ -328,7 +332,7 @@ export const Details11 = () => {
   const getDuplicateConsumptionRecords = (rowId) => {
     const duplicates = [];
     const seen = new Map();
-    
+
     if (rowConsumptions[rowId]) {
       rowConsumptions[rowId].forEach((consumption, index) => {
         const key = `${consumption.supplierLotCode}-${consumption.expiryDate}-${consumption.palletNumber}`;
@@ -343,11 +347,13 @@ export const Details11 = () => {
         }
       });
     }
-    
+
     // Return only duplicate instances (not the first one)
-    const firstInstances = duplicates.filter((index, pos) => duplicates.indexOf(index) === pos && duplicates.indexOf(index) === 0);
-    const duplicateInstances = duplicates.filter(index => !firstInstances.includes(index));
-    return duplicateInstances.map(index => String(index + 1).padStart(3, "0"));
+    const firstInstances = duplicates.filter(
+      (index, pos) => duplicates.indexOf(index) === pos && duplicates.indexOf(index) === 0
+    );
+    const duplicateInstances = duplicates.filter((index) => !firstInstances.includes(index));
+    return duplicateInstances.map((index) => String(index + 1).padStart(3, "0"));
   };
 
   // Function to check if consumption records have duplicates
@@ -454,7 +460,6 @@ export const Details11 = () => {
 
   // SummaryDivider component
   const SummaryDivider = () => <Box width="1px" height="x6" backgroundColor="lightGrey" mx="x2" />;
-
 
   // ActualProductionRecordNumberPill component (using the reusable component)
   const ActualProductionRecordNumberPill = ({
@@ -3525,7 +3530,11 @@ export const Details11 = () => {
                           py="x1"
                           disabled={role === "customer"}
                           width="100%"
-                          errorMessage={(row.id === "row-2" || row.id === "row-5") && row.supplierLotCode === "" ? "Required" : undefined}
+                          errorMessage={
+                            (row.id === "row-2" || row.id === "row-5") && row.supplierLotCode === ""
+                              ? "Required"
+                              : undefined
+                          }
                         />
                       </Box>
                       <Box width="100%">
@@ -3687,7 +3696,9 @@ export const Details11 = () => {
                                     ),
                                     cellRenderer: ({ row }: { row: any }) => (
                                       <Box py="x2" px="x1" display="flex" alignItems="center" justifyContent="center">
-                                        <RecordNumberPill number={row.pillNumber || String(row.index + 1).padStart(3, "0")} />
+                                        <RecordNumberPill
+                                          number={row.pillNumber || String(row.index + 1).padStart(3, "0")}
+                                        />
                                       </Box>
                                     ),
                                   },
@@ -4551,7 +4562,7 @@ const Details11Default2 = () => {
   const getDuplicateRecords = () => {
     const duplicates = [];
     const seen = new Map();
-    
+
     productionRows.forEach((row, index) => {
       const key = `${row.palletNumber}-${row.supplierLotCode}-${row.expiryDate}`;
       if (seen.has(key)) {
@@ -4564,18 +4575,20 @@ const Details11Default2 = () => {
         seen.set(key, index);
       }
     });
-    
+
     // Return only duplicate instances (not the first one)
-    const firstInstances = duplicates.filter((index, pos) => duplicates.indexOf(index) === pos && duplicates.indexOf(index) === 0);
-    const duplicateInstances = duplicates.filter(index => !firstInstances.includes(index));
-    return duplicateInstances.map(index => String(index + 1).padStart(3, "0"));
+    const firstInstances = duplicates.filter(
+      (index, pos) => duplicates.indexOf(index) === pos && duplicates.indexOf(index) === 0
+    );
+    const duplicateInstances = duplicates.filter((index) => !firstInstances.includes(index));
+    return duplicateInstances.map((index) => String(index + 1).padStart(3, "0"));
   };
 
   // Function to check if a specific row is a duplicate
   const isRowDuplicate = (rowIndex) => {
     const duplicates = [];
     const seen = new Map();
-    
+
     productionRows.forEach((row, index) => {
       const key = `${row.palletNumber}-${row.supplierLotCode}-${row.expiryDate}`;
       if (seen.has(key)) {
@@ -4588,10 +4601,12 @@ const Details11Default2 = () => {
         seen.set(key, index);
       }
     });
-    
+
     // Only return true for duplicate instances (not the first one)
-    const firstInstances = duplicates.filter((index, pos) => duplicates.indexOf(index) === pos && duplicates.indexOf(index) === 0);
-    const duplicateInstances = duplicates.filter(index => !firstInstances.includes(index));
+    const firstInstances = duplicates.filter(
+      (index, pos) => duplicates.indexOf(index) === pos && duplicates.indexOf(index) === 0
+    );
+    const duplicateInstances = duplicates.filter((index) => !firstInstances.includes(index));
     return duplicateInstances.includes(rowIndex);
   };
 
@@ -4599,7 +4614,7 @@ const Details11Default2 = () => {
   const getDuplicateConsumptionRecords = (rowId) => {
     const duplicates = [];
     const seen = new Map();
-    
+
     if (rowConsumptions[rowId]) {
       rowConsumptions[rowId].forEach((consumption, index) => {
         const key = `${consumption.supplierLotCode}-${consumption.expiryDate}-${consumption.palletNumber}`;
@@ -4614,11 +4629,13 @@ const Details11Default2 = () => {
         }
       });
     }
-    
+
     // Return only duplicate instances (not the first one)
-    const firstInstances = duplicates.filter((index, pos) => duplicates.indexOf(index) === pos && duplicates.indexOf(index) === 0);
-    const duplicateInstances = duplicates.filter(index => !firstInstances.includes(index));
-    return duplicateInstances.map(index => String(index + 1).padStart(3, "0"));
+    const firstInstances = duplicates.filter(
+      (index, pos) => duplicates.indexOf(index) === pos && duplicates.indexOf(index) === 0
+    );
+    const duplicateInstances = duplicates.filter((index) => !firstInstances.includes(index));
+    return duplicateInstances.map((index) => String(index + 1).padStart(3, "0"));
   };
 
   // Function to check if consumption records have duplicates
@@ -5086,39 +5103,29 @@ const Details11Default2 = () => {
             <Box borderBottom="solid 1px" borderColor="lightGrey">
               {/* Table Header */}
               <Flex py="x1" px="x1" borderBottom="solid 1px" borderColor="lightGrey" gap="x1">
-                <Box width="18%">
-                  #
-                </Box>
-                <Box width="100%">
-                  Pallet number
-                </Box>
-                <Box width="100%">
-                  Customer's lot code
-                </Box>
-                <Box width="100%">
-                  Supplier's lot code
-                </Box>
-                <Box width="100%">
-                  Expiry date
-                </Box>
-                <Box width="100%">
-                  Quantity
-                </Box>
-                <Box width="100%">
-                  UOM
-                </Box>
+                <Box width="18%">#</Box>
+                <Box width="100%">Pallet number</Box>
+                <Box width="100%">Customer's lot code</Box>
+                <Box width="100%">Supplier's lot code</Box>
+                <Box width="100%">Expiry date</Box>
+                <Box width="100%">Quantity</Box>
+                <Box width="100%">UOM</Box>
               </Flex>
 
               {/* Table Rows with nested content */}
               {productionRows.map((row, index) => (
                 <Box key={row.id}>
                   {/* Main Production Row */}
-                  <Flex 
-                    alignItems="center" 
-                    py="x0" 
-                    gap="x1" 
-                    className={`flex-row ${(row.supplierLotCode === "" || isRowDuplicate(index)) ? "has-error" : ""}`} 
-                    borderBottom={(row.supplierLotCode === "" || isRowDuplicate(index) || row.id === "row-9" || row.id === "row-2") ? "none" : "solid 1px"} 
+                  <Flex
+                    alignItems="center"
+                    py="x0"
+                    gap="x1"
+                    className={`flex-row ${row.supplierLotCode === "" || isRowDuplicate(index) ? "has-error" : ""}`}
+                    borderBottom={
+                      row.supplierLotCode === "" || isRowDuplicate(index) || row.id === "row-9" || row.id === "row-2"
+                        ? "none"
+                        : "solid 1px"
+                    }
                     borderColor="lightGrey"
                   >
                     <Flex width="3em" alignItems="center" justifyContent="center" ml="x1" mr="x0_5">
@@ -5137,7 +5144,6 @@ const Details11Default2 = () => {
                         value={row.customerLotCode || ""}
                         onChange={(e) => handleProductionRowChange(row.id, "customerLotCode", e.target.value)}
                         py="x1"
-
                         width="100%"
                       />
                     </Box>
@@ -5153,7 +5159,6 @@ const Details11Default2 = () => {
                         value={row.expiryDate}
                         onChange={(e) => handleProductionRowChange(row.id, "expiryDate", e.target.value)}
                         py="x1"
-
                         width="100%"
                       />
                     </Box>
@@ -5162,7 +5167,6 @@ const Details11Default2 = () => {
                         value={row.quantity}
                         onChange={(e) => handleProductionRowChange(row.id, "quantity", e.target.value)}
                         py="x1"
-
                         width="100%"
                       />
                     </Box>
@@ -5266,48 +5270,47 @@ const Details11Default2 = () => {
                     </Box>
                   )}
 
-
                   {/* InlineValidation error box for duplicate records */}
                   {isRowDuplicate(index) && (
                     <Box pb="x1_5" pl="x1_5" className="error-message-box" position="relative">
-                        <Tooltip
-                          tooltip="Each actual production record must be unique for the following combination of fields: pallet number, supplier's lot code, and expiry date. Validated on blur. As soon as the condition is met, the error is displayed below all except the first row where this condition is met."
-                          placement="top"
+                      <Tooltip
+                        tooltip="Each actual production record must be unique for the following combination of fields: pallet number, supplier's lot code, and expiry date. Validated on blur. As soon as the condition is met, the error is displayed below all except the first row where this condition is met."
+                        placement="top"
+                      >
+                        <Box
+                          position="absolute"
+                          right="x1"
+                          top="x0_25"
+                          width="20px"
+                          height="20px"
+                          borderRadius="50%"
+                          backgroundColor="violet"
+                          display="flex"
+                          alignItems="center"
+                          justifyContent="center"
+                          zIndex={1}
+                          cursor="pointer"
                         >
-                          <Box
-                            position="absolute"
-                            right="x1"
-                            top="x0_25"
-                            width="20px"
-                            height="20px"
-                            borderRadius="50%"
-                            backgroundColor="violet"
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center"
-                            zIndex={1}
-                            cursor="pointer"
-                          >
-                            <Text fontSize="small" color="white" fontWeight="bold">
-                              1
-                            </Text>
-                          </Box>
-                        </Tooltip>
+                          <Text fontSize="small" color="white" fontWeight="bold">
+                            1
+                          </Text>
+                        </Box>
+                      </Tooltip>
                       <Box pr="x6">
-                        <InlineValidation 
-                            errorMessage={`Duplicate actual production record detected (#002). Each record must have an unique combination of lot code, expiry date, and pallet number.`}
+                        <InlineValidation
+                          errorMessage={`Duplicate actual production record detected (#002). Each record must have an unique combination of lot code, expiry date, and pallet number.`}
                         />
                       </Box>
                     </Box>
                   )}
 
                   {/* Divider after error boxes if they are the last element before next row */}
-                  {(((row.id === "row-2" || row.id === "row-5") && row.supplierLotCode === "") || row.id === "row-3" || row.id === "row-9" || isRowDuplicate(index)) && 
-                   !(rowConsumptions[row.id] && rowConsumptions[row.id].length > 0) && 
-                   row.id !== "row-2" && (
-                    <Box borderBottom="solid 1px" borderColor="lightGrey" />
-                  )}
-
+                  {(((row.id === "row-2" || row.id === "row-5") && row.supplierLotCode === "") ||
+                    row.id === "row-3" ||
+                    row.id === "row-9" ||
+                    isRowDuplicate(index)) &&
+                    !(rowConsumptions[row.id] && rowConsumptions[row.id].length > 0) &&
+                    row.id !== "row-2" && <Box borderBottom="solid 1px" borderColor="lightGrey" />}
 
                   {/* Subcomponent Consumption Table */}
                   {rowConsumptions[row.id] && rowConsumptions[row.id].length > 0 && (
@@ -5315,28 +5318,44 @@ const Details11Default2 = () => {
                       {/* Table Header */}
                       <Flex py="x0_5" px="x1" borderBottom="solid 1px" borderColor="lightGrey" gap="x1">
                         <Box width="40px" textAlign="center">
-                          <Text fontSize="small" fontWeight="bold">#</Text>
+                          <Text fontSize="small" fontWeight="bold">
+                            #
+                          </Text>
                         </Box>
                         <Box width="140px">
-                          <Text fontSize="small" fontWeight="bold">Item code</Text>
+                          <Text fontSize="small" fontWeight="bold">
+                            Item code
+                          </Text>
                         </Box>
                         <Box width="160px">
-                          <Text fontSize="small" fontWeight="bold">Customer's lot code</Text>
+                          <Text fontSize="small" fontWeight="bold">
+                            Customer's lot code
+                          </Text>
                         </Box>
                         <Box width="160px">
-                          <Text fontSize="small" fontWeight="bold">Supplier's lot code</Text>
+                          <Text fontSize="small" fontWeight="bold">
+                            Supplier's lot code
+                          </Text>
                         </Box>
                         <Box width="140px">
-                          <Text fontSize="small" fontWeight="bold">Expiry date</Text>
+                          <Text fontSize="small" fontWeight="bold">
+                            Expiry date
+                          </Text>
                         </Box>
                         <Box width="140px">
-                          <Text fontSize="small" fontWeight="bold">Pallet number</Text>
+                          <Text fontSize="small" fontWeight="bold">
+                            Pallet number
+                          </Text>
                         </Box>
                         <Box width="140px">
-                          <Text fontSize="small" fontWeight="bold">Quantity</Text>
+                          <Text fontSize="small" fontWeight="bold">
+                            Quantity
+                          </Text>
                         </Box>
                         <Box width="140px">
-                          <Text fontSize="small" fontWeight="bold">UOM</Text>
+                          <Text fontSize="small" fontWeight="bold">
+                            UOM
+                          </Text>
                         </Box>
                       </Flex>
 
@@ -5344,7 +5363,20 @@ const Details11Default2 = () => {
                       {rowConsumptions[row.id].map((consumption, index) => (
                         <Box key={consumption.id}>
                           {/* Consumption Row */}
-                          <Flex py="x0_5" px="x1" gap="x1" alignItems="center" borderBottom={index === 2 && hasDuplicateConsumptionRecords(row.id) ? "none" : index === 5 && consumption.id === "consumption-1-6" ? "none" : "solid 1px"} borderColor="lightGrey">
+                          <Flex
+                            py="x0_5"
+                            px="x1"
+                            gap="x1"
+                            alignItems="center"
+                            borderBottom={
+                              index === 2 && hasDuplicateConsumptionRecords(row.id)
+                                ? "none"
+                                : index === 5 && consumption.id === "consumption-1-6"
+                                  ? "none"
+                                  : "solid 1px"
+                            }
+                            borderColor="lightGrey"
+                          >
                             <Box width="40px" display="flex" justifyContent="center">
                               <RecordNumberPill number={String(index + 1).padStart(3, "0")} />
                             </Box>
@@ -5430,8 +5462,8 @@ const Details11Default2 = () => {
                                 </Text>
                               </Box>
                               <Box pr="x6">
-                                <InlineValidation 
-                                  errorMessage={`Duplicate subcomponent consumption record detected (#002). Each record must have an unique combination of item code, lot code, expiry date, and pallet number.`} 
+                                <InlineValidation
+                                  errorMessage={`Duplicate subcomponent consumption record detected (#002). Each record must have an unique combination of item code, lot code, expiry date, and pallet number.`}
                                 />
                               </Box>
                             </Box>
@@ -5465,9 +5497,7 @@ const Details11Default2 = () => {
                                 </Text>
                               </Box>
                               <Box pr="x6">
-                                <InlineValidation 
-                                  errorMessage="Expiry date mismatch detected (#005). All subcomponent consumption records sharing the same item code and lot code must have identical expiry dates." 
-                                />
+                                <InlineValidation errorMessage="Expiry date mismatch detected (#005). All subcomponent consumption records sharing the same item code and lot code must have identical expiry dates." />
                               </Box>
                             </Box>
                           )}
@@ -5476,52 +5506,41 @@ const Details11Default2 = () => {
                           {consumption.id === "consumption-1-6" && (
                             <Box borderBottom="solid 1px" borderColor="lightGrey" />
                           )}
-
-
                         </Box>
                       ))}
-
-
-
                     </Box>
                   )}
 
-                   {/* Error 7 - Multiple errors for row-2 */}
-                   {row.id === "row-2" && (
-                     <Box mt="x0_25" pb="x0_5" pl="x1_5" mb="x1" position="relative">
-                       <Box
-                         position="absolute"
-                         right="x1"
-                         top="x0_25"
-                         width="20px"
-                         height="20px"
-                         borderRadius="50%"
-                         backgroundColor="violet"
-                         display="flex"
-                         alignItems="center"
-                         justifyContent="center"
-                         zIndex={1}
-                         cursor="pointer"
-                         title="Multiple errors on a single row: Use InlineValidation with list (NDS)."
-                       >
-                         <Text fontSize="small" color="white" fontWeight="bold">
-                           7
-                         </Text>
-                       </Box>
-                       <Box pr="x6">
-                         <InlineValidation 
-                           errorList={[
-                             "Error 1",
-                             "Error 2"
-                           ]}
-                         />
-                       </Box>
-                     </Box>
-                   )}
+                  {/* Error 7 - Multiple errors for row-2 */}
+                  {row.id === "row-2" && (
+                    <Box mt="x0_25" pb="x0_5" pl="x1_5" mb="x1" position="relative">
+                      <Box
+                        position="absolute"
+                        right="x1"
+                        top="x0_25"
+                        width="20px"
+                        height="20px"
+                        borderRadius="50%"
+                        backgroundColor="violet"
+                        display="flex"
+                        alignItems="center"
+                        justifyContent="center"
+                        zIndex={1}
+                        cursor="pointer"
+                        title="Multiple errors on a single row: Use InlineValidation with list (NDS)."
+                      >
+                        <Text fontSize="small" color="white" fontWeight="bold">
+                          7
+                        </Text>
+                      </Box>
+                      <Box pr="x6">
+                        <InlineValidation errorList={["Error 1", "Error 2"]} />
+                      </Box>
+                    </Box>
+                  )}
 
-
-                   {/* Note section for row-2 */}
-                   {row.id === "row-2" && (
+                  {/* Note section for row-2 */}
+                  {row.id === "row-2" && (
                     <Box ml="x6" border="1px solid" borderColor="lightGrey" borderRadius="medium" p="x0_25" mb="x1">
                       <Flex
                         backgroundColor="whiteGrey"
@@ -5570,10 +5589,7 @@ const Details11Default2 = () => {
                   )}
 
                   {/* Divider after Note section for row-2 */}
-                  {row.id === "row-2" && (
-                    <Box borderBottom="solid 1px" borderColor="lightGrey" />
-                  )}
-
+                  {row.id === "row-2" && <Box borderBottom="solid 1px" borderColor="lightGrey" />}
                 </Box>
               ))}
             </Box>
