@@ -47,6 +47,7 @@ import {
   Radio,
   RadioGroup,
   Pagination,
+  Modal,
 } from "../../..";
 import { formatDateToYYYYMonDD, formatDateWithWeek } from "../utils/dateUtils";
 import {
@@ -170,47 +171,47 @@ export const Details11 = () => {
       palletNumber: "PAL-001",
       customerLotCode: "CUST-001",
       supplierLotCode: "SUPP-001",
-      expiryDate: "2025-12-31",
+      expiryDate: "2024-12-31",
       quantity: "50",
       uom: "kg",
       verticalAlign: "top",
     },
     {
       id: "row-2",
-      palletNumber: "PAL-002",
-      customerLotCode: "CUST-002",
-      supplierLotCode: "",
-      expiryDate: "2025-12-31",
-      quantity: "45",
-      uom: "kg",
+      palletNumber: "PAL-DUPLICATE",
+      customerLotCode: "CUST-004",
+      supplierLotCode: "SUPP-DUPLICATE",
+      expiryDate: "2024-12-31",
+      quantity: "30",
+      uom: "lb",
       verticalAlign: "top",
-    }, // Empty supplier lot code for error
+    }, // Duplicate record - same as row-4 and row-7
     {
       id: "row-3",
       palletNumber: "PAL-003",
       customerLotCode: "CUST-003",
-      supplierLotCode: "SUPP-003",
-      expiryDate: "2025-11-15",
+      supplierLotCode: "",
+      expiryDate: "2026-11-15",
       quantity: "75",
       uom: "cs",
       verticalAlign: "top",
     },
     {
       id: "row-4",
-      palletNumber: "PAL-004",
-      customerLotCode: "CUST-004",
-      supplierLotCode: "SUPP-004",
-      expiryDate: "2025-10-20",
-      quantity: "30",
-      uom: "lb",
+      palletNumber: "PAL-DUPLICATE",
+      customerLotCode: "CUST-002",
+      supplierLotCode: "SUPP-DUPLICATE",
+      expiryDate: "2024-12-31",
+      quantity: "45",
+      uom: "kg",
       verticalAlign: "top",
-    },
+    }, // Duplicate record - same as row-2 and row-7
     {
       id: "row-5",
       palletNumber: "PAL-005",
       customerLotCode: "CUST-005",
       supplierLotCode: "",
-      expiryDate: "2025-09-10",
+      expiryDate: "2024-09-10",
       quantity: "60",
       uom: "ea",
       verticalAlign: "top",
@@ -220,19 +221,39 @@ export const Details11 = () => {
       palletNumber: "PAL-006",
       customerLotCode: "CUST-006",
       supplierLotCode: "SUPP-006",
-      expiryDate: "2025-08-25",
+      expiryDate: "2024-08-25",
       quantity: "90",
       uom: "g",
       verticalAlign: "top",
     },
     {
       id: "row-7",
-      palletNumber: "PAL-007",
+      palletNumber: "PAL-DUPLICATE",
       customerLotCode: "CUST-007",
-      supplierLotCode: "SUPP-007",
-      expiryDate: "2025-07-30",
+      supplierLotCode: "SUPP-DUPLICATE",
+      expiryDate: "2024-12-31",
       quantity: "120",
       uom: "kg",
+      verticalAlign: "top",
+    }, // Duplicate record - same as row-2 and row-4
+    {
+      id: "row-8",
+      palletNumber: "PAL-008",
+      customerLotCode: "CUST-008",
+      supplierLotCode: "SUPP-MISMATCH",
+      expiryDate: "2024-06-15",
+      quantity: "85",
+      uom: "lb",
+      verticalAlign: "top",
+    },
+    {
+      id: "row-9",
+      palletNumber: "PAL-009",
+      customerLotCode: "CUST-009",
+      supplierLotCode: "SUPP-MISMATCH",
+      expiryDate: "2024-08-20",
+      quantity: "95",
+      uom: "lb",
       verticalAlign: "top",
     },
   ]);
@@ -255,16 +276,95 @@ export const Details11 = () => {
     >
   >({});
 
+  // Function to detect duplicate production records
+  const getDuplicateRecords = () => {
+    const duplicates = [];
+    const seen = new Map();
+    
+    productionRows.forEach((row, index) => {
+      const key = `${row.palletNumber}-${row.supplierLotCode}-${row.expiryDate}`;
+      if (seen.has(key)) {
+        const existingIndex = seen.get(key);
+        if (!duplicates.includes(existingIndex)) {
+          duplicates.push(existingIndex);
+        }
+        duplicates.push(index);
+      } else {
+        seen.set(key, index);
+      }
+    });
+    
+    // Return only duplicate instances (not the first one)
+    const firstInstances = duplicates.filter((index, pos) => duplicates.indexOf(index) === pos && duplicates.indexOf(index) === 0);
+    const duplicateInstances = duplicates.filter(index => !firstInstances.includes(index));
+    return duplicateInstances.map(index => String(index + 1).padStart(3, "0"));
+  };
+
+  // Function to check if a specific row is a duplicate
+  const isRowDuplicate = (rowIndex) => {
+    const duplicates = [];
+    const seen = new Map();
+    
+    productionRows.forEach((row, index) => {
+      const key = `${row.palletNumber}-${row.supplierLotCode}-${row.expiryDate}`;
+      if (seen.has(key)) {
+        const existingIndex = seen.get(key);
+        if (!duplicates.includes(existingIndex)) {
+          duplicates.push(existingIndex);
+        }
+        duplicates.push(index);
+      } else {
+        seen.set(key, index);
+      }
+    });
+    
+    // Only return true for duplicate instances (not the first one)
+    const firstInstances = duplicates.filter((index, pos) => duplicates.indexOf(index) === pos && duplicates.indexOf(index) === 0);
+    const duplicateInstances = duplicates.filter(index => !firstInstances.includes(index));
+    return duplicateInstances.includes(rowIndex);
+  };
+
+  // Function to detect duplicate consumption records
+  const getDuplicateConsumptionRecords = (rowId) => {
+    const duplicates = [];
+    const seen = new Map();
+    
+    if (rowConsumptions[rowId]) {
+      rowConsumptions[rowId].forEach((consumption, index) => {
+        const key = `${consumption.supplierLotCode}-${consumption.expiryDate}-${consumption.palletNumber}`;
+        if (seen.has(key)) {
+          const existingIndex = seen.get(key);
+          if (!duplicates.includes(existingIndex)) {
+            duplicates.push(existingIndex);
+          }
+          duplicates.push(index);
+        } else {
+          seen.set(key, index);
+        }
+      });
+    }
+    
+    // Return only duplicate instances (not the first one)
+    const firstInstances = duplicates.filter((index, pos) => duplicates.indexOf(index) === pos && duplicates.indexOf(index) === 0);
+    const duplicateInstances = duplicates.filter(index => !firstInstances.includes(index));
+    return duplicateInstances.map(index => String(index + 1).padStart(3, "0"));
+  };
+
+  // Function to check if consumption records have duplicates
+  const hasDuplicateConsumptionRecords = (rowId) => {
+    return getDuplicateConsumptionRecords(rowId).length > 0;
+  };
+
   // Prepopulate consumption data with errors
   React.useEffect(() => {
     setRowConsumptions({
       "row-1": [
         {
           id: "consumption-1-1",
-          item: "Raw Material A",
+          item: "Steel Components",
           customerLotCode: "CUST-LOT-001",
           supplierLotCode: "SUPP-LOT-001",
-          expiryDate: "2025-12-31",
+          expiryDate: "2024-12-31",
           palletNumber: "PAL-001",
           quantity: "25",
           uom: "kg",
@@ -272,11 +372,11 @@ export const Details11 = () => {
         },
         {
           id: "consumption-1-2",
-          item: "", // Empty for error demonstration
+          item: "Chemical Additives", // Item for demonstration
           customerLotCode: "CUST-LOT-002",
-          supplierLotCode: "SUPP-LOT-002",
-          expiryDate: "2025-12-31",
-          palletNumber: "PAL-002",
+          supplierLotCode: "SUPP-DUPLICATE",
+          expiryDate: "2024-12-31",
+          palletNumber: "PAL-DUPLICATE",
           quantity: "15",
           uom: "", // Empty for error demonstration
           verticalAlign: "top",
@@ -285,19 +385,19 @@ export const Details11 = () => {
           id: "consumption-1-3",
           item: "Component B",
           customerLotCode: "CUST-LOT-003",
-          supplierLotCode: "SUPP-LOT-003",
-          expiryDate: "2025-11-15",
-          palletNumber: "PAL-003",
+          supplierLotCode: "SUPP-DUPLICATE",
+          expiryDate: "2024-12-31",
+          palletNumber: "PAL-DUPLICATE",
           quantity: "40",
           uom: "cs",
           verticalAlign: "top",
         },
         {
           id: "consumption-1-4",
-          item: "Raw Material C",
+          item: "Plastic Resins",
           customerLotCode: "CUST-LOT-004",
           supplierLotCode: "SUPP-LOT-004",
-          expiryDate: "2025-10-20",
+          expiryDate: "2024-10-20",
           palletNumber: "PAL-004",
           quantity: "30",
           uom: "lb",
@@ -305,10 +405,10 @@ export const Details11 = () => {
         },
         {
           id: "consumption-1-5",
-          item: "", // Empty for error demonstration
+          item: "Chemical Additives", // Item for demonstration
           customerLotCode: "CUST-LOT-005",
-          supplierLotCode: "SUPP-LOT-005",
-          expiryDate: "2025-09-10",
+          supplierLotCode: "SUPP-MISMATCH-CONSUMPTION",
+          expiryDate: "2024-09-10",
           palletNumber: "PAL-005",
           quantity: "20",
           uom: "ea",
@@ -316,10 +416,10 @@ export const Details11 = () => {
         },
         {
           id: "consumption-1-6",
-          item: "Component D",
+          item: "Chemical Additives",
           customerLotCode: "CUST-LOT-006",
-          supplierLotCode: "SUPP-LOT-006",
-          expiryDate: "2025-08-25",
+          supplierLotCode: "SUPP-MISMATCH-CONSUMPTION",
+          expiryDate: "2024-10-15",
           palletNumber: "PAL-006",
           quantity: "35",
           uom: "g",
@@ -327,10 +427,10 @@ export const Details11 = () => {
         },
         {
           id: "consumption-1-7",
-          item: "Raw Material E",
+          item: "Electronic Components",
           customerLotCode: "CUST-LOT-007",
           supplierLotCode: "SUPP-LOT-007",
-          expiryDate: "2025-07-30",
+          expiryDate: "2024-07-30",
           palletNumber: "PAL-007",
           quantity: "50",
           uom: "kg",
@@ -1048,7 +1148,7 @@ export const Details11 = () => {
       actualQuantity: rowData.actualQuantity ? rowData.actualQuantity.split(" ")[0] || "95" : "95",
       lotCode: rowData.customerLotCode || "CUST-LOT-001",
       supplierLotCode: rowData.supplierLotCode || "SUPP-LOT-001",
-      expiryDate: rowData.expiryDate || "2025-12-31",
+      expiryDate: rowData.expiryDate || "2024-12-31",
       palletNumber: rowData.palletNumber || "PAL-001",
       producedQuantity: rowData.actualQuantity ? rowData.actualQuantity.split(" ")[0] || "95" : "95",
       note: rowData.note || "Production completed successfully with minor adjustments.",
@@ -1095,7 +1195,7 @@ export const Details11 = () => {
               palletNumber: "PAL-001",
               customerLotCode: "CUST-001",
               supplierLotCode: "SUPP-001",
-              expiryDate: "2025-12-31",
+              expiryDate: "2024-12-31",
               quantity: "50",
               uom: "kg",
               verticalAlign: "top",
@@ -1105,7 +1205,7 @@ export const Details11 = () => {
               palletNumber: "PAL-002",
               customerLotCode: "CUST-002",
               supplierLotCode: "",
-              expiryDate: "2025-12-31",
+              expiryDate: "2024-12-31",
               quantity: "45",
               uom: "kg",
               verticalAlign: "top",
@@ -1178,10 +1278,10 @@ export const Details11 = () => {
       newRowConsumptions["row-1"] = [
         {
           id: "consumption-1-1",
-          item: "Raw Material A",
+          item: "Steel Components",
           customerLotCode: "RM-A-001",
           supplierLotCode: "RM-A-SUP-001",
-          expiryDate: "2025-06-30",
+          expiryDate: "2024-06-30",
           palletNumber: "RM-PAL-001",
           quantity: "25",
           uom: "kg",
@@ -1192,7 +1292,7 @@ export const Details11 = () => {
           item: "Raw Material B",
           customerLotCode: "RM-B-001",
           supplierLotCode: "RM-B-SUP-001",
-          expiryDate: "2025-08-15",
+          expiryDate: "2024-08-15",
           palletNumber: "RM-PAL-002",
           quantity: "15",
           uom: "kg",
@@ -1202,10 +1302,10 @@ export const Details11 = () => {
       newRowConsumptions["row-2"] = [
         {
           id: "consumption-2-1",
-          item: "Raw Material A",
+          item: "Steel Components",
           customerLotCode: "RM-A-002",
           supplierLotCode: "RM-A-SUP-002",
-          expiryDate: "2025-06-30",
+          expiryDate: "2024-06-30",
           palletNumber: "RM-PAL-003",
           quantity: "20",
           uom: "kg",
@@ -1216,7 +1316,7 @@ export const Details11 = () => {
           item: "Component X",
           customerLotCode: "COMP-X-001",
           supplierLotCode: "COMP-X-SUP-001",
-          expiryDate: "2025-09-20",
+          expiryDate: "2024-09-20",
           palletNumber: "COMP-PAL-001",
           quantity: "10",
           uom: "kg",
@@ -1587,7 +1687,7 @@ export const Details11 = () => {
       ),
     },
     {
-      label: "Item",
+      label: "Item code",
       dataKey: "item",
       width: "auto",
       headerFormatter: ({ label }: { label: string }) => (
@@ -3280,9 +3380,30 @@ export const Details11 = () => {
           }
         >
           <Form>
-            <Alert type="danger" title="Errors prevent the record from being saved" mb="0">
-              Please correct the highlighted errors and try again.
-            </Alert>
+            <Box position="relative">
+              <Alert type="danger" title="Errors prevent the record from being saved" mb="0">
+                Please correct the highlighted errors and try again.
+              </Alert>
+              <Box
+                position="absolute"
+                right="x1"
+                top="x1"
+                width="20px"
+                height="20px"
+                borderRadius="50%"
+                backgroundColor="violet"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                zIndex={1}
+                cursor="pointer"
+                title="Saving a report with an error brings up the error alert."
+              >
+                <Text fontSize="small" color="white" fontWeight="bold">
+                  9
+                </Text>
+              </Box>
+            </Box>
             <Box py="x2">
               <Field>
                 <FieldLabel labelText="Date" pb="x1" />
@@ -3404,7 +3525,7 @@ export const Details11 = () => {
                           py="x1"
                           disabled={role === "customer"}
                           width="100%"
-                          errorMessage={row.id === "row-2" && row.supplierLotCode === "" ? "Required" : undefined}
+                          errorMessage={(row.id === "row-2" || row.id === "row-5") && row.supplierLotCode === "" ? "Required" : undefined}
                         />
                       </Box>
                       <Box width="100%">
@@ -3566,18 +3687,18 @@ export const Details11 = () => {
                                     ),
                                     cellRenderer: ({ row }: { row: any }) => (
                                       <Box py="x2" px="x1" display="flex" alignItems="center" justifyContent="center">
-                                        <RecordNumberPill number={row.pillNumber || "001"} />
+                                        <RecordNumberPill number={row.pillNumber || String(row.index + 1).padStart(3, "0")} />
                                       </Box>
                                     ),
                                   },
                                   {
-                                    label: "Item",
+                                    label: "Item code",
                                     dataKey: "item",
                                     width: "400px",
                                     headerFormatter: () => (
                                       <Box py="x0_25">
                                         <Text fontSize="small" lineHeight="smallTextCompressed">
-                                          Item
+                                          Item code
                                         </Text>
                                       </Box>
                                     ),
@@ -4321,47 +4442,47 @@ const Details11Default2 = () => {
       palletNumber: "PAL-001",
       customerLotCode: "CUST-001",
       supplierLotCode: "SUPP-001",
-      expiryDate: "2025-12-31",
+      expiryDate: "2024-12-31",
       quantity: "50",
       uom: "kg",
       verticalAlign: "top",
     },
     {
       id: "row-2",
-      palletNumber: "PAL-002",
-      customerLotCode: "CUST-002",
-      supplierLotCode: "",
-      expiryDate: "2025-12-31",
-      quantity: "45",
-      uom: "kg",
+      palletNumber: "PAL-DUPLICATE",
+      customerLotCode: "CUST-004",
+      supplierLotCode: "SUPP-DUPLICATE",
+      expiryDate: "2024-12-31",
+      quantity: "30",
+      uom: "lb",
       verticalAlign: "top",
-    }, // Empty supplier lot code for error
+    }, // Duplicate record - same as row-4 and row-7
     {
       id: "row-3",
       palletNumber: "PAL-003",
       customerLotCode: "CUST-003",
-      supplierLotCode: "SUPP-003",
-      expiryDate: "2025-11-15",
+      supplierLotCode: "",
+      expiryDate: "2026-11-15",
       quantity: "75",
       uom: "cs",
       verticalAlign: "top",
     },
     {
       id: "row-4",
-      palletNumber: "PAL-004",
-      customerLotCode: "CUST-004",
-      supplierLotCode: "SUPP-004",
-      expiryDate: "2025-10-20",
-      quantity: "30",
-      uom: "lb",
+      palletNumber: "PAL-DUPLICATE",
+      customerLotCode: "CUST-002",
+      supplierLotCode: "SUPP-DUPLICATE",
+      expiryDate: "2024-12-31",
+      quantity: "45",
+      uom: "kg",
       verticalAlign: "top",
-    },
+    }, // Duplicate record - same as row-2 and row-7
     {
       id: "row-5",
       palletNumber: "PAL-005",
       customerLotCode: "CUST-005",
       supplierLotCode: "",
-      expiryDate: "2025-09-10",
+      expiryDate: "2024-09-10",
       quantity: "60",
       uom: "ea",
       verticalAlign: "top",
@@ -4371,19 +4492,39 @@ const Details11Default2 = () => {
       palletNumber: "PAL-006",
       customerLotCode: "CUST-006",
       supplierLotCode: "SUPP-006",
-      expiryDate: "2025-08-25",
+      expiryDate: "2024-08-25",
       quantity: "90",
       uom: "g",
       verticalAlign: "top",
     },
     {
       id: "row-7",
-      palletNumber: "PAL-007",
+      palletNumber: "PAL-DUPLICATE",
       customerLotCode: "CUST-007",
-      supplierLotCode: "SUPP-007",
-      expiryDate: "2025-07-30",
+      supplierLotCode: "SUPP-DUPLICATE",
+      expiryDate: "2024-12-31",
       quantity: "120",
       uom: "kg",
+      verticalAlign: "top",
+    }, // Duplicate record - same as row-2 and row-4
+    {
+      id: "row-8",
+      palletNumber: "PAL-008",
+      customerLotCode: "CUST-008",
+      supplierLotCode: "SUPP-MISMATCH",
+      expiryDate: "2024-06-15",
+      quantity: "85",
+      uom: "lb",
+      verticalAlign: "top",
+    },
+    {
+      id: "row-9",
+      palletNumber: "PAL-009",
+      customerLotCode: "CUST-009",
+      supplierLotCode: "SUPP-MISMATCH",
+      expiryDate: "2024-08-20",
+      quantity: "95",
+      uom: "lb",
       verticalAlign: "top",
     },
   ]);
@@ -4406,16 +4547,95 @@ const Details11Default2 = () => {
     >
   >({});
 
+  // Function to detect duplicate production records
+  const getDuplicateRecords = () => {
+    const duplicates = [];
+    const seen = new Map();
+    
+    productionRows.forEach((row, index) => {
+      const key = `${row.palletNumber}-${row.supplierLotCode}-${row.expiryDate}`;
+      if (seen.has(key)) {
+        const existingIndex = seen.get(key);
+        if (!duplicates.includes(existingIndex)) {
+          duplicates.push(existingIndex);
+        }
+        duplicates.push(index);
+      } else {
+        seen.set(key, index);
+      }
+    });
+    
+    // Return only duplicate instances (not the first one)
+    const firstInstances = duplicates.filter((index, pos) => duplicates.indexOf(index) === pos && duplicates.indexOf(index) === 0);
+    const duplicateInstances = duplicates.filter(index => !firstInstances.includes(index));
+    return duplicateInstances.map(index => String(index + 1).padStart(3, "0"));
+  };
+
+  // Function to check if a specific row is a duplicate
+  const isRowDuplicate = (rowIndex) => {
+    const duplicates = [];
+    const seen = new Map();
+    
+    productionRows.forEach((row, index) => {
+      const key = `${row.palletNumber}-${row.supplierLotCode}-${row.expiryDate}`;
+      if (seen.has(key)) {
+        const existingIndex = seen.get(key);
+        if (!duplicates.includes(existingIndex)) {
+          duplicates.push(existingIndex);
+        }
+        duplicates.push(index);
+      } else {
+        seen.set(key, index);
+      }
+    });
+    
+    // Only return true for duplicate instances (not the first one)
+    const firstInstances = duplicates.filter((index, pos) => duplicates.indexOf(index) === pos && duplicates.indexOf(index) === 0);
+    const duplicateInstances = duplicates.filter(index => !firstInstances.includes(index));
+    return duplicateInstances.includes(rowIndex);
+  };
+
+  // Function to detect duplicate consumption records
+  const getDuplicateConsumptionRecords = (rowId) => {
+    const duplicates = [];
+    const seen = new Map();
+    
+    if (rowConsumptions[rowId]) {
+      rowConsumptions[rowId].forEach((consumption, index) => {
+        const key = `${consumption.supplierLotCode}-${consumption.expiryDate}-${consumption.palletNumber}`;
+        if (seen.has(key)) {
+          const existingIndex = seen.get(key);
+          if (!duplicates.includes(existingIndex)) {
+            duplicates.push(existingIndex);
+          }
+          duplicates.push(index);
+        } else {
+          seen.set(key, index);
+        }
+      });
+    }
+    
+    // Return only duplicate instances (not the first one)
+    const firstInstances = duplicates.filter((index, pos) => duplicates.indexOf(index) === pos && duplicates.indexOf(index) === 0);
+    const duplicateInstances = duplicates.filter(index => !firstInstances.includes(index));
+    return duplicateInstances.map(index => String(index + 1).padStart(3, "0"));
+  };
+
+  // Function to check if consumption records have duplicates
+  const hasDuplicateConsumptionRecords = (rowId) => {
+    return getDuplicateConsumptionRecords(rowId).length > 0;
+  };
+
   // Prepopulate consumption data with errors
   React.useEffect(() => {
     setRowConsumptions({
       "row-1": [
         {
           id: "consumption-1-1",
-          item: "Raw Material A",
+          item: "Steel Components",
           customerLotCode: "CUST-LOT-001",
           supplierLotCode: "SUPP-LOT-001",
-          expiryDate: "2025-12-31",
+          expiryDate: "2024-12-31",
           palletNumber: "PAL-001",
           quantity: "25",
           uom: "kg",
@@ -4423,11 +4643,11 @@ const Details11Default2 = () => {
         },
         {
           id: "consumption-1-2",
-          item: "", // Empty for error demonstration
+          item: "Chemical Additives", // Item for demonstration
           customerLotCode: "CUST-LOT-002",
-          supplierLotCode: "SUPP-LOT-002",
-          expiryDate: "2025-12-31",
-          palletNumber: "PAL-002",
+          supplierLotCode: "SUPP-DUPLICATE",
+          expiryDate: "2024-12-31",
+          palletNumber: "PAL-DUPLICATE",
           quantity: "15",
           uom: "", // Empty for error demonstration
           verticalAlign: "top",
@@ -4436,19 +4656,19 @@ const Details11Default2 = () => {
           id: "consumption-1-3",
           item: "Component B",
           customerLotCode: "CUST-LOT-003",
-          supplierLotCode: "SUPP-LOT-003",
-          expiryDate: "2025-11-15",
-          palletNumber: "PAL-003",
+          supplierLotCode: "SUPP-DUPLICATE",
+          expiryDate: "2024-12-31",
+          palletNumber: "PAL-DUPLICATE",
           quantity: "40",
           uom: "cs",
           verticalAlign: "top",
         },
         {
           id: "consumption-1-4",
-          item: "Raw Material C",
+          item: "Plastic Resins",
           customerLotCode: "CUST-LOT-004",
           supplierLotCode: "SUPP-LOT-004",
-          expiryDate: "2025-10-20",
+          expiryDate: "2024-10-20",
           palletNumber: "PAL-004",
           quantity: "30",
           uom: "lb",
@@ -4456,10 +4676,10 @@ const Details11Default2 = () => {
         },
         {
           id: "consumption-1-5",
-          item: "", // Empty for error demonstration
+          item: "Chemical Additives", // Item for demonstration
           customerLotCode: "CUST-LOT-005",
-          supplierLotCode: "SUPP-LOT-005",
-          expiryDate: "2025-09-10",
+          supplierLotCode: "SUPP-MISMATCH-CONSUMPTION",
+          expiryDate: "2024-09-10",
           palletNumber: "PAL-005",
           quantity: "20",
           uom: "ea",
@@ -4467,10 +4687,10 @@ const Details11Default2 = () => {
         },
         {
           id: "consumption-1-6",
-          item: "Component D",
+          item: "Chemical Additives",
           customerLotCode: "CUST-LOT-006",
-          supplierLotCode: "SUPP-LOT-006",
-          expiryDate: "2025-08-25",
+          supplierLotCode: "SUPP-MISMATCH-CONSUMPTION",
+          expiryDate: "2024-10-15",
           palletNumber: "PAL-006",
           quantity: "35",
           uom: "g",
@@ -4478,10 +4698,10 @@ const Details11Default2 = () => {
         },
         {
           id: "consumption-1-7",
-          item: "Raw Material E",
+          item: "Electronic Components",
           customerLotCode: "CUST-LOT-007",
           supplierLotCode: "SUPP-LOT-007",
-          expiryDate: "2025-07-30",
+          expiryDate: "2024-07-30",
           palletNumber: "PAL-007",
           quantity: "50",
           uom: "kg",
@@ -4708,7 +4928,7 @@ const Details11Default2 = () => {
                       palletNumber: "PAL-001",
                       customerLotCode: "CUST-001",
                       supplierLotCode: "SUPP-001",
-                      expiryDate: "2025-12-31",
+                      expiryDate: "2024-12-31",
                       note: "First batch completed successfully",
                     },
                     {
@@ -4719,7 +4939,7 @@ const Details11Default2 = () => {
                       palletNumber: "PAL-002",
                       customerLotCode: "CUST-002",
                       supplierLotCode: "", // Empty for error demonstration
-                      expiryDate: "2025-12-31",
+                      expiryDate: "2024-12-31",
                       note: "Second batch with missing supplier lot code",
                     },
                   ]}
@@ -4731,11 +4951,11 @@ const Details11Default2 = () => {
               </Box>
 
               {/* Error validation boxes */}
-              <Box mt="x0_5" pb="x1_5" pl="x1_5" borderBottom="solid 1px" borderColor="lightGrey">
+              <Box pb="x1" pl="x1_5">
                 <InlineValidation errorMessage="Supplier's lot code is required for PAL-002" />
               </Box>
 
-              <Box mt="x2" pl="x2">
+              <Box mt="x2" pl="x1_5">
                 <InlineValidation errorMessage="Item and UOM are required for consumption record #002" />
               </Box>
             </Box>
@@ -4765,22 +4985,65 @@ const Details11Default2 = () => {
         }
       >
         <Form>
-          <Alert type="danger" title="Errors prevent the record from being saved" mb="0">
-            Please correct the highlighted errors and try again.
-          </Alert>
+          <Box position="relative">
+            <Alert type="danger" title="Errors prevent the record from being saved" mb="0">
+              Please correct the highlighted errors and try again.
+            </Alert>
+            <Box
+              position="absolute"
+              right="x1"
+              top="x1"
+              width="20px"
+              height="20px"
+              borderRadius="50%"
+              backgroundColor="violet"
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+              zIndex={1}
+              cursor="pointer"
+              title="Saving a report with an error brings up the error alert."
+            >
+              <Text fontSize="small" color="white" fontWeight="bold">
+                9
+              </Text>
+            </Box>
+          </Box>
           <Box py="x2">
             <Field>
-              <FieldLabel labelText="Date" pb="x1" />
-              <DatePicker
-                onChange={(date) =>
-                  setProductionRecordState((prev) => ({
-                    ...prev,
-                    date: date ? date.toISOString().split("T")[0] : "",
-                  }))
-                }
-                selected={productionRecordState.date ? new Date(productionRecordState.date) : null}
-                inputProps={{ disabled: role === "customer" && isEditingProduction }}
-              />
+              <Box position="relative">
+                <FieldLabel labelText="Date" pb="x1" />
+                <DatePicker
+                  onChange={(date) =>
+                    setProductionRecordState((prev) => ({
+                      ...prev,
+                      date: date ? date.toISOString().split("T")[0] : "",
+                    }))
+                  }
+                  selected={productionRecordState.date ? new Date(productionRecordState.date) : null}
+                  inputProps={{ disabled: role === "customer" && isEditingProduction }}
+                  errorMessage="Required"
+                />
+                <Box
+                  position="absolute"
+                  right="x1"
+                  top="x2"
+                  width="20px"
+                  height="20px"
+                  borderRadius="50%"
+                  backgroundColor="violet"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  zIndex={1}
+                  cursor="pointer"
+                  title="Date field is required. Validated on blur."
+                >
+                  <Text fontSize="small" color="white" fontWeight="bold">
+                    8
+                  </Text>
+                </Box>
+              </Box>
             </Field>
 
             <Flex gap="x1_5">
@@ -4854,8 +5117,8 @@ const Details11Default2 = () => {
                     alignItems="center" 
                     py="x0" 
                     gap="x1" 
-                    className={`flex-row ${row.supplierLotCode === "" ? "has-error" : ""}`} 
-                    borderBottom={row.supplierLotCode === "" ? "none" : "solid 1px"} 
+                    className={`flex-row ${(row.supplierLotCode === "" || isRowDuplicate(index)) ? "has-error" : ""}`} 
+                    borderBottom={(row.supplierLotCode === "" || isRowDuplicate(index) || row.id === "row-9" || row.id === "row-2") ? "none" : "solid 1px"} 
                     borderColor="lightGrey"
                   >
                     <Flex width="3em" alignItems="center" justifyContent="center" ml="x1" mr="x0_5">
@@ -4921,249 +5184,396 @@ const Details11Default2 = () => {
 
                   {/* InlineValidation error box for supplier lot code */}
                   {(row.id === "row-2" || row.id === "row-5") && row.supplierLotCode === "" && (
-                    <Box pt="x0_5" pb="x1_5" pl="x1_5" borderBottom="solid 1px" borderColor="lightGrey" className="error-message-box">
-                      <InlineValidation errorMessage="Supplier's lot code is required" />
+                    <Box pb="x1_5" pl="x1_5" className="error-message-box" position="relative">
+                      <Box
+                        position="absolute"
+                        right="x1"
+                        top="x0_25"
+                        width="20px"
+                        height="20px"
+                        borderRadius="50%"
+                        backgroundColor="violet"
+                        display="flex"
+                        alignItems="center"
+                        justifyContent="center"
+                        zIndex={1}
+                        cursor="pointer"
+                        title="Required fields: In the actual production and subcomponent consumption record, Supplier's lot code and Expiry date is required if the item tracking settings are on. Validated on submit (if validated on blur, the error may be thrown too frequently)."
+                      >
+                        <Text fontSize="small" color="white" fontWeight="bold">
+                          {row.id === "row-2" ? "1" : "6"}
+                        </Text>
+                      </Box>
+                      <Box pr="x6">
+                        <InlineValidation errorMessage="Supplier's lot code is required" />
+                      </Box>
                     </Box>
                   )}
+
+                  {/* InlineValidation error box for future date error */}
+                  {row.id === "row-3" && (
+                    <Box pb="x1_5" pl="x1_5" className="error-message-box" position="relative">
+                      <Box
+                        position="absolute"
+                        right="x1"
+                        top="x0_25"
+                        width="20px"
+                        height="20px"
+                        borderRadius="50%"
+                        backgroundColor="violet"
+                        display="flex"
+                        alignItems="center"
+                        justifyContent="center"
+                        zIndex={1}
+                        cursor="pointer"
+                        title="Actual production records cannot be created for dates in the future; they can only be created for the current date and past dates. Validated on blur. As soon as the condition is met the error below affected rows is displayed."
+                      >
+                        <Text fontSize="small" color="white" fontWeight="bold">
+                          3
+                        </Text>
+                      </Box>
+                      <Box pr="x6">
+                        <InlineValidation errorMessage="Actual production records cannot be created for future dates" />
+                      </Box>
+                    </Box>
+                  )}
+
+                  {/* InlineValidation error box for expiry date mismatch */}
+                  {row.id === "row-9" && (
+                    <Box pb="x1_5" pl="x1_5" className="error-message-box" position="relative">
+                      <Box
+                        position="absolute"
+                        right="x1"
+                        top="x0_25"
+                        width="20px"
+                        height="20px"
+                        borderRadius="50%"
+                        backgroundColor="violet"
+                        display="flex"
+                        alignItems="center"
+                        justifyContent="center"
+                        zIndex={1}
+                        cursor="pointer"
+                        title="If there are multiple actual production records for the same supplier's lot code, the expiry dates across them (if they are specified), must be consistent - one supplier's lot code cannot be associated with multiple expiry dates. Validated on blur. When the condition is met the error is displayed below the 2nd row that meets the criteria."
+                      >
+                        <Text fontSize="small" color="white" fontWeight="bold">
+                          4
+                        </Text>
+                      </Box>
+                      <Box pr="x6">
+                        <InlineValidation errorMessage="Expiry date mismatch detected (#008). All actual production records sharing the same supplier lot code must have identical expiry dates." />
+                      </Box>
+                    </Box>
+                  )}
+
+
+                  {/* InlineValidation error box for duplicate records */}
+                  {isRowDuplicate(index) && (
+                    <Box pb="x1_5" pl="x1_5" className="error-message-box" position="relative">
+                        <Tooltip
+                          tooltip="Each actual production record must be unique for the following combination of fields: pallet number, supplier's lot code, and expiry date. Validated on blur. As soon as the condition is met, the error is displayed below all except the first row where this condition is met."
+                          placement="top"
+                        >
+                          <Box
+                            position="absolute"
+                            right="x1"
+                            top="x0_25"
+                            width="20px"
+                            height="20px"
+                            borderRadius="50%"
+                            backgroundColor="violet"
+                            display="flex"
+                            alignItems="center"
+                            justifyContent="center"
+                            zIndex={1}
+                            cursor="pointer"
+                          >
+                            <Text fontSize="small" color="white" fontWeight="bold">
+                              1
+                            </Text>
+                          </Box>
+                        </Tooltip>
+                      <Box pr="x6">
+                        <InlineValidation 
+                            errorMessage={`Duplicate actual production record detected (#002). Each record must have an unique combination of supplier lot code, expiry date, and pallet number.`}
+                        />
+                      </Box>
+                    </Box>
+                  )}
+
+                  {/* Divider after error boxes if they are the last element before next row */}
+                  {(((row.id === "row-2" || row.id === "row-5") && row.supplierLotCode === "") || row.id === "row-3" || row.id === "row-9" || isRowDuplicate(index)) && 
+                   !(rowConsumptions[row.id] && rowConsumptions[row.id].length > 0) && 
+                   row.id !== "row-2" && (
+                    <Box borderBottom="solid 1px" borderColor="lightGrey" />
+                  )}
+
 
                   {/* Subcomponent Consumption Table */}
                   {rowConsumptions[row.id] && rowConsumptions[row.id].length > 0 && (
                     <Box ml="x4">
-                      <Table
-                        rows={rowConsumptions[row.id].map((consumption) => ({
-                          ...consumption,
-                          id: `${row.id}-${consumption.id}`,
-                          consumptionId: consumption.id,
-                        }))}
-                        columns={[
-                          {
-                            label: "#",
-                            dataKey: "recordNumber",
-                            width: "40px",
-                            headerFormatter: () => (
-                              <Box py="x0_25">
-                                <Text fontSize="small" lineHeight="smallTextCompressed">
-                                  #
-                                </Text>
-                              </Box>
-                            ),
-                            cellRenderer: ({ row }: { row: any }) => (
+                      {/* Table Header */}
+                      <Flex py="x0_5" px="x1" borderBottom="solid 1px" borderColor="lightGrey" gap="x1">
+                        <Box width="40px" textAlign="center">
+                          <Text fontSize="small" fontWeight="bold">#</Text>
+                        </Box>
+                        <Box width="140px">
+                          <Text fontSize="small" fontWeight="bold">Item</Text>
+                        </Box>
+                        <Box width="160px">
+                          <Text fontSize="small" fontWeight="bold">Customer's lot code</Text>
+                        </Box>
+                        <Box width="160px">
+                          <Text fontSize="small" fontWeight="bold">Supplier's lot code</Text>
+                        </Box>
+                        <Box width="140px">
+                          <Text fontSize="small" fontWeight="bold">Expiry date</Text>
+                        </Box>
+                        <Box width="140px">
+                          <Text fontSize="small" fontWeight="bold">Pallet number</Text>
+                        </Box>
+                        <Box width="140px">
+                          <Text fontSize="small" fontWeight="bold">Quantity</Text>
+                        </Box>
+                        <Box width="140px">
+                          <Text fontSize="small" fontWeight="bold">UOM</Text>
+                        </Box>
+                      </Flex>
+
+                      {/* Individual Consumption Rows */}
+                      {rowConsumptions[row.id].map((consumption, index) => (
+                        <Box key={consumption.id}>
+                          {/* Consumption Row */}
+                          <Flex py="x0_5" px="x1" gap="x1" alignItems="center" borderBottom={index === 2 && hasDuplicateConsumptionRecords(row.id) ? "none" : index === 5 && consumption.id === "consumption-1-6" ? "none" : "solid 1px"} borderColor="lightGrey">
+                            <Box width="40px" display="flex" justifyContent="center">
+                              <RecordNumberPill number={String(index + 1).padStart(3, "0")} />
+                            </Box>
+                            <Box width="140px">
+                              <Input
+                                value={consumption.item}
+                                onChange={(e) => console.log("Item changed:", e.target.value)}
+                                placeholder="Enter item"
+                                inputWidth="140px"
+                              />
+                            </Box>
+                            <Box width="160px">
+                              <Input
+                                inputWidth="160px"
+                                value={consumption.customerLotCode || ""}
+                                onChange={(e) => console.log("Customer lot code changed:", e.target.value)}
+                              />
+                            </Box>
+                            <Box width="160px">
+                              <Input
+                                inputWidth="160px"
+                                value={consumption.supplierLotCode || ""}
+                                onChange={(e) => console.log("Supplier lot code changed:", e.target.value)}
+                              />
+                            </Box>
+                            <Box width="140px">
+                              <DatePicker
+                                selected={consumption.expiryDate ? new Date(consumption.expiryDate) : null}
+                                onChange={(date) => console.log("Expiry date changed:", date)}
+                              />
+                            </Box>
+                            <Box width="140px">
+                              <Input
+                                inputWidth="140px"
+                                value={consumption.palletNumber || ""}
+                                onChange={(e) => console.log("Pallet number changed:", e.target.value)}
+                              />
+                            </Box>
+                            <Box width="140px">
+                              <Input
+                                inputWidth="140px"
+                                type="number"
+                                min="0"
+                                value={consumption.quantity || ""}
+                                onChange={(e) => console.log("Quantity changed:", e.target.value)}
+                              />
+                            </Box>
+                            <Box width="140px">
+                              <Select
+                                value={consumption.uom || ""}
+                                onChange={(value) => console.log("UOM changed:", value)}
+                                options={[
+                                  { value: "kg", label: "kg" },
+                                  { value: "lb", label: "lb" },
+                                  { value: "cs", label: "cs" },
+                                  { value: "ea", label: "ea" },
+                                  { value: "g", label: "g" },
+                                ]}
+                              />
+                            </Box>
+                          </Flex>
+
+                          {/* Error box for duplicate consumption records - show only on duplicate instances */}
+                          {index === 2 && hasDuplicateConsumptionRecords(row.id) && (
+                            <Box mt="x0_25" pb="x0_5" pl="x3" position="relative">
                               <Box
-                                py="x2"
-                                px="x0_5"
+                                position="absolute"
+                                right="x1"
+                                top="x0_25"
+                                width="20px"
+                                height="20px"
+                                borderRadius="50%"
+                                backgroundColor="violet"
                                 display="flex"
                                 alignItems="center"
                                 justifyContent="center"
+                                zIndex={1}
+                                cursor="pointer"
+                                title="Each subcomponent consumption record must be unique for the following combination of fields: item code, supplier's lot code, expiry date, and pallet number. Validated on blur. As soon as the condition is met, the error is displayed below all except the first row where this condition is met."
                               >
-                                <RecordNumberPill number={row.pillNumber || "001"} />
-                              </Box>
-                            ),
-                          },
-                          {
-                            label: "Item",
-                            dataKey: "item",
-                            width: "140px",
-                            headerFormatter: () => (
-                              <Box py="x0_25">
-                                <Text fontSize="small" lineHeight="smallTextCompressed">
-                                  Item
+                                <Text fontSize="small" color="white" fontWeight="bold">
+                                  2
                                 </Text>
                               </Box>
-                            ),
-                            cellRenderer: ({ row }: { row: any }) => (
-                              <Box py="x0_5" pr="x0_5" width="140px">
-                                <AsyncSelect
-                                  value={row.item}
-                                  onChange={(value) => {
-                                    // Handle item change
-                                    console.log("Item changed:", value);
-                                  }}
-                                  loadOptions={async (inputValue) => {
-                                    // Mock async search - replace with actual API call
-                                    const mockItems = [
-                                      { value: "Raw Material A", label: "Raw Material A" },
-                                      { value: "Raw Material B", label: "Raw Material B" },
-                                      { value: "Raw Material C", label: "Raw Material C" },
-                                      { value: "Component X", label: "Component X" },
-                                      { value: "Component Y", label: "Component Y" },
-                                    ];
-                                    return mockItems.filter((item) =>
-                                      item.label.toLowerCase().includes(inputValue.toLowerCase())
-                                    );
-                                  }}
+                              <Box pr="x6">
+                                <InlineValidation 
+                                  errorMessage={`Duplicate subcomponent consumption record detected (#002). Each record must have an unique combination of item code, supplier lot code, expiry date, and pallet number.`} 
                                 />
                               </Box>
-                            ),
-                          },
-                          {
-                            label: "Customer's lot code",
-                            dataKey: "customerLotCode",
-                            width: "160px",
-                            headerFormatter: () => (
-                              <Box py="x0_25">
-                                <Text fontSize="small" lineHeight="smallTextCompressed">
-                                  Customer's lot code
-                                </Text>
-                              </Box>
-                            ),
-                            cellRenderer: ({ row }: { row: any }) => (
-                              <Box py="x0_5" pr="x0_5">
-                                <Input
-                                inputWidth="160px"
-                                  value={row.customerLotCode || ""}
-                                  onChange={(e) => {
-                                    // Handle customer lot code change
-                                    console.log("Customer lot code changed:", e.target.value);
-                                  }}
-                                />
-                              </Box>
-                            ),
-                          },
-                          {
-                            label: "Supplier's lot code",
-                            dataKey: "supplierLotCode",
-                            width: "160px",
-                            headerFormatter: () => (
-                              <Box py="x0_25">
-                                <Text fontSize="small" lineHeight="smallTextCompressed">
-                                  Supplier's lot code
-                                </Text>
-                              </Box>
-                            ),
-                            cellRenderer: ({ row }: { row: any }) => (
-                              <Box py="x0_5" pr="x0_5">
-                                <Input
-                                inputWidth="160px"
-                                  value={row.supplierLotCode || ""}
-                                  onChange={(e) => {
-                                    // Handle supplier lot code change
-                                    console.log("Supplier lot code changed:", e.target.value);
-                                  }}
-                                />
-                              </Box>
-                            ),
-                          },
-                          {
-                            label: "Expiry date",
-                            dataKey: "expiryDate",
-                            width: "140px",
-                            headerFormatter: () => (
-                              <Box py="x0_25">
-                                <Text fontSize="small" lineHeight="smallTextCompressed">
-                                  Expiry date
-                                </Text>
-                              </Box>
-                            ),
-                            cellRenderer: ({ row }: { row: any }) => (
-                              <Box py="x0_5" pr="x0_5">
-                                <DatePicker
+                            </Box>
+                          )}
 
-                                  selected={row.expiryDate ? new Date(row.expiryDate) : null}
-                                  onChange={(date) => {
-                                    // Handle expiry date change
-                                    console.log("Expiry date changed:", date);
-                                  }}
-                                />
-                              </Box>
-                            ),
-                          },
-                          {
-                            label: "Pallet number",
-                            dataKey: "palletNumber",
-                            width: "140px",
-                            headerFormatter: () => (
-                              <Box py="x0_25">
-                                <Text fontSize="small" lineHeight="smallTextCompressed">
-                                  Pallet number
-                                </Text>
-                              </Box>
-                            ),
-                            cellRenderer: ({ row }: { row: any }) => (
-                              <Box py="x0_5" pr="x0_5">
-                                <Input
-                                inputWidth="140px"
-                                  value={row.palletNumber || ""}
-                                  onChange={(e) => {
-                                    // Handle pallet number change
-                                    console.log("Pallet number changed:", e.target.value);
-                                  }}
-                                />
-                              </Box>
-                            ),
-                          },
-                          {
-                            label: "Quantity",
-                            dataKey: "quantity",
-                            width: "140px",
-                            headerFormatter: () => (
-                              <Box py="x0_25">
-                                <Text fontSize="small" lineHeight="smallTextCompressed">
-                                  Quantity
-                                </Text>
-                              </Box>
-                            ),
-                            cellRenderer: ({ row }: { row: any }) => (
-                              <Box py="x0_5" pr="x0_5">
-                                <Input
-                                inputWidth="140px"
-                                  type="number"
-                                  min="0"
-                                  value={row.quantity || ""}
-                                  onChange={(e) => {
-                                    // Handle quantity change
-                                    console.log("Quantity changed:", e.target.value);
-                                  }}
-                                />
-                              </Box>
-                            ),
-                          },
-                          {
-                            label: "UOM",
-                            dataKey: "uom",
-                            width: "140px",
-                            headerFormatter: () => (
-                              <Box py="x0_25">
-                                <Text fontSize="small" lineHeight="smallTextCompressed">
-                                  UOM
-                                </Text>
-                              </Box>
-                            ),
-                            cellRenderer: ({ row }: { row: any }) => (
-                              <Box py="x0_5" pr="x0_5" width="140px">
-                                <Select
-                                      value={row.uom || ""}
-                                  onChange={(value) => {
-                                    // Handle UOM change
-                                    console.log("UOM changed:", value);
-                                  }}
-                                  options={[
-                                    { value: "kg", label: "kg" },
-                                    { value: "lb", label: "lb" },
-                                    { value: "cs", label: "cs" },
-                                    { value: "ea", label: "ea" },
-                                    { value: "g", label: "g" },
-                                  ]}
-                                />
-                              </Box>
-                            ),
-                          },
-                        ]}
-                        keyField="id"
-                        rowBorder={true}
-                        compact={true}
-                        className="subcomponent-consumption-edit-table"
-                      />
+                          {/* Divider after duplicate consumption error */}
+                          {index === 2 && hasDuplicateConsumptionRecords(row.id) && (
+                            <Box borderBottom="solid 1px" borderColor="lightGrey" />
+                          )}
 
-                      {/* InlineValidation error box for consumption errors */}
-                      {rowConsumptions[row.id].some(
-                        (consumption) => consumption.item === "" || consumption.uom === ""
-                      ) && (
-                        <Box mt="x0_5" pb="x1_5" pl="x1_5" borderBottom="solid 1px" borderColor="lightGrey">
-                          <InlineValidation errorMessage="Item and UOM are required for consumption records" />
+                          {/* Error box for expiry date mismatch - show after row 006 */}
+                          {consumption.id === "consumption-1-6" && (
+                            <Box mt="x0_25" pb="x0_5" pl="x3" position="relative">
+                              <Box
+                                position="absolute"
+                                right="x1"
+                                top="x0_25"
+                                width="20px"
+                                height="20px"
+                                borderRadius="50%"
+                                backgroundColor="violet"
+                                display="flex"
+                                alignItems="center"
+                                justifyContent="center"
+                                zIndex={1}
+                                cursor="pointer"
+                                title="If there are multiple subcomponent consumption records for the same item and supplier's lot code, the expiry dates across them (if they are specified) must match. Validated on blur. When the condition is met the error is displayed below the 2nd row that meets the criteria."
+                              >
+                                <Text fontSize="small" color="white" fontWeight="bold">
+                                  5
+                                </Text>
+                              </Box>
+                              <Box pr="x6">
+                                <InlineValidation 
+                                  errorMessage="Expiry date mismatch detected (#005). All subcomponent consumption records sharing the same item code and supplier lot code must have identical expiry dates." 
+                                />
+                              </Box>
+                            </Box>
+                          )}
+
+                          {/* Divider after expiry date mismatch error */}
+                          {consumption.id === "consumption-1-6" && (
+                            <Box borderBottom="solid 1px" borderColor="lightGrey" />
+                          )}
+
+
                         </Box>
-                      )}
+                      ))}
+
+
+
                     </Box>
                   )}
+
+                   {/* Error 7 - Multiple errors for row-2 */}
+                   {row.id === "row-2" && (
+                     <Box mt="x0_25" pb="x0_5" pl="x1_5" mb="x1" position="relative">
+                       <Box
+                         position="absolute"
+                         right="x1"
+                         top="x0_25"
+                         width="20px"
+                         height="20px"
+                         borderRadius="50%"
+                         backgroundColor="violet"
+                         display="flex"
+                         alignItems="center"
+                         justifyContent="center"
+                         zIndex={1}
+                         cursor="pointer"
+                         title="Multiple errors on a single row: Use InlineValidation with list (NDS)."
+                       >
+                         <Text fontSize="small" color="white" fontWeight="bold">
+                           7
+                         </Text>
+                       </Box>
+                       <Box pr="x6">
+                         <InlineValidation 
+                           errorList={[
+                             "Error 1",
+                             "Error 2"
+                           ]}
+                         />
+                       </Box>
+                     </Box>
+                   )}
+
+
+                   {/* Note section for row-2 */}
+                   {row.id === "row-2" && (
+                    <Box ml="x6" border="1px solid" borderColor="lightGrey" borderRadius="medium" p="x0_25" mb="x1">
+                      <Flex
+                        backgroundColor="whiteGrey"
+                        pl="x2"
+                        pr="x0_75"
+                        borderRadius="small"
+                        justifyContent="space-between"
+                        alignItems="center"
+                      >
+                        <Text fontSize="small" fontWeight="bold" lineHeight="smallTextBase">
+                          Note
+                        </Text>
+                        <Flex alignItems="center" gap="x0_5">
+                          <IconicButton
+                            icon="upArrow"
+                            aria-label="Collapse note"
+                            tooltip="Collapse note"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              console.log("Toggle note");
+                            }}
+                          />
+                          <IconicButton
+                            icon="removeCircleOutline"
+                            aria-label="Remove note"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              console.log("Remove note clicked");
+                            }}
+                            tooltip="Remove note"
+                          />
+                        </Flex>
+                      </Flex>
+                      <Box px="x1" py="x1">
+                        <Textarea
+                          placeholder="Add a note for this production record..."
+                          value=""
+                          onChange={(e) => {
+                            console.log("Note changed:", e.target.value);
+                          }}
+                          rows={3}
+                        />
+                      </Box>
+                    </Box>
+                  )}
+
+                  {/* Divider after Note section for row-2 */}
+                  {row.id === "row-2" && (
+                    <Box borderBottom="solid 1px" borderColor="lightGrey" />
+                  )}
+
                 </Box>
               ))}
             </Box>
