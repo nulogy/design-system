@@ -54,7 +54,11 @@ export const OrgSettingsWithOrderManagement = () => {
   const [enableItemLevelOverrides, setEnableItemLevelOverrides] = useState(false);
 
   // Order management configuration
-  const [lotCodeDisplayMode, setLotCodeDisplayMode] = useState("single");
+  const [lotCodeMode, setLotCodeMode] = useState("simplified");
+  const [poLineItemsTraceability, setPoLineItemsTraceability] = useState(["supplier", "customer"]);
+  const [poLineItemDetailsTraceability, setPoLineItemDetailsTraceability] = useState(["supplier", "customer"]);
+  const [inTransitDeliveryTraceability, setInTransitDeliveryTraceability] = useState(["supplier", "customer"]);
+  const [inventorySummaryTraceability, setInventorySummaryTraceability] = useState(["supplier", "customer"]);
 
   // Shop Floor integration
   const [enableShopFloorDataModelAlignment, setEnableShopFloorDataModelAlignment] = useState(false);
@@ -315,46 +319,145 @@ export const OrgSettingsWithOrderManagement = () => {
 
             <Divider my="x4" />
 
-            {/* Order management configuration */}
+            {/* Lot code configuration */}
             <FormSection>
-              <Heading3 mb="x2">Order management</Heading3>
+              <Heading3>Lot code field configuration</Heading3>
+              <Text mb="x1_5" color="midGrey" fontSize="small">
+                Defines how lot codes are structured and managed within the system.
+              </Text>
 
-              {/* Lot code configuration subsection */}
-              <Box mb="x2">
-                <Heading4 mb="x1">Lot code configuration</Heading4>
-                <Text mb="x1" color="midGrey" fontSize="small">
-                  Provides a control over the way the system handles lot codes on PO line items and PO line item details
-                  page.
+              <Box mb="x1_5">
+                <Radio
+                  name="lotCodeMode"
+                  value="simplified"
+                  checked={lotCodeMode === "simplified"}
+                  onChange={(e) => setLotCodeMode(e.target.value)}
+                  labelText="Simplified"
+                />
+                <Text ml="x3" mt="quarter" color="midGrey" fontSize="small">
+                  Uses a single, universal lot code across all operations. Ideal for straightforward workflows where a
+                  single identifier is sufficient for tracking and reporting.
                 </Text>
-
-                <Box mb="x1">
-                  <Radio
-                    name="lotCodeDisplayMode"
-                    value="single"
-                    checked={lotCodeDisplayMode === "single"}
-                    onChange={(e) => setLotCodeDisplayMode(e.target.value)}
-                    labelText="Single lot code"
-                  />
-                  <Text ml="x1" mt="quarter" color="midGrey" fontSize="small">
-                    The system will display and validate only one lot code. In UI the lot code will be refered as Lot
-                    code{" "}
-                  </Text>
-                </Box>
-
-                <Box mb="x2">
-                  <Radio
-                    name="lotCodeDisplayMode"
-                    value="dual"
-                    checked={lotCodeDisplayMode === "dual"}
-                    onChange={(e) => setLotCodeDisplayMode(e.target.value)}
-                    labelText="Dual lot code"
-                  />
-                  <Text ml="x1" mt="quarter" color="midGrey" fontSize="small">
-                    The system handles Supplier's and Customer's lot code separatelly. In UI the lot code will be
-                    refered as Supplier's Lot code and Customer's Lot code.
-                  </Text>
-                </Box>
               </Box>
+
+              <Box mb="x1_5">
+                <Radio
+                  name="lotCodeMode"
+                  value="advanced"
+                  checked={lotCodeMode === "advanced"}
+                  onChange={(e) => setLotCodeMode(e.target.value)}
+                  labelText="Advanced"
+                />
+                <Text ml="x3" mt="quarter" color="midGrey" fontSize="small">
+                  Define separate lot codes for customer, supplier, and vendor tracking and reporting.
+                </Text>
+              </Box>
+
+              {lotCodeMode === "advanced" && (
+                <Box ml="x3" mt="x2">
+                  <Divider my="x0_25" />
+                  
+                  <Box py="x0_25">
+                    <Flex alignItems="center" gap="x0_25">
+                      <Box width="40%">
+                        <FieldLabel
+                          labelText="PO line item (production)"
+                          hint="PO line items page and PO line item production record"
+                        />
+                      </Box>
+                      <Box width="60%">
+                        <Select
+                          multiselect
+                          value={poLineItemsTraceability}
+                          onChange={(value) => setPoLineItemsTraceability(Array.isArray(value) ? value.map(v => String(v)) : [])}
+                          options={[
+                            { value: "supplier", label: "Supplier" },
+                            { value: "customer", label: "Customer" },
+                            { value: "vendor", label: "Vendor" },
+                          ]}
+                        />
+                      </Box>
+                    </Flex>
+                  </Box>
+                  
+                  <Divider my="x0_25" />
+                  
+                  <Box py="x0_25">
+                    <Flex alignItems="center" gap="x0_25">
+                      <Box width="40%">
+                        <FieldLabel
+                          labelText="PO line item (consumption)"
+                          hint="PO line item production record"
+                        />
+                      </Box>
+                      <Box width="60%">
+                        <Select
+                          multiselect
+                          value={poLineItemDetailsTraceability}
+                          onChange={(value) => setPoLineItemDetailsTraceability(Array.isArray(value) ? value.map(v => String(v)) : [])}
+                          options={[
+                            { value: "supplier", label: "Supplier" },
+                            { value: "customer", label: "Customer" },
+                            { value: "vendor", label: "Vendor" },
+                          ]}
+                        />
+                      </Box>
+                    </Flex>
+                  </Box>
+                  
+                  <Divider my="x0_25" />
+                  
+                  <Box py="x0_25">
+                    <Flex alignItems="center" gap="x0_25">
+                      <Box width="40%">
+                        <FieldLabel
+                          labelText="In-transit delivery item"
+                          hint="Placeholder"
+                        />
+                      </Box>
+                      <Box width="60%">
+                        <Select
+                          multiselect
+                          value={inTransitDeliveryTraceability}
+                          onChange={(value) => setInTransitDeliveryTraceability(Array.isArray(value) ? value.map(v => String(v)) : [])}
+                          options={[
+                            { value: "supplier", label: "Supplier" },
+                            { value: "customer", label: "Customer" },
+                            { value: "vendor", label: "Vendor" },
+                          ]}
+                        />
+                      </Box>
+                    </Flex>
+                  </Box>
+                  
+                  <Divider my="x0_25" />
+                  
+                  <Box py="x0_25">
+                    <Flex alignItems="center" gap="x0_25">
+                      <Box width="40%">
+                        <FieldLabel
+                          labelText="Inventory summary record"
+                          hint="Placeholder"
+                        />
+                      </Box>
+                      <Box width="60%">
+                        <Select
+                          multiselect
+                          value={inventorySummaryTraceability}
+                          onChange={(value) => setInventorySummaryTraceability(Array.isArray(value) ? value.map(v => String(v)) : [])}
+                          options={[
+                            { value: "supplier", label: "Supplier" },
+                            { value: "customer", label: "Customer" },
+                            { value: "vendor", label: "Vendor" },
+                          ]}
+                        />
+                      </Box>
+                    </Flex>
+                  </Box>
+                  
+                  <Divider my="x0_25" />
+                </Box>
+              )}
             </FormSection>
 
             <Divider my="x2" />
@@ -369,7 +472,7 @@ export const OrgSettingsWithOrderManagement = () => {
                 </Text>
               </Box>
 
-              <Box mb="x2">
+              <Box mb="x1">
                 <Checkbox
                   checked={enableShopFloorDataModelAlignment}
                   onChange={(e) => setEnableShopFloorDataModelAlignment(e.target.checked)}
