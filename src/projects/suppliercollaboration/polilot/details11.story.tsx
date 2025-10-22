@@ -278,6 +278,16 @@ export const Details11 = () => {
   const [newlyAddedNoteId, setNewlyAddedNoteId] = useState<string | null>(null);
   const [newlyAddedConsumptionId, setNewlyAddedConsumptionId] = useState<string | null>(null);
   const [showUnsavedChangesModal, setShowUnsavedChangesModal] = useState(false);
+
+  // Check if selected date is in the future
+  const isFutureDate = () => {
+    if (!productionRecordState.date) return false;
+    const selectedDate = new Date(productionRecordState.date);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0); // Reset time to start of day for accurate comparison
+    return selectedDate > today;
+  };
+
   // fieldConfig now imported from optionsData.tsx
   const [fieldConfigState, setFieldConfigState] = useState(fieldConfig);
 
@@ -3424,7 +3434,7 @@ export const Details11 = () => {
                     }
                   }}
                   selected={productionRecordState.date ? new Date(productionRecordState.date) : null}
-                  inputProps={{ disabled: role === "customer" && isEditingProduction }}
+                  inputProps={{ disabled: isEditingProduction }}
                 />
               </Field>
 
@@ -4130,16 +4140,34 @@ export const Details11 = () => {
 
               {role === "supplier" && (
                 <Box mt="x1">
-                  <QuietButton
-                    icon="addCircleOutline"
-                    iconSide="left"
-                    fullWidth
-                    onClick={handleAddProductionRow}
-                    type="button"
-                    disabled={!productionRecordState.date && isInCreateEditMode}
-                  >
-                    Add actual production record
-                  </QuietButton>
+                  {isFutureDate() ? (
+                    <Box
+                      py="x1"
+                      textAlign="center"
+                      style={{
+                        fontSize: "14px",
+                        color: "#6B7280",
+                      }}
+                    >
+                      <Flex alignItems="center" justifyContent="center" gap="x1">
+                        <Icon icon="warning" size="x2" color="midGrey" />
+                        <Text>
+                          Adding actual production records for future dates is not allowed.
+                        </Text>
+                      </Flex>
+                    </Box>
+                  ) : (
+                    <QuietButton
+                      icon="addCircleOutline"
+                      iconSide="left"
+                      fullWidth
+                      onClick={handleAddProductionRow}
+                      type="button"
+                      disabled={!productionRecordState.date && isInCreateEditMode}
+                    >
+                      Add actual production record
+                    </QuietButton>
+                  )}
                 </Box>
               )}
             </Box>
