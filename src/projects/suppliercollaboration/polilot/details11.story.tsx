@@ -396,13 +396,13 @@ export const Details11 = () => {
 
           return (
             <Flex py="x0_75">
-              <TruncatedText 
-                width="auto" 
-                maxWidth="152px" 
-                fontSize="medium" 
+              <TruncatedText
+                width="auto"
+                maxWidth="152px"
+                fontSize="medium"
                 lineHeight="base"
                 style={{
-                  color: "var(--color-black)"
+                  color: "var(--color-black)",
                 }}
               >
                 {row.lotCode}
@@ -600,13 +600,13 @@ export const Details11 = () => {
 
           return (
             <Flex py="x0_75">
-              <TruncatedText 
-                width="auto" 
-                maxWidth="152px" 
-                fontSize="small" 
+              <TruncatedText
+                width="auto"
+                maxWidth="152px"
+                fontSize="small"
                 lineHeight="smallTextCompressed"
                 style={{
-                  color: "var(--color-black)"
+                  color: "var(--color-black)",
                 }}
               >
                 {row.lotCode}
@@ -834,13 +834,13 @@ export const Details11 = () => {
 
           return (
             <Flex py="x0_75">
-              <TruncatedText 
-                width="auto" 
-                maxWidth="152px" 
-                fontSize="small" 
+              <TruncatedText
+                width="auto"
+                maxWidth="152px"
+                fontSize="small"
                 lineHeight="smallTextCompressed"
                 style={{
-                  color: "var(--color-black)"
+                  color: "var(--color-black)",
                 }}
               >
                 {row.lotCode}
@@ -1645,11 +1645,11 @@ export const Details11 = () => {
 
             return (
               <Flex py="x0_5">
-                <Text 
-                  fontSize="small" 
+                <Text
+                  fontSize="small"
                   lineHeight="smallTextCompressed"
                   style={{
-                    color: "var(--color-black)"
+                    color: "var(--color-black)",
                   }}
                 >
                   {row.supplierLotCode}
@@ -1784,11 +1784,11 @@ export const Details11 = () => {
 
           return (
             <Flex py="x1_5">
-              <Text 
-                fontSize="small" 
+              <Text
+                fontSize="small"
                 lineHeight="smallTextCompressed"
                 style={{
-                  color: "var(--color-black)"
+                  color: "var(--color-black)",
                 }}
               >
                 {row.customerLotCode}
@@ -3881,34 +3881,38 @@ export const Details11 = () => {
                                           </Box>
                                         ),
                                       },
-                                      ...(dualLotCode ? [{
-                                        label: "Customer's lot code",
-                                        dataKey: "customerLotCode",
-                                        headerFormatter: () => (
-                                          <Box py="x0_25">
-                                            <Text fontSize="small" lineHeight="smallTextCompressed">
-                                              Customer's lot code
-                                            </Text>
-                                          </Box>
-                                        ),
-                                        cellRenderer: ({ row }: { row: any }) => (
-                                          <Box py="x0_5" pr="x1">
-                                            <Input
-                                              value={row.customerLotCode || ""}
-                                              onChange={(e) =>
-                                                handleConsumptionRowChange(
-                                                  row.id,
-                                                  row.consumptionId,
-                                                  "customerLotCode",
-                                                  e.target.value
-                                                )
-                                              }
-                                              disabled={false}
-                                              inputWidth="100%"
-                                            />
-                                          </Box>
-                                        ),
-                                      }] : []),
+                                      ...(dualLotCode
+                                        ? [
+                                            {
+                                              label: "Customer's lot code",
+                                              dataKey: "customerLotCode",
+                                              headerFormatter: () => (
+                                                <Box py="x0_25">
+                                                  <Text fontSize="small" lineHeight="smallTextCompressed">
+                                                    Customer's lot code
+                                                  </Text>
+                                                </Box>
+                                              ),
+                                              cellRenderer: ({ row }: { row: any }) => (
+                                                <Box py="x0_5" pr="x1">
+                                                  <Input
+                                                    value={row.customerLotCode || ""}
+                                                    onChange={(e) =>
+                                                      handleConsumptionRowChange(
+                                                        row.id,
+                                                        row.consumptionId,
+                                                        "customerLotCode",
+                                                        e.target.value
+                                                      )
+                                                    }
+                                                    disabled={false}
+                                                    inputWidth="100%"
+                                                  />
+                                                </Box>
+                                              ),
+                                            },
+                                          ]
+                                        : []),
                                       {
                                         label: dualLotCode ? "Supplier's lot code" : "Lot code",
                                         dataKey: "supplierLotCode",
@@ -4151,9 +4155,7 @@ export const Details11 = () => {
                     >
                       <Flex alignItems="center" justifyContent="center" gap="x1">
                         <Icon icon="warning" size="x2" color="midGrey" />
-                        <Text>
-                          Adding actual production records for future dates is not allowed.
-                        </Text>
+                        <Text>Adding actual production records for future dates is not allowed.</Text>
                       </Flex>
                     </Box>
                   ) : (
@@ -4437,15 +4439,15 @@ export const Details11 = () => {
                   />
                 </Flex>
               </Tooltip>
-              <Tooltip tooltip="When enabled, shows both Customer's and Supplier's lot codes. When disabled, shows only lot code with primary styling." placement="top">
+              <Tooltip
+                tooltip="When enabled, shows both Customer's and Supplier's lot codes. When disabled, shows only lot code with primary styling."
+                placement="top"
+              >
                 <Flex alignItems="center" gap="x1" width="200px">
                   <Text width="100px" fontSize="small" color="midGrey">
                     Dual lot
                   </Text>
-                  <Toggle
-                    toggled={dualLotCode}
-                    onChange={(e) => setDualLotCode(e.target.checked)}
-                  />
+                  <Toggle toggled={dualLotCode} onChange={(e) => setDualLotCode(e.target.checked)} />
                 </Flex>
               </Tooltip>
               <Flex alignItems="center" gap="x1" width="275px">

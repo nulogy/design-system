@@ -250,7 +250,6 @@ export const OrgSettingsWithOrderManagement = () => {
               </Field>
             </FormSection>
 
-
             {/* BOM explosion configuration */}
             <FormSection style={{ filter: "blur(3px)", pointerEvents: "none" }}>
               <Heading4 mb="x3">BOM explosion configuration</Heading4>
@@ -324,7 +323,8 @@ export const OrgSettingsWithOrderManagement = () => {
               <Box mb="x2">
                 <Heading4 mb="x1">Lot code configuration</Heading4>
                 <Text mb="x1" color="midGrey" fontSize="small">
-                  Provides a control over the way the system handles lot codes on PO line items and PO line item details page.
+                  Provides a control over the way the system handles lot codes on PO line items and PO line item details
+                  page.
                 </Text>
 
                 <Box mb="x1">
@@ -336,7 +336,9 @@ export const OrgSettingsWithOrderManagement = () => {
                     labelText="Single lot code"
                   />
                   <Text ml="x1" mt="quarter" color="midGrey" fontSize="small">
-                    The system will display and validate only one lot code. In UI the lot code will be refered as Lot code                  </Text>
+                    The system will display and validate only one lot code. In UI the lot code will be refered as Lot
+                    code{" "}
+                  </Text>
                 </Box>
 
                 <Box mb="x2">
@@ -348,7 +350,8 @@ export const OrgSettingsWithOrderManagement = () => {
                     labelText="Dual lot code"
                   />
                   <Text ml="x1" mt="quarter" color="midGrey" fontSize="small">
-                    The system handles Supplier's and Customer's lot code separatelly. In UI the lot code will be refered as Supplier's Lot code and Customer's Lot code.
+                    The system handles Supplier's and Customer's lot code separatelly. In UI the lot code will be
+                    refered as Supplier's Lot code and Customer's Lot code.
                   </Text>
                 </Box>
               </Box>

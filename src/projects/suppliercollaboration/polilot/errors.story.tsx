@@ -5214,7 +5214,6 @@ const Details11Default2 = () => {
                     </Box>
                   )}
 
-
                   {/* InlineValidation error box for expiry date mismatch */}
                   {row.id === "row-9" && (
                     <Box pb="x1_5" pl="x1_5" className="error-message-box" position="relative">
@@ -5479,8 +5478,6 @@ const Details11Default2 = () => {
                           {consumption.id === "consumption-1-6" && (
                             <Box borderBottom="solid 1px" borderColor="lightGrey" />
                           )}
-
-
                         </Box>
                       ))}
                     </Box>
