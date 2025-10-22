@@ -389,8 +389,8 @@ export const Details11 = () => {
               <TruncatedText 
                 width="auto" 
                 maxWidth="152px" 
-                fontSize="small" 
-                lineHeight="smallTextCompressed"
+                fontSize="medium" 
+                lineHeight="base"
                 style={{
                   color: "var(--color-black)"
                 }}
@@ -1773,7 +1773,7 @@ export const Details11 = () => {
           }
 
           return (
-            <Flex py="x0_5">
+            <Flex py="x1_5">
               <Text 
                 fontSize="small" 
                 lineHeight="smallTextCompressed"
