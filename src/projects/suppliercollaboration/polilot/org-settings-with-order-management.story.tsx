@@ -356,7 +356,7 @@ export const OrgSettingsWithOrderManagement = () => {
               {lotCodeMode === "advanced" && (
                 <Box ml="x3" mt="x2">
                   <Divider my="x0_25" />
-                  
+
                   <Box py="x0_25">
                     <Flex alignItems="center" gap="x0_25">
                       <Box width="40%">
@@ -369,7 +369,9 @@ export const OrgSettingsWithOrderManagement = () => {
                         <Select
                           multiselect
                           value={poLineItemsTraceability}
-                          onChange={(value) => setPoLineItemsTraceability(Array.isArray(value) ? value.map(v => String(v)) : [])}
+                          onChange={(value) =>
+                            setPoLineItemsTraceability(Array.isArray(value) ? value.map((v) => String(v)) : [])
+                          }
                           options={[
                             { value: "supplier", label: "Supplier" },
                             { value: "customer", label: "Customer" },
@@ -379,22 +381,21 @@ export const OrgSettingsWithOrderManagement = () => {
                       </Box>
                     </Flex>
                   </Box>
-                  
+
                   <Divider my="x0_25" />
-                  
+
                   <Box py="x0_25">
                     <Flex alignItems="center" gap="x0_25">
                       <Box width="40%">
-                        <FieldLabel
-                          labelText="PO line item (consumption)"
-                          hint="PO line item production record"
-                        />
+                        <FieldLabel labelText="PO line item (consumption)" hint="PO line item production record" />
                       </Box>
                       <Box width="60%">
                         <Select
                           multiselect
                           value={poLineItemDetailsTraceability}
-                          onChange={(value) => setPoLineItemDetailsTraceability(Array.isArray(value) ? value.map(v => String(v)) : [])}
+                          onChange={(value) =>
+                            setPoLineItemDetailsTraceability(Array.isArray(value) ? value.map((v) => String(v)) : [])
+                          }
                           options={[
                             { value: "supplier", label: "Supplier" },
                             { value: "customer", label: "Customer" },
@@ -404,22 +405,21 @@ export const OrgSettingsWithOrderManagement = () => {
                       </Box>
                     </Flex>
                   </Box>
-                  
+
                   <Divider my="x0_25" />
-                  
+
                   <Box py="x0_25">
                     <Flex alignItems="center" gap="x0_25">
                       <Box width="40%">
-                        <FieldLabel
-                          labelText="In-transit delivery item"
-                          hint="Placeholder"
-                        />
+                        <FieldLabel labelText="In-transit delivery item" hint="Placeholder" />
                       </Box>
                       <Box width="60%">
                         <Select
                           multiselect
                           value={inTransitDeliveryTraceability}
-                          onChange={(value) => setInTransitDeliveryTraceability(Array.isArray(value) ? value.map(v => String(v)) : [])}
+                          onChange={(value) =>
+                            setInTransitDeliveryTraceability(Array.isArray(value) ? value.map((v) => String(v)) : [])
+                          }
                           options={[
                             { value: "supplier", label: "Supplier" },
                             { value: "customer", label: "Customer" },
@@ -429,22 +429,21 @@ export const OrgSettingsWithOrderManagement = () => {
                       </Box>
                     </Flex>
                   </Box>
-                  
+
                   <Divider my="x0_25" />
-                  
+
                   <Box py="x0_25">
                     <Flex alignItems="center" gap="x0_25">
                       <Box width="40%">
-                        <FieldLabel
-                          labelText="Inventory summary record"
-                          hint="Placeholder"
-                        />
+                        <FieldLabel labelText="Inventory summary record" hint="Placeholder" />
                       </Box>
                       <Box width="60%">
                         <Select
                           multiselect
                           value={inventorySummaryTraceability}
-                          onChange={(value) => setInventorySummaryTraceability(Array.isArray(value) ? value.map(v => String(v)) : [])}
+                          onChange={(value) =>
+                            setInventorySummaryTraceability(Array.isArray(value) ? value.map((v) => String(v)) : [])
+                          }
                           options={[
                             { value: "supplier", label: "Supplier" },
                             { value: "customer", label: "Customer" },
@@ -454,7 +453,7 @@ export const OrgSettingsWithOrderManagement = () => {
                       </Box>
                     </Flex>
                   </Box>
-                  
+
                   <Divider my="x0_25" />
                 </Box>
               )}
