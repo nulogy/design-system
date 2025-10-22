@@ -435,7 +435,7 @@ export const Details11 = () => {
           id: "consumption-1-7",
           item: "Electronic Components",
           customerLotCode: "CUST-LOT-007",
-          supplierLotCode: "SUPP-LOT-007",
+          supplierLotCode: "",
           expiryDate: "2024-07-30",
           palletNumber: "PAL-007",
           quantity: "50",
@@ -3421,7 +3421,7 @@ export const Details11 = () => {
                   }
                   selected={productionRecordState.date ? new Date(productionRecordState.date) : null}
                   inputProps={{ disabled: role === "customer" && isEditingProduction }}
-                  errorMessage="Required"
+                  errorMessage="Actual production records cannot be created for future dates."
                 />
               </Field>
 
@@ -4717,7 +4717,7 @@ const Details11Default2 = () => {
           id: "consumption-1-7",
           item: "Electronic Components",
           customerLotCode: "CUST-LOT-007",
-          supplierLotCode: "SUPP-LOT-007",
+          supplierLotCode: "",
           expiryDate: "2024-07-30",
           palletNumber: "PAL-007",
           quantity: "50",
@@ -4969,11 +4969,11 @@ const Details11Default2 = () => {
 
               {/* Error validation boxes */}
               <Box pb="x1" pl="x1_5">
-                <InlineValidation errorMessage="Supplier's lot code is required for PAL-002" />
+                <InlineValidation errorMessage="Lot code is required for PAL-002." />
               </Box>
 
               <Box mt="x2" pl="x1_5">
-                <InlineValidation errorMessage="Item and UOM are required for consumption record #002" />
+                <InlineValidation errorMessage="Item and UOM are required for consumption record #002." />
               </Box>
             </Box>
           </Tab>
@@ -5202,45 +5202,18 @@ const Details11Default2 = () => {
                         justifyContent="center"
                         zIndex={1}
                         cursor="pointer"
-                        title="Required fields: In the actual production and subcomponent consumption record, Supplier's lot code and Expiry date is required if the item tracking settings are on. Validated on submit (if validated on blur, the error may be thrown too frequently)."
+                        title="Required fields: In the actual production and subcomponent consumption record, lot code and Expiry date is required if the item tracking settings are on. Validated on submit (if validated on blur, the error may be thrown too frequently)."
                       >
                         <Text fontSize="small" color="white" fontWeight="bold">
                           {row.id === "row-2" ? "1" : "6"}
                         </Text>
                       </Box>
                       <Box pr="x6">
-                        <InlineValidation errorMessage="Supplier's lot code is required" />
+                        <InlineValidation errorMessage="Lot code is required. Lot code tracking is enforced for the item being produced." />
                       </Box>
                     </Box>
                   )}
 
-                  {/* InlineValidation error box for future date error */}
-                  {row.id === "row-3" && (
-                    <Box pb="x1_5" pl="x1_5" className="error-message-box" position="relative">
-                      <Box
-                        position="absolute"
-                        right="x1"
-                        top="x0_25"
-                        width="20px"
-                        height="20px"
-                        borderRadius="50%"
-                        backgroundColor="violet"
-                        display="flex"
-                        alignItems="center"
-                        justifyContent="center"
-                        zIndex={1}
-                        cursor="pointer"
-                        title="Actual production records cannot be created for dates in the future; they can only be created for the current date and past dates. Validated on blur. As soon as the condition is met the error below affected rows is displayed."
-                      >
-                        <Text fontSize="small" color="white" fontWeight="bold">
-                          3
-                        </Text>
-                      </Box>
-                      <Box pr="x6">
-                        <InlineValidation errorMessage="Actual production records cannot be created for future dates" />
-                      </Box>
-                    </Box>
-                  )}
 
                   {/* InlineValidation error box for expiry date mismatch */}
                   {row.id === "row-9" && (
@@ -5506,6 +5479,8 @@ const Details11Default2 = () => {
                           {consumption.id === "consumption-1-6" && (
                             <Box borderBottom="solid 1px" borderColor="lightGrey" />
                           )}
+
+
                         </Box>
                       ))}
                     </Box>
