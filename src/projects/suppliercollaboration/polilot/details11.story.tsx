@@ -1668,7 +1668,7 @@ export const Details11 = () => {
           if (!dualLotCode && role === "customer") {
             return null;
           }
-          
+
           return (
             <Box pr="x1">
               <DropdownMenu
