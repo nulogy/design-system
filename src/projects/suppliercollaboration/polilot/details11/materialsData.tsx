@@ -116,7 +116,8 @@ export const materialsData2 = [
   {
     subcomponentConsumptionRecordItem: "004",
     item: "Stearic acid",
-    lotCode: "LOT-SA-002",
+    customerLotCode: "LOT-SA-002",
+    supplierLotCode: "SUP-SA-002",
     expiryDate: "2026-07-25",
     palletNumber: "PAL-012",
     quantity: "0.12",
@@ -125,7 +126,8 @@ export const materialsData2 = [
   {
     subcomponentConsumptionRecordItem: "005",
     item: "Hydroxypropyl methylcellulose",
-    lotCode: "LOT-HPMC-002",
+    customerLotCode: "LOT-HPMC-002",
+    supplierLotCode: "SUP-HPMC-002",
     expiryDate: "2026-08-30",
     palletNumber: "PAL-013",
     quantity: "0.25",
@@ -134,7 +136,8 @@ export const materialsData2 = [
   {
     subcomponentConsumptionRecordItem: "006",
     item: "Titanium dioxide",
-    lotCode: "LOT-TD-002",
+    customerLotCode: "LOT-TD-002",
+    supplierLotCode: "SUP-TD-002",
     expiryDate: "2026-09-05",
     palletNumber: "PAL-014",
     quantity: "0.03",

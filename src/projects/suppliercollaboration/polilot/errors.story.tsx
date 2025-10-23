@@ -715,7 +715,6 @@ export const Details11 = () => {
                 fontSize="small"
                 lineHeight="smallTextCompressed"
                 fontWeight="bold"
-                textTransform="uppercase"
                 letterSpacing=".05em"
               >
                 {row.actualProductionRecordNumber}
@@ -1759,11 +1758,26 @@ export const Details11 = () => {
           {label}
         </Text>
       ),
-      cellFormatter: ({ cellData }: { cellData: string }) => (
-        <Text fontSize="small" lineHeight="smallTextCompressed">
-          {cellData}
-        </Text>
-      ),
+      cellRenderer: ({ row }: { row: any }) => {
+        // Expiry date is shared between customer and supplier, so show the same value regardless of dual lot setting
+        if (!row.expiryDate || row.expiryDate === "-") {
+          return (
+            <Flex py="x0_5">
+              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                -
+              </Text>
+            </Flex>
+          );
+        }
+
+        return (
+          <Flex py="x0_5">
+            <Text fontSize="small" lineHeight="smallTextCompressed">
+              {row.expiryDate}
+            </Text>
+          </Flex>
+        );
+      },
     },
     {
       label: "Pallet number",
