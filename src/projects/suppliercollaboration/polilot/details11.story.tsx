@@ -348,67 +348,83 @@ export const Details11 = () => {
       dataKey: "lotCode",
       width: "180px",
       cellRenderer: ({ row }: { row: any }) => {
-        // If lot code is not required in config, show "-"
-        if (!fieldConfigState.lotCodeRequired) {
-          return (
-            <Flex py="x0_75">
-              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
-                -
-              </Text>
-            </Flex>
-          );
-        }
-
         const hasCustomerLot = row.lotCode && row.lotCode !== "-";
         const hasSupplierLot = row.supplierLotCode && row.supplierLotCode !== "-";
 
         if (dualLotCode) {
           // When dual lot is ON, show both values
-          if (!hasCustomerLot && !hasSupplierLot) {
-            return null;
-          }
+          if (fieldConfigState.lotCodeRequired) {
+            // Lot code ON: show actual values
+            if (!hasCustomerLot && !hasSupplierLot) {
+              return null;
+            }
 
-          return (
-            <Flex py="x0_75" gap="x0_25" flexDirection="column">
-              {hasCustomerLot && (
-                <TruncatedText width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
-                  {row.lotCode}
-                </TruncatedText>
-              )}
-              {hasSupplierLot && (
+            return (
+              <Flex py="x0_75" gap="x0_25" flexDirection="column">
+                {hasCustomerLot && (
+                  <TruncatedText width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
+                    {row.lotCode}
+                  </TruncatedText>
+                )}
+                {hasSupplierLot && (
+                  <TruncatedText
+                    width="auto"
+                    maxWidth="152px"
+                    fontSize="small"
+                    lineHeight="smallTextCompressed"
+                    color="midGrey"
+                  >
+                    {row.supplierLotCode}
+                  </TruncatedText>
+                )}
+              </Flex>
+            );
+          } else {
+            // Lot code OFF: show two "-" entries
+            return (
+              <Flex py="x0_75" flexDirection="column" gap="x0_25">
+                <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                  -
+                </Text>
+                <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                  -
+                </Text>
+              </Flex>
+            );
+          }
+        } else {
+          // When dual lot is OFF, show only supplier's lot code
+          if (fieldConfigState.lotCodeRequired) {
+            // Lot code ON: show supplier's lot code
+            if (!hasSupplierLot) {
+              return null;
+            }
+
+            return (
+              <Flex py="x0_75">
                 <TruncatedText
                   width="auto"
                   maxWidth="152px"
-                  fontSize="small"
-                  lineHeight="smallTextCompressed"
-                  color="midGrey"
+                  fontSize="medium"
+                  lineHeight="base"
+                  style={{
+                    color: "var(--color-black)",
+                  }}
                 >
                   {row.supplierLotCode}
                 </TruncatedText>
-              )}
-            </Flex>
-          );
-        } else {
-          // When dual lot is OFF, show only customer lot code in black
-          if (!hasCustomerLot) {
-            return null;
+              </Flex>
+            );
+          } else {
+            // Lot code OFF: show one "-" entry
+            return (
+              <Flex py="x0_75">
+                <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                  -
+                </Text>
+              </Flex>
+            );
           }
-
-          return (
-            <Flex py="x0_75">
-              <TruncatedText
-                width="auto"
-                maxWidth="152px"
-                fontSize="medium"
-                lineHeight="base"
-                style={{
-                  color: "var(--color-black)",
-                }}
-              >
-                {row.lotCode}
-              </TruncatedText>
-            </Flex>
-          );
         }
       },
     },
@@ -552,15 +568,30 @@ export const Details11 = () => {
       dataKey: "lotCode",
       width: "180px",
       cellRenderer: ({ row }: { row: any }) => {
-        // If lot code is not required in config, show "-"
+        // Handle lot code display based on both dual lot and lot code toggles
         if (!fieldConfigState.lotCodeRequired) {
-          return (
-            <Flex py="x0_75">
-              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
-                -
-              </Text>
-            </Flex>
-          );
+          if (dualLotCode) {
+            // Dual lot ON + Lot code OFF: show two "-" entries
+            return (
+              <Flex py="x0_75" flexDirection="column" gap="x0_25">
+                <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                  -
+                </Text>
+                <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                  -
+                </Text>
+              </Flex>
+            );
+          } else {
+            // Dual lot OFF + Lot code OFF: show one "-" entry
+            return (
+              <Flex py="x0_75">
+                <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                  -
+                </Text>
+              </Flex>
+            );
+          }
         }
 
         const hasCustomerLot = row.lotCode && row.lotCode !== "-";
@@ -593,8 +624,8 @@ export const Details11 = () => {
             </Flex>
           );
         } else {
-          // When dual lot is OFF, show only customer lot code in black
-          if (!hasCustomerLot) {
+          // When dual lot is OFF, show only supplier's lot code
+          if (!hasSupplierLot) {
             return null;
           }
 
@@ -609,7 +640,7 @@ export const Details11 = () => {
                   color: "var(--color-black)",
                 }}
               >
-                {row.lotCode}
+                {row.supplierLotCode}
               </TruncatedText>
             </Flex>
           );
@@ -786,15 +817,30 @@ export const Details11 = () => {
       dataKey: "lotCode",
       width: "180px",
       cellRenderer: ({ row }: { row: any }) => {
-        // If lot code is not required in config, show "-"
+        // Handle lot code display based on both dual lot and lot code toggles
         if (!fieldConfigState.lotCodeRequired) {
-          return (
-            <Flex py="x0_75">
-              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
-                -
-              </Text>
-            </Flex>
-          );
+          if (dualLotCode) {
+            // Dual lot ON + Lot code OFF: show two "-" entries
+            return (
+              <Flex py="x0_75" flexDirection="column" gap="x0_25">
+                <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                  -
+                </Text>
+                <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                  -
+                </Text>
+              </Flex>
+            );
+          } else {
+            // Dual lot OFF + Lot code OFF: show one "-" entry
+            return (
+              <Flex py="x0_75">
+                <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                  -
+                </Text>
+              </Flex>
+            );
+          }
         }
 
         const hasCustomerLot = row.lotCode && row.lotCode !== "-";
@@ -827,8 +873,8 @@ export const Details11 = () => {
             </Flex>
           );
         } else {
-          // When dual lot is OFF, show only customer lot code in black
-          if (!hasCustomerLot) {
+          // When dual lot is OFF, show only supplier's lot code
+          if (!hasSupplierLot) {
             return null;
           }
 
@@ -843,7 +889,7 @@ export const Details11 = () => {
                   color: "var(--color-black)",
                 }}
               >
-                {row.lotCode}
+                {row.supplierLotCode}
               </TruncatedText>
             </Flex>
           );
@@ -1609,54 +1655,8 @@ export const Details11 = () => {
           </Box>
         ),
         cellRenderer: ({ row }: { row: any }) => {
-          const hasCustomerLot = row.customerLotCode && row.customerLotCode !== "-";
-          const hasSupplierLot = row.supplierLotCode && row.supplierLotCode !== "-";
-
-          if (dualLotCode) {
-            // When dual lot is ON, show customer lot code but hide supplier lot code
-            if (!hasCustomerLot) {
-              return (
-                <Flex py="x0_5">
-                  <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
-                    -
-                  </Text>
-                </Flex>
-              );
-            }
-
-            return (
-              <Flex py="x0_5">
-                <Text fontSize="small" lineHeight="smallTextCompressed">
-                  {row.customerLotCode}
-                </Text>
-              </Flex>
-            );
-          } else {
-            // When dual lot is OFF, show only supplier's lot code
-            if (!hasSupplierLot) {
-              return (
-                <Flex py="x0_5">
-                  <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
-                    -
-                  </Text>
-                </Flex>
-              );
-            }
-
-            return (
-              <Flex py="x0_5">
-                <Text
-                  fontSize="small"
-                  lineHeight="smallTextCompressed"
-                  style={{
-                    color: "var(--color-black)",
-                  }}
-                >
-                  {row.supplierLotCode}
-                </Text>
-              </Flex>
-            );
-          }
+          // Always show blank for parent table rows since detailed info is in nested tables
+          return null;
         },
       };
     }

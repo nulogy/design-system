@@ -611,7 +611,7 @@ export const OrgSettingsWithOrderManagement = () => {
           <Flex alignItems="center">
             <Toggle
               labelText="Configuration enforced by customer"
-              checked={configurationEnforcedByCustomer}
+              isOn={configurationEnforcedByCustomer}
               onChange={(e) => {
                 setConfigurationEnforcedByCustomer(e.target.checked);
                 if (e.target.checked) {
