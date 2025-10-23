@@ -1663,18 +1663,25 @@ export const Details11 = () => {
     if (column.dataKey === "actions") {
       return {
         ...column,
-        cellRenderer: ({ row }: { row: any }) => (
-          <Box pr="x1">
-            <DropdownMenu
-              trigger={() => (
-                <IconicButton icon="more" aria-label="More actions" disabled={!productionRecordState.date} />
-              )}
-              placement="bottom-end"
-            >
-              <DropdownButton onClick={() => handleEditProduction(row.id)}>Edit production record</DropdownButton>
-            </DropdownMenu>
-          </Box>
-        ),
+        cellRenderer: ({ row }: { row: any }) => {
+          // Hide edit production record option when dual lot is off and view is as customer
+          if (!dualLotCode && role === "customer") {
+            return null;
+          }
+          
+          return (
+            <Box pr="x1">
+              <DropdownMenu
+                trigger={() => (
+                  <IconicButton icon="more" aria-label="More actions" disabled={!productionRecordState.date} />
+                )}
+                placement="bottom-end"
+              >
+                <DropdownButton onClick={() => handleEditProduction(row.id)}>Edit production record</DropdownButton>
+              </DropdownMenu>
+            </Box>
+          );
+        },
       };
     }
     return column;

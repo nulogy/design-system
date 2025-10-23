@@ -5270,7 +5270,7 @@ const Details11Default2 = () => {
                       </Tooltip>
                       <Box pr="x6">
                         <InlineValidation
-                          errorMessage={`Duplicate actual production record detected (#002). Each record must have an unique combination of lot code, expiry date, and pallet number.`}
+                          errorMessage={`Duplicate actual production record detected (#002). Each record must have an unique combination of pallet number, lot code, and expiry date.`}
                         />
                       </Box>
                     </Box>
