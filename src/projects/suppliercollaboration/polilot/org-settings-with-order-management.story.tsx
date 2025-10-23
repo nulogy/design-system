@@ -13,6 +13,7 @@ import {
   Select,
   Checkbox,
   Radio,
+  Toggle,
   Button,
   Form,
   FormSection,
@@ -22,6 +23,7 @@ import {
   Breadcrumbs,
   Link,
   BrandedNavBar,
+  Alert,
 } from "../../..";
 
 export default {
@@ -55,10 +57,11 @@ export const OrgSettingsWithOrderManagement = () => {
 
   // Order management configuration
   const [lotCodeMode, setLotCodeMode] = useState("simplified");
-  const [poLineItemsTraceability, setPoLineItemsTraceability] = useState(["supplier", "customer"]);
-  const [poLineItemDetailsTraceability, setPoLineItemDetailsTraceability] = useState(["supplier", "customer"]);
-  const [inTransitDeliveryTraceability, setInTransitDeliveryTraceability] = useState(["supplier", "customer"]);
-  const [inventorySummaryTraceability, setInventorySummaryTraceability] = useState(["supplier", "customer"]);
+  const [configurationEnforcedByCustomer, setConfigurationEnforcedByCustomer] = useState(false);
+  const [poLineItemsTraceability, setPoLineItemsTraceability] = useState(["supplier"]);
+  const [poLineItemDetailsTraceability, setPoLineItemDetailsTraceability] = useState(["supplier"]);
+  const [inTransitDeliveryTraceability, setInTransitDeliveryTraceability] = useState(["supplier"]);
+  const [inventorySummaryTraceability, setInventorySummaryTraceability] = useState(["supplier"]);
 
   // Shop Floor integration
   const [enableShopFloorDataModelAlignment, setEnableShopFloorDataModelAlignment] = useState(false);
@@ -322,9 +325,12 @@ export const OrgSettingsWithOrderManagement = () => {
             {/* Lot code configuration */}
             <FormSection>
               <Heading3>Lot code field configuration</Heading3>
-              <Text mb="x1_5" color="midGrey" fontSize="small">
-                Defines how lot codes are structured and managed within the system.
-              </Text>
+              
+              {configurationEnforcedByCustomer && (
+                <Alert type="warning" mb="x0">
+                  Configuration is enforced by the customer partners' requirements and cannot be modified.
+                </Alert>
+              )}
 
               <Box mb="x1_5">
                 <Radio
@@ -333,6 +339,7 @@ export const OrgSettingsWithOrderManagement = () => {
                   checked={lotCodeMode === "simplified"}
                   onChange={(e) => setLotCodeMode(e.target.value)}
                   labelText="Simplified"
+                  disabled={configurationEnforcedByCustomer}
                 />
                 <Text ml="x3" mt="quarter" color="midGrey" fontSize="small">
                   Uses a single, universal lot code across all operations. Ideal for straightforward workflows where a
@@ -347,113 +354,182 @@ export const OrgSettingsWithOrderManagement = () => {
                   checked={lotCodeMode === "advanced"}
                   onChange={(e) => setLotCodeMode(e.target.value)}
                   labelText="Advanced"
+                  disabled={configurationEnforcedByCustomer}
                 />
                 <Text ml="x3" mt="quarter" color="midGrey" fontSize="small">
-                  Define separate lot codes for customer, supplier, and vendor tracking and reporting.
+                  Configure separate lot codes for suppliers, customers, and vendors. Ideal for workflows where partners have their own tracking and reporting requirements.
                 </Text>
               </Box>
 
               {lotCodeMode === "advanced" && (
                 <Box ml="x3" mt="x2">
                   <Divider my="x0_25" />
-
+                  
                   <Box py="x0_25">
-                    <Flex alignItems="center" gap="x0_25">
-                      <Box width="40%">
-                        <FieldLabel
-                          labelText="PO line item (production)"
-                          hint="PO line items page and PO line item production record"
-                        />
+                    <Flex alignItems="flex-start" gap="x0_25">
+                      <Box width="50%" pt="x1">
+                        <FieldLabel labelText="PO line item lot code" />
                       </Box>
-                      <Box width="60%">
-                        <Select
-                          multiselect
-                          value={poLineItemsTraceability}
-                          onChange={(value) =>
-                            setPoLineItemsTraceability(Array.isArray(value) ? value.map((v) => String(v)) : [])
-                          }
-                          options={[
-                            { value: "supplier", label: "Supplier" },
-                            { value: "customer", label: "Customer" },
-                            { value: "vendor", label: "Vendor" },
-                          ]}
-                        />
+                      <Box width="50%">
+                        <Flex flexDirection="column" gap="x0_25">
+                          <Checkbox
+                            checked={true}
+                            disabled={true}
+                            labelText="Supplier"
+                          />
+                          <Checkbox
+                            checked={poLineItemsTraceability.includes("customer")}
+                            onChange={(e) => {
+                              if (e.target.checked) {
+                                setPoLineItemsTraceability([...poLineItemsTraceability, "customer"]);
+                              } else {
+                                setPoLineItemsTraceability(poLineItemsTraceability.filter(item => item !== "customer"));
+                              }
+                            }}
+                            labelText="Customer"
+                            disabled={configurationEnforcedByCustomer}
+                          />
+                        </Flex>
                       </Box>
                     </Flex>
                   </Box>
-
+                  
                   <Divider my="x0_25" />
-
+                  
                   <Box py="x0_25">
-                    <Flex alignItems="center" gap="x0_25">
-                      <Box width="40%">
-                        <FieldLabel labelText="PO line item (consumption)" hint="PO line item production record" />
+                    <Flex alignItems="flex-start" gap="x0_25">
+                      <Box width="50%" pt="x1">
+                        <FieldLabel labelText="PO line item actual production record lot code" />
                       </Box>
-                      <Box width="60%">
-                        <Select
-                          multiselect
-                          value={poLineItemDetailsTraceability}
-                          onChange={(value) =>
-                            setPoLineItemDetailsTraceability(Array.isArray(value) ? value.map((v) => String(v)) : [])
-                          }
-                          options={[
-                            { value: "supplier", label: "Supplier" },
-                            { value: "customer", label: "Customer" },
-                            { value: "vendor", label: "Vendor" },
-                          ]}
-                        />
+                      <Box width="50%">
+                        <Flex flexDirection="column" gap="x0_25">
+                          <Checkbox
+                            checked={true}
+                            disabled={true}
+                            labelText="Supplier"
+                          />
+                          <Checkbox
+                            checked={poLineItemDetailsTraceability.includes("customer")}
+                            onChange={(e) => {
+                              if (e.target.checked) {
+                                setPoLineItemDetailsTraceability([...poLineItemDetailsTraceability, "customer"]);
+                              } else {
+                                setPoLineItemDetailsTraceability(poLineItemDetailsTraceability.filter(item => item !== "customer"));
+                              }
+                            }}
+                            labelText="Customer"
+                            disabled={configurationEnforcedByCustomer}
+                          />
+                        </Flex>
                       </Box>
                     </Flex>
                   </Box>
-
+                  
                   <Divider my="x0_25" />
-
+                  
                   <Box py="x0_25">
-                    <Flex alignItems="center" gap="x0_25">
-                      <Box width="40%">
-                        <FieldLabel labelText="In-transit delivery item" hint="Placeholder" />
+                    <Flex alignItems="flex-start" gap="x0_25">
+                      <Box width="50%" pt="x1">
+                        <FieldLabel labelText="PO line item subcomponent consumption record lot code" />
                       </Box>
-                      <Box width="60%">
-                        <Select
-                          multiselect
-                          value={inTransitDeliveryTraceability}
-                          onChange={(value) =>
-                            setInTransitDeliveryTraceability(Array.isArray(value) ? value.map((v) => String(v)) : [])
-                          }
-                          options={[
-                            { value: "supplier", label: "Supplier" },
-                            { value: "customer", label: "Customer" },
-                            { value: "vendor", label: "Vendor" },
-                          ]}
-                        />
+                      <Box width="50%">
+                        <Flex flexDirection="column" gap="x0_25">
+                          <Checkbox
+                            checked={true}
+                            disabled={true}
+                            labelText="Supplier"
+                          />
+                          <Checkbox
+                            checked={inTransitDeliveryTraceability.includes("customer")}
+                            onChange={(e) => {
+                              if (e.target.checked) {
+                                setInTransitDeliveryTraceability([...inTransitDeliveryTraceability, "customer"]);
+                              } else {
+                                setInTransitDeliveryTraceability(inTransitDeliveryTraceability.filter(item => item !== "customer"));
+                              }
+                            }}
+                            labelText="Customer"
+                            disabled={configurationEnforcedByCustomer}
+                          />
+                        </Flex>
                       </Box>
                     </Flex>
                   </Box>
-
+                  
                   <Divider my="x0_25" />
-
+                  
                   <Box py="x0_25">
-                    <Flex alignItems="center" gap="x0_25">
-                      <Box width="40%">
-                        <FieldLabel labelText="Inventory summary record" hint="Placeholder" />
+                    <Flex alignItems="flex-start" gap="x0_25">
+                      <Box width="50%" pt="x1">
+                        <FieldLabel labelText="Inventory summary record lot code" />
                       </Box>
-                      <Box width="60%">
-                        <Select
-                          multiselect
-                          value={inventorySummaryTraceability}
-                          onChange={(value) =>
-                            setInventorySummaryTraceability(Array.isArray(value) ? value.map((v) => String(v)) : [])
-                          }
-                          options={[
-                            { value: "supplier", label: "Supplier" },
-                            { value: "customer", label: "Customer" },
-                            { value: "vendor", label: "Vendor" },
-                          ]}
-                        />
+                      <Box width="50%">
+                        <Flex flexDirection="column" gap="x0_25">
+                          <Checkbox
+                            checked={true}
+                            disabled={true}
+                            labelText="Supplier"
+                          />
+                          <Checkbox
+                            checked={inventorySummaryTraceability.includes("customer")}
+                            onChange={(e) => {
+                              if (e.target.checked) {
+                                setInventorySummaryTraceability([...inventorySummaryTraceability, "customer"]);
+                              } else {
+                                setInventorySummaryTraceability(inventorySummaryTraceability.filter(item => item !== "customer"));
+                              }
+                            }}
+                            labelText="Customer"
+                            disabled={configurationEnforcedByCustomer}
+                          />
+                        </Flex>
                       </Box>
                     </Flex>
                   </Box>
-
+                  
+                  <Divider my="x0_25" />
+                  
+                  <Box py="x0_25">
+                    <Flex alignItems="flex-start" gap="x0_25">
+                      <Box width="50%" pt="x1">
+                        <FieldLabel labelText="In-transit delivery item lot code" />
+                      </Box>
+                      <Box width="50%">
+                        <Flex flexDirection="column" gap="x0_25">
+                          <Checkbox
+                            checked={true}
+                            disabled={true}
+                            labelText="Supplier"
+                          />
+                          <Checkbox
+                            checked={inTransitDeliveryTraceability.includes("customer")}
+                            onChange={(e) => {
+                              if (e.target.checked) {
+                                setInTransitDeliveryTraceability([...inTransitDeliveryTraceability, "customer"]);
+                              } else {
+                                setInTransitDeliveryTraceability(inTransitDeliveryTraceability.filter(item => item !== "customer"));
+                              }
+                            }}
+                            labelText="Customer"
+                            disabled={configurationEnforcedByCustomer}
+                          />
+                          <Checkbox
+                            checked={inTransitDeliveryTraceability.includes("vendor")}
+                            onChange={(e) => {
+                              if (e.target.checked) {
+                                setInTransitDeliveryTraceability([...inTransitDeliveryTraceability, "vendor"]);
+                              } else {
+                                setInTransitDeliveryTraceability(inTransitDeliveryTraceability.filter(item => item !== "vendor"));
+                              }
+                            }}
+                            labelText="Vendor"
+                            disabled={configurationEnforcedByCustomer}
+                          />
+                        </Flex>
+                      </Box>
+                    </Flex>
+                  </Box>
+                  
                   <Divider my="x0_25" />
                 </Box>
               )}
@@ -516,6 +592,46 @@ export const OrgSettingsWithOrderManagement = () => {
               <Button>Create Organization</Button>
             </Flex>
           </Form>
+        </Box>
+
+        {/* Floating Configuration */}
+        <Box
+          position="fixed"
+          bottom="x4"
+          left="50%"
+          transform="translateX(-50%)"
+          backgroundColor="white"
+          borderRadius="large"
+          boxShadow="elevated"
+          p="x2"
+          border="1px solid"
+          borderColor="lightGrey"
+          zIndex={1000}
+        >
+          <Flex alignItems="center">
+            <Toggle
+              labelText="Configuration enforced by customer"
+              checked={configurationEnforcedByCustomer}
+              onChange={(e) => {
+                setConfigurationEnforcedByCustomer(e.target.checked);
+                if (e.target.checked) {
+                  setLotCodeMode("advanced");
+                  // Select all traceability options
+                  setPoLineItemsTraceability(["supplier", "customer", "vendor"]);
+                  setPoLineItemDetailsTraceability(["supplier", "customer", "vendor"]);
+                  setInTransitDeliveryTraceability(["supplier", "customer", "vendor"]);
+                  setInventorySummaryTraceability(["supplier", "customer", "vendor"]);
+                } else {
+                  // Reset to default when disabled
+                  setPoLineItemsTraceability(["supplier"]);
+                  setPoLineItemDetailsTraceability(["supplier"]);
+                  setInTransitDeliveryTraceability(["supplier"]);
+                  setInventorySummaryTraceability(["supplier"]);
+                }
+              }}
+              size="small"
+            />
+          </Flex>
         </Box>
       </Page>
     </ApplicationFrame>
