@@ -325,7 +325,7 @@ export const OrgSettingsWithOrderManagement = () => {
             {/* Lot code configuration */}
             <FormSection>
               <Heading3>Lot code field configuration</Heading3>
-              
+
               {configurationEnforcedByCustomer && (
                 <Alert type="warning" mb="x0">
                   Configuration is enforced by the customer partners' requirements and cannot be modified.
@@ -357,14 +357,15 @@ export const OrgSettingsWithOrderManagement = () => {
                   disabled={configurationEnforcedByCustomer}
                 />
                 <Text ml="x3" mt="quarter" color="midGrey" fontSize="small">
-                  Configure separate lot codes for suppliers, customers, and vendors. Ideal for workflows where partners have their own tracking and reporting requirements.
+                  Configure separate lot codes for suppliers, customers, and vendors. Ideal for workflows where partners
+                  have their own tracking and reporting requirements.
                 </Text>
               </Box>
 
               {lotCodeMode === "advanced" && (
                 <Box ml="x3" mt="x2">
                   <Divider my="x0_25" />
-                  
+
                   <Box py="x0_25">
                     <Flex alignItems="flex-start" gap="x0_25">
                       <Box width="50%" pt="x1">
@@ -372,18 +373,16 @@ export const OrgSettingsWithOrderManagement = () => {
                       </Box>
                       <Box width="50%">
                         <Flex flexDirection="column" gap="x0_25">
-                          <Checkbox
-                            checked={true}
-                            disabled={true}
-                            labelText="Supplier"
-                          />
+                          <Checkbox checked={true} disabled={true} labelText="Supplier" />
                           <Checkbox
                             checked={poLineItemsTraceability.includes("customer")}
                             onChange={(e) => {
                               if (e.target.checked) {
                                 setPoLineItemsTraceability([...poLineItemsTraceability, "customer"]);
                               } else {
-                                setPoLineItemsTraceability(poLineItemsTraceability.filter(item => item !== "customer"));
+                                setPoLineItemsTraceability(
+                                  poLineItemsTraceability.filter((item) => item !== "customer")
+                                );
                               }
                             }}
                             labelText="Customer"
@@ -393,9 +392,9 @@ export const OrgSettingsWithOrderManagement = () => {
                       </Box>
                     </Flex>
                   </Box>
-                  
+
                   <Divider my="x0_25" />
-                  
+
                   <Box py="x0_25">
                     <Flex alignItems="flex-start" gap="x0_25">
                       <Box width="50%" pt="x1">
@@ -403,18 +402,16 @@ export const OrgSettingsWithOrderManagement = () => {
                       </Box>
                       <Box width="50%">
                         <Flex flexDirection="column" gap="x0_25">
-                          <Checkbox
-                            checked={true}
-                            disabled={true}
-                            labelText="Supplier"
-                          />
+                          <Checkbox checked={true} disabled={true} labelText="Supplier" />
                           <Checkbox
                             checked={poLineItemDetailsTraceability.includes("customer")}
                             onChange={(e) => {
                               if (e.target.checked) {
                                 setPoLineItemDetailsTraceability([...poLineItemDetailsTraceability, "customer"]);
                               } else {
-                                setPoLineItemDetailsTraceability(poLineItemDetailsTraceability.filter(item => item !== "customer"));
+                                setPoLineItemDetailsTraceability(
+                                  poLineItemDetailsTraceability.filter((item) => item !== "customer")
+                                );
                               }
                             }}
                             labelText="Customer"
@@ -424,9 +421,9 @@ export const OrgSettingsWithOrderManagement = () => {
                       </Box>
                     </Flex>
                   </Box>
-                  
+
                   <Divider my="x0_25" />
-                  
+
                   <Box py="x0_25">
                     <Flex alignItems="flex-start" gap="x0_25">
                       <Box width="50%" pt="x1">
@@ -434,18 +431,16 @@ export const OrgSettingsWithOrderManagement = () => {
                       </Box>
                       <Box width="50%">
                         <Flex flexDirection="column" gap="x0_25">
-                          <Checkbox
-                            checked={true}
-                            disabled={true}
-                            labelText="Supplier"
-                          />
+                          <Checkbox checked={true} disabled={true} labelText="Supplier" />
                           <Checkbox
                             checked={inTransitDeliveryTraceability.includes("customer")}
                             onChange={(e) => {
                               if (e.target.checked) {
                                 setInTransitDeliveryTraceability([...inTransitDeliveryTraceability, "customer"]);
                               } else {
-                                setInTransitDeliveryTraceability(inTransitDeliveryTraceability.filter(item => item !== "customer"));
+                                setInTransitDeliveryTraceability(
+                                  inTransitDeliveryTraceability.filter((item) => item !== "customer")
+                                );
                               }
                             }}
                             labelText="Customer"
@@ -455,9 +450,9 @@ export const OrgSettingsWithOrderManagement = () => {
                       </Box>
                     </Flex>
                   </Box>
-                  
+
                   <Divider my="x0_25" />
-                  
+
                   <Box py="x0_25">
                     <Flex alignItems="flex-start" gap="x0_25">
                       <Box width="50%" pt="x1">
@@ -465,18 +460,16 @@ export const OrgSettingsWithOrderManagement = () => {
                       </Box>
                       <Box width="50%">
                         <Flex flexDirection="column" gap="x0_25">
-                          <Checkbox
-                            checked={true}
-                            disabled={true}
-                            labelText="Supplier"
-                          />
+                          <Checkbox checked={true} disabled={true} labelText="Supplier" />
                           <Checkbox
                             checked={inventorySummaryTraceability.includes("customer")}
                             onChange={(e) => {
                               if (e.target.checked) {
                                 setInventorySummaryTraceability([...inventorySummaryTraceability, "customer"]);
                               } else {
-                                setInventorySummaryTraceability(inventorySummaryTraceability.filter(item => item !== "customer"));
+                                setInventorySummaryTraceability(
+                                  inventorySummaryTraceability.filter((item) => item !== "customer")
+                                );
                               }
                             }}
                             labelText="Customer"
@@ -486,9 +479,9 @@ export const OrgSettingsWithOrderManagement = () => {
                       </Box>
                     </Flex>
                   </Box>
-                  
+
                   <Divider my="x0_25" />
-                  
+
                   <Box py="x0_25">
                     <Flex alignItems="flex-start" gap="x0_25">
                       <Box width="50%" pt="x1">
@@ -496,18 +489,16 @@ export const OrgSettingsWithOrderManagement = () => {
                       </Box>
                       <Box width="50%">
                         <Flex flexDirection="column" gap="x0_25">
-                          <Checkbox
-                            checked={true}
-                            disabled={true}
-                            labelText="Supplier"
-                          />
+                          <Checkbox checked={true} disabled={true} labelText="Supplier" />
                           <Checkbox
                             checked={inTransitDeliveryTraceability.includes("customer")}
                             onChange={(e) => {
                               if (e.target.checked) {
                                 setInTransitDeliveryTraceability([...inTransitDeliveryTraceability, "customer"]);
                               } else {
-                                setInTransitDeliveryTraceability(inTransitDeliveryTraceability.filter(item => item !== "customer"));
+                                setInTransitDeliveryTraceability(
+                                  inTransitDeliveryTraceability.filter((item) => item !== "customer")
+                                );
                               }
                             }}
                             labelText="Customer"
@@ -519,7 +510,9 @@ export const OrgSettingsWithOrderManagement = () => {
                               if (e.target.checked) {
                                 setInTransitDeliveryTraceability([...inTransitDeliveryTraceability, "vendor"]);
                               } else {
-                                setInTransitDeliveryTraceability(inTransitDeliveryTraceability.filter(item => item !== "vendor"));
+                                setInTransitDeliveryTraceability(
+                                  inTransitDeliveryTraceability.filter((item) => item !== "vendor")
+                                );
                               }
                             }}
                             labelText="Vendor"
@@ -529,7 +522,7 @@ export const OrgSettingsWithOrderManagement = () => {
                       </Box>
                     </Flex>
                   </Box>
-                  
+
                   <Divider my="x0_25" />
                 </Box>
               )}
@@ -629,7 +622,6 @@ export const OrgSettingsWithOrderManagement = () => {
                   setInventorySummaryTraceability(["supplier"]);
                 }
               }}
-              size="small"
             />
           </Flex>
         </Box>
