@@ -23,7 +23,7 @@ import {
   Link,
   BrandedNavBar,
   NDSProvider,
-} from "../../../../..";
+} from "../../../../";
 
 export default {
   title: "Projects/Supplier Collaboration/Lot traceability/Org Settings",
