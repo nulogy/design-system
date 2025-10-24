@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { toast, Tooltip } from "../../..";
+import { toast, Tooltip } from "../../../..";
 import {
   Box,
   Flex,
@@ -40,11 +40,11 @@ import {
   DatePicker,
   Select,
   Textarea,
-} from "../../..";
-import { formatDateToYYYYMonDD, formatDateWithWeek } from "../utils/dateUtils";
+} from "../../../..";
+import { formatDateToYYYYMonDD, formatDateWithWeek } from "../../utils/dateUtils";
 
 export default {
-  title: "Projects/Supplier Collaboration/POLI lot/Details 2",
+  title: "Projects/Supplier Collaboration/Lot traceability/Progress/Details 2",
 };
 
 const primaryMenu = [

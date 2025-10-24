@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Box, Text, ApplicationFrame, Table, Button, Flex, PrimaryButton, DangerButton } from "../../..";
 
 export default {
-  title: "Projects/Supplier Collaboration/POLI lot/Button Context Test",
+  title: "Projects/Supplier Collaboration/Lot traceability/Table test",
 };
 
 const testData = [
@@ -20,7 +20,7 @@ const testData = [
   },
 ];
 
-export const ButtonContextTest = () => {
+export const TableTest = () => {
   const [expandedRows, setExpandedRows] = useState<string[]>([]);
   const [data, setData] = useState(testData);
 

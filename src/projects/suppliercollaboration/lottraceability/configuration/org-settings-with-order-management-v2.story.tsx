@@ -26,13 +26,14 @@ import {
   Alert,
   Icon,
   Tooltip,
-} from "../../..";
+  NDSProvider,
+} from "../../../../..";
 
 export default {
-  title: "Projects/Supplier Collaboration/POLI lot/Lot code configuration",
+  title: "Projects/Supplier Collaboration/Lot traceability/Configuration",
 };
 
-export const V1 = () => {
+const V1Component = () => {
   const [organizationName, setOrganizationName] = useState("American Wood Fiber");
   const [organizationCode, setOrganizationCode] = useState("7050017");
   const [timeZone, setTimeZone] = useState("(GMT-05:00) Eastern Time (US & Canada)");
@@ -700,7 +701,13 @@ export const V1 = () => {
   );
 };
 
-export const V2 = () => {
+export const V1 = () => (
+  <NDSProvider locale="en_US" variant="desktop">
+    <V1Component />
+  </NDSProvider>
+);
+
+const V2Component = () => {
   const [organizationName, setOrganizationName] = useState("American Wood Fiber");
   const [organizationCode, setOrganizationCode] = useState("7050017");
   const [timeZone, setTimeZone] = useState("(GMT-05:00) Eastern Time (US & Canada)");
@@ -1256,3 +1263,9 @@ export const V2 = () => {
     </ApplicationFrame>
   );
 };
+
+export const V2 = () => (
+  <NDSProvider locale="en_US" variant="desktop">
+    <V2Component />
+  </NDSProvider>
+);
