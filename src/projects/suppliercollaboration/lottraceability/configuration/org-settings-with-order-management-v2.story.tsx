@@ -27,7 +27,7 @@ import {
   Icon,
   Tooltip,
   NDSProvider,
-} from "../../../../..";
+} from "../../../../";
 
 export default {
   title: "Projects/Supplier Collaboration/Lot traceability/Configuration",
