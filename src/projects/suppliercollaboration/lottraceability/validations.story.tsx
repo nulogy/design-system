@@ -4385,7 +4385,6 @@ export const Inline = () => {
   );
 };
 
-
 // Advance component with InlineValidation error boxes (old approach)
 const InlineAdvance = () => {
   // Reusable RecordNumberPill component for Advance
