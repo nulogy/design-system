@@ -461,7 +461,10 @@ const V1Component = () => {
                               checked={poLineItemSubcomponentTraceability.includes("customer")}
                               onChange={(e) => {
                                 if (e.target.checked) {
-                                  setPoLineItemSubcomponentTraceability([...poLineItemSubcomponentTraceability, "customer"]);
+                                  setPoLineItemSubcomponentTraceability([
+                                    ...poLineItemSubcomponentTraceability,
+                                    "customer",
+                                  ]);
                                 } else {
                                   setPoLineItemSubcomponentTraceability(
                                     poLineItemSubcomponentTraceability.filter((item) => item !== "customer")
@@ -570,7 +573,9 @@ const V1Component = () => {
                       labelText="Enforce configuration settings on partners"
                     />
                     <Text ml="x3" mt="quarter" color="midGrey" fontSize="small">
-                      When enabled, your configuration settings are applied to partner organizations that have allowed configuration enforcement. This ensures a consistent experience and interface across all connected partners.
+                      When enabled, your configuration settings are applied to partner organizations that have allowed
+                      configuration enforcement. This ensures a consistent experience and interface across all connected
+                      partners.
                     </Text>
                   </Box>
                 </Box>
@@ -585,7 +590,8 @@ const V1Component = () => {
                   labelText="Allow partner configuration enforcement"
                 />
                 <Text ml="x3" mt="quarter" color="midGrey" fontSize="small">
-                  When enabled, partners can apply their configuration settings to your organization. This may extend, but not override, your existing setup to ensure compliance with their requirements.
+                  When enabled, partners can apply their configuration settings to your organization. This may extend,
+                  but not override, your existing setup to ensure compliance with their requirements.
                 </Text>
               </Box>
             </FormSection>
@@ -1108,7 +1114,10 @@ const V2Component = () => {
                             checked={poLineItemSubcomponentTraceability.includes("customer")}
                             onChange={(e) => {
                               if (e.target.checked) {
-                                setPoLineItemSubcomponentTraceability([...poLineItemSubcomponentTraceability, "customer"]);
+                                setPoLineItemSubcomponentTraceability([
+                                  ...poLineItemSubcomponentTraceability,
+                                  "customer",
+                                ]);
                               } else {
                                 setPoLineItemSubcomponentTraceability(
                                   poLineItemSubcomponentTraceability.filter((item) => item !== "customer")
@@ -1258,7 +1267,6 @@ const V2Component = () => {
             </Flex>
           </Form>
         </Box>
-
       </Page>
     </ApplicationFrame>
   );
