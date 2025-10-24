@@ -22,13 +22,14 @@ import {
   Breadcrumbs,
   Link,
   BrandedNavBar,
-} from "../../..";
+  NDSProvider,
+} from "../../../../..";
 
 export default {
-  title: "Projects/Supplier Collaboration/POLI lot/Org Settings",
+  title: "Projects/Supplier Collaboration/Lot traceability/Org Settings",
 };
 
-export const OrgSettings = () => {
+const OrgSettingsComponent = () => {
   const [organizationName, setOrganizationName] = useState("American Wood Fiber");
   const [organizationCode, setOrganizationCode] = useState("7050017");
   const [timeZone, setTimeZone] = useState("(GMT-05:00) Eastern Time (US & Canada)");
@@ -468,3 +469,9 @@ export const OrgSettings = () => {
     </ApplicationFrame>
   );
 };
+
+export const OrgSettings = () => (
+  <NDSProvider locale="en_US" variant="desktop">
+    <OrgSettingsComponent />
+  </NDSProvider>
+);

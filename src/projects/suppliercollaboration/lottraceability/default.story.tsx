@@ -50,7 +50,7 @@ import { poliRows, shouldShowEditBox } from "../utils/poliTableData";
 import { formatDateWithWeek, formatDateToYYYYMonDD } from "../utils/dateUtils";
 
 export default {
-  title: "Projects/Supplier Collaboration/POLI lot/Default",
+  title: "Projects/Supplier Collaboration/Lot traceability/POLI index",
 };
 
 const primaryMenu = [
@@ -72,7 +72,7 @@ const secondaryMenu = [
   },
 ];
 
-export const Default = () => {
+export const POLIIndex = () => {
   const [selectedRows, setSelectedRows] = useState<string[]>([]);
   const [role, setRole] = useState("supplier");
   const [isFilterSidebarOpen, setIsFilterSidebarOpen] = useState(false);

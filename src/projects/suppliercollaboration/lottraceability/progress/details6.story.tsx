@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { toast, Tooltip } from "../../..";
+import { toast, Tooltip } from "../../../..";
 import {
   Box,
   Flex,
@@ -43,16 +43,11 @@ import {
   Toggle,
   Switcher,
   Switch,
-  Checkbox,
-  CheckboxGroup,
-  Radio,
-  RadioGroup,
-  Pagination,
-} from "../../..";
-import { formatDateToYYYYMonDD, formatDateWithWeek } from "../utils/dateUtils";
+} from "../../../..";
+import { formatDateToYYYYMonDD, formatDateWithWeek } from "../../utils/dateUtils";
 
 export default {
-  title: "Projects/Supplier Collaboration/POLI lot/Details10",
+  title: "Projects/Supplier Collaboration/Lot traceability/Progress/Details 6",
 };
 
 const primaryMenu = [
@@ -64,7 +59,7 @@ const primaryMenu = [
 
 const secondaryMenu = [
   {
-    name: "POLI lot",
+    name: "Lot traceability",
     items: [
       { name: "Overview", href: "/" },
       { name: "Production records", href: "/" },
@@ -73,31 +68,10 @@ const secondaryMenu = [
   },
 ];
 
-export const Details10 = () => {
+export const Details6 = () => {
   const [selectedIndex, setSelectedIndex] = useState(1); // Production records tab is index 1
   const [showProductionSidebar, setShowProductionSidebar] = useState(false);
   const [isEditingProduction, setIsEditingProduction] = useState(false);
-  const [productionEntryType, setProductionEntryType] = useState<"quick" | "detailed">("quick");
-  const [historyLogFilter, setHistoryLogFilter] = useState("All");
-  const [actualQuantity, setActualQuantity] = useState("");
-  const [productionRows, setProductionRows] = useState([
-    { id: "row-1", palletNumber: "", customerLotCode: "", supplierLotCode: "", expiryDate: "", quantity: "" },
-  ]);
-  const [rowNotes, setRowNotes] = useState<Record<string, string>>({});
-  const [rowConsumptions, setRowConsumptions] = useState<
-    Record<
-      string,
-      Array<{
-        id: string;
-        item: string;
-        lotCode: string;
-        expiryDate: string;
-        palletNumber: string;
-        quantity: string;
-        uom: string;
-      }>
-    >
-  >({});
 
   // Header and Summary state
   const [userState] = useState({ role: "supplier" });
@@ -141,31 +115,9 @@ export const Details10 = () => {
   // SummaryDivider component
   const SummaryDivider = () => <Box width="1px" height="x6" backgroundColor="lightGrey" mx="x2" />;
 
-  // OutputNumberPill component
-  const OutputNumberPill = ({ outputNumber }: { outputNumber: string }) => (
-    <Flex py="x0_75" mr="x1" justifyContent="flex-start" ml="-96px">
-      <Tooltip tooltip={`Actual production record #${outputNumber}`} placement="left">
-        <Box backgroundColor="lightGrey" px="half" borderRadius="small">
-          <Text
-            color="darkGrey"
-            fontSize="smaller"
-            lineHeight="smallerText"
-            fontWeight="bold"
-            textTransform="uppercase"
-            letterSpacing=".05em"
-          >
-            {outputNumber}
-          </Text>
-        </Box>
-      </Tooltip>
-    </Flex>
-  );
-
   // Handler functions
   const handleCancelPOLineItem = () => {
     console.log("Cancel PO line item");
-    // Add proper modal handling here if needed
-    toast.success("PO line item cancellation initiated");
   };
 
   const handleEditDetails = () => {
@@ -191,7 +143,6 @@ export const Details10 = () => {
       expiryDate: null as Date | null,
       palletNumber: "",
       consumedQuantity: "",
-      uom: "",
       parentDate: undefined as string | undefined,
       parentActualQuantity: undefined as string | undefined,
     },
@@ -213,11 +164,10 @@ export const Details10 = () => {
   const [productionBatches, setProductionBatches] = useState([]);
   const [consumptionMaterials, setConsumptionMaterials] = useState([]);
   const [role, setRole] = useState("customer");
-  const [showConfigBar, setShowConfigBar] = useState(true);
   const [fieldConfig, setFieldConfig] = useState({
-    lotCodeRequired: true,
-    palletNumberRequired: true,
-    expiryDateRequired: true,
+    lotCodeRequired: false,
+    palletNumberRequired: false,
+    expiryDateRequired: false,
     sanofiRequired: true,
   });
 
@@ -256,7 +206,6 @@ export const Details10 = () => {
     {
       id: "1-1",
       actualQuantity: "0 cases",
-      outputNumber: "001",
       lotCode: "LOT-2025-001",
       supplierLotCode: "SUP-LOT-001",
       expiryDate: "2026-Feb-12",
@@ -269,7 +218,6 @@ export const Details10 = () => {
     {
       id: "1-2",
       actualQuantity: "5 cases",
-      outputNumber: "002",
       lotCode: "LOT-2025-001A",
       supplierLotCode: "SUP-LOT-001A",
       expiryDate: "2026-Feb-12",
@@ -282,7 +230,6 @@ export const Details10 = () => {
     {
       id: "1-3",
       actualQuantity: "3 cases",
-      outputNumber: "003",
       lotCode: "LOT-2025-001B",
       supplierLotCode: "SUP-LOT-001B",
       expiryDate: "2026-Feb-12",
@@ -298,7 +245,6 @@ export const Details10 = () => {
     {
       id: "2-1",
       actualQuantity: "12 cases",
-      outputNumber: "001",
       lotCode: "LOT-2025-002",
       supplierLotCode: "SUP-LOT-002",
       expiryDate: "2026-03-15",
@@ -317,7 +263,6 @@ export const Details10 = () => {
     {
       id: "3-1",
       actualQuantity: "25 cases",
-      outputNumber: "001",
       lotCode: "LOT-2025-003",
       supplierLotCode: "SUP-LOT-003",
       expiryDate: "2026-04-20",
@@ -336,7 +281,6 @@ export const Details10 = () => {
     {
       id: "4-1",
       actualQuantity: "0 cases",
-      outputNumber: "001",
       lotCode: "LOT-2025-004",
       supplierLotCode: "SUP-LOT-004",
       expiryDate: "2026-08-08",
@@ -352,7 +296,6 @@ export const Details10 = () => {
     {
       id: "5-1",
       actualQuantity: "8 cases",
-      outputNumber: "Output #001",
       lotCode: "LOT-2025-005A",
       supplierLotCode: "SUP-LOT-005A",
       expiryDate: "2026-03-15",
@@ -368,7 +311,6 @@ export const Details10 = () => {
     {
       id: "5-2",
       actualQuantity: "4 cases",
-      outputNumber: "Output #002",
       lotCode: "LOT-2025-005B",
       supplierLotCode: "SUP-LOT-005B",
       expiryDate: "2026-03-15",
@@ -387,7 +329,6 @@ export const Details10 = () => {
     {
       id: "6-1",
       actualQuantity: "15 cases",
-      outputNumber: "Actual production record #001",
       lotCode: "LOT-2025-006A",
       supplierLotCode: "SUP-LOT-006A",
       expiryDate: "2026-04-22",
@@ -403,7 +344,6 @@ export const Details10 = () => {
     {
       id: "6-2",
       actualQuantity: "8 cases",
-      outputNumber: "Actual production record #002",
       lotCode: "LOT-2025-006B",
       supplierLotCode: "SUP-LOT-006B",
       expiryDate: "2026-04-22",
@@ -417,7 +357,6 @@ export const Details10 = () => {
     {
       id: "7-1",
       actualQuantity: "0 cases",
-      outputNumber: "001",
       lotCode: "LOT-2025-007A",
       supplierLotCode: "SUP-LOT-007A",
       expiryDate: "2026-05-10",
@@ -428,7 +367,6 @@ export const Details10 = () => {
     {
       id: "7-2",
       actualQuantity: "0 cases",
-      outputNumber: "002",
       lotCode: "LOT-2025-007B",
       supplierLotCode: "SUP-LOT-007B",
       expiryDate: "2026-05-10",
@@ -454,18 +392,12 @@ export const Details10 = () => {
   // Nested table columns configuration
   const nestedTableColumns = [
     {
-      label: "Number",
-      dataKey: "outputNumber",
-      width: "0px",
-      cellRenderer: ({ row }: { row: any }) => <OutputNumberPill outputNumber={row.outputNumber} />,
-    },
-    {
       label: "Actual quantity",
       dataKey: "actualQuantity",
       width: "180px",
       cellRenderer: ({ row }: { row: any }) => {
         return (
-          <Flex py="x0_75" mr="x1">
+          <Flex py="x2" mr="x1">
             <Text>{row.actualQuantity}</Text>
           </Flex>
         );
@@ -497,16 +429,18 @@ export const Details10 = () => {
             <TruncatedText fullWidth width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
               {row.lotCode || ""}
             </TruncatedText>
-            <TruncatedText
-              fullWidth
-              width="auto"
-              maxWidth="152px"
-              fontSize="small"
-              lineHeight="smallTextCompressed"
-              color="midGrey"
-            >
-              {row.supplierLotCode || ""}
-            </TruncatedText>
+            {fieldConfig.sanofiRequired && (
+              <TruncatedText
+                fullWidth
+                width="auto"
+                maxWidth="152px"
+                fontSize="small"
+                lineHeight="smallTextCompressed"
+                color="midGrey"
+              >
+                {row.supplierLotCode || ""}
+              </TruncatedText>
+            )}
           </Flex>
         );
       },
@@ -532,8 +466,7 @@ export const Details10 = () => {
           return null;
         }
 
-        const formattedDate = formatDateToYYYYMonDD(row.expiryDate);
-        return <Text>{formattedDate}</Text>;
+        return formatDateToYYYYMonDD(row.expiryDate);
       },
     },
     {
@@ -571,444 +504,24 @@ export const Details10 = () => {
         }
 
         return (
-          <Box py="x0_375">
-            <TruncatedText pr="x2" py="x1" fontSize="small" lineHeight="smallTextCompressed" maxCharacters={98}>
-              {row.note}
-            </TruncatedText>
-          </Box>
-        );
-      },
-    },
-    {
-      label: "",
-      dataKey: "spacer",
-      width: "48px",
-      headerFormatter: () => null,
-      cellRenderer: () => null,
-    },
-    {
-      label: "Number",
-      dataKey: "outputNumber",
-      width: "48px",
-      cellRenderer: ({ row }: { row: any }) => {
-        // Check if this is from nestedTableData2 (id starts with "2-")
-        const isSecondTable = row.id && row.id.startsWith("2-");
-        // Check if this is from nestedTableData3 (id starts with "3-")
-        const isThirdTable = row.id && row.id.startsWith("3-");
-
-        if (isSecondTable) {
-          return (
-            <Flex py="x2" mr="x1" justifyContent="flex-end">
-              <Box backgroundColor="midGrey" px="half" borderRadius="small">
-                <Text
-                  color="white"
-                  fontSize="smaller"
-                  lineHeight="smallerText"
-                  fontWeight="bold"
-                  textTransform="uppercase"
-                  letterSpacing=".05em"
-                >
-                  {row.outputNumber}
-                </Text>
-              </Box>
-            </Flex>
-          );
-        }
-
-        if (isThirdTable) {
-          return (
-            <Flex pb="x2" mr="x1" justifyContent="flex-end" alignItems="flex-start">
-              <Box
-                backgroundColor="midGrey"
-                px="half"
-                borderTopLeftRadius="0"
-                borderTopRightRadius="0"
-                borderBottomLeftRadius="small"
-                borderBottomRightRadius="small"
-                mt="-28px"
-              >
-                <Text
-                  color="white"
-                  fontSize="smaller"
-                  lineHeight="smallerText"
-                  fontWeight="bold"
-                  textTransform="uppercase"
-                  letterSpacing=".05em"
-                >
-                  {row.outputNumber}
-                </Text>
-              </Box>
-            </Flex>
-          );
-        }
-
-        return (
-          <Flex py="x2" mr="x1" justifyContent="flex-end">
-            <Text color="midGrey" fontSize="small">
-              {row.outputNumber}
-            </Text>
-          </Flex>
-        );
-      },
-    },
-  ];
-
-  // Custom nested table columns for 5th, 6th, 7th tables (Number column first)
-  const nestedTableColumns567 = [
-    {
-      label: "Number",
-      dataKey: "outputNumber",
-      width: "0px",
-      cellRenderer: ({ row }: { row: any }) => {
-        // Check if this is from nestedTableData5 (id starts with "5-")
-        const isFifthTable = row.id && row.id.startsWith("5-");
-        // Check if this is from nestedTableData6 (id starts with "6-")
-        const isSixthTable = row.id && row.id.startsWith("6-");
-
-        let marginLeft = "-146px"; // Default for row 7 (was -96px)
-
-        if (isFifthTable) {
-          marginLeft = "-170px"; // More space for "Output #001", "Output #002" (was -120px)
-        } else if (isSixthTable) {
-          marginLeft = "-300px"; // Much more space for "Actual production record #001", "Actual production record #002" (was -250px)
-        }
-
-        return (
-          <Flex py="x2" mr="x1" justifyContent="flex-start" ml={marginLeft}>
-            <Box
-              backgroundColor={isSixthTable ? "white" : "midGrey"}
-              borderColor={isSixthTable ? "whiteGrey" : undefined}
-              borderWidth={isSixthTable ? "1px" : undefined}
-              borderStyle={isSixthTable ? "solid" : undefined}
-              px="half"
-              borderRadius={isSixthTable ? "medium" : "small"}
-              style={isSixthTable ? { border: "1px solid #E5E5E5" } : undefined}
-            >
+          <Box py="x1">
+            <Tooltip tooltip={row.note} placement="top">
               <Text
-                color={isSixthTable ? "midGrey" : "white"}
-                fontSize="smaller"
-                lineHeight="smallerText"
-                fontWeight="bold"
-                textTransform="uppercase"
-                letterSpacing=".05em"
+                fontSize="small"
+                lineHeight="smallTextCompressed"
+                style={{
+                  display: "-webkit-box",
+                  WebkitLineClamp: 2,
+                  WebkitBoxOrient: "vertical",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                  maxHeight: "2.4em", // 2 lines * 1.2em line height
+                  cursor: "help",
+                }}
               >
-                {row.outputNumber}
+                {row.note}
               </Text>
-            </Box>
-          </Flex>
-        );
-      },
-    },
-    {
-      label: "Actual quantity",
-      dataKey: "actualQuantity",
-      width: "180px",
-      cellRenderer: ({ row }: { row: any }) => {
-        return (
-          <Flex py="x0_75" mr="x1">
-            <Text>{row.actualQuantity}</Text>
-          </Flex>
-        );
-      },
-    },
-    {
-      label: "Lot code",
-      dataKey: "lotCode",
-      width: "180px",
-      cellRenderer: ({ row }: { row: any }) => {
-        // If lot code is not required in config, show "-"
-        if (!fieldConfig.lotCodeRequired) {
-          return (
-            <Flex py="x2">
-              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
-                -
-              </Text>
-            </Flex>
-          );
-        }
-
-        // If all lot codes are empty, don't render anything
-        if (!row.lotCode && !row.supplierLotCode) {
-          return null;
-        }
-
-        return (
-          <Flex py="x2" gap="x0_25" flexDirection="column">
-            <TruncatedText fullWidth width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
-              {row.lotCode || ""}
-            </TruncatedText>
-            <TruncatedText
-              fullWidth
-              width="auto"
-              maxWidth="152px"
-              fontSize="small"
-              lineHeight="smallTextCompressed"
-              color="midGrey"
-            >
-              {row.supplierLotCode || ""}
-            </TruncatedText>
-          </Flex>
-        );
-      },
-    },
-    {
-      label: "Customer's lot code",
-      dataKey: "customerLotCode",
-      width: "180px",
-      cellRenderer: ({ row }: { row: any }) => {
-        // If customer lot code is empty, don't render anything
-        if (!row.customerLotCode) {
-          return null;
-        }
-
-        return (
-          <Flex py="x2">
-            <TruncatedText fullWidth width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
-              {row.customerLotCode}
-            </TruncatedText>
-          </Flex>
-        );
-      },
-    },
-    {
-      label: "Supplier's lot code",
-      dataKey: "supplierLotCode",
-      width: "180px",
-      cellRenderer: ({ row }: { row: any }) => {
-        // If supplier lot code is empty, don't render anything
-        if (!row.supplierLotCode) {
-          return null;
-        }
-
-        return (
-          <Flex py="x2">
-            <TruncatedText fullWidth width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
-              {row.supplierLotCode}
-            </TruncatedText>
-          </Flex>
-        );
-      },
-    },
-    {
-      label: "Expiry date",
-      dataKey: "expiryDate",
-      width: "150px",
-      cellRenderer: ({ row }: { row: any }) => {
-        // If expiry date is not required in config, show "-"
-        if (!fieldConfig.expiryDateRequired) {
-          return (
-            <Flex py="x2">
-              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
-                -
-              </Text>
-            </Flex>
-          );
-        }
-
-        // If expiry date is empty, don't render anything
-        if (!row.expiryDate) {
-          return null;
-        }
-
-        const formattedDate = formatDateToYYYYMonDD(row.expiryDate);
-        return <Text>{formattedDate}</Text>;
-      },
-    },
-    {
-      label: "Pallet number",
-      dataKey: "palletNumber",
-      width: "180px",
-      cellRenderer: ({ row }: { row: any }) => {
-        // If pallet number is not required in config, show "-"
-        if (!fieldConfig.palletNumberRequired) {
-          return (
-            <Flex py="x2">
-              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
-                -
-              </Text>
-            </Flex>
-          );
-        }
-
-        // If pallet number is empty, don't render anything
-        if (!row.palletNumber) {
-          return null;
-        }
-
-        return row.palletNumber;
-      },
-    },
-    {
-      label: "Note",
-      dataKey: "note",
-      width: "auto",
-      cellRenderer: ({ row }: { row: any }) => {
-        // If note is empty, don't render anything
-        if (!row.note) {
-          return null;
-        }
-
-        return (
-          <Box py="x0_375">
-            <TruncatedText pr="x2" py="x1" fontSize="small" lineHeight="smallTextCompressed" maxCharacters={98}>
-              {row.note}
-            </TruncatedText>
-          </Box>
-        );
-      },
-    },
-    {
-      label: "",
-      dataKey: "spacer",
-      width: "48px",
-      headerFormatter: () => null,
-      cellRenderer: () => null,
-    },
-  ];
-
-  // Custom nested table columns for 4th table (Number column first)
-  const nestedTableColumns4th = [
-    {
-      label: "Number",
-      dataKey: "outputNumber",
-      width: "0px",
-      cellRenderer: ({ row }: { row: any }) => {
-        return (
-          <Flex py="x2" mr="x1" justifyContent="flex-start" ml="-96px">
-            <Tooltip tooltip="Actual production record #001" placement="top">
-              <Box backgroundColor="midGrey" px="half" borderRadius="small">
-                <Text
-                  color="white"
-                  fontSize="smaller"
-                  lineHeight="smallerText"
-                  fontWeight="bold"
-                  textTransform="uppercase"
-                  letterSpacing=".05em"
-                >
-                  {row.outputNumber}
-                </Text>
-              </Box>
             </Tooltip>
-          </Flex>
-        );
-      },
-    },
-    {
-      label: "Actual quantity",
-      dataKey: "actualQuantity",
-      width: "180px",
-      cellRenderer: ({ row }: { row: any }) => {
-        return (
-          <Flex py="x0_75" mr="x1">
-            <Text>{row.actualQuantity}</Text>
-          </Flex>
-        );
-      },
-    },
-    {
-      label: "Lot code",
-      dataKey: "lotCode",
-      width: "180px",
-      cellRenderer: ({ row }: { row: any }) => {
-        // If lot code is not required in config, show "-"
-        if (!fieldConfig.lotCodeRequired) {
-          return (
-            <Flex py="x2">
-              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
-                -
-              </Text>
-            </Flex>
-          );
-        }
-
-        // If all lot codes are empty, don't render anything
-        if (!row.lotCode && !row.supplierLotCode) {
-          return null;
-        }
-
-        return (
-          <Flex py="x2" gap="x0_25" flexDirection="column">
-            <TruncatedText fullWidth width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
-              {row.lotCode || ""}
-            </TruncatedText>
-            <TruncatedText
-              fullWidth
-              width="auto"
-              maxWidth="152px"
-              fontSize="small"
-              lineHeight="smallTextCompressed"
-              color="midGrey"
-            >
-              {row.supplierLotCode || ""}
-            </TruncatedText>
-          </Flex>
-        );
-      },
-    },
-    {
-      label: "Expiry date",
-      dataKey: "expiryDate",
-      width: "150px",
-      cellRenderer: ({ row }: { row: any }) => {
-        // If expiry date is not required in config, show "-"
-        if (!fieldConfig.expiryDateRequired) {
-          return (
-            <Flex py="x2">
-              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
-                -
-              </Text>
-            </Flex>
-          );
-        }
-
-        // If expiry date is empty, don't render anything
-        if (!row.expiryDate) {
-          return null;
-        }
-
-        const formattedDate = formatDateToYYYYMonDD(row.expiryDate);
-        return <Text>{formattedDate}</Text>;
-      },
-    },
-    {
-      label: "Pallet number",
-      dataKey: "palletNumber",
-      width: "180px",
-      cellRenderer: ({ row }: { row: any }) => {
-        // If pallet number is not required in config, show "-"
-        if (!fieldConfig.palletNumberRequired) {
-          return (
-            <Flex py="x2">
-              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
-                -
-              </Text>
-            </Flex>
-          );
-        }
-
-        // If pallet number is empty, don't render anything
-        if (!row.palletNumber) {
-          return null;
-        }
-
-        return row.palletNumber;
-      },
-    },
-    {
-      label: "Note",
-      dataKey: "note",
-      width: "auto",
-      cellRenderer: ({ row }: { row: any }) => {
-        // If note is empty, don't render anything
-        if (!row.note) {
-          return null;
-        }
-
-        return (
-          <Box py="x0_375">
-            <TruncatedText pr="x2" py="x1" fontSize="small" lineHeight="smallTextCompressed" maxCharacters={98}>
-              {row.note}
-            </TruncatedText>
           </Box>
         );
       },
@@ -1037,13 +550,13 @@ export const Details10 = () => {
       note: "Initial production batch with quality control checks completed",
       expandedContent: () => (
         <Box style={{ paddingLeft: "-56px" }}>
-          <Box style={{ paddingLeft: "298px" }}>
+          <Box style={{ paddingLeft: "300px" }}>
             <Table
               columns={nestedTableColumns}
               rows={nestedTableData1}
               keyField="id"
               rowBorder={true}
-              className="actual-production-record-table"
+              className="nested-table"
               compact={true}
               hasExpandableRows={true}
               expandedRows={nestedExpandedRows}
@@ -1066,13 +579,13 @@ export const Details10 = () => {
       note: "Standard production run with normal quality metrics",
       expandedContent: () => (
         <Box style={{ paddingLeft: "-56px" }}>
-          <Box style={{ paddingLeft: "298px" }}>
+          <Box style={{ paddingLeft: "300px" }}>
             <Table
               columns={nestedTableColumns}
               rows={nestedTableData2}
               keyField="id"
               rowBorder={true}
-              className="actual-production-record-table"
+              className="nested-table"
               compact={true}
               hasExpandableRows={true}
               expandedRows={nestedExpandedRows}
@@ -1095,13 +608,13 @@ export const Details10 = () => {
       note: "High volume production batch for major customer order",
       expandedContent: () => (
         <Box style={{ paddingLeft: "-56px" }}>
-          <Box style={{ paddingLeft: "298px" }}>
+          <Box style={{ paddingLeft: "300px" }}>
             <Table
               columns={nestedTableColumns}
               rows={nestedTableData3}
               keyField="id"
               rowBorder={true}
-              className="actual-production-record-table"
+              className="nested-table"
               compact={true}
               hasExpandableRows={true}
               expandedRows={nestedExpandedRows}
@@ -1114,7 +627,7 @@ export const Details10 = () => {
     {
       id: "4",
       date: "2025-Aug-08",
-      //lotCodeAndExpiry: "LOT-2025-004",
+      lotCodeAndExpiry: "LOT-2025-004",
       customerLotCode: "LOT-2025-004",
       supplierLotCode: "SUP-LOT-004",
       expiryDate: "2026-08-08",
@@ -1124,13 +637,13 @@ export const Details10 = () => {
       note: "Equipment maintenance scheduled, production line optimization in progress",
       expandedContent: () => (
         <Box style={{ paddingLeft: "-56px" }}>
-          <Box style={{ paddingLeft: "298px" }}>
+          <Box style={{ paddingLeft: "300px" }}>
             <Table
-              columns={nestedTableColumns4th}
+              columns={nestedTableColumns}
               rows={nestedTableData4}
               keyField="id"
               rowBorder={true}
-              className="actual-production-record-table"
+              className="nested-table"
               compact={true}
               hasExpandableRows={true}
               expandedRows={nestedExpandedRows}
@@ -1153,13 +666,13 @@ export const Details10 = () => {
       note: "Multi-batch production run with quality variations",
       expandedContent: () => (
         <Box style={{ paddingLeft: "-56px" }}>
-          <Box style={{ paddingLeft: "298px" }}>
+          <Box style={{ paddingLeft: "300px" }}>
             <Table
-              columns={nestedTableColumns567}
+              columns={nestedTableColumns}
               rows={nestedTableData5}
               keyField="id"
               rowBorder={true}
-              className="actual-production-record-table"
+              className="nested-table"
               compact={true}
               hasExpandableRows={true}
               expandedRows={nestedExpandedRows}
@@ -1182,13 +695,13 @@ export const Details10 = () => {
       note: "Quality control batch with mixed results",
       expandedContent: () => (
         <Box style={{ paddingLeft: "-56px" }}>
-          <Box style={{ paddingLeft: "298px" }}>
+          <Box style={{ paddingLeft: "300px" }}>
             <Table
-              columns={nestedTableColumns567}
+              columns={nestedTableColumns}
               rows={nestedTableData6}
               keyField="id"
               rowBorder={true}
-              className="actual-production-record-table"
+              className="nested-table"
               compact={true}
               hasExpandableRows={true}
               expandedRows={nestedExpandedRows}
@@ -1211,13 +724,13 @@ export const Details10 = () => {
       note: "Production on hold due to material shortage and supply chain delays",
       expandedContent: () => (
         <Box style={{ paddingLeft: "-56px" }}>
-          <Box style={{ paddingLeft: "298px" }}>
+          <Box style={{ paddingLeft: "300px" }}>
             <Table
-              columns={nestedTableColumns567}
+              columns={nestedTableColumns}
               rows={nestedTableData7}
               keyField="id"
               rowBorder={true}
-              className="actual-production-record-table"
+              className="nested-table"
               compact={true}
               hasExpandableRows={true}
               expandedRows={nestedExpandedRows}
@@ -1261,9 +774,11 @@ export const Details10 = () => {
       headerFormatter: () => (
         <Box pt="x1_25" pb="x0_75">
           <Text>Lot code</Text>
-          <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
-            Customer's / Supplier's
-          </Text>
+          {fieldConfig.sanofiRequired && (
+            <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+              Customer's / Supplier's
+            </Text>
+          )}
         </Box>
       ),
       cellRenderer: ({ row }: { row: any }) => {
@@ -1304,11 +819,7 @@ export const Details10 = () => {
       width: "32px",
       headerFormatter: () => null,
       cellRenderer: (props: { row: any }) => {
-        // Hide the entire dropdown when Sanofi ref ID is off
-        if (!fieldConfig.sanofiRequired) {
-          return null;
-        }
-
+        // Show Edit action for all rows
         return (
           <DropdownMenu trigger={() => <IconicButton icon="more" aria-label="More actions" />} placement="bottom-end">
             <DropdownButton onClick={() => handleEditProduction(props.row)}>Edit production</DropdownButton>
@@ -1321,25 +832,11 @@ export const Details10 = () => {
   const handleAddProduction = () => {
     setIsEditingProduction(false);
     setProductionBatches([]); // Clear batches when adding new production
-    setProductionRecord({
-      date: "",
-      uom: "",
-      expectedQuantity: "",
-      actualQuantity: "",
-      lotCode: "",
-      supplierLotCode: "",
-      expiryDate: "",
-      palletNumber: "",
-      producedQuantity: "",
-      note: "",
-    });
     setShowProductionSidebar(true);
   };
 
   const handleEditProduction = (rowData: any) => {
     setIsEditingProduction(true);
-    setProductionEntryType("detailed"); // Set to detailed mode for editing
-
     // Map row data to production record format
     setProductionRecord({
       date: rowData.date || "",
@@ -1354,7 +851,7 @@ export const Details10 = () => {
       note: rowData.note || "",
     });
 
-    // Populate production rows based on the row's nested data
+    // Populate production batches based on the row's nested data
     let nestedData = [];
     switch (rowData.id) {
       case "1":
@@ -1376,82 +873,27 @@ export const Details10 = () => {
         nestedData = [];
     }
 
-    // Convert nested data to production rows format
-    const rows = nestedData.map((batch, index) => ({
-      id: `row-${index + 1}`,
-      palletNumber: batch.palletNumber || "",
-      customerLotCode: batch.customerLotCode || "",
-      supplierLotCode: batch.supplierLotCode || "",
-      expiryDate: batch.expiryDate || "",
-      quantity: batch.actualQuantity ? batch.actualQuantity.split(" ")[0] || "" : "",
-    }));
+    // Convert nested data to production batches format (only show additional batches if more than 1 exists)
+    const batches =
+      nestedData.length > 1
+        ? nestedData.slice(1).map((batch, index) => ({
+            id: batch.id,
+            lotCode: batch.lotCode || "",
+            supplierLotCode: batch.supplierLotCode || "",
+            expiryDate: batch.expiryDate || "",
+            palletNumber: batch.palletNumber || "",
+            producedQuantity: batch.actualQuantity ? batch.actualQuantity.split(" ")[0] || "" : "",
+            note: batch.note || "",
+          }))
+        : [];
 
-    // Populate notes from nested data
-    const notes: Record<string, string> = {};
-    nestedData.forEach((batch, index) => {
-      if (batch.note) {
-        notes[`row-${index + 1}`] = batch.note;
-      }
-    });
-
-    setProductionRows(rows);
-    setRowNotes(notes);
-
-    // Extract consumption materials data for each production row
-    const newRowConsumptions: Record<
-      string,
-      Array<{
-        id: string;
-        item: string;
-        lotCode: string;
-        expiryDate: string;
-        palletNumber: string;
-        quantity: string;
-        uom: string;
-      }>
-    > = {};
-
-    // For each production row, try to find corresponding consumption data
-    rows.forEach((row, index) => {
-      // Try to find consumption data from the corresponding batch
-      const batch = nestedData[index];
-      if (batch && batch.expandedContent && typeof batch.expandedContent === "function") {
-        try {
-          const expandedContent = batch.expandedContent();
-          if (
-            expandedContent &&
-            expandedContent.props &&
-            expandedContent.props.materials &&
-            expandedContent.props.materials.length > 0
-          ) {
-            newRowConsumptions[row.id] = expandedContent.props.materials.map(
-              (material: any, materialIndex: number) => ({
-                ...material,
-                id: material.id || `consumption-${Date.now()}-${index}-${materialIndex}`,
-              })
-            );
-          }
-        } catch (error) {
-          console.log(`Error extracting consumption materials for row ${index}:`, error);
-        }
-      }
-    });
-
-    console.log("Extracted consumption materials for rows:", newRowConsumptions);
-    setRowConsumptions(newRowConsumptions);
+    setProductionBatches(batches);
     setShowProductionSidebar(true);
   };
 
   const handleCloseProductionSidebar = () => {
     setShowProductionSidebar(false);
     setIsEditingProduction(false);
-    setProductionEntryType("quick");
-    setActualQuantity("");
-    setProductionRows([
-      { id: "row-1", palletNumber: "", customerLotCode: "", supplierLotCode: "", expiryDate: "", quantity: "" },
-    ]);
-    setRowNotes({});
-    setRowConsumptions({});
     setProductionRecord({
       date: "",
       uom: "",
@@ -1507,98 +949,6 @@ export const Details10 = () => {
     handleCloseProductionSidebar();
   };
 
-  const handleProductionRowChange = (rowId: string, field: string, value: string) => {
-    setProductionRows((prev) => prev.map((row) => (row.id === rowId ? { ...row, [field]: value } : row)));
-  };
-
-  const handleAddProductionRow = () => {
-    const newRow = {
-      id: `row-${Date.now()}`,
-      palletNumber: "",
-      customerLotCode: "",
-      supplierLotCode: "",
-      expiryDate: "",
-      quantity: "",
-    };
-    setProductionRows((prev) => [...prev, newRow]);
-  };
-
-  const handleRemoveProductionRow = (rowId: string) => {
-    if (productionRows.length > 1) {
-      setProductionRows((prev) => prev.filter((row) => row.id !== rowId));
-    }
-  };
-
-  const handleAddNote = (rowId: string) => {
-    setRowNotes((prev) => ({
-      ...prev,
-      [rowId]: prev[rowId] || "",
-    }));
-  };
-
-  const handleNoteChange = (rowId: string, value: string) => {
-    setRowNotes((prev) => ({
-      ...prev,
-      [rowId]: value,
-    }));
-  };
-
-  const handleAddConsumptionForRow = (rowId: string) => {
-    setRowConsumptions((prev) => ({
-      ...prev,
-      [rowId]: prev[rowId] || [
-        {
-          id: `consumption-${Date.now()}`,
-          item: "",
-          lotCode: "",
-          expiryDate: "",
-          palletNumber: "",
-          quantity: "",
-          uom: "",
-        },
-      ],
-    }));
-  };
-
-  const handleConsumptionRowChange = (rowId: string, consumptionId: string, field: string, value: string) => {
-    setRowConsumptions((prev) => ({
-      ...prev,
-      [rowId]:
-        prev[rowId]?.map((consumption) =>
-          consumption.id === consumptionId ? { ...consumption, [field]: value } : consumption
-        ) || [],
-    }));
-  };
-
-  const handleAddConsumptionRow = (rowId: string) => {
-    const newConsumption = {
-      id: `consumption-${Date.now()}`,
-      item: "",
-      lotCode: "",
-      expiryDate: "",
-      palletNumber: "",
-      quantity: "",
-      uom: "",
-    };
-    setRowConsumptions((prev) => ({
-      ...prev,
-      [rowId]: [...(prev[rowId] || []), newConsumption],
-    }));
-  };
-
-  const handleRemoveConsumptionRow = (rowId: string, consumptionId: string) => {
-    console.log("Removing consumption row:", rowId, consumptionId);
-    setRowConsumptions((prev) => {
-      const currentConsumptions = prev[rowId] || [];
-      const filteredConsumptions = currentConsumptions.filter((consumption) => consumption.id !== consumptionId);
-      console.log("Before:", currentConsumptions.length, "After:", filteredConsumptions.length);
-      return {
-        ...prev,
-        [rowId]: filteredConsumptions,
-      };
-    });
-  };
-
   const handleOpenConsumptionSidebar = (
     materials: Array<{ item: string; lotCode: string; expiryDate: string; palletNumber: string; quantity: string }>,
     parentData?: { date: string; actualQuantity: string }
@@ -1613,7 +963,6 @@ export const Details10 = () => {
         expiryDate: material.expiryDate ? new Date(material.expiryDate) : null,
         palletNumber: material.palletNumber,
         consumedQuantity: parts[0] || "",
-        uom: parts[1] || "",
         // Store parent data for help text
         parentDate: parentData?.date,
         parentActualQuantity: parentData?.actualQuantity,
@@ -1635,7 +984,7 @@ export const Details10 = () => {
   };
 
   const handleSaveConsumption = () => {
-    toast.success("Subcomponent consumption saved successfully!");
+    toast.success("Consumption details saved successfully!");
     handleCloseConsumptionSidebar();
   };
 
@@ -1653,7 +1002,6 @@ export const Details10 = () => {
         expiryDate: null,
         palletNumber: "",
         consumedQuantity: "",
-        uom: "",
         parentDate: undefined,
         parentActualQuantity: undefined,
       },
@@ -1661,7 +1009,7 @@ export const Details10 = () => {
   };
 
   const handleSaveAddConsumption = () => {
-    toast.success("Subcomponent consumption added successfully!");
+    toast.success("Consumption details added successfully!");
     handleCloseAddConsumptionSidebar();
   };
 
@@ -1673,18 +1021,17 @@ export const Details10 = () => {
       expiryDate: null as Date | null,
       palletNumber: "",
       consumedQuantity: "",
-      uom: "",
       parentDate: undefined as string | undefined,
       parentActualQuantity: undefined as string | undefined,
     };
     setConsumptionItems((prev) => [...prev, newItem]);
   };
 
-  const handleRemoveConsumptionItem = (itemId: string) => {
+  const handleRemoveConsumptionItem = (itemId) => {
     setConsumptionItems((prev) => prev.filter((item) => item.id !== itemId));
   };
 
-  const handleConsumptionItemFieldChange = (itemId: string, field: string, value: string) => {
+  const handleConsumptionItemFieldChange = (itemId, field, value) => {
     setConsumptionItems((prev) => prev.map((item) => (item.id === itemId ? { ...item, [field]: value } : item)));
   };
 
@@ -1695,64 +1042,56 @@ export const Details10 = () => {
       lotCode: "LOT-ACET-001",
       expiryDate: "2026-03-15",
       palletNumber: "PAL-001",
-      quantity: "2.5",
-      uom: "kg",
+      quantity: "2.5 kg",
     },
     {
       item: "Microcrystalline cellulose",
       lotCode: "LOT-MCC-001",
       expiryDate: "2026-04-20",
       palletNumber: "PAL-002",
-      quantity: "1.2",
-      uom: "kg",
+      quantity: "1.2 kg",
     },
     {
       item: "Croscarmellose sodium",
       lotCode: "LOT-CCS-001",
       expiryDate: "2026-05-10",
       palletNumber: "PAL-003",
-      quantity: "0.3",
-      uom: "kg",
+      quantity: "0.3 kg",
     },
     {
       item: "Magnesium stearate",
       lotCode: "LOT-MS-001",
       expiryDate: "2026-06-15",
       palletNumber: "PAL-004",
-      quantity: "0.1",
-      uom: "kg",
+      quantity: "0.1 kg",
     },
     {
       item: "Hydroxypropyl methylcellulose",
       lotCode: "LOT-HPMC-001",
       expiryDate: "2026-07-20",
       palletNumber: "PAL-005",
-      quantity: "0.8",
-      uom: "kg",
+      quantity: "0.8 kg",
     },
     {
       item: "Talc powder",
       lotCode: "LOT-TALC-001",
       expiryDate: "2026-08-25",
       palletNumber: "PAL-006",
-      quantity: "0.5",
-      uom: "kg",
+      quantity: "0.5 kg",
     },
     {
       item: "FD&C Blue #2",
       lotCode: "LOT-BLUE-001",
       expiryDate: "2026-09-30",
       palletNumber: "PAL-007",
-      quantity: "0.02",
-      uom: "kg",
+      quantity: "0.02 kg",
     },
     {
       item: "Sodium benzoate",
       lotCode: "LOT-SB-001",
       expiryDate: "2026-10-15",
       palletNumber: "PAL-008",
-      quantity: "0.05",
-      uom: "kg",
+      quantity: "0.05 kg",
     },
   ];
 
@@ -1762,64 +1101,56 @@ export const Details10 = () => {
       lotCode: "LOT-IBU-002",
       expiryDate: "2026-04-10",
       palletNumber: "PAL-009",
-      quantity: "1.8",
-      uom: "kg",
+      quantity: "1.8 kg",
     },
     {
       item: "Povidone K30",
       lotCode: "LOT-PVP-002",
       expiryDate: "2026-05-15",
       palletNumber: "PAL-010",
-      quantity: "0.9",
-      uom: "kg",
+      quantity: "0.9 kg",
     },
     {
       item: "Sodium starch glycolate",
       lotCode: "LOT-SSG-002",
       expiryDate: "2026-06-20",
       palletNumber: "PAL-011",
-      quantity: "0.4",
-      uom: "kg",
+      quantity: "0.4 kg",
     },
     {
       item: "Stearic acid",
       lotCode: "LOT-SA-002",
       expiryDate: "2026-07-25",
       palletNumber: "PAL-012",
-      quantity: "0.2",
-      uom: "kg",
+      quantity: "0.2 kg",
     },
     {
       item: "FD&C Red #40",
       lotCode: "LOT-RED-002",
       expiryDate: "2026-08-30",
       palletNumber: "PAL-013",
-      quantity: "0.05",
-      uom: "kg",
+      quantity: "0.05 kg",
     },
     {
       item: "Silicon dioxide",
       lotCode: "LOT-SD-002",
       expiryDate: "2026-09-15",
       palletNumber: "PAL-014",
-      quantity: "0.3",
-      uom: "kg",
+      quantity: "0.3 kg",
     },
     {
       item: "Aspartame",
       lotCode: "LOT-ASP-002",
       expiryDate: "2026-10-20",
       palletNumber: "PAL-015",
-      quantity: "0.1",
-      uom: "kg",
+      quantity: "0.1 kg",
     },
     {
       item: "Mint flavor",
       lotCode: "LOT-MF-002",
       expiryDate: "2026-11-25",
       palletNumber: "PAL-016",
-      quantity: "0.02",
-      uom: "kg",
+      quantity: "0.02 kg",
     },
   ];
 
@@ -1829,64 +1160,56 @@ export const Details10 = () => {
       lotCode: "LOT-IBU-005A",
       expiryDate: "2026-05-10",
       palletNumber: "PAL-017",
-      quantity: "1.8",
-      uom: "kg",
+      quantity: "1.8 kg",
     },
     {
       item: "Povidone K30",
       lotCode: "LOT-PVP-005A",
       expiryDate: "2026-06-15",
       palletNumber: "PAL-018",
-      quantity: "0.9",
-      uom: "kg",
+      quantity: "0.9 kg",
     },
     {
       item: "Sodium starch glycolate",
       lotCode: "LOT-SSG-005A",
       expiryDate: "2026-07-20",
       palletNumber: "PAL-019",
-      quantity: "0.4",
-      uom: "kg",
+      quantity: "0.4 kg",
     },
     {
       item: "Stearic acid",
       lotCode: "LOT-SA-005A",
       expiryDate: "2026-08-25",
       palletNumber: "PAL-020",
-      quantity: "0.2",
-      uom: "kg",
+      quantity: "0.2 kg",
     },
     {
       item: "FD&C Red #40",
       lotCode: "LOT-RED-005A",
       expiryDate: "2026-09-30",
       palletNumber: "PAL-021",
-      quantity: "0.05",
-      uom: "kg",
+      quantity: "0.05 kg",
     },
     {
       item: "Silicon dioxide",
       lotCode: "LOT-SD-005A",
       expiryDate: "2026-10-15",
       palletNumber: "PAL-022",
-      quantity: "0.3",
-      uom: "kg",
+      quantity: "0.3 kg",
     },
     {
       item: "Aspartame",
       lotCode: "LOT-ASP-005A",
       expiryDate: "2026-11-20",
       palletNumber: "PAL-023",
-      quantity: "0.1",
-      uom: "kg",
+      quantity: "0.1 kg",
     },
     {
       item: "Mint flavor",
       lotCode: "LOT-MF-005A",
       expiryDate: "2026-12-25",
       palletNumber: "PAL-024",
-      quantity: "0.02",
-      uom: "kg",
+      quantity: "0.02 kg",
     },
   ];
 
@@ -1896,64 +1219,56 @@ export const Details10 = () => {
       lotCode: "LOT-IBU-005B",
       expiryDate: "2026-05-10",
       palletNumber: "PAL-025",
-      quantity: "0.9",
-      uom: "kg",
+      quantity: "0.9 kg",
     },
     {
       item: "Povidone K30",
       lotCode: "LOT-PVP-005B",
       expiryDate: "2026-06-15",
       palletNumber: "PAL-026",
-      quantity: "0.45",
-      uom: "kg",
+      quantity: "0.45 kg",
     },
     {
       item: "Sodium starch glycolate",
       lotCode: "LOT-SSG-005B",
       expiryDate: "2026-07-20",
       palletNumber: "PAL-027",
-      quantity: "0.2",
-      uom: "kg",
+      quantity: "0.2 kg",
     },
     {
       item: "Stearic acid",
       lotCode: "LOT-SA-005B",
       expiryDate: "2026-08-25",
       palletNumber: "PAL-028",
-      quantity: "0.1",
-      uom: "kg",
+      quantity: "0.1 kg",
     },
     {
       item: "FD&C Red #40",
       lotCode: "LOT-RED-005B",
       expiryDate: "2026-09-30",
       palletNumber: "PAL-029",
-      quantity: "0.025",
-      uom: "kg",
+      quantity: "0.025 kg",
     },
     {
       item: "Silicon dioxide",
       lotCode: "LOT-SD-005B",
       expiryDate: "2026-10-15",
       palletNumber: "PAL-030",
-      quantity: "0.15",
-      uom: "kg",
+      quantity: "0.15 kg",
     },
     {
       item: "Aspartame",
       lotCode: "LOT-ASP-005B",
       expiryDate: "2026-11-20",
       palletNumber: "PAL-031",
-      quantity: "0.05",
-      uom: "kg",
+      quantity: "0.05 kg",
     },
     {
       item: "Mint flavor",
       lotCode: "LOT-MF-005B",
       expiryDate: "2026-12-25",
       palletNumber: "PAL-032",
-      quantity: "0.01",
-      uom: "kg",
+      quantity: "0.01 kg",
     },
   ];
 
@@ -1963,64 +1278,56 @@ export const Details10 = () => {
       lotCode: "LOT-ACET-006A",
       expiryDate: "2026-06-15",
       palletNumber: "PAL-033",
-      quantity: "3.2",
-      uom: "kg",
+      quantity: "3.2 kg",
     },
     {
       item: "Microcrystalline cellulose",
       lotCode: "LOT-MCC-006A",
       expiryDate: "2026-07-20",
       palletNumber: "PAL-034",
-      quantity: "1.5",
-      uom: "kg",
+      quantity: "1.5 kg",
     },
     {
       item: "Croscarmellose sodium",
       lotCode: "LOT-CCS-006A",
       expiryDate: "2026-08-25",
       palletNumber: "PAL-035",
-      quantity: "0.4",
-      uom: "kg",
+      quantity: "0.4 kg",
     },
     {
       item: "Magnesium stearate",
       lotCode: "LOT-MS-006A",
       expiryDate: "2026-09-30",
       palletNumber: "PAL-036",
-      quantity: "0.15",
-      uom: "kg",
+      quantity: "0.15 kg",
     },
     {
       item: "Hydroxypropyl methylcellulose",
       lotCode: "LOT-HPMC-006A",
       expiryDate: "2026-10-15",
       palletNumber: "PAL-037",
-      quantity: "1.0",
-      uom: "kg",
+      quantity: "1.0 kg",
     },
     {
       item: "Talc powder",
       lotCode: "LOT-TALC-006A",
       expiryDate: "2026-11-20",
       palletNumber: "PAL-038",
-      quantity: "0.6",
-      uom: "kg",
+      quantity: "0.6 kg",
     },
     {
       item: "FD&C Blue #2",
       lotCode: "LOT-BLUE-006A",
       expiryDate: "2026-12-25",
       palletNumber: "PAL-039",
-      quantity: "0.03",
-      uom: "kg",
+      quantity: "0.03 kg",
     },
     {
       item: "Sodium benzoate",
       lotCode: "LOT-SB-006A",
       expiryDate: "2027-01-30",
       palletNumber: "PAL-040",
-      quantity: "0.08",
-      uom: "kg",
+      quantity: "0.08 kg",
     },
   ];
 
@@ -2030,83 +1337,67 @@ export const Details10 = () => {
       lotCode: "LOT-ACET-006B",
       expiryDate: "2026-06-15",
       palletNumber: "PAL-041",
-      quantity: "1.7",
-      uom: "kg",
+      quantity: "1.7 kg",
     },
     {
       item: "Microcrystalline cellulose",
       lotCode: "LOT-MCC-006B",
       expiryDate: "2026-07-20",
       palletNumber: "PAL-042",
-      quantity: "0.8",
-      uom: "kg",
+      quantity: "0.8 kg",
     },
     {
       item: "Croscarmellose sodium",
       lotCode: "LOT-CCS-006B",
       expiryDate: "2026-08-25",
       palletNumber: "PAL-043",
-      quantity: "0.2",
-      uom: "kg",
+      quantity: "0.2 kg",
     },
     {
       item: "Magnesium stearate",
       lotCode: "LOT-MS-006B",
       expiryDate: "2026-09-30",
       palletNumber: "PAL-044",
-      quantity: "0.08",
-      uom: "kg",
+      quantity: "0.08 kg",
     },
     {
       item: "Hydroxypropyl methylcellulose",
       lotCode: "LOT-HPMC-006B",
       expiryDate: "2026-10-15",
       palletNumber: "PAL-045",
-      quantity: "0.5",
-      uom: "kg",
+      quantity: "0.5 kg",
     },
     {
       item: "Talc powder",
       lotCode: "LOT-TALC-006B",
       expiryDate: "2026-11-20",
       palletNumber: "PAL-046",
-      quantity: "0.3",
-      uom: "kg",
+      quantity: "0.3 kg",
     },
     {
       item: "FD&C Blue #2",
       lotCode: "LOT-BLUE-006B",
       expiryDate: "2026-12-25",
       palletNumber: "PAL-047",
-      quantity: "0.015",
-      uom: "kg",
+      quantity: "0.015 kg",
     },
     {
       item: "Sodium benzoate",
       lotCode: "LOT-SB-006B",
       expiryDate: "2027-01-30",
       palletNumber: "PAL-048",
-      quantity: "0.04",
-      uom: "kg",
+      quantity: "0.04 kg",
     },
   ];
 
   const materialsData7A = [
-    {
-      item: "Pending - Acetaminophen 500mg",
-      lotCode: "TBD",
-      expiryDate: "TBD",
-      palletNumber: "TBD",
-      quantity: "TBD",
-      uom: "TBD",
-    },
+    { item: "Pending - Acetaminophen 500mg", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
     {
       item: "Pending - Microcrystalline cellulose",
       lotCode: "TBD",
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Croscarmellose sodium",
@@ -2114,67 +1405,29 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
-    {
-      item: "Pending - Magnesium stearate",
-      lotCode: "TBD",
-      expiryDate: "TBD",
-      palletNumber: "TBD",
-      quantity: "TBD",
-      uom: "TBD",
-    },
+    { item: "Pending - Magnesium stearate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
     {
       item: "Pending - Hydroxypropyl methylcellulose",
       lotCode: "TBD",
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
-    {
-      item: "Pending - Talc powder",
-      lotCode: "TBD",
-      expiryDate: "TBD",
-      palletNumber: "TBD",
-      quantity: "TBD",
-      uom: "TBD",
-    },
-    {
-      item: "Pending - FD&C Blue #2",
-      lotCode: "TBD",
-      expiryDate: "TBD",
-      palletNumber: "TBD",
-      quantity: "TBD",
-      uom: "TBD",
-    },
-    {
-      item: "Pending - Sodium benzoate",
-      lotCode: "TBD",
-      expiryDate: "TBD",
-      palletNumber: "TBD",
-      quantity: "TBD",
-      uom: "TBD",
-    },
+    { item: "Pending - Talc powder", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - FD&C Blue #2", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Sodium benzoate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
   ];
 
   const materialsData7B = [
     // Base materials (8 items)
-    {
-      item: "Pending - Acetaminophen 500mg",
-      lotCode: "TBD",
-      expiryDate: "TBD",
-      palletNumber: "TBD",
-      quantity: "TBD",
-      uom: "TBD",
-    },
+    { item: "Pending - Acetaminophen 500mg", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
     {
       item: "Pending - Microcrystalline cellulose",
       lotCode: "TBD",
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Croscarmellose sodium",
@@ -2182,89 +1435,36 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
-    {
-      item: "Pending - Magnesium stearate",
-      lotCode: "TBD",
-      expiryDate: "TBD",
-      palletNumber: "TBD",
-      quantity: "TBD",
-      uom: "TBD",
-    },
+    { item: "Pending - Magnesium stearate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
     {
       item: "Pending - Hydroxypropyl methylcellulose",
       lotCode: "TBD",
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
-    {
-      item: "Pending - Talc powder",
-      lotCode: "TBD",
-      expiryDate: "TBD",
-      palletNumber: "TBD",
-      quantity: "TBD",
-      uom: "TBD",
-    },
-    {
-      item: "Pending - FD&C Blue #2",
-      lotCode: "TBD",
-      expiryDate: "TBD",
-      palletNumber: "TBD",
-      quantity: "TBD",
-      uom: "TBD",
-    },
-    {
-      item: "Pending - Sodium benzoate",
-      lotCode: "TBD",
-      expiryDate: "TBD",
-      palletNumber: "TBD",
-      quantity: "TBD",
-      uom: "TBD",
-    },
+    { item: "Pending - Talc powder", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - FD&C Blue #2", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Sodium benzoate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
 
     // Additional materials to reach 120 rows
-    {
-      item: "Pending - Lactose monohydrate",
-      lotCode: "TBD",
-      expiryDate: "TBD",
-      palletNumber: "TBD",
-      quantity: "TBD",
-      uom: "TBD",
-    },
-    {
-      item: "Pending - Povidone K30",
-      lotCode: "TBD",
-      expiryDate: "TBD",
-      palletNumber: "TBD",
-      quantity: "TBD",
-      uom: "TBD",
-    },
+    { item: "Pending - Lactose monohydrate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
+    { item: "Pending - Povidone K30", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
     {
       item: "Pending - Colloidal silicon dioxide",
       lotCode: "TBD",
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
-    {
-      item: "Pending - Stearic acid",
-      lotCode: "TBD",
-      expiryDate: "TBD",
-      palletNumber: "TBD",
-      quantity: "TBD",
-      uom: "TBD",
-    },
+    { item: "Pending - Stearic acid", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
     {
       item: "Pending - Sodium starch glycolate",
       lotCode: "TBD",
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Croscarmellose sodium",
@@ -2272,7 +1472,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Hydroxypropyl cellulose",
@@ -2280,7 +1479,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     { item: "Pending - Ethylcellulose", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
     { item: "Pending - Methylcellulose", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
@@ -2290,7 +1488,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Polyethylene glycol 4000",
@@ -2298,7 +1495,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Polyethylene glycol 6000",
@@ -2306,7 +1502,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     { item: "Pending - Polysorbate 80", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
     { item: "Pending - Polysorbate 20", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
@@ -2328,7 +1523,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Sodium phosphate monobasic",
@@ -2336,7 +1530,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     { item: "Pending - Citric acid", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
     { item: "Pending - Sodium citrate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
@@ -2350,7 +1543,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     { item: "Pending - Potassium carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
     { item: "Pending - Calcium carbonate", lotCode: "TBD", expiryDate: "TBD", palletNumber: "TBD", quantity: "TBD" },
@@ -2390,7 +1582,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Dodecanedioate carbonate",
@@ -2398,7 +1589,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Tridecanedioate carbonate",
@@ -2406,7 +1596,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Tetradecanedioate carbonate",
@@ -2414,7 +1603,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Pentadecanedioate carbonate",
@@ -2422,7 +1610,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Hexadecanedioate carbonate",
@@ -2430,7 +1617,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Heptadecanedioate carbonate",
@@ -2438,7 +1624,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Octadecanedioate carbonate",
@@ -2446,7 +1631,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Nonadecanedioate carbonate",
@@ -2454,7 +1638,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Eicosanedioate carbonate",
@@ -2462,7 +1645,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Heneicosanedioate carbonate",
@@ -2470,7 +1652,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Docosanedioate carbonate",
@@ -2478,7 +1659,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Tricosanedioate carbonate",
@@ -2486,7 +1666,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Tetracosanedioate carbonate",
@@ -2494,7 +1673,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Pentacosanedioate carbonate",
@@ -2502,7 +1680,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Hexacosanedioate carbonate",
@@ -2510,7 +1687,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Heptacosanedioate carbonate",
@@ -2518,7 +1694,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Octacosanedioate carbonate",
@@ -2526,7 +1701,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Nonacosanedioate carbonate",
@@ -2534,7 +1708,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Triacontanedioate carbonate",
@@ -2542,7 +1715,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Hentriacontanedioate carbonate",
@@ -2550,7 +1722,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Dotriacontanedioate carbonate",
@@ -2558,7 +1729,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Tritriacontanedioate carbonate",
@@ -2566,7 +1736,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Tetratriacontanedioate carbonate",
@@ -2574,7 +1743,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Pentatriacontanedioate carbonate",
@@ -2582,7 +1750,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Hexatriacontanedioate carbonate",
@@ -2590,7 +1757,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Heptatriacontanedioate carbonate",
@@ -2598,7 +1764,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Octatriacontanedioate carbonate",
@@ -2606,7 +1771,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Nonatriacontanedioate carbonate",
@@ -2614,7 +1778,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Tetracontanedioate carbonate",
@@ -2622,7 +1785,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Hentetracontanedioate carbonate",
@@ -2630,7 +1792,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Dotetracontanedioate carbonate",
@@ -2638,7 +1799,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Tritetracontanedioate carbonate",
@@ -2646,7 +1806,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Tetratetracontanedioate carbonate",
@@ -2654,7 +1813,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Pentatetracontanedioate carbonate",
@@ -2662,7 +1820,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Hexatetracontanedioate carbonate",
@@ -2670,7 +1827,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Heptatetracontanedioate carbonate",
@@ -2678,7 +1834,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Octatetracontanedioate carbonate",
@@ -2686,7 +1841,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Nonatetracontanedioate carbonate",
@@ -2694,7 +1848,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Pentacontanedioate carbonate",
@@ -2702,7 +1855,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Henpentacontanedioate carbonate",
@@ -2710,7 +1862,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Dopentacontanedioate carbonate",
@@ -2718,7 +1869,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Tripentacontanedioate carbonate",
@@ -2726,7 +1876,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Tetrapentacontanedioate carbonate",
@@ -2734,7 +1883,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Pentapentacontanedioate carbonate",
@@ -2742,7 +1890,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Hexapentacontanedioate carbonate",
@@ -2750,7 +1897,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Heptapentacontanedioate carbonate",
@@ -2758,7 +1904,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Octapentacontanedioate carbonate",
@@ -2766,7 +1911,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Nonapentacontanedioate carbonate",
@@ -2774,7 +1918,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Hexacontanedioate carbonate",
@@ -2782,7 +1925,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Henhexacontanedioate carbonate",
@@ -2790,7 +1932,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Dohexacontanedioate carbonate",
@@ -2798,7 +1939,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Trihexacontanedioate carbonate",
@@ -2806,7 +1946,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Tetrahexacontanedioate carbonate",
@@ -2814,7 +1953,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Pentahexacontanedioate carbonate",
@@ -2822,7 +1960,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Hexahexacontanedioate carbonate",
@@ -2830,7 +1967,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Heptahexacontanedioate carbonate",
@@ -2838,7 +1974,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Octahexacontanedioate carbonate",
@@ -2846,7 +1981,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Nonahexacontanedioate carbonate",
@@ -2854,7 +1988,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Heptacontanedioate carbonate",
@@ -2862,7 +1995,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Henheptacontanedioate carbonate",
@@ -2870,7 +2002,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Doheptacontanedioate carbonate",
@@ -2878,7 +2009,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Triheptacontanedioate carbonate",
@@ -2886,7 +2016,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Tetraheptacontanedioate carbonate",
@@ -2894,7 +2023,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Pentaheptacontanedioate carbonate",
@@ -2902,7 +2030,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Hexaheptacontanedioate carbonate",
@@ -2910,7 +2037,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Heptaheptacontanedioate carbonate",
@@ -2918,7 +2044,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Octaheptacontanedioate carbonate",
@@ -2926,7 +2051,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Nonaheptacontanedioate carbonate",
@@ -2934,7 +2058,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Octacontanedioate carbonate",
@@ -2942,7 +2065,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Henoctacontanedioate carbonate",
@@ -2950,7 +2072,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Dooctacontanedioate carbonate",
@@ -2958,7 +2079,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Trioctacontanedioate carbonate",
@@ -2966,7 +2086,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Tetraoctacontanedioate carbonate",
@@ -2974,7 +2093,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Pentaoctacontanedioate carbonate",
@@ -2982,7 +2100,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Hexaoctacontanedioate carbonate",
@@ -2990,7 +2107,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Heptaoctacontanedioate carbonate",
@@ -2998,7 +2114,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Octaoctacontanedioate carbonate",
@@ -3006,7 +2121,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Nonaoctacontanedioate carbonate",
@@ -3014,7 +2128,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Nonacontanedioate carbonate",
@@ -3022,7 +2135,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Hennonacontanedioate carbonate",
@@ -3030,7 +2142,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Dononacontanedioate carbonate",
@@ -3038,7 +2149,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Trinonacontanedioate carbonate",
@@ -3046,7 +2156,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Tetranonacontanedioate carbonate",
@@ -3054,7 +2163,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Pentanonacontanedioate carbonate",
@@ -3062,7 +2170,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Hexanonacontanedioate carbonate",
@@ -3070,7 +2177,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Heptanonacontanedioate carbonate",
@@ -3078,7 +2184,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Octanonacontanedioate carbonate",
@@ -3086,7 +2191,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Nonanonacontanedioate carbonate",
@@ -3094,7 +2198,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Hectanedioate carbonate",
@@ -3102,7 +2205,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
 
     // Additional materials to make it super long (200+ more items)
@@ -3112,7 +2214,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 002",
@@ -3120,7 +2221,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 003",
@@ -3128,7 +2228,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 004",
@@ -3136,7 +2235,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 005",
@@ -3144,7 +2242,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 006",
@@ -3152,7 +2249,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 007",
@@ -3160,7 +2256,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 008",
@@ -3168,7 +2263,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 009",
@@ -3176,7 +2270,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 010",
@@ -3184,7 +2277,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 011",
@@ -3192,7 +2284,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 012",
@@ -3200,7 +2291,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 013",
@@ -3208,7 +2298,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 014",
@@ -3216,7 +2305,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 015",
@@ -3224,7 +2312,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 016",
@@ -3232,7 +2319,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 017",
@@ -3240,7 +2326,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 018",
@@ -3248,7 +2333,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 019",
@@ -3256,7 +2340,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 020",
@@ -3264,7 +2347,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 021",
@@ -3272,7 +2354,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 022",
@@ -3280,7 +2361,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 023",
@@ -3288,7 +2368,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 024",
@@ -3296,7 +2375,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 025",
@@ -3304,7 +2382,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 026",
@@ -3312,7 +2389,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 027",
@@ -3320,7 +2396,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 028",
@@ -3328,7 +2403,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 029",
@@ -3336,7 +2410,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 030",
@@ -3344,7 +2417,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 031",
@@ -3352,7 +2424,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 032",
@@ -3360,7 +2431,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 033",
@@ -3368,7 +2438,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 034",
@@ -3376,7 +2445,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 035",
@@ -3384,7 +2452,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 036",
@@ -3392,7 +2459,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 037",
@@ -3400,7 +2466,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 038",
@@ -3408,7 +2473,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 039",
@@ -3416,7 +2480,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 040",
@@ -3424,7 +2487,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 041",
@@ -3432,7 +2494,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 042",
@@ -3440,7 +2501,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 043",
@@ -3448,7 +2508,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 044",
@@ -3456,7 +2515,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 045",
@@ -3464,7 +2522,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 046",
@@ -3472,7 +2529,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 047",
@@ -3480,7 +2536,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 048",
@@ -3488,7 +2543,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 049",
@@ -3496,7 +2550,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 050",
@@ -3504,7 +2557,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 051",
@@ -3512,7 +2564,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 052",
@@ -3520,7 +2571,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 053",
@@ -3528,7 +2578,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 054",
@@ -3536,7 +2585,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 055",
@@ -3544,7 +2592,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 056",
@@ -3552,7 +2599,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 057",
@@ -3560,7 +2606,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 058",
@@ -3568,7 +2613,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 059",
@@ -3576,7 +2620,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 060",
@@ -3584,7 +2627,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 061",
@@ -3592,7 +2634,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 062",
@@ -3600,7 +2641,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 063",
@@ -3608,7 +2648,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 064",
@@ -3616,7 +2655,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 065",
@@ -3624,7 +2662,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 066",
@@ -3632,7 +2669,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 067",
@@ -3640,7 +2676,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 068",
@@ -3648,7 +2683,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 069",
@@ -3656,7 +2690,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 070",
@@ -3664,7 +2697,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 071",
@@ -3672,7 +2704,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 072",
@@ -3680,7 +2711,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 073",
@@ -3688,7 +2718,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 074",
@@ -3696,7 +2725,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 075",
@@ -3704,7 +2732,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 076",
@@ -3712,7 +2739,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 077",
@@ -3720,7 +2746,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 078",
@@ -3728,7 +2753,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 079",
@@ -3736,7 +2760,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 080",
@@ -3744,7 +2767,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 081",
@@ -3752,7 +2774,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 082",
@@ -3760,7 +2781,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 083",
@@ -3768,7 +2788,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 084",
@@ -3776,7 +2795,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 085",
@@ -3784,7 +2802,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 086",
@@ -3792,7 +2809,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 087",
@@ -3800,7 +2816,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 088",
@@ -3808,7 +2823,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 089",
@@ -3816,7 +2830,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 090",
@@ -3824,7 +2837,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 091",
@@ -3832,7 +2844,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 092",
@@ -3840,7 +2851,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 093",
@@ -3848,7 +2858,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 094",
@@ -3856,7 +2865,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 095",
@@ -3864,7 +2872,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 096",
@@ -3872,7 +2879,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 097",
@@ -3880,7 +2886,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 098",
@@ -3888,7 +2893,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 099",
@@ -3896,7 +2900,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 100",
@@ -3904,7 +2907,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 101",
@@ -3912,7 +2914,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 102",
@@ -3920,7 +2921,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 103",
@@ -3928,7 +2928,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 104",
@@ -3936,7 +2935,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 105",
@@ -3944,7 +2942,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 106",
@@ -3952,7 +2949,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 107",
@@ -3960,7 +2956,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 108",
@@ -3968,7 +2963,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 109",
@@ -3976,7 +2970,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 110",
@@ -3984,7 +2977,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 111",
@@ -3992,7 +2984,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 112",
@@ -4000,7 +2991,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 113",
@@ -4008,7 +2998,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 114",
@@ -4016,7 +3005,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 115",
@@ -4024,7 +3012,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 116",
@@ -4032,7 +3019,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 117",
@@ -4040,7 +3026,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 118",
@@ -4048,7 +3033,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 119",
@@ -4056,7 +3040,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 120",
@@ -4064,7 +3047,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 121",
@@ -4072,7 +3054,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 122",
@@ -4080,7 +3061,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 123",
@@ -4088,7 +3068,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 124",
@@ -4096,7 +3075,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 125",
@@ -4104,7 +3082,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 126",
@@ -4112,7 +3089,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 127",
@@ -4120,7 +3096,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 128",
@@ -4128,7 +3103,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 129",
@@ -4136,7 +3110,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 130",
@@ -4144,7 +3117,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 131",
@@ -4152,7 +3124,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 132",
@@ -4160,7 +3131,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 133",
@@ -4168,7 +3138,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 134",
@@ -4176,7 +3145,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 135",
@@ -4184,7 +3152,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 136",
@@ -4192,7 +3159,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 137",
@@ -4200,7 +3166,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 138",
@@ -4208,7 +3173,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 139",
@@ -4216,7 +3180,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 140",
@@ -4224,7 +3187,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 141",
@@ -4232,7 +3194,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 142",
@@ -4240,7 +3201,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 143",
@@ -4248,7 +3208,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 144",
@@ -4256,7 +3215,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 145",
@@ -4264,7 +3222,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 146",
@@ -4272,7 +3229,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 147",
@@ -4280,7 +3236,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 148",
@@ -4288,7 +3243,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 149",
@@ -4296,7 +3250,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 150",
@@ -4304,7 +3257,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 151",
@@ -4312,7 +3264,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 152",
@@ -4320,7 +3271,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 153",
@@ -4328,7 +3278,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 154",
@@ -4336,7 +3285,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 155",
@@ -4344,7 +3292,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 156",
@@ -4352,7 +3299,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 157",
@@ -4360,7 +3306,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 158",
@@ -4368,7 +3313,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 159",
@@ -4376,7 +3320,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 160",
@@ -4384,7 +3327,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 161",
@@ -4392,7 +3334,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 162",
@@ -4400,7 +3341,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 163",
@@ -4408,7 +3348,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 164",
@@ -4416,7 +3355,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 165",
@@ -4424,7 +3362,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 166",
@@ -4432,7 +3369,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 167",
@@ -4440,7 +3376,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 168",
@@ -4448,7 +3383,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 169",
@@ -4456,7 +3390,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 170",
@@ -4464,7 +3397,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 171",
@@ -4472,7 +3404,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 172",
@@ -4480,7 +3411,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 173",
@@ -4488,7 +3418,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 174",
@@ -4496,7 +3425,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 175",
@@ -4504,7 +3432,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 176",
@@ -4512,7 +3439,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 177",
@@ -4520,7 +3446,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 178",
@@ -4528,7 +3453,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 179",
@@ -4536,7 +3460,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 180",
@@ -4544,7 +3467,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 181",
@@ -4552,7 +3474,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 182",
@@ -4560,7 +3481,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 183",
@@ -4568,7 +3488,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 184",
@@ -4576,7 +3495,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 185",
@@ -4584,7 +3502,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 186",
@@ -4592,7 +3509,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 187",
@@ -4600,7 +3516,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 188",
@@ -4608,7 +3523,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 189",
@@ -4616,7 +3530,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 190",
@@ -4624,7 +3537,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 191",
@@ -4632,7 +3544,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 192",
@@ -4640,7 +3551,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 193",
@@ -4648,7 +3558,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 194",
@@ -4656,7 +3565,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 195",
@@ -4664,7 +3572,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 196",
@@ -4672,7 +3579,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 197",
@@ -4680,7 +3586,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 198",
@@ -4688,7 +3593,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 199",
@@ -4696,7 +3600,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
     {
       item: "Pending - Additional Material 200",
@@ -4704,7 +3607,6 @@ export const Details10 = () => {
       expiryDate: "TBD",
       palletNumber: "TBD",
       quantity: "TBD",
-      uom: "TBD",
     },
   ];
 
@@ -4728,8 +3630,7 @@ export const Details10 = () => {
         if (row.expiryDate === "TBD") {
           return <Text color="midGrey">TBD</Text>;
         }
-        const formattedDate = formatDateToYYYYMonDD(row.expiryDate);
-        return <Text>{formattedDate}</Text>;
+        return formatDateToYYYYMonDD(row.expiryDate);
       },
     },
     {
@@ -4740,12 +3641,7 @@ export const Details10 = () => {
     {
       label: "Quantity",
       dataKey: "quantity",
-      width: "80px",
-    },
-    {
-      label: "UOM",
-      dataKey: "uom",
-      width: "60px",
+      width: "100px",
     },
   ];
 
@@ -4754,14 +3650,7 @@ export const Details10 = () => {
     materials,
     parentData,
   }: {
-    materials: Array<{
-      item: string;
-      lotCode: string;
-      expiryDate: string;
-      palletNumber: string;
-      quantity: string;
-      uom: string;
-    }>;
+    materials: Array<{ item: string; lotCode: string; expiryDate: string; palletNumber: string; quantity: string }>;
     parentData?: { date: string; actualQuantity: string };
   }) => {
     // Check if materials array is empty or all items have "TBD" quantities (indicating 0 production)
@@ -4780,12 +3669,17 @@ export const Details10 = () => {
         p="x2"
       >
         <Flex justifyContent="space-between" alignItems="center" mb="x2" ml="x1">
-          <Flex alignItems="baseline" gap="x1">
-            <Heading4 mb="0">Subcomponent consumption</Heading4>
-            <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
-              BOM revision 2.1
-            </Text>
-          </Flex>
+          <Heading4 mb="0">Consumption details</Heading4>
+          {role === "supplier" && !isEmpty && (
+            <IconicButton
+              icon="edit"
+              aria-label="Edit consumption details"
+              onClick={() => handleOpenConsumptionSidebar(materials, parentData)}
+              type="button"
+            >
+              Edit
+            </IconicButton>
+          )}
         </Flex>
         {isEmpty ? (
           <Box py="x4" textAlign="center">
@@ -4800,7 +3694,7 @@ export const Details10 = () => {
             keyField="item"
             compact={true}
             rowBorder={true}
-            className="subcomponent-consumption-record-table"
+            className="consumption-table"
           />
         )}
       </Box>
@@ -4821,16 +3715,14 @@ export const Details10 = () => {
         p="x2"
       >
         <Heading4 mb="x2" ml="x1">
-          Subcomponent consumption
+          Consumption details
         </Heading4>
         <Box py="x4" textAlign="center">
           <Text color="midGrey" fontSize="small" mb="x2">
             No consumption data available
           </Text>
           {role === "supplier" && (
-            <PrimaryButton type="button" onClick={handleAddConsumptionReport}>
-              Add consumption details
-            </PrimaryButton>
+            <PrimaryButton onClick={handleAddConsumptionReport}>Add consumption details</PrimaryButton>
           )}
         </Box>
       </Box>
@@ -4846,12 +3738,8 @@ export const Details10 = () => {
         }}
         renderBreadcrumbs={() => (
           <Breadcrumbs>
-            <Link href="#" onClick={(e) => e.preventDefault()}>
-              Home
-            </Link>
-            <Link href="#" onClick={(e) => e.preventDefault()}>
-              PO line items
-            </Link>
+            <Link href="#">Home</Link>
+            <Link href="#">PO line items</Link>
           </Breadcrumbs>
         )}
         title="PO-2025-001"
@@ -4991,11 +3879,11 @@ export const Details10 = () => {
           }
           
           /* Hide 2nd level nested table headers (1st tier nested) */
-          .actual-production-record-table thead {
+          .nested-table thead {
             height: 0 !important;
             overflow: hidden !important;
           }
-          .actual-production-record-table thead th {
+          .nested-table thead th {
             height: 0 !important;
             padding: 0 !important;
             border: none !important;
@@ -5004,45 +3892,38 @@ export const Details10 = () => {
           }
           
           /* Show headers for consumption tables (3rd level) */
-          .subcomponent-consumption-record-table thead {
+          .consumption-table thead {
             height: auto !important;
             overflow: visible !important;
           }
-          .subcomponent-consumption-record-table thead th {
+          .consumption-table thead th {
             height: auto !important;
-            padding: 0 0 8px 8px !important;
+            padding: 8px 12px !important;
             border: none !important;
             border-bottom: 1px solid #e0e0e0 !important;
             line-height: normal !important;
-            font-size: 12px !important;
-            font-weight: bold !important;
-            color: inherit !important;
-          }
-          
-          /* Add extra padding-left to columns 2+ */
-          .subcomponent-consumption-record-table thead th:nth-child(n+2) {
-            padding-left: 16px !important;
+            font-size: 14px !important;
           }
           
           /* Match consumption table column widths */
-          .subcomponent-consumption-record-table thead th:nth-child(1) { width: 200px !important; }
-          .subcomponent-consumption-record-table thead th:nth-child(2) { width: 150px !important; }
-          .subcomponent-consumption-record-table thead th:nth-child(3) { width: 120px !important; }
-          .subcomponent-consumption-record-table thead th:nth-child(4) { width: 120px !important; }
-          .subcomponent-consumption-record-table thead th:nth-child(5) { width: 100px !important; }
+          .consumption-table thead th:nth-child(1) { width: 200px !important; }
+          .consumption-table thead th:nth-child(2) { width: 150px !important; }
+          .consumption-table thead th:nth-child(3) { width: 120px !important; }
+          .consumption-table thead th:nth-child(4) { width: 120px !important; }
+          .consumption-table thead th:nth-child(5) { width: 100px !important; }
           
           /* Style consumption table body cells */
-          .subcomponent-consumption-record-table tbody td {
+          .consumption-table tbody td {
             padding: 8px 12px !important;
             font-size: 14px !important;
             line-height: 24px !important;
           }
           
           /* Ensure parent table row borders are visible */
-          .production-record-table tbody tr {
+          .parent-table tbody tr {
             border-bottom: 1px solid #e0e0e0 !important;
           }
-          .production-record-table tbody tr:last-child {
+          .parent-table tbody tr:last-child {
             border-bottom: none !important;
           }
           
@@ -5269,12 +4150,8 @@ export const Details10 = () => {
                     </Text>
                   </Flex>
                   <Flex gap="x2">
-                    <Button type="button" size="small">
-                      View full proposal
-                    </Button>
-                    <PrimaryButton type="button" size="small">
-                      Create new proposal
-                    </PrimaryButton>
+                    <Button size="small">View full proposal</Button>
+                    <PrimaryButton size="small">Create new proposal</PrimaryButton>
                   </Flex>
                 </Flex>
               </Flex>
@@ -5300,7 +4177,7 @@ export const Details10 = () => {
                   keyField="id"
                   rowBorder={true}
                   compact={true}
-                  className="production-record-table"
+                  className="parent-table"
                 />
               </Box>
             </Box>
@@ -5316,1110 +4193,9 @@ export const Details10 = () => {
             </Box>
           </Tab>
           <Tab label="History log">
-            {/* Header */}
-            <Box mt="x4">
-              <Flex mx="x1" justifyContent="space-between" alignItems="flex-start" mb="x2">
-                <Flex flexDirection="column">
-                  <Text>Event / Modification</Text>
-                  <Text color="midGrey" fontSize="small" lineHeight="smallTextCompressed">
-                    User, date, and time
-                  </Text>
-                </Flex>
-                <Flex justifyContent="flex-end">
-                  <Switcher selected={historyLogFilter} onChange={(value) => setHistoryLogFilter(value)}>
-                    <Switch value="All">All</Switch>
-                    <Switch value="Production record">Production record</Switch>
-                    <Switch value="Collaboration">Collaboration</Switch>
-                    <Switch value="PO line item details">PO line item details</Switch>
-                  </Switcher>
-                </Flex>
-              </Flex>
-              <Divider m="0" />
+            <Box>
+              <Text>History log content goes here...</Text>
             </Box>
-
-            {/* Log */}
-            <Flex flexDirection="column">
-              {/* Group 1: January 29, 2025 */}
-              {(historyLogFilter === "All" || historyLogFilter === "Production record") && (
-                <Flex flexDirection="column" gap="x1" maxWidth="1280px" mx="x1" pt="x2_5" pb="x2_5">
-                  {/* Header */}
-                  <Box mb="half">
-                    <Text fontSize="small" lineHeight="smallCompact">
-                      <Box as="span" color="black" fontWeight="bold">
-                        Production record
-                      </Box>
-                      <Box as="span" color="midGrey" mx="half">
-                        {" "}
-                        for{" "}
-                      </Box>
-                      <Box as="span" color="black" fontWeight="bold">
-                        January 29, 2025
-                      </Box>
-                    </Text>
-                  </Box>
-
-                  {/* DescriptionList */}
-                  <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Actual quantity modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            1,000 cases
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            1,200 cases
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Lot code modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            LOT-2025-001-001
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            LOT-2025-001-001A
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Customer's lot code modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            CUST-LOT-001
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            CUST-LOT-001A
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Supplier's lot code modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            SUP-LOT-001
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            SUP-LOT-001B
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Expiry date modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            March 15, 2026
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            March 20, 2026
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Pallet number modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            PAL-001
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            PAL-002
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Note modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            Standard production run
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            Special handling required for temperature control
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                  </DescriptionList>
-
-                  {/* Footer */}
-                  <Box mt="half">
-                    <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
-                      by
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        sarah.johnson@supplier.com
-                      </Box>
-                      on
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        January 29th, 2025
-                      </Box>
-                      at
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        02:30:15PM
-                      </Box>
-                    </Text>
-                  </Box>
-                </Flex>
-              )}
-
-              {/* Divider between Group 1 and Group 2 */}
-              {(historyLogFilter === "All" || historyLogFilter === "Production record") && <Divider m="0" />}
-
-              {/* Group 2: January 28, 2025 */}
-              {(historyLogFilter === "All" || historyLogFilter === "Production record") && (
-                <Flex flexDirection="column" gap="x1" maxWidth="1280px" mx="x1" pt="x2_5" pb="x2_5">
-                  {/* Header */}
-                  <Box mb="half">
-                    <Text fontSize="small" lineHeight="smallCompact">
-                      <Box as="span" color="black" fontWeight="bold">
-                        Production record
-                      </Box>
-                      <Box as="span" color="midGrey" mx="half">
-                        {" "}
-                        for{" "}
-                      </Box>
-                      <Box as="span" color="black" fontWeight="bold">
-                        January 28, 2025
-                      </Box>
-                    </Text>
-                  </Box>
-
-                  {/* DescriptionList */}
-                  <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Date modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            January 25, 2025
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            January 28, 2025
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Expected quantity modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            1,000 cases
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            1,200 cases
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                  </DescriptionList>
-
-                  {/* Footer */}
-                  <Box mt="half">
-                    <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
-                      by
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        system@nulogy.com
-                      </Box>
-                      on
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        January 28th, 2025
-                      </Box>
-                      at
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        09:15:42AM
-                      </Box>
-                    </Text>
-                  </Box>
-                </Flex>
-              )}
-
-              {/* Divider between Group 2 and Group 3 */}
-              {(historyLogFilter === "All" || historyLogFilter === "Production record") && <Divider m="0" />}
-
-              {/* Group 3: Collaboration */}
-              {(historyLogFilter === "All" || historyLogFilter === "Collaboration") && (
-                <Flex flexDirection="column" gap="x1" maxWidth="1280px" mx="x1" pt="x2_5" pb="x2_5">
-                  {/* Header */}
-                  <Box mb="half">
-                    <Text fontSize="small" lineHeight="smallCompact">
-                      <Box as="span" color="black" fontWeight="bold">
-                        Collaboration
-                      </Box>
-                    </Text>
-                  </Box>
-
-                  {/* DescriptionList */}
-                  <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Supplier UOM modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            Cases
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            Pallets
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Cost per unit modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            US $45.50
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            US $48.75
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Lead time modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            14 days
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            18 days
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                  </DescriptionList>
-
-                  {/* Footer */}
-                  <Box mt="half">
-                    <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
-                      by
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        tom.wilson@artisan.com
-                      </Box>
-                      on
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        January 27th, 2025
-                      </Box>
-                      at
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        11:45:30AM
-                      </Box>
-                    </Text>
-                  </Box>
-                </Flex>
-              )}
-
-              {/* Divider between Group 3 and Group 4 */}
-              {(historyLogFilter === "All" || historyLogFilter === "Collaboration") && <Divider m="0" />}
-
-              {/* Group 4: January 26, 2025 */}
-              {(historyLogFilter === "All" || historyLogFilter === "Production record") && (
-                <Flex flexDirection="column" gap="x1" maxWidth="1280px" mx="x1" pt="x2_5" pb="x2_5">
-                  {/* Header */}
-                  <Box mb="half">
-                    <Text fontSize="small" lineHeight="smallCompact">
-                      <Box as="span" color="black" fontWeight="bold">
-                        Production record
-                      </Box>
-                      <Box as="span" color="midGrey" mx="half">
-                        {" "}
-                        for{" "}
-                      </Box>
-                      <Box as="span" color="black" fontWeight="bold">
-                        January 26, 2025
-                      </Box>
-                    </Text>
-                  </Box>
-
-                  {/* DescriptionList */}
-                  <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Date modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            January 24, 2025
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            January 26, 2025
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Expected quantity modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            800 cases
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            900 cases
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                  </DescriptionList>
-
-                  {/* Footer */}
-                  <Box mt="half">
-                    <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
-                      by
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        quality.team@nulogy.com
-                      </Box>
-                      on
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        January 26th, 2025
-                      </Box>
-                      at
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        03:20:18PM
-                      </Box>
-                    </Text>
-                  </Box>
-                </Flex>
-              )}
-
-              {/* Divider between Group 4 and Group 5 */}
-              {(historyLogFilter === "All" || historyLogFilter === "Production record") && <Divider m="0" />}
-
-              {/* Group 5: PO line item details */}
-              {(historyLogFilter === "All" || historyLogFilter === "PO line item details") && (
-                <Flex flexDirection="column" gap="x1" maxWidth="1280px" mx="x1" pt="x2_5" pb="x2_5">
-                  {/* Header */}
-                  <Box mb="half">
-                    <Text fontSize="small" lineHeight="smallCompact">
-                      <Box as="span" color="black" fontWeight="bold">
-                        PO line item details
-                      </Box>
-                    </Text>
-                  </Box>
-
-                  {/* DescriptionList */}
-                  <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          PO number modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            PO-2025-001-001
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            PO-2025-001-002
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Customer's PO line item number modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            CUST-LINE-001
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            CUST-LINE-001A
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Priority modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            Medium
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            High
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                  </DescriptionList>
-
-                  {/* Footer */}
-                  <Box mt="half">
-                    <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
-                      by
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        jennifer.martinez@customer.com
-                      </Box>
-                      on
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        January 25th, 2025
-                      </Box>
-                      at
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        10:15:25AM
-                      </Box>
-                    </Text>
-                  </Box>
-                </Flex>
-              )}
-
-              {/* Divider between Group 5 and Group 6 */}
-              {(historyLogFilter === "All" || historyLogFilter === "PO line item details") && <Divider m="0" />}
-
-              {/* Group 6: January 30, 2025 (Combined) */}
-              {(historyLogFilter === "All" || historyLogFilter === "Production record") && (
-                <Flex flexDirection="column" gap="x1" maxWidth="1280px" mx="x1" pt="x2_5" pb="x2_5">
-                  {/* Header */}
-                  <Box mb="half">
-                    <Text fontSize="small" lineHeight="smallCompact">
-                      <Box as="span" color="black" fontWeight="bold">
-                        Production record
-                      </Box>
-                      <Box as="span" color="midGrey" mx="half">
-                        {" "}
-                        for{" "}
-                      </Box>
-                      <Box as="span" color="black" fontWeight="bold">
-                        January 30, 2025
-                      </Box>
-                    </Text>
-                  </Box>
-
-                  {/* DescriptionList */}
-                  <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Date modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            January 29, 2025
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            January 30, 2025
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Expected quantity modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            750 cases
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            850 cases
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                  </DescriptionList>
-
-                  {/* Second DescriptionList for details */}
-                  <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Actual quantity modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            800 cases
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            950 cases
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Lot code modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            LOT-2025-001-002
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            LOT-2025-001-002B
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Customer's lot code modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            CUST-LOT-002
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            CUST-LOT-002A
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Supplier's lot code modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            SUP-LOT-002
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            SUP-LOT-002B
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Expiry date modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            March 18, 2026
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            March 22, 2026
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Pallet number modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            PAL-003
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            PAL-004
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Note modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            Standard batch processing
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            Enhanced quality control procedures applied
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                  </DescriptionList>
-
-                  {/* Footer */}
-                  <Box mt="half">
-                    <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
-                      by
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        sarah.johnson@supplier.com
-                      </Box>
-                      on
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        January 30th, 2025
-                      </Box>
-                      at
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        01:45:30PM
-                      </Box>
-                    </Text>
-                  </Box>
-                </Flex>
-              )}
-
-              {/* Divider between Group 6 and Group 7 */}
-              {(historyLogFilter === "All" || historyLogFilter === "Production record") && <Divider m="0" />}
-
-              {/* Group 7: January 31, 2025 (Combined) */}
-              {(historyLogFilter === "All" || historyLogFilter === "Production record") && (
-                <Flex flexDirection="column" gap="x1" maxWidth="1280px" mx="x1" pt="x2_5" pb="x2_5">
-                  <Box mb="half">
-                    <Text fontSize="small" lineHeight="smallCompact">
-                      <Box as="span" color="black" fontWeight="bold">
-                        Production record
-                      </Box>
-                      <Box as="span" color="midGrey" mx="half">
-                        {" "}
-                        for{" "}
-                      </Box>
-                      <Box as="span" color="black" fontWeight="bold">
-                        January 31, 2025
-                      </Box>
-                    </Text>
-                  </Box>
-                  <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Date modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            January 30, 2025
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            January 31, 2025
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Expected quantity modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            850 cases
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            900 cases
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                  </DescriptionList>
-
-                  <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Actual quantity modified
-                        </Box>
-                        <Box as="span" fontSize="small" color="black">
-                          {" "}
-                          – Batch #03
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            950 cases
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            1,000 cases
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Lot code modified
-                        </Box>
-                        <Box as="span" fontSize="small" color="black">
-                          {" "}
-                          – Batch #01
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            LOT-2025-001-001
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            LOT-2025-001-001A
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Lot code modified
-                        </Box>
-                        <Box as="span" fontSize="small" color="black">
-                          {" "}
-                          – Batch #02
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            LOT-2025-001-002
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            LOT-2025-001-002A
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Lot code modified
-                        </Box>
-                        <Box as="span" fontSize="small" color="black">
-                          {" "}
-                          – Batch #03
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            LOT-2025-001-003
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            LOT-2025-001-003A
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Customer's lot code modified
-                        </Box>
-                        <Box as="span" fontSize="small" color="black">
-                          {" "}
-                          – Batch #03
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            CUST-LOT-003
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            CUST-LOT-003A
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Supplier's lot code modified
-                        </Box>
-                        <Box as="span" fontSize="small" color="black">
-                          {" "}
-                          – Batch #03
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            SUP-LOT-003
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            SUP-LOT-003B
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Expiry date modified
-                        </Box>
-                        <Box as="span" fontSize="small" color="black">
-                          {" "}
-                          – Batch #03
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            March 22, 2026
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            March 25, 2026
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Pallet number modified
-                        </Box>
-                        <Box as="span" fontSize="small" color="black">
-                          {" "}
-                          – Batch #03
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            PAL-005
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            PAL-006
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Note modified
-                        </Box>
-                        <Box as="span" fontSize="small" color="black">
-                          {" "}
-                          – Batch #03
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            Enhanced quality control procedures applied
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            Final quality approval and packaging instructions updated
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                  </DescriptionList>
-
-                  <Box mt="half">
-                    <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
-                      by
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        mike.rodriguez@supplier.com
-                      </Box>
-                      on
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        January 31st, 2025
-                      </Box>
-                      at
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        03:15:45PM
-                      </Box>
-                    </Text>
-                  </Box>
-                </Flex>
-              )}
-
-              {/* Divider between Group 7 and Group 8 */}
-              {(historyLogFilter === "All" || historyLogFilter === "Production record") && <Divider m="0" />}
-
-              {/* Group 8: No header group */}
-              {(historyLogFilter === "All" || historyLogFilter === "Production record") && (
-                <Flex flexDirection="column" gap="x1" maxWidth="1280px" mx="x1" pt="x2_5" pb="x2_5">
-                  {/* DescriptionList */}
-                  <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Batch status modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            In Progress
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            Completed
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Box as="span" color="black">
-                          Quality check modified
-                        </Box>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Flex as="span" alignItems="center" gap="half">
-                          <Box as="span" color="midGrey">
-                            Pending
-                          </Box>
-                          <Icon icon="arrowForward" color="grey" size="x2_5" />
-                          <Box as="span" color="black">
-                            Passed
-                          </Box>
-                        </Flex>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                  </DescriptionList>
-
-                  {/* Footer */}
-                  <Box mt="half">
-                    <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
-                      by
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        quality.assurance@supplier.com
-                      </Box>
-                      on
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        February 1st, 2025
-                      </Box>
-                      at
-                      <Box as="span" color="black" fontWeight="normal" mx="half">
-                        08:30:15AM
-                      </Box>
-                    </Text>
-                  </Box>
-                </Flex>
-              )}
-
-              {/* Divider after the last group */}
-              {(historyLogFilter === "All" || historyLogFilter === "Production record") && <Divider m="0" />}
-            </Flex>
-            <Pagination currentPage={1} totalPages={5} justifyContent="flex-end" pt="x1" />
           </Tab>
         </Tabs>
 
@@ -6428,7 +4204,7 @@ export const Details10 = () => {
           isOpen={showProductionSidebar}
           onClose={handleCloseProductionSidebar}
           title={isEditingProduction ? "Edit production record" : "Create production record"}
-          width="1280px"
+          width="600px"
           duration={0.25}
           closeOnOutsideClick={true}
           overlay="show"
@@ -6451,441 +4227,222 @@ export const Details10 = () => {
               </Heading4>
 
               <Field>
-                <FieldLabel labelText="Date" pb="x1" />
+                <FieldLabel
+                  labelText="Date"
+                  pb="x1"
+                  requirementText={fieldConfig.lotCodeRequired && role === "supplier" ? "(Required)" : undefined}
+                />
                 <DatePicker
-                  onChange={(date) =>
-                    setProductionRecord((prev) => ({ ...prev, date: date ? date.toISOString().split("T")[0] : "" }))
-                  }
-                  selected={productionRecord.date ? new Date(productionRecord.date) : null}
+                  onChange={(date) => handleProductionFieldChange("date", date?.toISOString() || "")}
+                  selected={productionRecord.date ? new Date(productionRecord.date) : undefined}
                   inputProps={{ disabled: role === "customer" && isEditingProduction }}
                 />
               </Field>
 
-              <Flex gap="x2">
-                <Box width="20em">
-                  <Field>
-                    <FieldLabel labelText="Expected quantity" pb="x1" />
-                    <Input
-                      value={productionRecord.expectedQuantity}
-                      onChange={(e) => setProductionRecord((prev) => ({ ...prev, expectedQuantity: e.target.value }))}
-                      disabled={role === "customer" && isEditingProduction}
-                    />
-                  </Field>
-                </Box>
-                <Box width="10em">
-                  <Field>
-                    <FieldLabel labelText="UOM" pb="x1" />
-                    <Select
-                      value={productionRecord.uom}
-                      onChange={(value) => setProductionRecord((prev) => ({ ...prev, uom: String(value) }))}
-                      disabled={role === "customer" && isEditingProduction}
-                      options={[
-                        { value: "kg", label: "kg" },
-                        { value: "lb", label: "lb" },
-                        { value: "g", label: "g" },
-                        { value: "oz", label: "oz" },
-                        { value: "cases", label: "cases" },
-                      ]}
-                    />
-                  </Field>
-                </Box>
-              </Flex>
+              <Field width="50%">
+                <FieldLabel
+                  labelText="UOM"
+                  pb="x1"
+                  requirementText={fieldConfig.lotCodeRequired && role === "supplier" ? "(Required)" : undefined}
+                />
+                <Select
+                  value={productionRecord.uom}
+                  onChange={(value) => handleProductionFieldChange("uom", String(value))}
+                  options={uomOptions}
+                  disabled={role === "customer" && isEditingProduction}
+                />
+              </Field>
+
+              <Field width="50%" pb="x1">
+                <FieldLabel labelText="Expected quantity" pb="x1" />
+                <Input
+                  type="number"
+                  value={productionRecord.expectedQuantity}
+                  onChange={(e) => handleProductionFieldChange("expectedQuantity", e.target.value)}
+                  disabled={role === "customer" && isEditingProduction}
+                />
+              </Field>
 
               <Divider mb="x3" />
 
               <Flex justifyContent="space-between" alignItems="center" mb="x2">
-                <Heading4>Production details</Heading4>
-                {role === "supplier" && (
-                  <Switcher
-                    selected={productionEntryType}
-                    onChange={(value) => {
-                      setProductionEntryType(value as "quick" | "detailed");
-                    }}
-                  >
-                    <Switch value="quick" type="button">
-                      Quick mode
-                    </Switch>
-                    <Switch value="detailed" type="button">
-                      Detailed mode
-                    </Switch>
-                  </Switcher>
-                )}
+                <Heading4>Production details: Batch 1</Heading4>
               </Flex>
 
-              {productionEntryType === "quick" ? (
-                <Box width="21em">
+              <Field width="50%">
+                <FieldLabel
+                  labelText="Produced quantity"
+                  pb="x1"
+                  requirementText={fieldConfig.lotCodeRequired && role === "supplier" ? "(Required)" : undefined}
+                />
+                <Input
+                  type="number"
+                  value={productionRecord.producedQuantity}
+                  onChange={(e) => handleProductionFieldChange("producedQuantity", e.target.value)}
+                  disabled={role === "customer" && isEditingProduction}
+                />
+              </Field>
+
+              {/* Hide Customer's lot code when adding as supplier */}
+              {!(role === "supplier" && !isEditingProduction) && (
+                <Field>
+                  <FieldLabel
+                    labelText={fieldConfig.sanofiRequired ? "Customer's lot code" : "Lot code"}
+                    pb="x1"
+                    requirementText={fieldConfig.lotCodeRequired && role === "customer" ? "(Required)" : undefined}
+                  />
+                  <Input
+                    value={productionRecord.lotCode}
+                    onChange={(e) => handleProductionFieldChange("lotCode", e.target.value)}
+                    disabled={role === "supplier" && isEditingProduction}
+                  />
+                </Field>
+              )}
+
+              {fieldConfig.sanofiRequired && (
+                <Field>
+                  <FieldLabel labelText={role === "supplier" ? "Supplier's lot code" : "Customer's lot code"} pb="x1" />
+                  <Input
+                    value={productionRecord.supplierLotCode}
+                    onChange={(e) => handleProductionFieldChange("supplierLotCode", e.target.value)}
+                    disabled={role === "customer" && isEditingProduction}
+                  />
+                </Field>
+              )}
+
+              <Field>
+                <FieldLabel
+                  labelText="Expiry date"
+                  pb="x1"
+                  requirementText={fieldConfig.expiryDateRequired && role === "supplier" ? "(Required)" : undefined}
+                />
+                <DatePicker
+                  onChange={(date) => handleProductionFieldChange("date", date?.toISOString() || "")}
+                  selected={productionRecord.date ? new Date(productionRecord.date) : undefined}
+                  inputProps={{ disabled: role === "customer" && isEditingProduction }}
+                />
+              </Field>
+
+              <Field>
+                <FieldLabel labelText="Pallet number" pb="x1" />
+                <Input
+                  value={productionRecord.palletNumber}
+                  onChange={(e) => handleProductionFieldChange("palletNumber", e.target.value)}
+                  disabled={role === "customer" && isEditingProduction}
+                />
+              </Field>
+
+              <Field pb="x1">
+                <FieldLabel labelText="Note" pb="x1" />
+                <Textarea
+                  value={productionRecord.note}
+                  onChange={(e) => handleProductionFieldChange("note", e.target.value)}
+                  disabled={role === "customer" && isEditingProduction}
+                />
+              </Field>
+
+              {productionBatches.map((batch, index) => (
+                <Box key={batch.id}>
+                  <Divider mb="x2_5" />
+
+                  <Flex justifyContent="space-between" alignItems="center" mb="x2">
+                    <Heading4 pb="0">Production details: batch {index + 2}</Heading4>
+                    {role === "supplier" && (
+                      <IconicButton
+                        icon="removeCircleOutline"
+                        aria-label="Remove batch"
+                        onClick={() => handleRemoveBatch(batch.id)}
+                        type="button"
+                      />
+                    )}
+                  </Flex>
+
                   <Field>
-                    <FieldLabel labelText="Actual quantity" pb="x1" />
+                    <FieldLabel
+                      labelText="Produced quantity"
+                      pb="x1"
+                      requirementText={fieldConfig.lotCodeRequired && role === "supplier" ? "(Required)" : undefined}
+                    />
                     <Input
-                      value={actualQuantity}
-                      onChange={(e) => setActualQuantity(e.target.value)}
-                      placeholder="Enter total production quantity"
-                      suffix="kg"
+                      type="number"
+                      value={batch.producedQuantity}
+                      onChange={(e) => handleBatchFieldChange(batch.id, "producedQuantity", e.target.value)}
+                      disabled={role === "customer" && isEditingProduction}
+                    />
+                  </Field>
+
+                  <Field>
+                    <FieldLabel
+                      labelText={fieldConfig.sanofiRequired ? "Customer's lot code" : "Lot code"}
+                      pb="x1"
+                      requirementText={fieldConfig.lotCodeRequired && role === "customer" ? "(Required)" : undefined}
+                    />
+                    <Input
+                      value={batch.lotCode}
+                      onChange={(e) => handleBatchFieldChange(batch.id, "lotCode", e.target.value)}
+                    />
+                  </Field>
+
+                  {fieldConfig.sanofiRequired && (
+                    <Field>
+                      <FieldLabel
+                        labelText={role === "supplier" ? "Supplier's lot code" : "Customer's lot code"}
+                        pb="x1"
+                      />
+                      <Input
+                        value={batch.supplierLotCode}
+                        onChange={(e) => handleBatchFieldChange(batch.id, "supplierLotCode", e.target.value)}
+                        disabled={role === "customer" && isEditingProduction}
+                      />
+                    </Field>
+                  )}
+
+                  <Field>
+                    <FieldLabel
+                      labelText="Expiry date"
+                      pb="x1"
+                      requirementText={fieldConfig.expiryDateRequired && role === "supplier" ? "(Required)" : undefined}
+                    />
+                    <Input
+                      value={batch.expiryDate}
+                      onChange={(e) => handleBatchFieldChange(batch.id, "expiryDate", e.target.value)}
+                      disabled={role === "customer" && isEditingProduction}
+                    />
+                  </Field>
+
+                  <Field>
+                    <FieldLabel labelText="Pallet number" pb="x1" />
+                    <Input
+                      value={batch.palletNumber}
+                      onChange={(e) => handleBatchFieldChange(batch.id, "palletNumber", e.target.value)}
+                      disabled={role === "customer" && isEditingProduction}
+                    />
+                  </Field>
+
+                  <Field pb="x1">
+                    <FieldLabel labelText="Note" pb="x1" />
+                    <Textarea
+                      value={batch.note}
+                      onChange={(e) => handleBatchFieldChange(batch.id, "note", e.target.value)}
+                      disabled={role === "customer" && isEditingProduction}
                     />
                   </Field>
                 </Box>
-              ) : (
-                <Box>
-                  {/* Custom table structure with nested rows */}
-                  <Box>
-                    {/* Table Header */}
-                    <Box display="flex" borderBottom="1px solid" borderColor="lightGrey" pb="x1">
-                      <Box flex="1" pb="x1" pl="x1" fontWeight="bold" fontSize="small">
-                        Pallet number
-                        {role === "supplier" && fieldConfig.palletNumberRequired && (
-                          <Text inline ml="x0_5" fontSize="small" color="darkGrey">
-                            (Required)
-                          </Text>
-                        )}
-                      </Box>
-                      <Box flex="1" pb="x1" pl="x1" fontWeight="bold" fontSize="small">
-                        Customer's lot code
-                      </Box>
-                      <Box flex="1" pb="x1" pl="x1" fontWeight="bold" fontSize="small">
-                        Supplier's lot code
-                        {role === "supplier" && fieldConfig.lotCodeRequired && (
-                          <Text inline ml="x0_5" fontSize="small" color="darkGrey">
-                            (Required)
-                          </Text>
-                        )}
-                      </Box>
-                      <Box flex="1" pb="x1" pl="x1" fontWeight="bold" fontSize="small">
-                        Expiry date
-                        {role === "supplier" && fieldConfig.expiryDateRequired && (
-                          <Text inline ml="x0_5" fontSize="small" color="darkGrey">
-                            (Required)
-                          </Text>
-                        )}
-                      </Box>
-                      <Box flex="1" pb="x1" pl="x1" fontWeight="bold" fontSize="small">
-                        Quantity
-                      </Box>
-                      {role === "supplier" && <Box width="88px" pb="x1" pl="x1"></Box>}
-                    </Box>
+              ))}
 
-                    {/* Table Rows with nested content */}
-                    {productionRows.map((row, index) => (
-                      <Box key={row.id}>
-                        {/* Main Production Row */}
-                        <Box display="flex" alignItems="center" py="x0">
-                          <Box flex="1">
-                            <Input
-                              value={row.palletNumber}
-                              onChange={(e) => handleProductionRowChange(row.id, "palletNumber", e.target.value)}
-                              placeholder="Enter pallet number"
-                              p="x1"
-                              disabled={role === "customer" && isEditingProduction}
-                            />
-                          </Box>
-                          <Box flex="1">
-                            <Input
-                              value={row.customerLotCode || ""}
-                              onChange={(e) => handleProductionRowChange(row.id, "customerLotCode", e.target.value)}
-                              placeholder="Enter customer's lot code"
-                              p="x1"
-                              disabled={role === "supplier"}
-                            />
-                          </Box>
-                          <Box flex="1">
-                            <Input
-                              value={row.supplierLotCode || ""}
-                              onChange={(e) => handleProductionRowChange(row.id, "supplierLotCode", e.target.value)}
-                              placeholder="Enter supplier's lot code"
-                              p="x1"
-                              disabled={role === "customer"}
-                            />
-                          </Box>
-                          <Box flex="1">
-                            <Input
-                              value={row.expiryDate}
-                              onChange={(e) => handleProductionRowChange(row.id, "expiryDate", e.target.value)}
-                              placeholder="Enter expiry date"
-                              p="x1"
-                              disabled={role === "customer" && isEditingProduction}
-                            />
-                          </Box>
-                          <Box flex="1">
-                            <Input
-                              value={row.quantity}
-                              onChange={(e) => handleProductionRowChange(row.id, "quantity", e.target.value)}
-                              placeholder="Enter quantity"
-                              p="x1"
-                              disabled={role === "customer" && isEditingProduction}
-                            />
-                          </Box>
-                          {role === "supplier" && (
-                            <Box width="88px">
-                              <Flex gap="x1" alignItems="center">
-                                <DropdownMenu
-                                  trigger={() => <IconicButton icon="more" aria-label="More actions" />}
-                                  placement="bottom-end"
-                                >
-                                  <DropdownButton
-                                    onClick={(e) => {
-                                      e.preventDefault();
-                                      handleAddConsumptionForRow(row.id);
-                                    }}
-                                  >
-                                    Add subcomponent consumption
-                                  </DropdownButton>
-                                  <DropdownButton
-                                    onClick={(e) => {
-                                      e.preventDefault();
-                                      handleAddNote(row.id);
-                                    }}
-                                  >
-                                    Add note
-                                  </DropdownButton>
-                                </DropdownMenu>
-                                {productionRows.length > 1 && (
-                                  <IconicButton
-                                    icon="removeCircleOutline"
-                                    aria-label="Remove row"
-                                    onClick={() => handleRemoveProductionRow(row.id)}
-                                    type="button"
-                                  />
-                                )}
-                              </Flex>
-                            </Box>
-                          )}
-                        </Box>
+              <Divider mb="x3" />
 
-                        {/* Container for Consumption Details and Note */}
-                        {(rowConsumptions[row.id] && rowConsumptions[row.id].length > 0) ||
-                        rowNotes[row.id] !== undefined ? (
-                          <Box p="x1" borderBottom="1px solid" borderBottomColor="lightGrey">
-                            {/* Subcomponent consumption - Nested below this specific row */}
-                            {rowConsumptions[row.id] && rowConsumptions[row.id].length > 0 && (
-                              <Box
-                                border="1px solid"
-                                borderColor="lightGrey"
-                                borderRadius="large"
-                                p="x2"
-                                mb="x1"
-                                mt="x0"
-                              >
-                                <Heading4 mb="x1" fontSize="small">
-                                  Subcomponent consumption
-                                </Heading4>
-                                <Table
-                                  columns={[
-                                    {
-                                      label: "Item",
-                                      dataKey: "item",
-                                      cellRenderer: ({ row }: { row: any }) => (
-                                        <Box py="x1" pr="x2" minWidth="8em" width="100%">
-                                          <Input
-                                            value={row.item}
-                                            onChange={(e) =>
-                                              handleConsumptionRowChange(
-                                                row.id,
-                                                row.consumptionId,
-                                                "item",
-                                                e.target.value
-                                              )
-                                            }
-                                            placeholder="Item"
-                                            disabled={role === "customer"}
-                                          />
-                                        </Box>
-                                      ),
-                                    },
-                                    {
-                                      label: "Lot",
-                                      dataKey: "lotCode",
-                                      cellRenderer: ({ row }: { row: any }) => (
-                                        <Box py="x1" pr="x2" minWidth="8em" width="100%">
-                                          <Input
-                                            value={row.lotCode}
-                                            onChange={(e) =>
-                                              handleConsumptionRowChange(
-                                                row.id,
-                                                row.consumptionId,
-                                                "lotCode",
-                                                e.target.value
-                                              )
-                                            }
-                                            placeholder="Lot"
-                                            disabled={role === "customer"}
-                                          />
-                                        </Box>
-                                      ),
-                                    },
-                                    {
-                                      label: "Expiry",
-                                      dataKey: "expiryDate",
-                                      cellRenderer: ({ row }: { row: any }) => (
-                                        <Box py="x1" pr="x2" minWidth="8em" width="100%">
-                                          <Input
-                                            value={row.expiryDate}
-                                            onChange={(e) =>
-                                              handleConsumptionRowChange(
-                                                row.id,
-                                                row.consumptionId,
-                                                "expiryDate",
-                                                e.target.value
-                                              )
-                                            }
-                                            placeholder="Expiry"
-                                            disabled={role === "customer"}
-                                          />
-                                        </Box>
-                                      ),
-                                    },
-                                    {
-                                      label: "Pallet",
-                                      dataKey: "palletNumber",
-                                      cellRenderer: ({ row }: { row: any }) => (
-                                        <Box py="x1" pr="x2" minWidth="8em" width="100%">
-                                          <Input
-                                            value={row.palletNumber}
-                                            onChange={(e) =>
-                                              handleConsumptionRowChange(
-                                                row.id,
-                                                row.consumptionId,
-                                                "palletNumber",
-                                                e.target.value
-                                              )
-                                            }
-                                            placeholder="Pallet"
-                                            disabled={role === "customer"}
-                                          />
-                                        </Box>
-                                      ),
-                                    },
-                                    {
-                                      label: "Qty",
-                                      dataKey: "quantity",
-                                      cellRenderer: ({ row }: { row: any }) => (
-                                        <Box py="x1" pr="x2" minWidth="8em" width="100%">
-                                          <Input
-                                            value={row.quantity}
-                                            onChange={(e) =>
-                                              handleConsumptionRowChange(
-                                                row.id,
-                                                row.consumptionId,
-                                                "quantity",
-                                                e.target.value
-                                              )
-                                            }
-                                            placeholder="Qty"
-                                            disabled={role === "customer"}
-                                          />
-                                        </Box>
-                                      ),
-                                    },
-                                    {
-                                      label: "UOM",
-                                      dataKey: "uom",
-                                      width: "100px",
-                                      cellRenderer: ({ row }: { row: any }) => (
-                                        <Box py="x1" pr="x2" minWidth="8em" width="100%" maxWidth="16em">
-                                          <Select
-                                            value={row.uom}
-                                            onChange={(value) =>
-                                              handleConsumptionRowChange(
-                                                row.id,
-                                                row.consumptionId,
-                                                "uom",
-                                                String(value)
-                                              )
-                                            }
-                                            options={[
-                                              { value: "kg", label: "kg" },
-                                              { value: "lb", label: "lb" },
-                                              { value: "g", label: "g" },
-                                              { value: "oz", label: "oz" },
-                                              { value: "cases", label: "cases" },
-                                            ]}
-                                            disabled={role === "customer"}
-                                          />
-                                        </Box>
-                                      ),
-                                    },
-                                    ...(role === "supplier"
-                                      ? [
-                                          {
-                                            label: "",
-                                            dataKey: "actions",
-                                            width: "40px",
-                                            cellRenderer: ({ row }: { row: any }) => (
-                                              <IconicButton
-                                                icon="removeCircleOutline"
-                                                aria-label="Remove consumption row"
-                                                onClick={(e) => {
-                                                  e.preventDefault();
-                                                  handleRemoveConsumptionRow(row.id, row.consumptionId);
-                                                }}
-                                                type="button"
-                                                pr="x2"
-                                                py="x1"
-                                              />
-                                            ),
-                                          },
-                                        ]
-                                      : []),
-                                  ]}
-                                  rows={rowConsumptions[row.id].map((consumption) => ({
-                                    ...consumption,
-                                    id: `${row.id}-${consumption.id}`,
-                                    consumptionId: consumption.id,
-                                  }))}
-                                  keyField="id"
-                                  compact={true}
-                                  rowBorder={true}
-                                  className="subcomponent-consumption-edit-table"
-                                />
-                                {role === "supplier" && (
-                                  <Box mt="x1">
-                                    <QuietButton
-                                      icon="addCircleOutline"
-                                      iconSide="left"
-                                      fullWidth
-                                      onClick={() => handleAddConsumptionRow(row.id)}
-                                      type="button"
-                                    >
-                                      Add row
-                                    </QuietButton>
-                                  </Box>
-                                )}
-                              </Box>
-                            )}
-
-                            {/* Note - Nested below this specific row */}
-                            {rowNotes[row.id] !== undefined && (
-                              <Box border="1px solid" borderColor="lightGrey" borderRadius="large" p="x2">
-                                <Field>
-                                  <FieldLabel labelText="Note" pb="x1" />
-                                  <Textarea
-                                    value={rowNotes[row.id]}
-                                    onChange={(e) => handleNoteChange(row.id, e.target.value)}
-                                    placeholder="Enter note for this row"
-                                    disabled={role === "customer" && isEditingProduction}
-                                  />
-                                </Field>
-                              </Box>
-                            )}
-                          </Box>
-                        ) : (
-                          <Box borderBottom="1px solid" borderColor="lightGrey" />
-                        )}
-                      </Box>
-                    ))}
-                  </Box>
-
-                  {role === "supplier" && (
-                    <Box mt="x1">
-                      <QuietButton
-                        icon="addCircleOutline"
-                        iconSide="left"
-                        fullWidth
-                        onClick={handleAddProductionRow}
-                        type="button"
-                      >
-                        Add row
-                      </QuietButton>
-                    </Box>
-                  )}
+              {role === "supplier" && (
+                <Box pb="x3">
+                  <QuietButton
+                    icon="addCircleOutline"
+                    iconSide="left"
+                    fullWidth
+                    onClick={handleAddAnotherProduction}
+                    type="button"
+                  >
+                    Add another production batch details
+                  </QuietButton>
                 </Box>
               )}
             </FormSection>
@@ -6968,17 +4525,11 @@ export const Details10 = () => {
                     </Field>
                   </Flex>
                   <Field>
-                    <FieldLabel labelText="UOM" pb="x1" />
+                    <FieldLabel labelText="Unit" pb="x1" />
                     <Select
-                      value={material.uom}
-                      onChange={(value) => handleConsumptionFieldChange(material.id, "uom", String(value))}
-                      options={[
-                        { value: "kg", label: "kg" },
-                        { value: "lb", label: "lb" },
-                        { value: "g", label: "g" },
-                        { value: "oz", label: "oz" },
-                        { value: "cases", label: "cases" },
-                      ]}
+                      value={material.unit}
+                      onChange={(value) => handleConsumptionFieldChange(material.id, "unit", String(value))}
+                      options={unitOptions}
                     />
                   </Field>
                 </Box>
@@ -7018,7 +4569,7 @@ export const Details10 = () => {
                   {index > 0 && <Divider mb="x2_5" />}
 
                   <Flex justifyContent="space-between" alignItems="center" mb="x2">
-                    <Heading4 pb="0">Subcomponent consumption: item {index + 1}</Heading4>
+                    <Heading4 pb="0">Consumption details: item {index + 1}</Heading4>
                     {consumptionItems.length > 1 && (
                       <IconicButton
                         icon="removeCircleOutline"
@@ -7056,9 +4607,7 @@ export const Details10 = () => {
                       <FieldLabel labelText="Expiry date" pb="x1" />
                       <DatePicker
                         selected={item.expiryDate}
-                        onChange={(date) =>
-                          handleConsumptionItemFieldChange(item.id, "expiryDate", date?.toISOString())
-                        }
+                        onChange={(date) => handleConsumptionItemFieldChange(item.id, "expiryDate", date)}
                       />
                     </Field>
                   </Box>
@@ -7074,37 +4623,17 @@ export const Details10 = () => {
                     </Field>
                   </Box>
 
-                  <Flex gap="x1">
-                    <Box flex="1" pb="x3">
-                      <Field>
-                        <FieldLabel labelText="Quantity" pb="x1" />
-                        <Input
-                          type="number"
-                          value={item.consumedQuantity}
-                          onChange={(e) =>
-                            handleConsumptionItemFieldChange(item.id, "consumedQuantity", e.target.value)
-                          }
-                          placeholder="Enter consumed quantity"
-                        />
-                      </Field>
-                    </Box>
-                    <Box flex="1" pb="x3">
-                      <Field>
-                        <FieldLabel labelText="UOM" pb="x1" />
-                        <Select
-                          value={item.uom}
-                          onChange={(value) => handleConsumptionItemFieldChange(item.id, "uom", String(value))}
-                          options={[
-                            { value: "kg", label: "kg" },
-                            { value: "lb", label: "lb" },
-                            { value: "g", label: "g" },
-                            { value: "oz", label: "oz" },
-                            { value: "cases", label: "cases" },
-                          ]}
-                        />
-                      </Field>
-                    </Box>
-                  </Flex>
+                  <Box pb="x3">
+                    <Field>
+                      <FieldLabel labelText="Quantity" pb="x1" />
+                      <Input
+                        type="number"
+                        value={item.consumedQuantity}
+                        onChange={(e) => handleConsumptionItemFieldChange(item.id, "consumedQuantity", e.target.value)}
+                        placeholder="Enter consumed quantity"
+                      />
+                    </Field>
+                  </Box>
                 </Box>
               ))}
 
@@ -7118,83 +4647,75 @@ export const Details10 = () => {
         </Sidebar>
 
         {/* Floating Configuration */}
-        {showConfigBar && (
-          <Box
-            position="fixed"
-            bottom="x4"
-            left="50%"
-            transform="translateX(-50%)"
-            backgroundColor="white"
-            border="1px solid"
-            borderColor="lightGrey"
-            borderRadius="x1"
-            boxShadow="medium"
-          >
-            <Flex alignItems="center" gap="x2" px="x2" py="x1">
-              <Text fontSize="small">Tracking:</Text>
-              <Tooltip tooltip="Controled by item setting. Makes the filed mandatory" placement="top">
-                <Flex alignItems="center" gap="x1" width="200px">
-                  <Text width="100px" fontSize="small" color="midGrey">
-                    Lot code
-                  </Text>
-                  <Toggle
-                    toggled={fieldConfig.lotCodeRequired}
-                    onChange={(e) => handleFieldConfigChange("lotCodeRequired", e.target.checked)}
-                  />
-                </Flex>
-              </Tooltip>
-              <Tooltip tooltip="Controled by item setting. Makes the filed mandatory" placement="top">
-                <Flex alignItems="center" gap="x1" width="200px">
-                  <Text width="150px" fontSize="small" color="midGrey">
-                    Expiry date
-                  </Text>
-                  <Toggle
-                    toggled={fieldConfig.expiryDateRequired}
-                    onChange={(e) => handleFieldConfigChange("expiryDateRequired", e.target.checked)}
-                  />
-                </Flex>
-              </Tooltip>
+        <Box
+          position="fixed"
+          bottom="x4"
+          left="50%"
+          transform="translateX(-50%)"
+          backgroundColor="white"
+          border="1px solid"
+          borderColor="lightGrey"
+          borderRadius="x1"
+          boxShadow="medium"
+        >
+          <Flex alignItems="center" gap="x2" px="x2" py="x1">
+            <Text fontSize="small">Tracking:</Text>
+            <Tooltip tooltip="Controled by item setting. Makes the filed mandatory" placement="top">
               <Flex alignItems="center" gap="x1" width="200px">
                 <Text width="100px" fontSize="small" color="midGrey">
-                  Pallet
+                  Lot code
                 </Text>
                 <Toggle
-                  toggled={fieldConfig.palletNumberRequired}
-                  onChange={(e) => handleFieldConfigChange("palletNumberRequired", e.target.checked)}
+                  toggled={fieldConfig.lotCodeRequired}
+                  onChange={(e) => handleFieldConfigChange("lotCodeRequired", e.target.checked)}
                 />
               </Flex>
-              <Tooltip
-                tooltip="Controled by Org POLI setting. Controls the display and batch production creation fileds."
-                placement="top"
-              >
-                <Flex alignItems="center" gap="x1" width="200px">
-                  <Text width="150px" fontSize="small" color="midGrey">
-                    SANOFI req
-                  </Text>
-                  <Toggle
-                    toggled={fieldConfig.sanofiRequired}
-                    onChange={(e) => handleFieldConfigChange("sanofiRequired", e.target.checked)}
-                  />
-                </Flex>
-              </Tooltip>
-              <Flex alignItems="center" gap="x1" width="275px">
-                <Text width="125px" fontSize="small" color="midGrey">
-                  View as:
+            </Tooltip>
+            <Tooltip tooltip="Controled by item setting. Makes the filed mandatory" placement="top">
+              <Flex alignItems="center" gap="x1" width="200px">
+                <Text width="150px" fontSize="small" color="midGrey">
+                  Expiry date
                 </Text>
-                <Switcher selected={role} onChange={setRole}>
-                  <Switch value="supplier">Supplier</Switch>
-                  <Switch value="customer">Customer</Switch>
-                </Switcher>
+                <Toggle
+                  toggled={fieldConfig.expiryDateRequired}
+                  onChange={(e) => handleFieldConfigChange("expiryDateRequired", e.target.checked)}
+                />
               </Flex>
-              <IconicButton
-                icon="close"
-                aria-label="Close configuration"
-                onClick={() => setShowConfigBar(false)}
-                type="button"
+            </Tooltip>
+            <Flex alignItems="center" gap="x1" width="200px">
+              <Text width="100px" fontSize="small" color="midGrey">
+                Pallet
+              </Text>
+              <Toggle
+                toggled={fieldConfig.palletNumberRequired}
+                onChange={(e) => handleFieldConfigChange("palletNumberRequired", e.target.checked)}
               />
             </Flex>
-          </Box>
-        )}
+            <Tooltip
+              tooltip="Controled by Org POLI setting. Controls the display and batch production creation fileds."
+              placement="top"
+            >
+              <Flex alignItems="center" gap="x1" width="200px">
+                <Text width="150px" fontSize="small" color="midGrey">
+                  SANOFI req
+                </Text>
+                <Toggle
+                  toggled={fieldConfig.sanofiRequired}
+                  onChange={(e) => handleFieldConfigChange("sanofiRequired", e.target.checked)}
+                />
+              </Flex>
+            </Tooltip>
+            <Flex alignItems="center" gap="x1" width="275px">
+              <Text width="125px" fontSize="small" color="midGrey">
+                View as:
+              </Text>
+              <Switcher selected={role} onChange={setRole}>
+                <Switch value="supplier">Supplier</Switch>
+                <Switch value="customer">Customer</Switch>
+              </Switcher>
+            </Flex>
+          </Flex>
+        </Box>
 
         {/* Edit Details Sidebar */}
         <Sidebar
@@ -7203,12 +4724,8 @@ export const Details10 = () => {
           title="Edit details"
           footer={
             <Flex gap="x2" justifyContent="flex-start">
-              <PrimaryButton type="button" onClick={handleSaveEditDetails}>
-                Save
-              </PrimaryButton>
-              <QuietButton type="button" onClick={handleCloseEditSidebar}>
-                Cancel
-              </QuietButton>
+              <PrimaryButton onClick={handleSaveEditDetails}>Save</PrimaryButton>
+              <QuietButton onClick={handleCloseEditSidebar}>Cancel</QuietButton>
             </Flex>
           }
         >

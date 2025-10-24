@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { toast, Tooltip } from "../../..";
+import { toast, Tooltip } from "../../../..";
 import {
   Box,
   Flex,
@@ -41,11 +41,11 @@ import {
   Select,
   Textarea,
   Toggle,
-} from "../../..";
-import { formatDateToYYYYMonDD, formatDateWithWeek } from "../utils/dateUtils";
+} from "../../../..";
+import { formatDateToYYYYMonDD, formatDateWithWeek } from "../../utils/dateUtils";
 
 export default {
-  title: "Projects/Supplier Collaboration/POLI lot/Details 5",
+  title: "Projects/Supplier Collaboration/Lot traceability/Progress/Details 5",
 };
 
 export const Details5 = () => {

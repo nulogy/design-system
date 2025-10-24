@@ -58,8 +58,8 @@ import {
   materialsData6A,
   materialsData6B,
   materialsData7A,
-} from "./details11/materialsData";
-import { createNestedTableData } from "./details11/nestedTableData";
+} from "./poli-details/materialsData";
+import { createNestedTableData } from "./poli-details/nestedTableData";
 import {
   uomOptions,
   unitOptions,
@@ -71,11 +71,11 @@ import {
   editFormData,
   productionRecord,
   fieldConfig,
-} from "./details11/optionsData";
-import { productionRecordsData, productionRecordsColumns } from "./details11/productionRecordsData";
+} from "./poli-details/optionsData";
+import { productionRecordsData, productionRecordsColumns } from "./poli-details/productionRecordsData";
 
 export default {
-  title: "Projects/Supplier Collaboration/POLI lot/Errors",
+  title: "Projects/Supplier Collaboration/Lot traceability/Validations",
 };
 
 const primaryMenu = [
@@ -87,7 +87,7 @@ const primaryMenu = [
 
 const secondaryMenu = [
   {
-    name: "POLI lot",
+    name: "Lot traceability",
     items: [
       { name: "Overview", href: "/" },
       { name: "Production records", href: "/" },
@@ -144,7 +144,7 @@ const RecordNumberPill = ({
   );
 };
 
-export const Details11 = () => {
+export const Inline = () => {
   const [selectedIndex, setSelectedIndex] = useState(1); // Production records tab is index 1
   const [showProductionSidebar, setShowProductionSidebar] = useState(true); // Open by default for errors
   const [isEditingProduction, setIsEditingProduction] = useState(false);
@@ -4385,15 +4385,10 @@ export const Details11 = () => {
   );
 };
 
-export const Default = () => (
-  <NDSProvider locale="en_US" variant="desktop">
-    <Details11 />
-  </NDSProvider>
-);
 
-// Default2 component with InlineValidation error boxes (old approach)
-const Details11Default2 = () => {
-  // Reusable RecordNumberPill component for Default2
+// Advance component with InlineValidation error boxes (old approach)
+const InlineAdvance = () => {
+  // Reusable RecordNumberPill component for Advance
   const RecordNumberPill = ({
     number,
     tooltip,
@@ -4767,7 +4762,7 @@ const Details11Default2 = () => {
     console.log("Saving production...");
   };
 
-  // Define RecordNumberPill locally for Default2 (not exported from NDS)
+  // Define RecordNumberPill locally for Advance (not exported from NDS)
 
   // Copy the main page content from Details11 but with InlineValidation error boxes
   return (
@@ -4835,12 +4830,12 @@ const Details11Default2 = () => {
         renderBreadcrumbs={() => (
           <Breadcrumbs>
             <Link href="/supplier-collaboration">Supplier Collaboration</Link>
-            <Link href="/supplier-collaboration/polilot">POLI lot</Link>
-            <Text>Details 11 - Errors (InlineValidation)</Text>
+            <Link href="/supplier-collaboration/lottraceability">Lot traceability</Link>
+            <Text>POLI details - Errors (InlineValidation)</Text>
           </Breadcrumbs>
         )}
       >
-        <Summary title="POLI lot #001 - Details 11 - Errors (InlineValidation)" />
+        <Summary title="Lot traceability #001 - POLI details - Errors (InlineValidation)" />
       </Header>
 
       <Page>
@@ -5586,8 +5581,8 @@ const Details11Default2 = () => {
   );
 };
 
-export const Default2 = () => (
+export const Advance = () => (
   <NDSProvider locale="en_US" variant="desktop">
-    <Details11Default2 />
+    <InlineAdvance />
   </NDSProvider>
 );

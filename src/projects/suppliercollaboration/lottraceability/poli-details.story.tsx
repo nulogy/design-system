@@ -59,8 +59,8 @@ import {
   materialsData6A,
   materialsData6B,
   materialsData7A,
-} from "./details11/materialsData";
-import { createNestedTableData } from "./details11/nestedTableData";
+} from "./poli-details/materialsData";
+import { createNestedTableData } from "./poli-details/nestedTableData";
 import {
   uomOptions,
   unitOptions,
@@ -72,11 +72,11 @@ import {
   editFormData,
   productionRecord,
   fieldConfig,
-} from "./details11/optionsData";
-import { productionRecordsData, productionRecordsColumns } from "./details11/productionRecordsData";
+} from "./poli-details/optionsData";
+import { productionRecordsData, productionRecordsColumns } from "./poli-details/productionRecordsData";
 
 export default {
-  title: "Projects/Supplier Collaboration/POLI lot/Details11",
+  title: "Projects/Supplier Collaboration/Lot traceability/POLI details",
 };
 
 const primaryMenu = [
@@ -88,7 +88,7 @@ const primaryMenu = [
 
 const secondaryMenu = [
   {
-    name: "POLI lot",
+    name: "Lot traceability",
     items: [
       { name: "Overview", href: "/" },
       { name: "Production records", href: "/" },
@@ -97,7 +97,7 @@ const secondaryMenu = [
   },
 ];
 
-export const Details11 = () => {
+export const V1 = () => {
   const [selectedIndex, setSelectedIndex] = useState(1); // Production records tab is index 1
   const [showProductionSidebar, setShowProductionSidebar] = useState(false);
   const [isEditingProduction, setIsEditingProduction] = useState(false);

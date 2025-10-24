@@ -18,7 +18,7 @@ import {
 } from "../../..";
 
 export default {
-  title: "Projects/Supplier Collaboration/POLI lot/History Log",
+  title: "Projects/Supplier Collaboration/Lot traceability/History Log",
 };
 
 export const HistoryLog = () => {
