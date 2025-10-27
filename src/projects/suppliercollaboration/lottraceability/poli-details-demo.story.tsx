@@ -72,9 +72,7 @@ export const POLIDetailsDemo = () => {
     actualProductionRecordNumber: string;
   }) => (
     <Flex py="x0_75" mr="x1" justifyContent="flex-start" ml="-104px">
-      <RecordNumberPill
-        number={actualProductionRecordNumber}
-      />
+      <RecordNumberPill number={actualProductionRecordNumber} />
     </Flex>
   );
 
@@ -85,9 +83,7 @@ export const POLIDetailsDemo = () => {
     subcomponentConsumptionRecordItem: string;
   }) => (
     <Box py="x2" px="x1" display="flex" alignItems="center" justifyContent="center">
-      <RecordNumberPill
-        number={subcomponentConsumptionRecordItem}
-      />
+      <RecordNumberPill number={subcomponentConsumptionRecordItem} />
     </Box>
   );
 
@@ -269,9 +265,9 @@ export const POLIDetailsDemo = () => {
                   columns={[
                     { label: "Date", dataKey: "date", width: "120px" },
                     { label: "Expected quantity", dataKey: "expectedQuantity", width: "180px" },
-                    { 
-                      label: "Actual quantity", 
-                      dataKey: "actualQuantity", 
+                    {
+                      label: "Actual quantity",
+                      dataKey: "actualQuantity",
                       width: "180px",
                       cellRenderer: ({ row }: { row: any }) => {
                         return (
@@ -281,9 +277,9 @@ export const POLIDetailsDemo = () => {
                         );
                       },
                     },
-                    { 
-                      label: "Pallet number", 
-                      dataKey: "palletNumber", 
+                    {
+                      label: "Pallet number",
+                      dataKey: "palletNumber",
                       width: "180px",
                       cellRenderer: ({ row }: { row: any }) => (
                         <Box py="x0_75" mr="x1" pl="half">
@@ -310,9 +306,9 @@ export const POLIDetailsDemo = () => {
                         return null;
                       },
                     },
-                    { 
-                      label: "Expiry date", 
-                      dataKey: "expiryDate", 
+                    {
+                      label: "Expiry date",
+                      dataKey: "expiryDate",
                       width: "150px",
                       cellRenderer: ({ row }: { row: any }) => (
                         <Box py="x0_75" mr="x1" pl="half">
@@ -322,9 +318,9 @@ export const POLIDetailsDemo = () => {
                         </Box>
                       ),
                     },
-                    { 
-                      label: "Note", 
-                      dataKey: "note", 
+                    {
+                      label: "Note",
+                      dataKey: "note",
                       width: "auto",
                       cellRenderer: ({ row }: { row: any }) => (
                         <Box py="x0_75" mr="x1" pl="half">
@@ -365,9 +361,9 @@ export const POLIDetailsDemo = () => {
                                     <ActualProductionRecordNumberPill actualProductionRecordNumber={row.number} />
                                   ),
                                 },
-                                { 
-                                  label: "Actual quantity", 
-                                  dataKey: "actualQuantity", 
+                                {
+                                  label: "Actual quantity",
+                                  dataKey: "actualQuantity",
                                   width: "180px",
                                   cellRenderer: ({ row }: { row: any }) => {
                                     return (
@@ -402,17 +398,15 @@ export const POLIDetailsDemo = () => {
                                     </Flex>
                                   ),
                                 },
-                                { 
-                                  label: "Expiry date", 
-                                  dataKey: "expiryDate", 
+                                {
+                                  label: "Expiry date",
+                                  dataKey: "expiryDate",
                                   width: "150px",
-                                  cellRenderer: ({ row }: { row: any }) => (
-                                    <Text>{row.expiryDate}</Text>
-                                  ),
+                                  cellRenderer: ({ row }: { row: any }) => <Text>{row.expiryDate}</Text>,
                                 },
-                                { 
-                                  label: "Note", 
-                                  dataKey: "note", 
+                                {
+                                  label: "Note",
+                                  dataKey: "note",
                                   width: "auto",
                                   cellRenderer: ({ row }: { row: any }) => {
                                     if (!row.note) {
@@ -420,7 +414,13 @@ export const POLIDetailsDemo = () => {
                                     }
                                     return (
                                       <Box py="x0_375">
-                                        <TruncatedText pr="x2" py="x1" fontSize="small" lineHeight="smallTextCompressed" maxCharacters={98}>
+                                        <TruncatedText
+                                          pr="x2"
+                                          py="x1"
+                                          fontSize="small"
+                                          lineHeight="smallTextCompressed"
+                                          maxCharacters={98}
+                                        >
                                           {row.note}
                                         </TruncatedText>
                                       </Box>
@@ -479,7 +479,9 @@ export const POLIDetailsDemo = () => {
                                             dataKey: "number",
                                             width: "40px",
                                             cellRenderer: ({ row }: { row: any }) => (
-                                              <SubcomponentConsumptionRecordNumberPill subcomponentConsumptionRecordItem={row.number} />
+                                              <SubcomponentConsumptionRecordNumberPill
+                                                subcomponentConsumptionRecordItem={row.number}
+                                              />
                                             ),
                                           },
                                           {
@@ -517,7 +519,11 @@ export const POLIDetailsDemo = () => {
                                                   <Text fontSize="small" lineHeight="smallTextCompressed">
                                                     {row.customerLotCode}
                                                   </Text>
-                                                  <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                                  <Text
+                                                    fontSize="small"
+                                                    lineHeight="smallTextCompressed"
+                                                    color="midGrey"
+                                                  >
                                                     {row.supplierLotCode}
                                                   </Text>
                                                 </Flex>
@@ -660,7 +666,9 @@ export const POLIDetailsDemo = () => {
                                             dataKey: "number",
                                             width: "40px",
                                             cellRenderer: ({ row }: { row: any }) => (
-                                              <SubcomponentConsumptionRecordNumberPill subcomponentConsumptionRecordItem={row.number} />
+                                              <SubcomponentConsumptionRecordNumberPill
+                                                subcomponentConsumptionRecordItem={row.number}
+                                              />
                                             ),
                                           },
                                           {
@@ -698,7 +706,11 @@ export const POLIDetailsDemo = () => {
                                                   <Text fontSize="small" lineHeight="smallTextCompressed">
                                                     {row.customerLotCode}
                                                   </Text>
-                                                  <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                                  <Text
+                                                    fontSize="small"
+                                                    lineHeight="smallTextCompressed"
+                                                    color="midGrey"
+                                                  >
                                                     {row.supplierLotCode}
                                                   </Text>
                                                 </Flex>
@@ -834,9 +846,9 @@ export const POLIDetailsDemo = () => {
                                     <ActualProductionRecordNumberPill actualProductionRecordNumber={row.number} />
                                   ),
                                 },
-                                { 
-                                  label: "Actual quantity", 
-                                  dataKey: "actualQuantity", 
+                                {
+                                  label: "Actual quantity",
+                                  dataKey: "actualQuantity",
                                   width: "180px",
                                   cellRenderer: ({ row }: { row: any }) => {
                                     return (
@@ -871,17 +883,15 @@ export const POLIDetailsDemo = () => {
                                     </Flex>
                                   ),
                                 },
-                                { 
-                                  label: "Expiry date", 
-                                  dataKey: "expiryDate", 
+                                {
+                                  label: "Expiry date",
+                                  dataKey: "expiryDate",
                                   width: "150px",
-                                  cellRenderer: ({ row }: { row: any }) => (
-                                    <Text>{row.expiryDate}</Text>
-                                  ),
+                                  cellRenderer: ({ row }: { row: any }) => <Text>{row.expiryDate}</Text>,
                                 },
-                                { 
-                                  label: "Note", 
-                                  dataKey: "note", 
+                                {
+                                  label: "Note",
+                                  dataKey: "note",
                                   width: "auto",
                                   cellRenderer: ({ row }: { row: any }) => {
                                     if (!row.note) {
@@ -889,7 +899,13 @@ export const POLIDetailsDemo = () => {
                                     }
                                     return (
                                       <Box py="x0_375">
-                                        <TruncatedText pr="x2" py="x1" fontSize="small" lineHeight="smallTextCompressed" maxCharacters={98}>
+                                        <TruncatedText
+                                          pr="x2"
+                                          py="x1"
+                                          fontSize="small"
+                                          lineHeight="smallTextCompressed"
+                                          maxCharacters={98}
+                                        >
                                           {row.note}
                                         </TruncatedText>
                                       </Box>
@@ -948,7 +964,9 @@ export const POLIDetailsDemo = () => {
                                             dataKey: "number",
                                             width: "40px",
                                             cellRenderer: ({ row }: { row: any }) => (
-                                              <SubcomponentConsumptionRecordNumberPill subcomponentConsumptionRecordItem={row.number} />
+                                              <SubcomponentConsumptionRecordNumberPill
+                                                subcomponentConsumptionRecordItem={row.number}
+                                              />
                                             ),
                                           },
                                           {
@@ -986,7 +1004,11 @@ export const POLIDetailsDemo = () => {
                                                   <Text fontSize="small" lineHeight="smallTextCompressed">
                                                     {row.customerLotCode}
                                                   </Text>
-                                                  <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                                  <Text
+                                                    fontSize="small"
+                                                    lineHeight="smallTextCompressed"
+                                                    color="midGrey"
+                                                  >
                                                     {row.supplierLotCode}
                                                   </Text>
                                                 </Flex>
@@ -1129,7 +1151,9 @@ export const POLIDetailsDemo = () => {
                                             dataKey: "number",
                                             width: "40px",
                                             cellRenderer: ({ row }: { row: any }) => (
-                                              <SubcomponentConsumptionRecordNumberPill subcomponentConsumptionRecordItem={row.number} />
+                                              <SubcomponentConsumptionRecordNumberPill
+                                                subcomponentConsumptionRecordItem={row.number}
+                                              />
                                             ),
                                           },
                                           {
@@ -1167,7 +1191,11 @@ export const POLIDetailsDemo = () => {
                                                   <Text fontSize="small" lineHeight="smallTextCompressed">
                                                     {row.customerLotCode}
                                                   </Text>
-                                                  <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                                  <Text
+                                                    fontSize="small"
+                                                    lineHeight="smallTextCompressed"
+                                                    color="midGrey"
+                                                  >
                                                     {row.supplierLotCode}
                                                   </Text>
                                                 </Flex>
@@ -1303,9 +1331,9 @@ export const POLIDetailsDemo = () => {
                                     <ActualProductionRecordNumberPill actualProductionRecordNumber={row.number} />
                                   ),
                                 },
-                                { 
-                                  label: "Actual quantity", 
-                                  dataKey: "actualQuantity", 
+                                {
+                                  label: "Actual quantity",
+                                  dataKey: "actualQuantity",
                                   width: "180px",
                                   cellRenderer: ({ row }: { row: any }) => {
                                     return (
@@ -1340,17 +1368,15 @@ export const POLIDetailsDemo = () => {
                                     </Flex>
                                   ),
                                 },
-                                { 
-                                  label: "Expiry date", 
-                                  dataKey: "expiryDate", 
+                                {
+                                  label: "Expiry date",
+                                  dataKey: "expiryDate",
                                   width: "150px",
-                                  cellRenderer: ({ row }: { row: any }) => (
-                                    <Text>{row.expiryDate}</Text>
-                                  ),
+                                  cellRenderer: ({ row }: { row: any }) => <Text>{row.expiryDate}</Text>,
                                 },
-                                { 
-                                  label: "Note", 
-                                  dataKey: "note", 
+                                {
+                                  label: "Note",
+                                  dataKey: "note",
                                   width: "auto",
                                   cellRenderer: ({ row }: { row: any }) => {
                                     if (!row.note) {
@@ -1358,7 +1384,13 @@ export const POLIDetailsDemo = () => {
                                     }
                                     return (
                                       <Box py="x0_375">
-                                        <TruncatedText pr="x2" py="x1" fontSize="small" lineHeight="smallTextCompressed" maxCharacters={98}>
+                                        <TruncatedText
+                                          pr="x2"
+                                          py="x1"
+                                          fontSize="small"
+                                          lineHeight="smallTextCompressed"
+                                          maxCharacters={98}
+                                        >
                                           {row.note}
                                         </TruncatedText>
                                       </Box>
@@ -1417,7 +1449,9 @@ export const POLIDetailsDemo = () => {
                                             dataKey: "number",
                                             width: "40px",
                                             cellRenderer: ({ row }: { row: any }) => (
-                                              <SubcomponentConsumptionRecordNumberPill subcomponentConsumptionRecordItem={row.number} />
+                                              <SubcomponentConsumptionRecordNumberPill
+                                                subcomponentConsumptionRecordItem={row.number}
+                                              />
                                             ),
                                           },
                                           {
@@ -1455,7 +1489,11 @@ export const POLIDetailsDemo = () => {
                                                   <Text fontSize="small" lineHeight="smallTextCompressed">
                                                     {row.customerLotCode}
                                                   </Text>
-                                                  <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                                  <Text
+                                                    fontSize="small"
+                                                    lineHeight="smallTextCompressed"
+                                                    color="midGrey"
+                                                  >
                                                     {row.supplierLotCode}
                                                   </Text>
                                                 </Flex>
@@ -1598,7 +1636,9 @@ export const POLIDetailsDemo = () => {
                                             dataKey: "number",
                                             width: "40px",
                                             cellRenderer: ({ row }: { row: any }) => (
-                                              <SubcomponentConsumptionRecordNumberPill subcomponentConsumptionRecordItem={row.number} />
+                                              <SubcomponentConsumptionRecordNumberPill
+                                                subcomponentConsumptionRecordItem={row.number}
+                                              />
                                             ),
                                           },
                                           {
@@ -1636,7 +1676,11 @@ export const POLIDetailsDemo = () => {
                                                   <Text fontSize="small" lineHeight="smallTextCompressed">
                                                     {row.customerLotCode}
                                                   </Text>
-                                                  <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                                  <Text
+                                                    fontSize="small"
+                                                    lineHeight="smallTextCompressed"
+                                                    color="midGrey"
+                                                  >
                                                     {row.supplierLotCode}
                                                   </Text>
                                                 </Flex>
@@ -1772,9 +1816,9 @@ export const POLIDetailsDemo = () => {
                                     <ActualProductionRecordNumberPill actualProductionRecordNumber={row.number} />
                                   ),
                                 },
-                                { 
-                                  label: "Actual quantity", 
-                                  dataKey: "actualQuantity", 
+                                {
+                                  label: "Actual quantity",
+                                  dataKey: "actualQuantity",
                                   width: "180px",
                                   cellRenderer: ({ row }: { row: any }) => {
                                     return (
@@ -1809,17 +1853,15 @@ export const POLIDetailsDemo = () => {
                                     </Flex>
                                   ),
                                 },
-                                { 
-                                  label: "Expiry date", 
-                                  dataKey: "expiryDate", 
+                                {
+                                  label: "Expiry date",
+                                  dataKey: "expiryDate",
                                   width: "150px",
-                                  cellRenderer: ({ row }: { row: any }) => (
-                                    <Text>{row.expiryDate}</Text>
-                                  ),
+                                  cellRenderer: ({ row }: { row: any }) => <Text>{row.expiryDate}</Text>,
                                 },
-                                { 
-                                  label: "Note", 
-                                  dataKey: "note", 
+                                {
+                                  label: "Note",
+                                  dataKey: "note",
                                   width: "auto",
                                   cellRenderer: ({ row }: { row: any }) => {
                                     if (!row.note) {
@@ -1827,7 +1869,13 @@ export const POLIDetailsDemo = () => {
                                     }
                                     return (
                                       <Box py="x0_375">
-                                        <TruncatedText pr="x2" py="x1" fontSize="small" lineHeight="smallTextCompressed" maxCharacters={98}>
+                                        <TruncatedText
+                                          pr="x2"
+                                          py="x1"
+                                          fontSize="small"
+                                          lineHeight="smallTextCompressed"
+                                          maxCharacters={98}
+                                        >
                                           {row.note}
                                         </TruncatedText>
                                       </Box>
@@ -1886,7 +1934,9 @@ export const POLIDetailsDemo = () => {
                                             dataKey: "number",
                                             width: "40px",
                                             cellRenderer: ({ row }: { row: any }) => (
-                                              <SubcomponentConsumptionRecordNumberPill subcomponentConsumptionRecordItem={row.number} />
+                                              <SubcomponentConsumptionRecordNumberPill
+                                                subcomponentConsumptionRecordItem={row.number}
+                                              />
                                             ),
                                           },
                                           {
@@ -1924,7 +1974,11 @@ export const POLIDetailsDemo = () => {
                                                   <Text fontSize="small" lineHeight="smallTextCompressed">
                                                     {row.customerLotCode}
                                                   </Text>
-                                                  <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                                  <Text
+                                                    fontSize="small"
+                                                    lineHeight="smallTextCompressed"
+                                                    color="midGrey"
+                                                  >
                                                     {row.supplierLotCode}
                                                   </Text>
                                                 </Flex>
@@ -2067,7 +2121,9 @@ export const POLIDetailsDemo = () => {
                                             dataKey: "number",
                                             width: "40px",
                                             cellRenderer: ({ row }: { row: any }) => (
-                                              <SubcomponentConsumptionRecordNumberPill subcomponentConsumptionRecordItem={row.number} />
+                                              <SubcomponentConsumptionRecordNumberPill
+                                                subcomponentConsumptionRecordItem={row.number}
+                                              />
                                             ),
                                           },
                                           {
@@ -2105,7 +2161,11 @@ export const POLIDetailsDemo = () => {
                                                   <Text fontSize="small" lineHeight="smallTextCompressed">
                                                     {row.customerLotCode}
                                                   </Text>
-                                                  <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                                  <Text
+                                                    fontSize="small"
+                                                    lineHeight="smallTextCompressed"
+                                                    color="midGrey"
+                                                  >
                                                     {row.supplierLotCode}
                                                   </Text>
                                                 </Flex>
@@ -2241,9 +2301,9 @@ export const POLIDetailsDemo = () => {
                                     <ActualProductionRecordNumberPill actualProductionRecordNumber={row.number} />
                                   ),
                                 },
-                                { 
-                                  label: "Actual quantity", 
-                                  dataKey: "actualQuantity", 
+                                {
+                                  label: "Actual quantity",
+                                  dataKey: "actualQuantity",
                                   width: "180px",
                                   cellRenderer: ({ row }: { row: any }) => {
                                     return (
@@ -2278,17 +2338,15 @@ export const POLIDetailsDemo = () => {
                                     </Flex>
                                   ),
                                 },
-                                { 
-                                  label: "Expiry date", 
-                                  dataKey: "expiryDate", 
+                                {
+                                  label: "Expiry date",
+                                  dataKey: "expiryDate",
                                   width: "150px",
-                                  cellRenderer: ({ row }: { row: any }) => (
-                                    <Text>{row.expiryDate}</Text>
-                                  ),
+                                  cellRenderer: ({ row }: { row: any }) => <Text>{row.expiryDate}</Text>,
                                 },
-                                { 
-                                  label: "Note", 
-                                  dataKey: "note", 
+                                {
+                                  label: "Note",
+                                  dataKey: "note",
                                   width: "auto",
                                   cellRenderer: ({ row }: { row: any }) => {
                                     if (!row.note) {
@@ -2296,7 +2354,13 @@ export const POLIDetailsDemo = () => {
                                     }
                                     return (
                                       <Box py="x0_375">
-                                        <TruncatedText pr="x2" py="x1" fontSize="small" lineHeight="smallTextCompressed" maxCharacters={98}>
+                                        <TruncatedText
+                                          pr="x2"
+                                          py="x1"
+                                          fontSize="small"
+                                          lineHeight="smallTextCompressed"
+                                          maxCharacters={98}
+                                        >
                                           {row.note}
                                         </TruncatedText>
                                       </Box>
@@ -2355,7 +2419,9 @@ export const POLIDetailsDemo = () => {
                                             dataKey: "number",
                                             width: "40px",
                                             cellRenderer: ({ row }: { row: any }) => (
-                                              <SubcomponentConsumptionRecordNumberPill subcomponentConsumptionRecordItem={row.number} />
+                                              <SubcomponentConsumptionRecordNumberPill
+                                                subcomponentConsumptionRecordItem={row.number}
+                                              />
                                             ),
                                           },
                                           {
@@ -2393,7 +2459,11 @@ export const POLIDetailsDemo = () => {
                                                   <Text fontSize="small" lineHeight="smallTextCompressed">
                                                     {row.customerLotCode}
                                                   </Text>
-                                                  <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                                  <Text
+                                                    fontSize="small"
+                                                    lineHeight="smallTextCompressed"
+                                                    color="midGrey"
+                                                  >
                                                     {row.supplierLotCode}
                                                   </Text>
                                                 </Flex>
@@ -2536,7 +2606,9 @@ export const POLIDetailsDemo = () => {
                                             dataKey: "number",
                                             width: "40px",
                                             cellRenderer: ({ row }: { row: any }) => (
-                                              <SubcomponentConsumptionRecordNumberPill subcomponentConsumptionRecordItem={row.number} />
+                                              <SubcomponentConsumptionRecordNumberPill
+                                                subcomponentConsumptionRecordItem={row.number}
+                                              />
                                             ),
                                           },
                                           {
@@ -2574,7 +2646,11 @@ export const POLIDetailsDemo = () => {
                                                   <Text fontSize="small" lineHeight="smallTextCompressed">
                                                     {row.customerLotCode}
                                                   </Text>
-                                                  <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                                  <Text
+                                                    fontSize="small"
+                                                    lineHeight="smallTextCompressed"
+                                                    color="midGrey"
+                                                  >
                                                     {row.supplierLotCode}
                                                   </Text>
                                                 </Flex>
