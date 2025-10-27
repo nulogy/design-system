@@ -5212,6 +5212,62 @@ export const POLIDetailsDemo = () => {
           .sb-show-main {
             padding: 0 !important;
           }
+          
+          /* Fix table row borders - only border-bottom for tr */
+          .production-record-table tr {
+            border-bottom: 1px solid #d1d5db !important;
+          }
+          
+          .production-record-table tr:last-child {
+            border-bottom: none !important;
+          }
+          
+          .production-record-table thead tr {
+            border-bottom: 1px solid #d1d5db !important;
+          }
+          
+          .production-record-table thead th {
+            border-bottom: 1px solid #d1d5db !important;
+          }
+          
+          /* Hide headers in nested actual production record tables */
+          .actual-production-record-table {
+            border-collapse: separate !important;
+            border-spacing: 0 !important;
+          }
+          .actual-production-record-table tr {
+            border-bottom: none !important;
+          }
+          .actual-production-record-table thead tr {
+            border-bottom: none !important;
+          }
+          .actual-production-record-table thead th {
+            border-bottom: none !important;
+          }
+          .actual-production-record-table > thead th {
+            height: 0 !important;
+            padding: 0 !important;
+            line-height: 0 !important;
+            font-size: 0 !important;
+          }
+          .actual-production-record-table > tbody tr {
+            border-bottom: 1px solid #e4e7eb !important;
+          }
+          .actual-production-record-table > tbody tr td {
+            border-bottom: 1px solid #e4e7eb !important;
+          }
+          .actual-production-record-table > tbody tr:first-child {
+            border-top: none !important;
+          }
+          .actual-production-record-table > tbody tr:first-child td {
+            border-top: none !important;
+          }
+          .actual-production-record-table > tbody tr:last-child {
+            border-bottom: none !important;
+          }
+          .actual-production-record-table > tbody tr:last-child td {
+            border-bottom: none !important;
+          }
         `}
       </style>
       <Page>
@@ -5288,174 +5344,453 @@ export const POLIDetailsDemo = () => {
           </Tab>
           <Tab label="Production records">
             <Box mt="x3">
-              <Flex justifyContent="space-between" alignItems="center" mb="x3">
-                <Heading4>Production records</Heading4>
-                <Button onClick={handleAddProductionRow}>Add production record</Button>
-              </Flex>
-
-              {productionRows.length > 0 && <Heading4 mb="x3">Actual production</Heading4>}
-
-              <Box>
-                {/* Custom table structure with nested rows */}
-                {productionRows.length > 0 && (
-                  <Box>
-                    {/* Table Header */}
-                    <Flex borderBottom="1px solid" borderColor="lightGrey" pr="56px" pb="x1" gap="x1">
-                      <Flex minWidth="32px" ml="x1" mr="x0_5">
-                        #
-                      </Flex>
-                      <Box width="100%">Pallet number</Box>
-                      {dualLotCode && <Box width="100%">Customer's lot code</Box>}
-                      <Box width="100%">
-                        {dualLotCode ? "Supplier's lot code" : "Lot code"}
-                        {role === "supplier" && fieldConfigState.lotCodeRequired && (
-                          <Text fontSize="small" inline ml="x0_5" color="darkGrey">
-                            (Required)
+              <Box minWidth="1236px">
+                <Table
+                  columns={[
+                    { label: "Date", dataKey: "date", width: "120px" },
+                    { label: "Expected quantity", dataKey: "expectedQuantity", width: "180px" },
+                    { label: "Actual quantity", dataKey: "actualQuantity", width: "180px" },
+                    { label: "Pallet number", dataKey: "palletNumber", width: "180px" },
+                    { 
+                      label: "Lot code", 
+                      dataKey: "customerLotCode", 
+                      width: "180px",
+                      headerFormatter: () => (
+                        <Box pt="x1_25" pb="x0_75">
+                          <Text>Lot code</Text>
+                          <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                            (Customer's / Supplier's)
                           </Text>
-                        )}
-                      </Box>
-                      <Box width="100%">
-                        Expiry date
-                        {role === "supplier" && fieldConfigState.expiryDateRequired && (
-                          <Text fontSize="small" inline ml="x0_5" color="darkGrey">
-                            (Required)
-                          </Text>
-                        )}
-                      </Box>
-                      <Box width="100%">
-                        Quantity
-                        <Text fontSize="small" inline ml="x0_5" color="darkGrey">
-                          (Required)
-                        </Text>
-                      </Box>
-                      <Box width="75%">
-                        UOM
-                        <Text fontSize="small" inline ml="x0_5" color="darkGrey">
-                          (Required)
-                        </Text>
-                      </Box>
-                    </Flex>
-
-                    {/* Table Rows with nested content */}
-                    {productionRows.map((row, index) => (
-                      <Box key={row.id}>
-                        {/* Main Row */}
-                        <Flex
-                          borderBottom="1px solid"
-                          borderColor="lightGrey"
-                          py="x1"
-                          pr="56px"
-                          gap="x1"
-                          alignItems="center"
-                        >
-                          <Flex minWidth="32px" ml="x1" mr="x0_5" justifyContent="center">
-                            <Text fontSize="small" fontWeight="bold">
-                              {index + 1}
-                            </Text>
-                          </Flex>
-                          <Box width="100%">
-                            <Input
-                              value={row.palletNumber}
-                              onChange={(e) => {
-                                const newRows = productionRows.map((r) =>
-                                  r.id === row.id ? { ...r, palletNumber: e.target.value } : r
-                                );
-                                setProductionRows(newRows);
-                              }}
-                              placeholder="Enter pallet number"
+                        </Box>
+                      ),
+                      cellRenderer: () => {
+                        // Always show blank for parent table rows since detailed info is in nested tables
+                        return null;
+                      },
+                    },
+                    { label: "Expiry date", dataKey: "expiryDate", width: "150px" },
+                    { label: "Note", dataKey: "note", width: "auto" },
+                  ]}
+                  rows={[
+                    {
+                      id: "1",
+                      date: "2025-09-05",
+                      expectedQuantity: "2",
+                      actualQuantity: "2",
+                      palletNumber: "",
+                      customerLotCode: "",
+                      expiryDate: "",
+                      note: "",
+                      expandedContent: () => (
+                        <Box style={{ paddingLeft: "-56px" }}>
+                          <Box style={{ paddingLeft: "298px" }}>
+                            <Table
+                              columns={[
+                                { 
+                                  label: "Number", 
+                                  dataKey: "number", 
+                                  width: "0px",
+                                  cellRenderer: ({ row }: { row: any }) => (
+                                    <ActualProductionRecordNumberPill actualProductionRecordNumber={row.number} />
+                                  ),
+                                },
+                                { label: "Actual quantity", dataKey: "actualQuantity", width: "180px" },
+                                { 
+                                  label: "Pallet number", 
+                                  dataKey: "palletNumber", 
+                                  width: "180px",
+                                  cellRenderer: ({ row }: { row: any }) => (
+                                    <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                      {row.palletNumber || "-"}
+                                    </Text>
+                                  ),
+                                },
+                                { 
+                                  label: "Lot code", 
+                                  dataKey: "lotCode", 
+                                  width: "180px",
+                                  cellRenderer: ({ row }: { row: any }) => (
+                                    <Flex py="x0_75" gap="x0_25" flexDirection="column">
+                                      <Text fontSize="small" lineHeight="smallTextCompressed">
+                                        {row.customerLotCode}
+                                      </Text>
+                                      <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                        {row.supplierLotCode}
+                                      </Text>
+                                    </Flex>
+                                  ),
+                                },
+                                { label: "Expiry date", dataKey: "expiryDate", width: "150px" },
+                                { label: "Note", dataKey: "note", width: "auto" },
+                              ]}
+                              rows={[
+                                {
+                                  id: "1",
+                                  number: "001",
+                                  actualQuantity: "1",
+                                  palletNumber: "",
+                                  customerLotCode: "BEJC03021",
+                                  supplierLotCode: "LSAB00001",
+                                  expiryDate: "2027-09-01",
+                                  note: "",
+                                },
+                                {
+                                  id: "2",
+                                  number: "002",
+                                  actualQuantity: "1",
+                                  palletNumber: "",
+                                  customerLotCode: "BEJC03022",
+                                  supplierLotCode: "LSAB00002",
+                                  expiryDate: "2027-09-01",
+                                  note: "",
+                                },
+                              ]}
+                              keyField="id"
+                              rowBorder={true}
+                              className="actual-production-record-table"
+                              compact={true}
                             />
                           </Box>
-                          {dualLotCode && (
-                            <Box width="100%">
-                              <Input
-                                value={row.customerLotCode}
-                                onChange={(e) => {
-                                  const newRows = productionRows.map((r) =>
-                                    r.id === row.id ? { ...r, customerLotCode: e.target.value } : r
-                                  );
-                                  setProductionRows(newRows);
-                                }}
-                                placeholder="Enter customer lot code"
-                              />
-                            </Box>
-                          )}
-                          <Box width="100%">
-                            <Input
-                              value={row.supplierLotCode}
-                              onChange={(e) => {
-                                const newRows = productionRows.map((r) =>
-                                  r.id === row.id ? { ...r, supplierLotCode: e.target.value } : r
-                                );
-                                setProductionRows(newRows);
-                              }}
-                              placeholder="Enter supplier lot code"
+                        </Box>
+                      ),
+                    },
+                    {
+                      id: "2",
+                      date: "2025-09-08",
+                      expectedQuantity: "2",
+                      actualQuantity: "2",
+                      palletNumber: "",
+                      customerLotCode: "",
+                      expiryDate: "",
+                      note: "",
+                      expandedContent: () => (
+                        <Box style={{ paddingLeft: "-56px" }}>
+                          <Box style={{ paddingLeft: "298px" }}>
+                            <Table
+                              columns={[
+                                { 
+                                  label: "Number", 
+                                  dataKey: "number", 
+                                  width: "0px",
+                                  cellRenderer: ({ row }: { row: any }) => (
+                                    <ActualProductionRecordNumberPill actualProductionRecordNumber={row.number} />
+                                  ),
+                                },
+                                { label: "Actual quantity", dataKey: "actualQuantity", width: "180px" },
+                                { 
+                                  label: "Pallet number", 
+                                  dataKey: "palletNumber", 
+                                  width: "180px",
+                                  cellRenderer: ({ row }: { row: any }) => (
+                                    <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                      {row.palletNumber || "-"}
+                                    </Text>
+                                  ),
+                                },
+                                { 
+                                  label: "Lot code", 
+                                  dataKey: "lotCode", 
+                                  width: "180px",
+                                  cellRenderer: ({ row }: { row: any }) => (
+                                    <Flex py="x0_75" gap="x0_25" flexDirection="column">
+                                      <Text fontSize="small" lineHeight="smallTextCompressed">
+                                        {row.customerLotCode}
+                                      </Text>
+                                      <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                        {row.supplierLotCode}
+                                      </Text>
+                                    </Flex>
+                                  ),
+                                },
+                                { label: "Expiry date", dataKey: "expiryDate", width: "150px" },
+                                { label: "Note", dataKey: "note", width: "auto" },
+                              ]}
+                              rows={[
+                                {
+                                  id: "1",
+                                  number: "001",
+                                  actualQuantity: "1",
+                                  palletNumber: "",
+                                  customerLotCode: "BEJC03023",
+                                  supplierLotCode: "LSAB00003",
+                                  expiryDate: "2027-09-04",
+                                  note: "",
+                                },
+                                {
+                                  id: "2",
+                                  number: "002",
+                                  actualQuantity: "1",
+                                  palletNumber: "",
+                                  customerLotCode: "BEJC03024",
+                                  supplierLotCode: "LSAB00004",
+                                  expiryDate: "2027-09-04",
+                                  note: "",
+                                },
+                              ]}
+                              keyField="id"
+                              rowBorder={true}
+                              className="actual-production-record-table"
+                              compact={true}
                             />
                           </Box>
-                          <Box width="100%">
-                            <Input
-                              value={row.expiryDate}
-                              onChange={(e) => {
-                                const newRows = productionRows.map((r) =>
-                                  r.id === row.id ? { ...r, expiryDate: e.target.value } : r
-                                );
-                                setProductionRows(newRows);
-                              }}
-                              placeholder="YYYY-MM-DD"
+                        </Box>
+                      ),
+                    },
+                    {
+                      id: "3",
+                      date: "2025-09-09",
+                      expectedQuantity: "2",
+                      actualQuantity: "",
+                      palletNumber: "",
+                      customerLotCode: "",
+                      expiryDate: "",
+                      note: "",
+                      expandedContent: () => (
+                        <Box style={{ paddingLeft: "-56px" }}>
+                          <Box style={{ paddingLeft: "298px" }}>
+                            <Table
+                              columns={[
+                                { 
+                                  label: "Number", 
+                                  dataKey: "number", 
+                                  width: "0px",
+                                  cellRenderer: ({ row }: { row: any }) => (
+                                    <ActualProductionRecordNumberPill actualProductionRecordNumber={row.number} />
+                                  ),
+                                },
+                                { label: "Actual quantity", dataKey: "actualQuantity", width: "180px" },
+                                { 
+                                  label: "Pallet number", 
+                                  dataKey: "palletNumber", 
+                                  width: "180px",
+                                  cellRenderer: ({ row }: { row: any }) => (
+                                    <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                      {row.palletNumber || "-"}
+                                    </Text>
+                                  ),
+                                },
+                                { 
+                                  label: "Lot code", 
+                                  dataKey: "lotCode", 
+                                  width: "180px",
+                                  cellRenderer: ({ row }: { row: any }) => (
+                                    <Flex py="x0_75" gap="x0_25" flexDirection="column">
+                                      <Text fontSize="small" lineHeight="smallTextCompressed">
+                                        {row.customerLotCode}
+                                      </Text>
+                                      <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                        {row.supplierLotCode}
+                                      </Text>
+                                    </Flex>
+                                  ),
+                                },
+                                { label: "Expiry date", dataKey: "expiryDate", width: "150px" },
+                                { label: "Note", dataKey: "note", width: "auto" },
+                              ]}
+                              rows={[
+                                {
+                                  id: "1",
+                                  number: "001",
+                                  actualQuantity: "1",
+                                  palletNumber: "",
+                                  customerLotCode: "BEJC03025",
+                                  supplierLotCode: "LSAB00005",
+                                  expiryDate: "2027-09-05",
+                                  note: "",
+                                },
+                                {
+                                  id: "2",
+                                  number: "002",
+                                  actualQuantity: "1",
+                                  palletNumber: "",
+                                  customerLotCode: "BEJC03026",
+                                  supplierLotCode: "LSAB00006",
+                                  expiryDate: "2027-09-05",
+                                  note: "",
+                                },
+                              ]}
+                              keyField="id"
+                              rowBorder={true}
+                              className="actual-production-record-table"
+                              compact={true}
                             />
                           </Box>
-                          <Box width="100%">
-                            <Input
-                              value={row.quantity}
-                              onChange={(e) => {
-                                const newRows = productionRows.map((r) =>
-                                  r.id === row.id ? { ...r, quantity: e.target.value } : r
-                                );
-                                setProductionRows(newRows);
-                              }}
-                              placeholder="Enter quantity"
+                        </Box>
+                      ),
+                    },
+                    {
+                      id: "4",
+                      date: "2025-09-10",
+                      expectedQuantity: "2",
+                      actualQuantity: "",
+                      palletNumber: "",
+                      customerLotCode: "",
+                      expiryDate: "",
+                      note: "",
+                      expandedContent: () => (
+                        <Box style={{ paddingLeft: "-56px" }}>
+                          <Box style={{ paddingLeft: "298px" }}>
+                            <Table
+                              columns={[
+                                { 
+                                  label: "Number", 
+                                  dataKey: "number", 
+                                  width: "0px",
+                                  cellRenderer: ({ row }: { row: any }) => (
+                                    <ActualProductionRecordNumberPill actualProductionRecordNumber={row.number} />
+                                  ),
+                                },
+                                { label: "Actual quantity", dataKey: "actualQuantity", width: "180px" },
+                                { 
+                                  label: "Pallet number", 
+                                  dataKey: "palletNumber", 
+                                  width: "180px",
+                                  cellRenderer: ({ row }: { row: any }) => (
+                                    <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                      {row.palletNumber || "-"}
+                                    </Text>
+                                  ),
+                                },
+                                { 
+                                  label: "Lot code", 
+                                  dataKey: "lotCode", 
+                                  width: "180px",
+                                  cellRenderer: ({ row }: { row: any }) => (
+                                    <Flex py="x0_75" gap="x0_25" flexDirection="column">
+                                      <Text fontSize="small" lineHeight="smallTextCompressed">
+                                        {row.customerLotCode}
+                                      </Text>
+                                      <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                        {row.supplierLotCode}
+                                      </Text>
+                                    </Flex>
+                                  ),
+                                },
+                                { label: "Expiry date", dataKey: "expiryDate", width: "150px" },
+                                { label: "Note", dataKey: "note", width: "auto" },
+                              ]}
+                              rows={[
+                                {
+                                  id: "1",
+                                  number: "001",
+                                  actualQuantity: "1",
+                                  palletNumber: "",
+                                  customerLotCode: "BEJC03027",
+                                  supplierLotCode: "LSAB00007",
+                                  expiryDate: "2027-09-06",
+                                  note: "",
+                                },
+                                {
+                                  id: "2",
+                                  number: "002",
+                                  actualQuantity: "1",
+                                  palletNumber: "",
+                                  customerLotCode: "BEJC03028",
+                                  supplierLotCode: "LSAB00008",
+                                  expiryDate: "2027-09-06",
+                                  note: "",
+                                },
+                              ]}
+                              keyField="id"
+                              rowBorder={true}
+                              className="actual-production-record-table"
+                              compact={true}
                             />
                           </Box>
-                          <Box width="75%">
-                            <Select
-                              value={row.uom}
-                              onChange={(value) => {
-                                const newRows = productionRows.map((r) =>
-                                  r.id === row.id ? { ...r, uom: String(value) } : r
-                                );
-                                setProductionRows(newRows);
-                              }}
-                              options={uomOptions}
+                        </Box>
+                      ),
+                    },
+                    {
+                      id: "5",
+                      date: "2025-09-11",
+                      expectedQuantity: "2",
+                      actualQuantity: "",
+                      palletNumber: "",
+                      customerLotCode: "",
+                      expiryDate: "",
+                      note: "",
+                      expandedContent: () => (
+                        <Box style={{ paddingLeft: "-56px" }}>
+                          <Box style={{ paddingLeft: "298px" }}>
+                            <Table
+                              columns={[
+                                { 
+                                  label: "Number", 
+                                  dataKey: "number", 
+                                  width: "0px",
+                                  cellRenderer: ({ row }: { row: any }) => (
+                                    <ActualProductionRecordNumberPill actualProductionRecordNumber={row.number} />
+                                  ),
+                                },
+                                { label: "Actual quantity", dataKey: "actualQuantity", width: "180px" },
+                                { 
+                                  label: "Pallet number", 
+                                  dataKey: "palletNumber", 
+                                  width: "180px",
+                                  cellRenderer: ({ row }: { row: any }) => (
+                                    <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                      {row.palletNumber || "-"}
+                                    </Text>
+                                  ),
+                                },
+                                { 
+                                  label: "Lot code", 
+                                  dataKey: "lotCode", 
+                                  width: "180px",
+                                  cellRenderer: ({ row }: { row: any }) => (
+                                    <Flex py="x0_75" gap="x0_25" flexDirection="column">
+                                      <Text fontSize="small" lineHeight="smallTextCompressed">
+                                        {row.customerLotCode}
+                                      </Text>
+                                      <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                        {row.supplierLotCode}
+                                      </Text>
+                                    </Flex>
+                                  ),
+                                },
+                                { label: "Expiry date", dataKey: "expiryDate", width: "150px" },
+                                { label: "Note", dataKey: "note", width: "auto" },
+                              ]}
+                              rows={[
+                                {
+                                  id: "1",
+                                  number: "001",
+                                  actualQuantity: "1",
+                                  palletNumber: "",
+                                  customerLotCode: "BEJC03029",
+                                  supplierLotCode: "LSAB00009",
+                                  expiryDate: "2027-09-07",
+                                  note: "",
+                                },
+                                {
+                                  id: "2",
+                                  number: "002",
+                                  actualQuantity: "1",
+                                  palletNumber: "",
+                                  customerLotCode: "BEJC03030",
+                                  supplierLotCode: "LSAB00010",
+                                  expiryDate: "2027-09-07",
+                                  note: "",
+                                },
+                              ]}
+                              keyField="id"
+                              rowBorder={true}
+                              className="actual-production-record-table"
+                              compact={true}
                             />
                           </Box>
-                          <Box position="absolute" right="x2">
-                            <IconicButton
-                              icon="trash"
-                              onClick={() => {
-                                setPendingRemoveRowId(row.id);
-                                setShowRemoveProductionModal(true);
-                              }}
-                              size="small"
-                              variant="quiet"
-                            />
-                          </Box>
-                        </Flex>
-                      </Box>
-                    ))}
-                  </Box>
-                )}
-
-                {productionRows.length === 0 && (
-                  <Box
-                    p="x6"
-                    textAlign="center"
-                    border="1px dashed"
-                    borderColor="lightGrey"
-                    borderRadius="medium"
-                    backgroundColor="lightGrey"
-                  >
-                    <Text color="midGrey">No production records added yet</Text>
-                  </Box>
-                )}
+                        </Box>
+                      ),
+                    },
+                  ]}
+                  hasExpandableRows={true}
+                  expandedRows={expandedRows}
+                  onRowExpansionChange={setExpandedRows}
+                  keyField="id"
+                  rowBorder={true}
+                  compact={true}
+                  className="production-record-table"
+                />
               </Box>
             </Box>
           </Tab>
