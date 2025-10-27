@@ -2076,16 +2076,6 @@ export const V1 = () => {
         `}
       </style>
       <Page>
-        <Flex justifyContent="flex-end" alignItems="center" gap="x1_5" mb="x1">
-          <IconicButton
-            icon="edit"
-            aria-label="Edit"
-            onClick={handleEditDetails}
-            disabled={!productionRecordState.date && isInCreateEditMode}
-          >
-            Edit
-          </IconicButton>
-        </Flex>
         <Box mb="x3">
           <DescriptionList layout="stacked" columns={{ extraSmall: 1, small: 2, medium: 3, large: 5 }}>
             <DescriptionGroup>
@@ -4683,6 +4673,993 @@ export const V1 = () => {
       </Modal>
 
       {/* Modal for unsaved changes warning */}
+      <Modal
+        isOpen={showUnsavedChangesModal}
+        onRequestClose={() => setShowUnsavedChangesModal(false)}
+        title="Discard unsaved changes?"
+        footerContent={
+          <ButtonGroup>
+            <QuietButton onClick={handleConfirmCloseProductionSidebar}>Discard</QuietButton>
+            <QuietButton onClick={() => setShowUnsavedChangesModal(false)}>Keep editing</QuietButton>
+          </ButtonGroup>
+        }
+      >
+        <Text>The production record has unsaved changes that will be discarded if you continue without saving.</Text>
+      </Modal>
+    </ApplicationFrame>
+  );
+};
+
+// Demo version with updated PO number
+const demoDetailsData = {
+  ...detailsData,
+  poNumber: "PO-2025-002",
+};
+
+export const POLIDetailsDemo = () => {
+  const [selectedIndex, setSelectedIndex] = useState(1); // Production records tab is index 1
+  const [showProductionSidebar, setShowProductionSidebar] = useState(false);
+  const [isEditingProduction, setIsEditingProduction] = useState(false);
+
+  // Helper to determine if we're in create/edit mode (should apply date dependency)
+  const isInCreateEditMode = showProductionSidebar || isEditingProduction;
+  const [productionEntryType, setProductionEntryType] = useState<"quick" | "detailed">("quick");
+  const [historyLogFilter, setHistoryLogFilter] = useState("All");
+  const [actualQuantity, setActualQuantity] = useState("");
+  const [productionRows, setProductionRows] = useState([]);
+  const [initialProductionRows, setInitialProductionRows] = useState([]);
+  const [initialRowConsumptions, setInitialRowConsumptions] = useState<Record<string, any[]>>({});
+  const [initialRowNotes, setInitialRowNotes] = useState<Record<string, string>>({});
+  const [rowNotes, setRowNotes] = useState<Record<string, string>>({});
+  const [rowConsumptions, setRowConsumptions] = useState<
+    Record<
+      string,
+      Array<{
+        id: string;
+        item: string;
+        customerLotCode: string;
+        supplierLotCode: string;
+        expiryDate: string;
+        palletNumber: string;
+        quantity: string;
+        uom: string;
+        pillNumber?: string;
+      }>
+    >
+  >({});
+
+  // Header and Summary state
+  // userState, collaborationState, acceptedItems, poStatus now imported from optionsData.tsx
+  const [productionComplete] = useState(false);
+
+  // Edit state
+  const [showEditSidebar, setShowEditSidebar] = useState(false);
+  // editFormData now imported from optionsData.tsx
+  const [editFormDataState, setEditFormDataState] = useState(editFormData);
+
+  // Details data
+  // detailsData now imported from optionsData.tsx
+
+  // SummaryDivider component
+  const SummaryDivider = () => <Box width="1px" height="x6" backgroundColor="lightGrey" mx="x2" />;
+
+  // Reusable RecordNumberPill component
+  const RecordNumberPill = ({
+    number,
+    tooltip,
+    placement = "top",
+    fontSize = "smaller",
+    style,
+    mr,
+  }: {
+    number: string;
+    tooltip?: string;
+    placement?: "left" | "right" | "top" | "bottom";
+    fontSize?: "smaller" | "small";
+    style?: React.CSSProperties;
+    mr?: string;
+  }) => {
+    const pillContent = (
+      <Box
+        backgroundColor="lightGrey"
+        px="half"
+        borderRadius="small"
+        width="fit-content"
+        mr={mr}
+        style={{ display: "inline-block" }}
+      >
+        <Text
+          color="darkGrey"
+          fontSize={fontSize}
+          fontWeight="bold"
+          textTransform="uppercase"
+          letterSpacing=".05em"
+          lineHeight="smallerText"
+          style={style}
+        >
+          {number}
+        </Text>
+      </Box>
+    );
+
+    return tooltip ? (
+      <Tooltip tooltip={tooltip} placement={placement}>
+        {pillContent}
+      </Tooltip>
+    ) : (
+      pillContent
+    );
+  };
+
+  // ActualProductionRecordNumberPill component (using the reusable component)
+  const ActualProductionRecordNumberPill = ({
+    actualProductionRecordNumber,
+  }: {
+    actualProductionRecordNumber: string;
+  }) => (
+    <Flex py="x0_75" mr="x1" justifyContent="flex-start" ml="-96px">
+      <RecordNumberPill
+        number={actualProductionRecordNumber}
+        tooltip={`Actual production record #${actualProductionRecordNumber}`}
+        placement="left"
+      />
+    </Flex>
+  );
+
+  // SubcomponentConsumptionRecordNumberPill component (using the reusable component)
+  const SubcomponentConsumptionRecordNumberPill = ({
+    subcomponentConsumptionRecordItem,
+  }: {
+    subcomponentConsumptionRecordItem: string;
+  }) => (
+    <RecordNumberPill
+      number={subcomponentConsumptionRecordItem}
+      tooltip={`Subcomponent consumption record #${subcomponentConsumptionRecordItem}`}
+      placement="left"
+    />
+  );
+
+  // Handler functions
+  const handleCancelPOLineItem = () => {
+    // Add proper modal handling here if needed
+    toast.success("PO line item cancellation initiated");
+  };
+
+  const handleEditDetails = () => {
+    setShowEditSidebar(true);
+  };
+
+  const handleCloseEditSidebar = () => {
+    setShowEditSidebar(false);
+  };
+
+  const handleSaveEditDetails = () => {
+    setShowEditSidebar(false);
+    toast.success("PO line item details saved successfully");
+  };
+
+  const [showConsumptionSidebar, setShowConsumptionSidebar] = useState(false);
+  const [showAddConsumptionSidebar, setShowAddConsumptionSidebar] = useState(false);
+  const [currentConsumptionRowId, setCurrentConsumptionRowId] = useState<string>("");
+  const [consumptionItems, setConsumptionItems] = useState([
+    {
+      id: "consumption-item-1",
+      item: "",
+      customerLotCode: "",
+      supplierLotCode: "",
+      expiryDate: null as Date | null,
+      palletNumber: "",
+      consumedQuantity: "",
+      uom: "",
+      parentDate: undefined as string | undefined,
+      parentActualQuantity: undefined as string | undefined,
+    },
+  ]);
+  const [expandedRows, setExpandedRows] = useState<string[]>([]);
+  const [nestedExpandedRows, setNestedExpandedRows] = useState<string[]>([]);
+  const [subcomponentConsumptionExpanded, setSubcomponentConsumptionExpanded] = useState<Record<string, boolean>>({});
+  const [noteExpanded, setNoteExpanded] = useState<Record<string, boolean>>({});
+  // productionRecord now imported from optionsData.tsx
+  const [productionRecordState, setProductionRecordState] = useState(productionRecord);
+  const [consumptionMaterials, setConsumptionMaterials] = useState([]);
+  const [role, setRole] = useState("supplier");
+  const [showConfigBar, setShowConfigBar] = useState(true);
+  const [dualLotCode, setDualLotCode] = useState(true);
+  const [showExistingRecordModal, setShowExistingRecordModal] = useState(false);
+  const [showDataLossModal, setShowDataLossModal] = useState(false);
+  const [hasAugust8thData, setHasAugust8thData] = useState(false);
+  const [pendingDate, setPendingDate] = useState<string | null>(null);
+  const [showRemoveNoteModal, setShowRemoveNoteModal] = useState(false);
+  const [showRemoveSubcomponentModal, setShowRemoveSubcomponentModal] = useState(false);
+  const [showRemoveProductionModal, setShowRemoveProductionModal] = useState(false);
+  const [pendingRemoveRowId, setPendingRemoveRowId] = useState<string | null>(null);
+  const [newlyAddedRowId, setNewlyAddedRowId] = useState<string | null>(null);
+  const [newlyAddedNoteId, setNewlyAddedNoteId] = useState<string | null>(null);
+  const [newlyAddedConsumptionId, setNewlyAddedConsumptionId] = useState<string | null>(null);
+  const [showUnsavedChangesModal, setShowUnsavedChangesModal] = useState(false);
+
+  // Check if selected date is in the future
+  const isFutureDate = () => {
+    if (!productionRecordState.date) return false;
+    const selectedDate = new Date(productionRecordState.date);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0); // Reset time to start of day for accurate comparison
+    return selectedDate > today;
+  };
+
+  // fieldConfig now imported from optionsData.tsx
+  const [fieldConfigState, setFieldConfigState] = useState(fieldConfig);
+
+  // primaryMenu and secondaryMenu now imported from optionsData.tsx
+
+  // uomOptions and unitOptions now imported from optionsData.tsx
+
+  // Nested table data now imported from nestedTableData.tsx
+
+  // Actual production report columns configuration
+  const actualProductionReportColumns = [
+    {
+      label: "Number",
+      dataKey: "actualProductionRecordNumber",
+      width: "0px",
+      cellRenderer: ({ row }: { row: any }) => (
+        <ActualProductionRecordNumberPill actualProductionRecordNumber={row.actualProductionRecordNumber} />
+      ),
+    },
+    {
+      label: "Actual quantity",
+      dataKey: "actualQuantity",
+      width: "180px",
+      cellRenderer: ({ row }: { row: any }) => {
+        return (
+          <Flex py="x0_75" mr="x1">
+            <Text>{row.actualQuantity}</Text>
+          </Flex>
+        );
+      },
+    },
+    {
+      label: "Pallet number",
+      dataKey: "palletNumber",
+      width: "180px",
+      cellRenderer: ({ row }: { row: any }) => {
+        // If pallet number is not required in config, show "-"
+        if (!fieldConfigState.palletNumberRequired) {
+          return (
+            <Flex py="x0_75">
+              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                -
+              </Text>
+            </Flex>
+          );
+        }
+
+        // If pallet number is empty, don't render anything
+        if (!row.palletNumber) {
+          return null;
+        }
+
+        return row.palletNumber;
+      },
+    },
+    {
+      label: "Lot code",
+      dataKey: "lotCode",
+      width: "180px",
+      cellRenderer: ({ row }: { row: any }) => {
+        const hasCustomerLot = row.lotCode && row.lotCode !== "-";
+        const hasSupplierLot = row.supplierLotCode && row.supplierLotCode !== "-";
+
+        if (dualLotCode) {
+          // When dual lot is ON, show both values
+          if (fieldConfigState.lotCodeRequired) {
+            // Lot code ON: show actual values
+            if (!hasCustomerLot && !hasSupplierLot) {
+              return null;
+            }
+
+            return (
+              <Flex py="x0_75" gap="x0_25" flexDirection="column">
+                {hasCustomerLot && (
+                  <TruncatedText width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
+                    {row.lotCode}
+                  </TruncatedText>
+                )}
+                {hasSupplierLot && (
+                  <TruncatedText
+                    width="auto"
+                    maxWidth="152px"
+                    fontSize="small"
+                    lineHeight="smallTextCompressed"
+                    color="midGrey"
+                  >
+                    {row.supplierLotCode}
+                  </TruncatedText>
+                )}
+              </Flex>
+            );
+          } else {
+            // Lot code OFF: show two "-" entries
+            return (
+              <Flex py="x0_75" flexDirection="column" gap="x0_25">
+                <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                  -
+                </Text>
+                <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                  -
+                </Text>
+              </Flex>
+            );
+          }
+        } else {
+          // When dual lot is OFF, show only supplier's lot code
+          if (fieldConfigState.lotCodeRequired) {
+            // Lot code ON: show supplier's lot code
+            if (!hasSupplierLot) {
+              return null;
+            }
+
+            return (
+              <Flex py="x0_75">
+                <TruncatedText width="auto" maxWidth="152px" fontSize="small" lineHeight="smallTextCompressed">
+                  {row.supplierLotCode}
+                </TruncatedText>
+              </Flex>
+            );
+          } else {
+            // Lot code OFF: show "-"
+            return (
+              <Flex py="x0_75">
+                <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                  -
+                </Text>
+              </Flex>
+            );
+          }
+        }
+      },
+    },
+    {
+      label: "Expiry date",
+      dataKey: "expiryDate",
+      width: "180px",
+      cellRenderer: ({ row }: { row: any }) => {
+        // If expiry date is not required in config, show "-"
+        if (!fieldConfigState.expiryDateRequired) {
+          return (
+            <Flex py="x0_75">
+              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                -
+              </Text>
+            </Flex>
+          );
+        }
+
+        // If expiry date is empty, don't render anything
+        if (!row.expiryDate) {
+          return null;
+        }
+
+        return (
+          <Flex py="x0_75">
+            <Text fontSize="small" lineHeight="smallTextCompressed">
+              {row.expiryDate}
+            </Text>
+          </Flex>
+        );
+      },
+    },
+    {
+      label: "UOM",
+      dataKey: "uom",
+      width: "180px",
+      cellRenderer: ({ row }: { row: any }) => {
+        return (
+          <Flex py="x0_75" mr="x1">
+            <Text fontSize="small" lineHeight="smallTextCompressed">
+              {row.uom}
+            </Text>
+          </Flex>
+        );
+      },
+    },
+  ];
+
+  // Breadcrumbs
+  const breadcrumbs = (
+    <Breadcrumbs>
+      <Link href="#">Home</Link>
+      <Link href="#">Lot traceability</Link>
+      <Link href="#">POLI details</Link>
+    </Breadcrumbs>
+  );
+
+  // Helper functions
+  const handleAddProductionRow = () => {
+    const newRow = {
+      id: `row-${Date.now()}`,
+      palletNumber: "",
+      customerLotCode: "",
+      supplierLotCode: "",
+      expiryDate: "",
+      quantity: "",
+      uom: "cs",
+    };
+    setProductionRows([...productionRows, newRow]);
+    setRowConsumptions({ ...rowConsumptions, [newRow.id]: [] });
+    setRowNotes({ ...rowNotes, [newRow.id]: "" });
+  };
+
+  const handleRemoveProductionRow = (rowId: string) => {
+    setProductionRows(productionRows.filter((row) => row.id !== rowId));
+    const newConsumptions = { ...rowConsumptions };
+    const newNotes = { ...rowNotes };
+    delete newConsumptions[rowId];
+    delete newNotes[rowId];
+    setRowConsumptions(newConsumptions);
+    setRowNotes(newNotes);
+  };
+
+  const handleSaveProduction = () => {
+    toast.success("Production record saved successfully");
+    setShowProductionSidebar(false);
+    setProductionRecordState(productionRecord);
+    setProductionRows([]);
+    setRowConsumptions({});
+    setRowNotes({});
+  };
+
+  const handleCancelProduction = () => {
+    setShowProductionSidebar(false);
+    setProductionRecordState(productionRecord);
+    setProductionRows([]);
+    setRowConsumptions({});
+    setRowNotes({});
+  };
+
+  const handleEditProduction = () => {
+    setIsEditingProduction(true);
+    setShowProductionSidebar(true);
+  };
+
+  const handleCloseProductionSidebar = () => {
+    if (productionRows.length > 0 || Object.keys(rowConsumptions).length > 0 || Object.values(rowNotes).some(note => note.trim() !== "")) {
+      setShowUnsavedChangesModal(true);
+    } else {
+      setShowProductionSidebar(false);
+      setIsEditingProduction(false);
+    }
+  };
+
+  const handleConfirmCloseProductionSidebar = () => {
+    setShowUnsavedChangesModal(false);
+    setShowProductionSidebar(false);
+    setIsEditingProduction(false);
+    setProductionRows([]);
+    setRowConsumptions({});
+    setRowNotes({});
+  };
+
+  const handleSaveEdit = () => {
+    toast.success("Changes saved successfully");
+    setShowEditSidebar(false);
+  };
+
+  const handleCancelEdit = () => {
+    setShowEditSidebar(false);
+    setEditFormDataState(editFormData);
+  };
+
+  const confirmRemoveNote = () => {
+    if (pendingRemoveRowId) {
+      setRowNotes({ ...rowNotes, [pendingRemoveRowId]: "" });
+      setShowRemoveNoteModal(false);
+      setPendingRemoveRowId(null);
+    }
+  };
+
+  const confirmRemoveSubcomponentConsumption = () => {
+    if (pendingRemoveRowId) {
+      setRowConsumptions({ ...rowConsumptions, [pendingRemoveRowId]: [] });
+      setShowRemoveSubcomponentModal(false);
+      setPendingRemoveRowId(null);
+    }
+  };
+
+  const confirmRemoveProductionRow = () => {
+    if (pendingRemoveRowId) {
+      handleRemoveProductionRow(pendingRemoveRowId);
+      setShowRemoveProductionModal(false);
+      setPendingRemoveRowId(null);
+    }
+  };
+
+  return (
+    <ApplicationFrame>
+      <ToastContainer />
+      <Header
+        breakpoints={{
+          medium: 1200,
+        }}
+        renderBreadcrumbs={() => (
+          <Breadcrumbs>
+            <Link href="#" onClick={(e) => e.preventDefault()}>
+              Home
+            </Link>
+            <Link href="#" onClick={(e) => e.preventDefault()}>
+              PO line items
+            </Link>
+          </Breadcrumbs>
+        )}
+        title="00010"
+        subtitle="767933 – ALP DS 75MG/ML LNZ 20K"
+        renderActions={() => (
+          <Flex gap="x1_5" alignItems="center">
+            <IconicButton
+              icon="edit"
+              onClick={() => console.log('Comments clicked')}
+              size="small"
+              variant="quiet"
+            >
+              Comments
+            </IconicButton>
+          </Flex>
+        )}
+      />
+      <style>
+        {`
+          /* Remove Storybook's default padding */
+          .sb-show-main {
+            padding: 0 !important;
+          }
+        `}
+      </style>
+      <Page>
+        <Box mb="x3" mt="x4">
+          <DescriptionList layout="stacked" columns={{ extraSmall: 1, small: 2, medium: 3, large: 5 }}>
+            <DescriptionGroup>
+              <DescriptionTerm>
+                <Text color="darkGrey">PO number</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>
+                <Link underline={false}>4500034963</Link>
+              </DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
+                <Text color="darkGrey">Customer's item code and description</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>
+                <Link underline={false}>767933 - ALP DS 75MG/ML LNZ 20K</Link>
+              </DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
+                <Text color="darkGrey">BOM revision and release date</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>-</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
+                <Text color="darkGrey">Supplier's PO line item number</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>-</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
+                <Text color="darkGrey">Priority</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>-</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
+                <Text color="darkGrey">Item order type</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>-</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
+                <Text color="darkGrey">Customer's lot code</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>-</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
+                <Text color="darkGrey">Supplier's lot code</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>LSAB00</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
+                <Text color="darkGrey">Supplier</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>Lonza Sales Ltd</DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
+                <Text color="darkGrey">Ship to</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>0000328653 - EM Sanofi B.V US</DescriptionDetails>
+            </DescriptionGroup>
+          </DescriptionList>
+        </Box>
+        <Tabs selectedIndex={selectedIndex} onTabClick={(e, index) => setSelectedIndex(index)}>
+          <Tab label="Collaboration">
+          </Tab>
+          <Tab label="Production records">
+            <Box mt="x3">
+              <Flex justifyContent="space-between" alignItems="center" mb="x3">
+                <Heading4>Production records</Heading4>
+                <Button onClick={handleAddProductionRow}>Add production record</Button>
+              </Flex>
+
+              {productionRows.length > 0 && <Heading4 mb="x3">Actual production</Heading4>}
+
+              <Box>
+                {/* Custom table structure with nested rows */}
+                {productionRows.length > 0 && (
+                  <Box>
+                    {/* Table Header */}
+                    <Flex borderBottom="1px solid" borderColor="lightGrey" pr="56px" pb="x1" gap="x1">
+                      <Flex minWidth="32px" ml="x1" mr="x0_5">
+                        #
+                      </Flex>
+                      <Box width="100%">Pallet number</Box>
+                      {dualLotCode && <Box width="100%">Customer's lot code</Box>}
+                      <Box width="100%">
+                        {dualLotCode ? "Supplier's lot code" : "Lot code"}
+                        {role === "supplier" && fieldConfigState.lotCodeRequired && (
+                          <Text fontSize="small" inline ml="x0_5" color="darkGrey">
+                            (Required)
+                          </Text>
+                        )}
+                      </Box>
+                      <Box width="100%">
+                        Expiry date
+                        {role === "supplier" && fieldConfigState.expiryDateRequired && (
+                          <Text fontSize="small" inline ml="x0_5" color="darkGrey">
+                            (Required)
+                          </Text>
+                        )}
+                      </Box>
+                      <Box width="100%">
+                        Quantity
+                        <Text fontSize="small" inline ml="x0_5" color="darkGrey">
+                          (Required)
+                        </Text>
+                      </Box>
+                      <Box width="75%">
+                        UOM
+                        <Text fontSize="small" inline ml="x0_5" color="darkGrey">
+                          (Required)
+                        </Text>
+                      </Box>
+                    </Flex>
+
+                    {/* Table Rows with nested content */}
+                    {productionRows.map((row, index) => (
+                      <Box key={row.id}>
+                        {/* Main Row */}
+                        <Flex
+                          borderBottom="1px solid"
+                          borderColor="lightGrey"
+                          py="x1"
+                          pr="56px"
+                          gap="x1"
+                          alignItems="center"
+                        >
+                          <Flex minWidth="32px" ml="x1" mr="x0_5" justifyContent="center">
+                            <Text fontSize="small" fontWeight="bold">
+                              {index + 1}
+                            </Text>
+                          </Flex>
+                          <Box width="100%">
+                            <Input
+                              value={row.palletNumber}
+                              onChange={(e) => {
+                                const newRows = productionRows.map((r) =>
+                                  r.id === row.id ? { ...r, palletNumber: e.target.value } : r
+                                );
+                                setProductionRows(newRows);
+                              }}
+                              placeholder="Enter pallet number"
+                            />
+                          </Box>
+                          {dualLotCode && (
+                            <Box width="100%">
+                              <Input
+                                value={row.customerLotCode}
+                                onChange={(e) => {
+                                  const newRows = productionRows.map((r) =>
+                                    r.id === row.id ? { ...r, customerLotCode: e.target.value } : r
+                                  );
+                                  setProductionRows(newRows);
+                                }}
+                                placeholder="Enter customer lot code"
+                              />
+                            </Box>
+                          )}
+                          <Box width="100%">
+                            <Input
+                              value={row.supplierLotCode}
+                              onChange={(e) => {
+                                const newRows = productionRows.map((r) =>
+                                  r.id === row.id ? { ...r, supplierLotCode: e.target.value } : r
+                                );
+                                setProductionRows(newRows);
+                              }}
+                              placeholder="Enter supplier lot code"
+                            />
+                          </Box>
+                          <Box width="100%">
+                            <Input
+                              value={row.expiryDate}
+                              onChange={(e) => {
+                                const newRows = productionRows.map((r) =>
+                                  r.id === row.id ? { ...r, expiryDate: e.target.value } : r
+                                );
+                                setProductionRows(newRows);
+                              }}
+                              placeholder="YYYY-MM-DD"
+                            />
+                          </Box>
+                          <Box width="100%">
+                            <Input
+                              value={row.quantity}
+                              onChange={(e) => {
+                                const newRows = productionRows.map((r) =>
+                                  r.id === row.id ? { ...r, quantity: e.target.value } : r
+                                );
+                                setProductionRows(newRows);
+                              }}
+                              placeholder="Enter quantity"
+                            />
+                          </Box>
+                          <Box width="75%">
+                            <Select
+                              value={row.uom}
+                              onChange={(value) => {
+                                const newRows = productionRows.map((r) =>
+                                  r.id === row.id ? { ...r, uom: String(value) } : r
+                                );
+                                setProductionRows(newRows);
+                              }}
+                              options={uomOptions}
+                            />
+                          </Box>
+                          <Box position="absolute" right="x2">
+                            <IconicButton
+                              icon="trash"
+                              onClick={() => {
+                                setPendingRemoveRowId(row.id);
+                                setShowRemoveProductionModal(true);
+                              }}
+                              size="small"
+                              variant="quiet"
+                            />
+                          </Box>
+                        </Flex>
+                      </Box>
+                    ))}
+                  </Box>
+                )}
+
+                {productionRows.length === 0 && (
+                  <Box
+                    p="x6"
+                    textAlign="center"
+                    border="1px dashed"
+                    borderColor="lightGrey"
+                    borderRadius="medium"
+                    backgroundColor="lightGrey"
+                  >
+                    <Text color="midGrey">No production records added yet</Text>
+                  </Box>
+                )}
+              </Box>
+            </Box>
+          </Tab>
+          <Tab label="Attachments">
+          </Tab>
+          <Tab label="Milestone performance">
+          </Tab>
+          <Tab label="History log">
+          </Tab>
+        </Tabs>
+      </Page>
+
+      {/* Production Sidebar */}
+        <Sidebar
+        isOpen={showProductionSidebar}
+        onRequestClose={handleCloseProductionSidebar}
+        title={isEditingProduction ? "Edit production record" : "Add production record"}
+        footerContent={
+          <ButtonGroup>
+            <QuietButton onClick={handleCancelProduction}>Cancel</QuietButton>
+            <PrimaryButton onClick={handleSaveProduction}>Save</PrimaryButton>
+          </ButtonGroup>
+        }
+      >
+        <Form>
+          <FormSection>
+            <Field mb="x3">
+              <FieldLabel labelText="Date" mb="x1" />
+              <DatePicker
+                value={productionRecordState.date ? new Date(productionRecordState.date) : null}
+                onChange={(date) => setProductionRecordState({ ...productionRecordState, date: date ? date.toISOString().split('T')[0] : "" })}
+              />
+            </Field>
+
+            <Field mb="x3">
+              <FieldLabel labelText="BOM revision" mb="x1" />
+              <Input
+                value={productionRecordState.bomRevision}
+                onChange={(e) => setProductionRecordState({ ...productionRecordState, bomRevision: e.target.value })}
+                placeholder="Enter BOM revision"
+              />
+            </Field>
+
+            <Field mb="x3">
+              <FieldLabel labelText="UOM" mb="x1" />
+              <Select
+                value={productionRecordState.uom}
+                onChange={(value) => setProductionRecordState({ ...productionRecordState, uom: String(value) })}
+                options={uomOptions}
+              />
+            </Field>
+
+            <Field mb="x3">
+              <FieldLabel labelText="Expected quantity" mb="x1" />
+              <Input
+                value={productionRecordState.expectedQuantity}
+                onChange={(e) => setProductionRecordState({ ...productionRecordState, expectedQuantity: e.target.value })}
+                placeholder="Enter expected quantity"
+              />
+            </Field>
+
+            <Field mb="x3">
+              <FieldLabel labelText="Actual quantity" mb="x1" />
+              <Input
+                value={productionRecordState.actualQuantity}
+                onChange={(e) => setProductionRecordState({ ...productionRecordState, actualQuantity: e.target.value })}
+                placeholder="Enter actual quantity"
+              />
+            </Field>
+
+            <Field mb="x3">
+              <FieldLabel labelText="Lot code" mb="x1" />
+              <Input
+                value={productionRecordState.lotCode}
+                onChange={(e) => setProductionRecordState({ ...productionRecordState, lotCode: e.target.value })}
+                placeholder="Enter lot code"
+              />
+            </Field>
+
+            <Field mb="x3">
+              <FieldLabel labelText="Supplier lot code" mb="x1" />
+              <Input
+                value={productionRecordState.supplierLotCode}
+                onChange={(e) => setProductionRecordState({ ...productionRecordState, supplierLotCode: e.target.value })}
+                placeholder="Enter supplier lot code"
+              />
+            </Field>
+
+            <Field mb="x3">
+              <FieldLabel labelText="Expiry date" mb="x1" />
+              <Input
+                value={productionRecordState.expiryDate}
+                onChange={(e) => setProductionRecordState({ ...productionRecordState, expiryDate: e.target.value })}
+                placeholder="YYYY-MM-DD"
+              />
+            </Field>
+
+            <Field mb="x3">
+              <FieldLabel labelText="Pallet number" mb="x1" />
+              <Input
+                value={productionRecordState.palletNumber}
+                onChange={(e) => setProductionRecordState({ ...productionRecordState, palletNumber: e.target.value })}
+                placeholder="Enter pallet number"
+              />
+            </Field>
+
+            <Field mb="x3">
+              <FieldLabel labelText="Produced quantity" mb="x1" />
+              <Input
+                value={productionRecordState.producedQuantity}
+                onChange={(e) => setProductionRecordState({ ...productionRecordState, producedQuantity: e.target.value })}
+                placeholder="Enter produced quantity"
+              />
+            </Field>
+
+            <Field mb="x3">
+              <FieldLabel labelText="Note" mb="x1" />
+              <Textarea
+                value={productionRecordState.note}
+                onChange={(e) => setProductionRecordState({ ...productionRecordState, note: e.target.value })}
+                placeholder="Enter note"
+                rows={3}
+              />
+            </Field>
+          </FormSection>
+        </Form>
+      </Sidebar>
+
+      {/* Toast Container */}
+      <ToastContainer />
+
+      {/* Modals */}
+      <Modal
+        isOpen={showRemoveNoteModal}
+        onRequestClose={() => {
+          setShowRemoveNoteModal(false);
+          setPendingRemoveRowId(null);
+        }}
+        title="Remove note?"
+        footerContent={
+          <ButtonGroup>
+            <QuietButton onClick={confirmRemoveNote}>Remove</QuietButton>
+            <QuietButton
+              onClick={() => {
+                setShowRemoveNoteModal(false);
+                setPendingRemoveRowId(null);
+              }}
+            >
+              Cancel
+            </QuietButton>
+          </ButtonGroup>
+        }
+      >
+        <Text>The note will be removed if you continue with this action.</Text>
+      </Modal>
+
+      <Modal
+        isOpen={showRemoveSubcomponentModal}
+        onRequestClose={() => {
+          setShowRemoveSubcomponentModal(false);
+          setPendingRemoveRowId(null);
+        }}
+        title="Remove subcomponent consumption?"
+        footerContent={
+          <ButtonGroup>
+            <QuietButton onClick={confirmRemoveSubcomponentConsumption}>Remove</QuietButton>
+            <QuietButton
+              onClick={() => {
+                setShowRemoveSubcomponentModal(false);
+                setPendingRemoveRowId(null);
+              }}
+            >
+              Cancel
+            </QuietButton>
+          </ButtonGroup>
+        }
+      >
+        <Text>The subcomponent consumption will be removed if you continue with this action.</Text>
+      </Modal>
+
+      <Modal
+        isOpen={showRemoveProductionModal}
+        onRequestClose={() => {
+          setShowRemoveProductionModal(false);
+          setPendingRemoveRowId(null);
+        }}
+        title="Remove actual production record?"
+        footerContent={
+          <ButtonGroup>
+            <QuietButton onClick={confirmRemoveProductionRow}>Remove</QuietButton>
+            <QuietButton
+              onClick={() => {
+                setShowRemoveProductionModal(false);
+                setPendingRemoveRowId(null);
+              }}
+            >
+              Cancel
+            </QuietButton>
+          </ButtonGroup>
+        }
+      >
+        <Text>The actual production record will be removed if you continue with this action.</Text>
+      </Modal>
+
       <Modal
         isOpen={showUnsavedChangesModal}
         onRequestClose={() => setShowUnsavedChangesModal(false)}
