@@ -256,7 +256,7 @@ export const POLIDetailsDemo = () => {
           </DescriptionList>
         </Box>
 
-        <Tabs selectedIndex={selectedIndex} onTabChange={setSelectedIndex}>
+        <Tabs selectedIndex={selectedIndex} onTabClick={(e, index) => setSelectedIndex(index)}>
           <Tab label="Attachments">
             <Box mt="x3">
               <Text>Attachments content</Text>
