@@ -16,7 +16,7 @@ import {
   Tab,
   Tabs,
   Header,
-  Table,
+  TruncatedText,
 } from "../../..";
 
 export default {
@@ -255,7 +255,7 @@ export const POLIDetailsDemo = () => {
           </DescriptionList>
         </Box>
 
-        <Tabs selectedIndex={selectedIndex} onTabChange={setSelectedIndex}>
+        <Tabs selectedIndex={selectedIndex} onTabSelect={setSelectedIndex}>
           <Tab label="Attachments">
             <Box mt="x3">
               <Text>Attachments content</Text>
@@ -266,8 +266,8 @@ export const POLIDetailsDemo = () => {
               <Box minWidth="1236px">
                 <Table
                   columns={[
-                    { label: "Date", dataKey: "date", width: "120px", minWidth: "120px" },
-                    { label: "Expected quantity", dataKey: "expectedQuantity", width: "180px", minWidth: "180px" },
+                    { label: "Date", dataKey: "date", width: "120px" },
+                    { label: "Expected quantity", dataKey: "expectedQuantity", width: "180px" },
                     { 
                       label: "Actual quantity", 
                       dataKey: "actualQuantity", 
@@ -337,7 +337,6 @@ export const POLIDetailsDemo = () => {
                       label: "",
                       dataKey: "actions",
                       width: "32px",
-                      pr: "x1",
                       headerFormatter: () => null,
                     },
                   ]}
@@ -486,7 +485,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Item code",
                                             dataKey: "item",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -501,10 +500,10 @@ export const POLIDetailsDemo = () => {
                                             label: "Lot code",
                                             dataKey: "lotCode",
                                             width: "180px",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Flex flexDirection="column">
                                                 <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                  {label}
+                                                  {column.label}
                                                 </Text>
                                                 <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
                                                   (Customer's / Supplier's)
@@ -528,7 +527,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Expiry date",
                                             dataKey: "expiryDate",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -543,7 +542,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Pallet number",
                                             dataKey: "palletNumber",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -558,7 +557,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Quantity",
                                             dataKey: "quantity",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -573,7 +572,7 @@ export const POLIDetailsDemo = () => {
                                             label: "UOM",
                                             dataKey: "uom",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -667,7 +666,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Item code",
                                             dataKey: "item",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -682,10 +681,10 @@ export const POLIDetailsDemo = () => {
                                             label: "Lot code",
                                             dataKey: "lotCode",
                                             width: "180px",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Flex flexDirection="column">
                                                 <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                  {label}
+                                                  {column.label}
                                                 </Text>
                                                 <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
                                                   (Customer's / Supplier's)
@@ -709,7 +708,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Expiry date",
                                             dataKey: "expiryDate",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -724,7 +723,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Pallet number",
                                             dataKey: "palletNumber",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -739,7 +738,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Quantity",
                                             dataKey: "quantity",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -754,7 +753,7 @@ export const POLIDetailsDemo = () => {
                                             label: "UOM",
                                             dataKey: "uom",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -955,7 +954,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Item code",
                                             dataKey: "item",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -970,10 +969,10 @@ export const POLIDetailsDemo = () => {
                                             label: "Lot code",
                                             dataKey: "lotCode",
                                             width: "180px",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Flex flexDirection="column">
                                                 <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                  {label}
+                                                  {column.label}
                                                 </Text>
                                                 <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
                                                   (Customer's / Supplier's)
@@ -997,7 +996,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Expiry date",
                                             dataKey: "expiryDate",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -1012,7 +1011,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Pallet number",
                                             dataKey: "palletNumber",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -1027,7 +1026,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Quantity",
                                             dataKey: "quantity",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -1042,7 +1041,7 @@ export const POLIDetailsDemo = () => {
                                             label: "UOM",
                                             dataKey: "uom",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -1136,7 +1135,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Item code",
                                             dataKey: "item",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -1151,10 +1150,10 @@ export const POLIDetailsDemo = () => {
                                             label: "Lot code",
                                             dataKey: "lotCode",
                                             width: "180px",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Flex flexDirection="column">
                                                 <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                  {label}
+                                                  {column.label}
                                                 </Text>
                                                 <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
                                                   (Customer's / Supplier's)
@@ -1178,7 +1177,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Expiry date",
                                             dataKey: "expiryDate",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -1193,7 +1192,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Pallet number",
                                             dataKey: "palletNumber",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -1208,7 +1207,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Quantity",
                                             dataKey: "quantity",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -1223,7 +1222,7 @@ export const POLIDetailsDemo = () => {
                                             label: "UOM",
                                             dataKey: "uom",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -1424,7 +1423,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Item code",
                                             dataKey: "item",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -1439,10 +1438,10 @@ export const POLIDetailsDemo = () => {
                                             label: "Lot code",
                                             dataKey: "lotCode",
                                             width: "180px",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Flex flexDirection="column">
                                                 <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                  {label}
+                                                  {column.label}
                                                 </Text>
                                                 <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
                                                   (Customer's / Supplier's)
@@ -1466,7 +1465,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Expiry date",
                                             dataKey: "expiryDate",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -1481,7 +1480,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Pallet number",
                                             dataKey: "palletNumber",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -1496,7 +1495,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Quantity",
                                             dataKey: "quantity",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -1511,7 +1510,7 @@ export const POLIDetailsDemo = () => {
                                             label: "UOM",
                                             dataKey: "uom",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -1605,7 +1604,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Item code",
                                             dataKey: "item",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -1620,10 +1619,10 @@ export const POLIDetailsDemo = () => {
                                             label: "Lot code",
                                             dataKey: "lotCode",
                                             width: "180px",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Flex flexDirection="column">
                                                 <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                  {label}
+                                                  {column.label}
                                                 </Text>
                                                 <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
                                                   (Customer's / Supplier's)
@@ -1647,7 +1646,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Expiry date",
                                             dataKey: "expiryDate",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -1662,7 +1661,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Pallet number",
                                             dataKey: "palletNumber",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -1677,7 +1676,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Quantity",
                                             dataKey: "quantity",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -1692,7 +1691,7 @@ export const POLIDetailsDemo = () => {
                                             label: "UOM",
                                             dataKey: "uom",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -1893,7 +1892,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Item code",
                                             dataKey: "item",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -1908,10 +1907,10 @@ export const POLIDetailsDemo = () => {
                                             label: "Lot code",
                                             dataKey: "lotCode",
                                             width: "180px",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Flex flexDirection="column">
                                                 <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                  {label}
+                                                  {column.label}
                                                 </Text>
                                                 <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
                                                   (Customer's / Supplier's)
@@ -1935,7 +1934,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Expiry date",
                                             dataKey: "expiryDate",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -1950,7 +1949,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Pallet number",
                                             dataKey: "palletNumber",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -1965,7 +1964,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Quantity",
                                             dataKey: "quantity",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -1980,7 +1979,7 @@ export const POLIDetailsDemo = () => {
                                             label: "UOM",
                                             dataKey: "uom",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -2074,7 +2073,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Item code",
                                             dataKey: "item",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -2089,10 +2088,10 @@ export const POLIDetailsDemo = () => {
                                             label: "Lot code",
                                             dataKey: "lotCode",
                                             width: "180px",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Flex flexDirection="column">
                                                 <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                  {label}
+                                                  {column.label}
                                                 </Text>
                                                 <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
                                                   (Customer's / Supplier's)
@@ -2116,7 +2115,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Expiry date",
                                             dataKey: "expiryDate",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -2131,7 +2130,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Pallet number",
                                             dataKey: "palletNumber",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -2146,7 +2145,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Quantity",
                                             dataKey: "quantity",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -2161,7 +2160,7 @@ export const POLIDetailsDemo = () => {
                                             label: "UOM",
                                             dataKey: "uom",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -2362,7 +2361,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Item code",
                                             dataKey: "item",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -2377,10 +2376,10 @@ export const POLIDetailsDemo = () => {
                                             label: "Lot code",
                                             dataKey: "lotCode",
                                             width: "180px",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Flex flexDirection="column">
                                                 <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                  {label}
+                                                  {column.label}
                                                 </Text>
                                                 <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
                                                   (Customer's / Supplier's)
@@ -2404,7 +2403,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Expiry date",
                                             dataKey: "expiryDate",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -2419,7 +2418,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Pallet number",
                                             dataKey: "palletNumber",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -2434,7 +2433,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Quantity",
                                             dataKey: "quantity",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -2449,7 +2448,7 @@ export const POLIDetailsDemo = () => {
                                             label: "UOM",
                                             dataKey: "uom",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -2543,7 +2542,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Item code",
                                             dataKey: "item",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -2558,10 +2557,10 @@ export const POLIDetailsDemo = () => {
                                             label: "Lot code",
                                             dataKey: "lotCode",
                                             width: "180px",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Flex flexDirection="column">
                                                 <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                  {label}
+                                                  {column.label}
                                                 </Text>
                                                 <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
                                                   (Customer's / Supplier's)
@@ -2585,7 +2584,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Expiry date",
                                             dataKey: "expiryDate",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -2600,7 +2599,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Pallet number",
                                             dataKey: "palletNumber",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -2615,7 +2614,7 @@ export const POLIDetailsDemo = () => {
                                             label: "Quantity",
                                             dataKey: "quantity",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
@@ -2630,7 +2629,7 @@ export const POLIDetailsDemo = () => {
                                             label: "UOM",
                                             dataKey: "uom",
                                             width: "auto",
-                                            headerFormatter: ({ label }: { label: string }) => (
+                                            headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
                                                 {label}
                                               </Text>
