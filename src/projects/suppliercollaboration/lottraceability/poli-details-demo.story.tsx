@@ -17,6 +17,7 @@ import {
   Tabs,
   Header,
   TruncatedText,
+  Table,
 } from "../../..";
 
 export default {
@@ -255,7 +256,7 @@ export const POLIDetailsDemo = () => {
           </DescriptionList>
         </Box>
 
-        <Tabs selectedIndex={selectedIndex} onTabSelect={setSelectedIndex}>
+        <Tabs selectedIndex={selectedIndex} onTabChange={setSelectedIndex}>
           <Tab label="Attachments">
             <Box mt="x3">
               <Text>Attachments content</Text>
@@ -487,7 +488,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -529,7 +530,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -544,7 +545,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -559,7 +560,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -574,7 +575,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -668,7 +669,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -710,7 +711,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -725,7 +726,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -740,7 +741,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -755,7 +756,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -956,7 +957,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -998,7 +999,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -1013,7 +1014,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -1028,7 +1029,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -1043,7 +1044,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -1137,7 +1138,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -1179,7 +1180,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -1194,7 +1195,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -1209,7 +1210,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -1224,7 +1225,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -1425,7 +1426,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -1467,7 +1468,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -1482,7 +1483,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -1497,7 +1498,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -1512,7 +1513,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -1606,7 +1607,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -1648,7 +1649,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -1663,7 +1664,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -1678,7 +1679,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -1693,7 +1694,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -1894,7 +1895,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -1936,7 +1937,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -1951,7 +1952,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -1966,7 +1967,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -1981,7 +1982,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -2075,7 +2076,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -2117,7 +2118,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -2132,7 +2133,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -2147,7 +2148,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -2162,7 +2163,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -2363,7 +2364,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -2405,7 +2406,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -2420,7 +2421,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -2435,7 +2436,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -2450,7 +2451,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -2544,7 +2545,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -2586,7 +2587,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -2601,7 +2602,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -2616,7 +2617,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -2631,7 +2632,7 @@ export const POLIDetailsDemo = () => {
                                             width: "auto",
                                             headerFormatter: (column: any) => (
                                               <Text fontSize="small" lineHeight="smallTextCompressed">
-                                                {label}
+                                                {column.label}
                                               </Text>
                                             ),
                                             cellFormatter: ({ cellData }: { cellData: string }) => (
