@@ -195,10 +195,12 @@ export const Loading = () => {
   // ActualProductionRecordNumberPill component (using the reusable component)
   const ActualProductionRecordNumberPill = ({
     actualProductionRecordNumber,
+    style,
   }: {
     actualProductionRecordNumber: string;
+    style?: React.CSSProperties;
   }) => (
-    <Flex py="x0_75" mr="x1" justifyContent="flex-start" ml="-96px">
+    <Flex py="x0_75" mr="x1" justifyContent="flex-start" ml="-96px" style={style}>
       <RecordNumberPill
         number={actualProductionRecordNumber}
         placement="left"
@@ -301,7 +303,10 @@ export const Loading = () => {
       dataKey: "actualProductionRecordNumber",
       width: "0px",
       cellRenderer: ({ row }: { row: any }) => (
-        <ActualProductionRecordNumberPill actualProductionRecordNumber={row.actualProductionRecordNumber} />
+        <ActualProductionRecordNumberPill
+          actualProductionRecordNumber={row.actualProductionRecordNumber}
+          style={row.pillOpacity ? { opacity: row.pillOpacity } : undefined}
+        />
       ),
     },
     {
@@ -1018,19 +1023,19 @@ export const Loading = () => {
   // Create skeleton data for loading state
   const skeletonProductionRecordsData = Array.from({ length: 5 }, (_, index) => ({
     id: `skeleton-${index + 1}`,
-    date: <div style={{ opacity: index >= 3 ? (index === 3 ? 0.67 : 0.33) : 1 }}><Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" /></div>,
-    expectedQuantity: <div style={{ opacity: index >= 3 ? (index === 3 ? 0.67 : 0.33) : 1 }}><Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" /></div>,
-    actualQuantity: <div style={{ opacity: index >= 3 ? (index === 3 ? 0.67 : 0.33) : 1 }}><Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" /></div>,
+    date: <div style={{ opacity: index === 0 ? 1.0 : index === 1 ? 0.8 : index === 2 ? 0.6 : index === 3 ? 0.4 : 0.2 }}><Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" /></div>,
+    expectedQuantity: <div style={{ opacity: index === 0 ? 1.0 : index === 1 ? 0.8 : index === 2 ? 0.6 : index === 3 ? 0.4 : 0.2 }}><Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" /></div>,
+    actualQuantity: <div style={{ opacity: index === 0 ? 1.0 : index === 1 ? 0.8 : index === 2 ? 0.6 : index === 3 ? 0.4 : 0.2 }}><Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" /></div>,
     palletNumber: "",
     lotCode: (
-      <Flex flexDirection="column" gap="x0_25" style={{ opacity: index >= 3 ? (index === 3 ? 0.67 : 0.33) : 1 }}>
+      <Flex flexDirection="column" gap="x0_25" style={{ opacity: index === 0 ? 1.0 : index === 1 ? 0.8 : index === 2 ? 0.6 : index === 3 ? 0.4 : 0.2 }}>
         <Skeleton width={getRandomWidth(60, 99)} height="12px" borderRadius="medium" />
         <Skeleton width={getRandomWidth(60, 99)} height="12px" borderRadius="medium" />
       </Flex>
     ),
     expiryDate: "",
     note: "",
-    actions: <div style={{ opacity: index >= 3 ? (index === 3 ? 0.67 : 0.33) : 1 }}><Skeleton width={getRandomWidth(60, 69)} height="32px" borderRadius="medium" /></div>,
+    actions: <div style={{ opacity: index === 0 ? 1.0 : index === 1 ? 0.8 : index === 2 ? 0.6 : index === 3 ? 0.4 : 0.2 }}><Skeleton width={getRandomWidth(60, 69)} height="32px" borderRadius="medium" /></div>,
     expandedContent: () => (
       <Box style={{ paddingLeft: "-56px" }}>
         <Box style={{ paddingLeft: "298px" }}>
@@ -1039,17 +1044,18 @@ export const Loading = () => {
             rows={Array.from({ length: 5 }, (_, nestedIndex) => ({
               id: `nested-skeleton-${index}-${nestedIndex}`,
               actualProductionRecordNumber: `00${nestedIndex + 1}`,
-              actualQuantity: <div style={{ opacity: nestedIndex >= 3 ? (nestedIndex === 3 ? 0.67 : 0.33) : 1 }}><Skeleton width={getRandomWidth(60, 69)} height="24px" borderRadius="medium" /></div>,
-              palletNumber: <div style={{ opacity: nestedIndex >= 3 ? (nestedIndex === 3 ? 0.67 : 0.33) : 1 }}><Skeleton width={getRandomWidth(60, 69)} height="24px" borderRadius="medium" /></div>,
+              pillOpacity: nestedIndex === 0 ? 1.0 : nestedIndex === 1 ? 0.8 : nestedIndex === 2 ? 0.6 : nestedIndex === 3 ? 0.4 : 0.2,
+              actualQuantity: <div style={{ opacity: nestedIndex === 0 ? 1.0 : nestedIndex === 1 ? 0.8 : nestedIndex === 2 ? 0.6 : nestedIndex === 3 ? 0.4 : 0.2 }}><Skeleton width={getRandomWidth(60, 69)} height="24px" borderRadius="medium" /></div>,
+              palletNumber: <div style={{ opacity: nestedIndex === 0 ? 1.0 : nestedIndex === 1 ? 0.8 : nestedIndex === 2 ? 0.6 : nestedIndex === 3 ? 0.4 : 0.2 }}><Skeleton width={getRandomWidth(60, 69)} height="24px" borderRadius="medium" /></div>,
               lotCode: (
-                <Flex flexDirection="column" gap="x0_25" style={{ opacity: nestedIndex >= 3 ? (nestedIndex === 3 ? 0.67 : 0.33) : 1 }}>
+                <Flex flexDirection="column" gap="x0_25" style={{ opacity: nestedIndex === 0 ? 1.0 : nestedIndex === 1 ? 0.8 : nestedIndex === 2 ? 0.6 : nestedIndex === 3 ? 0.4 : 0.2 }}>
                   <Skeleton width={getRandomWidth(60, 69)} height="12px" borderRadius="medium" />
                   <Skeleton width={getRandomWidth(60, 69)} height="12px" borderRadius="medium" />
                 </Flex>
               ),
-              expiryDate: <div style={{ opacity: nestedIndex >= 3 ? (nestedIndex === 3 ? 0.67 : 0.33) : 1 }}><Skeleton width={getRandomWidth(60, 69)} height="24px" borderRadius="medium" /></div>,
-              note: <div style={{ opacity: nestedIndex >= 3 ? (nestedIndex === 3 ? 0.67 : 0.33) : 1 }}><Skeleton width={getRandomWidth(60, 69)} height="24px" borderRadius="medium" /></div>,
-              spacer: <div style={{ opacity: nestedIndex >= 3 ? (nestedIndex === 3 ? 0.67 : 0.33) : 1 }}><Skeleton width={getRandomWidth(60, 69)} height="32px" borderRadius="medium" /></div>,
+              expiryDate: <div style={{ opacity: nestedIndex === 0 ? 1.0 : nestedIndex === 1 ? 0.8 : nestedIndex === 2 ? 0.6 : nestedIndex === 3 ? 0.4 : 0.2 }}><Skeleton width={getRandomWidth(60, 69)} height="24px" borderRadius="medium" /></div>,
+              note: <div style={{ opacity: nestedIndex === 0 ? 1.0 : nestedIndex === 1 ? 0.8 : nestedIndex === 2 ? 0.6 : nestedIndex === 3 ? 0.4 : 0.2 }}><Skeleton width={getRandomWidth(60, 69)} height="24px" borderRadius="medium" /></div>,
+              spacer: <div style={{ opacity: nestedIndex === 0 ? 1.0 : nestedIndex === 1 ? 0.8 : nestedIndex === 2 ? 0.6 : nestedIndex === 3 ? 0.4 : 0.2 }}><Skeleton width={getRandomWidth(60, 69)} height="32px" borderRadius="medium" /></div>,
               expandedContent: () => (
                 <Box
                   border="1px solid"
@@ -1221,18 +1227,18 @@ export const Loading = () => {
                     ]}
                     rows={Array.from({ length: 5 }, (_, subIndex) => ({
                       id: `sub-skeleton-${index}-${nestedIndex}-${subIndex}`,
-                      number: <RecordNumberPill number={`00${subIndex + 1}`} />,
-                      item: <div style={{ opacity: subIndex >= 3 ? (subIndex === 3 ? 0.67 : 0.33) : 1 }}><Skeleton width={getRandomWidth(60, 100)} height="16px" /></div>,
+                      number: <div style={{ opacity: subIndex === 0 ? 1.0 : subIndex === 1 ? 0.8 : subIndex === 2 ? 0.6 : subIndex === 3 ? 0.4 : 0.2 }}><RecordNumberPill number={`00${subIndex + 1}`} /></div>,
+                      item: <div style={{ opacity: subIndex === 0 ? 1.0 : subIndex === 1 ? 0.8 : subIndex === 2 ? 0.6 : subIndex === 3 ? 0.4 : 0.2 }}><Skeleton width={getRandomWidth(60, 100)} height="16px" /></div>,
                       lotCode: (
-                        <Flex flexDirection="column" gap="x0_25" style={{ opacity: subIndex >= 3 ? (subIndex === 3 ? 0.67 : 0.33) : 1 }}>
+                        <Flex flexDirection="column" gap="x0_25" style={{ opacity: subIndex === 0 ? 1.0 : subIndex === 1 ? 0.8 : subIndex === 2 ? 0.6 : subIndex === 3 ? 0.4 : 0.2 }}>
                           <Skeleton width={getRandomWidth(60, 100)} height="12px" />
                           <Skeleton width={getRandomWidth(60, 100)} height="12px" />
                         </Flex>
                       ),
-                      expiryDate: <div style={{ opacity: subIndex >= 3 ? (subIndex === 3 ? 0.67 : 0.33) : 1 }}><Skeleton width={getRandomWidth(60, 100)} height="16px" /></div>,
-                      palletNumber: <div style={{ opacity: subIndex >= 3 ? (subIndex === 3 ? 0.67 : 0.33) : 1 }}><Skeleton width={getRandomWidth(50, 90)} height="16px" /></div>,
-                      quantity: <div style={{ opacity: subIndex >= 3 ? (subIndex === 3 ? 0.67 : 0.33) : 1 }}><Skeleton width={getRandomWidth(40, 80)} height="16px" /></div>,
-                      uom: <div style={{ opacity: subIndex >= 3 ? (subIndex === 3 ? 0.67 : 0.33) : 1 }}><Skeleton width={getRandomWidth(30, 60)} height="16px" /></div>,
+                      expiryDate: <div style={{ opacity: subIndex === 0 ? 1.0 : subIndex === 1 ? 0.8 : subIndex === 2 ? 0.6 : subIndex === 3 ? 0.4 : 0.2 }}><Skeleton width={getRandomWidth(60, 100)} height="16px" /></div>,
+                      palletNumber: <div style={{ opacity: subIndex === 0 ? 1.0 : subIndex === 1 ? 0.8 : subIndex === 2 ? 0.6 : subIndex === 3 ? 0.4 : 0.2 }}><Skeleton width={getRandomWidth(50, 90)} height="16px" /></div>,
+                      quantity: <div style={{ opacity: subIndex === 0 ? 1.0 : subIndex === 1 ? 0.8 : subIndex === 2 ? 0.6 : subIndex === 3 ? 0.4 : 0.2 }}><Skeleton width={getRandomWidth(40, 80)} height="16px" /></div>,
+                      uom: <div style={{ opacity: subIndex === 0 ? 1.0 : subIndex === 1 ? 0.8 : subIndex === 2 ? 0.6 : subIndex === 3 ? 0.4 : 0.2 }}><Skeleton width={getRandomWidth(30, 60)} height="16px" /></div>,
                     }))}
                     compact={true}
                     rowBorder={true}
@@ -2315,7 +2321,8 @@ export const Loading = () => {
           .sb-show-main {
             padding: 0 !important;
           }
-            .production-record-table tbody tr {
+          
+          .production-record-table tbody tr {
             border-bottom: 1px solid #e4e7eb !important;
           }
           
@@ -2348,26 +2355,46 @@ export const Loading = () => {
             border-bottom: none !important;
           }
           
-          /* Reduce border opacity for main production records rows 3, 4, and 5 */
+          /* Reduce border opacity for main production records rows 1-5 */
+          .production-record-table tbody tr:nth-child(1) {
+            border-bottom: 1px solid #e4e7eb !important;
+          }
+          .production-record-table tbody tr:nth-child(2) {
+            border-bottom: 1px solid #e4e7eb !important;
+          }
           .production-record-table tbody tr:nth-child(3) {
-            border-bottom: 1px solid rgba(228, 231, 235, 0.67) !important;
+            border-bottom: 1px solid #e4e7eb !important;
           }
           .production-record-table tbody tr:nth-child(4) {
-            border-bottom: 1px solid rgba(228, 231, 235, 0.33) !important;
-          }
-          .production-record-table tbody tr:nth-child(5) {
-            border-bottom: 1px solid rgba(228, 231, 235, 0) !important;
+            border-bottom: 1px solid #e4e7eb !important;
           }
           
-          /* Reduce border opacity for actual production records rows 3, 4, and 5 */
-          .actual-production-record-table tbody tr:nth-child(3) {
-            border-bottom: 1px solid rgba(228, 231, 235, 0.67) !important;
+          /* Reduce border opacity for actual production records rows 1-5 */
+          .actual-production-record-table > tbody tr:nth-child(1) {
+            border-bottom: 1px solid #e4e7eb !important;
           }
-          .actual-production-record-table tbody tr:nth-child(4) {
-            border-bottom: 1px solid rgba(228, 231, 235, 0.33) !important;
+          .actual-production-record-table > tbody tr:nth-child(2) {
+            border-bottom: 1px solid #e4e7eb !important;
           }
-          .actual-production-record-table tbody tr:nth-child(5) {
-            border-bottom: 1px solid rgba(228, 231, 235, 0) !important;
+          .actual-production-record-table > tbody tr:nth-child(3) {
+            border-bottom: 1px solid #e4e7eb !important;
+          }
+          .actual-production-record-table > tbody tr:nth-child(4) {
+            border-bottom: 1px solid #e4e7eb !important;
+          }
+          
+          /* Reduce border opacity for actual production records td elements rows 1-5 */
+          .actual-production-record-table > tbody tr:nth-child(1) td {
+            border-bottom: 1px solid #e4e7eb !important;
+          }
+          .actual-production-record-table > tbody tr:nth-child(2) td {
+            border-bottom: 1px solid #e4e7eb !important;
+          }
+          .actual-production-record-table > tbody tr:nth-child(3) td {
+            border-bottom: 1px solid #e4e7eb !important;
+          }
+          .actual-production-record-table > tbody tr:nth-child(4) td {
+            border-bottom: 1px solid #e4e7eb !important;
           }
           
           /* Subcomponent consumption table styling */
@@ -2381,16 +2408,22 @@ export const Loading = () => {
             padding-top: 6px !important;
             padding-bottom: 6px !important;
           }
+          .subcomponent-consumption-record-table tbody tr:last-child {
+            border-bottom: none !important;
+          }
           
-          /* Reduce border opacity for subcomponent consumption rows 3, 4, and 5 */
+          /* Reduce border opacity for subcomponent consumption rows 1-5 */
+          .subcomponent-consumption-record-table tbody tr:nth-child(1) {
+            border-bottom: 1px solid #e4e7eb !important;
+          }
+          .subcomponent-consumption-record-table tbody tr:nth-child(2) {
+            border-bottom: 1px solid #e4e7eb !important;
+          }
           .subcomponent-consumption-record-table tbody tr:nth-child(3) {
-            border-bottom: 1px solid rgba(228, 231, 235, 0.67) !important;
+            border-bottom: 1px solid #e4e7eb !important;
           }
           .subcomponent-consumption-record-table tbody tr:nth-child(4) {
-            border-bottom: 1px solid rgba(228, 231, 235, 0.33) !important;
-          }
-          .subcomponent-consumption-record-table tbody tr:nth-child(5) {
-            border-bottom: 1px solid rgba(228, 231, 235, 0) !important;
+            border-bottom: 1px solid #e4e7eb !important;
           }
         `}
       </style>
