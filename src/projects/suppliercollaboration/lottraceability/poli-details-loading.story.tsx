@@ -195,14 +195,13 @@ export const Loading = () => {
   // ActualProductionRecordNumberPill component (using the reusable component)
   const ActualProductionRecordNumberPill = ({
     actualProductionRecordNumber,
-    style,
   }: {
     actualProductionRecordNumber: string;
-    style?: React.CSSProperties;
   }) => (
-    <Flex py="x0_75" mr="x1" justifyContent="flex-start" ml="-96px" style={style}>
+    <Flex py="x0_75" mr="x1" justifyContent="flex-start" ml="-104px" px="x1">
       <RecordNumberPill
         number={actualProductionRecordNumber}
+        tooltip={`Actual production record #${actualProductionRecordNumber}`}
         placement="left"
       />
     </Flex>
@@ -305,7 +304,6 @@ export const Loading = () => {
       cellRenderer: ({ row }: { row: any }) => (
         <ActualProductionRecordNumberPill
           actualProductionRecordNumber={row.actualProductionRecordNumber}
-          style={row.pillOpacity ? { opacity: row.pillOpacity } : undefined}
         />
       ),
     },
@@ -493,6 +491,83 @@ export const Loading = () => {
       width: "48px",
       headerFormatter: () => null,
       cellRenderer: () => null,
+    },
+  ];
+
+  // Subcomponent consumption columns
+  const subcomponentConsumptionColumns = [
+    { 
+      dataKey: "number", 
+      label: "#", 
+      width: "40px",
+      headerFormatter: () => (
+        <Box py="x0_25">
+          <Text fontSize="small" lineHeight="smallTextCompressed">#</Text>
+        </Box>
+      ),
+    },
+    { 
+      dataKey: "item", 
+      label: "Item code", 
+      width: "140px",
+      headerFormatter: () => (
+        <Box py="x0_25">
+          <Text fontSize="small" lineHeight="smallTextCompressed">Item code</Text>
+        </Box>
+      ),
+    },
+    { 
+      dataKey: "lotCode", 
+      label: "Lot code", 
+      width: "140px",
+      headerFormatter: () => (
+        <Box py="x0_25">
+          <Text fontSize="small" lineHeight="smallTextCompressed">Lot code</Text>
+          <Text fontSize="smaller" color="darkGrey" lineHeight="smallTextCompressed">
+            (Customer's / Supplier's)
+          </Text>
+        </Box>
+      ),
+    },
+    { 
+      dataKey: "expiryDate", 
+      label: "Expiry date", 
+      width: "120px",
+      headerFormatter: () => (
+        <Box py="x0_25">
+          <Text fontSize="small" lineHeight="smallTextCompressed">Expiry date</Text>
+        </Box>
+      ),
+    },
+    { 
+      dataKey: "palletNumber", 
+      label: "Pallet number", 
+      width: "120px",
+      headerFormatter: () => (
+        <Box py="x0_25">
+          <Text fontSize="small" lineHeight="smallTextCompressed">Pallet number</Text>
+        </Box>
+      ),
+    },
+    { 
+      dataKey: "quantity", 
+      label: "Quantity", 
+      width: "100px",
+      headerFormatter: () => (
+        <Box py="x0_25">
+          <Text fontSize="small" lineHeight="smallTextCompressed">Quantity</Text>
+        </Box>
+      ),
+    },
+    { 
+      dataKey: "uom", 
+      label: "UOM", 
+      width: "80px",
+      headerFormatter: () => (
+        <Box py="x0_25">
+          <Text fontSize="small" lineHeight="smallTextCompressed">UOM</Text>
+        </Box>
+      ),
     },
   ];
 
@@ -1021,9 +1096,46 @@ export const Loading = () => {
 
   // Production records data now imported from productionRecordsData.tsx
   // Create skeleton data for loading state
-  const skeletonProductionRecordsData = Array.from({ length: 5 }, (_, index) => ({
+  // Skeleton data for first table (with circular mask in first column)
+  const skeletonProductionRecordsDataWithCircle = [
+    // Special first row with circular mask
+    {
+      id: "special-row",
+      opacity: 1.0,
+      circularMask: (
+        <Box p="x1_5">
+          <Skeleton width="32px" height="32px" borderRadius="50%" />
+        </Box>
+      ),
+      number: <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" />,
+      date: <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" />,
+      expectedQuantity: <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" />,
+      actualQuantity: <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" />,
+      lotCode: (
+        <Flex flexDirection="column" gap="x0_25">
+          <Skeleton width={getRandomWidth(60, 99)} height="12px" borderRadius="medium" />
+          <Skeleton width={getRandomWidth(60, 99)} height="12px" borderRadius="medium" />
+        </Flex>
+      ),
+      expiryDate: "",
+      note: "",
+      actions: (
+        <Flex justifyContent="flex-end" mr="x1">
+          <IconicButton icon="more" disabled={true} />
+        </Flex>
+      ),
+      expandedContent: () => null, // No expansion for this special row
+    },
+    // Regular rows
+    ...Array.from({ length: 5 }, (_, index) => ({
     id: `skeleton-${index + 1}`,
-    date: <div style={{ opacity: index === 0 ? 1.0 : index === 1 ? 0.8 : index === 2 ? 0.6 : index === 3 ? 0.4 : 0.2 }}><Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" /></div>,
+    opacity: index === 0 ? 1.0 : index === 1 ? 0.8 : index === 2 ? 0.6 : index === 3 ? 0.4 : 0.2,
+    circularMask: (
+      <Box p="x1_5">
+        <Skeleton width="32px" height="32px" borderRadius="50%" />
+      </Box>
+    ),
+    date: <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" />,
     expectedQuantity: <div style={{ opacity: index === 0 ? 1.0 : index === 1 ? 0.8 : index === 2 ? 0.6 : index === 3 ? 0.4 : 0.2 }}><Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" /></div>,
     actualQuantity: <div style={{ opacity: index === 0 ? 1.0 : index === 1 ? 0.8 : index === 2 ? 0.6 : index === 3 ? 0.4 : 0.2 }}><Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" /></div>,
     palletNumber: "",
@@ -1035,7 +1147,11 @@ export const Loading = () => {
     ),
     expiryDate: "",
     note: "",
-    actions: <div style={{ opacity: index === 0 ? 1.0 : index === 1 ? 0.8 : index === 2 ? 0.6 : index === 3 ? 0.4 : 0.2 }}><Skeleton width={getRandomWidth(60, 69)} height="32px" borderRadius="medium" /></div>,
+        actions: (
+          <Flex justifyContent="flex-end" mr="x1">
+            <IconicButton icon="more" disabled={true} />
+          </Flex>
+        ),
     expandedContent: () => (
       <Box style={{ paddingLeft: "-56px" }}>
         <Box style={{ paddingLeft: "298px" }}>
@@ -1117,9 +1233,9 @@ export const Loading = () => {
                         label: "Item code",
                         dataKey: "item",
                         width: "auto",
-                        headerFormatter: ({ label }: { label: string }) => (
+                        headerFormatter: (column: any) => (
                           <Text fontSize="small" lineHeight="smallTextCompressed">
-                            {label}
+                            {column.label}
                           </Text>
                         ),
                         cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -1132,10 +1248,10 @@ export const Loading = () => {
                         label: "Lot code",
                         dataKey: "lotCode",
                         width: "180px",
-                        headerFormatter: ({ label }: { label: string }) => (
+                        headerFormatter: (column: any) => (
                           <Flex flexDirection="column">
                             <Text fontSize="small" lineHeight="smallTextCompressed">
-                              {label}
+                              {column.label}
                             </Text>
                             <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
                               (Customer's / Supplier's)
@@ -1168,9 +1284,9 @@ export const Loading = () => {
                         label: "Expiry date",
                         dataKey: "expiryDate",
                         width: "auto",
-                        headerFormatter: ({ label }: { label: string }) => (
+                        headerFormatter: (column: any) => (
                           <Text fontSize="small" lineHeight="smallTextCompressed">
-                            {label}
+                            {column.label}
                           </Text>
                         ),
                         cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -1183,9 +1299,9 @@ export const Loading = () => {
                         label: "Pallet number",
                         dataKey: "palletNumber",
                         width: "auto",
-                        headerFormatter: ({ label }: { label: string }) => (
+                        headerFormatter: (column: any) => (
                           <Text fontSize="small" lineHeight="smallTextCompressed">
-                            {label}
+                            {column.label}
                           </Text>
                         ),
                         cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -1198,9 +1314,9 @@ export const Loading = () => {
                         label: "Quantity",
                         dataKey: "quantity",
                         width: "auto",
-                        headerFormatter: ({ label }: { label: string }) => (
+                        headerFormatter: (column: any) => (
                           <Text fontSize="small" lineHeight="smallTextCompressed">
-                            {label}
+                            {column.label}
                           </Text>
                         ),
                         cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -1213,9 +1329,9 @@ export const Loading = () => {
                         label: "UOM",
                         dataKey: "uom",
                         width: "auto",
-                        headerFormatter: ({ label }: { label: string }) => (
+                        headerFormatter: (column: any) => (
                           <Text fontSize="small" lineHeight="smallTextCompressed">
-                            {label}
+                            {column.label}
                           </Text>
                         ),
                         cellFormatter: ({ cellData }: { cellData: string }) => (
@@ -1254,6 +1370,108 @@ export const Loading = () => {
             expandedRows={[]}
             onRowExpansionChange={() => {}}
             keyField="id"
+          />
+        </Box>
+      </Box>
+    ),
+  }))
+  ];
+
+  // Original skeleton data for second table
+  const skeletonProductionRecordsData = Array.from({ length: 5 }, (_, index) => ({
+    id: `skeleton-${index + 1}`,
+    date: <div style={{ opacity: index === 0 ? 1.0 : index === 1 ? 0.8 : index === 2 ? 0.6 : index === 3 ? 0.4 : 0.2 }}><Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" /></div>,
+    expectedQuantity: <div style={{ opacity: index === 0 ? 1.0 : index === 1 ? 0.8 : index === 2 ? 0.6 : index === 3 ? 0.4 : 0.2 }}><Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" /></div>,
+    actualQuantity: <div style={{ opacity: index === 0 ? 1.0 : index === 1 ? 0.8 : index === 2 ? 0.6 : index === 3 ? 0.4 : 0.2 }}><Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" /></div>,
+    palletNumber: "",
+    lotCode: (
+      <Flex flexDirection="column" gap="x0_25" style={{ opacity: index === 0 ? 1.0 : index === 1 ? 0.8 : index === 2 ? 0.6 : index === 3 ? 0.4 : 0.2 }}>
+        <Skeleton width={getRandomWidth(60, 99)} height="12px" borderRadius="medium" />
+        <Skeleton width={getRandomWidth(60, 99)} height="12px" borderRadius="medium" />
+      </Flex>
+    ),
+    expiryDate: "",
+    note: "",
+    actions: (
+      <Flex justifyContent="flex-end" mr="x1">
+        <IconicButton icon="more" disabled={true} />
+      </Flex>
+    ),
+    expandedContent: () => (
+      <Box style={{ paddingLeft: "-56px" }}>
+        <Box style={{ paddingLeft: "298px" }}>
+          <Table
+            columns={actualProductionReportColumns}
+            rows={Array.from({ length: 5 }, (_, nestedIndex) => ({
+              id: `nested-${index}-${nestedIndex}`,
+              actualProductionRecordNumber: `00${nestedIndex + 1}`,
+              actualQuantity: <div style={{ opacity: nestedIndex === 0 ? 1.0 : nestedIndex === 1 ? 0.8 : nestedIndex === 2 ? 0.6 : nestedIndex === 3 ? 0.4 : 0.2 }}><Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" /></div>,
+              palletNumber: <div style={{ opacity: nestedIndex === 0 ? 1.0 : nestedIndex === 1 ? 0.8 : nestedIndex === 2 ? 0.6 : nestedIndex === 3 ? 0.4 : 0.2 }}><Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" /></div>,
+              lotCode: (<Flex flexDirection="column" gap="x0_25" style={{ opacity: nestedIndex === 0 ? 1.0 : nestedIndex === 1 ? 0.8 : nestedIndex === 2 ? 0.6 : nestedIndex === 3 ? 0.4 : 0.2 }}><Skeleton width={getRandomWidth(60, 99)} height="12px" borderRadius="medium" /><Skeleton width={getRandomWidth(60, 99)} height="12px" borderRadius="medium" /></Flex>),
+              expiryDate: <div style={{ opacity: nestedIndex === 0 ? 1.0 : nestedIndex === 1 ? 0.8 : nestedIndex === 2 ? 0.6 : nestedIndex === 3 ? 0.4 : 0.2 }}><Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" /></div>,
+              note: <div style={{ opacity: nestedIndex === 0 ? 1.0 : nestedIndex === 1 ? 0.8 : nestedIndex === 2 ? 0.6 : nestedIndex === 3 ? 0.4 : 0.2 }}><Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" /></div>,
+              spacer: <div style={{ opacity: nestedIndex === 0 ? 1.0 : nestedIndex === 1 ? 0.8 : nestedIndex === 2 ? 0.6 : nestedIndex === 3 ? 0.4 : 0.2 }}><Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" /></div>,
+              expandedContent: () => (
+                <Box mx="28px" p="x0_5" border="1px solid" borderColor="lightGrey" borderTop="none" borderBottomLeftRadius="medium" borderBottomRightRadius="medium" mb="x1" mt="x0">
+                  <Flex
+                    backgroundColor="whiteGrey"
+                    pl="x2"
+                    pr="x0_75"
+                    py="x0_75"
+                    mb="x1"
+                    borderRadius="small"
+                    alignItems="center"
+                    justifyContent="space-between"
+                  >
+                    <Flex alignItems="center" gap="x1">
+                    <Text fontSize="small" fontWeight="bold" lineHeight="smallTextBase">
+                      Subcomponent consumption
+                    </Text>
+                    <Text as="span" color="midGrey" fontSize="small">
+                      &bull;
+                    </Text>
+                    <Link
+                      href="/bom/revision/2.1"
+                      openInNewTab
+                      underline={false}
+                      color="midGrey"
+                      fontSize="small"
+                      fontWeight="normal"
+                      lineHeight="smallTextCompressed"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      BOM revision 2.1
+                    </Link>
+                    </Flex>
+                  </Flex>
+                  <Table
+                    columns={subcomponentConsumptionColumns}
+                    rows={Array.from({ length: 5 }, (_, subIndex) => ({
+                      id: `sub-${index}-${nestedIndex}-${subIndex}`,
+                      number: <div style={{ opacity: subIndex === 0 ? 1.0 : subIndex === 1 ? 0.8 : subIndex === 2 ? 0.6 : subIndex === 3 ? 0.4 : 0.2 }}><RecordNumberPill number={`00${subIndex + 1}`} /></div>,
+                      item: <div style={{ opacity: subIndex === 0 ? 1.0 : subIndex === 1 ? 0.8 : subIndex === 2 ? 0.6 : subIndex === 3 ? 0.4 : 0.2 }}><Skeleton width={getRandomWidth(60, 99)} height="16px" borderRadius="medium" /></div>,
+                      lotCode: (<Flex flexDirection="column" gap="x0_25" style={{ opacity: subIndex === 0 ? 1.0 : subIndex === 1 ? 0.8 : subIndex === 2 ? 0.6 : subIndex === 3 ? 0.4 : 0.2 }}><Skeleton width={getRandomWidth(60, 99)} height="12px" borderRadius="medium" /><Skeleton width={getRandomWidth(60, 99)} height="12px" borderRadius="medium" /></Flex>),
+                      expiryDate: <div style={{ opacity: subIndex === 0 ? 1.0 : subIndex === 1 ? 0.8 : subIndex === 2 ? 0.6 : subIndex === 3 ? 0.4 : 0.2 }}><Skeleton width={getRandomWidth(60, 99)} height="16px" borderRadius="medium" /></div>,
+                      palletNumber: <div style={{ opacity: subIndex === 0 ? 1.0 : subIndex === 1 ? 0.8 : subIndex === 2 ? 0.6 : subIndex === 3 ? 0.4 : 0.2 }}><Skeleton width={getRandomWidth(60, 99)} height="16px" borderRadius="medium" /></div>,
+                      quantity: <div style={{ opacity: subIndex === 0 ? 1.0 : subIndex === 1 ? 0.8 : subIndex === 2 ? 0.6 : subIndex === 3 ? 0.4 : 0.2 }}><Skeleton width={getRandomWidth(60, 99)} height="16px" borderRadius="medium" /></div>,
+                      uom: <div style={{ opacity: subIndex === 0 ? 1.0 : subIndex === 1 ? 0.8 : subIndex === 2 ? 0.6 : subIndex === 3 ? 0.4 : 0.2 }}><Skeleton width={getRandomWidth(60, 99)} height="16px" borderRadius="medium" /></div>,
+                    }))}
+                    className="subcomponent-consumption-record-table"
+                    compact={true}
+                    rowBorder={true}
+                    keyField="id"
+                    m="x1"
+                  />
+                </Box>
+              ),
+            }))}
+            className="actual-production-record-table"
+            hasExpandableRows={true}
+            expandedRows={[]}
+            onRowExpansionChange={() => {}}
+            keyField="id"
+            compact={true}
+            rowBorder={true}
           />
         </Box>
       </Box>
@@ -1919,8 +2137,39 @@ export const Loading = () => {
     setConsumptionItems((prev) => prev.map((item) => (item.id === itemId ? { ...item, [field]: value } : item)));
   };
 
-  // Add cellRenderer to production records columns
-  const productionRecordsColumnsWithRenderer = productionRecordsColumns.map((column) => {
+  // Add cellRenderer to production records columns (top table with masked circle)
+  const productionRecordsColumnsWithMaskedCircle = [
+    // Add new column at the beginning without label
+    {
+      dataKey: "circularMask",
+      width: "56px",
+      cellRenderer: ({ row }: { row: any }) => (
+        <Box p="x1_5" style={{ opacity: row.opacity || 1.0 }}>
+          <Skeleton width="32px" height="32px" borderRadius="50%" />
+        </Box>
+      ),
+    },
+    ...productionRecordsColumns.map((column) => {
+    if (column.dataKey === "number") {
+      return {
+        ...column,
+        cellRenderer: ({ row }: { row: any }) => (
+          <div style={{ opacity: row.opacity || 1.0 }}>
+            <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" />
+          </div>
+        ),
+      };
+    }
+    if (column.dataKey === "date") {
+      return {
+        ...column,
+        cellRenderer: ({ row }: { row: any }) => (
+          <div style={{ opacity: row.opacity || 1.0 }}>
+            <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" />
+          </div>
+        ),
+      };
+    }
     if (column.dataKey === "customerLotCode") {
       return {
         ...column,
@@ -1928,7 +2177,7 @@ export const Loading = () => {
           <Box pt="x1_25" pb="x0_75">
             <Text>Lot code</Text>
             {dualLotCode && (
-              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+              <Text fontSize="smaller" color="darkGrey">
                 (Customer's / Supplier's)
               </Text>
             )}
@@ -1949,6 +2198,75 @@ export const Loading = () => {
             <Box pr="x1">
               <IconicButton icon="more" aria-label="More actions" disabled={true} />
             </Box>
+          );
+        },
+      };
+    }
+    return column;
+  })
+  ];
+
+  // Add cellRenderer to production records columns (bottom table with expand button)
+  const productionRecordsColumnsWithRenderer = productionRecordsColumns.map((column) => {
+    if (column.dataKey === "customerLotCode") {
+      return {
+        ...column,
+        headerFormatter: (column: any) => (
+          <Box pt="x1_25" pb="x0_75">
+            <Text>Lot code</Text>
+            <Text fontSize="smaller" color="darkGrey">
+              (Customer's / Supplier's)
+            </Text>
+          </Box>
+        ),
+        cellRenderer: ({ row }: { row: any }) => {
+          if (React.isValidElement(row.customerLotCode)) {
+            return row.customerLotCode;
+          }
+          return (
+            <Flex flexDirection="column" gap="x0_25">
+              <Text fontSize="smaller">{row.customerLotCode}</Text>
+              <Text fontSize="smaller" color="darkGrey">
+                {row.supplierLotCode}
+              </Text>
+            </Flex>
+          );
+        },
+      };
+    }
+    if (column.dataKey === "expiryDate") {
+      return {
+        ...column,
+        cellRenderer: ({ row }: { row: any }) => {
+          if (React.isValidElement(row.expiryDate)) {
+            return row.expiryDate;
+          }
+          return "";
+        },
+      };
+    }
+    if (column.dataKey === "note") {
+      return {
+        ...column,
+        cellRenderer: ({ row }: { row: any }) => {
+          if (React.isValidElement(row.note)) {
+            return row.note;
+          }
+          return row.note ? <TruncatedText>{row.note}</TruncatedText> : "";
+        },
+      };
+    }
+    if (column.dataKey === "actions") {
+      return {
+        ...column,
+        cellRenderer: ({ row }: { row: any }) => {
+          if (React.isValidElement(row.actions)) {
+            return row.actions;
+          }
+          return (
+            <Flex justifyContent="flex-end" mr="x1">
+              <IconicButton icon="more" disabled={true} />
+            </Flex>
           );
         },
       };
@@ -2408,9 +2726,12 @@ export const Loading = () => {
             padding-top: 6px !important;
             padding-bottom: 6px !important;
           }
-          .subcomponent-consumption-record-table tbody tr:last-child {
-            border-bottom: none !important;
-          }
+    .subcomponent-consumption-record-table tbody tr:last-child {
+      border-bottom: none !important;
+    }
+    .subcomponent-consumption-record-table tbody tr:last-child td {
+      border-bottom: none !important;
+    }
           
           /* Reduce border opacity for subcomponent consumption rows 1-5 */
           .subcomponent-consumption-record-table tbody tr:nth-child(1) {
@@ -2669,6 +2990,19 @@ export const Loading = () => {
               )}
 
               <Box minWidth="1236px">
+                <Table
+                  columns={productionRecordsColumnsWithMaskedCircle}
+                  rows={skeletonProductionRecordsDataWithCircle}
+                  hasExpandableRows={false}
+                  keyField="id"
+                  rowBorder={true}
+                  compact={true}
+                  className="production-record-table"
+                />
+              </Box>
+              
+              {/* Duplicate table below */}
+              <Box minWidth="1236px" mt="x4">
                 <Table
                   columns={productionRecordsColumnsWithRenderer}
                   rows={skeletonProductionRecordsData}
