@@ -73,7 +73,7 @@ import {
   fieldConfig,
 } from "./poli-details/optionsData";
 import { productionRecordsData, productionRecordsColumns } from "./poli-details/productionRecordsData";
-import { Skeleton, SkeletonText, skeletonStyles } from "./components/Skeleton";
+import { Skeleton, SkeletonText, skeletonStyles } from "src/projects/suppliercollaboration/lottraceability/components/Skeleton";
 
 export default {
   title: "Projects/Supplier Collaboration/Lot traceability/POLI details Loading",
