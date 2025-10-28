@@ -73,7 +73,7 @@ import {
   fieldConfig,
 } from "./poli-details/optionsData";
 import { productionRecordsData, productionRecordsColumns } from "./poli-details/productionRecordsData";
-import { Skeleton, SkeletonText, skeletonStyles } from "src/projects/suppliercollaboration/lottraceability/components/Skeleton";
+import { Skeleton, SkeletonText, skeletonStyles } from "./components/Skeleton";
 
 export default {
   title: "Projects/Supplier Collaboration/Lot traceability/POLI details Loading",
@@ -1358,6 +1358,7 @@ export const Loading = () => {
                     }))}
                     compact={true}
                     rowBorder={true}
+                    rowHovers={false}
                     className="subcomponent-consumption-record-table"
                   />
                 </Box>
@@ -1365,6 +1366,7 @@ export const Loading = () => {
             }))}
             compact={true}
             rowBorder={true}
+            rowHovers={false}
             className="actual-production-record-table"
             hasExpandableRows={true}
             expandedRows={[]}
@@ -1459,8 +1461,8 @@ export const Loading = () => {
                     className="subcomponent-consumption-record-table"
                     compact={true}
                     rowBorder={true}
+                    rowHovers={false}
                     keyField="id"
-                    m="x1"
                   />
                 </Box>
               ),
@@ -1472,6 +1474,7 @@ export const Loading = () => {
             keyField="id"
             compact={true}
             rowBorder={true}
+            rowHovers={false}
           />
         </Box>
       </Box>
@@ -1505,6 +1508,7 @@ export const Loading = () => {
             }
             keyField="id"
             rowBorder={true}
+            rowHovers={false}
             className="actual-production-record-table"
             compact={true}
             hasExpandableRows={true}
@@ -2997,6 +3001,7 @@ export const Loading = () => {
                   keyField="id"
                   rowBorder={true}
                   compact={true}
+                  rowHovers={false}
                   className="production-record-table"
                 />
               </Box>
@@ -3012,6 +3017,7 @@ export const Loading = () => {
                   keyField="id"
                   rowBorder={true}
                   compact={true}
+                  rowHovers={false}
                   className="production-record-table"
                 />
               </Box>
@@ -4796,6 +4802,7 @@ export const Loading = () => {
                                     keyField="id"
                                     compact={true}
                                     rowBorder={true}
+                                    rowHovers={false}
                                     className="subcomponent-consumption-record-table"
                                   />
                                   {role === "supplier" && (
