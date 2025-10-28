@@ -28,8 +28,8 @@ export const Skeleton: React.FC<SkeletonProps> = ({
         borderRadius,
         backgroundColor,
         ...(animation && {
-          position: 'relative',
-          overflow: 'hidden',
+          position: "relative",
+          overflow: "hidden",
         }),
         ...style,
       }}
@@ -40,40 +40,24 @@ export const Skeleton: React.FC<SkeletonProps> = ({
 };
 
 // Specific skeleton variants for common use cases
-export const SkeletonText: React.FC<{ lines?: number; width?: string }> = ({ 
-  lines = 1, 
-  width = "100%" 
-}) => (
+export const SkeletonText: React.FC<{ lines?: number; width?: string }> = ({ lines = 1, width = "100%" }) => (
   <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
     {Array.from({ length: lines }).map((_, index) => (
-      <Skeleton
-        key={index}
-        width={index === lines - 1 ? "75%" : width}
-        height="14px"
-      />
+      <Skeleton key={index} width={index === lines - 1 ? "75%" : width} height="14px" />
     ))}
   </div>
 );
 
-export const SkeletonTable: React.FC<{ 
-  rows?: number; 
-  columns?: number; 
+export const SkeletonTable: React.FC<{
+  rows?: number;
+  columns?: number;
   cellHeight?: string;
-}> = ({ 
-  rows = 5, 
-  columns = 4, 
-  cellHeight = "40px" 
-}) => (
+}> = ({ rows = 5, columns = 4, cellHeight = "40px" }) => (
   <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
     {/* Header */}
     <div style={{ display: "flex", gap: "16px" }}>
       {Array.from({ length: columns }).map((_, index) => (
-        <Skeleton
-          key={`header-${index}`}
-          width="120px"
-          height="20px"
-          borderRadius="4px"
-        />
+        <Skeleton key={`header-${index}`} width="120px" height="20px" borderRadius="4px" />
       ))}
     </div>
     {/* Rows */}
@@ -92,15 +76,11 @@ export const SkeletonTable: React.FC<{
   </div>
 );
 
-export const SkeletonCard: React.FC<{ 
-  width?: string; 
+export const SkeletonCard: React.FC<{
+  width?: string;
   height?: string;
   showAvatar?: boolean;
-}> = ({ 
-  width = "300px", 
-  height = "200px",
-  showAvatar = false 
-}) => (
+}> = ({ width = "300px", height = "200px", showAvatar = false }) => (
   <div
     style={{
       width,
@@ -110,7 +90,7 @@ export const SkeletonCard: React.FC<{
       padding: "16px",
       display: "flex",
       flexDirection: "column",
-      gap: "16px"
+      gap: "16px",
     }}
   >
     {showAvatar && (
@@ -148,4 +128,3 @@ export const skeletonStyles = `
     animation: skeleton-wave 1.2s linear infinite;
   }
 `;
-
