@@ -1129,14 +1129,14 @@ export const Loading = () => {
           <Skeleton width="32px" height="32px" borderRadius="50%" />
         </Box>
       ),
-      number: <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" />,
-      date: <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" />,
-      expectedQuantity: <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" />,
-      actualQuantity: <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" />,
+      number: <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="4px" />,
+      date: <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="4px" />,
+      expectedQuantity: <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="4px" />,
+      actualQuantity: <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="4px" />,
       lotCode: (
         <Flex flexDirection="column" gap="x0_25">
-          <Skeleton width={getRandomWidth(60, 99)} height="12px" borderRadius="medium" />
-          <Skeleton width={getRandomWidth(60, 99)} height="12px" borderRadius="medium" />
+          <Skeleton width={getRandomWidth(60, 99)} height="12px" borderRadius="4px" />
+          <Skeleton width={getRandomWidth(60, 99)} height="12px" borderRadius="4px" />
         </Flex>
       ),
       expiryDate: "",
@@ -1157,15 +1157,15 @@ export const Loading = () => {
           <Skeleton width="32px" height="32px" borderRadius="50%" />
         </Box>
       ),
-      date: <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" />,
+      date: <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="4px" />,
       expectedQuantity: (
         <div style={{ opacity: index === 0 ? 1.0 : index === 1 ? 0.8 : index === 2 ? 0.6 : index === 3 ? 0.4 : 0.2 }}>
-          <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" />
+          <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="4px" />
         </div>
       ),
       actualQuantity: (
         <div style={{ opacity: index === 0 ? 1.0 : index === 1 ? 0.8 : index === 2 ? 0.6 : index === 3 ? 0.4 : 0.2 }}>
-          <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" />
+          <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="4px" />
         </div>
       ),
       palletNumber: "",
@@ -1175,8 +1175,8 @@ export const Loading = () => {
           gap="x0_25"
           style={{ opacity: index === 0 ? 1.0 : index === 1 ? 0.8 : index === 2 ? 0.6 : index === 3 ? 0.4 : 0.2 }}
         >
-          <Skeleton width={getRandomWidth(60, 99)} height="12px" borderRadius="medium" />
-          <Skeleton width={getRandomWidth(60, 99)} height="12px" borderRadius="medium" />
+          <Skeleton width={getRandomWidth(60, 99)} height="12px" borderRadius="4px" />
+          <Skeleton width={getRandomWidth(60, 99)} height="12px" borderRadius="4px" />
         </Flex>
       ),
       expiryDate: "",
@@ -1226,7 +1226,7 @@ export const Loading = () => {
                                 : 0.2,
                     }}
                   >
-                    <Skeleton width={getRandomWidth(60, 69)} height="24px" borderRadius="medium" />
+                    <Skeleton width={getRandomWidth(60, 69)} height="24px" borderRadius="4px" />
                   </div>
                 ),
                 palletNumber: (
@@ -1244,7 +1244,7 @@ export const Loading = () => {
                                 : 0.2,
                     }}
                   >
-                    <Skeleton width={getRandomWidth(60, 69)} height="24px" borderRadius="medium" />
+                    <Skeleton width={getRandomWidth(60, 69)} height="24px" borderRadius="4px" />
                   </div>
                 ),
                 lotCode: (
@@ -1264,8 +1264,8 @@ export const Loading = () => {
                                 : 0.2,
                     }}
                   >
-                    <Skeleton width={getRandomWidth(60, 69)} height="12px" borderRadius="medium" />
-                    <Skeleton width={getRandomWidth(60, 69)} height="12px" borderRadius="medium" />
+                    <Skeleton width={getRandomWidth(60, 69)} height="12px" borderRadius="4px" />
+                    <Skeleton width={getRandomWidth(60, 69)} height="12px" borderRadius="4px" />
                   </Flex>
                 ),
                 expiryDate: (
@@ -1283,7 +1283,7 @@ export const Loading = () => {
                                 : 0.2,
                     }}
                   >
-                    <Skeleton width={getRandomWidth(60, 69)} height="24px" borderRadius="medium" />
+                    <Skeleton width={getRandomWidth(60, 69)} height="24px" borderRadius="4px" />
                   </div>
                 ),
                 note: (
@@ -1301,7 +1301,7 @@ export const Loading = () => {
                                 : 0.2,
                     }}
                   >
-                    <Skeleton width={getRandomWidth(60, 69)} height="24px" borderRadius="medium" />
+                    <Skeleton width={getRandomWidth(60, 69)} height="24px" borderRadius="4px" />
                   </div>
                 ),
                 spacer: (
@@ -1319,7 +1319,7 @@ export const Loading = () => {
                                 : 0.2,
                     }}
                   >
-                    <Skeleton width={getRandomWidth(60, 69)} height="32px" borderRadius="medium" />
+                    <Skeleton width={getRandomWidth(60, 69)} height="32px" borderRadius="4px" />
                   </div>
                 ),
                 expandedContent: () => (
@@ -1654,17 +1654,17 @@ export const Loading = () => {
     id: `skeleton-${index + 1}`,
     date: (
       <div style={{ opacity: index === 0 ? 1.0 : index === 1 ? 0.8 : index === 2 ? 0.6 : index === 3 ? 0.4 : 0.2 }}>
-        <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" />
+        <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="4px" />
       </div>
     ),
     expectedQuantity: (
       <div style={{ opacity: index === 0 ? 1.0 : index === 1 ? 0.8 : index === 2 ? 0.6 : index === 3 ? 0.4 : 0.2 }}>
-        <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" />
+        <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="4px" />
       </div>
     ),
     actualQuantity: (
       <div style={{ opacity: index === 0 ? 1.0 : index === 1 ? 0.8 : index === 2 ? 0.6 : index === 3 ? 0.4 : 0.2 }}>
-        <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" />
+        <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="4px" />
       </div>
     ),
     palletNumber: "",
@@ -1674,8 +1674,8 @@ export const Loading = () => {
         gap="x0_25"
         style={{ opacity: index === 0 ? 1.0 : index === 1 ? 0.8 : index === 2 ? 0.6 : index === 3 ? 0.4 : 0.2 }}
       >
-        <Skeleton width={getRandomWidth(60, 99)} height="12px" borderRadius="medium" />
-        <Skeleton width={getRandomWidth(60, 99)} height="12px" borderRadius="medium" />
+        <Skeleton width={getRandomWidth(60, 99)} height="12px" borderRadius="4px" />
+        <Skeleton width={getRandomWidth(60, 99)} height="12px" borderRadius="4px" />
       </Flex>
     ),
     expiryDate: "",
@@ -1725,7 +1725,7 @@ export const Loading = () => {
                               : 0.2,
                   }}
                 >
-                  <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" />
+                  <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="4px" />
                 </div>
               ),
               palletNumber: (
@@ -1743,7 +1743,7 @@ export const Loading = () => {
                               : 0.2,
                   }}
                 >
-                  <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" />
+                  <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="4px" />
                 </div>
               ),
               lotCode: (
@@ -1763,8 +1763,8 @@ export const Loading = () => {
                               : 0.2,
                   }}
                 >
-                  <Skeleton width={getRandomWidth(60, 99)} height="16px" borderRadius="medium" />
-                  <Skeleton width={getRandomWidth(60, 99)} height="16px" borderRadius="medium" />
+                  <Skeleton width={getRandomWidth(60, 99)} height="16px" borderRadius="4px" />
+                  <Skeleton width={getRandomWidth(60, 99)} height="16px" borderRadius="4px" />
                 </Flex>
               ),
               expiryDate: (
@@ -1782,7 +1782,7 @@ export const Loading = () => {
                               : 0.2,
                   }}
                 >
-                  <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" />
+                  <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="4px" />
                 </div>
               ),
               note: (
@@ -1800,7 +1800,7 @@ export const Loading = () => {
                               : 0.2,
                   }}
                 >
-                  <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" />
+                  <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="4px" />
                 </div>
               ),
               spacer: (
@@ -1818,7 +1818,7 @@ export const Loading = () => {
                               : 0.2,
                   }}
                 >
-                  <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" />
+                  <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="4px" />
                 </div>
               ),
               expandedContent: () => (
@@ -1901,7 +1901,7 @@ export const Loading = () => {
                                       : 0.2,
                           }}
                         >
-                          <Skeleton width={getRandomWidth(60, 99)} height="16px" borderRadius="medium" />
+                          <Skeleton width={getRandomWidth(60, 99)} height="16px" borderRadius="4px" />
                         </div>
                       ),
                       lotCode: (
@@ -1921,8 +1921,8 @@ export const Loading = () => {
                                       : 0.2,
                           }}
                         >
-                          <Skeleton width={getRandomWidth(60, 99)} height="16px" borderRadius="medium" />
-                          <Skeleton width={getRandomWidth(60, 99)} height="16px" borderRadius="medium" />
+                          <Skeleton width={getRandomWidth(60, 99)} height="16px" borderRadius="4px" />
+                          <Skeleton width={getRandomWidth(60, 99)} height="16px" borderRadius="4px" />
                         </Flex>
                       ),
                       expiryDate: (
@@ -1940,7 +1940,7 @@ export const Loading = () => {
                                       : 0.2,
                           }}
                         >
-                          <Skeleton width={getRandomWidth(60, 99)} height="16px" borderRadius="medium" />
+                          <Skeleton width={getRandomWidth(60, 99)} height="16px" borderRadius="4px" />
                         </div>
                       ),
                       palletNumber: (
@@ -1958,7 +1958,7 @@ export const Loading = () => {
                                       : 0.2,
                           }}
                         >
-                          <Skeleton width={getRandomWidth(60, 99)} height="16px" borderRadius="medium" />
+                          <Skeleton width={getRandomWidth(60, 99)} height="16px" borderRadius="4px" />
                         </div>
                       ),
                       quantity: (
@@ -1976,7 +1976,7 @@ export const Loading = () => {
                                       : 0.2,
                           }}
                         >
-                          <Skeleton width={getRandomWidth(60, 99)} height="16px" borderRadius="medium" />
+                          <Skeleton width={getRandomWidth(60, 99)} height="16px" borderRadius="4px" />
                         </div>
                       ),
                       uom: (
@@ -1994,7 +1994,7 @@ export const Loading = () => {
                                       : 0.2,
                           }}
                         >
-                          <Skeleton width={getRandomWidth(60, 99)} height="16px" borderRadius="medium" />
+                          <Skeleton width={getRandomWidth(60, 99)} height="16px" borderRadius="4px" />
                         </div>
                       ),
                     }))}
@@ -2698,7 +2698,7 @@ export const Loading = () => {
           ...column,
           cellRenderer: ({ row }: { row: any }) => (
             <div style={{ opacity: row.opacity || 1.0 }}>
-              <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" />
+              <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="4px" />
             </div>
           ),
         };
@@ -2708,7 +2708,7 @@ export const Loading = () => {
           ...column,
           cellRenderer: ({ row }: { row: any }) => (
             <div style={{ opacity: row.opacity || 1.0 }}>
-              <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="medium" />
+              <Skeleton width={getRandomWidth(60, 99)} height="24px" borderRadius="4px" />
             </div>
           ),
         };
@@ -3103,7 +3103,7 @@ export const Loading = () => {
                     </Box>
                   }
                 >
-                  <Box height="x1" mt="x1" mb="x0_25" width="100%" backgroundColor="blue" borderRadius="medium" />
+                  <Box height="x1" mt="x1" mb="x0_25" width="100%" backgroundColor="blue" borderRadius="4px" />
                 </Tooltip>
 
                 <Flex justifyContent={productionComplete ? "space-between" : "center"}>
@@ -4911,7 +4911,7 @@ export const Loading = () => {
                           <Box pl="52px" borderBottom="1px solid" borderBottomColor="lightGrey">
                             {/* Note - Nested below this specific row */}
                             {rowNotes[row.id] !== undefined && (
-                              <Box border="1px solid" borderColor="lightGrey" borderRadius="medium" p="x0_25" mb="x1">
+                              <Box border="1px solid" borderColor="lightGrey" borderRadius="4px" p="x0_25" mb="x1">
                                 <Flex
                                   backgroundColor="whiteGrey"
                                   pl="x2"
@@ -4979,7 +4979,7 @@ export const Loading = () => {
                               <Box
                                 border="1px solid"
                                 borderColor="lightGrey"
-                                borderRadius="medium"
+                                borderRadius="4px"
                                 p="x0_25"
                                 mb="x1"
                                 mt="x0"
