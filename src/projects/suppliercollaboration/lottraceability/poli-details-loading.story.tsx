@@ -301,9 +301,14 @@ export const Loading = () => {
       label: "Number",
       dataKey: "actualProductionRecordNumber",
       width: "0px",
-      cellRenderer: ({ row }: { row: any }) => (
-        <ActualProductionRecordNumberPill actualProductionRecordNumber={row.actualProductionRecordNumber} />
-      ),
+      cellRenderer: ({ row }: { row: any }) => {
+        // If actualProductionRecordNumber is a React element (with opacity), return it directly
+        if (React.isValidElement(row.actualProductionRecordNumber)) {
+          return row.actualProductionRecordNumber;
+        }
+        // Otherwise render normally
+        return <ActualProductionRecordNumberPill actualProductionRecordNumber={row.actualProductionRecordNumber} />;
+      },
     },
     {
       label: "Actual quantity",
@@ -884,6 +889,11 @@ export const Loading = () => {
       dataKey: "actualProductionRecordNumber",
       width: "0px",
       cellRenderer: ({ row }: { row: any }) => {
+        // If actualProductionRecordNumber is a React element (with opacity), return it directly
+        if (React.isValidElement(row.actualProductionRecordNumber)) {
+          return row.actualProductionRecordNumber;
+        }
+        // Otherwise render normally
         return (
           <Flex py="x0_75" mr="x1" justifyContent="flex-start" ml="-96px">
             <RecordNumberPill number={row.actualProductionRecordNumber} placement="top" />
@@ -1183,17 +1193,24 @@ export const Loading = () => {
               columns={actualProductionReportColumns}
               rows={Array.from({ length: 5 }, (_, nestedIndex) => ({
                 id: `nested-skeleton-${index}-${nestedIndex}`,
-                actualProductionRecordNumber: `00${nestedIndex + 1}`,
-                pillOpacity:
-                  nestedIndex === 0
-                    ? 1.0
-                    : nestedIndex === 1
-                      ? 0.8
-                      : nestedIndex === 2
-                        ? 0.6
-                        : nestedIndex === 3
-                          ? 0.4
-                          : 0.2,
+                actualProductionRecordNumber: (
+                  <div
+                    style={{
+                      opacity:
+                        nestedIndex === 0
+                          ? 1.0
+                          : nestedIndex === 1
+                            ? 0.8
+                            : nestedIndex === 2
+                              ? 0.6
+                              : nestedIndex === 3
+                                ? 0.4
+                                : 0.2,
+                    }}
+                  >
+                    <ActualProductionRecordNumberPill actualProductionRecordNumber={`00${nestedIndex + 1}`} />
+                  </div>
+                ),
                 actualQuantity: (
                   <div
                     style={{
@@ -1675,7 +1692,24 @@ export const Loading = () => {
             columns={actualProductionReportColumns}
             rows={Array.from({ length: 5 }, (_, nestedIndex) => ({
               id: `nested-${index}-${nestedIndex}`,
-              actualProductionRecordNumber: `00${nestedIndex + 1}`,
+              actualProductionRecordNumber: (
+                <div
+                  style={{
+                    opacity:
+                      nestedIndex === 0
+                        ? 1.0
+                        : nestedIndex === 1
+                          ? 0.8
+                          : nestedIndex === 2
+                            ? 0.6
+                            : nestedIndex === 3
+                              ? 0.4
+                              : 0.2,
+                  }}
+                >
+                  <ActualProductionRecordNumberPill actualProductionRecordNumber={`00${nestedIndex + 1}`} />
+                </div>
+              ),
               actualQuantity: (
                 <div
                   style={{

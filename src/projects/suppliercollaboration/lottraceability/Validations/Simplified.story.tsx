@@ -341,9 +341,7 @@ const InlineSimplified = () => {
         requiredRecords.push(index);
       }
     });
-    return requiredRecords
-      .sort((a, b) => a - b)
-      .map((index) => String(index + 1).padStart(3, "0"));
+    return requiredRecords.sort((a, b) => a - b).map((index) => String(index + 1).padStart(3, "0"));
   };
 
   // Function to check if date is required (empty)
@@ -679,11 +677,20 @@ const InlineSimplified = () => {
                         <Flex alignItems="center" gap="x0_5" flexWrap="wrap">
                           <Flex gap="x0_5" alignItems="center">
                             {duplicateRecords.map((num) => (
-                              <RecordNumberPill key={num} number={num} backgroundColor="lightRed" textColor="red" boxShadow="small" />
+                              <RecordNumberPill
+                                key={num}
+                                number={num}
+                                backgroundColor="lightRed"
+                                textColor="red"
+                                boxShadow="small"
+                              />
                             ))}
                           </Flex>
                           <Box position="relative" display="inline-block">
-                            <Text pr="x3">Duplicate actual production records detected. Each record must have an unique combination of pallet number, lot code, and expiry date.</Text>
+                            <Text pr="x3">
+                              Duplicate actual production records detected. Each record must have an unique combination
+                              of pallet number, lot code, and expiry date.
+                            </Text>
                             <Box
                               position="absolute"
                               right="x0"
@@ -710,11 +717,20 @@ const InlineSimplified = () => {
                         <Flex alignItems="center" gap="x0_5" flexWrap="wrap">
                           <Flex gap="x0_5" alignItems="center">
                             {expiryMismatchRecords.map((num) => (
-                              <RecordNumberPill key={num} number={num} backgroundColor="lightRed" textColor="red" boxShadow="small" />
+                              <RecordNumberPill
+                                key={num}
+                                number={num}
+                                backgroundColor="lightRed"
+                                textColor="red"
+                                boxShadow="small"
+                              />
                             ))}
                           </Flex>
                           <Box position="relative" display="inline-block">
-                            <Text pr="x3">Expiry date mismatch detected. All actual production records sharing the same lot code must have identical expiry dates.</Text>
+                            <Text pr="x3">
+                              Expiry date mismatch detected. All actual production records sharing the same lot code
+                              must have identical expiry dates.
+                            </Text>
                             <Box
                               position="absolute"
                               right="x0"
@@ -741,11 +757,19 @@ const InlineSimplified = () => {
                         <Flex alignItems="center" gap="x0_5" flexWrap="wrap">
                           <Flex gap="x0_5" alignItems="center">
                             {lotCodeRequiredRecords.map((num) => (
-                              <RecordNumberPill key={num} number={num} backgroundColor="lightRed" textColor="red" boxShadow="small" />
+                              <RecordNumberPill
+                                key={num}
+                                number={num}
+                                backgroundColor="lightRed"
+                                textColor="red"
+                                boxShadow="small"
+                              />
                             ))}
                           </Flex>
                           <Box position="relative" display="inline-block">
-                            <Text pr="x3">Lot code is required. Lot code tracking is enforced for the item being produced.</Text>
+                            <Text pr="x3">
+                              Lot code is required. Lot code tracking is enforced for the item being produced.
+                            </Text>
                             <Box
                               position="absolute"
                               right="x0"
@@ -883,7 +907,9 @@ const InlineSimplified = () => {
                 const duplicateRecords = getDuplicateRecords();
                 const expiryMismatchRecords = getExpiryDateMismatchRecords();
                 const lotCodeRequiredRecords = getLotCodeRequiredRecords();
-                const errorRecordNumbers = [...new Set([...duplicateRecords, ...expiryMismatchRecords, ...lotCodeRequiredRecords])];
+                const errorRecordNumbers = [
+                  ...new Set([...duplicateRecords, ...expiryMismatchRecords, ...lotCodeRequiredRecords]),
+                ];
 
                 return productionRows.map((row, index) => {
                   const recordNumber = String(index + 1).padStart(3, "0");
@@ -905,177 +931,177 @@ const InlineSimplified = () => {
                         borderColor="lightGrey"
                       >
                         <Flex width="3em" alignItems="flex-start" justifyContent="center" ml="x1" mr="x0_5" pt="x2_5">
-                          <RecordNumberPill 
-                            number={recordNumber} 
+                          <RecordNumberPill
+                            number={recordNumber}
                             backgroundColor={hasError ? "lightRed" : undefined}
                             textColor={hasError ? "red" : undefined}
                           />
                         </Flex>
-                    <Box width="100%">
-                      <Input
-                        value={row.palletNumber}
-                        onChange={(e) => handleProductionRowChange(row.id, "palletNumber", e.target.value)}
-                        py="x1"
-                        width="100%"
-                      />
-                    </Box>
-                    <Box width="100%">
-                      <Input
-                        value={row.customerLotCode || ""}
-                        onChange={(e) => handleProductionRowChange(row.id, "customerLotCode", e.target.value)}
-                        py="x1"
-                        width="100%"
-                      />
-                    </Box>
-                    <Box width="100%">
-                      <Input
-                        value={row.supplierLotCode || ""}
-                        onChange={(e) => handleProductionRowChange(row.id, "supplierLotCode", e.target.value)}
-                        py="x1"
-                        width="100%"
-                        errorMessage={row.id === "row-4" || row.id === "row-5" ? "Required" : undefined}
-                      />
-                    </Box>
-                    <Box width="100%">
-                      <Input
-                        value={row.expiryDate}
-                        onChange={(e) => handleProductionRowChange(row.id, "expiryDate", e.target.value)}
-                        py="x1"
-                        width="100%"
-                      />
-                    </Box>
-                    <Box width="100%">
-                      <Input
-                        value={row.quantity}
-                        onChange={(e) => handleProductionRowChange(row.id, "quantity", e.target.value)}
-                        py="x1"
-                        width="100%"
-                      />
-                    </Box>
-                    <Box width="100%" pt="x1">
-                      <Select
-                        value={row.uom}
-                        onChange={(value) => handleProductionRowChange(row.id, "uom", String(value))}
-                        options={[
-                          { value: "kg", label: "kg" },
-                          { value: "lb", label: "lb" },
-                          { value: "g", label: "g" },
-                          { value: "oz", label: "oz" },
-                          { value: "cases", label: "cases" },
-                        ]}
-                        width="100%"
-                      />
-                    </Box>
-                    <Box width="88px" pt="x1">
-                      <Flex gap="x0_5" alignItems="center">
-                        <DropdownMenu
-                          trigger={() => <IconicButton icon="more" aria-label="More actions" />}
-                          placement="bottom-end"
-                        >
-                          <DropdownButton
-                            onClick={(e) => {
-                              e.preventDefault();
-                              handleAddNote(row.id);
-                            }}
+                        <Box width="100%">
+                          <Input
+                            value={row.palletNumber}
+                            onChange={(e) => handleProductionRowChange(row.id, "palletNumber", e.target.value)}
+                            py="x1"
+                            width="100%"
+                          />
+                        </Box>
+                        <Box width="100%">
+                          <Input
+                            value={row.customerLotCode || ""}
+                            onChange={(e) => handleProductionRowChange(row.id, "customerLotCode", e.target.value)}
+                            py="x1"
+                            width="100%"
+                          />
+                        </Box>
+                        <Box width="100%">
+                          <Input
+                            value={row.supplierLotCode || ""}
+                            onChange={(e) => handleProductionRowChange(row.id, "supplierLotCode", e.target.value)}
+                            py="x1"
+                            width="100%"
+                            errorMessage={row.id === "row-4" || row.id === "row-5" ? "Required" : undefined}
+                          />
+                        </Box>
+                        <Box width="100%">
+                          <Input
+                            value={row.expiryDate}
+                            onChange={(e) => handleProductionRowChange(row.id, "expiryDate", e.target.value)}
+                            py="x1"
+                            width="100%"
+                          />
+                        </Box>
+                        <Box width="100%">
+                          <Input
+                            value={row.quantity}
+                            onChange={(e) => handleProductionRowChange(row.id, "quantity", e.target.value)}
+                            py="x1"
+                            width="100%"
+                          />
+                        </Box>
+                        <Box width="100%" pt="x1">
+                          <Select
+                            value={row.uom}
+                            onChange={(value) => handleProductionRowChange(row.id, "uom", String(value))}
+                            options={[
+                              { value: "kg", label: "kg" },
+                              { value: "lb", label: "lb" },
+                              { value: "g", label: "g" },
+                              { value: "oz", label: "oz" },
+                              { value: "cases", label: "cases" },
+                            ]}
+                            width="100%"
+                          />
+                        </Box>
+                        <Box width="88px" pt="x1">
+                          <Flex gap="x0_5" alignItems="center">
+                            <DropdownMenu
+                              trigger={() => <IconicButton icon="more" aria-label="More actions" />}
+                              placement="bottom-end"
+                            >
+                              <DropdownButton
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  handleAddNote(row.id);
+                                }}
+                              >
+                                Add note
+                              </DropdownButton>
+                            </DropdownMenu>
+                            {productionRows.length > 1 && (
+                              <IconicButton
+                                icon="removeCircleOutline"
+                                aria-label="Remove row"
+                                onClick={() => handleRemoveProductionRow(row.id)}
+                                tooltip="Remove actual production record"
+                              />
+                            )}
+                          </Flex>
+                        </Box>
+                      </Flex>
+
+                      {/* InlineValidation error box for supplier lot code */}
+                      {row.id === "row-2" && row.supplierLotCode === "" && (
+                        <Box pb="x1_5" pl="x1_5" className="error-message-box" position="relative">
+                          <Box
+                            position="absolute"
+                            right="x1"
+                            top="x0_25"
+                            width="20px"
+                            height="20px"
+                            borderRadius="50%"
+                            backgroundColor="violet"
+                            display="flex"
+                            alignItems="center"
+                            justifyContent="center"
+                            zIndex={1}
+                            cursor="pointer"
+                            title="Required fields: In the actual production record, lot code and Expiry date is required if the item tracking settings are on. Validated on submit (if validated on blur, the error may be thrown too frequently)."
                           >
-                            Add note
-                          </DropdownButton>
-                        </DropdownMenu>
-                        {productionRows.length > 1 && (
-                          <IconicButton
-                            icon="removeCircleOutline"
-                            aria-label="Remove row"
-                            onClick={() => handleRemoveProductionRow(row.id)}
-                            tooltip="Remove actual production record"
-                          />
-                        )}
-                      </Flex>
+                            <Text fontSize="small" color="white" fontWeight="bold">
+                              1
+                            </Text>
+                          </Box>
+                          <Box pr="x6">
+                            <InlineValidation errorMessage="Lot code is required. Lot code tracking is enforced for the item being produced." />
+                          </Box>
+                        </Box>
+                      )}
+
+                      {/* Divider after error boxes if they are the last element before next row */}
+                      {row.id === "row-2" && row.supplierLotCode === "" && (
+                        <Box borderBottom="solid 1px" borderColor="lightGrey" />
+                      )}
+
+                      {/* Note section */}
+                      {rowNotes[row.id] !== undefined && (
+                        <Box ml="x6" border="1px solid" borderColor="lightGrey" borderRadius="medium" p="x0_25" mb="x1">
+                          <Flex
+                            backgroundColor="whiteGrey"
+                            pl="x2"
+                            pr="x0_75"
+                            borderRadius="small"
+                            justifyContent="space-between"
+                            alignItems="center"
+                          >
+                            <Text fontSize="small" fontWeight="bold" lineHeight="smallTextBase">
+                              Note
+                            </Text>
+                            <Flex alignItems="center" gap="x0_5">
+                              <IconicButton
+                                icon="upArrow"
+                                aria-label="Collapse note"
+                                tooltip="Collapse note"
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  e.stopPropagation();
+                                  console.log("Toggle note");
+                                }}
+                              />
+                              <IconicButton
+                                icon="removeCircleOutline"
+                                aria-label="Remove note"
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  handleRemoveNote(row.id);
+                                }}
+                                tooltip="Remove note"
+                              />
+                            </Flex>
+                          </Flex>
+                          <Box px="x1" py="x1">
+                            <Textarea
+                              placeholder="Add a note for this production record..."
+                              value={rowNotes[row.id] || ""}
+                              onChange={(e) => handleNoteChange(row.id, e.target.value)}
+                              rows={3}
+                            />
+                          </Box>
+                        </Box>
+                      )}
+
+                      {/* Divider after Note section */}
+                      {rowNotes[row.id] !== undefined && <Box borderBottom="solid 1px" borderColor="lightGrey" />}
                     </Box>
-                  </Flex>
-
-                  {/* InlineValidation error box for supplier lot code */}
-                  {row.id === "row-2" && row.supplierLotCode === "" && (
-                    <Box pb="x1_5" pl="x1_5" className="error-message-box" position="relative">
-                      <Box
-                        position="absolute"
-                        right="x1"
-                        top="x0_25"
-                        width="20px"
-                        height="20px"
-                        borderRadius="50%"
-                        backgroundColor="violet"
-                        display="flex"
-                        alignItems="center"
-                        justifyContent="center"
-                        zIndex={1}
-                        cursor="pointer"
-                        title="Required fields: In the actual production record, lot code and Expiry date is required if the item tracking settings are on. Validated on submit (if validated on blur, the error may be thrown too frequently)."
-                      >
-                        <Text fontSize="small" color="white" fontWeight="bold">
-                          1
-                        </Text>
-                      </Box>
-                      <Box pr="x6">
-                        <InlineValidation errorMessage="Lot code is required. Lot code tracking is enforced for the item being produced." />
-                      </Box>
-                    </Box>
-                  )}
-
-                  {/* Divider after error boxes if they are the last element before next row */}
-                  {row.id === "row-2" && row.supplierLotCode === "" && (
-                    <Box borderBottom="solid 1px" borderColor="lightGrey" />
-                  )}
-
-                  {/* Note section */}
-                  {rowNotes[row.id] !== undefined && (
-                    <Box ml="x6" border="1px solid" borderColor="lightGrey" borderRadius="medium" p="x0_25" mb="x1">
-                      <Flex
-                        backgroundColor="whiteGrey"
-                        pl="x2"
-                        pr="x0_75"
-                        borderRadius="small"
-                        justifyContent="space-between"
-                        alignItems="center"
-                      >
-                        <Text fontSize="small" fontWeight="bold" lineHeight="smallTextBase">
-                          Note
-                        </Text>
-                        <Flex alignItems="center" gap="x0_5">
-                          <IconicButton
-                            icon="upArrow"
-                            aria-label="Collapse note"
-                            tooltip="Collapse note"
-                            onClick={(e) => {
-                              e.preventDefault();
-                              e.stopPropagation();
-                              console.log("Toggle note");
-                            }}
-                          />
-                          <IconicButton
-                            icon="removeCircleOutline"
-                            aria-label="Remove note"
-                            onClick={(e) => {
-                              e.preventDefault();
-                              handleRemoveNote(row.id);
-                            }}
-                            tooltip="Remove note"
-                          />
-                        </Flex>
-                      </Flex>
-                      <Box px="x1" py="x1">
-                        <Textarea
-                          placeholder="Add a note for this production record..."
-                          value={rowNotes[row.id] || ""}
-                          onChange={(e) => handleNoteChange(row.id, e.target.value)}
-                          rows={3}
-                        />
-                      </Box>
-                    </Box>
-                  )}
-
-                  {/* Divider after Note section */}
-                  {rowNotes[row.id] !== undefined && <Box borderBottom="solid 1px" borderColor="lightGrey" />}
-                </Box>
                   );
                 });
               })()}
