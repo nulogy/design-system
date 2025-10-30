@@ -873,7 +873,7 @@ const CustomTagsPage = () => {
         {/* Deactivate Custom Tag Confirmation Modal */}
         <Modal
           isOpen={showTagDeactivateModal}
-          title="Custom tag assigned in a PO line item"
+          title="Custom tag assigned to a PO line item"
           onRequestClose={handleCancelTagDeactivate}
           footerContent={
             <Flex gap="x2" justifyContent="flex-start">
@@ -888,11 +888,11 @@ const CustomTagsPage = () => {
               <Text as="span" fontWeight="medium">
                 {deactivatingTag.label}
               </Text>{" "}
-              is currently assigned to at least one "In progress" PO line item. Deactivating this tag will retain its
-              assignment on existing line item(s), but it will no longer be available for new assignments.
+              is currently assigned to at least one PO line item. Deactivating this tag will retain its assignment on
+              existing line item(s), but it will no longer be available for new assignments.
             </Text>
           )}
-          <Text>Are you sure you want to deactivate this custom tag?</Text>
+          {deactivatingTag && <Text>Are you sure you want to deactivate this custom tag?</Text>}
         </Modal>
       </Page>
     </ApplicationFrame>
