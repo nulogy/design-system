@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styled from "styled-components";
 import {
   ApplicationFrame,
   Page,
@@ -17,6 +18,9 @@ import {
   Sidebar,
   Input,
   Select,
+  SelectOption,
+  type SelectOptionProps,
+  type NDSOption,
   DatePicker,
   Form,
   FormSection,
@@ -25,6 +29,7 @@ import {
   FieldLabel,
   Toggle,
   TruncatedText,
+  Textarea,
   PrimaryButton,
   QuietButton,
   DropdownMenu,
@@ -43,6 +48,12 @@ export default {
     layout: "fullscreen",
   },
 };
+// Enforce top vertical alignment for table cells in this story
+const TopAlignedTable = styled.div(() => ({
+  "& table td": {
+    verticalAlign: "top",
+  },
+}));
 
 interface WorkOrderPriority {
   id: string;
@@ -54,6 +65,7 @@ interface WorkOrderPriority {
 interface CustomTag {
   id: string;
   label: string;
+  description: string;
   type: string;
   status: "Active" | "Deactivated";
 }
@@ -80,8 +92,28 @@ const CustomTagsPage = () => {
   ]);
 
   const [customTags, setCustomTags] = useState<CustomTag[]>([
-    { id: "1", label: "Express shipment", type: "neutral", status: "Active" },
-    { id: "2", label: "Validated for assembly", type: "success", status: "Active" },
+    {
+      id: "1",
+      label: "Express shipment",
+      description: "Priority shipping for urgent orders",
+      type: "quiet",
+      status: "Active",
+    },
+    {
+      id: "2",
+      label: "Validated for assembly",
+      description: "Items that have passed quality checks",
+      type: "success",
+      status: "Active",
+    },
+    {
+      id: "3",
+      label: "This is a very long custom tag label that exceeds 24 characters",
+      description:
+        "This is a very long description that demonstrates how the textarea handles longer content and wrapping",
+      type: "warning",
+      status: "Deactivated",
+    },
   ]);
 
   const [editingPriority, setEditingPriority] = useState<WorkOrderPriority | null>(null);
@@ -91,14 +123,23 @@ const CustomTagsPage = () => {
   const [showCreateTagSidebar, setShowCreateTagSidebar] = useState(false);
   const [newTag, setNewTag] = useState<Partial<CustomTag>>({
     label: "",
-    type: "neutral",
+    description: "",
+    type: "quiet",
     status: "Active",
   });
-  const [isBlankSlate, setIsBlankSlate] = useState(true);
+  const [isBlankSlate, setIsBlankSlate] = useState(false);
+  const [blankSlateCustomTags, setBlankSlateCustomTags] = useState<CustomTag[]>([]);
   const [deactivatingPriority, setDeactivatingPriority] = useState<WorkOrderPriority | null>(null);
   const [deactivatingTag, setDeactivatingTag] = useState<CustomTag | null>(null);
   const [showDeactivateModal, setShowDeactivateModal] = useState(false);
   const [showTagDeactivateModal, setShowTagDeactivateModal] = useState(false);
+  const [labelError, setLabelError] = useState<string>("");
+  const [hasValidated, setHasValidated] = useState<boolean>(false);
+  const [showValidationAlert, setShowValidationAlert] = useState(false);
+  const [editLabelError, setEditLabelError] = useState<string>("");
+  const [createLabelError, setCreateLabelError] = useState<string>("");
+  const [editHasValidated, setEditHasValidated] = useState<boolean>(false);
+  const [createHasValidated, setCreateHasValidated] = useState<boolean>(false);
 
   // Helper function to update priority with display objects
   const updatePriority = (id: string, updates: Partial<WorkOrderPriority>) => {
@@ -118,6 +159,10 @@ const CustomTagsPage = () => {
   const handleEditTag = (tag: CustomTag) => {
     setEditingTag(tag);
     setShowTagEditSidebar(true);
+    // Reset validation state when opening edit sidebar
+    setEditHasValidated(false);
+    setEditLabelError("");
+    setShowValidationAlert(false);
   };
 
   const handleSavePriority = () => {
@@ -125,16 +170,25 @@ const CustomTagsPage = () => {
       updatePriority(editingPriority.id, editingPriority);
       setEditingPriority(null);
       setShowEditSidebar(false);
-      toast.success("Priority updated successfully");
+      toast.success("Priority updated");
     }
   };
 
   const handleSaveTag = () => {
     if (editingTag) {
+      setEditHasValidated(true);
+      const error = validateLabel(editingTag.label, editingTag.id);
+      if (error) {
+        setEditLabelError(error);
+        setShowValidationAlert(true);
+        return;
+      }
+      setEditLabelError("");
+      setShowValidationAlert(false);
       updateTag(editingTag.id, editingTag);
       setEditingTag(null);
       setShowTagEditSidebar(false);
-      toast.success("Custom tag updated successfully");
+      toast.success("Custom tag updated");
     }
   };
 
@@ -146,30 +200,55 @@ const CustomTagsPage = () => {
   const handleCancelTagEdit = () => {
     setEditingTag(null);
     setShowTagEditSidebar(false);
+    setEditLabelError("");
+    setShowValidationAlert(false);
+    setEditHasValidated(false);
   };
 
   const handleCreateTag = () => {
     setShowCreateTagSidebar(true);
+    // Reset validation state when opening create sidebar
+    setCreateHasValidated(false);
+    setCreateLabelError("");
+    setShowValidationAlert(false);
   };
 
   const handleSaveNewTag = () => {
-    if (newTag.label && newTag.type && newTag.status) {
+    setCreateHasValidated(true);
+    const error = validateLabel(newTag.label);
+    if (error) {
+      setCreateLabelError(error);
+      setShowValidationAlert(true);
+      return;
+    }
+
+    if (newTag.type && newTag.status) {
+      setCreateLabelError("");
+      setShowValidationAlert(false);
       const tag: CustomTag = {
         id: String(Date.now()),
         label: newTag.label,
+        description: newTag.description || "",
         type: newTag.type,
         status: newTag.status,
       };
-      setCustomTags((prev) => [...prev, tag]);
-      setNewTag({ label: "", type: "neutral", status: "Active" });
+      if (isBlankSlate) {
+        setBlankSlateCustomTags((prev) => [...prev, tag]);
+      } else {
+        setCustomTags((prev) => [...prev, tag]);
+      }
+      setNewTag({ label: "", description: "", type: "quiet", status: "Active" });
       setShowCreateTagSidebar(false);
-      toast.success("Custom tag created successfully");
+      toast.success("Custom tag created");
     }
   };
 
   const handleCancelCreateTag = () => {
-    setNewTag({ label: "", type: "neutral", status: "Active" });
+    setNewTag({ label: "", description: "", type: "quiet", status: "Active" });
     setShowCreateTagSidebar(false);
+    setCreateLabelError("");
+    setShowValidationAlert(false);
+    setCreateHasValidated(false);
   };
 
   const handleDescriptionChange = (value: string) => {
@@ -190,6 +269,14 @@ const CustomTagsPage = () => {
     }
   };
 
+  const handleTagLabelBlur = () => {
+    if (editingTag) {
+      setEditHasValidated(true);
+      const error = validateLabel(editingTag.label, editingTag.id);
+      setEditLabelError(error);
+    }
+  };
+
   const handleTagTypeChange = (value: string) => {
     if (editingTag) {
       setEditingTag({ ...editingTag, type: value });
@@ -206,6 +293,12 @@ const CustomTagsPage = () => {
     setNewTag({ ...newTag, label: value });
   };
 
+  const handleNewTagLabelBlur = () => {
+    setCreateHasValidated(true);
+    const error = validateLabel(newTag.label);
+    setCreateLabelError(error);
+  };
+
   const handleNewTagTypeChange = (value: string) => {
     setNewTag({ ...newTag, type: value });
   };
@@ -214,13 +307,40 @@ const CustomTagsPage = () => {
     setNewTag({ ...newTag, status: isActive ? "Active" : "Deactivated" });
   };
 
+  const handleTagDescriptionChange = (value: string) => {
+    if (editingTag) {
+      setEditingTag({ ...editingTag, description: value });
+    }
+  };
+
+  const handleNewTagDescriptionChange = (value: string) => {
+    setNewTag({ ...newTag, description: value });
+  };
+
+  const validateLabel = (label: string, excludeId?: string): string => {
+    if (!label.trim()) {
+      return "The field is required.";
+    }
+
+    const currentTags = isBlankSlate ? blankSlateCustomTags : customTags;
+    const isDuplicate = currentTags.some(
+      (tag) => tag.label.toLowerCase() === label.toLowerCase() && tag.id !== excludeId
+    );
+
+    if (isDuplicate) {
+      return "This label already exists. Please enter a unique label.";
+    }
+
+    return "";
+  };
+
   const handleToggleStatus = (priority: WorkOrderPriority) => {
     if (priority.status === "Active") {
       setDeactivatingPriority(priority);
       setShowDeactivateModal(true);
     } else {
       updatePriority(priority.id, { status: "Active" });
-      toast.success("Priority activated successfully");
+      toast.success("Priority activated");
     }
   };
 
@@ -230,7 +350,7 @@ const CustomTagsPage = () => {
       setShowTagDeactivateModal(true);
     } else {
       updateTag(tag.id, { status: "Active" });
-      toast.success("Custom tag activated successfully");
+      toast.success("Custom tag activated");
     }
   };
 
@@ -239,7 +359,7 @@ const CustomTagsPage = () => {
       updatePriority(deactivatingPriority.id, { status: "Deactivated" });
       setDeactivatingPriority(null);
       setShowDeactivateModal(false);
-      toast.success("Priority deactivated successfully");
+      toast.success("Priority deactivated");
     }
   };
 
@@ -248,7 +368,7 @@ const CustomTagsPage = () => {
       updateTag(deactivatingTag.id, { status: "Deactivated" });
       setDeactivatingTag(null);
       setShowTagDeactivateModal(false);
-      toast.success("Custom tag deactivated successfully");
+      toast.success("Custom tag deactivated");
     }
   };
 
@@ -365,30 +485,42 @@ const CustomTagsPage = () => {
     {
       label: "Custom tag",
       dataKey: "customTag",
-      width: "auto",
+      width: "240px",
       cellRenderer: (props: { row: CustomTag }) => {
-        const getStatusIndicatorType = (type: string) => {
-          return type as any; // Type corresponds directly to StatusIndicator type
+        const getStatusIndicatorType = (type: string, status: string) => {
+          // Deactivated tags always show as neutral
+          return status === "Deactivated" ? "neutral" : (type as any);
         };
 
         return (
-          <Flex alignItems="center" gap="x1">
-            <StatusIndicator type={getStatusIndicatorType(props.row.type)}>{props.row.label}</StatusIndicator>
-            {props.row.status === "Deactivated" && (
-              <Text fontSize="small" color="midGrey">
-                (Deactivated)
-              </Text>
-            )}
-          </Flex>
+          <Box pl="x0_25" py="x0_75">
+            <StatusIndicator type={getStatusIndicatorType(props.row.type, props.row.status)}>
+              <TruncatedText maxCharacters={24} fontSize="smaller" lineHeight="smallerText">
+                {props.row.label.length > 24 ? `${props.row.label.substring(0, 96)}...` : props.row.label}
+              </TruncatedText>
+            </StatusIndicator>
+          </Box>
         );
       },
     },
     {
+      label: "Description",
+      dataKey: "description",
+      width: "auto",
+      cellFormatter: ({ row }: { row: CustomTag }) => (
+        <Box py="0">
+          <Text color={row.status === "Active" ? undefined : "midGrey"}>{row.description || "-"}</Text>
+        </Box>
+      ),
+    },
+    {
       label: "Status",
       dataKey: "status",
-      width: "220px",
-      cellRenderer: (props: { row: CustomTag }) => (
-        <Text color={props.row.status === "Active" ? undefined : "midGrey"}>{props.row.status}</Text>
+      width: "140px",
+      cellFormatter: ({ row }: { row: CustomTag }) => (
+        <Box py="0">
+          <Text color={row.status === "Active" ? undefined : "midGrey"}>{row.status}</Text>
+        </Box>
       ),
     },
     {
@@ -396,48 +528,63 @@ const CustomTagsPage = () => {
       dataKey: "actions",
       width: "40px",
       cellRenderer: (props: { row: CustomTag }) => (
-        <DropdownMenu trigger={() => <IconicButton icon="more" aria-label="More actions" />}>
-          <DropdownButton onClick={() => handleEditTag(props.row)}>Edit</DropdownButton>
-          <Divider my="x1" />
-          {props.row.status === "Active" ? (
-            <DropdownButton onClick={() => handleToggleTagStatus(props.row)}>Deactivate</DropdownButton>
-          ) : (
-            <DropdownButton onClick={() => handleToggleTagStatus(props.row)}>Activate</DropdownButton>
-          )}
-        </DropdownMenu>
+        <Box py="0">
+          <DropdownMenu trigger={() => <IconicButton icon="more" aria-label="More actions" />}>
+            <DropdownButton onClick={() => handleEditTag(props.row)}>Edit</DropdownButton>
+            <Divider my="x1" />
+            {props.row.status === "Active" ? (
+              <DropdownButton onClick={() => handleToggleTagStatus(props.row)}>Deactivate</DropdownButton>
+            ) : (
+              <DropdownButton onClick={() => handleToggleTagStatus(props.row)}>Activate</DropdownButton>
+            )}
+          </DropdownMenu>
+        </Box>
       ),
     },
   ];
 
   const tagTypeOptions = [
-    { label: "Neutral", value: "neutral" },
-    { label: "Dark", value: "dark" },
-    { label: "Danger", value: "danger" },
-    { label: "Informative", value: "informative" },
-    { label: "Success", value: "success" },
+    { label: "Neutral", value: "quiet" },
     { label: "Warning", value: "warning" },
-    { label: "Quiet", value: "quiet" },
+    { label: "Error", value: "danger" },
+    { label: "Success", value: "success" },
   ];
+
+  // Custom Option component that renders StatusIndicator
+  const StatusIndicatorOption = ({ ...props }: SelectOptionProps<NDSOption, false, any>) => {
+    return (
+      <SelectOption {...props}>
+        <StatusIndicator type={props.data.value as any}>{props.data.label}</StatusIndicator>
+      </SelectOption>
+    );
+  };
 
   return (
     <ApplicationFrame>
       <ToastContainer />
       {navigation}
       <Page fullHeight breadcrumbs={breadcrumbs} title="PO line items">
-        <Tabs defaultSelectedIndex={0}>
+        <Tabs defaultSelectedIndex={1}>
           <Tab label="Priorities">
-            <Box maxWidth="976px" mx="auto" mt="x3">
+            <Box maxWidth="1236px" mx="auto" mt="x3">
               <Table columns={priorityColumns} rows={currentPriorities} compact />
             </Box>
           </Tab>
           <Tab label="Custom tags">
-            <Box maxWidth="976px" mx="auto" mt="x3">
+            <Box maxWidth="1236px" mx="auto" mt="x3">
               <Flex justifyContent="flex-end" mb="x2">
                 <IconicButton icon="add" onClick={handleCreateTag}>
                   New custom tag
                 </IconicButton>
               </Flex>
-              <Table columns={customTagColumns} rows={customTags} compact />
+              <TopAlignedTable>
+                <Table
+                  columns={customTagColumns}
+                  rows={isBlankSlate ? blankSlateCustomTags : customTags}
+                  compact
+                  noRowsContent="No custom tags have been created yet. Click 'New custom tag' to get started."
+                />
+              </TopAlignedTable>
             </Box>
           </Tab>
         </Tabs>
@@ -447,7 +594,7 @@ const CustomTagsPage = () => {
           isOpen={showEditSidebar && !!editingPriority}
           title="Edit priority"
           onClose={handleCancelEdit}
-          width="400px"
+          width="480px"
           duration={0.25}
           closeOnOutsideClick={true}
           overlay="show"
@@ -503,7 +650,7 @@ const CustomTagsPage = () => {
           isOpen={showTagEditSidebar && !!editingTag}
           title="Edit custom tag"
           onClose={handleCancelTagEdit}
-          width="400px"
+          width="480px"
           duration={0.25}
           closeOnOutsideClick={true}
           overlay="show"
@@ -517,46 +664,75 @@ const CustomTagsPage = () => {
           }
         >
           {editingTag && (
-            <Form>
-              <FormSection>
-                <Box pb="x3">
-                  <Field>
-                    <FieldLabel labelText="Label" pb="x1" />
-                    <Input
-                      value={editingTag.label}
-                      onChange={(e) => handleTagLabelChange(e.target.value)}
-                      placeholder="Enter tag label"
-                      autoFocus
-                    />
-                  </Field>
+            <>
+              {showValidationAlert && (
+                <Box mb="x3">
+                  <Alert type="danger" title="Errors prevent the custom tag from being saved">
+                    <Text>Please correct the errors and try again.</Text>
+                  </Alert>
                 </Box>
-                <Box pb="x3">
-                  <Field>
-                    <FieldLabel labelText="Type" pb="x1" />
-                    <Select
-                      value={editingTag.type}
-                      onChange={(value) => handleTagTypeChange(String(value))}
-                      options={tagTypeOptions}
-                    />
-                  </Field>
-                </Box>
-                <Box pb="x3">
-                  <Field>
-                    <FieldLabel
-                      labelText="Status"
-                      pb="x1"
-                      helpText="Toggle to activate or deactivate the custom tag in the application."
-                    />
-                    <Toggle
-                      toggled={editingTag.status === "Active"}
-                      onChange={(e) => handleTagStatusChange(e.target.checked)}
-                      onText="Active"
-                      offText="Deactivated"
-                    />
-                  </Field>
-                </Box>
-              </FormSection>
-            </Form>
+              )}
+              <Form>
+                <FormSection>
+                  <Box pb="x3">
+                    <Field>
+                      <FieldLabel labelText="Label" pb="x1" />
+                      <Input
+                        value={editingTag.label}
+                        onChange={(e) => handleTagLabelChange(e.target.value)}
+                        onBlur={handleTagLabelBlur}
+                        placeholder="Enter tag label"
+                        maxLength={96}
+                        errorMessage={editHasValidated ? editLabelError : ""}
+                      />
+                    </Field>
+                  </Box>
+                  <Box pb="x3">
+                    <Field>
+                      <FieldLabel labelText="Description" pb="x1" requirementText="(Optional)" />
+                      <Textarea
+                        value={editingTag.description || ""}
+                        onChange={(e) => handleTagDescriptionChange(e.target.value)}
+                        placeholder="Enter tag description"
+                        rows={3}
+                      />
+                    </Field>
+                  </Box>
+                  <Box pb="x3">
+                    <Field>
+                      <FieldLabel
+                        labelText="Type"
+                        pb="x1"
+                        hint="Type applies only to your organization. Your partners will see the Neutral tag type regardless of your selection."
+                      />
+                      <Select
+                        value={editingTag.type}
+                        onChange={(value) => handleTagTypeChange(String(value))}
+                        options={tagTypeOptions}
+                        components={{
+                          Option: StatusIndicatorOption,
+                        }}
+                      />
+                    </Field>
+                  </Box>
+                  <Box pb="x3">
+                    <Field>
+                      <FieldLabel
+                        labelText="Status"
+                        pb="x1"
+                        helpText="Toggle to activate or deactivate the custom tag in the application."
+                      />
+                      <Toggle
+                        toggled={editingTag.status === "Active"}
+                        onChange={(e) => handleTagStatusChange(e.target.checked)}
+                        onText="Active"
+                        offText="Deactivated"
+                      />
+                    </Field>
+                  </Box>
+                </FormSection>
+              </Form>
+            </>
           )}
         </Sidebar>
 
@@ -565,7 +741,7 @@ const CustomTagsPage = () => {
           isOpen={showCreateTagSidebar}
           title="New custom tag"
           onClose={handleCancelCreateTag}
-          width="400px"
+          width="480px"
           duration={0.25}
           closeOnOutsideClick={true}
           overlay="show"
@@ -577,6 +753,13 @@ const CustomTagsPage = () => {
             </Flex>
           }
         >
+          {showValidationAlert && (
+            <Box mb="x3">
+              <Alert type="danger" title="Errors prevent the custom tag from being saved">
+                <Text>Please correct the errors and try again.</Text>
+              </Alert>
+            </Box>
+          )}
           <Form>
             <FormSection>
               <Box pb="x3">
@@ -585,18 +768,38 @@ const CustomTagsPage = () => {
                   <Input
                     value={newTag.label || ""}
                     onChange={(e) => handleNewTagLabelChange(e.target.value)}
+                    onBlur={handleNewTagLabelBlur}
                     placeholder="Enter tag label"
-                    autoFocus
+                    maxLength={96}
+                    errorMessage={createHasValidated ? createLabelError : ""}
                   />
                 </Field>
               </Box>
               <Box pb="x3">
                 <Field>
-                  <FieldLabel labelText="Type" pb="x1" />
+                  <FieldLabel labelText="Description" pb="x1" requirementText="(Optional)" />
+                  <Textarea
+                    value={newTag.description || ""}
+                    onChange={(e) => handleNewTagDescriptionChange(e.target.value)}
+                    placeholder="Enter tag description"
+                    rows={3}
+                  />
+                </Field>
+              </Box>
+              <Box pb="x3">
+                <Field>
+                  <FieldLabel
+                    labelText="Type"
+                    pb="x1"
+                    hint="Type applies only to your organization. Your partners will see the Neutral tag type regardless of your selection."
+                  />
                   <Select
-                    value={newTag.type || "neutral"}
+                    value={newTag.type || "quiet"}
                     onChange={(value) => handleNewTagTypeChange(String(value))}
                     options={tagTypeOptions}
+                    components={{
+                      Option: StatusIndicatorOption,
+                    }}
                   />
                 </Field>
               </Box>
@@ -636,8 +839,8 @@ const CustomTagsPage = () => {
             <Toggle
               toggled={isBlankSlate}
               onChange={(e) => setIsBlankSlate(e.target.checked)}
-              onText="Default"
-              offText="Customized"
+              onText="Blank slate"
+              offText="Default"
             />
           </Flex>
         </Box>
@@ -683,7 +886,7 @@ const CustomTagsPage = () => {
             <Text mb="x2">
               Custom tag{" "}
               <Text as="span" fontWeight="medium">
-                {deactivatingTag.label} ({deactivatingTag.type})
+                {deactivatingTag.label}
               </Text>{" "}
               is currently assigned to at least one "In progress" PO line item. Deactivating this tag will retain its
               assignment on existing line item(s), but it will no longer be available for new assignments.
