@@ -23,6 +23,14 @@ import {
   Checkbox,
   DateRange,
   Tooltip,
+  Button,
+  ButtonGroup,
+  DropdownMenu,
+  DropdownButton,
+  DropdownItem,
+  DropdownLink,
+  QuietButton,
+  PrimaryButton,
 } from "../../..";
 import { AppTag } from "../../../AppTag";
 import { poliRows, shouldShowEditBox } from "../utils/poliTableData";
@@ -36,6 +44,9 @@ export const V2 = () => {
   const [selectedRows, setSelectedRows] = useState<string[]>([]);
   const [role, setRole] = useState("supplier");
   const [isFilterSidebarOpen, setIsFilterSidebarOpen] = useState(false);
+  const [isEditMode, setIsEditMode] = useState(false);
+  const [editedItemsCount, setEditedItemsCount] = useState(0);
+  const [bulkAction, setBulkAction] = useState<string | null>(null);
   const [poLineItemNumbers, setPoLineItemNumbers] = useState<string[]>([]);
   const [onlyBlankSupplierPo, setOnlyBlankSupplierPo] = useState(false);
   const [items, setItems] = useState<string[]>([]);
@@ -62,7 +73,8 @@ export const V2 = () => {
     {
       id: "3",
       label: "This is a very long custom tag label that exceeds 24 characters",
-      description: "This is a very long description that demonstrates how the textarea handles longer content and wrapping",
+      description:
+        "This is a very long description that demonstrates how the textarea handles longer content and wrapping",
       type: "warning",
       status: "Deactivated",
     },
@@ -523,7 +535,7 @@ export const V2 = () => {
 
         // Assign different tags to different rows for variety
         const assignedTags = [];
-        
+
         // Row 1 gets 2 tags for demonstration
         if (rowId === 1) {
           assignedTags.push(customTags[0]); // Express shipment
@@ -1280,23 +1292,143 @@ export const V2 = () => {
     <ApplicationFrame>
       <Header breakpoints={{ medium: 1200 }} renderBreadcrumbs={() => breadcrumbs} title="PO line items" />
       <Page>
-        <Flex justifyContent="flex-end" alignItems="center" mb="x3">
-          <Flex gap="x2" alignItems="center">
-            <IconicButton icon="publish" aria-label="Import">
-              Import
-            </IconicButton>
-            <IconicButton icon="getApp" aria-label="Export">
-              Export
-            </IconicButton>
-            <VerticalDivider />
-            <IconicButton icon="chatBubble" aria-label="Collaboration status">
-              Collaboration status
-            </IconicButton>
-            <VerticalDivider />
-            <IconicButton icon="filter" aria-label="Filters" onClick={() => setIsFilterSidebarOpen(true)}>
-              Filters
-            </IconicButton>
-          </Flex>
+        {/* Actions Bar - Shows bulk actions when rows selected, otherwise shows regular actions */}
+        <Flex justifyContent="flex-start" alignItems="center" mb="x3">
+          {selectedRows.length > 0 ? (
+            <>
+              {/* Left group - Selection info and deselect */}
+              <Flex alignItems="center" gap="x2">
+                {isEditMode ? (
+                  <>
+                    <Text fontSize="small" color="midGrey">
+                      {selectedRows.length} item{selectedRows.length !== 1 ? "s" : ""} selected
+                    </Text>
+                    <Text fontSize="small" color="midGrey">
+                      {" "}
+                      •{" "}
+                    </Text>
+                    <Text fontSize="small" color="midGrey">
+                      {editedItemsCount} item{editedItemsCount !== 1 ? "s" : ""} edited
+                    </Text>
+                    <QuietButton size="small" onClick={() => setEditedItemsCount(0)}>
+                      Discard all edits
+                    </QuietButton>
+                  </>
+                ) : (
+                  <>
+                    <Text fontSize="small" color="midGrey">
+                      {selectedRows.length} item{selectedRows.length !== 1 ? "s" : ""} selected
+                    </Text>
+                    <QuietButton size="small" onClick={() => setSelectedRows([])}>
+                      Deselect all
+                    </QuietButton>
+                  </>
+                )}
+              </Flex>
+
+              {/* Right group - Actions */}
+              <Flex gap="x2" alignItems="center" ml="auto">
+                {isEditMode ? (
+                  <Flex alignItems="center">
+                    <QuietButton onClick={() => setIsEditMode(false)}>Quit editing</QuietButton>
+                    <PrimaryButton
+                      onClick={() => {
+                        setBulkAction("save");
+                        setIsEditMode(false);
+                        setEditedItemsCount(0);
+                      }}
+                    >
+                      Save
+                    </PrimaryButton>
+                  </Flex>
+                ) : (
+                  <>
+                    <Button onClick={() => setBulkAction("accept")}>Accept PO line item</Button>
+                    <Button onClick={() => setBulkAction("cancel")}>Cancel PO line item</Button>
+                    <Button
+                      onClick={() => {
+                        setBulkAction("edit");
+                        setIsEditMode(true);
+                        setEditedItemsCount(selectedRows.length);
+                      }}
+                    >
+                      Edit PO line item
+                    </Button>
+                    <VerticalDivider />
+                    <DropdownMenu
+                      trigger={() => (
+                        <IconicButton labelHidden icon="more">
+                          More actions
+                        </IconicButton>
+                      )}
+                    >
+                      <DropdownMenu
+                        trigger={() => (
+                          <DropdownButton>
+                            <Flex justifyContent="space-between">
+                              <Text>Add tag</Text>
+                              <Icon icon="rightArrow" title="right arrow" />
+                            </Flex>
+                          </DropdownButton>
+                        )}
+                        placement="left-start"
+                        showArrow={false}
+                        openOnHover
+                        openAriaLabel="open add tag submenu"
+                        closeAriaLabel="close add tag submenu"
+                        minWidth="240px"
+                      >
+                        {customTags.map((tag) => (
+                          <DropdownButton key={tag.id} onClick={() => setBulkAction(`add-tag-${tag.id}`)}>
+                            {tag.label}
+                          </DropdownButton>
+                        ))}
+                      </DropdownMenu>
+                      <DropdownMenu
+                        trigger={() => (
+                          <DropdownButton>
+                            <Flex justifyContent="space-between">
+                              <Text>Remove tag</Text>
+                              <Icon icon="rightArrow" title="right arrow" />
+                            </Flex>
+                          </DropdownButton>
+                        )}
+                        placement="left-start"
+                        showArrow={false}
+                        openOnHover
+                        openAriaLabel="open remove tag submenu"
+                        closeAriaLabel="close remove tag submenu"
+                        minWidth="240px"
+                      >
+                        {customTags.map((tag) => (
+                          <DropdownButton key={tag.id} onClick={() => setBulkAction(`remove-tag-${tag.id}`)}>
+                            {tag.label}
+                          </DropdownButton>
+                        ))}
+                      </DropdownMenu>
+                    </DropdownMenu>
+                  </>
+                )}
+              </Flex>
+            </>
+          ) : (
+            <Flex justifyContent="flex-end" gap="x2" alignItems="center" width="100%">
+              <IconicButton icon="publish" aria-label="Import">
+                Import
+              </IconicButton>
+              <IconicButton icon="getApp" aria-label="Export">
+                Export
+              </IconicButton>
+              <VerticalDivider />
+              <IconicButton icon="chatBubble" aria-label="Collaboration status">
+                Collaboration status
+              </IconicButton>
+              <VerticalDivider />
+              <IconicButton icon="filter" aria-label="Filters" onClick={() => setIsFilterSidebarOpen(true)}>
+                Filters
+              </IconicButton>
+            </Flex>
+          )}
         </Flex>
         <Box width="100%" overflowX="auto">
           <Box width="5100px">
