@@ -574,7 +574,7 @@ const CustomTagsPage = () => {
             <Box maxWidth="1236px" mx="auto" mt="x3">
               <Flex justifyContent="flex-end" mb="x2">
                 <IconicButton icon="add" onClick={handleCreateTag}>
-                  New custom tag
+                  Create custom tag
                 </IconicButton>
               </Flex>
               <TopAlignedTable>
@@ -582,7 +582,16 @@ const CustomTagsPage = () => {
                   columns={customTagColumns}
                   rows={isBlankSlate ? blankSlateCustomTags : customTags}
                   compact
-                  noRowsContent="No custom tags have been created yet. Click 'New custom tag' to get started."
+                  noRowsContent={
+                    (
+                      <Box textAlign="center" py="x4">
+                        <Text mb="x3" color="midGrey">
+                          No custom tags have been created yet.
+                        </Text>
+                        <PrimaryButton onClick={handleCreateTag}>Create custom tag</PrimaryButton>
+                      </Box>
+                    ) as any
+                  }
                 />
               </TopAlignedTable>
             </Box>
@@ -739,7 +748,7 @@ const CustomTagsPage = () => {
         {/* Create New Custom Tag Sidebar */}
         <Sidebar
           isOpen={showCreateTagSidebar}
-          title="New custom tag"
+          title="Create custom tag"
           onClose={handleCancelCreateTag}
           width="480px"
           duration={0.25}
@@ -764,7 +773,11 @@ const CustomTagsPage = () => {
             <FormSection>
               <Box pb="x3">
                 <Field>
-                  <FieldLabel labelText="Label" pb="x1" />
+                  <FieldLabel
+                    labelText="Label"
+                    hint="Keep the label short. Labels longer than 24 characters will be truncated. Maximum length is 64 characters."
+                    pb="x1"
+                  />
                   <Input
                     value={newTag.label || ""}
                     onChange={(e) => handleNewTagLabelChange(e.target.value)}
@@ -873,7 +886,7 @@ const CustomTagsPage = () => {
         {/* Deactivate Custom Tag Confirmation Modal */}
         <Modal
           isOpen={showTagDeactivateModal}
-          title="Custom tag assigned to a PO line item"
+          title="Custom tag in use"
           onRequestClose={handleCancelTagDeactivate}
           footerContent={
             <Flex gap="x2" justifyContent="flex-start">
@@ -884,12 +897,12 @@ const CustomTagsPage = () => {
         >
           {deactivatingTag && (
             <Text mb="x2">
-              Custom tag{" "}
+              The custom tag{" "}
               <Text as="span" fontWeight="medium">
                 {deactivatingTag.label}
               </Text>{" "}
-              is currently assigned to at least one PO line item. Deactivating this tag will retain its assignment on
-              existing line item(s), but it will no longer be available for new assignments.
+              is currently associated to at least one PO line item. Deactivating this tag will keep it on existing items
+              but prevent it from being added to new ones.
             </Text>
           )}
           {deactivatingTag && <Text>Are you sure you want to deactivate this custom tag?</Text>}
