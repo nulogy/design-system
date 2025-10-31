@@ -152,6 +152,7 @@ export const V1 = () => {
     fontSize = "smaller",
     style,
     mr,
+    isProductionRecord = false,
   }: {
     number: string;
     tooltip?: string;
@@ -159,8 +160,9 @@ export const V1 = () => {
     fontSize?: "smaller" | "small";
     style?: React.CSSProperties;
     mr?: string;
+    isProductionRecord?: boolean;
   }) => {
-    const pillContent = (
+    const pillBox = (
       <Box
         backgroundColor="lightGrey"
         px="half"
@@ -183,13 +185,23 @@ export const V1 = () => {
       </Box>
     );
 
-    return tooltip ? (
+    const boxWithTooltip = tooltip ? (
       <Tooltip tooltip={tooltip} placement={placement}>
-        {pillContent}
+        {pillBox}
       </Tooltip>
     ) : (
-      pillContent
+      pillBox
     );
+
+    if (isProductionRecord) {
+      return (
+        <Flex width="80px" justifyContent="flex-end" ml="-144px">
+          {boxWithTooltip}
+        </Flex>
+      );
+    }
+
+    return boxWithTooltip;
   };
 
   // ActualProductionRecordNumberPill component (using the reusable component)
@@ -198,11 +210,12 @@ export const V1 = () => {
   }: {
     actualProductionRecordNumber: string;
   }) => (
-    <Flex py="x0_75" mr="x1" justifyContent="flex-start" ml="-96px">
+    <Flex py="x0_75" mr="x1" justifyContent="flex-start">
       <RecordNumberPill
         number={actualProductionRecordNumber}
         tooltip={`Actual production record #${actualProductionRecordNumber}`}
         placement="left"
+        isProductionRecord={true}
       />
     </Flex>
   );
@@ -770,8 +783,8 @@ export const V1 = () => {
       width: "0px",
       cellRenderer: ({ row }: { row: any }) => {
         return (
-          <Flex py="x0_75" mr="x1" justifyContent="flex-start" ml="-96px">
-            <RecordNumberPill number={row.actualProductionRecordNumber} placement="top" />
+          <Flex py="x0_75" mr="x1" justifyContent="flex-start">
+            <RecordNumberPill number={row.actualProductionRecordNumber} placement="top" isProductionRecord={true} />
           </Flex>
         );
       },
@@ -979,7 +992,7 @@ export const V1 = () => {
     ...record,
     expandedContent: () => (
       <Box style={{ paddingLeft: "-56px" }}>
-        <Box style={{ paddingLeft: "298px" }}>
+        <Box style={{ paddingLeft: "290px" }}>
           <Table
             columns={actualProductionReportColumns}
             rows={
@@ -2512,7 +2525,7 @@ export const V1 = () => {
                       <Box as="span" color="black" fontWeight="bold">
                         Actual production record
                       </Box>
-                      <RecordNumberPill number="001" />
+                      <RecordNumberPill number="01" />
                     </Flex>
                   </Box>
                   <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
@@ -2662,7 +2675,7 @@ export const V1 = () => {
                       <Box as="span" color="black" fontWeight="bold">
                         Actual production record
                       </Box>
-                      <RecordNumberPill number="002" />
+                      <RecordNumberPill number="02" />
                     </Flex>
                   </Box>
                   <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
@@ -2747,7 +2760,7 @@ export const V1 = () => {
                       <Box as="span" color="black" fontWeight="bold">
                         Actual production record
                       </Box>
-                      <RecordNumberPill number="001" />
+                      <RecordNumberPill number="01" />
                       <Box as="span" color="midGrey">
                         –
                       </Box>
@@ -2887,7 +2900,7 @@ export const V1 = () => {
                       <Box as="span" color="black" fontWeight="bold">
                         Actual production record
                       </Box>
-                      <RecordNumberPill number="002" />
+                      <RecordNumberPill number="02" />
                       <Box as="span" color="midGrey">
                         –
                       </Box>
@@ -2972,7 +2985,7 @@ export const V1 = () => {
                       <Box as="span" color="black" fontWeight="bold">
                         Actual production record
                       </Box>
-                      <RecordNumberPill number="004" />
+                      <RecordNumberPill number="04" />
                       <Box as="span" color="midGrey">
                         –
                       </Box>
@@ -3216,7 +3229,7 @@ export const V1 = () => {
                           <Box as="span" color="black" fontWeight="bold">
                             Actual production record
                           </Box>
-                          <RecordNumberPill number="003" />
+                          <RecordNumberPill number="03" />
                         </Flex>
                       </Box>
                       <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
@@ -3280,7 +3293,7 @@ export const V1 = () => {
                           <Box as="span" color="black" fontWeight="bold">
                             Actual production record
                           </Box>
-                          <RecordNumberPill number="003" />
+                          <RecordNumberPill number="03" />
                           <Box as="span" color="midGrey">
                             –
                           </Box>
@@ -3526,7 +3539,7 @@ export const V1 = () => {
                       {/* Main Production Row */}
                       <Flex alignItems="center" py="x0" gap="x1">
                         <Flex width="3em" alignItems="center" justifyContent="center" ml="x1" mr="x0_5">
-                          <RecordNumberPill number={`${String(index + 1).padStart(3, "0")}`} />
+                          <RecordNumberPill number={`${String(index + 1).padStart(2, "0")}`} />
                         </Flex>
                         <Box width="100%">
                           <Input
