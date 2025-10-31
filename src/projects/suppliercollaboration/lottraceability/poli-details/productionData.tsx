@@ -583,7 +583,7 @@ export const ConsumptionReport = ({
 export const nestedTableData1 = [
   {
     id: "1-1",
-    actualProductionRecordNumber: "001",
+    actualProductionRecordNumber: "01",
     actualQuantity: "5 cases",
     lotCode: "LOT-2025-001",
     supplierLotCode: "SUP-LOT-001",
@@ -609,7 +609,7 @@ export const nestedTableData1 = [
   },
   {
     id: "1-3",
-    actualProductionRecordNumber: "003",
+    actualProductionRecordNumber: "0003",
     actualQuantity: "0 cases",
     lotCode: "LOT-2025-001",
     supplierLotCode: "SUP-LOT-001",
@@ -673,7 +673,7 @@ export const nestedTableData4 = [
 export const nestedTableData5 = [
   {
     id: "5-1",
-    actualProductionRecordNumber: "001",
+    actualProductionRecordNumber: "01",
     actualQuantity: "8 cases",
     lotCode: "LOT-2025-005",
     supplierLotCode: "SUP-LOT-005",
@@ -702,7 +702,7 @@ export const nestedTableData5 = [
 export const nestedTableData6 = [
   {
     id: "6-1",
-    actualProductionRecordNumber: "001",
+    actualProductionRecordNumber: "01",
     actualQuantity: "10 cases",
     lotCode: "LOT-2025-006",
     supplierLotCode: "SUP-LOT-006",
@@ -729,7 +729,7 @@ export const nestedTableData6 = [
 export const nestedTableData7 = [
   {
     id: "7-1",
-    actualProductionRecordNumber: "001",
+    actualProductionRecordNumber: "01",
     actualQuantity: "0 cases",
     lotCode: "LOT-2025-007",
     supplierLotCode: "SUP-LOT-007",

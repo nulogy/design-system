@@ -16,7 +16,7 @@ export const createNestedTableData = (consumptionTableColumns: any) => {
     {
       id: "1-1",
       actualQuantity: "0 cases",
-      actualProductionRecordNumber: "001",
+      actualProductionRecordNumber: "01",
       lotCode: "LOT-2025-001",
       supplierLotCode: "SUP-LOT-001",
       expiryDate: "2026-Feb-12",
@@ -50,7 +50,7 @@ export const createNestedTableData = (consumptionTableColumns: any) => {
     {
       id: "1-3",
       actualQuantity: "3 cases",
-      actualProductionRecordNumber: "003",
+      actualProductionRecordNumber: "0003",
       lotCode: "LOT-2025-001B",
       supplierLotCode: "SUP-LOT-001B",
       expiryDate: "2026-Feb-12",
@@ -130,7 +130,7 @@ export const createNestedTableData = (consumptionTableColumns: any) => {
     {
       id: "5-1",
       actualQuantity: "8 cases",
-      actualProductionRecordNumber: "001",
+      actualProductionRecordNumber: "01",
       lotCode: "LOT-2025-005A",
       supplierLotCode: "SUP-LOT-005A",
       expiryDate: "2026-03-15",
@@ -167,7 +167,7 @@ export const createNestedTableData = (consumptionTableColumns: any) => {
     {
       id: "6-1",
       actualQuantity: "15 cases",
-      actualProductionRecordNumber: "001",
+      actualProductionRecordNumber: "01",
       lotCode: "LOT-2025-006A",
       supplierLotCode: "SUP-LOT-006A",
       expiryDate: "2026-04-22",
@@ -200,7 +200,7 @@ export const createNestedTableData = (consumptionTableColumns: any) => {
     {
       id: "7-1",
       actualQuantity: "0 cases",
-      actualProductionRecordNumber: "001",
+      actualProductionRecordNumber: "01",
       lotCode: "LOT-2025-007A",
       supplierLotCode: "SUP-LOT-007A",
       expiryDate: "2026-05-10",
