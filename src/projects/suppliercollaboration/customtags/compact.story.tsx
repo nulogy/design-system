@@ -101,6 +101,18 @@ export const V1 = () => {
     },
   ];
 
+  // Function to get sort order for tag type (error/danger -> warning -> success -> quiet)
+  const getTagTypeOrder = (tag: { type: string }) => {
+    const type = tag.type;
+    if (type === "danger" || type === "error") return 1;
+    if (type === "warning") return 2;
+    if (type === "success") return 3;
+    return 4; // quiet, neutral, or other
+  };
+
+  // Sort customTags by type order for dropdown menus
+  const sortedCustomTags = [...customTags].sort((a, b) => getTagTypeOrder(a) - getTagTypeOrder(b));
+
   const handleRowSelectionChange = (selectedRowIds: string[]) => {
     // Filter out canceled rows from selection
     const filteredSelectedRows = selectedRowIds.filter((rowId) => {
@@ -554,10 +566,30 @@ export const V1 = () => {
         // Additional tags to show in tooltip for row 1
         const additionalTags = rowId === 1 ? [customTags[3], customTags[4], customTags[5]] : [];
 
+        // Function to get sort order for tag type (error/danger -> warning -> success -> quiet)
+        const getTagTypeOrder = (tag) => {
+          const getStatusIndicatorType = () => {
+            if (tag.status === "Deactivated") return "neutral";
+            if (tag.label === "Validated for assembly") {
+              return role === "customer" ? "success" : "quiet";
+            }
+            return tag.type;
+          };
+          const type = getStatusIndicatorType();
+          if (type === "danger" || type === "error") return 1;
+          if (type === "warning") return 2;
+          if (type === "success") return 3;
+          return 4; // quiet, neutral, or other
+        };
+
+        // Sort tags by type order
+        const sortedAssignedTags = [...assignedTags].sort((a, b) => getTagTypeOrder(a) - getTagTypeOrder(b));
+        const sortedAdditionalTags = [...additionalTags].sort((a, b) => getTagTypeOrder(a) - getTagTypeOrder(b));
+
         return (
           <Flex flexDirection="column" gap="x0_25" px="x1" py="x0_75">
             <Flex flexWrap="wrap" gap="x0_25">
-              {assignedTags.map((tag) => {
+              {sortedAssignedTags.map((tag) => {
                 const getStatusIndicatorType = () => {
                   if (tag.status === "Deactivated") return "neutral";
                   // "Validated for assembly" should be "success" for customer, "quiet" for supplier
@@ -575,11 +607,11 @@ export const V1 = () => {
                   </StatusIndicator>
                 );
               })}
-              {rowId === 1 && additionalTags.length > 0 && (
+              {rowId === 1 && sortedAdditionalTags.length > 0 && (
                 <Tooltip
                   tooltip={
                     <Flex flexDirection="column" gap="x0_75">
-                      {additionalTags.map((tag) => (
+                      {sortedAdditionalTags.map((tag) => (
                         <Text key={tag.id} fontSize="small" lineHeight="smallTextCompressed">
                           {tag.label}
                         </Text>
@@ -595,7 +627,7 @@ export const V1 = () => {
                 </Tooltip>
               )}
             </Flex>
-            {assignedTags.some((tag) => tag.status === "Deactivated") && (
+            {sortedAssignedTags.some((tag) => tag.status === "Deactivated") && (
               <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
                 (Deactivated)
               </Text>
@@ -1369,7 +1401,7 @@ export const V1 = () => {
                         closeAriaLabel="close add tag submenu"
                         minWidth="240px"
                       >
-                        {customTags.map((tag) => (
+                        {sortedCustomTags.map((tag) => (
                           <DropdownButton key={tag.id} onClick={() => setBulkAction(`add-tag-${tag.id}`)}>
                             {tag.label}
                           </DropdownButton>
@@ -1391,7 +1423,7 @@ export const V1 = () => {
                         closeAriaLabel="close remove tag submenu"
                         minWidth="240px"
                       >
-                        {customTags.map((tag) => (
+                        {sortedCustomTags.map((tag) => (
                           <DropdownButton key={tag.id} onClick={() => setBulkAction(`remove-tag-${tag.id}`)}>
                             {tag.label}
                           </DropdownButton>
