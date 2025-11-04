@@ -1387,59 +1387,63 @@ export const V2 = () => {
                     >
                       Edit PO line item
                     </Button>
-                    <VerticalDivider />
-                    <DropdownMenu
-                      trigger={() => (
-                        <IconicButton labelHidden icon="more">
-                          More actions
-                        </IconicButton>
-                      )}
-                    >
-                      <DropdownMenu
-                        trigger={() => (
-                          <DropdownButton>
-                            <Flex justifyContent="space-between">
-                              <Text>Add tag</Text>
-                              <Icon icon="rightArrow" title="right arrow" />
-                            </Flex>
-                          </DropdownButton>
-                        )}
-                        placement="left-start"
-                        showArrow={false}
-                        openOnHover
-                        openAriaLabel="open add tag submenu"
-                        closeAriaLabel="close add tag submenu"
-                        minWidth="240px"
-                      >
-                        {sortedCustomTags.map((tag) => (
-                          <DropdownButton key={tag.id} onClick={() => setBulkAction(`add-tag-${tag.id}`)}>
-                            {tag.label}
-                          </DropdownButton>
-                        ))}
-                      </DropdownMenu>
-                      <DropdownMenu
-                        trigger={() => (
-                          <DropdownButton>
-                            <Flex justifyContent="space-between">
-                              <Text>Remove tag</Text>
-                              <Icon icon="rightArrow" title="right arrow" />
-                            </Flex>
-                          </DropdownButton>
-                        )}
-                        placement="left-start"
-                        showArrow={false}
-                        openOnHover
-                        openAriaLabel="open remove tag submenu"
-                        closeAriaLabel="close remove tag submenu"
-                        minWidth="240px"
-                      >
-                        {sortedCustomTags.map((tag) => (
-                          <DropdownButton key={tag.id} onClick={() => setBulkAction(`remove-tag-${tag.id}`)}>
-                            {tag.label}
-                          </DropdownButton>
-                        ))}
-                      </DropdownMenu>
-                    </DropdownMenu>
+                    {role !== "supplier" && (
+                      <>
+                        <VerticalDivider />
+                        <DropdownMenu
+                          trigger={() => (
+                            <IconicButton labelHidden icon="more">
+                              More actions
+                            </IconicButton>
+                          )}
+                        >
+                          <DropdownMenu
+                            trigger={() => (
+                              <DropdownButton>
+                                <Flex justifyContent="space-between">
+                                  <Text>Add tag</Text>
+                                  <Icon icon="rightArrow" title="right arrow" />
+                                </Flex>
+                              </DropdownButton>
+                            )}
+                            placement="left-start"
+                            showArrow={false}
+                            openOnHover
+                            openAriaLabel="open add tag submenu"
+                            closeAriaLabel="close add tag submenu"
+                            minWidth="240px"
+                          >
+                            {sortedCustomTags.map((tag) => (
+                              <DropdownButton key={tag.id} onClick={() => setBulkAction(`add-tag-${tag.id}`)}>
+                                {tag.label}
+                              </DropdownButton>
+                            ))}
+                          </DropdownMenu>
+                          <DropdownMenu
+                            trigger={() => (
+                              <DropdownButton>
+                                <Flex justifyContent="space-between">
+                                  <Text>Remove tag</Text>
+                                  <Icon icon="rightArrow" title="right arrow" />
+                                </Flex>
+                              </DropdownButton>
+                            )}
+                            placement="left-start"
+                            showArrow={false}
+                            openOnHover
+                            openAriaLabel="open remove tag submenu"
+                            closeAriaLabel="close remove tag submenu"
+                            minWidth="240px"
+                          >
+                            {sortedCustomTags.map((tag) => (
+                              <DropdownButton key={tag.id} onClick={() => setBulkAction(`remove-tag-${tag.id}`)}>
+                                {tag.label}
+                              </DropdownButton>
+                            ))}
+                          </DropdownMenu>
+                        </DropdownMenu>
+                      </>
+                    )}
                   </>
                 )}
               </Flex>

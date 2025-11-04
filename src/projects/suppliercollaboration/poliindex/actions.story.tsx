@@ -153,7 +153,7 @@ export const Actions = () => {
       width: "40px",
       headerFormatter: () => (
         <Box width="100%" textAlign="center" px="x0_5" py="x1">
-          <Text fontSize="small" fontWeight="bold">
+          <Text fontSize="smaller" fontWeight="bold">
             <Icon icon="chatBubble" size="x2_5" />
           </Text>
         </Box>
@@ -172,7 +172,7 @@ export const Actions = () => {
       width: "40px",
       headerFormatter: () => (
         <Box width="100%" textAlign="center" px="x0_5" py="x1">
-          <Text fontSize="small" fontWeight="bold">
+          <Text fontSize="smaller" fontWeight="bold">
             <Icon icon="attachment" size="x2_5" />
           </Text>
         </Box>
@@ -191,7 +191,7 @@ export const Actions = () => {
       width: "184px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
             PO number
           </Text>
         </Box>
@@ -228,10 +228,10 @@ export const Actions = () => {
       width: "200px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
             PO line item number
           </Text>
-          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="normal" color="midGrey">
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="normal" color="midGrey">
             Customer's / Supplier's
           </Text>
         </Box>
@@ -291,7 +291,7 @@ export const Actions = () => {
       width: "152px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
             Creation date
           </Text>
         </Box>
@@ -304,7 +304,7 @@ export const Actions = () => {
             <Text fontSize="small" lineHeight="smallTextCompressed">
               {formattedDate}
             </Text>
-            <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+            <Text fontSize="smaller" lineHeight="smallerText" color="midGrey">
               (Week {weekNumber})
             </Text>
           </Flex>
@@ -317,7 +317,7 @@ export const Actions = () => {
       width: "200px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
             {role === "supplier" ? "Customer" : "Supplier"}
           </Text>
         </Box>
@@ -351,7 +351,7 @@ export const Actions = () => {
       width: "120px",
       headerFormatter: () => (
         <Box px="x1" pt="x1_25" pb="x0_75">
-          <Text fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
+          <Text fontSize="smaller" lineHeight="smallerText" fontWeight="bold">
             Actions
           </Text>
         </Box>
@@ -396,7 +396,7 @@ export const Actions = () => {
       <Header breakpoints={{ medium: 1200 }} renderBreadcrumbs={() => breadcrumbs} title="PO line items" />
       <Page>
         {/* Actions Bar - Shows bulk actions when rows selected, otherwise shows regular actions */}
-        <Flex justifyContent="space-between" alignItems="center" mb="x3">
+        <Flex justifyContent="flex-start" alignItems="center" mb="x3">
           {selectedRows.length > 0 ? (
             <>
               {/* Left group - Selection info and deselect */}
@@ -428,10 +428,11 @@ export const Actions = () => {
                   </>
                 )}
               </Flex>
+
               {/* Right group - Actions */}
               <Flex gap="x2" alignItems="center">
                 {isEditMode ? (
-                  <>
+                  <Flex alignItems="center">
                     <QuietButton onClick={() => setIsEditMode(false)}>Quit editing</QuietButton>
                     <PrimaryButton
                       onClick={() => {
@@ -442,7 +443,7 @@ export const Actions = () => {
                     >
                       Save
                     </PrimaryButton>
-                  </>
+                  </Flex>
                 ) : (
                   <>
                     <IconicButton
@@ -470,22 +471,26 @@ export const Actions = () => {
                     >
                       Edit PO line item(s)
                     </IconicButton>
-                    <VerticalDivider />
-                    <DropdownMenu>
-                      <DropdownButton size="small">More actions</DropdownButton>
-                      <DropdownItem onClick={() => setBulkAction("export")}>
-                        <Icon icon="getApp" size="x2" />
-                        Export
-                      </DropdownItem>
-                      <DropdownItem onClick={() => setBulkAction("duplicate")}>
-                        <Icon icon="copy" size="x2" />
-                        Duplicate
-                      </DropdownItem>
-                      <DropdownItem onClick={() => setBulkAction("delete")}>
-                        <Icon icon="delete" size="x2" />
-                        Delete
-                      </DropdownItem>
-                    </DropdownMenu>
+                    {role !== "supplier" && (
+                      <>
+                        <VerticalDivider />
+                        <DropdownMenu>
+                          <DropdownButton size="small">More actions</DropdownButton>
+                          <DropdownItem onClick={() => setBulkAction("export")}>
+                            <Icon icon="getApp" size="x2" />
+                            Export
+                          </DropdownItem>
+                          <DropdownItem onClick={() => setBulkAction("duplicate")}>
+                            <Icon icon="copy" size="x2" />
+                            Duplicate
+                          </DropdownItem>
+                          <DropdownItem onClick={() => setBulkAction("delete")}>
+                            <Icon icon="delete" size="x2" />
+                            Delete
+                          </DropdownItem>
+                        </DropdownMenu>
+                      </>
+                    )}
                   </>
                 )}
               </Flex>

@@ -3469,11 +3469,7 @@ export const V1 = () => {
                 </Box>
                 <Box width="8em">
                   <Field>
-                    <FieldLabel
-                      labelText="UOM"
-                      pb="x1"
-                      hint="Only UOMs with defined conversion ratios to the PO line item's requested quantity UOM are available. Upon submission, quantities are converted and displayed in the PO line item's requested quantity UOM."
-                    />
+                    <FieldLabel labelText="UOM" pb="x1" />
                     <Select
                       value={productionRecordState.uom}
                       onChange={(value) => setProductionRecordState((prev) => ({ ...prev, uom: String(value) }))}
