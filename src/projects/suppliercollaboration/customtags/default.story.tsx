@@ -773,11 +773,7 @@ const CustomTagsPage = () => {
             <FormSection>
               <Box pb="x3">
                 <Field>
-                  <FieldLabel
-                    labelText="Label"
-                    hint="Keep the label short. Labels longer than 24 characters will be truncated. Maximum length is 64 characters."
-                    pb="x1"
-                  />
+                  <FieldLabel labelText="Label" pb="x1" />
                   <Input
                     value={newTag.label || ""}
                     onChange={(e) => handleNewTagLabelChange(e.target.value)}
@@ -901,8 +897,8 @@ const CustomTagsPage = () => {
               <Text as="span" fontWeight="medium">
                 {deactivatingTag.label}
               </Text>{" "}
-              is currently associated to at least one PO line item. Deactivating this tag will keep it on existing items
-              but prevent it from being added to new ones.
+              is currently added to at least one PO line item. Deactivating this tag will keep it on existing items but
+              prevent it from being added to new ones.
             </Text>
           )}
           {deactivatingTag && <Text>Are you sure you want to deactivate this custom tag?</Text>}
