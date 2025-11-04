@@ -5012,7 +5012,8 @@ const InlineAdvance = () => {
         <Form>
           <Box pt="x2" pb="x2" position="relative">
             <Alert type="danger" title="Edit conflict detected">
-              The record has been modified by another user. Refresh the page to retrieve the latest data and reapply your changes.
+              The record has been modified by another user. Refresh the page to retrieve the latest data and reapply
+              your changes.
             </Alert>
             <Box
               position="absolute"
@@ -5154,7 +5155,11 @@ const InlineAdvance = () => {
                     gap="x1"
                     className={`flex-row ${row.supplierLotCode === "" || isRowDuplicate(index) ? "has-error" : ""}`}
                     borderBottom={
-                      row.supplierLotCode === "" || isRowDuplicate(index) || row.id === "row-9" || row.id === "row-2" || row.id === "row-8"
+                      row.supplierLotCode === "" ||
+                      isRowDuplicate(index) ||
+                      row.id === "row-9" ||
+                      row.id === "row-2" ||
+                      row.id === "row-8"
                         ? "none"
                         : "solid 1px"
                     }
@@ -5246,7 +5251,6 @@ const InlineAdvance = () => {
                     </Box>
                   )}
 
-
                   {/* InlineValidation error box for expiry date mismatch */}
                   {(row.id === "row-8" || row.id === "row-9") && (
                     <Box pb="x1_5" pl="x1_5" className="error-message-box" position="relative">
@@ -5302,9 +5306,7 @@ const InlineAdvance = () => {
                         </Box>
                       </Tooltip>
                       <Box pr="x6">
-                        <InlineValidation
-                          errorMessage="Duplicate actual production record detected. Each record must have an unique combination of pallet number, lot code, and expiry date."
-                        />
+                        <InlineValidation errorMessage="Duplicate actual production record detected. Each record must have an unique combination of pallet number, lot code, and expiry date." />
                       </Box>
                     </Box>
                   )}
@@ -5353,7 +5355,12 @@ const InlineAdvance = () => {
                         </Box>
                       </Flex>
                       <Box pr="x6">
-                        <InlineValidation errorList={["Duplicate actual production record detected. Each record must have an unique combination of pallet number, lot code, and expiry date.", "Error 2"]} />
+                        <InlineValidation
+                          errorList={[
+                            "Duplicate actual production record detected. Each record must have an unique combination of pallet number, lot code, and expiry date.",
+                            "Error 2",
+                          ]}
+                        />
                       </Box>
                     </Box>
                   )}
@@ -6050,7 +6057,8 @@ const InlineSimplified2 = () => {
         <Form>
           <Box pt="x2" pb="x2" position="relative">
             <Alert type="danger" title="Edit conflict detected">
-              The record has been modified by another user. Refresh the page to retrieve the latest data and reapply your changes.
+              The record has been modified by another user. Refresh the page to retrieve the latest data and reapply
+              your changes.
             </Alert>
             <Box
               position="absolute"
@@ -6192,7 +6200,11 @@ const InlineSimplified2 = () => {
                     gap="x1"
                     className={`flex-row ${row.supplierLotCode === "" || isRowDuplicate(index) ? "has-error" : ""}`}
                     borderBottom={
-                      row.supplierLotCode === "" || isRowDuplicate(index) || row.id === "row-9" || row.id === "row-2" || row.id === "row-8"
+                      row.supplierLotCode === "" ||
+                      isRowDuplicate(index) ||
+                      row.id === "row-9" ||
+                      row.id === "row-2" ||
+                      row.id === "row-8"
                         ? "none"
                         : "solid 1px"
                     }
@@ -6284,7 +6296,6 @@ const InlineSimplified2 = () => {
                     </Box>
                   )}
 
-
                   {/* InlineValidation error box for expiry date mismatch */}
                   {(row.id === "row-8" || row.id === "row-9") && (
                     <Box pb="x1_5" pl="x1_5" className="error-message-box" position="relative">
@@ -6340,9 +6351,7 @@ const InlineSimplified2 = () => {
                         </Box>
                       </Tooltip>
                       <Box pr="x6">
-                        <InlineValidation
-                          errorMessage="Duplicate actual production record detected. Each record must have an unique combination of pallet number, lot code, and expiry date."
-                        />
+                        <InlineValidation errorMessage="Duplicate actual production record detected. Each record must have an unique combination of pallet number, lot code, and expiry date." />
                       </Box>
                     </Box>
                   )}
@@ -6391,7 +6400,12 @@ const InlineSimplified2 = () => {
                         </Box>
                       </Flex>
                       <Box pr="x6">
-                        <InlineValidation errorList={["Duplicate actual production record detected. Each record must have an unique combination of pallet number, lot code, and expiry date.", "Error 2"]} />
+                        <InlineValidation
+                          errorList={[
+                            "Duplicate actual production record detected. Each record must have an unique combination of pallet number, lot code, and expiry date.",
+                            "Error 2",
+                          ]}
+                        />
                       </Box>
                     </Box>
                   )}

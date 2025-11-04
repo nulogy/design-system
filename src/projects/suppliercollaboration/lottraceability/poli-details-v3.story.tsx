@@ -3428,9 +3428,11 @@ export const V3 = () => {
                 <Box>
                   {/* Table Header */}
                   <Flex borderBottom="1px solid" borderColor="lightGrey" pr="56px" pb="x1" gap="x1">
-                    <Flex minWidth="32px" ml="x1" mr="x0_5">
-                      #
-                    </Flex>
+                    {isEditingProduction && (
+                      <Flex minWidth="32px" ml="x1" mr="x0_5">
+                        #
+                      </Flex>
+                    )}
                     <Box width="100%">Pallet number</Box>
                     {dualLotCode && <Box width="100%">Customer's lot code</Box>}
                     <Box width="100%">
@@ -3468,9 +3470,11 @@ export const V3 = () => {
                     <Box key={row.id}>
                       {/* Main Production Row */}
                       <Flex alignItems="center" py="x0" gap="x1">
-                        <Flex width="3em" alignItems="center" justifyContent="center" ml="x1" mr="x0_5">
-                          <RecordNumberPill number={`${String(index + 1).padStart(2, "0")}`} />
-                        </Flex>
+                        {isEditingProduction && (
+                          <Flex width="3em" alignItems="center" justifyContent="center" ml="x1" mr="x0_5">
+                            <RecordNumberPill number={`${String(index + 1).padStart(2, "0")}`} />
+                          </Flex>
+                        )}
                         <Box width="100%">
                           <Input
                             value={row.palletNumber}
@@ -3566,14 +3570,6 @@ export const V3 = () => {
                                 >
                                   Add note
                                 </DropdownButton>
-                                <DropdownButton
-                                  onClick={(e) => {
-                                    e.preventDefault();
-                                    handleAddConsumptionForRow(row.id);
-                                  }}
-                                >
-                                  Add subcomponent consumption
-                                </DropdownButton>
                               </DropdownMenu>
                               {productionRows.length > 1 && (
                                 <>
@@ -3605,7 +3601,11 @@ export const V3 = () => {
                       {/* Container for Consumption Details and Note */}
                       {(rowConsumptions[row.id] && rowConsumptions[row.id].length > 0) ||
                       rowNotes[row.id] !== undefined ? (
-                        <Box pl="52px" borderBottom="1px solid" borderBottomColor="lightGrey">
+                        <Box
+                          ml={isEditingProduction ? "44px" : "0"}
+                          borderBottom="1px solid"
+                          borderBottomColor="lightGrey"
+                        >
                           {/* Note - Nested below this specific row */}
                           {rowNotes[row.id] !== undefined && (
                             <Box border="1px solid" borderColor="lightGrey" borderRadius="medium" p="x0_25" mb="x1">
@@ -3672,7 +3672,7 @@ export const V3 = () => {
                             </Box>
                           )}
                           {/* Subcomponent consumption - Nested below this specific row */}
-                          {rowConsumptions[row.id] && rowConsumptions[row.id].length > 0 && (
+                          {!isEditingProduction && rowConsumptions[row.id] && rowConsumptions[row.id].length > 0 && (
                             <Box
                               border="1px solid"
                               borderColor="lightGrey"
@@ -4055,20 +4055,6 @@ export const V3 = () => {
                                     rowBorder={true}
                                     className="subcomponent-consumption-edit-table"
                                   />
-                                  {role === "supplier" && (
-                                    <Box mt="x1">
-                                      <QuietButton
-                                        icon="addCircleOutline"
-                                        iconSide="left"
-                                        fullWidth
-                                        onClick={() => handleAddConsumptionRow(row.id)}
-                                        type="button"
-                                        disabled={!productionRecordState.date && isInCreateEditMode}
-                                      >
-                                        Add subcomponent consumption record
-                                      </QuietButton>
-                                    </Box>
-                                  )}
                                 </Box>
                               )}
                             </Box>
