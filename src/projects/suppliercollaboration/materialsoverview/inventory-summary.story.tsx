@@ -23,6 +23,7 @@ import {
   QuietButton,
   AsyncSelect,
   Divider,
+  Heading4,
 } from "../../..";
 import { verticalAlign } from "styled-system";
 
@@ -57,7 +58,7 @@ export const InventorySummary = () => {
   const [customerItemCode, setCustomerItemCode] = useState("");
   const [supplierItemCode, setSupplierItemCode] = useState("");
   const [customerPlanners, setCustomerPlanners] = useState<any[]>([]);
-  const [palletNumber, setPalletNumber] = useState("");
+  const [palletNumber, setPalletNumber] = useState<any[]>([]);
   const [customerLotCode, setCustomerLotCode] = useState<any[]>([]);
   const [supplierLotCode, setSupplierLotCode] = useState<any[]>([]);
   const [vendorLotCode, setVendorLotCode] = useState<any[]>([]);
@@ -71,6 +72,21 @@ export const InventorySummary = () => {
   const [ownerUnspecified, setOwnerUnspecified] = useState(false);
   const [inventoryStatus, setInventoryStatus] = useState<string | null>(null);
   const [shelfLifeStatus, setShelfLifeStatus] = useState<string[]>(["At risk", "Expired", "Good"]);
+  
+  // New filter states for reorganized filters
+  const [items, setItems] = useState<any[]>([]);
+  const [brands, setBrands] = useState<string[]>([]);
+  const [divisions, setDivisions] = useState<string[]>([]);
+  const [programGroups, setProgramGroups] = useState<string[]>([]);
+  const [itemOrderTypes, setItemOrderTypes] = useState<string[]>([]);
+  const [inventoryStatuses, setInventoryStatuses] = useState<string[]>(["On hand", "Rejected", "Quality control"]);
+  const [suppliers, setSuppliers] = useState<string[]>([]);
+  const [materialOwners, setMaterialOwners] = useState<string[]>([]);
+
+  // Lot code column configuration
+  const [showCustomerLotCode, setShowCustomerLotCode] = useState(true);
+  const [showSupplierLotCode, setShowSupplierLotCode] = useState(true); // Always true, disabled
+  const [showVendorLotCode, setShowVendorLotCode] = useState(true);
 
   // Mock load options for AsyncSelect
   const loadCustomerPlanners = async (inputValue: string) => {
@@ -93,6 +109,43 @@ export const InventorySummary = () => {
     return [];
   };
 
+  const loadItems = async (inputValue: string) => {
+    // Mock implementation
+    return [];
+  };
+
+  const loadPalletNumbers = async (inputValue: string) => {
+    // Mock implementation
+    return [];
+  };
+
+  // Calculate number of active filters
+  const getActiveFilterCount = () => {
+    let count = 0;
+    
+    // Item filters
+    if (items.length > 0) count++;
+    if (brands.length > 0) count++;
+    if (divisions.length > 0) count++;
+    if (programGroups.length > 0) count++;
+    if (itemOrderTypes.length > 0) count++;
+    if (customerPlanners.length > 0) count++;
+    
+    // Inventory filters
+    if (customerLotCode.length > 0) count++;
+    if (supplierLotCode.length > 0) count++;
+    if (vendorLotCode.length > 0) count++;
+    // Shelf life status: always count as applied (has default selection)
+    count++;
+    if (palletNumber.length > 0) count++;
+    // Inventory statuses: always count as applied (has default selection)
+    count++;
+    if (suppliers.length > 0) count++;
+    if (materialOwners.length > 0) count++;
+    
+    return count;
+  };
+
   const breadcrumbs = (
     <Breadcrumbs>
       <Link href="#">Home</Link>
@@ -100,55 +153,105 @@ export const InventorySummary = () => {
     </Breadcrumbs>
   );
 
+  // Build header label based on configuration
+  const getLotCodeHeaderLabel = () => {
+    // If only Supplier is checked, don't show any label
+    if (showSupplierLotCode && !showCustomerLotCode && !showVendorLotCode) {
+      return "";
+    }
+    
+    const labels: string[] = [];
+    if (showCustomerLotCode) labels.push("Customer's");
+    if (showSupplierLotCode) labels.push("Supplier's");
+    if (showVendorLotCode) labels.push("Vendor's");
+    
+    return labels.length > 0 ? `(${labels.join(" / ")})` : "";
+  };
+
   const lotDetailsColumns = [
     {
       label: "Lot code",
       dataKey: "lotCode",
       width: "280px",
-      headerFormatter: () => (
-        <Box mt="x2_5" mb="x0_75">
-          <Text>Lot code</Text>
-          <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
-            (Customer's / Supplier's / Vendor's)
-          </Text>
-        </Box>
-      ),
+      headerFormatter: () => {
+        const label = getLotCodeHeaderLabel();
+        return (
+          <Box pt="x1_25" pb="x0_75">
+            <Text>Lot code</Text>
+            {label && (
+              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                {label}
+              </Text>
+            )}
+          </Box>
+        );
+      },
       cellRenderer: ({ row }: { row: any }) => {
-        // If all lot codes are empty, don't render anything
-        if (!row.customerLotCode && !row.supplierLotCode && !row.vendorLotCode) {
+        // Determine primary and secondary values based on configuration
+        let primaryValue: string;
+        const secondaryValues: string[] = [];
+        
+        if (showCustomerLotCode) {
+          // If Customer is checked, it's primary
+          primaryValue = row.customerLotCode || "-";
+          // Secondary row: Supplier, then Vendor
+          if (showSupplierLotCode && row.supplierLotCode) {
+            secondaryValues.push(row.supplierLotCode);
+          }
+          if (showVendorLotCode && row.vendorLotCode) {
+            secondaryValues.push(row.vendorLotCode);
+          }
+        } else {
+          // If Customer is not checked, Supplier is primary
+          primaryValue = row.supplierLotCode || "-";
+          // Secondary row: Vendor first
+          if (showVendorLotCode && row.vendorLotCode) {
+            secondaryValues.push(row.vendorLotCode);
+          }
+        }
+
+        // If all lot codes are empty or none are configured, don't render anything
+        const hasAnyValue = row.customerLotCode || row.supplierLotCode || row.vendorLotCode;
+        const hasAnyConfigured = showCustomerLotCode || showSupplierLotCode || showVendorLotCode;
+        if (!hasAnyValue || !hasAnyConfigured) {
           return null;
         }
 
         return (
-          <Flex px="x1" py="x0_75" gap="x0_25" flexDirection="column">
-            <TruncatedText fullWidth width="auto" maxWidth="152px" fontSize="medium">
-              {row.customerLotCode || "-"}
+          <Flex 
+            px="x1" 
+            py={secondaryValues.length > 0 ? "x0_75" : "x0_75"} 
+            gap="x0_25" 
+            flexDirection="column" 
+            alignItems="flex-start"
+            style={{ alignSelf: "flex-start" }}
+          >
+            <TruncatedText fullWidth width="auto" maxWidth="304px" fontSize="medium">
+              {primaryValue}
             </TruncatedText>
-            <Flex gap="half">
-              <TruncatedText
-                fullWidth
-                width="auto"
-                maxWidth="152px"
-                fontSize="small"
-                lineHeight="smallTextCompressed"
-                color="midGrey"
-              >
-                {row.supplierLotCode || "-"}
-              </TruncatedText>
-              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
-                /
-              </Text>
-              <TruncatedText
-                fullWidth
-                width="auto"
-                maxWidth="152px"
-                fontSize="small"
-                lineHeight="smallTextCompressed"
-                color="midGrey"
-              >
-                {row.vendorLotCode || "-"}
-              </TruncatedText>
-            </Flex>
+            {secondaryValues.length > 0 && (
+              <Flex gap="half">
+                {secondaryValues.map((value, index) => (
+                  <React.Fragment key={index}>
+                    {index > 0 && (
+                      <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                        /
+                      </Text>
+                    )}
+                    <TruncatedText
+                      fullWidth
+                      width="auto"
+                      maxWidth={secondaryValues.length === 1 ? "304px" : "140px"}
+                      fontSize="small"
+                      lineHeight="smallTextCompressed"
+                      color="midGrey"
+                    >
+                      {value}
+                    </TruncatedText>
+                  </React.Fragment>
+                ))}
+              </Flex>
+            )}
           </Flex>
         );
       },
@@ -233,7 +336,7 @@ export const InventorySummary = () => {
     {
       id: "2",
       lotCode: "JKMN9876",
-      customerLotCode: "",
+      customerLotCode: "-",
       supplierLotCode: "SUP-9876",
       vendorLotCode: "VEN-9876",
       expiryDate: "2026-05-05",
@@ -264,7 +367,7 @@ export const InventorySummary = () => {
       id: "4",
       lotCode: "EFGH5678",
       customerLotCode: "EFGH5678",
-      supplierLotCode: "SUP-5678",
+      supplierLotCode: "-",
       vendorLotCode: "VEN-5678",
       expiryDate: "2026-06-19",
       expiryDateText: "in 226 day",
@@ -280,7 +383,7 @@ export const InventorySummary = () => {
       lotCode: "VERY-LONG-CUSTOMER-LOT-CODE-2024-ABC",
       customerLotCode: "VERY-LONG-CUSTOMER-LOT-CODE-2024-ABC",
       supplierLotCode: "SUP-9999",
-      vendorLotCode: "",
+      vendorLotCode: "-",
       expiryDate: "2026-07-15",
       expiryDateText: "in 252 day",
       shelfLifeStatus: "Good",
@@ -293,8 +396,8 @@ export const InventorySummary = () => {
     {
       id: "6",
       lotCode: "SHORT-123",
-      customerLotCode: "",
-      supplierLotCode: "",
+      customerLotCode: "-",
+      supplierLotCode: "-",
       vendorLotCode: "VERY-LONG-VENDOR-LOT-CODE-2024-XYZ-EXTENDED",
       expiryDate: "2026-08-20",
       expiryDateText: "in 288 day",
@@ -308,7 +411,7 @@ export const InventorySummary = () => {
     {
       id: "7",
       lotCode: "MEDIUM-456",
-      customerLotCode: "MEDIUM-456",
+      customerLotCode: "-",
       supplierLotCode: "EXTREMELY-LONG-SUPPLIER-LOT-CODE-2024-DEF-GHI",
       vendorLotCode: "VEN-456",
       expiryDate: "2026-09-10",
@@ -323,9 +426,9 @@ export const InventorySummary = () => {
     {
       id: "8",
       lotCode: "LOT-789",
-      customerLotCode: "",
+      customerLotCode: "-",
       supplierLotCode: "SUP-789",
-      vendorLotCode: "",
+      vendorLotCode: "-",
       expiryDate: "2026-10-05",
       expiryDateText: "in 334 day",
       shelfLifeStatus: "Good",
@@ -353,8 +456,8 @@ export const InventorySummary = () => {
     {
       id: "10",
       lotCode: "SHORT-ABC",
-      customerLotCode: "",
-      supplierLotCode: "LONG-SUPPLIER-LOT-CODE-NO-CUSTOMER",
+      customerLotCode: "-",
+      supplierLotCode: "-",
       vendorLotCode: "LONG-VENDOR-LOT-CODE-NO-CUSTOMER",
       expiryDate: "2026-12-20",
       expiryDateText: "in 410 day",
@@ -368,9 +471,9 @@ export const InventorySummary = () => {
     {
       id: "11",
       lotCode: "MIXED-123",
-      customerLotCode: "",
+      customerLotCode: "-",
       supplierLotCode: "LONG-SUPPLIER-LOT-CODE-FOR-TRUNCATION-TEST",
-      vendorLotCode: "VEN-123",
+      vendorLotCode: "-",
       expiryDate: "2027-01-10",
       expiryDateText: "in 431 day",
       shelfLifeStatus: "Good",
@@ -384,7 +487,7 @@ export const InventorySummary = () => {
       id: "12",
       lotCode: "FINAL-456",
       customerLotCode: "FINAL-456",
-      supplierLotCode: "SUP-456",
+      supplierLotCode: "-",
       vendorLotCode: "LONG-VENDOR-LOT-CODE-FOR-TRUNCATION-TEST-EXTENDED",
       expiryDate: "2027-02-28",
       expiryDateText: "in 480 day",
@@ -405,6 +508,11 @@ export const InventorySummary = () => {
           .sb-show-main {
             padding: 0 !important;
           }
+          
+          /* Ensure table cells are top-aligned */
+          table tbody tr td {
+            vertical-align: top !important;
+          }
         `}
       </style>
       <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
@@ -415,7 +523,7 @@ export const InventorySummary = () => {
               <Flex gap="x2" pb="x2">
                 <PrimaryButton onClick={() => setShowDetailsSidebar(true)}>Details</PrimaryButton>
                 <IconicButton icon="filter" aria-label="Filters" onClick={() => setShowFiltersSidebar(true)}>
-                  Filters
+                  Filters (2)
                 </IconicButton>
               </Flex>
             </Tab>
@@ -447,11 +555,49 @@ export const InventorySummary = () => {
         <Table columns={lotDetailsColumns as any} rows={lotDetailsRows} compact />
       </Sidebar>
 
+      {/* Floating Lot code configuration */}
+      {showDetailsSidebar && (
+        <Box
+          position="fixed"
+          bottom="x2"
+          right="x2"
+          zIndex={1001}
+          backgroundColor="lightYellow"
+          borderRadius="medium"
+          boxShadow="large"
+          p="x2"
+          border="3px dotted"
+          borderColor="yellow"
+        >
+          <Text fontSize="medium" fontWeight="medium" mb="x2">
+            Configuration
+          </Text>
+          <Flex flexDirection="column" gap="x1">
+            <Checkbox
+              checked={showCustomerLotCode}
+              onChange={(e) => setShowCustomerLotCode(e.target.checked)}
+              labelText="Customer"
+            />
+            <Checkbox
+              checked={showSupplierLotCode}
+              onChange={(e) => setShowSupplierLotCode(e.target.checked)}
+              labelText="Supplier"
+              disabled
+            />
+            <Checkbox
+              checked={showVendorLotCode}
+              onChange={(e) => setShowVendorLotCode(e.target.checked)}
+              labelText="Vendor"
+            />
+          </Flex>
+        </Box>
+      )}
+
       <Sidebar
         isOpen={showFiltersSidebar}
         onClose={() => setShowFiltersSidebar(false)}
-        title="Filters"
-        width="xs"
+        title={getActiveFilterCount() > 0 ? `Filters (${getActiveFilterCount()})` : "Filters"}
+        width="480px"
         footer={
           <Flex gap="x2" alignItems="center" justifyContent="space-between" width="100%">
             <Flex gap="x2" alignItems="center">
@@ -465,20 +611,20 @@ export const InventorySummary = () => {
                 setCustomerItemCode("");
                 setSupplierItemCode("");
                 setCustomerPlanners([]);
-                setPalletNumber("");
+                setItems([]);
+                setBrands([]);
+                setDivisions([]);
+                setProgramGroups([]);
+                setItemOrderTypes([]);
+                setCustomerPlanners([]);
                 setCustomerLotCode([]);
                 setSupplierLotCode([]);
                 setVendorLotCode([]);
-                setSupplier(null);
-                setBrand("");
-                setDivision(null);
-                setProductGroup(null);
-                setItemType(null);
-                setOwnerNatasha(false);
-                setOwnerSupplier(false);
-                setOwnerUnspecified(false);
-                setInventoryStatus(null);
                 setShelfLifeStatus(["At risk", "Expired", "Good"]);
+                setPalletNumber([]);
+                setInventoryStatuses(["On hand", "Rejected", "Quality control"]);
+                setSuppliers([]);
+                setMaterialOwners([]);
               }}
             >
               Reset
@@ -487,6 +633,7 @@ export const InventorySummary = () => {
         }
       >
         <Flex flexDirection="column" gap="x3">
+          {/* Saved filters - no section */}
           <Box>
             <Select
               labelText="Saved filters"
@@ -498,170 +645,179 @@ export const InventorySummary = () => {
             />
           </Box>
 
-          <Divider my="x1" />
+          <Divider my="0" />
 
+          {/* Section: Item filters */}
           <Box>
-            <Input
-              labelText="Customer's item code"
-              placeholder="Start typing"
-              value={customerItemCode}
-              onChange={(e) => setCustomerItemCode(e.target.value)}
-            />
-          </Box>
+            <Heading4 mb="x2">Item filters</Heading4>
+            <Flex flexDirection="column" gap="x3">
+              <Box>
+                <AsyncSelect
+                  labelText="Items"
+                  helpText="Search by customer's item code or description"
+                  placeholder="Start typing"
+                  loadOptions={loadItems}
+                  value={items}
+                  onChange={(value) => setItems((value as any[]) || [])}
+                />
+              </Box>
 
-          <Box>
-            <Input
-              labelText="Supplier's item code"
-              placeholder="Start typing"
-              value={supplierItemCode}
-              onChange={(e) => setSupplierItemCode(e.target.value)}
-            />
-          </Box>
+              <Box>
+                <Select
+                  labelText="Brands"
+                  placeholder="Select"
+                  value={brands}
+                  onChange={(value) => setBrands((value as string[]) || [])}
+                  options={[]}
+                  multiselect
+                />
+              </Box>
 
-          <Box>
-            <AsyncSelect
-              labelText="Customer planners"
-              placeholder="Start typing"
-              loadOptions={loadCustomerPlanners}
-              value={customerPlanners}
-              onChange={(value) => setCustomerPlanners((value as any[]) || [])}
-            />
-          </Box>
+              <Box>
+                <Select
+                  labelText="Divisions"
+                  placeholder="Select"
+                  value={divisions}
+                  onChange={(value) => setDivisions((value as string[]) || [])}
+                  options={[]}
+                  multiselect
+                />
+              </Box>
 
-          <Box>
-            <Input
-              labelText="Pallet number"
-              placeholder="Start typing"
-              value={palletNumber}
-              onChange={(e) => setPalletNumber(e.target.value)}
-            />
-          </Box>
+              <Box>
+                <Select
+                  labelText="Program groups"
+                  placeholder="Select"
+                  value={programGroups}
+                  onChange={(value) => setProgramGroups((value as string[]) || [])}
+                  options={[]}
+                  multiselect
+                />
+              </Box>
 
-          <Box>
-            <AsyncSelect
-              labelText="Customer's lot code"
-              placeholder="Start typing"
-              loadOptions={loadCustomerLotCodes}
-              value={customerLotCode}
-              onChange={(value) => setCustomerLotCode((value as any[]) || [])}
-            />
-          </Box>
+              <Box>
+                <Select
+                  labelText="Item order types"
+                  placeholder="Select"
+                  value={itemOrderTypes}
+                  onChange={(value) => setItemOrderTypes((value as string[]) || [])}
+                  options={[]}
+                  multiselect
+                />
+              </Box>
 
-          <Box>
-            <AsyncSelect
-              labelText="Supplier's lot code"
-              placeholder="Start typing"
-              loadOptions={loadSupplierLotCodes}
-              value={supplierLotCode}
-              onChange={(value) => setSupplierLotCode((value as any[]) || [])}
-            />
-          </Box>
-
-          <Box>
-            <AsyncSelect
-              labelText="Vendor's lot code"
-              placeholder="Start typing"
-              loadOptions={loadVendorLotCodes}
-              value={vendorLotCode}
-              onChange={(value) => setVendorLotCode((value as any[]) || [])}
-            />
-          </Box>
-
-          <Box>
-            <Select
-              labelText="Supplier"
-              placeholder="Select"
-              value={supplier}
-              onChange={(value) => setSupplier(value as string | null)}
-              options={[]}
-            />
-          </Box>
-
-          <Box>
-            <Input
-              labelText="Brand"
-              placeholder="Start typing"
-              value={brand}
-              onChange={(e) => setBrand(e.target.value)}
-            />
-          </Box>
-
-          <Box>
-            <Select
-              labelText="Division"
-              placeholder="Select"
-              value={division}
-              onChange={(value) => setDivision(value as string | null)}
-              options={[]}
-            />
-          </Box>
-
-          <Box>
-            <Select
-              labelText="Product Group"
-              placeholder="Select"
-              value={productGroup}
-              onChange={(value) => setProductGroup(value as string | null)}
-              options={[]}
-            />
-          </Box>
-
-          <Box>
-            <Select
-              labelText="Item type"
-              placeholder="Select"
-              value={itemType}
-              onChange={(value) => setItemType(value as string | null)}
-              options={[]}
-            />
-          </Box>
-
-          <Box>
-            <Text fontSize="medium" fontWeight="medium" mb="x1">
-              Owner
-            </Text>
-            <Flex flexDirection="column" gap="x1">
-              <Checkbox
-                checked={ownerNatasha}
-                onChange={(e) => setOwnerNatasha(e.target.checked)}
-                labelText="Natasha Cosmetics"
-              />
-              <Checkbox
-                checked={ownerSupplier}
-                onChange={(e) => setOwnerSupplier(e.target.checked)}
-                labelText="Supplier"
-              />
-              <Checkbox
-                checked={ownerUnspecified}
-                onChange={(e) => setOwnerUnspecified(e.target.checked)}
-                labelText="Unspecified"
-              />
+              <Box>
+                <AsyncSelect
+                  labelText="Customer planners"
+                  placeholder="Start typing"
+                  loadOptions={loadCustomerPlanners}
+                  value={customerPlanners}
+                  onChange={(value) => setCustomerPlanners((value as any[]) || [])}
+                />
+              </Box>
             </Flex>
           </Box>
 
+          {/* Section: Inventory filters */}
           <Box>
-            <Select
-              labelText="Inventory status"
-              placeholder="Select"
-              value={inventoryStatus}
-              onChange={(value) => setInventoryStatus(value as string | null)}
-              options={[]}
-            />
-          </Box>
+            <Heading4 mb="x2">Inventory filters</Heading4>
+            <Flex flexDirection="column" gap="x3">
+              <Box>
+                <AsyncSelect
+                  labelText="Customer's lot codes"
+                  placeholder="Start typing"
+                  loadOptions={loadCustomerLotCodes}
+                  value={customerLotCode}
+                  onChange={(value) => setCustomerLotCode((value as any[]) || [])}
+                />
+              </Box>
 
-          <Box>
-            <Select
-              labelText="Shelf life status"
-              placeholder="Select"
-              value={shelfLifeStatus}
-              onChange={(value) => setShelfLifeStatus((value as string[]) || [])}
-              options={[
-                { value: "At risk", label: "At risk" },
-                { value: "Expired", label: "Expired" },
-                { value: "Good", label: "Good" },
-              ]}
-              multiselect
-            />
+              <Box>
+                <AsyncSelect
+                  labelText="Supplier's lot codes"
+                  placeholder="Start typing"
+                  loadOptions={loadSupplierLotCodes}
+                  value={supplierLotCode}
+                  onChange={(value) => setSupplierLotCode((value as any[]) || [])}
+                />
+              </Box>
+
+              <Box>
+                <AsyncSelect
+                  labelText="Vendor's lot codes"
+                  placeholder="Start typing"
+                  loadOptions={loadVendorLotCodes}
+                  value={vendorLotCode}
+                  onChange={(value) => setVendorLotCode((value as any[]) || [])}
+                />
+              </Box>
+
+              <Box>
+                <Select
+                  labelText="Shelf life statuses"
+                  placeholder="Select"
+                  value={shelfLifeStatus}
+                  onChange={(value) => setShelfLifeStatus((value as string[]) || [])}
+                  options={[
+                    { value: "At risk", label: "At risk" },
+                    { value: "Expired", label: "Expired" },
+                    { value: "Good", label: "Good" },
+                  ]}
+                  multiselect
+                />
+              </Box>
+
+              <Box>
+                <AsyncSelect
+                  labelText="Pallet number"
+                  placeholder="Start typing"
+                  loadOptions={loadPalletNumbers}
+                  value={palletNumber}
+                  onChange={(value) => setPalletNumber((value as any[]) || [])}
+                />
+              </Box>
+
+              <Box>
+                <Select
+                  labelText="Inventory statuses"
+                  placeholder="Select"
+                  value={inventoryStatuses}
+                  onChange={(value) => setInventoryStatuses((value as string[]) || [])}
+                  options={[
+                    { value: "On hand", label: "On hand" },
+                    { value: "Rejected", label: "Rejected" },
+                    { value: "Quality control", label: "Quality control" },
+                  ]}
+                  multiselect
+                />
+              </Box>
+
+              <Box>
+                <Select
+                  labelText="Suppliers"
+                  placeholder="Select"
+                  value={suppliers}
+                  onChange={(value) => setSuppliers((value as string[]) || [])}
+                  options={[]}
+                  multiselect
+                />
+              </Box>
+
+              <Box>
+                <Select
+                  labelText="Material owners"
+                  placeholder="Select"
+                  value={materialOwners}
+                  onChange={(value) => setMaterialOwners((value as string[]) || [])}
+                  options={[
+                    { value: "Natasha Cosmetics", label: "Natasha Cosmetics" },
+                    { value: "Supplier", label: "Supplier" },
+                    { value: "Unspecified", label: "Unspecified" },
+                  ]}
+                  multiselect
+                />
+              </Box>
+            </Flex>
           </Box>
         </Flex>
       </Sidebar>
