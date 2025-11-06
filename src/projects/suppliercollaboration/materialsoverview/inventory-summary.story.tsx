@@ -72,7 +72,7 @@ export const InventorySummary = () => {
   const [ownerUnspecified, setOwnerUnspecified] = useState(false);
   const [inventoryStatus, setInventoryStatus] = useState<string | null>(null);
   const [shelfLifeStatus, setShelfLifeStatus] = useState<string[]>(["At risk", "Expired", "Good"]);
-  
+
   // New filter states for reorganized filters
   const [items, setItems] = useState<any[]>([]);
   const [brands, setBrands] = useState<string[]>([]);
@@ -122,7 +122,7 @@ export const InventorySummary = () => {
   // Calculate number of active filters
   const getActiveFilterCount = () => {
     let count = 0;
-    
+
     // Item filters
     if (items.length > 0) count++;
     if (brands.length > 0) count++;
@@ -130,7 +130,7 @@ export const InventorySummary = () => {
     if (programGroups.length > 0) count++;
     if (itemOrderTypes.length > 0) count++;
     if (customerPlanners.length > 0) count++;
-    
+
     // Inventory filters
     if (customerLotCode.length > 0) count++;
     if (supplierLotCode.length > 0) count++;
@@ -142,7 +142,7 @@ export const InventorySummary = () => {
     count++;
     if (suppliers.length > 0) count++;
     if (materialOwners.length > 0) count++;
-    
+
     return count;
   };
 
@@ -159,12 +159,12 @@ export const InventorySummary = () => {
     if (showSupplierLotCode && !showCustomerLotCode && !showVendorLotCode) {
       return "";
     }
-    
+
     const labels: string[] = [];
     if (showCustomerLotCode) labels.push("Customer's");
     if (showSupplierLotCode) labels.push("Supplier's");
     if (showVendorLotCode) labels.push("Vendor's");
-    
+
     return labels.length > 0 ? `(${labels.join(" / ")})` : "";
   };
 
@@ -190,7 +190,7 @@ export const InventorySummary = () => {
         // Determine primary and secondary values based on configuration
         let primaryValue: string;
         const secondaryValues: string[] = [];
-        
+
         if (showCustomerLotCode) {
           // If Customer is checked, it's primary
           primaryValue = row.customerLotCode || "-";
@@ -218,11 +218,11 @@ export const InventorySummary = () => {
         }
 
         return (
-          <Flex 
-            px="x1" 
-            py={secondaryValues.length > 0 ? "x0_75" : "x0_75"} 
-            gap="x0_25" 
-            flexDirection="column" 
+          <Flex
+            px="x1"
+            py={secondaryValues.length > 0 ? "x0_75" : "x0_75"}
+            gap="x0_25"
+            flexDirection="column"
             alignItems="flex-start"
             style={{ alignSelf: "flex-start" }}
           >
@@ -261,9 +261,7 @@ export const InventorySummary = () => {
       dataKey: "expiryDate",
       cellRenderer: ({ row }: any) => (
         <Flex pr="x1" py="x0_75" gap="x0_25" flexDirection="column">
-          <Text fontSize="medium">
-            {row.expiryDate}
-          </Text>
+          <Text fontSize="medium">{row.expiryDate}</Text>
           <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
             {row.expiryDateText}
           </Text>
@@ -284,9 +282,7 @@ export const InventorySummary = () => {
         }
         return (
           <Flex pr="x1" py="x0_5" alignItems="flex-start">
-            <StatusIndicator type={indicatorType as any}>
-              {cellData}
-            </StatusIndicator>
+            <StatusIndicator type={indicatorType as any}>{cellData}</StatusIndicator>
           </Flex>
         );
       },
@@ -547,11 +543,22 @@ export const InventorySummary = () => {
         disableScroll={true}
         helpText={
           <>
-            389499<Text as="span" mx="x1">•</Text>DD_Food&Bev<Text as="span" mx="x1">•</Text>Active<Text as="span" mx="x1">•</Text>Owned by DD_CoMan1
+            389499
+            <Text as="span" mx="x1">
+              •
+            </Text>
+            DD_Food&Bev
+            <Text as="span" mx="x1">
+              •
+            </Text>
+            Active
+            <Text as="span" mx="x1">
+              •
+            </Text>
+            Owned by DD_CoMan1
           </>
         }
       >
-        
         <Table columns={lotDetailsColumns as any} rows={lotDetailsRows} compact />
       </Sidebar>
 
@@ -824,4 +831,3 @@ export const InventorySummary = () => {
     </>
   );
 };
-
