@@ -1156,6 +1156,20 @@ const V2Component = () => {
                             labelText="Customer"
                             disabled={false}
                           />
+                          <Checkbox
+                            checked={inventorySummaryTraceability.includes("vendor")}
+                            onChange={(e) => {
+                              if (e.target.checked) {
+                                setInventorySummaryTraceability([...inventorySummaryTraceability, "vendor"]);
+                              } else {
+                                setInventorySummaryTraceability(
+                                  inventorySummaryTraceability.filter((item) => item !== "vendor")
+                                );
+                              }
+                            }}
+                            labelText="Vendor"
+                            disabled={false}
+                          />
                         </Flex>
                       </Box>
                     </Flex>
@@ -1184,20 +1198,6 @@ const V2Component = () => {
                             }}
                             labelText="Customer"
                             disabled={false}
-                          />
-                          <Checkbox
-                            checked={inTransitDeliveryTraceability.includes("vendor")}
-                            onChange={(e) => {
-                              if (e.target.checked) {
-                                setInTransitDeliveryTraceability([...inTransitDeliveryTraceability, "vendor"]);
-                              } else {
-                                setInTransitDeliveryTraceability(
-                                  inTransitDeliveryTraceability.filter((item) => item !== "vendor")
-                                );
-                              }
-                            }}
-                            labelText="Vendor"
-                            disabled={configurationEnforcedByCustomer}
                           />
                         </Flex>
                       </Box>
