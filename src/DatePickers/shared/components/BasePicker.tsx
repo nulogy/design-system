@@ -15,6 +15,8 @@ import { getPopperModifiers } from "../helpers";
 import DatePickerInput from "./DatePickerInput";
 
 interface BasePickerProps extends DatePickerProps {
+  name?: string;
+  required?: boolean;
   defaultFormat: string;
   disabledKeyboardNavigation?: boolean;
   defaultPlaceholder: string;
@@ -53,6 +55,8 @@ export const BasePicker = forwardRef<ReactDatePicker, BasePickerProps>(
       onEnterKeyPress,
       locale,
       disabledKeyboardNavigation,
+      name,
+      required,
       ...props
     },
     pickerRef
@@ -137,6 +141,8 @@ export const BasePicker = forwardRef<ReactDatePicker, BasePickerProps>(
           onBlur={onBlur}
           showMonthYearPicker={showMonthYearPicker}
           showWeekNumbers={showWeekNumbers}
+          name={name}
+          required={required}
           onEnterKeyPress={onEnterKeyPress}
           popperModifiers={getPopperModifiers(disableFlipping)}
           disabledKeyboardNavigation={disabledKeyboardNavigation}
