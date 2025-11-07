@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { action } from "@storybook/addon-actions";
-import { boolean } from "@storybook/addon-knobs";
+import type { Meta, StoryObj } from "@storybook/react";
 import { Toggle, Button, Box } from "../index";
 import { dashed } from "../utils/story/dashed";
 
@@ -8,9 +8,17 @@ const DashedBox = dashed(Box);
 
 export default {
   title: "Components/Toggle",
-};
+  component: Toggle,
+} satisfies Meta<typeof Toggle>;
 
-export const _Toggle = () => <Toggle data-testid="toggle-example" onChange={action("on change")} />;
+type Story = StoryObj<typeof Toggle>;
+
+export const _Toggle: Story = {
+  args: {
+    "data-testid": "toggle-example",
+    onChange: action("on change"),
+  },
+};
 
 export const ToggleWithAllProps = () => (
   <Toggle
@@ -103,16 +111,21 @@ export const WithContraintWidth = () => (
   </DashedBox>
 );
 
-export const ControlledToggle = () => (
-  <Toggle
-    labelText="Controlled Toggle"
-    toggled={boolean("Toggled", false)}
-    onText="on"
-    offText="off"
-    onChange={action("on change")}
-    data-testid="toggle-example"
-  />
-);
+export const ControlledToggle: Story = {
+  args: {
+    labelText: "Controlled Toggle",
+    toggled: false,
+    onText: "on",
+    offText: "off",
+    onChange: action("on change"),
+    "data-testid": "toggle-example",
+  },
+  argTypes: {
+    toggled: {
+      control: { type: "boolean" },
+    },
+  },
+};
 
 export const UsingRefToControlFocus = () => {
   const ref = useRef(null);
