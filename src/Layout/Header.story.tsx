@@ -1,3 +1,4 @@
+import type { Meta } from "@storybook/react";
 import React from "react";
 import {
   Box,
@@ -20,6 +21,17 @@ import SummaryDivider from "../Summary/SummaryDivider";
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import numberFromDimension from "../utils/numberFromDimension";
 import { legacy as theme } from "../theme/theme";
+
+const viewports = [theme.breakpoints.small, theme.breakpoints.medium, theme.breakpoints.large].map(numberFromDimension);
+
+export default {
+  title: "Components/Header",
+  component: Header,
+  parameters: {
+    layout: "fullscreen",
+    chromatic: { viewports },
+  },
+} satisfies Meta<typeof Header>;
 
 export const Default = () => (
   <Header
@@ -198,13 +210,3 @@ export const WithEverything = () => (
     </Box>
   </Header>
 );
-
-const viewports = [theme.breakpoints.small, theme.breakpoints.medium, theme.breakpoints.large].map(numberFromDimension);
-
-export default {
-  title: "Components/Header",
-  parameters: {
-    layout: "fullscreen",
-    chromatic: { viewports },
-  },
-};

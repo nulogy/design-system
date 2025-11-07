@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { action } from "@storybook/addon-actions";
+import type { Meta, StoryObj } from "@storybook/react";
 import { Toggle, Button, Box } from "../index";
 import { dashed } from "../utils/story/dashed";
 
@@ -7,12 +8,16 @@ const DashedBox = dashed(Box);
 
 export default {
   title: "Components/Toggle",
-};
+  component: Toggle,
+} satisfies Meta<typeof Toggle>;
 
-export const _Toggle = () => {
-  const [toggled, setToggled] = useState(false);
+type Story = StoryObj<typeof Toggle>;
 
-  return <Toggle data-testid="toggle-example" toggled={toggled} onChange={(e) => setToggled(e.target.checked)} />;
+export const _Toggle: Story = {
+  args: {
+    "data-testid": "toggle-example",
+    onChange: action("on change"),
+  },
 };
 
 export const ToggleWithAllProps = () => {
@@ -107,19 +112,33 @@ WithLongText.storyName = "With long text";
 export const WithContraintWidth = () => {
   const [toggled, setToggled] = useState(true);
 
-  return (
-    <DashedBox width="200px" padding="x2">
-      <Toggle
-        labelText="Toggle"
-        onText="This is a long On label for the toggle component."
-        offText="This is a long Off label for the toggle component."
-        toggled={toggled}
-        onChange={(e) => setToggled(e.target.checked)}
-      />
-    </DashedBox>
-  );
+export const WithContraintWidth = () => (
+  <DashedBox width="200px" padding="x2">
+    <Toggle
+      labelText="Toggle"
+      onText="This is a long On label for the toggle component."
+      offText="This is a long Off label for the toggle component."
+      defaultToggled
+      onChange={action("on change")}
+    />
+  </DashedBox>
+);
+
+export const ControlledToggle: Story = {
+  args: {
+    labelText: "Controlled Toggle",
+    toggled: false,
+    onText: "on",
+    offText: "off",
+    onChange: action("on change"),
+    "data-testid": "toggle-example",
+  },
+  argTypes: {
+    toggled: {
+      control: { type: "boolean" },
+    },
+  },
 };
-WithContraintWidth.storyName = "With constraint width";
 
 export const UsingRefToControlFocus = () => {
   const [toggled, setToggled] = useState(true);

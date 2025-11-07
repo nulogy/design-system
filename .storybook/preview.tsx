@@ -1,6 +1,7 @@
 import React from "react";
 import { desktop as theme } from "../src/theme";
 import { ALL_NDS_LOCALES, NDSProvider } from "../src";
+import { Decorator } from "@storybook/react";
 
 const viewports = {
   extraSmall: {
@@ -92,7 +93,7 @@ export const globalTypes = {
   },
 };
 
-const withThemeProvider = (Story, context) => {
+const withThemeProvider: Decorator = (Story, context) => {
   const { theme, locale, desktopScale } = context.globals;
 
   return (

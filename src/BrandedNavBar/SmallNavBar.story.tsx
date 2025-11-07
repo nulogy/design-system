@@ -1,4 +1,4 @@
-import { select } from "@storybook/addon-knobs";
+import type { Meta, StoryObj } from "@storybook/react";
 import React from "react";
 import styled from "styled-components";
 import { Branding } from "../Branding";
@@ -85,7 +85,9 @@ const smallViewport = {
 export default {
   title: "Components/BrandedNavBar/SmallNavBar",
   parameters: smallViewport,
-};
+} satisfies Meta<typeof SmallNavBar>;
+
+type Story = StoryObj<typeof SmallNavBar>;
 
 export const _SmallNavBar = () => <WrappedSmallNavBar menuData={{ primaryMenu, secondaryMenu }} />;
 
@@ -126,21 +128,38 @@ export const WithANulogyLogoAndAppName = () => (
   />
 );
 
-export const WithEnvironmentBanner = () => (
-  <WrappedSmallNavBar
-    menuData={{ primaryMenu, secondaryMenu }}
-    environment={select("environment", ["training", "development"], "training")}
-  />
-);
+export const WithEnvironmentBanner: Story = {
+  render: (args) => <WrappedSmallNavBar menuData={{ primaryMenu, secondaryMenu }} environment={args.environment} />,
+  args: {
+    environment: "training",
+  },
+  argTypes: {
+    environment: {
+      control: { type: "select" },
+      options: ["training", "development"],
+    },
+  },
+};
 
-export const WithCustomMenuButton = () => (
-  <WrappedSmallNavBar
-    menuData={{ primaryMenu, secondaryMenu }}
-    environment={select("environment", ["training", "development"], "training")}
-    renderMenuButton={({ onClick, ariaExpanded, isOpen }) => (
-      <Button onClick={onClick} aria-expanded={ariaExpanded}>
-        Click to {isOpen ? "close" : "open"}
-      </Button>
-    )}
-  />
-);
+export const WithCustomMenuButton: Story = {
+  render: (args) => (
+    <WrappedSmallNavBar
+      menuData={{ primaryMenu, secondaryMenu }}
+      environment={args.environment}
+      renderMenuButton={({ onClick, ariaExpanded, isOpen }) => (
+        <Button onClick={onClick} aria-expanded={ariaExpanded}>
+          Click to {isOpen ? "close" : "open"}
+        </Button>
+      )}
+    />
+  ),
+  args: {
+    environment: "training",
+  },
+  argTypes: {
+    environment: {
+      control: { type: "select" },
+      options: ["training", "development"],
+    },
+  },
+};
