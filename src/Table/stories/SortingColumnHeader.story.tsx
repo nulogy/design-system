@@ -4,6 +4,7 @@ import { Table } from "../../index";
 
 export default {
   title: "Components/Table/Headers",
+  component: Table.SortingHeader,
 } satisfies Meta<typeof Table.SortingHeader>;
 
 type Story = StoryObj<typeof Table.SortingHeader>;
