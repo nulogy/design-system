@@ -16,7 +16,6 @@ const config: StorybookConfig = {
     },
     "@storybook/addon-a11y",
     "@storybook/addon-actions",
-    "storybook-addon-performance",
   ],
 
   framework: "@storybook/react-webpack5",

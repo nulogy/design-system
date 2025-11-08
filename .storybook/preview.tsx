@@ -1,7 +1,7 @@
 import React from "react";
+import { Decorator } from "@storybook/react";
 import { desktop as theme } from "../src/theme";
 import { ALL_NDS_LOCALES, NDSProvider } from "../src";
-import { Decorator } from "@storybook/react";
 
 const viewports = {
   extraSmall: {
