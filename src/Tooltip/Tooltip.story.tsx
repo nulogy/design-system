@@ -1,3 +1,4 @@
+import type { Meta, StoryObj } from "@storybook/react";
 import React from "react";
 import {
   Box,
@@ -16,178 +17,178 @@ import {
 
 export default {
   title: "Components/Tooltip",
+  component: Tooltip,
   parameters: {
     chromatic: { disable: true },
   },
+} satisfies Meta<typeof Tooltip>;
+
+type Story = StoryObj<typeof Tooltip>;
+
+export const Default: Story = {
+  render: () => (
+    <Flex p="x8">
+      <Tooltip tooltip="I am a Tooltip!">
+        <Button data-testid="tooltip-trigger">Button</Button>
+      </Tooltip>
+    </Flex>
+  ),
 };
 
-export const _Tooltip = () => (
-  <Flex p="x8">
-    <Tooltip tooltip="I am a Tooltip!">
-      <Button> Button </Button>
-    </Tooltip>
-  </Flex>
-);
-
-export const WithWrappedText = () => (
-  <Flex p="x8">
-    <Tooltip
-      placement="bottom"
-      tooltip="I am a Tooltip! I have very long text, and my default max-width is 24em (based on 14px font-size), which is equal to 336px, or approximately 45 characters."
-      defaultOpen
-    >
-      <Button> Button </Button>
-    </Tooltip>
-  </Flex>
-);
-
-WithWrappedText.story = {
+export const WithWrappedText: Story = {
+  render: () => (
+    <Flex p="x8">
+      <Tooltip
+        placement="bottom"
+        tooltip="I am a Tooltip! I have very long text, and my default max-width is 24em (based on 14px font-size), which is equal to 336px, or approximately 45 characters."
+        defaultOpen
+      >
+        <Button> Button </Button>
+      </Tooltip>
+    </Flex>
+  ),
   name: "with wrapped text",
 };
 
-export const WithCustomMaxWidth = () => (
-  <Flex p="x8">
-    <Tooltip
-      placement="bottom"
-      tooltip="I am a Tooltip! I have very long text, but I have a smaller maxWidth prop that causes me to wrap frequently."
-      maxWidth="128px"
-      defaultOpen
-    >
-      <Button> Button </Button>
-    </Tooltip>
-  </Flex>
-);
-
-WithCustomMaxWidth.story = {
+export const WithCustomMaxWidth: Story = {
+  render: (args) => (
+    <Flex p="x8">
+      <Tooltip
+        {...args}
+        placement="bottom"
+        tooltip="I am a Tooltip! I have very long text, but I have a smaller maxWidth prop that causes me to wrap frequently."
+        maxWidth="128px"
+        defaultOpen
+      >
+        <Button> Button </Button>
+      </Tooltip>
+    </Flex>
+  ),
   name: "with custom maxWidth",
 };
 
-export const WithPlacement = () => (
-  <>
-    <Flex my="x6" mx="x8" justifyContent="space-around">
-      <Tooltip placement="top-start" tooltip="top-start" defaultOpen>
-        <Button>Tooltip trigger</Button>
-      </Tooltip>
-      <Tooltip placement="top" tooltip="top" defaultOpen>
-        <Button>Tooltip trigger</Button>
-      </Tooltip>
-      <Tooltip placement="top-end" tooltip="top-end" defaultOpen>
-        <Button>Tooltip trigger</Button>
-      </Tooltip>
-    </Flex>
-    <Flex my="x6" mx="x8" justifyContent="space-around">
-      <Tooltip placement="left-start" tooltip="left-start" defaultOpen>
-        <Button>Tooltip trigger</Button>
-      </Tooltip>
-      <Tooltip placement="left" tooltip="left" defaultOpen>
-        <Button>Tooltip trigger</Button>
-      </Tooltip>
-      <Tooltip placement="left-end" tooltip="left-end" defaultOpen>
-        <Button>Tooltip trigger</Button>
-      </Tooltip>
-    </Flex>
-    <Flex my="x6" mx="x8" justifyContent="space-around">
-      <Tooltip placement="right-start" tooltip="right-start" defaultOpen>
-        <Button>Tooltip trigger</Button>
-      </Tooltip>
-      <Tooltip placement="right" tooltip="right" defaultOpen>
-        <Button>Tooltip trigger</Button>
-      </Tooltip>
-      <Tooltip placement="right-end" tooltip="right-end" defaultOpen>
-        <Button>Tooltip trigger</Button>
-      </Tooltip>
-    </Flex>
-    <Flex my="x6" mx="x8" justifyContent="space-around">
-      <Tooltip placement="bottom-start" tooltip="bottom-start" defaultOpen>
-        <Button>Tooltip trigger</Button>
-      </Tooltip>
-      <Tooltip placement="bottom" tooltip="bottom" defaultOpen>
-        <Button>Tooltip trigger</Button>
-      </Tooltip>
-      <Tooltip placement="bottom-end" tooltip="bottom-end" defaultOpen>
-        <Button>Tooltip trigger</Button>
-      </Tooltip>
-    </Flex>
-  </>
-);
-
-WithPlacement.story = {
+export const WithPlacement: Story = {
+  render: () => (
+    <>
+      <Flex my="x6" mx="x8" justifyContent="space-around">
+        <Tooltip placement="top-start" tooltip="top-start" defaultOpen>
+          <Button>Tooltip trigger</Button>
+        </Tooltip>
+        <Tooltip placement="top" tooltip="top" defaultOpen>
+          <Button>Tooltip trigger</Button>
+        </Tooltip>
+        <Tooltip placement="top-end" tooltip="top-end" defaultOpen>
+          <Button>Tooltip trigger</Button>
+        </Tooltip>
+      </Flex>
+      <Flex my="x6" mx="x8" justifyContent="space-around">
+        <Tooltip placement="left-start" tooltip="left-start" defaultOpen>
+          <Button>Tooltip trigger</Button>
+        </Tooltip>
+        <Tooltip placement="left" tooltip="left" defaultOpen>
+          <Button>Tooltip trigger</Button>
+        </Tooltip>
+        <Tooltip placement="left-end" tooltip="left-end" defaultOpen>
+          <Button>Tooltip trigger</Button>
+        </Tooltip>
+      </Flex>
+      <Flex my="x6" mx="x8" justifyContent="space-around">
+        <Tooltip placement="right-start" tooltip="right-start" defaultOpen>
+          <Button>Tooltip trigger</Button>
+        </Tooltip>
+        <Tooltip placement="right" tooltip="right" defaultOpen>
+          <Button>Tooltip trigger</Button>
+        </Tooltip>
+        <Tooltip placement="right-end" tooltip="right-end" defaultOpen>
+          <Button>Tooltip trigger</Button>
+        </Tooltip>
+      </Flex>
+      <Flex my="x6" mx="x8" justifyContent="space-around">
+        <Tooltip placement="bottom-start" tooltip="bottom-start" defaultOpen>
+          <Button>Tooltip trigger</Button>
+        </Tooltip>
+        <Tooltip placement="bottom" tooltip="bottom" defaultOpen>
+          <Button>Tooltip trigger</Button>
+        </Tooltip>
+        <Tooltip placement="bottom-end" tooltip="bottom-end" defaultOpen>
+          <Button>Tooltip trigger</Button>
+        </Tooltip>
+      </Flex>
+    </>
+  ),
   name: "with placement",
 };
 
-export const WithLinkPassedIn = () => (
-  <Tooltip placement="bottom" tooltip={<Link href="/"> Link </Link>} defaultOpen>
-    <Button> Button </Button>
-  </Tooltip>
-);
-
-WithLinkPassedIn.story = {
+export const WithLinkPassedIn: Story = {
+  render: (args) => (
+    <Tooltip {...args} placement="bottom" tooltip={<Link href="/"> Link </Link>} defaultOpen>
+      <Button> Button </Button>
+    </Tooltip>
+  ),
   name: "with Link passed in",
 };
 
-export const WithButtonPassedIn = () => (
-  <Tooltip placement="bottom" tooltip={<Button href="/"> Button </Button>} defaultOpen>
-    <Button> Button </Button>
-  </Tooltip>
-);
-
-WithButtonPassedIn.story = {
+export const WithButtonPassedIn: Story = {
+  render: (args) => (
+    <Tooltip {...args} placement="bottom" tooltip={<Button href="/"> Button </Button>} defaultOpen>
+      <Button> Button </Button>
+    </Tooltip>
+  ),
   name: "with Button passed in",
 };
 
-export const WithCustomShowDelay = () => (
-  <Tooltip placement="bottom" tooltip="Tooltip" showDelay="1000">
-    <Button> Button </Button>
-  </Tooltip>
-);
-
-WithCustomShowDelay.story = {
+export const WithCustomShowDelay: Story = {
+  render: (args) => (
+    <Tooltip {...args} placement="bottom" tooltip="Tooltip" showDelay="1000">
+      <Button> Button </Button>
+    </Tooltip>
+  ),
   name: "with custom showDelay",
 };
 
-export const WithOtherFocusableElements = () => (
-  <>
-    <Tooltip placement="bottom" tooltip="Tooltip">
-      <Button> Button </Button>
-    </Tooltip>
-    <Tooltip placement="bottom" tooltip="Tooltip">
-      <Link href="/"> Link </Link>
-    </Tooltip>
-    <Tooltip placement="bottom" tooltip="Tooltip">
-      <Text mr="x2" inline bg="blue">
-        Inline Text
-      </Text>
-    </Tooltip>
-    <Tooltip placement="bottom" tooltip="Tooltip">
-      <Box width="200px" bg="blue">
-        Box width 200px
-      </Box>
-    </Tooltip>
-    <Tooltip placement="bottom" tooltip="Tooltip">
-      <Box bg="blue">Box</Box>
-    </Tooltip>
-  </>
-);
-
-WithOtherFocusableElements.story = {
+export const WithOtherFocusableElements: Story = {
+  render: () => (
+    <>
+      <Tooltip placement="bottom" tooltip="Tooltip">
+        <Button> Button </Button>
+      </Tooltip>
+      <Tooltip placement="bottom" tooltip="Tooltip">
+        <Link href="/"> Link </Link>
+      </Tooltip>
+      <Tooltip placement="bottom" tooltip="Tooltip">
+        <Text mr="x2" inline bg="blue">
+          Inline Text
+        </Text>
+      </Tooltip>
+      <Tooltip placement="bottom" tooltip="Tooltip">
+        <Box width="200px" bg="blue">
+          Box width 200px
+        </Box>
+      </Tooltip>
+      <Tooltip placement="bottom" tooltip="Tooltip">
+        <Box bg="blue">Box</Box>
+      </Tooltip>
+    </>
+  ),
   name: "with other focusable elements",
 };
 
-export const OpenByDefault = () => (
-  <Tooltip tooltip="I am an open Tooltip!" defaultOpen>
-    <Button>Hover me</Button>
-  </Tooltip>
-);
-
-OpenByDefault.story = {
+export const OpenByDefault: Story = {
+  render: (args) => (
+    <Tooltip {...args} tooltip="I am an open Tooltip!" defaultOpen>
+      <Button>Hover me</Button>
+    </Tooltip>
+  ),
   name: "open by default",
 };
 
-export const WithCustomComponent = () => (
-  <Tooltip tooltip="See me on hover!" defaultOpen>
-    <CustomComponent />
-  </Tooltip>
-);
+export const WithCustomComponent: Story = {
+  render: (args) => (
+    <Tooltip {...args} tooltip="See me on hover!" defaultOpen>
+      <CustomComponent />
+    </Tooltip>
+  ),
+};
 
 const CustomComponent = React.forwardRef<HTMLSpanElement, React.HTMLAttributes<HTMLSpanElement>>(
   (props, forwardedRef) => (
@@ -232,14 +233,17 @@ const CustomTooltip = () => (
   </Flex>
 );
 
-export const WithCustomTooltip = () => (
-  <Flex alignItems="center" gap="half">
-    <Text fontSize="small" color="darkGrey">
-      You can embed custom components in the tooltip
-    </Text>
+export const WithCustomTooltip: Story = {
+  render: () => (
+    <Flex alignItems="center" gap="half">
+      <Text fontSize="small" color="darkGrey">
+        You can embed custom components in the tooltip
+      </Text>
 
-    <Tooltip maxWidth="340px" tooltip={<CustomTooltip />} defaultOpen>
-      <Icon icon="info" size="x3" color="darkGrey" />
-    </Tooltip>
-  </Flex>
-);
+      <Tooltip maxWidth="340px" tooltip={<CustomTooltip />} defaultOpen>
+        <Icon icon="info" size="x3" color="darkGrey" />
+      </Tooltip>
+    </Flex>
+  ),
+  name: "with custom tooltip",
+};

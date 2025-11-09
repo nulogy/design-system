@@ -3,7 +3,7 @@ const radio = () => cy.get('[type="radio"]');
 describe("Radio", () => {
   describe("Default", () => {
     beforeEach(() => {
-      cy.renderFromStorybook("radio--radio");
+      cy.renderFromStorybook("radio--default");
     });
     it("can be checked", () => {
       radio().should("not.be.checked");
@@ -57,7 +57,7 @@ describe("Radio", () => {
     });
     it("focus can be set", () => {
       radio().should("not.have.focus");
-      cy.get("button").click();
+      cy.get("[data-testid='the-button']").click();
       radio().should("have.focus");
     });
   });
