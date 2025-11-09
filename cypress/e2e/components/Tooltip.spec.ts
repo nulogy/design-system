@@ -1,9 +1,9 @@
 describe("Tooltip", () => {
-  const triggerSelector = "button";
+  const triggerSelector = "[data-testid='tooltip-trigger']";
 
   describe("Default", () => {
     beforeEach(() => {
-      cy.renderFromStorybook("tooltip--tooltip");
+      cy.renderFromStorybook("tooltip--default");
     });
 
     it("hides content without interaction", () => {
