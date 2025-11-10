@@ -1,3 +1,10 @@
+## [15.1.1](https://github.com/nulogy/design-system/compare/v15.1.0...v15.1.1) (2025-11-10)
+
+
+### Bug Fixes
+
+* Add temporary params to DatePicker ([b414899](https://github.com/nulogy/design-system/commit/b41489958c085babb351f6bd678980b2751adff0))
+
 # [15.1.0](https://github.com/nulogy/design-system/compare/v15.0.1...v15.1.0) (2025-08-21)
 
 
