@@ -20,25 +20,42 @@ const TableFooterRow = ({ row, columns, loading, compact }) => {
     (column) => column.dataKey !== "selected" && column.dataKey !== "expanded"
   );
   const numberOfControlColumns = columns.length - columnsWithoutControls.length;
+
+  // Track if we're in a colSpan and which columns to skip
+  let skipCount = 0;
+  const columnsToRender = [];
+
+  columnsWithoutControls.forEach((column, index) => {
+    if (skipCount > 0) {
+      skipCount--;
+      return; // Skip this column as it's spanned
+    }
+
+    if (row._colSpan && column.dataKey === "palletNumber") {
+      skipCount = row._colSpan - 1; // Skip the next N-1 columns
+    }
+
+    columnsToRender.push({ column, index });
+  });
+
   return (
     <StyledFooterRow>
-      {columnsWithoutControls.map((column, index) =>
+      {columnsToRender.map(({ column, index }) =>
         index === 0 ? (
           <StyledTh key={column.dataKey} scope="row" colSpan={numberOfControlColumns + 1} compact={compact}>
-            {row[column.dataKey]}
+            {column.cellRenderer
+              ? column.cellRenderer({ row, cellData: row[column.dataKey], column })
+              : row[column.dataKey]}
           </StyledTh>
         ) : (
           !loading && (
             <TableCell
               key={column.dataKey ?? column.key ?? index}
               row={row}
-              column={{
-                dataKey: column.dataKey,
-                label: column.label,
-                align: column.align,
-              }}
+              column={column}
               cellData={row[column.dataKey]}
               compact={compact}
+              colSpan={row._colSpan && column.dataKey === "palletNumber" ? row._colSpan : undefined}
             />
           )
         )

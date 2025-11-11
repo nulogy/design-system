@@ -132,6 +132,7 @@ export const V3 = () => {
   // Header and Summary state
   // userState, collaborationState, acceptedItems, poStatus now imported from optionsData.tsx
   const [productionComplete] = useState(false);
+  const [missingAttainment, setMissingAttainment] = useState(false);
 
   // Edit state
   const [showEditSidebar, setShowEditSidebar] = useState(false);
@@ -1652,8 +1653,183 @@ export const V3 = () => {
     setConsumptionItems((prev) => prev.map((item) => (item.id === itemId ? { ...item, [field]: value } : item)));
   };
 
+  // Calculate totals for footer
+  const calculateTotals = () => {
+    let totalExpected = 0;
+    let totalActual = 0;
+    let uom = "cs"; // Default UOM, will be extracted from first row
+
+    productionRecordsData.forEach((row) => {
+      const expectedMatch = row.expectedQuantity?.match(/^([\d,]+)\s*(.+)$/);
+      const actualMatch = row.actualQuantity?.match(/^([\d,]+)\s*(.+)$/);
+
+      if (expectedMatch) {
+        const value = parseFloat(expectedMatch[1].replace(/,/g, ""));
+        if (!isNaN(value)) {
+          totalExpected += value;
+        }
+        if (!uom && expectedMatch[2]) {
+          uom = expectedMatch[2];
+        }
+      }
+
+      if (actualMatch) {
+        const value = parseFloat(actualMatch[1].replace(/,/g, ""));
+        if (!isNaN(value)) {
+          totalActual += value;
+        }
+      }
+    });
+
+    // Calculate percentage for attainment
+    const attainmentPercentage = totalExpected > 0 ? (totalActual / totalExpected) * 100 : 0;
+
+    return {
+      totalExpected: `${totalExpected.toLocaleString()} ${uom}`,
+      totalActual: `${totalActual.toLocaleString()} ${uom}`,
+      attainmentPercentage: `${attainmentPercentage.toFixed(1)}%`,
+    };
+  };
+
+  const totals = calculateTotals();
+
+  // Create footer rows
+  const footerRows = [
+    {
+      id: "footer-total",
+      date: "Total",
+      expectedQuantity: totals.totalExpected,
+      actualQuantity: totals.totalActual,
+      palletNumber: totals.attainmentPercentage, // Store attainment here, will span multiple columns
+      isFooterRow: true,
+      _colSpan: 5, // Span 5 columns: palletNumber, customerLotCode, expiryDate, note, actions
+    },
+  ];
+
   // Add cellRenderer to production records columns
   const productionRecordsColumnsWithRenderer = productionRecordsColumns.map((column) => {
+    // Add cellRenderer for date column to handle footer rows
+    if (column.dataKey === "date") {
+      return {
+        ...column,
+        cellRenderer: ({ row, cellData }: { row: any; cellData?: any }) => {
+          if (row.isFooterRow) {
+            // For footer rows, render the date content
+            return (
+              <Flex pl="x1" pr="x1" py="x1_5" justifyContent="flex-start">
+                {typeof row.date === "string" ? (
+                  <Text color="black" fontWeight="medium">
+                    {row.date}
+                  </Text>
+                ) : (
+                  row.date
+                )}
+              </Flex>
+            );
+          }
+          // For regular rows, return the cellData to preserve default rendering
+          return cellData;
+        },
+      };
+    }
+    if (column.dataKey === "expectedQuantity") {
+      return {
+        ...column,
+        cellRenderer: ({ row, cellData }: { row: any; cellData?: any }) => {
+          if (row.isFooterRow) {
+            return (
+              <Flex pr="x1" py="x1_5" alignItems="center">
+                <Text fontWeight="medium">{row.expectedQuantity || ""}</Text>
+              </Flex>
+            );
+          }
+          // For regular rows, return the cellData to preserve default rendering
+          return cellData;
+        },
+      };
+    }
+    if (column.dataKey === "actualQuantity") {
+      return {
+        ...column,
+        cellRenderer: ({ row }: { row: any }) => {
+          if (row.isFooterRow) {
+            return (
+              <Flex pr="x1" py="x1_5" alignItems="center">
+                <Text fontWeight="medium">{row.actualQuantity}</Text>
+              </Flex>
+            );
+          }
+          // Keep existing renderer for regular rows
+          return (
+            <Box py="x0_75" mr="x1">
+              <Text>{row.actualQuantity}</Text>
+            </Box>
+          );
+        },
+      };
+    }
+    if (column.dataKey === "palletNumber") {
+      return {
+        ...column,
+        cellRenderer: ({ row }: { row: any }) => {
+          if (row.isFooterRow) {
+            // Show Scheduled attainment spanning multiple columns
+            if (missingAttainment) {
+              return (
+                <Flex
+                  py="x1_5"
+                  px="x2_5"
+                  backgroundColor="whiteGrey"
+                  borderRadius="large"
+                  justifyContent="center"
+                  alignItems="center"
+                >
+                  <Text color="midGrey">Attainment is not available</Text>
+                  <Tooltip tooltip="Attainment cannot be calculated when the expected quantity is 0">
+                    <Icon color="darkGrey" size="x2" m="x0_5" icon="info" />
+                  </Tooltip>
+                </Flex>
+              );
+            }
+            return (
+              <Flex
+                py="x1_5"
+                px="x2_5"
+                backgroundColor="whiteGrey"
+                borderRadius="large"
+                justifyContent="center"
+                alignItems="center"
+              >
+                <Text fontWeight="medium">{row.palletNumber} attainment</Text>
+                <Tooltip tooltip="Calculated by dividing the total actual by the toal expected quantity">
+                  <Icon color="darkGrey" size="x2" m="x0_5" icon="info" />
+                </Tooltip>
+              </Flex>
+            );
+          }
+          // Use default rendering for regular rows
+          return (
+            <Box py="x0_75" mr="x1" pl="half">
+              <Text fontSize="small" lineHeight="smallCompressed">
+                {row.palletNumber}
+              </Text>
+            </Box>
+          );
+        },
+      };
+    }
+    if (column.dataKey === "expiryDate" || column.dataKey === "note") {
+      return {
+        ...column,
+        cellRenderer: ({ row }: { row: any }) => {
+          // Hide these columns for footer rows (they're spanned by palletNumber)
+          if (row.isFooterRow) {
+            return null;
+          }
+          return null; // Use default rendering for regular rows
+        },
+      };
+    }
     if (column.dataKey === "customerLotCode") {
       return {
         ...column,
@@ -1668,6 +1844,10 @@ export const V3 = () => {
           </Box>
         ),
         cellRenderer: ({ row }: { row: any }) => {
+          // Hide for footer rows (spanned by palletNumber)
+          if (row.isFooterRow) {
+            return null;
+          }
           // Always show blank for parent table rows since detailed info is in nested tables
           return null;
         },
@@ -1677,6 +1857,10 @@ export const V3 = () => {
       return {
         ...column,
         cellRenderer: ({ row }: { row: any }) => {
+          // Hide actions for footer rows
+          if (row.isFooterRow) {
+            return null;
+          }
           // Hide edit production record option when dual lot is off and view is as customer
           if (!dualLotCode && role === "customer") {
             return null;
@@ -2050,6 +2234,8 @@ export const V3 = () => {
             border-bottom: 1px solid #e4e7eb !important;
           }
           
+          
+          
           .actual-production-record-table {
             border-collapse: separate !important;
             border-spacing: 0 !important;
@@ -2333,6 +2519,7 @@ export const V3 = () => {
                 <Table
                   columns={productionRecordsColumnsWithRenderer}
                   rows={productionRecordsDataWithExpandedContent}
+                  footerRows={footerRows}
                   hasExpandableRows={true}
                   expandedRows={expandedRows}
                   onRowExpansionChange={setExpandedRows}
@@ -4376,6 +4563,12 @@ export const V3 = () => {
                   <Toggle toggled={dualLotCode} onChange={(e) => setDualLotCode(e.target.checked)} />
                 </Flex>
               </Tooltip>
+              <Flex alignItems="center" gap="x1" width="200px">
+                <Text width="150px" fontSize="small" color="midGrey">
+                  Missing attainment
+                </Text>
+                <Toggle toggled={missingAttainment} onChange={(e) => setMissingAttainment(e.target.checked)} />
+              </Flex>
               <Flex alignItems="center" gap="x1" width="275px">
                 <Text width="125px" fontSize="small" color="midGrey">
                   View as:
