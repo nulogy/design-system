@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { action } from "@storybook/addon-actions";
-import { select, boolean } from "@storybook/addon-knobs";
+import type { Meta, StoryObj } from "@storybook/react";
 
 import { DatePicker } from "../index";
 import { Button } from "../..";
@@ -13,34 +13,45 @@ const selectedDateExamples = [
 
 export default {
   title: "Components/DatePickers/DatePicker",
+  component: DatePicker,
+} satisfies Meta<typeof DatePicker>;
+
+type Story = StoryObj<typeof DatePicker>;
+
+export const Default: Story = {
+  args: {
+    selected: selectedDateExamples[0],
+    onChange: action("date changed"),
+    onFocus: action("date selector focused"),
+    onBlur: action("date selector blurred"),
+    onInputChange: action("input changed"),
+    inputProps: { labelText: "Expiry Date" },
+  },
+  argTypes: {
+    selected: {
+      control: { type: "select" },
+      options: selectedDateExamples,
+    },
+  },
 };
 
-export const Default = () => (
-  <DatePicker
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    //@ts-ignore
-    selected={select("selected", selectedDateExamples, selectedDateExamples[0], "selected")}
-    onChange={action("date changed")}
-    onFocus={action("date selector focused")}
-    onBlur={action("date selector blurred")}
-    onInputChange={action("input changed")}
-    inputProps={{ labelText: "Expiry Date" }}
-  />
-);
-
-export const WithCustomDateFormat = () => (
-  <DatePicker
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    //@ts-ignore
-    selected={select("selected", selectedDateExamples, selectedDateExamples[0], "selected")}
-    dateFormat="MMMM d, yyyy"
-    onChange={action("date changed")}
-    onFocus={action("date selector focused")}
-    onBlur={action("date selector blurred")}
-    onInputChange={action("input changed")}
-    inputProps={{ labelText: "Expiry Date" }}
-  />
-);
+export const WithCustomDateFormat: Story = {
+  args: {
+    selected: selectedDateExamples[0],
+    dateFormat: "MMMM d, yyyy",
+    onChange: action("date changed"),
+    onFocus: action("date selector focused"),
+    onBlur: action("date selector blurred"),
+    onInputChange: action("input changed"),
+    inputProps: { labelText: "Expiry Date" },
+  },
+  argTypes: {
+    selected: {
+      control: { type: "select" },
+      options: selectedDateExamples,
+    },
+  },
+};
 
 export const WithCustomPlaceholder = () => (
   <DatePicker
@@ -78,19 +89,26 @@ export const WithMinAndMaxDate = () => (
   />
 );
 
-export const DisableFlipping = () => (
-  <DatePicker
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    //@ts-ignore
-    selected={select("selected", selectedDateExamples, selectedDateExamples[0], "selected")}
-    onBlur={action("date selector blurred")}
-    onFocus={action("date selector focused")}
-    onChange={action("date changed")}
-    onInputChange={action("input changed")}
-    inputProps={{ labelText: "Expiry Date" }}
-    disableFlipping={boolean("disableFlipping", true)}
-  />
-);
+export const DisableFlipping: Story = {
+  args: {
+    selected: selectedDateExamples[0],
+    onBlur: action("date selector blurred"),
+    onFocus: action("date selector focused"),
+    onChange: action("date changed"),
+    onInputChange: action("input changed"),
+    inputProps: { labelText: "Expiry Date" },
+    disableFlipping: true,
+  },
+  argTypes: {
+    selected: {
+      control: { type: "select" },
+      options: selectedDateExamples,
+    },
+    disableFlipping: {
+      control: { type: "boolean" },
+    },
+  },
+};
 
 export const UsingRefToControlFocus = () => {
   const ref = useRef(null);

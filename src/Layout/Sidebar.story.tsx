@@ -1,4 +1,4 @@
-import { text } from "@storybook/addon-knobs";
+import type { Meta, StoryObj } from "@storybook/react";
 import React, { useState, useRef } from "react";
 import {
   ApplicationFrame,
@@ -22,7 +22,9 @@ export default {
     layout: "fullscreen",
     chromatic: { delay: 300 }, // time for sidebar animation
   },
-};
+} satisfies Meta<typeof Sidebar>;
+
+type Story = StoryObj<typeof Sidebar>;
 
 const ExampleSidebar = ({ isOpen, onClose, ...props }) => (
   <Sidebar isOpen={isOpen} title="Filters" onClose={onClose} footer={<PrimaryButton>Apply</PrimaryButton>} {...props}>
@@ -168,7 +170,7 @@ export const OpenByDefault = () => {
   );
 };
 
-export const WithCustomOffset = () => {
+const WithCustomOffsetComponent = (args) => {
   const [isOpen, setIsOpen] = useState(true);
   const triggerRef = useRef(null);
 
@@ -203,12 +205,20 @@ export const WithCustomOffset = () => {
           onClose={closeSidebar}
           triggerRef={triggerRef}
           aria-controls="openSidebarTrigger"
-          offset={text("offset", "400px")}
-          duration={text("duration", "0.5")}
+          {...args}
         />
       </Page>
     </ApplicationFrame>
   );
+};
+
+export const WithCustomOffset: Story = {
+  args: {
+    offset: "400px",
+    duration: 0.5,
+  },
+  name: "With custom offset",
+  render: (args) => <WithCustomOffsetComponent {...args} />,
 };
 
 export const DontCloseOnOutsideClick = () => {

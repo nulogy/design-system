@@ -9,7 +9,7 @@ import { BoxProps } from "../Box";
 
 type Breakpoint = string | number;
 
-interface HeaderProps extends Omit<BoxProps, "title"> {
+export interface HeaderProps extends Omit<BoxProps, "title"> {
   renderBreadcrumbs?: () => ReactNode;
   title?: ReactNode;
   subtitle?: string;

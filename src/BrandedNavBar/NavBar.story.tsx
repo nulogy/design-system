@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { select } from "@storybook/addon-knobs";
+import type { Meta, StoryObj } from "@storybook/react";
 import { BrowserRouter, Link as ReactRouterLink } from "react-router-dom";
 import { Heading1 } from "../Type";
 import { Icon } from "../Icon";
@@ -134,7 +134,9 @@ const secondaryMenuWithIcon = [
 
 export default {
   title: "Components/BrandedNavBar",
-};
+} satisfies Meta<typeof NDSBrandedNavBar>;
+
+type Story = StoryObj<typeof NDSBrandedNavBar>;
 
 export const _BrandedNavBar = () => <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />;
 
@@ -162,16 +164,24 @@ WithACompanyLogoAndAppName.story = {
   name: "With a company logo and app name",
 };
 
-export const WithEnvironmentBanner = () => (
-  <BrandedNavBar
-    menuData={{ primaryMenu, secondaryMenu }}
-    subtext="Quality control"
-    logoSrc={sampleLogo}
-    environment={select("environment", ["training", "development"], "training")}
-  />
-);
-
-WithEnvironmentBanner.story = {
+export const WithEnvironmentBanner: Story = {
+  render: (args) => (
+    <BrandedNavBar
+      menuData={{ primaryMenu, secondaryMenu }}
+      subtext="Quality control"
+      logoSrc={sampleLogo}
+      environment={args.environment}
+    />
+  ),
+  args: {
+    environment: "training",
+  },
+  argTypes: {
+    environment: {
+      control: { type: "select" },
+      options: ["training", "development"],
+    },
+  },
   name: "with environment banner",
 };
 
