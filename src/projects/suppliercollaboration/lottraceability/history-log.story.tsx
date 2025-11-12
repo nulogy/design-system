@@ -18,10 +18,10 @@ import {
 } from "../../..";
 
 export default {
-  title: "Projects/Supplier Collaboration/Lot traceability/History Log",
+  title: "Projects/Supplier Collaboration/Lot traceability/History log/V1",
 };
 
-export const HistoryLog = () => {
+export const V1 = () => {
   const [highlights, setHighlights] = useState({
     entry: false,
     group: false,
@@ -46,7 +46,7 @@ export const HistoryLog = () => {
     mr,
   }: {
     number: string;
-    tooltip?: string;
+    tooltip?: React.ReactNode;
     placement?: "left" | "right" | "top" | "bottom";
     fontSize?: "smaller" | "small";
     style?: React.CSSProperties;
@@ -637,7 +637,16 @@ export const HistoryLog = () => {
                     <Box as="span" color="black" fontWeight="bold">
                       Actual production record
                     </Box>
-                    <RecordNumberPill number="001" />
+                    <RecordNumberPill
+                      number="001"
+                      tooltip={
+                        <Box>
+                          <Text>Pallet number: PAL-001B</Text>
+                          <Text>Supplier's lot code: SUP-LOT-001</Text>
+                          <Text>Expiry date: March 15, 2026</Text>
+                        </Box>
+                      }
+                    />
                   </Flex>
                 </Box>
                 <Box
@@ -712,7 +721,31 @@ export const HistoryLog = () => {
                   <Box as="span" color="black" fontWeight="bold">
                     Actual production record
                   </Box>
-                  <RecordNumberPill number="001" />
+                  <RecordNumberPill
+                    number="001"
+                    tooltip={
+                      <Flex p="x0_25" gap="x0_5" flexDirection="column">
+                        <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                          Pallet number:{" "}
+                          <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                            PAL-001B
+                          </Text>
+                        </Text>
+                        <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                          Supplier's lot code:{" "}
+                          <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                            SUP-LOT-001
+                          </Text>
+                        </Text>
+                        <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                          Expiry date:{" "}
+                          <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                            March 15, 2026
+                          </Text>
+                        </Text>
+                      </Flex>
+                    }
+                  />
                 </Flex>
               </Box>
               <Box
@@ -814,14 +847,68 @@ export const HistoryLog = () => {
                     <Box as="span" color="black" fontWeight="bold">
                       Actual production record
                     </Box>
-                    <RecordNumberPill number="001" />
+                    <RecordNumberPill
+                      number="001"
+                      tooltip={
+                        <Flex p="x0_25" gap="x0_5" flexDirection="column">
+                          <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                            Pallet number:{" "}
+                            <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                              PAL-001B
+                            </Text>
+                          </Text>
+                          <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                            Supplier's lot code:{" "}
+                            <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                              SUP-LOT-002
+                            </Text>
+                          </Text>
+                          <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                            Expiry date:{" "}
+                            <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                              March 16, 2026
+                            </Text>
+                          </Text>
+                        </Flex>
+                      }
+                    />
                     <Box as="span" color="midGrey">
                       –
                     </Box>
                     <Box as="span" color="black" fontWeight="bold">
                       Subcomponent consumption record
                     </Box>
-                    <RecordNumberPill number="001" />
+                    <RecordNumberPill
+                      number="001"
+                      tooltip={
+                        <Flex p="x0_25" gap="x0_5" flexDirection="column">
+                          <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                            Item code:{" "}
+                            <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                              ITM-003M
+                            </Text>
+                          </Text>
+                          <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                            Supplier's lot code:{" "}
+                            <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                              SUP-LOT-003
+                            </Text>
+                          </Text>
+                          <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                            Expiry date:{" "}
+                            <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                              March 17, 2026
+                            </Text>
+                          </Text>
+                          <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                            Pallet number:{" "}
+                            <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                              PAL-001C
+                            </Text>
+                          </Text>
+                        </Flex>
+                      }
+                    />
                   </Flex>
                 </Box>
                 <Box
@@ -914,14 +1001,69 @@ export const HistoryLog = () => {
                   <Box as="span" color="black" fontWeight="bold">
                     Actual production record
                   </Box>
-                  <RecordNumberPill number="001" />
+                  <RecordNumberPill
+                    number="001"
+                    tooltip={
+                      <Flex p="x0_25" gap="x0_5" flexDirection="column">
+                        <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                          Pallet number:{" "}
+                          <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                            PAL-001B
+                          </Text>
+                        </Text>
+                        <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                          Supplier's lot code:{" "}
+                          <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                            SUP-LOT-001
+                          </Text>
+                        </Text>
+                        <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                          Expiry date:{" "}
+                          <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                            March 15, 2026
+                          </Text>
+                        </Text>
+                      </Flex>
+                    }
+                  />
+
                   <Box as="span" color="midGrey">
                     –
                   </Box>
                   <Box as="span" color="black" fontWeight="bold">
                     Subcomponent consumption record
                   </Box>
-                  <RecordNumberPill number="001" />
+                  <RecordNumberPill
+                    number="001"
+                    tooltip={
+                      <Flex p="x0_25" gap="x0_5" flexDirection="column">
+                        <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                          Item code:{" "}
+                          <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                            ITM-003M
+                          </Text>
+                        </Text>
+                        <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                          Supplier's lot code:{" "}
+                          <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                            SUP-LOT-003
+                          </Text>
+                        </Text>
+                        <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                          Expiry date:{" "}
+                          <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                            March 17, 2026
+                          </Text>
+                        </Text>
+                        <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                          Pallet number:{" "}
+                          <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                            PAL-001C
+                          </Text>
+                        </Text>
+                      </Flex>
+                    }
+                  />
                 </Flex>
               </Box>
               <Box
