@@ -1801,7 +1801,7 @@ export const V3 = () => {
                 alignItems="center"
               >
                 <Text fontWeight="medium">{row.palletNumber} attainment</Text>
-                <Tooltip tooltip="Calculated by dividing the total actual by the toal expected quantity">
+                <Tooltip tooltip="Calculated by dividing the total actual quantity by the total expected quantity">
                   <Icon color="darkGrey" size="x2" m="x0_5" icon="info" />
                 </Tooltip>
               </Flex>
