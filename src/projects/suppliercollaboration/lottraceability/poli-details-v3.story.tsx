@@ -156,7 +156,7 @@ export const V3 = () => {
     isProductionRecord = false,
   }: {
     number: string;
-    tooltip?: string;
+    tooltip?: React.ReactNode;
     placement?: "left" | "right" | "top" | "bottom";
     fontSize?: "smaller" | "small";
     style?: React.CSSProperties;
@@ -2650,7 +2650,31 @@ export const V3 = () => {
                         <Box as="span" color="black" fontWeight="bold">
                           Actual production record
                         </Box>
-                        <RecordNumberPill number="01" />
+                        <RecordNumberPill
+                          number="01"
+                          tooltip={
+                            <Flex p="x0_25" gap="x0_5" flexDirection="column">
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Pallet number:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  PAL-002
+                                </Text>
+                              </Text>
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Supplier's lot code:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  SUP-LOT-001B
+                                </Text>
+                              </Text>
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Expiry date:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  March 20, 2026
+                                </Text>
+                              </Text>
+                            </Flex>
+                          }
+                        />
                       </Flex>
                     </Box>
                     <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
@@ -2822,7 +2846,31 @@ export const V3 = () => {
                         <Box as="span" color="black" fontWeight="bold">
                           Actual production record
                         </Box>
-                        <RecordNumberPill number="02" />
+                        <RecordNumberPill
+                          number="02"
+                          tooltip={
+                            <Flex p="x0_25" gap="x0_5" flexDirection="column">
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Pallet number:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  PAL-003
+                                </Text>
+                              </Text>
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Supplier's lot code:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  SUP-LOT-002
+                                </Text>
+                              </Text>
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Expiry date:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  March 16, 2026
+                                </Text>
+                              </Text>
+                            </Flex>
+                          }
+                        />
                       </Flex>
                     </Box>
                     <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
@@ -2904,14 +2952,68 @@ export const V3 = () => {
                         <Box as="span" color="black" fontWeight="bold">
                           Actual production record
                         </Box>
-                        <RecordNumberPill number="01" />
+                        <RecordNumberPill
+                          number="01"
+                          tooltip={
+                            <Flex p="x0_25" gap="x0_5" flexDirection="column">
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Pallet number:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  PAL-001A
+                                </Text>
+                              </Text>
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Supplier's lot code:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  SUP-LOT-001
+                                </Text>
+                              </Text>
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Expiry date:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  March 15, 2026
+                                </Text>
+                              </Text>
+                            </Flex>
+                          }
+                        />
                         <Box as="span" color="midGrey">
                           –
                         </Box>
                         <Box as="span" color="black" fontWeight="bold">
                           Subcomponent consumption record
                         </Box>
-                        <RecordNumberPill number="001" />
+                        <RecordNumberPill
+                          number="001"
+                          tooltip={
+                            <Flex p="x0_25" gap="x0_5" flexDirection="column">
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Item code:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  Raw Material A (Grade 2)
+                                </Text>
+                              </Text>
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Supplier's lot code:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  SUP-LOT-001B
+                                </Text>
+                              </Text>
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Expiry date:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  March 15, 2026
+                                </Text>
+                              </Text>
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Pallet number:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  PAL-RM-002
+                                </Text>
+                              </Text>
+                            </Flex>
+                          }
+                        />
                       </Flex>
                     </Box>
 
@@ -3066,14 +3168,68 @@ export const V3 = () => {
                         <Box as="span" color="black" fontWeight="bold">
                           Actual production record
                         </Box>
-                        <RecordNumberPill number="02" />
+                        <RecordNumberPill
+                          number="02"
+                          tooltip={
+                            <Flex p="x0_25" gap="x0_5" flexDirection="column">
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Pallet number:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  PAL-003
+                                </Text>
+                              </Text>
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Supplier's lot code:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  SUP-LOT-002
+                                </Text>
+                              </Text>
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Expiry date:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  March 16, 2026
+                                </Text>
+                              </Text>
+                            </Flex>
+                          }
+                        />
                         <Box as="span" color="midGrey">
                           –
                         </Box>
                         <Box as="span" color="black" fontWeight="bold">
                           Subcomponent consumption record
                         </Box>
-                        <RecordNumberPill number="002" />
+                        <RecordNumberPill
+                          number="002"
+                          tooltip={
+                            <Flex p="x0_25" gap="x0_5" flexDirection="column">
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Item code:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  Raw Material B (Premium Grade)
+                                </Text>
+                              </Text>
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Supplier's lot code:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  SUP-LOT-002
+                                </Text>
+                              </Text>
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Expiry date:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  March 18, 2026
+                                </Text>
+                              </Text>
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Pallet number:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  PAL-004
+                                </Text>
+                              </Text>
+                            </Flex>
+                          }
+                        />
                       </Flex>
                     </Box>
                     <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
@@ -3173,14 +3329,68 @@ export const V3 = () => {
                         <Box as="span" color="black" fontWeight="bold">
                           Actual production record
                         </Box>
-                        <RecordNumberPill number="04" />
+                        <RecordNumberPill
+                          number="04"
+                          tooltip={
+                            <Flex p="x0_25" gap="x0_5" flexDirection="column">
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Pallet number:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  PAL-005
+                                </Text>
+                              </Text>
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Supplier's lot code:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  SUP-LOT-005
+                                </Text>
+                              </Text>
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Expiry date:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  March 20, 2026
+                                </Text>
+                              </Text>
+                            </Flex>
+                          }
+                        />
                         <Box as="span" color="midGrey">
                           –
                         </Box>
                         <Box as="span" color="black" fontWeight="bold">
                           Subcomponent consumption record
                         </Box>
-                        <RecordNumberPill number="004" />
+                        <RecordNumberPill
+                          number="004"
+                          tooltip={
+                            <Flex p="x0_25" gap="x0_5" flexDirection="column">
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Item code:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  Raw Material C (Enhanced Grade)
+                                </Text>
+                              </Text>
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Supplier's lot code:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  SUP-LOT-005
+                                </Text>
+                              </Text>
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Expiry date:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  March 20, 2025
+                                </Text>
+                              </Text>
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Pallet number:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  PAL-005
+                                </Text>
+                              </Text>
+                            </Flex>
+                          }
+                        />
                       </Flex>
                     </Box>
                     <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
@@ -3337,7 +3547,31 @@ export const V3 = () => {
                         <Box as="span" color="black" fontWeight="bold">
                           Actual production record
                         </Box>
-                        <RecordNumberPill number="03" />
+                        <RecordNumberPill
+                          number="03"
+                          tooltip={
+                            <Flex p="x0_25" gap="x0_5" flexDirection="column">
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Pallet number:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  PAL-005
+                                </Text>
+                              </Text>
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Supplier's lot code:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  SUP-LOT-003
+                                </Text>
+                              </Text>
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Expiry date:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  March 19, 2026
+                                </Text>
+                              </Text>
+                            </Flex>
+                          }
+                        />
                       </Flex>
                     </Box>
                     <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
@@ -3419,14 +3653,68 @@ export const V3 = () => {
                         <Box as="span" color="black" fontWeight="bold">
                           Actual production record
                         </Box>
-                        <RecordNumberPill number="03" />
+                        <RecordNumberPill
+                          number="03"
+                          tooltip={
+                            <Flex p="x0_25" gap="x0_5" flexDirection="column">
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Pallet number:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  PAL-005
+                                </Text>
+                              </Text>
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Supplier's lot code:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  SUP-LOT-003
+                                </Text>
+                              </Text>
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Expiry date:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  March 19, 2026
+                                </Text>
+                              </Text>
+                            </Flex>
+                          }
+                        />
                         <Box as="span" color="midGrey">
                           –
                         </Box>
                         <Box as="span" color="black" fontWeight="bold">
                           Subcomponent consumption record
                         </Box>
-                        <RecordNumberPill number="005" />
+                        <RecordNumberPill
+                          number="005"
+                          tooltip={
+                            <Flex p="x0_25" gap="x0_5" flexDirection="column">
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Item code:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  Raw Material D (Premium Grade)
+                                </Text>
+                              </Text>
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Supplier's lot code:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  SUP-LOT-003
+                                </Text>
+                              </Text>
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Expiry date:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  March 20, 2025
+                                </Text>
+                              </Text>
+                              <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                                Pallet number:{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallTextCompressed" color="black">
+                                  PAL-005
+                                </Text>
+                              </Text>
+                            </Flex>
+                          }
+                        />
                       </Flex>
                     </Box>
                     <DescriptionList layout="auto" density="compact" descriptionTermMaxWidth="38.2%">
@@ -3653,15 +3941,13 @@ export const V3 = () => {
                       </Text>
                     </Box>
                     <Box width="75%">
-                      <Flex alignItems="center" gap="x0_5" >
+                      <Flex alignItems="center" gap="x0_5">
                         <Text>UOM</Text>
                         <Text fontSize="small" inline color="darkGrey">
                           (Required)
                         </Text>
                         {role === "supplier" && (
-                          <Tooltip
-                            tooltip="Only UOMs with conversion ratios to the order UOM can be selected. Quantities will be converted and displayed in the order UOM. Additional conversions can be imported by the customer on the Items page."
-                          >
+                          <Tooltip tooltip="Only UOMs with conversion ratios to the order UOM can be selected. Quantities will be converted and displayed in the order UOM. Additional conversions can be imported by the customer on the Items page.">
                             <Icon icon="info" color="darkGrey" size="x2" />
                           </Tooltip>
                         )}
@@ -4190,9 +4476,7 @@ export const V3 = () => {
                                                 UOM
                                               </Text>
                                               {role === "supplier" && (
-                                                <Tooltip
-                                                  tooltip="Only UOMs with conversion ratios to the order UOM can be selected. Quantities will be converted and displayed in the order UOM. Additional conversions can be imported by the customer on the Items page."
-                                                >
+                                                <Tooltip tooltip="Only UOMs with conversion ratios to the order UOM can be selected. Quantities will be converted and displayed in the order UOM. Additional conversions can be imported by the customer on the Items page.">
                                                   <Icon icon="info" color="darkGrey" size="x2" />
                                                 </Tooltip>
                                               )}

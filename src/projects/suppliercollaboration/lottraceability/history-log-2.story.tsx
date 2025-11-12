@@ -46,7 +46,7 @@ export const V2 = () => {
     mr,
   }: {
     number: string;
-    tooltip?: string;
+    tooltip?: React.ReactNode;
     placement?: "left" | "right" | "top" | "bottom";
     fontSize?: "smaller" | "small";
     style?: React.CSSProperties;
