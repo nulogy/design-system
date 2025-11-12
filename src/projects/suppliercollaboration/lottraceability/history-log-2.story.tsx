@@ -18,10 +18,10 @@ import {
 } from "../../..";
 
 export default {
-  title: "Projects/Supplier Collaboration/Lot traceability/History Log 2",
+  title: "Projects/Supplier Collaboration/Lot traceability/History log/V2",
 };
 
-export const HistoryLog2 = () => {
+export const V2 = () => {
   const [highlights, setHighlights] = useState({
     entry: false,
     group: false,
@@ -1305,4 +1305,3 @@ export const HistoryLog2 = () => {
     </Flex>
   );
 };
-

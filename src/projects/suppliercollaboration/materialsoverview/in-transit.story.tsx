@@ -415,11 +415,7 @@ export const InTransit = () => {
         }
         return (
           <Box pt={cellPaddingTop} pb={cellPaddingBottom}>
-            {row.isMainRow ? (
-              <Text color="midGrey">-</Text>
-            ) : (
-              <Text color="midGrey">{row.expiryDate || "-"}</Text>
-            )}
+            {row.isMainRow ? <Text color="midGrey">-</Text> : <Text color="midGrey">{row.expiryDate || "-"}</Text>}
           </Box>
         );
       },
@@ -549,11 +545,7 @@ export const InTransit = () => {
         `}
       </style>
       <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
-        <Header
-          breakpoints={{ medium: 1200 }}
-          renderBreadcrumbs={() => breadcrumbs}
-          title="Order 4310000007"
-        >
+        <Header breakpoints={{ medium: 1200 }} renderBreadcrumbs={() => breadcrumbs} title="Order 4310000007">
           <StatusIndicator type="quiet">OPEN</StatusIndicator>
         </Header>
         <Page>
@@ -685,12 +677,7 @@ export const InTransit = () => {
 
                 {/* Items Table */}
                 <Box>
-                  <Table
-                    columns={columns}
-                    rows={itemsData}
-                    keyField="id"
-                    rowBorder
-                  />
+                  <Table columns={columns} rows={itemsData} keyField="id" rowBorder />
                 </Box>
               </Card>
             </Tab>
