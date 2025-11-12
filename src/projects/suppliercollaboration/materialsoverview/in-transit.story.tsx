@@ -7,6 +7,7 @@ import {
   Link,
   Box,
   Text,
+  Heading3,
   BrandedNavBar,
   Tabs,
   Tab,
@@ -120,8 +121,8 @@ export const InTransit = () => {
       item: "",
       poNumber: "",
       palletNumber: "",
-      customerLotCode: "BRK489",
-      supplierLotCode: "BRK489-SUP",
+      customerLotCode: "BRK489-VERY-LONG-CUSTOMER-LOT-CODE-THAT-SHOULD-TRUNCATE-WHEN-DISPLAYED-IN-THE-TABLE",
+      supplierLotCode: "BRK489-SUP-VERY-LONG-SUPPLIER-LOT-CODE-THAT-SHOULD-ALSO-TRUNCATE-WHEN-DISPLAYED-IN-THE-TABLE",
       expiryDate: "2026-09-27",
       shippedPalletQuantity: "220 CHEP",
       requiredQuantity: "",
@@ -138,7 +139,7 @@ export const InTransit = () => {
       item: "",
       poNumber: "",
       palletNumber: "",
-      customerLotCode: "LYN839",
+      customerLotCode: "-",
       supplierLotCode: "LYN839-SUP",
       expiryDate: "2026-09-19",
       shippedPalletQuantity: "140 Plastic",
@@ -195,7 +196,7 @@ export const InTransit = () => {
       poNumber: "",
       palletNumber: "",
       customerLotCode: "ALC312",
-      supplierLotCode: "ALC312-SUP",
+      supplierLotCode: "-",
       expiryDate: "2026-09-06",
       shippedPalletQuantity: "260 CHEP",
       requiredQuantity: "",
@@ -213,7 +214,7 @@ export const InTransit = () => {
       poNumber: "",
       palletNumber: "",
       customerLotCode: "CAR726",
-      supplierLotCode: "CAR726-SUP",
+      supplierLotCode: "-",
       expiryDate: "2026-09-26",
       shippedPalletQuantity: "260 CHEP",
       requiredQuantity: "",
@@ -248,6 +249,8 @@ export const InTransit = () => {
   // When customer is ON, use pt="x1" and pb="x3" for all cells except Lot code
   const cellPaddingTop = showCustomerLotCode ? "x1" : "x2";
   const cellPaddingBottom = showCustomerLotCode ? "x3" : "x2";
+  // Header padding based on lot code configuration
+  const headerPaddingBottom = showCustomerLotCode ? "x0_75" : "x1";
 
   // Table columns
   const columns = [
@@ -255,14 +258,19 @@ export const InTransit = () => {
       label: "Item",
       dataKey: "item",
       width: "200px",
+      headerFormatter: () => (
+        <Box pt="x1" pb={headerPaddingBottom}>
+          <Text>Item</Text>
+        </Box>
+      ),
       cellRenderer: ({ row }: { row: any }) => {
         // Sub-rows and total rows don't show item column
         if (row.isSubRow || row.isTotalRow) {
           return null;
         }
         return (
-          <Box pt={cellPaddingTop} pb={cellPaddingBottom}>
-            <TruncatedText maxCharacters={30}>{row.item}</TruncatedText>
+          <Box width="184px" ml="x1" mr="x1" pt={cellPaddingTop} pb={cellPaddingBottom}>
+            <TruncatedText fullWidth>{row.item}</TruncatedText>
           </Box>
         );
       },
@@ -271,13 +279,18 @@ export const InTransit = () => {
       label: "PO number",
       dataKey: "poNumber",
       width: "120px",
+      headerFormatter: () => (
+        <Box pt="x1" pb={headerPaddingBottom}>
+          <Text>PO number</Text>
+        </Box>
+      ),
       cellRenderer: ({ row }: { row: any }) => {
         // Total rows don't show PO number
         if (row.isTotalRow) {
           return null;
         }
         return (
-          <Box pt={cellPaddingTop} pb={cellPaddingBottom}>
+          <Box mr="x1" pt={cellPaddingTop} pb={cellPaddingBottom}>
             <Text color="midGrey">{row.poNumber || "-"}</Text>
           </Box>
         );
@@ -287,13 +300,18 @@ export const InTransit = () => {
       label: "Pallet number",
       dataKey: "palletNumber",
       width: "140px",
+      headerFormatter: () => (
+        <Box pt="x1" pb={headerPaddingBottom}>
+          <Text>Pallet number</Text>
+        </Box>
+      ),
       cellRenderer: ({ row }: { row: any }) => {
         // Total rows don't show pallet number
         if (row.isTotalRow) {
           return null;
         }
         return (
-          <Box pt={cellPaddingTop} pb={cellPaddingBottom}>
+          <Box mr="x1" pt={cellPaddingTop} pb={cellPaddingBottom}>
             <Text color="midGrey">{row.palletNumber || "-"}</Text>
           </Box>
         );
@@ -302,11 +320,11 @@ export const InTransit = () => {
     {
       label: "Lot code",
       dataKey: "lotCode",
-      width: "280px",
+      width: "240px",
       headerFormatter: () => {
         const label = getLotCodeHeaderLabel();
         return (
-          <Box pt="x1_25" pb="x0_75">
+          <Box pt="x1" pb={headerPaddingBottom} pr="x1">
             <Text>Lot code</Text>
             {label && (
               <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
@@ -317,13 +335,17 @@ export const InTransit = () => {
         );
       },
       cellRenderer: ({ row }: { row: any }) => {
-        // Main rows and total rows don't show lot code
-        if (row.isMainRow || row.isTotalRow) {
+        // Main rows don't show lot code
+        if (row.isMainRow) {
           return (
-            <Box pt={cellPaddingTop} pb={cellPaddingBottom}>
+            <Box mr="x1" pt={cellPaddingTop} pb={cellPaddingBottom}>
               <Text color="midGrey">-</Text>
             </Box>
           );
+        }
+        // Total rows don't show lot code (return null instead of "-")
+        if (row.isTotalRow) {
+          return null;
         }
 
         // For sub-rows, determine primary and secondary values based on configuration
@@ -347,7 +369,7 @@ export const InTransit = () => {
         const hasAnyConfigured = showCustomerLotCode || showSupplierLotCode;
         if (!hasAnyValue || !hasAnyConfigured) {
           return (
-            <Box pt={cellPaddingTop} pb={cellPaddingBottom}>
+            <Box mr="x1" pt={cellPaddingTop} pb={cellPaddingBottom}>
               <Text color="midGrey">-</Text>
             </Box>
           );
@@ -356,8 +378,8 @@ export const InTransit = () => {
         // If customer is off, show only single value with x2 padding
         if (!showCustomerLotCode) {
           return (
-            <Box pt={cellPaddingTop} pb={cellPaddingBottom}>
-              <TruncatedText fullWidth width="auto" maxWidth="304px" fontSize="medium">
+            <Box mr="x1" pt={cellPaddingTop} pb={cellPaddingBottom} width="264px">
+              <TruncatedText fullWidth fontSize="medium">
                 {primaryValue}
               </TruncatedText>
             </Box>
@@ -367,18 +389,20 @@ export const InTransit = () => {
         // If customer is on, show primary and secondary values
         return (
           <Flex
-            px="x1"
+            mr="x1"
+            pr="x1"
             py={secondaryValues.length > 0 ? "x0_75" : "x0_75"}
             gap="x0_25"
             flexDirection="column"
             alignItems="flex-start"
             style={{ alignSelf: "flex-start" }}
+            width="264px"
           >
-            <TruncatedText fullWidth width="auto" maxWidth="304px" fontSize="medium">
+            <TruncatedText fullWidth fontSize="small" lineHeight="smallTextCompressed">
               {primaryValue}
             </TruncatedText>
             {secondaryValues.length > 0 && (
-              <Flex gap="half">
+              <Flex gap="half" width="248px">
                 {secondaryValues.map((value, index) => (
                   <React.Fragment key={index}>
                     {index > 0 && (
@@ -386,14 +410,7 @@ export const InTransit = () => {
                         /
                       </Text>
                     )}
-                    <TruncatedText
-                      fullWidth
-                      width="auto"
-                      maxWidth={secondaryValues.length === 1 ? "304px" : "140px"}
-                      fontSize="small"
-                      lineHeight="smallTextCompressed"
-                      color="midGrey"
-                    >
+                    <TruncatedText fullWidth fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
                       {value}
                     </TruncatedText>
                   </React.Fragment>
@@ -408,14 +425,19 @@ export const InTransit = () => {
       label: "Expiry date",
       dataKey: "expiryDate",
       width: "120px",
+      headerFormatter: () => (
+        <Box pt="x1" pb={headerPaddingBottom}>
+          <Text>Expiry date</Text>
+        </Box>
+      ),
       cellRenderer: ({ row }: { row: any }) => {
         // Total rows don't show expiry date
         if (row.isTotalRow) {
           return null;
         }
         return (
-          <Box pt={cellPaddingTop} pb={cellPaddingBottom}>
-            {row.isMainRow ? <Text color="midGrey">-</Text> : <Text color="midGrey">{row.expiryDate || "-"}</Text>}
+          <Box mr="x1" pt={cellPaddingTop} pb={cellPaddingBottom}>
+            {row.isMainRow ? <Text color="midGrey">-</Text> : <Text>{row.expiryDate || "-"}</Text>}
           </Box>
         );
       },
@@ -424,18 +446,19 @@ export const InTransit = () => {
       label: "Shipped pallet quantity",
       dataKey: "shippedPalletQuantity",
       width: "180px",
+      headerFormatter: () => (
+        <Box pt="x1" pb={headerPaddingBottom}>
+          <Text>Shipped pallet quantity</Text>
+        </Box>
+      ),
       cellRenderer: ({ row }: { row: any }) => {
         // Total rows don't show shipped pallet quantity
         if (row.isTotalRow) {
           return null;
         }
         return (
-          <Box pt={cellPaddingTop} pb={cellPaddingBottom}>
-            {row.isMainRow ? (
-              <Text color="midGrey">-</Text>
-            ) : (
-              <Text color="midGrey">{row.shippedPalletQuantity || "-"}</Text>
-            )}
+          <Box mr="x1" pt={cellPaddingTop} pb={cellPaddingBottom}>
+            {row.isMainRow ? <Text color="midGrey">-</Text> : <Text>{row.shippedPalletQuantity || "-"}</Text>}
           </Box>
         );
       },
@@ -444,17 +467,22 @@ export const InTransit = () => {
       label: "Required quantity",
       dataKey: "requiredQuantity",
       width: "140px",
+      headerFormatter: () => (
+        <Box pt="x1" pb={headerPaddingBottom}>
+          <Text>Required quantity</Text>
+        </Box>
+      ),
       cellRenderer: ({ row }: { row: any }) => {
         // Only main rows and total rows show required quantity
         if (row.isSubRow) {
           return (
-            <Box pt={cellPaddingTop} pb={cellPaddingBottom}>
+            <Box mr="x1" pt={cellPaddingTop} pb={cellPaddingBottom}>
               <Text color="midGrey">-</Text>
             </Box>
           );
         }
         return (
-          <Box pt={cellPaddingTop} pb={cellPaddingBottom}>
+          <Box mr="x1" pt={cellPaddingTop} pb={cellPaddingBottom}>
             <Text>{row.requiredQuantity}</Text>
           </Box>
         );
@@ -464,8 +492,13 @@ export const InTransit = () => {
       label: "Shipped quantity",
       dataKey: "shippedQuantity",
       width: "140px",
+      headerFormatter: () => (
+        <Box pt="x1" pb={headerPaddingBottom}>
+          <Text>Shipped quantity</Text>
+        </Box>
+      ),
       cellRenderer: ({ row }: { row: any }) => (
-        <Box pt={cellPaddingTop} pb={cellPaddingBottom}>
+        <Box mr="x1" pt={cellPaddingTop} pb={cellPaddingBottom}>
           <Text>{row.shippedQuantity}</Text>
         </Box>
       ),
@@ -474,8 +507,13 @@ export const InTransit = () => {
       label: "Received quantity",
       dataKey: "receivedQuantity",
       width: "140px",
+      headerFormatter: () => (
+        <Box pt="x1" pb={headerPaddingBottom}>
+          <Text>Received quantity</Text>
+        </Box>
+      ),
       cellRenderer: ({ row }: { row: any }) => (
-        <Box pt={cellPaddingTop} pb={cellPaddingBottom}>
+        <Box mr="x1" pt={cellPaddingTop} pb={cellPaddingBottom}>
           <Text>{row.receivedQuantity}</Text>
         </Box>
       ),
@@ -484,18 +522,23 @@ export const InTransit = () => {
       label: "Freight class",
       dataKey: "freightClass",
       width: "120px",
+      headerFormatter: () => (
+        <Box pt="x1" pb={headerPaddingBottom}>
+          <Text>Freight class</Text>
+        </Box>
+      ),
       cellRenderer: ({ row }: { row: any }) => {
-        // Only total rows show freight class
-        if (!row.isTotalRow) {
+        // Total rows don't show freight class
+        if (row.isTotalRow) {
           return (
-            <Box pt={cellPaddingTop} pb={cellPaddingBottom}>
+            <Box mr="x1" pt={cellPaddingTop} pb={cellPaddingBottom}>
               <Text color="midGrey">-</Text>
             </Box>
           );
         }
         return (
-          <Box pt={cellPaddingTop} pb={cellPaddingBottom}>
-            <Text color="midGrey">{row.freightClass || "-"}</Text>
+          <Box mr="x1" pt={cellPaddingTop} pb={cellPaddingBottom}>
+            <Text color="midGrey">-</Text>
           </Box>
         );
       },
@@ -504,13 +547,18 @@ export const InTransit = () => {
       label: "Notes",
       dataKey: "notes",
       width: "auto",
+      headerFormatter: () => (
+        <Box pt="x1" pb={headerPaddingBottom}>
+          <Text>Notes</Text>
+        </Box>
+      ),
       cellRenderer: ({ row }: { row: any }) => {
         // Total rows don't show notes
         if (row.isTotalRow) {
           return null;
         }
         return (
-          <Box pt={cellPaddingTop} pb={cellPaddingBottom}>
+          <Box mr="x1" pt={cellPaddingTop} pb={cellPaddingBottom}>
             <Text color="midGrey">{row.notes || "-"}</Text>
           </Box>
         );
@@ -527,21 +575,71 @@ export const InTransit = () => {
             padding: 0 !important;
           }
           
-          /* Remove border on item column for sub-rows */
-          table tbody tr[data-testid="table-row"]:has(td:first-child:empty) td:first-child {
-            border-left: none !important;
-            border-bottom: none !important;
-          }
-          
-          /* Vertically align all table cells to top */
-          table tbody td {
+          /* Vertically align table header cells to top */
+          table thead th {
             vertical-align: top !important;
           }
           
-          /* Adjust table header padding */
-          table thead th {
-            padding: 8px 4px !important;
+          /* Blur header content */
+          header,
+          [data-testid="header"],
+          nav {
+            filter: blur(3px);
+            opacity: 0.5;
           }
+          
+          /* Blur tabs */
+          [role="tablist"],
+          [role="tab"] {
+            filter: blur(3px);
+            opacity: 0.5;
+          }
+          
+          /* Blur status indicators - specifically OPEN (quiet) and RECEIVED (neutral) */
+          [data-testid="status-indicator"],
+          [role="status"] {
+            filter: blur(3px) !important;
+            opacity: 0.5 !important;
+          }
+          
+          /* Blur delivery details section */
+          dl,
+          [data-testid="description-list"] {
+            filter: blur(3px);
+            opacity: 0.5;
+          }
+          
+          /* Blur delivery title and details section title */
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6,
+          /* Target the delivery header section (Flex containing title and status) */
+          div:has(> p[style*="font-size"]) + div:has([data-testid="status-indicator"]),
+          div:has(> p[style*="font-size"]),
+          /* Target Text components with large font size (delivery title) */
+          p[style*="font-size: 18px"],
+          p[style*="font-size: 1.125rem"] {
+            filter: blur(3px) !important;
+            opacity: 0.5 !important;
+          }
+          
+          /* Blur all table columns except Lot code (4th column) */
+          table thead th:not(:nth-child(4)),
+          table tbody td:not(:nth-child(4)) {
+            filter: blur(3px);
+            opacity: 0.5;
+          }
+          
+          /* Keep Lot code column (4th column) clear */
+          table thead th:nth-child(4),
+          table tbody td:nth-child(4) {
+            filter: none !important;
+            opacity: 1 !important;
+          }
+            
         `}
       </style>
       <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
@@ -559,9 +657,7 @@ export const InTransit = () => {
               <Card mt="x3" p="x3">
                 {/* Delivery Header */}
                 <Flex alignItems="center" gap="x1" mb="x3">
-                  <Text fontSize="large" fontWeight="medium">
-                    Delivery 910000011
-                  </Text>
+                  <Heading3 mb="0">Delivery 910000011</Heading3>
                   <StatusIndicator type="neutral">RECEIVED</StatusIndicator>
                 </Flex>
 
@@ -677,7 +773,7 @@ export const InTransit = () => {
 
                 {/* Items Table */}
                 <Box>
-                  <Table columns={columns} rows={itemsData} keyField="id" rowBorder />
+                  <Table columns={columns} rows={itemsData} keyField="id" rowBorder compact />
                 </Box>
               </Card>
             </Tab>
