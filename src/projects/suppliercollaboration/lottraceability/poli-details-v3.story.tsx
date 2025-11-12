@@ -3590,7 +3590,15 @@ export const V3 = () => {
                 </Box>
                 <Box width="8em">
                   <Field>
-                    <FieldLabel labelText="UOM" pb="x1" />
+                    <FieldLabel
+                      labelText="UOM"
+                      pb="x1"
+                      hint={
+                        role === "supplier"
+                          ? "Only UOMs with conversion ratios to the order UOM can be selected. Quantities will be converted and displayed in the order UOM. Additional conversions can be imported by the customer on the Items page."
+                          : undefined
+                      }
+                    />
                     <Select
                       value={productionRecordState.uom}
                       onChange={(value) => setProductionRecordState((prev) => ({ ...prev, uom: String(value) }))}
@@ -3645,10 +3653,19 @@ export const V3 = () => {
                       </Text>
                     </Box>
                     <Box width="75%">
-                      UOM
-                      <Text fontSize="small" inline ml="x0_5" color="darkGrey">
-                        (Required)
-                      </Text>
+                      <Flex alignItems="center" gap="x0_5" >
+                        <Text>UOM</Text>
+                        <Text fontSize="small" inline color="darkGrey">
+                          (Required)
+                        </Text>
+                        {role === "supplier" && (
+                          <Tooltip
+                            tooltip="Only UOMs with conversion ratios to the order UOM can be selected. Quantities will be converted and displayed in the order UOM. Additional conversions can be imported by the customer on the Items page."
+                          >
+                            <Icon icon="info" color="darkGrey" size="x2" />
+                          </Tooltip>
+                        )}
+                      </Flex>
                     </Box>
                   </Flex>
 
@@ -4168,9 +4185,18 @@ export const V3 = () => {
                                         width: "100px",
                                         headerFormatter: () => (
                                           <Box py="x0_25">
-                                            <Text fontSize="small" lineHeight="smallTextCompressed">
-                                              UOM
-                                            </Text>
+                                            <Flex alignItems="center" gap="x0_25">
+                                              <Text fontSize="small" lineHeight="smallTextCompressed">
+                                                UOM
+                                              </Text>
+                                              {role === "supplier" && (
+                                                <Tooltip
+                                                  tooltip="Only UOMs with conversion ratios to the order UOM can be selected. Quantities will be converted and displayed in the order UOM. Additional conversions can be imported by the customer on the Items page."
+                                                >
+                                                  <Icon icon="info" color="darkGrey" size="x2" />
+                                                </Tooltip>
+                                              )}
+                                            </Flex>
                                           </Box>
                                         ),
                                         cellRenderer: ({ row }: { row: any }) => (
@@ -4365,7 +4391,15 @@ export const V3 = () => {
                     </Field>
                   </Flex>
                   <Field>
-                    <FieldLabel labelText="UOM" pb="x1" />
+                    <FieldLabel
+                      labelText="UOM"
+                      pb="x1"
+                      hint={
+                        role === "supplier"
+                          ? "Only UOMs with conversion ratios to the order UOM can be selected. Quantities will be converted and displayed in the order UOM. Additional conversions can be imported by the customer on the Items page."
+                          : undefined
+                      }
+                    />
                     <Select
                       value={material.uom}
                       onChange={(value) => handleConsumptionFieldChange(material.id, "uom", String(value))}
@@ -4494,7 +4528,15 @@ export const V3 = () => {
                     </Box>
                     <Box flex="1" pb="x3">
                       <Field>
-                        <FieldLabel labelText="UOM" pb="x1" />
+                        <FieldLabel
+                          labelText="UOM"
+                          pb="x1"
+                          hint={
+                            role === "supplier"
+                              ? "Only UOMs with conversion ratios to the order UOM can be selected. Quantities will be converted and displayed in the order UOM. Additional conversions can be imported by the customer on the Items page."
+                              : undefined
+                          }
+                        />
                         <Select
                           value={item.uom}
                           onChange={(value) => handleConsumptionItemFieldChange(item.id, "uom", String(value))}
