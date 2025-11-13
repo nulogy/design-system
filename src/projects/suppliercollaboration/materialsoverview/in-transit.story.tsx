@@ -8,6 +8,7 @@ import {
   Box,
   Text,
   Heading3,
+  Heading4,
   BrandedNavBar,
   Tabs,
   Tab,
@@ -21,6 +22,14 @@ import {
   TruncatedText,
   Card,
   Checkbox,
+  Sidebar,
+  Input,
+  Select,
+  AsyncSelect,
+  PrimaryButton,
+  QuietButton,
+  DateRange,
+  Divider,
 } from "../../..";
 
 export default {
@@ -816,6 +825,472 @@ export const InTransit = () => {
           />
         </Flex>
       </Box>
+    </>
+  );
+};
+
+export const Filters = () => {
+  const [savedFilters, setSavedFilters] = useState<string | null>(null);
+  const [orderNumbers, setOrderNumbers] = useState<any[]>([]);
+  const [orderStatuses, setOrderStatuses] = useState<any[]>(["open"]);
+  const [poNumbers, setPoNumbers] = useState<any[]>([]);
+  const [shippingFacilities, setShippingFacilities] = useState<any[]>([]);
+  const [receivingFacilities, setReceivingFacilities] = useState<any[]>([]);
+  const [onlyOrdersWithAttachments, setOnlyOrdersWithAttachments] = useState(false);
+  const [deliveryNumbers, setDeliveryNumbers] = useState<any[]>([]);
+  const [deliveryStatuses, setDeliveryStatuses] = useState<any[]>([]);
+  const [deliveryExpectedShipDate, setDeliveryExpectedShipDate] = useState<any>(null);
+  const [deliveryExpectedReceiveDate, setDeliveryExpectedReceiveDate] = useState<any>(null);
+  const [deliveryActualShipDate, setDeliveryActualShipDate] = useState<any>(null);
+  const [deliveryActualReceiveDate, setDeliveryActualReceiveDate] = useState<any>(null);
+  const [shippingConditions, setShippingConditions] = useState<any[]>([]);
+  const [tmsNumbers, setTmsNumbers] = useState<any[]>([]);
+  const [proNumbers, setProNumbers] = useState<any[]>([]);
+  const [trailerNumbers, setTrailerNumbers] = useState<any[]>([]);
+  const [palletNumbers, setPalletNumbers] = useState<any[]>([]);
+  const [customerLotCodes, setCustomerLotCodes] = useState<any[]>([]);
+  const [supplierLotCodes, setSupplierLotCodes] = useState<any[]>([]);
+  const [freightClasses, setFreightClasses] = useState<any[]>([]);
+  const [items, setItems] = useState<any[]>([]);
+  const [supplierPlanners, setSupplierPlanners] = useState<any[]>([]);
+  const [brands, setBrands] = useState<any[]>([]);
+  const [divisions, setDivisions] = useState<any[]>([]);
+  const [productGroups, setProductGroups] = useState<any[]>([]);
+
+  // Mock load functions for AsyncSelect
+  const loadItems = async (inputValue: string) => {
+    return [];
+  };
+
+  const loadSupplierPlanners = async (inputValue: string) => {
+    return [];
+  };
+
+  const loadPoNumbers = async (inputValue: string) => {
+    return [];
+  };
+
+  const loadShippingFacilities = async (inputValue: string) => {
+    return [];
+  };
+
+  const loadReceivingFacilities = async (inputValue: string) => {
+    return [];
+  };
+
+  const loadDeliveryNumbers = async (inputValue: string) => {
+    return [];
+  };
+
+  const loadPalletNumbers = async (inputValue: string) => {
+    return [];
+  };
+
+  const loadTrailerNumbers = async (inputValue: string) => {
+    return [];
+  };
+
+  const loadTmsNumbers = async (inputValue: string) => {
+    return [];
+  };
+
+  const loadProNumbers = async (inputValue: string) => {
+    return [];
+  };
+
+  const loadCustomerLotCodes = async (inputValue: string) => {
+    return [];
+  };
+
+  const loadSupplierLotCodes = async (inputValue: string) => {
+    return [];
+  };
+
+  const loadOrderNumbers = async (inputValue: string) => {
+    return [];
+  };
+
+  const orderStatusOptions = [
+    { value: "open", label: "Open" },
+    { value: "closed", label: "Closed" },
+    { value: "cancelled", label: "Cancelled" },
+  ];
+
+  const getActiveFilterCount = () => {
+    let count = 0;
+    if (orderNumbers.length > 0) count++;
+    if (orderStatuses.length > 0) count++;
+    if (poNumbers.length > 0) count++;
+    if (shippingFacilities.length > 0) count++;
+    if (receivingFacilities.length > 0) count++;
+    if (onlyOrdersWithAttachments) count++;
+    if (deliveryNumbers.length > 0) count++;
+    if (deliveryStatuses.length > 0) count++;
+    if (deliveryExpectedShipDate) count++;
+    if (deliveryExpectedReceiveDate) count++;
+    if (deliveryActualShipDate) count++;
+    if (deliveryActualReceiveDate) count++;
+    if (shippingConditions.length > 0) count++;
+    if (tmsNumbers.length > 0) count++;
+    if (proNumbers.length > 0) count++;
+    if (trailerNumbers.length > 0) count++;
+    if (palletNumbers.length > 0) count++;
+    if (customerLotCodes.length > 0) count++;
+    if (supplierLotCodes.length > 0) count++;
+    if (freightClasses.length > 0) count++;
+    if (items.length > 0) count++;
+    if (supplierPlanners.length > 0) count++;
+    if (brands.length > 0) count++;
+    if (divisions.length > 0) count++;
+    if (productGroups.length > 0) count++;
+    return count;
+  };
+
+  return (
+    <>
+      <style>
+        {`
+          /* Remove Storybook's default padding */
+          .sb-show-main {
+            padding: 0 !important;
+          }
+        `}
+      </style>
+      <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
+        <Sidebar
+          isOpen={true}
+          onClose={() => {}}
+          title={getActiveFilterCount() > 0 ? `Filters (${getActiveFilterCount()})` : "Filters"}
+          width="480px"
+          footer={
+            <Flex gap="x2" alignItems="center" justifyContent="space-between" width="100%">
+              <Flex gap="x2" alignItems="center">
+                <PrimaryButton onClick={() => {}}>Apply</PrimaryButton>
+                <QuietButton onClick={() => {}}>Save</QuietButton>
+              </Flex>
+              <QuietButton
+                onClick={() => {
+                  setSavedFilters(null);
+                  setOrderNumbers([]);
+                  setOrderStatuses([]);
+                  setPoNumbers([]);
+                  setShippingFacilities([]);
+                  setReceivingFacilities([]);
+                  setOnlyOrdersWithAttachments(false);
+                  setDeliveryNumbers([]);
+                  setDeliveryStatuses([]);
+                  setDeliveryExpectedShipDate(null);
+                  setDeliveryExpectedReceiveDate(null);
+                  setDeliveryActualShipDate(null);
+                  setDeliveryActualReceiveDate(null);
+                  setShippingConditions([]);
+                  setTmsNumbers([]);
+                  setProNumbers([]);
+                  setTrailerNumbers([]);
+                  setPalletNumbers([]);
+                  setCustomerLotCodes([]);
+                  setSupplierLotCodes([]);
+                  setFreightClasses([]);
+                  setItems([]);
+                  setSupplierPlanners([]);
+                  setBrands([]);
+                  setDivisions([]);
+                  setProductGroups([]);
+                }}
+              >
+                Reset
+              </QuietButton>
+            </Flex>
+          }
+        >
+          <Flex flexDirection="column" gap="x3">
+            {/* Saved filters */}
+            <Box>
+              <Select
+                labelText="Saved filters"
+                placeholder="Select..."
+                value={savedFilters}
+                onChange={(value) => setSavedFilters(value as string | null)}
+                options={[]}
+                disabled
+              />
+            </Box>
+
+            <Divider my="0" />
+
+            {/* In-transit order filters */}
+            <Box>
+              <Heading4 mb="x2">In-transit order filters</Heading4>
+              <Flex flexDirection="column" gap="x3">
+                <Box>
+                  <AsyncSelect
+                    labelText="In-transit order numbers"
+                    placeholder="Start typing"
+                    loadOptions={loadOrderNumbers}
+                    value={orderNumbers}
+                    onChange={(value) => setOrderNumbers((value as any[]) || [])}
+                    multiselect
+                  />
+                </Box>
+                <Box>
+                  <Select
+                    labelText="Order statuses"
+                    placeholder="Select"
+                    value={orderStatuses}
+                    onChange={(value) => setOrderStatuses((value as any[]) || [])}
+                    options={orderStatusOptions}
+                    multiselect
+                  />
+                </Box>
+                <Box>
+                  <AsyncSelect
+                    labelText="PO numbers"
+                    placeholder="Start typing"
+                    loadOptions={loadPoNumbers}
+                    value={poNumbers}
+                    onChange={(value) => setPoNumbers((value as any[]) || [])}
+                    multiselect
+                  />
+                </Box>
+                <Box>
+                  <AsyncSelect
+                    labelText="Shipping facilities"
+                    placeholder="Start typing"
+                    loadOptions={loadShippingFacilities}
+                    value={shippingFacilities}
+                    onChange={(value) => setShippingFacilities((value as any[]) || [])}
+                    multiselect
+                  />
+                </Box>
+                <Box>
+                  <AsyncSelect
+                    labelText="Receiving facilities"
+                    placeholder="Start typing"
+                    loadOptions={loadReceivingFacilities}
+                    value={receivingFacilities}
+                    onChange={(value) => setReceivingFacilities((value as any[]) || [])}
+                    multiselect
+                  />
+                </Box>
+                <Box>
+                  <Checkbox
+                    checked={onlyOrdersWithAttachments}
+                    onChange={(e) => setOnlyOrdersWithAttachments(e.target.checked)}
+                    labelText="Only orders with attachments"
+                  />
+                </Box>
+              </Flex>
+            </Box>
+
+            {/* Delivery filters */}
+            <Box>
+              <Heading4 mb="x2">Delivery filters</Heading4>
+              <Flex flexDirection="column" gap="x3">
+                <Box>
+                  <AsyncSelect
+                    labelText="Delivery numbers"
+                    placeholder="Start typing"
+                    loadOptions={loadDeliveryNumbers}
+                    value={deliveryNumbers}
+                    onChange={(value) => setDeliveryNumbers((value as any[]) || [])}
+                    multiselect
+                  />
+                </Box>
+                <Box>
+                  <Select
+                    labelText="Delivery statuses"
+                    placeholder="Select"
+                    value={deliveryStatuses}
+                    onChange={(value) => setDeliveryStatuses((value as any[]) || [])}
+                    options={[]}
+                    multiselect
+                  />
+                </Box>
+                <Box>
+                  <Select
+                    labelText="Delivery expected ship date"
+                    placeholder="Select"
+                    value={deliveryExpectedShipDate}
+                    onChange={(value) => setDeliveryExpectedShipDate(value)}
+                    options={[]}
+                  />
+                </Box>
+                <Box>
+                  <Select
+                    labelText="Delivery expected receive date"
+                    placeholder="Select"
+                    value={deliveryExpectedReceiveDate}
+                    onChange={(value) => setDeliveryExpectedReceiveDate(value)}
+                    options={[]}
+                  />
+                </Box>
+                <Box>
+                  <Select
+                    labelText="Delivery actual ship date"
+                    placeholder="Select"
+                    value={deliveryActualShipDate}
+                    onChange={(value) => setDeliveryActualShipDate(value)}
+                    options={[]}
+                  />
+                </Box>
+                <Box>
+                  <Select
+                    labelText="Delivery actual receive date"
+                    placeholder="Select"
+                    value={deliveryActualReceiveDate}
+                    onChange={(value) => setDeliveryActualReceiveDate(value)}
+                    options={[]}
+                  />
+                </Box>
+                <Box>
+                  <Select
+                    labelText="Shipping conditions"
+                    placeholder="Select"
+                    value={shippingConditions}
+                    onChange={(value) => setShippingConditions((value as any[]) || [])}
+                    options={[]}
+                    multiselect
+                  />
+                </Box>
+                <Box>
+                  <AsyncSelect
+                    labelText="TMS numbers"
+                    placeholder="Start typing"
+                    loadOptions={loadTmsNumbers}
+                    value={tmsNumbers}
+                    onChange={(value) => setTmsNumbers((value as any[]) || [])}
+                    multiselect
+                  />
+                </Box>
+                <Box>
+                  <AsyncSelect
+                    labelText="Pro numbers"
+                    placeholder="Start typing"
+                    loadOptions={loadProNumbers}
+                    value={proNumbers}
+                    onChange={(value) => setProNumbers((value as any[]) || [])}
+                    multiselect
+                  />
+                </Box>
+                <Box>
+                  <AsyncSelect
+                    labelText="Trailer numbers"
+                    placeholder="Start typing"
+                    loadOptions={loadTrailerNumbers}
+                    value={trailerNumbers}
+                    onChange={(value) => setTrailerNumbers((value as any[]) || [])}
+                    multiselect
+                  />
+                </Box>
+                <Box>
+                  <AsyncSelect
+                    labelText="Pallet numbers"
+                    placeholder="Start typing"
+                    loadOptions={loadPalletNumbers}
+                    value={palletNumbers}
+                    onChange={(value) => setPalletNumbers((value as any[]) || [])}
+                    multiselect
+                  />
+                </Box>
+                <Box>
+                  <AsyncSelect
+                    labelText="Customer's lot codes"
+                    placeholder="Start typing"
+                    loadOptions={loadCustomerLotCodes}
+                    value={customerLotCodes}
+                    onChange={(value) => setCustomerLotCodes((value as any[]) || [])}
+                    multiselect
+                  />
+                </Box>
+                <Box>
+                  <AsyncSelect
+                    labelText="Supplier's lot codes"
+                    placeholder="Start typing"
+                    loadOptions={loadSupplierLotCodes}
+                    value={supplierLotCodes}
+                    onChange={(value) => setSupplierLotCodes((value as any[]) || [])}
+                    multiselect
+                  />
+                </Box>
+                <Box>
+                  <Select
+                    labelText="Freight classes"
+                    placeholder="Select"
+                    value={freightClasses}
+                    onChange={(value) => setFreightClasses((value as any[]) || [])}
+                    options={[]}
+                    multiselect
+                  />
+                </Box>
+              </Flex>
+            </Box>
+
+            {/* Item filters */}
+            <Box>
+              <Heading4 mb="x2">Item filters</Heading4>
+              <Flex flexDirection="column" gap="x3">
+                <Box>
+                  <AsyncSelect
+                    labelText="Items"
+                    helpText="Search by customer's item code or description"
+                    placeholder="Start typing"
+                    loadOptions={loadItems}
+                    value={items}
+                    onChange={(value) => setItems((value as any[]) || [])}
+                    multiselect
+                  />
+                </Box>
+              </Flex>
+            </Box>
+
+            {/* Additional filters */}
+            <Box>
+              <Flex flexDirection="column" gap="x3">
+                <Box>
+                  <AsyncSelect
+                    labelText="Supplier planners"
+                    placeholder="Start typing"
+                    loadOptions={loadSupplierPlanners}
+                    value={supplierPlanners}
+                    onChange={(value) => setSupplierPlanners((value as any[]) || [])}
+                    multiselect
+                  />
+                </Box>
+                <Box>
+                  <Select
+                    labelText="Brands"
+                    placeholder="Select"
+                    value={brands}
+                    onChange={(value) => setBrands((value as any[]) || [])}
+                    options={[]}
+                    multiselect
+                  />
+                </Box>
+                <Box>
+                  <Select
+                    labelText="Divisions"
+                    placeholder="Select"
+                    value={divisions}
+                    onChange={(value) => setDivisions((value as any[]) || [])}
+                    options={[]}
+                    multiselect
+                  />
+                </Box>
+                <Box>
+                  <Select
+                    labelText="Product groups"
+                    placeholder="Select"
+                    value={productGroups}
+                    onChange={(value) => setProductGroups((value as any[]) || [])}
+                    options={[]}
+                    multiselect
+                  />
+                </Box>
+              </Flex>
+            </Box>
+          </Flex>
+        </Sidebar>
+      </ApplicationFrame>
     </>
   );
 };
