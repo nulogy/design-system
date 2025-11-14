@@ -1076,7 +1076,14 @@ const V2Component = () => {
                   <Box py="x0_25">
                     <Flex alignItems="flex-start" gap="x0_25">
                       <Box width="50%" pt="x1">
-                        <FieldLabel labelText="PO line item actual production record lot code" />
+                        <FieldLabel
+                          labelText="Production record lot code"
+                          helpText={
+                            <Text fontSize="small" color="midGrey" mt="x1">
+                              Applied to actual production and subcomponent consumption record
+                            </Text>
+                          }
+                        />
                       </Box>
                       <Box width="50%">
                         <Flex flexDirection="column" gap="x0_25">
@@ -1089,38 +1096,6 @@ const V2Component = () => {
                               } else {
                                 setPoLineItemDetailsTraceability(
                                   poLineItemDetailsTraceability.filter((item) => item !== "customer")
-                                );
-                              }
-                            }}
-                            labelText="Customer"
-                            disabled={configurationEnforcedByCustomer}
-                          />
-                        </Flex>
-                      </Box>
-                    </Flex>
-                  </Box>
-
-                  <Divider my="x0_25" />
-
-                  <Box py="x0_25">
-                    <Flex alignItems="flex-start" gap="x0_25">
-                      <Box width="50%" pt="x1">
-                        <FieldLabel labelText="PO line item subcomponent consumption record lot code" />
-                      </Box>
-                      <Box width="50%">
-                        <Flex flexDirection="column" gap="x0_25">
-                          <Checkbox checked={true} disabled={true} labelText="Supplier" />
-                          <Checkbox
-                            checked={poLineItemSubcomponentTraceability.includes("customer")}
-                            onChange={(e) => {
-                              if (e.target.checked) {
-                                setPoLineItemSubcomponentTraceability([
-                                  ...poLineItemSubcomponentTraceability,
-                                  "customer",
-                                ]);
-                              } else {
-                                setPoLineItemSubcomponentTraceability(
-                                  poLineItemSubcomponentTraceability.filter((item) => item !== "customer")
                                 );
                               }
                             }}
