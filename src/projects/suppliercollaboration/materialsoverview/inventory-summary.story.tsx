@@ -549,7 +549,7 @@ export const InventorySummary = () => {
             <Text as="span">•</Text>
             <Text>Active</Text>
             <Text as="span">•</Text>
-            <StatusIndicator type="quiet">Supplier owned</StatusIndicator>
+            <StatusIndicator type="quiet">Supplier material owned</StatusIndicator>
           </Flex>
         }
       >
@@ -648,6 +648,109 @@ export const InventorySummary = () => {
 
           <Divider my="0" />
 
+          {/* Section: Inventory filters */}
+          <Box>
+            <Heading4 mb="x2">Inventory filters</Heading4>
+            <Flex flexDirection="column" gap="x3">
+              <Box>
+                <Select
+                  labelText="Suppliers"
+                  placeholder="Select"
+                  value={suppliers}
+                  onChange={(value) => setSuppliers((value as string[]) || [])}
+                  options={[]}
+                  multiselect
+                />
+              </Box>
+
+              <Box>
+                <Select
+                  labelText="Material owners"
+                  placeholder="Select"
+                  value={materialOwners}
+                  onChange={(value) => setMaterialOwners((value as string[]) || [])}
+                  options={[
+                    { value: "Natasha Cosmetics", label: "Natasha Cosmetics" },
+                    { value: "Supplier", label: "Supplier material owned" },
+                    { value: "Customer", label: "Customer material owned" },
+                    { value: "Unspecified", label: "Unspecified" },
+                  ]}
+                  multiselect
+                />
+              </Box>
+
+              <Box>
+                <AsyncSelect
+                  labelText="Customer's lot codes"
+                  placeholder="Start typing"
+                  loadOptions={loadCustomerLotCodes}
+                  value={customerLotCode}
+                  onChange={(value) => setCustomerLotCode((value as any[]) || [])}
+                />
+              </Box>
+
+              <Box>
+                <AsyncSelect
+                  labelText="Supplier's lot codes"
+                  placeholder="Start typing"
+                  loadOptions={loadSupplierLotCodes}
+                  value={supplierLotCode}
+                  onChange={(value) => setSupplierLotCode((value as any[]) || [])}
+                />
+              </Box>
+
+              <Box>
+                <AsyncSelect
+                  labelText="Vendor's lot codes"
+                  placeholder="Start typing"
+                  loadOptions={loadVendorLotCodes}
+                  value={vendorLotCode}
+                  onChange={(value) => setVendorLotCode((value as any[]) || [])}
+                />
+              </Box>
+
+              <Box>
+                <Select
+                  labelText="Shelf life statuses"
+                  placeholder="Select"
+                  value={shelfLifeStatus}
+                  onChange={(value) => setShelfLifeStatus((value as string[]) || [])}
+                  options={[
+                    { value: "At risk", label: "At risk" },
+                    { value: "Expired", label: "Expired" },
+                    { value: "Good", label: "Good" },
+                  ]}
+                  multiselect
+                />
+              </Box>
+
+              <Box>
+                <AsyncSelect
+                  labelText="Pallet numbers"
+                  placeholder="Start typing"
+                  loadOptions={loadPalletNumbers}
+                  value={palletNumber}
+                  onChange={(value) => setPalletNumber((value as any[]) || [])}
+                />
+              </Box>
+
+              <Box>
+                <Select
+                  labelText="Inventory statuses"
+                  placeholder="Select"
+                  value={inventoryStatuses}
+                  onChange={(value) => setInventoryStatuses((value as string[]) || [])}
+                  options={[
+                    { value: "On hand", label: "On hand" },
+                    { value: "Rejected", label: "Rejected" },
+                    { value: "Quality control", label: "Quality control" },
+                  ]}
+                  multiselect
+                />
+              </Box>
+            </Flex>
+          </Box>
+
           {/* Section: Item filters */}
           <Box>
             <Heading4 mb="x2">Item filters</Heading4>
@@ -687,7 +790,7 @@ export const InventorySummary = () => {
 
               <Box>
                 <Select
-                  labelText="Program groups"
+                  labelText="Product groups"
                   placeholder="Select"
                   value={programGroups}
                   onChange={(value) => setProgramGroups((value as string[]) || [])}
@@ -714,108 +817,6 @@ export const InventorySummary = () => {
                   loadOptions={loadCustomerPlanners}
                   value={customerPlanners}
                   onChange={(value) => setCustomerPlanners((value as any[]) || [])}
-                />
-              </Box>
-            </Flex>
-          </Box>
-
-          {/* Section: Inventory filters */}
-          <Box>
-            <Heading4 mb="x2">Inventory filters</Heading4>
-            <Flex flexDirection="column" gap="x3">
-              <Box>
-                <Select
-                  labelText="Suppliers"
-                  placeholder="Select"
-                  value={suppliers}
-                  onChange={(value) => setSuppliers((value as string[]) || [])}
-                  options={[]}
-                  multiselect
-                />
-              </Box>
-
-              <Box>
-                <Select
-                  labelText="Material owners"
-                  placeholder="Select"
-                  value={materialOwners}
-                  onChange={(value) => setMaterialOwners((value as string[]) || [])}
-                  options={[
-                    { value: "Natasha Cosmetics", label: "Natasha Cosmetics" },
-                    { value: "Supplier", label: "Supplier" },
-                    { value: "Unspecified", label: "Unspecified" },
-                  ]}
-                  multiselect
-                />
-              </Box>
-
-              <Box>
-                <Select
-                  labelText="Shelf life statuses"
-                  placeholder="Select"
-                  value={shelfLifeStatus}
-                  onChange={(value) => setShelfLifeStatus((value as string[]) || [])}
-                  options={[
-                    { value: "At risk", label: "At risk" },
-                    { value: "Expired", label: "Expired" },
-                    { value: "Good", label: "Good" },
-                  ]}
-                  multiselect
-                />
-              </Box>
-
-              <Box>
-                <Select
-                  labelText="Inventory statuses"
-                  placeholder="Select"
-                  value={inventoryStatuses}
-                  onChange={(value) => setInventoryStatuses((value as string[]) || [])}
-                  options={[
-                    { value: "On hand", label: "On hand" },
-                    { value: "Rejected", label: "Rejected" },
-                    { value: "Quality control", label: "Quality control" },
-                  ]}
-                  multiselect
-                />
-              </Box>
-
-              <Box>
-                <AsyncSelect
-                  labelText="Pallet numbers"
-                  placeholder="Start typing"
-                  loadOptions={loadPalletNumbers}
-                  value={palletNumber}
-                  onChange={(value) => setPalletNumber((value as any[]) || [])}
-                />
-              </Box>
-
-              <Box>
-                <AsyncSelect
-                  labelText="Customer's lot codes"
-                  placeholder="Start typing"
-                  loadOptions={loadCustomerLotCodes}
-                  value={customerLotCode}
-                  onChange={(value) => setCustomerLotCode((value as any[]) || [])}
-                />
-              </Box>
-
-              <Box>
-                <AsyncSelect
-                  labelText="Supplier's lot codes"
-                  placeholder="Start typing"
-                  loadOptions={loadSupplierLotCodes}
-                  value={supplierLotCode}
-                  onChange={(value) => setSupplierLotCode((value as any[]) || [])}
-                />
-              </Box>
-
-              <Box>
-                <AsyncSelect
-                  labelText="Vendor's lot codes"
-                  placeholder="Start typing"
-                  loadOptions={loadVendorLotCodes}
-                  value={vendorLotCode}
-                  onChange={(value) => setVendorLotCode((value as any[]) || [])}
                 />
               </Box>
             </Flex>

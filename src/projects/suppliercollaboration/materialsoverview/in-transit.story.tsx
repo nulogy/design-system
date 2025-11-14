@@ -64,7 +64,6 @@ export const InTransit = () => {
   const breadcrumbs = (
     <Breadcrumbs>
       <Link href="/supplier-collaboration">Home</Link>
-      <Link href="/supplier-collaboration/materials-overview">Materials overview</Link>
     </Breadcrumbs>
   );
 
@@ -856,6 +855,7 @@ export const Filters = () => {
   const [brands, setBrands] = useState<any[]>([]);
   const [divisions, setDivisions] = useState<any[]>([]);
   const [productGroups, setProductGroups] = useState<any[]>([]);
+  const [itemOrderTypes, setItemOrderTypes] = useState<any[]>([]);
 
   // Mock load functions for AsyncSelect
   const loadItems = async (inputValue: string) => {
@@ -939,10 +939,11 @@ export const Filters = () => {
     if (supplierLotCodes.length > 0) count++;
     if (freightClasses.length > 0) count++;
     if (items.length > 0) count++;
-    if (supplierPlanners.length > 0) count++;
     if (brands.length > 0) count++;
     if (divisions.length > 0) count++;
     if (productGroups.length > 0) count++;
+    if (itemOrderTypes.length > 0) count++;
+    if (supplierPlanners.length > 0) count++;
     return count;
   };
 
@@ -992,10 +993,11 @@ export const Filters = () => {
                   setSupplierLotCodes([]);
                   setFreightClasses([]);
                   setItems([]);
-                  setSupplierPlanners([]);
                   setBrands([]);
                   setDivisions([]);
                   setProductGroups([]);
+                  setItemOrderTypes([]);
+                  setSupplierPlanners([]);
                 }}
               >
                 Reset
@@ -1034,7 +1036,7 @@ export const Filters = () => {
                 </Box>
                 <Box>
                   <Select
-                    labelText="Order statuses"
+                    labelText="In-transit order statuses"
                     placeholder="Select"
                     value={orderStatuses}
                     onChange={(value) => setOrderStatuses((value as any[]) || [])}
@@ -1237,23 +1239,6 @@ export const Filters = () => {
                     loadOptions={loadItems}
                     value={items}
                     onChange={(value) => setItems((value as any[]) || [])}
-                    multiselect
-                  />
-                </Box>
-              </Flex>
-            </Box>
-
-            {/* Additional filters */}
-            <Box>
-              <Flex flexDirection="column" gap="x3">
-                <Box>
-                  <AsyncSelect
-                    labelText="Supplier planners"
-                    placeholder="Start typing"
-                    loadOptions={loadSupplierPlanners}
-                    value={supplierPlanners}
-                    onChange={(value) => setSupplierPlanners((value as any[]) || [])}
-                    multiselect
                   />
                 </Box>
                 <Box>
@@ -1283,6 +1268,26 @@ export const Filters = () => {
                     value={productGroups}
                     onChange={(value) => setProductGroups((value as any[]) || [])}
                     options={[]}
+                    multiselect
+                  />
+                </Box>
+                <Box>
+                  <Select
+                    labelText="Item order types"
+                    placeholder="Select"
+                    value={itemOrderTypes}
+                    onChange={(value) => setItemOrderTypes((value as any[]) || [])}
+                    options={[]}
+                    multiselect
+                  />
+                </Box>
+                <Box>
+                  <AsyncSelect
+                    labelText="Supplier planners"
+                    placeholder="Start typing"
+                    loadOptions={loadSupplierPlanners}
+                    value={supplierPlanners}
+                    onChange={(value) => setSupplierPlanners((value as any[]) || [])}
                     multiselect
                   />
                 </Box>
