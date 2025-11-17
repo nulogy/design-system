@@ -1,4 +1,4 @@
-import React from "react";
+import React, { type ReactNode } from "react";
 import styled from "styled-components";
 import { space } from "styled-system";
 import TableHead from "./TableHead";
@@ -9,7 +9,7 @@ import { RowType, Columns, RowBorder } from "./Table.types";
 export type BaseTableProps<ColumnMetaData> = {
   columns: Columns<ColumnMetaData>;
   rows: RowType[];
-  noRowsContent?: string;
+  noRowsContent?: ReactNode;
   keyField?: string;
   id?: string;
   loading?: boolean;
