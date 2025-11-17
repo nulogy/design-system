@@ -1,3 +1,10 @@
+## [15.1.2](https://github.com/nulogy/design-system/compare/v15.1.1...v15.1.2) (2025-11-17)
+
+
+### Bug Fixes
+
+* Table's `noRowsContent` type improvement ([7574a9b](https://github.com/nulogy/design-system/commit/7574a9b2fc273b24fa1a9875eb086eb29d919d4e))
+
 ## [15.1.1](https://github.com/nulogy/design-system/compare/v15.1.0...v15.1.1) (2025-11-10)
 
 ### Bug Fixes
