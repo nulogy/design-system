@@ -1,4 +1,4 @@
-import React from "react";
+import React, { type ReactNode } from "react";
 import styled from "styled-components";
 import { Box } from "../Box";
 import { DefaultNDSThemeType } from "../theme";
@@ -31,15 +31,15 @@ const StyledTr = styled.tr<StyledTrProps>(({ rowHovers, rowBorder, theme }: Styl
 }));
 
 const renderRows = (
-  rows,
-  columns,
-  keyField,
-  noRowsContent,
-  rowHovers,
-  compact,
-  onRowMouseLeave,
-  onRowMouseEnter,
-  rowBorder
+  rows: any[],
+  columns: any[],
+  keyField?: string,
+  rowHovers?: boolean,
+  noRowsContent?: ReactNode,
+  compact?: boolean,
+  onRowMouseLeave?: ({ row, e }: { row: any; e: React.MouseEvent<HTMLTableRowElement> }) => void,
+  onRowMouseEnter?: ({ row, e }: { row: any; e: React.MouseEvent<HTMLTableRowElement> }) => void,
+  rowBorder?: RowBorder
 ) =>
   rows.length > 0 ? (
     rows.map((row, rowIndex) => {
@@ -64,7 +64,7 @@ const renderRows = (
     <TableMessageContainer colSpan={columns.length}>{noRowsContent}</TableMessageContainer>
   );
 
-type TableBodyRowProps = {
+interface TableBodyRowProps {
   row: any;
   columns: any[];
   rowHovers?: boolean;
@@ -74,7 +74,7 @@ type TableBodyRowProps = {
   onMouseEnter?: any;
   onMouseLeave?: any;
   rowBorder?: RowBorder;
-};
+}
 
 const TableBodyRow = ({
   row,
@@ -121,7 +121,7 @@ const TableBodyRow = ({
   );
 };
 
-const TableMessageContainer = ({ colSpan, children }: { colSpan: number; children: React.ReactNode }) => (
+const TableMessageContainer = ({ colSpan, children }: { colSpan: number; children: ReactNode }) => (
   <tr data-testid="table-message-container">
     <td colSpan={colSpan}>
       <StyledMessageContainer className="nds-table__no-rows-content">{children}</StyledMessageContainer>
@@ -133,18 +133,18 @@ const LoadingContent = ({ colSpan }: { colSpan: number }) => (
   <TableMessageContainer colSpan={colSpan}>Loading...</TableMessageContainer>
 );
 
-type TableBodyProps = {
+interface TableBodyProps {
   rows: any[];
   columns: any[];
   keyField?: string;
-  noRowsContent?: any;
+  noRowsContent: ReactNode;
   loading?: boolean;
   rowHovers?: boolean;
   compact?: boolean;
-  onRowMouseLeave?: any;
-  onRowMouseEnter?: any;
+  onRowMouseLeave?: (...args: any[]) => any;
+  onRowMouseEnter?: (...args: any[]) => any;
   rowBorder?: RowBorder;
-};
+}
 
 const TableBody = ({
   rows,
@@ -164,8 +164,8 @@ const TableBody = ({
         rows,
         columns,
         keyField,
-        noRowsContent,
         rowHovers,
+        noRowsContent,
         compact,
         onRowMouseLeave,
         onRowMouseEnter,
