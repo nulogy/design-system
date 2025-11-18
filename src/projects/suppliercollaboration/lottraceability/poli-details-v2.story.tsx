@@ -51,6 +51,7 @@ import {
   Modal,
 } from "../../..";
 import { formatDateToYYYYMonDD, formatDateWithWeek } from "../utils/dateUtils";
+import { differenceInDays } from "date-fns";
 import {
   materialsData1,
   materialsData2,
@@ -137,6 +138,10 @@ export const V2 = () => {
   const [showEditSidebar, setShowEditSidebar] = useState(false);
   // editFormData now imported from optionsData.tsx
   const [editFormDataState, setEditFormDataState] = useState(editFormData);
+
+  // Milestone edit state
+  const [showMilestoneEditSidebar, setShowMilestoneEditSidebar] = useState(false);
+  const [editingMilestone, setEditingMilestone] = useState<any>(null);
 
   // Details data
   // detailsData now imported from optionsData.tsx
@@ -249,7 +254,24 @@ export const V2 = () => {
 
   const handleSaveEditDetails = () => {
     setShowEditSidebar(false);
-    toast.success("PO line item details saved successfully");
+    toast.success("PO line item details saved");
+  };
+
+  const handleCloseMilestoneEditSidebar = () => {
+    setShowMilestoneEditSidebar(false);
+    setEditingMilestone(null);
+  };
+
+  const handleSaveMilestoneEdit = () => {
+    // Update the milestone data
+    if (editingMilestone) {
+      setMilestonesData((prev) =>
+        prev.map((milestone) => (milestone.id === editingMilestone.id ? editingMilestone : milestone))
+      );
+    }
+    setShowMilestoneEditSidebar(false);
+    setEditingMilestone(null);
+    toast.success("Milestone updated");
   };
 
   const [showConsumptionSidebar, setShowConsumptionSidebar] = useState(false);
@@ -1894,6 +1916,177 @@ export const V2 = () => {
 
   // ConsumptionReport and EmptyConsumptionReport components now imported from components.tsx
 
+  // Milestones performance data
+  const [milestonesData, setMilestonesData] = useState([
+    {
+      id: "1",
+      milestone: "PO Line Item Created",
+      expectedCompletion: "2025-12-24",
+      supplierExpectedCompletion: "2025-12-25",
+      actualCompletion: "2025-12-10",
+    },
+    {
+      id: "2",
+      milestone: "Production Started",
+      expectedCompletion: "2025-12-26",
+      supplierExpectedCompletion: "2025-12-27",
+      actualCompletion: "2026-01-05",
+    },
+    {
+      id: "3",
+      milestone: "Production Complete",
+      expectedCompletion: "2025-12-27",
+      supplierExpectedCompletion: "2025-12-28",
+      actualCompletion: null,
+    },
+  ]);
+
+  // Milestones performance columns
+  const milestonesColumns = [
+    {
+      label: "Milestone",
+      dataKey: "milestone",
+      width: "auto",
+    },
+    {
+      label: "Expected completion",
+      dataKey: "expectedCompletion",
+      width: "auto",
+      cellRenderer: ({ row }: { row: any }) => {
+        return (
+          <Box py="x0_75">
+            <Text>{formatDateToYYYYMonDD(row.expectedCompletion)}</Text>
+          </Box>
+        );
+      },
+    },
+    {
+      label: "Supplier's expected completion",
+      dataKey: "supplierExpectedCompletion",
+      width: "auto",
+      cellRenderer: ({ row }: { row: any }) => {
+        return (
+          <Box py="x0_75">
+            <Text>{row.supplierExpectedCompletion ? formatDateToYYYYMonDD(row.supplierExpectedCompletion) : "-"}</Text>
+          </Box>
+        );
+      },
+    },
+    {
+      label: "Actual completion",
+      dataKey: "actualCompletion",
+      width: "auto",
+      cellRenderer: ({ row }: { row: any }) => {
+        return (
+          <Box py="x0_75">
+            <Text>{row.actualCompletion ? formatDateToYYYYMonDD(row.actualCompletion) : "-"}</Text>
+          </Box>
+        );
+      },
+    },
+    {
+      label: "Performance",
+      dataKey: "performance",
+      width: "auto",
+      cellRenderer: ({ row }: { row: any }) => {
+        if (!row.actualCompletion) {
+          return null;
+        }
+
+        const expectedDate = new Date(row.expectedCompletion);
+        const actualDate = new Date(row.actualCompletion);
+        const daysDifference = differenceInDays(expectedDate, actualDate);
+
+        if (daysDifference > 0) {
+          // Early completion
+          return (
+            <Box py="x0_75">
+              <Flex alignItems="center" gap="x0_5">
+                <Box
+                  borderRadius="medium"
+                  backgroundColor="lightGreen"
+                  display="inline-flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  width="x3"
+                  height="x3"
+                >
+                  <Icon icon="check" size="x2_5" color="green" />
+                </Box>
+                <Text>{daysDifference} days early</Text>
+              </Flex>
+            </Box>
+          );
+        } else if (daysDifference < 0) {
+          // Late completion
+          return (
+            <Box py="x0_75">
+              <Flex alignItems="center" gap="x0_5">
+                <Box
+                  borderRadius="medium"
+                  backgroundColor="lightRed"
+                  display="inline-flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  width="x3"
+                  height="x3"
+                >
+                  <Icon icon="error" size="x2_5" color="red" />
+                </Box>
+                <Text>{Math.abs(daysDifference)} days late</Text>
+              </Flex>
+            </Box>
+          );
+        } else {
+          // On time
+          return (
+            <Box py="x0_75">
+              <Flex alignItems="center" gap="x0_5">
+                <Box
+                  borderRadius="medium"
+                  backgroundColor="lightGreen"
+                  display="inline-flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  width="x3"
+                  height="x3"
+                >
+                  <Icon icon="check" size="x2_5" color="green" />
+                </Box>
+                <Text>On time</Text>
+              </Flex>
+            </Box>
+          );
+        }
+      },
+    },
+    {
+      label: "",
+      dataKey: "actions",
+      width: "40px",
+      cellRenderer: ({ row }: { row: any }) => {
+        // Only show edit option for suppliers
+        if (role !== "supplier") {
+          return null;
+        }
+        return (
+          <Box pr="x1">
+            <DropdownMenu trigger={() => <IconicButton icon="more" aria-label="More actions" />} placement="bottom-end">
+              <DropdownButton
+                onClick={() => {
+                  setEditingMilestone(row);
+                  setShowMilestoneEditSidebar(true);
+                }}
+              >
+                Edit supplier's expected completion
+              </DropdownButton>
+            </DropdownMenu>
+          </Box>
+        );
+      },
+    },
+  ];
+
   return (
     <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
       <ToastContainer />
@@ -2350,8 +2543,8 @@ export const V2 = () => {
             </Box>
           </Tab>
           <Tab label="Milestone performance">
-            <Box>
-              <Text>Milestone performance content goes here...</Text>
+            <Box mt="x3">
+              <Table rows={milestonesData} columns={milestonesColumns} />
             </Box>
           </Tab>
           <Tab label="General history log">
@@ -4458,6 +4651,49 @@ export const V2 = () => {
                 />
               </>
             )}
+          </Flex>
+        </Sidebar>
+
+        {/* Edit Milestone Sidebar */}
+        <Sidebar
+          isOpen={showMilestoneEditSidebar}
+          onClose={handleCloseMilestoneEditSidebar}
+          title="Edit milestone"
+          helpText={editingMilestone?.milestone || ""}
+          footer={
+            <Flex gap="x1_5" justifyContent="flex-start">
+              <PrimaryButton type="button" onClick={handleSaveMilestoneEdit}>
+                Save
+              </PrimaryButton>
+              <QuietButton type="button" onClick={handleCloseMilestoneEditSidebar}>
+                Cancel
+              </QuietButton>
+            </Flex>
+          }
+        >
+          <Flex flexDirection="column" gap="x3" py="x1">
+            {/* Supplier's expected completion */}
+            <Flex flexDirection="column" gap="x1">
+              <FieldLabel htmlFor="supplierExpectedCompletion" labelText="Supplier's expected completion" />
+              <Box>
+                <DatePicker
+                  id="supplierExpectedCompletion"
+                  autoFocus
+                  selected={
+                    editingMilestone?.supplierExpectedCompletion
+                      ? new Date(editingMilestone.supplierExpectedCompletion)
+                      : null
+                  }
+                  onChange={(date) =>
+                    setEditingMilestone((prev: any) =>
+                      prev
+                        ? { ...prev, supplierExpectedCompletion: date ? date.toISOString().split("T")[0] : null }
+                        : null
+                    )
+                  }
+                />
+              </Box>
+            </Flex>
           </Flex>
         </Sidebar>
 
