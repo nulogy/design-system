@@ -1,8 +1,7 @@
 import React from "react";
 import { fireEvent } from "@testing-library/react";
-
-import { Toggle } from ".";
 import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
+import { Toggle } from ".";
 
 describe("Toggle", () => {
   describe("calls event handlers", () => {

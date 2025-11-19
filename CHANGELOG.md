@@ -1,16 +1,14 @@
 ## [15.1.3](https://github.com/nulogy/design-system/compare/v15.1.2...v15.1.3) (2025-11-19)
 
-
 ### Bug Fixes
 
-* Add missing field label props to Select ([649eae1](https://github.com/nulogy/design-system/commit/649eae1ecab084a071cecfa63acd9b102f3c2752))
+- Add missing field label props to Select ([649eae1](https://github.com/nulogy/design-system/commit/649eae1ecab084a071cecfa63acd9b102f3c2752))
 
 ## [15.1.2](https://github.com/nulogy/design-system/compare/v15.1.1...v15.1.2) (2025-11-17)
 
-
 ### Bug Fixes
 
-* Table's `noRowsContent` type improvement ([7574a9b](https://github.com/nulogy/design-system/commit/7574a9b2fc273b24fa1a9875eb086eb29d919d4e))
+- Table's `noRowsContent` type improvement ([7574a9b](https://github.com/nulogy/design-system/commit/7574a9b2fc273b24fa1a9875eb086eb29d919d4e))
 
 ## [15.1.1](https://github.com/nulogy/design-system/compare/v15.1.0...v15.1.1) (2025-11-10)
 
