@@ -24,6 +24,7 @@ import {
 import { SelectOption } from "./SelectOption";
 import MenuList from "./MenuList";
 import { calcOptionsLength, checkOptionsAreValid, CustomOnChangeValue, extractValue, getReactSelectValue } from "./lib";
+import { FieldLabelProps } from "../FieldLabel/FieldLabel.type";
 
 export type NDSOptionValue = string | number | boolean | null;
 
@@ -35,9 +36,14 @@ export interface NDSOption {
 interface CustomProps<Option extends NDSOption, IsMulti extends boolean, Group extends GroupBase<Option>>
   extends StyledProps {
   autocomplete?: Props<Option, IsMulti, Group>["isSearchable"];
-  labelText?: string;
-  requirementText?: string;
-  helpText?: ReactNode;
+  // @see FieldLabel
+  labelText?: FieldLabelProps["labelText"];
+  // @see FieldLabel
+  requirementText?: FieldLabelProps["requirementText"];
+  // @see FieldLabel
+  hint?: FieldLabelProps["hint"];
+  // @see FieldLabel
+  helpText?: FieldLabelProps["helpText"];
   disabled?: Props<Option, IsMulti, Group>["isDisabled"];
   errorMessage?: string;
   errorList?: string[];
@@ -72,9 +78,6 @@ const NDSSelect = forwardRef(
       value,
       onChange,
       defaultValue,
-      labelText,
-      requirementText,
-      helpText,
       disabled,
       errorMessage,
       errorList,
@@ -109,6 +112,8 @@ const NDSSelect = forwardRef(
     const optionsRef = React.useRef(options);
     const optionsLength = React.useMemo(() => calcOptionsLength(options), [options]);
     const isWindowed = optionsLength >= windowThreshold;
+    const { labelText, requirementText, helpText, hint } = props;
+    const fieldLabelProps = { labelText, requirementText, helpText, hint };
     noOptionsMessage ||= () => t("no options");
 
     React.useEffect(() => {
@@ -126,7 +131,7 @@ const NDSSelect = forwardRef(
 
     return (
       <Field {...styledProps}>
-        <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
+        <MaybeFieldLabel {...fieldLabelProps}>
           <ReactSelect
             ref={ref}
             isSearchable={autocomplete}

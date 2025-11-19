@@ -283,20 +283,22 @@ export const WithAClearButton = () => (
   />
 );
 
-export const WithHelpText = () => (
+export const WithAllFieldLabelProps = () => (
   <Select
     placeholder="Please select inventory status"
     options={options}
     labelText="Inventory status"
     helpText="Additional information about input"
+    hint="This is a hint for the input field"
+    requirementText="(Required)"
     onChange={action("selection changed")}
     onBlur={action("blurred")}
     onInputChange={action("typed input value changed")}
   />
 );
 
-WithHelpText.story = {
-  name: "with helpText",
+WithAllFieldLabelProps.story = {
+  name: "with all field label props",
 };
 
 export const WithCustomId = () => (
