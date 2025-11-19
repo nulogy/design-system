@@ -1,9 +1,7 @@
-import React, { useState, useContext } from "react";
-import { ThemeContext } from "styled-components";
+import React, { useState } from "react";
 import { SpaceProps } from "styled-system";
 import propTypes from "@styled-system/prop-types";
-import { Box } from "../Box";
-import { HelpText, RequirementText } from "../FieldLabel";
+import { MaybeFieldLabel } from "../FieldLabel";
 import { Field } from "../Form";
 import { Text } from "../Type";
 import { ComponentVariant, useComponentVariant } from "../NDSProvider/ComponentVariantContext";
@@ -13,36 +11,8 @@ import { getSubset, omitSubset } from "../utils/subset";
 import { noop } from "../utils/noop";
 import ToggleButton from "./ToggleButton";
 
-const labelTextStyles = (theme: DefaultNDSThemeType) => ({
-  fontSize: theme.fontSizes.small,
-  fontWeight: theme.fontWeights.bold,
-  lineHeight: theme.lineHeights.smallTextBase,
-});
-
-type MaybeToggleTitleProps = React.ComponentPropsWithRef<"div"> & {
-  labelText?: string;
-  requirementText?: string;
-  helpText?: string;
-  children?: React.ReactNode;
-};
-
-function MaybeToggleTitle({ labelText, requirementText, helpText, children, ...props }: MaybeToggleTitleProps) {
-  const themeContext = useContext(ThemeContext);
-  return labelText ? (
-    <div {...props}>
-      <Box mb={children && "x1"}>
-        <span style={labelTextStyles(themeContext)}>{labelText}</span>
-        {requirementText && <RequirementText>{requirementText}</RequirementText>}
-        {helpText && <HelpText>{helpText}</HelpText>}
-      </Box>
-      {children}
-    </div>
-  ) : (
-    <>{children}</>
-  );
-}
-
 type BaseToggleProps = SpaceProps & {
+  hint?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   variant?: ComponentVariant;
   toggled?: boolean;
@@ -75,6 +45,7 @@ const BaseToggle = ({
   labelText,
   requirementText,
   helpText,
+  hint,
   toggled,
   onClick = noop,
   variant,
@@ -91,12 +62,7 @@ const BaseToggle = ({
 
   return (
     <Field className={className} alignItems="flex-start" py="half" {...spaceProps}>
-      <MaybeToggleTitle
-        id={labelText && `${labelText}-label`}
-        labelText={labelText}
-        requirementText={requirementText}
-        helpText={helpText}
-      >
+      <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText} hint={hint}>
         <ClickInputLabel
           variant={componentVariant}
           as="div"
@@ -124,7 +90,7 @@ const BaseToggle = ({
             </Text>
           )}
         </ClickInputLabel>
-      </MaybeToggleTitle>
+      </MaybeFieldLabel>
     </Field>
   );
 };
