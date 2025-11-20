@@ -1,6 +1,5 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { action } from "@storybook/addon-actions";
-import { boolean } from "@storybook/addon-knobs";
 import { Toggle, Button, Box } from "../index";
 import { dashed } from "../utils/story/dashed";
 
@@ -10,124 +9,138 @@ export default {
   title: "Components/Toggle",
 };
 
-export const _Toggle = () => <Toggle data-testid="toggle-example" onChange={action("on change")} />;
+export const _Toggle = () => {
+  const [toggled, setToggled] = useState(false);
 
-export const ToggleWithAllProps = () => (
-  <Toggle
-    labelText="Toggle"
-    helpText="Turns setting on/off"
-    onText="on"
-    offText="off"
-    defaultToggled
-    required
-    requirementText="(Required)"
-    onChange={action("on change")}
-  />
-);
-
-ToggleWithAllProps.story = {
-  name: "Toggle with all props",
+  return <Toggle data-testid="toggle-example" toggled={toggled} onChange={(e) => setToggled(e.target.checked)} />;
 };
 
-export const ToggleSetToDefaultToggled = () => (
-  <Toggle labelText="Toggle" defaultToggled onChange={action("on change")} />
-);
+export const ToggleWithAllProps = () => {
+  const [toggled, setToggled] = useState(true);
 
-ToggleSetToDefaultToggled.story = {
-  name: "Toggle set to defaultToggled",
-};
-
-export const ToggleSetToDisabled = () => (
-  <>
+  return (
     <Toggle
       labelText="Toggle"
-      disabled
+      helpText="Turns setting on/off"
       onText="on"
       offText="off"
-      onChange={action("on change")}
-      data-testid="toggle-example"
+      toggled={toggled}
+      required
+      requirementText="(Required)"
+      onChange={(e) => setToggled(e.target.checked)}
     />
+  );
+};
+ToggleWithAllProps.storyName = "Toggle with all props";
+
+export const ToggleSetToDisabled = () => {
+  return (
+    <>
+      <Toggle
+        labelText="Toggle"
+        disabled
+        onText="on"
+        offText="off"
+        onChange={action("on change")}
+        data-testid="toggle-example"
+      />
+      <Toggle
+        id="toggle-2"
+        disabled
+        onText="on"
+        offText="off"
+        toggled={true}
+        labelText="Toggle"
+        onChange={action("on change")}
+      />
+    </>
+  );
+};
+ToggleSetToDisabled.storyName = "Toggle set to disabled";
+
+export const WithCustomId = () => {
+  const [toggled, setToggled] = useState(true);
+
+  return (
     <Toggle
-      id="toggle-2"
-      disabled
+      id="my-custom-id"
+      labelText="Toggle"
       onText="on"
       offText="off"
-      defaultToggled
-      labelText="Toggle"
-      onChange={action("on change")}
+      toggled={toggled}
+      onChange={(e) => setToggled(e.target.checked)}
     />
-  </>
-);
-
-ToggleSetToDisabled.story = {
-  name: "Toggle set to disabled",
+  );
 };
+WithCustomId.storyName = "With custom id";
 
-export const WithCustomId = () => (
-  <Toggle id="my-custom-id" labelText="Toggle" onText="on" offText="off" onChange={action("on change")} />
-);
+export const WithText = () => {
+  const [toggled, setToggled] = useState(true);
 
-WithCustomId.story = {
-  name: "With custom id",
-};
-
-export const WithText = () => <Toggle labelText="Toggle" onText="on" offText="off" onChange={action("on change")} />;
-
-WithText.story = {
-  name: "With text",
-};
-
-export const WithLongText = () => (
-  <Toggle
-    labelText="Toggle"
-    defaultToggled
-    onText="this state has a very long text label to explain it's state"
-    offText="not this one"
-    onChange={action("on change")}
-  />
-);
-
-WithLongText.story = {
-  name: "With long text",
-};
-
-export const WithContraintWidth = () => (
-  <DashedBox width="200px" padding="x2">
+  return (
     <Toggle
       labelText="Toggle"
-      onText="This is a long On label for the toggle component."
-      offText="This is a long Off label for the toggle component."
-      defaultToggled
-      onChange={action("on change")}
+      onText="on"
+      offText="off"
+      toggled={toggled}
+      onChange={(e) => setToggled(e.target.checked)}
     />
-  </DashedBox>
-);
+  );
+};
+WithText.storyName = "With text";
 
-export const ControlledToggle = () => (
-  <Toggle
-    labelText="Controlled Toggle"
-    toggled={boolean("Toggled", false)}
-    onText="on"
-    offText="off"
-    onChange={action("on change")}
-    data-testid="toggle-example"
-  />
-);
+export const WithLongText = () => {
+  const [toggled, setToggled] = useState(true);
+
+  return (
+    <Toggle
+      labelText="Toggle"
+      toggled={toggled}
+      onText="this state has a very long text label to explain it's state"
+      offText="not this one"
+      onChange={(e) => setToggled(e.target.checked)}
+    />
+  );
+};
+WithLongText.storyName = "With long text";
+
+export const WithContraintWidth = () => {
+  const [toggled, setToggled] = useState(true);
+
+  return (
+    <DashedBox width="200px" padding="x2">
+      <Toggle
+        labelText="Toggle"
+        onText="This is a long On label for the toggle component."
+        offText="This is a long Off label for the toggle component."
+        toggled={toggled}
+        onChange={(e) => setToggled(e.target.checked)}
+      />
+    </DashedBox>
+  );
+};
+WithContraintWidth.storyName = "With constraint width";
 
 export const UsingRefToControlFocus = () => {
-  const ref = useRef(null);
+  const [toggled, setToggled] = useState(true);
+  const ref = useRef<HTMLInputElement>(null);
   const handleClick = () => {
     ref.current.focus();
   };
 
   return (
     <>
-      <Toggle id="my-custom-id" labelText="Toggle" onText="on" offText="off" onChange={action("on change")} ref={ref} />
+      <Toggle
+        id="my-custom-id"
+        labelText="Toggle"
+        onText="on"
+        offText="off"
+        toggled={toggled}
+        onChange={(e) => setToggled(e.target.checked)}
+        ref={ref}
+      />
       <Button onClick={handleClick}>Focus the Toggle</Button>
     </>
   );
 };
-
-UsingRefToControlFocus.story = {
-  name: "using ref to control focus",
-};
+UsingRefToControlFocus.storyName = "Using ref to control focus";
