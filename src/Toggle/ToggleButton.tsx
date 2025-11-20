@@ -1,4 +1,4 @@
-import React, { useRef, useImperativeHandle } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import type { Transition } from "framer-motion";
 import styled, { useTheme } from "styled-components";
@@ -6,31 +6,28 @@ import { DefaultNDSThemeType } from "../theme";
 import { AnimatedBox } from "../Box";
 import { useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 
-type SwitchProps = {
+interface SwitchProps {
   children?: React.ReactNode;
   disabled?: boolean;
-  toggled?: boolean;
-  onClick?: (event: React.MouseEvent) => void;
-};
+  checked?: boolean;
+}
 
-type SliderProps = {
+interface SliderProps {
   disabled?: boolean;
-};
+}
 
-type ToggleButtonProps = React.ComponentPropsWithRef<"input"> & {
-  defaultToggled?: boolean;
-  toggled?: boolean;
+interface ToggleButtonProps extends React.ComponentPropsWithRef<"input"> {
   disabled?: boolean;
   name?: string;
   theme?: DefaultNDSThemeType;
-};
+}
 
-type AnimationConfig = {
+interface AnimationConfig {
   transition: Transition;
   scale: string | number;
-};
+}
 
-const getSwitchBackground = (toggled) => (toggled ? "darkBlue" : "darkGrey");
+const getSwitchBackground = (checked: boolean) => (checked ? "darkBlue" : "darkGrey");
 
 const animationConfig: AnimationConfig = {
   transition: {
@@ -42,7 +39,7 @@ const animationConfig: AnimationConfig = {
   scale: 1.08,
 };
 
-function Switch({ children, disabled, toggled, onClick }: SwitchProps) {
+function Switch({ children, disabled, checked }: SwitchProps) {
   const componentVariant = useComponentVariant();
 
   return (
@@ -52,14 +49,13 @@ function Switch({ children, disabled, toggled, onClick }: SwitchProps) {
       flexShrink={0}
       height="24px"
       width="48px"
-      bg={disabled ? "grey" : getSwitchBackground(toggled)}
+      bg={disabled ? "grey" : getSwitchBackground(checked)}
       borderRadius="20px"
       padding="2px"
       boxShadow="small"
-      animate={toggled ? "toggled" : "initial"}
+      animate={checked ? "toggled" : "initial"}
       whileHover="active"
       whileFocus="active"
-      onClick={onClick}
     >
       {children}
     </AnimatedBox>
@@ -112,26 +108,15 @@ const ToggleInput = styled.input<ToggleButtonProps>(({ disabled, theme }) => ({
   },
 }));
 
-const ToggleButton = React.forwardRef<HTMLInputElement, ToggleButtonProps>((props, ref) => {
-  const { disabled, defaultToggled, toggled } = props;
-  const inputRef = useRef(null);
-
-  useImperativeHandle(ref, () => inputRef.current);
-
-  const handleClick = () => {
-    if (inputRef.current) {
-      // triggers the onChange event on a checkbox input
-      inputRef.current.click();
-    }
-  };
-
+const ToggleButton = React.forwardRef<HTMLInputElement, ToggleButtonProps>(({ disabled, checked, ...props }, ref) => {
   return (
-    <Switch disabled={disabled} toggled={toggled} onClick={handleClick}>
+    <Switch disabled={disabled} checked={checked}>
       <ToggleInput
-        ref={inputRef}
         type="checkbox"
-        defaultChecked={defaultToggled}
-        value={toggled ? "on" : "off"}
+        role="switch"
+        checked={checked}
+        ref={ref}
+        value={checked ? "on" : "off"}
         {...props}
       />
       <Slider disabled={disabled} />
