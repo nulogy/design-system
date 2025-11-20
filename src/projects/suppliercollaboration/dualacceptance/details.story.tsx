@@ -147,7 +147,7 @@ export const Default = () => {
       productionDueDate: "2025-Feb-28",
       unitPrice: "12.50",
       currency: "USD",
-      note: "Standard production requirements",
+      note: "Standard production requirements. All items must meet the specified quality standards and pass quality control inspections before shipment. Packaging must comply with industry standards and include proper labeling. Delivery should be completed within the agreed timeframe to ensure production schedules.",
     },
     proposal: {
       quantity: "15,500",
@@ -567,7 +567,7 @@ export const Default = () => {
                         {acceptedItems.request ? (
                           <Tooltip tooltip="Accepted">
                             <Box
-                              backgroundColor="lightGreen"
+                              backgroundColor="white"
                               borderRadius="medium"
                               p="x0_25"
                               width="x3"
@@ -734,7 +734,7 @@ export const Default = () => {
                           <Text my="x1">
                             {formData.request.unitPrice} {formData.request.currency}
                           </Text>
-                          <Text my="x1" minHeight="88px">
+                          <Text my="x1" minHeight="96px">
                             {formData.request.note}
                           </Text>
                         </>
@@ -752,7 +752,7 @@ export const Default = () => {
                         {acceptedItems.proposal ? (
                           <Tooltip tooltip="Accepted">
                             <Box
-                              backgroundColor="lightGreen"
+                              backgroundColor="white"
                               borderRadius="medium"
                               p="x0_25"
                               width="x3"
@@ -945,7 +945,7 @@ export const Default = () => {
                           <Text my="x1">-</Text>
                           <Text my="x1">-</Text>
                           <Text my="x1">-</Text>
-                          <Text my="x1" minHeight="88px">
+                          <Text my="x1" minHeight="96px">
                             -
                           </Text>
                         </>
@@ -1301,7 +1301,7 @@ export const V2 = () => {
       productionDueDate: "2025-Feb-28",
       unitPrice: "12.50",
       currency: "USD",
-      note: "Standard production requirements",
+      note: "Standard production requirements. All items must meet the specified quality standards and pass quality control inspections before shipment. Packaging must comply with industry standards and include proper labeling. Delivery should be completed within the agreed timeframe to ensure production schedules.",
     },
     proposal: {
       quantity: "15,500",
@@ -1691,10 +1691,10 @@ export const V2 = () => {
         </Box>
         <Tabs selectedIndex={selectedIndex} onTabClick={(e, index) => setSelectedIndex(index)}>
           <Tab label="Collaboration">
-            <Flex flexDirection="column" gap="x2" justifyContent="space-between" mt="x3">
+            <Flex flexDirection="column" gap="x2" maxWidth="1312px" mt="x3" mx="auto">
               {/* Requested production vs Supplier's proposal comparison */}
-              <Flex gap="x3" p="x2" pb="0">
-                <Flex flexDirection="column" gap="x0_5" mt="x9" pl="x2_5" flex={1} maxWidth="440px" minWidth="256px">
+              <Flex gap="x3" justifyContent="space-around" p="x2" pb="0" >
+                <Flex flexDirection="column" gap="x0_5" mt="x12" pl="x2_5" alignItems="flex-end">
                   <Text fontSize="small" lineHeight="smallRelaxed" fontWeight="bold" my="x1">
                     Quantity
                   </Text>
@@ -1710,17 +1710,32 @@ export const V2 = () => {
                 </Flex>
 
                 {/* Customer's request */}
-                <Card p="x1" maxWidth="440px" minWidth="256px" flex={1}>
-                    <Flex flexDirection="column" gap="x0_25" mb="x3">
-                      <Flex alignItems="center" gap="x1">
-                        <Heading4 mb="0">
+                <Card
+                  py="0"
+                  minWidth="256px"
+                  flex={1}
+                  boxShadow="none"
+                  px="0"
+                  backgroundColor="whiteGrey"
+                  border="1px solid"
+                  borderColor={
+                    editMode === "request"
+                      ? "grey"
+                      : acceptedItems.request
+                        ? "lightGreen"
+                        : "whiteGrey"
+                  }
+                >
+                    <Flex flexDirection="column" gap="x0_25" px="x2" py="x1_5" backgroundColor={acceptedItems.request ? "lightGreen" : undefined}>
+                      <Flex alignItems="center" gap="x1" justifyContent="center" >
+                        <Text fontWeight="medium" color={acceptedItems.proposal || editMode === "proposal" ? "midGrey" : undefined}>
                           {userState.role === "customer" ? "Your request" : "Customer's request"}
-                        </Heading4>
+                        </Text>
 
                         {acceptedItems.request ? (
                           <Tooltip tooltip="Accepted">
                             <Box
-                              backgroundColor="lightGreen"
+                              backgroundColor="white"
                               borderRadius="medium"
                               p="x0_25"
                               width="x3"
@@ -1775,18 +1790,19 @@ export const V2 = () => {
                           </>
                         )}
                       </Flex>
-                      <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
+                      <Text color={acceptedItems.proposal || editMode === "proposal" ? "midGrey" : "midGrey"} fontSize="small" lineHeight="smallCompact" textAlign="center">
                         by{" "}
-                        <Text as="span" fontSize="small" lineHeight="smallCompact" color="black">
+                        <Text as="span" fontSize="small" lineHeight="smallCompact" color={acceptedItems.proposal || editMode === "proposal" ? "midGrey" : "black"}>
                           John D.
                         </Text>{" "}
                         on{" "}
-                        <Text as="span" fontSize="small" lineHeight="smallCompact" color="black">
+                        <Text as="span" fontSize="small" lineHeight="smallCompact" color={acceptedItems.proposal || editMode === "proposal" ? "midGrey" : "black"}>
                           February 6, 2025
                         </Text>
                       </Text>
                     </Flex>
-                    <Flex flexDirection="column" gap="x0_5">
+
+                    <Flex flexDirection="column" gap="x0_5" px="x1" py="x3" backgroundColor="white" borderRadius="medium">
                       {editMode === "request" ? (
                         <>
                           {userState.role === "supplier" ? (
@@ -1880,32 +1896,73 @@ export const V2 = () => {
                         </>
                       ) : (
                         <>
-                          <Text my="x1">
+                        <Flex flexDirection="column" gap="x2_5" p="x1">
+                          <Text color={acceptedItems.proposal || editMode === "proposal" ? "midGrey" : undefined}>
                             {formData.request.quantity} {formData.request.unit}
                           </Text>
-                          <Text my="x1">{formData.request.productionDueDate}</Text>
-                          <Text my="x1">
+                          <Text color={acceptedItems.proposal || editMode === "proposal" ? "midGrey" : undefined}>{formData.request.productionDueDate}</Text>
+                          <Text color={acceptedItems.proposal || editMode === "proposal" ? "midGrey" : undefined}>
                             {formData.request.unitPrice} {formData.request.currency}
                           </Text>
-                          <Text my="x1" minHeight="88px">
+                          <TruncatedText minHeight="96px" maxCharacters={256} color={acceptedItems.proposal || editMode === "proposal" ? "midGrey" : undefined}>
                             {formData.request.note}
-                          </Text>
+                          </TruncatedText>
+                          </Flex>
                         </>
                       )}
                     </Flex>
+                    
+                    {editMode === "request" ? (
+                      <Flex gap="x2" p="x1" backgroundColor="white" borderRadius="medium">
+                        <PrimaryButton onClick={() => submitUpdate(editMode)} disabled={!hasChanges(editMode)} fullWidth>
+                          Submit request
+                        </PrimaryButton>
+                        <QuietButton onClick={exitEditMode} fullWidth>
+                          Cancel
+                        </QuietButton>
+                      </Flex>
+                    ) : (
+                      <Flex p="x1" backgroundColor={acceptedItems.request ? "lightGreen" : "whiteGrey"} borderRadius="medium">
+                        {userState.role === "supplier" && (
+                          <QuietButton fullWidth onClick={acceptCustomerRequest} disabled={acceptedItems.request}>
+                            Accept customer's request
+                          </QuietButton>
+                        )}
+                        {userState.role === "customer" && (
+                          <QuietButton fullWidth onClick={() => enterEditMode("request")}>
+                            Update request
+                          </QuietButton>
+                        )}
+                      </Flex>
+                    )}
                   </Card>
 
                   {/* Supplier's proposal */}
-                  <Card p="x1" maxWidth="440px" minWidth="256px" flex={1}>
-                    <Flex flexDirection="column" gap="x0_25" mb="x3">
-                      <Flex alignItems="center" gap="x1">
-                        <Heading4 mb="0">
+                  <Card
+                    py="0"
+                    minWidth="256px"
+                    flex={1}
+                    boxShadow="none"
+                    px="0"
+                    backgroundColor="whiteGrey"
+                    border="1px solid"
+                    borderColor={
+                      editMode === "proposal"
+                        ? "grey"
+                        : acceptedItems.proposal
+                          ? "lightGreen"
+                          : "whiteGrey"
+                    }
+                  >
+                    <Flex flexDirection="column" gap="x0_25" px="x2" py="x1_5" backgroundColor={acceptedItems.proposal ? "lightGreen" : undefined}>
+                      <Flex alignItems="center" gap="x1" justifyContent="center" >
+                        <Text fontWeight="medium" color={acceptedItems.request || editMode === "request" ? "midGrey" : undefined}>
                           {userState.role === "customer" ? "Supplier's proposal" : "Your proposal"}
-                        </Heading4>
+                        </Text>
                         {acceptedItems.proposal ? (
                           <Tooltip tooltip="Accepted">
                             <Box
-                              backgroundColor="lightGreen"
+                              backgroundColor="white"
                               borderRadius="medium"
                               p="x0_25"
                               width="x3"
@@ -1937,7 +1994,7 @@ export const V2 = () => {
                                   backgroundColor={
                                     userState.role === "supplier" &&
                                     collaborationState.activeCardAuthorRole === "supplier"
-                                      ? "whiteGrey"
+                                      ? "white"
                                       : "yellow"
                                   }
                                   borderRadius="medium"
@@ -1955,27 +2012,27 @@ export const V2 = () => {
                           </>
                         )}
                       </Flex>
-                      <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
+                      <Text color={acceptedItems.request || editMode === "request" ? "midGrey" : "midGrey"} fontSize="small" lineHeight="smallCompact" textAlign="center">
                         {supplierProposalMade ? (
                           userState.role === "customer" ? (
                             <>
                               by{" "}
-                              <Text as="span" fontSize="small" lineHeight="smallCompact" color="black">
+                              <Text as="span" fontSize="small" lineHeight="smallCompact" color={acceptedItems.request || editMode === "request" ? "midGrey" : "black"}>
                                 Supplier A.
                               </Text>{" "}
                               on{" "}
-                              <Text as="span" fontSize="small" lineHeight="smallCompact" color="black">
+                              <Text as="span" fontSize="small" lineHeight="smallCompact" color={acceptedItems.request || editMode === "request" ? "midGrey" : "black"}>
                                 February 6, 2025
                               </Text>
                             </>
                           ) : (
                             <>
                               by{" "}
-                              <Text as="span" fontSize="small" lineHeight="smallCompact" color="black">
+                              <Text as="span" fontSize="small" lineHeight="smallCompact" color={acceptedItems.request || editMode === "request" ? "midGrey" : "black"}>
                                 you
                               </Text>{" "}
                               on{" "}
-                              <Text as="span" fontSize="small" lineHeight="smallCompact" color="black">
+                              <Text as="span" fontSize="small" lineHeight="smallCompact" color={acceptedItems.request || editMode === "request" ? "midGrey" : "black"}>
                                 February 6, 2025
                               </Text>
                             </>
@@ -1987,7 +2044,8 @@ export const V2 = () => {
                         )}
                       </Text>
                     </Flex>
-                    <Flex flexDirection="column" gap="x0_5">
+
+                    <Flex flexDirection="column" gap="x0_5" px="x1" py="x3" backgroundColor="white" borderRadius="medium">
                       {editMode === "proposal" ? (
                         <>
                           {userState.role === "supplier" ? (
@@ -2084,62 +2142,57 @@ export const V2 = () => {
                         </>
                       ) : supplierProposalMade ? (
                         <>
-                          <Text my="x1">
+                        <Flex flexDirection="column" gap="x2_5" p="x1">
+                          <Text color={acceptedItems.request || editMode === "request" ? "midGrey" : undefined}>
                             {formData.proposal.quantity} {formData.proposal.unit}
                           </Text>
-                          <Text my="x1">{formData.proposal.productionDueDate}</Text>
-                          <Text my="x1">
+                          <Text color={acceptedItems.request || editMode === "request" ? "midGrey" : undefined}>{formData.proposal.productionDueDate}</Text>
+                          <Text color={acceptedItems.request || editMode === "request" ? "midGrey" : undefined}>
                             {formData.proposal.unitPrice} {formData.proposal.currency}
                           </Text>
-                          <Text my="x1">{formData.proposal.note}</Text>
+                          <TruncatedText minHeight="96px" maxCharacters={256} color={acceptedItems.request || editMode === "request" ? "midGrey" : undefined}>
+                            {formData.proposal.note}
+                          </TruncatedText>
+                        </Flex>
                         </>
                       ) : (
                         <>
                           <Text my="x1">-</Text>
                           <Text my="x1">-</Text>
                           <Text my="x1">-</Text>
-                          <Text my="x1" minHeight="88px">
+                          <Text my="x1" minHeight="96px">
                             -
                           </Text>
                         </>
                       )}
                     </Flex>
+                    
+                    {editMode === "proposal" ? (
+                      <Flex gap="x2" p="x1" backgroundColor="white" borderRadius="medium">
+                        <PrimaryButton onClick={() => submitUpdate(editMode)} disabled={!hasChanges(editMode)} fullWidth>
+                          Submit proposal
+                        </PrimaryButton>
+                        <QuietButton onClick={exitEditMode} fullWidth>
+                          Cancel
+                        </QuietButton>
+                      </Flex>
+                    ) : (
+                      <Flex p="x1" backgroundColor={acceptedItems.proposal ? "lightGreen" : "whiteGrey"} borderRadius="medium">
+                        {userState.role === "supplier" && (
+                          <QuietButton fullWidth onClick={() => enterEditMode("proposal")}>
+                            Update proposal
+                          </QuietButton>
+                        )}
+                        {userState.role === "customer" && (
+                          <QuietButton fullWidth onClick={acceptSupplierProposal} disabled={acceptedItems.proposal}>
+                            Accept supplier's proposal
+                          </QuietButton>
+                        )}
+                      </Flex>
+                    )}
                   </Card>
                 </Flex>
 
-                <Divider m="0" p="0" />
-
-                {/* Action buttons */}
-                <Flex gap="x2" px="x2" pb="x1">
-                  {editMode ? (
-                    <>
-                      <PrimaryButton onClick={() => submitUpdate(editMode)} disabled={!hasChanges(editMode)}>
-                        {editMode === "request" ? "Submit request" : "Submit proposal"}
-                      </PrimaryButton>
-                      <QuietButton onClick={exitEditMode}>Cancel</QuietButton>
-                    </>
-                  ) : (
-                    <>
-                      {/* Always show edit buttons based on user role */}
-                      {userState.role === "supplier" && (
-                        <>
-                          <QuietButton onClick={() => enterEditMode("proposal")}>Update proposal</QuietButton>
-                          <QuietButton onClick={acceptCustomerRequest} disabled={acceptedItems.request}>
-                            Accept customer's request
-                          </QuietButton>
-                        </>
-                      )}
-                      {userState.role === "customer" && (
-                        <>
-                          <QuietButton onClick={() => enterEditMode("request")}>Update request</QuietButton>
-                          <QuietButton onClick={acceptSupplierProposal} disabled={acceptedItems.proposal}>
-                            Accept supplier's proposal
-                          </QuietButton>
-                        </>
-                      )}
-                    </>
-                  )}
-                </Flex>
             </Flex>
           </Tab>
           <Tab label="Production records">
