@@ -1,3 +1,10 @@
+## [15.1.4](https://github.com/nulogy/design-system/compare/v15.1.3...v15.1.4) (2025-11-20)
+
+
+### Bug Fixes
+
+* Toggle should have field label ([8024eb5](https://github.com/nulogy/design-system/commit/8024eb5d040bf3faae68562e8f47149b7853fbb7))
+
 ## [15.1.3](https://github.com/nulogy/design-system/compare/v15.1.2...v15.1.3) (2025-11-19)
 
 ### Bug Fixes
