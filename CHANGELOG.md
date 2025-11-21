@@ -1,3 +1,10 @@
+# [15.2.0](https://github.com/nulogy/design-system/compare/v15.1.4...v15.2.0) (2025-11-21)
+
+
+### Features
+
+* Please... publish a release ([38c888b](https://github.com/nulogy/design-system/commit/38c888b46ee58bdfc07782db9908bb0e05186bdc))
+
 ## [15.1.4](https://github.com/nulogy/design-system/compare/v15.1.3...v15.1.4) (2025-11-20)
 
 ### Bug Fixes
