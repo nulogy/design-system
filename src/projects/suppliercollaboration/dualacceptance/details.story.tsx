@@ -1693,7 +1693,7 @@ export const V2 = () => {
           <Tab label="Collaboration">
             <Flex flexDirection="column" gap="x2" maxWidth="1312px" mt="x3" mx="auto">
               {/* Requested production vs Supplier's proposal comparison */}
-              <Flex gap="x3" justifyContent="space-around" p="x2" pb="0" >
+              <Flex gap="x3" justifyContent="space-around" alignItems="stretch" p="x2" pb="0" >
                 <Flex flexDirection="column" gap="x0_5" mt="x12" pl="x2_5" alignItems="flex-end">
                   <Text fontSize="small" lineHeight="smallRelaxed" fontWeight="bold" my="x1">
                     Quantity
@@ -1716,35 +1716,40 @@ export const V2 = () => {
                   flex={1}
                   boxShadow="none"
                   px="0"
-                  backgroundColor="whiteGrey"
+                  backgroundColor={acceptedItems.request ? "lightGreen" : editMode === "request" ? "white" : "whiteGrey"}
                   border="1px solid"
-                  borderColor={
-                    editMode === "request"
-                      ? "grey"
-                      : acceptedItems.request
-                        ? "lightGreen"
-                        : "whiteGrey"
-                  }
+                  borderRadius="large"
+                  borderColor="lightGrey"
+                  display="flex"
+                  flexDirection="column"
                 >
-                    <Flex flexDirection="column" gap="x0_25" px="x2" py="x1_5" backgroundColor={acceptedItems.request ? "lightGreen" : undefined}>
+                    <Flex 
+                      flexDirection="column" 
+                      gap="x0_25" 
+                      px="x2" 
+                      py="x1_5" 
+                      backgroundColor={acceptedItems.request ? "green" : editMode === "request" ? "whiteGrey" : "lightGrey"}
+                      borderTopLeftRadius="large"
+                      borderTopRightRadius="large"
+                    >
                       <Flex alignItems="center" gap="x1" justifyContent="center" >
-                        <Text fontWeight="medium" color={acceptedItems.proposal || editMode === "proposal" ? "midGrey" : undefined}>
+                        <Text fontWeight="medium" color={acceptedItems.request ? "white" : acceptedItems.proposal || editMode === "proposal" ? "midGrey" : undefined}>
                           {userState.role === "customer" ? "Your request" : "Customer's request"}
                         </Text>
 
                         {acceptedItems.request ? (
                           <Tooltip tooltip="Accepted">
                             <Box
-                              backgroundColor="white"
+                              backgroundColor="lightGreen"
                               borderRadius="medium"
                               p="x0_25"
-                              width="x3"
-                              height="x3"
+                              width="x2_5"
+                              height="x2_5"
                               display="flex"
                               alignItems="center"
                               justifyContent="center"
                             >
-                              <Icon icon="check" size="x2_5" color="green" />
+                              <Icon icon="check" size="x2" color="green" />
                             </Box>
                           </Tooltip>
                         ) : (
@@ -1790,19 +1795,49 @@ export const V2 = () => {
                           </>
                         )}
                       </Flex>
-                      <Text color={acceptedItems.proposal || editMode === "proposal" ? "midGrey" : "midGrey"} fontSize="small" lineHeight="smallCompact" textAlign="center">
-                        by{" "}
-                        <Text as="span" fontSize="small" lineHeight="smallCompact" color={acceptedItems.proposal || editMode === "proposal" ? "midGrey" : "black"}>
-                          John D.
-                        </Text>{" "}
-                        on{" "}
-                        <Text as="span" fontSize="small" lineHeight="smallCompact" color={acceptedItems.proposal || editMode === "proposal" ? "midGrey" : "black"}>
-                          February 6, 2025
-                        </Text>
+                      <Text 
+                        fontSize="small" 
+                        lineHeight="smallCompact" 
+                        textAlign="center"
+                        color={acceptedItems.request ? "white" : acceptedItems.proposal || editMode === "proposal" ? "midGrey" : "midGrey"}
+                      >
+                        {acceptedItems.request ? (
+                          <>
+                            <Text as="span" fontSize="small" lineHeight="smallCompact" color="lightGreen">by</Text>{" "}
+                            <Text as="span" fontSize="small" lineHeight="smallCompact" color="white">
+                              John D.
+                            </Text>{" "}
+                            <Text as="span" fontSize="small" lineHeight="smallCompact" color="lightGreen">on</Text>{" "}
+                            <Text as="span" fontSize="small" lineHeight="smallCompact" color="white">
+                              February 6, 2025
+                            </Text>
+                          </>
+                        ) : (
+                          <>
+                            by{" "}
+                            <Text as="span" fontSize="small" lineHeight="smallCompact" color={acceptedItems.proposal || editMode === "proposal" ? "midGrey" : "black"}>
+                              John D.
+                            </Text>{" "}
+                            on{" "}
+                            <Text as="span" fontSize="small" lineHeight="smallCompact" color={acceptedItems.proposal || editMode === "proposal" ? "midGrey" : "black"}>
+                              February 6, 2025
+                            </Text>
+                          </>
+                        )}
                       </Text>
                     </Flex>
 
-                    <Flex flexDirection="column" gap="x0_5" px="x1" py="x3" backgroundColor="white" borderRadius="medium">
+                    <Flex 
+                      flexDirection="column" 
+                      gap="x0_5" 
+                      px={editMode === "request" ? "x1" : "x2"} 
+                      py="x3" 
+                      backgroundColor={acceptedItems.request ? "lightGreen" : editMode === "request" ? undefined : "whiteGrey"} 
+                      borderRadius={acceptedItems.request ? undefined : "medium"}
+                      borderBottomLeftRadius={acceptedItems.request ? "large" : undefined}
+                      borderBottomRightRadius={acceptedItems.request ? "large" : undefined}
+                      flex={1}
+                    >
                       {editMode === "request" ? (
                         <>
                           {userState.role === "supplier" ? (
@@ -1896,7 +1931,7 @@ export const V2 = () => {
                         </>
                       ) : (
                         <>
-                        <Flex flexDirection="column" gap="x2_5" p="x1">
+                        <Flex flexDirection="column" gap="x2_5" flex={acceptedItems.request ? 1 : undefined}>
                           <Text color={acceptedItems.proposal || editMode === "proposal" ? "midGrey" : undefined}>
                             {formData.request.quantity} {formData.request.unit}
                           </Text>
@@ -1904,7 +1939,7 @@ export const V2 = () => {
                           <Text color={acceptedItems.proposal || editMode === "proposal" ? "midGrey" : undefined}>
                             {formData.request.unitPrice} {formData.request.currency}
                           </Text>
-                          <TruncatedText minHeight="96px" maxCharacters={256} color={acceptedItems.proposal || editMode === "proposal" ? "midGrey" : undefined}>
+                          <TruncatedText maxCharacters={256} color={acceptedItems.proposal || editMode === "proposal" ? "midGrey" : undefined}>
                             {formData.request.note}
                           </TruncatedText>
                           </Flex>
@@ -1912,28 +1947,30 @@ export const V2 = () => {
                       )}
                     </Flex>
                     
-                    {editMode === "request" ? (
-                      <Flex gap="x2" p="x1" backgroundColor="white" borderRadius="medium">
-                        <PrimaryButton onClick={() => submitUpdate(editMode)} disabled={!hasChanges(editMode)} fullWidth>
-                          Submit request
-                        </PrimaryButton>
-                        <QuietButton onClick={exitEditMode} fullWidth>
-                          Cancel
-                        </QuietButton>
-                      </Flex>
-                    ) : (
-                      <Flex p="x1" backgroundColor={acceptedItems.request ? "lightGreen" : "whiteGrey"} borderRadius="medium">
-                        {userState.role === "supplier" && (
-                          <QuietButton fullWidth onClick={acceptCustomerRequest} disabled={acceptedItems.request}>
-                            Accept customer's request
+                    {!acceptedItems.request && (
+                      editMode === "request" ? (
+                        <Flex gap="x2" p="x1" backgroundColor="white" borderRadius="medium">
+                          <PrimaryButton onClick={() => submitUpdate(editMode)} disabled={!hasChanges(editMode)} fullWidth>
+                            Submit request
+                          </PrimaryButton>
+                          <QuietButton onClick={exitEditMode} fullWidth>
+                            Cancel
                           </QuietButton>
-                        )}
-                        {userState.role === "customer" && (
-                          <QuietButton fullWidth onClick={() => enterEditMode("request")}>
-                            Update request
-                          </QuietButton>
-                        )}
-                      </Flex>
+                        </Flex>
+                      ) : (
+                        <Flex p="x1" backgroundColor="whiteGrey" borderRadius="medium">
+                          {userState.role === "supplier" && !acceptedItems.request && (
+                            <QuietButton fullWidth onClick={acceptCustomerRequest}>
+                              Accept customer's request
+                            </QuietButton>
+                          )}
+                          {userState.role === "customer" && !acceptedItems.request && (
+                            <QuietButton fullWidth onClick={() => enterEditMode("request")}>
+                              Update request
+                            </QuietButton>
+                          )}
+                        </Flex>
+                      )
                     )}
                   </Card>
 
@@ -1944,34 +1981,39 @@ export const V2 = () => {
                     flex={1}
                     boxShadow="none"
                     px="0"
-                    backgroundColor="whiteGrey"
+                    backgroundColor={acceptedItems.proposal ? "lightGreen" : editMode === "proposal" ? "white" : "whiteGrey"}
                     border="1px solid"
-                    borderColor={
-                      editMode === "proposal"
-                        ? "grey"
-                        : acceptedItems.proposal
-                          ? "lightGreen"
-                          : "whiteGrey"
-                    }
+                    borderRadius="large"
+                    borderColor="lightGrey"
+                    display="flex"
+                    flexDirection="column"
                   >
-                    <Flex flexDirection="column" gap="x0_25" px="x2" py="x1_5" backgroundColor={acceptedItems.proposal ? "lightGreen" : undefined}>
+                    <Flex 
+                      flexDirection="column" 
+                      gap="x0_25" 
+                      px="x2" 
+                      py="x1_5" 
+                      backgroundColor={acceptedItems.proposal ? "green" : editMode === "proposal" ? "whiteGrey" : "lightGrey"}
+                      borderTopLeftRadius="large"
+                      borderTopRightRadius="large"
+                    >
                       <Flex alignItems="center" gap="x1" justifyContent="center" >
-                        <Text fontWeight="medium" color={acceptedItems.request || editMode === "request" ? "midGrey" : undefined}>
+                        <Text fontWeight="medium" color={acceptedItems.proposal ? "white" : acceptedItems.request || editMode === "request" ? "midGrey" : undefined}>
                           {userState.role === "customer" ? "Supplier's proposal" : "Your proposal"}
                         </Text>
                         {acceptedItems.proposal ? (
                           <Tooltip tooltip="Accepted">
                             <Box
-                              backgroundColor="white"
+                              backgroundColor="lightGreen"
                               borderRadius="medium"
                               p="x0_25"
-                              width="x3"
-                              height="x3"
+                              width="x2_5"
+                              height="x2_5"
                               display="flex"
                               alignItems="center"
                               justifyContent="center"
                             >
-                              <Icon icon="check" size="x2_5" color="green" />
+                              <Icon icon="check" size="x2" color="green" />
                             </Box>
                           </Tooltip>
                         ) : (
@@ -2012,40 +2054,83 @@ export const V2 = () => {
                           </>
                         )}
                       </Flex>
-                      <Text color={acceptedItems.request || editMode === "request" ? "midGrey" : "midGrey"} fontSize="small" lineHeight="smallCompact" textAlign="center">
-                        {supplierProposalMade ? (
-                          userState.role === "customer" ? (
-                            <>
-                              by{" "}
-                              <Text as="span" fontSize="small" lineHeight="smallCompact" color={acceptedItems.request || editMode === "request" ? "midGrey" : "black"}>
-                                Supplier A.
-                              </Text>{" "}
-                              on{" "}
-                              <Text as="span" fontSize="small" lineHeight="smallCompact" color={acceptedItems.request || editMode === "request" ? "midGrey" : "black"}>
-                                February 6, 2025
-                              </Text>
-                            </>
-                          ) : (
-                            <>
-                              by{" "}
-                              <Text as="span" fontSize="small" lineHeight="smallCompact" color={acceptedItems.request || editMode === "request" ? "midGrey" : "black"}>
-                                you
-                              </Text>{" "}
-                              on{" "}
-                              <Text as="span" fontSize="small" lineHeight="smallCompact" color={acceptedItems.request || editMode === "request" ? "midGrey" : "black"}>
-                                February 6, 2025
-                              </Text>
-                            </>
-                          )
-                        ) : userState.role === "customer" ? (
-                          "Supplier have not made a proposal yet"
+                      <Text 
+                        fontSize="small" 
+                        lineHeight="smallCompact" 
+                        textAlign="center"
+                        color={acceptedItems.proposal ? "white" : acceptedItems.request || editMode === "request" ? "midGrey" : "midGrey"}
+                      >
+                        {acceptedItems.proposal ? (
+                          supplierProposalMade ? (
+                            userState.role === "customer" ? (
+                              <>
+                                <Text as="span" fontSize="small" lineHeight="smallCompact" color="lightGreen">by</Text>{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallCompact" color="white">
+                                  Supplier A.
+                                </Text>{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallCompact" color="lightGreen">on</Text>{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallCompact" color="white">
+                                  February 6, 2025
+                                </Text>
+                              </>
+                            ) : (
+                              <>
+                                <Text as="span" fontSize="small" lineHeight="smallCompact" color="lightGreen">by</Text>{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallCompact" color="white">
+                                  you
+                                </Text>{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallCompact" color="lightGreen">on</Text>{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallCompact" color="white">
+                                  February 6, 2025
+                                </Text>
+                              </>
+                            )
+                          ) : null
                         ) : (
-                          "You have not made a proposal yet"
+                          supplierProposalMade ? (
+                            userState.role === "customer" ? (
+                              <>
+                                by{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallCompact" color={acceptedItems.request || editMode === "request" ? "midGrey" : "black"}>
+                                  Supplier A.
+                                </Text>{" "}
+                                on{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallCompact" color={acceptedItems.request || editMode === "request" ? "midGrey" : "black"}>
+                                  February 6, 2025
+                                </Text>
+                              </>
+                            ) : (
+                              <>
+                                by{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallCompact" color={acceptedItems.request || editMode === "request" ? "midGrey" : "black"}>
+                                  you
+                                </Text>{" "}
+                                on{" "}
+                                <Text as="span" fontSize="small" lineHeight="smallCompact" color={acceptedItems.request || editMode === "request" ? "midGrey" : "black"}>
+                                  February 6, 2025
+                                </Text>
+                              </>
+                            )
+                          ) : userState.role === "customer" ? (
+                            "Supplier have not made a proposal yet"
+                          ) : (
+                            "You have not made a proposal yet"
+                          )
                         )}
                       </Text>
                     </Flex>
 
-                    <Flex flexDirection="column" gap="x0_5" px="x1" py="x3" backgroundColor="white" borderRadius="medium">
+                    <Flex 
+                      flexDirection="column" 
+                      gap="x0_5" 
+                      px={editMode === "proposal" ? "x1" : "x2"} 
+                      py="x3" 
+                      backgroundColor={acceptedItems.proposal ? "lightGreen" : editMode === "proposal" ? undefined : "whiteGrey"} 
+                      borderRadius={acceptedItems.proposal ? undefined : "medium"}
+                      borderBottomLeftRadius={acceptedItems.proposal ? "large" : undefined}
+                      borderBottomRightRadius={acceptedItems.proposal ? "large" : undefined}
+                      flex={1}
+                    >
                       {editMode === "proposal" ? (
                         <>
                           {userState.role === "supplier" ? (
@@ -2142,7 +2227,7 @@ export const V2 = () => {
                         </>
                       ) : supplierProposalMade ? (
                         <>
-                        <Flex flexDirection="column" gap="x2_5" p="x1">
+                        <Flex flexDirection="column" gap="x2_5" flex={acceptedItems.proposal ? 1 : undefined}>
                           <Text color={acceptedItems.request || editMode === "request" ? "midGrey" : undefined}>
                             {formData.proposal.quantity} {formData.proposal.unit}
                           </Text>
@@ -2150,7 +2235,7 @@ export const V2 = () => {
                           <Text color={acceptedItems.request || editMode === "request" ? "midGrey" : undefined}>
                             {formData.proposal.unitPrice} {formData.proposal.currency}
                           </Text>
-                          <TruncatedText minHeight="96px" maxCharacters={256} color={acceptedItems.request || editMode === "request" ? "midGrey" : undefined}>
+                          <TruncatedText maxCharacters={256} color={acceptedItems.request || editMode === "request" ? "midGrey" : undefined}>
                             {formData.proposal.note}
                           </TruncatedText>
                         </Flex>
@@ -2167,28 +2252,30 @@ export const V2 = () => {
                       )}
                     </Flex>
                     
-                    {editMode === "proposal" ? (
-                      <Flex gap="x2" p="x1" backgroundColor="white" borderRadius="medium">
-                        <PrimaryButton onClick={() => submitUpdate(editMode)} disabled={!hasChanges(editMode)} fullWidth>
-                          Submit proposal
-                        </PrimaryButton>
-                        <QuietButton onClick={exitEditMode} fullWidth>
-                          Cancel
-                        </QuietButton>
-                      </Flex>
-                    ) : (
-                      <Flex p="x1" backgroundColor={acceptedItems.proposal ? "lightGreen" : "whiteGrey"} borderRadius="medium">
-                        {userState.role === "supplier" && (
-                          <QuietButton fullWidth onClick={() => enterEditMode("proposal")}>
-                            Update proposal
+                    {!acceptedItems.proposal && (
+                      editMode === "proposal" ? (
+                        <Flex gap="x2" p="x1" backgroundColor="white" borderRadius="medium">
+                          <PrimaryButton onClick={() => submitUpdate(editMode)} disabled={!hasChanges(editMode)} fullWidth>
+                            Submit proposal
+                          </PrimaryButton>
+                          <QuietButton onClick={exitEditMode} fullWidth>
+                            Cancel
                           </QuietButton>
-                        )}
-                        {userState.role === "customer" && (
-                          <QuietButton fullWidth onClick={acceptSupplierProposal} disabled={acceptedItems.proposal}>
-                            Accept supplier's proposal
-                          </QuietButton>
-                        )}
-                      </Flex>
+                        </Flex>
+                      ) : (
+                        <Flex p="x1" backgroundColor="whiteGrey" borderRadius="medium">
+                          {userState.role === "supplier" && !acceptedItems.proposal && (
+                            <QuietButton fullWidth onClick={() => enterEditMode("proposal")}>
+                              Update proposal
+                            </QuietButton>
+                          )}
+                          {userState.role === "customer" && !acceptedItems.proposal && (
+                            <QuietButton fullWidth onClick={acceptSupplierProposal}>
+                              Accept supplier's proposal
+                            </QuietButton>
+                          )}
+                        </Flex>
+                      )
                     )}
                   </Card>
                 </Flex>
