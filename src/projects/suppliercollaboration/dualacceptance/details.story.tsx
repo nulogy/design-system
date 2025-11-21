@@ -267,6 +267,7 @@ export const Default = () => {
       currentValues.productionDueDate !== originalValues.productionDueDate ||
       currentValues.unitPrice !== originalValues.unitPrice ||
       currentValues.currency !== originalValues.currency ||
+      ("reason" in currentValues && "reason" in originalValues && currentValues.reason !== originalValues.reason) ||
       currentValues.note !== originalValues.note
     );
   };
@@ -1257,6 +1258,35 @@ export const V2 = () => {
   // Edit mode state
   const [editMode, setEditMode] = useState<"request" | "proposal" | null>(null);
 
+  // Form data
+  const [formData, setFormData] = useState({
+    edit: {
+      supplierPOLineItemNumber: "SPLI-001",
+      bomRevision: "Rev 1.2 – 2025-Jan-10",
+      needByDate: new Date("2025-02-15"),
+      closeProductionNote: "Production completed successfully",
+      carryOverSentTo: "",
+    },
+    request: {
+      quantity: "15,000",
+      unit: "eaches",
+      productionDueDate: new Date("2025-02-28"),
+      unitPrice: "12.50",
+      currency: "USD",
+      reason: "Quality requirements",
+      note: "Standard production requirements. All items must meet the specified quality standards and pass quality control inspections before shipment. Packaging must comply with industry standards and include proper labeling. Delivery should be completed within the agreed timeframe to ensure production schedules.",
+    },
+    proposal: {
+      quantity: "15,500",
+      unit: "eaches",
+      productionDueDate: new Date("2025-02-28"),
+      unitPrice: "12.50",
+      currency: "USD",
+      reason: "Quality requirements",
+      note: "Agreed to standard requirements",
+    },
+  });
+
   // Original form values for change detection
   const [originalFormValues, setOriginalFormValues] = useState<{
     request: typeof formData.request;
@@ -1285,33 +1315,6 @@ export const V2 = () => {
   const [isAcceptanceModalOpen, setIsAcceptanceModalOpen] = useState(false);
   const [acceptanceOption, setAcceptanceOption] = useState<"without-flagging" | "with-flagging">("without-flagging");
   const [isFlagged, setIsFlagged] = useState(false);
-
-  // Form data
-  const [formData, setFormData] = useState({
-    edit: {
-      supplierPOLineItemNumber: "SPLI-001",
-      bomRevision: "Rev 1.2 – 2025-Jan-10",
-      needByDate: new Date("2025-02-15"),
-      closeProductionNote: "Production completed successfully",
-      carryOverSentTo: "",
-    },
-    request: {
-      quantity: "15,000",
-      unit: "eaches",
-      productionDueDate: "2025-Feb-28",
-      unitPrice: "12.50",
-      currency: "USD",
-      note: "Standard production requirements. All items must meet the specified quality standards and pass quality control inspections before shipment. Packaging must comply with industry standards and include proper labeling. Delivery should be completed within the agreed timeframe to ensure production schedules.",
-    },
-    proposal: {
-      quantity: "15,500",
-      unit: "eaches",
-      productionDueDate: "2025-Feb-28",
-      unitPrice: "12.50",
-      currency: "USD",
-      note: "Agreed to standard requirements",
-    },
-  });
 
   // Sidebar functions
   const openSidebar = (sidebar: keyof typeof sidebarState) => {
@@ -1421,6 +1424,7 @@ export const V2 = () => {
       currentValues.productionDueDate !== originalValues.productionDueDate ||
       currentValues.unitPrice !== originalValues.unitPrice ||
       currentValues.currency !== originalValues.currency ||
+      ("reason" in currentValues && "reason" in originalValues && currentValues.reason !== originalValues.reason) ||
       currentValues.note !== originalValues.note
     );
   };
@@ -1604,7 +1608,7 @@ export const V2 = () => {
       />
       <Page>
         {/* Action bar above details */}
-        <Flex justifyContent="flex-end" alignItems="center" gap="x2" mb="x3">
+        <Flex justifyContent="flex-end" alignItems="center" gap="x2" mb="x2">
           <IconicButton icon="edit" aria-label="Edit" onClick={() => openSidebar("edit")}>
             Edit
           </IconicButton>
@@ -1621,6 +1625,38 @@ export const V2 = () => {
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
+                <Text color="darkGrey">Customer's PO line item number</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>
+                <Text>POLI-001</Text>
+              </DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
+                <Text color="darkGrey">Supplier's PO line item number</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>
+                <Text>{formData.edit.supplierPOLineItemNumber || "-"}</Text>
+              </DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
+                <Text color="darkGrey">Created on</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>
+                <Text>February 1, 2025</Text>
+              </DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
+                <Text color="darkGrey">{userState.role === "customer" ? "Customer" : "Supplier"}</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>
+                <Text>Claudia Supplier</Text>
+              </DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
                 <Text color="darkGrey">Customer's item code and description</Text>
               </DescriptionTerm>
               <DescriptionDetails>
@@ -1629,32 +1665,40 @@ export const V2 = () => {
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
-                <Text color="darkGrey">BOM revision and release date</Text>
+                <Text color="darkGrey">Supplier's item code</Text>
               </DescriptionTerm>
               <DescriptionDetails>
-                <Text>-</Text>
+                <Text>SUP-ITEM-001</Text>
               </DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
-                <Text color="darkGrey">Supplier's PO line item number</Text>
+                <Text color="darkGrey">Tags</Text>
               </DescriptionTerm>
-              <DescriptionDetails>-</DescriptionDetails>
+              <DescriptionDetails>
+                <Flex flexWrap="wrap" gap="x0_25">
+                  {assignedTags.expressShipment && (
+                    <StatusIndicator type="quiet">
+                      <Text fontSize="smaller" lineHeight="smallerText">Express shipment</Text>
+                    </StatusIndicator>
+                  )}
+                  {assignedTags.validatedForAssembly && (
+                    <StatusIndicator type={userState.role === "customer" ? "success" : "quiet"}>
+                      <Text fontSize="smaller" lineHeight="smallerText">Validated for assembly</Text>
+                    </StatusIndicator>
+                  )}
+                  {!assignedTags.expressShipment && !assignedTags.validatedForAssembly && (
+                    <Text>-</Text>
+                  )}
+                </Flex>
+              </DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
                 <Text color="darkGrey">Priority</Text>
               </DescriptionTerm>
               <DescriptionDetails>
-                <Text>-</Text>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Item order type</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Text>Supplier</Text>
+                <Text>High</Text>
               </DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
@@ -1675,26 +1719,64 @@ export const V2 = () => {
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
-                <Text color="darkGrey">{userState.role === "customer" ? "Customer" : "Supplier"}</Text>
+                <Text color="darkGrey">BOM revision and release date</Text>
               </DescriptionTerm>
-              <DescriptionDetails>Claudia Supplier</DescriptionDetails>
+              <DescriptionDetails>
+                <Text>{formData.edit.bomRevision || "-"}</Text>
+              </DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
                 <Text color="darkGrey">Ship to</Text>
               </DescriptionTerm>
               <DescriptionDetails>
-                <Text>-</Text>
+                <Text>Warehouse A - 123 Main St, City, State 12345</Text>
               </DescriptionDetails>
             </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
+                <Text color="darkGrey">Needed by</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>
+                <Text>{formData.edit.needByDate ? new Date(formData.edit.needByDate).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }) : "-"}</Text>
+              </DescriptionDetails>
+            </DescriptionGroup>
+            {productionComplete && (
+              <>
+                <DescriptionGroup>
+                  <DescriptionTerm>
+                    <Text color="darkGrey">Close production note</Text>
+                  </DescriptionTerm>
+                  <DescriptionDetails>
+                    <Text>{formData.edit.closeProductionNote || "-"}</Text>
+                  </DescriptionDetails>
+                </DescriptionGroup>
+                <DescriptionGroup>
+                  <DescriptionTerm>
+                    <Text color="darkGrey">Carry over sent to</Text>
+                  </DescriptionTerm>
+                  <DescriptionDetails>
+                    <Text>{formData.edit.carryOverSentTo || "-"}</Text>
+                  </DescriptionDetails>
+                </DescriptionGroup>
+              </>
+            )}
           </DescriptionList>
         </Box>
+        <style>
+          {`
+            .collaboration-card-request:hover:not(.card-edit-mode),
+            .collaboration-card-proposal:hover:not(.card-edit-mode) {
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+            }
+          `}
+        </style>
         <Tabs selectedIndex={selectedIndex} onTabClick={(e, index) => setSelectedIndex(index)}>
           <Tab label="Collaboration">
             <Flex flexDirection="column" gap="x2" maxWidth="1312px" mt="x3" mx="auto">
               {/* Requested production vs Supplier's proposal comparison */}
               <Flex gap="x3" justifyContent="space-around" alignItems="stretch" p="x2" pb="0" >
-                <Flex flexDirection="column" gap="x0_5" mt="x12" pl="x2_5" alignItems="flex-end">
+                <Flex flexDirection="column" gap="x0_5" mt="96px" pl="x2_5" alignItems="flex-end">
                   <Text fontSize="small" lineHeight="smallRelaxed" fontWeight="bold" my="x1">
                     Quantity
                   </Text>
@@ -1705,6 +1787,9 @@ export const V2 = () => {
                     Unit price
                   </Text>
                   <Text fontSize="small" lineHeight="smallRelaxed" fontWeight="bold" my="x1">
+                    Reason
+                  </Text>
+                  <Text fontSize="small" lineHeight="smallRelaxed" fontWeight="bold" my="x1">
                     Note
                   </Text>
                 </Flex>
@@ -1713,8 +1798,9 @@ export const V2 = () => {
                 <Card
                   py="0"
                   minWidth="256px"
+                  minHeight="440px"
                   flex={1}
-                  boxShadow="none"
+                  boxShadow={editMode === "request" ? "medium" : "none"}
                   px="0"
                   backgroundColor={acceptedItems.request ? "lightGreen" : editMode === "request" ? "white" : "whiteGrey"}
                   border="1px solid"
@@ -1722,6 +1808,8 @@ export const V2 = () => {
                   borderColor="lightGrey"
                   display="flex"
                   flexDirection="column"
+                  className={`collaboration-card-request ${editMode === "request" ? "card-edit-mode" : ""} ${acceptedItems.proposal || editMode === "proposal" ? "card-deemphasized" : ""}`}
+                  style={{ transition: "box-shadow 0.2s ease-in-out" }}
                 >
                     <Flex 
                       flexDirection="column" 
@@ -1831,7 +1919,7 @@ export const V2 = () => {
                       flexDirection="column" 
                       gap="x0_5" 
                       px={editMode === "request" ? "x1" : "x2"} 
-                      py="x3" 
+                      py="x3"
                       backgroundColor={acceptedItems.request ? "lightGreen" : editMode === "request" ? undefined : "whiteGrey"} 
                       borderRadius={acceptedItems.request ? undefined : "medium"}
                       borderBottomLeftRadius={acceptedItems.request ? "large" : undefined}
@@ -1892,16 +1980,15 @@ export const V2 = () => {
                             </Box>
                           )}
                           <Box width="100%">
-                            <Input
-                              value={formData.request.productionDueDate}
-                              onChange={(e) =>
+                            <DatePicker
+                              selected={formData.request.productionDueDate instanceof Date ? formData.request.productionDueDate : new Date(formData.request.productionDueDate)}
+                              onChange={(date) =>
                                 setFormData((prev) => ({
                                   ...prev,
-                                  request: { ...prev.request, productionDueDate: e.target.value },
+                                  request: { ...prev.request, productionDueDate: date || new Date() },
                                 }))
                               }
                               placeholder="Enter production due date"
-                              inputWidth="100%"
                             />
                           </Box>
                           <Box width="100%">
@@ -1919,6 +2006,26 @@ export const V2 = () => {
                             />
                           </Box>
                           <Box width="100%">
+                            <Select
+                              options={[
+                                { value: "Quality requirements", label: "Quality requirements" },
+                                { value: "Production delay", label: "Production delay" },
+                                { value: "Material shortage", label: "Material shortage" },
+                                { value: "Equipment maintenance", label: "Equipment maintenance" },
+                                { value: "Other", label: "Other" },
+                              ]}
+                              value={formData.request.reason}
+                              onChange={(option) =>
+                                setFormData((prev) => ({
+                                  ...prev,
+                                  request: { ...prev.request, reason: option as string },
+                                }))
+                              }
+                              width="100%"
+                              placeholder="Select reason"
+                            />
+                          </Box>
+                          <Box width="100%">
                             <Textarea
                               value={formData.request.note}
                               onChange={(e) =>
@@ -1931,14 +2038,27 @@ export const V2 = () => {
                         </>
                       ) : (
                         <>
-                        <Flex flexDirection="column" gap="x2_5" flex={acceptedItems.request ? 1 : undefined}>
+                        <Flex flexDirection="column" gap="9.5px" flex={acceptedItems.request ? 1 : undefined} pt="8px">
                           <Text color={acceptedItems.proposal || editMode === "proposal" ? "midGrey" : undefined}>
                             {formData.request.quantity} {formData.request.unit}
                           </Text>
-                          <Text color={acceptedItems.proposal || editMode === "proposal" ? "midGrey" : undefined}>{formData.request.productionDueDate}</Text>
+                          <Divider m="0" />
+                          <Text color={acceptedItems.proposal || editMode === "proposal" ? "midGrey" : undefined}>
+                            {formData.request.productionDueDate 
+                              ? (formData.request.productionDueDate instanceof Date 
+                                  ? formData.request.productionDueDate.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })
+                                  : formData.request.productionDueDate)
+                              : "-"}
+                          </Text>
+                          <Divider m="0" />
                           <Text color={acceptedItems.proposal || editMode === "proposal" ? "midGrey" : undefined}>
                             {formData.request.unitPrice} {formData.request.currency}
                           </Text>
+                          <Divider m="0" />
+                          <Text color={acceptedItems.proposal || editMode === "proposal" ? "midGrey" : undefined}>
+                            {formData.request.reason || "-"}
+                          </Text>
+                          <Divider m="0" />
                           <TruncatedText maxCharacters={256} color={acceptedItems.proposal || editMode === "proposal" ? "midGrey" : undefined}>
                             {formData.request.note}
                           </TruncatedText>
@@ -1949,7 +2069,7 @@ export const V2 = () => {
                     
                     {!acceptedItems.request && (
                       editMode === "request" ? (
-                        <Flex gap="x2" p="x1" backgroundColor="white" borderRadius="medium">
+                        <Flex gap="x2" p="x1" backgroundColor={undefined} borderRadius="medium">
                           <PrimaryButton onClick={() => submitUpdate(editMode)} disabled={!hasChanges(editMode)} fullWidth>
                             Submit request
                           </PrimaryButton>
@@ -1978,8 +2098,9 @@ export const V2 = () => {
                   <Card
                     py="0"
                     minWidth="256px"
+                    minHeight="440px"
                     flex={1}
-                    boxShadow="none"
+                    boxShadow={editMode === "proposal" ? "medium" : "none"}
                     px="0"
                     backgroundColor={acceptedItems.proposal ? "lightGreen" : editMode === "proposal" ? "white" : "whiteGrey"}
                     border="1px solid"
@@ -1987,6 +2108,8 @@ export const V2 = () => {
                     borderColor="lightGrey"
                     display="flex"
                     flexDirection="column"
+                    className={`collaboration-card-proposal ${editMode === "proposal" ? "card-edit-mode" : ""} ${acceptedItems.request || editMode === "request" ? "card-deemphasized" : ""}`}
+                    style={{ transition: "box-shadow 0.2s ease-in-out" }}
                   >
                     <Flex 
                       flexDirection="column" 
@@ -2124,7 +2247,7 @@ export const V2 = () => {
                       flexDirection="column" 
                       gap="x0_5" 
                       px={editMode === "proposal" ? "x1" : "x2"} 
-                      py="x3" 
+                      py="x3"
                       backgroundColor={acceptedItems.proposal ? "lightGreen" : editMode === "proposal" ? undefined : "whiteGrey"} 
                       borderRadius={acceptedItems.proposal ? undefined : "medium"}
                       borderBottomLeftRadius={acceptedItems.proposal ? "large" : undefined}
@@ -2185,16 +2308,15 @@ export const V2 = () => {
                             </Box>
                           )}
                           <Box width="100%">
-                            <Input
-                              value={formData.proposal.productionDueDate}
-                              onChange={(e) =>
+                            <DatePicker
+                              selected={formData.proposal.productionDueDate instanceof Date ? formData.proposal.productionDueDate : new Date(formData.proposal.productionDueDate)}
+                              onChange={(date) =>
                                 setFormData((prev) => ({
                                   ...prev,
-                                  proposal: { ...prev.proposal, productionDueDate: e.target.value },
+                                  proposal: { ...prev.proposal, productionDueDate: date || new Date() },
                                 }))
                               }
                               placeholder="Enter production due date"
-                              inputWidth="100%"
                             />
                           </Box>
                           <Box width="100%">
@@ -2209,6 +2331,26 @@ export const V2 = () => {
                               placeholder="1"
                               suffix={formData.proposal.currency}
                               suffixWidth="160px"
+                            />
+                          </Box>
+                          <Box width="100%">
+                            <Select
+                              options={[
+                                { value: "Quality requirements", label: "Quality requirements" },
+                                { value: "Production delay", label: "Production delay" },
+                                { value: "Material shortage", label: "Material shortage" },
+                                { value: "Equipment maintenance", label: "Equipment maintenance" },
+                                { value: "Other", label: "Other" },
+                              ]}
+                              value={formData.proposal.reason}
+                              onChange={(option) =>
+                                setFormData((prev) => ({
+                                  ...prev,
+                                  proposal: { ...prev.proposal, reason: option as string },
+                                }))
+                              }
+                              width="100%"
+                              placeholder="Select reason"
                             />
                           </Box>
                           <Box width="100%">
@@ -2227,14 +2369,27 @@ export const V2 = () => {
                         </>
                       ) : supplierProposalMade ? (
                         <>
-                        <Flex flexDirection="column" gap="x2_5" flex={acceptedItems.proposal ? 1 : undefined}>
+                        <Flex flexDirection="column" gap="9.5px" flex={acceptedItems.proposal ? 1 : undefined} pt="8px">
                           <Text color={acceptedItems.request || editMode === "request" ? "midGrey" : undefined}>
                             {formData.proposal.quantity} {formData.proposal.unit}
                           </Text>
-                          <Text color={acceptedItems.request || editMode === "request" ? "midGrey" : undefined}>{formData.proposal.productionDueDate}</Text>
+                          <Divider m="0" />
+                          <Text color={acceptedItems.request || editMode === "request" ? "midGrey" : undefined}>
+                            {formData.proposal.productionDueDate 
+                              ? (formData.proposal.productionDueDate instanceof Date 
+                                  ? formData.proposal.productionDueDate.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })
+                                  : formData.proposal.productionDueDate)
+                              : "-"}
+                          </Text>
+                          <Divider m="0" />
                           <Text color={acceptedItems.request || editMode === "request" ? "midGrey" : undefined}>
                             {formData.proposal.unitPrice} {formData.proposal.currency}
                           </Text>
+                          <Divider m="0" />
+                          <Text color={acceptedItems.request || editMode === "request" ? "midGrey" : undefined}>
+                            {formData.proposal.reason || "-"}
+                          </Text>
+                          <Divider m="0" />
                           <TruncatedText maxCharacters={256} color={acceptedItems.request || editMode === "request" ? "midGrey" : undefined}>
                             {formData.proposal.note}
                           </TruncatedText>
@@ -2254,7 +2409,7 @@ export const V2 = () => {
                     
                     {!acceptedItems.proposal && (
                       editMode === "proposal" ? (
-                        <Flex gap="x2" p="x1" backgroundColor="white" borderRadius="medium">
+                        <Flex gap="x2" p="x1" backgroundColor={undefined} borderRadius="medium">
                           <PrimaryButton onClick={() => submitUpdate(editMode)} disabled={!hasChanges(editMode)} fullWidth>
                             Submit proposal
                           </PrimaryButton>
