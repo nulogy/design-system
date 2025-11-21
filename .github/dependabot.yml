@@ -1,10 +1,15 @@
 version: 2
 updates:
-- package-ecosystem: npm
-  directory: "/"
-  schedule:
-    interval: daily
-    time: "10:00"
-    timezone: America/Toronto
-  open-pull-requests-limit: 8
-  rebase-strategy: disabled
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: daily
+      time: "10:00"
+      timezone: America/Toronto
+    open-pull-requests-limit: 8
+    rebase-strategy: disabled
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10

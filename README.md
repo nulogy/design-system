@@ -40,20 +40,18 @@ Note that loading fonts from Google API is just an example and not the most perf
 
 Wrap your application in the NDSProvider component to access Nulogy's theme values and add typographic defaults.
 
-```js
+```jsx
 import React from "react";
 import { NDSProvider } from "@nulogy/components";
 
-class App extends React.Component {
-  render() {
-    return <NDSProvider>// your application</NDSProvider>;
-  }
+export default function App() {
+  return <NDSProvider>// your application</NDSProvider>;
 }
 ```
 
 ### 3. Import desired components
 
-```js
+```jsx
 import { Button } from "@nulogy/components";
 
 const SomeView = () => <Button>Click me</Button>;
