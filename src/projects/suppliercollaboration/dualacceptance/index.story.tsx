@@ -127,6 +127,8 @@ export const Default = () => {
   const [lotCodes, setLotCodes] = useState<string[]>([]);
   const [customerLotCodes, setCustomerLotCodes] = useState<string[]>([]);
   const [supplierLotCodes, setSupplierLotCodes] = useState<string[]>([]);
+  const [collaborationStatuses, setCollaborationStatuses] = useState<string[]>([]);
+  const [includeFlaggedAcceptance, setIncludeFlaggedAcceptance] = useState(true);
   const [selectedActions, setSelectedActions] = useState<string[]>([]);
   const [selectedTags, setSelectedTags] = useState<Record<string, string[]>>({
     "1": ["neutral"],
@@ -140,6 +142,8 @@ export const Default = () => {
     "9": ["neutral"],
     "10": ["success"],
   });
+  // Track which rows have flagged acceptance
+  const [flaggedRows, setFlaggedRows] = useState<Set<string>>(new Set(["2", "5"]));
 
   // Saved view 1 state
   const [savedView1Title, setSavedView1Title] = useState("Saved view 1");
@@ -693,16 +697,25 @@ export const Default = () => {
           </Text>
         </Box>
       ),
-      cellRenderer: ({ cellData }: { cellData: any }) => (
-        <Flex px="x1" py="x0_25" width="100%">
-          {cellData === "accepted" && (
-            <StatusIndicator type="quiet" mt="x0_5">
-              <Flex alignItems="center" gap="x0_5">
-                Accepted
-                {acceptedItems.proposal && isFlagged && <Icon icon="error" size="x1_75" color="darkGrey" />}
-              </Flex>
-            </StatusIndicator>
-          )}
+      cellRenderer: ({ cellData, row }: { cellData: any; row: any }) => {
+        const isRowFlagged = flaggedRows.has(row.id);
+        return (
+          <Flex px="x1" py="x0_25" width="100%">
+            {cellData === "accepted" &&
+              (isRowFlagged ? (
+                <Tooltip tooltip="With flagged acceptance">
+                  <StatusIndicator type="success" mt="x0_5">
+                    <Flex alignItems="center" gap="x0_25">
+                      Accepted
+                      <Icon icon="error" size="x1_75" color="white" mr="-6px" />
+                    </Flex>
+                  </StatusIndicator>
+                </Tooltip>
+              ) : (
+                <StatusIndicator type="success" mt="x0_5">
+                  Accepted
+                </StatusIndicator>
+              ))}
           {cellData === "awaiting" && role === "supplier" && (
             <StatusIndicator type="warning" mt="x4" mb="x0_5">
               Awaiting your response
@@ -723,8 +736,9 @@ export const Default = () => {
               Awaiting your response
             </StatusIndicator>
           )}
-        </Flex>
-      ),
+          </Flex>
+        );
+      },
     },
     {
       label: "",
@@ -1903,6 +1917,8 @@ export const Default = () => {
             <PrimaryButton onClick={() => setIsFilterSidebarOpen(false)}>Apply</PrimaryButton>
             <QuietButton
               onClick={() => {
+                setCollaborationStatuses([]);
+                setIncludeFlaggedAcceptance(true);
                 setCustomerLotCodes([]);
                 setSupplierLotCodes([]);
               }}
@@ -1913,6 +1929,32 @@ export const Default = () => {
         }
       >
         <Flex flexDirection="column" gap="x3">
+          <Box>
+            <Select
+              labelText="Collaboration statuses"
+              multiselect
+              value={collaborationStatuses}
+              onChange={(value) => setCollaborationStatuses(value as string[])}
+              options={[
+                { value: "accepted", label: "Accepted" },
+                { value: "requires-response", label: "Requires your response" },
+                {
+                  value: "awaiting-other",
+                  label: role === "supplier" ? "Awaiting customer response" : "Awaiting supplier response",
+                },
+              ]}
+            />
+            {collaborationStatuses.includes("accepted") && (
+              <Box>
+                <Checkbox
+                  checked={includeFlaggedAcceptance}
+                  onChange={(e) => setIncludeFlaggedAcceptance(e.target.checked)}
+                  labelText="Include flagged acceptance"
+                />
+              </Box>
+            )}
+          </Box>
+
           <Box>
             <AsyncSelect
               labelText="Customer's lot codes"
