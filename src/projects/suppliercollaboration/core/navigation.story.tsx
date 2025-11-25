@@ -78,11 +78,11 @@ export const NulogyAdmin = () => (
                   type: "custom",
                   render: () => (
                     <SubMenuItem>
-                      <SubMenuItemLink>  
-                          <Flex alignItems="center" gap="x0_5">
-                            <span>PO line items</span>
-                            <StatusIndicator type="neutral">Legacy</StatusIndicator>
-                          </Flex>
+                      <SubMenuItemLink>
+                        <Flex alignItems="center" gap="x0_5">
+                          <span>PO line items</span>
+                          <StatusIndicator type="neutral">Legacy</StatusIndicator>
+                        </Flex>
                       </SubMenuItemLink>
                     </SubMenuItem>
                   ),
@@ -1594,4 +1594,3 @@ export const SupplierUser = () => (
     </ApplicationFrame>
   </BrowserRouter>
 );
-

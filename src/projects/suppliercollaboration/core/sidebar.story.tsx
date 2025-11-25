@@ -422,7 +422,7 @@ export default {
 export const Default = () => {
   // Use Customer User navigation config by default
   const navConfig = getNavigationConfig("Customer User");
-  
+
   // Knobs for section order - each position can be independently selected
   const sectionOrderOptions = {
     "Saved Filters": "saved",
@@ -431,17 +431,17 @@ export const Default = () => {
     "Item Filters": "item",
     "(None)": "none",
   };
-  
+
   const position1 = select("Position 1", sectionOrderOptions, "saved");
   const position2 = select("Position 2", sectionOrderOptions, "order");
   const position3 = select("Position 3", sectionOrderOptions, "delivery");
   const position4 = select("Position 4", sectionOrderOptions, "item");
-  
+
   // Build ordered array from positions, filtering out "none" and duplicates
   const sectionOrder = [position1, position2, position3, position4]
     .filter((pos) => pos !== "none")
     .filter((pos, index, arr) => arr.indexOf(pos) === index); // Remove duplicates
-  
+
   const [savedFilters, setSavedFilters] = useState<string | null>(null);
   const [orderNumbers, setOrderNumbers] = useState<any[]>([]);
   const [orderStatuses, setOrderStatuses] = useState<any[]>(["open"]);
@@ -942,12 +942,10 @@ export const Default = () => {
                 const section = sections[sectionKey];
                 if (section) {
                   renderedSections.push(section);
-                  
+
                   // Add divider after saved section if there are more sections to render
                   if (sectionKey === "saved" && !dividerAdded) {
-                    const hasMoreSections = sectionOrder.slice(index + 1).some(
-                      (key) => sections[key]
-                    );
+                    const hasMoreSections = sectionOrder.slice(index + 1).some((key) => sections[key]);
                     if (hasMoreSections) {
                       renderedSections.push(<Divider key="divider" my="0" />);
                       dividerAdded = true;
@@ -964,4 +962,3 @@ export const Default = () => {
     </BrowserRouter>
   );
 };
-
