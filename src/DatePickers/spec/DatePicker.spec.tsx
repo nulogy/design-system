@@ -1,6 +1,6 @@
 import React from "react";
 import { fireEvent } from "@testing-library/react";
-import { vi } from "vitest";
+import { describe, it, expect, vi } from "vitest";
 import { startOfWeek, endOfWeek, getWeek, getYear } from "date-fns";
 import { renderWithNDSProvider } from "../../NDSProvider/renderWithNDSProvider.spec-utils";
 import { DatePicker, WeekPicker } from "..";
