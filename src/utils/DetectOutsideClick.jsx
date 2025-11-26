@@ -1,5 +1,8 @@
 import React from "react";
 
+/**
+ * @deprecated use `useClickOutside` instead
+ */
 export default class DetectOutsideClick extends React.Component {
   constructor(props) {
     super(props);
