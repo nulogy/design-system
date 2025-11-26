@@ -62,7 +62,7 @@ jobs:
       - name: Install dependencies
         run: yarn
 
-      - name: Jest
+      - name: Vitest
         run: yarn test:components
 
       - name: Cypress

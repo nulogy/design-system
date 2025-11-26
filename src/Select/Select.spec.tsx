@@ -1,5 +1,6 @@
 import React from "react";
 import { fireEvent } from "@testing-library/react";
+import { vi } from "vitest";
 import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
 import { selectOption } from "./Select.spec-utils";
 import { UsingRefToControlFocus, WithMultiselect, WithState } from "./Select.story";
@@ -13,7 +14,7 @@ describe("select", () => {
       { label: "Three", value: "three" },
     ];
 
-    const callback = jest.fn();
+    const callback = vi.fn();
 
     const { container, queryByText } = renderWithNDSProvider(
       <Select options={options} name="multiselect" onChange={callback} />
@@ -33,25 +34,25 @@ describe("select", () => {
 
     const { container, queryByText } = renderWithNDSProvider(<Select options={options} defaultValue="two" />);
 
-    expect(container).toHaveTextContent("Two");
+    expect(container.textContent).toContain("Two");
     selectOption("Three", container, queryByText);
-    expect(container).toHaveTextContent("Three");
+    expect(container.textContent).toContain("Three");
   });
 
   describe("with state", () => {
     it("clears the selected option", () => {
       const { container, queryByText } = renderWithNDSProvider(<WithState />);
       selectOption("Open", container, queryByText);
-      expect(container).toHaveTextContent("Open");
+      expect(container.textContent).toContain("Open");
       fireEvent.click(queryByText("Clear selection"));
-      expect(container).not.toHaveTextContent("Open");
+      expect(container.textContent).not.toContain("Open");
     });
   });
 });
 
 describe("multi select", () => {
   it("returns the selected items on change", () => {
-    const callback = jest.fn();
+    const callback = vi.fn();
 
     const { container, queryByText } = renderWithNDSProvider(<WithMultiselect onChange={callback} />);
 
@@ -70,15 +71,15 @@ describe("multi select", () => {
 
     const { container } = renderWithNDSProvider(<Select options={options} multiselect defaultValue={["one", "two"]} />);
 
-    expect(container).toHaveTextContent("One");
-    expect(container).toHaveTextContent("Two");
+    expect(container.textContent).toContain("One");
+    expect(container.textContent).toContain("Two");
   });
   describe("with ref", () => {
     it("can set the focus", () => {
       const { container, queryByText } = renderWithNDSProvider(<UsingRefToControlFocus />);
-      expect(container.querySelectorAll("input")[0]).not.toHaveFocus();
+      expect(document.activeElement).not.toBe(container.querySelectorAll("input")[0]);
       fireEvent.click(queryByText("Focus the Input"));
-      expect(container.querySelectorAll("input")[0]).toHaveFocus();
+      expect(document.activeElement).toBe(container.querySelectorAll("input")[0]);
     });
   });
 });

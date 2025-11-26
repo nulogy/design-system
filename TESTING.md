@@ -11,7 +11,7 @@ Some stories may be useful for testing, but aren't useful as component documenta
 
 ### Unit tests
 
-Event handlers should be tested with React Testing Library and Jest within the component folder. Check that the function is called when an event is triggered and called with the correct arguments. This helps us maintain the behaviour developers expect when using our components.
+Event handlers should be tested with React Testing Library and Vitest within the component folder. Check that the function is called when an event is triggered and called with the correct arguments. This helps us maintain the behaviour developers expect when using our components.
 
 Any complex logic the component relies on should also be unit tested. The logic can be separeted from the component into a function so that it can be easily tested with number of different arguments.
 
@@ -45,4 +45,4 @@ Test IDs should be maintained while refactoring to avoid breaking changes that c
 
 ## Utilities Testing
 
-All .util files should have a corresponding Jest .spec file that tests a variety of arguments with each utility function.
+All .util files should have a corresponding Vitest .spec file that tests a variety of arguments with each utility function.

@@ -30,7 +30,7 @@ describe("useMediaQuery", () => {
 
     it("should return false if window.matchMedia is not available", () => {
       render(<Component />);
-      expect(screen.getByText("false")).toBeInTheDocument();
+      expect(screen.getByText("false")).toBeTruthy();
     });
   });
 });

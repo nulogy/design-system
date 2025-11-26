@@ -1,11 +1,12 @@
 import React from "react";
 import { fireEvent } from "@testing-library/react";
+import { vi } from "vitest";
 import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
 import { Toggle } from ".";
 
 describe("Toggle", () => {
   describe("calls event handlers", () => {
-    const onChange = jest.fn();
+    const onChange = vi.fn();
 
     it("returns the selected time when the selection has changed", () => {
       const { container } = renderWithNDSProvider(<Toggle onChange={onChange} data-testid="toggle" />);
