@@ -1,5 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
+import { describe, it, expect, beforeEach, afterEach } from "vitest";
 import useMediaQuery from ".";
 
 const defaultInnerWidth = 800;

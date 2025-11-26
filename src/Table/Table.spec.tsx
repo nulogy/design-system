@@ -1,6 +1,6 @@
 import React from "react";
 import { fireEvent } from "@testing-library/react";
-import { vi } from "vitest";
+import { describe, it, expect, vi } from "vitest";
 import { createMatchMedia } from "../utils/testing/createMatchMedia";
 import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
 import { mockColumns, getMockRows, getMockColumns } from "./Table.mock-utils";
