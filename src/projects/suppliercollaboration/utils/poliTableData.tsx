@@ -645,7 +645,7 @@ export const poliRows = [
     productionProgress: "75",
     lastComment:
       "Production proceeding as planned with all materials received and assembly line running at optimal efficiency",
-    collaborationStatus: "awaiting",
+    collaborationStatus: "accepted",
     quantity: "200",
     uom: "cases",
     productionDueDate: "2024-01-30",
@@ -692,7 +692,7 @@ export const poliRows = [
     productionProgress: "0",
     lastComment:
       "Materials delayed due to supply chain issues - awaiting shipment confirmation from overseas supplier with updated delivery timeline",
-    collaborationStatus: "draft",
+    collaborationStatus: "accepted",
     quantity: "125",
     uom: "eaches",
     productionDueDate: "2024-02-05",

@@ -316,7 +316,7 @@ export const Default = () => {
         renderActions={() => (
           <Flex gap="x2" alignItems="center">
             <IconicButton icon="chatBubble" aria-label="Comments" onClick={() => openSidebar("comments")} />
-            <DropdownMenu className="blur-more-actions">
+            <DropdownMenu>
               <DropdownButton onClick={handleCancelPOLineItem}>Cancel PO line item</DropdownButton>
             </DropdownMenu>
           </Flex>
@@ -325,33 +325,48 @@ export const Default = () => {
           <Summary breakpoint={120}>
             <Flex flexDirection="column" alignItems="center" width="200px" justifyContent="center" pt="x0_5">
               <Flex height="x2_5" alignItems="center" justifyContent="center">
-                <StatusIndicator
-                  alignSelf="center"
-                  type={
-                    productionComplete ||
-                    collaborationState.status === "accepted" ||
-                    acceptedItems.request ||
-                    acceptedItems.proposal
-                      ? "success"
-                      : collaborationState.activeCardAuthorRole !== userState.role
-                        ? "warning"
-                        : "quiet"
-                  }
-                >
-                  {productionComplete ||
+                {(productionComplete ||
                   collaborationState.status === "accepted" ||
                   acceptedItems.request ||
-                  acceptedItems.proposal ? (
-                    "Accepted"
-                  ) : collaborationState.activeCardAuthorRole === userState.role ? (
-                    <TruncatedText fontSize="smaller" lineHeight="smallerText" fullWidth maxWidth="184px">
-                      {`Awaiting ${userState.role === "supplier" ? "customer" : "supplier"} response`}
-                    </TruncatedText>
-                  ) : (
-                    "Requires your response"
-                  )}
-                  {acceptedItems.proposal && isFlagged && <Icon icon="error" size="x1_75" color="white" />}
-                </StatusIndicator>
+                  acceptedItems.proposal) &&
+                acceptedItems.proposal &&
+                isFlagged ? (
+                  <Tooltip tooltip="With flagged acceptance">
+                    <StatusIndicator alignSelf="center" type="success">
+                      <Flex alignItems="center" gap="x0_25">
+                        Accepted
+                        <Icon icon="error" size="x1_75" color="white" mr="-6px" />
+                      </Flex>
+                    </StatusIndicator>
+                  </Tooltip>
+                ) : (
+                  <StatusIndicator
+                    alignSelf="center"
+                    type={
+                      productionComplete ||
+                      collaborationState.status === "accepted" ||
+                      acceptedItems.request ||
+                      acceptedItems.proposal
+                        ? "success"
+                        : collaborationState.activeCardAuthorRole !== userState.role
+                          ? "warning"
+                          : "quiet"
+                    }
+                  >
+                    {productionComplete ||
+                    collaborationState.status === "accepted" ||
+                    acceptedItems.request ||
+                    acceptedItems.proposal ? (
+                      "Accepted"
+                    ) : collaborationState.activeCardAuthorRole === userState.role ? (
+                      <TruncatedText fontSize="smaller" lineHeight="smallerText" fullWidth maxWidth="184px">
+                        {`Awaiting ${userState.role === "supplier" ? "customer" : "supplier"} response`}
+                      </TruncatedText>
+                    ) : (
+                      "Requires your response"
+                    )}
+                  </StatusIndicator>
+                )}
               </Flex>
               <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
                 For{" "}
@@ -463,25 +478,6 @@ export const Default = () => {
         )}
       />
       <Page>
-        <style>
-          {`
-            /* Blur More actions dropdown in header */
-            .blur-more-actions,
-            .blur-more-actions *,
-            .blur-more-actions button,
-            .blur-more-actions [role="menu"],
-            button[aria-haspopup="true"]:has(svg) {
-              filter: blur(4px);
-              opacity: 0.3;
-            }
-            
-            /* Blur Edit button in Details section */
-            button[aria-label="Edit"] {
-              filter: blur(4px);
-              opacity: 0.3;
-            }
-          `}
-        </style>
         {/* Action bar above details */}
         <Flex justifyContent="flex-end" alignItems="center" gap="x2" mb="x3">
           <IconicButton icon="edit" aria-label="Edit" onClick={() => openSidebar("edit")}>
@@ -1619,35 +1615,50 @@ export const V2 = () => {
         renderSummary={() => (
           <Summary breakpoint={1200}>
             <Flex flexDirection="column" gap="half" alignItems="center" width="200px" justifyContent="center">
-              <StatusIndicator
-                alignSelf="center"
-                type={
-                  productionComplete ||
-                  collaborationState.status === "accepted" ||
-                  acceptedItems.request ||
-                  acceptedItems.proposal
-                    ? "success"
-                    : collaborationState.activeCardAuthorRole !== userState.role
-                      ? "warning"
-                      : "quiet"
-                }
-              >
-                <Flex alignItems="center" gap="x0_5" pr="0">
-                  {productionComplete ||
-                  collaborationState.status === "accepted" ||
-                  acceptedItems.request ||
-                  acceptedItems.proposal ? (
-                    "Accepted"
-                  ) : collaborationState.activeCardAuthorRole === userState.role ? (
-                    <TruncatedText fontSize="small" lineHeight="smallTextCompressed" fullWidth maxWidth="184px">
-                      {`Awaiting ${userState.role === "supplier" ? "customer" : "supplier"} response`}
-                    </TruncatedText>
-                  ) : (
-                    "Requires your response"
-                  )}
-                  {acceptedItems.proposal && isFlagged && <Icon icon="error" size="x1_75" color="white" />}
-                </Flex>
-              </StatusIndicator>
+              {(productionComplete ||
+                collaborationState.status === "accepted" ||
+                acceptedItems.request ||
+                acceptedItems.proposal) &&
+              acceptedItems.proposal &&
+              isFlagged ? (
+                <Tooltip tooltip="With flagged acceptance">
+                  <StatusIndicator alignSelf="center" type="success">
+                    <Flex alignItems="center" gap="x0_25" pr="0">
+                      Accepted
+                      <Icon icon="error" size="x1_75" color="white" mr="-6px" />
+                    </Flex>
+                  </StatusIndicator>
+                </Tooltip>
+              ) : (
+                <StatusIndicator
+                  alignSelf="center"
+                  type={
+                    productionComplete ||
+                    collaborationState.status === "accepted" ||
+                    acceptedItems.request ||
+                    acceptedItems.proposal
+                      ? "success"
+                      : collaborationState.activeCardAuthorRole !== userState.role
+                        ? "warning"
+                        : "quiet"
+                  }
+                >
+                  <Flex alignItems="center" gap="x0_5" pr="0">
+                    {productionComplete ||
+                    collaborationState.status === "accepted" ||
+                    acceptedItems.request ||
+                    acceptedItems.proposal ? (
+                      "Accepted"
+                    ) : collaborationState.activeCardAuthorRole === userState.role ? (
+                      <TruncatedText fontSize="small" lineHeight="smallTextCompressed" fullWidth maxWidth="184px">
+                        {`Awaiting ${userState.role === "supplier" ? "customer" : "supplier"} response`}
+                      </TruncatedText>
+                    ) : (
+                      "Requires your response"
+                    )}
+                  </Flex>
+                </StatusIndicator>
+              )}
               <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
                 For{" "}
                 <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
@@ -3181,35 +3192,50 @@ export const V3 = () => {
         renderSummary={() => (
           <Summary breakpoint={1200}>
             <Flex flexDirection="column" gap="half" alignItems="center" width="200px" justifyContent="center">
-              <StatusIndicator
-                alignSelf="center"
-                type={
-                  productionComplete ||
-                  collaborationState.status === "accepted" ||
-                  acceptedItems.request ||
-                  acceptedItems.proposal
-                    ? "success"
-                    : collaborationState.activeCardAuthorRole !== userState.role
-                      ? "warning"
-                      : "quiet"
-                }
-              >
-                <Flex alignItems="center" gap="x0_5" pr="0">
-                  {productionComplete ||
-                  collaborationState.status === "accepted" ||
-                  acceptedItems.request ||
-                  acceptedItems.proposal ? (
-                    "Accepted"
-                  ) : collaborationState.activeCardAuthorRole === userState.role ? (
-                    <TruncatedText fontSize="small" lineHeight="smallTextCompressed" fullWidth maxWidth="184px">
-                      {`Awaiting ${userState.role === "supplier" ? "customer" : "supplier"} response`}
-                    </TruncatedText>
-                  ) : (
-                    "Requires your response"
-                  )}
-                  {acceptedItems.proposal && isFlagged && <Icon icon="error" size="x1_75" color="white" />}
-                </Flex>
-              </StatusIndicator>
+              {(productionComplete ||
+                collaborationState.status === "accepted" ||
+                acceptedItems.request ||
+                acceptedItems.proposal) &&
+              acceptedItems.proposal &&
+              isFlagged ? (
+                <Tooltip tooltip="With flagged acceptance">
+                  <StatusIndicator alignSelf="center" type="success">
+                    <Flex alignItems="center" gap="x0_25" pr="0">
+                      Accepted
+                      <Icon icon="error" size="x1_75" color="white" mr="-6px" />
+                    </Flex>
+                  </StatusIndicator>
+                </Tooltip>
+              ) : (
+                <StatusIndicator
+                  alignSelf="center"
+                  type={
+                    productionComplete ||
+                    collaborationState.status === "accepted" ||
+                    acceptedItems.request ||
+                    acceptedItems.proposal
+                      ? "success"
+                      : collaborationState.activeCardAuthorRole !== userState.role
+                        ? "warning"
+                        : "quiet"
+                  }
+                >
+                  <Flex alignItems="center" gap="x0_5" pr="0">
+                    {productionComplete ||
+                    collaborationState.status === "accepted" ||
+                    acceptedItems.request ||
+                    acceptedItems.proposal ? (
+                      "Accepted"
+                    ) : collaborationState.activeCardAuthorRole === userState.role ? (
+                      <TruncatedText fontSize="small" lineHeight="smallTextCompressed" fullWidth maxWidth="184px">
+                        {`Awaiting ${userState.role === "supplier" ? "customer" : "supplier"} response`}
+                      </TruncatedText>
+                    ) : (
+                      "Requires your response"
+                    )}
+                  </Flex>
+                </StatusIndicator>
+              )}
               <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
                 For{" "}
                 <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">

@@ -716,26 +716,26 @@ export const Default = () => {
                   Accepted
                 </StatusIndicator>
               ))}
-          {cellData === "awaiting" && role === "supplier" && (
-            <StatusIndicator type="warning" mt="x4" mb="x0_5">
-              Awaiting your response
-            </StatusIndicator>
-          )}
-          {cellData === "awaiting" && role === "customer" && (
-            <StatusIndicator type="quiet" mt="x0_5">
-              Awaiting supplier response
-            </StatusIndicator>
-          )}
-          {cellData === "draft" && role === "supplier" && (
-            <StatusIndicator type="quiet" mt="x0_5">
-              Awaiting customer response
-            </StatusIndicator>
-          )}
-          {cellData === "draft" && role === "customer" && (
-            <StatusIndicator type="warning" mt="x4" mb="x0_5">
-              Awaiting your response
-            </StatusIndicator>
-          )}
+            {cellData === "awaiting" && role === "supplier" && (
+              <StatusIndicator type="warning" mt="x4" mb="x0_5">
+                Awaiting your response
+              </StatusIndicator>
+            )}
+            {cellData === "awaiting" && role === "customer" && (
+              <StatusIndicator type="quiet" mt="x0_5">
+                Awaiting supplier response
+              </StatusIndicator>
+            )}
+            {cellData === "draft" && role === "supplier" && (
+              <StatusIndicator type="quiet" mt="x0_5">
+                Awaiting customer response
+              </StatusIndicator>
+            )}
+            {cellData === "draft" && role === "customer" && (
+              <StatusIndicator type="warning" mt="x4" mb="x0_5">
+                Awaiting your response
+              </StatusIndicator>
+            )}
           </Flex>
         );
       },
