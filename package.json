@@ -26,7 +26,8 @@
     "fix:lint": "yarn check:lint --fix",
     "fix:format": "prettier -w .",
     "test": "yarn test:components && yarn run test:cypress",
-    "test:components": "vitest",
+    "test:components": "vitest run",
+    "test:components:watch": "vitest",
     "test:cypress": "start-server-and-test start-server 9999 'cypress run'",
     "test:visual": "npx chromatic --project-token $CHROMATIC_TOKEN --exit-zero-on-changes",
     "prepare": "husky"
