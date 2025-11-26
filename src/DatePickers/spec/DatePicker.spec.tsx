@@ -1,13 +1,14 @@
 import React from "react";
 import { fireEvent } from "@testing-library/react";
+import { vi } from "vitest";
 import { startOfWeek, endOfWeek, getWeek, getYear } from "date-fns";
 import { renderWithNDSProvider } from "../../NDSProvider/renderWithNDSProvider.spec-utils";
 import { DatePicker, WeekPicker } from "..";
 
 describe("DatePicker", () => {
   describe("date selection", () => {
-    const onChange = jest.fn();
-    const onInputChange = jest.fn();
+    const onChange = vi.fn();
+    const onInputChange = vi.fn();
 
     it("returns the selected date when the selection has changed", () => {
       const { container, getByLabelText } = renderWithNDSProvider(
@@ -43,7 +44,7 @@ describe("DatePicker", () => {
 describe("WeekPicker", () => {
   describe("onChange callback", () => {
     it("returns a WeekRange object when a date is selected", () => {
-      const onChangeMock = jest.fn();
+      const onChangeMock = vi.fn();
       const testDate = new Date("2024-03-15");
 
       const { container } = renderWithNDSProvider(

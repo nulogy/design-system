@@ -1,5 +1,6 @@
 import React from "react";
 import { fireEvent } from "@testing-library/react";
+import { vi } from "vitest";
 import { createMatchMedia } from "../utils/testing/createMatchMedia";
 import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
 import { getPageItemsToDisplay } from "./lib";
@@ -46,9 +47,9 @@ describe("Pagination", () => {
     });
   });
   describe("callbacks", () => {
-    const onSelectPageCallback = jest.fn();
-    const onNextCallback = jest.fn();
-    const onPreviousCallback = jest.fn();
+    const onSelectPageCallback = vi.fn();
+    const onNextCallback = vi.fn();
+    const onPreviousCallback = vi.fn();
 
     it("onSelectPage: returns current page when a page is selected", () => {
       window.matchMedia = createMatchMedia(1024);

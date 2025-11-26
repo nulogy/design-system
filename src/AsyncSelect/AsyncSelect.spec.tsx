@@ -1,4 +1,5 @@
 import React from "react";
+import { vi } from "vitest";
 import { selectOption } from "../Select/Select.spec-utils";
 import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
 import { AsyncSelect } from ".";
@@ -11,8 +12,8 @@ describe("select", () => {
       { label: "Three", value: "three" },
     ];
 
-    const callback = jest.fn();
-    const loadOptions = jest.fn();
+    const callback = vi.fn();
+    const loadOptions = vi.fn();
 
     const { container, queryByText } = renderWithNDSProvider(
       <AsyncSelect loadOptions={loadOptions} defaultOptions={options} onChange={callback} />
