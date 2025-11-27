@@ -1,3 +1,5 @@
+import { expect } from "vitest";
+
 expect.extend({
   toMatchDate(received, date) {
     const pass =
