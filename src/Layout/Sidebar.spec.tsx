@@ -3,6 +3,7 @@ import { fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import { PrimaryButton } from "../Button";
 import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
+import "../testing/matchers/toHaveStyle";
 import { Sidebar } from ".";
 
 describe("Sidebar", () => {
@@ -31,7 +32,7 @@ describe("Sidebar", () => {
           Sidebar
         </Sidebar>
       );
-      expect(queryByTestId("sidebar-overlay")).toHaveStyle("opacity: 0");
+      expect(queryByTestId("sidebar-overlay")).toHaveComputedStyle("opacity: 0");
     });
 
     it("doesn't use an overlay if the sidebar stays open on outside clicks", () => {
@@ -68,7 +69,7 @@ describe("Sidebar", () => {
           Sidebar
         </Sidebar>
       );
-      expect(queryByTestId("sidebar-overlay")).toHaveStyle("z-index: 1001");
+      expect(queryByTestId("sidebar-overlay")).toHaveComputedStyle("z-index: 1001");
     });
   });
 });
