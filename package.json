@@ -89,7 +89,7 @@
     "@storybook/codemod": "7.6.20",
     "@storybook/react": "7.6.20",
     "@storybook/react-webpack5": "7.6.20",
-    "@storybook/theming": "7.6.20",
+    "@storybook/theming": "8.1.11",
     "@testing-library/react": "^12.1.5",
     "@types/css-mediaquery": "^0.1.4",
     "@types/deep-equal": "^1.0.4",
