@@ -6,10 +6,7 @@ import { expect } from "vitest";
  * @param styleString - CSS style string in the format "property: value" (e.g., "opacity: 0", "z-index: 1001")
  * @returns true if the computed style matches, false otherwise
  */
-export function hasComputedStyle(
-  element: HTMLElement | null,
-  styleString: string
-): boolean {
+export function hasComputedStyle(element: HTMLElement | null, styleString: string): boolean {
   if (!element) {
     return false;
   }
@@ -46,17 +43,13 @@ expect.extend({
 
     if (pass) {
       return {
-        message: () =>
-          `expected element not to have computed style ${property}: ${value}`,
+        message: () => `expected element not to have computed style ${property}: ${value}`,
         pass: true,
       };
     } else {
-      const actualValue = received
-        ? window.getComputedStyle(received).getPropertyValue(property)
-        : "element is null";
+      const actualValue = received ? window.getComputedStyle(received).getPropertyValue(property) : "element is null";
       return {
-        message: () =>
-          `expected element to have computed style ${property}: ${value}, but got ${actualValue}`,
+        message: () => `expected element to have computed style ${property}: ${value}, but got ${actualValue}`,
         pass: false,
       };
     }
@@ -72,4 +65,3 @@ declare module "vitest" {
     toHaveComputedStyle(styleString: string): void;
   }
 }
-
