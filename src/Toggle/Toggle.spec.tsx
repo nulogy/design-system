@@ -13,5 +13,11 @@ describe("Toggle", () => {
 
       expect(onChange).toHaveBeenCalled();
     });
+
+    it("correctly disables the toggle", () => {
+      const { container } = renderWithNDSProvider(<Toggle onChange={onChange} data-testid="toggle" disabled />);
+      const element = container.querySelector("[data-testid='toggle'] input");
+      expect(element).toBeDisabled();
+    });
   });
 });
