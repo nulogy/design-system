@@ -1,3 +1,20 @@
+## [15.2.2](https://github.com/nulogy/design-system/compare/v15.2.1...v15.2.2) (2025-11-27)
+
+
+### Bug Fixes
+
+* Add missing import ([19eefb0](https://github.com/nulogy/design-system/commit/19eefb05384be79b11fcae2911c68c273fa6f430))
+* Add missing type annotation ([67da608](https://github.com/nulogy/design-system/commit/67da608b578d64d694c595a937b1cce5e755a616))
+* Cypress tests pass again ([6e9ab2c](https://github.com/nulogy/design-system/commit/6e9ab2c25275d7bd110f4ac626ecf7f25f6446f5))
+* Dependabot schema is fixed ([9b595a5](https://github.com/nulogy/design-system/commit/9b595a51cc8a0c24ac27b2e03d04e1fecaf9423a))
+* Formatting ([d935874](https://github.com/nulogy/design-system/commit/d935874ac85b41b1c5e2749a33d8567de55c7209))
+* Pagination specs work ([634d5b5](https://github.com/nulogy/design-system/commit/634d5b5597640b45ead7f3dd66aa8ebf3156592e))
+* Rename file to indicate contains JSX ([7b22569](https://github.com/nulogy/design-system/commit/7b22569b87279aa2aac89e355efe4b0a7bda368a))
+* Rename file to indicate contains JSX ([295f6e0](https://github.com/nulogy/design-system/commit/295f6e0f8df788db16630fd8ee3ec38bbe25a0ee))
+* Sidebar specs pass again ([9d3f2b7](https://github.com/nulogy/design-system/commit/9d3f2b780fe9f899f6b71275c57adcf8495b31d1))
+* Story fixes ([32b0286](https://github.com/nulogy/design-system/commit/32b028611687c686ce5a11e257dd2eec5907450e))
+* Toggle spec works again ([daf84d8](https://github.com/nulogy/design-system/commit/daf84d8ddded2165eaf80919338db3a36e26cb3c))
+
 ## [15.2.1](https://github.com/nulogy/design-system/compare/v15.2.0...v15.2.1) (2025-11-27)
 
 ### Bug Fixes
