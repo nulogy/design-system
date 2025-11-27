@@ -13,8 +13,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          cache: 'yarn'
-          node-version-file: '.nvmrc'
+          cache: "yarn"
+          node-version-file: ".nvmrc"
 
       - name: Install dependencies
         run: yarn
@@ -27,3 +27,4 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_TOKEN }}
           token: ${{ secrets.GITHUB_TOKEN }}
           storybookBuildDir: "storybook-static"
+          exitOnceUploaded: true
