@@ -1,5 +1,5 @@
 import React from "react";
-import { fireEvent } from "@testing-library/react";
+import { fireEvent, screen } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import { createMatchMedia } from "../utils/testing/createMatchMedia";
 import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
@@ -54,7 +54,7 @@ describe("Pagination", () => {
     it("onSelectPage: returns current page when a page is selected", () => {
       window.matchMedia = createMatchMedia(1024);
 
-      const { getAllByLabelText } = renderWithNDSProvider(
+      renderWithNDSProvider(
         <Pagination
           currentPage={1}
           totalPages={5}
@@ -64,15 +64,15 @@ describe("Pagination", () => {
         />
       );
       const clickPage = (pageNum: number) => {
-        fireEvent.click(getAllByLabelText("Go to page {{count}}")[pageNum]);
+        fireEvent.click(screen.getByLabelText(`Go to page ${pageNum}`));
       };
       clickPage(2);
-      expect(onSelectPageCallback).toHaveBeenCalledWith(4);
+      expect(onSelectPageCallback).toHaveBeenCalledWith(2);
       clickPage(3);
-      expect(onSelectPageCallback).toHaveBeenCalledWith(5);
+      expect(onSelectPageCallback).toHaveBeenCalledWith(3);
     });
     it("onPrevious: prev button is disabled when current page is 1", () => {
-      const { getByLabelText } = renderWithNDSProvider(
+      renderWithNDSProvider(
         <Pagination
           currentPage={1}
           totalPages={5}
@@ -81,15 +81,17 @@ describe("Pagination", () => {
           onSelectPage={onSelectPageCallback}
         />
       );
+
       const clickPrevious = () => {
-        const PreviousButton = getByLabelText("Go to previous results");
+        const PreviousButton = screen.getByLabelText("Go to previous results");
         fireEvent.click(PreviousButton);
       };
+
       clickPrevious();
       expect(onPreviousCallback).not.toHaveBeenCalled();
     });
     it("onPrevious: calls previous page handler when previous button is clicked", () => {
-      const { getByLabelText } = renderWithNDSProvider(
+      renderWithNDSProvider(
         <Pagination
           currentPage={2}
           totalPages={5}
@@ -99,14 +101,14 @@ describe("Pagination", () => {
         />
       );
       const clickPrevious = () => {
-        const PreviousButton = getByLabelText("Go to previous results");
+        const PreviousButton = screen.getByLabelText("Go to previous results");
         fireEvent.click(PreviousButton);
       };
       clickPrevious();
       expect(onPreviousCallback).toHaveBeenCalled();
     });
     it("onNext: calls next page handler when next button is clicked", () => {
-      const { getByLabelText } = renderWithNDSProvider(
+      renderWithNDSProvider(
         <Pagination
           currentPage={1}
           totalPages={5}
@@ -115,7 +117,7 @@ describe("Pagination", () => {
           onSelectPage={onSelectPageCallback}
         />
       );
-      const NextButton = getByLabelText("Go to next results");
+      const NextButton = screen.getByLabelText("Go to next results");
 
       fireEvent.click(NextButton);
       expect(onNextCallback).toHaveBeenCalled();

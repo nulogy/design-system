@@ -7,6 +7,6 @@ export default defineConfig({
     globals: false,
     include: ["**/*.spec.tsx", "**/*.spec.ts"],
     exclude: ["**/node_modules/**", "**/cypress/**", "**/dist/**"],
-    setupFiles: [resolve(__dirname, "spec/support/registerContext.js")],
+    setupFiles: [resolve(__dirname, "spec/support/vitestAutoCleanup.ts")],
   },
 });
