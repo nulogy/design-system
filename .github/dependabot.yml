@@ -18,8 +18,3 @@ updates:
       timezone: America/Toronto
     open-pull-requests-limit: 8
     rebase-strategy: disabled
-  - package-ecosystem: github-actions
-    directory: "/"
-    schedule:
-      interval: daily
-    open-pull-requests-limit: 10
