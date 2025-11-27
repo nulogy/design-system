@@ -65,7 +65,7 @@ export const WithScrollingContent: Story = {
   args: {
     title: "Modal Title",
     footerContent: ModalButtons,
-    children: () => (
+    children: (
       <>
         <Text>
           Content Content Content Content Content Content Content Content Content Content Content Content Content
@@ -106,7 +106,7 @@ export const WithScrollingContent: Story = {
 export const WithScrollingContentWithoutFooterContent: Story = {
   args: {
     title: "Modal Title",
-    children: () => (
+    children: (
       <>
         <Text>
           Content Content Content Content Content Content Content Content Content Content Content Content Content
@@ -176,7 +176,8 @@ export const WithSelect: Story = {
     title: "Edit Profile",
     footerContent: ModalButtons,
     maxWidth: "456px",
-    children: () => (
+    onRequestClose: () => {},
+    children: (
       <Form id="myForm" mb="x2">
         <Select
           maxHeight="96px"
@@ -195,7 +196,8 @@ export const WithSelectAndScrollingContent: Story = {
     title: "Edit Profile",
     footerContent: ModalButtons,
     maxWidth: "456px",
-    children: () => (
+    onRequestClose: () => {},
+    children: (
       <Form id="myForm" mb="x2">
         <Input name="name" id="name" labelText="Name" />
         <Input type="number" name="age" id="age" labelText="Age" />
@@ -231,6 +233,7 @@ export const WithParentSelector: Story = {
 
 export const ExampleControlledModal: Story = {
   render: () => <ModalExample />,
+  name: "example controlled modal",
 };
 
 const ModalExample = () => {
@@ -266,8 +269,4 @@ const ModalExample = () => {
       </NDSModal>
     </>
   );
-};
-
-ExampleControlledModal.story = {
-  name: "example controlled modal",
 };
