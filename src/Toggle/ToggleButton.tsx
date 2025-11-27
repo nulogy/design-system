@@ -117,6 +117,7 @@ const ToggleButton = React.forwardRef<HTMLInputElement, ToggleButtonProps>(({ di
         checked={checked}
         ref={ref}
         value={checked ? "on" : "off"}
+        disabled={disabled}
         {...props}
       />
       <Slider disabled={disabled} />
