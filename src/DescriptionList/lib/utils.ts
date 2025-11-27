@@ -9,7 +9,7 @@ export function validateAndExtractGridProps(props: DescriptionListProps): {
 
   if (columns && groupMinWidth) {
     throw new Error(
-      "Please provide either a `columns` or `groupMinWidth` prop to the DescriptionList, not both.\n\nSee component documentation: https://github.com/nulogy/design-system/blob/master/src/DescriptionList/README.md"
+      "Please provide either a `columns` or `groupMinWidth` prop to the DescriptionList, not both.\n\nSee component documentation: https://github.com/nulogy/design-system/blob/main/src/DescriptionList/README.md"
     );
   }
 

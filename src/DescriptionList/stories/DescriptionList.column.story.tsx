@@ -89,7 +89,7 @@ export const ResponsiveColumns = () => (
     info={
       <Text fontSize="sm" color="darkGrey">
         The breakpoint is based on the container width, not the viewport width. See component{" "}
-        <Link href="https://github.com/nulogy/design-system/blob/master/src/DescriptionList/README.md">
+        <Link href="https://github.com/nulogy/design-system/blob/main/src/DescriptionList/README.md">
           documentation
         </Link>
         .

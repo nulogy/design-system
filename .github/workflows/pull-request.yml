@@ -3,7 +3,7 @@ name: CI
 on:
   pull_request:
     branches:
-      - master
+      - main
       - next
       - beta
 
@@ -18,8 +18,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          cache: 'yarn'
-          node-version-file: '.nvmrc'
+          cache: "yarn"
+          node-version-file: ".nvmrc"
 
       - name: Install dependencies
         run: yarn
@@ -37,8 +37,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          cache: 'yarn'
-          node-version-file: '.nvmrc'
+          cache: "yarn"
+          node-version-file: ".nvmrc"
 
       - name: Install dependencies
         run: yarn
@@ -56,8 +56,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          cache: 'yarn'
-          node-version-file: '.nvmrc'
+          cache: "yarn"
+          node-version-file: ".nvmrc"
 
       - name: Install dependencies
         run: yarn
