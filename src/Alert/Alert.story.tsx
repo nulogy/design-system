@@ -44,9 +44,9 @@ export const WithATitle: Story = {
 export const WithALink: Story = {
   args: {
     children: (
-      <p>
+      <>
         An alert with <Link href="/">linked details</Link>.
-      </p>
+      </>
     ),
   },
   name: "With a link",

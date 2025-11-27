@@ -7,11 +7,9 @@ export default {
   title: "Components/Radio",
   component: Radio,
   args: {
-    p: "x3",
     id: "radio",
     labelText: "I am a radio button",
   },
-  render: (args) => <Radio {...args} data-testid="radio" />,
 } satisfies Meta<typeof Radio>;
 
 type Story = StoryObj<typeof Radio>;
