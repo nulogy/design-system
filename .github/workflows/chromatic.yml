@@ -22,7 +22,7 @@ jobs:
       - name: Build Storybook
         run: yarn build:storybook
 
-      - uses: chromaui/action@v1
+      - uses: chromaui/action@v13
         with:
           projectToken: ${{ secrets.CHROMATIC_TOKEN }}
           token: ${{ secrets.GITHUB_TOKEN }}
