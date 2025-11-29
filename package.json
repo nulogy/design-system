@@ -107,7 +107,7 @@
     "chromatic": "^13.3.3",
     "concurrently": "^9.2.0",
     "css-mediaquery": "^0.1.2",
-    "cypress": "^13.2.0",
+    "cypress": "^13.17.0",
     "cypress-enter-plugin": "^1.0.1",
     "cypress-plugin-tab": "^1.0.1",
     "cypress-real-events": "^1.14.0",
