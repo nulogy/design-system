@@ -32,7 +32,6 @@ const GLOBALS = {
   exenv: "exenv",
   classnames: "t",
   "html-parse-stringify2": "HTML",
-  "smoothscroll-polyfill": "smoothscroll",
   "react-fast-compare": "isEqual",
   "path-to-regexp": "pathToRegexp",
   "react-is": "reactIs",

@@ -22,10 +22,6 @@ Additionally, verify that the new component has already been added to the design
 - `yarn build` will rebuild the package exports for production.
 - `yarn start:cypress` will run the cypress test runner.
 
-To generate the files needed for a new component, you can use [Plop](https://plopjs.com/)
-
-- Run `yarn new ComponentName` (make sure your name is in PascalCase)
-
 ## Coding standards
 
 _Coming soon_

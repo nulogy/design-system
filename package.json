@@ -8,7 +8,6 @@
   },
   "scripts": {
     "ci": "yarn && yarn build && yarn test && yarn run check",
-    "new": "plop",
     "start-server": "yarn build:storybook && yarn http-server -p 9999 ./storybook-static",
     "start": "concurrently \"yarn build:watch\" \"yarn start:storybook\"",
     "start:cypress": "start-server-and-test start 9999 'cypress open'",
@@ -99,7 +98,6 @@
     "@types/react-router-dom": "5.3.0",
     "@typescript-eslint/eslint-plugin": "^4.0.0",
     "@typescript-eslint/parser": "^5.30.5",
-    "awesome-typescript-loader": "^5.2.1",
     "babel-eslint": "^10.0.3",
     "babel-loader": "8.0.6",
     "babel-plugin-inline-json-import": "^0.3.2",
@@ -120,7 +118,6 @@
     "husky": "^9.1.7",
     "jsdom": "^24.0.0",
     "mockdate": "^3.0.2",
-    "plop": "^2.4.0",
     "prettier": "^3.4.2",
     "re-resizable": "^6.10.3",
     "react": "17.0.2",
@@ -171,7 +168,6 @@
     "react-resize-detector": "^9.1.0",
     "react-select": "^5.9.0",
     "react-window": "^1.8.11",
-    "smoothscroll-polyfill": "^0.4.4",
     "styled-system": "^5.1.4",
     "stylis": "^4.0.0"
   }
