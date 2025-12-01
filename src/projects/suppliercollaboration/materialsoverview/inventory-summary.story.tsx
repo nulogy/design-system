@@ -24,6 +24,8 @@ import {
   AsyncSelect,
   Divider,
   Heading4,
+  Switcher,
+  Switch,
 } from "../../..";
 import { verticalAlign } from "styled-system";
 
@@ -52,6 +54,7 @@ export const InventorySummary = () => {
   const [showDetailsSidebar, setShowDetailsSidebar] = useState(false);
   const [showFiltersSidebar, setShowFiltersSidebar] = useState(false);
   const [selectedTabIndex, setSelectedTabIndex] = useState(0);
+  const [viewAs, setViewAs] = useState<"supplier" | "customer">("supplier");
 
   // Filter states
   const [savedFilters, setSavedFilters] = useState<string | null>(null);
@@ -594,6 +597,30 @@ export const InventorySummary = () => {
         </Box>
       )}
 
+      {/* Floating View as configuration */}
+      {showFiltersSidebar && (
+        <Box
+          position="fixed"
+          bottom="x2"
+          right="x2"
+          zIndex={1001}
+          backgroundColor="lightYellow"
+          borderRadius="medium"
+          boxShadow="large"
+          p="x2"
+          border="3px dotted"
+          borderColor="yellow"
+        >
+          <Text fontSize="medium" fontWeight="medium" mb="x2">
+            View as
+          </Text>
+          <Switcher selected={viewAs} onChange={(value) => setViewAs(value as "supplier" | "customer")}>
+            <Switch value="supplier">Supplier</Switch>
+            <Switch value="customer">Customer</Switch>
+          </Switcher>
+        </Box>
+      )}
+
       <Sidebar
         isOpen={showFiltersSidebar}
         onClose={() => setShowFiltersSidebar(false)}
@@ -654,7 +681,7 @@ export const InventorySummary = () => {
             <Flex flexDirection="column" gap="x3">
               <Box>
                 <Select
-                  labelText="Suppliers"
+                  labelText={viewAs === "supplier" ? "Customers" : "Suppliers"}
                   placeholder="Select"
                   value={suppliers}
                   onChange={(value) => setSuppliers((value as string[]) || [])}
@@ -758,7 +785,11 @@ export const InventorySummary = () => {
               <Box>
                 <AsyncSelect
                   labelText="Items"
-                  helpText="Search by customer's item code or description"
+                  helpText={
+                    viewAs === "supplier"
+                      ? "Search by customer's item code, description or supplier's item code"
+                      : "Search by customer's item code or description"
+                  }
                   placeholder="Start typing"
                   loadOptions={loadItems}
                   value={items}
@@ -812,7 +843,7 @@ export const InventorySummary = () => {
 
               <Box>
                 <AsyncSelect
-                  labelText="Customer planners"
+                  labelText={viewAs === "supplier" ? "Supplier planner" : "Customer's planner"}
                   placeholder="Start typing"
                   loadOptions={loadCustomerPlanners}
                   value={customerPlanners}
