@@ -45,7 +45,7 @@ const Switcher: React.FC<React.PropsWithChildren<SwitcherProps>> = ({ variant, s
         },
         onClick: (e) => {
           setFocusedIndex(index);
-          if (onChange) onChange(e.target.value);
+          if (onChange) onChange(e.currentTarget.value);
         },
       });
     });
