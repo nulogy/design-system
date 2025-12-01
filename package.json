@@ -47,7 +47,7 @@
     "component library"
   ],
   "engines": {
-    "yarn": "^1.17.3"
+    "pnpm": ">=10"
   },
   "main": "dist/main.js",
   "module": "dist/main.module.js",
