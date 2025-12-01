@@ -193,8 +193,8 @@ importers:
         specifier: ^17.0.20
         version: 17.0.20
       '@types/react-router-dom':
-        specifier: 5.3.0
-        version: 5.3.0
+        specifier: ^5.3.3
+        version: 5.3.3
       '@typescript-eslint/eslint-plugin':
         specifier: ^4.0.0
         version: 4.0.0(@typescript-eslint/parser@5.62.0(eslint@6.8.0)(typescript@5.9.3))(eslint@6.8.0)(typescript@5.9.3)
@@ -277,8 +277,8 @@ importers:
         specifier: 17.0.2
         version: 17.0.2(react@17.0.2)
       react-router-dom:
-        specifier: ^5.2.0
-        version: 5.2.0(react@17.0.2)
+        specifier: ^5.3.3
+        version: 5.3.4(react@17.0.2)
       rollup:
         specifier: ^2.7.3
         version: 2.79.1
@@ -2748,10 +2748,6 @@ packages:
   '@types/history@4.7.11':
     resolution: {integrity: sha512-qjDJRrmvBMiTx+jyLxvLfJU7UznFuokDv4f3WRuriHKERccVpFU+8XMQUAbDzoiJCsmexxRExQeMwwCdamSKDA==}
 
-  '@types/history@5.0.0':
-    resolution: {integrity: sha512-hy8b7Y1J8OGe6LbAjj3xniQrj3v6lsivCcrmf4TzSgPzLkhIeKgc5IZnT7ReIqmEuodjfO8EYAuoFvIrHi/+jQ==}
-    deprecated: This is a stub types definition. history provides its own type definitions, so you do not need this installed.
-
   '@types/html-minifier-terser@6.1.0':
     resolution: {integrity: sha512-oh/6byDPnL1zeNXFrDXFLyZjkr1MsBG667IM792caf1L2UPOOMf65NFzjUH/ltyfwjAGfs1rsX1eftK0jC/KIg==}
 
@@ -2818,8 +2814,8 @@ packages:
   '@types/react-dom@17.0.20':
     resolution: {integrity: sha512-4pzIjSxDueZZ90F52mU3aPoogkHIoSIDG+oQ+wQK7Cy2B9S+MvOqY0uEA/qawKz381qrEDkvpwyt8Bm31I8sbA==}
 
-  '@types/react-router-dom@5.3.0':
-    resolution: {integrity: sha512-svUzpEpKDwK8nmfV2vpZNSsiijFNKY8+gUqGqvGGOVrXvX58k1JIJubZa5igkwacbq/0umphO5SsQn/BQsnKpw==}
+  '@types/react-router-dom@5.3.3':
+    resolution: {integrity: sha512-kpqnYK4wcdm5UaWI3fLcELopqLrHgLqNsdpHauzlQktfkHL3npOSwtj1Uz9oKBAzs7lFtVkV8j83voAz2D8fhw==}
 
   '@types/react-router@5.1.20':
     resolution: {integrity: sha512-jGjmu/ZqS7FjSH6owMcD5qpq19+1RS9DeVRqfl1FeBMxTDQAGwlMWOcs52NDoXaNKyG3d1cYQFMs9rCrb88o9Q==}
@@ -5186,9 +5182,6 @@ packages:
   history@4.10.1:
     resolution: {integrity: sha512-36nwAD620w12kuzPAsyINPWJqlNbij+hpK1k9XRloDtym8mxzGYl2c17LnV6IAGB2Dmg4tEa7G7DlawS0+qjew==}
 
-  history@5.3.0:
-    resolution: {integrity: sha512-ZqaKwjjrAYUYfLG+htGaIIZ4nioX2L70ZUMIFysS3xvBsSG4x/n1V6TXV3N8ZYNuFGlDirFg32T7B6WOUPDYcQ==}
-
   hoist-non-react-statics@3.3.2:
     resolution: {integrity: sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==}
 
@@ -6137,13 +6130,6 @@ packages:
   min-indent@1.0.1:
     resolution: {integrity: sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==}
     engines: {node: '>=4'}
-
-  mini-create-react-context@0.4.1:
-    resolution: {integrity: sha512-YWCYEmd5CQeHGSAKrYvXgmzzkrvssZcuuQDDeqkT+PziKGMgE+0MCCtcKbROzocGBG1meBLl2FotlRwf4gAzbQ==}
-    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
-    peerDependencies:
-      prop-types: ^15.0.0
-      react: ^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
 
   minimatch@3.1.2:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
@@ -7226,13 +7212,13 @@ packages:
       react: ^16.0.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
 
-  react-router-dom@5.2.0:
-    resolution: {integrity: sha512-gxAmfylo2QUjcwxI63RhQ5G85Qqt4voZpUXSEqCwykV0baaOTQDR1f0PmY8AELqIyVc0NEZUj0Gov5lNGcXgsA==}
+  react-router-dom@5.3.4:
+    resolution: {integrity: sha512-m4EqFMHv/Ih4kpcBCONHbkT68KoAeHN4p3lAGoNryfHi0dMy0kCzEZakiKRsvg5wHZ/JLrLW8o8KomWiz/qbYQ==}
     peerDependencies:
       react: '>=15'
 
-  react-router@5.2.0:
-    resolution: {integrity: sha512-smz1DUuFHRKdcJC0jobGo8cVbhO3x50tCL4icacOlcwDOEQPq4TMqwx3sY1TP+DvtTgz4nm3thuo7A+BK2U0Dw==}
+  react-router@5.3.4:
+    resolution: {integrity: sha512-Ys9K+ppnJah3QuaRiLxk+jDWOR1MekYQrlytiXxC1RyfbdsZkS5pvKAzCCr031xHixZwpnsYNT5xysdFHQaYsA==}
     peerDependencies:
       react: '>=15'
 
@@ -11867,10 +11853,6 @@ snapshots:
 
   '@types/history@4.7.11': {}
 
-  '@types/history@5.0.0':
-    dependencies:
-      history: 5.3.0
-
   '@types/html-minifier-terser@6.1.0': {}
 
   '@types/istanbul-lib-coverage@2.0.3': {}
@@ -11926,20 +11908,20 @@ snapshots:
     dependencies:
       '@types/react': 17.0.62
 
-  '@types/react-router-dom@5.3.0':
+  '@types/react-router-dom@5.3.3':
     dependencies:
-      '@types/history': 5.0.0
-      '@types/react': 19.2.2
+      '@types/history': 4.7.11
+      '@types/react': 17.0.62
       '@types/react-router': 5.1.20
 
   '@types/react-router@5.1.20':
     dependencies:
       '@types/history': 4.7.11
-      '@types/react': 19.2.2
+      '@types/react': 17.0.62
 
   '@types/react-transition-group@4.4.9':
     dependencies:
-      '@types/react': 19.2.2
+      '@types/react': 17.0.62
 
   '@types/react-window@1.8.8':
     dependencies:
@@ -14695,10 +14677,6 @@ snapshots:
       tiny-warning: 1.0.3
       value-equal: 1.0.1
 
-  history@5.3.0:
-    dependencies:
-      '@babel/runtime': 7.28.4
-
   hoist-non-react-statics@3.3.2:
     dependencies:
       react-is: 16.13.1
@@ -15660,13 +15638,6 @@ snapshots:
 
   min-indent@1.0.1: {}
 
-  mini-create-react-context@0.4.1(prop-types@15.7.2)(react@17.0.2):
-    dependencies:
-      '@babel/runtime': 7.28.4
-      prop-types: 15.7.2
-      react: 17.0.2
-      tiny-warning: 1.0.3
-
   minimatch@3.1.2:
     dependencies:
       brace-expansion: 1.1.11
@@ -16617,24 +16588,23 @@ snapshots:
       react: 17.0.2
       react-dom: 17.0.2(react@17.0.2)
 
-  react-router-dom@5.2.0(react@17.0.2):
+  react-router-dom@5.3.4(react@17.0.2):
     dependencies:
       '@babel/runtime': 7.28.4
       history: 4.10.1
       loose-envify: 1.4.0
       prop-types: 15.7.2
       react: 17.0.2
-      react-router: 5.2.0(react@17.0.2)
+      react-router: 5.3.4(react@17.0.2)
       tiny-invariant: 1.3.3
       tiny-warning: 1.0.3
 
-  react-router@5.2.0(react@17.0.2):
+  react-router@5.3.4(react@17.0.2):
     dependencies:
       '@babel/runtime': 7.28.4
       history: 4.10.1
       hoist-non-react-statics: 3.3.2
       loose-envify: 1.4.0
-      mini-create-react-context: 0.4.1(prop-types@15.7.2)(react@17.0.2)
       path-to-regexp: 1.8.0
       prop-types: 15.7.2
       react: 17.0.2
