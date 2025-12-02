@@ -27,6 +27,13 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Cache Cypress
+        uses: actions/cache/save@v4
+        id: cache-cypress-save
+        with:
+          path: ~/.cache/Cypress
+          key: ${{ runner.os }}-cypress-node-modules-${{ hashFiles('client/pnpm-lock.yaml') }}
+
       - name: Build Storybook
         run: pnpm build:storybook
 
