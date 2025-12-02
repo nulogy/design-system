@@ -93,6 +93,3 @@ yarn-error.log*
 
 # VSCode settings
 .vscode
-
-# asdf version manager
-.tool-versions
