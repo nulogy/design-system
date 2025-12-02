@@ -20,7 +20,7 @@
     "check": "pnpm warn:prepush && pnpm check:types && pnpm check:lint && pnpm check:format",
     "check:types": "tsc && cd cypress && tsc --noEmit",
     "check:lint": "eslint --config ./.eslintrc .'*/**/*.{js,ts,tsx}'",
-    "check:format": "prettier -c --ignore-path .prettierignore-check .",
+    "check:format": "prettier -c .",
     "fix": "pnpm fix:lint && pnpm fix:format",
     "fix:lint": "pnpm check:lint --fix",
     "fix:format": "prettier -w .",

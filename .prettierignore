@@ -1,7 +1,7 @@
 *.hbs
 *.yml
 *.yaml
-.github
 package.json
 storybook-static
 dist
+*.md
