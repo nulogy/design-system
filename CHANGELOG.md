@@ -1,3 +1,12 @@
+## [15.2.3](https://github.com/nulogy/design-system/compare/v15.2.2...v15.2.3) (2025-12-02)
+
+
+### Bug Fixes
+
+* Cypress should be correctly cached now ([3aba83d](https://github.com/nulogy/design-system/commit/3aba83d1973db0e1ecfec5763731ddb05bc6683f))
+* Github actions ought to work now ([59f85bb](https://github.com/nulogy/design-system/commit/59f85bbaf54ba8130b719baf53256cb8fe3d0d12))
+* Pin some dependencies ([d89410a](https://github.com/nulogy/design-system/commit/d89410ad1480ca8c239ddee7a210fe5d1eb02f7d))
+
 ## [15.2.2](https://github.com/nulogy/design-system/compare/v15.2.1...v15.2.2) (2025-11-27)
 
 ### Bug Fixes
