@@ -114,7 +114,7 @@
     "http-server": "^14.0.0",
     "husky": "^9.1.7",
     "jsdom": "^27.2.0",
-    "mockdate": "^3.0.2",
+    "mockdate": "^3.0.5",
     "prettier": "^3.4.2",
     "re-resizable": "^6.10.3",
     "react": "17.0.2",
