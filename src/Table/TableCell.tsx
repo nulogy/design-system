@@ -2,12 +2,12 @@ import React, { CSSProperties } from "react";
 import styled from "styled-components";
 import { DefaultNDSThemeType } from "../theme";
 
-type StyledTableCellProps = {
+interface StyledTableCellProps {
   align?: CSSProperties["textAlign"];
   compact?: boolean;
   verticalAlign?: CSSProperties["verticalAlign"];
   theme?: DefaultNDSThemeType;
-};
+}
 
 const StyledTableCell = styled.td<StyledTableCellProps>(
   ({ align, compact, verticalAlign, theme }: StyledTableCellProps) => {
