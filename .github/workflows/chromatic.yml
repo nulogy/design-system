@@ -22,7 +22,7 @@ jobs:
         uses: actions/setup-node@v6
         with:
           cache: pnpm
-          node-version-file: ".nvmrc"
+          node-version-file: ".tool-versions"
 
       - name: Install dependencies
         run: pnpm install

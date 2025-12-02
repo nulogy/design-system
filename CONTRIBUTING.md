@@ -7,7 +7,7 @@ Additionally, verify that the new component has already been added to the design
 
 ### Prerequisites
 
-1. Download and install the Node version in the `.nvmrc` file.
+1. Download and install the Node version in the `.tool-versions` file.
 2. Download and install the package manager [pnpm](https://pnpm.io/installation)
 
 ### Cloning the repo
