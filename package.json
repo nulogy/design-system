@@ -153,7 +153,7 @@
     "date-fns": "2.23.0",
     "debounce": "^1.2.0",
     "deep-equal": "^2.2.1",
-    "framer-motion": "6.5.1",
+    "framer-motion": "12.23.25",
     "i18next": "^19.3.1",
     "polished": "3.4.4",
     "react-datepicker": "^4.25.0",
