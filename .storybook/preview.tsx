@@ -1,3 +1,4 @@
+import type { Preview } from "@storybook/react";
 import React from "react";
 import { Decorator } from "@storybook/react";
 import { desktop as theme } from "../src/theme";
@@ -107,5 +108,9 @@ const withThemeProvider: Decorator = (Story, context) => {
   );
 };
 
-export const decorators = [withThemeProvider];
-export const tags = ["autodocs"];
+const preview: Preview = {
+  decorators: [withThemeProvider],
+  tags: ["autodocs"],
+};
+
+export default preview;
