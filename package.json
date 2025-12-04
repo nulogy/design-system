@@ -81,7 +81,7 @@
     "@storybook/addon-docs": "7.6.20",
     "@storybook/addon-storysource": "7.6.20",
     "@storybook/addon-toolbars": "7.6.20",
-    "@storybook/addon-viewport": "7.6.20",
+    "@storybook/addon-viewport": "9.0.8",
     "@storybook/codemod": "7.6.20",
     "@storybook/react": "7.6.20",
     "@storybook/react-webpack5": "7.6.20",
