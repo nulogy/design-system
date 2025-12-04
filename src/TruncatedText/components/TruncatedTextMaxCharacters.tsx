@@ -1,7 +1,7 @@
 import React from "react";
 import { Text } from "../../Type";
 import { TruncatedTextProps } from "../types";
-import MaybeTooltip from "./MaybeTooltip";
+import MaybeTooltip from "../../MaybeTooltip/MaybeTooltip";
 
 const TruncatedTextMaxCharacters = ({
   children,

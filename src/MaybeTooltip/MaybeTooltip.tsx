@@ -1,6 +1,6 @@
 import React from "react";
-import { Tooltip } from "../..";
-import { TooltipProps } from "../../Tooltip/Tooltip";
+import { TooltipProps } from "../Tooltip/Tooltip";
+import { Tooltip } from "../Tooltip";
 
 export interface MaybeTooltipProps extends TooltipProps {
   /** Whether to enable the tooltip at all */
@@ -9,6 +9,9 @@ export interface MaybeTooltipProps extends TooltipProps {
   supportMobileTap?: boolean;
 }
 
+/**
+ * Conditionally displays a tooltip.
+ */
 function MaybeTooltip({
   tooltip,
   showTooltip = true,

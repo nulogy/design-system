@@ -108,3 +108,4 @@ export type { NulogyAppName } from "./types/NulogyApp";
 export { useWindowDimensions } from "./utils";
 export { InlineValidation } from "./Validation";
 export { VerticalDivider } from "./VerticalDivider";
+export { default as MaybeTooltip } from "./MaybeTooltip/MaybeTooltip";
