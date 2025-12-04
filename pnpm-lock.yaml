@@ -42,8 +42,8 @@ importers:
         specifier: ^1.8.8
         version: 1.8.8
       '@types/styled-system':
-        specifier: 5.1.22
-        version: 5.1.22
+        specifier: 5.1.25
+        version: 5.1.25
       core-js:
         specifier: '3'
         version: 3.19.1
@@ -2861,8 +2861,8 @@ packages:
   '@types/sizzle@2.3.3':
     resolution: {integrity: sha512-JYM8x9EGF163bEyhdJBpR2QX1R5naCJHC8ucJylJ3w9/CVBaskdQ8WqBf8MmQrd1kRvp/a4TS8HJ+bxzR7ZJYQ==}
 
-  '@types/styled-system@5.1.22':
-    resolution: {integrity: sha512-NbRp37zWcrf/+Qf2NumdyZfhSx1dzJ50zgfKvnezYJx1HTRUMVYY8jtWvK1eoIAa6F5sXwHLhE8oXNu15ThBAA==}
+  '@types/styled-system@5.1.25':
+    resolution: {integrity: sha512-B1oyjE4oeAbVnkigcB0WqU2gPFuTwLV/KkLa/uJZWFB9JWVKq1Fs0QwodZXZ9Sq6cb9ngY4kDqRY/dictIchjA==}
 
   '@types/stylis@4.2.5':
     resolution: {integrity: sha512-1Xve+NMN7FWjY14vLoY5tL3BVEQ/n42YLwaqJIPYhotZ9uBHt87VceMwWQpzmdEt2TNXIorIFG+YeCUUW7RInw==}
@@ -11969,7 +11969,7 @@ snapshots:
 
   '@types/sizzle@2.3.3': {}
 
-  '@types/styled-system@5.1.22':
+  '@types/styled-system@5.1.25':
     dependencies:
       csstype: 3.2.3
 
