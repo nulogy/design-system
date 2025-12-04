@@ -1,3 +1,17 @@
+# [15.3.0](https://github.com/nulogy/design-system/compare/v15.2.3...v15.3.0) (2025-12-04)
+
+
+### Bug Fixes
+
+* Cache Cypress in Github Actions correctly ([d0512ab](https://github.com/nulogy/design-system/commit/d0512ab9080ba738734ebaf4513a399a7ca3b0ed))
+* Page title can be a ReactNode ([24b57d1](https://github.com/nulogy/design-system/commit/24b57d1877ad5c4c1cf3be7a532b898e510709ba))
+* Type Storybook's preview file ([c25c296](https://github.com/nulogy/design-system/commit/c25c29689be27f336611ddb89bd259c51c734c41))
+
+
+### Features
+
+* Export MaybeTooltip ([b1a29c0](https://github.com/nulogy/design-system/commit/b1a29c0cbea6b1a9c2bdb9bd011f738ea11c5086))
+
 ## [15.2.3](https://github.com/nulogy/design-system/compare/v15.2.2...v15.2.3) (2025-12-02)
 
 
