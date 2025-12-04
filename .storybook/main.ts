@@ -16,12 +16,16 @@ const config: StorybookConfig = {
     },
     "@storybook/addon-a11y",
     "@storybook/addon-actions",
+    "@storybook/addon-webpack5-compiler-babel",
+    "@chromatic-com/storybook",
   ],
 
   framework: "@storybook/react-webpack5",
 
-  docs: {
-    autodocs: true,
+  docs: {},
+
+  typescript: {
+    reactDocgen: "react-docgen-typescript",
   },
 };
 

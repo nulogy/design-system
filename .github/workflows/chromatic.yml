@@ -43,3 +43,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           storybookBuildDir: "storybook-static"
           exitOnceUploaded: true
+          onlyChanged: true

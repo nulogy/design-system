@@ -108,3 +108,4 @@ const withThemeProvider: Decorator = (Story, context) => {
 };
 
 export const decorators = [withThemeProvider];
+export const tags = ["autodocs"];
