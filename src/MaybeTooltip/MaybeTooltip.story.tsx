@@ -7,7 +7,11 @@ import MaybeTooltip from "./MaybeTooltip";
 export default {
   title: "Components/MaybeTooltip",
   component: MaybeTooltip,
-  render: (args) => <Box width="100px"><MaybeTooltip {...args} /></Box>,
+  render: (args) => (
+    <Box width="100px">
+      <MaybeTooltip {...args} />
+    </Box>
+  ),
 } satisfies Meta<typeof MaybeTooltip>;
 
 type Story = StoryObj<typeof MaybeTooltip>;
