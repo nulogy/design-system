@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { TextProps } from "../Type";
-import { MaybeTooltipProps } from "./components/MaybeTooltip";
+import { MaybeTooltipProps } from "../MaybeTooltip/MaybeTooltip";
 
 export interface TruncatedTextProps extends TextProps {
   children?: string;
