@@ -9,7 +9,7 @@ import {
 } from "./components/TooltipComponents";
 import { getPlacementProps } from "./helpers";
 
-export type TooltipProps = {
+export interface TooltipProps {
   /** Delay before showing (in ms) */
   showDelay?: string | number;
   /** Whether the tooltip is open by default */
@@ -36,7 +36,7 @@ export type TooltipProps = {
   tooltip?: React.ReactNode;
   /** Child element that triggers the tooltip */
   children?: React.ReactNode;
-};
+}
 
 export default function Tooltip({
   showDelay = "100",
