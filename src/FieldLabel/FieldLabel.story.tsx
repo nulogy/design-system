@@ -1,5 +1,5 @@
 import React from "react";
-import { Field, FieldLabel, Input, Select, Toggle, RadioGroup, Radio, Flex } from "../index";
+import { FieldLabel, Input, Select, Toggle, RadioGroup, Radio, Flex } from "../index";
 import { Link } from "../Link";
 
 const helpTextWithLink = (
@@ -82,7 +82,7 @@ export const WithRangeOfInputComponents = () => (
     </FieldLabel>
 
     <FieldLabel labelText="Label with hint" hint="This is a hint for the input field" requirementText="(Required)">
-      <Toggle onText="on" offText="off" defaultToggled />
+      <Toggle onText="on" offText="off" toggled={true} />
     </FieldLabel>
     <FieldLabel labelText="Label with hint" hint="This is a hint for the input field" requirementText="(Required)">
       <RadioGroup name="settingSelection">

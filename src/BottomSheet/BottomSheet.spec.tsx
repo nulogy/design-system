@@ -1,13 +1,14 @@
 import React from "react";
 import { fireEvent, screen } from "@testing-library/react";
+import { describe, it, expect, vi } from "vitest";
 import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
 import BottomSheet from "./BottomSheet";
 
 describe("BottomSheet", () => {
   it("passes onClose callback to primaryAction and secondaryAction", () => {
-    const onCloseMock = jest.fn();
-    const primaryActionMock = jest.fn(({ onClose }) => <button onClick={onClose}>Primary Action</button>);
-    const secondaryActionMock = jest.fn(({ onClose }) => <button onClick={onClose}>Secondary Action</button>);
+    const onCloseMock = vi.fn();
+    const primaryActionMock = vi.fn(({ onClose }) => <button onClick={onClose}>Primary Action</button>);
+    const secondaryActionMock = vi.fn(({ onClose }) => <button onClick={onClose}>Secondary Action</button>);
 
     renderWithNDSProvider(
       <BottomSheet

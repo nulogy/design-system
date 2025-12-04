@@ -1,5 +1,5 @@
 /*
-  Copied as is from: https://github.com/jacobworrel/react-windowed-select/blob/master/src/MenuList.tsx
+  Copied as is from: https://github.com/jacobworrel/react-windowed-select/blob/main/src/MenuList.tsx
   MIT License
   Copyright (c) 2019 Jacob Worrel
   Permission is hereby granted, free of charge, to any person obtaining a copy

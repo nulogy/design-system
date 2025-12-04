@@ -1,4 +1,5 @@
 import React from "react";
+import { Decorator } from "@storybook/react";
 import { desktop as theme } from "../src/theme";
 import { ALL_NDS_LOCALES, NDSProvider } from "../src";
 
@@ -92,7 +93,7 @@ export const globalTypes = {
   },
 };
 
-const withThemeProvider = (Story, context) => {
+const withThemeProvider: Decorator = (Story, context) => {
   const { theme, locale, desktopScale } = context.globals;
 
   return (

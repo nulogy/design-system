@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { action } from "@storybook/addon-actions";
-import { boolean, select, text } from "@storybook/addon-knobs";
+import type { Meta, StoryObj } from "@storybook/react";
 import { PropsValue } from "react-select";
 import { Box } from "../Box";
 import { Flex } from "../Flex";
@@ -73,38 +73,103 @@ class SelectWithState extends React.Component<SelectWithStateProps, { selectedVa
 
 export default {
   title: "Components/Select",
-};
+  component: Select,
+} satisfies Meta<typeof Select>;
 
-export const _Select = () => (
-  <Select
-    options={options}
-    autocomplete={boolean("autocomplete", true)}
-    className={text("className", undefined)}
-    classNamePrefix={text("classNamePrefix", undefined)}
-    closeMenuOnSelect={boolean("closeMenuOnSelect", true)}
-    disabled={boolean("disabled", false)}
-    defaultValue={select("defaultValue", [undefined, ...options.map(({ value }) => value)], undefined)}
-    errorMessage={text("errorMessage", "")}
-    labelText={text("labelText", "Inventory Status")}
-    helpText={text("helpText", undefined)}
-    noOptionsMessage={() => "No options"}
-    required={boolean("required", false)}
-    requirementText={text("requirementText", undefined)}
-    id={text("id", undefined)}
-    maxHeight={text("maxHeight", "248px")}
-    menuPosition={select("menuPosition", ["absolute", "fixed"], "absolute")}
-    multiselect={boolean("multiselect", false)}
-    name={text("name", undefined)}
-    placeholder={text("placeholder", " ")}
-    value={select("value", [undefined, ...options.map(({ value }) => value)], undefined)}
-    menuIsOpen={boolean("menuIsOpen", undefined)}
-    onMenuOpen={action("on menu open")}
-    onMenuClose={action("on menu close")}
-    onChange={action("selection changed")}
-    onInputChange={action("typed input value changed")}
-    onBlur={action("blurred")}
-  />
-);
+type Story = StoryObj<typeof Select>;
+
+export const _Select: Story = {
+  args: {
+    options,
+    autocomplete: true,
+    className: undefined,
+    classNamePrefix: undefined,
+    closeMenuOnSelect: true,
+    disabled: false,
+    defaultValue: undefined,
+    errorMessage: "",
+    labelText: "Inventory Status",
+    helpText: undefined,
+    noOptionsMessage: () => "No options",
+    required: false,
+    requirementText: undefined,
+    id: undefined,
+    maxHeight: "248px",
+    menuPosition: "absolute",
+    multiselect: false,
+    name: undefined,
+    placeholder: " ",
+    value: undefined,
+    menuIsOpen: undefined,
+    onMenuOpen: action("on menu open"),
+    onMenuClose: action("on menu close"),
+    onChange: action("selection changed"),
+    onInputChange: action("typed input value changed"),
+    onBlur: action("blurred"),
+  },
+  argTypes: {
+    autocomplete: {
+      control: { type: "boolean" },
+    },
+    className: {
+      control: { type: "text" },
+    },
+    classNamePrefix: {
+      control: { type: "text" },
+    },
+    closeMenuOnSelect: {
+      control: { type: "boolean" },
+    },
+    disabled: {
+      control: { type: "boolean" },
+    },
+    defaultValue: {
+      control: { type: "select" },
+      options: [undefined, ...options.map(({ value }) => value)],
+    },
+    errorMessage: {
+      control: { type: "text" },
+    },
+    labelText: {
+      control: { type: "text" },
+    },
+    helpText: {
+      control: { type: "text" },
+    },
+    required: {
+      control: { type: "boolean" },
+    },
+    requirementText: {
+      control: { type: "text" },
+    },
+    id: {
+      control: { type: "text" },
+    },
+    maxHeight: {
+      control: { type: "text" },
+    },
+    menuPosition: {
+      control: { type: "select" },
+      options: ["absolute", "fixed"],
+    },
+    multiselect: {
+      control: { type: "boolean" },
+    },
+    name: {
+      control: { type: "text" },
+    },
+    placeholder: {
+      control: { type: "text" },
+    },
+    value: {
+      control: { type: "select" },
+      options: [undefined, ...options.map(({ value }) => value)],
+    },
+    menuIsOpen: {
+      control: { type: "boolean" },
+    },
+  },
+};
 
 export const WithStyledProps = () => {
   return (
@@ -283,20 +348,22 @@ export const WithAClearButton = () => (
   />
 );
 
-export const WithHelpText = () => (
+export const WithAllFieldLabelProps = () => (
   <Select
     placeholder="Please select inventory status"
     options={options}
     labelText="Inventory status"
     helpText="Additional information about input"
+    hint="This is a hint for the input field"
+    requirementText="(Required)"
     onChange={action("selection changed")}
     onBlur={action("blurred")}
     onInputChange={action("typed input value changed")}
   />
 );
 
-WithHelpText.story = {
-  name: "with helpText",
+WithAllFieldLabelProps.story = {
+  name: "with all field label props",
 };
 
 export const WithCustomId = () => (

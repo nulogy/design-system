@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+---
 name: Chromatic
 on:
   push:
@@ -6,24 +8,38 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0 # INTENTIONAL!
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
         with:
-          cache: 'yarn'
-          node-version-file: '.nvmrc'
+          version: 10
+          run_install: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          cache: pnpm
+          node-version-file: ".tool-versions"
 
       - name: Install dependencies
-        run: yarn
+        run: pnpm install
+
+      - name: Cache Cypress
+        uses: actions/cache/save@v4
+        id: cache-cypress-save
+        with:
+          path: ~/.cache/Cypress
+          key: ${{ runner.os }}-cypress-node-modules-${{ hashFiles('client/pnpm-lock.yaml') }}
 
       - name: Build Storybook
-        run: yarn build:storybook
+        run: pnpm build:storybook
 
-      - uses: chromaui/action@v1
+      - uses: chromaui/action@v13
         with:
           projectToken: ${{ secrets.CHROMATIC_TOKEN }}
           token: ${{ secrets.GITHUB_TOKEN }}
           storybookBuildDir: "storybook-static"
+          exitOnceUploaded: true

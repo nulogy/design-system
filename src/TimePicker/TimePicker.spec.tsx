@@ -1,5 +1,6 @@
 import React from "react";
 import { fireEvent } from "@testing-library/react";
+import { describe, it, expect, vi } from "vitest";
 
 import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
 import { Button } from "../Button";
@@ -22,8 +23,8 @@ const selectOption = (optionText, container, queryByText, i = 0) => {
 
 describe("TimePicker", () => {
   describe("time selection", () => {
-    const onChange = jest.fn();
-    const onInputChange = jest.fn();
+    const onChange = vi.fn();
+    const onInputChange = vi.fn();
 
     it("returns the selected time when the selection has changed", () => {
       const { container, queryByText } = renderWithNDSProvider(
@@ -49,7 +50,7 @@ describe("TimePicker", () => {
 
     it("calls onBlur", () => {
       const labelText = "Expiry Time";
-      const onBlur = jest.fn();
+      const onBlur = vi.fn();
       const { container, getByTestId } = renderWithNDSProvider(
         <>
           <TimePicker onChange={onChange} onInputChange={onInputChange} onBlur={onBlur} labelText={labelText} />
@@ -61,7 +62,7 @@ describe("TimePicker", () => {
         target: { value },
       });
       fireEvent.click(container.querySelectorAll("button")[0]);
-      expect(getByTestId("select-input")).toHaveValue("8:00 PM");
+      expect(getByTestId("select-input").value).toBe("8:00 PM");
       expect(onBlur).toHaveBeenCalled();
     });
 
@@ -77,7 +78,7 @@ describe("TimePicker", () => {
         fireEvent.change(container.querySelectorAll("input")[0], {
           target: { value },
         });
-        expect(getByTestId(SELECTED_TEST_ID)).toContainHTML("3:15 PM");
+        expect(getByTestId(SELECTED_TEST_ID).innerHTML).toContain("3:15 PM");
       });
     });
 
@@ -93,7 +94,7 @@ describe("TimePicker", () => {
           target: { value },
         });
 
-        expect(getByTestId(CLOSEST_TEST_ID)).toContainHTML("3:00 PM");
+        expect(getByTestId(CLOSEST_TEST_ID).innerHTML).toContain("3:00 PM");
       });
       it("for 3:1", () => {
         const labelText = "Expiry Time";
@@ -105,7 +106,7 @@ describe("TimePicker", () => {
           target: { value },
         });
 
-        expect(getByTestId(CLOSEST_TEST_ID)).toContainHTML("3:15 AM");
+        expect(getByTestId(CLOSEST_TEST_ID).innerHTML).toContain("3:15 AM");
       });
       it("for 3:12p", () => {
         const labelText = "Expiry Time";
@@ -117,7 +118,7 @@ describe("TimePicker", () => {
           target: { value },
         });
 
-        expect(getByTestId(CLOSEST_TEST_ID)).toContainHTML("3:15 PM");
+        expect(getByTestId(CLOSEST_TEST_ID).innerHTML).toContain("3:15 PM");
       });
     });
   });

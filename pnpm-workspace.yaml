@@ -1,0 +1,9 @@
+onlyBuiltDependencies:
+  - "@swc/core"
+  - core-js
+  - core-js-pure
+  - cypress
+  - esbuild
+
+packages:
+  - .

@@ -2,7 +2,7 @@
 
 ![npm (scoped)](https://img.shields.io/npm/v/@nulogy/components.svg?style=flat-square)
 ![Build](https://img.shields.io/github/workflow/status/nulogy/design-system/Release?style=flat-square)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/nulogy/design-system/blob/master/CONTRIBUTING.md)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/nulogy/design-system/blob/main/CONTRIBUTING.md)
 
 > Built with React, components make it easy to create interfaces that conform to the principles of the Nulogy Design System.
 
@@ -40,20 +40,18 @@ Note that loading fonts from Google API is just an example and not the most perf
 
 Wrap your application in the NDSProvider component to access Nulogy's theme values and add typographic defaults.
 
-```js
+```jsx
 import React from "react";
 import { NDSProvider } from "@nulogy/components";
 
-class App extends React.Component {
-  render() {
-    return <NDSProvider>// your application</NDSProvider>;
-  }
+export default function App() {
+  return <NDSProvider>// your application</NDSProvider>;
 }
 ```
 
 ### 3. Import desired components
 
-```js
+```jsx
 import { Button } from "@nulogy/components";
 
 const SomeView = () => <Button>Click me</Button>;
@@ -62,7 +60,7 @@ const SomeView = () => <Button>Click me</Button>;
 ## ✨ Usage
 
 - See [nulogy.design](http://nulogy.design) for instructions on how best to use each component
-- See the [Storybook](https://master--5f60c6c285eaad0022dce67f.chromatic.com) for usage examples
+- See the [Storybook](https://main--5f60c6c285eaad0022dce67f.chromatic.com) for usage examples
 
 ## 🌎 Localization
 
@@ -88,7 +86,7 @@ If you encounter a bug, need a new component or new capability of an existing co
 
 ## 🙌 Contributing
 
-Please see [Contributing.MD](https://github.com/nulogy/design-system/blob/master/CONTRIBUTING.md) if you work at Nulogy and would like to contribute.
+Please see [Contributing.MD](https://github.com/nulogy/design-system/blob/main/CONTRIBUTING.md) if you work at Nulogy and would like to contribute.
 
 ## 💬 Questions
 

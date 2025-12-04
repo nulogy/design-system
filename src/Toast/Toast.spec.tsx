@@ -1,13 +1,14 @@
 import React from "react";
 import { fireEvent } from "@testing-library/react";
+import { describe, it, expect, vi } from "vitest";
 import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
 import { Toast } from ".";
 
 describe("Toast", () => {
   describe("callbacks", () => {
-    const onHideHandler = jest.fn();
-    const onShowHandler = jest.fn();
-    const onCloseHandler = jest.fn();
+    const onHideHandler = vi.fn();
+    const onShowHandler = vi.fn();
+    const onCloseHandler = vi.fn();
 
     it("calls onShow callback when triggered", () => {
       renderWithNDSProvider(

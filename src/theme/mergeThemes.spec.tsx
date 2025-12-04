@@ -1,3 +1,4 @@
+import { describe, it, expect } from "vitest";
 import { mergeThemes } from "./mergeThemes.util";
 import { legacy as NDSTheme } from "./theme";
 

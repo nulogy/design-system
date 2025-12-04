@@ -1,5 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
+import { describe, it, expect, beforeEach, afterEach } from "vitest";
 import useMediaQuery from ".";
 
 const defaultInnerWidth = 800;
@@ -30,7 +31,7 @@ describe("useMediaQuery", () => {
 
     it("should return false if window.matchMedia is not available", () => {
       render(<Component />);
-      expect(screen.getByText("false")).toBeInTheDocument();
+      expect(screen.getByText("false")).toBeTruthy();
     });
   });
 });

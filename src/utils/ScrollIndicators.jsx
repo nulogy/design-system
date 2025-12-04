@@ -1,7 +1,7 @@
 import React from "react";
-import { Icon } from "../Icon";
 import styled from "styled-components";
 import { position } from "styled-system";
+import { Icon } from "../Icon";
 
 const ScrollIndicatorWrapper = styled.div(
   ({ theme }) => ({

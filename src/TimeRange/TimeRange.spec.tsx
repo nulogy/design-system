@@ -1,5 +1,6 @@
 import React from "react";
 import { fireEvent } from "@testing-library/react";
+import { describe, it, expect, vi } from "vitest";
 
 import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
 import { TimeRange } from ".";
@@ -21,7 +22,7 @@ const selectTimeOption = (optionText, container, queryAllByText, i = 0) => {
 describe("TimeRange", () => {
   describe("range selection", () => {
     it("returns the selected range when the range changes", () => {
-      const onRangeChange = jest.fn();
+      const onRangeChange = vi.fn();
       const { container, queryAllByText } = renderWithNDSProvider(<TimeRange onRangeChange={onRangeChange} />);
       selectTimeOption("10:00 AM", container, queryAllByText);
       selectTimeOption("11:15 AM", container, queryAllByText, 1);
@@ -32,15 +33,15 @@ describe("TimeRange", () => {
       expect(latestCall.error).toBeUndefined();
     });
     it("shows an error if the range is invalid", () => {
-      const onRangeChange = jest.fn();
+      const onRangeChange = vi.fn();
       const { queryByText } = renderWithNDSProvider(
         <TimeRange onRangeChange={onRangeChange} defaultStartTime="12:00" defaultEndTime="05:00" />
       );
       expect(queryByText("end time is before start time")).not.toBeNull();
     });
     it("returns the start date when the start date changes", () => {
-      const onStartTimeChange = jest.fn();
-      const onEndTimeChange = jest.fn();
+      const onStartTimeChange = vi.fn();
+      const onEndTimeChange = vi.fn();
       const { container, queryAllByText } = renderWithNDSProvider(
         <TimeRange onStartTimeChange={onStartTimeChange} onEndTimeChange={onEndTimeChange} />
       );
@@ -51,8 +52,8 @@ describe("TimeRange", () => {
       expect(onEndTimeChange).not.toHaveBeenCalled();
     });
     it("returns the end time when the end time changes", () => {
-      const onStartTimeChange = jest.fn();
-      const onEndTimeChange = jest.fn();
+      const onStartTimeChange = vi.fn();
+      const onEndTimeChange = vi.fn();
       const { container, queryAllByText } = renderWithNDSProvider(
         <TimeRange onStartTimeChange={onStartTimeChange} onEndTimeChange={onEndTimeChange} />
       );

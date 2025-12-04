@@ -1,5 +1,5 @@
 import React from "react";
-import { boolean, text } from "@storybook/addon-knobs";
+import type { Meta, StoryObj } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { Box, DropdownButton, DropdownMenu, Button, Text, Flex } from "../..";
 import { getMockRows, mockColumns } from "../Table.mock-utils";
@@ -257,51 +257,96 @@ const rowDataWithSections = [
 
 export default {
   title: "Components/Table/Base",
+  component: Table,
+} satisfies Meta<typeof Table>;
+
+type Story = StoryObj<typeof Table>;
+
+export const WithData: Story = {
+  args: {
+    columns,
+    rows: rowData,
+    rowHovers: true,
+    compact: false,
+    loading: false,
+    className: "Table",
+  },
+  argTypes: {
+    rowHovers: {
+      control: { type: "boolean" },
+    },
+    compact: {
+      control: { type: "boolean" },
+    },
+    loading: {
+      control: { type: "boolean" },
+    },
+  },
 };
 
-export const WithData = () => (
-  <Table
-    columns={columns}
-    rows={rowData}
-    rowHovers={boolean("Show row hovers", true)}
-    compact={boolean("Show with compact styling", false)}
-    loading={boolean("Show loading state", false)}
-    className="Table"
-  />
-);
+export const WithNoData: Story = {
+  args: {
+    columns,
+    rows: [],
+    noRowsContent: undefined,
+    loading: false,
+  },
+  argTypes: {
+    noRowsContent: {
+      control: { type: "text" },
+    },
+    loading: {
+      control: { type: "boolean" },
+    },
+  },
+};
 
-export const WithNoData = () => (
-  <Table
-    columns={columns}
-    rows={[]}
-    noRowsContent={text("Custom text", undefined)}
-    loading={boolean("Show loading state", false)}
-  />
-);
+export const WithStickyHeader: Story = {
+  render: (args) => (
+    <Box mt="x4">
+      <Table
+        columns={columns}
+        rows={rowData}
+        rowHovers={args.rowHovers}
+        compact={args.compact}
+        loading={args.loading}
+        className="Table"
+        stickyHeader
+      />
+    </Box>
+  ),
+  args: {
+    rowHovers: true,
+    compact: false,
+    loading: false,
+  },
+  argTypes: {
+    rowHovers: {
+      control: { type: "boolean" },
+    },
+    compact: {
+      control: { type: "boolean" },
+    },
+    loading: {
+      control: { type: "boolean" },
+    },
+  },
+};
 
-export const WithStickyHeader = () => (
-  <Box mt="x4">
-    <Table
-      columns={columns}
-      rows={rowData}
-      rowHovers={boolean("Show row hovers", true)}
-      compact={boolean("Show with compact styling", false)}
-      loading={boolean("Show loading state", false)}
-      className="Table"
-      stickyHeader
-    />
-  </Box>
-);
-
-export const WithLotsOfRowsAndColumns = () => (
-  <Table
-    columns={mockColumns}
-    rows={getMockRows(50)}
-    hasSelectableRows
-    onRowSelectionChange={action("row selection changed")}
-    loading={boolean("Show loading state", false)}
-  />
-);
+export const WithLotsOfRowsAndColumns: Story = {
+  args: {
+    columns: mockColumns,
+    rows: getMockRows(50),
+    hasSelectableRows: true,
+    onRowSelectionChange: action("row selection changed"),
+    loading: false,
+  },
+  argTypes: {
+    loading: {
+      control: { type: "boolean" },
+    },
+  },
+};
 
 export const WithCustomColumnWidths = () => <Table columns={columnsWithWidths} rows={rowDataWithWidths} />;
 
@@ -355,74 +400,114 @@ export const WithMetadata = () => (
 
 export const WithFullWidthSection = () => <Table columns={columns} rows={rowDataWithSections} />;
 
-export const WithAFooter = () => (
-  <>
-    <Table
-      columns={columns}
-      keyField="date"
-      rows={rowData}
-      footerRows={footerRowData}
-      loading={boolean("Show loading state", false)}
-    />
-    <Table
-      compact
-      columns={columns}
-      keyField="date"
-      rows={compactRowData}
-      footerRows={footerRowData}
-      loading={boolean("Show loading state", false)}
-    />
-  </>
-);
+export const WithAFooter: Story = {
+  render: (args) => (
+    <>
+      <Table columns={columns} keyField="date" rows={rowData} footerRows={footerRowData} loading={args.loading} />
+      <Table
+        compact
+        columns={columns}
+        keyField="date"
+        rows={compactRowData}
+        footerRows={footerRowData}
+        loading={args.loading}
+      />
+    </>
+  ),
+  args: {
+    loading: false,
+  },
+  argTypes: {
+    loading: {
+      control: { type: "boolean" },
+    },
+  },
+};
 
-export const WithRowBorder = () => (
-  <Table
-    rowBorder={boolean("Show row border", true)}
-    columns={columns}
-    rows={rowData}
-    rowHovers={boolean("Show row hovers", true)}
-    compact={boolean("Show with compact styling", false)}
-    loading={boolean("Show loading state", false)}
-    className="Table"
-  />
-);
+export const WithRowBorder: Story = {
+  args: {
+    rowBorder: true,
+    columns,
+    rows: rowData,
+    rowHovers: true,
+    compact: false,
+    loading: false,
+    className: "Table",
+  },
+  argTypes: {
+    rowBorder: {
+      control: { type: "boolean" },
+    },
+    rowHovers: {
+      control: { type: "boolean" },
+    },
+    compact: {
+      control: { type: "boolean" },
+    },
+    loading: {
+      control: { type: "boolean" },
+    },
+  },
+};
 
-export const WithVerticalAlignment = () => (
-  <Table
-    rowBorder={boolean("Show row border", true)}
-    columns={[
-      { label: "Description", dataKey: "description", width: "50%" },
-      { label: "Expected Quantity", dataKey: "expectedQuantity" },
-      { label: "Actual Quantity", dataKey: "actualQuantity" },
-    ]}
-    rows={[
-      {
-        description:
-          "This whole row is top aligned. lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing",
-        expectedQuantity: "2,025 eaches",
-        verticalAlign: "top",
-        actualQuantity: "1,800 eaches",
-        id: "r1",
-      },
-      {
-        description:
-          "This whole row is middle aligned. lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing",
-        expectedQuantity: "2,475 eaches",
-        verticalAlign: "middle",
-        actualQuantity: "2,250 eaches",
-        id: "r2",
-      },
-      {
-        description:
-          "This whole row is bottom aligned. lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing",
-        expectedQuantity: "2,475 eaches",
-        verticalAlign: "bottom",
-        actualQuantity: "1,425 eaches",
-        id: "r3",
-      },
-    ]}
-    rowHovers={boolean("Show row hovers", true)}
-    compact={boolean("Show with compact styling", false)}
-    loading={boolean("Show loading state", false)}
-  />
-);
+export const WithVerticalAlignment: Story = {
+  render: (args) => (
+    <Table
+      rowBorder={args.rowBorder}
+      columns={[
+        { label: "Description", dataKey: "description", width: "50%" },
+        { label: "Expected Quantity", dataKey: "expectedQuantity" },
+        { label: "Actual Quantity", dataKey: "actualQuantity" },
+      ]}
+      rows={[
+        {
+          description:
+            "This whole row is top aligned. lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing",
+          expectedQuantity: "2,025 eaches",
+          verticalAlign: "top",
+          actualQuantity: "1,800 eaches",
+          id: "r1",
+        },
+        {
+          description:
+            "This whole row is middle aligned. lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing",
+          expectedQuantity: "2,475 eaches",
+          verticalAlign: "middle",
+          actualQuantity: "2,250 eaches",
+          id: "r2",
+        },
+        {
+          description:
+            "This whole row is bottom aligned. lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing",
+          expectedQuantity: "2,475 eaches",
+          verticalAlign: "bottom",
+          actualQuantity: "1,425 eaches",
+          id: "r3",
+        },
+      ]}
+      rowHovers={args.rowHovers}
+      compact={args.compact}
+      loading={args.loading}
+    />
+  ),
+  args: {
+    rowBorder: true,
+    rowHovers: true,
+    compact: false,
+    loading: false,
+  },
+  argTypes: {
+    rowBorder: {
+      control: { type: "boolean" },
+    },
+    rowHovers: {
+      control: { type: "boolean" },
+    },
+    compact: {
+      control: { type: "boolean" },
+    },
+    loading: {
+      control: { type: "boolean" },
+    },
+  },
+};

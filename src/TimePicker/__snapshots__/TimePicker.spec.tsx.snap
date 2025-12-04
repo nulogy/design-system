@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`gets time options returns an array of options every 15 min 1`] = `
+exports[`gets time options > returns an array of options every 15 min 1`] = `
 [
   {
     "label": "12:00 AM",
@@ -389,7 +389,7 @@ exports[`gets time options returns an array of options every 15 min 1`] = `
 ]
 `;
 
-exports[`gets time options returns an array of options within max 1`] = `
+exports[`gets time options > returns an array of options within max 1`] = `
 [
   {
     "label": "12:00 AM",
@@ -854,7 +854,7 @@ exports[`gets time options returns an array of options within max 1`] = `
 ]
 `;
 
-exports[`gets time options returns an array of options within min 1`] = `
+exports[`gets time options > returns an array of options within min 1`] = `
 [
   {
     "label": "9:00 AM",
@@ -1219,7 +1219,7 @@ exports[`gets time options returns an array of options within min 1`] = `
 ]
 `;
 
-exports[`gets time options returns an array of options within min and max 1`] = `
+exports[`gets time options > returns an array of options within min and max 1`] = `
 [
   {
     "label": "8:00 AM",

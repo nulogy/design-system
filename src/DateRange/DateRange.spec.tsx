@@ -1,5 +1,6 @@
 import React from "react";
 import { fireEvent } from "@testing-library/react";
+import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 
 import { resetDate, mockDate } from "../testing/mockUtils/mockDates";
 import "../testing/matchers/toMatchDate";
@@ -29,7 +30,7 @@ describe("DateRange", () => {
       resetDate();
     });
     it("returns the selected range when the range changes", () => {
-      const onRangeChange = jest.fn();
+      const onRangeChange = vi.fn();
       const { container, getByLabelText } = renderWithNDSProvider(<DateRange onRangeChange={onRangeChange} />);
       const startDateInput = getByLabelText("Select a start date");
       fireEvent.click(startDateInput);
@@ -44,7 +45,7 @@ describe("DateRange", () => {
       expect(latestCall.error).toBeUndefined();
     });
     it("returns the selected range when the time changes", () => {
-      const onRangeChange = jest.fn();
+      const onRangeChange = vi.fn();
       const { container, queryAllByText, getByLabelText } = renderWithNDSProvider(
         <DateRange onRangeChange={onRangeChange} showTimes />
       );
@@ -65,7 +66,7 @@ describe("DateRange", () => {
       expect(latestCall.error).toBeUndefined();
     });
     it("returns the selected range with an error if the range is invalid", () => {
-      const onRangeChange = jest.fn();
+      const onRangeChange = vi.fn();
       const { container, getByLabelText } = renderWithNDSProvider(<DateRange onRangeChange={onRangeChange} />);
       const startDateInput = getByLabelText("Select a start date");
       fireEvent.click(startDateInput);
@@ -86,7 +87,7 @@ describe("DateRange", () => {
         defaultStartDate.getMonth(),
         defaultStartDate.getDate() + 6
       );
-      const onRangeChange = jest.fn();
+      const onRangeChange = vi.fn();
       const { container, getByLabelText } = renderWithNDSProvider(
         <DateRange defaultStartDate={defaultStartDate} defaultEndDate={defaultEndDate} onRangeChange={onRangeChange} />
       );
@@ -99,7 +100,7 @@ describe("DateRange", () => {
       expect(latestCall.error).toBeUndefined();
     });
     it("returns the selected range with an error if the range is invalid based on time", () => {
-      const onRangeChange = jest.fn();
+      const onRangeChange = vi.fn();
       const { container, queryAllByText, getByLabelText } = renderWithNDSProvider(
         <DateRange showTimes onRangeChange={onRangeChange} />
       );
@@ -120,8 +121,8 @@ describe("DateRange", () => {
       expect(latestCall.error).toEqual("end time is before start time");
     });
     it("returns the start date when the start date changes", () => {
-      const onStartDateChange = jest.fn();
-      const onEndDateChange = jest.fn();
+      const onStartDateChange = vi.fn();
+      const onEndDateChange = vi.fn();
       const { container, getByLabelText } = renderWithNDSProvider(
         <DateRange onStartDateChange={onStartDateChange} onEndDateChange={onEndDateChange} />
       );
@@ -134,8 +135,8 @@ describe("DateRange", () => {
       expect(onEndDateChange).not.toHaveBeenCalled();
     });
     it("returns the end date when the end date changes", () => {
-      const onStartDateChange = jest.fn();
-      const onEndDateChange = jest.fn();
+      const onStartDateChange = vi.fn();
+      const onEndDateChange = vi.fn();
       const { container, getByLabelText } = renderWithNDSProvider(
         <DateRange onStartDateChange={onStartDateChange} onEndDateChange={onEndDateChange} />
       );

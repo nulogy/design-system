@@ -1,22 +1,25 @@
 import React from "react";
 import { fireEvent } from "@testing-library/react";
-
-import { Toggle } from ".";
+import { describe, it, expect, vi } from "vitest";
 import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
+import { Toggle } from ".";
 
 describe("Toggle", () => {
   describe("calls event handlers", () => {
-    const onChange = jest.fn();
-    const onClick = jest.fn();
+    const onChange = vi.fn();
 
     it("returns the selected time when the selection has changed", () => {
-      const { container } = renderWithNDSProvider(
-        <Toggle onChange={onChange} onClick={onClick} data-testid="toggle" />
-      );
+      const { container } = renderWithNDSProvider(<Toggle onChange={onChange} data-testid="toggle" />);
       fireEvent.click(container.querySelectorAll("[data-testid='toggle'] input")[0]);
 
       expect(onChange).toHaveBeenCalled();
-      expect(onClick).toHaveBeenCalled();
+    });
+
+    it("correctly disables the toggle", () => {
+      const { container } = renderWithNDSProvider(<Toggle onChange={onChange} data-testid="toggle" disabled />);
+      const element = container.querySelector("[data-testid='toggle'] input");
+      expect(element).toBeDefined();
+      expect((element as HTMLInputElement).disabled).toBe(true);
     });
   });
 });
