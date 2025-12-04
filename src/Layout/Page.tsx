@@ -4,9 +4,9 @@ import { Flex } from "../Flex";
 import { FlexProps } from "../Flex/Flex";
 import Header from "./Header";
 
-interface PageProps extends FlexProps {
+export interface PageProps extends Omit<FlexProps, "title"> {
   breadcrumbs?: ReactNode;
-  title?: string;
+  title?: ReactNode;
   children?: ReactNode;
   headerContent?: ReactNode;
   fullHeight?: boolean;
