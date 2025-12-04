@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Heading2, toast, Tooltip } from "../../..";
+import React, { useState, useEffect } from "react";
+import { Heading1, Heading2, toast, Tooltip } from "../../..";
 import {
   Box,
   Flex,
@@ -31,6 +31,7 @@ import {
   StatusIndicator,
   TruncatedText,
   Header,
+  AsyncSelect,
   Summary,
   SummaryDivider,
   DatePicker,
@@ -127,6 +128,19 @@ export const Default = () => {
   // PO status state
   const [poStatus, setPoStatus] = useState("At risk" as "Late" | "Completed" | "At risk" | "On time" | "Cancelled");
 
+  // POLI status state
+  const [poliStatus, setPoliStatus] = useState<"Open" | "Canceled" | "Completed">("Open");
+
+  // UOM view state - defaults based on user role
+  const [uomView, setUomView] = useState<"customer" | "supplier">(
+    userState.role === "supplier" ? "supplier" : "customer"
+  );
+
+  // Update UOM view when user role changes
+  useEffect(() => {
+    setUomView(userState.role === "supplier" ? "supplier" : "customer");
+  }, [userState.role]);
+
   // Acceptance modal state
   const [isAcceptanceModalOpen, setIsAcceptanceModalOpen] = useState(false);
   const [acceptanceOption, setAcceptanceOption] = useState<"without-flagging" | "with-flagging">("without-flagging");
@@ -140,6 +154,9 @@ export const Default = () => {
       needByDate: new Date("2025-02-15"),
       closeProductionNote: "Production completed successfully",
       carryOverSentTo: "",
+      priority: "High",
+      customerLotCode: "LOT-2024-001",
+      supplierLotCode: "SUP-LOT-001",
     },
     request: {
       quantity: "15,000",
@@ -312,171 +329,269 @@ export const Default = () => {
           </Breadcrumbs>
         )}
         title="12345678"
-        subtitle="12345678 – PR 24 SEPHORA ONLINE DELUXE OCT"
         renderActions={() => (
-          <Flex gap="x2" alignItems="center">
+          <Flex gap="x0_5" ml="x1" alignItems="center">
             <IconicButton icon="chatBubble" aria-label="Comments" onClick={() => openSidebar("comments")} />
-            <DropdownMenu>
-              <DropdownButton onClick={handleCancelPOLineItem}>Cancel PO line item</DropdownButton>
-            </DropdownMenu>
+            {userState.role === "customer" && (
+              <>
+                <VerticalDivider />
+                <DropdownMenu>
+                  <DropdownButton onClick={handleCancelPOLineItem}>Cancel PO line item</DropdownButton>
+                </DropdownMenu>
+              </>
+            )}
           </Flex>
         )}
-        renderSummary={() => (
-          <Summary breakpoint={120}>
-            <Flex flexDirection="column" alignItems="center" width="200px" justifyContent="center" pt="x0_5">
-              <Flex height="x2_5" alignItems="center" justifyContent="center">
-                {(productionComplete ||
-                  collaborationState.status === "accepted" ||
-                  acceptedItems.request ||
-                  acceptedItems.proposal) &&
-                acceptedItems.proposal &&
-                isFlagged ? (
-                  <Tooltip tooltip="With flagged acceptance">
-                    <StatusIndicator alignSelf="center" type="success">
-                      <Flex alignItems="center" gap="x0_25">
-                        Accepted
-                        <Icon icon="error" size="x1_75" color="white" mr="-6px" />
-                      </Flex>
+        renderSummary={() => {
+          if (poliStatus === "Canceled") {
+            return (
+              <Summary breakpoint={120}>
+                <Flex flexDirection="column" alignItems="center" width="200px" justifyContent="center" pt="x0_5">
+                  <Flex height="x2_5" alignItems="center" justifyContent="center">
+                    <StatusIndicator alignSelf="center" type="quiet">
+                      Canceled
                     </StatusIndicator>
-                  </Tooltip>
-                ) : (
-                  <StatusIndicator
-                    alignSelf="center"
-                    type={
-                      productionComplete ||
-                      collaborationState.status === "accepted" ||
-                      acceptedItems.request ||
-                      acceptedItems.proposal
-                        ? "success"
-                        : collaborationState.activeCardAuthorRole !== userState.role
-                          ? "warning"
-                          : "quiet"
+                  </Flex>
+                  <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
+                    On{" "}
+                    <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
+                      September 12, 2025
+                    </Text>
+                  </Text>
+                </Flex>
+              </Summary>
+            );
+          }
+
+          if (poliStatus === "Completed") {
+            return (
+              <Summary breakpoint={120}>
+                <Flex flexDirection="column" alignItems="center" width="200px" justifyContent="center" pt="x0_5">
+                  <Flex height="x2_5" alignItems="center" justifyContent="center">
+                    <StatusIndicator alignSelf="center" type="neutral">
+                      Completed
+                    </StatusIndicator>
+                  </Flex>
+                  <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
+                    On{" "}
+                    <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
+                      September 29, 2025
+                    </Text>
+                  </Text>
+                </Flex>
+                <SummaryDivider />
+                <Flex flexDirection="column" width="200px" justifyContent="center" pt="x0_5">
+                  <Tooltip
+                    tooltip={
+                      <Box>
+                        <Text fontSize="small" lineHeight="smallRelaxed">
+                          12,000 / 15,000 eaches
+                        </Text>
+                      </Box>
                     }
                   >
-                    {productionComplete ||
+                    <Flex height="x2_5" alignItems="center" justifyContent="center">
+                      <Box height="x1" width="100%" backgroundColor="blue" borderRadius="medium" />
+                    </Flex>
+                  </Tooltip>
+
+                  <Flex justifyContent="center">
+                    <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
+                      <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
+                        90%
+                      </Text>{" "}
+                      produced
+                    </Text>
+                  </Flex>
+                </Flex>
+              </Summary>
+            );
+          }
+
+          // Open - show current content
+          return (
+            <Summary breakpoint={120}>
+              <Flex flexDirection="column" alignItems="center" width="200px" justifyContent="center" pt="x0_5">
+                <Flex height="x2_5" alignItems="center" justifyContent="center">
+                  {(productionComplete ||
                     collaborationState.status === "accepted" ||
                     acceptedItems.request ||
-                    acceptedItems.proposal ? (
-                      "Accepted"
-                    ) : collaborationState.activeCardAuthorRole === userState.role ? (
-                      <TruncatedText fontSize="smaller" lineHeight="smallerText" fullWidth maxWidth="184px">
-                        {`Awaiting ${userState.role === "supplier" ? "customer" : "supplier"} response`}
-                      </TruncatedText>
-                    ) : (
-                      "Requires your response"
-                    )}
-                  </StatusIndicator>
-                )}
-              </Flex>
-              <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                For{" "}
-                <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
-                  2 days
-                </Text>
-              </Text>
-            </Flex>
-            <SummaryDivider />
-
-            <Flex flexDirection="column" width="200px" justifyContent="center" pt="x0_5">
-              <Tooltip
-                tooltip={
-                  <Box>
-                    <Text fontSize="small" lineHeight="smallRelaxed">
-                      12,000 / 15,000 eaches
-                    </Text>
-                  </Box>
-                }
-              >
-                <Flex height="x2_5" alignItems="center" justifyContent="center">
-                  <Box height="x1" width="100%" backgroundColor="blue" borderRadius="medium" />
+                    acceptedItems.proposal) &&
+                  acceptedItems.proposal &&
+                  isFlagged ? (
+                    <Tooltip tooltip="With flagged acceptance">
+                      <StatusIndicator alignSelf="center" type="success">
+                        <Flex alignItems="center" gap="x0_25">
+                          Accepted
+                          <Icon icon="error" size="x1_75" color="white" mr="-6px" />
+                        </Flex>
+                      </StatusIndicator>
+                    </Tooltip>
+                  ) : (
+                    <StatusIndicator
+                      alignSelf="center"
+                      type={
+                        productionComplete ||
+                        collaborationState.status === "accepted" ||
+                        acceptedItems.request ||
+                        acceptedItems.proposal
+                          ? "success"
+                          : collaborationState.activeCardAuthorRole !== userState.role
+                            ? "warning"
+                            : "quiet"
+                      }
+                    >
+                      {productionComplete ||
+                      collaborationState.status === "accepted" ||
+                      acceptedItems.request ||
+                      acceptedItems.proposal ? (
+                        "Accepted"
+                      ) : collaborationState.activeCardAuthorRole === userState.role ? (
+                        <TruncatedText fontSize="smaller" lineHeight="smallerText" fullWidth maxWidth="184px">
+                          {`Awaiting ${userState.role === "supplier" ? "customer" : "supplier"} response`}
+                        </TruncatedText>
+                      ) : (
+                        "Requires your response"
+                      )}
+                    </StatusIndicator>
+                  )}
                 </Flex>
-              </Tooltip>
-
-              <Flex justifyContent={productionComplete ? "space-between" : "center"}>
                 <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                  <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
-                    90%
-                  </Text>{" "}
-                  produced
+                  {(productionComplete ||
+                    collaborationState.status === "accepted" ||
+                    acceptedItems.request ||
+                    acceptedItems.proposal) ? (
+                    <>
+                      On{" "}
+                      <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
+                        September 24, 2025
+                      </Text>
+                    </>
+                  ) : (
+                    <>
+                      For{" "}
+                      <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
+                        2 days
+                      </Text>
+                    </>
+                  )}
                 </Text>
-
-                {productionComplete && (
-                  <StatusIndicator type="quiet">
-                    <Flex alignItems="center" gap="x0_5">
-                      Completed
-                      {isFlagged && <Icon icon="error" size="x2" color="white" />}
-                    </Flex>
-                  </StatusIndicator>
-                )}
               </Flex>
-            </Flex>
-            <SummaryDivider />
-            <Flex flexDirection="column" alignItems="center" width="200px" justifyContent="center" pt="x0_5">
-              {poStatus === "Late" && (
-                <>
+              <SummaryDivider />
+
+              <Flex flexDirection="column" width="200px" justifyContent="center" pt="x0_5">
+                <Tooltip
+                  tooltip={
+                    <Box>
+                      <Text fontSize="small" lineHeight="smallRelaxed">
+                        12,000 / 15,000 eaches
+                      </Text>
+                    </Box>
+                  }
+                >
                   <Flex height="x2_5" alignItems="center" justifyContent="center">
-                    <StatusIndicator type="danger">Late</StatusIndicator>
+                    <Box height="x1" width="100%" backgroundColor="blue" borderRadius="medium" />
                   </Flex>
+                </Tooltip>
+
+                <Flex justifyContent={productionComplete ? "space-between" : "center"}>
                   <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
                     <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
-                      7 days
+                      90%
                     </Text>{" "}
-                    past due date
+                    produced
                   </Text>
-                </>
-              )}
-              {poStatus === "At risk" && (
-                <>
-                  <Flex height="x2_5" alignItems="center" justifyContent="center">
-                    <StatusIndicator alignSelf="center" type="warning">
-                      At risk
+
+                  {productionComplete && (
+                    <StatusIndicator type="quiet">
+                      <Flex alignItems="center" gap="x0_5">
+                        Completed
+                        {isFlagged && <Icon icon="error" size="x2" color="white" />}
+                      </Flex>
                     </StatusIndicator>
-                  </Flex>
-                  <TruncatedText fullWidth fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                    Current milestone 5 days late, previous 10 days late.
-                  </TruncatedText>
-                </>
-              )}
-              {poStatus === "Completed" && (
-                <>
-                  <Flex height="x2_5" alignItems="center" justifyContent="center">
-                    <StatusIndicator alignSelf="center" type="quiet">
-                      Completed
-                    </StatusIndicator>
-                  </Flex>
-                  <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                    on January 24, 2025
-                  </Text>
-                </>
-              )}
-              {poStatus === "Cancelled" && (
-                <>
-                  <Flex height="x2_5" alignItems="center" justifyContent="center">
-                    <StatusIndicator alignSelf="center" type="quiet">
-                      Cancelled
-                    </StatusIndicator>
-                  </Flex>
-                  <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                    on February 22, 2025
-                  </Text>
-                </>
-              )}
-              {poStatus === "On time" && (
-                <>
-                  <Flex height="x2_5" alignItems="center" justifyContent="center">
-                    <StatusIndicator alignSelf="center" type="success">
-                      On time
-                    </StatusIndicator>
-                  </Flex>
-                  <TruncatedText fullWidth fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                    Previous milestone completed 2 days ahead of time. Current milestone 12 days till due date.
-                  </TruncatedText>
-                </>
-              )}
-            </Flex>
-          </Summary>
-        )}
-      />
+                  )}
+                </Flex>
+              </Flex>
+              <SummaryDivider />
+              <Flex flexDirection="column" alignItems="center" width="200px" justifyContent="center" pt="x0_5">
+                {poStatus === "Late" && (
+                  <>
+                    <Flex height="x2_5" alignItems="center" justifyContent="center">
+                      <StatusIndicator type="danger">Late</StatusIndicator>
+                    </Flex>
+                    <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
+                      <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">Production done</Text> milestone
+                    </Text>
+                  </>
+                )}
+                {poStatus === "At risk" && (
+                  <>
+                    <Flex height="x2_5" alignItems="center" justifyContent="center">
+                      <StatusIndicator alignSelf="center" type="warning">
+                        At risk
+                      </StatusIndicator>
+                    </Flex>
+                    <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
+                      <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">Production done</Text> milestone
+                    </Text>
+                  </>
+                )}
+                {poStatus === "Completed" && (
+                  <>
+                    <Flex height="x2_5" alignItems="center" justifyContent="center">
+                      <StatusIndicator alignSelf="center" type="quiet">
+                        Completed
+                      </StatusIndicator>
+                    </Flex>
+                    <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
+                      on January 24, 2025
+                    </Text>
+                  </>
+                )}
+                {poStatus === "Cancelled" && (
+                  <>
+                    <Flex height="x2_5" alignItems="center" justifyContent="center">
+                      <StatusIndicator alignSelf="center" type="quiet">
+                        Cancelled
+                      </StatusIndicator>
+                    </Flex>
+                    <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
+                      on February 22, 2025
+                    </Text>
+                  </>
+                )}
+                {poStatus === "On time" && (
+                  <>
+                    <Flex height="x2_5" alignItems="center" justifyContent="center">
+                      <StatusIndicator alignSelf="center" type="success">
+                        On time
+                      </StatusIndicator>
+                    </Flex>
+                    <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
+                      <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">Production done</Text> milestone
+                    </Text>
+                  </>
+                )}
+              </Flex>
+            </Summary>
+          );
+        }}
+      >
+        <Flex alignItems="flex-end" gap="x2" mt="x1" ml="-4px">
+          <StatusIndicator
+            type={
+              poliStatus === "Completed" || poliStatus === "Canceled"
+                ? "neutral"
+                : "quiet"
+            }
+          >
+            {poliStatus}
+          </StatusIndicator>
+          <Text pl="x2" borderLeft="1px solid" borderColor="grey">
+            12345678 – PR 24 SEPHORA ONLINE DELUXE OCT
+          </Text>
+        </Flex>
+      </Header>
       <Page>
         {/* Action bar above details */}
         <Flex justifyContent="flex-end" alignItems="center" gap="x2" mb="x3">
@@ -508,6 +623,22 @@ export const Default = () => {
               </DescriptionTerm>
               <DescriptionDetails>
                 <Text>{formData.edit.supplierPOLineItemNumber || "-"}</Text>
+              </DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
+                <Text color="darkGrey">Status</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>
+                <StatusIndicator
+                  type={
+                    poliStatus === "Completed" || poliStatus === "Canceled"
+                      ? "neutral"
+                      : "quiet"
+                  }
+                >
+                  {poliStatus}
+                </StatusIndicator>
               </DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
@@ -608,7 +739,7 @@ export const Default = () => {
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
-                <Text color="darkGrey">Needed by</Text>
+                <Text color="darkGrey">Need by date</Text>
               </DescriptionTerm>
               <DescriptionDetails>
                 <Text>
@@ -646,7 +777,18 @@ export const Default = () => {
         </Box>
         <Tabs selectedIndex={selectedIndex} onTabClick={(e, index) => setSelectedIndex(index)}>
           <Tab label="Collaboration">
-            <Card p="x1" mt="x3" mx="auto" minWidth="696px" maxWidth="1126px">
+            <Flex flexDirection="column" alignItems="flex-end" mt="x2">
+              <Box mb="x2">
+                <Switcher
+                  selected={uomView}
+                  onChange={(value) => setUomView(value as "customer" | "supplier")}
+                >
+                  <Switch value="customer">Customer's UOM</Switch>
+                  <Switch value="supplier">Supplier's UOM</Switch>
+                </Switcher>
+              </Box>
+            </Flex>
+            <Card p="x1" mt="x0" mx="auto" minWidth="696px" maxWidth="1126px">
               <Flex flexDirection="column" gap="x2">
                 {/* Requested production vs Supplier's proposal comparison */}
                 <Flex gap="x3" p="x2" pb="0">
@@ -814,11 +956,18 @@ export const Default = () => {
                           </Box>
                           <Box width="100%">
                             <Input
-                              value={formData.request.unitPrice}
+                              value={
+                                uomView === "supplier"
+                                  ? (parseFloat(formData.request.unitPrice) * 20).toFixed(2)
+                                  : formData.request.unitPrice
+                              }
                               onChange={(e) =>
                                 setFormData((prev) => ({
                                   ...prev,
-                                  request: { ...prev.request, unitPrice: e.target.value },
+                                  request: {
+                                    ...prev.request,
+                                    unitPrice: uomView === "supplier" ? (parseFloat(e.target.value) / 20).toFixed(2) : e.target.value,
+                                  },
                                 }))
                               }
                               placeholder="1"
@@ -843,11 +992,17 @@ export const Default = () => {
                       ) : (
                         <>
                           <Text my="x1">
-                            {formData.request.quantity} {formData.request.unit}
+                            {uomView === "supplier"
+                              ? `${(parseFloat(formData.request.quantity.replace(/,/g, "")) / 20).toLocaleString()}`
+                              : formData.request.quantity}{" "}
+                            {uomView === "supplier" ? "cases" : "eaches"}
                           </Text>
                           <Text my="x1">{formData.request.productionDueDate}</Text>
                           <Text my="x1">
-                            {formData.request.unitPrice} {formData.request.currency}
+                            {uomView === "supplier"
+                              ? (parseFloat(formData.request.unitPrice) * 20).toFixed(2)
+                              : formData.request.unitPrice}{" "}
+                            {formData.request.currency}
                           </Text>
                           <Text my="x1" height="x3"></Text>
                           <Text my="x1" minHeight="96px">
@@ -971,12 +1126,9 @@ export const Default = () => {
 
                               <Select
                                 options={[
-                                  { value: "square yards", label: "square yards" },
-                                  { value: "pieces", label: "pieces" },
-                                  { value: "meters", label: "meters" },
-                                  { value: "pounds", label: "pounds" },
+                                  { value: uomView === "supplier" ? "cases" : "eaches", label: uomView === "supplier" ? "cases" : "eaches" },
                                 ]}
-                                value={formData.proposal.unit}
+                                value={uomView === "supplier" ? "cases" : "eaches"}
                                 onChange={(option) =>
                                   setFormData((prev) => ({
                                     ...prev,
@@ -986,6 +1138,7 @@ export const Default = () => {
                                 width="100%"
                                 minWidth="100px"
                                 maxWidth="160px"
+                                disabled
                               />
                             </Flex>
                           ) : (
@@ -999,7 +1152,7 @@ export const Default = () => {
                                   }))
                                 }
                                 placeholder="1"
-                                suffix={formData.proposal.unit}
+                                suffix={uomView === "supplier" ? "cases" : "eaches"}
                                 suffixWidth="160px"
                               />
                             </Box>
@@ -1019,11 +1172,18 @@ export const Default = () => {
                           </Box>
                           <Box width="100%">
                             <Input
-                              value={formData.proposal.unitPrice}
+                              value={
+                                uomView === "supplier"
+                                  ? (parseFloat(formData.proposal.unitPrice) * 20).toFixed(2)
+                                  : formData.proposal.unitPrice
+                              }
                               onChange={(e) =>
                                 setFormData((prev) => ({
                                   ...prev,
-                                  proposal: { ...prev.proposal, unitPrice: e.target.value },
+                                  proposal: {
+                                    ...prev.proposal,
+                                    unitPrice: uomView === "supplier" ? (parseFloat(e.target.value) / 20).toFixed(2) : e.target.value,
+                                  },
                                 }))
                               }
                               placeholder="1"
@@ -1068,11 +1228,17 @@ export const Default = () => {
                       ) : supplierProposalMade ? (
                         <>
                           <Text my="x1">
-                            {formData.proposal.quantity} {formData.proposal.unit}
+                            {uomView === "supplier"
+                              ? `${(parseFloat(formData.proposal.quantity.replace(/,/g, "")) / 20).toLocaleString()}`
+                              : formData.proposal.quantity}{" "}
+                            {uomView === "supplier" ? "cases" : "eaches"}
                           </Text>
                           <Text my="x1">{formData.proposal.productionDueDate}</Text>
                           <Text my="x1">
-                            {formData.proposal.unitPrice} {formData.proposal.currency}
+                            {uomView === "supplier"
+                              ? (parseFloat(formData.proposal.unitPrice) * 20).toFixed(2)
+                              : formData.proposal.unitPrice}{" "}
+                            {formData.proposal.currency}
                           </Text>
                           <Text my="x1">{formData.proposal.reason || "-"}</Text>
                           <Text my="x1">{formData.proposal.note}</Text>
@@ -1219,6 +1385,24 @@ export const Default = () => {
               />
             </Flex>
             <VerticalDivider />
+            <Flex gap="x1" justifyContent="center" alignItems="center">
+              <Text fontSize="small" color="midGrey" width="100px" textAlign="right">
+                POLI status:
+              </Text>
+              <Select
+                options={[
+                  { value: "Open", label: "Open" },
+                  { value: "Canceled", label: "Canceled" },
+                  { value: "Completed", label: "Completed" },
+                ]}
+                value={poliStatus}
+                onChange={(option) => setPoliStatus(option as "Open" | "Canceled" | "Completed")}
+                placeholder="Select POLI status"
+                menuPlacement="top"
+                width="160px"
+              />
+            </Flex>
+            <VerticalDivider />
             <Flex gap="x1" justifyContent="center" alignItems="center" width="200px">
               <Checkbox
                 id="productionComplete"
@@ -1260,6 +1444,12 @@ export const Default = () => {
         }
       >
         <Flex flexDirection="column" gap="x3" py="x1">
+          {/* PO number - disabled */}
+          <Input labelText="PO number" id="poNumber" value="PO-00000004" disabled />
+
+          {/* Customer's PO line item number - disabled */}
+          <Input labelText="Customer's PO line item number" id="customerPOLineItemNumber" value="POLI-001" disabled />
+
           {/* Supplier's PO line item number - editable only by supplier */}
           {userState.role === "supplier" && (
             <Input
@@ -1272,48 +1462,108 @@ export const Default = () => {
             />
           )}
 
-          {/* BOM revision and release date - editable */}
+          {/* Created on - disabled */}
+          <Input labelText="Created on" id="createdOn" value="February 1, 2025" disabled />
+
+          {/* Customer / Supplier - disabled */}
           <Input
-            labelText="BOM revision and release date - Use fancy 2 row select"
-            id="bomRevision"
-            autoFocus
-            value={formData.edit.bomRevision}
-            onChange={(e) => setFormData((prev) => ({ ...prev, edit: { ...prev.edit, bomRevision: e.target.value } }))}
+            labelText={userState.role === "customer" ? "Customer" : "Supplier"}
+            id="customerSupplier"
+            value="Claudia Supplier"
+            disabled
           />
 
-          {/* Need by date - editable only by customer */}
+          {/* Customer's item code and description - disabled */}
+          <Input
+            labelText="Customer's item code and description"
+            id="customerItemCode"
+            value="TEST_ITEM_OPT_2 - this is the description of the item 2"
+            disabled
+          />
+
+          {/* Supplier's item code - disabled */}
+          <Input labelText="Supplier's item code" id="supplierItemCode" value="SUP-ITEM-001" disabled />
+
+          {/* Tags - disabled */}
+          <Input labelText="Tags" id="tags" value="" disabled />
+
+          {/* Priority - editable only by customer */}
           {userState.role === "customer" && (
-            <Flex flexDirection="column" gap="x1">
-              <FieldLabel htmlFor="needByDate" labelText="Need by date" />
-              <Box>
-                <DatePicker
-                  id="needByDate"
-                  selected={formData.edit.needByDate}
-                  onChange={(date) => setFormData((prev) => ({ ...prev, edit: { ...prev.edit, needByDate: date } }))}
-                />
-              </Box>
-            </Flex>
+            <Select
+              labelText="Priority"
+              id="priority"
+              value={formData.edit.priority}
+              onChange={(value) => setFormData((prev) => ({ ...prev, edit: { ...prev.edit, priority: value as string } }))}
+              options={[
+                { value: "Low", label: "Low" },
+                { value: "Medium", label: "Medium" },
+                { value: "High", label: "High" },
+                { value: "Urgent", label: "Urgent" },
+              ]}
+            />
           )}
 
-          {/* Assigned tags checkbox group - editable only by customer */}
+          {/* Customer's lot code - editable only by customer */}
           {userState.role === "customer" && (
-            <CheckboxGroup
-              labelText="Assigned tags"
-              name="assignedTags"
-              checkedValue={[
-                ...(assignedTags.validatedForAssembly ? ["validatedForAssembly"] : []),
-                ...(assignedTags.expressShipment ? ["expressShipment"] : []),
-              ]}
-              onChange={(values) => {
-                setAssignedTags({
-                  validatedForAssembly: values.includes("validatedForAssembly"),
-                  expressShipment: values.includes("expressShipment"),
-                });
-              }}
-            >
-              <Checkbox value="validatedForAssembly" labelText="Validated for assembly" />
-              <Checkbox value="expressShipment" labelText="Express shipment" />
-            </CheckboxGroup>
+            <Input
+              labelText="Customer's lot code"
+              id="customerLotCode"
+              value={formData.edit.customerLotCode}
+              onChange={(e) => setFormData((prev) => ({ ...prev, edit: { ...prev.edit, customerLotCode: e.target.value } }))}
+            />
+          )}
+
+          {/* Supplier's lot code - editable only by supplier */}
+          {userState.role === "supplier" && (
+            <Input
+              labelText="Supplier's lot code"
+              id="supplierLotCode"
+              value={formData.edit.supplierLotCode}
+              onChange={(e) => setFormData((prev) => ({ ...prev, edit: { ...prev.edit, supplierLotCode: e.target.value } }))}
+            />
+          )}
+
+          {/* BOM revision and release date - editable by supplier and customer */}
+          <AsyncSelect
+            labelText="BOM revision and release date"
+            placeholder="Start typing"
+            loadOptions={loadOptions}
+            value={formData.edit.bomRevision}
+            onChange={(value) => setFormData((prev) => ({ ...prev, edit: { ...prev.edit, bomRevision: value as string } }))}
+          />
+
+          {/* Ship to - disabled */}
+          <Input labelText="Ship to" id="shipTo" value="Warehouse A - 123 Main St, City, State 12345" disabled />
+
+          {/* Need by date - disabled */}
+          <Input
+            labelText="Need by date"
+            id="needByDateDisplay"
+            value={
+              formData.edit.needByDate
+                ? new Date(formData.edit.needByDate).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })
+                : "-"
+            }
+            disabled
+          />
+
+          {/* Close production note - disabled, shown only if production complete */}
+          {productionComplete && (
+            <Input
+              labelText="Close production note"
+              id="closeProductionNote"
+              value={formData.edit.closeProductionNote || "-"}
+              disabled
+            />
+          )}
+
+          {/* Carry over sent to - disabled, shown only if production complete */}
+          {productionComplete && (
+            <Input labelText="Carry over sent to" id="carryOverSentTo" value={formData.edit.carryOverSentTo || "-"} disabled />
           )}
         </Flex>
       </Sidebar>
@@ -1337,7 +1587,7 @@ export const Default = () => {
               <Radio
                 name="acceptance-option"
                 value="without-flagging"
-                labelText="With standard acceptance"
+                labelText="With standard acceptance / Accept and reconcile / Accept with reconciliation"
                 checked={acceptanceOption === "without-flagging"}
                 onChange={() => setAcceptanceOption("without-flagging")}
               />
@@ -1350,7 +1600,7 @@ export const Default = () => {
               <Radio
                 name="acceptance-option"
                 value="with-flagging"
-                labelText="With flagged acceptance"
+                labelText="With flagged acceptence / Accept and retain requested / Accept without reconciliation"
                 checked={acceptanceOption === "with-flagging"}
                 onChange={() => setAcceptanceOption("with-flagging")}
               />
@@ -1446,6 +1696,9 @@ export const V2 = () => {
 
   // PO status state
   const [poStatus, setPoStatus] = useState("At risk" as "Late" | "Completed" | "At risk" | "On time" | "Cancelled");
+
+  // POLI status state
+  const [poliStatus, setPoliStatus] = useState<"Open" | "Canceled" | "Completed">("Open");
 
   // Acceptance modal state
   const [isAcceptanceModalOpen, setIsAcceptanceModalOpen] = useState(false);
@@ -1660,9 +1913,9 @@ export const V2 = () => {
                 </StatusIndicator>
               )}
               <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                For{" "}
+                On{" "}
                 <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
-                  2 days
+                  September 24, 2025
                 </Text>
               </Text>
             </Flex>
@@ -1792,6 +2045,22 @@ export const V2 = () => {
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
+                <Text color="darkGrey">Status</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>
+                <StatusIndicator
+                  type={
+                    poliStatus === "Completed" || poliStatus === "Canceled"
+                      ? "neutral"
+                      : "quiet"
+                  }
+                >
+                  {poliStatus}
+                </StatusIndicator>
+              </DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
                 <Text color="darkGrey">Created on</Text>
               </DescriptionTerm>
               <DescriptionDetails>
@@ -1888,7 +2157,7 @@ export const V2 = () => {
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
-                <Text color="darkGrey">Needed by</Text>
+                <Text color="darkGrey">Need by date</Text>
               </DescriptionTerm>
               <DescriptionDetails>
                 <Text>
@@ -3024,6 +3293,9 @@ export const V3 = () => {
   // PO status state
   const [poStatus, setPoStatus] = useState("At risk" as "Late" | "Completed" | "At risk" | "On time" | "Cancelled");
 
+  // POLI status state
+  const [poliStatus, setPoliStatus] = useState<"Open" | "Canceled" | "Completed">("Open");
+
   // Acceptance modal state
   const [isAcceptanceModalOpen, setIsAcceptanceModalOpen] = useState(false);
   const [acceptanceOption, setAcceptanceOption] = useState<"without-flagging" | "with-flagging">("without-flagging");
@@ -3237,9 +3509,9 @@ export const V3 = () => {
                 </StatusIndicator>
               )}
               <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                For{" "}
+                On{" "}
                 <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
-                  2 days
+                  September 24, 2025
                 </Text>
               </Text>
             </Flex>
@@ -3369,6 +3641,22 @@ export const V3 = () => {
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
+                <Text color="darkGrey">Status</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>
+                <StatusIndicator
+                  type={
+                    poliStatus === "Completed" || poliStatus === "Canceled"
+                      ? "neutral"
+                      : "quiet"
+                  }
+                >
+                  {poliStatus}
+                </StatusIndicator>
+              </DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
                 <Text color="darkGrey">Created on</Text>
               </DescriptionTerm>
               <DescriptionDetails>
@@ -3465,7 +3753,7 @@ export const V3 = () => {
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
-                <Text color="darkGrey">Needed by</Text>
+                <Text color="darkGrey">Need by date</Text>
               </DescriptionTerm>
               <DescriptionDetails>
                 <Text>
