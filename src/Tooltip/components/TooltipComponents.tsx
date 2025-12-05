@@ -167,8 +167,7 @@ const StyledArrow = styled(TooltipPrimitive.Arrow)(({ theme }) => ({
 }));
 
 interface StyledTooltipContentProps
-  extends React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Content>,
-    MaxWidthProps {
+  extends React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Content>, MaxWidthProps {
   children?: React.ReactNode;
 }
 

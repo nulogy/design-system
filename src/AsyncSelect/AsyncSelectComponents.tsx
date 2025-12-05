@@ -17,8 +17,11 @@ import type { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import { StyledOption } from "../Select/SelectOption";
 import { InputIcon } from "../Icon/Icon";
 
-interface CustomSelectProps<Option, IsMulti extends boolean, Group extends GroupBase<Option>>
-  extends Props<Option, IsMulti, Group> {
+interface CustomSelectProps<Option, IsMulti extends boolean, Group extends GroupBase<Option>> extends Props<
+  Option,
+  IsMulti,
+  Group
+> {
   iconLeft?: IconName | "loading";
 }
 

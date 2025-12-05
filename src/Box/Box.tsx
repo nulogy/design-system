@@ -10,7 +10,8 @@ export interface BoxProps extends StyledProps, ComponentPropsWithRef<"div"> {
 const Box = styled.div<BoxProps>(addStyledProps);
 
 export interface AnimatedBoxProps
-  extends MotionProps,
+  extends
+    MotionProps,
     Omit<BoxProps, "onAnimationStart" | "onDrag" | "onDragStart" | "onDragEnd" | "style" | "transition"> {}
 
 export const AnimatedBox = styled(motion.div)<AnimatedBoxProps>(addStyledProps);

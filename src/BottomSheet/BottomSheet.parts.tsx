@@ -70,13 +70,7 @@ function OverlayPart({ closeOnClick, children, ...props }: OverlayPartProps) {
 }
 
 interface SheetPartProps
-  extends DialogContentProps,
-    WidthProps,
-    MaxWidthProps,
-    HeightProps,
-    MaxHeightProps,
-    SpaceProps,
-    LayoutProps {
+  extends DialogContentProps, WidthProps, MaxWidthProps, HeightProps, MaxHeightProps, SpaceProps, LayoutProps {
   children: React.ReactNode;
   "aria-label": string;
 }

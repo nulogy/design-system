@@ -23,7 +23,8 @@ const Overlay = styled(motion(ReachDialogOverlay))(({ theme }) => ({
 }));
 
 interface SheetProps
-  extends DialogContentProps,
+  extends
+    DialogContentProps,
     AnimationProps,
     WidthProps,
     MaxWidthProps,
