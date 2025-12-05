@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useTheme } from "styled-components";
 import { Heading1, Heading2, toast, Tooltip } from "../../..";
 import {
   Box,
@@ -76,6 +77,7 @@ const loadOptions = (inputValue, callback) => {
 };
 
 export const Default = () => {
+  const theme = useTheme();
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   // Sidebar state
@@ -95,8 +97,8 @@ export const Default = () => {
     role: "supplier" as "supplier" | "customer",
   });
 
-  // Production complete state
-  const [productionComplete, setProductionComplete] = useState(false);
+  // Production status state
+  const [productionStatus, setProductionStatus] = useState<"Not started" | "In progress" | "Completed">("Not started");
 
   // Supplier's proposal made state
   const [supplierProposalMade, setSupplierProposalMade] = useState(true);
@@ -125,8 +127,8 @@ export const Default = () => {
     expressShipment: false,
   });
 
-  // PO status state
-  const [poStatus, setPoStatus] = useState("At risk" as "Late" | "Completed" | "At risk" | "On time" | "Cancelled");
+  // Milestone status state
+  const [poStatus, setPoStatus] = useState("At risk" as "Late" | "At risk" | "On time");
 
   // POLI status state
   const [poliStatus, setPoliStatus] = useState<"Open" | "Canceled" | "Completed">("Open");
@@ -139,12 +141,21 @@ export const Default = () => {
   // Update UOM view when user role changes
   useEffect(() => {
     setUomView(userState.role === "supplier" ? "supplier" : "customer");
+    // Update proposal unit default based on user role
+    setFormData((prev) => ({
+      ...prev,
+      proposal: {
+        ...prev.proposal,
+        unit: userState.role === "supplier" ? "cases" : "eaches",
+      },
+    }));
   }, [userState.role]);
 
   // Acceptance modal state
   const [isAcceptanceModalOpen, setIsAcceptanceModalOpen] = useState(false);
   const [acceptanceOption, setAcceptanceOption] = useState<"without-flagging" | "with-flagging">("without-flagging");
   const [isFlagged, setIsFlagged] = useState(false);
+  const [isReconciled, setIsReconciled] = useState<boolean | null>(null); // null = not accepted yet, true = reconciled, false = not reconciled
 
   // Form data
   const [formData, setFormData] = useState({
@@ -152,7 +163,7 @@ export const Default = () => {
       supplierPOLineItemNumber: "SPLI-001",
       bomRevision: "Rev 1.2 – 2025-Jan-10",
       needByDate: new Date("2025-02-15"),
-      closeProductionNote: "Production completed successfully",
+      closeProductionNote: "Production completed",
       carryOverSentTo: "",
       priority: "High",
       customerLotCode: "LOT-2024-001",
@@ -169,7 +180,7 @@ export const Default = () => {
     },
     proposal: {
       quantity: "15,500",
-      unit: "eaches",
+      unit: "cases",
       productionDueDate: "2025-Feb-28",
       unitPrice: "12.50",
       currency: "USD",
@@ -194,7 +205,7 @@ export const Default = () => {
       showAcceptedCard: true,
     }));
     toast.success(
-      `${collaborationState.activeCardAuthorRole === "customer" ? "Request" : "Proposal"} accepted successfully`
+      `${collaborationState.activeCardAuthorRole === "customer" ? "Request" : "Proposal"} accepted`
     );
   };
 
@@ -207,12 +218,12 @@ export const Default = () => {
       activeCardAuthorRole: userState.role,
     }));
     setSidebarState((prev) => ({ ...prev, newProposal: false }));
-    toast.success(`${userState.role === "supplier" ? "Proposal" : "Request"} submitted successfully`);
+    toast.success(`${userState.role === "supplier" ? "Proposal" : "Request"} submitted`);
   };
 
   const acceptCustomerRequest = () => {
     setAcceptedItems((prev) => ({ ...prev, request: true }));
-    toast.success("Request accepted successfully");
+    toast.success("Request accepted");
   };
 
   const acceptSupplierProposal = () => {
@@ -231,10 +242,12 @@ export const Default = () => {
           quantity: prev.proposal.quantity,
         },
       }));
-      toast.success("Proposal accepted successfully");
+      setIsReconciled(true); // Request reconciled
+      toast.success("Proposal accepted");
     } else {
       // Keep original quantity but add flag
       setIsFlagged(true);
+      setIsReconciled(false); // Request not reconciled
       toast.success("Proposal accepted with flagging");
     }
 
@@ -253,24 +266,59 @@ export const Default = () => {
       request: { ...formData.request },
       proposal: { ...formData.proposal },
     });
+    // Update unit based on UOM view when entering edit mode for proposal
+    if (mode === "proposal") {
+      const newUnit = uomView === "supplier" ? "cases" : "eaches";
+      // Stored quantity is always in eaches, convert based on UOM view
+      const currentQuantityInEaches = parseFloat(formData.proposal.quantity.replace(/,/g, "")) || 0;
+      
+      let newQuantity = currentQuantityInEaches;
+      // Convert quantity to match UOM view
+      if (uomView === "supplier") {
+        // Convert eaches to cases: divide by 20
+        newQuantity = currentQuantityInEaches / 20;
+      }
+      // If customer UOM view, keep as eaches (no conversion needed)
+      
+      setFormData((prev) => ({
+        ...prev,
+        proposal: {
+          ...prev.proposal,
+          unit: newUnit,
+          quantity: newQuantity.toLocaleString("en-US"),
+        },
+      }));
+    }
   };
 
   // Function to submit updated proposal or request
   const submitUpdate = (mode: "request" | "proposal") => {
     exitEditMode();
 
-    // Always reset acceptance status for the item being updated
+    // Reset ALL acceptance status when either is updated (updating invalidates previous acceptances)
+    setAcceptedItems({ request: false, proposal: false });
+    
     if (mode === "request") {
-      setAcceptedItems((prev) => ({ ...prev, request: false }));
       // Customer updated their request, now awaiting supplier's response
-      setCollaborationState((prev) => ({ ...prev, activeCardAuthorRole: "customer" }));
+      setCollaborationState((prev) => ({ 
+        ...prev, 
+        activeCardAuthorRole: "customer",
+        status: "awaiting"
+      }));
     } else if (mode === "proposal") {
-      setAcceptedItems((prev) => ({ ...prev, proposal: false }));
       // Supplier updated their proposal, now awaiting customer's response
-      setCollaborationState((prev) => ({ ...prev, activeCardAuthorRole: "supplier" }));
+      setCollaborationState((prev) => ({ 
+        ...prev, 
+        activeCardAuthorRole: "supplier",
+        status: "awaiting"
+      }));
     }
+    
+    // Reset reconciliation and flagged status
+    setIsReconciled(null);
+    setIsFlagged(false);
 
-    toast.success(`${mode === "request" ? "Request" : "Proposal"} updated successfully`);
+    toast.success(`${mode === "request" ? "Request" : "Proposal"} updated`);
   };
 
   // Function to check if form has changes
@@ -293,13 +341,21 @@ export const Default = () => {
 
   // Function to exit edit mode
   const exitEditMode = () => {
+    // Restore original form values when canceling
+    if (originalFormValues) {
+      setFormData({
+        request: { ...originalFormValues.request },
+        proposal: { ...originalFormValues.proposal },
+        edit: formData.edit, // Keep edit form data unchanged
+      });
+    }
     setEditMode(null);
     setOriginalFormValues(null);
   };
 
   // Function to handle cancel PO line item
   const handleCancelPOLineItem = () => {
-    toast.success("PO line item cancelled successfully");
+    toast.success("PO line item cancelled");
   };
 
   return (
@@ -331,55 +387,40 @@ export const Default = () => {
         title="12345678"
         renderActions={() => (
           <Flex gap="x0_5" ml="x1" alignItems="center">
-            <IconicButton icon="chatBubble" aria-label="Comments" onClick={() => openSidebar("comments")} />
-            {userState.role === "customer" && (
-              <>
-                <VerticalDivider />
-                <DropdownMenu>
-                  <DropdownButton onClick={handleCancelPOLineItem}>Cancel PO line item</DropdownButton>
-                </DropdownMenu>
-              </>
-            )}
+            <Box display="flex" alignItems="center" position="relative">
+              <IconicButton icon="chatBubble" labelHidden tooltip="Comments (6)" onClick={() => openSidebar("comments")}>
+                Comments (6)
+              </IconicButton>
+              <Box
+                position="absolute"
+                right="x0_5"
+                top="x1"
+                width="8px"
+                height="8px"
+                borderRadius="50%"
+                backgroundColor={theme.colors.blue}
+                style={{
+                  outline: `3px solid ${theme.colors.whiteGrey}`,
+                  outlineOffset: "0px",
+                }}
+              />
+            </Box>
+            {userState.role === "customer" &&
+              poliStatus !== "Canceled" &&
+              poliStatus !== "Completed" && (
+                <>
+                  <VerticalDivider />
+                  <DropdownMenu>
+                    <DropdownButton onClick={handleCancelPOLineItem}>Cancel PO line item</DropdownButton>
+                  </DropdownMenu>
+                </>
+              )}
           </Flex>
         )}
         renderSummary={() => {
           if (poliStatus === "Canceled") {
             return (
               <Summary breakpoint={120}>
-                <Flex flexDirection="column" alignItems="center" width="200px" justifyContent="center" pt="x0_5">
-                  <Flex height="x2_5" alignItems="center" justifyContent="center">
-                    <StatusIndicator alignSelf="center" type="quiet">
-                      Canceled
-                    </StatusIndicator>
-                  </Flex>
-                  <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                    On{" "}
-                    <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
-                      September 12, 2025
-                    </Text>
-                  </Text>
-                </Flex>
-              </Summary>
-            );
-          }
-
-          if (poliStatus === "Completed") {
-            return (
-              <Summary breakpoint={120}>
-                <Flex flexDirection="column" alignItems="center" width="200px" justifyContent="center" pt="x0_5">
-                  <Flex height="x2_5" alignItems="center" justifyContent="center">
-                    <StatusIndicator alignSelf="center" type="neutral">
-                      Completed
-                    </StatusIndicator>
-                  </Flex>
-                  <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                    On{" "}
-                    <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
-                      September 29, 2025
-                    </Text>
-                  </Text>
-                </Flex>
-                <SummaryDivider />
                 <Flex flexDirection="column" width="200px" justifyContent="center" pt="x0_5">
                   <Tooltip
                     tooltip={
@@ -391,7 +432,38 @@ export const Default = () => {
                     }
                   >
                     <Flex height="x2_5" alignItems="center" justifyContent="center">
-                      <Box height="x1" width="100%" backgroundColor="blue" borderRadius="medium" />
+                      <Box height="x1" width="100%" backgroundColor="grey" borderRadius="medium" />
+                    </Flex>
+                  </Tooltip>
+
+                  <Flex justifyContent="center">
+                    <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
+                      <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
+                        90%
+                      </Text>{" "}
+                      produced
+                    </Text>
+                  </Flex>
+                </Flex>
+              </Summary>
+            );
+          }
+
+          if (poliStatus === "Completed") {
+            return (
+              <Summary breakpoint={120}>
+                <Flex flexDirection="column" width="200px" justifyContent="center" pt="x0_5">
+                  <Tooltip
+                    tooltip={
+                      <Box>
+                        <Text fontSize="small" lineHeight="smallRelaxed">
+                          12,000 / 15,000 eaches
+                        </Text>
+                      </Box>
+                    }
+                  >
+                    <Flex height="x2_5" alignItems="center" justifyContent="center">
+                      <Box height="x1" width="100%" backgroundColor="darkGrey" borderRadius="medium" />
                     </Flex>
                   </Tooltip>
 
@@ -412,13 +484,14 @@ export const Default = () => {
           return (
             <Summary breakpoint={120}>
               <Flex flexDirection="column" alignItems="center" width="200px" justifyContent="center" pt="x0_5">
-                <Flex height="x2_5" alignItems="center" justifyContent="center">
-                  {(productionComplete ||
+                <Flex height="x2_5" alignItems="center" justifyContent="center" gap="x0_5">
+                  {(productionStatus === "Completed" ||
                     collaborationState.status === "accepted" ||
                     acceptedItems.request ||
                     acceptedItems.proposal) &&
                   acceptedItems.proposal &&
-                  isFlagged ? (
+                  isFlagged &&
+                  isReconciled !== false ? (
                     <Tooltip tooltip="With flagged acceptance">
                       <StatusIndicator alignSelf="center" type="success">
                         <Flex alignItems="center" gap="x0_25">
@@ -431,7 +504,7 @@ export const Default = () => {
                     <StatusIndicator
                       alignSelf="center"
                       type={
-                        productionComplete ||
+                        productionStatus === "Completed" ||
                         collaborationState.status === "accepted" ||
                         acceptedItems.request ||
                         acceptedItems.proposal
@@ -441,7 +514,7 @@ export const Default = () => {
                             : "quiet"
                       }
                     >
-                      {productionComplete ||
+                      {productionStatus === "Completed" ||
                       collaborationState.status === "accepted" ||
                       acceptedItems.request ||
                       acceptedItems.proposal ? (
@@ -455,9 +528,21 @@ export const Default = () => {
                       )}
                     </StatusIndicator>
                   )}
+                  {/* Show reconciliation status pill when proposal is accepted */}
+                  {acceptedItems.proposal && isReconciled !== null && (
+                    <Tooltip
+                      tooltip={isReconciled ? "Request reconciled" : "Request not reconciled"}
+                    >
+                      <StatusIndicator alignSelf="center" type="quiet">
+                        <TruncatedText maxCharacters={9} fontSize="smaller" lineHeight="smallerText" showTooltip={false}>
+                          {isReconciled ? "Reconciled" : "Not reconciled"}
+                        </TruncatedText>
+                      </StatusIndicator>
+                    </Tooltip>
+                  )}
                 </Flex>
                 <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                  {(productionComplete ||
+                  {(productionStatus === "Completed" ||
                     collaborationState.status === "accepted" ||
                     acceptedItems.request ||
                     acceptedItems.proposal) ? (
@@ -484,25 +569,36 @@ export const Default = () => {
                   tooltip={
                     <Box>
                       <Text fontSize="small" lineHeight="smallRelaxed">
-                        12,000 / 15,000 eaches
+                        {productionStatus === "Not started" ? "0 / 15,000 eaches" : "12,000 / 15,000 eaches"}
                       </Text>
                     </Box>
                   }
                 >
                   <Flex height="x2_5" alignItems="center" justifyContent="center">
-                    <Box height="x1" width="100%" backgroundColor="blue" borderRadius="medium" />
+                    <Box 
+                      height="x1" 
+                      width="100%" 
+                      backgroundColor={
+                        productionStatus === "Not started" 
+                          ? "lightGrey" 
+                          : productionStatus === "Completed" 
+                            ? "darkGrey" 
+                            : "blue"
+                      } 
+                      borderRadius="medium" 
+                    />
                   </Flex>
                 </Tooltip>
 
-                <Flex justifyContent={productionComplete ? "space-between" : "center"}>
+                <Flex justifyContent={productionStatus === "Completed" ? "space-between" : "center"}>
                   <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
                     <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
-                      90%
+                      {productionStatus === "Not started" ? "0%" : "90%"}
                     </Text>{" "}
                     produced
                   </Text>
 
-                  {productionComplete && (
+                  {productionStatus === "Completed" && (
                     <StatusIndicator type="quiet">
                       <Flex alignItems="center" gap="x0_5">
                         Completed
@@ -533,30 +629,6 @@ export const Default = () => {
                     </Flex>
                     <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
                       <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">Production done</Text> milestone
-                    </Text>
-                  </>
-                )}
-                {poStatus === "Completed" && (
-                  <>
-                    <Flex height="x2_5" alignItems="center" justifyContent="center">
-                      <StatusIndicator alignSelf="center" type="quiet">
-                        Completed
-                      </StatusIndicator>
-                    </Flex>
-                    <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                      on January 24, 2025
-                    </Text>
-                  </>
-                )}
-                {poStatus === "Cancelled" && (
-                  <>
-                    <Flex height="x2_5" alignItems="center" justifyContent="center">
-                      <StatusIndicator alignSelf="center" type="quiet">
-                        Cancelled
-                      </StatusIndicator>
-                    </Flex>
-                    <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                      on February 22, 2025
                     </Text>
                   </>
                 )}
@@ -595,7 +667,7 @@ export const Default = () => {
       <Page>
         {/* Action bar above details */}
         <Flex justifyContent="flex-end" alignItems="center" gap="x2" mb="x3">
-          <IconicButton icon="edit" aria-label="Edit" onClick={() => openSidebar("edit")}>
+          <IconicButton icon="edit" labelHidden tooltip="Edit" onClick={() => openSidebar("edit")}>
             Edit
           </IconicButton>
         </Flex>
@@ -753,7 +825,7 @@ export const Default = () => {
                 </Text>
               </DescriptionDetails>
             </DescriptionGroup>
-            {productionComplete && (
+            {productionStatus === "Completed" && (
               <>
                 <DescriptionGroup>
                   <DescriptionTerm>
@@ -792,7 +864,7 @@ export const Default = () => {
               <Flex flexDirection="column" gap="x2">
                 {/* Requested production vs Supplier's proposal comparison */}
                 <Flex gap="x3" p="x2" pb="0">
-                  <Flex flexDirection="column" gap="x0_5" mt="x9" pl="x2_5" flex={1} minWidth="120px" maxWidth="160px">
+                  <Flex flexDirection="column" gap="x0_5" mt="x9" pl="x2_5" flex={1} minWidth="160px" maxWidth="200px">
                     <Text fontSize="small" lineHeight="smallRelaxed" fontWeight="bold" my="x1">
                       Quantity
                     </Text>
@@ -800,7 +872,7 @@ export const Default = () => {
                       Due date
                     </Text>
                     <Text fontSize="small" lineHeight="smallRelaxed" fontWeight="bold" my="x1">
-                      Unit price
+                      Unit (each) price
                     </Text>
                     <Text fontSize="small" lineHeight="smallRelaxed" fontWeight="bold" my="x1">
                       Reason
@@ -811,7 +883,7 @@ export const Default = () => {
                   </Flex>
 
                   {/* Customer's request */}
-                  <Box minWidth="256px" maxWidth="440px" flex={1}>
+                  <Box minWidth="236px" maxWidth="420px" flex={1}>
                     <Flex flexDirection="column" gap="x0_25" mb="x3">
                       <Flex alignItems="center" gap="x1">
                         <Heading4 mb="0">
@@ -821,7 +893,7 @@ export const Default = () => {
                         {acceptedItems.request ? (
                           <Tooltip tooltip="Accepted">
                             <Box
-                              backgroundColor="white"
+                              backgroundColor="lightGreen"
                               borderRadius="medium"
                               p="x0_25"
                               width="x3"
@@ -956,17 +1028,13 @@ export const Default = () => {
                           </Box>
                           <Box width="100%">
                             <Input
-                              value={
-                                uomView === "supplier"
-                                  ? (parseFloat(formData.request.unitPrice) * 20).toFixed(2)
-                                  : formData.request.unitPrice
-                              }
+                              value={formData.request.unitPrice}
                               onChange={(e) =>
                                 setFormData((prev) => ({
                                   ...prev,
                                   request: {
                                     ...prev.request,
-                                    unitPrice: uomView === "supplier" ? (parseFloat(e.target.value) / 20).toFixed(2) : e.target.value,
+                                    unitPrice: e.target.value,
                                   },
                                 }))
                               }
@@ -991,18 +1059,138 @@ export const Default = () => {
                         </>
                       ) : (
                         <>
-                          <Text my="x1">
+                          <Text 
+                            my="x1"
+                            style={{
+                              textDecoration: (() => {
+                                if (acceptedItems.request || acceptedItems.proposal) return "none";
+                                if (!supplierProposalMade) return "none";
+                                const requestQty = parseFloat(formData.request.quantity.replace(/,/g, "")) || 0;
+                                const proposalQty = parseFloat(formData.proposal.quantity.replace(/,/g, "")) || 0;
+                                const isDifferent = requestQty !== proposalQty;
+                                if (!isDifferent) return "none";
+                                
+                                // Request column (customer's request)
+                                // If activeCardAuthorRole is "customer" (customer made request, awaiting supplier), highlight customer's value in grey
+                                // If activeCardAuthorRole is "supplier" (supplier made proposal, awaiting customer), highlight customer's value in yellow
+                                const awaitingSupplier = collaborationState.activeCardAuthorRole === "customer";
+                                const awaitingCustomer = collaborationState.activeCardAuthorRole === "supplier";
+                                
+                                if (userState.role === "customer" && awaitingSupplier) {
+                                  return "underline"; // Customer's value, awaiting supplier response
+                                } else if (userState.role === "supplier" && awaitingSupplier) {
+                                  return "underline"; // Supplier viewing customer's request, awaiting supplier response
+                                }
+                                return "none";
+                              })(),
+                              textDecorationColor: (() => {
+                                if (acceptedItems.request || acceptedItems.proposal) return "transparent";
+                                if (!supplierProposalMade) return "transparent";
+                                const requestQty = parseFloat(formData.request.quantity.replace(/,/g, "")) || 0;
+                                const proposalQty = parseFloat(formData.proposal.quantity.replace(/,/g, "")) || 0;
+                                const isDifferent = requestQty !== proposalQty;
+                                if (!isDifferent) return "transparent";
+                                
+                                const awaitingSupplier = collaborationState.activeCardAuthorRole === "customer";
+                                const awaitingCustomer = collaborationState.activeCardAuthorRole === "supplier";
+                                
+                                if (userState.role === "customer" && awaitingSupplier) {
+                                  return theme.colors.grey; // Customer's value, awaiting supplier response
+                                } else if (userState.role === "supplier" && awaitingSupplier) {
+                                  return theme.colors.yellow; // Supplier viewing customer's request, awaiting supplier response
+                                }
+                                return "transparent";
+                              })(),
+                              textDecorationThickness: "2px",
+                              textUnderlineOffset: "4px",
+                            }}
+                          >
                             {uomView === "supplier"
                               ? `${(parseFloat(formData.request.quantity.replace(/,/g, "")) / 20).toLocaleString()}`
                               : formData.request.quantity}{" "}
                             {uomView === "supplier" ? "cases" : "eaches"}
                           </Text>
-                          <Text my="x1">{formData.request.productionDueDate}</Text>
-                          <Text my="x1">
-                            {uomView === "supplier"
-                              ? (parseFloat(formData.request.unitPrice) * 20).toFixed(2)
-                              : formData.request.unitPrice}{" "}
-                            {formData.request.currency}
+                          <Text 
+                            my="x1"
+                            style={{
+                              textDecoration: (() => {
+                                if (acceptedItems.request || acceptedItems.proposal) return "none";
+                                if (!supplierProposalMade) return "none";
+                                const isDifferent = formData.request.productionDueDate !== formData.proposal.productionDueDate;
+                                if (!isDifferent) return "none";
+                                
+                                const awaitingSupplier = collaborationState.activeCardAuthorRole === "customer";
+                                const awaitingCustomer = collaborationState.activeCardAuthorRole === "supplier";
+                                
+                                if (userState.role === "customer" && awaitingSupplier) {
+                                  return "underline";
+                                } else if (userState.role === "supplier" && awaitingCustomer) {
+                                  return "underline";
+                                }
+                                return "none";
+                              })(),
+                              textDecorationColor: (() => {
+                                if (acceptedItems.request || acceptedItems.proposal) return "transparent";
+                                if (!supplierProposalMade) return "transparent";
+                                const isDifferent = formData.request.productionDueDate !== formData.proposal.productionDueDate;
+                                if (!isDifferent) return "transparent";
+                                
+                                const awaitingSupplier = collaborationState.activeCardAuthorRole === "customer";
+                                const awaitingCustomer = collaborationState.activeCardAuthorRole === "supplier";
+                                
+                                if (userState.role === "customer" && awaitingSupplier) {
+                                  return theme.colors.grey;
+                                } else if (userState.role === "supplier" && awaitingCustomer) {
+                                  return theme.colors.yellow;
+                                }
+                                return "transparent";
+                              })(),
+                              textDecorationThickness: "2px",
+                              textUnderlineOffset: "4px",
+                            }}
+                          >
+                            {formData.request.productionDueDate}
+                          </Text>
+                          <Text 
+                            my="x1"
+                            style={{
+                              textDecoration: (() => {
+                                if (acceptedItems.request || acceptedItems.proposal) return "none";
+                                if (!supplierProposalMade) return "none";
+                                const isDifferent = formData.request.unitPrice !== formData.proposal.unitPrice;
+                                if (!isDifferent) return "none";
+                                
+                                const awaitingSupplier = collaborationState.activeCardAuthorRole === "customer";
+                                const awaitingCustomer = collaborationState.activeCardAuthorRole === "supplier";
+                                
+                                if (userState.role === "customer" && awaitingSupplier) {
+                                  return "underline";
+                                } else if (userState.role === "supplier" && awaitingCustomer) {
+                                  return "underline";
+                                }
+                                return "none";
+                              })(),
+                              textDecorationColor: (() => {
+                                if (acceptedItems.request || acceptedItems.proposal) return "transparent";
+                                if (!supplierProposalMade) return "transparent";
+                                const isDifferent = formData.request.unitPrice !== formData.proposal.unitPrice;
+                                if (!isDifferent) return "transparent";
+                                
+                                const awaitingSupplier = collaborationState.activeCardAuthorRole === "customer";
+                                const awaitingCustomer = collaborationState.activeCardAuthorRole === "supplier";
+                                
+                                if (userState.role === "customer" && awaitingSupplier) {
+                                  return theme.colors.grey;
+                                } else if (userState.role === "supplier" && awaitingCustomer) {
+                                  return theme.colors.yellow;
+                                }
+                                return "transparent";
+                              })(),
+                              textDecorationThickness: "2px",
+                              textUnderlineOffset: "4px",
+                            }}
+                          >
+                            {formData.request.unitPrice} {formData.request.currency}
                           </Text>
                           <Text my="x1" height="x3"></Text>
                           <Text my="x1" minHeight="96px">
@@ -1014,7 +1202,7 @@ export const Default = () => {
                   </Box>
 
                   {/* Supplier's proposal */}
-                  <Box maxWidth="440px" minWidth="256px" flex={1}>
+                  <Box maxWidth="420px" minWidth="236px" flex={1}>
                     <Flex flexDirection="column" gap="x0_25" mb="x3">
                       <Flex alignItems="center" gap="x1">
                         <Heading4 mb="0">
@@ -1023,7 +1211,7 @@ export const Default = () => {
                         {acceptedItems.proposal ? (
                           <Tooltip tooltip="Accepted">
                             <Box
-                              backgroundColor="white"
+                              backgroundColor="lightGreen"
                               borderRadius="medium"
                               p="x0_25"
                               width="x3"
@@ -1126,9 +1314,13 @@ export const Default = () => {
 
                               <Select
                                 options={[
-                                  { value: uomView === "supplier" ? "cases" : "eaches", label: uomView === "supplier" ? "cases" : "eaches" },
+                                  { value: "cases", label: "cases" },
+                                  { value: "eaches", label: "eaches" },
+                                  { value: "pieces", label: "pieces" },
+                                  { value: "meters", label: "meters" },
+                                  { value: "pounds", label: "pounds" },
                                 ]}
-                                value={uomView === "supplier" ? "cases" : "eaches"}
+                                value={formData.proposal.unit}
                                 onChange={(option) =>
                                   setFormData((prev) => ({
                                     ...prev,
@@ -1138,7 +1330,7 @@ export const Default = () => {
                                 width="100%"
                                 minWidth="100px"
                                 maxWidth="160px"
-                                disabled
+                                disabled={userState.role !== "supplier"}
                               />
                             </Flex>
                           ) : (
@@ -1172,17 +1364,13 @@ export const Default = () => {
                           </Box>
                           <Box width="100%">
                             <Input
-                              value={
-                                uomView === "supplier"
-                                  ? (parseFloat(formData.proposal.unitPrice) * 20).toFixed(2)
-                                  : formData.proposal.unitPrice
-                              }
+                              value={formData.proposal.unitPrice}
                               onChange={(e) =>
                                 setFormData((prev) => ({
                                   ...prev,
                                   proposal: {
                                     ...prev.proposal,
-                                    unitPrice: uomView === "supplier" ? (parseFloat(e.target.value) / 20).toFixed(2) : e.target.value,
+                                    unitPrice: e.target.value,
                                   },
                                 }))
                               }
@@ -1227,18 +1415,139 @@ export const Default = () => {
                         </>
                       ) : supplierProposalMade ? (
                         <>
-                          <Text my="x1">
+                          <Text 
+                            my="x1"
+                            style={{
+                              textDecoration: (() => {
+                                if (acceptedItems.request || acceptedItems.proposal) return "none";
+                                if (!supplierProposalMade) return "none";
+                                const requestQty = parseFloat(formData.request.quantity.replace(/,/g, "")) || 0;
+                                const proposalQty = parseFloat(formData.proposal.quantity.replace(/,/g, "")) || 0;
+                                const isDifferent = requestQty !== proposalQty;
+                                if (!isDifferent) return "none";
+                                
+                                // Proposal column (supplier's proposal)
+                                // Only underline when awaiting customer response (activeCardAuthorRole === "supplier")
+                                // If activeCardAuthorRole is "supplier" (supplier made proposal, awaiting customer), highlight supplier's value in grey
+                                // If activeCardAuthorRole is "customer" (customer made request, awaiting supplier), do NOT underline proposal (we underline request instead)
+                                const awaitingSupplier = collaborationState.activeCardAuthorRole === "customer";
+                                const awaitingCustomer = collaborationState.activeCardAuthorRole === "supplier";
+                                
+                                if (userState.role === "supplier" && awaitingCustomer) {
+                                  return "underline"; // Supplier's value, awaiting customer response
+                                } else if (userState.role === "customer" && awaitingCustomer) {
+                                  return "underline"; // Customer viewing supplier's proposal, awaiting customer response (yellow)
+                                }
+                                return "none";
+                              })(),
+                              textDecorationColor: (() => {
+                                if (acceptedItems.request || acceptedItems.proposal) return "transparent";
+                                if (!supplierProposalMade) return "transparent";
+                                const requestQty = parseFloat(formData.request.quantity.replace(/,/g, "")) || 0;
+                                const proposalQty = parseFloat(formData.proposal.quantity.replace(/,/g, "")) || 0;
+                                const isDifferent = requestQty !== proposalQty;
+                                if (!isDifferent) return "transparent";
+                                
+                                const awaitingSupplier = collaborationState.activeCardAuthorRole === "customer";
+                                const awaitingCustomer = collaborationState.activeCardAuthorRole === "supplier";
+                                
+                                if (userState.role === "supplier" && awaitingCustomer) {
+                                  return theme.colors.grey; // Supplier's value, awaiting customer response
+                                } else if (userState.role === "customer" && awaitingCustomer) {
+                                  return theme.colors.yellow; // Customer viewing supplier's proposal, awaiting customer response
+                                }
+                                return "transparent";
+                              })(),
+                              textDecorationThickness: "2px",
+                              textUnderlineOffset: "4px",
+                            }}
+                          >
                             {uomView === "supplier"
                               ? `${(parseFloat(formData.proposal.quantity.replace(/,/g, "")) / 20).toLocaleString()}`
                               : formData.proposal.quantity}{" "}
                             {uomView === "supplier" ? "cases" : "eaches"}
                           </Text>
-                          <Text my="x1">{formData.proposal.productionDueDate}</Text>
-                          <Text my="x1">
-                            {uomView === "supplier"
-                              ? (parseFloat(formData.proposal.unitPrice) * 20).toFixed(2)
-                              : formData.proposal.unitPrice}{" "}
-                            {formData.proposal.currency}
+                          <Text 
+                            my="x1"
+                            style={{
+                              textDecoration: (() => {
+                                if (acceptedItems.request || acceptedItems.proposal) return "none";
+                                if (!supplierProposalMade) return "none";
+                                const isDifferent = formData.request.productionDueDate !== formData.proposal.productionDueDate;
+                                if (!isDifferent) return "none";
+                                
+                                const awaitingSupplier = collaborationState.activeCardAuthorRole === "customer";
+                                const awaitingCustomer = collaborationState.activeCardAuthorRole === "supplier";
+                                
+                                if (userState.role === "supplier" && awaitingCustomer) {
+                                  return "underline";
+                                } else if (userState.role === "customer" && awaitingCustomer) {
+                                  return "underline";
+                                }
+                                return "none";
+                              })(),
+                              textDecorationColor: (() => {
+                                if (acceptedItems.request || acceptedItems.proposal) return "transparent";
+                                if (!supplierProposalMade) return "transparent";
+                                const isDifferent = formData.request.productionDueDate !== formData.proposal.productionDueDate;
+                                if (!isDifferent) return "transparent";
+                                
+                                const awaitingSupplier = collaborationState.activeCardAuthorRole === "customer";
+                                const awaitingCustomer = collaborationState.activeCardAuthorRole === "supplier";
+                                
+                                if (userState.role === "supplier" && awaitingCustomer) {
+                                  return theme.colors.grey;
+                                } else if (userState.role === "customer" && awaitingCustomer) {
+                                  return theme.colors.yellow;
+                                }
+                                return "transparent";
+                              })(),
+                              textDecorationThickness: "2px",
+                              textUnderlineOffset: "4px",
+                            }}
+                          >
+                            {formData.proposal.productionDueDate}
+                          </Text>
+                          <Text 
+                            my="x1"
+                            style={{
+                              textDecoration: (() => {
+                                if (acceptedItems.request || acceptedItems.proposal) return "none";
+                                if (!supplierProposalMade) return "none";
+                                const isDifferent = formData.request.unitPrice !== formData.proposal.unitPrice;
+                                if (!isDifferent) return "none";
+                                
+                                const awaitingSupplier = collaborationState.activeCardAuthorRole === "customer";
+                                const awaitingCustomer = collaborationState.activeCardAuthorRole === "supplier";
+                                
+                                if (userState.role === "supplier" && awaitingCustomer) {
+                                  return "underline";
+                                } else if (userState.role === "customer" && awaitingCustomer) {
+                                  return "underline";
+                                }
+                                return "none";
+                              })(),
+                              textDecorationColor: (() => {
+                                if (acceptedItems.request || acceptedItems.proposal) return "transparent";
+                                if (!supplierProposalMade) return "transparent";
+                                const isDifferent = formData.request.unitPrice !== formData.proposal.unitPrice;
+                                if (!isDifferent) return "transparent";
+                                
+                                const awaitingSupplier = collaborationState.activeCardAuthorRole === "customer";
+                                const awaitingCustomer = collaborationState.activeCardAuthorRole === "supplier";
+                                
+                                if (userState.role === "supplier" && awaitingCustomer) {
+                                  return theme.colors.grey;
+                                } else if (userState.role === "customer" && awaitingCustomer) {
+                                  return theme.colors.yellow;
+                                }
+                                return "transparent";
+                              })(),
+                              textDecorationThickness: "2px",
+                              textUnderlineOffset: "4px",
+                            }}
+                          >
+                            {formData.proposal.unitPrice} {formData.proposal.currency}
                           </Text>
                           <Text my="x1">{formData.proposal.reason || "-"}</Text>
                           <Text my="x1">{formData.proposal.note}</Text>
@@ -1263,26 +1572,26 @@ export const Default = () => {
                 <Flex gap="x2" px="x2" pb="x1">
                   {editMode ? (
                     <>
-                      <PrimaryButton onClick={() => submitUpdate(editMode)} disabled={!hasChanges(editMode)}>
+                      <PrimaryButton onClick={() => submitUpdate(editMode)} disabled={!hasChanges(editMode) || poliStatus === "Canceled"}>
                         {editMode === "request" ? "Submit request" : "Submit proposal"}
                       </PrimaryButton>
-                      <QuietButton onClick={exitEditMode}>Cancel</QuietButton>
+                      <QuietButton onClick={exitEditMode} disabled={poliStatus === "Canceled"}>Cancel</QuietButton>
                     </>
                   ) : (
                     <>
                       {/* Always show edit buttons based on user role */}
                       {userState.role === "supplier" && (
                         <>
-                          <QuietButton onClick={() => enterEditMode("proposal")}>Update proposal</QuietButton>
-                          <QuietButton onClick={acceptCustomerRequest} disabled={acceptedItems.request}>
+                          <QuietButton onClick={() => enterEditMode("proposal")} disabled={poliStatus === "Canceled"}>Update proposal</QuietButton>
+                          <QuietButton onClick={acceptCustomerRequest} disabled={acceptedItems.request || poliStatus === "Canceled" || collaborationState.activeCardAuthorRole === null}>
                             Accept customer's request
                           </QuietButton>
                         </>
                       )}
                       {userState.role === "customer" && (
                         <>
-                          <QuietButton onClick={() => enterEditMode("request")}>Update request</QuietButton>
-                          <QuietButton onClick={acceptSupplierProposal} disabled={acceptedItems.proposal}>
+                          <QuietButton onClick={() => enterEditMode("request")} disabled={poliStatus === "Canceled"}>Update request</QuietButton>
+                          <QuietButton onClick={acceptSupplierProposal} disabled={acceptedItems.proposal || poliStatus === "Canceled" || collaborationState.activeCardAuthorRole === null}>
                             Accept supplier's proposal
                           </QuietButton>
                         </>
@@ -1327,12 +1636,13 @@ export const Default = () => {
           left="50%"
           transform="translateX(-50%)"
           zIndex={1000}
-          backgroundColor="white"
-          borderRadius="medium"
+          borderRadius="rounded"
           boxShadow="large"
-          p="x2"
-          border="1px solid"
-          borderColor="lightGrey"
+          px="x2"
+          py="x1"
+          border="3px dotted"
+          borderColor="yellow"
+          backgroundColor="lightYellow"
         >
           <Flex alignItems="center" gap="x1">
             <Switcher
@@ -1344,21 +1654,52 @@ export const Default = () => {
             </Switcher>
             <VerticalDivider />
             <Flex gap="x1" justifyContent="center" alignItems="center">
-              <Text fontSize="small" color="midGrey" width="120px" textAlign="right">
-                Active request by:
+              <Text fontSize="small" color="midGrey" width="60px" textAlign="right">
+                Awaiting:
               </Text>
-              <Select
+              <Select minWidth="200px"
                 options={[
-                  { value: "supplier", label: "Supplier" },
-                  { value: "customer", label: "Customer" },
+                  { value: "customer", label: "Supplier's response" },
+                  { value: "supplier", label: "Customer's response" },
+                  { value: "none", label: "None" },
                 ]}
-                value={collaborationState.activeCardAuthorRole || "supplier"}
-                onChange={(option) =>
-                  setCollaborationState((prev) => ({
-                    ...prev,
-                    activeCardAuthorRole: option as "supplier" | "customer",
-                  }))
-                }
+                value={collaborationState.activeCardAuthorRole === null ? "none" : (collaborationState.activeCardAuthorRole || "supplier")}
+                onChange={(option) => {
+                  if (option === "none") {
+                    // Apply Accepted state - same as clicking Accept
+                    if (collaborationState.activeCardAuthorRole === "customer") {
+                      // Awaiting supplier's response, so accept the request
+                      acceptCustomerRequest();
+                    } else if (collaborationState.activeCardAuthorRole === "supplier") {
+                      // Awaiting customer's response
+                      if (userState.role === "customer") {
+                        // Viewed as Customer - bring up Dual acceptance modal
+                        acceptSupplierProposal();
+                      } else {
+                        // Viewed as Supplier - accept directly without modal
+                        setAcceptedItems((prev) => ({ ...prev, proposal: true }));
+                        setFormData((prev) => ({
+                          ...prev,
+                          request: {
+                            ...prev.request,
+                            quantity: prev.proposal.quantity,
+                          },
+                        }));
+                        toast.success("Proposal accepted");
+                      }
+                    }
+                    // Set to null to show "None" state
+                    setCollaborationState((prev) => ({
+                      ...prev,
+                      activeCardAuthorRole: null,
+                    }));
+                  } else {
+                    setCollaborationState((prev) => ({
+                      ...prev,
+                      activeCardAuthorRole: option as "supplier" | "customer",
+                    }));
+                  }
+                }}
                 placeholder="Select author role"
                 menuPlacement="top"
                 width="160px"
@@ -1366,30 +1707,28 @@ export const Default = () => {
             </Flex>
             <VerticalDivider />
             <Flex gap="x1" justifyContent="center" alignItems="center">
-              <Text fontSize="small" color="midGrey" width="80px" textAlign="right">
-                PO status:
+              <Text fontSize="small" color="midGrey" width="110px" textAlign="right">
+                Milestone status:
               </Text>
-              <Select
+              <Select maxWidth="120px"
                 options={[
                   { value: "Late", label: "Late" },
-                  { value: "Completed", label: "Completed" },
                   { value: "At risk", label: "At risk" },
                   { value: "On time", label: "On time" },
-                  { value: "Cancelled", label: "Cancelled" },
                 ]}
                 value={poStatus}
-                onChange={(option) => setPoStatus(option as "Late" | "Completed" | "At risk" | "On time" | "Cancelled")}
-                placeholder="Select PO status"
+                onChange={(option) => setPoStatus(option as "Late" | "At risk" | "On time")}
+                placeholder="Select Milestone status"
                 menuPlacement="top"
                 width="160px"
               />
             </Flex>
             <VerticalDivider />
             <Flex gap="x1" justifyContent="center" alignItems="center">
-              <Text fontSize="small" color="midGrey" width="100px" textAlign="right">
+              <Text fontSize="small" color="midGrey" width="80px" textAlign="right">
                 POLI status:
               </Text>
-              <Select
+              <Select maxWidth="140px"
                 options={[
                   { value: "Open", label: "Open" },
                   { value: "Canceled", label: "Canceled" },
@@ -1403,16 +1742,25 @@ export const Default = () => {
               />
             </Flex>
             <VerticalDivider />
-            <Flex gap="x1" justifyContent="center" alignItems="center" width="200px">
-              <Checkbox
-                id="productionComplete"
-                checked={productionComplete}
-                onChange={(e) => setProductionComplete(e.target.checked)}
-                labelText="Production complete"
+            <Flex gap="x1" justifyContent="center" alignItems="center" width="220px">
+              <Text fontSize="small" color="midGrey" width="90px" textAlign="right">
+                Production:
+              </Text>
+              <Select minWidth="140px"
+                options={[
+                  { value: "Not started", label: "Not started" },
+                  { value: "In progress", label: "In progress" },
+                  { value: "Completed", label: "Completed" },
+                ]}
+                value={productionStatus}
+                onChange={(option) => setProductionStatus(option as "Not started" | "In progress" | "Completed")}
+                placeholder="Select production status"
+                menuPlacement="top"
+                width="160px"
               />
             </Flex>
             <VerticalDivider />
-            <Flex gap="x1" justifyContent="center" alignItems="center" width="200px">
+            <Flex gap="x1" justifyContent="center" alignItems="center" width="220px">
               <Checkbox
                 id="supplierProposalMade"
                 checked={supplierProposalMade}
@@ -1434,7 +1782,7 @@ export const Default = () => {
             <PrimaryButton
               onClick={() => {
                 closeSidebar("edit");
-                toast.success("PO line item details saved successfully");
+                toast.success("PO line item details saved");
               }}
             >
               Save
@@ -1552,7 +1900,7 @@ export const Default = () => {
           />
 
           {/* Close production note - disabled, shown only if production complete */}
-          {productionComplete && (
+          {productionStatus === "Completed" && (
             <Input
               labelText="Close production note"
               id="closeProductionNote"
@@ -1562,7 +1910,7 @@ export const Default = () => {
           )}
 
           {/* Carry over sent to - disabled, shown only if production complete */}
-          {productionComplete && (
+          {productionStatus === "Completed" && (
             <Input labelText="Carry over sent to" id="carryOverSentTo" value={formData.edit.carryOverSentTo || "-"} disabled />
           )}
         </Flex>
@@ -1584,26 +1932,44 @@ export const Default = () => {
         <Box px="half">
           <Flex flexDirection="column" gap="x1">
             <Box mb="x1">
-              <Radio
-                name="acceptance-option"
-                value="without-flagging"
-                labelText="With standard acceptance / Accept and reconcile / Accept with reconciliation"
-                checked={acceptanceOption === "without-flagging"}
-                onChange={() => setAcceptanceOption("without-flagging")}
-              />
+              <Flex alignItems="center" gap="x1">
+                <Radio
+                  name="acceptance-option"
+                  value="without-flagging"
+                  labelText="Accept and update request"
+                  checked={acceptanceOption === "without-flagging"}
+                  onChange={() => setAcceptanceOption("without-flagging")}
+                />
+                <Tooltip tooltip="Request reconciled">
+                  <StatusIndicator type="quiet">
+                    <Text fontSize="smaller" lineHeight="smallerText">
+                      Reconciled
+                    </Text>
+                  </StatusIndicator>
+                </Tooltip>
+              </Flex>
               <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed" ml="x3">
                 This will update your requested quantity to match the supplier's proposal.
               </Text>
             </Box>
             <Divider m="0" />
             <Box mb="x1">
-              <Radio
-                name="acceptance-option"
-                value="with-flagging"
-                labelText="With flagged acceptence / Accept and retain requested / Accept without reconciliation"
-                checked={acceptanceOption === "with-flagging"}
-                onChange={() => setAcceptanceOption("with-flagging")}
-              />
+              <Flex alignItems="center" gap="x1">
+                <Radio
+                  name="acceptance-option"
+                  value="with-flagging"
+                  labelText="Accept and retain request"
+                  checked={acceptanceOption === "with-flagging"}
+                  onChange={() => setAcceptanceOption("with-flagging")}
+                />
+                <Tooltip tooltip="Request not reconciled">
+                  <StatusIndicator type="quiet">
+                    <Text fontSize="smaller" lineHeight="smallerText">
+                      Not reconciled
+                    </Text>
+                  </StatusIndicator>
+                </Tooltip>
+              </Flex>
               <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed" ml="x3">
                 This will accept the proposal but keep your requested quantity.
               </Text>
@@ -1650,7 +2016,7 @@ export const V2 = () => {
       supplierPOLineItemNumber: "SPLI-001",
       bomRevision: "Rev 1.2 – 2025-Jan-10",
       needByDate: new Date("2025-02-15"),
-      closeProductionNote: "Production completed successfully",
+      closeProductionNote: "Production completed",
       carryOverSentTo: "",
     },
     request: {
@@ -1721,7 +2087,7 @@ export const V2 = () => {
       showAcceptedCard: true,
     }));
     toast.success(
-      `${collaborationState.activeCardAuthorRole === "customer" ? "Request" : "Proposal"} accepted successfully`
+      `${collaborationState.activeCardAuthorRole === "customer" ? "Request" : "Proposal"} accepted`
     );
   };
 
@@ -1734,12 +2100,12 @@ export const V2 = () => {
       activeCardAuthorRole: userState.role,
     }));
     setSidebarState((prev) => ({ ...prev, newProposal: false }));
-    toast.success(`${userState.role === "supplier" ? "Proposal" : "Request"} submitted successfully`);
+    toast.success(`${userState.role === "supplier" ? "Proposal" : "Request"} submitted`);
   };
 
   const acceptCustomerRequest = () => {
     setAcceptedItems((prev) => ({ ...prev, request: true }));
-    toast.success("Request accepted successfully");
+    toast.success("Request accepted");
   };
 
   const acceptSupplierProposal = () => {
@@ -1758,7 +2124,7 @@ export const V2 = () => {
           quantity: prev.proposal.quantity,
         },
       }));
-      toast.success("Proposal accepted successfully");
+      toast.success("Proposal accepted");
     } else {
       // Keep original quantity but add flag
       setIsFlagged(true);
@@ -1797,7 +2163,7 @@ export const V2 = () => {
       setCollaborationState((prev) => ({ ...prev, activeCardAuthorRole: "supplier" }));
     }
 
-    toast.success(`${mode === "request" ? "Request" : "Proposal"} updated successfully`);
+    toast.success(`${mode === "request" ? "Request" : "Proposal"} updated`);
   };
 
   // Function to check if form has changes
@@ -1826,7 +2192,7 @@ export const V2 = () => {
 
   // Function to handle cancel PO line item
   const handleCancelPOLineItem = () => {
-    toast.success("PO line item cancelled successfully");
+    toast.success("PO line item cancelled");
   };
 
   return (
@@ -3097,7 +3463,7 @@ export const V2 = () => {
             <PrimaryButton
               onClick={() => {
                 closeSidebar("edit");
-                toast.success("PO line item details saved successfully");
+                toast.success("PO line item details saved");
               }}
             >
               Save
@@ -3184,7 +3550,7 @@ export const V2 = () => {
               <Radio
                 name="acceptance-option"
                 value="without-flagging"
-                labelText="With standard acceptance"
+                labelText="Accept and update request"
                 checked={acceptanceOption === "without-flagging"}
                 onChange={() => setAcceptanceOption("without-flagging")}
               />
@@ -3197,7 +3563,7 @@ export const V2 = () => {
               <Radio
                 name="acceptance-option"
                 value="with-flagging"
-                labelText="With flagged acceptance"
+                labelText="Accept and retain request"
                 checked={acceptanceOption === "with-flagging"}
                 onChange={() => setAcceptanceOption("with-flagging")}
               />
@@ -3246,7 +3612,7 @@ export const V3 = () => {
       supplierPOLineItemNumber: "SPLI-001",
       bomRevision: "Rev 1.2 – 2025-Jan-10",
       needByDate: new Date("2025-02-15"),
-      closeProductionNote: "Production completed successfully",
+      closeProductionNote: "Production completed",
       carryOverSentTo: "",
     },
     request: {
@@ -3317,7 +3683,7 @@ export const V3 = () => {
       showAcceptedCard: true,
     }));
     toast.success(
-      `${collaborationState.activeCardAuthorRole === "customer" ? "Request" : "Proposal"} accepted successfully`
+      `${collaborationState.activeCardAuthorRole === "customer" ? "Request" : "Proposal"} accepted`
     );
   };
 
@@ -3330,12 +3696,12 @@ export const V3 = () => {
       activeCardAuthorRole: userState.role,
     }));
     setSidebarState((prev) => ({ ...prev, newProposal: false }));
-    toast.success(`${userState.role === "supplier" ? "Proposal" : "Request"} submitted successfully`);
+    toast.success(`${userState.role === "supplier" ? "Proposal" : "Request"} submitted`);
   };
 
   const acceptCustomerRequest = () => {
     setAcceptedItems((prev) => ({ ...prev, request: true }));
-    toast.success("Request accepted successfully");
+    toast.success("Request accepted");
   };
 
   const acceptSupplierProposal = () => {
@@ -3354,7 +3720,7 @@ export const V3 = () => {
           quantity: prev.proposal.quantity,
         },
       }));
-      toast.success("Proposal accepted successfully");
+      toast.success("Proposal accepted");
     } else {
       // Keep original quantity but add flag
       setIsFlagged(true);
@@ -3393,7 +3759,7 @@ export const V3 = () => {
       setCollaborationState((prev) => ({ ...prev, activeCardAuthorRole: "supplier" }));
     }
 
-    toast.success(`${mode === "request" ? "Request" : "Proposal"} updated successfully`);
+    toast.success(`${mode === "request" ? "Request" : "Proposal"} updated`);
   };
 
   // Function to check if form has changes
@@ -3422,7 +3788,7 @@ export const V3 = () => {
 
   // Function to handle cancel PO line item
   const handleCancelPOLineItem = () => {
-    toast.success("PO line item cancelled successfully");
+    toast.success("PO line item cancelled");
   };
 
   return (
@@ -4084,7 +4450,7 @@ export const V3 = () => {
                         </Box>
                       </>
                     ) : (
-                      <DescriptionList layout="inline" showDivider descriptionTermMaxWidth="160px">
+                      <DescriptionList layout="inline" showDivider descriptionTermMaxWidth="200px">
                         <DescriptionGroup>
                           <DescriptionTerm>Quantity</DescriptionTerm>
                           <DescriptionDetails>
@@ -4110,7 +4476,7 @@ export const V3 = () => {
                           </DescriptionDetails>
                         </DescriptionGroup>
                         <DescriptionGroup>
-                          <DescriptionTerm>Unit price</DescriptionTerm>
+                          <DescriptionTerm>Unit (each) price</DescriptionTerm>
                           <DescriptionDetails>
                             <Text color={acceptedItems.proposal || editMode === "proposal" ? "midGrey" : undefined}>
                               {formData.request.unitPrice} {formData.request.currency}
@@ -4511,7 +4877,7 @@ export const V3 = () => {
                           </DescriptionDetails>
                         </DescriptionGroup>
                         <DescriptionGroup>
-                          <DescriptionTerm>Unit price</DescriptionTerm>
+                          <DescriptionTerm>Unit (each) price</DescriptionTerm>
                           <DescriptionDetails>
                             <Text color={acceptedItems.request || editMode === "request" ? "midGrey" : undefined}>
                               {formData.proposal.unitPrice} {formData.proposal.currency}
@@ -4705,7 +5071,7 @@ export const V3 = () => {
             <PrimaryButton
               onClick={() => {
                 closeSidebar("edit");
-                toast.success("PO line item details saved successfully");
+                toast.success("PO line item details saved");
               }}
             >
               Save
@@ -4792,7 +5158,7 @@ export const V3 = () => {
               <Radio
                 name="acceptance-option"
                 value="without-flagging"
-                labelText="With standard acceptance"
+                labelText="Accept and update request"
                 checked={acceptanceOption === "without-flagging"}
                 onChange={() => setAcceptanceOption("without-flagging")}
               />
@@ -4805,7 +5171,7 @@ export const V3 = () => {
               <Radio
                 name="acceptance-option"
                 value="with-flagging"
-                labelText="With flagged acceptance"
+                labelText="Accept and retain request"
                 checked={acceptanceOption === "with-flagging"}
                 onChange={() => setAcceptanceOption("with-flagging")}
               />
