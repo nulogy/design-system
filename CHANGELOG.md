@@ -1,3 +1,10 @@
+## [15.4.1](https://github.com/nulogy/design-system/compare/v15.4.0...v15.4.1) (2025-12-05)
+
+
+### Bug Fixes
+
+* Resolve `styled.div` is not defined ([e83f3fe](https://github.com/nulogy/design-system/commit/e83f3fe53f2c45d69c46315bf374618aae2343e2))
+
 # [15.4.0](https://github.com/nulogy/design-system/compare/v15.3.0...v15.4.0) (2025-12-05)
 
 
