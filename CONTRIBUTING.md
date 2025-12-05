@@ -18,7 +18,9 @@ Additionally, verify that the new component has already been added to the design
 
 ## Writing components
 
-- `pnpm start` will run a storybook at [localhost:9999](localhost:9999) for local development.
+- `pnpm start` will run both the build watcher and Storybook at [localhost:9999](localhost:9999) for local development.
+  - **Note**: You must use `pnpm` (not `npm`) to run Storybook. The project uses pnpm as its package manager.
+  - To run Storybook only (without the build watcher), use `pnpm run start:storybook`
 - `pnpm build` will rebuild the package exports for production.
 - `pnpm start:cypress` will run the cypress test runner.
 

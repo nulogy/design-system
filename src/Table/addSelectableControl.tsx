@@ -15,11 +15,12 @@ const selectHeaderFormatter = (onSelectHeader, isHeaderSelected, selectAllAriaLa
 const SelectCell = ({ row, onSelectRow }) => {
   const selectRowHandler = () => onSelectRow(row);
   const checked = row[SELECTABLE_COLUMN_DATA_KEY];
+  const disabled = row.disabled;
   const { t } = useTranslation();
   const checkedAriaLabel = row.selectAriaLabel || t("select row");
   const uncheckedAriaLabel = row.deselectAriaLabel || t("select row");
   const ariaLabel = checked ? checkedAriaLabel : uncheckedAriaLabel;
-  return <Checkbox aria-label={ariaLabel} checked={checked} onChange={selectRowHandler} />;
+  return <Checkbox aria-label={ariaLabel} checked={checked} onChange={selectRowHandler} disabled={disabled} />;
 };
 
 const selectCellRenderer = (onSelectRow) => (props) => <SelectCell onSelectRow={onSelectRow} {...props} />;
