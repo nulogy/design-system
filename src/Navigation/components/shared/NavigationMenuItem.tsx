@@ -103,7 +103,9 @@ export const NavigationMenuItem = React.forwardRef<HTMLLIElement, NavigationMenu
           <SubMenuContent>
             <RadixNavigationMenu.Sub orientation="vertical">
               <NavigationMenuSubList>
-                {item.items?.map((sub) => <MenuSubItem key={sub.key} item={sub} level={level + 1} />)}
+                {item.items?.map((sub) => (
+                  <MenuSubItem key={sub.key} item={sub} level={level + 1} />
+                ))}
               </NavigationMenuSubList>
             </RadixNavigationMenu.Sub>
           </SubMenuContent>

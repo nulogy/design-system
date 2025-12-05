@@ -311,7 +311,8 @@ export type CursorProps = {
 };
 
 export interface StyledProps
-  extends SpaceProps,
+  extends
+    SpaceProps,
     BackgroundColorProps,
     LayoutProps,
     FlexGrowProps,

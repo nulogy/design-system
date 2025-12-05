@@ -33,8 +33,11 @@ export interface NDSOption {
   value: NDSOptionValue;
 }
 
-export interface CustomProps<Option extends NDSOption, IsMulti extends boolean, Group extends GroupBase<Option>>
-  extends StyledProps {
+export interface CustomProps<
+  Option extends NDSOption,
+  IsMulti extends boolean,
+  Group extends GroupBase<Option>,
+> extends StyledProps {
   autocomplete?: Props<Option, IsMulti, Group>["isSearchable"];
   // @see FieldLabel
   labelText?: FieldLabelProps["labelText"];

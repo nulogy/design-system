@@ -21,9 +21,7 @@ interface BaseProps {
 }
 
 interface IconicButtonProps
-  extends BaseProps,
-    SpaceProps,
-    Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, keyof BaseProps> {}
+  extends BaseProps, SpaceProps, Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, keyof BaseProps> {}
 
 const IconWrapper = styled.span<{ size: string }>(({ theme, size }) => ({
   display: "inline-flex",
