@@ -204,9 +204,7 @@ export const Default = () => {
       status: "accepted",
       showAcceptedCard: true,
     }));
-    toast.success(
-      `${collaborationState.activeCardAuthorRole === "customer" ? "Request" : "Proposal"} accepted`
-    );
+    toast.success(`${collaborationState.activeCardAuthorRole === "customer" ? "Request" : "Proposal"} accepted`);
   };
 
   const submitNewProposal = () => {
@@ -271,7 +269,7 @@ export const Default = () => {
       const newUnit = uomView === "supplier" ? "cases" : "eaches";
       // Stored quantity is always in eaches, convert based on UOM view
       const currentQuantityInEaches = parseFloat(formData.proposal.quantity.replace(/,/g, "")) || 0;
-      
+
       let newQuantity = currentQuantityInEaches;
       // Convert quantity to match UOM view
       if (uomView === "supplier") {
@@ -279,7 +277,7 @@ export const Default = () => {
         newQuantity = currentQuantityInEaches / 20;
       }
       // If customer UOM view, keep as eaches (no conversion needed)
-      
+
       setFormData((prev) => ({
         ...prev,
         proposal: {
@@ -297,23 +295,23 @@ export const Default = () => {
 
     // Reset ALL acceptance status when either is updated (updating invalidates previous acceptances)
     setAcceptedItems({ request: false, proposal: false });
-    
+
     if (mode === "request") {
       // Customer updated their request, now awaiting supplier's response
-      setCollaborationState((prev) => ({ 
-        ...prev, 
+      setCollaborationState((prev) => ({
+        ...prev,
         activeCardAuthorRole: "customer",
-        status: "awaiting"
+        status: "awaiting",
       }));
     } else if (mode === "proposal") {
       // Supplier updated their proposal, now awaiting customer's response
-      setCollaborationState((prev) => ({ 
-        ...prev, 
+      setCollaborationState((prev) => ({
+        ...prev,
         activeCardAuthorRole: "supplier",
-        status: "awaiting"
+        status: "awaiting",
       }));
     }
-    
+
     // Reset reconciliation and flagged status
     setIsReconciled(null);
     setIsFlagged(false);
@@ -388,7 +386,12 @@ export const Default = () => {
         renderActions={() => (
           <Flex gap="x0_5" ml="x1" alignItems="center">
             <Box display="flex" alignItems="center" position="relative">
-              <IconicButton icon="chatBubble" labelHidden tooltip="Comments (6)" onClick={() => openSidebar("comments")}>
+              <IconicButton
+                icon="chatBubble"
+                labelHidden
+                tooltip="Comments (6)"
+                onClick={() => openSidebar("comments")}
+              >
                 Comments (6)
               </IconicButton>
               <Box
@@ -405,16 +408,14 @@ export const Default = () => {
                 }}
               />
             </Box>
-            {userState.role === "customer" &&
-              poliStatus !== "Canceled" &&
-              poliStatus !== "Completed" && (
-                <>
-                  <VerticalDivider />
-                  <DropdownMenu>
-                    <DropdownButton onClick={handleCancelPOLineItem}>Cancel PO line item</DropdownButton>
-                  </DropdownMenu>
-                </>
-              )}
+            {userState.role === "customer" && poliStatus !== "Canceled" && poliStatus !== "Completed" && (
+              <>
+                <VerticalDivider />
+                <DropdownMenu>
+                  <DropdownButton onClick={handleCancelPOLineItem}>Cancel PO line item</DropdownButton>
+                </DropdownMenu>
+              </>
+            )}
           </Flex>
         )}
         renderSummary={() => {
@@ -530,11 +531,14 @@ export const Default = () => {
                   )}
                   {/* Show reconciliation status pill when proposal is accepted */}
                   {acceptedItems.proposal && isReconciled !== null && (
-                    <Tooltip
-                      tooltip={isReconciled ? "Request reconciled" : "Request not reconciled"}
-                    >
+                    <Tooltip tooltip={isReconciled ? "Request reconciled" : "Request not reconciled"}>
                       <StatusIndicator alignSelf="center" type="quiet">
-                        <TruncatedText maxCharacters={9} fontSize="smaller" lineHeight="smallerText" showTooltip={false}>
+                        <TruncatedText
+                          maxCharacters={9}
+                          fontSize="smaller"
+                          lineHeight="smallerText"
+                          showTooltip={false}
+                        >
                           {isReconciled ? "Reconciled" : "Not reconciled"}
                         </TruncatedText>
                       </StatusIndicator>
@@ -542,10 +546,10 @@ export const Default = () => {
                   )}
                 </Flex>
                 <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                  {(productionStatus === "Completed" ||
-                    collaborationState.status === "accepted" ||
-                    acceptedItems.request ||
-                    acceptedItems.proposal) ? (
+                  {productionStatus === "Completed" ||
+                  collaborationState.status === "accepted" ||
+                  acceptedItems.request ||
+                  acceptedItems.proposal ? (
                     <>
                       On{" "}
                       <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
@@ -575,17 +579,17 @@ export const Default = () => {
                   }
                 >
                   <Flex height="x2_5" alignItems="center" justifyContent="center">
-                    <Box 
-                      height="x1" 
-                      width="100%" 
+                    <Box
+                      height="x1"
+                      width="100%"
                       backgroundColor={
-                        productionStatus === "Not started" 
-                          ? "lightGrey" 
-                          : productionStatus === "Completed" 
-                            ? "darkGrey" 
+                        productionStatus === "Not started"
+                          ? "lightGrey"
+                          : productionStatus === "Completed"
+                            ? "darkGrey"
                             : "blue"
-                      } 
-                      borderRadius="medium" 
+                      }
+                      borderRadius="medium"
                     />
                   </Flex>
                 </Tooltip>
@@ -616,7 +620,10 @@ export const Default = () => {
                       <StatusIndicator type="danger">Late</StatusIndicator>
                     </Flex>
                     <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                      <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">Production done</Text> milestone
+                      <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
+                        Production done
+                      </Text>{" "}
+                      milestone
                     </Text>
                   </>
                 )}
@@ -628,7 +635,10 @@ export const Default = () => {
                       </StatusIndicator>
                     </Flex>
                     <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                      <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">Production done</Text> milestone
+                      <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
+                        Production done
+                      </Text>{" "}
+                      milestone
                     </Text>
                   </>
                 )}
@@ -640,7 +650,10 @@ export const Default = () => {
                       </StatusIndicator>
                     </Flex>
                     <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                      <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">Production done</Text> milestone
+                      <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
+                        Production done
+                      </Text>{" "}
+                      milestone
                     </Text>
                   </>
                 )}
@@ -650,13 +663,7 @@ export const Default = () => {
         }}
       >
         <Flex alignItems="flex-end" gap="x2" mt="x1" ml="-4px">
-          <StatusIndicator
-            type={
-              poliStatus === "Completed" || poliStatus === "Canceled"
-                ? "neutral"
-                : "quiet"
-            }
-          >
+          <StatusIndicator type={poliStatus === "Completed" || poliStatus === "Canceled" ? "neutral" : "quiet"}>
             {poliStatus}
           </StatusIndicator>
           <Text pl="x2" borderLeft="1px solid" borderColor="grey">
@@ -702,13 +709,7 @@ export const Default = () => {
                 <Text color="darkGrey">Status</Text>
               </DescriptionTerm>
               <DescriptionDetails>
-                <StatusIndicator
-                  type={
-                    poliStatus === "Completed" || poliStatus === "Canceled"
-                      ? "neutral"
-                      : "quiet"
-                  }
-                >
+                <StatusIndicator type={poliStatus === "Completed" || poliStatus === "Canceled" ? "neutral" : "quiet"}>
                   {poliStatus}
                 </StatusIndicator>
               </DescriptionDetails>
@@ -851,10 +852,7 @@ export const Default = () => {
           <Tab label="Collaboration">
             <Flex flexDirection="column" alignItems="flex-end" mt="x2">
               <Box mb="x2">
-                <Switcher
-                  selected={uomView}
-                  onChange={(value) => setUomView(value as "customer" | "supplier")}
-                >
+                <Switcher selected={uomView} onChange={(value) => setUomView(value as "customer" | "supplier")}>
                   <Switch value="customer">Customer's UOM</Switch>
                   <Switch value="supplier">Supplier's UOM</Switch>
                 </Switcher>
@@ -1059,7 +1057,7 @@ export const Default = () => {
                         </>
                       ) : (
                         <>
-                          <Text 
+                          <Text
                             my="x1"
                             style={{
                               textDecoration: (() => {
@@ -1069,13 +1067,13 @@ export const Default = () => {
                                 const proposalQty = parseFloat(formData.proposal.quantity.replace(/,/g, "")) || 0;
                                 const isDifferent = requestQty !== proposalQty;
                                 if (!isDifferent) return "none";
-                                
+
                                 // Request column (customer's request)
                                 // If activeCardAuthorRole is "customer" (customer made request, awaiting supplier), highlight customer's value in grey
                                 // If activeCardAuthorRole is "supplier" (supplier made proposal, awaiting customer), highlight customer's value in yellow
                                 const awaitingSupplier = collaborationState.activeCardAuthorRole === "customer";
                                 const awaitingCustomer = collaborationState.activeCardAuthorRole === "supplier";
-                                
+
                                 if (userState.role === "customer" && awaitingSupplier) {
                                   return "underline"; // Customer's value, awaiting supplier response
                                 } else if (userState.role === "supplier" && awaitingSupplier) {
@@ -1090,10 +1088,10 @@ export const Default = () => {
                                 const proposalQty = parseFloat(formData.proposal.quantity.replace(/,/g, "")) || 0;
                                 const isDifferent = requestQty !== proposalQty;
                                 if (!isDifferent) return "transparent";
-                                
+
                                 const awaitingSupplier = collaborationState.activeCardAuthorRole === "customer";
                                 const awaitingCustomer = collaborationState.activeCardAuthorRole === "supplier";
-                                
+
                                 if (userState.role === "customer" && awaitingSupplier) {
                                   return theme.colors.grey; // Customer's value, awaiting supplier response
                                 } else if (userState.role === "supplier" && awaitingSupplier) {
@@ -1110,18 +1108,19 @@ export const Default = () => {
                               : formData.request.quantity}{" "}
                             {uomView === "supplier" ? "cases" : "eaches"}
                           </Text>
-                          <Text 
+                          <Text
                             my="x1"
                             style={{
                               textDecoration: (() => {
                                 if (acceptedItems.request || acceptedItems.proposal) return "none";
                                 if (!supplierProposalMade) return "none";
-                                const isDifferent = formData.request.productionDueDate !== formData.proposal.productionDueDate;
+                                const isDifferent =
+                                  formData.request.productionDueDate !== formData.proposal.productionDueDate;
                                 if (!isDifferent) return "none";
-                                
+
                                 const awaitingSupplier = collaborationState.activeCardAuthorRole === "customer";
                                 const awaitingCustomer = collaborationState.activeCardAuthorRole === "supplier";
-                                
+
                                 if (userState.role === "customer" && awaitingSupplier) {
                                   return "underline";
                                 } else if (userState.role === "supplier" && awaitingCustomer) {
@@ -1132,12 +1131,13 @@ export const Default = () => {
                               textDecorationColor: (() => {
                                 if (acceptedItems.request || acceptedItems.proposal) return "transparent";
                                 if (!supplierProposalMade) return "transparent";
-                                const isDifferent = formData.request.productionDueDate !== formData.proposal.productionDueDate;
+                                const isDifferent =
+                                  formData.request.productionDueDate !== formData.proposal.productionDueDate;
                                 if (!isDifferent) return "transparent";
-                                
+
                                 const awaitingSupplier = collaborationState.activeCardAuthorRole === "customer";
                                 const awaitingCustomer = collaborationState.activeCardAuthorRole === "supplier";
-                                
+
                                 if (userState.role === "customer" && awaitingSupplier) {
                                   return theme.colors.grey;
                                 } else if (userState.role === "supplier" && awaitingCustomer) {
@@ -1151,7 +1151,7 @@ export const Default = () => {
                           >
                             {formData.request.productionDueDate}
                           </Text>
-                          <Text 
+                          <Text
                             my="x1"
                             style={{
                               textDecoration: (() => {
@@ -1159,10 +1159,10 @@ export const Default = () => {
                                 if (!supplierProposalMade) return "none";
                                 const isDifferent = formData.request.unitPrice !== formData.proposal.unitPrice;
                                 if (!isDifferent) return "none";
-                                
+
                                 const awaitingSupplier = collaborationState.activeCardAuthorRole === "customer";
                                 const awaitingCustomer = collaborationState.activeCardAuthorRole === "supplier";
-                                
+
                                 if (userState.role === "customer" && awaitingSupplier) {
                                   return "underline";
                                 } else if (userState.role === "supplier" && awaitingCustomer) {
@@ -1175,10 +1175,10 @@ export const Default = () => {
                                 if (!supplierProposalMade) return "transparent";
                                 const isDifferent = formData.request.unitPrice !== formData.proposal.unitPrice;
                                 if (!isDifferent) return "transparent";
-                                
+
                                 const awaitingSupplier = collaborationState.activeCardAuthorRole === "customer";
                                 const awaitingCustomer = collaborationState.activeCardAuthorRole === "supplier";
-                                
+
                                 if (userState.role === "customer" && awaitingSupplier) {
                                   return theme.colors.grey;
                                 } else if (userState.role === "supplier" && awaitingCustomer) {
@@ -1415,7 +1415,7 @@ export const Default = () => {
                         </>
                       ) : supplierProposalMade ? (
                         <>
-                          <Text 
+                          <Text
                             my="x1"
                             style={{
                               textDecoration: (() => {
@@ -1425,14 +1425,14 @@ export const Default = () => {
                                 const proposalQty = parseFloat(formData.proposal.quantity.replace(/,/g, "")) || 0;
                                 const isDifferent = requestQty !== proposalQty;
                                 if (!isDifferent) return "none";
-                                
+
                                 // Proposal column (supplier's proposal)
                                 // Only underline when awaiting customer response (activeCardAuthorRole === "supplier")
                                 // If activeCardAuthorRole is "supplier" (supplier made proposal, awaiting customer), highlight supplier's value in grey
                                 // If activeCardAuthorRole is "customer" (customer made request, awaiting supplier), do NOT underline proposal (we underline request instead)
                                 const awaitingSupplier = collaborationState.activeCardAuthorRole === "customer";
                                 const awaitingCustomer = collaborationState.activeCardAuthorRole === "supplier";
-                                
+
                                 if (userState.role === "supplier" && awaitingCustomer) {
                                   return "underline"; // Supplier's value, awaiting customer response
                                 } else if (userState.role === "customer" && awaitingCustomer) {
@@ -1447,10 +1447,10 @@ export const Default = () => {
                                 const proposalQty = parseFloat(formData.proposal.quantity.replace(/,/g, "")) || 0;
                                 const isDifferent = requestQty !== proposalQty;
                                 if (!isDifferent) return "transparent";
-                                
+
                                 const awaitingSupplier = collaborationState.activeCardAuthorRole === "customer";
                                 const awaitingCustomer = collaborationState.activeCardAuthorRole === "supplier";
-                                
+
                                 if (userState.role === "supplier" && awaitingCustomer) {
                                   return theme.colors.grey; // Supplier's value, awaiting customer response
                                 } else if (userState.role === "customer" && awaitingCustomer) {
@@ -1467,18 +1467,19 @@ export const Default = () => {
                               : formData.proposal.quantity}{" "}
                             {uomView === "supplier" ? "cases" : "eaches"}
                           </Text>
-                          <Text 
+                          <Text
                             my="x1"
                             style={{
                               textDecoration: (() => {
                                 if (acceptedItems.request || acceptedItems.proposal) return "none";
                                 if (!supplierProposalMade) return "none";
-                                const isDifferent = formData.request.productionDueDate !== formData.proposal.productionDueDate;
+                                const isDifferent =
+                                  formData.request.productionDueDate !== formData.proposal.productionDueDate;
                                 if (!isDifferent) return "none";
-                                
+
                                 const awaitingSupplier = collaborationState.activeCardAuthorRole === "customer";
                                 const awaitingCustomer = collaborationState.activeCardAuthorRole === "supplier";
-                                
+
                                 if (userState.role === "supplier" && awaitingCustomer) {
                                   return "underline";
                                 } else if (userState.role === "customer" && awaitingCustomer) {
@@ -1489,12 +1490,13 @@ export const Default = () => {
                               textDecorationColor: (() => {
                                 if (acceptedItems.request || acceptedItems.proposal) return "transparent";
                                 if (!supplierProposalMade) return "transparent";
-                                const isDifferent = formData.request.productionDueDate !== formData.proposal.productionDueDate;
+                                const isDifferent =
+                                  formData.request.productionDueDate !== formData.proposal.productionDueDate;
                                 if (!isDifferent) return "transparent";
-                                
+
                                 const awaitingSupplier = collaborationState.activeCardAuthorRole === "customer";
                                 const awaitingCustomer = collaborationState.activeCardAuthorRole === "supplier";
-                                
+
                                 if (userState.role === "supplier" && awaitingCustomer) {
                                   return theme.colors.grey;
                                 } else if (userState.role === "customer" && awaitingCustomer) {
@@ -1508,7 +1510,7 @@ export const Default = () => {
                           >
                             {formData.proposal.productionDueDate}
                           </Text>
-                          <Text 
+                          <Text
                             my="x1"
                             style={{
                               textDecoration: (() => {
@@ -1516,10 +1518,10 @@ export const Default = () => {
                                 if (!supplierProposalMade) return "none";
                                 const isDifferent = formData.request.unitPrice !== formData.proposal.unitPrice;
                                 if (!isDifferent) return "none";
-                                
+
                                 const awaitingSupplier = collaborationState.activeCardAuthorRole === "customer";
                                 const awaitingCustomer = collaborationState.activeCardAuthorRole === "supplier";
-                                
+
                                 if (userState.role === "supplier" && awaitingCustomer) {
                                   return "underline";
                                 } else if (userState.role === "customer" && awaitingCustomer) {
@@ -1532,10 +1534,10 @@ export const Default = () => {
                                 if (!supplierProposalMade) return "transparent";
                                 const isDifferent = formData.request.unitPrice !== formData.proposal.unitPrice;
                                 if (!isDifferent) return "transparent";
-                                
+
                                 const awaitingSupplier = collaborationState.activeCardAuthorRole === "customer";
                                 const awaitingCustomer = collaborationState.activeCardAuthorRole === "supplier";
-                                
+
                                 if (userState.role === "supplier" && awaitingCustomer) {
                                   return theme.colors.grey;
                                 } else if (userState.role === "customer" && awaitingCustomer) {
@@ -1572,26 +1574,49 @@ export const Default = () => {
                 <Flex gap="x2" px="x2" pb="x1">
                   {editMode ? (
                     <>
-                      <PrimaryButton onClick={() => submitUpdate(editMode)} disabled={!hasChanges(editMode) || poliStatus === "Canceled"}>
+                      <PrimaryButton
+                        onClick={() => submitUpdate(editMode)}
+                        disabled={!hasChanges(editMode) || poliStatus === "Canceled"}
+                      >
                         {editMode === "request" ? "Submit request" : "Submit proposal"}
                       </PrimaryButton>
-                      <QuietButton onClick={exitEditMode} disabled={poliStatus === "Canceled"}>Cancel</QuietButton>
+                      <QuietButton onClick={exitEditMode} disabled={poliStatus === "Canceled"}>
+                        Cancel
+                      </QuietButton>
                     </>
                   ) : (
                     <>
                       {/* Always show edit buttons based on user role */}
                       {userState.role === "supplier" && (
                         <>
-                          <QuietButton onClick={() => enterEditMode("proposal")} disabled={poliStatus === "Canceled"}>Update proposal</QuietButton>
-                          <QuietButton onClick={acceptCustomerRequest} disabled={acceptedItems.request || poliStatus === "Canceled" || collaborationState.activeCardAuthorRole === null}>
+                          <QuietButton onClick={() => enterEditMode("proposal")} disabled={poliStatus === "Canceled"}>
+                            Update proposal
+                          </QuietButton>
+                          <QuietButton
+                            onClick={acceptCustomerRequest}
+                            disabled={
+                              acceptedItems.request ||
+                              poliStatus === "Canceled" ||
+                              collaborationState.activeCardAuthorRole === null
+                            }
+                          >
                             Accept customer's request
                           </QuietButton>
                         </>
                       )}
                       {userState.role === "customer" && (
                         <>
-                          <QuietButton onClick={() => enterEditMode("request")} disabled={poliStatus === "Canceled"}>Update request</QuietButton>
-                          <QuietButton onClick={acceptSupplierProposal} disabled={acceptedItems.proposal || poliStatus === "Canceled" || collaborationState.activeCardAuthorRole === null}>
+                          <QuietButton onClick={() => enterEditMode("request")} disabled={poliStatus === "Canceled"}>
+                            Update request
+                          </QuietButton>
+                          <QuietButton
+                            onClick={acceptSupplierProposal}
+                            disabled={
+                              acceptedItems.proposal ||
+                              poliStatus === "Canceled" ||
+                              collaborationState.activeCardAuthorRole === null
+                            }
+                          >
                             Accept supplier's proposal
                           </QuietButton>
                         </>
@@ -1657,13 +1682,18 @@ export const Default = () => {
               <Text fontSize="small" color="midGrey" width="60px" textAlign="right">
                 Awaiting:
               </Text>
-              <Select minWidth="200px"
+              <Select
+                minWidth="200px"
                 options={[
                   { value: "customer", label: "Supplier's response" },
                   { value: "supplier", label: "Customer's response" },
                   { value: "none", label: "None" },
                 ]}
-                value={collaborationState.activeCardAuthorRole === null ? "none" : (collaborationState.activeCardAuthorRole || "supplier")}
+                value={
+                  collaborationState.activeCardAuthorRole === null
+                    ? "none"
+                    : collaborationState.activeCardAuthorRole || "supplier"
+                }
                 onChange={(option) => {
                   if (option === "none") {
                     // Apply Accepted state - same as clicking Accept
@@ -1710,7 +1740,8 @@ export const Default = () => {
               <Text fontSize="small" color="midGrey" width="110px" textAlign="right">
                 Milestone status:
               </Text>
-              <Select maxWidth="120px"
+              <Select
+                maxWidth="120px"
                 options={[
                   { value: "Late", label: "Late" },
                   { value: "At risk", label: "At risk" },
@@ -1728,7 +1759,8 @@ export const Default = () => {
               <Text fontSize="small" color="midGrey" width="80px" textAlign="right">
                 POLI status:
               </Text>
-              <Select maxWidth="140px"
+              <Select
+                maxWidth="140px"
                 options={[
                   { value: "Open", label: "Open" },
                   { value: "Canceled", label: "Canceled" },
@@ -1746,7 +1778,8 @@ export const Default = () => {
               <Text fontSize="small" color="midGrey" width="90px" textAlign="right">
                 Production:
               </Text>
-              <Select minWidth="140px"
+              <Select
+                minWidth="140px"
                 options={[
                   { value: "Not started", label: "Not started" },
                   { value: "In progress", label: "In progress" },
@@ -1841,7 +1874,9 @@ export const Default = () => {
               labelText="Priority"
               id="priority"
               value={formData.edit.priority}
-              onChange={(value) => setFormData((prev) => ({ ...prev, edit: { ...prev.edit, priority: value as string } }))}
+              onChange={(value) =>
+                setFormData((prev) => ({ ...prev, edit: { ...prev.edit, priority: value as string } }))
+              }
               options={[
                 { value: "Low", label: "Low" },
                 { value: "Medium", label: "Medium" },
@@ -1857,7 +1892,9 @@ export const Default = () => {
               labelText="Customer's lot code"
               id="customerLotCode"
               value={formData.edit.customerLotCode}
-              onChange={(e) => setFormData((prev) => ({ ...prev, edit: { ...prev.edit, customerLotCode: e.target.value } }))}
+              onChange={(e) =>
+                setFormData((prev) => ({ ...prev, edit: { ...prev.edit, customerLotCode: e.target.value } }))
+              }
             />
           )}
 
@@ -1867,7 +1904,9 @@ export const Default = () => {
               labelText="Supplier's lot code"
               id="supplierLotCode"
               value={formData.edit.supplierLotCode}
-              onChange={(e) => setFormData((prev) => ({ ...prev, edit: { ...prev.edit, supplierLotCode: e.target.value } }))}
+              onChange={(e) =>
+                setFormData((prev) => ({ ...prev, edit: { ...prev.edit, supplierLotCode: e.target.value } }))
+              }
             />
           )}
 
@@ -1877,7 +1916,9 @@ export const Default = () => {
             placeholder="Start typing"
             loadOptions={loadOptions}
             value={formData.edit.bomRevision}
-            onChange={(value) => setFormData((prev) => ({ ...prev, edit: { ...prev.edit, bomRevision: value as string } }))}
+            onChange={(value) =>
+              setFormData((prev) => ({ ...prev, edit: { ...prev.edit, bomRevision: value as string } }))
+            }
           />
 
           {/* Ship to - disabled */}
@@ -1911,7 +1952,12 @@ export const Default = () => {
 
           {/* Carry over sent to - disabled, shown only if production complete */}
           {productionStatus === "Completed" && (
-            <Input labelText="Carry over sent to" id="carryOverSentTo" value={formData.edit.carryOverSentTo || "-"} disabled />
+            <Input
+              labelText="Carry over sent to"
+              id="carryOverSentTo"
+              value={formData.edit.carryOverSentTo || "-"}
+              disabled
+            />
           )}
         </Flex>
       </Sidebar>
@@ -2086,9 +2132,7 @@ export const V2 = () => {
       status: "accepted",
       showAcceptedCard: true,
     }));
-    toast.success(
-      `${collaborationState.activeCardAuthorRole === "customer" ? "Request" : "Proposal"} accepted`
-    );
+    toast.success(`${collaborationState.activeCardAuthorRole === "customer" ? "Request" : "Proposal"} accepted`);
   };
 
   const submitNewProposal = () => {
@@ -2414,13 +2458,7 @@ export const V2 = () => {
                 <Text color="darkGrey">Status</Text>
               </DescriptionTerm>
               <DescriptionDetails>
-                <StatusIndicator
-                  type={
-                    poliStatus === "Completed" || poliStatus === "Canceled"
-                      ? "neutral"
-                      : "quiet"
-                  }
-                >
+                <StatusIndicator type={poliStatus === "Completed" || poliStatus === "Canceled" ? "neutral" : "quiet"}>
                   {poliStatus}
                 </StatusIndicator>
               </DescriptionDetails>
@@ -3682,9 +3720,7 @@ export const V3 = () => {
       status: "accepted",
       showAcceptedCard: true,
     }));
-    toast.success(
-      `${collaborationState.activeCardAuthorRole === "customer" ? "Request" : "Proposal"} accepted`
-    );
+    toast.success(`${collaborationState.activeCardAuthorRole === "customer" ? "Request" : "Proposal"} accepted`);
   };
 
   const submitNewProposal = () => {
@@ -4010,13 +4046,7 @@ export const V3 = () => {
                 <Text color="darkGrey">Status</Text>
               </DescriptionTerm>
               <DescriptionDetails>
-                <StatusIndicator
-                  type={
-                    poliStatus === "Completed" || poliStatus === "Canceled"
-                      ? "neutral"
-                      : "quiet"
-                  }
-                >
+                <StatusIndicator type={poliStatus === "Completed" || poliStatus === "Canceled" ? "neutral" : "quiet"}>
                   {poliStatus}
                 </StatusIndicator>
               </DescriptionDetails>

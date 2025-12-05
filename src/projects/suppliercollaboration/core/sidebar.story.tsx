@@ -441,12 +441,7 @@ export default {
   },
 };
 
-export const Default = (args: {
-  position1: string;
-  position2: string;
-  position3: string;
-  position4: string;
-}) => {
+export const Default = (args: { position1: string; position2: string; position3: string; position4: string }) => {
   // Use Customer User navigation config by default
   const navConfig = getNavigationConfig("Customer User");
 
