@@ -4420,11 +4420,14 @@ export const DetailsSectionExamples = () => {
   const filteredVariations = variations.filter((variation) => {
     if (filters.viewedAs !== "all" && variation.userRole !== filters.viewedAs) return false;
     if (filters.production === "all") return true;
-    const matchesProductionFilter =
-      (filters.production === "Open" && variation.poliStatus === "Open") ||
-      (filters.production === "Closed" &&
-        (variation.poliStatus === "Canceled" || variation.poliStatus === "Completed"));
-    return matchesProductionFilter;
+    if (filters.production === "Open") {
+      return variation.poliStatus === "Open";
+    }
+    if (filters.production === "Closed") {
+      const status = variation.poliStatus as string;
+      return status === "Canceled" || status === "Completed";
+    }
+    return true;
   });
 
   // Remove duplicates based on title - keep only the first occurrence of each unique title
