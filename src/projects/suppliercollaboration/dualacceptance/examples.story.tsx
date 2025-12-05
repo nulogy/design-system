@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useTheme } from "styled-components";
 import { Tooltip } from "../../..";
+import { ReconciledIcon } from "./ReconciledIcon";
 import {
   Box,
   Flex,
@@ -117,22 +118,38 @@ const HeaderVariation = ({
                     tooltip={
                       <Box>
                         <Text fontSize="small" lineHeight="smallRelaxed">
-                          7,500 / 15,000 eaches
+                          {productionStatus === "Not started"
+                            ? "0 / 15,000 eaches"
+                            : productionStatus === "Completed"
+                              ? "14,700 / 15,000 eaches"
+                              : "7,500 / 15,000 eaches"}
                         </Text>
                       </Box>
                     }
                   >
                     <Flex height="x2_5" alignItems="center" justifyContent="center">
-                      <Box height="x1" width="100%" backgroundColor="grey" borderRadius="medium" />
+                      <Box
+                        height="x1"
+                        width="100%"
+                        backgroundColor={productionStatus === "Not started" ? "lightGrey" : "grey"}
+                        borderRadius="medium"
+                      />
                     </Flex>
                   </Tooltip>
-                  <Flex justifyContent="center">
-                    <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                      <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
-                        50%
+                  <Flex justifyContent={productionStatus === "Completed" ? "space-between" : "center"} alignItems="center" gap="x0_5">
+                    <Text fontSize="small" color="midGrey" lineHeight="smallTextCompressed" style={{ whiteSpace: "nowrap" }}>
+                      <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
+                        {productionStatus === "Not started" ? "0%" : productionStatus === "Completed" ? "98%" : "50%"}
                       </Text>{" "}
                       produced
                     </Text>
+                    {productionStatus === "Completed" && (
+                      <StatusIndicator type="quiet">
+                        <Flex alignItems="center" gap="x0_5">
+                          Completed
+                        </Flex>
+                      </StatusIndicator>
+                    )}
                   </Flex>
                 </Flex>
               </Summary>
@@ -147,22 +164,38 @@ const HeaderVariation = ({
                     tooltip={
                       <Box>
                         <Text fontSize="small" lineHeight="smallRelaxed">
-                          7,500 / 15,000 eaches
+                          {productionStatus === "Not started"
+                            ? "0 / 15,000 eaches"
+                            : productionStatus === "Completed"
+                              ? "14,700 / 15,000 eaches"
+                              : "7,500 / 15,000 eaches"}
                         </Text>
                       </Box>
                     }
                   >
                     <Flex height="x2_5" alignItems="center" justifyContent="center">
-                      <Box height="x1" width="100%" backgroundColor="darkGrey" borderRadius="medium" />
+                      <Box
+                        height="x1"
+                        width="100%"
+                        backgroundColor={productionStatus === "Not started" ? "lightGrey" : "darkGrey"}
+                        borderRadius="medium"
+                      />
                     </Flex>
                   </Tooltip>
-                  <Flex justifyContent="center">
-                    <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                      <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
-                        50%
+                  <Flex justifyContent={productionStatus === "Completed" ? "space-between" : "center"} alignItems="center" gap="x0_5">
+                    <Text fontSize="small" color="midGrey" lineHeight="smallTextCompressed" style={{ whiteSpace: "nowrap" }}>
+                      <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
+                        {productionStatus === "Not started" ? "0%" : productionStatus === "Completed" ? "98%" : "50%"}
                       </Text>{" "}
                       produced
                     </Text>
+                    {productionStatus === "Completed" && (
+                      <StatusIndicator type="quiet">
+                        <Flex alignItems="center" gap="x0_5">
+                          Completed
+                        </Flex>
+                      </StatusIndicator>
+                    )}
                   </Flex>
                 </Flex>
               </Summary>
@@ -174,67 +207,99 @@ const HeaderVariation = ({
             <Summary breakpoint={120}>
               <Flex flexDirection="column" alignItems="center" width="200px" justifyContent="center" pt="x0_5">
                 <Flex height="x2_5" alignItems="center" justifyContent="center" gap="x0_5">
-                  {(collaborationStatus === "accepted" || acceptedRequest || acceptedProposal) &&
-                  acceptedProposal &&
-                  isFlagged &&
-                  isReconciled !== false ? (
-                    <Tooltip tooltip="With flagged acceptance">
-                      <StatusIndicator alignSelf="center" type="success">
-                        <Flex alignItems="center" gap="x0_25">
-                          Accepted
-                          <Icon icon="error" size="x1_75" color="white" mr="-6px" />
-                        </Flex>
-                      </StatusIndicator>
+                  {acceptedProposal && isReconciled !== null ? (
+                    <Tooltip tooltip={isReconciled ? "Accepted with updated request" : "Accepted with retained request"}>
+                      <Flex alignItems="center" gap="x0_5">
+                        {(collaborationStatus === "accepted" || acceptedRequest || acceptedProposal) &&
+                        acceptedProposal &&
+                        isFlagged &&
+                        isReconciled !== false ? (
+                          <StatusIndicator alignSelf="center" type="success">
+                            <Flex alignItems="center" gap="x0_25">
+                              Accepted
+                              <Icon icon="error" size="x1_75" color="white" mr="-6px" />
+                            </Flex>
+                          </StatusIndicator>
+                        ) : (
+                          <StatusIndicator
+                            alignSelf="center"
+                            type={
+                              acceptedProposal && isReconciled === false
+                                ? "neutral"
+                                : collaborationStatus === "accepted" || acceptedRequest || acceptedProposal
+                                  ? "success"
+                                  : activeCardAuthorRole === userRole
+                                    ? "warning"
+                                    : "quiet"
+                            }
+                          >
+                            {collaborationStatus === "accepted" || acceptedRequest || acceptedProposal ? (
+                              "Accepted"
+                            ) : activeCardAuthorRole === userRole ? (
+                              "Requires your response"
+                            ) : (
+                              <TruncatedText fontSize="smaller" lineHeight="smallerText" fullWidth maxWidth="184px">
+                                {`Awaiting ${userRole === "supplier" ? "customer" : "supplier"} response`}
+                              </TruncatedText>
+                            )}
+                          </StatusIndicator>
+                        )}
+                        <Box display="flex" alignItems="center" justifyContent="center">
+                          <ReconciledIcon variant={isReconciled ? "standard" : "flagged"} size={20} />
+                        </Box>
+                      </Flex>
                     </Tooltip>
                   ) : (
-                    <StatusIndicator
-                      alignSelf="center"
-                      type={
-                        collaborationStatus === "accepted" || acceptedRequest || acceptedProposal
-                          ? "success"
-                          : activeCardAuthorRole === userRole
-                            ? "warning"
-                            : "quiet"
-                      }
-                    >
-                      {collaborationStatus === "accepted" || acceptedRequest || acceptedProposal ? (
-                        "Accepted"
-                      ) : activeCardAuthorRole === userRole ? (
-                        "Requires your response"
+                    <>
+                      {(collaborationStatus === "accepted" || acceptedRequest || acceptedProposal) &&
+                      acceptedProposal &&
+                      isFlagged &&
+                      isReconciled !== false ? (
+                        <Tooltip tooltip="With flagged acceptance">
+                          <StatusIndicator alignSelf="center" type="success">
+                            <Flex alignItems="center" gap="x0_25">
+                              Accepted
+                              <Icon icon="error" size="x1_75" color="white" mr="-6px" />
+                            </Flex>
+                          </StatusIndicator>
+                        </Tooltip>
                       ) : (
-                        <TruncatedText fontSize="smaller" lineHeight="smallerText" fullWidth maxWidth="184px">
-                          {`Awaiting ${userRole === "supplier" ? "customer" : "supplier"} response`}
-                        </TruncatedText>
-                      )}
-                    </StatusIndicator>
-                  )}
-                  {acceptedProposal && isReconciled !== null && (
-                    <Tooltip tooltip={isReconciled ? "Request reconciled" : "Request not reconciled"}>
-                      <StatusIndicator alignSelf="center" type="quiet">
-                        <TruncatedText
-                          maxCharacters={9}
-                          fontSize="smaller"
-                          lineHeight="smallerText"
-                          showTooltip={false}
+                        <StatusIndicator
+                          alignSelf="center"
+                          type={
+                            collaborationStatus === "accepted" || acceptedRequest || acceptedProposal
+                              ? "success"
+                              : activeCardAuthorRole === userRole
+                                ? "warning"
+                                : "quiet"
+                          }
                         >
-                          {isReconciled ? "Reconciled" : "Not reconciled"}
-                        </TruncatedText>
-                      </StatusIndicator>
-                    </Tooltip>
+                          {collaborationStatus === "accepted" || acceptedRequest || acceptedProposal ? (
+                            "Accepted"
+                          ) : activeCardAuthorRole === userRole ? (
+                            "Requires your response"
+                          ) : (
+                            <TruncatedText fontSize="smaller" lineHeight="smallerText" fullWidth maxWidth="184px">
+                              {`Awaiting ${userRole === "supplier" ? "customer" : "supplier"} response`}
+                            </TruncatedText>
+                          )}
+                        </StatusIndicator>
+                      )}
+                    </>
                   )}
                 </Flex>
-                <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
+                <Text fontSize="small" color="midGrey" lineHeight="smallTextCompressed">
                   {collaborationStatus === "accepted" || acceptedRequest || acceptedProposal ? (
                     <>
                       On{" "}
-                      <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
+                      <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
                         September 24, 2025
                       </Text>
                     </>
                   ) : (
                     <>
                       For{" "}
-                      <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
+                      <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
                         2 days
                       </Text>
                     </>
@@ -271,9 +336,9 @@ const HeaderVariation = ({
                     />
                   </Flex>
                 </Tooltip>
-                <Flex justifyContent={productionStatus === "Completed" ? "space-between" : "center"}>
-                  <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                    <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
+                <Flex justifyContent={productionStatus === "Completed" ? "space-between" : "center"} alignItems="center" gap="x0_5">
+                  <Text fontSize="small" color="midGrey" lineHeight="smallTextCompressed" style={{ whiteSpace: "nowrap" }}>
+                    <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
                       {productionStatus === "Not started" ? "0%" : productionStatus === "Completed" ? "99%" : "50%"}
                     </Text>{" "}
                     produced
@@ -295,8 +360,8 @@ const HeaderVariation = ({
                     <Flex height="x2_5" alignItems="center" justifyContent="center">
                       <StatusIndicator type="danger">Late</StatusIndicator>
                     </Flex>
-                    <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                      <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
+                    <Text fontSize="small" color="midGrey" lineHeight="smallTextCompressed">
+                      <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
                         Production done
                       </Text>{" "}
                       milestone
@@ -310,8 +375,8 @@ const HeaderVariation = ({
                         At risk
                       </StatusIndicator>
                     </Flex>
-                    <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                      <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
+                    <Text fontSize="small" color="midGrey" lineHeight="smallTextCompressed">
+                      <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
                         Production done
                       </Text>{" "}
                       milestone
@@ -325,8 +390,8 @@ const HeaderVariation = ({
                         On time
                       </StatusIndicator>
                     </Flex>
-                    <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                      <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
+                    <Text fontSize="small" color="midGrey" lineHeight="smallTextCompressed">
+                      <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
                         Production done
                       </Text>{" "}
                       milestone
@@ -885,7 +950,7 @@ export const Header = () => {
     },
     // Customer - Canceled
     {
-      title: "Viewed as Customer | POLI status: Canceled",
+      title: "Viewed as Customer | POLI status: Canceled | Production: Not started",
       userRole: "customer" as const,
       poliStatus: "Canceled" as const,
       productionStatus: "Not started" as const,
@@ -898,7 +963,7 @@ export const Header = () => {
       activeCardAuthorRole: "supplier" as const,
     },
     {
-      title: "Viewed as Customer | POLI status: Canceled",
+      title: "Viewed as Customer | POLI status: Canceled | Production: In progress",
       userRole: "customer" as const,
       poliStatus: "Canceled" as const,
       productionStatus: "In progress" as const,
@@ -911,7 +976,7 @@ export const Header = () => {
       activeCardAuthorRole: "supplier" as const,
     },
     {
-      title: "Viewed as Customer | POLI status: Canceled",
+      title: "Viewed as Customer | POLI status: Canceled | Production: Completed",
       userRole: "customer" as const,
       poliStatus: "Canceled" as const,
       productionStatus: "Completed" as const,
@@ -924,7 +989,7 @@ export const Header = () => {
       activeCardAuthorRole: "supplier" as const,
     },
     {
-      title: "Viewed as Customer | POLI status: Canceled",
+      title: "Viewed as Customer | POLI status: Canceled | Production: Not started",
       userRole: "customer" as const,
       poliStatus: "Canceled" as const,
       productionStatus: "Not started" as const,
@@ -937,7 +1002,7 @@ export const Header = () => {
       activeCardAuthorRole: "supplier" as const,
     },
     {
-      title: "Viewed as Customer | POLI status: Canceled",
+      title: "Viewed as Customer | POLI status: Canceled | Production: Not started",
       userRole: "customer" as const,
       poliStatus: "Canceled" as const,
       productionStatus: "Not started" as const,
@@ -950,7 +1015,7 @@ export const Header = () => {
       activeCardAuthorRole: "supplier" as const,
     },
     {
-      title: "Viewed as Customer | POLI status: Canceled",
+      title: "Viewed as Customer | POLI status: Canceled | Production: Not started",
       userRole: "customer" as const,
       poliStatus: "Canceled" as const,
       productionStatus: "Not started" as const,
@@ -963,7 +1028,7 @@ export const Header = () => {
       activeCardAuthorRole: "customer" as const,
     },
     {
-      title: "Viewed as Customer | POLI status: Canceled",
+      title: "Viewed as Customer | POLI status: Canceled | Production: Not started",
       userRole: "customer" as const,
       poliStatus: "Canceled" as const,
       productionStatus: "Not started" as const,
@@ -976,7 +1041,7 @@ export const Header = () => {
       activeCardAuthorRole: null as null,
     },
     {
-      title: "Viewed as Customer | POLI status: Canceled",
+      title: "Viewed as Customer | POLI status: Canceled | Production: Not started",
       userRole: "customer" as const,
       poliStatus: "Canceled" as const,
       productionStatus: "Not started" as const,
@@ -989,7 +1054,7 @@ export const Header = () => {
       activeCardAuthorRole: null as null,
     },
     {
-      title: "Viewed as Customer | POLI status: Canceled",
+      title: "Viewed as Customer | POLI status: Canceled | Production: Not started",
       userRole: "customer" as const,
       poliStatus: "Canceled" as const,
       productionStatus: "Not started" as const,
@@ -1003,7 +1068,7 @@ export const Header = () => {
     },
     // Customer - Completed
     {
-      title: "Viewed as Customer | POLI status: Completed",
+      title: "Viewed as Customer | POLI status: Completed | Production: Not started",
       userRole: "customer" as const,
       poliStatus: "Completed" as const,
       productionStatus: "Not started" as const,
@@ -1016,7 +1081,7 @@ export const Header = () => {
       activeCardAuthorRole: "supplier" as const,
     },
     {
-      title: "Viewed as Customer | POLI status: Completed",
+      title: "Viewed as Customer | POLI status: Completed | Production: In progress",
       userRole: "customer" as const,
       poliStatus: "Completed" as const,
       productionStatus: "In progress" as const,
@@ -1029,7 +1094,7 @@ export const Header = () => {
       activeCardAuthorRole: "supplier" as const,
     },
     {
-      title: "Viewed as Customer | POLI status: Completed",
+      title: "Viewed as Customer | POLI status: Completed | Production: Completed",
       userRole: "customer" as const,
       poliStatus: "Completed" as const,
       productionStatus: "Completed" as const,
@@ -1042,7 +1107,7 @@ export const Header = () => {
       activeCardAuthorRole: "supplier" as const,
     },
     {
-      title: "Viewed as Customer | POLI status: Completed",
+      title: "Viewed as Customer | POLI status: Completed | Production: Completed",
       userRole: "customer" as const,
       poliStatus: "Completed" as const,
       productionStatus: "Completed" as const,
@@ -1691,7 +1756,7 @@ export const Header = () => {
     },
     // Supplier - Canceled
     {
-      title: "Viewed as Supplier | POLI status: Canceled",
+      title: "Viewed as Supplier | POLI status: Canceled | Production: Not started",
       userRole: "supplier" as const,
       poliStatus: "Canceled" as const,
       productionStatus: "Not started" as const,
@@ -1704,7 +1769,7 @@ export const Header = () => {
       activeCardAuthorRole: "customer" as const,
     },
     {
-      title: "Viewed as Supplier | POLI status: Canceled",
+      title: "Viewed as Supplier | POLI status: Canceled | Production: In progress",
       userRole: "supplier" as const,
       poliStatus: "Canceled" as const,
       productionStatus: "In progress" as const,
@@ -1717,7 +1782,7 @@ export const Header = () => {
       activeCardAuthorRole: "customer" as const,
     },
     {
-      title: "Viewed as Supplier | POLI status: Canceled",
+      title: "Viewed as Supplier | POLI status: Canceled | Production: Completed",
       userRole: "supplier" as const,
       poliStatus: "Canceled" as const,
       productionStatus: "Completed" as const,
@@ -1730,7 +1795,7 @@ export const Header = () => {
       activeCardAuthorRole: "customer" as const,
     },
     {
-      title: "Viewed as Supplier | POLI status: Canceled",
+      title: "Viewed as Supplier | POLI status: Canceled | Production: Not started",
       userRole: "supplier" as const,
       poliStatus: "Canceled" as const,
       productionStatus: "Not started" as const,
@@ -1743,7 +1808,7 @@ export const Header = () => {
       activeCardAuthorRole: "customer" as const,
     },
     {
-      title: "Viewed as Supplier | POLI status: Canceled",
+      title: "Viewed as Supplier | POLI status: Canceled | Production: Not started",
       userRole: "supplier" as const,
       poliStatus: "Canceled" as const,
       productionStatus: "Not started" as const,
@@ -1756,7 +1821,7 @@ export const Header = () => {
       activeCardAuthorRole: "customer" as const,
     },
     {
-      title: "Viewed as Supplier | POLI status: Canceled",
+      title: "Viewed as Supplier | POLI status: Canceled | Production: Not started",
       userRole: "supplier" as const,
       poliStatus: "Canceled" as const,
       productionStatus: "Not started" as const,
@@ -1769,7 +1834,7 @@ export const Header = () => {
       activeCardAuthorRole: "supplier" as const,
     },
     {
-      title: "Viewed as Supplier | POLI status: Canceled",
+      title: "Viewed as Supplier | POLI status: Canceled | Production: Not started",
       userRole: "supplier" as const,
       poliStatus: "Canceled" as const,
       productionStatus: "Not started" as const,
@@ -1782,7 +1847,7 @@ export const Header = () => {
       activeCardAuthorRole: null as null,
     },
     {
-      title: "Viewed as Supplier | POLI status: Canceled",
+      title: "Viewed as Supplier | POLI status: Canceled | Production: Not started",
       userRole: "supplier" as const,
       poliStatus: "Canceled" as const,
       productionStatus: "Not started" as const,
@@ -1795,7 +1860,7 @@ export const Header = () => {
       activeCardAuthorRole: null as null,
     },
     {
-      title: "Viewed as Supplier | POLI status: Canceled",
+      title: "Viewed as Supplier | POLI status: Canceled | Production: Not started",
       userRole: "supplier" as const,
       poliStatus: "Canceled" as const,
       productionStatus: "Not started" as const,
@@ -1809,7 +1874,7 @@ export const Header = () => {
     },
     // Supplier - Completed
     {
-      title: "Viewed as Supplier | POLI status: Completed",
+      title: "Viewed as Supplier | POLI status: Completed | Production: Not started",
       userRole: "supplier" as const,
       poliStatus: "Completed" as const,
       productionStatus: "Not started" as const,
@@ -1822,7 +1887,7 @@ export const Header = () => {
       activeCardAuthorRole: "customer" as const,
     },
     {
-      title: "Viewed as Supplier | POLI status: Completed",
+      title: "Viewed as Supplier | POLI status: Completed | Production: In progress",
       userRole: "supplier" as const,
       poliStatus: "Completed" as const,
       productionStatus: "In progress" as const,
@@ -1835,7 +1900,7 @@ export const Header = () => {
       activeCardAuthorRole: "customer" as const,
     },
     {
-      title: "Viewed as Supplier | POLI status: Completed",
+      title: "Viewed as Supplier | POLI status: Completed | Production: Completed",
       userRole: "supplier" as const,
       poliStatus: "Completed" as const,
       productionStatus: "Completed" as const,
@@ -1848,7 +1913,7 @@ export const Header = () => {
       activeCardAuthorRole: "customer" as const,
     },
     {
-      title: "Viewed as Supplier | POLI status: Completed",
+      title: "Viewed as Supplier | POLI status: Completed | Production: Completed",
       userRole: "supplier" as const,
       poliStatus: "Completed" as const,
       productionStatus: "Completed" as const,
@@ -1970,7 +2035,6 @@ export const Header = () => {
                 <Select
                   menuPosition="fixed"
                   styles={selectStyles}
-                  disabled={filters.poliStatus === "Completed" || filters.poliStatus === "Canceled"}
                   value={filters.production}
                   onChange={(value) => setFilters({ ...filters, production: value as any })}
                   options={[
