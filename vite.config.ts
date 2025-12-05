@@ -33,6 +33,7 @@ export default defineConfig({
     extensions: [".js", ".jsx", ".ts", ".tsx", ".mjs"],
   },
   build: {
+    emptyOutDir: false,
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
       name: "NDSComponents",

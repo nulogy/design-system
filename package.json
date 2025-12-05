@@ -14,7 +14,7 @@
     "start:cypress": "start-server-and-test start 9999 'cypress open'",
     "start:storybook": "storybook dev -p 9999",
     "clean:storybook": "rm -rf node_modules/.cache/storybook && rm -rf ./storybook-static",
-    "build": "vite build",
+    "build": "tsc -p tsconfig.build.json && vite build",
     "build:watch": "vite build --watch",
     "build:storybook": "storybook build --stats-json",
     "warn:prepush": "echo \"Make sure you also run all the other CI steps before pushing by running 'pnpm ci'\"",
