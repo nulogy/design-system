@@ -551,7 +551,7 @@ const Option4Template: StoryFn<TableProps> = (args) => (
   </ApplicationFrame>
 );
 
-export const Default = Template.bind({});
+export const Default: StoryFn<TableProps> = Template.bind({});
 Default.args = {
   columns,
   rows,
@@ -562,7 +562,7 @@ Default.args = {
   onPageChange: (page) => console.log("Page changed to:", page),
 };
 
-export const Option2 = Option2Template.bind({});
+export const Option2: StoryFn<TableProps> = Option2Template.bind({});
 Option2.args = {
   columns,
   rows,
@@ -573,7 +573,7 @@ Option2.args = {
   onPageChange: (page) => console.log("Page changed to:", page),
 };
 
-export const Option3 = Option3Template.bind({});
+export const Option3: StoryFn<TableProps> = Option3Template.bind({});
 Option3.args = {
   columns: columnsWithoutRenderers,
   rows: rowsWithTopAlignment,
@@ -584,7 +584,7 @@ Option3.args = {
   onPageChange: (page) => console.log("Page changed to:", page),
 };
 
-export const Option4 = Option4Template.bind({});
+export const Option4: StoryFn<TableProps> = Option4Template.bind({});
 Option4.args = {
   columns: columnsWithMiddleAlignment,
   rows: rowsWithMiddleAlignment,
