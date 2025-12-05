@@ -14,7 +14,7 @@
     "start:cypress": "start-server-and-test start 9999 'cypress open'",
     "start:storybook": "storybook dev -p 9999",
     "clean:storybook": "rm -rf node_modules/.cache/storybook && rm -rf ./storybook-static",
-    "build": "tsc -p tsconfig.build.json && vite build",
+    "build": "rm -rf dist && tsc -p tsconfig.build.json && vite build",
     "build:verify": "node scripts/verify-build.js",
     "build:watch": "vite build --watch",
     "build:storybook": "storybook build --stats-json",
@@ -51,6 +51,13 @@
   "main": "dist/main.js",
   "module": "dist/main.module.js",
   "typings": "dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/main.module.js",
+      "require": "./dist/main.js"
+    }
+  },
   "files": [
     "/dist"
   ],
