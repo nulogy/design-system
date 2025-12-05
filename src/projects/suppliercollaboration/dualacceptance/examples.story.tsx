@@ -136,8 +136,17 @@ const HeaderVariation = ({
                       />
                     </Flex>
                   </Tooltip>
-                  <Flex justifyContent={productionStatus === "Completed" ? "space-between" : "center"} alignItems="center" gap="x0_5">
-                    <Text fontSize="small" color="midGrey" lineHeight="smallTextCompressed" style={{ whiteSpace: "nowrap" }}>
+                  <Flex
+                    justifyContent={productionStatus === "Completed" ? "space-between" : "center"}
+                    alignItems="center"
+                    gap="x0_5"
+                  >
+                    <Text
+                      fontSize="small"
+                      color="midGrey"
+                      lineHeight="smallTextCompressed"
+                      style={{ whiteSpace: "nowrap" }}
+                    >
                       <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
                         {productionStatus === "Not started" ? "0%" : productionStatus === "Completed" ? "98%" : "50%"}
                       </Text>{" "}
@@ -182,8 +191,17 @@ const HeaderVariation = ({
                       />
                     </Flex>
                   </Tooltip>
-                  <Flex justifyContent={productionStatus === "Completed" ? "space-between" : "center"} alignItems="center" gap="x0_5">
-                    <Text fontSize="small" color="midGrey" lineHeight="smallTextCompressed" style={{ whiteSpace: "nowrap" }}>
+                  <Flex
+                    justifyContent={productionStatus === "Completed" ? "space-between" : "center"}
+                    alignItems="center"
+                    gap="x0_5"
+                  >
+                    <Text
+                      fontSize="small"
+                      color="midGrey"
+                      lineHeight="smallTextCompressed"
+                      style={{ whiteSpace: "nowrap" }}
+                    >
                       <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
                         {productionStatus === "Not started" ? "0%" : productionStatus === "Completed" ? "98%" : "50%"}
                       </Text>{" "}
@@ -205,10 +223,19 @@ const HeaderVariation = ({
           // Open - show current content
           return (
             <Summary breakpoint={120}>
-              <Flex flexDirection="column" alignItems="center" width="200px" justifyContent="center" pt="x0_5" gap="x0_5">
+              <Flex
+                flexDirection="column"
+                alignItems="center"
+                width="200px"
+                justifyContent="center"
+                pt="x0_5"
+                gap="x0_5"
+              >
                 <Flex height="x2_5" alignItems="center" justifyContent="center" gap="x0_5">
                   {acceptedProposal && isReconciled !== null ? (
-                    <Tooltip tooltip={isReconciled ? "Accepted with updated request" : "Accepted with retained request"}>
+                    <Tooltip
+                      tooltip={isReconciled ? "Accepted with updated request" : "Accepted with retained request"}
+                    >
                       <Flex alignItems="center" gap="x0_5">
                         {(collaborationStatus === "accepted" || acceptedRequest || acceptedProposal) &&
                         acceptedProposal &&
@@ -336,8 +363,17 @@ const HeaderVariation = ({
                     />
                   </Flex>
                 </Tooltip>
-                <Flex justifyContent={productionStatus === "Completed" ? "space-between" : "center"} alignItems="center" gap="x0_5">
-                  <Text fontSize="small" color="midGrey" lineHeight="smallTextCompressed" style={{ whiteSpace: "nowrap" }}>
+                <Flex
+                  justifyContent={productionStatus === "Completed" ? "space-between" : "center"}
+                  alignItems="center"
+                  gap="x0_5"
+                >
+                  <Text
+                    fontSize="small"
+                    color="midGrey"
+                    lineHeight="smallTextCompressed"
+                    style={{ whiteSpace: "nowrap" }}
+                  >
                     <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
                       {productionStatus === "Not started" ? "0%" : productionStatus === "Completed" ? "99%" : "50%"}
                     </Text>{" "}
@@ -354,7 +390,14 @@ const HeaderVariation = ({
                 </Flex>
               </Flex>
               <SummaryDivider />
-              <Flex flexDirection="column" alignItems="center" width="200px" justifyContent="center" pt="x0_5" gap="x0_5">
+              <Flex
+                flexDirection="column"
+                alignItems="center"
+                width="200px"
+                justifyContent="center"
+                pt="x0_5"
+                gap="x0_5"
+              >
                 {poStatus === "Late" && (
                   <>
                     <Flex height="x2_5" alignItems="center" justifyContent="center">
@@ -1999,89 +2042,89 @@ export const Header = () => {
                 </Box>
                 <Box minWidth="150px">
                   <FieldLabel labelText="POLI status" mb="x1" />
-                <Select
-                  menuPosition="fixed"
-                  styles={selectStyles}
-                  value={filters.poliStatus}
-                  onChange={(value) => setFilters({ ...filters, poliStatus: value as any })}
-                  options={[
-                    { value: "all", label: "All" },
-                    { value: "Open", label: "Open" },
-                    { value: "Canceled", label: "Canceled" },
-                    { value: "Completed", label: "Completed" },
-                  ]}
-                />
-              </Box>
-              <Box minWidth="300px">
-                <FieldLabel labelText="Collaboration" mb="x1" />
-                <Select
-                  menuPosition="fixed"
-                  styles={selectStyles}
-                  disabled={filters.poliStatus === "Completed" || filters.poliStatus === "Canceled"}
-                  value={filters.collaboration}
-                  onChange={(value) => setFilters({ ...filters, collaboration: value as any })}
-                  options={[
-                    { value: "all", label: "All" },
-                    { value: "awaiting-customer", label: "Awaiting customer's response" },
-                    { value: "awaiting-supplier", label: "Awaiting supplier's response" },
-                    { value: "request-accepted", label: "Request accepted" },
-                    { value: "proposal-accepted-reconciled", label: "Proposal accepted (reconciled)" },
-                    { value: "proposal-accepted-not-reconciled", label: "Proposal accepted (not reconciled)" },
-                  ]}
-                />
-              </Box>
-              <Box minWidth="150px">
-                <FieldLabel labelText="Production" mb="x1" />
-                <Select
-                  menuPosition="fixed"
-                  styles={selectStyles}
-                  value={filters.production}
-                  onChange={(value) => setFilters({ ...filters, production: value as any })}
-                  options={[
-                    { value: "all", label: "All" },
-                    { value: "Not started", label: "Not started" },
-                    { value: "In progress", label: "In progress" },
-                    { value: "Completed", label: "Completed" },
-                  ]}
-                />
-              </Box>
-              <Box minWidth="150px">
-                <FieldLabel labelText="Milestone status" mb="x1" />
-                <Select
-                  menuPosition="fixed"
-                  styles={selectStyles}
-                  disabled={filters.poliStatus === "Completed" || filters.poliStatus === "Canceled"}
-                  value={filters.milestoneStatus}
-                  onChange={(value) => setFilters({ ...filters, milestoneStatus: value as any })}
-                  options={[
-                    { value: "all", label: "All" },
-                    { value: "Late", label: "Late" },
-                    { value: "At risk", label: "At risk" },
-                    { value: "On time", label: "On time" },
-                  ]}
-                />
-              </Box>
-            </Flex>
+                  <Select
+                    menuPosition="fixed"
+                    styles={selectStyles}
+                    value={filters.poliStatus}
+                    onChange={(value) => setFilters({ ...filters, poliStatus: value as any })}
+                    options={[
+                      { value: "all", label: "All" },
+                      { value: "Open", label: "Open" },
+                      { value: "Canceled", label: "Canceled" },
+                      { value: "Completed", label: "Completed" },
+                    ]}
+                  />
+                </Box>
+                <Box minWidth="300px">
+                  <FieldLabel labelText="Collaboration" mb="x1" />
+                  <Select
+                    menuPosition="fixed"
+                    styles={selectStyles}
+                    disabled={filters.poliStatus === "Completed" || filters.poliStatus === "Canceled"}
+                    value={filters.collaboration}
+                    onChange={(value) => setFilters({ ...filters, collaboration: value as any })}
+                    options={[
+                      { value: "all", label: "All" },
+                      { value: "awaiting-customer", label: "Awaiting customer's response" },
+                      { value: "awaiting-supplier", label: "Awaiting supplier's response" },
+                      { value: "request-accepted", label: "Request accepted" },
+                      { value: "proposal-accepted-reconciled", label: "Proposal accepted (reconciled)" },
+                      { value: "proposal-accepted-not-reconciled", label: "Proposal accepted (not reconciled)" },
+                    ]}
+                  />
+                </Box>
+                <Box minWidth="150px">
+                  <FieldLabel labelText="Production" mb="x1" />
+                  <Select
+                    menuPosition="fixed"
+                    styles={selectStyles}
+                    value={filters.production}
+                    onChange={(value) => setFilters({ ...filters, production: value as any })}
+                    options={[
+                      { value: "all", label: "All" },
+                      { value: "Not started", label: "Not started" },
+                      { value: "In progress", label: "In progress" },
+                      { value: "Completed", label: "Completed" },
+                    ]}
+                  />
+                </Box>
+                <Box minWidth="150px">
+                  <FieldLabel labelText="Milestone status" mb="x1" />
+                  <Select
+                    menuPosition="fixed"
+                    styles={selectStyles}
+                    disabled={filters.poliStatus === "Completed" || filters.poliStatus === "Canceled"}
+                    value={filters.milestoneStatus}
+                    onChange={(value) => setFilters({ ...filters, milestoneStatus: value as any })}
+                    options={[
+                      { value: "all", label: "All" },
+                      { value: "Late", label: "Late" },
+                      { value: "At risk", label: "At risk" },
+                      { value: "On time", label: "On time" },
+                    ]}
+                  />
+                </Box>
+              </Flex>
+            </Box>
+            {uniqueVariations.map((variation, index) => (
+              <HeaderVariation
+                key={index}
+                title={variation.title}
+                userRole={variation.userRole}
+                poliStatus={variation.poliStatus}
+                productionStatus={variation.productionStatus}
+                collaborationStatus={variation.collaborationStatus}
+                acceptedRequest={variation.acceptedRequest}
+                acceptedProposal={variation.acceptedProposal}
+                poStatus={variation.poStatus}
+                isReconciled={variation.isReconciled}
+                isFlagged={variation.isFlagged}
+                activeCardAuthorRole={variation.activeCardAuthorRole}
+              />
+            ))}
           </Box>
-          {uniqueVariations.map((variation, index) => (
-            <HeaderVariation
-              key={index}
-              title={variation.title}
-              userRole={variation.userRole}
-              poliStatus={variation.poliStatus}
-              productionStatus={variation.productionStatus}
-              collaborationStatus={variation.collaborationStatus}
-              acceptedRequest={variation.acceptedRequest}
-              acceptedProposal={variation.acceptedProposal}
-              poStatus={variation.poStatus}
-              isReconciled={variation.isReconciled}
-              isFlagged={variation.isFlagged}
-              activeCardAuthorRole={variation.activeCardAuthorRole}
-            />
-          ))}
-        </Box>
-      </Page>
-    </ApplicationFrame>
+        </Page>
+      </ApplicationFrame>
     </>
   );
 };
@@ -2469,39 +2512,39 @@ export const DetailsSection = () => {
                 </Box>
                 <Box minWidth="150px">
                   <FieldLabel labelText="Production" mb="x1" />
-                <Select
-                  menuPosition="fixed"
-                  styles={selectStyles}
-                  value={filters.production}
-                  onChange={(value) => setFilters({ ...filters, production: value as any })}
-                  options={[
-                    { value: "all", label: "All" },
-                    { value: "Open", label: "Open" },
-                    { value: "Closed", label: "Closed" },
-                  ]}
-                />
-              </Box>
-            </Flex>
+                  <Select
+                    menuPosition="fixed"
+                    styles={selectStyles}
+                    value={filters.production}
+                    onChange={(value) => setFilters({ ...filters, production: value as any })}
+                    options={[
+                      { value: "all", label: "All" },
+                      { value: "Open", label: "Open" },
+                      { value: "Closed", label: "Closed" },
+                    ]}
+                  />
+                </Box>
+              </Flex>
+            </Box>
+            {uniqueVariations.map((variation, index) => (
+              <DetailsSectionVariation
+                key={index}
+                title={variation.title}
+                userRole={variation.userRole}
+                poliStatus={variation.poliStatus}
+                productionStatus={variation.productionStatus}
+                supplierPOLineItemNumber={(variation as any).supplierPOLineItemNumber}
+                bomRevision={(variation as any).bomRevision}
+                needByDate={(variation as any).needByDate}
+                closeProductionNote={(variation as any).closeProductionNote}
+                carryOverSentTo={(variation as any).carryOverSentTo}
+                expressShipment={(variation as any).expressShipment}
+                validatedForAssembly={(variation as any).validatedForAssembly}
+              />
+            ))}
           </Box>
-          {uniqueVariations.map((variation, index) => (
-            <DetailsSectionVariation
-              key={index}
-              title={variation.title}
-              userRole={variation.userRole}
-              poliStatus={variation.poliStatus}
-              productionStatus={variation.productionStatus}
-              supplierPOLineItemNumber={(variation as any).supplierPOLineItemNumber}
-              bomRevision={(variation as any).bomRevision}
-              needByDate={(variation as any).needByDate}
-              closeProductionNote={(variation as any).closeProductionNote}
-              carryOverSentTo={(variation as any).carryOverSentTo}
-              expressShipment={(variation as any).expressShipment}
-              validatedForAssembly={(variation as any).validatedForAssembly}
-            />
-          ))}
-        </Box>
-      </Page>
-    </ApplicationFrame>
+        </Page>
+      </ApplicationFrame>
     </>
   );
 };

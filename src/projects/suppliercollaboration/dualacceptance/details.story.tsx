@@ -459,8 +459,17 @@ export const Default = () => {
                       />
                     </Flex>
                   </Tooltip>
-                  <Flex justifyContent={productionStatus === "Completed" ? "space-between" : "center"} alignItems="center" gap="x0_5">
-                    <Text fontSize="small" color="midGrey" lineHeight="smallTextCompressed" style={{ whiteSpace: "nowrap" }}>
+                  <Flex
+                    justifyContent={productionStatus === "Completed" ? "space-between" : "center"}
+                    alignItems="center"
+                    gap="x0_5"
+                  >
+                    <Text
+                      fontSize="small"
+                      color="midGrey"
+                      lineHeight="smallTextCompressed"
+                      style={{ whiteSpace: "nowrap" }}
+                    >
                       <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
                         {productionStatus === "Not started" ? "0%" : productionStatus === "Completed" ? "98%" : "50%"}
                       </Text>{" "}
@@ -505,8 +514,17 @@ export const Default = () => {
                       />
                     </Flex>
                   </Tooltip>
-                  <Flex justifyContent={productionStatus === "Completed" ? "space-between" : "center"} alignItems="center" gap="x0_5">
-                    <Text fontSize="small" color="midGrey" lineHeight="smallTextCompressed" style={{ whiteSpace: "nowrap" }}>
+                  <Flex
+                    justifyContent={productionStatus === "Completed" ? "space-between" : "center"}
+                    alignItems="center"
+                    gap="x0_5"
+                  >
+                    <Text
+                      fontSize="small"
+                      color="midGrey"
+                      lineHeight="smallTextCompressed"
+                      style={{ whiteSpace: "nowrap" }}
+                    >
                       <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
                         {productionStatus === "Not started" ? "0%" : productionStatus === "Completed" ? "98%" : "50%"}
                       </Text>{" "}
@@ -528,10 +546,19 @@ export const Default = () => {
           // Open - show current content
           return (
             <Summary breakpoint={120}>
-              <Flex flexDirection="column" alignItems="center" width="200px" justifyContent="center" pt="x0_5" gap="x0_5">
+              <Flex
+                flexDirection="column"
+                alignItems="center"
+                width="200px"
+                justifyContent="center"
+                pt="x0_5"
+                gap="x0_5"
+              >
                 <Flex height="x2_5" alignItems="center" justifyContent="center" gap="x0_5">
                   {acceptedItems.proposal && isReconciled !== null ? (
-                    <Tooltip tooltip={isReconciled ? "Accepted with updated request" : "Accepted with retained request"}>
+                    <Tooltip
+                      tooltip={isReconciled ? "Accepted with updated request" : "Accepted with retained request"}
+                    >
                       <Flex alignItems="center" gap="x0_5">
                         {(productionStatus === "Completed" ||
                           collaborationState.status === "accepted" ||
@@ -631,8 +658,8 @@ export const Default = () => {
                 </Flex>
                 <Text fontSize="small" color="midGrey" lineHeight="smallTextCompressed">
                   {productionStatus === "Completed" ||
-                    collaborationState.status === "accepted" ||
-                    acceptedItems.request ||
+                  collaborationState.status === "accepted" ||
+                  acceptedItems.request ||
                   acceptedItems.proposal ? (
                     <>
                       On{" "}
@@ -682,8 +709,17 @@ export const Default = () => {
                   </Flex>
                 </Tooltip>
 
-                <Flex justifyContent={productionStatus === "Completed" ? "space-between" : "center"} alignItems="center" gap="x0_5">
-                  <Text fontSize="small" color="midGrey" lineHeight="smallTextCompressed" style={{ whiteSpace: "nowrap" }}>
+                <Flex
+                  justifyContent={productionStatus === "Completed" ? "space-between" : "center"}
+                  alignItems="center"
+                  gap="x0_5"
+                >
+                  <Text
+                    fontSize="small"
+                    color="midGrey"
+                    lineHeight="smallTextCompressed"
+                    style={{ whiteSpace: "nowrap" }}
+                  >
                     <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
                       {productionStatus === "Not started" ? "0%" : productionStatus === "Completed" ? "99%" : "50%"}
                     </Text>{" "}
@@ -700,7 +736,14 @@ export const Default = () => {
                 </Flex>
               </Flex>
               <SummaryDivider />
-              <Flex flexDirection="column" alignItems="center" width="200px" justifyContent="center" pt="x0_5" gap="x0_5">
+              <Flex
+                flexDirection="column"
+                alignItems="center"
+                width="200px"
+                justifyContent="center"
+                pt="x0_5"
+                gap="x0_5"
+              >
                 {poStatus === "Late" && (
                   <>
                     <Flex height="x2_5" alignItems="center" justifyContent="center">
@@ -775,168 +818,168 @@ export const Default = () => {
           </IconicButton>
         </Flex>
         {detailsExpanded && (
-        <Box mb="x3" pl="x3">
-          <DescriptionList layout="stacked" columns={{ extraSmall: 1, small: 2, medium: 3, large: 5 }}>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">PO number</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Link underline={false}>PO-00000004</Link>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Customer's PO line item number</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
+          <Box mb="x3" pl="x3">
+            <DescriptionList layout="stacked" columns={{ extraSmall: 1, small: 2, medium: 3, large: 5 }}>
+              <DescriptionGroup>
+                <DescriptionTerm>
+                  <Text color="darkGrey">PO number</Text>
+                </DescriptionTerm>
+                <DescriptionDetails>
+                  <Link underline={false}>PO-00000004</Link>
+                </DescriptionDetails>
+              </DescriptionGroup>
+              <DescriptionGroup>
+                <DescriptionTerm>
+                  <Text color="darkGrey">Customer's PO line item number</Text>
+                </DescriptionTerm>
+                <DescriptionDetails>
                   <Text>{customerPOLineItemNumber}</Text>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Supplier's PO line item number</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Text>{formData.edit.supplierPOLineItemNumber || "-"}</Text>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Status</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
+                </DescriptionDetails>
+              </DescriptionGroup>
+              <DescriptionGroup>
+                <DescriptionTerm>
+                  <Text color="darkGrey">Supplier's PO line item number</Text>
+                </DescriptionTerm>
+                <DescriptionDetails>
+                  <Text>{formData.edit.supplierPOLineItemNumber || "-"}</Text>
+                </DescriptionDetails>
+              </DescriptionGroup>
+              <DescriptionGroup>
+                <DescriptionTerm>
+                  <Text color="darkGrey">Status</Text>
+                </DescriptionTerm>
+                <DescriptionDetails>
                   <StatusIndicator type={poliStatus === "Completed" || poliStatus === "Canceled" ? "neutral" : "quiet"}>
-                  {poliStatus}
-                </StatusIndicator>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Created on</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Text>February 1, 2025</Text>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
+                    {poliStatus}
+                  </StatusIndicator>
+                </DescriptionDetails>
+              </DescriptionGroup>
+              <DescriptionGroup>
+                <DescriptionTerm>
+                  <Text color="darkGrey">Created on</Text>
+                </DescriptionTerm>
+                <DescriptionDetails>
+                  <Text>February 1, 2025</Text>
+                </DescriptionDetails>
+              </DescriptionGroup>
+              <DescriptionGroup>
+                <DescriptionTerm>
                   <Text color="darkGrey">{userState.role === "customer" ? "Supplier" : "Customer"}</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Text>Claudia Supplier</Text>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Customer's item code and description</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
+                </DescriptionTerm>
+                <DescriptionDetails>
+                  <Text>Claudia Supplier</Text>
+                </DescriptionDetails>
+              </DescriptionGroup>
+              <DescriptionGroup>
+                <DescriptionTerm>
+                  <Text color="darkGrey">Customer's item code and description</Text>
+                </DescriptionTerm>
+                <DescriptionDetails>
                   <Link underline={false}>{customerItemCodeAndDescription}</Link>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Supplier's item code</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Text>SUP-ITEM-001</Text>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Tags</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Flex flexWrap="wrap" gap="x0_25">
-                  {assignedTags.expressShipment && (
-                    <StatusIndicator type="quiet">
-                      <Text fontSize="smaller" lineHeight="smallerText">
-                        Express shipment
-                      </Text>
-                    </StatusIndicator>
-                  )}
-                  {assignedTags.validatedForAssembly && (
-                    <StatusIndicator type={userState.role === "customer" ? "success" : "quiet"}>
-                      <Text fontSize="smaller" lineHeight="smallerText">
-                        Validated for assembly
-                      </Text>
-                    </StatusIndicator>
-                  )}
-                  {!assignedTags.expressShipment && !assignedTags.validatedForAssembly && <Text>-</Text>}
-                </Flex>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Priority</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Text>High</Text>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Customer's lot code</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Text>LOT-2024-001</Text>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Supplier's lot code</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Text>SUP-LOT-001</Text>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">BOM revision and release date</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Text>{formData.edit.bomRevision || "-"}</Text>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Ship to</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Text>Warehouse A - 123 Main St, City, State 12345</Text>
-              </DescriptionDetails>
-            </DescriptionGroup>
+                </DescriptionDetails>
+              </DescriptionGroup>
+              <DescriptionGroup>
+                <DescriptionTerm>
+                  <Text color="darkGrey">Supplier's item code</Text>
+                </DescriptionTerm>
+                <DescriptionDetails>
+                  <Text>SUP-ITEM-001</Text>
+                </DescriptionDetails>
+              </DescriptionGroup>
+              <DescriptionGroup>
+                <DescriptionTerm>
+                  <Text color="darkGrey">Tags</Text>
+                </DescriptionTerm>
+                <DescriptionDetails>
+                  <Flex flexWrap="wrap" gap="x0_25">
+                    {assignedTags.expressShipment && (
+                      <StatusIndicator type="quiet">
+                        <Text fontSize="smaller" lineHeight="smallerText">
+                          Express shipment
+                        </Text>
+                      </StatusIndicator>
+                    )}
+                    {assignedTags.validatedForAssembly && (
+                      <StatusIndicator type={userState.role === "customer" ? "success" : "quiet"}>
+                        <Text fontSize="smaller" lineHeight="smallerText">
+                          Validated for assembly
+                        </Text>
+                      </StatusIndicator>
+                    )}
+                    {!assignedTags.expressShipment && !assignedTags.validatedForAssembly && <Text>-</Text>}
+                  </Flex>
+                </DescriptionDetails>
+              </DescriptionGroup>
+              <DescriptionGroup>
+                <DescriptionTerm>
+                  <Text color="darkGrey">Priority</Text>
+                </DescriptionTerm>
+                <DescriptionDetails>
+                  <Text>High</Text>
+                </DescriptionDetails>
+              </DescriptionGroup>
+              <DescriptionGroup>
+                <DescriptionTerm>
+                  <Text color="darkGrey">Customer's lot code</Text>
+                </DescriptionTerm>
+                <DescriptionDetails>
+                  <Text>LOT-2024-001</Text>
+                </DescriptionDetails>
+              </DescriptionGroup>
+              <DescriptionGroup>
+                <DescriptionTerm>
+                  <Text color="darkGrey">Supplier's lot code</Text>
+                </DescriptionTerm>
+                <DescriptionDetails>
+                  <Text>SUP-LOT-001</Text>
+                </DescriptionDetails>
+              </DescriptionGroup>
+              <DescriptionGroup>
+                <DescriptionTerm>
+                  <Text color="darkGrey">BOM revision and release date</Text>
+                </DescriptionTerm>
+                <DescriptionDetails>
+                  <Text>{formData.edit.bomRevision || "-"}</Text>
+                </DescriptionDetails>
+              </DescriptionGroup>
+              <DescriptionGroup>
+                <DescriptionTerm>
+                  <Text color="darkGrey">Ship to</Text>
+                </DescriptionTerm>
+                <DescriptionDetails>
+                  <Text>Warehouse A - 123 Main St, City, State 12345</Text>
+                </DescriptionDetails>
+              </DescriptionGroup>
               {productionStatus === "Completed" && (
                 <>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Need by date</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Text>
-                  {formData.edit.needByDate
-                    ? new Date(formData.edit.needByDate).toLocaleDateString("en-US", {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })
-                    : "-"}
-                </Text>
-              </DescriptionDetails>
-            </DescriptionGroup>
-                <DescriptionGroup>
-                  <DescriptionTerm>
-                    <Text color="darkGrey">Close production note</Text>
-                  </DescriptionTerm>
-                  <DescriptionDetails>
-                    <Text>{formData.edit.closeProductionNote || "-"}</Text>
-                  </DescriptionDetails>
-                </DescriptionGroup>
-              </>
-            )}
-          </DescriptionList>
-        </Box>
+                  <DescriptionGroup>
+                    <DescriptionTerm>
+                      <Text color="darkGrey">Need by date</Text>
+                    </DescriptionTerm>
+                    <DescriptionDetails>
+                      <Text>
+                        {formData.edit.needByDate
+                          ? new Date(formData.edit.needByDate).toLocaleDateString("en-US", {
+                              year: "numeric",
+                              month: "long",
+                              day: "numeric",
+                            })
+                          : "-"}
+                      </Text>
+                    </DescriptionDetails>
+                  </DescriptionGroup>
+                  <DescriptionGroup>
+                    <DescriptionTerm>
+                      <Text color="darkGrey">Close production note</Text>
+                    </DescriptionTerm>
+                    <DescriptionDetails>
+                      <Text>{formData.edit.closeProductionNote || "-"}</Text>
+                    </DescriptionDetails>
+                  </DescriptionGroup>
+                </>
+              )}
+            </DescriptionList>
+          </Box>
         )}
         <Tabs selectedIndex={selectedIndex} onTabClick={(e, index) => setSelectedIndex(index)}>
           <Tab label="Collaboration">
@@ -1824,11 +1867,11 @@ export const Default = () => {
                       activeCardAuthorRole: null,
                     }));
                   } else {
-                  setCollaborationState((prev) => ({
-                    ...prev,
-                    activeCardAuthorRole: option as "supplier" | "customer",
+                    setCollaborationState((prev) => ({
+                      ...prev,
+                      activeCardAuthorRole: option as "supplier" | "customer",
                     }));
-                }
+                  }
                 }}
                 placeholder="Select author role"
                 menuPlacement="top"
@@ -2079,13 +2122,13 @@ export const Default = () => {
           <Flex flexDirection="column" gap="x1">
             <Box mb="x1">
               <Flex alignItems="center" gap="x1">
-              <Radio
-                name="acceptance-option"
-                value="without-flagging"
+                <Radio
+                  name="acceptance-option"
+                  value="without-flagging"
                   labelText="Accept and update request"
-                checked={acceptanceOption === "without-flagging"}
-                onChange={() => setAcceptanceOption("without-flagging")}
-              />
+                  checked={acceptanceOption === "without-flagging"}
+                  onChange={() => setAcceptanceOption("without-flagging")}
+                />
                 <Box display="flex" alignItems="center" justifyContent="center">
                   <ReconciledIcon variant="standard" size={20} />
                 </Box>
@@ -2097,13 +2140,13 @@ export const Default = () => {
             <Divider m="0" />
             <Box mb="x1">
               <Flex alignItems="center" gap="x1">
-              <Radio
-                name="acceptance-option"
-                value="with-flagging"
+                <Radio
+                  name="acceptance-option"
+                  value="with-flagging"
                   labelText="Accept and retain request"
-                checked={acceptanceOption === "with-flagging"}
-                onChange={() => setAcceptanceOption("with-flagging")}
-              />
+                  checked={acceptanceOption === "with-flagging"}
+                  onChange={() => setAcceptanceOption("with-flagging")}
+                />
                 <Box display="flex" alignItems="center" justifyContent="center">
                   <ReconciledIcon variant="flagged" size={20} />
                 </Box>
