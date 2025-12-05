@@ -12,7 +12,7 @@
 // the project's config changing)
 
 /* eslint-disable no-unused-vars */
-module.exports = (on, config) => {
+export default (_on, _config) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
 };
