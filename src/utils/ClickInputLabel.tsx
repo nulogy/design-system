@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
 
 const ClickInputLabel = styled.label<{ variant?: ComponentVariant; disabled?: boolean }>(({ disabled, theme }) => ({

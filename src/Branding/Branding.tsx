@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { useTheme } from "styled-components";
+import { styled, useTheme } from "styled-components";
 import { Flex } from "../Flex";
 import { DefaultNDSThemeType } from "../theme";
 import BrandingText from "./BrandingText";

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { AppTagType } from "../types";
 import { appTagColors } from "../constants";
 

@@ -1,4 +1,4 @@
-import styled, { CSSObject, useTheme } from "styled-components";
+import { styled, CSSObject, useTheme } from "styled-components";
 import { useTranslation } from "react-i18next";
 import React, { useEffect } from "react";
 import { Icon } from "../Icon";

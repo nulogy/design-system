@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { useTheme } from "styled-components";
+import { styled, useTheme } from "styled-components";
 import numberFromDimension from "../utils/numberFromDimension";
 import { Box } from "../Box";
 import { BoxProps } from "../Box/Box";

@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import { styled } from "styled-components";
 import ReactResizeDetector from "react-resize-detector";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";

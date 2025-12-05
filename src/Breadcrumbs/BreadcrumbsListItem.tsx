@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { space, color, flexbox, layout, variant } from "styled-system";
 import { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
 

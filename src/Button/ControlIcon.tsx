@@ -1,6 +1,6 @@
 import type { IconName } from "@nulogy/icons";
 import React from "react";
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { layout, LayoutProps, space, SpaceProps } from "styled-system";
 import { Icon } from "../Icon";
 

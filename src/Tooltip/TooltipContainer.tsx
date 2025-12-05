@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { PositionProps } from "styled-system";
 import { Box } from "../Box";
 import { DefaultNDSThemeType } from "../theme";

@@ -1,5 +1,5 @@
 import React, { CSSProperties } from "react";
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { DefaultNDSThemeType } from "../theme";
 
 interface StyledTableCellProps {

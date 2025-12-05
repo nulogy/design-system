@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { CloseButton } from "../Button";
 
 const ModalCloseButton = styled(CloseButton)(({ theme }) => ({

@@ -1,5 +1,5 @@
 import React, { forwardRef, ReactNode } from "react";
-import styled, { CSSObject } from "styled-components";
+import { styled, CSSObject } from "styled-components";
 import propTypes from "@styled-system/prop-types";
 import { SpaceProps } from "styled-system";
 import { Box } from "../Box";

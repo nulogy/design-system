@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { DefaultNDSThemeType } from "../theme";
 import { useDescriptionListContext } from "./DescriptionListContext";
 import { BaseDescriptionListProps, Columns, Density, GroupMinWidth } from "./lib/types";

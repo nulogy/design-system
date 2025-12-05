@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { darken } from "polished";
 import Button, { ButtonProps } from "./Button";
 import { DefaultNDSThemeType } from "../theme";

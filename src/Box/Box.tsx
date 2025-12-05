@@ -1,5 +1,5 @@
 import { ComponentPropsWithRef } from "react";
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { motion, MotionProps } from "framer-motion";
 import { addStyledProps, StyledProps } from "../StyledProps";
 

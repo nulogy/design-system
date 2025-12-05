@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { components, GroupBase, OptionProps } from "react-select";
 import { typography } from "styled-system";
 import { subPx } from "../utils";

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
 import Button, { ButtonProps } from "./Button";
 const QuietButton = styled(Button)(({ theme }: ButtonProps) => ({
   color: theme.colors.blue,

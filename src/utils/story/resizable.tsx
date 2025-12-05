@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Resizable as ReResizable } from "re-resizable";
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { Box } from "../../Box";
 import { DashedBox } from "../../DescriptionList/stories/fixtures";
 import { Text } from "../../Type";

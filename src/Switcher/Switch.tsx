@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { variant } from "styled-system";
 import numberFromDimension from "../utils/numberFromDimension";
 import { ComponentVariant } from "../NDSProvider/ComponentVariantContext";

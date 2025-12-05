@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as TooltipPrimitive from "@radix-ui/react-tooltip";
-import styled, { keyframes, useTheme } from "styled-components";
+import { styled, keyframes, useTheme } from "styled-components";
 import { maxWidth } from "styled-system";
 import { MaxWidthProps } from "styled-system";
 

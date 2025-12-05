@@ -6,7 +6,7 @@ import {
 import type { AnimationProps } from "framer-motion";
 import { motion } from "framer-motion";
 import { transparentize } from "polished";
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { compose, height, layout, maxHeight, maxWidth, space, width } from "styled-system";
 import type { HeightProps, LayoutProps, MaxHeightProps, MaxWidthProps, SpaceProps, WidthProps } from "styled-system";
 import { Heading2, Text } from "../Type";

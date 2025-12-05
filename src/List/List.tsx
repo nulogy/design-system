@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { addStyledProps, StyledProps } from "../StyledProps";
 import ListItem from "./ListItem";
 

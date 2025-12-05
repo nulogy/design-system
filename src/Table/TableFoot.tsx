@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import { styled } from "styled-components";
 import TableCell from "./TableCell";
 import StyledTh from "./StyledTh";
 import { RowType, Columns } from "./Table.types";

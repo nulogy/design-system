@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import { styled } from "styled-components";
 import type { CSSObject } from "styled-components";
 import { display } from "styled-system";
 import { Text } from "../Type";

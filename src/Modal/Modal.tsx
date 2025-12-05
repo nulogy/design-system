@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import styled, { ThemeContext, CSSObject, useTheme } from "styled-components";
+import { styled, ThemeContext, CSSObject, useTheme } from "styled-components";
 import ReactModal from "react-modal";
 import { transparentize } from "polished";
 import { Heading2 } from "../Type";

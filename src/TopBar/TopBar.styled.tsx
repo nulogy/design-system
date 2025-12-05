@@ -1,7 +1,7 @@
 import { DialogOverlay } from "@reach/dialog";
 import { motion } from "framer-motion";
 import { transparentize } from "polished";
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { addStyledProps, StyledProps } from "../StyledProps";
 import { TOPBAR } from "./constants";
 

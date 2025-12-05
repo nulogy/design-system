@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { addStyledProps, StyledProps } from "../StyledProps";
 
 const Ul = styled.ul<StyledProps>(addStyledProps);

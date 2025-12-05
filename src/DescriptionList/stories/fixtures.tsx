@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { transparentize } from "polished";
 import { Box } from "../../Box";
 import { Flex } from "../../Flex";

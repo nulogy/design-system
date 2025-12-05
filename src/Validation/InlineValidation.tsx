@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { SpaceProps } from "styled-system";
 import { Text } from "../Type";
 import { Icon } from "../Icon";

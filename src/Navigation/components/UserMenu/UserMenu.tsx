@@ -1,5 +1,5 @@
 import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { addStyledProps, StyledProps } from "../../../StyledProps";
 import { Header } from "./parts/Header";
 import Item from "./parts/Item";

@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { useTheme } from "styled-components";
+import { styled, useTheme } from "styled-components";
 import type { IconName } from "@nulogy/icons";
 import { space, SpaceProps, variant } from "styled-system";
 import { Icon } from "../Icon";

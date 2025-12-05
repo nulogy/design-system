@@ -1,6 +1,6 @@
 import React from "react";
 import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { Text } from "../../../Type";
 import type { MenuItem } from "../../types";
 import { Icon } from "../../../Icon";

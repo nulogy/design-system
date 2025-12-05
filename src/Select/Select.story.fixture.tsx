@@ -1,6 +1,6 @@
 import React from "react";
 import { GroupBase } from "react-select";
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { SelectOption, SelectOptionProps } from "./SelectOption";
 import { NDSOption } from "./Select";
 
