@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2015",
+    "target": "ES2020",
     "declaration": true,
     "outDir": "./dist",
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -18,6 +18,6 @@
     "noImplicitAny": false,
     "jsx": "react"
   },
-  "include": ["src/**/*", "vitest.config.ts"],
+  "include": ["src/**/*", "vite.config.ts"],
   "exclude": ["node_modules", "./dist", "**/*.spec.js", "**/*.spec.tsx"]
 }

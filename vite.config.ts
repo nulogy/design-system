@@ -1,5 +1,5 @@
 import { resolve } from "node:path";
-import { defineConfig } from "vite";
+import { defineConfig } from "vitest/config";
 import react from "@vitejs/plugin-react";
 
 const PEER_DEPENDENCIES = {
@@ -25,6 +25,13 @@ const GLOBALS = {
 const externals = Object.keys(GLOBALS);
 
 export default defineConfig({
+  plugins: [react()],
+  define: {
+    ENV: JSON.stringify(process.env.NODE_ENV || "development"),
+  },
+  resolve: {
+    extensions: [".js", ".jsx", ".ts", ".tsx", ".mjs"],
+  },
   build: {
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
@@ -44,14 +51,14 @@ export default defineConfig({
       },
     },
     sourcemap: true,
-    minify: false, // Match Rollup default behavior
+    minify: false,
     target: "es2020",
   },
-  plugins: [react()],
-  define: {
-    ENV: JSON.stringify(process.env.NODE_ENV || "development"),
-  },
-  resolve: {
-    extensions: [".js", ".jsx", ".ts", ".tsx", ".mjs"],
+  test: {
+    environment: "jsdom",
+    globals: false,
+    include: ["**/*.spec.tsx", "**/*.spec.ts"],
+    exclude: ["**/node_modules/**", "**/cypress/**", "**/dist/**"],
+    setupFiles: [resolve(__dirname, "spec/support/vitestAutoCleanup.ts")],
   },
 });
