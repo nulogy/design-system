@@ -24,6 +24,17 @@ const GLOBALS = {
 
 const externals = Object.keys(GLOBALS);
 
+// External function - all peer dependencies are externalized
+// Also externalize react/jsx-runtime in case any dependencies use automatic JSX
+const external = (id: string) => {
+  // Externalize react/jsx-runtime and react/jsx-dev-runtime
+  // This ensures that if any dependencies use automatic JSX, they'll use the consumer's React
+  if (id === "react/jsx-runtime" || id === "react/jsx-dev-runtime") {
+    return true;
+  }
+  return externals.includes(id);
+};
+
 export default defineConfig({
   plugins: [react()],
   define: {
@@ -46,7 +57,7 @@ export default defineConfig({
       },
     },
     rollupOptions: {
-      external: externals,
+      external,
       output: {
         globals: GLOBALS,
       },
