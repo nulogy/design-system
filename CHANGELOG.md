@@ -1,3 +1,15 @@
+# [15.4.0](https://github.com/nulogy/design-system/compare/v15.3.0...v15.4.0) (2025-12-05)
+
+
+### Bug Fixes
+
+* Consistent pnpm version ([e3bdb31](https://github.com/nulogy/design-system/commit/e3bdb31e83fb02a181cb0ecb4beee7023cc3e898))
+
+
+### Features
+
+* Verify the build ([dfa0fa3](https://github.com/nulogy/design-system/commit/dfa0fa334d8d01dcce5ba4c797e6f056bc9119b0))
+
 # [15.3.0](https://github.com/nulogy/design-system/compare/v15.2.3...v15.3.0) (2025-12-04)
 
 
