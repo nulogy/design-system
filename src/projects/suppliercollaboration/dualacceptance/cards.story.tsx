@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
-import { select, withKnobs } from "@storybook/addon-knobs";
 import {
   Box,
   Flex,
@@ -233,7 +232,25 @@ export default {
   parameters: {
     layout: "fullscreen",
   },
-  decorators: [withKnobs],
+  argTypes: {
+    userType: {
+      control: { type: "select" },
+      options: ["Customer User", "Supplier User"],
+    },
+    cardType: {
+      control: { type: "select" },
+      options: ["request", "proposal"],
+    },
+    awaiting: {
+      control: { type: "select" },
+      options: ["none", "Customer", "Supplier"],
+    },
+  },
+  args: {
+    userType: "Customer User",
+    cardType: "request",
+    awaiting: "none",
+  },
 };
 
 const sampleFormData = {
@@ -660,19 +677,13 @@ const EditCard = ({
   );
 };
 
-export const Default = () => {
-  const userType = select(
-    "User Type",
-    { "Customer User": "Customer User", "Supplier User": "Supplier User" },
-    "Customer User"
-  );
-  const cardType = select("Card Type", { Request: "request", Proposal: "proposal" }, "request") as
-    | "request"
-    | "proposal";
-  const awaiting = select("Awaiting", { None: undefined, Customer: "Customer", Supplier: "Supplier" }, undefined) as
-    | "Customer"
-    | "Supplier"
-    | undefined;
+export const Default = (args: {
+  userType: "Customer User" | "Supplier User";
+  cardType: "request" | "proposal";
+  awaiting: "none" | "Customer" | "Supplier";
+}) => {
+  const { userType, cardType, awaiting: awaitingArg } = args;
+  const awaiting = awaitingArg === "none" ? undefined : awaitingArg;
   const navConfig = getNavigationConfig(userType);
 
   return (

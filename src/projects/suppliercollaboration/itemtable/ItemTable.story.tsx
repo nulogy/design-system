@@ -1,5 +1,5 @@
 import React from "react";
-import { Meta, Story } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import {
   Table,
   Box,
@@ -324,7 +324,7 @@ export default {
   },
 } as Meta;
 
-const Template: Story<TableProps> = (args) => (
+const Template: StoryFn<TableProps> = (args) => (
   <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
     <Page>
       <Box width="100%" height="calc(100vh - 96px)" overflow="auto" pb="x3">
@@ -334,7 +334,7 @@ const Template: Story<TableProps> = (args) => (
   </ApplicationFrame>
 );
 
-const Option2Template: Story<TableProps> = (args) => (
+const Option2Template: StoryFn<TableProps> = (args) => (
   <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
     <Page overflow="auto">
       <Table {...args} />
@@ -535,7 +535,7 @@ const rowsWithMiddleAlignment = rows.map((row) => ({
   verticalAlign: "middle",
 }));
 
-const Option3Template: Story<TableProps> = (args) => (
+const Option3Template: StoryFn<TableProps> = (args) => (
   <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
     <Page>
       <Table {...args} />
@@ -543,7 +543,7 @@ const Option3Template: Story<TableProps> = (args) => (
   </ApplicationFrame>
 );
 
-const Option4Template: Story<TableProps> = (args) => (
+const Option4Template: StoryFn<TableProps> = (args) => (
   <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
     <Page overflow="auto">
       <Table {...args} />
