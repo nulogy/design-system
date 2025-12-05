@@ -44,6 +44,9 @@ jobs:
       - name: Build
         run: pnpm build
 
+      - name: Verify build
+        run: pnpm build:verify
+
   lint:
     runs-on: ubuntu-latest
 

@@ -8,13 +8,14 @@
     "access": "public"
   },
   "scripts": {
-    "ci": "pnpm && pnpm build && pnpm test && pnpm run check",
+    "ci": "pnpm && pnpm build && pnpm build:verify && pnpm test && pnpm run check",
     "start-server": "pnpm build:storybook && pnpm http-server -p 9999 ./storybook-static",
     "start": "concurrently \"pnpm build:watch\" \"pnpm start:storybook\"",
     "start:cypress": "start-server-and-test start 9999 'cypress open'",
     "start:storybook": "storybook dev -p 9999",
     "clean:storybook": "rm -rf node_modules/.cache/storybook && rm -rf ./storybook-static",
     "build": "tsc -p tsconfig.build.json && vite build",
+    "build:verify": "node scripts/verify-build.js",
     "build:watch": "vite build --watch",
     "build:storybook": "storybook build --stats-json",
     "warn:prepush": "echo \"Make sure you also run all the other CI steps before pushing by running 'pnpm ci'\"",
