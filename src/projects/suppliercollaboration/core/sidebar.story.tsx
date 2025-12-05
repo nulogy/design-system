@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { BrowserRouter } from "react-router-dom";
-import { select, withKnobs } from "@storybook/addon-knobs";
 import {
   ApplicationFrame,
   Page,
@@ -416,26 +415,43 @@ const getNavigationConfig = (userType: string) => {
 
 export default {
   title: "Projects/Supplier Collaboration/Core/Filters",
-  decorators: [withKnobs],
+  argTypes: {
+    position1: {
+      control: { type: "select" },
+      options: ["saved", "order", "delivery", "item", "none"],
+    },
+    position2: {
+      control: { type: "select" },
+      options: ["saved", "order", "delivery", "item", "none"],
+    },
+    position3: {
+      control: { type: "select" },
+      options: ["saved", "order", "delivery", "item", "none"],
+    },
+    position4: {
+      control: { type: "select" },
+      options: ["saved", "order", "delivery", "item", "none"],
+    },
+  },
+  args: {
+    position1: "saved",
+    position2: "order",
+    position3: "delivery",
+    position4: "item",
+  },
 };
 
-export const Default = () => {
+export const Default = (args: {
+  position1: string;
+  position2: string;
+  position3: string;
+  position4: string;
+}) => {
   // Use Customer User navigation config by default
   const navConfig = getNavigationConfig("Customer User");
 
-  // Knobs for section order - each position can be independently selected
-  const sectionOrderOptions = {
-    "Saved Filters": "saved",
-    "In-transit Order Filters": "order",
-    "Delivery Filters": "delivery",
-    "Item Filters": "item",
-    "(None)": "none",
-  };
-
-  const position1 = select("Position 1", sectionOrderOptions, "saved");
-  const position2 = select("Position 2", sectionOrderOptions, "order");
-  const position3 = select("Position 3", sectionOrderOptions, "delivery");
-  const position4 = select("Position 4", sectionOrderOptions, "item");
+  // Use args for section order - each position can be independently selected
+  const { position1, position2, position3, position4 } = args;
 
   // Build ordered array from positions, filtering out "none" and duplicates
   const sectionOrder = [position1, position2, position3, position4]
