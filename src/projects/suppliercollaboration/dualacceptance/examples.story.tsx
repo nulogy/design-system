@@ -113,7 +113,7 @@ const HeaderVariation = ({
           if (poliStatus === "Canceled") {
             return (
               <Summary breakpoint={120}>
-                <Flex flexDirection="column" width="200px" justifyContent="center" pt="x0_5">
+                <Flex flexDirection="column" width="200px" justifyContent="center" pt="x0_5" gap="x0_5">
                   <Tooltip
                     tooltip={
                       <Box>
@@ -159,7 +159,7 @@ const HeaderVariation = ({
           if (poliStatus === "Completed") {
             return (
               <Summary breakpoint={120}>
-                <Flex flexDirection="column" width="200px" justifyContent="center" pt="x0_5">
+                <Flex flexDirection="column" width="200px" justifyContent="center" pt="x0_5" gap="x0_5">
                   <Tooltip
                     tooltip={
                       <Box>
@@ -205,7 +205,7 @@ const HeaderVariation = ({
           // Open - show current content
           return (
             <Summary breakpoint={120}>
-              <Flex flexDirection="column" alignItems="center" width="200px" justifyContent="center" pt="x0_5">
+              <Flex flexDirection="column" alignItems="center" width="200px" justifyContent="center" pt="x0_5" gap="x0_5">
                 <Flex height="x2_5" alignItems="center" justifyContent="center" gap="x0_5">
                   {acceptedProposal && isReconciled !== null ? (
                     <Tooltip tooltip={isReconciled ? "Accepted with updated request" : "Accepted with retained request"}>
@@ -307,7 +307,7 @@ const HeaderVariation = ({
                 </Text>
               </Flex>
               <SummaryDivider />
-              <Flex flexDirection="column" width="200px" justifyContent="center" pt="x0_5">
+              <Flex flexDirection="column" width="200px" justifyContent="center" pt="x0_5" gap="x0_5">
                 <Tooltip
                   tooltip={
                     <Box>
@@ -354,7 +354,7 @@ const HeaderVariation = ({
                 </Flex>
               </Flex>
               <SummaryDivider />
-              <Flex flexDirection="column" alignItems="center" width="200px" justifyContent="center" pt="x0_5">
+              <Flex flexDirection="column" alignItems="center" width="200px" justifyContent="center" pt="x0_5" gap="x0_5">
                 {poStatus === "Late" && (
                   <>
                     <Flex height="x2_5" alignItems="center" justifyContent="center">

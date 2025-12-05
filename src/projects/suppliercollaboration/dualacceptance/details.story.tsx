@@ -50,6 +50,7 @@ import {
   Radio,
 } from "../../..";
 import { POLICard } from "../polidetails/components/POLICard";
+import { ReconciledIcon } from "./ReconciledIcon";
 
 export default {
   title: "Projects/Supplier Collaboration/Dual acceptance/Details",
@@ -435,28 +436,43 @@ export const Default = () => {
           if (poliStatus === "Canceled") {
             return (
               <Summary breakpoint={120}>
-                <Flex flexDirection="column" width="200px" justifyContent="center" pt="x0_5">
+                <Flex flexDirection="column" width="200px" justifyContent="center" pt="x0_5" gap="x0_5">
                   <Tooltip
                     tooltip={
                       <Box>
                         <Text fontSize="small" lineHeight="smallRelaxed">
-                          7,500 / 15,000 eaches
+                          {productionStatus === "Not started"
+                            ? "0 / 15,000 eaches"
+                            : productionStatus === "Completed"
+                              ? "14,700 / 15,000 eaches"
+                              : "7,500 / 15,000 eaches"}
                         </Text>
                       </Box>
                     }
                   >
-                  <Flex height="x2_5" alignItems="center" justifyContent="center">
-                      <Box height="x1" width="100%" backgroundColor="grey" borderRadius="medium" />
-                  </Flex>
+                    <Flex height="x2_5" alignItems="center" justifyContent="center">
+                      <Box
+                        height="x1"
+                        width="100%"
+                        backgroundColor={productionStatus === "Not started" ? "lightGrey" : "grey"}
+                        borderRadius="medium"
+                      />
+                    </Flex>
                   </Tooltip>
-
-                  <Flex justifyContent="center">
-                  <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                    <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
-                        50%
+                  <Flex justifyContent={productionStatus === "Completed" ? "space-between" : "center"} alignItems="center" gap="x0_5">
+                    <Text fontSize="small" color="midGrey" lineHeight="smallTextCompressed" style={{ whiteSpace: "nowrap" }}>
+                      <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
+                        {productionStatus === "Not started" ? "0%" : productionStatus === "Completed" ? "98%" : "50%"}
                       </Text>{" "}
                       produced
-                  </Text>
+                    </Text>
+                    {productionStatus === "Completed" && (
+                      <StatusIndicator type="quiet">
+                        <Flex alignItems="center" gap="x0_5">
+                          Completed
+                        </Flex>
+                      </StatusIndicator>
+                    )}
                   </Flex>
                 </Flex>
               </Summary>
@@ -466,28 +482,43 @@ export const Default = () => {
           if (poliStatus === "Completed") {
             return (
               <Summary breakpoint={120}>
-                <Flex flexDirection="column" width="200px" justifyContent="center" pt="x0_5">
+                <Flex flexDirection="column" width="200px" justifyContent="center" pt="x0_5" gap="x0_5">
                   <Tooltip
                     tooltip={
                       <Box>
                         <Text fontSize="small" lineHeight="smallRelaxed">
-                          7,500 / 15,000 eaches
+                          {productionStatus === "Not started"
+                            ? "0 / 15,000 eaches"
+                            : productionStatus === "Completed"
+                              ? "14,700 / 15,000 eaches"
+                              : "7,500 / 15,000 eaches"}
                         </Text>
                       </Box>
                     }
                   >
                     <Flex height="x2_5" alignItems="center" justifyContent="center">
-                      <Box height="x1" width="100%" backgroundColor="darkGrey" borderRadius="medium" />
+                      <Box
+                        height="x1"
+                        width="100%"
+                        backgroundColor={productionStatus === "Not started" ? "lightGrey" : "darkGrey"}
+                        borderRadius="medium"
+                      />
                     </Flex>
                   </Tooltip>
-
-                  <Flex justifyContent="center">
-                    <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                      <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
-                        50%
+                  <Flex justifyContent={productionStatus === "Completed" ? "space-between" : "center"} alignItems="center" gap="x0_5">
+                    <Text fontSize="small" color="midGrey" lineHeight="smallTextCompressed" style={{ whiteSpace: "nowrap" }}>
+                      <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
+                        {productionStatus === "Not started" ? "0%" : productionStatus === "Completed" ? "98%" : "50%"}
                       </Text>{" "}
                       produced
                     </Text>
+                    {productionStatus === "Completed" && (
+                      <StatusIndicator type="quiet">
+                        <Flex alignItems="center" gap="x0_5">
+                          Completed
+                        </Flex>
+                      </StatusIndicator>
+                    )}
                   </Flex>
                 </Flex>
               </Summary>
@@ -497,82 +528,122 @@ export const Default = () => {
           // Open - show current content
           return (
             <Summary breakpoint={120}>
-              <Flex flexDirection="column" alignItems="center" width="200px" justifyContent="center" pt="x0_5">
+              <Flex flexDirection="column" alignItems="center" width="200px" justifyContent="center" pt="x0_5" gap="x0_5">
                 <Flex height="x2_5" alignItems="center" justifyContent="center" gap="x0_5">
-                  {(productionStatus === "Completed" ||
-                    collaborationState.status === "accepted" ||
-                    acceptedItems.request ||
-                    acceptedItems.proposal) &&
-                  acceptedItems.proposal &&
-                  isFlagged &&
-                  isReconciled !== false ? (
-                    <Tooltip tooltip="With flagged acceptance">
-                      <StatusIndicator alignSelf="center" type="success">
-                        <Flex alignItems="center" gap="x0_25">
-                          Accepted
-                          <Icon icon="error" size="x1_75" color="white" mr="-6px" />
-                        </Flex>
-                      </StatusIndicator>
+                  {acceptedItems.proposal && isReconciled !== null ? (
+                    <Tooltip tooltip={isReconciled ? "Accepted with updated request" : "Accepted with retained request"}>
+                      <Flex alignItems="center" gap="x0_5">
+                        {(productionStatus === "Completed" ||
+                          collaborationState.status === "accepted" ||
+                          acceptedItems.request ||
+                          acceptedItems.proposal) &&
+                        acceptedItems.proposal &&
+                        isFlagged &&
+                        isReconciled !== false ? (
+                          <StatusIndicator alignSelf="center" type="success">
+                            <Flex alignItems="center" gap="x0_25">
+                              Accepted
+                              <Icon icon="error" size="x1_75" color="white" mr="-6px" />
+                            </Flex>
+                          </StatusIndicator>
+                        ) : (
+                          <StatusIndicator
+                            alignSelf="center"
+                            type={
+                              acceptedItems.proposal && isReconciled === false
+                                ? "neutral"
+                                : productionStatus === "Completed" ||
+                                    collaborationState.status === "accepted" ||
+                                    acceptedItems.request ||
+                                    acceptedItems.proposal
+                                  ? "success"
+                                  : collaborationState.activeCardAuthorRole !== userState.role
+                                    ? "warning"
+                                    : "quiet"
+                            }
+                          >
+                            {productionStatus === "Completed" ||
+                            collaborationState.status === "accepted" ||
+                            acceptedItems.request ||
+                            acceptedItems.proposal ? (
+                              "Accepted"
+                            ) : collaborationState.activeCardAuthorRole === userState.role ? (
+                              <TruncatedText fontSize="smaller" lineHeight="smallerText" fullWidth maxWidth="184px">
+                                {`Awaiting ${userState.role === "supplier" ? "customer" : "supplier"} response`}
+                              </TruncatedText>
+                            ) : (
+                              "Requires your response"
+                            )}
+                          </StatusIndicator>
+                        )}
+                        <Box display="flex" alignItems="center" justifyContent="center">
+                          <ReconciledIcon variant={isReconciled ? "standard" : "flagged"} size={20} />
+                        </Box>
+                      </Flex>
                     </Tooltip>
                   ) : (
-                    <StatusIndicator
-                      alignSelf="center"
-                      type={
-                        productionStatus === "Completed" ||
+                    <>
+                      {(productionStatus === "Completed" ||
                         collaborationState.status === "accepted" ||
                         acceptedItems.request ||
-                        acceptedItems.proposal
-                          ? "success"
-                          : collaborationState.activeCardAuthorRole !== userState.role
-                            ? "warning"
-                            : "quiet"
-                      }
-                    >
-                      {productionStatus === "Completed" ||
-                      collaborationState.status === "accepted" ||
-                      acceptedItems.request ||
-                      acceptedItems.proposal ? (
-                        "Accepted"
-                      ) : collaborationState.activeCardAuthorRole === userState.role ? (
-                        <TruncatedText fontSize="smaller" lineHeight="smallerText" fullWidth maxWidth="184px">
-                          {`Awaiting ${userState.role === "supplier" ? "customer" : "supplier"} response`}
-                        </TruncatedText>
+                        acceptedItems.proposal) &&
+                      acceptedItems.proposal &&
+                      isFlagged &&
+                      isReconciled !== false ? (
+                        <Tooltip tooltip="With flagged acceptance">
+                          <StatusIndicator alignSelf="center" type="success">
+                            <Flex alignItems="center" gap="x0_25">
+                              Accepted
+                              <Icon icon="error" size="x1_75" color="white" mr="-6px" />
+                            </Flex>
+                          </StatusIndicator>
+                        </Tooltip>
                       ) : (
-                        "Requires your response"
-                      )}
-                    </StatusIndicator>
-                  )}
-                  {/* Show reconciliation status pill when proposal is accepted */}
-                  {acceptedItems.proposal && isReconciled !== null && (
-                    <Tooltip tooltip={isReconciled ? "Request reconciled" : "Request not reconciled"}>
-                      <StatusIndicator alignSelf="center" type="quiet">
-                        <TruncatedText
-                          maxCharacters={9}
-                          fontSize="smaller"
-                          lineHeight="smallerText"
-                          showTooltip={false}
+                        <StatusIndicator
+                          alignSelf="center"
+                          type={
+                            productionStatus === "Completed" ||
+                            collaborationState.status === "accepted" ||
+                            acceptedItems.request ||
+                            acceptedItems.proposal
+                              ? "success"
+                              : collaborationState.activeCardAuthorRole !== userState.role
+                                ? "warning"
+                                : "quiet"
+                          }
                         >
-                          {isReconciled ? "Reconciled" : "Not reconciled"}
-                        </TruncatedText>
-                      </StatusIndicator>
-                    </Tooltip>
+                          {productionStatus === "Completed" ||
+                          collaborationState.status === "accepted" ||
+                          acceptedItems.request ||
+                          acceptedItems.proposal ? (
+                            "Accepted"
+                          ) : collaborationState.activeCardAuthorRole === userState.role ? (
+                            <TruncatedText fontSize="smaller" lineHeight="smallerText" fullWidth maxWidth="184px">
+                              {`Awaiting ${userState.role === "supplier" ? "customer" : "supplier"} response`}
+                            </TruncatedText>
+                          ) : (
+                            "Requires your response"
+                          )}
+                        </StatusIndicator>
+                      )}
+                    </>
                   )}
                 </Flex>
-                <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
+                <Text fontSize="small" color="midGrey" lineHeight="smallTextCompressed">
                   {productionStatus === "Completed" ||
                     collaborationState.status === "accepted" ||
                     acceptedItems.request ||
                   acceptedItems.proposal ? (
                     <>
                       On{" "}
-                      <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
+                      <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
                         September 24, 2025
                       </Text>
                     </>
                   ) : (
                     <>
                       For{" "}
-                      <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
+                      <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
                         2 days
                       </Text>
                     </>
@@ -581,7 +652,7 @@ export const Default = () => {
               </Flex>
               <SummaryDivider />
 
-              <Flex flexDirection="column" width="200px" justifyContent="center" pt="x0_5">
+              <Flex flexDirection="column" width="200px" justifyContent="center" pt="x0_5" gap="x0_5">
                 <Tooltip
                   tooltip={
                     <Box>
@@ -611,14 +682,13 @@ export const Default = () => {
                   </Flex>
                 </Tooltip>
 
-                <Flex justifyContent={productionStatus === "Completed" ? "space-between" : "center"}>
-                  <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                    <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
+                <Flex justifyContent={productionStatus === "Completed" ? "space-between" : "center"} alignItems="center" gap="x0_5">
+                  <Text fontSize="small" color="midGrey" lineHeight="smallTextCompressed" style={{ whiteSpace: "nowrap" }}>
+                    <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
                       {productionStatus === "Not started" ? "0%" : productionStatus === "Completed" ? "99%" : "50%"}
                     </Text>{" "}
                     produced
                   </Text>
-
                   {productionStatus === "Completed" && (
                     <StatusIndicator type="quiet">
                       <Flex alignItems="center" gap="x0_5">
@@ -630,14 +700,14 @@ export const Default = () => {
                 </Flex>
               </Flex>
               <SummaryDivider />
-              <Flex flexDirection="column" alignItems="center" width="200px" justifyContent="center" pt="x0_5">
+              <Flex flexDirection="column" alignItems="center" width="200px" justifyContent="center" pt="x0_5" gap="x0_5">
                 {poStatus === "Late" && (
                   <>
                     <Flex height="x2_5" alignItems="center" justifyContent="center">
                       <StatusIndicator type="danger">Late</StatusIndicator>
                     </Flex>
-                    <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                      <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
+                    <Text fontSize="small" color="midGrey" lineHeight="smallTextCompressed">
+                      <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
                         Production done
                       </Text>{" "}
                       milestone
@@ -651,8 +721,8 @@ export const Default = () => {
                         At risk
                       </StatusIndicator>
                     </Flex>
-                    <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                      <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
+                    <Text fontSize="small" color="midGrey" lineHeight="smallTextCompressed">
+                      <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
                         Production done
                       </Text>{" "}
                       milestone
@@ -666,8 +736,8 @@ export const Default = () => {
                         On time
                       </StatusIndicator>
                     </Flex>
-                    <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                      <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
+                    <Text fontSize="small" color="midGrey" lineHeight="smallTextCompressed">
+                      <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
                         Production done
                       </Text>{" "}
                       milestone
@@ -2016,13 +2086,9 @@ export const Default = () => {
                 checked={acceptanceOption === "without-flagging"}
                 onChange={() => setAcceptanceOption("without-flagging")}
               />
-                <Tooltip tooltip="Request reconciled">
-                  <StatusIndicator type="quiet">
-                    <Text fontSize="smaller" lineHeight="smallerText">
-                      Reconciled
-                    </Text>
-                  </StatusIndicator>
-                </Tooltip>
+                <Box display="flex" alignItems="center" justifyContent="center">
+                  <ReconciledIcon variant="standard" size={20} />
+                </Box>
               </Flex>
               <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed" ml="x3">
                 This will update your requested quantity to match the supplier's proposal.
@@ -2038,13 +2104,9 @@ export const Default = () => {
                 checked={acceptanceOption === "with-flagging"}
                 onChange={() => setAcceptanceOption("with-flagging")}
               />
-                <Tooltip tooltip="Request not reconciled">
-                  <StatusIndicator type="quiet">
-                    <Text fontSize="smaller" lineHeight="smallerText">
-                      Not reconciled
-                    </Text>
-                  </StatusIndicator>
-                </Tooltip>
+                <Box display="flex" alignItems="center" justifyContent="center">
+                  <ReconciledIcon variant="flagged" size={20} />
+                </Box>
               </Flex>
               <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed" ml="x3">
                 This will accept the proposal but keep your requested quantity.
