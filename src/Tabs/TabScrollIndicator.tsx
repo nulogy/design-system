@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Icon } from "../Icon";

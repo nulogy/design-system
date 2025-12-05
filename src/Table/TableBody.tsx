@@ -1,5 +1,5 @@
 import React, { type ReactNode } from "react";
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { Box } from "../Box";
 import { DefaultNDSThemeType } from "../theme";
 import TableCell from "./TableCell";

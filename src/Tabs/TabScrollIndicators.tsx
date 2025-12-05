@@ -1,5 +1,5 @@
 // @ts-nocheck
-import styled from "styled-components";
+import { styled } from "styled-components";
 import React from "react";
 import TabScrollIndicator from "./TabScrollIndicator";
 const TabScrollIndicatorContainer = styled.div(({ width, theme }) => ({

@@ -1,5 +1,5 @@
 // @ts-nocheck
-import styled from "styled-components";
+import { styled } from "styled-components";
 
 const TimePickerDropdown = styled.ul(({ theme, isOpen }) => {
   return {

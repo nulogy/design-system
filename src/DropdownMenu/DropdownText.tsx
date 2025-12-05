@@ -1,4 +1,4 @@
-import styled, { CSSObject } from "styled-components";
+import { styled, CSSObject } from "styled-components";
 import { Text } from "../Type";
 import type { TextProps } from "../Type";
 import { addStyledProps } from "../StyledProps";

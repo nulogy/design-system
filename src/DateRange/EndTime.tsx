@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { TimePicker } from "../TimePicker";
 
 const EndTime = styled(TimePicker)(({ theme }) => ({

@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { position } from "styled-system";
 import { Icon } from "../Icon";
 

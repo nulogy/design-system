@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { useTheme } from "styled-components";
+import { styled, useTheme } from "styled-components";
 import { Text } from "../Type";
 import { APP_ABBREVIATIONS, APP_DISPLAY_NAMES, NulogyAppName } from "../types/NulogyApp";
 import { MiniTooltip } from "../MiniTooltip";

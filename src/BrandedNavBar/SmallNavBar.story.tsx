@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import React from "react";
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { Branding } from "../Branding";
 import { Button, SmallNavBarProps } from "../index";
 import { Link } from "../Link";

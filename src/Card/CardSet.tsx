@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { addStyledProps } from "../StyledProps";
 import { Flex } from "../Flex";
 

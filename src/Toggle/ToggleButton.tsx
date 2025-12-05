@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import type { Transition } from "framer-motion";
-import styled, { useTheme } from "styled-components";
+import { styled, useTheme } from "styled-components";
 import { DefaultNDSThemeType } from "../theme";
 import { AnimatedBox } from "../Box";
 import { useComponentVariant } from "../NDSProvider/ComponentVariantContext";

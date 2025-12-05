@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { FlexProps } from "../Flex/Flex";
 import { useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import { Box } from "../Box";

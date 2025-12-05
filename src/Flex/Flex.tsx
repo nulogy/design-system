@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { Box } from "../Box";
 import { BoxProps } from "../Box/Box";
 import { gap } from "../StyledProps";

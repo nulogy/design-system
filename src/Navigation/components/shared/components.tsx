@@ -1,5 +1,5 @@
 import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
-import styled, { CSSProperties } from "styled-components";
+import { styled, CSSProperties } from "styled-components";
 import { Icon } from "../../../Icon";
 import { DefaultNDSThemeType } from "../../../theme";
 import { IconProps } from "../../../Icon/Icon";

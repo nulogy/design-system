@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { themeGet } from "@styled-system/theme-get";
 import { Icon } from "../Icon";
 import { DefaultNDSThemeType } from "../theme";

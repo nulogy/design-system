@@ -1,5 +1,5 @@
 import React, { type ReactNode } from "react";
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { space } from "styled-system";
 import TableHead from "./TableHead";
 import TableBody from "./TableBody";

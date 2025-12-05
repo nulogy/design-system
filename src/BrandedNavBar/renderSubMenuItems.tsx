@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { CSSObject } from "styled-components";
+import { styled, CSSObject } from "styled-components";
 import { DropdownText, DropdownLink } from "../DropdownMenu";
 import { Icon } from "../Icon";
 

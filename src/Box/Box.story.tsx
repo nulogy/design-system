@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { Button } from "../Button";
 import { Box, Flex } from "../index";
 import { AnimatedBox } from "./Box";

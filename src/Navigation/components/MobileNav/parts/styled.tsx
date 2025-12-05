@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
 import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
 import { Box } from "../../../../Box";
 import { Text } from "../../../../Type";

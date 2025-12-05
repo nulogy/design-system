@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { transparentize } from "polished";
 import { DefaultNDSThemeType } from "../theme";
 

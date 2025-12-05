@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { addStyledProps, StyledProps } from "../StyledProps";
 
 export interface DividerProps extends StyledProps, React.HTMLAttributes<HTMLHRElement> {

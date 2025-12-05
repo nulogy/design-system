@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { PopperArrowProps as ReactPopperArrowProps } from "react-popper";
 import { PropsWithChildren } from "react";
 

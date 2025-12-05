@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { variant } from "styled-system";
 import { addStyledProps, StyledProps } from "../StyledProps";
 import { ComponentVariant } from "../NDSProvider/ComponentVariantContext";

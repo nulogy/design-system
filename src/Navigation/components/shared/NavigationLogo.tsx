@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import { styled } from "styled-components";
 
 const LogoContainer = styled.div<{ $maxWidth?: string; $maxHeight?: string }>(({ $maxWidth, $maxHeight }) => ({
   display: "flex",

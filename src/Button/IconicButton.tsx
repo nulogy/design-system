@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { space, SpaceProps, variant } from "styled-system";
 import { Manager, Reference, Popper } from "react-popper-2";
 import { transparentize } from "polished";

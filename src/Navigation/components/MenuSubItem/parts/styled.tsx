@@ -1,5 +1,5 @@
 import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { addStyledProps, StyledProps } from "../../../../StyledProps";
 import { NAVIGATION_SUB_MENU_MIN_WIDTH_PX } from "../../shared/constants";
 import { disableHoverEvents } from "../../shared/disableHoverEvents";

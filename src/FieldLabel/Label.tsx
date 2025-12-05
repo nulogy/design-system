@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { space, color, display, DisplayProps } from "styled-system";
 import type { SpaceProps } from "styled-system";
 import type { ComponentPropsWithRef } from "react";

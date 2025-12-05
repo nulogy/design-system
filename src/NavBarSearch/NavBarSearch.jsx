@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { darken, transparentize } from "polished";
 import { useTranslation } from "react-i18next";
 import { Flex } from "../Flex";

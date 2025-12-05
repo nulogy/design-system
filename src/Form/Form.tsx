@@ -1,5 +1,5 @@
 import * as React from "react";
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { space } from "styled-system";
 import type { SpaceProps } from "styled-system";
 import { Heading2 } from "../Type";

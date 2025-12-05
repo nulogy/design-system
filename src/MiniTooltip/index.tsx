@@ -1,5 +1,5 @@
 import * as TooltipPrimitive from "@radix-ui/react-tooltip";
-import styled, { keyframes } from "styled-components";
+import { styled, keyframes } from "styled-components";
 import { transparentize } from "polished";
 import React, { ReactNode } from "react";
 

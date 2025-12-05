@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Flex as NDSFlex } from "../index";
-import styled from "styled-components";
+import { styled } from "styled-components";
 
 const Flex = ({ children, ...props }) => (
   <NDSFlex

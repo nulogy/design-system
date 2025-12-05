@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { variant } from "styled-system";
 import { DefaultNDSThemeType } from "../theme";
 import { addStyledProps, StyledProps } from "../StyledProps";

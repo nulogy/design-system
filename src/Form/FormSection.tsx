@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { Heading3 } from "../Type";
 import Field from "./Field";
 import Fieldset from "./Fieldset";

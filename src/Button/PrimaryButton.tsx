@@ -1,4 +1,4 @@
-import styled, { CSSObject } from "styled-components";
+import { styled, CSSObject } from "styled-components";
 import { darken } from "polished";
 import Button, { ButtonProps } from "./Button";
 

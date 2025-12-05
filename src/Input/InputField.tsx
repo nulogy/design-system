@@ -1,6 +1,6 @@
 import { IconName } from "@nulogy/icons";
 import React, { forwardRef } from "react";
-import styled, { CSSObject, useTheme } from "styled-components";
+import { styled, CSSObject, useTheme } from "styled-components";
 import { space, SpaceProps, variant } from "styled-system";
 import { Box, BoxProps } from "../Box";
 import { MaybeFieldLabel } from "../FieldLabel";

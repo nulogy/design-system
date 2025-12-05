@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { InputField, InputFieldProps } from "../Input/InputField";
 
 type TimePickerInputProps = InputFieldProps & { dropdownIsOpen: boolean };

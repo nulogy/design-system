@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
 import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
 import { addStyledProps, StyledProps } from "../../../StyledProps";
 import { NAVIGATION_MENU_CONTENT_WIDTH_MAX_WIDTH_PX, NAVIGATION_MENU_HEIGHT_STYLED_UNITS } from "./constants";
