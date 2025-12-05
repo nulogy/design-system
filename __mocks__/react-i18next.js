@@ -1,7 +1,6 @@
-const React = require("react");
-const reactI18next = require("react-i18next");
-
-const en_US = require("../locales/en_US.json");
+import React from "react";
+import * as reactI18next from "react-i18next";
+import en_US from "../locales/en_US.json";
 
 const hasChildren = (node) => node && (node.children || (node.props && node.props.children));
 
@@ -37,7 +36,7 @@ useMock.i18n = {
   getFixedT: (_) => (k) => en_US[k] || k,
 };
 
-module.exports = {
+export default {
   // this mock makes sure any components using the translate HoC receive the t function as a prop
   withTranslation: () => (Component) => (props) => <Component t={(k) => k} {...props} />,
   Trans: ({ children }) => renderNodes(children),
