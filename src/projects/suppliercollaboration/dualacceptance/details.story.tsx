@@ -80,11 +80,21 @@ export const Default = () => {
   const theme = useTheme();
   const [selectedIndex, setSelectedIndex] = useState(0);
 
+  // Customer's PO line item number
+  const customerPOLineItemNumber = "POLI-001";
+
+  // Customer's item code and description
+  const customerItemCodeAndDescription = "12345678 – PR 24 SEPHORA ONLINE DELUXE OCT";
+
   // Sidebar state
   const [sidebarState, setSidebarState] = useState({
     edit: false,
     comments: false,
   });
+
+  // Close production modal state
+  const [isCloseProductionModalOpen, setIsCloseProductionModalOpen] = useState(false);
+  const [closeProductionNote, setCloseProductionNote] = useState("");
 
   // Collaboration state
   const [collaborationState, setCollaborationState] = useState({
@@ -137,6 +147,9 @@ export const Default = () => {
   const [uomView, setUomView] = useState<"customer" | "supplier">(
     userState.role === "supplier" ? "supplier" : "customer"
   );
+
+  // Details section expanded state
+  const [detailsExpanded, setDetailsExpanded] = useState(true);
 
   // Update UOM view when user role changes
   useEffect(() => {
@@ -382,7 +395,7 @@ export const Default = () => {
             <Link href="#">PO line items</Link>
           </Breadcrumbs>
         )}
-        title="12345678"
+        title={customerPOLineItemNumber}
         renderActions={() => (
           <Flex gap="x0_5" ml="x1" alignItems="center">
             <Box display="flex" alignItems="center" position="relative">
@@ -673,12 +686,22 @@ export const Default = () => {
       </Header>
       <Page>
         {/* Action bar above details */}
-        <Flex justifyContent="flex-end" alignItems="center" gap="x2" mb="x3">
-          <IconicButton icon="edit" labelHidden tooltip="Edit" onClick={() => openSidebar("edit")}>
-            Edit
+        <Flex justifyContent="flex-end" alignItems="center" gap="x0_5" mb="x3">
+          <IconicButton
+            icon={detailsExpanded ? "collapse" : "expand"}
+            labelHidden
+            tooltip={detailsExpanded ? "Collapse details" : "Expand details"}
+            onClick={() => setDetailsExpanded(!detailsExpanded)}
+          >
+            {detailsExpanded ? "Collapse details" : "Expand details"}
+          </IconicButton>
+          <VerticalDivider />
+          <IconicButton icon="edit" labelHidden tooltip="Edit details" onClick={() => openSidebar("edit")}>
+            Edit details
           </IconicButton>
         </Flex>
-        <Box mb="x3" pl="x3">
+        {detailsExpanded && (
+          <Box mb="x3" pl="x3">
           <DescriptionList layout="stacked" columns={{ extraSmall: 1, small: 2, medium: 3, large: 5 }}>
             <DescriptionGroup>
               <DescriptionTerm>
@@ -693,7 +716,7 @@ export const Default = () => {
                 <Text color="darkGrey">Customer's PO line item number</Text>
               </DescriptionTerm>
               <DescriptionDetails>
-                <Text>POLI-001</Text>
+                <Text>{customerPOLineItemNumber}</Text>
               </DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
@@ -735,7 +758,7 @@ export const Default = () => {
                 <Text color="darkGrey">Customer's item code and description</Text>
               </DescriptionTerm>
               <DescriptionDetails>
-                <Link underline={false}>TEST_ITEM_OPT_2 - this is the description of the item 2</Link>
+                <Link underline={false}>{customerItemCodeAndDescription}</Link>
               </DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
@@ -848,6 +871,7 @@ export const Default = () => {
             )}
           </DescriptionList>
         </Box>
+        )}
         <Tabs selectedIndex={selectedIndex} onTabClick={(e, index) => setSelectedIndex(index)}>
           <Tab label="Collaboration">
             <Flex flexDirection="column" alignItems="flex-end" mt="x2">
@@ -1628,6 +1652,16 @@ export const Default = () => {
             </Card>
           </Tab>
           <Tab label="Production records">
+            {userState.role === "supplier" && (
+              <Flex justifyContent="flex-end" alignItems="center" gap="x3" mb="x3" px="x3" py="x2">
+                <IconicButton icon="add" onClick={() => {}}>
+                  Create production record
+                </IconicButton>
+                <IconicButton icon="close" onClick={() => setIsCloseProductionModalOpen(true)}>
+                  Close production
+                </IconicButton>
+              </Flex>
+            )}
             <Box p="x4">
               <Text>Record report that surfaces:</Text>
               <List mt="x2">
@@ -1858,7 +1892,7 @@ export const Default = () => {
           <Input
             labelText="Customer's item code and description"
             id="customerItemCode"
-            value="TEST_ITEM_OPT_2 - this is the description of the item 2"
+            value={customerItemCodeAndDescription}
             disabled
           />
 
@@ -2021,6 +2055,60 @@ export const Default = () => {
               </Text>
             </Box>
           </Flex>
+        </Box>
+      </Modal>
+
+      {/* Close Production Modal */}
+      <Modal
+        isOpen={isCloseProductionModalOpen}
+        onRequestClose={() => setIsCloseProductionModalOpen(false)}
+        title="Close production?"
+        footerContent={
+          <Flex justifyContent="flex-start" gap="x2">
+            <PrimaryButton
+              onClick={() => {
+                // Handle close production
+                setIsCloseProductionModalOpen(false);
+                setCloseProductionNote("");
+                toast.success("Production closed");
+              }}
+            >
+              Yes, close production
+            </PrimaryButton>
+            <QuietButton
+              onClick={() => {
+                setIsCloseProductionModalOpen(false);
+                setCloseProductionNote("");
+              }}
+            >
+              No, cancel
+            </QuietButton>
+          </Flex>
+        }
+      >
+        <Box px="half">
+         
+            <Text mb="x2">
+              Close production manually to indicate that production is completed on this line item when it will not be
+              produced in full.
+            </Text> 
+
+              <Text fontSize="small" fontWeight="bold" lineHeight="smallCompressed">
+                Actual attainment
+              </Text>
+              <Text mb="x2">
+                8,187 liters / 9,157 liters (89.41% attainment)
+              </Text>
+
+              
+              <Textarea
+              labelText="Close production note"
+                value={closeProductionNote}
+                onChange={(e) => setCloseProductionNote(e.target.value)}
+                placeholder="Provide reason(s) for closing production"
+                rows={4}
+              />
+ 
         </Box>
       </Modal>
     </ApplicationFrame>
