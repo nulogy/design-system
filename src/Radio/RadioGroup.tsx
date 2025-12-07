@@ -1,5 +1,5 @@
-import React, { CSSProperties, useContext } from "react";
-import { ThemeContext, useTheme } from "styled-components";
+import React, { CSSProperties } from "react";
+import { useTheme } from "styled-components";
 import { HelpText, RequirementText } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import { Fieldset } from "../Form";

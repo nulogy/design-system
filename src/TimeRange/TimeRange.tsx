@@ -12,9 +12,9 @@ const DEFAULT_LABEL = "Time Range";
 type TimeRangeProps = SpaceProps & {
   variant?: ComponentVariant;
   timeFormat?: string;
-  onRangeChange?: Function;
-  onStartTimeChange?: Function;
-  onEndTimeChange?: Function;
+  onRangeChange?: (range: { startTime?: string; endTime?: string; error?: string }) => void;
+  onStartTimeChange?: (label: string) => void;
+  onEndTimeChange?: (label: string) => void;
   ref?: React.MutableRefObject<unknown>;
   errorMessage?: string;
   defaultStartTime?: string;
@@ -73,7 +73,7 @@ const TimeRange = forwardRef(
         ...inputRef1,
         focus: () => {
           if (inputRef1.current) {
-            // @ts-ignore
+            // @ts-expect-error - focus method exists on input elements but type may not be narrowed correctly
             inputRef1.current.focus();
           }
         },
@@ -82,7 +82,7 @@ const TimeRange = forwardRef(
         ...inputRef2,
         focus: () => {
           if (inputRef2.current) {
-            // @ts-ignore
+            // @ts-expect-error - focus method exists on input elements but type may not be narrowed correctly
             inputRef2.current.focus();
           }
         },

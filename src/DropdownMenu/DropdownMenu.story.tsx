@@ -157,13 +157,17 @@ SetToDisabled.story = {
   name: "Set to disabled",
 };
 
-export const WithConditionallyRenderedMenuItems = () => (
-  <DropdownMenu>
-    <DropdownButton onClick={() => {}}>Item A</DropdownButton>
-    {false && <DropdownButton onClick={() => {}}>Conditional Item B</DropdownButton>}
-    {true && <DropdownButton onClick={() => {}}>Conditional Item C</DropdownButton>}
-  </DropdownMenu>
-);
+export const WithConditionallyRenderedMenuItems = () => {
+  const showItemB = false;
+  const showItemC = true;
+  return (
+    <DropdownMenu>
+      <DropdownButton onClick={() => {}}>Item A</DropdownButton>
+      {showItemB && <DropdownButton onClick={() => {}}>Conditional Item B</DropdownButton>}
+      {showItemC && <DropdownButton onClick={() => {}}>Conditional Item C</DropdownButton>}
+    </DropdownMenu>
+  );
+};
 
 export const WithRenderProps = () => (
   <DropdownMenu>

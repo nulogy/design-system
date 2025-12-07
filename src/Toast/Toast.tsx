@@ -106,7 +106,6 @@ export const Toast = ({
       {visible && (
         <AnimatedBox
           onMouseEnter={onMouseIn}
-          /* @ts-ignore */
           onFocus={onMouseIn}
           onMouseLeave={onMouseOut}
           onBlur={onMouseOut}
@@ -122,7 +121,6 @@ export const Toast = ({
           layout
           {...toastAnimationConfig}
         >
-          {/* @ts-ignore */}
           <Alert
             minWidth="200px"
             maxWidth="600px"

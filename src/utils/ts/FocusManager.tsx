@@ -7,8 +7,8 @@ type Reference = {
 
 type ChildrenHandlers = {
   focusedIndex: number;
-  handleArrowNavigation: Function;
-  setFocusedIndex: Function;
+  handleArrowNavigation: (e: React.KeyboardEvent) => void;
+  setFocusedIndex: React.Dispatch<React.SetStateAction<number>>;
 };
 
 type FocusManagerProps = {

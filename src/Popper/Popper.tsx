@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React, { useState, useEffect, useRef, LegacyRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Manager, Reference, Popper as ReactPopperPopUp } from "react-popper";
 import { useTranslation } from "react-i18next";
 import { PopperArrow } from "../utils";
@@ -143,7 +143,6 @@ const Popper = React.forwardRef<React.Ref<unknown>, PopperProps>(
           },
         });
         return React.cloneElement(transformedElement, {
-          // eslint-disable-next-line react/no-array-index-key
           key: i,
         });
       });

@@ -49,7 +49,6 @@ export const StyledOption = styled.div<StyledOptionProps>(
     })
 );
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface SelectOptionProps<
   Option = NDSOption,
   IsMulti extends boolean = boolean,

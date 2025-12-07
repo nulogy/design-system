@@ -99,7 +99,6 @@ const Toggle = React.forwardRef<HTMLInputElement, ToggleProps>(
       if (onClick) {
         console.warn("onClick is deprecated. Use onChange instead.");
       }
-      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const _checked = checked ?? defaultToggled ?? toggled;
@@ -120,7 +119,6 @@ const Toggle = React.forwardRef<HTMLInputElement, ToggleProps>(
       if (_checked !== undefined && !(onChange || onClick)) {
         console.warn("onChange or onClick is required when checked is set.");
       }
-      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (

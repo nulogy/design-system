@@ -47,7 +47,6 @@ const MenuTrigger = ({
     "aria-label": ariaLabel,
   };
   return (
-    // @ts-ignore
     <NavBarDropdownMenu
       {...props}
       placement="bottom-start"

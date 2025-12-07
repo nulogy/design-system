@@ -67,7 +67,7 @@ const Sheet = styled(motion(ReachDialogContent)).withConfig({
   compose(...styleFns)
 );
 
-const ContentContainer = styled.div((_) => ({
+const ContentContainer = styled.div(() => ({
   overflowY: "auto",
   flex: 1,
   WebkitOverflowScrolling: "touch",

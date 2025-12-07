@@ -150,7 +150,7 @@ function MenuList(props) {
       itemData={children}
       itemSize={(index) => measuredHeights[index] || heights[index]}
     >
-      {/*@ts-ignore*/}
+      {/* @ts-expect-error - react-window types may not match exactly with our usage */}
       {({ data, index, style }: ListChildProps) => {
         return (
           <div

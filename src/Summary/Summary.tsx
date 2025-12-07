@@ -4,7 +4,6 @@ import numberFromDimension from "../utils/numberFromDimension";
 import { Box } from "../Box";
 import { BoxProps } from "../Box/Box";
 import { SummaryContextProvider } from "./SummaryContext";
-import { DefaultNDSThemeType } from "../theme";
 
 type SummaryProps = Omit<BoxProps, "as"> & {
   breakpoint?: number | string;

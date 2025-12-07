@@ -12,6 +12,7 @@ import { addStyledProps } from "../StyledProps";
 import NulogyLogo from "./NulogyLogo";
 import { TriggerFunctionProps } from "./TriggerFunctionProps";
 import { useScrollLock } from "../utils/useScrollLock";
+import { DefaultNDSThemeType } from "../theme";
 
 const borderStyle = "1px solid #e4e7eb";
 
@@ -21,10 +22,9 @@ const BrandingWrap = styled.div(({ theme }) => ({
   marginBottom: theme.space.x1,
 }));
 
-// eslint-disable-next-line no-mixed-operators
 const getPaddingLeft = (layer) => `${24 * layer + 24}px`;
 
-const getSharedStyles = (theme): CSSObject => ({
+const getSharedStyles = (theme: DefaultNDSThemeType): CSSObject => ({
   display: "flex",
   alignItems: "center",
   gap: theme.space.half,
@@ -83,7 +83,7 @@ const renderMenuLink = (menuItem, linkOnClick, themeColorObject, layer) => {
     href: menuItem.href,
     as: menuItem.as,
     to: menuItem.to,
-    // eslint-disable-next-line no-mixed-operators
+
     pl: layer === 0 ? getPaddingLeft(layer) : `${24 * layer + 20}px`,
     mb: "x1",
     target: menuItem.openInNew ? "_blank" : undefined,
@@ -175,7 +175,7 @@ type MenuItem = {
 type SubMenuProps = {
   layer?: number;
   menuItem?: MenuItem;
-  linkOnClick?: Function;
+  linkOnClick?: React.MouseEventHandler<HTMLElement>;
   themeColorObject?: ThemeColorObject;
 };
 
@@ -222,7 +222,7 @@ type MenuData = {
 type BaseMobileMenuProps = {
   menuData: MenuData;
   subtext?: string;
-  closeMenu?: Function;
+  closeMenu?: React.MouseEventHandler<HTMLElement>;
   themeColorObject?: ThemeColorObject;
   showNulogyLogo?: boolean;
 };
