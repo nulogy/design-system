@@ -1,3 +1,17 @@
+# [16.0.0](https://github.com/nulogy/design-system/compare/v15.4.1...v16.0.0) (2025-12-07)
+
+
+### Features
+
+* upgrade ESLint to v9 and improve TypeScript types ([e5410f1](https://github.com/nulogy/design-system/commit/e5410f1e96aea5ad0d36f1b46cc51f029503141a))
+
+
+### BREAKING CHANGES
+
+* TypeScript types for callback props are now more specific.
+Consumers with strict TypeScript checking may need to update their callback
+function signatures to match the new types, though runtime behavior is unchanged.
+
 ## [15.4.1](https://github.com/nulogy/design-system/compare/v15.4.0...v15.4.1) (2025-12-05)
 
 
