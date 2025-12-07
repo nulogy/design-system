@@ -33,7 +33,7 @@ const renderNodes = (reactNodes) => {
 const useMock = [(k) => k, {}];
 useMock.t = (k) => en_US[k] || k;
 useMock.i18n = {
-  getFixedT: (_) => (k) => en_US[k] || k,
+  getFixedT: () => (k) => en_US[k] || k,
 };
 
 export default {

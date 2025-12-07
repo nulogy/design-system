@@ -1,8 +1,6 @@
-// @ts-nocheck
-// typescript turned off because of {toast.type} not being a string
-
 import React, { useState } from "react";
 import { Button, DangerButton, IconicButton, Modal, PrimaryButton, Flex, Toast } from "../index";
+import { NotificationType } from "../Alert/Alert";
 
 export default {
   title: "Components/Toast",
@@ -57,7 +55,11 @@ export const _MultipleToastsExample = () => {
       DELETE: "delete",
       ERROR: "error",
     };
-    const TOASTS = [
+    const TOASTS: Array<{
+      action: string;
+      message: string;
+      type: NotificationType;
+    }> = [
       {
         action: TOAST_ACTIONS.SAVE,
         message: "Saved all your changes",

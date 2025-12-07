@@ -10,7 +10,7 @@ type PopperArrowProps = ReactPopperArrowProps & {
 
 const getThemeColor = (color, theme) => (theme.colors[color] ? theme.colors[color] : color);
 
-const positionArrow = (placement, theme) => {
+const positionArrow = (placement) => {
   const location = String(placement).split("-")[0];
   switch (location) {
     case "top":
@@ -145,8 +145,8 @@ const PopperArrow = styled.div<PropsWithChildren<PopperArrowProps>>(
   ({ placement = "bottom", borderColor = "grey", backgroundColor = "white", theme }) => ({
     ...drawArrow(placement, borderColor, backgroundColor, theme),
   }),
-  ({ placement = "bottom", theme }) => ({
-    ...positionArrow(placement, theme),
+  ({ placement = "bottom" }) => ({
+    ...positionArrow(placement),
   })
 );
 

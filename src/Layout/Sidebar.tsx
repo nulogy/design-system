@@ -18,7 +18,6 @@ type PredefinedSidebarWidth = "xs" | "s" | "m" | "l" | "xl";
 // We need (string & {}) to allow passing
 // custom values in addition to the predefined width
 // https://twitter.com/mattpocockuk/status/1671908303918473217
-// eslint-disable-next-line @typescript-eslint/ban-types
 type SidebarWidth = PredefinedSidebarWidth | (string & {});
 
 const sidebarWidths: Record<PredefinedSidebarWidth, CSSProperties["width"]> = {

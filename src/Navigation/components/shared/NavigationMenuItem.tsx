@@ -134,7 +134,11 @@ export const NavigationMenuSubList = styled(RadixNavigationMenu.List)`
 `;
 
 const Button = React.forwardRef<HTMLButtonElement, React.ComponentPropsWithoutRef<"button">>(
-  ({ onPointerEnter: _, onPointerLeave: __, onPointerMove: ___, ...props }, forwardedRef) => {
+  ({ onPointerEnter, onPointerLeave, onPointerMove, ...props }, forwardedRef) => {
+    // These props are intentionally ignored to prevent pointer events from interfering with keyboard navigation
+    void onPointerEnter;
+    void onPointerLeave;
+    void onPointerMove;
     return <button {...props} ref={forwardedRef} />;
   }
 );

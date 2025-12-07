@@ -90,7 +90,6 @@ type SmallNavBarNoStateProps = {
   renderMenuButton?: (props: RenderMenuButtonProps) => React.ReactElement;
 } & AcceptsMenuStateProps;
 
-/* eslint-disable react/destructuring-assignment */
 const SmallNavBarNoState = ({
   menuData,
   menuState: { isOpen, toggleMenu, closeMenu },
@@ -157,7 +156,6 @@ const SmallNavBarNoState = ({
     </SmallHeader>
   );
 };
-/* eslint-enable react/destructuring-assignment */
 
 const SmallNavBar = withMenuState(SmallNavBarNoState);
 

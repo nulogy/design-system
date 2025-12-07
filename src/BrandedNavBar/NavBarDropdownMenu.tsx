@@ -5,20 +5,27 @@ import DropdownMenuContainer from "../DropdownMenu/DropdownMenuContainer";
 
 type MenuState = {
   isOpen?: boolean;
-  openMenu?: Function;
-  closeMenu?: Function;
-  toggleMenu?: Function;
+  openMenu?: (skipDelay?: boolean) => void;
+  closeMenu?: (skipDelay?: boolean) => void;
+  toggleMenu?: (skipDelay?: boolean) => void;
 };
 
 type NavBarDropdownMenuProps = {
   children?: React.ReactNode;
-  trigger?: Function;
+  trigger?: (props: {
+    closeMenu?: (skipDelay?: boolean) => void;
+    openMenu?: (skipDelay?: boolean) => void;
+    isOpen?: boolean;
+  }) => React.ReactElement;
   menuState?: MenuState;
   showArrow?: boolean;
   placement?: "bottom-start" | "right-start" | "left-start";
   modifiers?: any;
   triggerTogglesMenuState?: boolean;
-  dropdownMenuContainerEventHandlers?: Function;
+  dropdownMenuContainerEventHandlers?: (props: {
+    openMenu?: (skipDelay?: boolean) => void;
+    closeMenu?: (skipDelay?: boolean) => void;
+  }) => React.HTMLAttributes<HTMLElement>;
 };
 
 class StatelessNavBarDropdownMenuClass extends React.Component<NavBarDropdownMenuProps, any> {
@@ -30,7 +37,6 @@ type Ref = {
   ref: any;
 };
 
-/* eslint-disable react/destructuring-assignment */
 class StatelessNavBarDropdownMenu extends StatelessNavBarDropdownMenuClass {
   constructor(props) {
     super(props);
@@ -112,52 +118,57 @@ class StatelessNavBarDropdownMenu extends StatelessNavBarDropdownMenuClass {
         </Reference>
         {isOpen && (
           <Popper placement={placement} modifiers={modifiers}>
-            {(popperProps) => (
-              <>
-                <DropdownMenuContainer
-                  {...popperProps}
-                  placement={placement}
-                  showArrow={showArrow}
-                  {...this.menuEventHandlers()}
-                  ref={(node) => {
-                    if (typeof popperProps.ref === "function") {
-                      popperProps.ref(node);
-                    }
-                    this.setMenuRef(node);
-                  }}
-                  onMouseDown={(e) => {
-                    e.preventDefault();
-                    e.target.focus();
-                  }}
-                  {...dropdownMenuContainerEventHandlers({
-                    openMenu,
-                    closeMenu,
-                  })}
-                >
-                  <PopperArrow
-                    {...popperProps.arrowProps}
+            {(popperProps) => {
+              const { ref: popperRef, style, placement: popperPlacement } = popperProps;
+              return (
+                <>
+                  <DropdownMenuContainer
+                    dataPlacement={popperPlacement}
+                    style={style}
                     placement={placement}
-                    ref={popperProps.arrowProps.ref}
-                    backgroundColor="white"
-                    borderColor="white"
-                  />
-                  <DetectOutsideClick onClick={this.handleOutsideClick} clickRef={[this.menuRef, this.triggerRef]} />
-                  {childrenFnc({
-                    closeMenu,
-                    openMenu,
-                  })}
-                </DropdownMenuContainer>
-              </>
-            )}
+                    showArrow={showArrow}
+                    {...this.menuEventHandlers()}
+                    {...({
+                      ref: (node: HTMLElement | null) => {
+                        if (typeof popperRef === "function") {
+                          popperRef(node);
+                        }
+                        this.setMenuRef(node);
+                      },
+                    } as any)}
+                    onMouseDown={(e) => {
+                      e.preventDefault();
+                      e.target.focus();
+                    }}
+                    {...dropdownMenuContainerEventHandlers({
+                      openMenu,
+                      closeMenu,
+                    })}
+                  >
+                    <PopperArrow
+                      {...popperProps.arrowProps}
+                      placement={placement}
+                      ref={popperProps.arrowProps.ref}
+                      backgroundColor="white"
+                      borderColor="white"
+                    />
+                    <DetectOutsideClick onClick={this.handleOutsideClick} clickRef={[this.menuRef, this.triggerRef]} />
+                    {childrenFnc({
+                      closeMenu,
+                      openMenu,
+                    })}
+                  </DropdownMenuContainer>
+                </>
+              );
+            }}
           </Popper>
         )}
       </Manager>
     );
   }
 }
-/* eslint-enable react/destructuring-assignment */
 
-// @ts-ignore
+// @ts-expect-error - defaultProps is not recognized on functional components in newer React types
 StatelessNavBarDropdownMenu.defaultProps = {
   showArrow: true,
   placement: "bottom-start",
@@ -168,7 +179,7 @@ StatelessNavBarDropdownMenu.defaultProps = {
 
 const NavBarDropdownMenu = withMenuState(StatelessNavBarDropdownMenu);
 
-// @ts-ignore
+// @ts-expect-error - defaultProps is not recognized on functional components in newer React types
 NavBarDropdownMenu.defaultProps = {
   showDelay: "0",
   hideDelay: "100",

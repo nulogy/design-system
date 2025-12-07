@@ -1,3 +1,4 @@
+import { describe, it, expect } from "vitest";
 import generateId from "./generateId";
 
 describe("generate id", () => {

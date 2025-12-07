@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
 import { action } from "@storybook/addon-actions";
-
-import { TimePicker, Button, Flex } from "../index";
+import { TimePicker, Button } from "../index";
 
 export default {
   title: "Components/TimePicker",

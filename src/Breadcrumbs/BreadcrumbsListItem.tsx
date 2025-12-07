@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { space, color, flexbox, layout, variant } from "styled-system";
+import { space, color, flexbox, layout } from "styled-system";
 import { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
 
 export const BreadcrumbsListSeparator = styled.li(

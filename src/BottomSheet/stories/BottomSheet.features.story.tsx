@@ -11,7 +11,6 @@ import { Text } from "../../Type";
 import { Placeholder } from "../../utils/story/placeholder";
 import BottomSheet from "../BottomSheet";
 import { ApplicationFrame, Page } from "../../Layout";
-import { menuItems } from "../../TopBar/stories/fixtures";
 import { TopBar } from "../../TopBar";
 
 export default {

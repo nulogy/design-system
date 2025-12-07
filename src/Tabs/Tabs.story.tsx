@@ -171,15 +171,3 @@ export const WithContentLoadedOnSelection = () => (
 WithContentLoadedOnSelection.story = {
   name: "with content loaded on selection",
 };
-
-export const WithConditionallyRenderedTabs = () => (
-  <Tabs>
-    {false && <Tab label="Hidden 2">Hidden tab 1</Tab>}
-
-    {true && <Tab label="Shown 1">Shown tab 1</Tab>}
-
-    {false && <Tab label="Hidden 2">Hidden tab 2</Tab>}
-
-    {true && <Tab label="Shown 2">Shown tab 2</Tab>}
-  </Tabs>
-);

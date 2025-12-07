@@ -42,7 +42,6 @@ const RangeContainer = ({
         <Flex>{endComponent}</Flex>
       </Flex>
       {errorMessages.map((errorMessage, i) => (
-        // eslint-disable-next-line react/no-array-index-key
         <InlineValidation key={i} errorMessage={errorMessage} />
       ))}
     </Flex>
