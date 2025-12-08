@@ -148,7 +148,7 @@
     "deep-equal": "^2.2.1",
     "framer-motion": "6.5.1",
     "i18next": "^19.3.1",
-    "polished": "3.4.4",
+    "polished": "4.3.1",
     "react-datepicker": "^4.25.0",
     "react-fast-compare": "^3.2.0",
     "react-hot-toast": "^2.4.1",
