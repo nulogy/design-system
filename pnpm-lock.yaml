@@ -245,7 +245,7 @@ importers:
         version: 3.4.2
       re-resizable:
         specifier: ^6.10.3
-        version: 6.10.3(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
+        version: 6.11.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
       react:
         specifier: 17.0.2
         version: 17.0.2
@@ -5735,6 +5735,7 @@ packages:
     engines: {node: '>=0.6.0', teleport: '>=0.2.0'}
     deprecated: |-
       You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript developers strong feelings about promises. They can almost certainly migrate to the native JavaScript promise now. Thank you literally everyone for joining me in this bet against the odds. Be excellent to each other.
+
       (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
 
   qs@6.14.0:
@@ -5756,8 +5757,8 @@ packages:
     resolution: {integrity: sha512-y3bGgqKj3QBdxLbLkomlohkvsA8gdAiUQlSBJnBhfn+BPxg4bc62d8TcBW15wavDfgexCgccckhcZvywyQYPOw==}
     hasBin: true
 
-  re-resizable@6.10.3:
-    resolution: {integrity: sha512-zvWb7X3RJMA4cuSrqoxgs3KR+D+pEXnGrD2FAD6BMYAULnZsSF4b7AOVyG6pC3VVNVOtlagGDCDmZSwWLjjBBw==}
+  re-resizable@6.11.2:
+    resolution: {integrity: sha512-2xI2P3OHs5qw7K0Ud1aLILK6MQxW50TcO+DetD9eIV58j84TqYeHoZcL9H4GXFXXIh7afhH8mv5iUCXII7OW7A==}
     peerDependencies:
       react: ^16.13.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
       react-dom: ^16.13.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
@@ -13230,7 +13231,7 @@ snapshots:
       minimist: 1.2.8
       strip-json-comments: 2.0.1
 
-  re-resizable@6.10.3(react-dom@17.0.2(react@17.0.2))(react@17.0.2):
+  re-resizable@6.11.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2):
     dependencies:
       react: 17.0.2
       react-dom: 17.0.2(react@17.0.2)
