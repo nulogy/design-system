@@ -87,6 +87,7 @@ const CollaborationStatusOption = ({
 }: SelectOptionProps<NDSOption, true, GroupBase<NDSOption>>) => {
   const value = props.data.value;
   const role = (props.selectProps as any).role || "supplier"; // Get role from select props
+  const acceptanceType = (props.selectProps as any).acceptanceType || "dual"; // Get acceptance type from select props
 
   const renderPill = () => {
     if (value === "awaiting-your-response") {
@@ -105,33 +106,48 @@ const CollaborationStatusOption = ({
         </Box>
       );
     }
-    if (value === "accepted-updated") {
-      return (
-        <Box height="x4" display="flex" alignItems="center" justifyContent="flex-start">
-          <Tooltip tooltip="Accepted with updated request">
-            <Flex alignItems="center" gap="x0_5" display="inline-flex">
-              <StatusIndicator type="success">Accepted</StatusIndicator>
-              <Box display="flex" alignItems="center" justifyContent="center">
-                <ReconciledIcon variant="standard" size={20} />
+    if (value === "accepted" || value === "accepted-updated" || value === "accepted-retained") {
+      // In standard mode, show simple green Accepted pill
+      if (acceptanceType === "standard") {
+        return (
+          <Box height="x4" display="flex" alignItems="center" justifyContent="flex-start">
+            <StatusIndicator type="success">Accepted</StatusIndicator>
+          </Box>
+        );
+      }
+      // In dual mode, show with icon and tooltip
+      if (value === "accepted-updated") {
+        return (
+          <Box height="x4" display="flex" alignItems="center" justifyContent="flex-start">
+            <Tooltip tooltip="Accepted with updated request">
+              <Box display="flex" alignItems="center">
+                <Flex alignItems="center" gap="x0_5" display="inline-flex">
+                  <StatusIndicator type="success">Accepted</StatusIndicator>
+                  <Box display="flex" alignItems="center" justifyContent="center">
+                    <ReconciledIcon variant="standard" size={20} />
+                  </Box>
+                </Flex>
               </Box>
-            </Flex>
-          </Tooltip>
-        </Box>
-      );
-    }
-    if (value === "accepted-retained") {
-      return (
-        <Box height="x4" display="flex" alignItems="center" justifyContent="flex-start">
-          <Tooltip tooltip="Accepted with retained request">
-            <Flex alignItems="center" gap="x0_5" display="inline-flex">
-              <StatusIndicator type="neutral">Accepted</StatusIndicator>
-              <Box display="flex" alignItems="center" justifyContent="center">
-                <ReconciledIcon variant="flagged" size={20} />
+            </Tooltip>
+          </Box>
+        );
+      }
+      if (value === "accepted-retained") {
+        return (
+          <Box height="x4" display="flex" alignItems="center" justifyContent="flex-start">
+            <Tooltip tooltip="Accepted with retained request">
+              <Box display="flex" alignItems="center">
+                <Flex alignItems="center" gap="x0_5" display="inline-flex">
+                  <StatusIndicator type="neutral">Accepted</StatusIndicator>
+                  <Box display="flex" alignItems="center" justifyContent="center">
+                    <ReconciledIcon variant="flagged" size={20} />
+                  </Box>
+                </Flex>
               </Box>
-            </Flex>
-          </Tooltip>
-        </Box>
-      );
+            </Tooltip>
+          </Box>
+        );
+      }
     }
     return (
       <Box height="x4" display="flex" alignItems="center" justifyContent="flex-start">
@@ -147,6 +163,7 @@ const CollaborationStatusOption = ({
 const CollaborationStatusMultiValue = ({ data, ...props }: any) => {
   const value = data.value;
   const role = (props.selectProps as any).role || "supplier";
+  const acceptanceType = (props.selectProps as any).acceptanceType || "dual";
 
   const renderPill = () => {
     if (value === "awaiting-your-response") {
@@ -159,29 +176,36 @@ const CollaborationStatusMultiValue = ({ data, ...props }: any) => {
         </StatusIndicator>
       );
     }
-    if (value === "accepted-updated") {
-      return (
-        <Tooltip tooltip="Accepted with updated request">
-          <Flex alignItems="center" gap="x0_5" display="inline-flex">
-            <StatusIndicator type="success">Accepted</StatusIndicator>
-            <Box display="flex" alignItems="center" justifyContent="center">
-              <ReconciledIcon variant="standard" size={20} />
-            </Box>
-          </Flex>
-        </Tooltip>
-      );
-    }
-    if (value === "accepted-retained") {
-      return (
-        <Tooltip tooltip="Accepted with retained request">
-          <Flex alignItems="center" gap="x0_5" display="inline-flex">
-            <StatusIndicator type="neutral">Accepted</StatusIndicator>
-            <Box display="flex" alignItems="center" justifyContent="center">
-              <ReconciledIcon variant="flagged" size={20} />
-            </Box>
-          </Flex>
-        </Tooltip>
-      );
+    if (value === "accepted" || value === "accepted-updated" || value === "accepted-retained") {
+      // In standard mode, show simple green Accepted pill
+      if (acceptanceType === "standard") {
+        return <StatusIndicator type="success">Accepted</StatusIndicator>;
+      }
+      // In dual mode, show with icon and tooltip
+      if (value === "accepted-updated") {
+        return (
+          <Tooltip tooltip="Accepted with updated request">
+            <Flex alignItems="center" gap="x0_5" display="inline-flex">
+              <StatusIndicator type="success">Accepted</StatusIndicator>
+              <Box display="flex" alignItems="center" justifyContent="center">
+                <ReconciledIcon variant="standard" size={20} />
+              </Box>
+            </Flex>
+          </Tooltip>
+        );
+      }
+      if (value === "accepted-retained") {
+        return (
+          <Tooltip tooltip="Accepted with retained request">
+            <Flex alignItems="center" gap="x0_5" display="inline-flex">
+              <StatusIndicator type="neutral">Accepted</StatusIndicator>
+              <Box display="flex" alignItems="center" justifyContent="center">
+                <ReconciledIcon variant="flagged" size={20} />
+              </Box>
+            </Flex>
+          </Tooltip>
+        );
+      }
     }
     return data.label;
   };
@@ -211,6 +235,7 @@ const secondaryMenu = [
 export const Default = () => {
   const [selectedRows, setSelectedRows] = useState<string[]>([]);
   const [role, setRole] = useState("supplier");
+  const [acceptanceType, setAcceptanceType] = useState<"dual" | "standard">("dual");
   const [isFilterSidebarOpen, setIsFilterSidebarOpen] = useState(false);
   const [poLineItemNumbers, setPoLineItemNumbers] = useState<string[]>([]);
   const [onlyBlankSupplierPo, setOnlyBlankSupplierPo] = useState(false);
@@ -816,14 +841,22 @@ export const Default = () => {
         return (
           <Flex px="x1" py="x0_25" width="100%" alignItems="center" gap="x0_5">
             {cellData === "accepted" && (
-              <Tooltip tooltip={isReconciled ? "Accepted with updated request" : "Accepted with retained request"}>
-                <Flex alignItems="center" gap="x0_5">
-                  <StatusIndicator type={isReconciled ? "success" : "neutral"}>Accepted</StatusIndicator>
-                  <Box display="flex" alignItems="center" justifyContent="center">
-                    <ReconciledIcon variant={isReconciled ? "standard" : "flagged"} size={20} />
-                  </Box>
-                </Flex>
-              </Tooltip>
+              <>
+                {acceptanceType === "standard" ? (
+                  <StatusIndicator type="success" mt="x0_5">
+                    Accepted
+                  </StatusIndicator>
+                ) : (
+                  <Tooltip tooltip={isReconciled ? "Accepted with updated request" : "Accepted with retained request"}>
+                    <Flex alignItems="center" gap="x0_5" mt="x0_5">
+                      <StatusIndicator type={isReconciled ? "success" : "neutral"}>Accepted</StatusIndicator>
+                      <Box display="flex" alignItems="center" justifyContent="center">
+                        <ReconciledIcon variant={isReconciled ? "standard" : "flagged"} size={20} />
+                      </Box>
+                    </Flex>
+                  </Tooltip>
+                )}
+              </>
             )}
             {cellData === "awaiting" && role === "supplier" && (
               <StatusIndicator type="warning" mt="x4" mb="x0_5">
@@ -2043,21 +2076,32 @@ export const Default = () => {
               multiselect
               value={collaborationStatuses}
               onChange={(value) => setCollaborationStatuses(Array.isArray(value) ? value.map((v) => String(v)) : [])}
-              options={[
-                { value: "awaiting-your-response", label: "Awaiting your response" },
-                {
-                  value: "awaiting-other",
-                  label: role === "supplier" ? "Awaiting customer response" : "Awaiting supplier response",
-                },
-                { value: "accepted-updated", label: "Accepted with updated request" },
-                { value: "accepted-retained", label: "Accepted with retained request" },
-              ]}
+              options={
+                acceptanceType === "standard"
+                  ? [
+                      { value: "awaiting-your-response", label: "Awaiting your response" },
+                      {
+                        value: "awaiting-other",
+                        label: role === "supplier" ? "Awaiting customer response" : "Awaiting supplier response",
+                      },
+                      { value: "accepted", label: "Accepted" },
+                    ]
+                  : [
+                      { value: "awaiting-your-response", label: "Awaiting your response" },
+                      {
+                        value: "awaiting-other",
+                        label: role === "supplier" ? "Awaiting customer response" : "Awaiting supplier response",
+                      },
+                      { value: "accepted-updated", label: "Accepted with updated request" },
+                      { value: "accepted-retained", label: "Accepted with retained request" },
+                    ]
+              }
               components={{
                 Option: CollaborationStatusOption,
                 MultiValue: CollaborationStatusMultiValue,
               }}
-              // Pass role to custom option component via selectProps
-              {...({ role } as any)}
+              // Pass role and acceptanceType to custom option component via selectProps
+              {...({ role, acceptanceType } as any)}
             />
           </Box>
 
@@ -2085,7 +2129,7 @@ export const Default = () => {
         </Flex>
       </Sidebar>
 
-      {/* Floating Supplier/Customer Switcher */}
+      {/* Floating Configuration Bar */}
       <Box
         position="fixed"
         bottom="x2"
@@ -2100,14 +2144,29 @@ export const Default = () => {
         borderColor="lightGrey"
         display="flex"
         alignItems="center"
+        gap="x2"
       >
-        <Text fontSize="small" mr="x2">
+        <Text fontSize="small" mr="x1">
           View as:
         </Text>
         <Switcher selected={role} onChange={setRole}>
           <Switch value="supplier">Supplier</Switch>
           <Switch value="customer">Customer</Switch>
         </Switcher>
+        <VerticalDivider />
+        <Text fontSize="small" mr="x1">
+          Acceptance:
+        </Text>
+        <Box width="120px">
+          <Select
+            value={acceptanceType}
+            onChange={(value) => setAcceptanceType(value as "dual" | "standard")}
+            options={[
+              { value: "dual", label: "Dual" },
+              { value: "standard", label: "Standard" },
+            ]}
+          />
+        </Box>
       </Box>
 
       {/* Saved View 1 Modal */}
