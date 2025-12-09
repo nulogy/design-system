@@ -114,6 +114,9 @@ export const Default = () => {
   // Production status state
   const [productionStatus, setProductionStatus] = useState<"Not started" | "In progress" | "Completed">("Not started");
 
+  // Production complete state
+  const [productionComplete, setProductionComplete] = useState(false);
+
   // Supplier's proposal made state
   const [supplierProposalMade, setSupplierProposalMade] = useState(true);
 
@@ -139,6 +142,7 @@ export const Default = () => {
   const [assignedTags, setAssignedTags] = useState({
     validatedForAssembly: false,
     expressShipment: false,
+    customTag: true,
   });
 
   // Milestone status state
@@ -965,23 +969,13 @@ export const Default = () => {
                   <Text color="darkGrey">Tags</Text>
                 </DescriptionTerm>
                 <DescriptionDetails>
-                  <Flex flexWrap="wrap" gap="x0_25">
-                    {assignedTags.expressShipment && (
-                      <StatusIndicator type="quiet">
-                        <Text fontSize="smaller" lineHeight="smallerText">
-                          Express shipment
-                        </Text>
-                      </StatusIndicator>
-                    )}
-                    {assignedTags.validatedForAssembly && (
-                      <StatusIndicator type={userState.role === "customer" ? "success" : "quiet"}>
-                        <Text fontSize="smaller" lineHeight="smallerText">
-                          Validated for assembly
-                        </Text>
-                      </StatusIndicator>
-                    )}
-                    {!assignedTags.expressShipment && !assignedTags.validatedForAssembly && <Text>-</Text>}
-                  </Flex>
+                  {assignedTags.customTag ? (
+                    <StatusIndicator type="warning">
+                      Custom tag
+                    </StatusIndicator>
+                  ) : (
+                    <Text>-</Text>
+                  )}
                 </DescriptionDetails>
               </DescriptionGroup>
               <DescriptionGroup>
@@ -2144,11 +2138,47 @@ export const Default = () => {
           {/* Supplier's item code - disabled */}
           <Input labelText="Supplier's item code" id="supplierItemCode" value="SUP-ITEM-001" disabled />
 
-          {/* Tags - disabled */}
-          <Input labelText="Tags" id="tags" value="" disabled />
+          {/* Assigned tags multiselect - editable only by customer */}
+          {userState.role === "customer" ? (
+            <Select
+              labelText="Tags"
+              multiselect
+              value={[
+                ...(assignedTags.validatedForAssembly ? ["validatedForAssembly"] : []),
+                ...(assignedTags.expressShipment ? ["expressShipment"] : []),
+                ...(assignedTags.customTag ? ["customTag"] : []),
+              ]}
+              onChange={(values) => {
+                const selectedValues = Array.isArray(values) ? values : [];
+                setAssignedTags({
+                  validatedForAssembly: selectedValues.includes("validatedForAssembly"),
+                  expressShipment: selectedValues.includes("expressShipment"),
+                  customTag: selectedValues.includes("customTag"),
+                });
+              }}
+              options={[
+                { value: "validatedForAssembly", label: "Validated for assembly" },
+                { value: "expressShipment", label: "Express shipment" },
+                { value: "customTag", label: "Custom tag" },
+              ]}
+            />
+          ) : (
+            <Input
+              labelText="Tags"
+              id="tagsDisplay"
+              value={
+                [
+                  ...(assignedTags.validatedForAssembly ? ["Validated for assembly"] : []),
+                  ...(assignedTags.expressShipment ? ["Express shipment"] : []),
+                  ...(assignedTags.customTag ? ["Custom tag"] : []),
+                ].join(", ") || "-"
+              }
+              disabled
+            />
+          )}
 
           {/* Priority - editable only by customer */}
-          {userState.role === "customer" && (
+          {userState.role === "customer" ? (
             <Select
               labelText="Priority"
               id="priority"
@@ -2163,10 +2193,12 @@ export const Default = () => {
                 { value: "Urgent", label: "Urgent" },
               ]}
             />
+          ) : (
+            <Input labelText="Priority" id="priorityDisplay" value={formData.edit.priority} disabled />
           )}
 
           {/* Customer's lot code - editable only by customer */}
-          {userState.role === "customer" && (
+          {userState.role === "customer" ? (
             <Input
               labelText="Customer's lot code"
               id="customerLotCode"
@@ -2174,6 +2206,13 @@ export const Default = () => {
               onChange={(e) =>
                 setFormData((prev) => ({ ...prev, edit: { ...prev.edit, customerLotCode: e.target.value } }))
               }
+            />
+          ) : (
+            <Input
+              labelText="Customer's lot code"
+              id="customerLotCodeDisplay"
+              value={formData.edit.customerLotCode}
+              disabled
             />
           )}
 
@@ -2203,21 +2242,38 @@ export const Default = () => {
           {/* Ship to - disabled */}
           <Input labelText="Ship to" id="shipTo" value="Warehouse A - 123 Main St, City, State 12345" disabled />
 
-          {/* Need by date - disabled */}
-          <Input
-            labelText="Need by date"
-            id="needByDateDisplay"
-            value={
-              formData.edit.needByDate
-                ? new Date(formData.edit.needByDate).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })
-                : "-"
-            }
-            disabled
-          />
+          {/* Need by date - editable only by customer, shown only if production complete */}
+          {productionStatus === "Completed" && (
+            <>
+              {userState.role === "customer" ? (
+                <Flex flexDirection="column" gap="x1">
+                  <FieldLabel htmlFor="needByDate" labelText="Need by date" />
+                  <Box>
+                    <DatePicker
+                      id="needByDate"
+                      selected={formData.edit.needByDate}
+                      onChange={(date) => setFormData((prev) => ({ ...prev, edit: { ...prev.edit, needByDate: date } }))}
+                    />
+                  </Box>
+                </Flex>
+              ) : (
+                <Input
+                  labelText="Need by date"
+                  id="needByDateDisplay"
+                  value={
+                    formData.edit.needByDate
+                      ? new Date(formData.edit.needByDate).toLocaleDateString("en-US", {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        })
+                      : "-"
+                  }
+                  disabled
+                />
+              )}
+            </>
+          )}
 
           {/* Close production note - disabled, shown only if production complete */}
           {productionStatus === "Completed" && (
@@ -2367,6 +2423,9 @@ export const V2 = () => {
     role: "supplier" as "supplier" | "customer",
   });
 
+  // Production status state
+  const [productionStatus, setProductionStatus] = useState<"Not started" | "In progress" | "Completed">("Not started");
+
   // Production complete state
   const [productionComplete, setProductionComplete] = useState(false);
 
@@ -2376,6 +2435,9 @@ export const V2 = () => {
   // Edit mode state
   const [editMode, setEditMode] = useState<"request" | "proposal" | null>(null);
 
+  // Customer item code and description
+  const customerItemCodeAndDescription = "ITEM-001 - High-quality widget with advanced features";
+
   // Form data
   const [formData, setFormData] = useState({
     edit: {
@@ -2384,6 +2446,9 @@ export const V2 = () => {
       needByDate: new Date("2025-02-15"),
       closeProductionNote: "Production completed",
       carryOverSentTo: "",
+      priority: "High",
+      customerLotCode: "LOT-2024-001",
+      supplierLotCode: "SUP-LOT-001",
     },
     request: {
       quantity: "15,000",
@@ -2424,6 +2489,7 @@ export const V2 = () => {
   const [assignedTags, setAssignedTags] = useState({
     validatedForAssembly: false,
     expressShipment: false,
+    customTag: true,
   });
 
   // PO status state
@@ -3839,6 +3905,12 @@ export const V2 = () => {
         }
       >
         <Flex flexDirection="column" gap="x3" py="x1">
+          {/* PO number - disabled */}
+          <Input labelText="PO number" id="poNumber" value="PO-00000004" disabled />
+
+          {/* Customer's PO line item number - disabled */}
+          <Input labelText="Customer's PO line item number" id="customerPOLineItemNumber" value="POLI-001" disabled />
+
           {/* Supplier's PO line item number - editable only by supplier */}
           {userState.role === "supplier" && (
             <Input
@@ -3851,14 +3923,83 @@ export const V2 = () => {
             />
           )}
 
-          {/* BOM revision and release date - editable */}
+          {/* Created on - disabled */}
+          <Input labelText="Created on" id="createdOn" value="February 1, 2025" disabled />
+
+          {/* Customer / Supplier - disabled */}
           <Input
-            labelText="BOM revision and release date - Use fancy 2 row select"
-            id="bomRevision"
-            autoFocus
-            value={formData.edit.bomRevision}
-            onChange={(e) => setFormData((prev) => ({ ...prev, edit: { ...prev.edit, bomRevision: e.target.value } }))}
+            labelText={userState.role === "customer" ? "Supplier" : "Customer"}
+            id="customerSupplier"
+            value="Claudia Supplier"
+            disabled
           />
+
+          {/* Customer's item code and description - disabled */}
+          <Input
+            labelText="Customer's item code and description"
+            id="customerItemCode"
+            value={customerItemCodeAndDescription}
+            disabled
+          />
+
+          {/* Supplier's item code - disabled */}
+          <Input labelText="Supplier's item code" id="supplierItemCode" value="SUP-ITEM-001" disabled />
+
+          {/* Priority - editable only by customer */}
+          {userState.role === "customer" && (
+            <Select
+              labelText="Priority"
+              id="priority"
+              value={formData.edit.priority}
+              onChange={(value) =>
+                setFormData((prev) => ({ ...prev, edit: { ...prev.edit, priority: value as string } }))
+              }
+              options={[
+                { value: "Low", label: "Low" },
+                { value: "Medium", label: "Medium" },
+                { value: "High", label: "High" },
+                { value: "Urgent", label: "Urgent" },
+              ]}
+            />
+          )}
+
+          {/* Customer's lot code - editable only by customer */}
+          {userState.role === "customer" && (
+            <Input
+              labelText="Customer's lot code"
+              id="customerLotCode"
+              value={formData.edit.customerLotCode}
+              onChange={(e) =>
+                setFormData((prev) => ({ ...prev, edit: { ...prev.edit, customerLotCode: e.target.value } }))
+              }
+            />
+          )}
+
+          {/* Supplier's lot code - editable only by supplier */}
+          {userState.role === "supplier" && (
+            <Input
+              labelText="Supplier's lot code"
+              id="supplierLotCode"
+              value={formData.edit.supplierLotCode}
+              onChange={(e) =>
+                setFormData((prev) => ({ ...prev, edit: { ...prev.edit, supplierLotCode: e.target.value } }))
+              }
+            />
+          )}
+
+          {/* BOM revision and release date - editable by supplier and customer */}
+          <AsyncSelect
+            labelText="BOM revision and release date"
+            placeholder="Start typing"
+            loadOptions={loadOptions}
+            value={formData.edit.bomRevision}
+            onChange={(value) =>
+              setFormData((prev) => ({ ...prev, edit: { ...prev.edit, bomRevision: value as string } }))
+            }
+          />
+
+          {/* Ship to - disabled */}
+          <Input labelText="Ship to" id="shipTo" value="Warehouse A - 123 Main St, City, State 12345" disabled />
 
           {/* Need by date - editable only by customer */}
           {userState.role === "customer" && (
@@ -3874,25 +4015,50 @@ export const V2 = () => {
             </Flex>
           )}
 
-          {/* Assigned tags checkbox group - editable only by customer */}
+          {/* Assigned tags multiselect - editable only by customer */}
           {userState.role === "customer" && (
-            <CheckboxGroup
-              labelText="Assigned tags"
-              name="assignedTags"
-              checkedValue={[
+            <Select
+              labelText="Tags"
+              multiselect
+              value={[
                 ...(assignedTags.validatedForAssembly ? ["validatedForAssembly"] : []),
                 ...(assignedTags.expressShipment ? ["expressShipment"] : []),
+                ...(assignedTags.customTag ? ["customTag"] : []),
               ]}
               onChange={(values) => {
+                const selectedValues = Array.isArray(values) ? values : [];
                 setAssignedTags({
-                  validatedForAssembly: values.includes("validatedForAssembly"),
-                  expressShipment: values.includes("expressShipment"),
+                  validatedForAssembly: selectedValues.includes("validatedForAssembly"),
+                  expressShipment: selectedValues.includes("expressShipment"),
+                  customTag: selectedValues.includes("customTag"),
                 });
               }}
-            >
-              <Checkbox value="validatedForAssembly" labelText="Validated for assembly" />
-              <Checkbox value="expressShipment" labelText="Express shipment" />
-            </CheckboxGroup>
+              options={[
+                { value: "validatedForAssembly", label: "Validated for assembly" },
+                { value: "expressShipment", label: "Express shipment" },
+                { value: "customTag", label: "Custom tag" },
+              ]}
+            />
+          )}
+
+          {/* Close production note - disabled, shown only if production complete */}
+          {productionStatus === "Completed" && (
+            <Input
+              labelText="Close production note"
+              id="closeProductionNote"
+              value={formData.edit.closeProductionNote || "-"}
+              disabled
+            />
+          )}
+
+          {/* Carry over sent to - disabled, shown only if production complete */}
+          {productionStatus === "Completed" && (
+            <Input
+              labelText="Carry over sent to"
+              id="carryOverSentTo"
+              value={formData.edit.carryOverSentTo || "-"}
+              disabled
+            />
           )}
         </Flex>
       </Sidebar>
@@ -3963,6 +4129,9 @@ export const V3 = () => {
     role: "supplier" as "supplier" | "customer",
   });
 
+  // Production status state
+  const [productionStatus, setProductionStatus] = useState<"Not started" | "In progress" | "Completed">("Not started");
+
   // Production complete state
   const [productionComplete, setProductionComplete] = useState(false);
 
@@ -3972,6 +4141,9 @@ export const V3 = () => {
   // Edit mode state
   const [editMode, setEditMode] = useState<"request" | "proposal" | null>(null);
 
+  // Customer item code and description
+  const customerItemCodeAndDescription = "ITEM-001 - High-quality widget with advanced features";
+
   // Form data
   const [formData, setFormData] = useState({
     edit: {
@@ -3980,6 +4152,9 @@ export const V3 = () => {
       needByDate: new Date("2025-02-15"),
       closeProductionNote: "Production completed",
       carryOverSentTo: "",
+      priority: "High",
+      customerLotCode: "LOT-2024-001",
+      supplierLotCode: "SUP-LOT-001",
     },
     request: {
       quantity: "15,000",
@@ -4020,6 +4195,7 @@ export const V3 = () => {
   const [assignedTags, setAssignedTags] = useState({
     validatedForAssembly: false,
     expressShipment: false,
+    customTag: true,
   });
 
   // PO status state
@@ -5447,6 +5623,12 @@ export const V3 = () => {
         }
       >
         <Flex flexDirection="column" gap="x3" py="x1">
+          {/* PO number - disabled */}
+          <Input labelText="PO number" id="poNumber" value="PO-00000004" disabled />
+
+          {/* Customer's PO line item number - disabled */}
+          <Input labelText="Customer's PO line item number" id="customerPOLineItemNumber" value="POLI-001" disabled />
+
           {/* Supplier's PO line item number - editable only by supplier */}
           {userState.role === "supplier" && (
             <Input
@@ -5459,14 +5641,83 @@ export const V3 = () => {
             />
           )}
 
-          {/* BOM revision and release date - editable */}
+          {/* Created on - disabled */}
+          <Input labelText="Created on" id="createdOn" value="February 1, 2025" disabled />
+
+          {/* Customer / Supplier - disabled */}
           <Input
-            labelText="BOM revision and release date - Use fancy 2 row select"
-            id="bomRevision"
-            autoFocus
-            value={formData.edit.bomRevision}
-            onChange={(e) => setFormData((prev) => ({ ...prev, edit: { ...prev.edit, bomRevision: e.target.value } }))}
+            labelText={userState.role === "customer" ? "Supplier" : "Customer"}
+            id="customerSupplier"
+            value="Claudia Supplier"
+            disabled
           />
+
+          {/* Customer's item code and description - disabled */}
+          <Input
+            labelText="Customer's item code and description"
+            id="customerItemCode"
+            value={customerItemCodeAndDescription}
+            disabled
+          />
+
+          {/* Supplier's item code - disabled */}
+          <Input labelText="Supplier's item code" id="supplierItemCode" value="SUP-ITEM-001" disabled />
+
+          {/* Priority - editable only by customer */}
+          {userState.role === "customer" && (
+            <Select
+              labelText="Priority"
+              id="priority"
+              value={formData.edit.priority}
+              onChange={(value) =>
+                setFormData((prev) => ({ ...prev, edit: { ...prev.edit, priority: value as string } }))
+              }
+              options={[
+                { value: "Low", label: "Low" },
+                { value: "Medium", label: "Medium" },
+                { value: "High", label: "High" },
+                { value: "Urgent", label: "Urgent" },
+              ]}
+            />
+          )}
+
+          {/* Customer's lot code - editable only by customer */}
+          {userState.role === "customer" && (
+            <Input
+              labelText="Customer's lot code"
+              id="customerLotCode"
+              value={formData.edit.customerLotCode}
+              onChange={(e) =>
+                setFormData((prev) => ({ ...prev, edit: { ...prev.edit, customerLotCode: e.target.value } }))
+              }
+            />
+          )}
+
+          {/* Supplier's lot code - editable only by supplier */}
+          {userState.role === "supplier" && (
+            <Input
+              labelText="Supplier's lot code"
+              id="supplierLotCode"
+              value={formData.edit.supplierLotCode}
+              onChange={(e) =>
+                setFormData((prev) => ({ ...prev, edit: { ...prev.edit, supplierLotCode: e.target.value } }))
+              }
+            />
+          )}
+
+          {/* BOM revision and release date - editable by supplier and customer */}
+          <AsyncSelect
+            labelText="BOM revision and release date"
+            placeholder="Start typing"
+            loadOptions={loadOptions}
+            value={formData.edit.bomRevision}
+            onChange={(value) =>
+              setFormData((prev) => ({ ...prev, edit: { ...prev.edit, bomRevision: value as string } }))
+            }
+          />
+
+          {/* Ship to - disabled */}
+          <Input labelText="Ship to" id="shipTo" value="Warehouse A - 123 Main St, City, State 12345" disabled />
 
           {/* Need by date - editable only by customer */}
           {userState.role === "customer" && (
@@ -5482,25 +5733,50 @@ export const V3 = () => {
             </Flex>
           )}
 
-          {/* Assigned tags checkbox group - editable only by customer */}
+          {/* Assigned tags multiselect - editable only by customer */}
           {userState.role === "customer" && (
-            <CheckboxGroup
-              labelText="Assigned tags"
-              name="assignedTags"
-              checkedValue={[
+            <Select
+              labelText="Tags"
+              multiselect
+              value={[
                 ...(assignedTags.validatedForAssembly ? ["validatedForAssembly"] : []),
                 ...(assignedTags.expressShipment ? ["expressShipment"] : []),
+                ...(assignedTags.customTag ? ["customTag"] : []),
               ]}
               onChange={(values) => {
+                const selectedValues = Array.isArray(values) ? values : [];
                 setAssignedTags({
-                  validatedForAssembly: values.includes("validatedForAssembly"),
-                  expressShipment: values.includes("expressShipment"),
+                  validatedForAssembly: selectedValues.includes("validatedForAssembly"),
+                  expressShipment: selectedValues.includes("expressShipment"),
+                  customTag: selectedValues.includes("customTag"),
                 });
               }}
-            >
-              <Checkbox value="validatedForAssembly" labelText="Validated for assembly" />
-              <Checkbox value="expressShipment" labelText="Express shipment" />
-            </CheckboxGroup>
+              options={[
+                { value: "validatedForAssembly", label: "Validated for assembly" },
+                { value: "expressShipment", label: "Express shipment" },
+                { value: "customTag", label: "Custom tag" },
+              ]}
+            />
+          )}
+
+          {/* Close production note - disabled, shown only if production complete */}
+          {productionStatus === "Completed" && (
+            <Input
+              labelText="Close production note"
+              id="closeProductionNote"
+              value={formData.edit.closeProductionNote || "-"}
+              disabled
+            />
+          )}
+
+          {/* Carry over sent to - disabled, shown only if production complete */}
+          {productionStatus === "Completed" && (
+            <Input
+              labelText="Carry over sent to"
+              id="carryOverSentTo"
+              value={formData.edit.carryOverSentTo || "-"}
+              disabled
+            />
           )}
         </Flex>
       </Sidebar>

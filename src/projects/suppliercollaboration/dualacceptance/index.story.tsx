@@ -2104,28 +2104,6 @@ export const Default = () => {
               {...({ role, acceptanceType } as any)}
             />
           </Box>
-
-          <Box>
-            <AsyncSelect
-              labelText="Customer's lot codes"
-              placeholder="Start typing"
-              loadOptions={loadCustomerLotCodes}
-              multiselect
-              value={customerLotCodes}
-              onChange={handleCustomerLotCodesChange}
-            />
-          </Box>
-
-          <Box>
-            <AsyncSelect
-              labelText="Supplier's lot codes"
-              placeholder="Start typing"
-              loadOptions={loadSupplierLotCodes}
-              multiselect
-              value={supplierLotCodes}
-              onChange={handleSupplierLotCodesChange}
-            />
-          </Box>
         </Flex>
       </Sidebar>
 
@@ -2165,6 +2143,7 @@ export const Default = () => {
               { value: "dual", label: "Dual" },
               { value: "standard", label: "Standard" },
             ]}
+            menuPlacement="top"
           />
         </Box>
       </Box>
@@ -2246,39 +2225,57 @@ export const Default = () => {
         maxWidth="649px"
         footerContent={
           <Flex justifyContent="flex-start" gap="x2">
-            <PrimaryButton onClick={handleAcceptanceConfirm}>Accept</PrimaryButton>
+            <PrimaryButton onClick={handleAcceptanceConfirm}>
+              {role === "customer" ? "Accept proposal" : "Accept"}
+            </PrimaryButton>
             <QuietButton onClick={handleAcceptanceCancel}>Cancel</QuietButton>
           </Flex>
         }
       >
         <Box px="half">
-          <Flex flexDirection="column" gap="x1">
-            <Box mb="x1">
-              <Radio
-                name="acceptance-option"
-                value="without-flagging"
-                labelText="With standard acceptance"
-                checked={acceptanceOption === "without-flagging"}
-                onChange={() => setAcceptanceOption("without-flagging")}
-              />
-              <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed" ml="x3">
-                This will update your requested quantity to match the supplier's proposal.
-              </Text>
-            </Box>
-            <Divider m="0" />
-            <Box mb="x1">
-              <Radio
-                name="acceptance-option"
-                value="with-flagging"
-                labelText="With flagged acceptance"
-                checked={acceptanceOption === "with-flagging"}
-                onChange={() => setAcceptanceOption("with-flagging")}
-              />
-              <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed" ml="x3">
-                This will accept the proposal but keep your requested quantity.
-              </Text>
-            </Box>
-          </Flex>
+          {role === "customer" && acceptanceType === "dual" ? (
+            <Flex flexDirection="column" gap="x1">
+              <Box mb="x1">
+                <Flex alignItems="center" gap="x1">
+                  <Radio
+                    name="acceptance-option"
+                    value="without-flagging"
+                    labelText="Accept and update request"
+                    checked={acceptanceOption === "without-flagging"}
+                    onChange={() => setAcceptanceOption("without-flagging")}
+                  />
+                  <Box display="flex" alignItems="center" justifyContent="center">
+                    <ReconciledIcon variant="standard" size={20} />
+                  </Box>
+                </Flex>
+                <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed" ml="x3">
+                  This will update your requested quantity to match the supplier's proposal.
+                </Text>
+              </Box>
+              <Divider m="0" />
+              <Box mb="x1">
+                <Flex alignItems="center" gap="x1">
+                  <Radio
+                    name="acceptance-option"
+                    value="with-flagging"
+                    labelText="Accept and retain request"
+                    checked={acceptanceOption === "with-flagging"}
+                    onChange={() => setAcceptanceOption("with-flagging")}
+                  />
+                  <Box display="flex" alignItems="center" justifyContent="center">
+                    <ReconciledIcon variant="flagged" size={20} />
+                  </Box>
+                </Flex>
+                <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed" ml="x3">
+                  This will accept the proposal but keep your requested quantity.
+                </Text>
+              </Box>
+            </Flex>
+          ) : (
+            <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
+              USE EXISTING MODAL
+            </Text>
+          )}
         </Box>
       </Modal>
     </ApplicationFrame>

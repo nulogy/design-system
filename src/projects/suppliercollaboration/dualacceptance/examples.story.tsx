@@ -38,6 +38,10 @@ import {
   Modal,
   Radio,
   Alert,
+  Sidebar,
+  DatePicker,
+  AsyncSelect,
+  ToastContainer,
 } from "../../..";
 
 export default {
@@ -267,25 +271,16 @@ const HeaderVariation = ({
                             {collaborationStatus === "accepted" || acceptedRequest || acceptedProposal ? (
                               "Accepted"
                             ) : activeCardAuthorRole === userRole ? (
-                              <Box borderBottom={`2px solid ${theme.colors.yellow}`} display="inline-block">
-                                Requires your response
-                              </Box>
+                              "Requires your response"
                             ) : (
-                              <Box
-                                borderBottom={`2px solid ${theme.colors.yellow}`}
-                                display="inline-block"
-                                style={{ textDecoration: "none" }}
+                              <TruncatedText
+                                fontSize="smaller"
+                                lineHeight="smallerText"
+                                fullWidth
+                                maxWidth="184px"
                               >
-                                <TruncatedText
-                                  fontSize="smaller"
-                                  lineHeight="smallerText"
-                                  fullWidth
-                                  maxWidth="184px"
-                                  style={{ textDecoration: "none" }}
-                                >
-                                  {`Awaiting ${userRole === "supplier" ? "customer" : "supplier"} response`}
-                                </TruncatedText>
-                              </Box>
+                                {`Awaiting ${userRole === "supplier" ? "customer" : "supplier"} response`}
+                              </TruncatedText>
                             )}
                           </StatusIndicator>
                         )}
@@ -322,19 +317,11 @@ const HeaderVariation = ({
                           {collaborationStatus === "accepted" || acceptedRequest || acceptedProposal ? (
                             "Accepted"
                           ) : activeCardAuthorRole === userRole ? (
-                            <Box borderBottom={`2px solid ${theme.colors.yellow}`} display="inline-block">
-                              Requires your response
-                            </Box>
+                            "Requires your response"
                           ) : (
-                            <Box
-                              borderBottom={`2px solid ${theme.colors.yellow}`}
-                              display="inline-block"
-                              style={{ textDecoration: "none" }}
-                            >
-                              <TruncatedText fontSize="smaller" lineHeight="smallerText" fullWidth maxWidth="184px">
-                                {`Awaiting ${userRole === "supplier" ? "customer" : "supplier"} response`}
-                              </TruncatedText>
-                            </Box>
+                            <TruncatedText fontSize="smaller" lineHeight="smallerText" fullWidth maxWidth="184px">
+                              {`Awaiting ${userRole === "supplier" ? "customer" : "supplier"} response`}
+                            </TruncatedText>
                           )}
                         </StatusIndicator>
                       )}
@@ -2159,6 +2146,7 @@ const DetailsSectionVariation = ({
   carryOverSentTo = "",
   expressShipment = false,
   validatedForAssembly = false,
+  customTag = true,
 }: {
   title: string;
   userRole: "customer" | "supplier";
@@ -2171,10 +2159,38 @@ const DetailsSectionVariation = ({
   carryOverSentTo?: string;
   expressShipment?: boolean;
   validatedForAssembly?: boolean;
+  customTag?: boolean;
 }) => {
   const customerPOLineItemNumber = "POLI-001";
   const customerItemCodeAndDescription = "12345678 – PR 24 SEPHORA ONLINE DELUXE OCT";
   const [detailsExpanded, setDetailsExpanded] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    supplierPOLineItemNumber: supplierPOLineItemNumber || "",
+    bomRevision: bomRevision || "",
+    needByDate: needByDate ? new Date(needByDate) : null as Date | null,
+    priority: "High",
+    customerLotCode: "LOT-2024-001",
+    supplierLotCode: "SUP-LOT-001",
+    closeProductionNote: closeProductionNote || "",
+    carryOverSentTo: carryOverSentTo || "",
+  });
+  const [assignedTags, setAssignedTags] = useState({
+    validatedForAssembly: validatedForAssembly,
+    expressShipment: expressShipment,
+    customTag: customTag,
+  });
+
+  // Load options for BOM revision
+  const loadOptions = async (inputValue: string) => {
+    const mockOptions = [
+      { value: "Rev 1.0 – 2025-Jan-01", label: "Rev 1.0 – 2025-Jan-01" },
+      { value: "Rev 1.1 – 2025-Jan-05", label: "Rev 1.1 – 2025-Jan-05" },
+      { value: "Rev 1.2 – 2025-Jan-10", label: "Rev 1.2 – 2025-Jan-10" },
+      { value: "Rev 2.0 – 2025-Feb-01", label: "Rev 2.0 – 2025-Feb-01" },
+    ];
+    return mockOptions.filter((option) => option.label.toLowerCase().includes(inputValue.toLowerCase()));
+  };
 
   return (
     <Box mb="x4">
@@ -2190,7 +2206,7 @@ const DetailsSectionVariation = ({
           {detailsExpanded ? "Collapse details" : "Expand details"}
         </IconicButton>
         <VerticalDivider />
-        <IconicButton icon="edit" labelHidden tooltip="Edit details" onClick={() => {}}>
+        <IconicButton icon="edit" labelHidden tooltip="Edit details" onClick={() => setSidebarOpen(true)}>
           Edit details
         </IconicButton>
       </Flex>
@@ -2268,23 +2284,13 @@ const DetailsSectionVariation = ({
                 <Text color="darkGrey">Tags</Text>
               </DescriptionTerm>
               <DescriptionDetails>
-                <Flex flexWrap="wrap" gap="x0_25">
-                  {expressShipment && (
-                    <StatusIndicator type="quiet">
-                      <Text fontSize="smaller" lineHeight="smallerText">
-                        Express shipment
-                      </Text>
-                    </StatusIndicator>
-                  )}
-                  {validatedForAssembly && (
-                    <StatusIndicator type={userRole === "customer" ? "success" : "quiet"}>
-                      <Text fontSize="smaller" lineHeight="smallerText">
-                        Validated for assembly
-                      </Text>
-                    </StatusIndicator>
-                  )}
-                  {!expressShipment && !validatedForAssembly && <Text>-</Text>}
-                </Flex>
+                {customTag ? (
+                  <StatusIndicator type="warning">
+                    Custom tag
+                  </StatusIndicator>
+                ) : (
+                  <Text>-</Text>
+                )}
               </DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
@@ -2358,6 +2364,225 @@ const DetailsSectionVariation = ({
           </DescriptionList>
         </Box>
       )}
+
+      {/* Edit Sidebar */}
+      <Sidebar
+        isOpen={sidebarOpen}
+        onClose={() => setSidebarOpen(false)}
+        title="Edit details"
+        footer={
+          <Flex gap="x2" justifyContent="flex-start">
+            <PrimaryButton
+              onClick={() => {
+                setSidebarOpen(false);
+                toast.success("PO line item details saved");
+              }}
+            >
+              Save
+            </PrimaryButton>
+            <QuietButton onClick={() => setSidebarOpen(false)}>Cancel</QuietButton>
+          </Flex>
+        }
+      >
+        <Flex flexDirection="column" gap="x3" py="x1">
+          {/* PO number - disabled */}
+          <Input labelText="PO number" id="poNumber" value="PO-00000004" disabled />
+
+          {/* Customer's PO line item number - disabled */}
+          <Input labelText="Customer's PO line item number" id="customerPOLineItemNumber" value={customerPOLineItemNumber} disabled />
+
+          {/* Supplier's PO line item number - editable only by supplier */}
+          {userRole === "supplier" && (
+            <Input
+              labelText="Supplier's PO line item number"
+              id="supplierPOLineItemNumber"
+              value={formData.supplierPOLineItemNumber}
+              onChange={(e) =>
+                setFormData((prev) => ({ ...prev, supplierPOLineItemNumber: e.target.value }))
+              }
+            />
+          )}
+
+          {/* Created on - disabled */}
+          <Input labelText="Created on" id="createdOn" value="February 1, 2025" disabled />
+
+          {/* Customer / Supplier - disabled */}
+          <Input
+            labelText={userRole === "customer" ? "Supplier" : "Customer"}
+            id="customerSupplier"
+            value="Claudia Supplier"
+            disabled
+          />
+
+          {/* Customer's item code and description - disabled */}
+          <Input
+            labelText="Customer's item code and description"
+            id="customerItemCode"
+            value={customerItemCodeAndDescription}
+            disabled
+          />
+
+          {/* Supplier's item code - disabled */}
+          <Input labelText="Supplier's item code" id="supplierItemCode" value="SUP-ITEM-001" disabled />
+
+          {/* Assigned tags multiselect - editable only by customer */}
+          {userRole === "customer" ? (
+            <Select
+              labelText="Tags"
+              multiselect
+              value={[
+                ...(assignedTags.validatedForAssembly ? ["validatedForAssembly"] : []),
+                ...(assignedTags.expressShipment ? ["expressShipment"] : []),
+                ...(assignedTags.customTag ? ["customTag"] : []),
+              ]}
+              onChange={(values) => {
+                const selectedValues = Array.isArray(values) ? values : [];
+                setAssignedTags({
+                  validatedForAssembly: selectedValues.includes("validatedForAssembly"),
+                  expressShipment: selectedValues.includes("expressShipment"),
+                  customTag: selectedValues.includes("customTag"),
+                });
+              }}
+              options={[
+                { value: "validatedForAssembly", label: "Validated for assembly" },
+                { value: "expressShipment", label: "Express shipment" },
+                { value: "customTag", label: "Custom tag" },
+              ]}
+            />
+          ) : (
+            <Input
+              labelText="Tags"
+              id="tagsDisplay"
+              value={
+                [
+                  ...(assignedTags.validatedForAssembly ? ["Validated for assembly"] : []),
+                  ...(assignedTags.expressShipment ? ["Express shipment"] : []),
+                  ...(assignedTags.customTag ? ["Custom tag"] : []),
+                ].join(", ") || "-"
+              }
+              disabled
+            />
+          )}
+
+          {/* Priority - editable only by customer */}
+          {userRole === "customer" ? (
+            <Select
+              labelText="Priority"
+              id="priority"
+              value={formData.priority}
+              onChange={(value) =>
+                setFormData((prev) => ({ ...prev, priority: value as string }))
+              }
+              options={[
+                { value: "Low", label: "Low" },
+                { value: "Medium", label: "Medium" },
+                { value: "High", label: "High" },
+                { value: "Urgent", label: "Urgent" },
+              ]}
+            />
+          ) : (
+            <Input labelText="Priority" id="priorityDisplay" value={formData.priority} disabled />
+          )}
+
+          {/* Customer's lot code - editable only by customer */}
+          {userRole === "customer" ? (
+            <Input
+              labelText="Customer's lot code"
+              id="customerLotCode"
+              value={formData.customerLotCode}
+              onChange={(e) =>
+                setFormData((prev) => ({ ...prev, customerLotCode: e.target.value }))
+              }
+            />
+          ) : (
+            <Input
+              labelText="Customer's lot code"
+              id="customerLotCodeDisplay"
+              value={formData.customerLotCode}
+              disabled
+            />
+          )}
+
+          {/* Supplier's lot code - editable only by supplier */}
+          {userRole === "supplier" && (
+            <Input
+              labelText="Supplier's lot code"
+              id="supplierLotCode"
+              value={formData.supplierLotCode}
+              onChange={(e) =>
+                setFormData((prev) => ({ ...prev, supplierLotCode: e.target.value }))
+              }
+            />
+          )}
+
+          {/* BOM revision and release date - editable by supplier and customer */}
+          <AsyncSelect
+            labelText="BOM revision and release date"
+            placeholder="Start typing"
+            loadOptions={loadOptions}
+            value={formData.bomRevision}
+            onChange={(value) =>
+              setFormData((prev) => ({ ...prev, bomRevision: value as string }))
+            }
+          />
+
+          {/* Ship to - disabled */}
+          <Input labelText="Ship to" id="shipTo" value="Warehouse A - 123 Main St, City, State 12345" disabled />
+
+          {/* Need by date - editable only by customer, shown only if production complete */}
+          {productionStatus === "Completed" && (
+            <>
+              {userRole === "customer" ? (
+                <Flex flexDirection="column" gap="x1">
+                  <FieldLabel htmlFor="needByDate" labelText="Need by date" />
+                  <Box>
+                    <DatePicker
+                      id="needByDate"
+                      selected={formData.needByDate}
+                      onChange={(date) => setFormData((prev) => ({ ...prev, needByDate: date }))}
+                    />
+                  </Box>
+                </Flex>
+              ) : (
+                <Input
+                  labelText="Need by date"
+                  id="needByDateDisplay"
+                  value={
+                    formData.needByDate
+                      ? new Date(formData.needByDate).toLocaleDateString("en-US", {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        })
+                      : "-"
+                  }
+                  disabled
+                />
+              )}
+            </>
+          )}
+
+          {/* Close production note - disabled, shown only if production complete */}
+          {productionStatus === "Completed" && (
+            <Input
+              labelText="Close production note"
+              id="closeProductionNote"
+              value={formData.closeProductionNote || "-"}
+              disabled
+            />
+          )}
+
+          {/* Carry over sent to - disabled, shown only if production complete */}
+          {productionStatus === "Completed" && (
+            <Input
+              labelText="Carry over sent to"
+              id="carryOverSentTo"
+              value={formData.carryOverSentTo || "-"}
+              disabled
+            />
+          )}
+        </Flex>
+      </Sidebar>
     </Box>
   );
 };
@@ -2417,7 +2642,7 @@ export const DetailsSection = () => {
     {
       title: "Viewed as Customer | Production: Closed",
       userRole: "customer" as const,
-      poliStatus: "Canceled" as const,
+      poliStatus: "Open" as const,
       productionStatus: "Completed" as const,
       supplierPOLineItemNumber: "SPLI-001",
       bomRevision: "Rev 1.2 – 2025-Jan-10",
@@ -2466,7 +2691,7 @@ export const DetailsSection = () => {
     {
       title: "Viewed as Supplier | Production: Closed",
       userRole: "supplier" as const,
-      poliStatus: "Canceled" as const,
+      poliStatus: "Open" as const,
       productionStatus: "Completed" as const,
       supplierPOLineItemNumber: "SPLI-001",
       bomRevision: "Rev 1.2 – 2025-Jan-10",
@@ -2481,11 +2706,17 @@ export const DetailsSection = () => {
     if (filters.viewedAs !== "all" && variation.userRole !== filters.viewedAs) return false;
     if (filters.production === "all") return true;
     if (filters.production === "Open") {
-      return variation.poliStatus === "Open";
+      // Open means production is not completed (Not started or In progress)
+      // Also exclude variations with "Production: Closed" in the title
+      return (
+        (variation.productionStatus === "Not started" || variation.productionStatus === "In progress") &&
+        !variation.title.includes("Production: Closed")
+      );
     }
     if (filters.production === "Closed") {
-      const status = variation.poliStatus as string;
-      return status === "Canceled" || status === "Completed";
+      // Closed means production is completed
+      // Also exclude variations with "Production: Open" in the title
+      return variation.productionStatus === "Completed" && !variation.title.includes("Production: Open");
     }
     return true;
   });
@@ -2563,6 +2794,7 @@ export const DetailsSection = () => {
             ))}
           </Box>
         </Page>
+        <ToastContainer />
       </ApplicationFrame>
     </>
   );
