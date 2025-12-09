@@ -67,16 +67,16 @@ const DefaultComponent = () => {
   const [tenantUID, setTenantUID] = useState("Oneworg_go_eco2-test");
 
   const breadcrumbs = (
-    <Breadcrumbs>
-      <Link href="#">Home</Link>
-      <Link href="#">Organizations</Link>
+    <Breadcrumbs {...({} as any)}>
+      <Link href="#" {...({} as any)}>Home</Link>
+      <Link href="#" {...({} as any)}>Organizations</Link>
     </Breadcrumbs>
   );
 
   return (
-    <ApplicationFrame>
-      <Header breakpoints={{ medium: 1200 }} renderBreadcrumbs={() => breadcrumbs} title="Edit Organization" />
-      <Page>
+    <ApplicationFrame {...({} as any)}>
+      <Header breakpoints={{ medium: 1200 }} renderBreadcrumbs={() => breadcrumbs} title="Edit Organization" {...({} as any)} />
+      <Page {...({} as any)}>
         <Box maxWidth="800px" mx="auto" p="x4">
           <Form>
             {/* Organization Details */}
@@ -84,17 +84,17 @@ const DefaultComponent = () => {
               <Heading3 mb="x3">Organization Details</Heading3>
 
               <Field mb="x3">
-                <FieldLabel labelText="Name" mb="x1" />
+                <FieldLabel labelText="Name" mb="x1" {...({} as any)} />
                 <Input value={organizationName} onChange={(e) => setOrganizationName(e.target.value)} />
               </Field>
 
               <Field mb="x3">
-                <FieldLabel labelText="Code" mb="x1" />
+                <FieldLabel labelText="Code" mb="x1" {...({} as any)} />
                 <Input value={organizationCode} onChange={(e) => setOrganizationCode(e.target.value)} />
               </Field>
 
               <Field mb="x3">
-                <FieldLabel labelText="Time Zone" mb="x1" />
+                <FieldLabel labelText="Time Zone" mb="x1" {...({} as any)} />
                 <Select
                   value={timeZone}
                   onChange={(value) => setTimeZone(String(value))}
@@ -120,7 +120,7 @@ const DefaultComponent = () => {
               </Field>
 
               <Field mb="x3">
-                <FieldLabel labelText="Logo" mb="x1" />
+                <FieldLabel labelText="Logo" mb="x1" {...({} as any)} />
                 <Box>
                   <input
                     type="file"
@@ -259,7 +259,7 @@ const DefaultComponent = () => {
               <Heading3 mb="x3">In-transit configuration</Heading3>
 
               <Field mb="x3">
-                <FieldLabel labelText="In Transit Shipment CSV import" mb="x1" />
+                <FieldLabel labelText="In Transit Shipment CSV import" mb="x1" {...({} as any)} />
                 <Select
                   value={inTransitShipmentCSV}
                   onChange={(value) => setInTransitShipmentCSV(String(value))}
@@ -384,7 +384,7 @@ const DefaultComponent = () => {
               </Box>
 
               <Field mb="x3">
-                <FieldLabel labelText="QuickSight Dashboard ID" mb="x1" />
+                <FieldLabel labelText="QuickSight Dashboard ID" mb="x1" {...({} as any)} />
                 <Input
                   value={quickSightDashboardId}
                   onChange={(e) => setQuickSightDashboardId(e.target.value)}
@@ -399,7 +399,7 @@ const DefaultComponent = () => {
               </Box>
 
               <Field mb="x3" mt="x3">
-                <FieldLabel labelText="Tenant UID" mb="x1" />
+                <FieldLabel labelText="Tenant UID" mb="x1" {...({} as any)} />
                 <Input value={tenantUID} onChange={(e) => setTenantUID(e.target.value)} />
               </Field>
             </FormSection>
@@ -417,7 +417,7 @@ const DefaultComponent = () => {
 };
 
 export const Default = () => (
-  <NDSProvider locale="en_US" variant="desktop">
+  <NDSProvider locale="en_US" variant="desktop" {...({} as any)}>
     <DefaultComponent />
   </NDSProvider>
 );
