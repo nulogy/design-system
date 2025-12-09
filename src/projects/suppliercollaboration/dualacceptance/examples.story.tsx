@@ -37,6 +37,7 @@ import {
   Textarea,
   Modal,
   Radio,
+  Alert,
 } from "../../..";
 
 export default {
@@ -266,11 +267,25 @@ const HeaderVariation = ({
                             {collaborationStatus === "accepted" || acceptedRequest || acceptedProposal ? (
                               "Accepted"
                             ) : activeCardAuthorRole === userRole ? (
-                              "Requires your response"
+                              <Box borderBottom={`2px solid ${theme.colors.yellow}`} display="inline-block">
+                                Requires your response
+                              </Box>
                             ) : (
-                              <TruncatedText fontSize="smaller" lineHeight="smallerText" fullWidth maxWidth="184px">
-                                {`Awaiting ${userRole === "supplier" ? "customer" : "supplier"} response`}
-                              </TruncatedText>
+                              <Box
+                                borderBottom={`2px solid ${theme.colors.yellow}`}
+                                display="inline-block"
+                                style={{ textDecoration: "none" }}
+                              >
+                                <TruncatedText
+                                  fontSize="smaller"
+                                  lineHeight="smallerText"
+                                  fullWidth
+                                  maxWidth="184px"
+                                  style={{ textDecoration: "none" }}
+                                >
+                                  {`Awaiting ${userRole === "supplier" ? "customer" : "supplier"} response`}
+                                </TruncatedText>
+                              </Box>
                             )}
                           </StatusIndicator>
                         )}
@@ -307,11 +322,19 @@ const HeaderVariation = ({
                           {collaborationStatus === "accepted" || acceptedRequest || acceptedProposal ? (
                             "Accepted"
                           ) : activeCardAuthorRole === userRole ? (
-                            "Requires your response"
+                            <Box borderBottom={`2px solid ${theme.colors.yellow}`} display="inline-block">
+                              Requires your response
+                            </Box>
                           ) : (
-                            <TruncatedText fontSize="smaller" lineHeight="smallerText" fullWidth maxWidth="184px">
-                              {`Awaiting ${userRole === "supplier" ? "customer" : "supplier"} response`}
-                            </TruncatedText>
+                            <Box
+                              borderBottom={`2px solid ${theme.colors.yellow}`}
+                              display="inline-block"
+                              style={{ textDecoration: "none" }}
+                            >
+                              <TruncatedText fontSize="smaller" lineHeight="smallerText" fullWidth maxWidth="184px">
+                                {`Awaiting ${userRole === "supplier" ? "customer" : "supplier"} response`}
+                              </TruncatedText>
+                            </Box>
                           )}
                         </StatusIndicator>
                       )}
@@ -2582,13 +2605,69 @@ const CollaborationVariation = ({
     request: acceptedRequest,
     proposal: acceptedProposal,
   });
+  const [hasRequestChanges, setHasRequestChanges] = useState(false);
+  const [hasProposalChanges, setHasProposalChanges] = useState(false);
+  const [formData, setFormData] = useState({
+    request: {
+      quantity: "15,000",
+      unit: "eaches",
+      productionDueDate: "2025-Feb-28",
+      unitPrice: "12.50",
+      currency: "USD",
+      reason: "Quality requirements",
+      note: "Standard production requirements. All items must meet the specified quality standards and pass quality control inspections before shipment. Packaging must comply with industry standards and include proper labeling. Delivery should be completed within the agreed timeframe to ensure production schedules.",
+    },
+    proposal: {
+      quantity: "15,500",
+      unit: "cases",
+      productionDueDate: "2025-Feb-28",
+      unitPrice: "12.50",
+      currency: "USD",
+      reason: "Quality requirements",
+      note: "Agreed to standard requirements",
+    },
+  });
 
   const enterEditMode = (mode: "request" | "proposal") => {
     setEditMode(mode);
+    // Reset change tracking when entering edit mode
+    if (mode === "request") {
+      setHasRequestChanges(false);
+    } else {
+      setHasProposalChanges(false);
+    }
   };
 
   const exitEditMode = () => {
     setEditMode(null);
+    setHasRequestChanges(false);
+    setHasProposalChanges(false);
+  };
+
+  const handleFormChange = (mode: "request" | "proposal", field: string, value: string) => {
+    setFormData((prev) => ({
+      ...prev,
+      [mode]: {
+        ...prev[mode],
+        [field]: value,
+      },
+    }));
+    // Mark that changes have been made
+    if (mode === "request") {
+      setHasRequestChanges(true);
+    } else {
+      setHasProposalChanges(true);
+    }
+  };
+
+  const handleSubmitRequest = () => {
+    exitEditMode();
+    toast.success("Request updated");
+  };
+
+  const handleSubmitProposal = () => {
+    exitEditMode();
+    toast.success("Proposal updated");
   };
 
   const handleAcceptCustomerRequest = () => {
@@ -2615,46 +2694,8 @@ const CollaborationVariation = ({
     setAcceptanceOption("without-flagging"); // Reset to default
   };
 
-  const formData = {
-    request: {
-      quantity: "15,000",
-      unit: "eaches",
-      productionDueDate: "2025-Feb-28",
-      unitPrice: "12.50",
-      currency: "USD",
-      reason: "Quality requirements",
-      note: "Standard production requirements. All items must meet the specified quality standards and pass quality control inspections before shipment. Packaging must comply with industry standards and include proper labeling. Delivery should be completed within the agreed timeframe to ensure production schedules.",
-    },
-    proposal: {
-      quantity: "15,500",
-      unit: "cases",
-      productionDueDate: "2025-Feb-28",
-      unitPrice: "12.50",
-      currency: "USD",
-      reason: "Quality requirements",
-      note: "Agreed to standard requirements",
-    },
-  };
-
   return (
     <Box mb="x4">
-      <Heading4 mb="x2">
-        {title.split(" | ").map((part, index, array) => {
-          const isNotMade = part.includes("Supplier's proposal: Not made");
-          return (
-            <React.Fragment key={index}>
-              {isNotMade ? (
-                <Text as="span" color="midGrey">
-                  {part}
-                </Text>
-              ) : (
-                part
-              )}
-              {index < array.length - 1 && " | "}
-            </React.Fragment>
-          );
-        })}
-      </Heading4>
       <Card p="x1" mt="x0" mx="auto" minWidth="696px" maxWidth="1126px">
         <Flex flexDirection="column" gap="x2">
           <Flex gap="x3" p="x2" pb="0">
@@ -2680,66 +2721,65 @@ const CollaborationVariation = ({
             <Box minWidth="236px" maxWidth="420px" flex={1}>
               <Flex flexDirection="column" gap="x0_25" mb="x3">
                 <Flex alignItems="center" gap="x1">
-                  <Heading4 mb="0">
-                    {userRole === "customer" ? "Your request" : "Customer's request"}
-                  </Heading4>
-                  {acceptedRequest || acceptedProposal ? (
-                    <Tooltip tooltip="Accepted">
-                      <Box
-                        backgroundColor="lightGreen"
-                        borderRadius="medium"
-                        p="x0_25"
-                        width="x3"
-                        height="x3"
-                        display="flex"
-                        alignItems="center"
-                        justifyContent="center"
-                      >
-                        <Icon icon="check" size="x2_5" color="green" />
-                      </Box>
-                    </Tooltip>
-                  ) : (
-                    <>
-                      {!acceptedRequest &&
-                        !acceptedProposal &&
-                        userRole === "supplier" &&
-                        activeCardAuthorRole === "customer" && (
-                          <Tooltip tooltip="Requires your response">
-                            <Box
-                              backgroundColor="yellow"
-                              borderRadius="medium"
-                              p="x0_25"
-                              width="x3"
-                              height="x3"
-                              display="flex"
-                              alignItems="center"
-                              justifyContent="center"
-                            >
-                              <Icon icon="accessTime" size="x2_5" color="darkGrey" />
-                            </Box>
-                          </Tooltip>
-                        )}
-                      {!acceptedRequest &&
-                        !acceptedProposal &&
-                        userRole === "customer" &&
-                        activeCardAuthorRole === "customer" && (
-                          <Tooltip tooltip="Awaiting supplier's response">
-                            <Box
-                              backgroundColor="whiteGrey"
-                              borderRadius="medium"
-                              p="x0_25"
-                              width="x3"
-                              height="x3"
-                              display="flex"
-                              alignItems="center"
-                              justifyContent="center"
-                            >
-                              <Icon icon="accessTime" size="x2_5" color="darkGrey" />
-                            </Box>
-                          </Tooltip>
-                        )}
-                    </>
-                  )}
+                  <Heading4 mb="0">{userRole === "customer" ? "Your request" : "Customer's request"}</Heading4>
+                  {(editMode !== "request" || !hasRequestChanges) &&
+                    (acceptedRequest || acceptedProposal ? (
+                      <Tooltip tooltip="Accepted">
+                        <Box
+                          backgroundColor="lightGreen"
+                          borderRadius="medium"
+                          p="x0_25"
+                          width="x3"
+                          height="x3"
+                          display="flex"
+                          alignItems="center"
+                          justifyContent="center"
+                        >
+                          <Icon icon="check" size="x2_5" color="green" />
+                        </Box>
+                      </Tooltip>
+                    ) : (
+                      <>
+                        {!acceptedRequest &&
+                          !acceptedProposal &&
+                          userRole === "supplier" &&
+                          activeCardAuthorRole === "customer" && (
+                            <Tooltip tooltip="Requires your response">
+                              <Box
+                                backgroundColor="yellow"
+                                borderRadius="medium"
+                                p="x0_25"
+                                width="x3"
+                                height="x3"
+                                display="flex"
+                                alignItems="center"
+                                justifyContent="center"
+                              >
+                                <Icon icon="accessTime" size="x2_5" color="darkGrey" />
+                              </Box>
+                            </Tooltip>
+                          )}
+                        {!acceptedRequest &&
+                          !acceptedProposal &&
+                          userRole === "customer" &&
+                          activeCardAuthorRole === "customer" && (
+                            <Tooltip tooltip="Awaiting supplier's response">
+                              <Box
+                                backgroundColor="whiteGrey"
+                                borderRadius="medium"
+                                p="x0_25"
+                                width="x3"
+                                height="x3"
+                                display="flex"
+                                alignItems="center"
+                                justifyContent="center"
+                              >
+                                <Icon icon="accessTime" size="x2_5" color="darkGrey" />
+                              </Box>
+                            </Tooltip>
+                          )}
+                      </>
+                    ))}
                 </Flex>
                 <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
                   by{" "}
@@ -2761,15 +2801,24 @@ const CollaborationVariation = ({
                         placeholder="1"
                         suffix={formData.request.unit}
                         suffixWidth="160px"
+                        onChange={(e) => handleFormChange("request", "quantity", e.target.value)}
                       />
                     </Box>
                     <Box width="100%">
-                      <Input value={formData.request.productionDueDate} placeholder="Enter production due date" />
+                      <Input
+                        value={formData.request.productionDueDate}
+                        placeholder="Enter production due date"
+                        onChange={(e) => handleFormChange("request", "productionDueDate", e.target.value)}
+                      />
                     </Box>
                     <Box width="100%">
                       <Flex alignItems="flex-start">
                         <Box flex={1} maxWidth="calc(100% - 160px)">
-                          <Input value={formData.request.unitPrice} placeholder="1" />
+                          <Input
+                            value={formData.request.unitPrice}
+                            placeholder="1"
+                            onChange={(e) => handleFormChange("request", "unitPrice", e.target.value)}
+                          />
                         </Box>
                         <Box width="160px" pt="x1" pb="x1" pl="x1">
                           <Text>
@@ -2785,7 +2834,12 @@ const CollaborationVariation = ({
                       <Box height="40px"></Box>
                     </Box>
                     <Box width="100%">
-                      <Textarea value={formData.request.note} placeholder="Enter note" style={{ height: "152px" }} />
+                      <Textarea
+                        value={formData.request.note}
+                        placeholder="Enter note"
+                        style={{ height: "152px" }}
+                        onChange={(e) => handleFormChange("request", "note", e.target.value)}
+                      />
                     </Box>
                   </>
                 ) : (
@@ -2802,9 +2856,19 @@ const CollaborationVariation = ({
                           const isDifferent = requestQty !== proposalQty;
                           if (!isDifferent) return "none";
 
-                          // If awaiting supplier's response (customer made request), underline customer's request values in grey
-                          // This is the "other party's" value when viewed by supplier
-                          if (collaborationStatus === "awaiting-supplier" || activeCardAuthorRole === "customer") {
+                          // Only underline if this column (Customer's request) has a status icon
+                          // Icon appears when: (supplier viewing and customer made request) OR (customer viewing and customer made request)
+                          const hasIcon =
+                            (!acceptedRequest &&
+                              !acceptedProposal &&
+                              userRole === "supplier" &&
+                              activeCardAuthorRole === "customer") ||
+                            (!acceptedRequest &&
+                              !acceptedProposal &&
+                              userRole === "customer" &&
+                              activeCardAuthorRole === "customer");
+
+                          if (hasIcon && activeCardAuthorRole !== null) {
                             return "underline";
                           }
                           return "none";
@@ -2818,9 +2882,25 @@ const CollaborationVariation = ({
                           const isDifferent = requestQty !== proposalQty;
                           if (!isDifferent) return "transparent";
 
-                          // If awaiting supplier's response, underline customer's request values in grey
-                          if (collaborationStatus === "awaiting-supplier" || activeCardAuthorRole === "customer") {
-                            return theme.colors.grey;
+                          // Only underline if this column has an icon
+                          const hasIcon =
+                            (!acceptedRequest &&
+                              !acceptedProposal &&
+                              userRole === "supplier" &&
+                              activeCardAuthorRole === "customer") ||
+                            (!acceptedRequest &&
+                              !acceptedProposal &&
+                              userRole === "customer" &&
+                              activeCardAuthorRole === "customer");
+
+                          if (hasIcon && activeCardAuthorRole !== null) {
+                            // Grey when awaiting your response (activeCardAuthorRole === userRole)
+                            // Yellow when awaiting other party's response (activeCardAuthorRole !== userRole)
+                            if (activeCardAuthorRole === userRole) {
+                              return theme.colors.grey;
+                            } else {
+                              return theme.colors.yellow;
+                            }
                           }
                           return "transparent";
                         })(),
@@ -2891,57 +2971,58 @@ const CollaborationVariation = ({
                   <Heading4 mb="0" color={!supplierProposalMade && editMode !== "proposal" ? "midGrey" : undefined}>
                     {userRole === "customer" ? "Supplier's proposal" : "Your proposal"}
                   </Heading4>
-                  {acceptedRequest || acceptedProposal ? (
-                    <Tooltip tooltip="Accepted">
-                      <Box
-                        backgroundColor={acceptedProposal && isReconciled === false ? "whiteGrey" : "lightGreen"}
-                        borderRadius="medium"
-                        p="x0_25"
-                        width="x3"
-                        height="x3"
-                        display="flex"
-                        alignItems="center"
-                        justifyContent="center"
-                      >
-                        <Icon
-                          icon="check"
-                          size="x2_5"
-                          color={acceptedProposal && isReconciled === false ? "grey" : "green"}
-                        />
-                      </Box>
-                    </Tooltip>
-                  ) : (
-                    <>
-                      {(!acceptedRequest &&
-                        !acceptedProposal &&
-                        userRole === "supplier" &&
-                        activeCardAuthorRole === "supplier") ||
-                      (userRole === "customer" && activeCardAuthorRole === "supplier") ? (
-                        <Tooltip
-                          tooltip={
-                            userRole === "supplier" && activeCardAuthorRole === "supplier"
-                              ? "Awaiting customer's response"
-                              : "Requires your response"
-                          }
+                  {(editMode !== "proposal" || !hasProposalChanges) &&
+                    (acceptedRequest || acceptedProposal ? (
+                      <Tooltip tooltip="Accepted">
+                        <Box
+                          backgroundColor={acceptedProposal && isReconciled === false ? "whiteGrey" : "lightGreen"}
+                          borderRadius="medium"
+                          p="x0_25"
+                          width="x3"
+                          height="x3"
+                          display="flex"
+                          alignItems="center"
+                          justifyContent="center"
                         >
-                          <Box
-                            backgroundColor={
-                              userRole === "supplier" && activeCardAuthorRole === "supplier" ? "whiteGrey" : "yellow"
+                          <Icon
+                            icon="check"
+                            size="x2_5"
+                            color={acceptedProposal && isReconciled === false ? "grey" : "green"}
+                          />
+                        </Box>
+                      </Tooltip>
+                    ) : (
+                      <>
+                        {(!acceptedRequest &&
+                          !acceptedProposal &&
+                          userRole === "supplier" &&
+                          activeCardAuthorRole === "supplier") ||
+                        (userRole === "customer" && activeCardAuthorRole === "supplier") ? (
+                          <Tooltip
+                            tooltip={
+                              userRole === "supplier" && activeCardAuthorRole === "supplier"
+                                ? "Awaiting customer's response"
+                                : "Requires your response"
                             }
-                            borderRadius="medium"
-                            p="x0_25"
-                            width="x3"
-                            height="x3"
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center"
                           >
-                            <Icon icon="accessTime" size="x2_5" color="darkGrey" />
-                          </Box>
-                        </Tooltip>
-                      ) : null}
-                    </>
-                  )}
+                            <Box
+                              backgroundColor={
+                                userRole === "supplier" && activeCardAuthorRole === "supplier" ? "whiteGrey" : "yellow"
+                              }
+                              borderRadius="medium"
+                              p="x0_25"
+                              width="x3"
+                              height="x3"
+                              display="flex"
+                              alignItems="center"
+                              justifyContent="center"
+                            >
+                              <Icon icon="accessTime" size="x2_5" color="darkGrey" />
+                            </Box>
+                          </Tooltip>
+                        ) : null}
+                      </>
+                    ))}
                 </Flex>
                 <Text color="midGrey" fontSize="small" lineHeight="smallCompact">
                   {supplierProposalMade ? (
@@ -2984,15 +3065,24 @@ const CollaborationVariation = ({
                         placeholder="1"
                         suffix={formData.proposal.unit}
                         suffixWidth="160px"
+                        onChange={(e) => handleFormChange("proposal", "quantity", e.target.value)}
                       />
                     </Box>
                     <Box width="100%">
-                      <Input value={formData.proposal.productionDueDate} placeholder="Enter production due date" />
+                      <Input
+                        value={formData.proposal.productionDueDate}
+                        placeholder="Enter production due date"
+                        onChange={(e) => handleFormChange("proposal", "productionDueDate", e.target.value)}
+                      />
                     </Box>
                     <Box width="100%">
                       <Flex alignItems="flex-start">
                         <Box flex={1} maxWidth="calc(100% - 160px)">
-                          <Input value={formData.proposal.unitPrice} placeholder="1" />
+                          <Input
+                            value={formData.proposal.unitPrice}
+                            placeholder="1"
+                            onChange={(e) => handleFormChange("proposal", "unitPrice", e.target.value)}
+                          />
                         </Box>
                         <Box width="160px" pt="x1" pb="x1" pl="x1">
                           <Text>
@@ -3016,10 +3106,16 @@ const CollaborationVariation = ({
                         value={formData.proposal.reason}
                         width="100%"
                         placeholder="Select reason"
+                        onChange={(value) => handleFormChange("proposal", "reason", String(value || ""))}
                       />
                     </Box>
                     <Box width="100%">
-                      <Textarea value={formData.proposal.note} placeholder="Enter note" style={{ height: "152px" }} />
+                      <Textarea
+                        value={formData.proposal.note}
+                        placeholder="Enter note"
+                        style={{ height: "152px" }}
+                        onChange={(e) => handleFormChange("proposal", "note", e.target.value)}
+                      />
                     </Box>
                   </>
                 ) : supplierProposalMade ? (
@@ -3036,9 +3132,19 @@ const CollaborationVariation = ({
                           const isDifferent = requestQty !== proposalQty;
                           if (!isDifferent) return "none";
 
-                          // If awaiting customer's response (supplier made proposal), underline supplier's proposal values in grey
-                          // This is the "other party's" value when viewed by customer
-                          if (collaborationStatus === "awaiting-customer" || activeCardAuthorRole === "supplier") {
+                          // Only underline if this column (Supplier's proposal) has a status icon
+                          // Icon appears when: (supplier viewing and supplier made proposal) OR (customer viewing and supplier made proposal)
+                          const hasIcon =
+                            (!acceptedRequest &&
+                              !acceptedProposal &&
+                              userRole === "supplier" &&
+                              activeCardAuthorRole === "supplier") ||
+                            (!acceptedRequest &&
+                              !acceptedProposal &&
+                              userRole === "customer" &&
+                              activeCardAuthorRole === "supplier");
+
+                          if (hasIcon && activeCardAuthorRole !== null) {
                             return "underline";
                           }
                           return "none";
@@ -3052,9 +3158,25 @@ const CollaborationVariation = ({
                           const isDifferent = requestQty !== proposalQty;
                           if (!isDifferent) return "transparent";
 
-                          // If awaiting customer's response, underline supplier's proposal values in grey
-                          if (collaborationStatus === "awaiting-customer" || activeCardAuthorRole === "supplier") {
-                            return theme.colors.grey;
+                          // Only underline if this column has an icon
+                          const hasIcon =
+                            (!acceptedRequest &&
+                              !acceptedProposal &&
+                              userRole === "supplier" &&
+                              activeCardAuthorRole === "supplier") ||
+                            (!acceptedRequest &&
+                              !acceptedProposal &&
+                              userRole === "customer" &&
+                              activeCardAuthorRole === "supplier");
+
+                          if (hasIcon && activeCardAuthorRole !== null) {
+                            // Grey when awaiting your response (activeCardAuthorRole === userRole)
+                            // Yellow when awaiting other party's response (activeCardAuthorRole !== userRole)
+                            if (activeCardAuthorRole === userRole) {
+                              return theme.colors.grey;
+                            } else {
+                              return theme.colors.yellow;
+                            }
                           }
                           return "transparent";
                         })(),
@@ -3116,9 +3238,15 @@ const CollaborationVariation = ({
                   </>
                 ) : (
                   <>
-                    <Text my="x1" color="midGrey">-</Text>
-                    <Text my="x1" color="midGrey">-</Text>
-                    <Text my="x1" color="midGrey">-</Text>
+                    <Text my="x1" color="midGrey">
+                      -
+                    </Text>
+                    <Text my="x1" color="midGrey">
+                      -
+                    </Text>
+                    <Text my="x1" color="midGrey">
+                      -
+                    </Text>
                     <Text my="x1" minHeight="96px" color="midGrey">
                       -
                     </Text>
@@ -3134,7 +3262,12 @@ const CollaborationVariation = ({
           <Flex gap="x2" px="x2" pb="x1">
             {editMode ? (
               <>
-                <PrimaryButton disabled={poliStatus === "Canceled"}>
+                <PrimaryButton
+                  disabled={
+                    poliStatus === "Canceled" || (editMode === "request" ? !hasRequestChanges : !hasProposalChanges)
+                  }
+                  onClick={() => {}}
+                >
                   {editMode === "request" ? "Submit request" : "Submit proposal"}
                 </PrimaryButton>
                 <QuietButton onClick={exitEditMode} disabled={poliStatus === "Canceled"}>
@@ -3246,12 +3379,7 @@ const CollaborationVariation = ({
 export const Collaboration = () => {
   const [filters, setFilters] = useState<{
     viewedAs: "customer" | "supplier";
-    collaboration:
-      | "awaiting-supplier"
-      | "awaiting-customer"
-      | "accepted"
-      | "accepted-updated"
-      | "accepted-retained";
+    collaboration: "awaiting-supplier" | "awaiting-customer" | "accepted" | "accepted-updated" | "accepted-retained";
     poliStatus: "open-completed" | "canceled";
     supplierProposal: "yes" | "no";
   }>({
@@ -3261,6 +3389,15 @@ export const Collaboration = () => {
     supplierProposal: "yes",
   });
 
+  // Combined alert visibility state
+  const [isCombinedAlertVisible, setIsCombinedAlertVisible] = useState(true);
+
+  // What's new section expandable state
+  const [isWhatsNewExpanded, setIsWhatsNewExpanded] = useState(false);
+
+  // Other notes section expandable state
+  const [isOtherNotesExpanded, setIsOtherNotesExpanded] = useState(false);
+
   const selectStyles = (baseStyles: any) => ({
     ...baseStyles,
     menu: (provided: any, state: any) => ({
@@ -3269,12 +3406,230 @@ export const Collaboration = () => {
     }),
   });
 
+  // Generate title based on current filters
+  const getAlertTitle = () => {
+    const viewedAs = filters.viewedAs === "customer" ? "Customer" : "Supplier";
+    const supplierProposal = filters.supplierProposal === "yes" ? "Made" : "Not made";
+
+    let collaboration = "";
+    if (filters.collaboration === "awaiting-supplier") {
+      collaboration = "Awaiting supplier's response";
+    } else if (filters.collaboration === "awaiting-customer") {
+      collaboration = "Awaiting customer's response";
+    } else if (filters.collaboration === "accepted-updated") {
+      collaboration = "Accepted with updated request";
+    } else if (filters.collaboration === "accepted-retained") {
+      collaboration = "Accepted with retained request";
+    } else if (filters.collaboration === "accepted") {
+      collaboration = "Accepted";
+    }
+
+    let poliStatus = "";
+    if (filters.poliStatus === "open-completed") {
+      poliStatus = "Open and Completed";
+    } else if (filters.poliStatus === "canceled") {
+      poliStatus = "Canceled";
+    } else {
+      poliStatus = "Open";
+    }
+
+    return `Viewed as ${viewedAs} | Supplier's proposal: ${supplierProposal} | Collaboration: ${collaboration} | POLI status: ${poliStatus}`;
+  };
+
+  // Calculate notes based on filter combinations
+  const getNotes = (hasVariations: boolean = true) => {
+    const notes: string[] = [];
+
+    // Supplier - No - Awaiting supplier's response - Open and Completed
+    if (
+      filters.viewedAs === "supplier" &&
+      filters.supplierProposal === "no" &&
+      filters.collaboration === "awaiting-supplier" &&
+      filters.poliStatus === "open-completed"
+    ) {
+      notes.push(
+        'Clicking Accept customer\'s proposal changes the status to "Accepted with updated request". No confirmation modal is displayed.'
+      );
+      notes.push("Submitting updated request changes the status to Awaiting customer's response.");
+    }
+
+    // Supplier - No - Awaiting customer's response - Open and Completed
+    if (
+      filters.viewedAs === "supplier" &&
+      filters.supplierProposal === "no" &&
+      filters.collaboration === "awaiting-customer" &&
+      filters.poliStatus === "open-completed"
+    ) {
+      notes.push(
+        "This state is not possible since the Supplier has not made a proposal, so there is nothing to be accepted by customer."
+      );
+    }
+
+    // Supplier - No - Accepted with updated request - Open and Completed
+    if (
+      filters.viewedAs === "supplier" &&
+      filters.supplierProposal === "no" &&
+      filters.collaboration === "accepted-updated" &&
+      filters.poliStatus === "open-completed"
+    ) {
+      notes.push("Updating proposal changes the state to Awaiting customer's response.");
+    }
+
+    // Customer - No - Awaiting customer's response
+    if (
+      filters.viewedAs === "customer" &&
+      filters.supplierProposal === "no" &&
+      filters.collaboration === "awaiting-customer"
+    ) {
+      notes.push(
+        "This state is not possible since the Supplier has not made a proposal, so there is nothing to respond to."
+      );
+    }
+
+    // Customer - No - Accepted with updated request
+    if (
+      filters.viewedAs === "customer" &&
+      filters.supplierProposal === "no" &&
+      filters.collaboration === "accepted-updated"
+    ) {
+      // Only show this note if not canceled
+      if (filters.poliStatus !== "canceled") {
+        notes.push("The Accept supplier button is disabled because no proposal is made yet.");
+      }
+      if (filters.poliStatus === "open-completed") {
+        notes.push("Updating request changes the state to Awaiting supplier's response.");
+      }
+    }
+
+    // Customer - No - Accepted with retained request
+    if (
+      filters.viewedAs === "customer" &&
+      filters.supplierProposal === "no" &&
+      filters.collaboration === "accepted-retained"
+    ) {
+      // For canceled and open-completed, show "This state is not possible" note
+      if (filters.poliStatus === "canceled" || filters.poliStatus === "open-completed") {
+        notes.push(
+          "This state is not possible since the Supplier has not made a proposal, so there is nothing to be accepted by customer."
+        );
+      } else {
+        // For other statuses, show the disabled button note
+        notes.push("The Accept supplier button is disabled because no proposal is made yet.");
+      }
+    }
+
+    // Customer - Yes - Accepted with updated request - Open and Completed
+    if (
+      filters.viewedAs === "customer" &&
+      filters.supplierProposal === "yes" &&
+      filters.collaboration === "accepted-updated" &&
+      filters.poliStatus === "open-completed"
+    ) {
+      notes.push("Updating request changes the state to Awaiting supplier's response.");
+    }
+
+    // Customer - Yes - Accepted with retained request - Open and Completed
+    if (
+      filters.viewedAs === "customer" &&
+      filters.supplierProposal === "yes" &&
+      filters.collaboration === "accepted-retained" &&
+      filters.poliStatus === "open-completed"
+    ) {
+      notes.push("Updating request changes the state to Awaiting supplier's response.");
+    }
+
+    // Customer - Yes - Awaiting supplier's response - Open and Completed
+    if (
+      filters.viewedAs === "customer" &&
+      filters.supplierProposal === "yes" &&
+      filters.collaboration === "awaiting-supplier" &&
+      filters.poliStatus === "open-completed"
+    ) {
+      notes.push(
+        'If the organization is configured with dual acceptance, clicking Accept supplier\'s proposal changes the status to "Accepted with updated request" or "Accepted with retained request", depending on the selection in the confirmation modal.'
+      );
+      notes.push(
+        'If the organization is configured with standard acceptance, clicking Accept supplier\'s proposal changes the status to "Accepted with updated request" and no confirmation modal is displayed.'
+      );
+    }
+
+    // Customer - Yes - Awaiting customer's response - Open and Completed
+    if (
+      filters.viewedAs === "customer" &&
+      filters.supplierProposal === "yes" &&
+      filters.collaboration === "awaiting-customer" &&
+      filters.poliStatus === "open-completed"
+    ) {
+      notes.push(
+        'If the organization is configured with dual acceptance, clicking Accept supplier\'s proposal changes the status to "Accepted with updated request" or "Accepted with retained request", depending on the selection in the confirmation modal.'
+      );
+      notes.push(
+        'If the organization is configured with standard acceptance, clicking Accept supplier\'s proposal changes the status to "Accepted with updated request" and no confirmation modal is displayed.'
+      );
+      notes.push("Submitting updated request changes the status to Awaiting supplier's response.");
+    }
+
+    // Supplier - Yes - Awaiting supplier's response - Open and Completed
+    if (
+      filters.viewedAs === "supplier" &&
+      filters.supplierProposal === "yes" &&
+      filters.collaboration === "awaiting-supplier" &&
+      filters.poliStatus === "open-completed"
+    ) {
+      notes.push(
+        'Clicking Accept customer\'s proposal changes the status to "Accepted with updated request". No confirmation modal is displayed.'
+      );
+      notes.push("Submitting updated request changes the status to Awaiting customer's response.");
+    }
+
+    // Supplier - Yes - Awaiting customer's response - Open and Completed
+    if (
+      filters.viewedAs === "supplier" &&
+      filters.supplierProposal === "yes" &&
+      filters.collaboration === "awaiting-customer" &&
+      filters.poliStatus === "open-completed"
+    ) {
+      notes.push(
+        'Clicking Accept customer\'s proposal changes the status to "Accepted with updated request". No confirmation modal is displayed.'
+      );
+      notes.push("Updating proposal maintains current state.");
+    }
+
+    // Supplier - Yes - Accepted with updated request - Open and Completed
+    if (
+      filters.viewedAs === "supplier" &&
+      filters.supplierProposal === "yes" &&
+      filters.collaboration === "accepted-updated" &&
+      filters.poliStatus === "open-completed"
+    ) {
+      notes.push("Updating proposal changes the state to Awaiting customer's response.");
+    }
+
+    // Supplier - Yes - Accepted with retained request - Open and Completed
+    if (
+      filters.viewedAs === "supplier" &&
+      filters.supplierProposal === "yes" &&
+      filters.collaboration === "accepted-retained" &&
+      filters.poliStatus === "open-completed"
+    ) {
+      notes.push("This state is not possible.");
+    }
+
+    // All canceled ones - only show if there are variations to render
+    if (filters.poliStatus === "canceled" && hasVariations) {
+      notes.push("Actions are disabled for canceled POLIs.");
+    }
+
+    return notes;
+  };
+
   const variations = [
     // ===== SUPPLIER'S PROPOSAL: NOT MADE =====
-    
+
     // Open - Awaiting supplier's response
     {
-      title: "Viewed as Customer | Supplier's proposal: Not made | Collaboration: Awaiting supplier's response | POLI status: Open",
+      title:
+        "Viewed as Customer | Supplier's proposal: Not made | Collaboration: Awaiting supplier's response | POLI status: Open",
       userRole: "customer" as const,
       collaborationStatus: "awaiting-supplier" as const,
       poliStatus: "Open" as const,
@@ -3285,7 +3640,8 @@ export const Collaboration = () => {
       activeCardAuthorRole: "customer" as const,
     },
     {
-      title: "Viewed as Supplier | Supplier's proposal: Not made | Collaboration: Awaiting your response | POLI status: Open",
+      title:
+        "Viewed as Supplier | Supplier's proposal: Not made | Collaboration: Awaiting your response | POLI status: Open",
       userRole: "supplier" as const,
       collaborationStatus: "awaiting-supplier" as const,
       poliStatus: "Open" as const,
@@ -3295,7 +3651,7 @@ export const Collaboration = () => {
       supplierProposalMade: false,
       activeCardAuthorRole: "customer" as const,
     },
-    
+
     // Open - Accepted (supplier accepted request without proposal)
     {
       title: "Viewed as Customer | Supplier's proposal: Not made | Collaboration: Accepted | POLI status: Open",
@@ -3319,10 +3675,11 @@ export const Collaboration = () => {
       supplierProposalMade: false,
       activeCardAuthorRole: "customer" as const,
     },
-    
+
     // Canceled - Awaiting supplier's response
     {
-      title: "Viewed as Customer | Supplier's proposal: Not made | Collaboration: Awaiting supplier's response | POLI status: Canceled",
+      title:
+        "Viewed as Customer | Supplier's proposal: Not made | Collaboration: Awaiting supplier's response | POLI status: Canceled",
       userRole: "customer" as const,
       collaborationStatus: "awaiting-supplier" as const,
       poliStatus: "Canceled" as const,
@@ -3333,7 +3690,8 @@ export const Collaboration = () => {
       activeCardAuthorRole: "customer" as const,
     },
     {
-      title: "Viewed as Supplier | Supplier's proposal: Not made | Collaboration: Awaiting your response | POLI status: Canceled",
+      title:
+        "Viewed as Supplier | Supplier's proposal: Not made | Collaboration: Awaiting your response | POLI status: Canceled",
       userRole: "supplier" as const,
       collaborationStatus: "awaiting-supplier" as const,
       poliStatus: "Canceled" as const,
@@ -3343,7 +3701,7 @@ export const Collaboration = () => {
       supplierProposalMade: false,
       activeCardAuthorRole: "customer" as const,
     },
-    
+
     // Canceled - Accepted
     {
       title: "Viewed as Customer | Supplier's proposal: Not made | Collaboration: Accepted | POLI status: Canceled",
@@ -3367,10 +3725,11 @@ export const Collaboration = () => {
       supplierProposalMade: false,
       activeCardAuthorRole: "customer" as const,
     },
-    
+
     // Completed - Awaiting supplier's response
     {
-      title: "Viewed as Customer | Supplier's proposal: Not made | Collaboration: Awaiting supplier's response | POLI status: Completed",
+      title:
+        "Viewed as Customer | Supplier's proposal: Not made | Collaboration: Awaiting supplier's response | POLI status: Completed",
       userRole: "customer" as const,
       collaborationStatus: "awaiting-supplier" as const,
       poliStatus: "Completed" as const,
@@ -3381,7 +3740,8 @@ export const Collaboration = () => {
       activeCardAuthorRole: "customer" as const,
     },
     {
-      title: "Viewed as Supplier | Supplier's proposal: Not made | Collaboration: Awaiting your response | POLI status: Completed",
+      title:
+        "Viewed as Supplier | Supplier's proposal: Not made | Collaboration: Awaiting your response | POLI status: Completed",
       userRole: "supplier" as const,
       collaborationStatus: "awaiting-supplier" as const,
       poliStatus: "Completed" as const,
@@ -3391,7 +3751,7 @@ export const Collaboration = () => {
       supplierProposalMade: false,
       activeCardAuthorRole: "customer" as const,
     },
-    
+
     // Completed - Accepted
     {
       title: "Viewed as Customer | Supplier's proposal: Not made | Collaboration: Accepted | POLI status: Completed",
@@ -3415,12 +3775,13 @@ export const Collaboration = () => {
       supplierProposalMade: false,
       activeCardAuthorRole: "customer" as const,
     },
-    
+
     // ===== SUPPLIER'S PROPOSAL: MADE =====
-    
+
     // Open - Awaiting supplier's response
     {
-      title: "Viewed as Customer | Supplier's proposal: Made | Collaboration: Awaiting supplier's response | POLI status: Open",
+      title:
+        "Viewed as Customer | Supplier's proposal: Made | Collaboration: Awaiting supplier's response | POLI status: Open",
       userRole: "customer" as const,
       collaborationStatus: "awaiting-supplier" as const,
       poliStatus: "Open" as const,
@@ -3431,7 +3792,8 @@ export const Collaboration = () => {
       activeCardAuthorRole: "customer" as const,
     },
     {
-      title: "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Awaiting your response | POLI status: Open",
+      title:
+        "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Awaiting your response | POLI status: Open",
       userRole: "supplier" as const,
       collaborationStatus: "awaiting-supplier" as const,
       poliStatus: "Open" as const,
@@ -3441,10 +3803,11 @@ export const Collaboration = () => {
       supplierProposalMade: true,
       activeCardAuthorRole: "customer" as const,
     },
-    
+
     // Completed - Awaiting supplier's response
     {
-      title: "Viewed as Customer | Supplier's proposal: Made | Collaboration: Awaiting supplier's response | POLI status: Completed",
+      title:
+        "Viewed as Customer | Supplier's proposal: Made | Collaboration: Awaiting supplier's response | POLI status: Completed",
       userRole: "customer" as const,
       collaborationStatus: "awaiting-supplier" as const,
       poliStatus: "Completed" as const,
@@ -3455,7 +3818,8 @@ export const Collaboration = () => {
       activeCardAuthorRole: "customer" as const,
     },
     {
-      title: "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Awaiting your response | POLI status: Completed",
+      title:
+        "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Awaiting your response | POLI status: Completed",
       userRole: "supplier" as const,
       collaborationStatus: "awaiting-supplier" as const,
       poliStatus: "Completed" as const,
@@ -3465,10 +3829,11 @@ export const Collaboration = () => {
       supplierProposalMade: true,
       activeCardAuthorRole: "customer" as const,
     },
-    
+
     // Canceled - Awaiting supplier's response
     {
-      title: "Viewed as Customer | Supplier's proposal: Made | Collaboration: Awaiting supplier's response | POLI status: Canceled",
+      title:
+        "Viewed as Customer | Supplier's proposal: Made | Collaboration: Awaiting supplier's response | POLI status: Canceled",
       userRole: "customer" as const,
       collaborationStatus: "awaiting-supplier" as const,
       poliStatus: "Canceled" as const,
@@ -3479,7 +3844,8 @@ export const Collaboration = () => {
       activeCardAuthorRole: "customer" as const,
     },
     {
-      title: "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Awaiting your response | POLI status: Canceled",
+      title:
+        "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Awaiting your response | POLI status: Canceled",
       userRole: "supplier" as const,
       collaborationStatus: "awaiting-supplier" as const,
       poliStatus: "Canceled" as const,
@@ -3489,10 +3855,11 @@ export const Collaboration = () => {
       supplierProposalMade: true,
       activeCardAuthorRole: "customer" as const,
     },
-    
+
     // Open - Awaiting customer's response
     {
-      title: "Viewed as Customer | Supplier's proposal: Made | Collaboration: Awaiting your response | POLI status: Open",
+      title:
+        "Viewed as Customer | Supplier's proposal: Made | Collaboration: Awaiting your response | POLI status: Open",
       userRole: "customer" as const,
       collaborationStatus: "awaiting-customer" as const,
       poliStatus: "Open" as const,
@@ -3503,7 +3870,8 @@ export const Collaboration = () => {
       activeCardAuthorRole: "supplier" as const,
     },
     {
-      title: "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Awaiting customer's response | POLI status: Open",
+      title:
+        "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Awaiting customer's response | POLI status: Open",
       userRole: "supplier" as const,
       collaborationStatus: "awaiting-customer" as const,
       poliStatus: "Open" as const,
@@ -3513,10 +3881,11 @@ export const Collaboration = () => {
       supplierProposalMade: true,
       activeCardAuthorRole: "supplier" as const,
     },
-    
+
     // Open - Accepted with updated request
     {
-      title: "Viewed as Customer | Supplier's proposal: Made | Collaboration: Accepted with updated request | POLI status: Open",
+      title:
+        "Viewed as Customer | Supplier's proposal: Made | Collaboration: Accepted with updated request | POLI status: Open",
       userRole: "customer" as const,
       collaborationStatus: "accepted-updated" as const,
       poliStatus: "Open" as const,
@@ -3527,7 +3896,8 @@ export const Collaboration = () => {
       activeCardAuthorRole: "supplier" as const,
     },
     {
-      title: "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Accepted with updated request | POLI status: Open",
+      title:
+        "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Accepted with updated request | POLI status: Open",
       userRole: "supplier" as const,
       collaborationStatus: "accepted-updated" as const,
       poliStatus: "Open" as const,
@@ -3537,10 +3907,11 @@ export const Collaboration = () => {
       supplierProposalMade: true,
       activeCardAuthorRole: "supplier" as const,
     },
-    
+
     // Open - Accepted with retained request
     {
-      title: "Viewed as Customer | Supplier's proposal: Made | Collaboration: Accepted with retained request | POLI status: Open",
+      title:
+        "Viewed as Customer | Supplier's proposal: Made | Collaboration: Accepted with retained request | POLI status: Open",
       userRole: "customer" as const,
       collaborationStatus: "accepted-retained" as const,
       poliStatus: "Open" as const,
@@ -3551,7 +3922,8 @@ export const Collaboration = () => {
       activeCardAuthorRole: "supplier" as const,
     },
     {
-      title: "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Accepted with retained request | POLI status: Open",
+      title:
+        "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Accepted with retained request | POLI status: Open",
       userRole: "supplier" as const,
       collaborationStatus: "accepted-retained" as const,
       poliStatus: "Open" as const,
@@ -3561,10 +3933,11 @@ export const Collaboration = () => {
       supplierProposalMade: true,
       activeCardAuthorRole: "supplier" as const,
     },
-    
+
     // Canceled - Awaiting customer's response
     {
-      title: "Viewed as Customer | Supplier's proposal: Made | Collaboration: Awaiting your response | POLI status: Canceled",
+      title:
+        "Viewed as Customer | Supplier's proposal: Made | Collaboration: Awaiting your response | POLI status: Canceled",
       userRole: "customer" as const,
       collaborationStatus: "awaiting-customer" as const,
       poliStatus: "Canceled" as const,
@@ -3575,7 +3948,8 @@ export const Collaboration = () => {
       activeCardAuthorRole: "supplier" as const,
     },
     {
-      title: "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Awaiting customer's response | POLI status: Canceled",
+      title:
+        "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Awaiting customer's response | POLI status: Canceled",
       userRole: "supplier" as const,
       collaborationStatus: "awaiting-customer" as const,
       poliStatus: "Canceled" as const,
@@ -3585,10 +3959,11 @@ export const Collaboration = () => {
       supplierProposalMade: true,
       activeCardAuthorRole: "supplier" as const,
     },
-    
+
     // Canceled - Accepted with updated request
     {
-      title: "Viewed as Customer | Supplier's proposal: Made | Collaboration: Accepted with updated request | POLI status: Canceled",
+      title:
+        "Viewed as Customer | Supplier's proposal: Made | Collaboration: Accepted with updated request | POLI status: Canceled",
       userRole: "customer" as const,
       collaborationStatus: "accepted-updated" as const,
       poliStatus: "Canceled" as const,
@@ -3599,7 +3974,8 @@ export const Collaboration = () => {
       activeCardAuthorRole: "supplier" as const,
     },
     {
-      title: "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Accepted with updated request | POLI status: Canceled",
+      title:
+        "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Accepted with updated request | POLI status: Canceled",
       userRole: "supplier" as const,
       collaborationStatus: "accepted-updated" as const,
       poliStatus: "Canceled" as const,
@@ -3609,10 +3985,11 @@ export const Collaboration = () => {
       supplierProposalMade: true,
       activeCardAuthorRole: "supplier" as const,
     },
-    
+
     // Canceled - Accepted with retained request
     {
-      title: "Viewed as Customer | Supplier's proposal: Made | Collaboration: Accepted with retained request | POLI status: Canceled",
+      title:
+        "Viewed as Customer | Supplier's proposal: Made | Collaboration: Accepted with retained request | POLI status: Canceled",
       userRole: "customer" as const,
       collaborationStatus: "accepted-retained" as const,
       poliStatus: "Canceled" as const,
@@ -3623,7 +4000,8 @@ export const Collaboration = () => {
       activeCardAuthorRole: "supplier" as const,
     },
     {
-      title: "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Accepted with retained request | POLI status: Canceled",
+      title:
+        "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Accepted with retained request | POLI status: Canceled",
       userRole: "supplier" as const,
       collaborationStatus: "accepted-retained" as const,
       poliStatus: "Canceled" as const,
@@ -3633,10 +4011,11 @@ export const Collaboration = () => {
       supplierProposalMade: true,
       activeCardAuthorRole: "supplier" as const,
     },
-    
+
     // Completed - Awaiting customer's response
     {
-      title: "Viewed as Customer | Supplier's proposal: Made | Collaboration: Awaiting your response | POLI status: Completed",
+      title:
+        "Viewed as Customer | Supplier's proposal: Made | Collaboration: Awaiting your response | POLI status: Completed",
       userRole: "customer" as const,
       collaborationStatus: "awaiting-customer" as const,
       poliStatus: "Completed" as const,
@@ -3647,7 +4026,8 @@ export const Collaboration = () => {
       activeCardAuthorRole: "supplier" as const,
     },
     {
-      title: "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Awaiting customer's response | POLI status: Completed",
+      title:
+        "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Awaiting customer's response | POLI status: Completed",
       userRole: "supplier" as const,
       collaborationStatus: "awaiting-customer" as const,
       poliStatus: "Completed" as const,
@@ -3657,10 +4037,11 @@ export const Collaboration = () => {
       supplierProposalMade: true,
       activeCardAuthorRole: "supplier" as const,
     },
-    
+
     // Completed - Accepted with updated request
     {
-      title: "Viewed as Customer | Supplier's proposal: Made | Collaboration: Accepted with updated request | POLI status: Completed",
+      title:
+        "Viewed as Customer | Supplier's proposal: Made | Collaboration: Accepted with updated request | POLI status: Completed",
       userRole: "customer" as const,
       collaborationStatus: "accepted-updated" as const,
       poliStatus: "Completed" as const,
@@ -3671,7 +4052,8 @@ export const Collaboration = () => {
       activeCardAuthorRole: "supplier" as const,
     },
     {
-      title: "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Accepted with updated request | POLI status: Completed",
+      title:
+        "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Accepted with updated request | POLI status: Completed",
       userRole: "supplier" as const,
       collaborationStatus: "accepted-updated" as const,
       poliStatus: "Completed" as const,
@@ -3681,10 +4063,11 @@ export const Collaboration = () => {
       supplierProposalMade: true,
       activeCardAuthorRole: "supplier" as const,
     },
-    
+
     // Completed - Accepted with retained request
     {
-      title: "Viewed as Customer | Supplier's proposal: Made | Collaboration: Accepted with retained request | POLI status: Completed",
+      title:
+        "Viewed as Customer | Supplier's proposal: Made | Collaboration: Accepted with retained request | POLI status: Completed",
       userRole: "customer" as const,
       collaborationStatus: "accepted-retained" as const,
       poliStatus: "Completed" as const,
@@ -3695,7 +4078,8 @@ export const Collaboration = () => {
       activeCardAuthorRole: "supplier" as const,
     },
     {
-      title: "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Accepted with retained request | POLI status: Completed",
+      title:
+        "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Accepted with retained request | POLI status: Completed",
       userRole: "supplier" as const,
       collaborationStatus: "accepted-retained" as const,
       poliStatus: "Completed" as const,
@@ -3821,10 +4205,143 @@ export const Collaboration = () => {
                 </Box>
               </Flex>
             </Box>
+            {/* Combined Alert with notes and What's new */}
+            {(() => {
+              const notes = getNotes(deduplicatedVariations.length > 0);
+              const hasNotes = notes.length > 0;
+
+              if ((hasNotes || isCombinedAlertVisible) && isCombinedAlertVisible) {
+                return (
+                  <Alert type="informative" title={getAlertTitle()} mt="x4" mb="x4">
+                    <Flex flexDirection="column" gap="x3" mt="x2">
+                      {/* Notes section */}
+                      {hasNotes && (
+                        <Box>
+                          <Box as="ul" style={{ margin: 0, paddingLeft: "20px" }}>
+                            {notes.map((note, index) => (
+                              <Text
+                                key={index}
+                                as="li"
+                                fontSize="small"
+                                lineHeight="smallRelaxed"
+                                mb={index < notes.length - 1 ? "x0_5" : 0}
+                              >
+                                {note}
+                              </Text>
+                            ))}
+                          </Box>
+                        </Box>
+                      )}
+
+                      {/* What's new expandable section */}
+                      <Box>
+                        <Flex
+                          alignItems="center"
+                          gap="x1"
+                          onClick={() => setIsWhatsNewExpanded(!isWhatsNewExpanded)}
+                          style={{ cursor: "pointer" }}
+                          mb={isWhatsNewExpanded ? "x2" : 0}
+                        >
+                          <IconicButton
+                            icon={isWhatsNewExpanded ? "collapse" : "expand"}
+                            labelHidden
+                            tooltip={isWhatsNewExpanded ? "Collapse" : "Expand"}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setIsWhatsNewExpanded(!isWhatsNewExpanded);
+                            }}
+                          />
+                          <Text fontSize="small" fontWeight="bold">
+                            What's new?
+                          </Text>
+                        </Flex>
+                        {isWhatsNewExpanded && (
+                          <Box as="ul" style={{ margin: 0, paddingLeft: "20px" }}>
+                            <Text as="li" fontSize="small" lineHeight="smallRelaxed" mb="x0_5">
+                              UOM toggle (refer to Details/Default story for implementation)
+                            </Text>
+                            <Text as="li" fontSize="small" lineHeight="smallRelaxed" mb="x0_5">
+                              Dynamic title and action labeling (e.g., "Yours")
+                            </Text>
+                            <Text as="li" fontSize="small" lineHeight="smallRelaxed" mb="x0_5">
+                              Description line below title (author, date)
+                            </Text>
+                            <Text as="li" fontSize="small" lineHeight="smallRelaxed" mb="x0_5">
+                              Status icons displayed next to column titles
+                            </Text>
+                            <Text as="li" fontSize="small" lineHeight="smallRelaxed" mb="x0_5">
+                              New visual style for indicating changed values: yellow and grey underlines are applied to
+                              Quantity, Due date, and Unit price fields only
+                            </Text>
+                            <Text as="li" fontSize="small" lineHeight="smallRelaxed" mb="x0_5">
+                              Unit of measure added to Unit price label
+                            </Text>
+                            <Text as="li" fontSize="small" lineHeight="smallRelaxed" mb="x0_5">
+                              Reason row added to the form
+                            </Text>
+                            <Text as="li" fontSize="small" lineHeight="smallRelaxed">
+                              In edit mode, suppliers can specify the unit that has a conversion ratio defined and also
+                              in customer default unit
+                            </Text>
+                          </Box>
+                        )}
+                      </Box>
+
+                      {/* Other notes expandable section */}
+                      <Box>
+                        <Flex
+                          alignItems="center"
+                          gap="x1"
+                          onClick={() => setIsOtherNotesExpanded(!isOtherNotesExpanded)}
+                          style={{ cursor: "pointer" }}
+                          mb={isOtherNotesExpanded ? "x2" : 0}
+                        >
+                          <IconicButton
+                            icon={isOtherNotesExpanded ? "collapse" : "expand"}
+                            labelHidden
+                            tooltip={isOtherNotesExpanded ? "Collapse" : "Expand"}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setIsOtherNotesExpanded(!isOtherNotesExpanded);
+                            }}
+                          />
+                          <Text fontSize="small" fontWeight="bold">
+                            Other notes
+                          </Text>
+                        </Flex>
+                        {isOtherNotesExpanded && (
+                          <Box as="ul" style={{ margin: 0, paddingLeft: "20px" }}>
+                            <Text as="li" fontSize="small" lineHeight="smallRelaxed" mb="x0_5">
+                              When entering edit mode, the submit button is disabled and the status icon remains
+                              visible. Once the first edit is made, the submit button becomes enabled and the status
+                              icon is removed from the column being edited.
+                            </Text>
+                            <Text as="li" fontSize="small" lineHeight="smallRelaxed" mb="x0_5">
+                              Status icons have tooltips.
+                            </Text>
+                            <Text as="li" fontSize="small" lineHeight="smallRelaxed" mb="x0_5">
+                              Success toast is displayed after accepting or updating proposal/request. — Proposal
+                              updated. — Request updated. — Proposal accepted. — Request accepted.
+                            </Text>
+                            <Text as="li" fontSize="small" lineHeight="smallRelaxed">
+                              Note is truncated.
+                            </Text>
+                          </Box>
+                        )}
+                      </Box>
+                    </Flex>
+                  </Alert>
+                );
+              }
+              return null;
+            })()}
             {deduplicatedVariations.map((variation, index) => {
               // Modify title to show "Open and Completed" when filter is "open-completed"
               let displayTitle = variation.title;
-              if (filters.poliStatus === "open-completed" && (variation.poliStatus === "Open" || variation.poliStatus === "Completed")) {
+              if (
+                filters.poliStatus === "open-completed" &&
+                (variation.poliStatus === "Open" || variation.poliStatus === "Completed")
+              ) {
                 displayTitle = displayTitle.replace(
                   /POLI status: (Open|Completed)/g,
                   "POLI status: Open and Completed"
@@ -3832,7 +4349,11 @@ export const Collaboration = () => {
               }
               // When "Accepted with updated request" is selected with "Supplier's proposal: Not made",
               // show "Accepted with updated request" in title instead of "Accepted"
-              if (filters.collaboration === "accepted-updated" && filters.supplierProposal === "no" && variation.collaborationStatus === "accepted") {
+              if (
+                filters.collaboration === "accepted-updated" &&
+                filters.supplierProposal === "no" &&
+                variation.collaborationStatus === "accepted"
+              ) {
                 displayTitle = displayTitle.replace(
                   /Collaboration: Accepted/g,
                   "Collaboration: Accepted with updated request"
@@ -3860,101 +4381,6 @@ export const Collaboration = () => {
                 />
               );
             })}
-            {/* Note section for specific filter combinations */}
-            {(() => {
-              const notes: string[] = [];
-              
-              // Customer - No - Awaiting customer's response
-              if (
-                filters.viewedAs === "customer" &&
-                filters.supplierProposal === "no" &&
-                filters.collaboration === "awaiting-customer"
-              ) {
-                notes.push("This state is not possible since the Supplier has not made a proposal, so there is nothing to respond to.");
-              }
-              
-              // Customer - No - Accepted with updated request
-              if (
-                filters.viewedAs === "customer" &&
-                filters.supplierProposal === "no" &&
-                filters.collaboration === "accepted-updated"
-              ) {
-                notes.push("The Accept supplier button is disabled because no proposal is made yet.");
-                if (filters.poliStatus === "open-completed") {
-                  notes.push("Updating request changes the state to Awaiting supplier's response.");
-                }
-              }
-              
-              // Customer - Yes - Accepted with updated request - Open and Completed
-              if (
-                filters.viewedAs === "customer" &&
-                filters.supplierProposal === "yes" &&
-                filters.collaboration === "accepted-updated" &&
-                filters.poliStatus === "open-completed"
-              ) {
-                notes.push("Updating request changes the state to Awaiting supplier's response.");
-              }
-              
-              // Customer - Yes - Accepted with retained request - Open and Completed
-              if (
-                filters.viewedAs === "customer" &&
-                filters.supplierProposal === "yes" &&
-                filters.collaboration === "accepted-retained" &&
-                filters.poliStatus === "open-completed"
-              ) {
-                notes.push("Updating request changes the state to Awaiting supplier's response.");
-              }
-              
-              // Customer - Yes - Awaiting supplier's response - Open and Completed
-              if (
-                filters.viewedAs === "customer" &&
-                filters.supplierProposal === "yes" &&
-                filters.collaboration === "awaiting-supplier" &&
-                filters.poliStatus === "open-completed"
-              ) {
-                notes.push("If the organization is configured with dual acceptance, clicking Accept supplier's proposal changes the status to \"Accepted with updated request\" or \"Accepted with retained request\", depending on the selection in the confirmation modal.");
-                notes.push("If the organization is configured with standard acceptance, clicking Accept supplier's proposal changes the status to \"Accepted with updated request\" and no confirmation modal is displayed.");
-              }
-              
-              // Customer - Yes - Awaiting customer's response - Open and Completed
-              if (
-                filters.viewedAs === "customer" &&
-                filters.supplierProposal === "yes" &&
-                filters.collaboration === "awaiting-customer" &&
-                filters.poliStatus === "open-completed"
-              ) {
-                notes.push("If the organization is configured with dual acceptance, clicking Accept supplier's proposal changes the status to \"Accepted with updated request\" or \"Accepted with retained request\", depending on the selection in the confirmation modal.");
-                notes.push("If the organization is configured with standard acceptance, clicking Accept supplier's proposal changes the status to \"Accepted with updated request\" and no confirmation modal is displayed.");
-                notes.push("Submitting updated request changes the status to Awaiting supplier's response.");
-              }
-              
-              // All canceled ones
-              if (filters.poliStatus === "canceled") {
-                notes.push("Actions are disabled for canceled POLIs.");
-              }
-              
-              if (notes.length > 0) {
-                return (
-                  <Box mt="x4" p="x3" backgroundColor="lightBlue" borderRadius="medium">
-                    <Box as="ul" style={{ margin: 0, paddingLeft: "20px" }}>
-                      {notes.map((note, index) => (
-                        <Text
-                          key={index}
-                          as="li"
-                          fontSize="small"
-                          color="midGrey"
-                          lineHeight="smallRelaxed"
-                          mb={index < notes.length - 1 ? "x1" : 0}
-                        >
-                          {note}
-                        </Text>
-                      ))}
-                    </Box>
-                  </Box>
-                );
-              }
-              return null;
-            })()}
           </Box>
         </Page>
       </ApplicationFrame>
