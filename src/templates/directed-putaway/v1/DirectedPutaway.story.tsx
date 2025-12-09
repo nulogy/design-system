@@ -89,7 +89,7 @@ export const Default = () => {
   const [currentLocationForProblem, setCurrentLocationForProblem] = useState<string | null>(null);
   const [locationScenario, setLocationScenario] = useState<"preferred" | "overflow" | "empty">("preferred");
   const [isControllerModalOpen, setIsControllerModalOpen] = useState(false);
-  
+
   // Preferred location data structure
   const locationData = {
     "rack-locations": {
@@ -216,12 +216,12 @@ export const Default = () => {
   // Function to recursively search for a location name in the locationData structure
   const findLocationInData = (data: any, locationName: string): boolean => {
     if (!data) return false;
-    
+
     // Check if current level matches
     if (data.name === locationName) {
       return true;
     }
-    
+
     // Recursively check children
     if (data.children) {
       for (const key in data.children) {
@@ -230,7 +230,7 @@ export const Default = () => {
         }
       }
     }
-    
+
     return false;
   };
 
@@ -254,7 +254,7 @@ export const Default = () => {
   const handleDropOffLocationSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const trimmedLocation = dropOffLocation.trim();
-    
+
     if (!trimmedLocation) {
       return;
     }
@@ -265,7 +265,7 @@ export const Default = () => {
 
     // Check if location exists in locationData
     const locationExists = findLocationInAllData(trimmedLocation);
-    
+
     if (locationExists) {
       // Success - remove pallet from pickedUpPallets
       const updatedPallets = pickedUpPallets.filter((p) => p.palletId !== palletData.palletId);
@@ -275,7 +275,7 @@ export const Default = () => {
       setDropOffLocation("");
       setDropOffLocationError(null);
       toast.success("Pallet dropped off successfully");
-      
+
       // If no more pallets in transit, switch back to pick up mode
       if (updatedPallets.length === 0) {
         setMode("pick up");
@@ -290,17 +290,17 @@ export const Default = () => {
     if (locationNavPath.length === 0) {
       return null; // At root level, return null to use special handling
     }
-    
+
     // Determine which data source to use based on scenario
     const dataSource = locationScenario === "overflow" ? overflowLocationData : locationData;
-    
+
     let current: any = dataSource;
     for (let i = 0; i < locationNavPath.length; i++) {
       const key = locationNavPath[i];
       // First level: access directly from dataSource
       if (i === 0 && dataSource[key as keyof typeof dataSource]) {
         current = dataSource[key as keyof typeof dataSource];
-      } 
+      }
       // Subsequent levels: access from children
       else if (current?.children?.[key]) {
         current = current.children[key];
@@ -315,15 +315,10 @@ export const Default = () => {
     // If locations are empty, show empty state
     if (locationScenario === "empty" && locationNavPath.length === 0) {
       return (
-        <Flex 
-          flexDirection="column" 
-          alignItems="center" 
-          justifyContent="center" 
-          minHeight="400px"
-          gap="x3"
-        >
+        <Flex flexDirection="column" alignItems="center" justifyContent="center" minHeight="400px" gap="x3">
           <Text color="midGrey" textAlign="center">
-            There are no available locations at this time. Try again later; bring the pallet back to the pick up location; or, contact your supervisor.
+            There are no available locations at this time. Try again later; bring the pallet back to the pick up
+            location; or, contact your supervisor.
           </Text>
         </Flex>
       );
@@ -335,24 +330,24 @@ export const Default = () => {
     if (locationNavPath.length === 0) {
       // Show top-level location types
       if (locationScenario === "preferred") {
-        items = Object.keys(locationData).map(key => ({ key, ...locationData[key as keyof typeof locationData] }));
+        items = Object.keys(locationData).map((key) => ({ key, ...locationData[key as keyof typeof locationData] }));
       } else if (locationScenario === "overflow") {
         // In overflow scenario, preferred locations have 0 spots, overflow locations are shown
-        items = Object.keys(locationData).map(key => ({ 
-          key, 
+        items = Object.keys(locationData).map((key) => ({
+          key,
           ...locationData[key as keyof typeof locationData],
-          palletSpots: 0 
+          palletSpots: 0,
         }));
-        overflowItems = Object.keys(overflowLocationData).map(key => ({ 
-          key, 
-          ...overflowLocationData[key as keyof typeof overflowLocationData] 
+        overflowItems = Object.keys(overflowLocationData).map((key) => ({
+          key,
+          ...overflowLocationData[key as keyof typeof overflowLocationData],
         }));
       }
     } else {
       // Show children of current location
       const current = getCurrentLocationData();
       if (current && current.children) {
-        items = Object.keys(current.children).map(key => ({ key, ...current.children[key] }));
+        items = Object.keys(current.children).map((key) => ({ key, ...current.children[key] }));
       }
     }
 
@@ -366,7 +361,7 @@ export const Default = () => {
             <Card
               key={item.key}
               onClick={() => item.children && handleLocationCardClick(item.key)}
-              style={{ 
+              style={{
                 cursor: item.children ? "pointer" : "default",
               }}
             >
@@ -375,9 +370,7 @@ export const Default = () => {
                 <DescriptionList columns={1} layout="inline" density="compact">
                   <DescriptionGroup>
                     <DescriptionTerm>Pallet spots available</DescriptionTerm>
-                    <DescriptionDetails>
-                      {item.palletSpots}
-                    </DescriptionDetails>
+                    <DescriptionDetails>{item.palletSpots}</DescriptionDetails>
                   </DescriptionGroup>
                 </DescriptionList>
               </Box>
@@ -385,12 +378,17 @@ export const Default = () => {
                 <>
                   <Divider my="x1" style={{ opacity: hasProblem ? 0.5 : 1 }} />
                   <Box>
-                    <IconicButton icon="warning" iconSize="x2" fontSize="small" onClick={(e) => {
-                      e.stopPropagation();
-                      setCurrentLocationForProblem(item.name);
-                      setSelectedProblem(reportedProblems[item.name] || null);
-                      setIsReportProblemModalOpen(true);
-                    }}>
+                    <IconicButton
+                      icon="warning"
+                      iconSize="x2"
+                      fontSize="small"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setCurrentLocationForProblem(item.name);
+                        setSelectedProblem(reportedProblems[item.name] || null);
+                        setIsReportProblemModalOpen(true);
+                      }}
+                    >
                       {hasProblem ? "Edit problem" : "Report a problem"}
                     </IconicButton>
                   </Box>
@@ -417,9 +415,7 @@ export const Default = () => {
                         <DescriptionList columns={1} layout="inline" density="compact">
                           <DescriptionGroup>
                             <DescriptionTerm>Pallet spots available</DescriptionTerm>
-                            <DescriptionDetails>
-                              {item.palletSpots}
-                            </DescriptionDetails>
+                            <DescriptionDetails>{item.palletSpots}</DescriptionDetails>
                           </DescriptionGroup>
                         </DescriptionList>
                       </Box>
@@ -441,9 +437,7 @@ export const Default = () => {
             )}
           </>
         )}
-        {locationNavPath.length > 0 && (
-          renderCardSet(items)
-        )}
+        {locationNavPath.length > 0 && renderCardSet(items)}
       </>
     );
   };
@@ -595,8 +589,13 @@ export const Default = () => {
   };
 
   const backButton = (
-    <Link href="#" onClick={handleNavBackClick} underline={false} style={{ display: "flex", alignItems: "center", paddingLeft: "16px" }}>
-      <Icon icon="arrowBack" size="x3" color="darkGrey"/>
+    <Link
+      href="#"
+      onClick={handleNavBackClick}
+      underline={false}
+      style={{ display: "flex", alignItems: "center", paddingLeft: "16px" }}
+    >
+      <Icon icon="arrowBack" size="x3" color="darkGrey" />
     </Link>
   );
 
@@ -606,415 +605,417 @@ export const Default = () => {
     <>
       <ApplicationFrame
         navBar={
-        <Box position="relative" width="100%">
-          <Navigation
-            primaryLogo={backButton}
-            secondaryNavigation={[
-              {
-                key: "controller",
-                type: "button",
-                icon: "settings",
-                tooltip: "Controller",
-                props: {
-                  onClick: () => {
-                    setIsControllerModalOpen(true);
+          <Box position="relative" width="100%">
+            <Navigation
+              primaryLogo={backButton}
+              secondaryNavigation={[
+                {
+                  key: "controller",
+                  type: "button",
+                  icon: "settings",
+                  tooltip: "Controller",
+                  props: {
+                    onClick: () => {
+                      setIsControllerModalOpen(true);
+                    },
                   },
                 },
-              },
-              {
-                key: "app-switcher",
-                type: "button",
-                icon: "apps",
-                tooltip: "App switcher",
-                props: {
-                  onClick: () => {
-                    // App switcher functionality would go here
+                {
+                  key: "app-switcher",
+                  type: "button",
+                  icon: "apps",
+                  tooltip: "App switcher",
+                  props: {
+                    onClick: () => {
+                      // App switcher functionality would go here
+                    },
                   },
                 },
-              },
-            ]}
-          />
-          <Box
-            position="absolute"
-            left="50%"
-            top="50%"
-            transform="translate(-50%, -50%)"
-            style={{ pointerEvents: "none" }}
-          >
-            <Text fontSize="medium" fontWeight="medium">
-              {pageTitle}
-            </Text>
+              ]}
+            />
+            <Box
+              position="absolute"
+              left="50%"
+              top="50%"
+              transform="translate(-50%, -50%)"
+              style={{ pointerEvents: "none" }}
+            >
+              <Text fontSize="medium" fontWeight="medium">
+                {pageTitle}
+              </Text>
+            </Box>
           </Box>
-        </Box>
-      }
-    >
-      <ToastContainer />
-      <Page fullHeight>
+        }
+      >
+        <ToastContainer />
+        <Page fullHeight>
           {selectedMove ? (
             <>
               <Box px="x1" maxWidth="1360px" mx="auto">
-              <Flex flexDirection="column" alignItems="flex-end" gap="x2" mb="x2">
-                <Switcher aria-label="Mode switcher" selected={mode} onChange={(value) => setMode(value as "pick up" | "drop off")}>
-                  <Switch value="pick up">Pick up</Switch>
-                  <Switch value="drop off">Drop off</Switch>
-                </Switcher>
-              </Flex>
-              {(mode === "pick up" || (mode === "drop off" && pickedUpPallets.length > 0)) && (
-                <Form onSubmit={handlePalletSubmit}>
-                  <FormSection>
-                    <Box pb="x1">
-                      <FieldLabel labelText="Pallet">
-                        <Input
-                          value={palletInput}
-                          onChange={(e) => {
-                            setPalletInput(e.target.value);
-                            setPalletValidationError(null);
-                            if (mode === "drop off") {
-                              setPalletData(null);
-                            }
-                          }}
-                          onKeyDown={(e) => {
-                            if (e.key === "Enter") {
-                              e.preventDefault();
-                              handlePalletSubmit(e as any);
-                            }
-                          }}
-                          errorMessage={palletValidationError || undefined}
-                        />
-                      </FieldLabel>
-                    </Box>
-                    {mode === "drop off" && (
-                      <Box pb="x1" mt="x1">
-                        <FieldLabel labelText="Drop-off location">
+                <Flex flexDirection="column" alignItems="flex-end" gap="x2" mb="x2">
+                  <Switcher
+                    aria-label="Mode switcher"
+                    selected={mode}
+                    onChange={(value) => setMode(value as "pick up" | "drop off")}
+                  >
+                    <Switch value="pick up">Pick up</Switch>
+                    <Switch value="drop off">Drop off</Switch>
+                  </Switcher>
+                </Flex>
+                {(mode === "pick up" || (mode === "drop off" && pickedUpPallets.length > 0)) && (
+                  <Form onSubmit={handlePalletSubmit}>
+                    <FormSection>
+                      <Box pb="x1">
+                        <FieldLabel labelText="Pallet">
                           <Input
-                            value={dropOffLocation}
+                            value={palletInput}
                             onChange={(e) => {
-                              setDropOffLocation(e.target.value);
-                              setDropOffLocationError(null);
-                            }}
-                            onKeyDown={(e) => {
-                              if (e.key === "Enter" && palletData) {
-                                e.preventDefault();
-                                handleDropOffLocationSubmit(e as any);
+                              setPalletInput(e.target.value);
+                              setPalletValidationError(null);
+                              if (mode === "drop off") {
+                                setPalletData(null);
                               }
                             }}
-                            disabled={!palletData}
-                            errorMessage={dropOffLocationError || undefined}
+                            onKeyDown={(e) => {
+                              if (e.key === "Enter") {
+                                e.preventDefault();
+                                handlePalletSubmit(e as any);
+                              }
+                            }}
+                            errorMessage={palletValidationError || undefined}
                           />
                         </FieldLabel>
                       </Box>
-                    )}
-                  </FormSection>
-                </Form>
-              )}
-              {palletData && mode === "pick up" && (
-                <Card mt="x1">
-                  <Heading3 mb="0">{palletData.palletId}</Heading3>
-                  <DescriptionList columns={1} layout="inline" density="compact">
-                    <DescriptionGroup>
-                      <DescriptionTerm>Item</DescriptionTerm>
-                      <DescriptionDetails>
-                        {palletData.itemCode} • {palletData.itemDescription}
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>Lot</DescriptionTerm>
-                      <DescriptionDetails>{palletData.lotCode}</DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>Expiry</DescriptionTerm>
-                      <DescriptionDetails>{palletData.expiryDate}</DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>Status</DescriptionTerm>
-                      <DescriptionDetails>{palletData.status}</DescriptionDetails>
-                    </DescriptionGroup>
-                    <DescriptionGroup>
-                      <DescriptionTerm>Quantity</DescriptionTerm>
-                      <DescriptionDetails>{palletData.quantity}</DescriptionDetails>
-                    </DescriptionGroup>
-                  </DescriptionList>
-                  <Divider my="x2" />
-                  <Flex justifyContent="flex-start">
-                    {isPalletPickedUp ? (
-                      <QuietButton size="small" onClick={handleCancelClick}>Cancel</QuietButton>
-                    ) : (
-                      <>
-                        <PrimaryButton onClick={handlePickUp}>Pick up</PrimaryButton>
-                        <QuietButton onClick={() => { setPalletData(null); setPalletInput(""); setIsPalletPickedUp(false); }}>Clear</QuietButton>
-                      </>
-                    )}
-                  </Flex>
-                </Card>
-              )}
-              <Divider my="x3" />
-              <Heading3 mb="x1">Pallets in-transit</Heading3>
-              {pickedUpPallets.length > 0 ? (
-                <>
-                  <Flex justifyContent="flex-end" mb="x2">
-                    <Text fontSize="small" color="midGrey">
-                      Sorted by: Recently picked up
-                    </Text>
-                  </Flex>
-                  <CardSet>
-                    {pickedUpPallets.map((pallet) => (
-                      <Card key={pallet.palletId}>
-                        <Heading3 mb="0">{pallet.palletId}</Heading3>
-                        <DescriptionList columns={1} layout="inline" density="compact">
-                          <DescriptionGroup>
-                            <DescriptionTerm>Item</DescriptionTerm>
-                            <DescriptionDetails>
-                              {pallet.itemCode} • {pallet.itemDescription}
-                            </DescriptionDetails>
-                          </DescriptionGroup>
-                          <DescriptionGroup>
-                            <DescriptionTerm>Lot</DescriptionTerm>
-                            <DescriptionDetails>{pallet.lotCode}</DescriptionDetails>
-                          </DescriptionGroup>
-                          <DescriptionGroup>
-                            <DescriptionTerm>Expiry</DescriptionTerm>
-                            <DescriptionDetails>{pallet.expiryDate}</DescriptionDetails>
-                          </DescriptionGroup>
-                          <DescriptionGroup>
-                            <DescriptionTerm>Status</DescriptionTerm>
-                            <DescriptionDetails>{pallet.status}</DescriptionDetails>
-                          </DescriptionGroup>
-                          <DescriptionGroup>
-                            <DescriptionTerm>Quantity</DescriptionTerm>
-                            <DescriptionDetails>{pallet.quantity}</DescriptionDetails>
-                          </DescriptionGroup>
-                        </DescriptionList>
-                        <Box mt="x2">
+                      {mode === "drop off" && (
+                        <Box pb="x1" mt="x1">
+                          <FieldLabel labelText="Drop-off location">
+                            <Input
+                              value={dropOffLocation}
+                              onChange={(e) => {
+                                setDropOffLocation(e.target.value);
+                                setDropOffLocationError(null);
+                              }}
+                              onKeyDown={(e) => {
+                                if (e.key === "Enter" && palletData) {
+                                  e.preventDefault();
+                                  handleDropOffLocationSubmit(e as any);
+                                }
+                              }}
+                              disabled={!palletData}
+                              errorMessage={dropOffLocationError || undefined}
+                            />
+                          </FieldLabel>
+                        </Box>
+                      )}
+                    </FormSection>
+                  </Form>
+                )}
+                {palletData && mode === "pick up" && (
+                  <Card mt="x1">
+                    <Heading3 mb="0">{palletData.palletId}</Heading3>
+                    <DescriptionList columns={1} layout="inline" density="compact">
+                      <DescriptionGroup>
+                        <DescriptionTerm>Item</DescriptionTerm>
+                        <DescriptionDetails>
+                          {palletData.itemCode} • {palletData.itemDescription}
+                        </DescriptionDetails>
+                      </DescriptionGroup>
+                      <DescriptionGroup>
+                        <DescriptionTerm>Lot</DescriptionTerm>
+                        <DescriptionDetails>{palletData.lotCode}</DescriptionDetails>
+                      </DescriptionGroup>
+                      <DescriptionGroup>
+                        <DescriptionTerm>Expiry</DescriptionTerm>
+                        <DescriptionDetails>{palletData.expiryDate}</DescriptionDetails>
+                      </DescriptionGroup>
+                      <DescriptionGroup>
+                        <DescriptionTerm>Status</DescriptionTerm>
+                        <DescriptionDetails>{palletData.status}</DescriptionDetails>
+                      </DescriptionGroup>
+                      <DescriptionGroup>
+                        <DescriptionTerm>Quantity</DescriptionTerm>
+                        <DescriptionDetails>{palletData.quantity}</DescriptionDetails>
+                      </DescriptionGroup>
+                    </DescriptionList>
+                    <Divider my="x2" />
+                    <Flex justifyContent="flex-start">
+                      {isPalletPickedUp ? (
+                        <QuietButton size="small" onClick={handleCancelClick}>
+                          Cancel
+                        </QuietButton>
+                      ) : (
+                        <>
+                          <PrimaryButton onClick={handlePickUp}>Pick up</PrimaryButton>
+                          <QuietButton
+                            onClick={() => {
+                              setPalletData(null);
+                              setPalletInput("");
+                              setIsPalletPickedUp(false);
+                            }}
+                          >
+                            Clear
+                          </QuietButton>
+                        </>
+                      )}
+                    </Flex>
+                  </Card>
+                )}
+                <Divider my="x3" />
+                <Heading3 mb="x1">Pallets in-transit</Heading3>
+                {pickedUpPallets.length > 0 ? (
+                  <>
+                    <Flex justifyContent="flex-end" mb="x2">
+                      <Text fontSize="small" color="midGrey">
+                        Sorted by: Recently picked up
+                      </Text>
+                    </Flex>
+                    <CardSet>
+                      {pickedUpPallets.map((pallet) => (
+                        <Card key={pallet.palletId}>
+                          <Heading3 mb="0">{pallet.palletId}</Heading3>
                           <DescriptionList columns={1} layout="inline" density="compact">
                             <DescriptionGroup>
-                              <DescriptionTerm>Drop-off location</DescriptionTerm>
+                              <DescriptionTerm>Item</DescriptionTerm>
                               <DescriptionDetails>
-                                <Button size="small" onClick={() => setIsLocationsSidebarOpen(true)}>
-                                  View available locations
-                                </Button>
+                                {pallet.itemCode} • {pallet.itemDescription}
                               </DescriptionDetails>
                             </DescriptionGroup>
+                            <DescriptionGroup>
+                              <DescriptionTerm>Lot</DescriptionTerm>
+                              <DescriptionDetails>{pallet.lotCode}</DescriptionDetails>
+                            </DescriptionGroup>
+                            <DescriptionGroup>
+                              <DescriptionTerm>Expiry</DescriptionTerm>
+                              <DescriptionDetails>{pallet.expiryDate}</DescriptionDetails>
+                            </DescriptionGroup>
+                            <DescriptionGroup>
+                              <DescriptionTerm>Status</DescriptionTerm>
+                              <DescriptionDetails>{pallet.status}</DescriptionDetails>
+                            </DescriptionGroup>
+                            <DescriptionGroup>
+                              <DescriptionTerm>Quantity</DescriptionTerm>
+                              <DescriptionDetails>{pallet.quantity}</DescriptionDetails>
+                            </DescriptionGroup>
                           </DescriptionList>
-                        </Box>
-                        {mode === "pick up" && (
-                          <>
-                            <Divider my="x2" />
-                            <Flex justifyContent="flex-start">
-                              <QuietButton size="small" onClick={() => handleCancelPickedUpPallet(pallet.palletId)}>Cancel</QuietButton>
-                            </Flex>
-                          </>
-                        )}
+                          <Box mt="x2">
+                            <DescriptionList columns={1} layout="inline" density="compact">
+                              <DescriptionGroup>
+                                <DescriptionTerm>Drop-off location</DescriptionTerm>
+                                <DescriptionDetails>
+                                  <Button size="small" onClick={() => setIsLocationsSidebarOpen(true)}>
+                                    View available locations
+                                  </Button>
+                                </DescriptionDetails>
+                              </DescriptionGroup>
+                            </DescriptionList>
+                          </Box>
+                          {mode === "pick up" && (
+                            <>
+                              <Divider my="x2" />
+                              <Flex justifyContent="flex-start">
+                                <QuietButton size="small" onClick={() => handleCancelPickedUpPallet(pallet.palletId)}>
+                                  Cancel
+                                </QuietButton>
+                              </Flex>
+                            </>
+                          )}
+                        </Card>
+                      ))}
+                    </CardSet>
+                  </>
+                ) : (
+                  <Flex flexDirection="column" alignItems="center" justifyContent="center" minHeight="400px" gap="x3">
+                    <Text color="midGrey" textAlign="center">
+                      There are no pallets in-transit yet. Scan a pallet to begin.
+                    </Text>
+                    <Text color="midGrey">or</Text>
+                    <QuietButton size="small" onClick={() => setSelectedMove(null)}>
+                      Close move
+                    </QuietButton>
+                  </Flex>
+                )}
+                <DeleteModal
+                  isOpen={isCancelModalOpen}
+                  onClose={handleCancelModalClose}
+                  onConfirm={handleCancelConfirm}
+                  title="Cancel pallet"
+                  itemName={palletToCancel?.palletId}
+                  itemType="pallet"
+                />
+                <Sidebar
+                  isOpen={isLocationsSidebarOpen}
+                  onClose={() => {
+                    setIsLocationsSidebarOpen(false);
+                    setLocationNavPath([]);
+                  }}
+                  title="Available locations"
+                >
+                  {locationNavPath.length > 0 && (
+                    <Box mb="x2">
+                      <QuietButton onClick={handleLocationBackClick}>
+                        <Icon icon="arrowBack" size="x2" mr="x1" />
+                        Back
+                      </QuietButton>
+                    </Box>
+                  )}
+                  {renderLocationCards()}
+                </Sidebar>
+              </Box>
+            </>
+          ) : (
+            <>
+              <Flex gap="x2" px="x1" pb="x2" justifyContent="space-between" alignItems="center">
+                <IconicButton icon="add" tooltip="Create move" onClick={handleCreateMoveClick}>
+                  Create move
+                </IconicButton>
+                <IconicButton icon="search" tooltip="Search moves" onClick={handleSearchMovesClick}>
+                  Search moves
+                </IconicButton>
+              </Flex>
+              <Box px="x1" pb="x1">
+                {searchResults.length === 0 ? (
+                  <Flex flexDirection="column" alignItems="center" justifyContent="center" minHeight="400px" gap="x3">
+                    <Text color="midGrey" textAlign="center">
+                      Create a move.
+                    </Text>
+                    <Text color="midGrey">or</Text>
+                    <Text color="midGrey">Search for moves by specifying at least one search option.</Text>
+                  </Flex>
+                ) : (
+                  <CardSet>
+                    {searchResults.map((move) => (
+                      <Card key={move.id} style={{ cursor: "pointer" }} onClick={() => handleMoveClick(move)}>
+                        <Heading3>Move {move.moveId}</Heading3>
                       </Card>
                     ))}
                   </CardSet>
-                </>
-              ) : (
-                <Flex 
-                  flexDirection="column" 
-                  alignItems="center" 
-                  justifyContent="center" 
-                  minHeight="400px"
-                  gap="x3"
-                >
-                  <Text color="midGrey" textAlign="center">
-                    There are no pallets in-transit yet. Scan a pallet to begin.
-                  </Text>
-                  <Text color="midGrey">or</Text>
-                  <QuietButton size="small" onClick={() => setSelectedMove(null)}>
-                    Close move
-                  </QuietButton>
-                </Flex>
-              )}
-              <DeleteModal
-                isOpen={isCancelModalOpen}
-                onClose={handleCancelModalClose}
-                onConfirm={handleCancelConfirm}
-                title="Cancel pallet"
-                itemName={palletToCancel?.palletId}
-                itemType="pallet"
-              />
-              <Sidebar
-                isOpen={isLocationsSidebarOpen}
-                onClose={() => {
-                  setIsLocationsSidebarOpen(false);
-                  setLocationNavPath([]);
-                }}
-                title="Available locations"
-              >
-                {locationNavPath.length > 0 && (
-                  <Box mb="x2">
-                    <QuietButton onClick={handleLocationBackClick}>
-                      <Icon icon="arrowBack" size="x2" mr="x1" />
-                      Back
-                    </QuietButton>
-                  </Box>
                 )}
-                {renderLocationCards()}
-              </Sidebar>
-            </Box>
-          </>
-        ) : (
-          <>
-            <Flex gap="x2" px="x1" pb="x2" justifyContent="space-between" alignItems="center">
-              <IconicButton icon="add" tooltip="Create move" onClick={handleCreateMoveClick}>
-                Create move
-              </IconicButton>
-              <IconicButton icon="search" tooltip="Search moves" onClick={handleSearchMovesClick}>
-                Search moves
-              </IconicButton>
-            </Flex>
-            <Box px="x1" pb="x1">
-              {searchResults.length === 0 ? (
-                <Flex 
-                flexDirection="column" 
-                alignItems="center" 
-                justifyContent="center" 
-                minHeight="400px"
-                gap="x3"
-              >
-                <Text color="midGrey" textAlign="center">
-                Create a move. 
-                </Text>
-                <Text color="midGrey">or</Text>
-                <Text color="midGrey">Search for moves by specifying at least one search option.</Text>
-              </Flex>
-                
-              ) : (
-                <CardSet>
-                  {searchResults.map((move) => (
-                    <Card key={move.id} style={{ cursor: "pointer" }} onClick={() => handleMoveClick(move)}>
-                      <Heading3>Move {move.moveId}</Heading3>
-                    </Card>
-                  ))}
-                </CardSet>
-              )}
-            </Box>
-          </>
-        )}
+              </Box>
+            </>
+          )}
         </Page>
-      <Sidebar
-        isOpen={isSearchSidebarOpen}
-        onClose={() => setIsSearchSidebarOpen(false)}
-        title="Search moves"
-        footer={
-          <Flex justifyContent="flex-start">
-            <PrimaryButton onClick={handleSearch} mr="x2">
-              Search
-            </PrimaryButton>
-            <QuietButton onClick={handleClear}>Clear</QuietButton>
-          </Flex>
-        }
-      >
-        <Form>
-          <FormSection>
-            <Box pb="x3">
-              <FieldLabel labelText="Move ID">
-                <Input value={moveId} onChange={(e) => setMoveId(e.target.value)} />
-              </FieldLabel>
-            </Box>
-            <Box pb="x3">
-              <FieldLabel labelText="Job ID">
-                <Input value={jobId} onChange={(e) => setJobId(e.target.value)} />
-              </FieldLabel>
-            </Box>
-            <Box pb="x3">
-              <FieldLabel labelText="Shipment ID">
-                <Input value={shipmentId} onChange={(e) => setShipmentId(e.target.value)} />
-              </FieldLabel>
-            </Box>
-            <Box pb="x3">
-              <Checkbox
-                labelText="Assigned to me"
-                checked={assignedToMe}
-                onChange={(e) => setAssignedToMe(e.target.checked)}
-              />
-            </Box>
-          </FormSection>
-        </Form>
-      </Sidebar>
-      <Modal
-        isOpen={isReportProblemModalOpen}
-        onRequestClose={() => {
-          setIsReportProblemModalOpen(false);
-          setSelectedProblem(null);
-          setCurrentLocationForProblem(null);
-        }}
-        title={reportedProblems[currentLocationForProblem || ""] ? "Edit problem" : "Report a problem"}
-        footerContent={
-          <Flex justifyContent="flex-start">
-            <PrimaryButton
-              onClick={() => {
-                if (selectedProblem && currentLocationForProblem) {
-                  // Save the reported problem for this location
-                  setReportedProblems({
-                    ...reportedProblems,
-                    [currentLocationForProblem]: selectedProblem,
-                  });
-                  toast.success("Problem reported successfully");
+        <Sidebar
+          isOpen={isSearchSidebarOpen}
+          onClose={() => setIsSearchSidebarOpen(false)}
+          title="Search moves"
+          footer={
+            <Flex justifyContent="flex-start">
+              <PrimaryButton onClick={handleSearch} mr="x2">
+                Search
+              </PrimaryButton>
+              <QuietButton onClick={handleClear}>Clear</QuietButton>
+            </Flex>
+          }
+        >
+          <Form>
+            <FormSection>
+              <Box pb="x3">
+                <FieldLabel labelText="Move ID">
+                  <Input value={moveId} onChange={(e) => setMoveId(e.target.value)} />
+                </FieldLabel>
+              </Box>
+              <Box pb="x3">
+                <FieldLabel labelText="Job ID">
+                  <Input value={jobId} onChange={(e) => setJobId(e.target.value)} />
+                </FieldLabel>
+              </Box>
+              <Box pb="x3">
+                <FieldLabel labelText="Shipment ID">
+                  <Input value={shipmentId} onChange={(e) => setShipmentId(e.target.value)} />
+                </FieldLabel>
+              </Box>
+              <Box pb="x3">
+                <Checkbox
+                  labelText="Assigned to me"
+                  checked={assignedToMe}
+                  onChange={(e) => setAssignedToMe(e.target.checked)}
+                />
+              </Box>
+            </FormSection>
+          </Form>
+        </Sidebar>
+        <Modal
+          isOpen={isReportProblemModalOpen}
+          onRequestClose={() => {
+            setIsReportProblemModalOpen(false);
+            setSelectedProblem(null);
+            setCurrentLocationForProblem(null);
+          }}
+          title={reportedProblems[currentLocationForProblem || ""] ? "Edit problem" : "Report a problem"}
+          footerContent={
+            <Flex justifyContent="flex-start">
+              <PrimaryButton
+                onClick={() => {
+                  if (selectedProblem && currentLocationForProblem) {
+                    // Save the reported problem for this location
+                    setReportedProblems({
+                      ...reportedProblems,
+                      [currentLocationForProblem]: selectedProblem,
+                    });
+                    toast.success("Problem reported successfully");
+                    setIsReportProblemModalOpen(false);
+                    setSelectedProblem(null);
+                    setCurrentLocationForProblem(null);
+                  }
+                }}
+                mr="x2"
+                disabled={!selectedProblem}
+              >
+                Submit
+              </PrimaryButton>
+              <QuietButton
+                onClick={() => {
                   setIsReportProblemModalOpen(false);
                   setSelectedProblem(null);
                   setCurrentLocationForProblem(null);
-                }
-              }}
-              mr="x2"
-              disabled={!selectedProblem}
-            >
-              Submit
-            </PrimaryButton>
-            <QuietButton
-              onClick={() => {
-                setIsReportProblemModalOpen(false);
-                setSelectedProblem(null);
-                setCurrentLocationForProblem(null);
-              }}
-            >
-              Cancel
-            </QuietButton>
-          </Flex>
-        }
-      >
-        <Form>
-          <FormSection>
-            <Box pb="x3">
-              <FieldLabel labelText="Problem">
-                <Select
-                  options={[
-                    { value: "location-full", label: "Location is full" },
-                    { value: "location-damaged", label: "Location is damaged" },
-                  ]}
-                  value={selectedProblem}
-                  onChange={(value) => setSelectedProblem(value as string)}
-                  placeholder="Select a problem"
-                />
-              </FieldLabel>
-            </Box>
-          </FormSection>
-        </Form>
-      </Modal>
-      <Modal
-        isOpen={isControllerModalOpen}
-        onRequestClose={() => setIsControllerModalOpen(false)}
-        title="Controller"
-        maxWidth="400px"
-      >
-        <Box pb="x3">
-          <Flex flexDirection="column" gap="x3">
-            <Flex alignItems="center" gap="x2">
-              <Text fontSize="small">Available locations sidebar:</Text>
-              <Switcher
-                selected={locationScenario}
-                onChange={(value) => setLocationScenario(value as "preferred" | "overflow" | "empty")}
+                }}
               >
-                <Switch value="preferred">Preferred</Switch>
-                <Switch value="overflow">Overflow</Switch>
-                <Switch value="empty">Empty</Switch>
-              </Switcher>
+                Cancel
+              </QuietButton>
             </Flex>
-          </Flex>
-        </Box>
-      </Modal>
-        </ApplicationFrame>
+          }
+        >
+          <Form>
+            <FormSection>
+              <Box pb="x3">
+                <FieldLabel labelText="Problem">
+                  <Select
+                    options={[
+                      { value: "location-full", label: "Location is full" },
+                      { value: "location-damaged", label: "Location is damaged" },
+                    ]}
+                    value={selectedProblem}
+                    onChange={(value) => setSelectedProblem(value as string)}
+                    placeholder="Select a problem"
+                  />
+                </FieldLabel>
+              </Box>
+            </FormSection>
+          </Form>
+        </Modal>
+        <Modal
+          isOpen={isControllerModalOpen}
+          onRequestClose={() => setIsControllerModalOpen(false)}
+          title="Controller"
+          maxWidth="400px"
+        >
+          <Box pb="x3">
+            <Flex flexDirection="column" gap="x3">
+              <Flex alignItems="center" gap="x2">
+                <Text fontSize="small">Available locations sidebar:</Text>
+                <Switcher
+                  selected={locationScenario}
+                  onChange={(value) => setLocationScenario(value as "preferred" | "overflow" | "empty")}
+                >
+                  <Switch value="preferred">Preferred</Switch>
+                  <Switch value="overflow">Overflow</Switch>
+                  <Switch value="empty">Empty</Switch>
+                </Switcher>
+              </Flex>
+            </Flex>
+          </Box>
+        </Modal>
+      </ApplicationFrame>
     </>
   );
 };
-
