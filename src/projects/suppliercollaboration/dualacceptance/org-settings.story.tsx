@@ -248,13 +248,14 @@ const DefaultComponent = () => {
                   labelText="Dual acceptance"
                 />
                 <Text ml="x3" mt="quarter" color="midGrey" fontSize="small">
-                  With this method, the user can choose whether accepting a proposal updates or retains the requested values.
+                  With this method, the user can choose whether accepting a proposal updates or retains the requested
+                  values.
                 </Text>
               </Box>
 
               <Text mb="x3" color="midGrey" fontSize="small">
-                This configuration setting is only available
-                to customer organizations. Supplier organizations are automatically assigned the acceptance model based on their customer's selection.
+                This configuration setting is only available to customer organizations. Supplier organizations are
+                automatically assigned the acceptance model based on their customer's selection.
               </Text>
             </FormSection>
 

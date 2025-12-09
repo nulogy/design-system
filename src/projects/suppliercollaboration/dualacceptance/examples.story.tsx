@@ -146,13 +146,21 @@ const HeaderVariation = ({
                       <Box
                         height="x1"
                         width="100%"
-                        backgroundColor={productionStatus === "Not started" ? "lightGrey" : productionStatus === "Completed" || productionStatus === "Carry over" ? "darkGrey" : "grey"}
+                        backgroundColor={
+                          productionStatus === "Not started"
+                            ? "lightGrey"
+                            : productionStatus === "Completed" || productionStatus === "Carry over"
+                              ? "darkGrey"
+                              : "grey"
+                        }
                         borderRadius="medium"
                       />
                     </Flex>
                   </Tooltip>
                   <Flex
-                    justifyContent={productionStatus === "Completed" || productionStatus === "Carry over" ? "space-between" : "center"}
+                    justifyContent={
+                      productionStatus === "Completed" || productionStatus === "Carry over" ? "space-between" : "center"
+                    }
                     alignItems="center"
                     gap={productionStatus === "Completed" || productionStatus === "Carry over" ? "x2" : "x0_5"}
                   >
@@ -163,7 +171,11 @@ const HeaderVariation = ({
                       style={{ whiteSpace: "nowrap" }}
                     >
                       <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
-                        {productionStatus === "Not started" ? "0%" : productionStatus === "Completed" || productionStatus === "Carry over" ? "98%" : "50%"}
+                        {productionStatus === "Not started"
+                          ? "0%"
+                          : productionStatus === "Completed" || productionStatus === "Carry over"
+                            ? "98%"
+                            : "50%"}
                       </Text>{" "}
                       produced
                     </Text>
@@ -207,7 +219,9 @@ const HeaderVariation = ({
                     </Flex>
                   </Tooltip>
                   <Flex
-                    justifyContent={productionStatus === "Completed" || productionStatus === "Carry over" ? "space-between" : "center"}
+                    justifyContent={
+                      productionStatus === "Completed" || productionStatus === "Carry over" ? "space-between" : "center"
+                    }
                     alignItems="center"
                     gap={productionStatus === "Completed" || productionStatus === "Carry over" ? "x2" : "x0_5"}
                   >
@@ -218,7 +232,11 @@ const HeaderVariation = ({
                       style={{ whiteSpace: "nowrap" }}
                     >
                       <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
-                        {productionStatus === "Not started" ? "0%" : productionStatus === "Completed" || productionStatus === "Carry over" ? "98%" : "50%"}
+                        {productionStatus === "Not started"
+                          ? "0%"
+                          : productionStatus === "Completed" || productionStatus === "Carry over"
+                            ? "98%"
+                            : "50%"}
                       </Text>{" "}
                       produced
                     </Text>
@@ -287,9 +305,7 @@ const HeaderVariation = ({
               <Flex flexDirection="column" alignItems="center" width="200px" justifyContent="center" gap="x0_5">
                 <Flex height="x2_5" alignItems="center" justifyContent="center" gap="x0_5">
                   {acceptedProposal && isReconciled !== null ? (
-                    <Tooltip
-                      tooltip={isReconciled ? "Accepted – Request updated" : "Accepted – Request retained"}
-                    >
+                    <Tooltip tooltip={isReconciled ? "Accepted – Request updated" : "Accepted – Request retained"}>
                       <Flex alignItems="center" gap="x0_5">
                         {(collaborationStatus === "accepted" || acceptedRequest || acceptedProposal) &&
                         acceptedProposal &&
@@ -321,20 +337,24 @@ const HeaderVariation = ({
                               }
                               style={
                                 acceptedProposal && isReconciled === false
-                                  ? { backgroundColor: "transparent", borderColor: "transparent", color: theme.colors.green }
+                                  ? {
+                                      backgroundColor: "transparent",
+                                      borderColor: "transparent",
+                                      color: theme.colors.green,
+                                    }
                                   : undefined
                               }
                             >
-                            {collaborationStatus === "accepted" || acceptedRequest || acceptedProposal ? (
-                              "Accepted"
-                            ) : activeCardAuthorRole === userRole ? (
-                              "Requires your response"
-                            ) : (
-                              <TruncatedText fontSize="smaller" lineHeight="smallerText" fullWidth maxWidth="184px">
-                                {`Awaiting ${userRole === "supplier" ? "customer" : "supplier"} response`}
-                              </TruncatedText>
-                            )}
-                          </StatusIndicator>
+                              {collaborationStatus === "accepted" || acceptedRequest || acceptedProposal ? (
+                                "Accepted"
+                              ) : activeCardAuthorRole === userRole ? (
+                                "Requires your response"
+                              ) : (
+                                <TruncatedText fontSize="smaller" lineHeight="smallerText" fullWidth maxWidth="184px">
+                                  {`Awaiting ${userRole === "supplier" ? "customer" : "supplier"} response`}
+                                </TruncatedText>
+                              )}
+                            </StatusIndicator>
                           </Box>
                         )}
                         <Box display="flex" alignItems="center" justifyContent="center">
@@ -2337,7 +2357,16 @@ const DetailsSectionVariation = ({
       expressShipment: expressShipment,
       customTag: customTag,
     });
-  }, [supplierPOLineItemNumber, bomRevision, needByDate, closeProductionNote, carryOverSentTo, validatedForAssembly, expressShipment, customTag]);
+  }, [
+    supplierPOLineItemNumber,
+    bomRevision,
+    needByDate,
+    closeProductionNote,
+    carryOverSentTo,
+    validatedForAssembly,
+    expressShipment,
+    customTag,
+  ]);
 
   // Load options for BOM revision
   const loadOptions = async (inputValue: string) => {
@@ -2360,163 +2389,159 @@ const DetailsSectionVariation = ({
         </IconicButton>
       </Flex>
       <Box mb="x3" pl="x3">
-          <DescriptionList layout="stacked" columns={{ extraSmall: 1, small: 2, medium: 3, large: 5 }}>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">PO number</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Link underline={false}>PO-00000004</Link>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Customer's PO line item number</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Text>{customerPOLineItemNumber}</Text>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Supplier's PO line item number</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Text>{supplierPOLineItemNumber || "-"}</Text>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Created on</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Text>February 1, 2025</Text>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">{userRole === "customer" ? "Supplier" : "Customer"}</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Text>Claudia Supplier</Text>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Customer's item code and description</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Link underline={false}>{customerItemCodeAndDescription}</Link>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Supplier's item code</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Text>SUP-ITEM-001</Text>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Tags</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                {customTag ? <StatusIndicator type="warning">Custom tag</StatusIndicator> : <Text>-</Text>}
-              </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Priority</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Text>High</Text>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Customer's lot code</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Text>LOT-2024-001</Text>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Supplier's lot code</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Text>SUP-LOT-001</Text>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Item order type</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Text>Standard</Text>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">BOM revision and release date</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Text>{bomRevision || "-"}</Text>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Ship to</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <Text>Warehouse A - 123 Main St, City, State 12345</Text>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            {(productionStatus === "Completed" || productionStatus === "Carry over") && (
-              <>
+        <DescriptionList layout="stacked" columns={{ extraSmall: 1, small: 2, medium: 3, large: 5 }}>
+          <DescriptionGroup>
+            <DescriptionTerm>
+              <Text color="darkGrey">PO number</Text>
+            </DescriptionTerm>
+            <DescriptionDetails>
+              <Link underline={false}>PO-00000004</Link>
+            </DescriptionDetails>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <DescriptionTerm>
+              <Text color="darkGrey">Customer's PO line item number</Text>
+            </DescriptionTerm>
+            <DescriptionDetails>
+              <Text>{customerPOLineItemNumber}</Text>
+            </DescriptionDetails>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <DescriptionTerm>
+              <Text color="darkGrey">Supplier's PO line item number</Text>
+            </DescriptionTerm>
+            <DescriptionDetails>
+              <Text>{supplierPOLineItemNumber || "-"}</Text>
+            </DescriptionDetails>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <DescriptionTerm>
+              <Text color="darkGrey">Created on</Text>
+            </DescriptionTerm>
+            <DescriptionDetails>
+              <Text>February 1, 2025</Text>
+            </DescriptionDetails>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <DescriptionTerm>
+              <Text color="darkGrey">{userRole === "customer" ? "Supplier" : "Customer"}</Text>
+            </DescriptionTerm>
+            <DescriptionDetails>
+              <Text>Claudia Supplier</Text>
+            </DescriptionDetails>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <DescriptionTerm>
+              <Text color="darkGrey">Customer's item code and description</Text>
+            </DescriptionTerm>
+            <DescriptionDetails>
+              <Link underline={false}>{customerItemCodeAndDescription}</Link>
+            </DescriptionDetails>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <DescriptionTerm>
+              <Text color="darkGrey">Supplier's item code</Text>
+            </DescriptionTerm>
+            <DescriptionDetails>
+              <Text>SUP-ITEM-001</Text>
+            </DescriptionDetails>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <DescriptionTerm>
+              <Text color="darkGrey">Tags</Text>
+            </DescriptionTerm>
+            <DescriptionDetails>
+              {customTag ? <StatusIndicator type="warning">Custom tag</StatusIndicator> : <Text>-</Text>}
+            </DescriptionDetails>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <DescriptionTerm>
+              <Text color="darkGrey">Priority</Text>
+            </DescriptionTerm>
+            <DescriptionDetails>
+              <Text>High</Text>
+            </DescriptionDetails>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <DescriptionTerm>
+              <Text color="darkGrey">Customer's lot code</Text>
+            </DescriptionTerm>
+            <DescriptionDetails>
+              <Text>LOT-2024-001</Text>
+            </DescriptionDetails>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <DescriptionTerm>
+              <Text color="darkGrey">Supplier's lot code</Text>
+            </DescriptionTerm>
+            <DescriptionDetails>
+              <Text>SUP-LOT-001</Text>
+            </DescriptionDetails>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <DescriptionTerm>
+              <Text color="darkGrey">Item order type</Text>
+            </DescriptionTerm>
+            <DescriptionDetails>
+              <Text>Standard</Text>
+            </DescriptionDetails>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <DescriptionTerm>
+              <Text color="darkGrey">BOM revision and release date</Text>
+            </DescriptionTerm>
+            <DescriptionDetails>
+              <Text>{bomRevision || "-"}</Text>
+            </DescriptionDetails>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <DescriptionTerm>
+              <Text color="darkGrey">Ship to</Text>
+            </DescriptionTerm>
+            <DescriptionDetails>
+              <Text>Warehouse A - 123 Main St, City, State 12345</Text>
+            </DescriptionDetails>
+          </DescriptionGroup>
+          {(productionStatus === "Completed" || productionStatus === "Carry over") && (
+            <>
+              <DescriptionGroup>
+                <DescriptionTerm>
+                  <Text color="darkGrey">Need by date</Text>
+                </DescriptionTerm>
+                <DescriptionDetails>
+                  <Text>
+                    {needByDate
+                      ? new Date(needByDate).toLocaleDateString("en-US", {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        })
+                      : "-"}
+                  </Text>
+                </DescriptionDetails>
+              </DescriptionGroup>
+              <DescriptionGroup>
+                <DescriptionTerm>
+                  <Text color="darkGrey">Close production note</Text>
+                </DescriptionTerm>
+                <DescriptionDetails>
+                  <Text>{closeProductionNote || "-"}</Text>
+                </DescriptionDetails>
+              </DescriptionGroup>
+              {productionStatus === "Carry over" && (
                 <DescriptionGroup>
                   <DescriptionTerm>
-                    <Text color="darkGrey">Need by date</Text>
+                    <Text color="darkGrey">Carry over sent to</Text>
                   </DescriptionTerm>
                   <DescriptionDetails>
-                    <Text>
-                      {needByDate
-                        ? new Date(needByDate).toLocaleDateString("en-US", {
-                            year: "numeric",
-                            month: "long",
-                            day: "numeric",
-                          })
-                        : "-"}
-                    </Text>
+                    {carryOverSentTo ? <Link underline={false}>{carryOverSentTo}</Link> : <Text>-</Text>}
                   </DescriptionDetails>
                 </DescriptionGroup>
-                <DescriptionGroup>
-                  <DescriptionTerm>
-                    <Text color="darkGrey">Close production note</Text>
-                  </DescriptionTerm>
-                  <DescriptionDetails>
-                    <Text>{closeProductionNote || "-"}</Text>
-                  </DescriptionDetails>
-                </DescriptionGroup>
-                {productionStatus === "Carry over" && (
-                  <DescriptionGroup>
-                    <DescriptionTerm>
-                      <Text color="darkGrey">Carry over sent to</Text>
-                    </DescriptionTerm>
-                    <DescriptionDetails>
-                      {carryOverSentTo ? (
-                        <Link underline={false}>{carryOverSentTo}</Link>
-                      ) : (
-                        <Text>-</Text>
-                      )}
-                    </DescriptionDetails>
-                  </DescriptionGroup>
-                )}
-              </>
-            )}
-          </DescriptionList>
-        </Box>
+              )}
+            </>
+          )}
+        </DescriptionList>
+      </Box>
 
       {/* Edit Sidebar */}
       <Sidebar

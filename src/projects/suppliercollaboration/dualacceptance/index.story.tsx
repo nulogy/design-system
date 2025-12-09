@@ -879,7 +879,11 @@ export const Default = () => {
                           style={
                             isReconciled
                               ? undefined
-                              : { backgroundColor: "transparent", borderColor: "transparent", color: theme.colors.green }
+                              : {
+                                  backgroundColor: "transparent",
+                                  borderColor: "transparent",
+                                  color: theme.colors.green,
+                                }
                           }
                         >
                           Accepted

@@ -112,7 +112,9 @@ export const Default = () => {
   const [acceptanceType, setAcceptanceType] = useState<"dual" | "standard">("dual");
 
   // Production status state
-  const [productionStatus, setProductionStatus] = useState<"Not started" | "In progress" | "Completed" | "Carry over">("Not started");
+  const [productionStatus, setProductionStatus] = useState<"Not started" | "In progress" | "Completed" | "Carry over">(
+    "Not started"
+  );
 
   // Production complete state
   const [productionComplete, setProductionComplete] = useState(false);
@@ -155,7 +157,6 @@ export const Default = () => {
   const [uomView, setUomView] = useState<"customer" | "supplier">(
     userState.role === "supplier" ? "supplier" : "customer"
   );
-
 
   // Update UOM view when user role changes
   useEffect(() => {
@@ -491,13 +492,21 @@ export const Default = () => {
                       <Box
                         height="x1"
                         width="100%"
-                        backgroundColor={productionStatus === "Not started" ? "lightGrey" : productionStatus === "Completed" || productionStatus === "Carry over" ? "darkGrey" : "grey"}
+                        backgroundColor={
+                          productionStatus === "Not started"
+                            ? "lightGrey"
+                            : productionStatus === "Completed" || productionStatus === "Carry over"
+                              ? "darkGrey"
+                              : "grey"
+                        }
                         borderRadius="medium"
                       />
                     </Flex>
                   </Tooltip>
                   <Flex
-                    justifyContent={productionStatus === "Completed" || productionStatus === "Carry over" ? "space-between" : "center"}
+                    justifyContent={
+                      productionStatus === "Completed" || productionStatus === "Carry over" ? "space-between" : "center"
+                    }
                     alignItems="center"
                     gap={productionStatus === "Completed" || productionStatus === "Carry over" ? "x2" : "x0_5"}
                   >
@@ -508,7 +517,11 @@ export const Default = () => {
                       style={{ whiteSpace: "nowrap" }}
                     >
                       <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
-                        {productionStatus === "Not started" ? "0%" : productionStatus === "Completed" || productionStatus === "Carry over" ? "98%" : "50%"}
+                        {productionStatus === "Not started"
+                          ? "0%"
+                          : productionStatus === "Completed" || productionStatus === "Carry over"
+                            ? "98%"
+                            : "50%"}
                       </Text>{" "}
                       produced
                     </Text>
@@ -552,7 +565,9 @@ export const Default = () => {
                     </Flex>
                   </Tooltip>
                   <Flex
-                    justifyContent={productionStatus === "Completed" || productionStatus === "Carry over" ? "space-between" : "center"}
+                    justifyContent={
+                      productionStatus === "Completed" || productionStatus === "Carry over" ? "space-between" : "center"
+                    }
                     alignItems="center"
                     gap={productionStatus === "Completed" || productionStatus === "Carry over" ? "x2" : "x0_5"}
                   >
@@ -563,7 +578,11 @@ export const Default = () => {
                       style={{ whiteSpace: "nowrap" }}
                     >
                       <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
-                        {productionStatus === "Not started" ? "0%" : productionStatus === "Completed" || productionStatus === "Carry over" ? "98%" : "50%"}
+                        {productionStatus === "Not started"
+                          ? "0%"
+                          : productionStatus === "Completed" || productionStatus === "Carry over"
+                            ? "98%"
+                            : "50%"}
                       </Text>{" "}
                       produced
                     </Text>
@@ -716,23 +735,32 @@ export const Default = () => {
                                   }
                                   style={
                                     acceptedItems.proposal && isReconciled === false && userState.role !== "supplier"
-                                      ? { backgroundColor: "transparent", borderColor: "transparent", color: theme.colors.green }
+                                      ? {
+                                          backgroundColor: "transparent",
+                                          borderColor: "transparent",
+                                          color: theme.colors.green,
+                                        }
                                       : undefined
                                   }
                                 >
-                                {productionStatus === "Completed" ||
-                                collaborationState.status === "accepted" ||
-                                acceptedItems.request ||
-                                acceptedItems.proposal ? (
-                                  "Accepted"
-                                ) : collaborationState.activeCardAuthorRole === userState.role ? (
-                                  <TruncatedText fontSize="smaller" lineHeight="smallerText" fullWidth maxWidth="184px">
-                                    {`Awaiting ${userState.role === "supplier" ? "customer" : "supplier"} response`}
-                                  </TruncatedText>
-                                ) : (
-                                  "Requires your response"
-                                )}
-                              </StatusIndicator>
+                                  {productionStatus === "Completed" ||
+                                  collaborationState.status === "accepted" ||
+                                  acceptedItems.request ||
+                                  acceptedItems.proposal ? (
+                                    "Accepted"
+                                  ) : collaborationState.activeCardAuthorRole === userState.role ? (
+                                    <TruncatedText
+                                      fontSize="smaller"
+                                      lineHeight="smallerText"
+                                      fullWidth
+                                      maxWidth="184px"
+                                    >
+                                      {`Awaiting ${userState.role === "supplier" ? "customer" : "supplier"} response`}
+                                    </TruncatedText>
+                                  ) : (
+                                    "Requires your response"
+                                  )}
+                                </StatusIndicator>
                               </Box>
                             )}
                             <Box display="flex" alignItems="center" justifyContent="center">
@@ -855,7 +883,9 @@ export const Default = () => {
                 </Tooltip>
 
                 <Flex
-                  justifyContent={productionStatus === "Completed" || productionStatus === "Carry over" ? "space-between" : "center"}
+                  justifyContent={
+                    productionStatus === "Completed" || productionStatus === "Carry over" ? "space-between" : "center"
+                  }
                   alignItems="center"
                   gap={productionStatus === "Completed" || productionStatus === "Carry over" ? "x2" : "x0_5"}
                 >
@@ -866,7 +896,11 @@ export const Default = () => {
                     style={{ whiteSpace: "nowrap" }}
                   >
                     <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
-                      {productionStatus === "Not started" ? "0%" : productionStatus === "Completed" || productionStatus === "Carry over" ? "99%" : "50%"}
+                      {productionStatus === "Not started"
+                        ? "0%"
+                        : productionStatus === "Completed" || productionStatus === "Carry over"
+                          ? "99%"
+                          : "50%"}
                     </Text>{" "}
                     produced
                   </Text>
@@ -947,163 +981,159 @@ export const Default = () => {
           </IconicButton>
         </Flex>
         <Box mb="x3" pl="x3">
-            <DescriptionList layout="stacked" columns={{ extraSmall: 1, small: 2, medium: 3, large: 5 }}>
-              <DescriptionGroup>
-                <DescriptionTerm>
-                  <Text color="darkGrey">PO number</Text>
-                </DescriptionTerm>
-                <DescriptionDetails>
-                  <Link underline={false}>PO-00000004</Link>
-                </DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>
-                  <Text color="darkGrey">Customer's PO line item number</Text>
-                </DescriptionTerm>
-                <DescriptionDetails>
-                  <Text>{customerPOLineItemNumber}</Text>
-                </DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>
-                  <Text color="darkGrey">Supplier's PO line item number</Text>
-                </DescriptionTerm>
-                <DescriptionDetails>
-                  <Text>{formData.edit.supplierPOLineItemNumber || "-"}</Text>
-                </DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>
-                  <Text color="darkGrey">Created on</Text>
-                </DescriptionTerm>
-                <DescriptionDetails>
-                  <Text>February 1, 2025</Text>
-                </DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>
-                  <Text color="darkGrey">{userState.role === "customer" ? "Supplier" : "Customer"}</Text>
-                </DescriptionTerm>
-                <DescriptionDetails>
-                  <Text>Claudia Supplier</Text>
-                </DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>
-                  <Text color="darkGrey">Customer's item code and description</Text>
-                </DescriptionTerm>
-                <DescriptionDetails>
-                  <Link underline={false}>{customerItemCodeAndDescription}</Link>
-                </DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>
-                  <Text color="darkGrey">Supplier's item code</Text>
-                </DescriptionTerm>
-                <DescriptionDetails>
-                  <Text>SUP-ITEM-001</Text>
-                </DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>
-                  <Text color="darkGrey">Tags</Text>
-                </DescriptionTerm>
-                <DescriptionDetails>
-                  {assignedTags.customTag ? (
-                    <StatusIndicator type="warning">Custom tag</StatusIndicator>
-                  ) : (
-                    <Text>-</Text>
-                  )}
-                </DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>
-                  <Text color="darkGrey">Priority</Text>
-                </DescriptionTerm>
-                <DescriptionDetails>
-                  <Text>High</Text>
-                </DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>
-                  <Text color="darkGrey">Customer's lot code</Text>
-                </DescriptionTerm>
-                <DescriptionDetails>
-                  <Text>LOT-2024-001</Text>
-                </DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>
-                  <Text color="darkGrey">Supplier's lot code</Text>
-                </DescriptionTerm>
-                <DescriptionDetails>
-                  <Text>SUP-LOT-001</Text>
-                </DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>
-                  <Text color="darkGrey">Item order type</Text>
-                </DescriptionTerm>
-                <DescriptionDetails>
-                  <Text>Standard</Text>
-                </DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>
-                  <Text color="darkGrey">BOM revision and release date</Text>
-                </DescriptionTerm>
-                <DescriptionDetails>
-                  <Text>{formData.edit.bomRevision || "-"}</Text>
-                </DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>
-                  <Text color="darkGrey">Ship to</Text>
-                </DescriptionTerm>
-                <DescriptionDetails>
-                  <Text>Warehouse A - 123 Main St, City, State 12345</Text>
-                </DescriptionDetails>
-              </DescriptionGroup>
-              {(productionStatus === "Completed" || productionStatus === "Carry over") && (
-                <>
+          <DescriptionList layout="stacked" columns={{ extraSmall: 1, small: 2, medium: 3, large: 5 }}>
+            <DescriptionGroup>
+              <DescriptionTerm>
+                <Text color="darkGrey">PO number</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>
+                <Link underline={false}>PO-00000004</Link>
+              </DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
+                <Text color="darkGrey">Customer's PO line item number</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>
+                <Text>{customerPOLineItemNumber}</Text>
+              </DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
+                <Text color="darkGrey">Supplier's PO line item number</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>
+                <Text>{formData.edit.supplierPOLineItemNumber || "-"}</Text>
+              </DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
+                <Text color="darkGrey">Created on</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>
+                <Text>February 1, 2025</Text>
+              </DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
+                <Text color="darkGrey">{userState.role === "customer" ? "Supplier" : "Customer"}</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>
+                <Text>Claudia Supplier</Text>
+              </DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
+                <Text color="darkGrey">Customer's item code and description</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>
+                <Link underline={false}>{customerItemCodeAndDescription}</Link>
+              </DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
+                <Text color="darkGrey">Supplier's item code</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>
+                <Text>SUP-ITEM-001</Text>
+              </DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
+                <Text color="darkGrey">Tags</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>
+                {assignedTags.customTag ? <StatusIndicator type="warning">Custom tag</StatusIndicator> : <Text>-</Text>}
+              </DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
+                <Text color="darkGrey">Priority</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>
+                <Text>High</Text>
+              </DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
+                <Text color="darkGrey">Customer's lot code</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>
+                <Text>LOT-2024-001</Text>
+              </DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
+                <Text color="darkGrey">Supplier's lot code</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>
+                <Text>SUP-LOT-001</Text>
+              </DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
+                <Text color="darkGrey">Item order type</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>
+                <Text>Standard</Text>
+              </DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
+                <Text color="darkGrey">BOM revision and release date</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>
+                <Text>{formData.edit.bomRevision || "-"}</Text>
+              </DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
+                <Text color="darkGrey">Ship to</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>
+                <Text>Warehouse A - 123 Main St, City, State 12345</Text>
+              </DescriptionDetails>
+            </DescriptionGroup>
+            {(productionStatus === "Completed" || productionStatus === "Carry over") && (
+              <>
+                <DescriptionGroup>
+                  <DescriptionTerm>
+                    <Text color="darkGrey">Need by date</Text>
+                  </DescriptionTerm>
+                  <DescriptionDetails>
+                    <Text>
+                      {formData.edit.needByDate
+                        ? new Date(formData.edit.needByDate).toLocaleDateString("en-US", {
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric",
+                          })
+                        : "-"}
+                    </Text>
+                  </DescriptionDetails>
+                </DescriptionGroup>
+                <DescriptionGroup>
+                  <DescriptionTerm>
+                    <Text color="darkGrey">Close production note</Text>
+                  </DescriptionTerm>
+                  <DescriptionDetails>
+                    <Text>{formData.edit.closeProductionNote || "-"}</Text>
+                  </DescriptionDetails>
+                </DescriptionGroup>
+                {productionStatus === "Carry over" && (
                   <DescriptionGroup>
                     <DescriptionTerm>
-                      <Text color="darkGrey">Need by date</Text>
+                      <Text color="darkGrey">Carry over sent to</Text>
                     </DescriptionTerm>
                     <DescriptionDetails>
-                      <Text>
-                        {formData.edit.needByDate
-                          ? new Date(formData.edit.needByDate).toLocaleDateString("en-US", {
-                              year: "numeric",
-                              month: "long",
-                              day: "numeric",
-                            })
-                          : "-"}
-                      </Text>
+                      <Link underline={false}>{formData.edit.carryOverSentTo}</Link>
                     </DescriptionDetails>
                   </DescriptionGroup>
-                  <DescriptionGroup>
-                    <DescriptionTerm>
-                      <Text color="darkGrey">Close production note</Text>
-                    </DescriptionTerm>
-                    <DescriptionDetails>
-                      <Text>{formData.edit.closeProductionNote || "-"}</Text>
-                    </DescriptionDetails>
-                  </DescriptionGroup>
-                  {productionStatus === "Carry over" && (
-                    <DescriptionGroup>
-                      <DescriptionTerm>
-                        <Text color="darkGrey">Carry over sent to</Text>
-                      </DescriptionTerm>
-                      <DescriptionDetails>
-                        <Link underline={false}>{formData.edit.carryOverSentTo}</Link>
-                      </DescriptionDetails>
-                    </DescriptionGroup>
-                  )}
-                </>
-              )}
-            </DescriptionList>
-          </Box>
+                )}
+              </>
+            )}
+          </DescriptionList>
+        </Box>
         <Tabs selectedIndex={selectedIndex} onTabClick={(e, index) => setSelectedIndex(index)}>
           <Tab label="Collaboration">
             <Flex flexDirection="column" alignItems="flex-end" mt="x2">
@@ -1931,8 +1961,14 @@ export const Default = () => {
                 <IconicButton icon="add" onClick={() => {}}>
                   Create production record
                 </IconicButton>
-                {(productionStatus === "In progress" || productionStatus === "Completed" || productionStatus === "Carry over") && (
-                  <IconicButton icon="cancel" onClick={() => setIsCloseProductionModalOpen(true)} disabled={productionStatus === "Completed" || productionStatus === "Carry over"}>
+                {(productionStatus === "In progress" ||
+                  productionStatus === "Completed" ||
+                  productionStatus === "Carry over") && (
+                  <IconicButton
+                    icon="cancel"
+                    onClick={() => setIsCloseProductionModalOpen(true)}
+                    disabled={productionStatus === "Completed" || productionStatus === "Carry over"}
+                  >
                     Close production
                   </IconicButton>
                 )}
@@ -2114,7 +2150,9 @@ export const Default = () => {
                     { value: "Carry over", label: "Carry over" },
                   ]}
                   value={productionStatus}
-                  onChange={(option) => setProductionStatus(option as "Not started" | "In progress" | "Completed" | "Carry over")}
+                  onChange={(option) =>
+                    setProductionStatus(option as "Not started" | "In progress" | "Completed" | "Carry over")
+                  }
                   placeholder="Select production status"
                   menuPlacement="top"
                   width="160px"
@@ -2485,7 +2523,9 @@ export const V2 = () => {
   });
 
   // Production status state
-  const [productionStatus, setProductionStatus] = useState<"Not started" | "In progress" | "Completed" | "Carry over">("Not started");
+  const [productionStatus, setProductionStatus] = useState<"Not started" | "In progress" | "Completed" | "Carry over">(
+    "Not started"
+  );
 
   // Production complete state
   const [productionComplete, setProductionComplete] = useState(false);
@@ -4203,7 +4243,9 @@ export const V3 = () => {
   });
 
   // Production status state
-  const [productionStatus, setProductionStatus] = useState<"Not started" | "In progress" | "Completed" | "Carry over">("Not started");
+  const [productionStatus, setProductionStatus] = useState<"Not started" | "In progress" | "Completed" | "Carry over">(
+    "Not started"
+  );
 
   // Production complete state
   const [productionComplete, setProductionComplete] = useState(false);
