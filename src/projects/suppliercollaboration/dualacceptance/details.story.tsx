@@ -112,7 +112,7 @@ export const Default = () => {
   const [acceptanceType, setAcceptanceType] = useState<"dual" | "standard">("dual");
 
   // Production status state
-  const [productionStatus, setProductionStatus] = useState<"Not started" | "In progress" | "Completed">("Not started");
+  const [productionStatus, setProductionStatus] = useState<"Not started" | "In progress" | "Completed" | "Carry over">("Not started");
 
   // Production complete state
   const [productionComplete, setProductionComplete] = useState(false);
@@ -156,8 +156,6 @@ export const Default = () => {
     userState.role === "supplier" ? "supplier" : "customer"
   );
 
-  // Details section expanded state
-  const [detailsExpanded, setDetailsExpanded] = useState(true);
 
   // Update UOM view when user role changes
   useEffect(() => {
@@ -185,7 +183,7 @@ export const Default = () => {
       bomRevision: "Rev 1.2 – 2025-Jan-10",
       needByDate: new Date("2025-02-15"),
       closeProductionNote: "Production completed",
-      carryOverSentTo: "",
+      carryOverSentTo: "PO-00000005",
       priority: "High",
       customerLotCode: "LOT-2024-001",
       supplierLotCode: "SUP-LOT-001",
@@ -482,7 +480,7 @@ export const Default = () => {
                         <Text fontSize="small" lineHeight="smallRelaxed">
                           {productionStatus === "Not started"
                             ? "0 / 15,000 eaches"
-                            : productionStatus === "Completed"
+                            : productionStatus === "Completed" || productionStatus === "Carry over"
                               ? "14,700 / 15,000 eaches"
                               : "7,500 / 15,000 eaches"}
                         </Text>
@@ -493,15 +491,15 @@ export const Default = () => {
                       <Box
                         height="x1"
                         width="100%"
-                        backgroundColor={productionStatus === "Not started" ? "lightGrey" : "grey"}
+                        backgroundColor={productionStatus === "Not started" ? "lightGrey" : productionStatus === "Completed" || productionStatus === "Carry over" ? "darkGrey" : "grey"}
                         borderRadius="medium"
                       />
                     </Flex>
                   </Tooltip>
                   <Flex
-                    justifyContent={productionStatus === "Completed" ? "space-between" : "center"}
+                    justifyContent={productionStatus === "Completed" || productionStatus === "Carry over" ? "space-between" : "center"}
                     alignItems="center"
-                    gap="x0_5"
+                    gap={productionStatus === "Completed" || productionStatus === "Carry over" ? "x2" : "x0_5"}
                   >
                     <Text
                       fontSize="small"
@@ -510,11 +508,11 @@ export const Default = () => {
                       style={{ whiteSpace: "nowrap" }}
                     >
                       <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
-                        {productionStatus === "Not started" ? "0%" : productionStatus === "Completed" ? "98%" : "50%"}
+                        {productionStatus === "Not started" ? "0%" : productionStatus === "Completed" || productionStatus === "Carry over" ? "98%" : "50%"}
                       </Text>{" "}
                       produced
                     </Text>
-                    {productionStatus === "Completed" && (
+                    {(productionStatus === "Completed" || productionStatus === "Carry over") && (
                       <StatusIndicator type="quiet">
                         <Flex alignItems="center" gap="x0_5">
                           Completed
@@ -537,7 +535,7 @@ export const Default = () => {
                         <Text fontSize="small" lineHeight="smallRelaxed">
                           {productionStatus === "Not started"
                             ? "0 / 15,000 eaches"
-                            : productionStatus === "Completed"
+                            : productionStatus === "Completed" || productionStatus === "Carry over"
                               ? "14,700 / 15,000 eaches"
                               : "7,500 / 15,000 eaches"}
                         </Text>
@@ -554,9 +552,9 @@ export const Default = () => {
                     </Flex>
                   </Tooltip>
                   <Flex
-                    justifyContent={productionStatus === "Completed" ? "space-between" : "center"}
+                    justifyContent={productionStatus === "Completed" || productionStatus === "Carry over" ? "space-between" : "center"}
                     alignItems="center"
-                    gap="x0_5"
+                    gap={productionStatus === "Completed" || productionStatus === "Carry over" ? "x2" : "x0_5"}
                   >
                     <Text
                       fontSize="small"
@@ -565,11 +563,11 @@ export const Default = () => {
                       style={{ whiteSpace: "nowrap" }}
                     >
                       <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
-                        {productionStatus === "Not started" ? "0%" : productionStatus === "Completed" ? "98%" : "50%"}
+                        {productionStatus === "Not started" ? "0%" : productionStatus === "Completed" || productionStatus === "Carry over" ? "98%" : "50%"}
                       </Text>{" "}
                       produced
                     </Text>
-                    {productionStatus === "Completed" && (
+                    {(productionStatus === "Completed" || productionStatus === "Carry over") && (
                       <StatusIndicator type="quiet">
                         <Flex alignItems="center" gap="x0_5">
                           Completed
@@ -771,7 +769,7 @@ export const Default = () => {
                       <Text fontSize="small" lineHeight="smallRelaxed">
                         {productionStatus === "Not started"
                           ? "0 / 15,000 eaches"
-                          : productionStatus === "Completed"
+                          : productionStatus === "Completed" || productionStatus === "Carry over"
                             ? "14,850 / 15,000 eaches"
                             : "7,500 / 15,000 eaches"}
                       </Text>
@@ -785,7 +783,7 @@ export const Default = () => {
                       backgroundColor={
                         productionStatus === "Not started"
                           ? "lightGrey"
-                          : productionStatus === "Completed"
+                          : productionStatus === "Completed" || productionStatus === "Carry over"
                             ? "darkGrey"
                             : "blue"
                       }
@@ -795,9 +793,9 @@ export const Default = () => {
                 </Tooltip>
 
                 <Flex
-                  justifyContent={productionStatus === "Completed" ? "space-between" : "center"}
+                  justifyContent={productionStatus === "Completed" || productionStatus === "Carry over" ? "space-between" : "center"}
                   alignItems="center"
-                  gap="x0_5"
+                  gap={productionStatus === "Completed" || productionStatus === "Carry over" ? "x2" : "x0_5"}
                 >
                   <Text
                     fontSize="small"
@@ -806,11 +804,11 @@ export const Default = () => {
                     style={{ whiteSpace: "nowrap" }}
                   >
                     <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
-                      {productionStatus === "Not started" ? "0%" : productionStatus === "Completed" ? "99%" : "50%"}
+                      {productionStatus === "Not started" ? "0%" : productionStatus === "Completed" || productionStatus === "Carry over" ? "99%" : "50%"}
                     </Text>{" "}
                     produced
                   </Text>
-                  {productionStatus === "Completed" && (
+                  {(productionStatus === "Completed" || productionStatus === "Carry over") && (
                     <StatusIndicator type="quiet">
                       <Flex alignItems="center" gap="x0_5">
                         Completed
@@ -882,21 +880,11 @@ export const Default = () => {
       <Page>
         {/* Action bar above details */}
         <Flex justifyContent="flex-end" alignItems="center" gap="x0_5" mb="x3">
-          <IconicButton
-            icon={detailsExpanded ? "collapse" : "expand"}
-            labelHidden
-            tooltip={detailsExpanded ? "Collapse details" : "Expand details"}
-            onClick={() => setDetailsExpanded(!detailsExpanded)}
-          >
-            {detailsExpanded ? "Collapse details" : "Expand details"}
-          </IconicButton>
-          <VerticalDivider />
           <IconicButton icon="edit" labelHidden tooltip="Edit details" onClick={() => openSidebar("edit")}>
             Edit details
           </IconicButton>
         </Flex>
-        {detailsExpanded && (
-          <Box mb="x3" pl="x3">
+        <Box mb="x3" pl="x3">
             <DescriptionList layout="stacked" columns={{ extraSmall: 1, small: 2, medium: 3, large: 5 }}>
               <DescriptionGroup>
                 <DescriptionTerm>
@@ -920,16 +908,6 @@ export const Default = () => {
                 </DescriptionTerm>
                 <DescriptionDetails>
                   <Text>{formData.edit.supplierPOLineItemNumber || "-"}</Text>
-                </DescriptionDetails>
-              </DescriptionGroup>
-              <DescriptionGroup>
-                <DescriptionTerm>
-                  <Text color="darkGrey">Status</Text>
-                </DescriptionTerm>
-                <DescriptionDetails>
-                  <StatusIndicator type={poliStatus === "Completed" || poliStatus === "Canceled" ? "neutral" : "quiet"}>
-                    {poliStatus}
-                  </StatusIndicator>
                 </DescriptionDetails>
               </DescriptionGroup>
               <DescriptionGroup>
@@ -1002,6 +980,14 @@ export const Default = () => {
               </DescriptionGroup>
               <DescriptionGroup>
                 <DescriptionTerm>
+                  <Text color="darkGrey">Item order type</Text>
+                </DescriptionTerm>
+                <DescriptionDetails>
+                  <Text>Standard</Text>
+                </DescriptionDetails>
+              </DescriptionGroup>
+              <DescriptionGroup>
+                <DescriptionTerm>
                   <Text color="darkGrey">BOM revision and release date</Text>
                 </DescriptionTerm>
                 <DescriptionDetails>
@@ -1016,7 +1002,7 @@ export const Default = () => {
                   <Text>Warehouse A - 123 Main St, City, State 12345</Text>
                 </DescriptionDetails>
               </DescriptionGroup>
-              {productionStatus === "Completed" && (
+              {(productionStatus === "Completed" || productionStatus === "Carry over") && (
                 <>
                   <DescriptionGroup>
                     <DescriptionTerm>
@@ -1042,11 +1028,20 @@ export const Default = () => {
                       <Text>{formData.edit.closeProductionNote || "-"}</Text>
                     </DescriptionDetails>
                   </DescriptionGroup>
+                  {productionStatus === "Carry over" && (
+                    <DescriptionGroup>
+                      <DescriptionTerm>
+                        <Text color="darkGrey">Carry over sent to</Text>
+                      </DescriptionTerm>
+                      <DescriptionDetails>
+                        <Link underline={false}>{formData.edit.carryOverSentTo}</Link>
+                      </DescriptionDetails>
+                    </DescriptionGroup>
+                  )}
                 </>
               )}
             </DescriptionList>
           </Box>
-        )}
         <Tabs selectedIndex={selectedIndex} onTabClick={(e, index) => setSelectedIndex(index)}>
           <Tab label="Collaboration">
             <Flex flexDirection="column" alignItems="flex-end" mt="x2">
@@ -1869,23 +1864,25 @@ export const Default = () => {
           <Tab label="Production records">
             {userState.role === "supplier" && (
               <Flex justifyContent="flex-end" alignItems="center" gap="x3" mb="x3" px="x3" py="x2">
+                {/* Not started: Show only Create production record (enabled) */}
+                {/* In progress: Show Create production record (enabled) and Close production (enabled) */}
+                {/* Completed: Show Create production record (enabled), Close production (disabled), Carry over (enabled) */}
+                {/* Carry over: Show Create production record (enabled), Close production (disabled), Carry over (disabled) */}
                 <IconicButton icon="add" onClick={() => {}}>
                   Create production record
                 </IconicButton>
-                <IconicButton icon="close" onClick={() => setIsCloseProductionModalOpen(true)}>
-                  Close production
-                </IconicButton>
+                {(productionStatus === "In progress" || productionStatus === "Completed" || productionStatus === "Carry over") && (
+                  <IconicButton icon="cancel" onClick={() => setIsCloseProductionModalOpen(true)} disabled={productionStatus === "Completed" || productionStatus === "Carry over"}>
+                    Close production
+                  </IconicButton>
+                )}
+                {(productionStatus === "Completed" || productionStatus === "Carry over") && (
+                  <IconicButton icon="arrowForward" onClick={() => {}} disabled={productionStatus === "Carry over"}>
+                    Carry over
+                  </IconicButton>
+                )}
               </Flex>
             )}
-            <Box p="x4">
-              <Text>Record report that surfaces:</Text>
-              <List mt="x2">
-                <ListItem>Next production date</ListItem>
-                <ListItem>Close production note</ListItem>
-                <ListItem>Carry over sent to</ListItem>
-                <ListItem>Production start date</ListItem>
-              </List>
-            </Box>
           </Tab>
           <Tab label="Attachments">
             <Box p="x4">
@@ -2054,9 +2051,10 @@ export const Default = () => {
                     { value: "Not started", label: "Not started" },
                     { value: "In progress", label: "In progress" },
                     { value: "Completed", label: "Completed" },
+                    { value: "Carry over", label: "Carry over" },
                   ]}
                   value={productionStatus}
-                  onChange={(option) => setProductionStatus(option as "Not started" | "In progress" | "Completed")}
+                  onChange={(option) => setProductionStatus(option as "Not started" | "In progress" | "Completed" | "Carry over")}
                   placeholder="Select production status"
                   menuPlacement="top"
                   width="160px"
@@ -2226,6 +2224,9 @@ export const Default = () => {
             />
           )}
 
+          {/* Item order type - disabled for both customer and supplier */}
+          <Input labelText="Item order type" id="itemOrderType" value="Standard" disabled />
+
           {/* BOM revision and release date - editable by supplier and customer */}
           <AsyncSelect
             labelText="BOM revision and release date"
@@ -2285,8 +2286,8 @@ export const Default = () => {
             />
           )}
 
-          {/* Carry over sent to - disabled, shown only if production complete */}
-          {productionStatus === "Completed" && (
+          {/* Carry over sent to - disabled, shown only if production complete or carry over */}
+          {(productionStatus === "Completed" || productionStatus === "Carry over") && (
             <Input
               labelText="Carry over sent to"
               id="carryOverSentTo"
@@ -2424,7 +2425,7 @@ export const V2 = () => {
   });
 
   // Production status state
-  const [productionStatus, setProductionStatus] = useState<"Not started" | "In progress" | "Completed">("Not started");
+  const [productionStatus, setProductionStatus] = useState<"Not started" | "In progress" | "Completed" | "Carry over">("Not started");
 
   // Production complete state
   const [productionComplete, setProductionComplete] = useState(false);
@@ -2445,7 +2446,7 @@ export const V2 = () => {
       bomRevision: "Rev 1.2 – 2025-Jan-10",
       needByDate: new Date("2025-02-15"),
       closeProductionNote: "Production completed",
-      carryOverSentTo: "",
+      carryOverSentTo: "PO-00000005",
       priority: "High",
       customerLotCode: "LOT-2024-001",
       supplierLotCode: "SUP-LOT-001",
@@ -2927,6 +2928,14 @@ export const V2 = () => {
               </DescriptionTerm>
               <DescriptionDetails>
                 <Text>SUP-LOT-001</Text>
+              </DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
+                <Text color="darkGrey">Item order type</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>
+                <Text>Standard</Text>
               </DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
@@ -3987,6 +3996,9 @@ export const V2 = () => {
             />
           )}
 
+          {/* Item order type - disabled for both customer and supplier */}
+          <Input labelText="Item order type" id="itemOrderType" value="Standard" disabled />
+
           {/* BOM revision and release date - editable by supplier and customer */}
           <AsyncSelect
             labelText="BOM revision and release date"
@@ -4051,8 +4063,8 @@ export const V2 = () => {
             />
           )}
 
-          {/* Carry over sent to - disabled, shown only if production complete */}
-          {productionStatus === "Completed" && (
+          {/* Carry over sent to - disabled, shown only if production complete or carry over */}
+          {(productionStatus === "Completed" || productionStatus === "Carry over") && (
             <Input
               labelText="Carry over sent to"
               id="carryOverSentTo"
@@ -4130,7 +4142,7 @@ export const V3 = () => {
   });
 
   // Production status state
-  const [productionStatus, setProductionStatus] = useState<"Not started" | "In progress" | "Completed">("Not started");
+  const [productionStatus, setProductionStatus] = useState<"Not started" | "In progress" | "Completed" | "Carry over">("Not started");
 
   // Production complete state
   const [productionComplete, setProductionComplete] = useState(false);
@@ -4151,7 +4163,7 @@ export const V3 = () => {
       bomRevision: "Rev 1.2 – 2025-Jan-10",
       needByDate: new Date("2025-02-15"),
       closeProductionNote: "Production completed",
-      carryOverSentTo: "",
+      carryOverSentTo: "PO-00000005",
       priority: "High",
       customerLotCode: "LOT-2024-001",
       supplierLotCode: "SUP-LOT-001",
@@ -4633,6 +4645,14 @@ export const V3 = () => {
               </DescriptionTerm>
               <DescriptionDetails>
                 <Text>SUP-LOT-001</Text>
+              </DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
+                <Text color="darkGrey">Item order type</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>
+                <Text>Standard</Text>
               </DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
@@ -5705,6 +5725,9 @@ export const V3 = () => {
             />
           )}
 
+          {/* Item order type - disabled for both customer and supplier */}
+          <Input labelText="Item order type" id="itemOrderType" value="Standard" disabled />
+
           {/* BOM revision and release date - editable by supplier and customer */}
           <AsyncSelect
             labelText="BOM revision and release date"
@@ -5769,8 +5792,8 @@ export const V3 = () => {
             />
           )}
 
-          {/* Carry over sent to - disabled, shown only if production complete */}
-          {productionStatus === "Completed" && (
+          {/* Carry over sent to - disabled, shown only if production complete or carry over */}
+          {(productionStatus === "Completed" || productionStatus === "Carry over") && (
             <Input
               labelText="Carry over sent to"
               id="carryOverSentTo"

@@ -225,11 +225,6 @@ const DefaultComponent = () => {
             <FormSection>
               <Heading3 mb="x2">Order management configuration</Heading3>
               <Heading4 mb="x2">Collaboration acceptance model</Heading4>
-              <Text mb="x3" color="midGrey" fontSize="small">
-                Choose whether PO line items use Standard acceptance or Dual acceptance. This setting is only available
-                to customer organizations. Supplier organizations inherit the acceptance model based on their customer's
-                selection.
-              </Text>
 
               <Box mb="x3">
                 <Radio
@@ -257,6 +252,11 @@ const DefaultComponent = () => {
                   as-is.
                 </Text>
               </Box>
+
+              <Text mb="x3" color="midGrey" fontSize="small">
+                This configuration setting is only available
+                to customer organizations. Supplier organizations are automatically assigned the acceptance model based on their customer’s selection.
+              </Text>
             </FormSection>
 
             <Divider my="x4" />

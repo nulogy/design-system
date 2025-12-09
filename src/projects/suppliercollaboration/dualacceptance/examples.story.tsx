@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTheme } from "styled-components";
 import { Tooltip, toast } from "../../..";
 import { ReconciledIcon } from "./ReconciledIcon";
@@ -67,7 +67,7 @@ const HeaderVariation = ({
   title: string;
   userRole: "customer" | "supplier";
   poliStatus: "Open" | "Canceled" | "Completed";
-  productionStatus: "Not started" | "In progress" | "Completed";
+  productionStatus: "Not started" | "In progress" | "Completed" | "Carry over";
   collaborationStatus: "awaiting" | "accepted";
   acceptedRequest: boolean;
   acceptedProposal: boolean;
@@ -135,7 +135,7 @@ const HeaderVariation = ({
                         <Text fontSize="small" lineHeight="smallRelaxed">
                           {productionStatus === "Not started"
                             ? "0 / 15,000 eaches"
-                            : productionStatus === "Completed"
+                            : productionStatus === "Completed" || productionStatus === "Carry over"
                               ? "14,700 / 15,000 eaches"
                               : "7,500 / 15,000 eaches"}
                         </Text>
@@ -146,15 +146,15 @@ const HeaderVariation = ({
                       <Box
                         height="x1"
                         width="100%"
-                        backgroundColor={productionStatus === "Not started" ? "lightGrey" : "grey"}
+                        backgroundColor={productionStatus === "Not started" ? "lightGrey" : productionStatus === "Completed" || productionStatus === "Carry over" ? "darkGrey" : "grey"}
                         borderRadius="medium"
                       />
                     </Flex>
                   </Tooltip>
                   <Flex
-                    justifyContent={productionStatus === "Completed" ? "space-between" : "center"}
+                    justifyContent={productionStatus === "Completed" || productionStatus === "Carry over" ? "space-between" : "center"}
                     alignItems="center"
-                    gap="x0_5"
+                    gap={productionStatus === "Completed" || productionStatus === "Carry over" ? "x2" : "x0_5"}
                   >
                     <Text
                       fontSize="small"
@@ -163,11 +163,11 @@ const HeaderVariation = ({
                       style={{ whiteSpace: "nowrap" }}
                     >
                       <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
-                        {productionStatus === "Not started" ? "0%" : productionStatus === "Completed" ? "98%" : "50%"}
+                        {productionStatus === "Not started" ? "0%" : productionStatus === "Completed" || productionStatus === "Carry over" ? "98%" : "50%"}
                       </Text>{" "}
                       produced
                     </Text>
-                    {productionStatus === "Completed" && (
+                    {(productionStatus === "Completed" || productionStatus === "Carry over") && (
                       <StatusIndicator type="quiet">
                         <Flex alignItems="center" gap="x0_5">
                           Completed
@@ -190,7 +190,7 @@ const HeaderVariation = ({
                         <Text fontSize="small" lineHeight="smallRelaxed">
                           {productionStatus === "Not started"
                             ? "0 / 15,000 eaches"
-                            : productionStatus === "Completed"
+                            : productionStatus === "Completed" || productionStatus === "Carry over"
                               ? "14,700 / 15,000 eaches"
                               : "7,500 / 15,000 eaches"}
                         </Text>
@@ -207,9 +207,9 @@ const HeaderVariation = ({
                     </Flex>
                   </Tooltip>
                   <Flex
-                    justifyContent={productionStatus === "Completed" ? "space-between" : "center"}
+                    justifyContent={productionStatus === "Completed" || productionStatus === "Carry over" ? "space-between" : "center"}
                     alignItems="center"
-                    gap="x0_5"
+                    gap={productionStatus === "Completed" || productionStatus === "Carry over" ? "x2" : "x0_5"}
                   >
                     <Text
                       fontSize="small"
@@ -218,11 +218,11 @@ const HeaderVariation = ({
                       style={{ whiteSpace: "nowrap" }}
                     >
                       <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
-                        {productionStatus === "Not started" ? "0%" : productionStatus === "Completed" ? "98%" : "50%"}
+                        {productionStatus === "Not started" ? "0%" : productionStatus === "Completed" || productionStatus === "Carry over" ? "98%" : "50%"}
                       </Text>{" "}
                       produced
                     </Text>
-                    {productionStatus === "Completed" && (
+                    {(productionStatus === "Completed" || productionStatus === "Carry over") && (
                       <StatusIndicator type="quiet">
                         <Flex alignItems="center" gap="x0_5">
                           Completed
@@ -2146,7 +2146,7 @@ const DetailsSectionVariation = ({
   title: string;
   userRole: "customer" | "supplier";
   poliStatus: "Open" | "Canceled" | "Completed";
-  productionStatus: "Not started" | "In progress" | "Completed";
+  productionStatus: "Not started" | "In progress" | "Completed" | "Carry over";
   supplierPOLineItemNumber?: string;
   bomRevision?: string;
   needByDate?: string;
@@ -2158,7 +2158,6 @@ const DetailsSectionVariation = ({
 }) => {
   const customerPOLineItemNumber = "POLI-001";
   const customerItemCodeAndDescription = "12345678 – PR 24 SEPHORA ONLINE DELUXE OCT";
-  const [detailsExpanded, setDetailsExpanded] = useState(true);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [formData, setFormData] = useState({
     supplierPOLineItemNumber: supplierPOLineItemNumber || "",
@@ -2176,6 +2175,23 @@ const DetailsSectionVariation = ({
     customTag: customTag,
   });
 
+  // Update formData when props change
+  useEffect(() => {
+    setFormData((prev) => ({
+      ...prev,
+      supplierPOLineItemNumber: supplierPOLineItemNumber || "",
+      bomRevision: bomRevision || "",
+      needByDate: needByDate ? new Date(needByDate) : null,
+      closeProductionNote: closeProductionNote || "",
+      carryOverSentTo: carryOverSentTo || "",
+    }));
+    setAssignedTags({
+      validatedForAssembly: validatedForAssembly,
+      expressShipment: expressShipment,
+      customTag: customTag,
+    });
+  }, [supplierPOLineItemNumber, bomRevision, needByDate, closeProductionNote, carryOverSentTo, validatedForAssembly, expressShipment, customTag]);
+
   // Load options for BOM revision
   const loadOptions = async (inputValue: string) => {
     const mockOptions = [
@@ -2192,21 +2208,11 @@ const DetailsSectionVariation = ({
       <Heading4 mb="x2">{title}</Heading4>
       {/* Action bar above details */}
       <Flex justifyContent="flex-end" alignItems="center" gap="x0_5" mb="x3">
-        <IconicButton
-          icon={detailsExpanded ? "collapse" : "expand"}
-          labelHidden
-          tooltip={detailsExpanded ? "Collapse details" : "Expand details"}
-          onClick={() => setDetailsExpanded(!detailsExpanded)}
-        >
-          {detailsExpanded ? "Collapse details" : "Expand details"}
-        </IconicButton>
-        <VerticalDivider />
         <IconicButton icon="edit" labelHidden tooltip="Edit details" onClick={() => setSidebarOpen(true)}>
           Edit details
         </IconicButton>
       </Flex>
-      {detailsExpanded && (
-        <Box mb="x3" pl="x3">
+      <Box mb="x3" pl="x3">
           <DescriptionList layout="stacked" columns={{ extraSmall: 1, small: 2, medium: 3, large: 5 }}>
             <DescriptionGroup>
               <DescriptionTerm>
@@ -2230,16 +2236,6 @@ const DetailsSectionVariation = ({
               </DescriptionTerm>
               <DescriptionDetails>
                 <Text>{supplierPOLineItemNumber || "-"}</Text>
-              </DescriptionDetails>
-            </DescriptionGroup>
-            <DescriptionGroup>
-              <DescriptionTerm>
-                <Text color="darkGrey">Status</Text>
-              </DescriptionTerm>
-              <DescriptionDetails>
-                <StatusIndicator type={poliStatus === "Completed" || poliStatus === "Canceled" ? "neutral" : "quiet"}>
-                  {poliStatus}
-                </StatusIndicator>
               </DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
@@ -2308,6 +2304,14 @@ const DetailsSectionVariation = ({
             </DescriptionGroup>
             <DescriptionGroup>
               <DescriptionTerm>
+                <Text color="darkGrey">Item order type</Text>
+              </DescriptionTerm>
+              <DescriptionDetails>
+                <Text>Standard</Text>
+              </DescriptionDetails>
+            </DescriptionGroup>
+            <DescriptionGroup>
+              <DescriptionTerm>
                 <Text color="darkGrey">BOM revision and release date</Text>
               </DescriptionTerm>
               <DescriptionDetails>
@@ -2322,7 +2326,7 @@ const DetailsSectionVariation = ({
                 <Text>Warehouse A - 123 Main St, City, State 12345</Text>
               </DescriptionDetails>
             </DescriptionGroup>
-            {productionStatus === "Completed" && (
+            {(productionStatus === "Completed" || productionStatus === "Carry over") && (
               <>
                 <DescriptionGroup>
                   <DescriptionTerm>
@@ -2348,11 +2352,24 @@ const DetailsSectionVariation = ({
                     <Text>{closeProductionNote || "-"}</Text>
                   </DescriptionDetails>
                 </DescriptionGroup>
+                {productionStatus === "Carry over" && (
+                  <DescriptionGroup>
+                    <DescriptionTerm>
+                      <Text color="darkGrey">Carry over sent to</Text>
+                    </DescriptionTerm>
+                    <DescriptionDetails>
+                      {carryOverSentTo ? (
+                        <Link underline={false}>{carryOverSentTo}</Link>
+                      ) : (
+                        <Text>-</Text>
+                      )}
+                    </DescriptionDetails>
+                  </DescriptionGroup>
+                )}
               </>
             )}
           </DescriptionList>
         </Box>
-      )}
 
       {/* Edit Sidebar */}
       <Sidebar
@@ -2501,6 +2518,9 @@ const DetailsSectionVariation = ({
             />
           )}
 
+          {/* Item order type - disabled for both customer and supplier */}
+          <Input labelText="Item order type" id="itemOrderType" value="Standard" disabled />
+
           {/* BOM revision and release date - editable by supplier and customer */}
           <AsyncSelect
             labelText="BOM revision and release date"
@@ -2513,8 +2533,8 @@ const DetailsSectionVariation = ({
           {/* Ship to - disabled */}
           <Input labelText="Ship to" id="shipTo" value="Warehouse A - 123 Main St, City, State 12345" disabled />
 
-          {/* Need by date - editable only by customer, shown only if production complete */}
-          {productionStatus === "Completed" && (
+          {/* Need by date - editable only by customer, shown only if production complete or carry over */}
+          {(productionStatus === "Completed" || productionStatus === "Carry over") && (
             <>
               {userRole === "customer" ? (
                 <Flex flexDirection="column" gap="x1">
@@ -2546,8 +2566,8 @@ const DetailsSectionVariation = ({
             </>
           )}
 
-          {/* Close production note - disabled, shown only if production complete */}
-          {productionStatus === "Completed" && (
+          {/* Close production note - disabled, shown only if production complete or carry over */}
+          {(productionStatus === "Completed" || productionStatus === "Carry over") && (
             <Input
               labelText="Close production note"
               id="closeProductionNote"
@@ -2556,12 +2576,12 @@ const DetailsSectionVariation = ({
             />
           )}
 
-          {/* Carry over sent to - disabled, shown only if production complete */}
-          {productionStatus === "Completed" && (
+          {/* Carry over sent to - disabled, shown only if carry over */}
+          {productionStatus === "Carry over" && (
             <Input
               labelText="Carry over sent to"
               id="carryOverSentTo"
-              value={formData.carryOverSentTo || "-"}
+              value={carryOverSentTo || formData.carryOverSentTo || "-"}
               disabled
             />
           )}
@@ -2573,7 +2593,7 @@ const DetailsSectionVariation = ({
 export const DetailsSection = () => {
   const [filters, setFilters] = useState({
     viewedAs: "all" as "all" | "customer" | "supplier",
-    production: "all" as "all" | "Open" | "Closed",
+    production: "all" as "all" | "Open" | "Closed" | "Carry over",
   });
 
   // Custom styles to ensure dropdown appears above all content
@@ -2684,6 +2704,34 @@ export const DetailsSection = () => {
       expressShipment: false,
       validatedForAssembly: false,
     },
+    // Customer - Carry over
+    {
+      title: "Viewed as Customer | Production: Carry over",
+      userRole: "customer" as const,
+      poliStatus: "Open" as const,
+      productionStatus: "Carry over" as const,
+      supplierPOLineItemNumber: "SPLI-001",
+      bomRevision: "Rev 1.2 – 2025-Jan-10",
+      needByDate: "2025-02-15",
+      closeProductionNote: "Production completed",
+      carryOverSentTo: "PO-00000005",
+      expressShipment: false,
+      validatedForAssembly: false,
+    },
+    // Supplier - Carry over
+    {
+      title: "Viewed as Supplier | Production: Carry over",
+      userRole: "supplier" as const,
+      poliStatus: "Open" as const,
+      productionStatus: "Carry over" as const,
+      supplierPOLineItemNumber: "SPLI-001",
+      bomRevision: "Rev 1.2 – 2025-Jan-10",
+      needByDate: "2025-02-15",
+      closeProductionNote: "Production completed",
+      carryOverSentTo: "PO-00000005",
+      expressShipment: false,
+      validatedForAssembly: false,
+    },
   ];
 
   const filteredVariations = variations.filter((variation) => {
@@ -2701,6 +2749,11 @@ export const DetailsSection = () => {
       // Closed means production is completed
       // Also exclude variations with "Production: Open" in the title
       return variation.productionStatus === "Completed" && !variation.title.includes("Production: Open");
+    }
+    if (filters.production === "Carry over") {
+      // Carry over means production status is Carry over
+      // Also exclude variations with "Production: Open" in the title
+      return variation.productionStatus === "Carry over" && !variation.title.includes("Production: Open");
     }
     return true;
   });
@@ -2755,6 +2808,7 @@ export const DetailsSection = () => {
                       { value: "all", label: "All" },
                       { value: "Open", label: "Open" },
                       { value: "Closed", label: "Closed" },
+                      { value: "Carry over", label: "Carry over" },
                     ]}
                   />
                 </Box>
