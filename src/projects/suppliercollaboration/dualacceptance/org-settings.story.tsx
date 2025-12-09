@@ -23,7 +23,7 @@ import {
   BrandedNavBar,
   Alert,
   NDSProvider,
-} from "../../../../";
+} from "../../..";
 
 export default {
   title: "Projects/Supplier Collaboration/Dual acceptance/Organization settings",
