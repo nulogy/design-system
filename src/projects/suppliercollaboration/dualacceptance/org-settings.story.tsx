@@ -68,14 +68,23 @@ const DefaultComponent = () => {
 
   const breadcrumbs = (
     <Breadcrumbs {...({} as any)}>
-      <Link href="#" {...({} as any)}>Home</Link>
-      <Link href="#" {...({} as any)}>Organizations</Link>
+      <Link href="#" {...({} as any)}>
+        Home
+      </Link>
+      <Link href="#" {...({} as any)}>
+        Organizations
+      </Link>
     </Breadcrumbs>
   );
 
   return (
     <ApplicationFrame {...({} as any)}>
-      <Header breakpoints={{ medium: 1200 }} renderBreadcrumbs={() => breadcrumbs} title="Edit Organization" {...({} as any)} />
+      <Header
+        breakpoints={{ medium: 1200 }}
+        renderBreadcrumbs={() => breadcrumbs}
+        title="Edit Organization"
+        {...({} as any)}
+      />
       <Page {...({} as any)}>
         <Box maxWidth="800px" mx="auto" p="x4">
           <Form>
@@ -215,9 +224,7 @@ const DefaultComponent = () => {
             {/* Order management module configuration */}
             <FormSection>
               <Heading3 mb="x2">Order management configuration</Heading3>
-              <Heading4 mb="x2">
-                Collaboration acceptance model
-              </Heading4>
+              <Heading4 mb="x2">Collaboration acceptance model</Heading4>
               <Text mb="x3" color="midGrey" fontSize="small">
                 Choose whether PO line items use Standard acceptance or Dual acceptance. This setting is only available
                 to customer organizations. Supplier organizations inherit the acceptance model based on their customer's
@@ -421,4 +428,3 @@ export const Default = () => (
     <DefaultComponent />
   </NDSProvider>
 );
-

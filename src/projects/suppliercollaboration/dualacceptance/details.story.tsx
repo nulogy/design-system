@@ -970,9 +970,7 @@ export const Default = () => {
                 </DescriptionTerm>
                 <DescriptionDetails>
                   {assignedTags.customTag ? (
-                    <StatusIndicator type="warning">
-                      Custom tag
-                    </StatusIndicator>
+                    <StatusIndicator type="warning">Custom tag</StatusIndicator>
                   ) : (
                     <Text>-</Text>
                   )}
@@ -2252,7 +2250,9 @@ export const Default = () => {
                     <DatePicker
                       id="needByDate"
                       selected={formData.edit.needByDate}
-                      onChange={(date) => setFormData((prev) => ({ ...prev, edit: { ...prev.edit, needByDate: date } }))}
+                      onChange={(date) =>
+                        setFormData((prev) => ({ ...prev, edit: { ...prev.edit, needByDate: date } }))
+                      }
                     />
                   </Box>
                 </Flex>

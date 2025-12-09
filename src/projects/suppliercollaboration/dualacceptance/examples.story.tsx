@@ -273,12 +273,7 @@ const HeaderVariation = ({
                             ) : activeCardAuthorRole === userRole ? (
                               "Requires your response"
                             ) : (
-                              <TruncatedText
-                                fontSize="smaller"
-                                lineHeight="smallerText"
-                                fullWidth
-                                maxWidth="184px"
-                              >
+                              <TruncatedText fontSize="smaller" lineHeight="smallerText" fullWidth maxWidth="184px">
                                 {`Awaiting ${userRole === "supplier" ? "customer" : "supplier"} response`}
                               </TruncatedText>
                             )}
@@ -2168,7 +2163,7 @@ const DetailsSectionVariation = ({
   const [formData, setFormData] = useState({
     supplierPOLineItemNumber: supplierPOLineItemNumber || "",
     bomRevision: bomRevision || "",
-    needByDate: needByDate ? new Date(needByDate) : null as Date | null,
+    needByDate: needByDate ? new Date(needByDate) : (null as Date | null),
     priority: "High",
     customerLotCode: "LOT-2024-001",
     supplierLotCode: "SUP-LOT-001",
@@ -2284,13 +2279,7 @@ const DetailsSectionVariation = ({
                 <Text color="darkGrey">Tags</Text>
               </DescriptionTerm>
               <DescriptionDetails>
-                {customTag ? (
-                  <StatusIndicator type="warning">
-                    Custom tag
-                  </StatusIndicator>
-                ) : (
-                  <Text>-</Text>
-                )}
+                {customTag ? <StatusIndicator type="warning">Custom tag</StatusIndicator> : <Text>-</Text>}
               </DescriptionDetails>
             </DescriptionGroup>
             <DescriptionGroup>
@@ -2389,7 +2378,12 @@ const DetailsSectionVariation = ({
           <Input labelText="PO number" id="poNumber" value="PO-00000004" disabled />
 
           {/* Customer's PO line item number - disabled */}
-          <Input labelText="Customer's PO line item number" id="customerPOLineItemNumber" value={customerPOLineItemNumber} disabled />
+          <Input
+            labelText="Customer's PO line item number"
+            id="customerPOLineItemNumber"
+            value={customerPOLineItemNumber}
+            disabled
+          />
 
           {/* Supplier's PO line item number - editable only by supplier */}
           {userRole === "supplier" && (
@@ -2397,9 +2391,7 @@ const DetailsSectionVariation = ({
               labelText="Supplier's PO line item number"
               id="supplierPOLineItemNumber"
               value={formData.supplierPOLineItemNumber}
-              onChange={(e) =>
-                setFormData((prev) => ({ ...prev, supplierPOLineItemNumber: e.target.value }))
-              }
+              onChange={(e) => setFormData((prev) => ({ ...prev, supplierPOLineItemNumber: e.target.value }))}
             />
           )}
 
@@ -2470,9 +2462,7 @@ const DetailsSectionVariation = ({
               labelText="Priority"
               id="priority"
               value={formData.priority}
-              onChange={(value) =>
-                setFormData((prev) => ({ ...prev, priority: value as string }))
-              }
+              onChange={(value) => setFormData((prev) => ({ ...prev, priority: value as string }))}
               options={[
                 { value: "Low", label: "Low" },
                 { value: "Medium", label: "Medium" },
@@ -2490,9 +2480,7 @@ const DetailsSectionVariation = ({
               labelText="Customer's lot code"
               id="customerLotCode"
               value={formData.customerLotCode}
-              onChange={(e) =>
-                setFormData((prev) => ({ ...prev, customerLotCode: e.target.value }))
-              }
+              onChange={(e) => setFormData((prev) => ({ ...prev, customerLotCode: e.target.value }))}
             />
           ) : (
             <Input
@@ -2509,9 +2497,7 @@ const DetailsSectionVariation = ({
               labelText="Supplier's lot code"
               id="supplierLotCode"
               value={formData.supplierLotCode}
-              onChange={(e) =>
-                setFormData((prev) => ({ ...prev, supplierLotCode: e.target.value }))
-              }
+              onChange={(e) => setFormData((prev) => ({ ...prev, supplierLotCode: e.target.value }))}
             />
           )}
 
@@ -2521,9 +2507,7 @@ const DetailsSectionVariation = ({
             placeholder="Start typing"
             loadOptions={loadOptions}
             value={formData.bomRevision}
-            onChange={(value) =>
-              setFormData((prev) => ({ ...prev, bomRevision: value as string }))
-            }
+            onChange={(value) => setFormData((prev) => ({ ...prev, bomRevision: value as string }))}
           />
 
           {/* Ship to - disabled */}
