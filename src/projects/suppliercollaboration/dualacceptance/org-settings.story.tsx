@@ -232,10 +232,10 @@ const DefaultComponent = () => {
                   value="standard"
                   checked={collaborationAcceptanceModel === "standard"}
                   onChange={(e) => setCollaborationAcceptanceModel(e.target.value)}
-                  labelText="Standard"
+                  labelText="Single acceptance"
                 />
                 <Text ml="x3" mt="quarter" color="midGrey" fontSize="small">
-                  Customer and supplier organizations use a single acceptance state for proposals.
+                  With this method, accepting a proposal always updates the requested values.
                 </Text>
               </Box>
 
@@ -245,17 +245,16 @@ const DefaultComponent = () => {
                   value="dual"
                   checked={collaborationAcceptanceModel === "dual"}
                   onChange={(e) => setCollaborationAcceptanceModel(e.target.value)}
-                  labelText="Dual"
+                  labelText="Dual acceptance"
                 />
                 <Text ml="x3" mt="quarter" color="midGrey" fontSize="small">
-                  Use this when you want clearer tracking of whether a proposal changed the original request or kept it
-                  as-is.
+                  With this method, the user can choose whether accepting a proposal updates or retains the requested values.
                 </Text>
               </Box>
 
               <Text mb="x3" color="midGrey" fontSize="small">
                 This configuration setting is only available
-                to customer organizations. Supplier organizations are automatically assigned the acceptance model based on their customer’s selection.
+                to customer organizations. Supplier organizations are automatically assigned the acceptance model based on their customer's selection.
               </Text>
             </FormSection>
 
