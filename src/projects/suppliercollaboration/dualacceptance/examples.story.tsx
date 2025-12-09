@@ -231,6 +231,52 @@ const HeaderVariation = ({
                     )}
                   </Flex>
                 </Flex>
+                <SummaryDivider />
+                <Flex flexDirection="column" alignItems="center" width="200px" justifyContent="center" gap="x0_5">
+                  {poStatus === "Late" && (
+                    <>
+                      <Flex height="x2_5" alignItems="center" justifyContent="center">
+                        <StatusIndicator type="danger">Late</StatusIndicator>
+                      </Flex>
+                      <Text fontSize="small" color="midGrey" lineHeight="smallTextCompressed">
+                        <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
+                          2 days
+                        </Text>{" "}
+                        late
+                      </Text>
+                    </>
+                  )}
+                  {poStatus === "At risk" && (
+                    <>
+                      <Flex height="x2_5" alignItems="center" justifyContent="center">
+                        <StatusIndicator alignSelf="center" type="warning">
+                          At risk
+                        </StatusIndicator>
+                      </Flex>
+                      <Text fontSize="small" color="midGrey" lineHeight="smallTextCompressed">
+                        <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
+                          Production done
+                        </Text>{" "}
+                        milestone
+                      </Text>
+                    </>
+                  )}
+                  {poStatus === "On time" && (
+                    <>
+                      <Flex height="x2_5" alignItems="center" justifyContent="center">
+                        <StatusIndicator alignSelf="center" type="success">
+                          On time
+                        </StatusIndicator>
+                      </Flex>
+                      <Text fontSize="small" color="midGrey" lineHeight="smallTextCompressed">
+                        <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
+                          2 days
+                        </Text>{" "}
+                        early
+                      </Text>
+                    </>
+                  )}
+                </Flex>
               </Summary>
             );
           }
@@ -242,7 +288,7 @@ const HeaderVariation = ({
                 <Flex height="x2_5" alignItems="center" justifyContent="center" gap="x0_5">
                   {acceptedProposal && isReconciled !== null ? (
                     <Tooltip
-                      tooltip={isReconciled ? "Accepted with updated request" : "Accepted with retained request"}
+                      tooltip={isReconciled ? "Accepted – Request updated" : "Accepted – Request retained"}
                     >
                       <Flex alignItems="center" gap="x0_5">
                         {(collaborationStatus === "accepted" || acceptedRequest || acceptedProposal) &&
@@ -256,18 +302,29 @@ const HeaderVariation = ({
                             </Flex>
                           </StatusIndicator>
                         ) : (
-                          <StatusIndicator
-                            alignSelf="center"
-                            type={
-                              acceptedProposal && isReconciled === false
-                                ? "neutral"
-                                : collaborationStatus === "accepted" || acceptedRequest || acceptedProposal
-                                  ? "success"
-                                  : activeCardAuthorRole === userRole
-                                    ? "warning"
-                                    : "quiet"
-                            }
+                          <Box
+                            backgroundColor={acceptedProposal && isReconciled === false ? "lightGreen" : "transparent"}
+                            borderRadius="8px"
+                            display="inline-block"
+                            lineHeight="0"
                           >
+                            <StatusIndicator
+                              alignSelf="center"
+                              type={
+                                acceptedProposal && isReconciled === false
+                                  ? "neutral"
+                                  : collaborationStatus === "accepted" || acceptedRequest || acceptedProposal
+                                    ? "success"
+                                    : activeCardAuthorRole === userRole
+                                      ? "warning"
+                                      : "quiet"
+                              }
+                              style={
+                                acceptedProposal && isReconciled === false
+                                  ? { backgroundColor: "transparent", borderColor: "transparent", color: theme.colors.green }
+                                  : undefined
+                              }
+                            >
                             {collaborationStatus === "accepted" || acceptedRequest || acceptedProposal ? (
                               "Accepted"
                             ) : activeCardAuthorRole === userRole ? (
@@ -278,6 +335,7 @@ const HeaderVariation = ({
                               </TruncatedText>
                             )}
                           </StatusIndicator>
+                          </Box>
                         )}
                         <Box display="flex" alignItems="center" justifyContent="center">
                           <ReconciledIcon variant={isReconciled ? "standard" : "flagged"} size={20} />
@@ -473,6 +531,13 @@ export const Header = () => {
     production: "all" as "all" | "Not started" | "In progress" | "Completed",
     milestoneStatus: "all" as "all" | "Late" | "At risk" | "On time",
   });
+
+  // Reset production filter to "all" if "Completed" is selected when POLI status is "Canceled"
+  useEffect(() => {
+    if (filters.poliStatus === "Canceled" && filters.production === "Completed") {
+      setFilters((prevFilters) => ({ ...prevFilters, production: "all" }));
+    }
+  }, [filters.poliStatus, filters.production]);
 
   // Custom styles to ensure dropdown appears above all content
   const selectStyles = (baseStyles: any) => ({
@@ -1020,19 +1085,6 @@ export const Header = () => {
       activeCardAuthorRole: "supplier" as const,
     },
     {
-      title: "Viewed as Customer | POLI status: Canceled | Production: Completed",
-      userRole: "customer" as const,
-      poliStatus: "Canceled" as const,
-      productionStatus: "Completed" as const,
-      collaborationStatus: "awaiting" as const,
-      acceptedRequest: false,
-      acceptedProposal: false,
-      poStatus: "On time" as const,
-      isReconciled: null as null,
-      isFlagged: false,
-      activeCardAuthorRole: "supplier" as const,
-    },
-    {
       title: "Viewed as Customer | POLI status: Canceled | Production: Not started",
       userRole: "customer" as const,
       poliStatus: "Canceled" as const,
@@ -1159,6 +1211,59 @@ export const Header = () => {
       acceptedRequest: false,
       acceptedProposal: true,
       poStatus: "On time" as const,
+      isReconciled: true,
+      isFlagged: false,
+      activeCardAuthorRole: null as null,
+    },
+    // Customer - Completed - Late
+    {
+      title: "Viewed as Customer | POLI status: Completed | Production: Not started | Milestone status: Late",
+      userRole: "customer" as const,
+      poliStatus: "Completed" as const,
+      productionStatus: "Not started" as const,
+      collaborationStatus: "awaiting" as const,
+      acceptedRequest: false,
+      acceptedProposal: false,
+      poStatus: "Late" as const,
+      isReconciled: null as null,
+      isFlagged: false,
+      activeCardAuthorRole: "supplier" as const,
+    },
+    {
+      title: "Viewed as Customer | POLI status: Completed | Production: In progress | Milestone status: Late",
+      userRole: "customer" as const,
+      poliStatus: "Completed" as const,
+      productionStatus: "In progress" as const,
+      collaborationStatus: "awaiting" as const,
+      acceptedRequest: false,
+      acceptedProposal: false,
+      poStatus: "Late" as const,
+      isReconciled: null as null,
+      isFlagged: false,
+      activeCardAuthorRole: "supplier" as const,
+    },
+    {
+      title: "Viewed as Customer | POLI status: Completed | Production: Completed | Milestone status: Late",
+      userRole: "customer" as const,
+      poliStatus: "Completed" as const,
+      productionStatus: "Completed" as const,
+      collaborationStatus: "awaiting" as const,
+      acceptedRequest: false,
+      acceptedProposal: false,
+      poStatus: "Late" as const,
+      isReconciled: null as null,
+      isFlagged: false,
+      activeCardAuthorRole: "supplier" as const,
+    },
+    {
+      title: "Viewed as Customer | POLI status: Completed | Production: Completed | Milestone status: Late",
+      userRole: "customer" as const,
+      poliStatus: "Completed" as const,
+      productionStatus: "Completed" as const,
+      collaborationStatus: "accepted" as const,
+      acceptedRequest: false,
+      acceptedProposal: true,
+      poStatus: "Late" as const,
       isReconciled: true,
       isFlagged: false,
       activeCardAuthorRole: null as null,
@@ -1826,19 +1931,6 @@ export const Header = () => {
       activeCardAuthorRole: "customer" as const,
     },
     {
-      title: "Viewed as Supplier | POLI status: Canceled | Production: Completed",
-      userRole: "supplier" as const,
-      poliStatus: "Canceled" as const,
-      productionStatus: "Completed" as const,
-      collaborationStatus: "awaiting" as const,
-      acceptedRequest: false,
-      acceptedProposal: false,
-      poStatus: "On time" as const,
-      isReconciled: null as null,
-      isFlagged: false,
-      activeCardAuthorRole: "customer" as const,
-    },
-    {
       title: "Viewed as Supplier | POLI status: Canceled | Production: Not started",
       userRole: "supplier" as const,
       poliStatus: "Canceled" as const,
@@ -1969,6 +2061,59 @@ export const Header = () => {
       isFlagged: false,
       activeCardAuthorRole: null as null,
     },
+    // Supplier - Completed - Late
+    {
+      title: "Viewed as Supplier | POLI status: Completed | Production: Not started | Milestone status: Late",
+      userRole: "supplier" as const,
+      poliStatus: "Completed" as const,
+      productionStatus: "Not started" as const,
+      collaborationStatus: "awaiting" as const,
+      acceptedRequest: false,
+      acceptedProposal: false,
+      poStatus: "Late" as const,
+      isReconciled: null as null,
+      isFlagged: false,
+      activeCardAuthorRole: "customer" as const,
+    },
+    {
+      title: "Viewed as Supplier | POLI status: Completed | Production: In progress | Milestone status: Late",
+      userRole: "supplier" as const,
+      poliStatus: "Completed" as const,
+      productionStatus: "In progress" as const,
+      collaborationStatus: "awaiting" as const,
+      acceptedRequest: false,
+      acceptedProposal: false,
+      poStatus: "Late" as const,
+      isReconciled: null as null,
+      isFlagged: false,
+      activeCardAuthorRole: "customer" as const,
+    },
+    {
+      title: "Viewed as Supplier | POLI status: Completed | Production: Completed | Milestone status: Late",
+      userRole: "supplier" as const,
+      poliStatus: "Completed" as const,
+      productionStatus: "Completed" as const,
+      collaborationStatus: "awaiting" as const,
+      acceptedRequest: false,
+      acceptedProposal: false,
+      poStatus: "Late" as const,
+      isReconciled: null as null,
+      isFlagged: false,
+      activeCardAuthorRole: "customer" as const,
+    },
+    {
+      title: "Viewed as Supplier | POLI status: Completed | Production: Completed | Milestone status: Late",
+      userRole: "supplier" as const,
+      poliStatus: "Completed" as const,
+      productionStatus: "Completed" as const,
+      collaborationStatus: "accepted" as const,
+      acceptedRequest: false,
+      acceptedProposal: true,
+      poStatus: "Late" as const,
+      isReconciled: true,
+      isFlagged: false,
+      activeCardAuthorRole: null as null,
+    },
   ];
 
   const filteredVariations = variations.filter((variation) => {
@@ -2080,12 +2225,14 @@ export const Header = () => {
                     menuPosition="fixed"
                     styles={selectStyles}
                     value={filters.production}
-                    onChange={(value) => setFilters({ ...filters, production: value as any })}
+                    onChange={(value) => {
+                      setFilters({ ...filters, production: value as any });
+                    }}
                     options={[
                       { value: "all", label: "All" },
                       { value: "Not started", label: "Not started" },
                       { value: "In progress", label: "In progress" },
-                      { value: "Completed", label: "Completed" },
+                      ...(filters.poliStatus === "Canceled" ? [] : [{ value: "Completed", label: "Completed" }]),
                     ]}
                   />
                 </Box>
@@ -2094,13 +2241,13 @@ export const Header = () => {
                   <Select
                     menuPosition="fixed"
                     styles={selectStyles}
-                    disabled={filters.poliStatus === "Completed" || filters.poliStatus === "Canceled"}
+                    disabled={filters.poliStatus === "Canceled"}
                     value={filters.milestoneStatus}
                     onChange={(value) => setFilters({ ...filters, milestoneStatus: value as any })}
                     options={[
                       { value: "all", label: "All" },
                       { value: "Late", label: "Late" },
-                      { value: "At risk", label: "At risk" },
+                      ...(filters.poliStatus === "Completed" ? [] : [{ value: "At risk", label: "At risk" }]),
                       { value: "On time", label: "On time" },
                     ]}
                   />
@@ -3245,7 +3392,7 @@ const CollaborationVariation = ({
                     (acceptedRequest || acceptedProposal ? (
                       <Tooltip tooltip="Accepted">
                         <Box
-                          backgroundColor={acceptedProposal && isReconciled === false ? "whiteGrey" : "lightGreen"}
+                          backgroundColor="lightGreen"
                           borderRadius="medium"
                           p="x0_25"
                           width="x3"
@@ -3687,9 +3834,9 @@ export const Collaboration = () => {
     } else if (filters.collaboration === "awaiting-customer") {
       collaboration = "Awaiting customer's response";
     } else if (filters.collaboration === "accepted-updated") {
-      collaboration = "Accepted with updated request";
+      collaboration = "Accepted – Request updated";
     } else if (filters.collaboration === "accepted-retained") {
-      collaboration = "Accepted with retained request";
+      collaboration = "Accepted – Request retained";
     } else if (filters.collaboration === "accepted") {
       collaboration = "Accepted";
     }
@@ -3718,7 +3865,7 @@ export const Collaboration = () => {
       filters.poliStatus === "open-completed"
     ) {
       notes.push(
-        'Clicking Accept customer\'s proposal changes the status to "Accepted with updated request". No confirmation modal is displayed.'
+        'Clicking Accept customer\'s proposal changes the status to "Accepted – Request updated". No confirmation modal is displayed.'
       );
       notes.push("Submitting updated request changes the status to Awaiting customer's response.");
     }
@@ -3735,7 +3882,7 @@ export const Collaboration = () => {
       );
     }
 
-    // Supplier - No - Accepted with updated request - Open and Completed
+    // Supplier - No - Accepted – Request updated - Open and Completed
     if (
       filters.viewedAs === "supplier" &&
       filters.supplierProposal === "no" &&
@@ -3756,7 +3903,7 @@ export const Collaboration = () => {
       );
     }
 
-    // Customer - No - Accepted with updated request
+    // Customer - No - Accepted – Request updated
     if (
       filters.viewedAs === "customer" &&
       filters.supplierProposal === "no" &&
@@ -3771,7 +3918,7 @@ export const Collaboration = () => {
       }
     }
 
-    // Customer - No - Accepted with retained request
+    // Customer - No - Accepted – Request retained
     if (
       filters.viewedAs === "customer" &&
       filters.supplierProposal === "no" &&
@@ -3788,7 +3935,7 @@ export const Collaboration = () => {
       }
     }
 
-    // Customer - Yes - Accepted with updated request - Open and Completed
+    // Customer - Yes - Accepted – Request updated - Open and Completed
     if (
       filters.viewedAs === "customer" &&
       filters.supplierProposal === "yes" &&
@@ -3798,7 +3945,7 @@ export const Collaboration = () => {
       notes.push("Updating request changes the state to Awaiting supplier's response.");
     }
 
-    // Customer - Yes - Accepted with retained request - Open and Completed
+    // Customer - Yes - Accepted – Request retained - Open and Completed
     if (
       filters.viewedAs === "customer" &&
       filters.supplierProposal === "yes" &&
@@ -3816,10 +3963,10 @@ export const Collaboration = () => {
       filters.poliStatus === "open-completed"
     ) {
       notes.push(
-        'If the organization is configured with dual acceptance, clicking Accept supplier\'s proposal changes the status to "Accepted with updated request" or "Accepted with retained request", depending on the selection in the confirmation modal.'
+        'If the organization is configured with dual acceptance, clicking Accept supplier\'s proposal changes the status to "Accepted – Request updated" or "Accepted – Request retained", depending on the selection in the confirmation modal.'
       );
       notes.push(
-        'If the organization is configured with standard acceptance, clicking Accept supplier\'s proposal changes the status to "Accepted with updated request" and no confirmation modal is displayed.'
+        'If the organization is configured with standard acceptance, clicking Accept supplier\'s proposal changes the status to "Accepted – Request updated" and no confirmation modal is displayed.'
       );
     }
 
@@ -3831,10 +3978,10 @@ export const Collaboration = () => {
       filters.poliStatus === "open-completed"
     ) {
       notes.push(
-        'If the organization is configured with dual acceptance, clicking Accept supplier\'s proposal changes the status to "Accepted with updated request" or "Accepted with retained request", depending on the selection in the confirmation modal.'
+        'If the organization is configured with dual acceptance, clicking Accept supplier\'s proposal changes the status to "Accepted – Request updated" or "Accepted – Request retained", depending on the selection in the confirmation modal.'
       );
       notes.push(
-        'If the organization is configured with standard acceptance, clicking Accept supplier\'s proposal changes the status to "Accepted with updated request" and no confirmation modal is displayed.'
+        'If the organization is configured with standard acceptance, clicking Accept supplier\'s proposal changes the status to "Accepted – Request updated" and no confirmation modal is displayed.'
       );
       notes.push("Submitting updated request changes the status to Awaiting supplier's response.");
     }
@@ -3847,7 +3994,7 @@ export const Collaboration = () => {
       filters.poliStatus === "open-completed"
     ) {
       notes.push(
-        'Clicking Accept customer\'s proposal changes the status to "Accepted with updated request". No confirmation modal is displayed.'
+        'Clicking Accept customer\'s proposal changes the status to "Accepted – Request updated". No confirmation modal is displayed.'
       );
       notes.push("Submitting updated request changes the status to Awaiting customer's response.");
     }
@@ -3860,12 +4007,12 @@ export const Collaboration = () => {
       filters.poliStatus === "open-completed"
     ) {
       notes.push(
-        'Clicking Accept customer\'s proposal changes the status to "Accepted with updated request". No confirmation modal is displayed.'
+        'Clicking Accept customer\'s proposal changes the status to "Accepted – Request updated". No confirmation modal is displayed.'
       );
       notes.push("Updating proposal maintains current state.");
     }
 
-    // Supplier - Yes - Accepted with updated request - Open and Completed
+    // Supplier - Yes - Accepted – Request updated - Open and Completed
     if (
       filters.viewedAs === "supplier" &&
       filters.supplierProposal === "yes" &&
@@ -3875,7 +4022,7 @@ export const Collaboration = () => {
       notes.push("Updating proposal changes the state to Awaiting customer's response.");
     }
 
-    // Supplier - Yes - Accepted with retained request - Open and Completed
+    // Supplier - Yes - Accepted – Request retained - Open and Completed
     if (
       filters.viewedAs === "supplier" &&
       filters.supplierProposal === "yes" &&
@@ -4152,10 +4299,10 @@ export const Collaboration = () => {
       activeCardAuthorRole: "supplier" as const,
     },
 
-    // Open - Accepted with updated request
+    // Open - Accepted – Request updated
     {
       title:
-        "Viewed as Customer | Supplier's proposal: Made | Collaboration: Accepted with updated request | POLI status: Open",
+        "Viewed as Customer | Supplier's proposal: Made | Collaboration: Accepted – Request updated | POLI status: Open",
       userRole: "customer" as const,
       collaborationStatus: "accepted-updated" as const,
       poliStatus: "Open" as const,
@@ -4167,7 +4314,7 @@ export const Collaboration = () => {
     },
     {
       title:
-        "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Accepted with updated request | POLI status: Open",
+        "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Accepted – Request updated | POLI status: Open",
       userRole: "supplier" as const,
       collaborationStatus: "accepted-updated" as const,
       poliStatus: "Open" as const,
@@ -4178,10 +4325,10 @@ export const Collaboration = () => {
       activeCardAuthorRole: "supplier" as const,
     },
 
-    // Open - Accepted with retained request
+    // Open - Accepted – Request retained
     {
       title:
-        "Viewed as Customer | Supplier's proposal: Made | Collaboration: Accepted with retained request | POLI status: Open",
+        "Viewed as Customer | Supplier's proposal: Made | Collaboration: Accepted – Request retained | POLI status: Open",
       userRole: "customer" as const,
       collaborationStatus: "accepted-retained" as const,
       poliStatus: "Open" as const,
@@ -4193,7 +4340,7 @@ export const Collaboration = () => {
     },
     {
       title:
-        "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Accepted with retained request | POLI status: Open",
+        "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Accepted – Request retained | POLI status: Open",
       userRole: "supplier" as const,
       collaborationStatus: "accepted-retained" as const,
       poliStatus: "Open" as const,
@@ -4230,10 +4377,10 @@ export const Collaboration = () => {
       activeCardAuthorRole: "supplier" as const,
     },
 
-    // Canceled - Accepted with updated request
+    // Canceled - Accepted – Request updated
     {
       title:
-        "Viewed as Customer | Supplier's proposal: Made | Collaboration: Accepted with updated request | POLI status: Canceled",
+        "Viewed as Customer | Supplier's proposal: Made | Collaboration: Accepted – Request updated | POLI status: Canceled",
       userRole: "customer" as const,
       collaborationStatus: "accepted-updated" as const,
       poliStatus: "Canceled" as const,
@@ -4245,7 +4392,7 @@ export const Collaboration = () => {
     },
     {
       title:
-        "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Accepted with updated request | POLI status: Canceled",
+        "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Accepted – Request updated | POLI status: Canceled",
       userRole: "supplier" as const,
       collaborationStatus: "accepted-updated" as const,
       poliStatus: "Canceled" as const,
@@ -4256,10 +4403,10 @@ export const Collaboration = () => {
       activeCardAuthorRole: "supplier" as const,
     },
 
-    // Canceled - Accepted with retained request
+    // Canceled - Accepted – Request retained
     {
       title:
-        "Viewed as Customer | Supplier's proposal: Made | Collaboration: Accepted with retained request | POLI status: Canceled",
+        "Viewed as Customer | Supplier's proposal: Made | Collaboration: Accepted – Request retained | POLI status: Canceled",
       userRole: "customer" as const,
       collaborationStatus: "accepted-retained" as const,
       poliStatus: "Canceled" as const,
@@ -4271,7 +4418,7 @@ export const Collaboration = () => {
     },
     {
       title:
-        "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Accepted with retained request | POLI status: Canceled",
+        "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Accepted – Request retained | POLI status: Canceled",
       userRole: "supplier" as const,
       collaborationStatus: "accepted-retained" as const,
       poliStatus: "Canceled" as const,
@@ -4308,10 +4455,10 @@ export const Collaboration = () => {
       activeCardAuthorRole: "supplier" as const,
     },
 
-    // Completed - Accepted with updated request
+    // Completed - Accepted – Request updated
     {
       title:
-        "Viewed as Customer | Supplier's proposal: Made | Collaboration: Accepted with updated request | POLI status: Completed",
+        "Viewed as Customer | Supplier's proposal: Made | Collaboration: Accepted – Request updated | POLI status: Completed",
       userRole: "customer" as const,
       collaborationStatus: "accepted-updated" as const,
       poliStatus: "Completed" as const,
@@ -4323,7 +4470,7 @@ export const Collaboration = () => {
     },
     {
       title:
-        "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Accepted with updated request | POLI status: Completed",
+        "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Accepted – Request updated | POLI status: Completed",
       userRole: "supplier" as const,
       collaborationStatus: "accepted-updated" as const,
       poliStatus: "Completed" as const,
@@ -4334,10 +4481,10 @@ export const Collaboration = () => {
       activeCardAuthorRole: "supplier" as const,
     },
 
-    // Completed - Accepted with retained request
+    // Completed - Accepted – Request retained
     {
       title:
-        "Viewed as Customer | Supplier's proposal: Made | Collaboration: Accepted with retained request | POLI status: Completed",
+        "Viewed as Customer | Supplier's proposal: Made | Collaboration: Accepted – Request retained | POLI status: Completed",
       userRole: "customer" as const,
       collaborationStatus: "accepted-retained" as const,
       poliStatus: "Completed" as const,
@@ -4349,7 +4496,7 @@ export const Collaboration = () => {
     },
     {
       title:
-        "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Accepted with retained request | POLI status: Completed",
+        "Viewed as Supplier | Supplier's proposal: Made | Collaboration: Accepted – Request retained | POLI status: Completed",
       userRole: "supplier" as const,
       collaborationStatus: "accepted-retained" as const,
       poliStatus: "Completed" as const,
@@ -4377,7 +4524,7 @@ export const Collaboration = () => {
       // Customer viewing "awaiting supplier's response" = standard filtering
       if (variation.collaborationStatus !== "awaiting-supplier") return false;
     } else if (filters.collaboration === "accepted-updated" && filters.supplierProposal === "no") {
-      // "Accepted with updated request" when supplier proposal is not made = supplier accepted request (same as "Accepted")
+      // "Accepted – Request updated" when supplier proposal is not made = supplier accepted request (same as "Accepted")
       if (variation.collaborationStatus !== "accepted") return false;
     } else {
       // Standard filtering for other collaboration statuses
@@ -4459,8 +4606,8 @@ export const Collaboration = () => {
                   >
                     <Switch value="awaiting-supplier">Awaiting supplier's response</Switch>
                     <Switch value="awaiting-customer">Awaiting customer's response</Switch>
-                    <Switch value="accepted-updated">Accepted with updated request</Switch>
-                    <Switch value="accepted-retained">Accepted with retained request</Switch>
+                    <Switch value="accepted-updated">Accepted – Request updated</Switch>
+                    <Switch value="accepted-retained">Accepted – Request retained</Switch>
                   </Switcher>
                 </Box>
                 <Box>
@@ -4617,8 +4764,8 @@ export const Collaboration = () => {
                   "POLI status: Open and Completed"
                 );
               }
-              // When "Accepted with updated request" is selected with "Supplier's proposal: Not made",
-              // show "Accepted with updated request" in title instead of "Accepted"
+              // When "Accepted – Request updated" is selected with "Supplier's proposal: Not made",
+              // show "Accepted – Request updated" in title instead of "Accepted"
               if (
                 filters.collaboration === "accepted-updated" &&
                 filters.supplierProposal === "no" &&
@@ -4626,7 +4773,7 @@ export const Collaboration = () => {
               ) {
                 displayTitle = displayTitle.replace(
                   /Collaboration: Accepted/g,
-                  "Collaboration: Accepted with updated request"
+                  "Collaboration: Accepted – Request updated"
                 );
               }
               // When viewed as Customer and collaboration is "awaiting-customer", show "Awaiting customer's response" instead of "Awaiting your response"

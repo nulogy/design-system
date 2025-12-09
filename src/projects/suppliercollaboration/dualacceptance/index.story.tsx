@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useTheme } from "styled-components";
 import { toast } from "../../..";
 import {
   ApplicationFrame,
@@ -85,6 +86,7 @@ const CollaborationStatusOption = ({
   children,
   ...props
 }: SelectOptionProps<NDSOption, true, GroupBase<NDSOption>>) => {
+  const theme = useTheme();
   const value = props.data.value;
   const role = (props.selectProps as any).role || "supplier"; // Get role from select props
   const acceptanceType = (props.selectProps as any).acceptanceType || "dual"; // Get acceptance type from select props
@@ -119,7 +121,7 @@ const CollaborationStatusOption = ({
       if (value === "accepted-updated") {
         return (
           <Box height="x4" display="flex" alignItems="center" justifyContent="flex-start">
-            <Tooltip tooltip="Accepted with updated request">
+            <Tooltip tooltip="Accepted – Request updated">
               <Box display="flex" alignItems="center">
                 <Flex alignItems="center" gap="x0_5" display="inline-flex">
                   <StatusIndicator type="success">Accepted</StatusIndicator>
@@ -135,10 +137,17 @@ const CollaborationStatusOption = ({
       if (value === "accepted-retained") {
         return (
           <Box height="x4" display="flex" alignItems="center" justifyContent="flex-start">
-            <Tooltip tooltip="Accepted with retained request">
+            <Tooltip tooltip="Accepted – Request retained">
               <Box display="flex" alignItems="center">
                 <Flex alignItems="center" gap="x0_5" display="inline-flex">
-                  <StatusIndicator type="neutral">Accepted</StatusIndicator>
+                  <Box backgroundColor="lightGreen" borderRadius="8px" display="inline-block" lineHeight="0">
+                    <StatusIndicator
+                      type="neutral"
+                      style={{ backgroundColor: "transparent", borderColor: "transparent", color: theme.colors.green }}
+                    >
+                      Accepted
+                    </StatusIndicator>
+                  </Box>
                   <Box display="flex" alignItems="center" justifyContent="center">
                     <ReconciledIcon variant="flagged" size={20} />
                   </Box>
@@ -161,6 +170,7 @@ const CollaborationStatusOption = ({
 
 // Custom MultiValue component to show pills in selected values
 const CollaborationStatusMultiValue = ({ data, ...props }: any) => {
+  const theme = useTheme();
   const value = data.value;
   const role = (props.selectProps as any).role || "supplier";
   const acceptanceType = (props.selectProps as any).acceptanceType || "dual";
@@ -184,7 +194,7 @@ const CollaborationStatusMultiValue = ({ data, ...props }: any) => {
       // In dual mode, show with icon and tooltip
       if (value === "accepted-updated") {
         return (
-          <Tooltip tooltip="Accepted with updated request">
+          <Tooltip tooltip="Accepted – Request updated">
             <Flex alignItems="center" gap="x0_5" display="inline-flex">
               <StatusIndicator type="success">Accepted</StatusIndicator>
               <Box display="flex" alignItems="center" justifyContent="center">
@@ -196,9 +206,16 @@ const CollaborationStatusMultiValue = ({ data, ...props }: any) => {
       }
       if (value === "accepted-retained") {
         return (
-          <Tooltip tooltip="Accepted with retained request">
+          <Tooltip tooltip="Accepted – Request retained">
             <Flex alignItems="center" gap="x0_5" display="inline-flex">
-              <StatusIndicator type="neutral">Accepted</StatusIndicator>
+              <Box backgroundColor="lightGreen" borderRadius="x1" display="inline-block" lineHeight="0">
+                <StatusIndicator
+                  type="neutral"
+                  style={{ backgroundColor: "transparent", borderColor: "transparent", color: theme.colors.green }}
+                >
+                  Accepted
+                </StatusIndicator>
+              </Box>
               <Box display="flex" alignItems="center" justifyContent="center">
                 <ReconciledIcon variant="flagged" size={20} />
               </Box>
@@ -233,6 +250,7 @@ const secondaryMenu = [
 ];
 
 export const Default = () => {
+  const theme = useTheme();
   const [selectedRows, setSelectedRows] = useState<string[]>([]);
   const [role, setRole] = useState("supplier");
   const [acceptanceType, setAcceptanceType] = useState<"dual" | "standard">("dual");
@@ -266,6 +284,7 @@ export const Default = () => {
   const [customerLotCodes, setCustomerLotCodes] = useState<string[]>([]);
   const [supplierLotCodes, setSupplierLotCodes] = useState<string[]>([]);
   const [collaborationStatuses, setCollaborationStatuses] = useState<string[]>([]);
+  const [collaborationStatuses2, setCollaborationStatuses2] = useState<string[]>([]);
   const [selectedActions, setSelectedActions] = useState<string[]>([]);
   const [selectedTags, setSelectedTags] = useState<Record<string, string[]>>({
     "1": ["neutral"],
@@ -847,9 +866,25 @@ export const Default = () => {
                     Accepted
                   </StatusIndicator>
                 ) : (
-                  <Tooltip tooltip={isReconciled ? "Accepted with updated request" : "Accepted with retained request"}>
+                  <Tooltip tooltip={isReconciled ? "Accepted – Request updated" : "Accepted – Request retained"}>
                     <Flex alignItems="center" gap="x0_5" mt="x0_5">
-                      <StatusIndicator type={isReconciled ? "success" : "neutral"}>Accepted</StatusIndicator>
+                      <Box
+                        backgroundColor={isReconciled ? "transparent" : "lightGreen"}
+                        borderRadius="8px"
+                        display="inline-block"
+                        lineHeight="0"
+                      >
+                        <StatusIndicator
+                          type={isReconciled ? "success" : "neutral"}
+                          style={
+                            isReconciled
+                              ? undefined
+                              : { backgroundColor: "transparent", borderColor: "transparent", color: theme.colors.green }
+                          }
+                        >
+                          Accepted
+                        </StatusIndicator>
+                      </Box>
                       <Box display="flex" alignItems="center" justifyContent="center">
                         <ReconciledIcon variant={isReconciled ? "standard" : "flagged"} size={20} />
                       </Box>
@@ -2092,8 +2127,8 @@ export const Default = () => {
                         value: "awaiting-other",
                         label: role === "supplier" ? "Awaiting customer response" : "Awaiting supplier response",
                       },
-                      { value: "accepted-updated", label: "Accepted with updated request" },
-                      { value: "accepted-retained", label: "Accepted with retained request" },
+                      { value: "accepted-updated", label: "Accepted – Request updated" },
+                      { value: "accepted-retained", label: "Accepted – Request retained" },
                     ]
               }
               components={{
@@ -2102,6 +2137,23 @@ export const Default = () => {
               }}
               // Pass role and acceptanceType to custom option component via selectProps
               {...({ role, acceptanceType } as any)}
+            />
+          </Box>
+          <Box>
+            <Select
+              labelText="Collaboration statuses"
+              multiselect
+              value={collaborationStatuses2}
+              onChange={(value) => setCollaborationStatuses2(Array.isArray(value) ? value.map((v) => String(v)) : [])}
+              options={[
+                { value: "awaiting-your-response", label: "Awaiting your response" },
+                {
+                  value: "awaiting-other",
+                  label: role === "supplier" ? "Awaiting customer's response" : "Awaiting supplier's response",
+                },
+                { value: "accepted-updated", label: "Accepted – Request updated" },
+                { value: "accepted-retained", label: "Accepted – Request retained" },
+              ]}
             />
           </Box>
         </Flex>

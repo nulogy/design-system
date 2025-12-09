@@ -576,6 +576,52 @@ export const Default = () => {
                     )}
                   </Flex>
                 </Flex>
+                <SummaryDivider />
+                <Flex flexDirection="column" alignItems="center" width="200px" justifyContent="center" gap="x0_5">
+                  {poStatus === "Late" && (
+                    <>
+                      <Flex height="x2_5" alignItems="center" justifyContent="center">
+                        <StatusIndicator type="danger">Late</StatusIndicator>
+                      </Flex>
+                      <Text fontSize="small" color="midGrey" lineHeight="smallTextCompressed">
+                        <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
+                          2 days
+                        </Text>{" "}
+                        late
+                      </Text>
+                    </>
+                  )}
+                  {poStatus === "At risk" && (
+                    <>
+                      <Flex height="x2_5" alignItems="center" justifyContent="center">
+                        <StatusIndicator alignSelf="center" type="warning">
+                          At risk
+                        </StatusIndicator>
+                      </Flex>
+                      <Text fontSize="small" color="midGrey" lineHeight="smallTextCompressed">
+                        <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
+                          Production done
+                        </Text>{" "}
+                        milestone
+                      </Text>
+                    </>
+                  )}
+                  {poStatus === "On time" && (
+                    <>
+                      <Flex height="x2_5" alignItems="center" justifyContent="center">
+                        <StatusIndicator alignSelf="center" type="success">
+                          On time
+                        </StatusIndicator>
+                      </Flex>
+                      <Text fontSize="small" color="midGrey" lineHeight="smallTextCompressed">
+                        <Text as="span" fontSize="small" lineHeight="smallTextCompressed" fontWeight="bold">
+                          2 days
+                        </Text>{" "}
+                        early
+                      </Text>
+                    </>
+                  )}
+                </Flex>
               </Summary>
             );
           }
@@ -621,12 +667,12 @@ export const Default = () => {
                         <Tooltip
                           tooltip={
                             acceptedItems.request
-                              ? "Accepted with updated request"
+                              ? "Accepted – Request updated"
                               : userState.role === "supplier"
-                                ? "Accepted with updated request"
+                                ? "Accepted – Request updated"
                                 : isReconciled
-                                  ? "Accepted with updated request"
-                                  : "Accepted with retained request"
+                                  ? "Accepted – Request updated"
+                                  : "Accepted – Request retained"
                           }
                         >
                           <Flex alignItems="center" gap="x0_5">
@@ -644,21 +690,36 @@ export const Default = () => {
                                 </Flex>
                               </StatusIndicator>
                             ) : (
-                              <StatusIndicator
-                                alignSelf="center"
-                                type={
+                              <Box
+                                backgroundColor={
                                   acceptedItems.proposal && isReconciled === false && userState.role !== "supplier"
-                                    ? "neutral"
-                                    : productionStatus === "Completed" ||
-                                        collaborationState.status === "accepted" ||
-                                        acceptedItems.request ||
-                                        acceptedItems.proposal
-                                      ? "success"
-                                      : collaborationState.activeCardAuthorRole !== userState.role
-                                        ? "warning"
-                                        : "quiet"
+                                    ? "lightGreen"
+                                    : "transparent"
                                 }
+                                borderRadius="8px"
+                                display="inline-block"
+                                lineHeight="0"
                               >
+                                <StatusIndicator
+                                  alignSelf="center"
+                                  type={
+                                    acceptedItems.proposal && isReconciled === false && userState.role !== "supplier"
+                                      ? "neutral"
+                                      : productionStatus === "Completed" ||
+                                          collaborationState.status === "accepted" ||
+                                          acceptedItems.request ||
+                                          acceptedItems.proposal
+                                        ? "success"
+                                        : collaborationState.activeCardAuthorRole !== userState.role
+                                          ? "warning"
+                                          : "quiet"
+                                  }
+                                  style={
+                                    acceptedItems.proposal && isReconciled === false && userState.role !== "supplier"
+                                      ? { backgroundColor: "transparent", borderColor: "transparent", color: theme.colors.green }
+                                      : undefined
+                                  }
+                                >
                                 {productionStatus === "Completed" ||
                                 collaborationState.status === "accepted" ||
                                 acceptedItems.request ||
@@ -672,6 +733,7 @@ export const Default = () => {
                                   "Requires your response"
                                 )}
                               </StatusIndicator>
+                              </Box>
                             )}
                             <Box display="flex" alignItems="center" justifyContent="center">
                               <ReconciledIcon
@@ -1421,9 +1483,7 @@ export const Default = () => {
                         {acceptedItems.request || acceptedItems.proposal ? (
                           <Tooltip tooltip="Accepted">
                             <Box
-                              backgroundColor={
-                                acceptedItems.proposal && isReconciled === false ? "whiteGrey" : "lightGreen"
-                              }
+                              backgroundColor="lightGreen"
                               borderRadius="medium"
                               p="x0_25"
                               width="x3"
@@ -2756,10 +2816,11 @@ export const V2 = () => {
                     Late
                   </StatusIndicator>
                   <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
+                    Production done{" "}
                     <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
-                      7 days
+                      2 days
                     </Text>{" "}
-                    past due date
+                    late
                   </Text>
                 </>
               )}
@@ -4473,10 +4534,11 @@ export const V3 = () => {
                     Late
                   </StatusIndicator>
                   <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
+                    Production done{" "}
                     <Text as="span" fontSize="small" lineHeight="smallRelaxed" fontWeight="bold">
-                      7 days
+                      2 days
                     </Text>{" "}
-                    past due date
+                    late
                   </Text>
                 </>
               )}
