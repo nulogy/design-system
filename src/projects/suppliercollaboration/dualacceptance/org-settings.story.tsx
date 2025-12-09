@@ -418,6 +418,57 @@ const DefaultComponent = () => {
             </Flex>
           </Form>
         </Box>
+
+        {/* Fixed Design Notes Section */}
+        <Box
+          position="fixed"
+          bottom="0"
+          left="0"
+          right="0"
+          backgroundColor="white"
+          borderTop="1px solid"
+          borderColor="lightGrey"
+          p="x4"
+          maxWidth="1200px"
+          mx="auto"
+          style={{ boxShadow: "0 -2px 8px rgba(0, 0, 0, 0.1)" }}
+        >
+          <Heading4 mb="x2">Design notes</Heading4>
+          <Box as="ul" pl="x4" mb="x0" style={{ listStyle: "disc" }}>
+            <Text as="li" mb="x1" fontSize="small" color="midGrey">
+              Section is added after Module access section on Create/Edit organization page
+            </Text>
+            <Text as="li" mb="x1" fontSize="small" color="midGrey">
+              Single acceptance is preselected
+            </Text>
+            <Text as="li" mb="x1" fontSize="small" color="midGrey">
+              Only customer organizations will be able to configure acceptance
+            </Text>
+            <Text as="li" mb="x1" fontSize="small" color="midGrey">
+              Supplier organizations settings will be ignored
+            </Text>
+            <Text as="li" mb="x1" fontSize="small" color="midGrey">
+              Supplier will get setting assigned based on their customer. In case where supplier has customers with
+              different settings we will treat that situation as if supplier has Dual acceptance assigned.
+            </Text>
+            <Text as="li" mb="x1" fontSize="small" color="midGrey">
+              Single acceptance creates 1 acceptance type referred in UI as "Accept/Accepted"
+            </Text>
+            <Text as="li" mb="x1" fontSize="small" color="midGrey">
+              Dual acceptance creates 2 acceptance types referred in UI as "Accept/Accepted – Request updated" and
+              "Accept/Accepted – Request retained"
+            </Text>
+            <Text as="li" mb="x1" fontSize="small" color="midGrey">
+              "Accept/Accepted" in single acceptance is the same as "Accept/Accepted – Request updated" in dual
+              acceptance
+            </Text>
+            <Text as="li" mb="x0" fontSize="small" color="midGrey">
+              If supplier has customers with mixed settings we would default Dual acceptance, meaning that
+              "Accept/Accepted" (which would come from customers with Single acceptance) will become "Accept/Accepted –
+              Request updated"
+            </Text>
+          </Box>
+        </Box>
       </Page>
     </ApplicationFrame>
   );
