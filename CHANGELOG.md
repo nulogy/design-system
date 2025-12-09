@@ -47,7 +47,6 @@ function signatures to match the new types, though runtime behavior is unchanged
 
 ## [15.2.3](https://github.com/nulogy/design-system/compare/v15.2.2...v15.2.3) (2025-12-02)
 
-
 ### Bug Fixes
 
 * Cypress should be correctly cached now ([3aba83d](https://github.com/nulogy/design-system/commit/3aba83d1973db0e1ecfec5763731ddb05bc6683f))

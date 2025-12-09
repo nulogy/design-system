@@ -46,6 +46,9 @@ export default function Link({ children, forApp, openInNewTab, ...props }: LinkP
 
 const LinkWrapper = styled.span<Pick<LinkProps, "underline">>(({ underline = true }) => ({
   textDecoration: underline ? "underline" : "none",
+  "&:hover": {
+    textDecoration: "underline",
+  },
 }));
 
 const resetButtonStyles = {
@@ -77,6 +80,7 @@ const Anchor = styled.a<LinkProps>(
     "&:hover": {
       cursor: "pointer",
       color: getHoverColor(props),
+      textDecoration: "underline",
     },
   }),
   addStyledProps
