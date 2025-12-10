@@ -39,10 +39,11 @@ import {
   DropdownButton,
   ButtonGroup,
   DangerButton,
+  StatusIndicator,
 } from "../../../index";
 
 export default {
-  title: "Templates/directed-putaway/v1",
+  title: "Templates/directed-putaway/v2",
   parameters: {
     layout: "fullscreen",
   },
@@ -63,6 +64,11 @@ interface Pallet {
   expiryDate: string;
   status: string;
   quantity: string;
+}
+
+interface PalletWithLocation extends Pallet {
+  assignedLocation: string | null;
+  locationUpdated?: boolean;
 }
 
 interface MovedPallet extends Pallet {
@@ -114,10 +120,10 @@ export const Default = () => {
   const [palletData, setPalletData] = useState<Pallet | null>(null);
   const [isPalletPickedUp, setIsPalletPickedUp] = useState(false);
   const [isCancelModalOpen, setIsCancelModalOpen] = useState(false);
-  const [pickedUpPallets, setPickedUpPallets] = useState<Pallet[]>([]);
+  const [pickedUpPallets, setPickedUpPallets] = useState<PalletWithLocation[]>([]);
   const [mode, setMode] = useState<"pick up" | "drop off">("pick up");
   const [dropOffLocation, setDropOffLocation] = useState("");
-  const [palletToCancel, setPalletToCancel] = useState<Pallet | null>(null);
+  const [palletToCancel, setPalletToCancel] = useState<Pallet | PalletWithLocation | null>(null);
   const [palletValidationError, setPalletValidationError] = useState<string | null>(null);
   const [isLocationsSidebarOpen, setIsLocationsSidebarOpen] = useState(false);
   const [locationNavPath, setLocationNavPath] = useState<string[]>([]);
@@ -126,6 +132,7 @@ export const Default = () => {
   const [selectedProblem, setSelectedProblem] = useState<string | null>(null);
   const [reportedProblems, setReportedProblems] = useState<Record<string, string>>({});
   const [currentLocationForProblem, setCurrentLocationForProblem] = useState<string | null>(null);
+  const [palletIdForProblem, setPalletIdForProblem] = useState<string | null>(null);
   const [locationScenario, setLocationScenario] = useState<"preferred" | "overflow" | "empty">("preferred");
   const [isControllerModalOpen, setIsControllerModalOpen] = useState(false);
   const [isMovedInventorySidebarOpen, setIsMovedInventorySidebarOpen] = useState(false);
@@ -197,6 +204,18 @@ export const Default = () => {
     const locations = Object.values(locationData)
       .map((location) => location.name)
       .filter((name) => availablePalletSpots[name] > 0)
+      .sort();
+    return locations.length > 0 ? locations[0] : null;
+  };
+
+  // Function to get the next available location after a given location
+  const getNextAvailableLocation = (currentLocation: string | null): string | null => {
+    const locations = Object.values(locationData)
+      .map((location) => location.name)
+      .filter((name) => {
+        // Exclude the current location and only include locations with available spots
+        return name !== currentLocation && availablePalletSpots[name] > 0;
+      })
       .sort();
     return locations.length > 0 ? locations[0] : null;
   };
@@ -480,9 +499,10 @@ export const Default = () => {
         setPalletData(null);
         return;
       }
-      // Pallet is valid
+      // Pallet is valid - convert to Pallet (without assignedLocation) for display
       setPalletValidationError(null);
-      setPalletData(foundPallet);
+      const { assignedLocation, ...palletWithoutLocation } = foundPallet;
+      setPalletData(palletWithoutLocation);
     } else {
       // Pick up mode - check if pallet is already in transit
       const existingPallet = pickedUpPallets.find((p) => p.palletId === trimmedInput);
@@ -512,8 +532,14 @@ export const Default = () => {
     // Pick up logic would go here
     console.log("Picking up pallet:", palletData);
     if (palletData) {
+      // Assign the first available location
+      const assignedLocation = getFirstFinalLocation();
+      const palletWithLocation: PalletWithLocation = {
+        ...palletData,
+        assignedLocation,
+      };
       // Add new pallet to the beginning of the array so newest appears on top
-      setPickedUpPallets([palletData, ...pickedUpPallets]);
+      setPickedUpPallets([palletWithLocation, ...pickedUpPallets]);
       setPalletData(null);
       setPalletInput("");
       setIsPalletPickedUp(false);
@@ -530,6 +556,16 @@ export const Default = () => {
     if (pallet) {
       setPalletToCancel(pallet);
       setIsCancelModalOpen(true);
+    }
+  };
+
+  const handleReportProblemForPallet = (palletId: string) => {
+    const pallet = pickedUpPallets.find((p) => p.palletId === palletId);
+    if (pallet && pallet.assignedLocation) {
+      setCurrentLocationForProblem(pallet.assignedLocation);
+      setPalletIdForProblem(palletId);
+      setSelectedProblem(reportedProblems[pallet.assignedLocation] || null);
+      setIsReportProblemModalOpen(true);
     }
   };
 
@@ -629,10 +665,10 @@ export const Default = () => {
                   </Switcher>
                   <IconicButton
                     icon="update"
-                    tooltip="View moved inventory"
+                    tooltip={`View moved inventory (${movedInventory.length})`}
                     onClick={() => setIsMovedInventorySidebarOpen(true)}
                   >
-                    View moved inventory
+                    View moved inventory ({movedInventory.length})
                   </IconicButton>
                 </Flex>
                 {(mode === "pick up" || (mode === "drop off" && pickedUpPallets.length > 0)) && (
@@ -779,6 +815,9 @@ export const Default = () => {
                             {mode === "pick up" && (
                               <Box onClick={(e) => e.stopPropagation()}>
                                 <DropdownMenu trigger={() => <IconicButton icon="more" iconSize="x3" />}>
+                                  <DropdownButton onClick={() => handleReportProblemForPallet(pallet.palletId)}>
+                                    Report a problem
+                                  </DropdownButton>
                                   <DropdownButton onClick={() => handleCancelPickedUpPallet(pallet.palletId)}>
                                     Cancel pickup
                                   </DropdownButton>
@@ -790,11 +829,11 @@ export const Default = () => {
                             <DescriptionGroup>
                               <DescriptionTerm>Drop-off location</DescriptionTerm>
                               <DescriptionDetails>
-                                <Flex alignItems="center" gap="x2">
-                                  <Text>{getFirstFinalLocation() || "—"}</Text>
-                                  <Button size="small" onClick={() => setIsLocationsSidebarOpen(true)}>
-                                    View other locations
-                                  </Button>
+                                <Flex alignItems="center" gap="x1">
+                                  <Text>{pallet.assignedLocation || "—"}</Text>
+                                  {pallet.locationUpdated && (
+                                    <StatusIndicator type="informative">Location updated</StatusIndicator>
+                                  )}
                                 </Flex>
                               </DescriptionDetails>
                             </DescriptionGroup>
@@ -1004,6 +1043,7 @@ export const Default = () => {
             setIsReportProblemModalOpen(false);
             setSelectedProblem(null);
             setCurrentLocationForProblem(null);
+            setPalletIdForProblem(null);
           }}
           title={reportedProblems[currentLocationForProblem || ""] ? "Edit problem" : "Report a problem"}
           footerContent={
@@ -1016,10 +1056,24 @@ export const Default = () => {
                       ...reportedProblems,
                       [currentLocationForProblem]: selectedProblem,
                     });
+                    
+                    // If reporting from a pallet card, update the pallet's assigned location
+                    if (palletIdForProblem) {
+                      const nextLocation = getNextAvailableLocation(currentLocationForProblem);
+                      setPickedUpPallets((prev) =>
+                        prev.map((p) =>
+                          p.palletId === palletIdForProblem
+                            ? { ...p, assignedLocation: nextLocation, locationUpdated: true }
+                            : p
+                        )
+                      );
+                    }
+                    
                     toast.success("Problem reported successfully");
                     setIsReportProblemModalOpen(false);
                     setSelectedProblem(null);
                     setCurrentLocationForProblem(null);
+                    setPalletIdForProblem(null);
                   }
                 }}
                 mr="x2"
@@ -1032,6 +1086,7 @@ export const Default = () => {
                   setIsReportProblemModalOpen(false);
                   setSelectedProblem(null);
                   setCurrentLocationForProblem(null);
+                  setPalletIdForProblem(null);
                 }}
               >
                 Cancel
