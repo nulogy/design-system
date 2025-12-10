@@ -20,6 +20,8 @@ const GLOBALS = {
   "path-to-regexp": "pathToRegexp",
   "react-is": "reactIs",
   "react-dom": "reactDom",
+  "react/jsx-runtime": "React",
+  "react/jsx-dev-runtime": "React",
 };
 
 const externals = Object.keys(GLOBALS);
