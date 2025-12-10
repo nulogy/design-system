@@ -137,12 +137,13 @@ export const Default = () => {
   const [isControllerModalOpen, setIsControllerModalOpen] = useState(false);
   const [isMovedInventorySidebarOpen, setIsMovedInventorySidebarOpen] = useState(false);
   const [movedInventory, setMovedInventory] = useState<MovedPallet[]>([]);
-  
+
   // Initialize available pallet spots from locationData
   const [availablePalletSpots, setAvailablePalletSpots] = useState<Record<string, number>>(() => {
     const spots: Record<string, number> = {};
     for (const key in locationData) {
-      spots[locationData[key as keyof typeof locationData].name] = locationData[key as keyof typeof locationData].palletSpots;
+      spots[locationData[key as keyof typeof locationData].name] =
+        locationData[key as keyof typeof locationData].palletSpots;
     }
     return spots;
   });
@@ -240,20 +241,20 @@ export const Default = () => {
       // Success - remove pallet from pickedUpPallets and add to moved inventory
       const updatedPallets = pickedUpPallets.filter((p) => p.palletId !== palletData.palletId);
       setPickedUpPallets(updatedPallets);
-      
+
       // Decrement available pallet spots for this location
       setAvailablePalletSpots((prev) => ({
         ...prev,
         [trimmedLocation]: prev[trimmedLocation] - 1,
       }));
-      
+
       // Add to moved inventory with drop-off location
       const movedPallet: MovedPallet = {
         ...palletData,
         dropOffLocation: trimmedLocation,
       };
       setMovedInventory([movedPallet, ...movedInventory]);
-      
+
       setPalletData(null);
       setPalletInput("");
       setDropOffLocation("");
@@ -480,12 +481,12 @@ export const Default = () => {
 
   const handlePalletSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Don't submit if the Select menu is open
     if (isSelectMenuOpen) {
       return;
     }
-    
+
     const trimmedInput = palletInput.trim();
     if (!trimmedInput) {
       return;
@@ -890,8 +891,8 @@ export const Default = () => {
                   }
                 >
                   <Text>
-                    Cancelling the pickup of Pallet {palletToCancel?.palletId || "XXX"} will remove it from the move list.
-                    Please bring the pallet back to where you picked it up.
+                    Cancelling the pickup of Pallet {palletToCancel?.palletId || "XXX"} will remove it from the move
+                    list. Please bring the pallet back to where you picked it up.
                   </Text>
                 </Modal>
                 <Sidebar
@@ -917,41 +918,41 @@ export const Default = () => {
                       </Flex>
                       <CardSet>
                         {movedInventory.map((pallet) => (
-                        <Card key={pallet.palletId}>
-                          <Heading3 mb="0">{pallet.palletId}</Heading3>
-                          <DescriptionList columns={1} layout="inline" density="compact">
-                            <DescriptionGroup>
-                              <DescriptionTerm>Drop-off location</DescriptionTerm>
-                              <DescriptionDetails>{pallet.dropOffLocation}</DescriptionDetails>
-                            </DescriptionGroup>
-                          </DescriptionList>
-                          <Divider my="x2" />
-                          <DescriptionList columns={1} layout="inline" density="compact">
-                            <DescriptionGroup>
-                              <DescriptionTerm>Item</DescriptionTerm>
-                              <DescriptionDetails>
-                                {pallet.itemCode} • {pallet.itemDescription}
-                              </DescriptionDetails>
-                            </DescriptionGroup>
-                            <DescriptionGroup>
-                              <DescriptionTerm>Lot</DescriptionTerm>
-                              <DescriptionDetails>{pallet.lotCode}</DescriptionDetails>
-                            </DescriptionGroup>
-                            <DescriptionGroup>
-                              <DescriptionTerm>Expiry</DescriptionTerm>
-                              <DescriptionDetails>{pallet.expiryDate}</DescriptionDetails>
-                            </DescriptionGroup>
-                            <DescriptionGroup>
-                              <DescriptionTerm>Status</DescriptionTerm>
-                              <DescriptionDetails>{pallet.status}</DescriptionDetails>
-                            </DescriptionGroup>
-                            <DescriptionGroup>
-                              <DescriptionTerm>Quantity</DescriptionTerm>
-                              <DescriptionDetails>{pallet.quantity}</DescriptionDetails>
-                            </DescriptionGroup>
-                          </DescriptionList>
-                        </Card>
-                      ))}
+                          <Card key={pallet.palletId}>
+                            <Heading3 mb="0">{pallet.palletId}</Heading3>
+                            <DescriptionList columns={1} layout="inline" density="compact">
+                              <DescriptionGroup>
+                                <DescriptionTerm>Drop-off location</DescriptionTerm>
+                                <DescriptionDetails>{pallet.dropOffLocation}</DescriptionDetails>
+                              </DescriptionGroup>
+                            </DescriptionList>
+                            <Divider my="x2" />
+                            <DescriptionList columns={1} layout="inline" density="compact">
+                              <DescriptionGroup>
+                                <DescriptionTerm>Item</DescriptionTerm>
+                                <DescriptionDetails>
+                                  {pallet.itemCode} • {pallet.itemDescription}
+                                </DescriptionDetails>
+                              </DescriptionGroup>
+                              <DescriptionGroup>
+                                <DescriptionTerm>Lot</DescriptionTerm>
+                                <DescriptionDetails>{pallet.lotCode}</DescriptionDetails>
+                              </DescriptionGroup>
+                              <DescriptionGroup>
+                                <DescriptionTerm>Expiry</DescriptionTerm>
+                                <DescriptionDetails>{pallet.expiryDate}</DescriptionDetails>
+                              </DescriptionGroup>
+                              <DescriptionGroup>
+                                <DescriptionTerm>Status</DescriptionTerm>
+                                <DescriptionDetails>{pallet.status}</DescriptionDetails>
+                              </DescriptionGroup>
+                              <DescriptionGroup>
+                                <DescriptionTerm>Quantity</DescriptionTerm>
+                                <DescriptionDetails>{pallet.quantity}</DescriptionDetails>
+                              </DescriptionGroup>
+                            </DescriptionList>
+                          </Card>
+                        ))}
                       </CardSet>
                     </>
                   ) : (
@@ -1056,7 +1057,7 @@ export const Default = () => {
                       ...reportedProblems,
                       [currentLocationForProblem]: selectedProblem,
                     });
-                    
+
                     // If reporting from a pallet card, update the pallet's assigned location
                     if (palletIdForProblem) {
                       const nextLocation = getNextAvailableLocation(currentLocationForProblem);
@@ -1068,7 +1069,7 @@ export const Default = () => {
                         )
                       );
                     }
-                    
+
                     toast.success("Problem reported successfully");
                     setIsReportProblemModalOpen(false);
                     setSelectedProblem(null);
