@@ -32,7 +32,6 @@ const ScrollIndicatorBottom = () => (
   </ScrollIndicatorWrapper>
 );
 
-/* eslint-disable react/destructuring-assignment */
 class ScrollIndicators extends React.Component {
   constructor() {
     super();
@@ -79,6 +78,5 @@ class ScrollIndicators extends React.Component {
     );
   }
 }
-/* eslint-enable react/destructuring-assignment */
 
 export default ScrollIndicators;
