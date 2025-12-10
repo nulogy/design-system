@@ -559,6 +559,13 @@ export const Header = () => {
     }
   }, [filters.poliStatus, filters.production]);
 
+  // Reset production filter to "all" if "Not started" is selected when POLI status is "Completed"
+  useEffect(() => {
+    if (filters.poliStatus === "Completed" && filters.production === "Not started") {
+      setFilters((prevFilters) => ({ ...prevFilters, production: "all" }));
+    }
+  }, [filters.poliStatus, filters.production]);
+
   // Custom styles to ensure dropdown appears above all content
   const selectStyles = (baseStyles: any) => ({
     ...baseStyles,
@@ -823,10 +830,10 @@ export const Header = () => {
       isFlagged: false,
       activeCardAuthorRole: "customer" as const,
     },
-    // Customer - Open - Proposal accepted (reconciled)
+    // Customer - Open - Proposal accepted (request updated)
     {
       title:
-        "Viewed as Customer | POLI status: Open | Proposal accepted (reconciled) | Production: Not started | Milestone status: On time",
+        "Viewed as Customer | POLI status: Open | Proposal accepted (request updated) | Production: Not started | Milestone status: On time",
       userRole: "customer" as const,
       poliStatus: "Open" as const,
       productionStatus: "Not started" as const,
@@ -840,7 +847,7 @@ export const Header = () => {
     },
     {
       title:
-        "Viewed as Customer | POLI status: Open | Proposal accepted (reconciled) | Production: Not started | Milestone status: At risk",
+        "Viewed as Customer | POLI status: Open | Proposal accepted (request updated) | Production: Not started | Milestone status: At risk",
       userRole: "customer" as const,
       poliStatus: "Open" as const,
       productionStatus: "Not started" as const,
@@ -854,7 +861,7 @@ export const Header = () => {
     },
     {
       title:
-        "Viewed as Customer | POLI status: Open | Proposal accepted (reconciled) | Production: Not started | Milestone status: Late",
+        "Viewed as Customer | POLI status: Open | Proposal accepted (request updated) | Production: Not started | Milestone status: Late",
       userRole: "customer" as const,
       poliStatus: "Open" as const,
       productionStatus: "Not started" as const,
@@ -868,7 +875,7 @@ export const Header = () => {
     },
     {
       title:
-        "Viewed as Customer | POLI status: Open | Proposal accepted (reconciled) | Production: In progress | Milestone status: On time",
+        "Viewed as Customer | POLI status: Open | Proposal accepted (request updated) | Production: In progress | Milestone status: On time",
       userRole: "customer" as const,
       poliStatus: "Open" as const,
       productionStatus: "In progress" as const,
@@ -882,7 +889,7 @@ export const Header = () => {
     },
     {
       title:
-        "Viewed as Customer | POLI status: Open | Proposal accepted (reconciled) | Production: In progress | Milestone status: At risk",
+        "Viewed as Customer | POLI status: Open | Proposal accepted (request updated) | Production: In progress | Milestone status: At risk",
       userRole: "customer" as const,
       poliStatus: "Open" as const,
       productionStatus: "In progress" as const,
@@ -896,7 +903,7 @@ export const Header = () => {
     },
     {
       title:
-        "Viewed as Customer | POLI status: Open | Proposal accepted (reconciled) | Production: In progress | Milestone status: Late",
+        "Viewed as Customer | POLI status: Open | Proposal accepted (request updated) | Production: In progress | Milestone status: Late",
       userRole: "customer" as const,
       poliStatus: "Open" as const,
       productionStatus: "In progress" as const,
@@ -910,7 +917,7 @@ export const Header = () => {
     },
     {
       title:
-        "Viewed as Customer | POLI status: Open | Proposal accepted (reconciled) | Production: Completed | Milestone status: On time",
+        "Viewed as Customer | POLI status: Open | Proposal accepted (request updated) | Production: Completed | Milestone status: On time",
       userRole: "customer" as const,
       poliStatus: "Open" as const,
       productionStatus: "Completed" as const,
@@ -924,7 +931,7 @@ export const Header = () => {
     },
     {
       title:
-        "Viewed as Customer | POLI status: Open | Proposal accepted (reconciled) | Production: Completed | Milestone status: At risk",
+        "Viewed as Customer | POLI status: Open | Proposal accepted (request updated) | Production: Completed | Milestone status: At risk",
       userRole: "customer" as const,
       poliStatus: "Open" as const,
       productionStatus: "Completed" as const,
@@ -938,7 +945,7 @@ export const Header = () => {
     },
     {
       title:
-        "Viewed as Customer | POLI status: Open | Proposal accepted (reconciled) | Production: Completed | Milestone status: Late",
+        "Viewed as Customer | POLI status: Open | Proposal accepted (request updated) | Production: Completed | Milestone status: Late",
       userRole: "customer" as const,
       poliStatus: "Open" as const,
       productionStatus: "Completed" as const,
@@ -950,10 +957,10 @@ export const Header = () => {
       isFlagged: false,
       activeCardAuthorRole: null as null,
     },
-    // Customer - Open - Proposal accepted (not reconciled)
+    // Customer - Open - Proposal accepted (request retained)
     {
       title:
-        "Viewed as Customer | POLI status: Open | Proposal accepted (not reconciled) | Production: Not started | Milestone status: On time",
+        "Viewed as Customer | POLI status: Open | Proposal accepted (request retained) | Production: Not started | Milestone status: On time",
       userRole: "customer" as const,
       poliStatus: "Open" as const,
       productionStatus: "Not started" as const,
@@ -967,7 +974,7 @@ export const Header = () => {
     },
     {
       title:
-        "Viewed as Customer | POLI status: Open | Proposal accepted (not reconciled) | Production: Not started | Milestone status: At risk",
+        "Viewed as Customer | POLI status: Open | Proposal accepted (request retained) | Production: Not started | Milestone status: At risk",
       userRole: "customer" as const,
       poliStatus: "Open" as const,
       productionStatus: "Not started" as const,
@@ -981,7 +988,7 @@ export const Header = () => {
     },
     {
       title:
-        "Viewed as Customer | POLI status: Open | Proposal accepted (not reconciled) | Production: Not started | Milestone status: Late",
+        "Viewed as Customer | POLI status: Open | Proposal accepted (request retained) | Production: Not started | Milestone status: Late",
       userRole: "customer" as const,
       poliStatus: "Open" as const,
       productionStatus: "Not started" as const,
@@ -995,7 +1002,7 @@ export const Header = () => {
     },
     {
       title:
-        "Viewed as Customer | POLI status: Open | Proposal accepted (not reconciled) | Production: In progress | Milestone status: On time",
+        "Viewed as Customer | POLI status: Open | Proposal accepted (request retained) | Production: In progress | Milestone status: On time",
       userRole: "customer" as const,
       poliStatus: "Open" as const,
       productionStatus: "In progress" as const,
@@ -1009,7 +1016,7 @@ export const Header = () => {
     },
     {
       title:
-        "Viewed as Customer | POLI status: Open | Proposal accepted (not reconciled) | Production: In progress | Milestone status: At risk",
+        "Viewed as Customer | POLI status: Open | Proposal accepted (request retained) | Production: In progress | Milestone status: At risk",
       userRole: "customer" as const,
       poliStatus: "Open" as const,
       productionStatus: "In progress" as const,
@@ -1023,7 +1030,7 @@ export const Header = () => {
     },
     {
       title:
-        "Viewed as Customer | POLI status: Open | Proposal accepted (not reconciled) | Production: In progress | Milestone status: Late",
+        "Viewed as Customer | POLI status: Open | Proposal accepted (request retained) | Production: In progress | Milestone status: Late",
       userRole: "customer" as const,
       poliStatus: "Open" as const,
       productionStatus: "In progress" as const,
@@ -1037,7 +1044,7 @@ export const Header = () => {
     },
     {
       title:
-        "Viewed as Customer | POLI status: Open | Proposal accepted (not reconciled) | Production: Completed | Milestone status: On time",
+        "Viewed as Customer | POLI status: Open | Proposal accepted (request retained) | Production: Completed | Milestone status: On time",
       userRole: "customer" as const,
       poliStatus: "Open" as const,
       productionStatus: "Completed" as const,
@@ -1051,7 +1058,7 @@ export const Header = () => {
     },
     {
       title:
-        "Viewed as Customer | POLI status: Open | Proposal accepted (not reconciled) | Production: Completed | Milestone status: At risk",
+        "Viewed as Customer | POLI status: Open | Proposal accepted (request retained) | Production: Completed | Milestone status: At risk",
       userRole: "customer" as const,
       poliStatus: "Open" as const,
       productionStatus: "Completed" as const,
@@ -1065,7 +1072,7 @@ export const Header = () => {
     },
     {
       title:
-        "Viewed as Customer | POLI status: Open | Proposal accepted (not reconciled) | Production: Completed | Milestone status: Late",
+        "Viewed as Customer | POLI status: Open | Proposal accepted (request retained) | Production: Completed | Milestone status: Late",
       userRole: "customer" as const,
       poliStatus: "Open" as const,
       productionStatus: "Completed" as const,
@@ -1542,10 +1549,10 @@ export const Header = () => {
       isFlagged: false,
       activeCardAuthorRole: "supplier" as const,
     },
-    // Supplier - Open - Proposal accepted (reconciled)
+    // Supplier - Open - Proposal accepted (request updated)
     {
       title:
-        "Viewed as Supplier | POLI status: Open | Proposal accepted (reconciled) | Production: Not started | Milestone status: On time",
+        "Viewed as Supplier | POLI status: Open | Proposal accepted (request updated) | Production: Not started | Milestone status: On time",
       userRole: "supplier" as const,
       poliStatus: "Open" as const,
       productionStatus: "Not started" as const,
@@ -1559,7 +1566,7 @@ export const Header = () => {
     },
     {
       title:
-        "Viewed as Supplier | POLI status: Open | Proposal accepted (reconciled) | Production: Not started | Milestone status: At risk",
+        "Viewed as Supplier | POLI status: Open | Proposal accepted (request updated) | Production: Not started | Milestone status: At risk",
       userRole: "supplier" as const,
       poliStatus: "Open" as const,
       productionStatus: "Not started" as const,
@@ -1573,7 +1580,7 @@ export const Header = () => {
     },
     {
       title:
-        "Viewed as Supplier | POLI status: Open | Proposal accepted (reconciled) | Production: Not started | Milestone status: Late",
+        "Viewed as Supplier | POLI status: Open | Proposal accepted (request updated) | Production: Not started | Milestone status: Late",
       userRole: "supplier" as const,
       poliStatus: "Open" as const,
       productionStatus: "Not started" as const,
@@ -1587,7 +1594,7 @@ export const Header = () => {
     },
     {
       title:
-        "Viewed as Supplier | POLI status: Open | Proposal accepted (reconciled) | Production: In progress | Milestone status: On time",
+        "Viewed as Supplier | POLI status: Open | Proposal accepted (request updated) | Production: In progress | Milestone status: On time",
       userRole: "supplier" as const,
       poliStatus: "Open" as const,
       productionStatus: "In progress" as const,
@@ -1601,7 +1608,7 @@ export const Header = () => {
     },
     {
       title:
-        "Viewed as Supplier | POLI status: Open | Proposal accepted (reconciled) | Production: In progress | Milestone status: At risk",
+        "Viewed as Supplier | POLI status: Open | Proposal accepted (request updated) | Production: In progress | Milestone status: At risk",
       userRole: "supplier" as const,
       poliStatus: "Open" as const,
       productionStatus: "In progress" as const,
@@ -1615,7 +1622,7 @@ export const Header = () => {
     },
     {
       title:
-        "Viewed as Supplier | POLI status: Open | Proposal accepted (reconciled) | Production: In progress | Milestone status: Late",
+        "Viewed as Supplier | POLI status: Open | Proposal accepted (request updated) | Production: In progress | Milestone status: Late",
       userRole: "supplier" as const,
       poliStatus: "Open" as const,
       productionStatus: "In progress" as const,
@@ -1629,7 +1636,7 @@ export const Header = () => {
     },
     {
       title:
-        "Viewed as Supplier | POLI status: Open | Proposal accepted (reconciled) | Production: Completed | Milestone status: On time",
+        "Viewed as Supplier | POLI status: Open | Proposal accepted (request updated) | Production: Completed | Milestone status: On time",
       userRole: "supplier" as const,
       poliStatus: "Open" as const,
       productionStatus: "Completed" as const,
@@ -1643,7 +1650,7 @@ export const Header = () => {
     },
     {
       title:
-        "Viewed as Supplier | POLI status: Open | Proposal accepted (reconciled) | Production: Completed | Milestone status: At risk",
+        "Viewed as Supplier | POLI status: Open | Proposal accepted (request updated) | Production: Completed | Milestone status: At risk",
       userRole: "supplier" as const,
       poliStatus: "Open" as const,
       productionStatus: "Completed" as const,
@@ -1657,7 +1664,7 @@ export const Header = () => {
     },
     {
       title:
-        "Viewed as Supplier | POLI status: Open | Proposal accepted (reconciled) | Production: Completed | Milestone status: Late",
+        "Viewed as Supplier | POLI status: Open | Proposal accepted (request updated) | Production: Completed | Milestone status: Late",
       userRole: "supplier" as const,
       poliStatus: "Open" as const,
       productionStatus: "Completed" as const,
@@ -1669,10 +1676,10 @@ export const Header = () => {
       isFlagged: false,
       activeCardAuthorRole: null as null,
     },
-    // Supplier - Open - Proposal accepted (not reconciled)
+    // Supplier - Open - Proposal accepted (request retained)
     {
       title:
-        "Viewed as Supplier | POLI status: Open | Proposal accepted (not reconciled) | Production: Not started | Milestone status: On time",
+        "Viewed as Supplier | POLI status: Open | Proposal accepted (request retained) | Production: Not started | Milestone status: On time",
       userRole: "supplier" as const,
       poliStatus: "Open" as const,
       productionStatus: "Not started" as const,
@@ -1686,7 +1693,7 @@ export const Header = () => {
     },
     {
       title:
-        "Viewed as Supplier | POLI status: Open | Proposal accepted (not reconciled) | Production: Not started | Milestone status: At risk",
+        "Viewed as Supplier | POLI status: Open | Proposal accepted (request retained) | Production: Not started | Milestone status: At risk",
       userRole: "supplier" as const,
       poliStatus: "Open" as const,
       productionStatus: "Not started" as const,
@@ -1700,7 +1707,7 @@ export const Header = () => {
     },
     {
       title:
-        "Viewed as Supplier | POLI status: Open | Proposal accepted (not reconciled) | Production: Not started | Milestone status: Late",
+        "Viewed as Supplier | POLI status: Open | Proposal accepted (request retained) | Production: Not started | Milestone status: Late",
       userRole: "supplier" as const,
       poliStatus: "Open" as const,
       productionStatus: "Not started" as const,
@@ -1714,7 +1721,7 @@ export const Header = () => {
     },
     {
       title:
-        "Viewed as Supplier | POLI status: Open | Proposal accepted (not reconciled) | Production: In progress | Milestone status: On time",
+        "Viewed as Supplier | POLI status: Open | Proposal accepted (request retained) | Production: In progress | Milestone status: On time",
       userRole: "supplier" as const,
       poliStatus: "Open" as const,
       productionStatus: "In progress" as const,
@@ -1728,7 +1735,7 @@ export const Header = () => {
     },
     {
       title:
-        "Viewed as Supplier | POLI status: Open | Proposal accepted (not reconciled) | Production: In progress | Milestone status: At risk",
+        "Viewed as Supplier | POLI status: Open | Proposal accepted (request retained) | Production: In progress | Milestone status: At risk",
       userRole: "supplier" as const,
       poliStatus: "Open" as const,
       productionStatus: "In progress" as const,
@@ -1742,7 +1749,7 @@ export const Header = () => {
     },
     {
       title:
-        "Viewed as Supplier | POLI status: Open | Proposal accepted (not reconciled) | Production: In progress | Milestone status: Late",
+        "Viewed as Supplier | POLI status: Open | Proposal accepted (request retained) | Production: In progress | Milestone status: Late",
       userRole: "supplier" as const,
       poliStatus: "Open" as const,
       productionStatus: "In progress" as const,
@@ -1756,7 +1763,7 @@ export const Header = () => {
     },
     {
       title:
-        "Viewed as Supplier | POLI status: Open | Proposal accepted (not reconciled) | Production: Completed | Milestone status: On time",
+        "Viewed as Supplier | POLI status: Open | Proposal accepted (request retained) | Production: Completed | Milestone status: On time",
       userRole: "supplier" as const,
       poliStatus: "Open" as const,
       productionStatus: "Completed" as const,
@@ -1770,7 +1777,7 @@ export const Header = () => {
     },
     {
       title:
-        "Viewed as Supplier | POLI status: Open | Proposal accepted (not reconciled) | Production: Completed | Milestone status: At risk",
+        "Viewed as Supplier | POLI status: Open | Proposal accepted (request retained) | Production: Completed | Milestone status: At risk",
       userRole: "supplier" as const,
       poliStatus: "Open" as const,
       productionStatus: "Completed" as const,
@@ -1784,7 +1791,7 @@ export const Header = () => {
     },
     {
       title:
-        "Viewed as Supplier | POLI status: Open | Proposal accepted (not reconciled) | Production: Completed | Milestone status: Late",
+        "Viewed as Supplier | POLI status: Open | Proposal accepted (request retained) | Production: Completed | Milestone status: Late",
       userRole: "supplier" as const,
       poliStatus: "Open" as const,
       productionStatus: "Completed" as const,
@@ -2234,8 +2241,8 @@ export const Header = () => {
                       { value: "awaiting-customer", label: "Awaiting customer's response" },
                       { value: "awaiting-supplier", label: "Awaiting supplier's response" },
                       { value: "request-accepted", label: "Request accepted" },
-                      { value: "proposal-accepted-reconciled", label: "Proposal accepted (reconciled)" },
-                      { value: "proposal-accepted-not-reconciled", label: "Proposal accepted (not reconciled)" },
+                      { value: "proposal-accepted-reconciled", label: "Proposal accepted (request updated)" },
+                      { value: "proposal-accepted-not-reconciled", label: "Proposal accepted (request retained)" },
                     ]}
                   />
                 </Box>
@@ -2250,7 +2257,7 @@ export const Header = () => {
                     }}
                     options={[
                       { value: "all", label: "All" },
-                      { value: "Not started", label: "Not started" },
+                      ...(filters.poliStatus === "Completed" ? [] : [{ value: "Not started", label: "Not started" }]),
                       { value: "In progress", label: "In progress" },
                       ...(filters.poliStatus === "Canceled" ? [] : [{ value: "Completed", label: "Completed" }]),
                     ]}
@@ -3890,9 +3897,12 @@ export const Collaboration = () => {
       filters.poliStatus === "open-completed"
     ) {
       notes.push(
-        'Clicking Accept customer\'s proposal changes the status to "Accepted – Request updated". No confirmation modal is displayed.'
+        'If the organization is configured with dual acceptance, clicking Accept customer\'s request changes the status to "Accepted – Request updated". No confirmation modal is displayed.'
       );
-      notes.push("Submitting updated request changes the status to Awaiting customer's response.");
+      notes.push(
+        'If the organization is configured with standard acceptance, clicking Accept customer\'s request changes the status to "Accepted". No confirmation modal is displayed.'
+      );
+      notes.push("Submitting updated proposal changes the status to Awaiting customer's response.");
     }
 
     // Supplier - No - Awaiting customer's response - Open and Completed
@@ -3915,6 +3925,18 @@ export const Collaboration = () => {
       filters.poliStatus === "open-completed"
     ) {
       notes.push("Updating proposal changes the state to Awaiting customer's response.");
+    }
+
+    // Supplier - No - Accepted – Request retained - Open and Completed
+    if (
+      filters.viewedAs === "supplier" &&
+      filters.supplierProposal === "no" &&
+      filters.collaboration === "accepted-retained" &&
+      filters.poliStatus === "open-completed"
+    ) {
+      notes.push(
+        "This state is not possible since the Supplier has not made a proposal, so there is nothing to be accepted by customer."
+      );
     }
 
     // Customer - No - Awaiting customer's response
@@ -3991,7 +4013,7 @@ export const Collaboration = () => {
         'If the organization is configured with dual acceptance, clicking Accept supplier\'s proposal changes the status to "Accepted – Request updated" or "Accepted – Request retained", depending on the selection in the confirmation modal.'
       );
       notes.push(
-        'If the organization is configured with standard acceptance, clicking Accept supplier\'s proposal changes the status to "Accepted – Request updated" and no confirmation modal is displayed.'
+        'If the organization is configured with standard acceptance, clicking Accept supplier\'s proposal changes the status to "Accepted" and no confirmation modal is displayed.'
       );
     }
 
@@ -4006,7 +4028,7 @@ export const Collaboration = () => {
         'If the organization is configured with dual acceptance, clicking Accept supplier\'s proposal changes the status to "Accepted – Request updated" or "Accepted – Request retained", depending on the selection in the confirmation modal.'
       );
       notes.push(
-        'If the organization is configured with standard acceptance, clicking Accept supplier\'s proposal changes the status to "Accepted – Request updated" and no confirmation modal is displayed.'
+        'If the organization is configured with standard acceptance, clicking Accept supplier\'s proposal changes the status to "Accepted" and no confirmation modal is displayed.'
       );
       notes.push("Submitting updated request changes the status to Awaiting supplier's response.");
     }
@@ -4019,9 +4041,12 @@ export const Collaboration = () => {
       filters.poliStatus === "open-completed"
     ) {
       notes.push(
-        'Clicking Accept customer\'s proposal changes the status to "Accepted – Request updated". No confirmation modal is displayed.'
+        'If the organization is configured with dual acceptance, clicking Accept customer\'s request changes the status to "Accepted – Request updated". No confirmation modal is displayed.'
       );
-      notes.push("Submitting updated request changes the status to Awaiting customer's response.");
+      notes.push(
+        'If the organization is configured with standard acceptance, clicking Accept customer\'s request changes the status to "Accepted". No confirmation modal is displayed.'
+      );
+      notes.push("Submitting updated proposal changes the status to Awaiting customer's response.");
     }
 
     // Supplier - Yes - Awaiting customer's response - Open and Completed
@@ -4032,7 +4057,10 @@ export const Collaboration = () => {
       filters.poliStatus === "open-completed"
     ) {
       notes.push(
-        'Clicking Accept customer\'s proposal changes the status to "Accepted – Request updated". No confirmation modal is displayed.'
+        'If the organization is configured with dual acceptance, clicking Accept customer\'s request changes the status to "Accepted – Request updated". No confirmation modal is displayed.'
+      );
+      notes.push(
+        'If the organization is configured with standard acceptance, clicking Accept customer\'s request changes the status to "Accepted". No confirmation modal is displayed.'
       );
       notes.push("Updating proposal maintains current state.");
     }
@@ -4054,7 +4082,7 @@ export const Collaboration = () => {
       filters.collaboration === "accepted-retained" &&
       filters.poliStatus === "open-completed"
     ) {
-      notes.push("This state is not possible.");
+      notes.push("Updating proposal changes the state to Awaiting customer's response.");
     }
 
     // All canceled ones - only show if there are variations to render
