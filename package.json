@@ -99,7 +99,7 @@
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "typescript-eslint": "^8.0.0",
-    "@vitejs/plugin-react": "^4.7.0",
+    "@vitejs/plugin-react": "^5.1.2",
     "chromatic": "^13.3.3",
     "concurrently": "^9.2.0",
     "css-mediaquery": "^0.1.2",
