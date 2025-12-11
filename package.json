@@ -71,7 +71,6 @@
   "devDependencies": {
     "@apollo/client": "^3.11.8",
     "@eslint/js": "^9.0.0",
-    "@nulogy/eslint-config-nulogy": "^1.0.0",
     "@nulogy/icons": "^4.37.2",
     "@semantic-release/changelog": "^6.0.2",
     "@semantic-release/commit-analyzer": "^13.0.1",
