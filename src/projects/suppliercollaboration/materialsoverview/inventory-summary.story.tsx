@@ -82,6 +82,7 @@ export const InventorySummary = () => {
   const [divisions, setDivisions] = useState<string[]>([]);
   const [programGroups, setProgramGroups] = useState<string[]>([]);
   const [itemOrderTypes, setItemOrderTypes] = useState<string[]>([]);
+  const [itemStatuses, setItemStatuses] = useState<string[]>(["Active", "Discontinued"]);
   const [inventoryStatuses, setInventoryStatuses] = useState<string[]>(["On hand", "Rejected", "Quality control"]);
   const [suppliers, setSuppliers] = useState<string[]>([]);
   const [materialOwners, setMaterialOwners] = useState<string[]>([]);
@@ -133,6 +134,8 @@ export const InventorySummary = () => {
     if (programGroups.length > 0) count++;
     if (itemOrderTypes.length > 0) count++;
     if (customerPlanners.length > 0) count++;
+    // Item statuses: always count as applied (has default selection)
+    count++;
 
     // Inventory filters
     if (customerLotCode.length > 0) count++;
@@ -644,6 +647,7 @@ export const InventorySummary = () => {
                 setDivisions([]);
                 setProgramGroups([]);
                 setItemOrderTypes([]);
+                setItemStatuses(["Active", "Discontinued"]);
                 setCustomerPlanners([]);
                 setCustomerLotCode([]);
                 setSupplierLotCode([]);
@@ -848,6 +852,20 @@ export const InventorySummary = () => {
                   loadOptions={loadCustomerPlanners}
                   value={customerPlanners}
                   onChange={(value) => setCustomerPlanners((value as any[]) || [])}
+                />
+              </Box>
+
+              <Box>
+                <Select
+                  labelText="Item status"
+                  placeholder="Select"
+                  value={itemStatuses}
+                  onChange={(value) => setItemStatuses((value as string[]) || [])}
+                  options={[
+                    { value: "Active", label: "Active" },
+                    { value: "Discontinued", label: "Discontinued" },
+                  ]}
+                  multiselect
                 />
               </Box>
             </Flex>

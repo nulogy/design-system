@@ -480,6 +480,7 @@ export const Default = (args: { position1: string; position2: string; position3:
   const [divisions, setDivisions] = useState<any[]>([]);
   const [productGroups, setProductGroups] = useState<any[]>([]);
   const [itemOrderTypes, setItemOrderTypes] = useState<any[]>([]);
+  const [itemStatuses, setItemStatuses] = useState<string[]>(["Active", "Discontinued"]);
 
   // Mock load functions for AsyncSelect
   const loadItems = async (inputValue: string) => {
@@ -645,6 +646,7 @@ export const Default = (args: { position1: string; position2: string; position3:
                   setDivisions([]);
                   setProductGroups([]);
                   setItemOrderTypes([]);
+                  setItemStatuses(["Active", "Discontinued"]);
                   setSupplierPlanners([]);
                 }}
               >
@@ -937,6 +939,19 @@ export const Default = (args: { position1: string; position2: string; position3:
                           loadOptions={loadSupplierPlanners}
                           value={supplierPlanners}
                           onChange={(value) => setSupplierPlanners((value as any[]) || [])}
+                          multiselect
+                        />
+                      </Box>
+                      <Box>
+                        <Select
+                          labelText="Item status"
+                          placeholder="Select"
+                          value={itemStatuses}
+                          onChange={(value) => setItemStatuses((value as string[]) || [])}
+                          options={[
+                            { value: "Active", label: "Active" },
+                            { value: "Discontinued", label: "Discontinued" },
+                          ]}
                           multiselect
                         />
                       </Box>
