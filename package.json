@@ -144,7 +144,7 @@
     "@types/react-window": "^1.8.8",
     "@types/styled-system": "5.1.25",
     "date-fns": "2.23.0",
-    "debounce": "^1.2.0",
+    "debounce": "^3.0.0",
     "deep-equal": "^2.2.1",
     "framer-motion": "6.5.1",
     "i18next": "^19.3.1",
