@@ -45,8 +45,8 @@ importers:
         specifier: 2.23.0
         version: 2.23.0
       debounce:
-        specifier: ^1.2.0
-        version: 1.2.1
+        specifier: ^3.0.0
+        version: 3.0.0
       deep-equal:
         specifier: ^2.2.1
         version: 2.2.3
@@ -3288,8 +3288,9 @@ packages:
   dayjs@1.11.10:
     resolution: {integrity: sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ==}
 
-  debounce@1.2.1:
-    resolution: {integrity: sha512-XRRe6Glud4rd/ZGQfiV1ruXSfbvfJedlV9Y6zOlP+2K04vBYiJEte6stfFkCP03aMnY5tsipamumUjL14fofug==}
+  debounce@3.0.0:
+    resolution: {integrity: sha512-64byRbF0/AirwbuHqB3/ZpMG9/nckDa6ZA0yd6UnaQNwbbemCOwvz2sL5sjXLHhZHADyiwLm0M5qMhltUUx+TA==}
+    engines: {node: '>=20'}
 
   debug@2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
@@ -10669,7 +10670,7 @@ snapshots:
 
   dayjs@1.11.10: {}
 
-  debounce@1.2.1: {}
+  debounce@3.0.0: {}
 
   debug@2.6.9:
     dependencies:
