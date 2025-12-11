@@ -10,6 +10,10 @@ updates:
       timezone: America/Toronto
     open-pull-requests-limit: 8
     rebase-strategy: disabled
+    groups:
+      semantic-release:
+        patterns:
+          - "*semantic-release*"
   - package-ecosystem: github-actions
     directory: "/"
     schedule:
