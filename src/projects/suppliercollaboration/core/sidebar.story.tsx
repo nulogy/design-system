@@ -944,7 +944,7 @@ export const Default = (args: { position1: string; position2: string; position3:
                       </Box>
                       <Box>
                         <Select
-                          labelText="Item status"
+                          labelText="Item statuses"
                           placeholder="Select"
                           value={itemStatuses}
                           onChange={(value) => setItemStatuses((value as string[]) || [])}
@@ -953,6 +953,7 @@ export const Default = (args: { position1: string; position2: string; position3:
                             { value: "Discontinued", label: "Discontinued" },
                           ]}
                           multiselect
+                          menuPlacement="top"
                         />
                       </Box>
                     </Flex>

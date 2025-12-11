@@ -857,7 +857,7 @@ export const InventorySummary = () => {
 
               <Box>
                 <Select
-                  labelText="Item status"
+                  labelText="Item statuses"
                   placeholder="Select"
                   value={itemStatuses}
                   onChange={(value) => setItemStatuses((value as string[]) || [])}
@@ -866,6 +866,7 @@ export const InventorySummary = () => {
                     { value: "Discontinued", label: "Discontinued" },
                   ]}
                   multiselect
+                  menuPlacement="top"
                 />
               </Box>
             </Flex>
