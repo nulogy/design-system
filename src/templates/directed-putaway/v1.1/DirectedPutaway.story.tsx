@@ -166,7 +166,7 @@ export const Default = () => {
   const generateMixedPalletItems = (): PalletItem[] => {
     const itemCount = Math.floor(Math.random() * 9) + 2; // 2-10 items
     const items: PalletItem[] = [];
-    
+
     // Sample item codes and descriptions
     const sampleItems = [
       { code: "PIE4124", desc: "Apple Pie" },
@@ -178,35 +178,35 @@ export const Default = () => {
       { code: "COO5678", desc: "Cookie" },
       { code: "CAK9012", desc: "Cake" },
     ];
-    
+
     // Sample lot codes
     const lotCodes = ["LOT001", "LOT002", "LOT003", "LOT004", "LOT005", "LOT006", "LOT007", "LOT008"];
-    
+
     // Generate expiry dates (random dates in the next 30-90 days)
     const getRandomExpiryDate = () => {
       const days = Math.floor(Math.random() * 60) + 30;
       const date = new Date();
       date.setDate(date.getDate() + days);
-      return date.toISOString().split('T')[0];
+      return date.toISOString().split("T")[0];
     };
-    
+
     // Sample statuses
     const statuses = ["Available", "Reserved", "In Transit"];
-    
+
     // Sample quantities
     const quantities = ["10", "20", "30", "40", "50", "100", "150", "200"];
-    
+
     for (let i = 0; i < itemCount; i++) {
       // Sometimes use the same item code with different lot/expiry, sometimes different item
       const useSameItem = Math.random() > 0.5 && items.length > 0;
-      const itemIndex = useSameItem 
+      const itemIndex = useSameItem
         ? Math.floor(Math.random() * items.length)
         : Math.floor(Math.random() * sampleItems.length);
-      
-      const baseItem = useSameItem 
+
+      const baseItem = useSameItem
         ? { code: items[itemIndex].itemCode, desc: items[itemIndex].itemDescription }
         : sampleItems[itemIndex];
-      
+
       items.push({
         itemCode: baseItem.code,
         itemDescription: baseItem.desc,
@@ -216,7 +216,7 @@ export const Default = () => {
         quantity: quantities[Math.floor(Math.random() * quantities.length)],
       });
     }
-    
+
     return items;
   };
 
@@ -437,9 +437,7 @@ export const Default = () => {
               <Flex justifyContent="space-between" alignItems="center" style={{ opacity: hasProblem ? 0.5 : 1 }}>
                 <Heading3 mb="0">{item.name}</Heading3>
                 {hasProblem ? (
-                  <StatusIndicator type="neutral">
-                    Problem reported
-                  </StatusIndicator>
+                  <StatusIndicator type="neutral">Problem reported</StatusIndicator>
                 ) : (
                   <StatusIndicator type="quiet">
                     {item.palletSpots} {item.palletSpots === 1 ? "spot" : "spots"} available
@@ -465,9 +463,7 @@ export const Default = () => {
                       <Card key={item.key} style={{ opacity: 0.5 }}>
                         <Flex justifyContent="space-between" alignItems="center">
                           <Heading3 mb="0">{item.name}</Heading3>
-                          <StatusIndicator type="neutral">
-                            Problem reported
-                          </StatusIndicator>
+                          <StatusIndicator type="neutral">Problem reported</StatusIndicator>
                         </Flex>
                       </Card>
                     );
@@ -588,7 +584,7 @@ export const Default = () => {
       setPalletValidationError(null);
       // Mock pallet data - in a real app, this would be an API call
       const isMixedPallet = trimmedInput.toUpperCase().startsWith("MP");
-      
+
       const mockPallet: Pallet = isMixedPallet
         ? {
             palletId: trimmedInput,
@@ -739,9 +735,7 @@ export const Default = () => {
                     onClick={() => setIsMovedInventorySidebarOpen(true)}
                     color="darkBlue"
                   >
-                    <Text color="darkBlue">
-                      View moved inventory ({movedInventory.length})
-                    </Text>
+                    <Text color="darkBlue">View moved inventory ({movedInventory.length})</Text>
                   </IconicButton>
                 </Flex>
                 {(mode === "pick up" || (mode === "drop off" && pickedUpPallets.length > 0)) && (
@@ -804,7 +798,8 @@ export const Default = () => {
                           {validatedDropOffLocation && availablePalletSpots[validatedDropOffLocation] !== undefined && (
                             <Text fontSize="small" color="midGrey" style={{ marginTop: "-24px", marginBottom: "24px" }}>
                               {availablePalletSpots[validatedDropOffLocation]}{" "}
-                              {availablePalletSpots[validatedDropOffLocation] === 1 ? "pallet spot" : "pallet spots"} available
+                              {availablePalletSpots[validatedDropOffLocation] === 1 ? "pallet spot" : "pallet spots"}{" "}
+                              available
                             </Text>
                           )}
                         </Box>
@@ -872,27 +867,33 @@ export const Default = () => {
                         <Flex style={{ gap: "16px", flexWrap: "nowrap" }}>
                           {palletData.items.map((item, index) => (
                             <Card key={index} style={{ minWidth: "300px", maxWidth: "300px", flexShrink: 0 }}>
-                              <Heading3 mb="x2">{item.itemCode} • {item.itemDescription}</Heading3>
-                              <DescriptionList 
-                                columns={1} 
-                                layout="inline" 
-                                density="compact"
-                              >
+                              <Heading3 mb="x2">
+                                {item.itemCode} • {item.itemDescription}
+                              </Heading3>
+                              <DescriptionList columns={1} layout="inline" density="compact">
                                 <DescriptionGroup>
                                   <DescriptionTerm>Lot</DescriptionTerm>
-                                  <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{item.lotCode}</DescriptionDetails>
+                                  <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>
+                                    {item.lotCode}
+                                  </DescriptionDetails>
                                 </DescriptionGroup>
                                 <DescriptionGroup>
                                   <DescriptionTerm>Expiry</DescriptionTerm>
-                                  <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{item.expiryDate}</DescriptionDetails>
+                                  <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>
+                                    {item.expiryDate}
+                                  </DescriptionDetails>
                                 </DescriptionGroup>
                                 <DescriptionGroup>
                                   <DescriptionTerm>Status</DescriptionTerm>
-                                  <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{item.status}</DescriptionDetails>
+                                  <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>
+                                    {item.status}
+                                  </DescriptionDetails>
                                 </DescriptionGroup>
                                 <DescriptionGroup>
                                   <DescriptionTerm>Quantity</DescriptionTerm>
-                                  <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{item.quantity}</DescriptionDetails>
+                                  <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>
+                                    {item.quantity}
+                                  </DescriptionDetails>
                                 </DescriptionGroup>
                               </DescriptionList>
                             </Card>
@@ -902,27 +903,33 @@ export const Default = () => {
                     ) : (
                       // Single item pallet
                       <Card style={{ maxWidth: "fit-content", width: "auto" }}>
-                        <Heading3 mb="x2">{palletData.itemCode} • {palletData.itemDescription}</Heading3>
-                        <DescriptionList 
-                          columns={1} 
-                          layout="inline" 
-                          density="compact"
-                        >
+                        <Heading3 mb="x2">
+                          {palletData.itemCode} • {palletData.itemDescription}
+                        </Heading3>
+                        <DescriptionList columns={1} layout="inline" density="compact">
                           <DescriptionGroup>
                             <DescriptionTerm>Lot</DescriptionTerm>
-                            <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{palletData.lotCode}</DescriptionDetails>
+                            <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>
+                              {palletData.lotCode}
+                            </DescriptionDetails>
                           </DescriptionGroup>
                           <DescriptionGroup>
                             <DescriptionTerm>Expiry</DescriptionTerm>
-                            <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{palletData.expiryDate}</DescriptionDetails>
+                            <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>
+                              {palletData.expiryDate}
+                            </DescriptionDetails>
                           </DescriptionGroup>
                           <DescriptionGroup>
                             <DescriptionTerm>Status</DescriptionTerm>
-                            <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{palletData.status}</DescriptionDetails>
+                            <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>
+                              {palletData.status}
+                            </DescriptionDetails>
                           </DescriptionGroup>
                           <DescriptionGroup>
                             <DescriptionTerm>Quantity</DescriptionTerm>
-                            <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{palletData.quantity}</DescriptionDetails>
+                            <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>
+                              {palletData.quantity}
+                            </DescriptionDetails>
                           </DescriptionGroup>
                         </DescriptionList>
                       </Card>
@@ -966,10 +973,9 @@ export const Default = () => {
                             <Box flex="1">
                               <Heading3 mb="x1">{pallet.palletId}</Heading3>
                               <Text color="midGrey">
-                                {pallet.items 
+                                {pallet.items
                                   ? `Mixed pallet (${pallet.items.length} items)`
-                                  : `${pallet.itemCode} • ${pallet.itemDescription}`
-                                }
+                                  : `${pallet.itemCode} • ${pallet.itemDescription}`}
                               </Text>
                             </Box>
                             <Box textAlign="right">
@@ -1073,27 +1079,33 @@ export const Default = () => {
                                 <Flex style={{ gap: "16px", flexWrap: "nowrap" }}>
                                   {pallet.items.map((item, index) => (
                                     <Card key={index} style={{ minWidth: "300px", maxWidth: "300px", flexShrink: 0 }}>
-                                      <Heading3 mb="x2">{item.itemCode} • {item.itemDescription}</Heading3>
-                                      <DescriptionList 
-                                        columns={1} 
-                                        layout="inline" 
-                                        density="compact"
-                                      >
+                                      <Heading3 mb="x2">
+                                        {item.itemCode} • {item.itemDescription}
+                                      </Heading3>
+                                      <DescriptionList columns={1} layout="inline" density="compact">
                                         <DescriptionGroup>
                                           <DescriptionTerm>Lot</DescriptionTerm>
-                                          <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{item.lotCode}</DescriptionDetails>
+                                          <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>
+                                            {item.lotCode}
+                                          </DescriptionDetails>
                                         </DescriptionGroup>
                                         <DescriptionGroup>
                                           <DescriptionTerm>Expiry</DescriptionTerm>
-                                          <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{item.expiryDate}</DescriptionDetails>
+                                          <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>
+                                            {item.expiryDate}
+                                          </DescriptionDetails>
                                         </DescriptionGroup>
                                         <DescriptionGroup>
                                           <DescriptionTerm>Status</DescriptionTerm>
-                                          <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{item.status}</DescriptionDetails>
+                                          <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>
+                                            {item.status}
+                                          </DescriptionDetails>
                                         </DescriptionGroup>
                                         <DescriptionGroup>
                                           <DescriptionTerm>Quantity</DescriptionTerm>
-                                          <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{item.quantity}</DescriptionDetails>
+                                          <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>
+                                            {item.quantity}
+                                          </DescriptionDetails>
                                         </DescriptionGroup>
                                       </DescriptionList>
                                     </Card>
@@ -1103,27 +1115,33 @@ export const Default = () => {
                             ) : (
                               // Single item pallet
                               <Card style={{ maxWidth: "fit-content", width: "auto" }}>
-                                <Heading3 mb="x2">{pallet.itemCode} • {pallet.itemDescription}</Heading3>
-                                <DescriptionList 
-                                  columns={1} 
-                                  layout="inline" 
-                                  density="compact"
-                                >
+                                <Heading3 mb="x2">
+                                  {pallet.itemCode} • {pallet.itemDescription}
+                                </Heading3>
+                                <DescriptionList columns={1} layout="inline" density="compact">
                                   <DescriptionGroup>
                                     <DescriptionTerm>Lot</DescriptionTerm>
-                                    <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{pallet.lotCode}</DescriptionDetails>
+                                    <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>
+                                      {pallet.lotCode}
+                                    </DescriptionDetails>
                                   </DescriptionGroup>
                                   <DescriptionGroup>
                                     <DescriptionTerm>Expiry</DescriptionTerm>
-                                    <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{pallet.expiryDate}</DescriptionDetails>
+                                    <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>
+                                      {pallet.expiryDate}
+                                    </DescriptionDetails>
                                   </DescriptionGroup>
                                   <DescriptionGroup>
                                     <DescriptionTerm>Status</DescriptionTerm>
-                                    <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{pallet.status}</DescriptionDetails>
+                                    <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>
+                                      {pallet.status}
+                                    </DescriptionDetails>
                                   </DescriptionGroup>
                                   <DescriptionGroup>
                                     <DescriptionTerm>Quantity</DescriptionTerm>
-                                    <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{pallet.quantity}</DescriptionDetails>
+                                    <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>
+                                      {pallet.quantity}
+                                    </DescriptionDetails>
                                   </DescriptionGroup>
                                 </DescriptionList>
                               </Card>
@@ -1156,23 +1174,33 @@ export const Default = () => {
                         <>
                           {selectedPalletForDetails.items.map((item, index) => (
                             <Card key={index}>
-                              <Heading3 mb="x2">{item.itemCode} • {item.itemDescription}</Heading3>
+                              <Heading3 mb="x2">
+                                {item.itemCode} • {item.itemDescription}
+                              </Heading3>
                               <DescriptionList columns={1} layout="inline" density="compact">
                                 <DescriptionGroup>
                                   <DescriptionTerm>Lot</DescriptionTerm>
-                                  <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{item.lotCode}</DescriptionDetails>
+                                  <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>
+                                    {item.lotCode}
+                                  </DescriptionDetails>
                                 </DescriptionGroup>
                                 <DescriptionGroup>
                                   <DescriptionTerm>Expiry</DescriptionTerm>
-                                  <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{item.expiryDate}</DescriptionDetails>
+                                  <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>
+                                    {item.expiryDate}
+                                  </DescriptionDetails>
                                 </DescriptionGroup>
                                 <DescriptionGroup>
                                   <DescriptionTerm>Status</DescriptionTerm>
-                                  <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{item.status}</DescriptionDetails>
+                                  <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>
+                                    {item.status}
+                                  </DescriptionDetails>
                                 </DescriptionGroup>
                                 <DescriptionGroup>
                                   <DescriptionTerm>Quantity</DescriptionTerm>
-                                  <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{item.quantity}</DescriptionDetails>
+                                  <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>
+                                    {item.quantity}
+                                  </DescriptionDetails>
                                 </DescriptionGroup>
                               </DescriptionList>
                             </Card>
@@ -1181,23 +1209,33 @@ export const Default = () => {
                       ) : (
                         // Single item pallet
                         <Card>
-                          <Heading3 mb="x2">{selectedPalletForDetails.itemCode} • {selectedPalletForDetails.itemDescription}</Heading3>
+                          <Heading3 mb="x2">
+                            {selectedPalletForDetails.itemCode} • {selectedPalletForDetails.itemDescription}
+                          </Heading3>
                           <DescriptionList columns={1} layout="inline" density="compact">
                             <DescriptionGroup>
                               <DescriptionTerm>Lot</DescriptionTerm>
-                              <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{selectedPalletForDetails.lotCode}</DescriptionDetails>
+                              <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>
+                                {selectedPalletForDetails.lotCode}
+                              </DescriptionDetails>
                             </DescriptionGroup>
                             <DescriptionGroup>
                               <DescriptionTerm>Expiry</DescriptionTerm>
-                              <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{selectedPalletForDetails.expiryDate}</DescriptionDetails>
+                              <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>
+                                {selectedPalletForDetails.expiryDate}
+                              </DescriptionDetails>
                             </DescriptionGroup>
                             <DescriptionGroup>
                               <DescriptionTerm>Status</DescriptionTerm>
-                              <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{selectedPalletForDetails.status}</DescriptionDetails>
+                              <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>
+                                {selectedPalletForDetails.status}
+                              </DescriptionDetails>
                             </DescriptionGroup>
                             <DescriptionGroup>
                               <DescriptionTerm>Quantity</DescriptionTerm>
-                              <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{selectedPalletForDetails.quantity}</DescriptionDetails>
+                              <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>
+                                {selectedPalletForDetails.quantity}
+                              </DescriptionDetails>
                             </DescriptionGroup>
                           </DescriptionList>
                         </Card>
@@ -1298,14 +1336,14 @@ export const Default = () => {
                       ...reportedProblems,
                       [currentLocationForProblem]: selectedProblem,
                     });
-                    
+
                     // If this location is the current validated drop-off location, clear it
                     if (validatedDropOffLocation === currentLocationForProblem) {
                       setValidatedDropOffLocation(null);
                       setDropOffLocation("");
                       setDropOffLocationError(null);
                     }
-                    
+
                     toast.success("Problem reported successfully");
                     setIsReportProblemModalOpen(false);
                     setSelectedProblem(null);
