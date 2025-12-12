@@ -437,7 +437,7 @@ export const Default = () => {
               <Flex justifyContent="space-between" alignItems="center" style={{ opacity: hasProblem ? 0.5 : 1 }}>
                 <Heading3 mb="0">{item.name}</Heading3>
                 {hasProblem ? (
-                  <StatusIndicator variant="neutral">
+                  <StatusIndicator type="neutral">
                     Problem reported
                   </StatusIndicator>
                 ) : (
@@ -465,7 +465,7 @@ export const Default = () => {
                       <Card key={item.key} style={{ opacity: 0.5 }}>
                         <Flex justifyContent="space-between" alignItems="center">
                           <Heading3 mb="0">{item.name}</Heading3>
-                          <StatusIndicator variant="neutral">
+                          <StatusIndicator type="neutral">
                             Problem reported
                           </StatusIndicator>
                         </Flex>
@@ -877,7 +877,6 @@ export const Default = () => {
                                 columns={1} 
                                 layout="inline" 
                                 density="compact"
-                                style={{ columnGap: "8px" }}
                               >
                                 <DescriptionGroup>
                                   <DescriptionTerm>Lot</DescriptionTerm>
@@ -908,7 +907,6 @@ export const Default = () => {
                           columns={1} 
                           layout="inline" 
                           density="compact"
-                          style={{ columnGap: "8px" }}
                         >
                           <DescriptionGroup>
                             <DescriptionTerm>Lot</DescriptionTerm>
@@ -1080,7 +1078,6 @@ export const Default = () => {
                                         columns={1} 
                                         layout="inline" 
                                         density="compact"
-                                        style={{ columnGap: "8px" }}
                                       >
                                         <DescriptionGroup>
                                           <DescriptionTerm>Lot</DescriptionTerm>
@@ -1111,7 +1108,6 @@ export const Default = () => {
                                   columns={1} 
                                   layout="inline" 
                                   density="compact"
-                                  style={{ columnGap: "8px" }}
                                 >
                                   <DescriptionGroup>
                                     <DescriptionTerm>Lot</DescriptionTerm>
@@ -1161,7 +1157,7 @@ export const Default = () => {
                           {selectedPalletForDetails.items.map((item, index) => (
                             <Card key={index}>
                               <Heading3 mb="x2">{item.itemCode} • {item.itemDescription}</Heading3>
-                              <DescriptionList columns={1} layout="inline" density="compact" style={{ columnGap: "8px" }}>
+                              <DescriptionList columns={1} layout="inline" density="compact">
                                 <DescriptionGroup>
                                   <DescriptionTerm>Lot</DescriptionTerm>
                                   <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{item.lotCode}</DescriptionDetails>
@@ -1186,7 +1182,7 @@ export const Default = () => {
                         // Single item pallet
                         <Card>
                           <Heading3 mb="x2">{selectedPalletForDetails.itemCode} • {selectedPalletForDetails.itemDescription}</Heading3>
-                          <DescriptionList columns={1} layout="inline" density="compact" style={{ columnGap: "8px" }}>
+                          <DescriptionList columns={1} layout="inline" density="compact">
                             <DescriptionGroup>
                               <DescriptionTerm>Lot</DescriptionTerm>
                               <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{selectedPalletForDetails.lotCode}</DescriptionDetails>
