@@ -31,6 +31,7 @@ import {
   DescriptionTerm,
   DescriptionDetails,
   Divider,
+  VerticalDivider,
   ToastContainer,
   toast,
   Modal,
@@ -39,10 +40,11 @@ import {
   DropdownButton,
   ButtonGroup,
   DangerButton,
+  StatusIndicator,
 } from "../../../index";
 
 export default {
-  title: "Templates/directed-putaway/v1",
+  title: "Templates/directed-putaway/v1.1",
   parameters: {
     layout: "fullscreen",
   },
@@ -55,14 +57,24 @@ interface Move {
   shipmentId?: string;
 }
 
-interface Pallet {
-  palletId: string;
+interface PalletItem {
   itemCode: string;
   itemDescription: string;
   lotCode: string;
   expiryDate: string;
   status: string;
   quantity: string;
+}
+
+interface Pallet {
+  palletId: string;
+  itemCode?: string;
+  itemDescription?: string;
+  lotCode?: string;
+  expiryDate?: string;
+  status?: string;
+  quantity?: string;
+  items?: PalletItem[]; // For mixed pallets
 }
 
 interface MovedPallet extends Pallet {
@@ -117,6 +129,7 @@ export const Default = () => {
   const [pickedUpPallets, setPickedUpPallets] = useState<Pallet[]>([]);
   const [mode, setMode] = useState<"pick up" | "drop off">("pick up");
   const [dropOffLocation, setDropOffLocation] = useState("");
+  const [validatedDropOffLocation, setValidatedDropOffLocation] = useState<string | null>(null);
   const [palletToCancel, setPalletToCancel] = useState<Pallet | null>(null);
   const [palletValidationError, setPalletValidationError] = useState<string | null>(null);
   const [isLocationsSidebarOpen, setIsLocationsSidebarOpen] = useState(false);
@@ -130,6 +143,8 @@ export const Default = () => {
   const [isControllerModalOpen, setIsControllerModalOpen] = useState(false);
   const [isMovedInventorySidebarOpen, setIsMovedInventorySidebarOpen] = useState(false);
   const [movedInventory, setMovedInventory] = useState<MovedPallet[]>([]);
+  const [isPalletDetailsSidebarOpen, setIsPalletDetailsSidebarOpen] = useState(false);
+  const [selectedPalletForDetails, setSelectedPalletForDetails] = useState<Pallet | null>(null);
 
   // Initialize available pallet spots from locationData
   const [availablePalletSpots, setAvailablePalletSpots] = useState<Record<string, number>>(() => {
@@ -145,6 +160,64 @@ export const Default = () => {
   const generateMoveId = () => {
     // Generate a random 6-digit move ID
     return Math.floor(100000 + Math.random() * 900000).toString();
+  };
+
+  // Generate random items for mixed pallets
+  const generateMixedPalletItems = (): PalletItem[] => {
+    const itemCount = Math.floor(Math.random() * 9) + 2; // 2-10 items
+    const items: PalletItem[] = [];
+    
+    // Sample item codes and descriptions
+    const sampleItems = [
+      { code: "PIE4124", desc: "Apple Pie" },
+      { code: "CHC5678", desc: "Chocolate Chip Cookie" },
+      { code: "BRN9012", desc: "Brownie" },
+      { code: "CUP3456", desc: "Cupcake" },
+      { code: "DON7890", desc: "Donut" },
+      { code: "MUF1234", desc: "Muffin" },
+      { code: "COO5678", desc: "Cookie" },
+      { code: "CAK9012", desc: "Cake" },
+    ];
+    
+    // Sample lot codes
+    const lotCodes = ["LOT001", "LOT002", "LOT003", "LOT004", "LOT005", "LOT006", "LOT007", "LOT008"];
+    
+    // Generate expiry dates (random dates in the next 30-90 days)
+    const getRandomExpiryDate = () => {
+      const days = Math.floor(Math.random() * 60) + 30;
+      const date = new Date();
+      date.setDate(date.getDate() + days);
+      return date.toISOString().split('T')[0];
+    };
+    
+    // Sample statuses
+    const statuses = ["Available", "Reserved", "In Transit"];
+    
+    // Sample quantities
+    const quantities = ["10", "20", "30", "40", "50", "100", "150", "200"];
+    
+    for (let i = 0; i < itemCount; i++) {
+      // Sometimes use the same item code with different lot/expiry, sometimes different item
+      const useSameItem = Math.random() > 0.5 && items.length > 0;
+      const itemIndex = useSameItem 
+        ? Math.floor(Math.random() * items.length)
+        : Math.floor(Math.random() * sampleItems.length);
+      
+      const baseItem = useSameItem 
+        ? { code: items[itemIndex].itemCode, desc: items[itemIndex].itemDescription }
+        : sampleItems[itemIndex];
+      
+      items.push({
+        itemCode: baseItem.code,
+        itemDescription: baseItem.desc,
+        lotCode: lotCodes[Math.floor(Math.random() * lotCodes.length)],
+        expiryDate: getRandomExpiryDate(),
+        status: statuses[Math.floor(Math.random() * statuses.length)],
+        quantity: quantities[Math.floor(Math.random() * quantities.length)],
+      });
+    }
+    
+    return items;
   };
 
   const handleLocationCardClick = (key: string) => {
@@ -193,11 +266,11 @@ export const Default = () => {
     return false;
   };
 
-  // Function to get the first location alphabetically that has available spots
+  // Function to get the first location alphabetically that has available spots and no reported problems
   const getFirstFinalLocation = (): string | null => {
     const locations = Object.values(locationData)
       .map((location) => location.name)
-      .filter((name) => availablePalletSpots[name] > 0)
+      .filter((name) => availablePalletSpots[name] > 0 && !reportedProblems[name])
       .sort();
     return locations.length > 0 ? locations[0] : null;
   };
@@ -210,48 +283,76 @@ export const Default = () => {
       return;
     }
 
-    if (!palletData) {
-      return;
-    }
-
     // Check if location exists in locationData
     const locationExists = findLocationInAllData(trimmedLocation);
     const currentSpots = availablePalletSpots[trimmedLocation];
+    const hasProblem = reportedProblems[trimmedLocation];
 
-    if (locationExists && currentSpots !== undefined && currentSpots > 0) {
-      // Success - remove pallet from pickedUpPallets and add to moved inventory
-      const updatedPallets = pickedUpPallets.filter((p) => p.palletId !== palletData.palletId);
-      setPickedUpPallets(updatedPallets);
-
-      // Decrement available pallet spots for this location
-      setAvailablePalletSpots((prev) => ({
-        ...prev,
-        [trimmedLocation]: prev[trimmedLocation] - 1,
-      }));
-
-      // Add to moved inventory with drop-off location
-      const movedPallet: MovedPallet = {
-        ...palletData,
-        dropOffLocation: trimmedLocation,
-      };
-      setMovedInventory([movedPallet, ...movedInventory]);
-
-      setPalletData(null);
-      setPalletInput("");
-      setDropOffLocation("");
+    if (hasProblem) {
+      // Error - location has a reported problem
+      setDropOffLocationError("Location has a reported problem");
+      setValidatedDropOffLocation(null);
+    } else if (locationExists && currentSpots !== undefined && currentSpots > 0) {
+      // Location is valid - store it and enable pallet field
+      setValidatedDropOffLocation(trimmedLocation);
       setDropOffLocationError(null);
-      toast.success("Pallet dropped off successfully");
-
-      // If no more pallets in transit, switch back to pick up mode
-      if (updatedPallets.length === 0) {
-        setMode("pick up");
-      }
     } else if (locationExists && currentSpots !== undefined && currentSpots === 0) {
       // Error - location is full
       setDropOffLocationError("Location is full");
+      setValidatedDropOffLocation(null);
     } else {
       // Error - location not found
       setDropOffLocationError("Pallet cannot be dropped off in that location");
+      setValidatedDropOffLocation(null);
+    }
+  };
+
+  const handleFinalDropOff = (pallet: Pallet) => {
+    if (!validatedDropOffLocation || !pallet) {
+      return;
+    }
+
+    // Calculate remaining spots before state update
+    const currentSpots = availablePalletSpots[validatedDropOffLocation] || 0;
+    const remainingSpots = currentSpots - 1;
+
+    // Success - remove pallet from pickedUpPallets and add to moved inventory
+    const updatedPallets = pickedUpPallets.filter((p) => p.palletId !== pallet.palletId);
+    setPickedUpPallets(updatedPallets);
+
+    // Decrement available pallet spots for this location
+    setAvailablePalletSpots((prev) => ({
+      ...prev,
+      [validatedDropOffLocation]: remainingSpots,
+    }));
+
+    // Add to moved inventory with drop-off location
+    const movedPallet: MovedPallet = {
+      ...pallet,
+      dropOffLocation: validatedDropOffLocation,
+    };
+    setMovedInventory([movedPallet, ...movedInventory]);
+
+    setPalletData(null);
+    setPalletInput("");
+
+    // Only reset drop-off location if:
+    // - No more pallet spots available, OR
+    // - No more pallets in transit
+    const hasRemainingSpots = remainingSpots > 0;
+    const hasRemainingPallets = updatedPallets.length > 0;
+
+    if (!hasRemainingSpots || !hasRemainingPallets) {
+      setDropOffLocation("");
+      setValidatedDropOffLocation(null);
+      setDropOffLocationError(null);
+    }
+
+    toast.success("Pallet dropped off successfully");
+
+    // If no more pallets in transit, switch back to pick up mode
+    if (updatedPallets.length === 0) {
+      setMode("pick up");
     }
   };
 
@@ -307,21 +408,21 @@ export const Default = () => {
             palletSpots: availablePalletSpots[location.name] ?? location.palletSpots,
           };
         })
+        .filter((item) => item.palletSpots > 0)
         .sort((a, b) => a.name.localeCompare(b.name));
     } else if (locationScenario === "overflow") {
-      // In overflow scenario, preferred locations have 0 spots, overflow locations are shown
-      items = Object.keys(locationData)
-        .map((key) => ({
-          key,
-          ...locationData[key as keyof typeof locationData],
-          palletSpots: 0,
-        }))
-        .sort((a, b) => a.name.localeCompare(b.name));
+      // In overflow scenario, preferred locations have 0 spots, so they're filtered out
+      items = [];
       overflowItems = Object.keys(overflowLocationData)
-        .map((key) => ({
-          key,
-          ...overflowLocationData[key as keyof typeof overflowLocationData],
-        }))
+        .map((key) => {
+          const location = overflowLocationData[key as keyof typeof overflowLocationData];
+          return {
+            key,
+            ...location,
+            palletSpots: availablePalletSpots[location.name] ?? location.palletSpots,
+          };
+        })
+        .filter((item) => item.palletSpots > 0)
         .sort((a, b) => a.name.localeCompare(b.name));
     }
 
@@ -334,28 +435,16 @@ export const Default = () => {
           return (
             <Card key={item.key}>
               <Flex justifyContent="space-between" alignItems="center" style={{ opacity: hasProblem ? 0.5 : 1 }}>
-                <Box flex="1">
-                  <Heading3 mb="x1">{item.name}</Heading3>
-                  <DescriptionList columns={1} layout="inline" density="compact">
-                    <DescriptionGroup>
-                      <DescriptionTerm>Pallet spots available</DescriptionTerm>
-                      <DescriptionDetails>{item.palletSpots}</DescriptionDetails>
-                    </DescriptionGroup>
-                  </DescriptionList>
-                </Box>
-                <Box ml="x2" flexShrink={0} alignSelf="flex-start" onClick={(e) => e.stopPropagation()}>
-                  <DropdownMenu trigger={() => <IconicButton icon="more" iconSize="x2" />}>
-                    <DropdownButton
-                      onClick={() => {
-                        setCurrentLocationForProblem(item.name);
-                        setSelectedProblem(reportedProblems[item.name] || null);
-                        setIsReportProblemModalOpen(true);
-                      }}
-                    >
-                      {hasProblem ? "Edit problem" : "Report a problem"}
-                    </DropdownButton>
-                  </DropdownMenu>
-                </Box>
+                <Heading3 mb="0">{item.name}</Heading3>
+                {hasProblem ? (
+                  <StatusIndicator variant="neutral">
+                    Problem reported
+                  </StatusIndicator>
+                ) : (
+                  <StatusIndicator type="quiet">
+                    {item.palletSpots} {item.palletSpots === 1 ? "spot" : "spots"} available
+                  </StatusIndicator>
+                )}
               </Flex>
             </Card>
           );
@@ -368,24 +457,25 @@ export const Default = () => {
         <Heading2 mb="x2">Preferred locations</Heading2>
         {locationScenario === "overflow" ? (
           <>
-            <CardSet>
-              {items.map((item) => {
-                return (
-                  <Card key={item.key} style={{ opacity: 0.5 }}>
-                    <Box>
-                      <Heading3 mb="x1">{item.name}</Heading3>
-                      <DescriptionList columns={1} layout="inline" density="compact">
-                        <DescriptionGroup>
-                          <DescriptionTerm>Pallet spots available</DescriptionTerm>
-                          <DescriptionDetails>{item.palletSpots}</DescriptionDetails>
-                        </DescriptionGroup>
-                      </DescriptionList>
-                    </Box>
-                  </Card>
-                );
-              })}
-            </CardSet>
-            <Divider my="x3" />
+            {items.length > 0 && (
+              <>
+                <CardSet>
+                  {items.map((item) => {
+                    return (
+                      <Card key={item.key} style={{ opacity: 0.5 }}>
+                        <Flex justifyContent="space-between" alignItems="center">
+                          <Heading3 mb="0">{item.name}</Heading3>
+                          <StatusIndicator variant="neutral">
+                            Problem reported
+                          </StatusIndicator>
+                        </Flex>
+                      </Card>
+                    );
+                  })}
+                </CardSet>
+                <Divider my="x3" />
+              </>
+            )}
             <Heading2 mb="x2">Overflow locations</Heading2>
             {renderCardSet(overflowItems)}
           </>
@@ -481,9 +571,11 @@ export const Default = () => {
         setPalletData(null);
         return;
       }
-      // Pallet is valid
+      // Pallet is valid - set it and trigger final drop off
       setPalletValidationError(null);
       setPalletData(foundPallet);
+      // Automatically complete the drop off
+      handleFinalDropOff(foundPallet);
     } else {
       // Pick up mode - check if pallet is already in transit
       const existingPallet = pickedUpPallets.find((p) => p.palletId === trimmedInput);
@@ -495,15 +587,22 @@ export const Default = () => {
       // Pallet is valid
       setPalletValidationError(null);
       // Mock pallet data - in a real app, this would be an API call
-      const mockPallet: Pallet = {
-        palletId: trimmedInput,
-        itemCode: "PIE4124",
-        itemDescription: "Apple Pie Filling",
-        lotCode: "DC12441",
-        expiryDate: "2024-Dec-15",
-        status: "Good",
-        quantity: "10,000.0 ea",
-      };
+      const isMixedPallet = trimmedInput.toUpperCase().startsWith("MP");
+      
+      const mockPallet: Pallet = isMixedPallet
+        ? {
+            palletId: trimmedInput,
+            items: generateMixedPalletItems(),
+          }
+        : {
+            palletId: trimmedInput,
+            itemCode: "PIE4124",
+            itemDescription: "Apple Pie Filling",
+            lotCode: "DC12441",
+            expiryDate: "2024-Dec-15",
+            status: "Good",
+            quantity: "10,000.0 ea",
+          };
       setPalletData(mockPallet);
       setPalletInput("");
     }
@@ -623,7 +722,13 @@ export const Default = () => {
                   <Switcher
                     aria-label="Mode switcher"
                     selected={mode}
-                    onChange={(value) => setMode(value as "pick up" | "drop off")}
+                    onChange={(value) => {
+                      setMode(value as "pick up" | "drop off");
+                      // Reset validated drop-off location when switching modes
+                      setValidatedDropOffLocation(null);
+                      setDropOffLocation("");
+                      setDropOffLocationError(null);
+                    }}
                   >
                     <Switch value="pick up">Pick up</Switch>
                     <Switch value="drop off">Drop off</Switch>
@@ -632,13 +737,78 @@ export const Default = () => {
                     icon="update"
                     tooltip="View moved inventory"
                     onClick={() => setIsMovedInventorySidebarOpen(true)}
+                    color="darkBlue"
                   >
-                    View moved inventory
+                    <Text color="darkBlue">
+                      View moved inventory ({movedInventory.length})
+                    </Text>
                   </IconicButton>
                 </Flex>
                 {(mode === "pick up" || (mode === "drop off" && pickedUpPallets.length > 0)) && (
                   <Form onSubmit={handlePalletSubmit}>
                     <FormSection>
+                      {mode === "drop off" && (
+                        <Box>
+                          <FieldLabel labelText="Drop-off location">
+                            <Box position="relative" width="100%">
+                              <Input
+                                value={dropOffLocation}
+                                onChange={(e) => {
+                                  setDropOffLocation(e.target.value);
+                                  setDropOffLocationError(null);
+                                  // Clear validated location when user changes the input
+                                  if (validatedDropOffLocation) {
+                                    setValidatedDropOffLocation(null);
+                                  }
+                                }}
+                                onKeyDown={(e) => {
+                                  if (e.key === "Enter") {
+                                    e.preventDefault();
+                                    handleDropOffLocationSubmit(e as any);
+                                  }
+                                }}
+                                errorMessage={dropOffLocationError || undefined}
+                                style={{ paddingRight: "140px" }}
+                              />
+                              <Box
+                                position="absolute"
+                                right="x1"
+                                display="flex"
+                                alignItems="center"
+                                gap="x1"
+                                style={{
+                                  pointerEvents: "none",
+                                  top: "50%",
+                                  transform: "translateY(-50%)",
+                                  marginTop: "0px",
+                                  zIndex: 1,
+                                }}
+                              >
+                                <VerticalDivider />
+                                <Box style={{ pointerEvents: "auto" }}>
+                                  <QuietButton
+                                    size="small"
+                                    disabled={!validatedDropOffLocation}
+                                    onClick={() => {
+                                      setCurrentLocationForProblem(dropOffLocation || null);
+                                      setSelectedProblem(reportedProblems[dropOffLocation] || null);
+                                      setIsReportProblemModalOpen(true);
+                                    }}
+                                  >
+                                    Report a problem
+                                  </QuietButton>
+                                </Box>
+                              </Box>
+                            </Box>
+                          </FieldLabel>
+                          {validatedDropOffLocation && availablePalletSpots[validatedDropOffLocation] !== undefined && (
+                            <Text fontSize="small" color="midGrey" style={{ marginTop: "-24px", marginBottom: "24px" }}>
+                              {availablePalletSpots[validatedDropOffLocation]}{" "}
+                              {availablePalletSpots[validatedDropOffLocation] === 1 ? "pallet spot" : "pallet spots"} available
+                            </Text>
+                          )}
+                        </Box>
+                      )}
                       <Box pb="x1">
                         <Flex gap="x1" alignItems="flex-end">
                           <Box flex="1">
@@ -658,6 +828,7 @@ export const Default = () => {
                                     handlePalletSubmit(e as any);
                                   }
                                 }}
+                                disabled={mode === "drop off" && !validatedDropOffLocation}
                                 errorMessage={palletValidationError || undefined}
                               />
                             </FieldLabel>
@@ -689,57 +860,75 @@ export const Default = () => {
                           </FieldLabel>
                         </Box>
                       )}
-                      {mode === "drop off" && (
-                        <Box pb="x1" mt="x1">
-                          <FieldLabel labelText="Drop-off location">
-                            <Input
-                              value={dropOffLocation}
-                              onChange={(e) => {
-                                setDropOffLocation(e.target.value);
-                                setDropOffLocationError(null);
-                              }}
-                              onKeyDown={(e) => {
-                                if (e.key === "Enter" && palletData) {
-                                  e.preventDefault();
-                                  handleDropOffLocationSubmit(e as any);
-                                }
-                              }}
-                              disabled={!palletData}
-                              errorMessage={dropOffLocationError || undefined}
-                            />
-                          </FieldLabel>
-                        </Box>
-                      )}
                     </FormSection>
                   </Form>
                 )}
                 {palletData && mode === "pick up" && (
                   <Card mt="x1">
-                    <Heading3 mb="0">{palletData.palletId}</Heading3>
-                    <DescriptionList columns={1} layout="inline" density="compact">
-                      <DescriptionGroup>
-                        <DescriptionTerm>Item</DescriptionTerm>
-                        <DescriptionDetails>
-                          {palletData.itemCode} • {palletData.itemDescription}
-                        </DescriptionDetails>
-                      </DescriptionGroup>
-                      <DescriptionGroup>
-                        <DescriptionTerm>Lot</DescriptionTerm>
-                        <DescriptionDetails>{palletData.lotCode}</DescriptionDetails>
-                      </DescriptionGroup>
-                      <DescriptionGroup>
-                        <DescriptionTerm>Expiry</DescriptionTerm>
-                        <DescriptionDetails>{palletData.expiryDate}</DescriptionDetails>
-                      </DescriptionGroup>
-                      <DescriptionGroup>
-                        <DescriptionTerm>Status</DescriptionTerm>
-                        <DescriptionDetails>{palletData.status}</DescriptionDetails>
-                      </DescriptionGroup>
-                      <DescriptionGroup>
-                        <DescriptionTerm>Quantity</DescriptionTerm>
-                        <DescriptionDetails>{palletData.quantity}</DescriptionDetails>
-                      </DescriptionGroup>
-                    </DescriptionList>
+                    <Heading3 mb="x2">{palletData.palletId}</Heading3>
+                    {palletData.items ? (
+                      // Mixed pallet - show carousel
+                      <Box style={{ overflowX: "auto", width: "100%" }}>
+                        <Flex style={{ gap: "16px", flexWrap: "nowrap" }}>
+                          {palletData.items.map((item, index) => (
+                            <Card key={index} style={{ minWidth: "300px", maxWidth: "300px", flexShrink: 0 }}>
+                              <Heading3 mb="x2">{item.itemCode} • {item.itemDescription}</Heading3>
+                              <DescriptionList 
+                                columns={1} 
+                                layout="inline" 
+                                density="compact"
+                                style={{ columnGap: "8px" }}
+                              >
+                                <DescriptionGroup>
+                                  <DescriptionTerm>Lot</DescriptionTerm>
+                                  <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{item.lotCode}</DescriptionDetails>
+                                </DescriptionGroup>
+                                <DescriptionGroup>
+                                  <DescriptionTerm>Expiry</DescriptionTerm>
+                                  <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{item.expiryDate}</DescriptionDetails>
+                                </DescriptionGroup>
+                                <DescriptionGroup>
+                                  <DescriptionTerm>Status</DescriptionTerm>
+                                  <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{item.status}</DescriptionDetails>
+                                </DescriptionGroup>
+                                <DescriptionGroup>
+                                  <DescriptionTerm>Quantity</DescriptionTerm>
+                                  <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{item.quantity}</DescriptionDetails>
+                                </DescriptionGroup>
+                              </DescriptionList>
+                            </Card>
+                          ))}
+                        </Flex>
+                      </Box>
+                    ) : (
+                      // Single item pallet
+                      <Card style={{ maxWidth: "fit-content", width: "auto" }}>
+                        <Heading3 mb="x2">{palletData.itemCode} • {palletData.itemDescription}</Heading3>
+                        <DescriptionList 
+                          columns={1} 
+                          layout="inline" 
+                          density="compact"
+                          style={{ columnGap: "8px" }}
+                        >
+                          <DescriptionGroup>
+                            <DescriptionTerm>Lot</DescriptionTerm>
+                            <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{palletData.lotCode}</DescriptionDetails>
+                          </DescriptionGroup>
+                          <DescriptionGroup>
+                            <DescriptionTerm>Expiry</DescriptionTerm>
+                            <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{palletData.expiryDate}</DescriptionDetails>
+                          </DescriptionGroup>
+                          <DescriptionGroup>
+                            <DescriptionTerm>Status</DescriptionTerm>
+                            <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{palletData.status}</DescriptionDetails>
+                          </DescriptionGroup>
+                          <DescriptionGroup>
+                            <DescriptionTerm>Quantity</DescriptionTerm>
+                            <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{palletData.quantity}</DescriptionDetails>
+                          </DescriptionGroup>
+                        </DescriptionList>
+                      </Card>
+                    )}
                     <Divider my="x2" />
                     <Flex justifyContent="flex-start">
                       {isPalletPickedUp ? (
@@ -775,8 +964,38 @@ export const Default = () => {
                     <CardSet>
                       {pickedUpPallets.map((pallet) => (
                         <Card key={pallet.palletId}>
-                          <Flex justifyContent="space-between" alignItems="center" mb="x1">
-                            <Heading3 mb="0">{pallet.palletId}</Heading3>
+                          <Flex justifyContent="space-between" alignItems="flex-start" mb="x2">
+                            <Box flex="1">
+                              <Heading3 mb="x1">{pallet.palletId}</Heading3>
+                              <Text color="midGrey">
+                                {pallet.items 
+                                  ? `Mixed pallet (${pallet.items.length} items)`
+                                  : `${pallet.itemCode} • ${pallet.itemDescription}`
+                                }
+                              </Text>
+                            </Box>
+                            <Box textAlign="right">
+                              <Text mb="x1">{getFirstFinalLocation() || "—"}</Text>
+                              <Text fontSize="small" color="midGrey">
+                                Drop off location
+                              </Text>
+                            </Box>
+                          </Flex>
+                          <Flex justifyContent="space-between" alignItems="center" mt="x2">
+                            <Flex gap="x2">
+                              <QuietButton
+                                size="small"
+                                onClick={() => {
+                                  setSelectedPalletForDetails(pallet);
+                                  setIsPalletDetailsSidebarOpen(true);
+                                }}
+                              >
+                                View pallet details
+                              </QuietButton>
+                              <QuietButton size="small" onClick={() => setIsLocationsSidebarOpen(true)}>
+                                View other locations
+                              </QuietButton>
+                            </Flex>
                             {mode === "pick up" && (
                               <Box onClick={(e) => e.stopPropagation()}>
                                 <DropdownMenu trigger={() => <IconicButton icon="more" iconSize="x3" />}>
@@ -787,44 +1006,6 @@ export const Default = () => {
                               </Box>
                             )}
                           </Flex>
-                          <DescriptionList columns={1} layout="inline" density="compact">
-                            <DescriptionGroup>
-                              <DescriptionTerm>Drop-off location</DescriptionTerm>
-                              <DescriptionDetails>
-                                <Flex alignItems="center" gap="x2">
-                                  <Text>{getFirstFinalLocation() || "—"}</Text>
-                                  <Button size="small" onClick={() => setIsLocationsSidebarOpen(true)}>
-                                    View other locations
-                                  </Button>
-                                </Flex>
-                              </DescriptionDetails>
-                            </DescriptionGroup>
-                          </DescriptionList>
-                          <Divider my="x2" />
-                          <DescriptionList columns={1} layout="inline" density="compact">
-                            <DescriptionGroup>
-                              <DescriptionTerm>Item</DescriptionTerm>
-                              <DescriptionDetails>
-                                {pallet.itemCode} • {pallet.itemDescription}
-                              </DescriptionDetails>
-                            </DescriptionGroup>
-                            <DescriptionGroup>
-                              <DescriptionTerm>Lot</DescriptionTerm>
-                              <DescriptionDetails>{pallet.lotCode}</DescriptionDetails>
-                            </DescriptionGroup>
-                            <DescriptionGroup>
-                              <DescriptionTerm>Expiry</DescriptionTerm>
-                              <DescriptionDetails>{pallet.expiryDate}</DescriptionDetails>
-                            </DescriptionGroup>
-                            <DescriptionGroup>
-                              <DescriptionTerm>Status</DescriptionTerm>
-                              <DescriptionDetails>{pallet.status}</DescriptionDetails>
-                            </DescriptionGroup>
-                            <DescriptionGroup>
-                              <DescriptionTerm>Quantity</DescriptionTerm>
-                              <DescriptionDetails>{pallet.quantity}</DescriptionDetails>
-                            </DescriptionGroup>
-                          </DescriptionList>
                         </Card>
                       ))}
                     </CardSet>
@@ -888,30 +1069,69 @@ export const Default = () => {
                               </DescriptionGroup>
                             </DescriptionList>
                             <Divider my="x2" />
-                            <DescriptionList columns={1} layout="inline" density="compact">
-                              <DescriptionGroup>
-                                <DescriptionTerm>Item</DescriptionTerm>
-                                <DescriptionDetails>
-                                  {pallet.itemCode} • {pallet.itemDescription}
-                                </DescriptionDetails>
-                              </DescriptionGroup>
-                              <DescriptionGroup>
-                                <DescriptionTerm>Lot</DescriptionTerm>
-                                <DescriptionDetails>{pallet.lotCode}</DescriptionDetails>
-                              </DescriptionGroup>
-                              <DescriptionGroup>
-                                <DescriptionTerm>Expiry</DescriptionTerm>
-                                <DescriptionDetails>{pallet.expiryDate}</DescriptionDetails>
-                              </DescriptionGroup>
-                              <DescriptionGroup>
-                                <DescriptionTerm>Status</DescriptionTerm>
-                                <DescriptionDetails>{pallet.status}</DescriptionDetails>
-                              </DescriptionGroup>
-                              <DescriptionGroup>
-                                <DescriptionTerm>Quantity</DescriptionTerm>
-                                <DescriptionDetails>{pallet.quantity}</DescriptionDetails>
-                              </DescriptionGroup>
-                            </DescriptionList>
+                            {pallet.items ? (
+                              // Mixed pallet - show carousel
+                              <Box style={{ overflowX: "auto", width: "100%" }}>
+                                <Flex style={{ gap: "16px", flexWrap: "nowrap" }}>
+                                  {pallet.items.map((item, index) => (
+                                    <Card key={index} style={{ minWidth: "300px", maxWidth: "300px", flexShrink: 0 }}>
+                                      <Heading3 mb="x2">{item.itemCode} • {item.itemDescription}</Heading3>
+                                      <DescriptionList 
+                                        columns={1} 
+                                        layout="inline" 
+                                        density="compact"
+                                        style={{ columnGap: "8px" }}
+                                      >
+                                        <DescriptionGroup>
+                                          <DescriptionTerm>Lot</DescriptionTerm>
+                                          <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{item.lotCode}</DescriptionDetails>
+                                        </DescriptionGroup>
+                                        <DescriptionGroup>
+                                          <DescriptionTerm>Expiry</DescriptionTerm>
+                                          <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{item.expiryDate}</DescriptionDetails>
+                                        </DescriptionGroup>
+                                        <DescriptionGroup>
+                                          <DescriptionTerm>Status</DescriptionTerm>
+                                          <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{item.status}</DescriptionDetails>
+                                        </DescriptionGroup>
+                                        <DescriptionGroup>
+                                          <DescriptionTerm>Quantity</DescriptionTerm>
+                                          <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{item.quantity}</DescriptionDetails>
+                                        </DescriptionGroup>
+                                      </DescriptionList>
+                                    </Card>
+                                  ))}
+                                </Flex>
+                              </Box>
+                            ) : (
+                              // Single item pallet
+                              <Card style={{ maxWidth: "fit-content", width: "auto" }}>
+                                <Heading3 mb="x2">{pallet.itemCode} • {pallet.itemDescription}</Heading3>
+                                <DescriptionList 
+                                  columns={1} 
+                                  layout="inline" 
+                                  density="compact"
+                                  style={{ columnGap: "8px" }}
+                                >
+                                  <DescriptionGroup>
+                                    <DescriptionTerm>Lot</DescriptionTerm>
+                                    <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{pallet.lotCode}</DescriptionDetails>
+                                  </DescriptionGroup>
+                                  <DescriptionGroup>
+                                    <DescriptionTerm>Expiry</DescriptionTerm>
+                                    <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{pallet.expiryDate}</DescriptionDetails>
+                                  </DescriptionGroup>
+                                  <DescriptionGroup>
+                                    <DescriptionTerm>Status</DescriptionTerm>
+                                    <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{pallet.status}</DescriptionDetails>
+                                  </DescriptionGroup>
+                                  <DescriptionGroup>
+                                    <DescriptionTerm>Quantity</DescriptionTerm>
+                                    <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{pallet.quantity}</DescriptionDetails>
+                                  </DescriptionGroup>
+                                </DescriptionList>
+                              </Card>
+                            )}
                           </Card>
                         ))}
                       </CardSet>
@@ -922,6 +1142,71 @@ export const Default = () => {
                         No pallets have been moved yet.
                       </Text>
                     </Flex>
+                  )}
+                </Sidebar>
+                <Sidebar
+                  isOpen={isPalletDetailsSidebarOpen}
+                  onClose={() => {
+                    setIsPalletDetailsSidebarOpen(false);
+                    setSelectedPalletForDetails(null);
+                  }}
+                  title={selectedPalletForDetails ? `Pallet ${selectedPalletForDetails.palletId}` : "Pallet details"}
+                  width="m"
+                >
+                  {selectedPalletForDetails && (
+                    <CardSet>
+                      {selectedPalletForDetails.items ? (
+                        // Mixed pallet - show vertical list
+                        <>
+                          {selectedPalletForDetails.items.map((item, index) => (
+                            <Card key={index}>
+                              <Heading3 mb="x2">{item.itemCode} • {item.itemDescription}</Heading3>
+                              <DescriptionList columns={1} layout="inline" density="compact" style={{ columnGap: "8px" }}>
+                                <DescriptionGroup>
+                                  <DescriptionTerm>Lot</DescriptionTerm>
+                                  <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{item.lotCode}</DescriptionDetails>
+                                </DescriptionGroup>
+                                <DescriptionGroup>
+                                  <DescriptionTerm>Expiry</DescriptionTerm>
+                                  <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{item.expiryDate}</DescriptionDetails>
+                                </DescriptionGroup>
+                                <DescriptionGroup>
+                                  <DescriptionTerm>Status</DescriptionTerm>
+                                  <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{item.status}</DescriptionDetails>
+                                </DescriptionGroup>
+                                <DescriptionGroup>
+                                  <DescriptionTerm>Quantity</DescriptionTerm>
+                                  <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{item.quantity}</DescriptionDetails>
+                                </DescriptionGroup>
+                              </DescriptionList>
+                            </Card>
+                          ))}
+                        </>
+                      ) : (
+                        // Single item pallet
+                        <Card>
+                          <Heading3 mb="x2">{selectedPalletForDetails.itemCode} • {selectedPalletForDetails.itemDescription}</Heading3>
+                          <DescriptionList columns={1} layout="inline" density="compact" style={{ columnGap: "8px" }}>
+                            <DescriptionGroup>
+                              <DescriptionTerm>Lot</DescriptionTerm>
+                              <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{selectedPalletForDetails.lotCode}</DescriptionDetails>
+                            </DescriptionGroup>
+                            <DescriptionGroup>
+                              <DescriptionTerm>Expiry</DescriptionTerm>
+                              <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{selectedPalletForDetails.expiryDate}</DescriptionDetails>
+                            </DescriptionGroup>
+                            <DescriptionGroup>
+                              <DescriptionTerm>Status</DescriptionTerm>
+                              <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{selectedPalletForDetails.status}</DescriptionDetails>
+                            </DescriptionGroup>
+                            <DescriptionGroup>
+                              <DescriptionTerm>Quantity</DescriptionTerm>
+                              <DescriptionDetails style={{ whiteSpace: "nowrap", textAlign: "left" }}>{selectedPalletForDetails.quantity}</DescriptionDetails>
+                            </DescriptionGroup>
+                          </DescriptionList>
+                        </Card>
+                      )}
+                    </CardSet>
                   )}
                 </Sidebar>
               </Box>
@@ -1017,6 +1302,14 @@ export const Default = () => {
                       ...reportedProblems,
                       [currentLocationForProblem]: selectedProblem,
                     });
+                    
+                    // If this location is the current validated drop-off location, clear it
+                    if (validatedDropOffLocation === currentLocationForProblem) {
+                      setValidatedDropOffLocation(null);
+                      setDropOffLocation("");
+                      setDropOffLocationError(null);
+                    }
+                    
                     toast.success("Problem reported successfully");
                     setIsReportProblemModalOpen(false);
                     setSelectedProblem(null);
