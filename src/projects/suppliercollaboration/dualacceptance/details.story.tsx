@@ -2425,27 +2425,31 @@ export const Default = () => {
                 </Box>
               </Flex>
               <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed" ml="x3">
-                This will update your requested quantity to match the supplier's proposal.
+                This will update your request to match the supplier's proposal.
               </Text>
             </Box>
             <Divider m="0" />
             <Box mb="x1">
-              <Flex alignItems="center" gap="x1">
-                <Radio
-                  name="acceptance-option"
-                  value="with-flagging"
-                  labelText="Accept and retain request"
-                  checked={acceptanceOption === "with-flagging"}
-                  onChange={() => setAcceptanceOption("with-flagging")}
-                />
-                <Box display="flex" alignItems="center" justifyContent="center">
-                  <ReconciledIcon variant="flagged" size={20} />
-                </Box>
-              </Flex>
-              <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed" ml="x3">
-                This will accept the proposal but keep your requested quantity.
-              </Text>
-            </Box>
+                <Flex alignItems="center" gap="x1">
+                  <Radio
+                    name="acceptance-option"
+                    value="with-flagging"
+                    labelText="Accept and retain request"
+                    checked={acceptanceOption === "with-flagging"}
+                    onChange={() => setAcceptanceOption("with-flagging")}
+                  />
+                  <Box display="flex" alignItems="center" justifyContent="center">
+                    <ReconciledIcon variant="flagged" size={20} />
+                  </Box>
+                </Flex>
+                <Flex flexDirection="column" gap="x0_5" ml="x3">
+                <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
+                This will accept the proposal while keeping your request unchanged.</Text>
+
+                <Text fontSize="smaller" color="midGrey">Proposals that match your request (quantity, unit price, and due date) will be accepted as "Accepted — Request updated."
+                </Text>
+                </Flex>
+              </Box>
           </Flex>
         </Box>
       </Modal>
