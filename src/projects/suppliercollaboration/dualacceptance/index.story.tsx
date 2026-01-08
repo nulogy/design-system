@@ -2323,11 +2323,14 @@ export const Default = () => {
                   </Box>
                 </Flex>
                 <Flex flexDirection="column" gap="x0_5" ml="x3">
-                <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
-                This will accept the proposal while keeping your request unchanged.</Text>
+                  <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed">
+                    This will accept the proposal while keeping your request unchanged.
+                  </Text>
 
-                <Text fontSize="smaller" color="midGrey">Proposals that match your request (quantity, unit price, and due date) will be accepted as "Accepted — Request updated."
-                </Text>
+                  <Text fontSize="smaller" color="midGrey">
+                    Proposals that match your request (quantity, unit price, and due date) will be accepted as "Accepted
+                    — Request updated."
+                  </Text>
                 </Flex>
               </Box>
             </Flex>
