@@ -239,33 +239,31 @@ export const Default = () => {
     []
   );
 
-const QtyDueRow = ({
+  const QtyDueRow = ({
     quantity,
     unit,
     productionDueDate,
-  quantityTextStyle,
-  dueDateTextStyle,
-  my = "x1",
+    quantityTextStyle,
+    dueDateTextStyle,
+    my = "x1",
   }: {
     quantity: string;
     unit: string;
     productionDueDate: string;
-  quantityTextStyle?: React.CSSProperties;
-  dueDateTextStyle?: React.CSSProperties;
-  my?: string;
+    quantityTextStyle?: React.CSSProperties;
+    dueDateTextStyle?: React.CSSProperties;
+    my?: string;
   }) => (
-  <Flex my={my as any} alignItems="center" flexWrap="nowrap" gap="x0_5">
-    <Text style={quantityTextStyle}>{`${quantity} ${unit}`}</Text>
+    <Flex my={my as any} alignItems="center" flexWrap="nowrap" gap="x0_5">
+      <Text style={quantityTextStyle}>{`${quantity} ${unit}`}</Text>
       <Text as="span" color="midGrey">
         on
       </Text>
-    <Text style={dueDateTextStyle}>{productionDueDate}</Text>
+      <Text style={dueDateTextStyle}>{productionDueDate}</Text>
     </Flex>
   );
 
-const SplitRowPlaceholder = () => (
-  <Box height={editMode === "proposal" ? "40px" : "24px"} my="x0_25" />
-);
+  const SplitRowPlaceholder = () => <Box height={editMode === "proposal" ? "40px" : "24px"} my="x0_25" />;
 
   return (
     <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
@@ -407,11 +405,7 @@ const SplitRowPlaceholder = () => (
                       </Flex>
 
                       {visibleProposalSplitRows.map((_, i) => (
-                        <Box
-                          key={`label-split-${i}`}
-                          height={editMode === "proposal" ? "40px" : "24px"}
-                          my="x0_25"
-                        />
+                        <Box key={`label-split-${i}`} height={editMode === "proposal" ? "40px" : "24px"} my="x0_25" />
                       ))}
 
                       <Text fontSize="small" lineHeight="smallRelaxed" fontWeight="bold" my="x1">
@@ -1008,9 +1002,11 @@ const SplitRowPlaceholder = () => (
                                 my="x0_25"
                                 quantityTextStyle={getMismatchStyle({
                                   highlight: (() => {
-                                    const requestQty = parseFloat(String(formData.request.quantity).replace(/,/g, "")) || 0;
+                                    const requestQty =
+                                      parseFloat(String(formData.request.quantity).replace(/,/g, "")) || 0;
                                     const splitQty = parseFloat(String(row.quantity).replace(/,/g, "")) || 0;
-                                    const splitQtyMismatch = requestQty !== splitQty || row.unit !== formData.request.unit;
+                                    const splitQtyMismatch =
+                                      requestQty !== splitQty || row.unit !== formData.request.unit;
 
                                     return (
                                       !acceptedItems.request &&
@@ -1075,9 +1071,7 @@ const SplitRowPlaceholder = () => (
                         >
                           {editMode === "request" ? "Submit request" : "Submit proposal"}
                         </PrimaryButton>
-                        <QuietButton onClick={cancelEdit}>
-                          Cancel
-                        </QuietButton>
+                        <QuietButton onClick={cancelEdit}>Cancel</QuietButton>
                       </>
                     ) : (
                       <>
