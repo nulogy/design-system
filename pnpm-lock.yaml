@@ -98,7 +98,7 @@ importers:
     devDependencies:
       '@apollo/client':
         specifier: ^3.11.8
-        version: 3.12.4(@types/react@17.0.90)(graphql@15.8.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
+        version: 3.12.4(@types/react@17.0.90)(graphql@16.13.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
       '@eslint/js':
         specifier: ^9.0.0
         version: 9.39.2
@@ -220,8 +220,8 @@ importers:
         specifier: ^15.0.0
         version: 15.15.0
       graphql:
-        specifier: 15.8.0
-        version: 15.8.0
+        specifier: 16.13.0
+        version: 16.13.0
       http-server:
         specifier: ^14.0.0
         version: 14.1.1
@@ -3580,9 +3580,9 @@ packages:
     peerDependencies:
       graphql: ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
 
-  graphql@15.8.0:
-    resolution: {integrity: sha512-5gghUc24tP9HRznNpV2+FIoq3xKkj5dTQqf4v0CpdPbFVwFkWoxOM+o+2OC9ZSvjEMTjfmG9QT+gcvggTwW1zw==}
-    engines: {node: '>= 10.x'}
+  graphql@16.13.0:
+    resolution: {integrity: sha512-uSisMYERbaB9bkA9M4/4dnqyktaEkf1kMHNKq/7DHyxVeWqHQ2mBmVqm5u6/FVHwF3iCNalKcg82Zfl+tffWoA==}
+    engines: {node: ^12.22.0 || ^14.16.0 || ^16.0.0 || >=17.0.0}
 
   gud@1.0.0:
     resolution: {integrity: sha512-zGEOVKFM5sVPPrYs7J5/hYEw2Pof8KCyOwyhG8sAF26mCAeUFAcYPu1mwB7hhpIP29zOIBaDqwuHdLp0jvZXjw==}
@@ -6531,14 +6531,14 @@ snapshots:
 
   '@adobe/css-tools@4.4.4': {}
 
-  '@apollo/client@3.12.4(@types/react@17.0.90)(graphql@15.8.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)':
+  '@apollo/client@3.12.4(@types/react@17.0.90)(graphql@16.13.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)':
     dependencies:
-      '@graphql-typed-document-node/core': 3.2.0(graphql@15.8.0)
+      '@graphql-typed-document-node/core': 3.2.0(graphql@16.13.0)
       '@wry/caches': 1.0.1
       '@wry/equality': 0.5.7
       '@wry/trie': 0.5.0
-      graphql: 15.8.0
-      graphql-tag: 2.12.6(graphql@15.8.0)
+      graphql: 16.13.0
+      graphql-tag: 2.12.6(graphql@16.13.0)
       hoist-non-react-statics: 3.3.2
       optimism: 0.18.1
       prop-types: 15.7.2
@@ -7042,9 +7042,9 @@ snapshots:
 
   '@floating-ui/utils@0.2.9': {}
 
-  '@graphql-typed-document-node/core@3.2.0(graphql@15.8.0)':
+  '@graphql-typed-document-node/core@3.2.0(graphql@16.13.0)':
     dependencies:
-      graphql: 15.8.0
+      graphql: 16.13.0
 
   '@hapi/address@5.1.1':
     dependencies:
@@ -10312,12 +10312,12 @@ snapshots:
 
   graceful-fs@4.2.11: {}
 
-  graphql-tag@2.12.6(graphql@15.8.0):
+  graphql-tag@2.12.6(graphql@16.13.0):
     dependencies:
-      graphql: 15.8.0
+      graphql: 16.13.0
       tslib: 2.8.1
 
-  graphql@15.8.0: {}
+  graphql@16.13.0: {}
 
   gud@1.0.0: {}
 
