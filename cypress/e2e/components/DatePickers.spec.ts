@@ -141,6 +141,7 @@ describe("Datepicker", () => {
       const getCalendarComponent = () => cy.get(CALENDAR_SELECTOR);
 
       beforeEach(() => {
+        cy.clock(new Date(2025, 1, 1).getTime());
         cy.renderFromStorybook("datepickers-monthpicker--default");
       });
 
