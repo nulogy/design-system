@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest";
 import React from "react";
 import { fireEvent, render } from "@testing-library/react";
 import useWindowDimensions, { getWindowDimensionInfo } from "./useWindowDimensions";
-import { act } from "react-dom/test-utils";
+import { act } from "react";
 
 // simulate window resize
 const fireResize = (width, height) => {
