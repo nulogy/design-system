@@ -1,3 +1,10 @@
+## [16.0.1](https://github.com/nulogy/design-system/compare/v16.0.0...v16.0.1) (2026-02-25)
+
+
+### Bug Fixes
+
+* Release process should work again ([e445228](https://github.com/nulogy/design-system/commit/e445228c092f66389bb42f49516d5049fa2949e2))
+
 # [16.0.0](https://github.com/nulogy/design-system/compare/v15.4.1...v16.0.0) (2025-12-07)
 
 
