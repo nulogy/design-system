@@ -90,6 +90,7 @@ const CenteredIcon = styled(Svg)({
 const IconContainer = styled.span(space, {
   display: "inline-flex",
   alignSelf: "center",
+  justifyContent: "center",
   position: "relative",
   height: "1em",
   width: `${ICON_SIZE_RATIO}em`,
