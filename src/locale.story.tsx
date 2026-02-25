@@ -4,6 +4,7 @@ import enUS from "../locales/en_US.json";
 import esES from "../locales/es_ES.json";
 import esMX from "../locales/es_MX.json";
 import frFR from "../locales/fr_FR.json";
+import jaJP from "../locales/ja_JP.json";
 import nlNL from "../locales/nl_NL.json";
 import plPL from "../locales/pl_PL.json";
 import ptBR from "../locales/pt_BR.json";
@@ -40,6 +41,10 @@ const locales: Record<string, Locale> = {
   fr_FR: {
     name: "French (France)",
     keys: frFR,
+  },
+  ja_JP: {
+    name: "Japanese (Japan)",
+    keys: jaJP,
   },
   nl_NL: {
     name: "Dutch",

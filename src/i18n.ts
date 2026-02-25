@@ -3,6 +3,7 @@ import i18n from "i18next";
 import de_DE from "../locales/de_DE.json";
 import en_US from "../locales/en_US.json";
 import es_ES from "../locales/es_ES.json";
+import ja_JP from "../locales/ja_JP.json";
 import es_MX from "../locales/es_MX.json";
 import fr_FR from "../locales/fr_FR.json";
 import nl_NL from "../locales/nl_NL.json";
@@ -26,6 +27,9 @@ const resources = {
   },
   fr_FR: {
     nds: fr_FR,
+  },
+  ja_JP: {
+    nds: ja_JP,
   },
   nl_NL: {
     nds: nl_NL,
