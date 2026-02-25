@@ -1,5 +1,5 @@
 /* These locales are exported for use in the docs site and storybook */
-import { enUS, de, fr, es, ptBR, ro, pl, nl, zhCN } from "date-fns/locale";
+import { enUS, de, fr, es, ja, ptBR, ro, pl, nl, zhCN } from "date-fns/locale";
 
 export const NDS_TO_DATE_FN_LOCALES_MAP = {
   de_DE: de,
@@ -7,6 +7,7 @@ export const NDS_TO_DATE_FN_LOCALES_MAP = {
   es_MX: es,
   es_ES: es,
   fr_FR: fr,
+  ja_JP: ja,
   nl_NL: nl,
   pl_PL: pl,
   pt_BR: ptBR,
@@ -34,6 +35,11 @@ export const ALL_NDS_LOCALES = [
     label: "France (French)",
     value: "fr_FR",
     dateFnsValue: NDS_TO_DATE_FN_LOCALES_MAP.fr_FR,
+  },
+  {
+    label: "Japanese (Japan)",
+    value: "ja_JP",
+    dateFnsValue: NDS_TO_DATE_FN_LOCALES_MAP.ja_JP,
   },
   {
     label: "Dutch (Netherlands)",
