@@ -17,7 +17,7 @@ type FocusManagerProps = {
   children: (handlers: ChildrenHandlers) => ReactNode;
 };
 
-const FocusManager: React.FC<React.PropsWithChildren<FocusManagerProps>> = ({
+const FocusManager: React.FC<FocusManagerProps> = ({
   children,
   refs = undefined,
   defaultFocusedIndex,

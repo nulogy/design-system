@@ -11,7 +11,9 @@ type MenuState = {
 };
 
 type NavBarDropdownMenuProps = {
-  children?: React.ReactNode;
+  children?:
+    | React.ReactNode
+    | ((props: { closeMenu?: (skipDelay?: boolean) => void; openMenu?: (skipDelay?: boolean) => void }) => React.ReactNode);
   trigger?: (props: {
     closeMenu?: (skipDelay?: boolean) => void;
     openMenu?: (skipDelay?: boolean) => void;
