@@ -61,9 +61,9 @@ export const WithACustomMaxWidth = () => (
 export const WithARouterLink = () => (
   <BrowserRouter>
     <TopBar.Root>
-      <Link component={TopBar.BackLink} to="/cycle-counts">
+      <TopBar.BackLink as={Link} to="/cycle-counts">
         Cycle counts
-      </Link>
+      </TopBar.BackLink>
       <TopBar.PageTitle>Cycle count #3992</TopBar.PageTitle>
       <TopBar.Menu>
         {menuItems.map((props) => (
