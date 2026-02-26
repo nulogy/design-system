@@ -66,7 +66,7 @@
     "react": ">=16.10.2 <19.0.0",
     "react-dom": ">=16.10.2 <19.0.0",
     "styled-components": "^6.0.0",
-    "typescript": "4.9.5"
+    "typescript": ">=4.9.5"
   },
   "devDependencies": {
     "@apollo/client": "^3.11.8",
