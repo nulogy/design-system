@@ -14,10 +14,7 @@ export function useSummaryContext() {
   return context;
 }
 
-export const SummaryContextProvider: React.FC<React.PropsWithChildren<SummaryContextValue>> = ({
-  breakpoint,
-  children,
-}) => {
+export function SummaryContextProvider({ breakpoint, children }: SummaryContextValue & { children?: React.ReactNode }) {
   return (
     <SummaryContext.Provider
       value={{
@@ -27,4 +24,4 @@ export const SummaryContextProvider: React.FC<React.PropsWithChildren<SummaryCon
       {children}
     </SummaryContext.Provider>
   );
-};
+}

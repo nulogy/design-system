@@ -13,7 +13,10 @@ const BACK_LINK_MAX_WIDTH: MaxWidthProps["maxWidth"] = {
   laptop: "24ch",
 };
 
-interface BackLinkProps extends MaxWidthProps, ComponentProps<typeof StyledBackLink> {}
+interface BackLinkProps extends MaxWidthProps, ComponentProps<typeof StyledBackLink> {
+  as?: React.ElementType;
+  to?: string;
+}
 
 export function BackLink({ children, maxWidth = BACK_LINK_MAX_WIDTH, ...props }: BackLinkProps) {
   const md = useMediaQuery("phoneLandscape");

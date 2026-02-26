@@ -134,16 +134,18 @@ function MenuList(props) {
       ref={list}
       outerRef={innerRef}
       estimatedItemSize={estimatedItemSize}
-      innerElementType={React.forwardRef(({ style, ...rest }, ref) => (
-        <div
-          ref={ref}
-          style={{
-            ...style,
-            height: `${parseFloat(style.height) + paddingBottom + paddingTop}px`,
-          }}
-          {...rest}
-        />
-      ))}
+      innerElementType={React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+        ({ style, ...rest }, ref) => (
+          <div
+            ref={ref}
+            style={{
+              ...style,
+              height: `${parseFloat(style.height as string) + paddingBottom + paddingTop}px`,
+            }}
+            {...rest}
+          />
+        )
+      )}
       height={menuHeight}
       width="100%"
       itemCount={itemCount}

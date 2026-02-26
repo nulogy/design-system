@@ -93,3 +93,6 @@ yarn-error.log*
 
 # VSCode settings
 .vscode
+
+# Claude Code local settings (personal, not shared)
+.claude/settings.local.json

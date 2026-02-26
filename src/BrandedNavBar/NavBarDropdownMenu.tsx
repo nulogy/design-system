@@ -11,7 +11,12 @@ type MenuState = {
 };
 
 type NavBarDropdownMenuProps = {
-  children?: React.ReactNode;
+  children?:
+    | React.ReactNode
+    | ((props: {
+        closeMenu?: (skipDelay?: boolean) => void;
+        openMenu?: (skipDelay?: boolean) => void;
+      }) => React.ReactNode);
   trigger?: (props: {
     closeMenu?: (skipDelay?: boolean) => void;
     openMenu?: (skipDelay?: boolean) => void;
@@ -138,7 +143,7 @@ class StatelessNavBarDropdownMenu extends StatelessNavBarDropdownMenuClass {
                     } as any)}
                     onMouseDown={(e) => {
                       e.preventDefault();
-                      e.target.focus();
+                      (e.target as HTMLElement).focus();
                     }}
                     {...dropdownMenuContainerEventHandlers({
                       openMenu,
