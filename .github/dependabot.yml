@@ -10,6 +10,31 @@ updates:
       timezone: America/Toronto
     open-pull-requests-limit: 8
     rebase-strategy: disabled
+    groups:
+      storybook:
+        patterns:
+          - "storybook"
+          - "@storybook/*"
+      semantic-release:
+        patterns:
+          - "semantic-release"
+          - "@semantic-release/*"
+      eslint:
+        patterns:
+          - "eslint"
+          - "eslint-*"
+          - "@eslint/*"
+          - "@typescript-eslint/*"
+          - "typescript-eslint"
+      cypress:
+        patterns:
+          - "cypress"
+          - "cypress-*"
+      vite:
+        patterns:
+          - "vite"
+          - "vitest"
+          - "@vitejs/*"
   - package-ecosystem: github-actions
     directory: "/"
     schedule:
