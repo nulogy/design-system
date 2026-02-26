@@ -69,7 +69,7 @@
     "typescript": "4.9.5"
   },
   "devDependencies": {
-    "@apollo/client": "^3.11.8",
+    "@apollo/client": "^4.1.6",
     "@eslint/js": "^9.0.0",
     "@nulogy/icons": "^4.37.2",
     "@semantic-release/changelog": "^6.0.2",
