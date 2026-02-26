@@ -14,6 +14,7 @@ interface SwitchProps {
 
 interface SliderProps {
   disabled?: boolean;
+  children?: React.ReactNode;
 }
 
 interface ToggleButtonProps extends React.ComponentPropsWithRef<"input"> {
@@ -62,7 +63,7 @@ function Switch({ children, disabled, checked }: SwitchProps) {
   );
 }
 
-const Slider: React.FC<React.PropsWithChildren<SliderProps>> = ({ disabled, children }) => {
+function Slider({ disabled, children }: SliderProps) {
   const theme = useTheme();
 
   return (
@@ -92,7 +93,7 @@ const Slider: React.FC<React.PropsWithChildren<SliderProps>> = ({ disabled, chil
       {children}
     </motion.div>
   );
-};
+}
 
 const ToggleInput = styled.input<ToggleButtonProps>(({ disabled, theme }) => ({
   width: "1px",

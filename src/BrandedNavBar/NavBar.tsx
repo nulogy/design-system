@@ -33,14 +33,7 @@ type MediumNavBarProps = {
   subtext?: string;
 };
 
-const MediumNavBar: React.FC<React.PropsWithChildren<MediumNavBarProps>> = ({
-  menuData,
-  environment,
-  logo,
-  showNulogyLogo,
-  subtext,
-  ...props
-}) => {
+function MediumNavBar({ menuData, environment, logo, showNulogyLogo, subtext, ...props }: MediumNavBarProps) {
   const { t } = useTranslation();
   return (
     <>
@@ -77,7 +70,7 @@ const MediumNavBar: React.FC<React.PropsWithChildren<MediumNavBarProps>> = ({
       </header>
     </>
   );
-};
+}
 
 const SelectNavBarBasedOnWidth = ({
   width,

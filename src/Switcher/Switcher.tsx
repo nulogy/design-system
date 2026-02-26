@@ -12,7 +12,7 @@ type SwitcherProps = {
   onChange?: (value: string) => void;
 };
 
-const Switcher: React.FC<React.PropsWithChildren<SwitcherProps>> = ({ variant, selected, onChange, ...rest }) => {
+function Switcher({ variant, selected, onChange, ...rest }: SwitcherProps) {
   const componentVariant = useComponentVariant(variant);
 
   const optionRefs = [];
@@ -60,6 +60,6 @@ const Switcher: React.FC<React.PropsWithChildren<SwitcherProps>> = ({ variant, s
       </FocusManager>
     </Box>
   );
-};
+}
 
 export default Switcher;

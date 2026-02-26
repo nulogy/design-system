@@ -62,6 +62,7 @@ const StyledReactModal = styled(ReactModal)(
 );
 
 type ModalProps = {
+  children?: React.ReactNode;
   isOpen?: boolean;
   title?: string;
   ariaLabel?: string;
@@ -82,9 +83,7 @@ type ModalProps = {
   parentSelector?: (...args: any) => HTMLElement;
 };
 
-const Modal: React.FC<React.PropsWithChildren<ModalProps>> & {
-  setAppElement: (element: string | HTMLElement) => void;
-} = ({
+function Modal({
   isOpen = true,
   shouldFocusAfterRender = true,
   shouldReturnFocusAfterClose = true,
@@ -104,7 +103,7 @@ const Modal: React.FC<React.PropsWithChildren<ModalProps>> & {
   footerContent,
   closeAriaLabel,
   parentSelector,
-}) => {
+}: ModalProps) {
   const modalHasHeader = Boolean(onRequestClose || title);
   const themeContext = useContext(ThemeContext);
   return (
@@ -144,7 +143,7 @@ const Modal: React.FC<React.PropsWithChildren<ModalProps>> & {
       </ModalWrapper>
     </StyledReactModal>
   );
-};
+}
 
 function ModalWrapper({
   modalHasHeader,
