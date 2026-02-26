@@ -29,7 +29,7 @@ const SummaryWrapper = styled(Box)<{ breakpoint: number }>(({ theme, breakpoint 
   },
 }));
 
-const Summary: React.FC<React.PropsWithChildren<SummaryProps>> = ({ breakpoint, children, ...rest }) => {
+function Summary({ breakpoint, children, ...rest }: SummaryProps) {
   const theme = useTheme();
   breakpoint ||= theme.breakpoints.medium;
 
@@ -42,6 +42,6 @@ const Summary: React.FC<React.PropsWithChildren<SummaryProps>> = ({ breakpoint, 
       </SummaryWrapper>
     </SummaryContextProvider>
   );
-};
+}
 
 export default Summary;

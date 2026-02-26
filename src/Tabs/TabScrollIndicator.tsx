@@ -48,14 +48,14 @@ type TabScrollIndicatorProps = {
   ariaLabelRight?: string;
 };
 
-const TabScrollIndicator: React.FC<React.PropsWithChildren<TabScrollIndicatorProps>> = ({
+function TabScrollIndicator({
   side = "left",
   width = 40,
   ariaLabelLeft,
   ariaLabelRight,
   onClick,
   ...props
-}) => {
+}: TabScrollIndicatorProps) {
   const { t } = useTranslation();
 
   const rightArrowLabel = ariaLabelRight || t("next");
@@ -78,6 +78,6 @@ const TabScrollIndicator: React.FC<React.PropsWithChildren<TabScrollIndicatorPro
       <Icon icon={side === "right" ? "rightArrow" : "leftArrow"} />
     </TabScrollIndicatorButton>
   );
-};
+}
 
 export default TabScrollIndicator;

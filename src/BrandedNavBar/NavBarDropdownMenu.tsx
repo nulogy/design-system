@@ -143,7 +143,7 @@ class StatelessNavBarDropdownMenu extends StatelessNavBarDropdownMenuClass {
                     } as any)}
                     onMouseDown={(e) => {
                       e.preventDefault();
-                      e.target.focus();
+                      (e.target as HTMLElement).focus();
                     }}
                     {...dropdownMenuContainerEventHandlers({
                       openMenu,

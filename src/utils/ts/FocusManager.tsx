@@ -17,7 +17,7 @@ type FocusManagerProps = {
   children: (handlers: ChildrenHandlers) => ReactNode;
 };
 
-const FocusManager: React.FC<FocusManagerProps> = ({ children, refs = undefined, defaultFocusedIndex }) => {
+function FocusManager({ children, refs = undefined, defaultFocusedIndex }: FocusManagerProps) {
   const [focusedIndex, setFocusedIndex] = useState<number>(defaultFocusedIndex ?? 0);
   const prevFocusedIndex = useRef<number>(focusedIndex);
 
@@ -64,6 +64,6 @@ const FocusManager: React.FC<FocusManagerProps> = ({ children, refs = undefined,
       })}
     </>
   );
-};
+}
 
 export default FocusManager;
