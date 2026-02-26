@@ -46,7 +46,8 @@ Cypress.Commands.add("assertTooltip", (triggerSelector, expectedText) => {
   cy.get(triggerSelector)
     .should("have.attr", "aria-describedby")
     .then((tooltipId) => {
-      cy.get(`#${tooltipId}`)
+      // Use attribute selector: Radix UI (e.g. React 18) can emit IDs like "radix-:r0:" where ":" is invalid in #id selectors
+      cy.get(`[id="${tooltipId}"]`)
         .should("exist")
         .should("have.css", "visibility", "visible")
         .and("have.css", "opacity", "1")
