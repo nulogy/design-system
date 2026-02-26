@@ -136,7 +136,7 @@
     "@nulogy/tokens": "^6.1.1",
     "@radix-ui/react-navigation-menu": "^1.1.4",
     "@radix-ui/react-tooltip": "1.0.7",
-    "@reach/dialog": "0.17.0",
+    "@reach/dialog": "0.18.0",
     "@styled-system/prop-types": "^5.1.4",
     "@styled-system/theme-get": "^5.1.2",
     "@types/react-window": "^1.8.8",
