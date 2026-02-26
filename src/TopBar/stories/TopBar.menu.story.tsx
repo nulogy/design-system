@@ -93,7 +93,7 @@ export const WithRouterLinks = () => {
         <BrowserRouter basename="/">
           {routerMenuItems.map((item) => (
             <TopBar.MenuItem key={item.title}>
-              <Link component={TopBar.MenuItemLink} {...item} />
+              <TopBar.MenuItemLink as={Link} {...item} />
             </TopBar.MenuItem>
           ))}
         </BrowserRouter>

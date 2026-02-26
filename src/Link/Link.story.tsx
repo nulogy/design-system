@@ -56,9 +56,9 @@ AsAButton.story = {
 
 export const _ReactRouterLink = () => (
   <BrowserRouter>
-    <ReactRouterLink component={Link} to="/place">
+    <Link as={ReactRouterLink} to="/place">
       Link
-    </ReactRouterLink>
+    </Link>
   </BrowserRouter>
 );
 
