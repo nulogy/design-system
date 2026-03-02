@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useState } from "react";
 import { useTheme } from "styled-components";
 import { toast } from "../../..";
 import ndsIcons from "@nulogy/icons";
@@ -19,9 +19,11 @@ import {
   Header,
   IconicButton,
   Link,
+  Modal,
   Page,
   PrimaryButton,
   QuietButton,
+  Radio,
   Select,
   StatusIndicator,
   Tab,
@@ -73,7 +75,7 @@ const initialFormData = {
     note: "Standard production requirements. All items must meet the specified quality standards and pass quality control inspections before shipment.",
   },
   proposal: {
-    quantity: "15,500",
+    quantity: "700",
     unit: "cases",
     productionDueDate: "2025-Feb-28",
     unitPrice: "12.50",
@@ -103,6 +105,54 @@ const formatDueDate = (date: Date) => {
   return `${year}-${month}-${day}`;
 };
 
+// Unit conversion for aggregation (matches design-repo): 1 case = 20 eaches, 1 pallet = 40 cases = 800 eaches
+const EACHES_PER_CASE = 20;
+const CASES_PER_PALLET = 40;
+const EACHES_PER_PALLET = EACHES_PER_CASE * CASES_PER_PALLET;
+
+const quantityToEaches = (qty: string, unit: string) => {
+  const n = parseFloat(String(qty).replace(/,/g, "")) || 0;
+  if (unit === "cases") return n * EACHES_PER_CASE;
+  if (unit === "pallets") return n * EACHES_PER_PALLET;
+  return n; // eaches
+};
+
+const eachesToUnit = (eaches: number, unit: string) => {
+  if (unit === "cases") return eaches / EACHES_PER_CASE;
+  if (unit === "pallets") return eaches / EACHES_PER_PALLET;
+  return eaches; // eaches
+};
+
+// Matches design-repo: request is stored in customer UOM (eaches); proposal in supplier UOM (e.g. cases)
+const CUSTOMER_UOM = "eaches";
+const DEFAULT_DISPLAY_SUPPLIER_UOM = "cases";
+
+const UNIT_OPTIONS = [
+  { value: "eaches", label: "eaches" },
+  { value: "cases", label: "cases" },
+  { value: "pallets", label: "pallets" },
+] as const;
+
+// Aggregated proposal values for acceptance: sum quantity in eaches, latest date (for split proposals)
+const getAggregatedProposalRequestUpdate = (
+  proposal: { quantity: string; unit: string; productionDueDate: string },
+  splitRows: { quantity: string; unit: string; productionDueDate: string }[]
+): { quantity: string; productionDueDate: string } => {
+  const totalEaches =
+    quantityToEaches(proposal.quantity, proposal.unit || "eaches") +
+    splitRows.reduce((sum, r) => sum + quantityToEaches(r.quantity, r.unit || "eaches"), 0);
+  const quantityStr = Math.round(totalEaches).toLocaleString("en-US", { maximumFractionDigits: 0 });
+  const allDates = [
+    parseDueDate(proposal.productionDueDate),
+    ...splitRows.map((r) => parseDueDate(r.productionDueDate)),
+  ].filter((d): d is Date => d != null && !Number.isNaN(d.getTime()));
+  const latestDate =
+    allDates.length > 0
+      ? formatDueDate(new Date(Math.max(...allDates.map((d) => d.getTime()))))
+      : proposal.productionDueDate || "";
+  return { quantity: quantityStr, productionDueDate: latestDate };
+};
+
 export const Default = () => {
   const theme = useTheme();
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -123,6 +173,7 @@ export const Default = () => {
 
   const [proposalSplitRows, setProposalSplitRows] = useState<SplitProposalRow[]>([]);
   const [committedProposalSplitRows, setCommittedProposalSplitRows] = useState<SplitProposalRow[]>([]);
+  const [requestAggregatedFromSplits, setRequestAggregatedFromSplits] = useState(false);
 
   const visibleProposalSplitRows = editMode === "proposal" ? proposalSplitRows : committedProposalSplitRows;
 
@@ -131,21 +182,59 @@ export const Default = () => {
   });
   const [supplierProposalMade, setSupplierProposalMade] = useState(true);
 
-  const getMismatchStyle = (opts: { highlight: boolean }) => {
+  // Dual acceptance (matches design-repo)
+  const [acceptanceType, setAcceptanceType] = useState<"dual" | "standard">("dual");
+  const [isAcceptanceModalOpen, setIsAcceptanceModalOpen] = useState(false);
+  const [acceptanceOption, setAcceptanceOption] = useState<"without-flagging" | "with-flagging">("without-flagging");
+  const [isReconciled, setIsReconciled] = useState<boolean | null>(null); // null = not accepted yet, true = request updated, false = request retained
+  const [isFlagged, setIsFlagged] = useState(false);
+
+  // ReconciledIcon: standard = both checkmarks green; flagged = second checkmark grey (matches design-repo)
+  const ReconciledIcon = ({ variant = "standard", size = 20 }: { variant?: "standard" | "flagged"; size?: number }) => {
+    const height = (size * 13) / 25;
+    const firstPathColor = "#008059";
+    const secondPathColor = variant === "flagged" ? theme.colors.grey : "#008059";
+    return (
+      <svg width={size} height={height} viewBox="0 0 25 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M13.7003 12.025L10.5 8.825L11.925 7.4L13.7003 9.175L22.8753 0L24.3003 1.425L13.7003 12.025Z"
+          fill={firstPathColor}
+        />
+        <path d="M5.7 12.025L0 6.325L1.425 4.9L5.7 9.175L14.875 0L16.3 1.425L5.7 12.025Z" fill={secondPathColor} />
+      </svg>
+    );
+  };
+
+  // Highlight style matches design-repo: borderBottom, yellow when "needs my response", grey otherwise
+  const getMismatchStyle = (opts: {
+    highlight: boolean;
+    needsMyResponse: boolean; // true = current user must act → yellow, false → grey
+  }) => {
     if (!opts.highlight) return undefined;
+    const color = opts.needsMyResponse ? theme.colors.yellow : theme.colors.grey;
     return {
-      textDecoration: "underline",
-      textDecorationThickness: "2px",
-      textUnderlineOffset: "4px",
-      textDecorationColor: role === "supplier" ? theme.colors.grey : theme.colors.yellow,
+      borderBottom: `2px solid ${color}`,
+      paddingBottom: 0,
+      display: "inline",
     } as React.CSSProperties;
   };
 
-  const requestQty = parseFloat(String(formData.request.quantity).replace(/,/g, "")) || 0;
-  const proposalQty = parseFloat(String(formData.proposal.quantity).replace(/,/g, "")) || 0;
-  const qtyMismatch = requestQty !== proposalQty;
-  const dueDateMismatch = formData.request.productionDueDate !== formData.proposal.productionDueDate;
+  // Compare in eaches (align with design-repo); use aggregated proposal when there are splits
+  const proposalAggregatedForMismatch = getAggregatedProposalRequestUpdate(
+    formData.proposal,
+    committedProposalSplitRows
+  );
+  const requestQtyEaches = quantityToEaches(formData.request.quantity, formData.request.unit || CUSTOMER_UOM);
+  const proposalQtyEaches = quantityToEaches(proposalAggregatedForMismatch.quantity, "eaches");
+  const qtyMismatch = requestQtyEaches !== proposalQtyEaches;
+  const dueDateMismatch = formData.request.productionDueDate !== proposalAggregatedForMismatch.productionDueDate;
   const unitPriceMismatch = formData.request.unitPrice !== formData.proposal.unitPrice;
+
+  // When in proposal edit mode, request column keeps showing in the proposal unit from edit start (don't change/recalculate when user changes proposal UOM)
+  const requestColumnDisplayUnit =
+    editMode === "proposal"
+      ? (originalFormValues?.proposal?.unit ?? DEFAULT_DISPLAY_SUPPLIER_UOM)
+      : (formData.proposal.unit ?? DEFAULT_DISPLAY_SUPPLIER_UOM);
 
   const enterEditMode = (mode: "request" | "proposal") => {
     setEditMode(mode);
@@ -176,23 +265,100 @@ export const Default = () => {
       setCommittedProposalSplitRows(proposalSplitRows.map((r) => ({ ...r })));
       setCollaborationState({ activeCardAuthorRole: "supplier" });
       setSupplierProposalMade(true);
+      setRequestAggregatedFromSplits(false);
     } else {
       setCollaborationState({ activeCardAuthorRole: "customer" });
     }
     setEditMode(null);
     setOriginalFormValues(null);
     setOriginalProposalSplitRows(null);
+    // Reset acceptance when either side updates (matches design-repo)
+    setAcceptedItems({ request: false, proposal: false });
+    setIsReconciled(null);
+    setIsFlagged(false);
+  };
+
+  const acceptSupplierProposal = () => {
+    if (acceptanceType === "standard" && role === "customer") {
+      setAcceptedItems((prev) => ({ ...prev, proposal: true }));
+      const hasSplits = committedProposalSplitRows.length > 0;
+      const update = hasSplits
+        ? getAggregatedProposalRequestUpdate(formData.proposal, committedProposalSplitRows)
+        : {
+            quantity: Math.round(
+              quantityToEaches(formData.proposal.quantity, formData.proposal.unit || "eaches")
+            ).toLocaleString("en-US", { maximumFractionDigits: 0 }),
+            productionDueDate: formData.proposal.productionDueDate || "",
+          };
+      setFormData((prev) => ({
+        ...prev,
+        request: {
+          ...prev.request,
+          quantity: update.quantity,
+          productionDueDate: update.productionDueDate,
+          unit: "eaches",
+        },
+      }));
+      setRequestAggregatedFromSplits(hasSplits);
+      setIsReconciled(true);
+      toast.success("Proposal accepted");
+      return;
+    }
+    setIsAcceptanceModalOpen(true);
+  };
+
+  const handleAcceptanceConfirm = () => {
+    setAcceptedItems((prev) => ({ ...prev, proposal: true }));
+
+    if (acceptanceOption === "without-flagging") {
+      const hasSplits = committedProposalSplitRows.length > 0;
+      const update = hasSplits
+        ? getAggregatedProposalRequestUpdate(formData.proposal, committedProposalSplitRows)
+        : {
+            quantity: Math.round(
+              quantityToEaches(formData.proposal.quantity, formData.proposal.unit || "eaches")
+            ).toLocaleString("en-US", { maximumFractionDigits: 0 }),
+            productionDueDate: formData.proposal.productionDueDate || "",
+          };
+      setFormData((prev) => ({
+        ...prev,
+        request: {
+          ...prev.request,
+          quantity: update.quantity,
+          productionDueDate: update.productionDueDate,
+          unit: "eaches",
+        },
+      }));
+      setRequestAggregatedFromSplits(hasSplits);
+      setIsReconciled(true);
+      toast.success("Proposal accepted");
+    } else {
+      setRequestAggregatedFromSplits(false);
+      setIsFlagged(true);
+      setIsReconciled(false);
+      toast.success("Proposal accepted");
+    }
+
+    setIsAcceptanceModalOpen(false);
+  };
+
+  const handleAcceptanceCancel = () => {
+    setIsAcceptanceModalOpen(false);
+    setAcceptanceOption("without-flagging");
   };
 
   const addProposalSplitRow = () => {
-    setProposalSplitRows((prev) => [
-      ...prev,
-      {
-        quantity: "0",
-        unit: formData.proposal.unit || "cases",
-        productionDueDate: formData.proposal.productionDueDate || "",
-      },
-    ]);
+    setProposalSplitRows((prev) => {
+      if (prev.length >= 2) return prev; // max 3 total rows (1 base + 2 splits), matches design-repo
+      return [
+        ...prev,
+        {
+          quantity: "0",
+          unit: formData.proposal.unit || "cases",
+          productionDueDate: formData.proposal.productionDueDate || "",
+        },
+      ];
+    });
   };
 
   const removeProposalSplitRow = (idx: number) => {
@@ -228,16 +394,8 @@ export const Default = () => {
     },
   ];
 
-  const unitOptions = useMemo(
-    () => [
-      { value: "cases", label: "cases" },
-      { value: "eaches", label: "eaches" },
-      { value: "pieces", label: "pieces" },
-      { value: "meters", label: "meters" },
-      { value: "pounds", label: "pounds" },
-    ],
-    []
-  );
+  // Unit options aligned with design-repo (eaches, cases, pallets only)
+  const unitOptions = UNIT_OPTIONS;
 
   const QtyDueRow = ({
     quantity,
@@ -347,7 +505,6 @@ export const Default = () => {
                   onChange={(value) => {
                     const nextRole = value as "supplier" | "customer";
                     setRole(nextRole);
-                    // Switching view should not force edit mode.
                     setEditMode(null);
                     setOriginalFormValues(null);
                     setOriginalProposalSplitRows(null);
@@ -356,6 +513,21 @@ export const Default = () => {
                   <Switch value="supplier">Supplier</Switch>
                   <Switch value="customer">Customer</Switch>
                 </Switcher>
+              </Flex>
+              <Flex alignItems="center" gap="x1">
+                <Text width="90px" fontSize="small" color="midGrey">
+                  Acceptance:
+                </Text>
+                <Select
+                  options={[
+                    { value: "dual", label: "Dual" },
+                    { value: "standard", label: "Standard" },
+                  ]}
+                  value={acceptanceType}
+                  onChange={(option) => setAcceptanceType(option as "dual" | "standard")}
+                  width="120px"
+                  menuPlacement="top"
+                />
               </Flex>
               <IconicButton
                 icon="close"
@@ -513,7 +685,9 @@ export const Default = () => {
                               </Box>
                               <Select
                                 options={unitOptions}
-                                value={formData.request.unit}
+                                value={
+                                  (formData.request.unit || CUSTOMER_UOM) as (typeof UNIT_OPTIONS)[number]["value"]
+                                }
                                 onChange={(option) =>
                                   setFormData((prev) => ({
                                     ...prev,
@@ -616,45 +790,120 @@ export const Default = () => {
                           </>
                         ) : (
                           <>
-                            <QtyDueRow
-                              quantity={formData.request.quantity}
-                              unit={uomView === "supplier" ? "cases" : formData.request.unit}
-                              productionDueDate={formData.request.productionDueDate}
-                              quantityTextStyle={getMismatchStyle({
-                                highlight:
-                                  !acceptedItems.request &&
-                                  !acceptedItems.proposal &&
-                                  supplierProposalMade &&
-                                  qtyMismatch &&
-                                  role === "supplier" &&
-                                  collaborationState.activeCardAuthorRole === "customer",
-                              })}
-                              dueDateTextStyle={getMismatchStyle({
-                                highlight:
-                                  !acceptedItems.request &&
-                                  !acceptedItems.proposal &&
-                                  supplierProposalMade &&
-                                  dueDateMismatch &&
-                                  role === "supplier" &&
-                                  collaborationState.activeCardAuthorRole === "customer",
-                              })}
-                            />
+                            {acceptedItems.proposal && requestAggregatedFromSplits ? (
+                              <Flex my="x1" alignItems="center" flexWrap="nowrap" gap="x0_5">
+                                <Text>
+                                  {uomView === "customer"
+                                    ? formData.request.quantity
+                                    : eachesToUnit(
+                                        quantityToEaches(
+                                          formData.request.quantity,
+                                          formData.request.unit || CUSTOMER_UOM
+                                        ),
+                                        requestColumnDisplayUnit
+                                      ).toLocaleString("en-US", {
+                                        maximumFractionDigits: 2,
+                                        minimumFractionDigits: 0,
+                                      })}{" "}
+                                  {uomView === "customer"
+                                    ? formData.request.unit || CUSTOMER_UOM
+                                    : requestColumnDisplayUnit}
+                                </Text>
+                                <Text as="span" color="midGrey">
+                                  on
+                                </Text>
+                                <Text>{formData.request.productionDueDate}</Text>
+                                <Tooltip
+                                  tooltip={
+                                    <Box>
+                                      <Text
+                                        color="midGrey"
+                                        mb="x1"
+                                        fontSize="small"
+                                        lineHeight="smallTextCompressed"
+                                        display="block"
+                                      >
+                                        Split request
+                                      </Text>
+                                      <Flex flexDirection="column" gap="x0_5">
+                                        <Text color="black" fontSize="small" lineHeight="smallTextCompressed">
+                                          {formData.proposal.quantity} {formData.proposal.unit}{" "}
+                                          <Text
+                                            as="span"
+                                            color="midGrey"
+                                            fontSize="small"
+                                            lineHeight="smallTextCompressed"
+                                          >
+                                            by
+                                          </Text>{" "}
+                                          {formData.proposal.productionDueDate}
+                                        </Text>
+                                        {committedProposalSplitRows.map((r, i) => (
+                                          <Text fontSize="small" lineHeight="smallTextCompressed" key={i} color="black">
+                                            {r.quantity} {r.unit}{" "}
+                                            <Text
+                                              as="span"
+                                              color="midGrey"
+                                              fontSize="small"
+                                              lineHeight="smallTextCompressed"
+                                            >
+                                              by
+                                            </Text>{" "}
+                                            {r.productionDueDate}
+                                          </Text>
+                                        ))}
+                                      </Flex>
+                                    </Box>
+                                  }
+                                >
+                                  <Box display="flex" alignItems="center">
+                                    <Icon icon={"arrowSplit" as any} size="x2_5" color="darkGrey" />
+                                  </Box>
+                                </Tooltip>
+                              </Flex>
+                            ) : (
+                              <QtyDueRow
+                                quantity={
+                                  uomView === "customer"
+                                    ? formData.request.quantity
+                                    : eachesToUnit(
+                                        quantityToEaches(
+                                          formData.request.quantity,
+                                          formData.request.unit || CUSTOMER_UOM
+                                        ),
+                                        requestColumnDisplayUnit
+                                      ).toLocaleString("en-US", {
+                                        maximumFractionDigits: 2,
+                                        minimumFractionDigits: 0,
+                                      })
+                                }
+                                unit={
+                                  uomView === "customer"
+                                    ? formData.request.unit || CUSTOMER_UOM
+                                    : requestColumnDisplayUnit
+                                }
+                                productionDueDate={formData.request.productionDueDate}
+                                quantityTextStyle={getMismatchStyle({
+                                  highlight:
+                                    !(acceptedItems.request || acceptedItems.proposal) &&
+                                    collaborationState.activeCardAuthorRole === "customer" &&
+                                    qtyMismatch,
+                                  needsMyResponse: role === "supplier",
+                                })}
+                                dueDateTextStyle={getMismatchStyle({
+                                  highlight:
+                                    !(acceptedItems.request || acceptedItems.proposal) &&
+                                    collaborationState.activeCardAuthorRole === "customer" &&
+                                    dueDateMismatch,
+                                  needsMyResponse: role === "supplier",
+                                })}
+                              />
+                            )}
                             {/* Push request content down to stay aligned when proposal has split rows */}
                             {visibleProposalSplitRows.map((_, i) => (
                               <SplitRowPlaceholder key={`request-view-placeholder-${i}`} />
                             ))}
-                            <Text
-                              my="x1"
-                              style={getMismatchStyle({
-                                highlight:
-                                  !acceptedItems.request &&
-                                  !acceptedItems.proposal &&
-                                  supplierProposalMade &&
-                                  unitPriceMismatch &&
-                                  role === "supplier" &&
-                                  collaborationState.activeCardAuthorRole === "customer",
-                              })}
-                            >
+                            <Text my="x1">
                               {formData.request.unitPrice} {formData.request.currency}{" "}
                               <Text as="span" fontSize="small" lineHeight="smallRelaxed" color="midGrey">
                                 (per each)
@@ -679,19 +928,45 @@ export const Default = () => {
                         <Flex alignItems="center" gap="x1">
                           <Heading4 mb="0">{role === "supplier" ? "Your proposal" : "Supplier's proposal"}</Heading4>
                           {acceptedItems.request || acceptedItems.proposal ? (
-                            <Tooltip tooltip="Accepted">
-                              <Box
-                                backgroundColor="lightGreen"
-                                borderRadius="medium"
-                                p="x0_25"
-                                width="x3"
-                                height="x3"
-                                display="flex"
-                                alignItems="center"
-                                justifyContent="center"
-                              >
-                                <Icon icon="check" size="x2_5" color="green" />
-                              </Box>
+                            <Tooltip
+                              tooltip={
+                                acceptanceType === "dual" && acceptedItems.proposal && isReconciled !== null
+                                  ? acceptedItems.request
+                                    ? "Accepted – Request updated"
+                                    : role === "supplier"
+                                      ? "Accepted – Request updated"
+                                      : isReconciled
+                                        ? "Accepted – Request updated"
+                                        : "Accepted – Request retained"
+                                  : "Accepted"
+                              }
+                            >
+                              <Flex alignItems="center" gap="x0_5">
+                                <Box
+                                  backgroundColor="lightGreen"
+                                  borderRadius="medium"
+                                  p="x0_25"
+                                  width="x3"
+                                  height="x3"
+                                  display="flex"
+                                  alignItems="center"
+                                  justifyContent="center"
+                                >
+                                  <Icon
+                                    icon="check"
+                                    size="x2_5"
+                                    color={
+                                      acceptedItems.proposal && isReconciled === false && role !== "supplier"
+                                        ? "grey"
+                                        : "green"
+                                    }
+                                  />
+                                </Box>
+                                {/* Second icon only when "Accept and retain request" (dual); "update request" shows single check like request column */}
+                                {acceptanceType === "dual" && acceptedItems.proposal && isReconciled === false && (
+                                  <ReconciledIcon variant="flagged" size={20} />
+                                )}
+                              </Flex>
                             </Tooltip>
                           ) : (
                             <>
@@ -760,13 +1035,18 @@ export const Default = () => {
 
                               <Select
                                 options={unitOptions}
-                                value={formData.proposal.unit}
-                                onChange={(option) =>
+                                value={
+                                  (formData.proposal.unit ||
+                                    DEFAULT_DISPLAY_SUPPLIER_UOM) as (typeof UNIT_OPTIONS)[number]["value"]
+                                }
+                                onChange={(option) => {
+                                  const newUnit = option as string;
                                   setFormData((prev) => ({
                                     ...prev,
-                                    proposal: { ...prev.proposal, unit: option as string },
-                                  }))
-                                }
+                                    proposal: { ...prev.proposal, unit: newUnit },
+                                  }));
+                                  setProposalSplitRows((prev) => prev.map((r) => ({ ...r, unit: newUnit })));
+                                }}
                                 width="100%"
                                 minWidth="100px"
                                 maxWidth="160px"
@@ -774,7 +1054,7 @@ export const Default = () => {
                               />
 
                               <Text color="midGrey" px="x0_5">
-                                on
+                                by
                               </Text>
 
                               <Box flex="1" minWidth="220px">
@@ -806,16 +1086,20 @@ export const Default = () => {
                                   </Box>
 
                                   <Flex alignItems="center" pl="x0_5">
-                                    {role === "supplier" && editMode === "proposal" && (
-                                      <IconicButton
-                                        icon={"arrowSplit" as any}
-                                        labelHidden
-                                        aria-label="Split proposal"
-                                        tooltip="Split proposal"
-                                        onClick={addProposalSplitRow}
-                                        type="button"
-                                      />
-                                    )}
+                                    {role === "supplier" &&
+                                      editMode === "proposal" &&
+                                      (proposalSplitRows.length < 2 ? (
+                                        <IconicButton
+                                          icon={"arrowSplit" as any}
+                                          labelHidden
+                                          aria-label="Split proposal"
+                                          tooltip="Split proposal"
+                                          onClick={addProposalSplitRow}
+                                          type="button"
+                                        />
+                                      ) : (
+                                        <Box width="32px" height="32px" flexShrink={0} aria-hidden />
+                                      ))}
                                   </Flex>
                                 </Box>
                               </Box>
@@ -843,22 +1127,14 @@ export const Default = () => {
                                   />
                                 </Box>
 
-                                <Select
-                                  options={unitOptions}
-                                  value={row.unit}
-                                  onChange={(option) =>
-                                    setProposalSplitRows((prev) =>
-                                      prev.map((r, i) => (i === idx ? { ...r, unit: option as string } : r))
-                                    )
-                                  }
-                                  width="100%"
-                                  minWidth="100px"
-                                  maxWidth="160px"
-                                  disabled={role !== "supplier"}
-                                />
+                                <Box width="100%" minWidth="100px" maxWidth="160px" display="flex" alignItems="center">
+                                  <TruncatedText fullWidth ml="x1">
+                                    {row.unit}
+                                  </TruncatedText>
+                                </Box>
 
                                 <Text color="midGrey" px="x0_5">
-                                  on
+                                  by
                                 </Text>
 
                                 <Box flex="1" minWidth="220px">
@@ -971,75 +1247,77 @@ export const Default = () => {
                         ) : (
                           <>
                             <QtyDueRow
-                              quantity={formData.proposal.quantity}
-                              unit={uomView === "supplier" ? "cases" : formData.proposal.unit}
+                              quantity={
+                                uomView === "customer"
+                                  ? quantityToEaches(
+                                      formData.proposal.quantity,
+                                      formData.proposal.unit || "eaches"
+                                    ).toLocaleString("en-US", {
+                                      maximumFractionDigits: 2,
+                                      minimumFractionDigits: 0,
+                                    })
+                                  : formData.proposal.quantity
+                              }
+                              unit={
+                                uomView === "customer"
+                                  ? CUSTOMER_UOM
+                                  : formData.proposal.unit || DEFAULT_DISPLAY_SUPPLIER_UOM
+                              }
                               productionDueDate={formData.proposal.productionDueDate}
                               my="x0_25"
                               quantityTextStyle={getMismatchStyle({
                                 highlight:
-                                  !acceptedItems.request &&
-                                  !acceptedItems.proposal &&
-                                  supplierProposalMade &&
-                                  qtyMismatch &&
-                                  collaborationState.activeCardAuthorRole === "supplier",
+                                  !(acceptedItems.request || acceptedItems.proposal) &&
+                                  collaborationState.activeCardAuthorRole === "supplier" &&
+                                  qtyMismatch,
+                                needsMyResponse: role === "customer",
                               })}
                               dueDateTextStyle={getMismatchStyle({
                                 highlight:
-                                  !acceptedItems.request &&
-                                  !acceptedItems.proposal &&
-                                  supplierProposalMade &&
-                                  dueDateMismatch &&
-                                  collaborationState.activeCardAuthorRole === "supplier",
+                                  !(acceptedItems.request || acceptedItems.proposal) &&
+                                  collaborationState.activeCardAuthorRole === "supplier" &&
+                                  dueDateMismatch,
+                                needsMyResponse: role === "customer",
                               })}
                             />
-                            {committedProposalSplitRows.map((row, idx) => (
-                              <QtyDueRow
-                                // eslint-disable-next-line react/no-array-index-key
-                                key={`proposal-view-split-${idx}`}
-                                quantity={row.quantity}
-                                unit={row.unit}
-                                productionDueDate={row.productionDueDate}
-                                my="x0_25"
-                                quantityTextStyle={getMismatchStyle({
-                                  highlight: (() => {
-                                    const requestQty =
-                                      parseFloat(String(formData.request.quantity).replace(/,/g, "")) || 0;
-                                    const splitQty = parseFloat(String(row.quantity).replace(/,/g, "")) || 0;
-                                    const splitQtyMismatch =
-                                      requestQty !== splitQty || row.unit !== formData.request.unit;
-
-                                    return (
-                                      !acceptedItems.request &&
-                                      !acceptedItems.proposal &&
-                                      supplierProposalMade &&
-                                      splitQtyMismatch &&
-                                      collaborationState.activeCardAuthorRole === "supplier"
-                                    );
-                                  })(),
-                                })}
-                                dueDateTextStyle={getMismatchStyle({
-                                  highlight:
-                                    !acceptedItems.request &&
-                                    !acceptedItems.proposal &&
-                                    supplierProposalMade &&
-                                    formData.request.productionDueDate !== row.productionDueDate &&
-                                    collaborationState.activeCardAuthorRole === "supplier",
-                                })}
-                              />
-                            ))}
-                            <Text
-                              mt="x2"
-                              mb="x1"
-                              style={getMismatchStyle({
-                                highlight:
-                                  !acceptedItems.request &&
-                                  !acceptedItems.proposal &&
-                                  supplierProposalMade &&
-                                  unitPriceMismatch &&
-                                  role === "customer" &&
-                                  collaborationState.activeCardAuthorRole === "supplier",
-                              })}
-                            >
+                            {committedProposalSplitRows.map((row, idx) => {
+                              const rowQtyEaches = quantityToEaches(String(row.quantity), row.unit || "eaches");
+                              const rowQtyMismatch = requestQtyEaches !== rowQtyEaches;
+                              return (
+                                <QtyDueRow
+                                  // eslint-disable-next-line react/no-array-index-key
+                                  key={`proposal-view-split-${idx}`}
+                                  quantity={
+                                    uomView === "customer"
+                                      ? rowQtyEaches.toLocaleString("en-US", {
+                                          maximumFractionDigits: 2,
+                                          minimumFractionDigits: 0,
+                                        })
+                                      : row.quantity
+                                  }
+                                  unit={
+                                    uomView === "customer" ? CUSTOMER_UOM : row.unit || DEFAULT_DISPLAY_SUPPLIER_UOM
+                                  }
+                                  productionDueDate={row.productionDueDate}
+                                  my="x0_25"
+                                  quantityTextStyle={getMismatchStyle({
+                                    highlight:
+                                      !(acceptedItems.request || acceptedItems.proposal) &&
+                                      collaborationState.activeCardAuthorRole === "supplier" &&
+                                      rowQtyMismatch,
+                                    needsMyResponse: role === "customer",
+                                  })}
+                                  dueDateTextStyle={getMismatchStyle({
+                                    highlight:
+                                      !(acceptedItems.request || acceptedItems.proposal) &&
+                                      collaborationState.activeCardAuthorRole === "supplier" &&
+                                      formData.request.productionDueDate !== row.productionDueDate,
+                                    needsMyResponse: role === "customer",
+                                  })}
+                                />
+                              );
+                            })}
+                            <Text mt="x2" mb="x1">
                               {formData.proposal.unitPrice} {formData.proposal.currency}{" "}
                               <Text as="span" fontSize="small" lineHeight="smallRelaxed" color="midGrey">
                                 (per each)
@@ -1087,6 +1365,7 @@ export const Default = () => {
                             <QuietButton
                               onClick={() => {
                                 setAcceptedItems((prev) => ({ ...prev, request: true }));
+                                setIsReconciled(true);
                                 toast.success("Customer's request accepted");
                               }}
                               disabled={acceptedItems.request}
@@ -1097,13 +1376,7 @@ export const Default = () => {
                         ) : (
                           <>
                             <QuietButton onClick={() => enterEditMode("request")}>Update request</QuietButton>
-                            <QuietButton
-                              onClick={() => {
-                                setAcceptedItems({ request: true, proposal: true });
-                                toast.success("Supplier's proposal accepted");
-                              }}
-                              disabled={acceptedItems.proposal}
-                            >
+                            <QuietButton onClick={acceptSupplierProposal} disabled={acceptedItems.proposal}>
                               Accept supplier's proposal
                             </QuietButton>
                           </>
@@ -1138,6 +1411,60 @@ export const Default = () => {
             </Box>
           </Tab>
         </Tabs>
+
+        {/* Dual acceptance modal (matches design-repo) */}
+        <Modal
+          isOpen={isAcceptanceModalOpen}
+          onRequestClose={handleAcceptanceCancel}
+          title="Accept supplier's proposal"
+          maxWidth="649px"
+          footerContent={
+            <Flex justifyContent="flex-start" gap="x2">
+              <PrimaryButton onClick={handleAcceptanceConfirm}>Accept proposal</PrimaryButton>
+              <QuietButton onClick={handleAcceptanceCancel}>Cancel</QuietButton>
+            </Flex>
+          }
+        >
+          <Box px="half">
+            <Flex flexDirection="column" gap="x1">
+              <Box mb="x1">
+                <Flex alignItems="center" gap="x1">
+                  <Radio
+                    name="acceptance-option"
+                    value="without-flagging"
+                    labelText="Accept and update request"
+                    checked={acceptanceOption === "without-flagging"}
+                    onChange={() => setAcceptanceOption("without-flagging")}
+                  />
+                  <Box display="flex" alignItems="center" justifyContent="center">
+                    <ReconciledIcon variant="standard" size={20} />
+                  </Box>
+                </Flex>
+                <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed" ml="x3">
+                  This will update your requested quantity to match the supplier's proposal.
+                </Text>
+              </Box>
+              <Divider m="0" />
+              <Box mb="x1">
+                <Flex alignItems="center" gap="x1">
+                  <Radio
+                    name="acceptance-option"
+                    value="with-flagging"
+                    labelText="Accept and retain request"
+                    checked={acceptanceOption === "with-flagging"}
+                    onChange={() => setAcceptanceOption("with-flagging")}
+                  />
+                  <Box display="flex" alignItems="center" justifyContent="center">
+                    <ReconciledIcon variant="flagged" size={20} />
+                  </Box>
+                </Flex>
+                <Text fontSize="small" color="midGrey" lineHeight="smallRelaxed" ml="x3">
+                  This will accept the proposal but keep your requested quantity.
+                </Text>
+              </Box>
+            </Flex>
+          </Box>
+        </Modal>
       </Page>
     </ApplicationFrame>
   );
