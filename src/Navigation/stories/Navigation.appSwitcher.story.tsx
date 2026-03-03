@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { expect, screen, userEvent, waitFor, within } from "storybook/test";
 import useConditionalAutoClick from "../../utils/testing/useConditionalAutoClick";
 import Navigation from "../Navigation";
 import { ApplicationFrame, Page } from "../../Layout";
@@ -20,7 +21,7 @@ export default {
 
 const appSwitcherToggleSelector = 'button[aria-label="Toggle app switcher"]';
 
-export const AllApps = () => {
+const AllAppsComponent = () => {
   useConditionalAutoClick({
     selector: appSwitcherToggleSelector,
     condition: {
@@ -58,6 +59,25 @@ export const AllApps = () => {
       }}
     />
   );
+};
+
+export const AllApps = {
+  render: () => <AllAppsComponent />,
+  name: "All Apps",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("auto-opens the app switcher", async () => {
+      await waitFor(() => expect(screen.getByText("Production Scheduling")).toBeVisible(), { timeout: 3000 });
+    });
+    await step("displays all available apps", async () => {
+      await expect(screen.getByText("Supplier Collaboration")).toBeVisible();
+      await expect(screen.getByText("Digital Quality Inspection")).toBeVisible();
+      await expect(screen.getByText(/Shop Floor/)).toBeVisible();
+      await expect(screen.getByText("Smart Factory")).toBeVisible();
+      await expect(screen.getByText("Connections")).toBeVisible();
+      await expect(screen.getByText("Data")).toBeVisible();
+    });
+  },
 };
 
 export const OnlySelectApps = () => {

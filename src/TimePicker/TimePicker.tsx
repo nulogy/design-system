@@ -164,6 +164,7 @@ const TimePicker = forwardRef<any, TimePickerProps>(
 
     const scrollToSelection = useCallback(
       debounce((currentOption, dropdown) => {
+        if (!dropdown.current) return;
         const currentIndex = Array.from(dropdown.current.children).indexOf(currentOption);
         if (currentIndex > 2) {
           dropdown.current.scrollTop = (currentIndex - 2) * currentOption.scrollHeight;

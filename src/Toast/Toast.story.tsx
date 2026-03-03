@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { expect, screen, userEvent, waitFor, within } from "storybook/test";
 import { Button, DangerButton, IconicButton, Modal, PrimaryButton, Flex, Toast } from "../index";
 import { NotificationType } from "../Alert/Alert";
 
@@ -6,25 +7,38 @@ export default {
   title: "Components/Toast",
 };
 
-export const _Toast = () => {
-  const ToastWithTrigger = () => {
-    const [triggered, setTriggered] = useState(false);
-    const triggerToast = () => {
-      setTriggered(!triggered);
+export const _Toast = {
+  render: () => {
+    const ToastWithTrigger = () => {
+      const [triggered, setTriggered] = useState(false);
+      const triggerToast = () => {
+        setTriggered(!triggered);
+      };
+      const onHideHandler = () => {
+        setTriggered(false);
+      };
+      return (
+        <>
+          <Button onClick={triggerToast}>Save Changes</Button>
+          <Toast triggered={triggered} onHide={onHideHandler}>
+            Saved
+          </Toast>
+        </>
+      );
     };
-    const onHideHandler = () => {
-      setTriggered(false);
-    };
-    return (
-      <>
-        <Button onClick={triggerToast}>Save Changes</Button>
-        <Toast triggered={triggered} onHide={onHideHandler}>
-          Saved
-        </Toast>
-      </>
-    );
-  };
-  return <ToastWithTrigger />;
+    return <ToastWithTrigger />;
+  },
+  name: "Toast",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("is hidden by default", async () => {
+      await expect(screen.queryByRole("alert")).not.toBeInTheDocument();
+    });
+    await step("shows toast when triggered", async () => {
+      await userEvent.click(canvas.getByText("Save Changes"));
+      await waitFor(() => expect(screen.getByRole("alert")).toBeVisible());
+    });
+  },
 };
 
 export const _MultipleToastsExample = {
@@ -167,6 +181,20 @@ export const WithCloseButton = {
   },
 
   name: "with close button",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("is hidden by default", async () => {
+      await expect(screen.queryByRole("alert")).not.toBeInTheDocument();
+    });
+    await step("shows toast when triggered", async () => {
+      await userEvent.click(canvas.getByText("Save Changes"));
+      await waitFor(() => expect(screen.getByRole("alert")).toBeVisible());
+    });
+    await step("hides toast when close button is clicked", async () => {
+      await userEvent.click(screen.getByLabelText("Close"));
+      await waitFor(() => expect(screen.queryByRole("alert")).not.toBeInTheDocument());
+    });
+  },
 };
 
 export const WithModal = {

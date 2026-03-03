@@ -1,4 +1,5 @@
 import React from "react";
+import { expect, screen, userEvent, waitFor, within } from "storybook/test";
 import {
   DropdownMenu,
   DropdownLink,
@@ -33,6 +34,18 @@ export const _DropdownMenu = {
   ),
 
   name: "DropdownMenu",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("opens the menu on click", async () => {
+      await userEvent.click(canvas.getByLabelText("open dropdown"));
+      await waitFor(() => expect(screen.getByText("Dropdown Button")).toBeVisible());
+      await expect(canvas.getByLabelText("close dropdown")).toBeInTheDocument();
+    });
+    await step("closes the menu on click", async () => {
+      await userEvent.click(canvas.getByLabelText("close dropdown"));
+      await waitFor(() => expect(canvas.queryByLabelText("close dropdown")).not.toBeInTheDocument());
+    });
+  },
 };
 
 export const WithCustomTrigger = {
@@ -48,6 +61,13 @@ export const WithCustomTrigger = {
   ),
 
   name: "with custom trigger",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("opens the menu with a custom trigger", async () => {
+      await userEvent.click(canvas.getByLabelText("open dropdown"));
+      await waitFor(() => expect(screen.getByText("Dropdown Button")).toBeVisible());
+    });
+  },
 };
 
 export const WithCustomColors = {
@@ -73,6 +93,17 @@ export const WithButtonClosingMenu = {
   ),
 
   name: "with button closing menu",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("opens the menu", async () => {
+      await userEvent.click(canvas.getByLabelText("open dropdown"));
+      await waitFor(() => expect(screen.getByText("Dropdown Button")).toBeVisible());
+    });
+    await step("closes the menu using the callback button", async () => {
+      await userEvent.click(screen.getByText("Dropdown Button"));
+      await waitFor(() => expect(canvas.queryByLabelText("close dropdown")).not.toBeInTheDocument());
+    });
+  },
 };
 
 export const WithCustomLink = () => (
@@ -133,6 +164,17 @@ export const WithSubmenu = {
   ),
 
   name: "with submenu",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("opens the menu", async () => {
+      await userEvent.click(canvas.getByLabelText("open dropdown"));
+      await waitFor(() => expect(screen.getByText("Dropdown Button")).toBeVisible());
+    });
+    await step("opens the submenu on hover", async () => {
+      await userEvent.hover(screen.getByLabelText("open sub dropdown"));
+      await waitFor(() => expect(screen.getByText("Inner Dropdown Button")).toBeVisible());
+    });
+  },
 };
 
 export const WithVisitedLinks = () => (

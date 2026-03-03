@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { expect, screen, userEvent, waitFor, within } from "storybook/test";
 import { ToastPosition } from "react-hot-toast";
 import { PrimaryButton } from "../Button";
 import { Input } from "../Input";
@@ -16,7 +17,7 @@ const getToastFunctionTemplate = ({
   isCloseable: ${isClosable},
 })`;
 
-export const WithEverything = () => {
+const WithEverythingComponent = () => {
   const [behavior, setBehavior] = useState("random");
   const [position, setPosition] = useState<ToastPosition>("bottom-center");
   const [type, setType] = useState("random");
@@ -123,6 +124,18 @@ export const WithEverything = () => {
       </Flex>
     </>
   );
+};
+
+export const WithEverything = {
+  render: () => <WithEverythingComponent />,
+  name: "With Everything",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("triggers a toast", async () => {
+      await userEvent.click(canvas.getByText("Trigger toast"));
+      await waitFor(() => expect(screen.getAllByRole("alert")[0]).toBeVisible());
+    });
+  },
 };
 
 export default {

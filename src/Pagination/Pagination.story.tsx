@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { expect, userEvent, waitFor, within } from "storybook/test";
 import { styled } from "styled-components";
 import { action } from "storybook/actions";
 import { Switch, Switcher } from "../Switcher";
@@ -106,7 +107,7 @@ export const CustomMaxVisiblePages = () => {
   );
 };
 
-export function ScrollAfterPagination() {
+const ScrollAfterPaginationComponent = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [scrollTarget, setScrollTarget] = useState("none");
   const ref = useRef(null);
@@ -157,4 +158,25 @@ export function ScrollAfterPagination() {
       />
     </Flex>
   );
-}
+};
+
+export const ScrollAfterPagination = {
+  render: () => <ScrollAfterPaginationComponent />,
+  name: "Scroll After Pagination",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("renders pagination with scroll target switcher", async () => {
+      await expect(canvas.getByRole("navigation", { name: "Pagination navigation" })).toBeInTheDocument();
+    });
+    await step("can switch scroll target to top of page", async () => {
+      await userEvent.click(canvas.getByText("Top of page"));
+    });
+    await step("can navigate to next page", async () => {
+      await userEvent.click(canvas.getByLabelText("Go to next results"));
+      await waitFor(() => expect(canvas.getByLabelText("Go to previous results")).not.toBeDisabled());
+    });
+    await step("can navigate back to previous page", async () => {
+      await userEvent.click(canvas.getByLabelText("Go to previous results"));
+    });
+  },
+};

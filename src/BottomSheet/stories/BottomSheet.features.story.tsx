@@ -1,4 +1,5 @@
 import React from "react";
+import { expect, screen, userEvent, waitFor } from "storybook/test";
 import { Box } from "../../Box";
 import { Button, IconicButton } from "../../Button";
 import { Flex } from "../../Flex";
@@ -78,25 +79,38 @@ export const WithAnApplicationFrame = {
   },
 };
 
-export const DisableCloseOnOverlayClick = () => {
-  const [isOpen, setIsOpen] = React.useState(true);
-  return (
-    <Box>
-      <Button onClick={() => setIsOpen(true)}>Open Sheet</Button>
-      <BottomSheet
-        disableCloseOnOverlayClick
-        aria-label="Example BottomSheet"
-        title="Disabled overlay"
-        helpText="This BottomSheet can not be dismissed by clicking on the overlay"
-        isOpen={isOpen}
-        onClose={() => {
-          setIsOpen(false);
-        }}
-      >
-        <Placeholder />
-      </BottomSheet>
-    </Box>
-  );
+export const DisableCloseOnOverlayClick = {
+  render: () => {
+    const [isOpen, setIsOpen] = React.useState(true);
+    return (
+      <Box>
+        <Button onClick={() => setIsOpen(true)}>Open Sheet</Button>
+        <BottomSheet
+          disableCloseOnOverlayClick
+          aria-label="Example BottomSheet"
+          title="Disabled overlay"
+          helpText="This BottomSheet can not be dismissed by clicking on the overlay"
+          isOpen={isOpen}
+          onClose={() => {
+            setIsOpen(false);
+          }}
+        >
+          <Placeholder />
+        </BottomSheet>
+      </Box>
+    );
+  },
+
+  name: "Disable close on overlay click",
+  play: async ({ canvasElement: _canvasElement, step }) => {
+    await step("is open initially", async () => {
+      await waitFor(() => expect(screen.getByRole("dialog")).toBeVisible(), { timeout: 3000 });
+    });
+    await step("closes when close button is clicked", async () => {
+      await userEvent.click(screen.getByText("Close"));
+      await waitFor(() => expect(screen.queryByRole("dialog")).not.toBeInTheDocument());
+    });
+  },
 };
 
 export const AdvancedUsage = () => {

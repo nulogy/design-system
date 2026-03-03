@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import React from "react";
+import { expect, userEvent, waitFor, within } from "storybook/test";
 import { Alert, Flex } from "../index";
 import { Link } from "../Link";
 
@@ -30,6 +31,16 @@ export const WithACloseButton: Story = {
     children: "This is an alert with a close button",
   },
   name: "With a close button",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("shows an alert", async () => {
+      await expect(canvas.getByRole("alert")).toBeVisible();
+    });
+    await step("hides the alert when closed", async () => {
+      await userEvent.click(canvas.getByLabelText("Close"));
+      await waitFor(() => expect(canvas.queryByRole("alert")).not.toBeInTheDocument());
+    });
+  },
 };
 
 export const WithATitle: Story = {

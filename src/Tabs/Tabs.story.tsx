@@ -1,4 +1,5 @@
 import React from "react";
+import { expect, userEvent, within } from "storybook/test";
 import { Button } from "../Button";
 import { Flex } from "../Flex";
 import { TabsProps, TabsState } from "./Tabs";
@@ -46,22 +47,46 @@ export default {
   title: "Components/Tabs",
 };
 
-export const _Tabs = () => (
-  <Tabs>
-    <Tab className="Tab1" label="Tab 1">
-      Tab 1 Content
-    </Tab>
-    <Tab className="Tab2" label="Tab 2">
-      Tab 2 Content
-    </Tab>
-    <Tab className="Tab3" label="Tab 3">
-      Tab 3 Content
-    </Tab>
-    <Tab className="Tab4" label="Tab 4">
-      Tab 4 Content
-    </Tab>
-  </Tabs>
-);
+export const _Tabs = {
+  render: () => (
+    <Tabs>
+      <Tab className="Tab1" label="Tab 1">
+        Tab 1 Content
+      </Tab>
+      <Tab className="Tab2" label="Tab 2">
+        Tab 2 Content
+      </Tab>
+      <Tab className="Tab3" label="Tab 3">
+        Tab 3 Content
+      </Tab>
+      <Tab className="Tab4" label="Tab 4">
+        Tab 4 Content
+      </Tab>
+    </Tabs>
+  ),
+  name: "Tabs",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("renders tab components", async () => {
+      await expect(canvas.getByText("Tab 1")).toBeVisible();
+    });
+    await step("selects the tab on click", async () => {
+      const tab1 = canvas.getByRole("tab", { name: "Tab 1" });
+      await expect(tab1).toHaveAttribute("aria-selected", "false");
+      await userEvent.click(tab1);
+      await expect(tab1).toHaveAttribute("aria-selected", "true");
+    });
+    await step("displays the tab content on click", async () => {
+      await expect(canvas.getByText("Tab 1 Content")).toBeVisible();
+    });
+    await step("moves to next tab with right arrow key", async () => {
+      const tab1 = canvas.getByRole("tab", { name: "Tab 1" });
+      tab1.focus();
+      await userEvent.keyboard("{ArrowRight}");
+      await expect(canvas.getByRole("tab", { name: "Tab 2" })).toHaveFocus();
+    });
+  },
+};
 
 export const WithADefaultSelectedIndex = {
   render: () => (
@@ -76,17 +101,28 @@ export const WithADefaultSelectedIndex = {
   name: "with a defaultSelectedIndex",
 };
 
-export const WithOtherInteractiveElements = () => (
-  <Flex gap="x2" alignItems="flex-start" flexDirection="column">
-    <Button>Click me</Button>
-    <Tabs defaultSelectedIndex={1}>
-      <Tab label="Tab 1">Tab 1 Content</Tab>
-      <Tab label="Tab 2">Tab 2 Content</Tab>
-      <Tab label="Tab 3">Tab 3 Content</Tab>
-      <Tab label="Tab 4">Tab 4 Content</Tab>
-    </Tabs>
-  </Flex>
-);
+export const WithOtherInteractiveElements = {
+  render: () => (
+    <Flex gap="x2" alignItems="flex-start" flexDirection="column">
+      <Button>Click me</Button>
+      <Tabs defaultSelectedIndex={1}>
+        <Tab label="Tab 1">Tab 1 Content</Tab>
+        <Tab label="Tab 2">Tab 2 Content</Tab>
+        <Tab label="Tab 3">Tab 3 Content</Tab>
+        <Tab label="Tab 4">Tab 4 Content</Tab>
+      </Tabs>
+    </Flex>
+  ),
+  name: "with other interactive elements",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("focuses on the default selected tab when tabbing", async () => {
+      canvas.getByText("Click me").focus();
+      await userEvent.tab();
+      await expect(document.activeElement).toHaveTextContent("Tab 2");
+    });
+  },
+};
 
 export const SetToFitted = {
   render: () => (
