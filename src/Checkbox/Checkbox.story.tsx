@@ -49,7 +49,13 @@ export const _Checkbox = () => <Checkbox p="x3" id="checkbox" labelText="I am a 
 
 export const Multiline = {
   render: () => <Checkbox p="x3" id="checkbox" labelText="Lorem ipsum dolor sit amet consecutor" />,
-  decorators: [(Story) => <div style={{ width: "200px" }}><Story /></div>],
+  decorators: [
+    (Story) => (
+      <div style={{ width: "200px" }}>
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 export const SetToDefaultChecked = {
