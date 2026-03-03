@@ -41,17 +41,17 @@ updates:
       testing-library:
         patterns:
           - "@testing-library/*"
-      types:
-        patterns:
-          - "@types/*"
       styled-system:
         patterns:
           - "styled-system"
           - "@styled-system/*"
+          - "@types/styled-system"
       react:
         patterns:
           - "react"
           - "react-dom"
+          - "@types/react"
+          - "@types/react-dom"
   - package-ecosystem: github-actions
     directory: "/"
     schedule:
