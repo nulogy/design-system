@@ -35,6 +35,23 @@ updates:
           - "vite"
           - "vitest"
           - "@vitejs/*"
+      radix-ui:
+        patterns:
+          - "@radix-ui/*"
+      testing-library:
+        patterns:
+          - "@testing-library/*"
+      types:
+        patterns:
+          - "@types/*"
+      styled-system:
+        patterns:
+          - "styled-system"
+          - "@styled-system/*"
+      react:
+        patterns:
+          - "react"
+          - "react-dom"
   - package-ecosystem: github-actions
     directory: "/"
     schedule:
