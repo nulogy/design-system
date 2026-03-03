@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { expect, userEvent, waitFor, within } from "storybook/test";
 import { action } from "storybook/actions";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
@@ -32,6 +33,22 @@ export const Default: Story = {
       control: { type: "select" },
       options: selectedDateExamples,
     },
+  },
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("has the correct date selected by default", async () => {
+      await expect(canvas.getByLabelText("select a date")).toHaveValue("2019-Jan-01");
+    });
+    await step("can open a calendar on click", async () => {
+      expect(document.querySelector(".react-datepicker-popper")).toBeNull();
+      await userEvent.click(canvas.getByLabelText("select a date"));
+      await waitFor(() => expect(document.querySelector(".react-datepicker-popper")).toBeInTheDocument());
+    });
+    await step("closes the calendar after selecting a date", async () => {
+      const day2 = document.querySelector(".react-datepicker__day--002") as HTMLElement;
+      await userEvent.click(day2);
+      await waitFor(() => expect(document.querySelector(".react-datepicker-popper")).not.toBeInTheDocument());
+    });
   },
 };
 
@@ -76,18 +93,42 @@ export const WithErrorState = () => (
   />
 );
 
-export const WithMinAndMaxDate = () => (
-  <DatePicker
-    selected={new Date("2019-01-05T05:00:00.000Z")}
-    minDate={new Date("2019-01-03T05:00:00.000Z")}
-    maxDate={new Date("2019-01-10T05:00:00.000Z")}
-    onFocus={action("date selector focused")}
-    onBlur={action("date selector blurred")}
-    onChange={action("date changed")}
-    onInputChange={action("input changed")}
-    inputProps={{ labelText: "Expiry Date" }}
-  />
-);
+export const WithMinAndMaxDate = {
+  render: () => (
+    <DatePicker
+      selected={new Date("2019-01-05T05:00:00.000Z")}
+      minDate={new Date("2019-01-03T05:00:00.000Z")}
+      maxDate={new Date("2019-01-10T05:00:00.000Z")}
+      onFocus={action("date selector focused")}
+      onBlur={action("date selector blurred")}
+      onChange={action("date changed")}
+      onInputChange={action("input changed")}
+      inputProps={{ labelText: "Expiry Date" }}
+    />
+  ),
+  name: "with min and max date",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("has the correct date selected", async () => {
+      await expect(canvas.getByLabelText("select a date")).toHaveValue("2019-Jan-05");
+    });
+    await step("cannot navigate past the max date with arrow keys", async () => {
+      const input = canvas.getByLabelText("select a date");
+      await userEvent.click(input);
+      for (let i = 0; i < 6; i++) {
+        await userEvent.keyboard("{ArrowUp}");
+      }
+      await expect(input).toHaveValue("2019-Jan-10");
+    });
+    await step("cannot navigate past the min date with arrow keys", async () => {
+      const input = canvas.getByLabelText("select a date");
+      for (let i = 0; i < 10; i++) {
+        await userEvent.keyboard("{ArrowDown}");
+      }
+      await expect(input).toHaveValue("2019-Jan-03");
+    });
+  },
+};
 
 export const DisableFlipping: Story = {
   args: {

@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react-vite";
 import React, { useRef } from "react";
+import { expect, userEvent, within } from "storybook/test";
 import { action } from "storybook/actions";
 import { Radio, Button } from "../index";
 
@@ -18,6 +19,15 @@ export const Default: Story = {
   args: {
     labelText: "I am a radio button",
   },
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("can be checked", async () => {
+      const radio = canvas.getByRole("radio");
+      await expect(radio).not.toBeChecked();
+      await userEvent.click(radio);
+      await expect(radio).toBeChecked();
+    });
+  },
 };
 
 export const SetToDefaultChecked: Story = {
@@ -26,6 +36,10 @@ export const SetToDefaultChecked: Story = {
     labelText: "I am checked by default",
   },
   name: "Set to default checked",
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await expect(canvas.getByRole("radio")).toBeChecked();
+  },
 };
 
 export const SetToDisabled: Story = {
@@ -36,6 +50,19 @@ export const SetToDisabled: Story = {
     </>
   ),
   name: "Set to disabled",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("shows checked value", async () => {
+      const radios = canvas.getAllByRole("radio");
+      await expect(radios[0]).not.toBeChecked();
+      await expect(radios[1]).toBeChecked();
+    });
+    await step("inputs are disabled", async () => {
+      const radios = canvas.getAllByRole("radio");
+      await expect(radios[0]).toBeDisabled();
+      await expect(radios[1]).toBeDisabled();
+    });
+  },
 };
 
 export const SetToError: Story = {
@@ -70,6 +97,14 @@ export const Controlled: Story = {
       />
     </>
   ),
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("shows checked value", async () => {
+      const radios = canvas.getAllByRole("radio");
+      await expect(radios[0]).toBeChecked();
+      await expect(radios[1]).not.toBeChecked();
+    });
+  },
 };
 
 const UsingRefToControlFocusComponent = () => {
@@ -91,4 +126,12 @@ const UsingRefToControlFocusComponent = () => {
 export const UsingRefToControlFocus: Story = {
   render: (args) => <UsingRefToControlFocusComponent {...args} />,
   name: "using ref to control focus",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("focus can be set via ref", async () => {
+      const radio = canvas.getByRole("radio");
+      await userEvent.click(canvas.getByTestId("the-button"));
+      await expect(radio).toHaveFocus();
+    });
+  },
 };

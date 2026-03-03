@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { expect, userEvent, waitFor, within } from "storybook/test";
 import { Table } from "../..";
 import { Input } from "../../Input";
 
@@ -78,4 +79,14 @@ export const WithFiltering = {
 export const WithFilteringAndPagination = {
   render: () => <TableWithFilters rowsPerPage={4} />,
   name: "with filtering and pagination",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("shows multiple pages for unfiltered data", async () => {
+      await expect(canvas.getByRole("button", { name: "Go to page 3" })).toBeInTheDocument();
+    });
+    await step("filters down to fewer pages", async () => {
+      await userEvent.type(canvas.getByRole("textbox", { name: "Filter by Name" }), "a");
+      await waitFor(() => expect(canvas.queryByRole("button", { name: "Go to page 3" })).not.toBeInTheDocument());
+    });
+  },
 };

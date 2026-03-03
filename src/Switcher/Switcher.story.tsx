@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { expect, userEvent, within } from "storybook/test";
 import { Box } from "../Box";
 import { Text } from "../Type";
 import { Button } from "../Button";
@@ -17,15 +18,26 @@ export const WithSelectedValue = () => {
   );
 };
 
-export const WithOtherInteractiveElements = () => (
-  <Flex gap="x1" alignItems="center">
-    <Button>Click me</Button>
-    <Switcher aria-label="storybook-switcher" selected="option_2">
-      <Switch value="option_1">Option 1</Switch>
-      <Switch value="option_2">Option 2</Switch>
-    </Switcher>
-  </Flex>
-);
+export const WithOtherInteractiveElements = {
+  render: () => (
+    <Flex gap="x1" alignItems="center">
+      <Button>Click me</Button>
+      <Switcher aria-label="storybook-switcher" selected="option_2">
+        <Switch value="option_1">Option 1</Switch>
+        <Switch value="option_2">Option 2</Switch>
+      </Switcher>
+    </Flex>
+  ),
+  name: "with other interactive elements",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("focuses the selected switch when tabbing from another element", async () => {
+      canvas.getByText("Click me").focus();
+      await userEvent.tab();
+      await expect(document.activeElement).toHaveTextContent("Option 2");
+    });
+  },
+};
 
 export const WithContent = () => {
   const [selected, setSelected] = useState("all");

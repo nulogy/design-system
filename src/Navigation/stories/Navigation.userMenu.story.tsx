@@ -1,4 +1,5 @@
 import React from "react";
+import { expect, screen, userEvent, waitFor, within } from "storybook/test";
 import { BrowserRouter, Link } from "react-router-dom";
 import { Flex } from "../../Flex";
 import { Input } from "../../Input";
@@ -18,7 +19,7 @@ export default {
 
 const userMenuToggleSelector = 'button[aria-label="Toggle user menu"]';
 
-export const BasicUsage = () => {
+const BasicUsageComponent = () => {
   useConditionalAutoClick({
     selector: userMenuToggleSelector,
     condition: {
@@ -83,6 +84,28 @@ export const BasicUsage = () => {
       }}
     />
   );
+};
+
+export const BasicUsage = {
+  render: () => <BasicUsageComponent />,
+  name: "Basic Usage",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("auto-opens the user menu", async () => {
+      await waitFor(() => expect(screen.getByText("Haider Alshamma")).toBeVisible(), { timeout: 3000 });
+    });
+    await step("displays full user information in header", async () => {
+      await expect(screen.getAllByText("haidera@nulogy.com")[0]).toBeVisible();
+    });
+    await step("shows select controls", async () => {
+      await expect(screen.getByText("Company")).toBeVisible();
+      await expect(screen.getByText("User group")).toBeVisible();
+    });
+    await step("shows menu items", async () => {
+      await expect(screen.getByText("Preferences")).toBeVisible();
+      await expect(screen.getByText("Sign out")).toBeVisible();
+    });
+  },
 };
 
 export const WithoutATrigger = () => {

@@ -1,4 +1,5 @@
 import React from "react";
+import { expect, userEvent, waitFor, within } from "storybook/test";
 import { action } from "storybook/actions";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { useState } from "react";
@@ -209,6 +210,21 @@ export const WithPagination: Story = {
     },
   },
   name: "with pagination",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("navigates to next page", async () => {
+      await userEvent.click(canvas.getByLabelText("Go to next results"));
+      await expect(canvas.getByTestId("table-body")).toHaveTextContent("2019-10-02");
+    });
+    await step("navigates to previous page", async () => {
+      await userEvent.click(canvas.getByLabelText("Go to previous results"));
+      await expect(canvas.getByTestId("table-body")).toHaveTextContent("2019-10-01");
+    });
+    await step("navigates to a specific page", async () => {
+      await userEvent.click(canvas.getByRole("button", { name: "Go to page 5" }));
+      await expect(canvas.getByTestId("table-body")).toHaveTextContent("2019-10-07");
+    });
+  },
 };
 
 export const WithEverything: Story = {
@@ -238,6 +254,26 @@ export const WithEverything: Story = {
     },
   },
   name: "with everything",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("can expand a row", async () => {
+      await userEvent.click(canvas.getByLabelText("Expand row"));
+      await expect(canvas.getByTestId("table-body")).toHaveTextContent("Expands!");
+    });
+    await step("can collapse the expanded row", async () => {
+      await userEvent.click(canvas.getByLabelText("Collapse row"));
+      await waitFor(() => expect(canvas.getByTestId("table-body")).not.toHaveTextContent("Expands!"));
+    });
+    await step("saves row selections when navigating pages", async () => {
+      const tableHead = canvasElement.querySelector("[data-testid='table-head']") as HTMLElement;
+      await userEvent.click(within(tableHead).getByTestId("visual-checkbox"));
+      const headerInput = canvasElement.querySelector("[data-testid='table-head'] [type='checkbox']") as HTMLInputElement;
+      await expect(headerInput).toBeChecked();
+      await userEvent.click(canvas.getByLabelText("Go to next results"));
+      await userEvent.click(canvas.getByLabelText("Go to previous results"));
+      await expect(headerInput).toBeChecked();
+    });
+  },
 };
 
 export const WithOnHoverActions: Story = {

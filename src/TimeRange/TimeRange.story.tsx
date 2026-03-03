@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { expect, screen, userEvent, waitFor, within } from "storybook/test";
 import { action } from "storybook/actions";
 
 import { Button, PrimaryButton } from "..";
@@ -61,6 +62,19 @@ export const WithMinAndMaxTimeRange = {
   ),
 
   name: "with min and max time range",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("shows constrained end time options after selecting a start time", async () => {
+      await userEvent.click(canvas.getByLabelText("Select a start time"));
+      const startOptions = screen.getAllByTestId(/select-option/);
+      await userEvent.click(startOptions[4]);
+      const startInput = canvas.getAllByTestId("select-input")[0];
+      await expect(startInput).toHaveValue("10:00 AM");
+      await userEvent.click(canvas.getByLabelText("Select an end time"));
+      const endOptions = screen.getAllByTestId(/select-option/);
+      await expect(endOptions.length).toBeGreaterThan(0);
+    });
+  },
 };
 
 export const UsingRefToControlFocus = {

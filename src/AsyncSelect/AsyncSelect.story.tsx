@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { expect, screen, userEvent, waitFor, within } from "storybook/test";
 import { action } from "storybook/actions";
 import { useState } from "react";
 import { AsyncSelect, Button, Flex } from "../index";
@@ -47,6 +48,12 @@ export const WithDefaultOptions = {
   ),
 
   name: "With default options",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("shows the dropdown arrow when there are default options", async () => {
+      await expect(canvas.getByTestId("select-arrow")).toBeVisible();
+    });
+  },
 };
 
 export const WithADefaultValue = {
@@ -67,19 +74,36 @@ export const WithADefaultValue = {
   name: "With a default value",
 };
 
-export const Multiselect = () => (
-  <AsyncSelect
-    placeholder="Enter a province"
-    onChange={action("selection changed")}
-    onBlur={action("blurred")}
-    className="Select"
-    classNamePrefix="SelectTest"
-    labelText="Provinces"
-    multiselect
-    onInputChange={action("typed input value changed")}
-    loadOptions={loadMatchingProvinces}
-  />
-);
+export const Multiselect = {
+  render: () => (
+    <AsyncSelect
+      placeholder="Enter a province"
+      onChange={action("selection changed")}
+      onBlur={action("blurred")}
+      className="Select"
+      classNamePrefix="SelectTest"
+      labelText="Provinces"
+      multiselect
+      onInputChange={action("typed input value changed")}
+      loadOptions={loadMatchingProvinces}
+    />
+  ),
+  name: "Multiselect",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("can select multiple values", async () => {
+      await userEvent.click(canvas.getByTestId("select-container"));
+      await userEvent.type(canvas.getByTestId("select-input"), "on");
+      await waitFor(() => expect(screen.getByText("Ontario")).toBeInTheDocument());
+      await userEvent.keyboard("{Enter}");
+      await expect(canvas.getByTestId("select-container")).toHaveTextContent("Ontario");
+      await userEvent.type(canvas.getByTestId("select-input"), "qu");
+      await waitFor(() => expect(screen.getByText("Quebec")).toBeInTheDocument());
+      await userEvent.keyboard("{Enter}");
+      await expect(canvas.getByTestId("select-container")).toHaveTextContent("Quebec");
+    });
+  },
+};
 
 export const WithAClearButton = () => (
   <AsyncSelect

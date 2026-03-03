@@ -1,4 +1,5 @@
 import React from "react";
+import { expect, userEvent, within } from "storybook/test";
 import { Radio, RadioGroup, Icon, Tooltip, Flex } from "../index";
 
 const errorList = ["Error message 1", "Error message 2"];
@@ -20,6 +21,23 @@ export const _RadioGroup = {
   ),
 
   name: "RadioGroup",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("has the correct initial values", async () => {
+      const radios = canvas.getAllByRole("radio");
+      await expect(radios[0]).not.toBeChecked();
+      await expect(radios[1]).not.toBeChecked();
+      await expect(radios[2]).not.toBeChecked();
+    });
+    await step("can be checked", async () => {
+      const radios = canvas.getAllByRole("radio");
+      await userEvent.click(radios[1]);
+      await expect(radios[1]).toBeChecked();
+      await userEvent.click(radios[2]);
+      await expect(radios[2]).toBeChecked();
+      await expect(radios[1]).not.toBeChecked();
+    });
+  },
 };
 
 export const RadioGroupWithAllProps = {
@@ -52,6 +70,16 @@ export const RadioGroupWithAllProps = {
 
   parameters: {
     chromatic: { diffThreshold: 0.3 },
+  },
+
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("has the correct initial values", async () => {
+      const radios = canvas.getAllByRole("radio");
+      await expect(radios[0]).toBeChecked();
+      await expect(radios[1]).not.toBeChecked();
+      await expect(radios[2]).not.toBeChecked();
+    });
   },
 };
 
@@ -100,12 +128,38 @@ export const SetToDisabled = {
   ),
 
   name: "Set to disabled",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("has the correct initial values", async () => {
+      const radios = canvas.getAllByRole("radio");
+      await expect(radios[0]).toBeChecked();
+      await expect(radios[1]).not.toBeChecked();
+      await expect(radios[2]).not.toBeChecked();
+    });
+    await step("all inputs are disabled", async () => {
+      const radios = canvas.getAllByRole("radio");
+      await expect(radios[0]).toBeDisabled();
+      await expect(radios[1]).toBeDisabled();
+      await expect(radios[2]).toBeDisabled();
+    });
+  },
 };
 
-export const Controlled = () => (
-  <RadioGroup labelText="Setting Selection" name="settingSelection" checkedValue="a" onChange={() => {}}>
-    <Radio value="a" labelText="Option A" />
-    <Radio value="b" labelText="Option B" />
-    <Radio value="c" labelText="Option C" />
-  </RadioGroup>
-);
+export const Controlled = {
+  render: () => (
+    <RadioGroup labelText="Setting Selection" name="settingSelection" checkedValue="a" onChange={() => {}}>
+      <Radio value="a" labelText="Option A" />
+      <Radio value="b" labelText="Option B" />
+      <Radio value="c" labelText="Option C" />
+    </RadioGroup>
+  ),
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("has the correct initial values", async () => {
+      const radios = canvas.getAllByRole("radio");
+      await expect(radios[0]).toBeChecked();
+      await expect(radios[1]).not.toBeChecked();
+      await expect(radios[2]).not.toBeChecked();
+    });
+  },
+};

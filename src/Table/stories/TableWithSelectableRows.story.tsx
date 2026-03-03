@@ -1,4 +1,5 @@
 import React from "react";
+import { expect, userEvent, within } from "storybook/test";
 import { action } from "storybook/actions";
 import { Table } from "..";
 
@@ -69,6 +70,22 @@ export const WithSelectableRows = {
   ),
 
   name: "with selectable rows",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("can select a row by clicking its checkbox", async () => {
+      const tableBody = canvas.getByTestId("table-body");
+      const rowCheckboxes = within(tableBody).getAllByTestId("visual-checkbox");
+      await userEvent.click(rowCheckboxes[0]);
+      const rowInputs = canvasElement.querySelectorAll("[data-testid='table-body'] [type='checkbox']");
+      await expect(rowInputs[0] as HTMLInputElement).toBeChecked();
+    });
+    await step("can select all rows using the header checkbox", async () => {
+      const tableHead = canvasElement.querySelector("[data-testid='table-head']") as HTMLElement;
+      await userEvent.click(within(tableHead).getByTestId("visual-checkbox"));
+      const headerInput = canvasElement.querySelector("[data-testid='table-head'] [type='checkbox']") as HTMLInputElement;
+      await expect(headerInput).toBeChecked();
+    });
+  },
 };
 
 export const WithPreselectedRows = {

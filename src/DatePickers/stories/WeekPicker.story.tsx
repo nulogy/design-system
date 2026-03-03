@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { expect, userEvent, waitFor, within } from "storybook/test";
 import { format } from "date-fns";
 import { Text } from "../../Type";
 import WeekPicker from "../WeekPicker";
@@ -6,14 +7,28 @@ export default {
   title: "Components/DatePickers/WeekPicker",
 };
 
-export const Default = () => <WeekPicker inputProps={{ labelText: "Expiry Date" }} />;
+export const Default = {
+  render: () => <WeekPicker inputProps={{ labelText: "Expiry Date" }} />,
+  name: "Default",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("can open a calendar on click", async () => {
+      expect(document.querySelector(".react-datepicker-popper")).toBeNull();
+      await userEvent.click(canvas.getByLabelText("select a date"));
+      await waitFor(() => expect(document.querySelector(".react-datepicker-popper")).toBeInTheDocument());
+    });
+    await step("shows week numbers in the calendar", async () => {
+      expect(document.querySelector(".react-datepicker__week-number")).toBeTruthy();
+    });
+  },
+};
 
 export const WithError = () => (
   <WeekPicker inputProps={{ labelText: "Week Selection" }} errorMessage="Please select a valid week" />
 );
 
-export const WithMinMaxDates = () => {
-  return (
+export const WithMinMaxDates = {
+  render: () => (
     <>
       <Text mb="x2">If a min or a max day falls in the middle of the week, no day in the week will be selectable.</Text>
       <WeekPicker
@@ -22,7 +37,16 @@ export const WithMinMaxDates = () => {
         maxDate={new Date("01/29/2025")}
       />
     </>
-  );
+  ),
+  name: "with min max dates",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("disables dates outside min/max range", async () => {
+      await userEvent.click(canvas.getByLabelText("select a date"));
+      await waitFor(() => expect(document.querySelector(".react-datepicker-popper")).toBeInTheDocument());
+      expect(document.querySelector(".react-datepicker__day--disabled")).toBeTruthy();
+    });
+  },
 };
 
 export const WithCustomDateFormat = () => (
@@ -33,16 +57,41 @@ export const WithPreselectedDate = () => (
   <WeekPicker inputProps={{ labelText: "Selected Week" }} selected={new Date("01/21/2025")} />
 );
 
-export const WithCustomLocale = () => <WeekPicker inputProps={{ labelText: "Semaine" }} locale="fr_FR" />;
+export const WithCustomLocale = {
+  render: () => <WeekPicker inputProps={{ labelText: "Semaine" }} locale="fr_FR" />,
+  name: "with custom locale",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("displays weekdays in French", async () => {
+      await userEvent.click(canvas.getByLabelText("select a date"));
+      await waitFor(() => expect(document.querySelector(".react-datepicker-popper")).toBeInTheDocument());
+      const dayNames = document.querySelectorAll(".react-datepicker__day-name");
+      expect(dayNames[1].textContent).toContain("lu");
+    });
+  },
+};
 
-export const Disabled = () => (
-  <WeekPicker
-    inputProps={{
-      labelText: "Week Selection",
-      disabled: true,
-    }}
-  />
-);
+export const Disabled = {
+  render: () => (
+    <WeekPicker
+      inputProps={{
+        labelText: "Week Selection",
+        disabled: true,
+      }}
+    />
+  ),
+  name: "disabled",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("has a disabled input", async () => {
+      await expect(canvas.getByLabelText("select a date")).toBeDisabled();
+    });
+    await step("cannot open the calendar when disabled", async () => {
+      await userEvent.click(canvas.getByLabelText("select a date"), { pointerEventsCheck: 0 });
+      expect(document.querySelector(".react-datepicker-popper")).toBeNull();
+    });
+  },
+};
 
 export const AdvancedUsage = () => {
   const [selectedWeek, setSelectedWeek] = useState(null);

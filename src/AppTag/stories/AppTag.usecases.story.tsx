@@ -1,4 +1,5 @@
 import React from "react";
+import { expect, screen, userEvent, waitFor, within } from "storybook/test";
 import { AppTag } from "..";
 import { Flex, InlineFlex } from "../../Flex";
 import { Icon } from "../../Icon";
@@ -188,4 +189,16 @@ export const InsideAModal = {
   },
 
   name: "Inside a Modal",
+  play: async ({ canvasElement, step }) => {
+    await step("shows the modal with the app tag", async () => {
+      await expect(screen.getByRole("dialog")).toBeVisible();
+      await expect(screen.getByText("DQI")).toBeVisible();
+    });
+    await step("shows a tooltip with the app name on hover", async () => {
+      await userEvent.hover(screen.getByText("DQI"));
+      await waitFor(() =>
+        expect(screen.getByRole("tooltip")).toHaveTextContent("Digital Quality Inspection")
+      );
+    });
+  },
 };

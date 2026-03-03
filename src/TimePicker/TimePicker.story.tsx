@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { expect, screen, userEvent, waitFor, within } from "storybook/test";
 import { action } from "storybook/actions";
 import { TimePicker, Button } from "../index";
 
@@ -17,6 +18,18 @@ export const Default = {
   ),
 
   name: "default",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("can open the dropdown on click", async () => {
+      await userEvent.click(canvas.getByTestId("select-input"));
+      await waitFor(() => expect(screen.getAllByTestId(/select-option/)[0]).toBeVisible());
+    });
+    await step("allows the user to select a time by clicking", async () => {
+      const options = screen.getAllByTestId(/select-option/);
+      await userEvent.click(options[0]);
+      await expect(canvas.getByTestId("select-container")).toHaveTextContent("12:00 AM");
+    });
+  },
 };
 
 export const WithCustomTimeFormat = {

@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import { expect, userEvent, within } from "storybook/test";
 import { action } from "storybook/actions";
 import { Toggle, Button, Box } from "../index";
 import { dashed } from "../utils/story/dashed";
@@ -9,10 +10,20 @@ export default {
   title: "Components/Toggle",
 };
 
-export const _Toggle = () => {
-  const [toggled, setToggled] = useState(false);
-
-  return <Toggle data-testid="toggle-example" toggled={toggled} onChange={(e) => setToggled(e.target.checked)} />;
+export const _Toggle = {
+  render: () => {
+    const [toggled, setToggled] = useState(false);
+    return <Toggle data-testid="toggle-example" toggled={toggled} onChange={(e) => setToggled(e.target.checked)} />;
+  },
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("changes the value on click", async () => {
+      const input = canvasElement.querySelector("[data-testid='toggle-example'] input") as HTMLInputElement;
+      await expect(input).not.toBeChecked();
+      await userEvent.click(canvas.getByTestId("toggle-example"));
+      await expect(input).toBeChecked();
+    });
+  },
 };
 
 export const ToggleWithAllProps = {
@@ -62,6 +73,14 @@ export const ToggleSetToDisabled = {
   },
 
   name: "Toggle set to disabled",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("disabled toggle does not change on click", async () => {
+      const input = canvas.getByTestId("toggle-example").querySelector("input") as HTMLInputElement;
+      await expect(input).toBeDisabled();
+      await expect(input).not.toBeChecked();
+    });
+  },
 };
 
 export const WithCustomId = {
