@@ -1,3 +1,14 @@
+## [16.0.2](https://github.com/nulogy/design-system/compare/v16.0.1...v16.0.2) (2026-03-03)
+
+
+### Bug Fixes
+
+* broaden typescript peerDependency from exact 4.9.5 to >=4.9.5 ([f9d4866](https://github.com/nulogy/design-system/commit/f9d4866885f1a6e037332bd851bde0a0a03599e7))
+* Broken tests have been fixed ([1902e39](https://github.com/nulogy/design-system/commit/1902e39f21c10864d4b29c6de93443b775d359a2))
+* import act from react instead of react-dom/test-utils ([30fc175](https://github.com/nulogy/design-system/commit/30fc175c07cc5b82c9e3f0a25f6c4ed0f38c2c44))
+* migrate stories and remove shim for react-router-dom v6 ([45b2bdc](https://github.com/nulogy/design-system/commit/45b2bdc7dd515140d3862e2e5f156b858875dba0))
+* resolve TypeScript type errors from React 18 @types/react stricter ReactNode ([fd5c205](https://github.com/nulogy/design-system/commit/fd5c2058df8951137330abef82aa1dc2bdb941bc))
+
 ## [16.0.1](https://github.com/nulogy/design-system/compare/v16.0.0...v16.0.1) (2026-02-25)
 
 
