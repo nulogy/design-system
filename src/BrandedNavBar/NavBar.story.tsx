@@ -1,6 +1,6 @@
 import React from "react";
 import { styled } from "styled-components";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { BrowserRouter, Link as ReactRouterLink } from "react-router-dom";
 import { Heading1 } from "../Type";
 import { Icon } from "../Icon";
@@ -138,29 +138,26 @@ export default {
 
 type Story = StoryObj<typeof NDSBrandedNavBar>;
 
-export const _BrandedNavBar = () => <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />;
-
-_BrandedNavBar.story = {
+export const _BrandedNavBar = {
+  render: () => <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />,
   name: "BrandedNavBar",
 };
 
-export const WithACompanyLogo = () => <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} logoSrc={sampleLogo} />;
-
-WithACompanyLogo.story = {
+export const WithACompanyLogo = {
+  render: () => <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} logoSrc={sampleLogo} />,
   name: "With a company logo",
 };
 
-export const WithAppName = () => <BrandedNavBar subtext="Quality Control" menuData={{ primaryMenu, secondaryMenu }} />;
-
-WithAppName.story = {
+export const WithAppName = {
+  render: () => <BrandedNavBar subtext="Quality Control" menuData={{ primaryMenu, secondaryMenu }} />,
   name: "With app name",
 };
 
-export const WithACompanyLogoAndAppName = () => (
-  <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} subtext="Quality control" logoSrc={sampleLogo} />
-);
+export const WithACompanyLogoAndAppName = {
+  render: () => (
+    <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} subtext="Quality control" logoSrc={sampleLogo} />
+  ),
 
-WithACompanyLogoAndAppName.story = {
   name: "With a company logo and app name",
 };
 
@@ -185,16 +182,16 @@ export const WithEnvironmentBanner: Story = {
   name: "with environment banner",
 };
 
-export const WithIcon = () => (
-  <BrandedNavBar
-    menuData={{
-      primaryMenu: primaryMenu,
-      secondaryMenu: secondaryMenuWithIcon,
-    }}
-  />
-);
+export const WithIcon = {
+  render: () => (
+    <BrandedNavBar
+      menuData={{
+        primaryMenu: primaryMenu,
+        secondaryMenu: secondaryMenuWithIcon,
+      }}
+    />
+  ),
 
-WithIcon.story = {
   name: "With icon",
 };
 
@@ -376,32 +373,34 @@ const primaryMenuReactRouter = [
   { name: "Link", to: "/Link" },
 ];
 
-export const WithReactRouter = () => (
-  <BrowserRouter basename="/">
-    <BrandedNavBar
-      brandingLinkTo="/Home"
-      brandingLinkComponent={ReactRouterLink}
-      menuData={{
-        primaryMenu: primaryMenuReactRouter,
-        secondaryMenu: secondaryMenuWithIcon,
-      }}
-    />
-  </BrowserRouter>
-);
+export const WithReactRouter = {
+  render: () => (
+    <BrowserRouter basename="/">
+      <BrandedNavBar
+        brandingLinkTo="/Home"
+        brandingLinkComponent={ReactRouterLink}
+        menuData={{
+          primaryMenu: primaryMenuReactRouter,
+          secondaryMenu: secondaryMenuWithIcon,
+        }}
+      />
+    </BrowserRouter>
+  ),
 
-WithReactRouter.story = {
   name: "With react router",
 };
 
-export const WithHamburgerMenu = () => {
-  return <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} defaultOpen />;
-};
-
-WithHamburgerMenu.parameters = {
-  viewport: {
-    defaultViewport: "small", // for some reason this has to match the viewport key, NOT the name!
+export const WithHamburgerMenu = {
+  render: () => {
+    return <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} defaultOpen />;
   },
-  chromatic: { viewports: [parseInt(theme.breakpoints.small)] },
+
+  parameters: {
+    viewport: {
+      defaultViewport: "small", // for some reason this has to match the viewport key, NOT the name!
+    },
+    chromatic: { viewports: [parseInt(theme.breakpoints.small)] },
+  },
 };
 
 const customPrimaryMenu = [
@@ -431,14 +430,15 @@ const customPrimaryMenu = [
 ];
 export const CustomRendering = () => <BrandedNavBar menuData={{ primaryMenu: customPrimaryMenu, secondaryMenu }} />;
 
-export const CustomRenderingInHamburger = () => (
-  <BrandedNavBar menuData={{ primaryMenu: customPrimaryMenu, secondaryMenu }} defaultOpen />
-);
-CustomRenderingInHamburger.parameters = {
-  viewport: {
-    defaultViewport: "small", // for some reason this has to match the viewport key, NOT the name!
+export const CustomRenderingInHamburger = {
+  render: () => <BrandedNavBar menuData={{ primaryMenu: customPrimaryMenu, secondaryMenu }} defaultOpen />,
+
+  parameters: {
+    viewport: {
+      defaultViewport: "small", // for some reason this has to match the viewport key, NOT the name!
+    },
+    chromatic: { viewports: [parseInt(theme.breakpoints.small)] },
   },
-  chromatic: { viewports: [parseInt(theme.breakpoints.small)] },
 };
 
 const primaryMenuWithCustomTriggers = [
@@ -486,16 +486,18 @@ const primaryMenuWithCustomTriggers = [
     ],
   },
 ];
+
 export const CustomMenuTriggers = () => (
   <BrandedNavBar menuData={{ primaryMenu: primaryMenuWithCustomTriggers, secondaryMenu }} />
 );
 
-export const CustomMenuTriggersInHamburger = () => (
-  <BrandedNavBar menuData={{ primaryMenu: primaryMenuWithCustomTriggers, secondaryMenu }} defaultOpen />
-);
-CustomMenuTriggersInHamburger.parameters = {
-  viewport: {
-    defaultViewport: "small", // for some reason this has to match the viewport key, NOT the name!
+export const CustomMenuTriggersInHamburger = {
+  render: () => <BrandedNavBar menuData={{ primaryMenu: primaryMenuWithCustomTriggers, secondaryMenu }} defaultOpen />,
+
+  parameters: {
+    viewport: {
+      defaultViewport: "small", // for some reason this has to match the viewport key, NOT the name!
+    },
+    chromatic: { viewports: [parseInt(theme.breakpoints.small)] },
   },
-  chromatic: { viewports: [parseInt(theme.breakpoints.small)] },
 };

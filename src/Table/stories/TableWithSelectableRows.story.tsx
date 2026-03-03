@@ -1,5 +1,5 @@
 import React from "react";
-import { action } from "@storybook/addon-actions";
+import { action } from "storybook/actions";
 import { Table } from "..";
 
 const columns = [
@@ -63,25 +63,25 @@ export default {
   title: "Components/Table/with selectable rows",
 };
 
-export const WithSelectableRows = () => (
-  <Table columns={columns} rows={rowData} hasSelectableRows onRowSelectionChange={action("row selection changed")} />
-);
+export const WithSelectableRows = {
+  render: () => (
+    <Table columns={columns} rows={rowData} hasSelectableRows onRowSelectionChange={action("row selection changed")} />
+  ),
 
-WithSelectableRows.story = {
   name: "with selectable rows",
 };
 
-export const WithPreselectedRows = () => (
-  <Table
-    columns={columns}
-    rows={rowData}
-    hasSelectableRows
-    selectedRows={["2019-10-01"]}
-    keyField="date"
-    onRowSelectionChange={action("row selection changed")}
-  />
-);
+export const WithPreselectedRows = {
+  render: () => (
+    <Table
+      columns={columns}
+      rows={rowData}
+      hasSelectableRows
+      selectedRows={["2019-10-01"]}
+      keyField="date"
+      onRowSelectionChange={action("row selection changed")}
+    />
+  ),
 
-WithPreselectedRows.story = {
   name: "with preselected rows",
 };

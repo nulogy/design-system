@@ -10,95 +10,95 @@ export default {
   },
 };
 
-export const _RadioGroup = () => (
-  <RadioGroup labelText="Setting Selection" name="settingSelection">
-    <Radio value="a" labelText="Option A" />
-    <Radio value="b" labelText="Option B" />
-    <Radio value="c" labelText="Option C" />
-  </RadioGroup>
-);
+export const _RadioGroup = {
+  render: () => (
+    <RadioGroup labelText="Setting Selection" name="settingSelection">
+      <Radio value="a" labelText="Option A" />
+      <Radio value="b" labelText="Option B" />
+      <Radio value="c" labelText="Option C" />
+    </RadioGroup>
+  ),
 
-_RadioGroup.story = {
   name: "RadioGroup",
 };
 
-export const RadioGroupWithAllProps = () => (
-  <RadioGroup
-    labelText="Setting Selection"
-    name="settingSelection"
-    helpText="Select a setting from the menu below:"
-    required
-    requirementText="(Required)"
-    defaultValue="a"
-  >
-    <Radio
-      value="a"
-      labelText={
-        <Flex alignItems="center">
-          Option A
-          <Tooltip placement="bottom" tooltip="Option A is a special option with extra information" defaultOpen>
-            <Icon icon="help" color="darkBlue" size="x2" ml="x1" />
-          </Tooltip>
-        </Flex>
-      }
-    />
-    <Radio value="b" labelText="Option B" />
-    <Radio value="c" labelText="Option C" />
-  </RadioGroup>
-);
+export const RadioGroupWithAllProps = {
+  render: () => (
+    <RadioGroup
+      labelText="Setting Selection"
+      name="settingSelection"
+      helpText="Select a setting from the menu below:"
+      required
+      requirementText="(Required)"
+      defaultValue="a"
+    >
+      <Radio
+        value="a"
+        labelText={
+          <Flex alignItems="center">
+            Option A
+            <Tooltip placement="bottom" tooltip="Option A is a special option with extra information" defaultOpen>
+              <Icon icon="help" color="darkBlue" size="x2" ml="x1" />
+            </Tooltip>
+          </Flex>
+        }
+      />
+      <Radio value="b" labelText="Option B" />
+      <Radio value="c" labelText="Option C" />
+    </RadioGroup>
+  ),
 
-RadioGroupWithAllProps.story = {
   name: "RadioGroup with all props",
+
+  parameters: {
+    chromatic: { diffThreshold: 0.3 },
+  },
 };
 
-RadioGroupWithAllProps.parameters = {
-  chromatic: { diffThreshold: 0.3 },
-};
+export const WithErrorMessage = {
+  render: () => (
+    <RadioGroup
+      errorMessage="Please select an option"
+      labelText="Setting Selection"
+      name="settingSelection"
+      defaultValue="a"
+    >
+      <Radio value="a" labelText="Option A" />
+      <Radio value="b" labelText="Option B" />
+      <Radio value="c" labelText="Option C" />
+    </RadioGroup>
+  ),
 
-export const WithErrorMessage = () => (
-  <RadioGroup
-    errorMessage="Please select an option"
-    labelText="Setting Selection"
-    name="settingSelection"
-    defaultValue="a"
-  >
-    <Radio value="a" labelText="Option A" />
-    <Radio value="b" labelText="Option B" />
-    <Radio value="c" labelText="Option C" />
-  </RadioGroup>
-);
-
-WithErrorMessage.story = {
   name: "with error message",
 };
 
-export const WithErrorList = () => (
-  <RadioGroup
-    errorMessage="Please select an option"
-    errorList={errorList}
-    labelText="Setting Selection"
-    name="settingSelection"
-    defaultValue="a"
-  >
-    <Radio value="a" labelText="Option A" />
-    <Radio value="b" labelText="Option B" />
-    <Radio value="c" labelText="Option C" />
-  </RadioGroup>
-);
+export const WithErrorList = {
+  render: () => (
+    <RadioGroup
+      errorMessage="Please select an option"
+      errorList={errorList}
+      labelText="Setting Selection"
+      name="settingSelection"
+      defaultValue="a"
+    >
+      <Radio value="a" labelText="Option A" />
+      <Radio value="b" labelText="Option B" />
+      <Radio value="c" labelText="Option C" />
+    </RadioGroup>
+  ),
 
-WithErrorList.story = {
   name: "with error list",
 };
 
-export const SetToDisabled = () => (
-  <RadioGroup disabled labelText="Setting Selection" name="settingSelection" defaultValue="a">
-    <Radio value="a" labelText="Option A" />
-    <Radio value="b" labelText="Option B" />
-    <Radio value="c" labelText="Option C" />
-  </RadioGroup>
-);
+export const SetToDisabled = {
+  render: () => (
+    <RadioGroup disabled labelText="Setting Selection" name="settingSelection" defaultValue="a">
+      <Radio value="a" labelText="Option A" />
+      <Radio value="b" labelText="Option B" />
+      <Radio value="c" labelText="Option C" />
+    </RadioGroup>
+  ),
 
-SetToDisabled.story = {
   name: "Set to disabled",
 };
 

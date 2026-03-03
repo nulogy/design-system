@@ -8,138 +8,136 @@ export default {
   title: "Components/IconicButton",
 };
 
-export const WithoutALabel = () => <IconicButton icon="delete" />;
-
-WithoutALabel.story = {
+export const WithoutALabel = {
+  render: () => <IconicButton icon="delete" />,
   name: "without a label",
 };
 
-export const WithLabel = () => <IconicButton icon="delete">Delete</IconicButton>;
-
-WithLabel.story = {
+export const WithLabel = {
+  render: () => <IconicButton icon="delete">Delete</IconicButton>,
   name: "with label",
 };
 
-export const WithALongLabel = () => (
-  <IconicButton icon="user">I am an Iconic Button with a really really really long label</IconicButton>
-);
+export const WithALongLabel = {
+  render: () => <IconicButton icon="user">I am an Iconic Button with a really really really long label</IconicButton>,
 
-WithALongLabel.story = {
   name: "with a long label",
 };
 
-export const SetToDisabled = () => (
-  <>
-    <IconicButton icon="cancel" disabled>
-      Cancel
-    </IconicButton>
-    <IconicButton icon="lock" disabled>
-      Lock
-    </IconicButton>
-  </>
-);
+export const SetToDisabled = {
+  render: () => (
+    <>
+      <IconicButton icon="cancel" disabled>
+        Cancel
+      </IconicButton>
+      <IconicButton icon="lock" disabled>
+        Lock
+      </IconicButton>
+    </>
+  ),
 
-SetToDisabled.story = {
   name: "set to disabled",
 };
 
-export const WithAHiddenLabel = () => (
-  <IconicButton ml="x6" labelHidden icon="user">
-    Hidden Label
-  </IconicButton>
-);
+export const WithAHiddenLabel = {
+  render: () => (
+    <IconicButton ml="x6" labelHidden icon="user">
+      Hidden Label
+    </IconicButton>
+  ),
 
-WithAHiddenLabel.story = {
   name: "with a hidden label",
 };
 
-export const WithACustomIconSize = () => (
-  <IconicButton icon="user" iconSize="50px" labelHidden>
-    I am an Iconic Button
-  </IconicButton>
-);
+export const WithACustomIconSize = {
+  render: () => (
+    <IconicButton icon="user" iconSize="50px" labelHidden>
+      I am an Iconic Button
+    </IconicButton>
+  ),
 
-WithACustomIconSize.story = {
   name: "with a custom icon size",
 };
 
-export const WithACustomColor = () => (
-  <IconicButton color="red" icon="close">
-    Close
-  </IconicButton>
-);
+export const WithACustomColor = {
+  render: () => (
+    <IconicButton color="red" icon="close">
+      Close
+    </IconicButton>
+  ),
 
-WithACustomColor.story = {
   name: "with a custom color",
 };
 
-export const WithATooltipAndLabel = () => (
-  <IconicButton tooltip="Stop job" icon="close">
-    Stop
-  </IconicButton>
-);
+export const WithATooltipAndLabel = {
+  render: () => (
+    <IconicButton tooltip="Stop job" icon="close">
+      Stop
+    </IconicButton>
+  ),
 
-WithATooltipAndLabel.story = {
   name: "with a tooltip and label",
 };
 
-export const WithAComplicatedTooltipAndLabel = () => (
-  <IconicButton tooltip={<Box>Hello</Box>} icon="close">
-    Please stop
-  </IconicButton>
-);
+export const WithAComplicatedTooltipAndLabel = {
+  render: () => (
+    <IconicButton tooltip={<Box>Hello</Box>} icon="close">
+      Please stop
+    </IconicButton>
+  ),
 
-WithAComplicatedTooltipAndLabel.story = {
   name: "with a complicated tooltip and label",
 };
 
-export const rightAligned = () => (
-  <Flex px="x3" height="150px">
-    <Flex justifyContent="flex-end" alignItems="flex-start" width="100%">
-      <IconicButton icon="rightArrow" labelHidden>
-        I am an Iconic Button
-      </IconicButton>
-      <IconicButton icon="leftArrow" labelHidden>
-        I am an Iconic Button 2
-      </IconicButton>
+export const rightAligned = {
+  render: () => (
+    <Flex px="x3" height="150px">
+      <Flex justifyContent="flex-end" alignItems="flex-start" width="100%">
+        <IconicButton icon="rightArrow" labelHidden>
+          I am an Iconic Button
+        </IconicButton>
+        <IconicButton icon="leftArrow" labelHidden>
+          I am an Iconic Button 2
+        </IconicButton>
+      </Flex>
     </Flex>
-  </Flex>
-);
+  ),
 
-rightAligned.parameters = {
-  chromatic: { diffThreshold: 0.3 },
+  parameters: {
+    chromatic: { diffThreshold: 0.3 },
+  },
 };
 
-export const WithACustomFontSize = () => (
-  <Flex flexDirection="column">
-    <IconicButton fontSize="small" tooltip="Stop job" icon="close">
-      This is an IconicButton with a small font size
-    </IconicButton>
-    <IconicButton fontSize="large" tooltip="Stop job" icon="close">
-      This is an IconicButton with a large font size
-    </IconicButton>
-    <IconicButton fontSize="48px" tooltip="Stop job" icon="close">
-      This is an IconicButton with 48px font size
-    </IconicButton>
-  </Flex>
-);
+export const WithACustomFontSize = {
+  render: () => (
+    <Flex flexDirection="column">
+      <IconicButton fontSize="small" tooltip="Stop job" icon="close">
+        This is an IconicButton with a small font size
+      </IconicButton>
+      <IconicButton fontSize="large" tooltip="Stop job" icon="close">
+        This is an IconicButton with a large font size
+      </IconicButton>
+      <IconicButton fontSize="48px" tooltip="Stop job" icon="close">
+        This is an IconicButton with 48px font size
+      </IconicButton>
+    </Flex>
+  ),
 
-WithACustomFontSize.story = {
   name: "with a custom font size",
 };
 
-export const WithNonTextChildren = () => (
-  <IconicButton fontSize="small" aria-label="warnings" icon="warning">
-    <Flex>
-      <Box as="span" pr="x1">
-        Warnings
-      </Box>
-      <StatusIndicator type="informative">3</StatusIndicator>
-    </Flex>
-  </IconicButton>
-);
+export const WithNonTextChildren = {
+  render: () => (
+    <IconicButton fontSize="small" aria-label="warnings" icon="warning">
+      <Flex>
+        <Box as="span" pr="x1">
+          Warnings
+        </Box>
+        <StatusIndicator type="informative">3</StatusIndicator>
+      </Flex>
+    </IconicButton>
+  ),
 
-WithNonTextChildren.story = {
   name: "with non text children",
 };
 

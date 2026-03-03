@@ -31,19 +31,21 @@ export const Default = () => {
   return <Table rowHovers={false} columns={columns} rows={rows} />;
 };
 
-export const WithoutATooltip = () => {
-  const appNames = Object.keys(APP_DISPLAY_NAMES) as NulogyAppName[];
+export const WithoutATooltip = {
+  render: () => {
+    const appNames = Object.keys(APP_DISPLAY_NAMES) as NulogyAppName[];
 
-  return (
-    <Flex flexDirection="column" gap="x2">
-      <Heading1 compact>AppTag without tooltip</Heading1>
-      <Flex gap="x2">
-        {appNames.map((appName) => (
-          <AppTag key={appName} app={appName} type="active" hideTooltip />
-        ))}
+    return (
+      <Flex flexDirection="column" gap="x2">
+        <Heading1 compact>AppTag without tooltip</Heading1>
+        <Flex gap="x2">
+          {appNames.map((appName) => (
+            <AppTag key={appName} app={appName} type="active" hideTooltip />
+          ))}
+        </Flex>
       </Flex>
-    </Flex>
-  );
-};
+    );
+  },
 
-WithoutATooltip.storyName = "Without a tooltip";
+  name: "Without a tooltip",
+};

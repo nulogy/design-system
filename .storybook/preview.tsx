@@ -1,6 +1,5 @@
-import type { Preview } from "@storybook/react";
+import type { Preview, Decorator } from "@storybook/react-vite";
 import React from "react";
-import { Decorator } from "@storybook/react";
 import { desktop as theme } from "../src/theme";
 import { ALL_NDS_LOCALES, NDSProvider } from "../src";
 
@@ -42,58 +41,6 @@ const viewports = {
   },
 };
 
-export const parameters = {
-  viewport: { viewports },
-  layout: "padded",
-  options: {
-    storySort: {
-      method: "alphabetical",
-    },
-  },
-};
-
-export const globalTypes = {
-  theme: {
-    name: "Theme",
-    description: "Global theme for components",
-    defaultValue: "desktop",
-    toolbar: {
-      icon: "browser",
-      items: [
-        { value: "desktop", title: "Desktop" },
-        { value: "touch", title: "Touch" },
-      ],
-      dynamicTitle: true,
-    },
-  },
-  desktopScale: {
-    name: "Desktop typography scale",
-    description: "Toggles between the standard and the new experimental desktop typography scale",
-    defaultValue: "standard",
-    toolbar: {
-      icon: "paragraph",
-      items: [
-        { value: "standard", title: "Standard desktop scale" },
-        { value: "experimental", title: "Experimental desktop scale (intended for design team testing)" },
-      ],
-      dynamicTitle: true,
-    },
-  },
-  locale: {
-    name: "Locale",
-    description: "NDSProvider Locale",
-    defaultValue: "en_US",
-    toolbar: {
-      icon: "globe",
-      items: ALL_NDS_LOCALES.map((locale) => ({
-        title: `${locale.label} - ${locale.value}`,
-        value: locale.value,
-      })),
-      dynamicTitle: true,
-    },
-  },
-};
-
 const withThemeProvider: Decorator = (Story, context) => {
   const { theme, locale, desktopScale } = context.globals;
 
@@ -109,6 +56,59 @@ const withThemeProvider: Decorator = (Story, context) => {
 };
 
 const preview: Preview = {
+  parameters: {
+    viewport: { options: viewports },
+    layout: "padded",
+    options: {
+      storySort: {
+        method: "alphabetical",
+      },
+    },
+    docs: { codePanel: true },
+  },
+  globalTypes: {
+    theme: {
+      name: "Theme",
+      description: "Global theme for components",
+      toolbar: {
+        icon: "browser",
+        items: [
+          { value: "desktop", title: "Desktop" },
+          { value: "touch", title: "Touch" },
+        ],
+        dynamicTitle: true,
+      },
+    },
+    desktopScale: {
+      name: "Desktop typography scale",
+      description: "Toggles between the standard and the new experimental desktop typography scale",
+      toolbar: {
+        icon: "paragraph",
+        items: [
+          { value: "standard", title: "Standard desktop scale" },
+          { value: "experimental", title: "Experimental desktop scale (intended for design team testing)" },
+        ],
+        dynamicTitle: true,
+      },
+    },
+    locale: {
+      name: "Locale",
+      description: "NDSProvider Locale",
+      toolbar: {
+        icon: "globe",
+        items: ALL_NDS_LOCALES.map((locale) => ({
+          title: `${locale.label} - ${locale.value}`,
+          value: locale.value,
+        })),
+        dynamicTitle: true,
+      },
+    },
+  },
+  initialGlobals: {
+    theme: "desktop",
+    desktopScale: "standard",
+    locale: "en_US",
+  },
   decorators: [withThemeProvider],
   tags: ["autodocs"],
 };

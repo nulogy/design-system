@@ -20,32 +20,32 @@ export const _Breadcrumbs = () => (
   </>
 );
 
-export const WithoutLink = () => (
-  <Breadcrumbs>
-    <Link href="/">Home</Link>
-    <Link href="/">Tenants</Link>
-    <Text>Current Tenant</Text>
-  </Breadcrumbs>
-);
+export const WithoutLink = {
+  render: () => (
+    <Breadcrumbs>
+      <Link href="/">Home</Link>
+      <Link href="/">Tenants</Link>
+      <Text>Current Tenant</Text>
+    </Breadcrumbs>
+  ),
 
-WithoutLink.story = {
   name: "without link",
 };
 
-export const WithReactRouter = () => (
-  <BrowserRouter>
-    <Breadcrumbs>
-      <Link as={ReactRouterLink} to="/">
-        Home
-      </Link>
-      <Link as={ReactRouterLink} to="/">
-        Tenants
-      </Link>
-      <Text>Current Tenant</Text>
-    </Breadcrumbs>
-  </BrowserRouter>
-);
+export const WithReactRouter = {
+  render: () => (
+    <BrowserRouter>
+      <Breadcrumbs>
+        <Link as={ReactRouterLink} to="/">
+          Home
+        </Link>
+        <Link as={ReactRouterLink} to="/">
+          Tenants
+        </Link>
+        <Text>Current Tenant</Text>
+      </Breadcrumbs>
+    </BrowserRouter>
+  ),
 
-WithReactRouter.story = {
   name: "with react router",
 };

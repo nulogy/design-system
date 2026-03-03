@@ -88,8 +88,7 @@ export default {
   title: "Components/Table/with server side pagination",
 };
 
-export const WithServerSidePagination = () => <TableWithServerSidePagination />;
-
-WithServerSidePagination.story = {
+export const WithServerSidePagination = {
+  render: () => <TableWithServerSidePagination />,
   name: "with server-side pagination",
 };

@@ -63,14 +63,12 @@ export default {
   title: "Components/Table/Density",
 };
 
-export const Default = () => <Table columns={columns} rows={rowData} />;
-
-Default.story = {
+export const Default = {
+  render: () => <Table columns={columns} rows={rowData} />,
   name: "Default",
 };
 
-export const Compact = () => <Table columns={columns} rows={rowData} compact />;
-
-Compact.story = {
+export const Compact = {
+  render: () => <Table columns={columns} rows={rowData} compact />,
   name: "Compact",
 };

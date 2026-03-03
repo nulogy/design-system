@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { useTheme } from "styled-components";
 import { Box } from "../../Box";
 import { IconicButton } from "../../Button";

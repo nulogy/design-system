@@ -6,39 +6,38 @@ export default {
   title: "Components/Link",
 };
 
-export const _Link = () => <Link href="http://nulogy.design">Link</Link>;
-
-_Link.story = {
+export const _Link = {
+  render: () => <Link href="http://nulogy.design">Link</Link>,
   name: "Link ",
 };
 
-export const WithCustomFontSize = () => (
-  <Link href="http://nulogy.design" fontSize="small">
-    Link
-  </Link>
-);
+export const WithCustomFontSize = {
+  render: () => (
+    <Link href="http://nulogy.design" fontSize="small">
+      Link
+    </Link>
+  ),
 
-WithCustomFontSize.story = {
   name: "with custom font size",
 };
 
-export const WithoutUnderline = () => (
-  <Link underline={false} href="http://nulogy.design">
-    Link
-  </Link>
-);
+export const WithoutUnderline = {
+  render: () => (
+    <Link underline={false} href="http://nulogy.design">
+      Link
+    </Link>
+  ),
 
-WithoutUnderline.story = {
   name: "Without underline",
 };
 
-export const WithADifferentColor = () => (
-  <Link color="black" hover="red" href="http://nulogy.design">
-    Link
-  </Link>
-);
+export const WithADifferentColor = {
+  render: () => (
+    <Link color="black" hover="red" href="http://nulogy.design">
+      Link
+    </Link>
+  ),
 
-WithADifferentColor.story = {
   name: "With a different color",
 };
 
@@ -48,32 +47,30 @@ export const WithADifferentFontSize = () => (
   </Link>
 );
 
-export const AsAButton = () => <Link as="button">Link</Link>;
-
-AsAButton.story = {
+export const AsAButton = {
+  render: () => <Link as="button">Link</Link>,
   name: "As a <button>",
 };
 
-export const _ReactRouterLink = () => (
-  <BrowserRouter>
-    <Link as={ReactRouterLink} to="/place">
-      Link
-    </Link>
-  </BrowserRouter>
-);
+export const _ReactRouterLink = {
+  render: () => (
+    <BrowserRouter>
+      <Link as={ReactRouterLink} to="/place">
+        Link
+      </Link>
+    </BrowserRouter>
+  ),
 
-_ReactRouterLink.story = {
   name: "with react router",
 };
 
-export const WithAppTag = () => (
-  <Link href="#production-scheduling" forApp="production-scheduling">
-    POLI-120392
-  </Link>
-);
+export const WithAppTag = {
+  render: () => (
+    <Link href="#production-scheduling" forApp="production-scheduling">
+      POLI-120392
+    </Link>
+  ),
 
-WithAppTag.story = {
-  // This story is referenced in the AppTag story. If you change the name, update the URL in the AppTag story.
   name: "With AppTag",
 };
 
@@ -83,12 +80,12 @@ export const OpenInNewTab = () => (
   </Link>
 );
 
-export const OpenInNewTabWithAppTag = () => (
-  <Link href="#production-scheduling" forApp="production-scheduling" openInNewTab>
-    POLI-120392
-  </Link>
-);
+export const OpenInNewTabWithAppTag = {
+  render: () => (
+    <Link href="#production-scheduling" forApp="production-scheduling" openInNewTab>
+      POLI-120392
+    </Link>
+  ),
 
-OpenInNewTabWithAppTag.story = {
   name: "Open in new tab with AppTag",
 };

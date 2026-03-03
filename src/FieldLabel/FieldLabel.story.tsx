@@ -12,14 +12,12 @@ export default {
   title: "Components/FieldLabel",
 };
 
-export const _FieldLabel = () => <FieldLabel labelText="Default label" />;
-
-_FieldLabel.story = {
+export const _FieldLabel = {
+  render: () => <FieldLabel labelText="Default label" />,
   name: "FieldLabel",
 };
 
 export const WithHelpText = () => <FieldLabel labelText="Default label" helpText={helpTextWithLink} />;
-
 export const WithRequirementText = () => <FieldLabel labelText="Default label" requirementText="(Required)" />;
 
 export const WithAllAdditionalText = () => (

@@ -5,8 +5,7 @@ export default {
   title: "Components/RangeContainer",
 };
 
-export const _RangeContainer = () => <RangeContainer>Example</RangeContainer>;
-
-_RangeContainer.story = {
+export const _RangeContainer = {
+  render: () => <RangeContainer>Example</RangeContainer>,
   name: "RangeContainer",
 };

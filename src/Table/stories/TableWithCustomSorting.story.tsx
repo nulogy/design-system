@@ -85,8 +85,7 @@ export default {
   title: "Components/Table/with custom sorting",
 };
 
-export const WithCustomSorting = () => <TableWithCustomSorting />;
-
-WithCustomSorting.story = {
+export const WithCustomSorting = {
+  render: () => <TableWithCustomSorting />,
   name: "with custom sorting",
 };

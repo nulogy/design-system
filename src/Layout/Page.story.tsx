@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import React from "react";
 import { ApplicationFrame, Breadcrumbs, Link, Heading2, Text, Page, StatusIndicator, Navigation } from "..";
 

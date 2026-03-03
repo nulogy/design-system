@@ -41,7 +41,7 @@ describe("select", () => {
 
   describe("with state", () => {
     it("clears the selected option", () => {
-      const { container, queryByText } = renderWithNDSProvider(<WithState />);
+      const { container, queryByText } = renderWithNDSProvider(WithState.render());
       selectOption("Open", container, queryByText);
       expect(container.textContent).toContain("Open");
       fireEvent.click(queryByText("Clear selection"));
@@ -54,7 +54,7 @@ describe("multi select", () => {
   it("returns the selected items on change", () => {
     const callback = vi.fn();
 
-    const { container, queryByText } = renderWithNDSProvider(<WithMultiselect onChange={callback} />);
+    const { container, queryByText } = renderWithNDSProvider(WithMultiselect.render({ onChange: callback }));
 
     selectOption("PCN4", container, queryByText);
     selectOption("PCN9", container, queryByText);

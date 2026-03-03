@@ -8,84 +8,78 @@ export default {
   title: "Components/TruncatedText",
 };
 
-export const _TruncatedText = () => (
-  <TruncatedText fontSize="small">Special instructions are provided for the shipment</TruncatedText>
-);
+export const _TruncatedText = {
+  render: () => <TruncatedText fontSize="small">Special instructions are provided for the shipment</TruncatedText>,
 
-_TruncatedText.story = {
   name: "TruncatedText",
 };
 
-export const WithoutTooltip = () => (
-  <TruncatedText showTooltip={false}>Special instructions are provided for the shipment</TruncatedText>
-);
+export const WithoutTooltip = {
+  render: () => <TruncatedText showTooltip={false}>Special instructions are provided for the shipment</TruncatedText>,
 
-WithoutTooltip.story = {
   name: "without tooltip",
 };
 
-export const UnderMaxCharacters = () => <TruncatedText>Item is available</TruncatedText>;
-
-UnderMaxCharacters.story = {
+export const UnderMaxCharacters = {
+  render: () => <TruncatedText>Item is available</TruncatedText>,
   name: "under max characters",
 };
 
-export const WithMaxCharacters10 = () => <TruncatedText maxCharacters={10}>Item is available</TruncatedText>;
-
-WithMaxCharacters10.story = {
+export const WithMaxCharacters10 = {
+  render: () => <TruncatedText maxCharacters={10}>Item is available</TruncatedText>,
   name: "with max characters 10",
 };
 
-export const WithCustomTruncationIndicator = () => (
-  <TruncatedText indicator=" + 2...">Special instructions are provided for the shipment</TruncatedText>
-);
+export const WithCustomTruncationIndicator = {
+  render: () => <TruncatedText indicator=" + 2...">Special instructions are provided for the shipment</TruncatedText>,
 
-WithCustomTruncationIndicator.story = {
   name: "with custom truncation indicator",
 };
 
-export const AsTitle = () => (
-  <TruncatedText element={<Heading1 />}>Special instructions are provided for the shipment</TruncatedText>
-);
+export const AsTitle = {
+  render: () => (
+    <TruncatedText element={<Heading1 />}>Special instructions are provided for the shipment</TruncatedText>
+  ),
 
-AsTitle.story = {
   name: "as title",
 };
 
-export const FullWidth = () => (
-  <Box width="200px">
-    <TruncatedText fullWidth>
-      Special instructions are truncated because there is not enough space to show them.
-    </TruncatedText>
-    <TruncatedText fullWidth>Instructions fit here.</TruncatedText>
-  </Box>
-);
+export const FullWidth = {
+  render: () => (
+    <Box width="200px">
+      <TruncatedText fullWidth>
+        Special instructions are truncated because there is not enough space to show them.
+      </TruncatedText>
+      <TruncatedText fullWidth>Instructions fit here.</TruncatedText>
+    </Box>
+  ),
 
-FullWidth.story = {
   name: "full width",
 };
 
-export const WithoutChildren = () => (
-  <Box>
-    <Heading1>No text should appear after this sentence, neither should the page crash.</Heading1>
-    <TruncatedText>{null}</TruncatedText>
-    <TruncatedText>{undefined}</TruncatedText>
-    <TruncatedText />
-  </Box>
-);
+export const WithoutChildren = {
+  render: () => (
+    <Box>
+      <Heading1>No text should appear after this sentence, neither should the page crash.</Heading1>
+      <TruncatedText>{null}</TruncatedText>
+      <TruncatedText>{undefined}</TruncatedText>
+      <TruncatedText />
+    </Box>
+  ),
 
-WithoutChildren.story = {
   name: "Without children",
 };
 
-export const TooltipInsideModal = () => {
-  return (
-    <Modal title="Modal Title">
-      <TruncatedText tooltipProps={{ defaultOpen: true }}>
-        The point of this test is to see if the tooltip is visible and shown over the modal and its overlay
-      </TruncatedText>
-    </Modal>
-  );
-};
+export const TooltipInsideModal = {
+  render: () => {
+    return (
+      <Modal title="Modal Title">
+        <TruncatedText tooltipProps={{ defaultOpen: true }}>
+          The point of this test is to see if the tooltip is visible and shown over the modal and its overlay
+        </TruncatedText>
+      </Modal>
+    );
+  },
 
-TooltipInsideModal.storyName = "Tooltip inside modal";
+  name: "Tooltip inside modal",
+};
