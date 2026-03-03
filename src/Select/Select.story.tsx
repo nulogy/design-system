@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { action } from "storybook/actions";
 import type { Meta, StoryObj } from "@storybook/react-vite";
+import { expect, screen, userEvent, waitFor, within } from "storybook/test";
 import { PropsValue } from "react-select";
 import { Box } from "../Box";
 import { Flex } from "../Flex";
@@ -168,6 +169,30 @@ export const _Select: Story = {
     menuIsOpen: {
       control: { type: "boolean" },
     },
+  },
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+
+    await step("dropdown is closed initially", async () => {
+      await expect(screen.queryByTestId("select-dropdown")).not.toBeInTheDocument();
+    });
+
+    await step("opens dropdown on click", async () => {
+      // Click the combobox input — the most reliable way to open react-select
+      await userEvent.click(canvas.getByRole("combobox"));
+      await waitFor(() => expect(screen.getByTestId("select-dropdown")).toBeInTheDocument());
+    });
+
+    await step("closes dropdown on Escape key", async () => {
+      await userEvent.keyboard("{Escape}");
+      await waitFor(() => expect(screen.queryByTestId("select-dropdown")).not.toBeInTheDocument());
+    });
+
+    await step("selects an option by clicking and closes the dropdown", async () => {
+      await userEvent.click(canvas.getByRole("combobox"));
+      await userEvent.click(screen.getByText("Assigned to a line"));
+      await waitFor(() => expect(screen.queryByTestId("select-dropdown")).not.toBeInTheDocument());
+    });
   },
 };
 
@@ -436,6 +461,33 @@ export const WithMultiselect = {
   },
 
   name: "with multiselect",
+
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+
+    await step("shows initial default values and excludes unselected ones", async () => {
+      await expect(canvas.getByText("PCN2")).toBeInTheDocument();
+      await expect(canvas.getByText("PCN1")).toBeInTheDocument();
+      // PCN4 is an unselected option — should not be visible while dropdown is closed
+      await expect(canvas.queryByText("PCN4")).not.toBeInTheDocument();
+    });
+
+    await step("removes a selected value via its remove button", async () => {
+      const [firstMultivalue] = canvas.getAllByTestId("select-multivalue");
+      // Click the react-select MultiValueRemove element (direct child of our NDS wrapper)
+      const removeBtn = firstMultivalue.querySelector('[class*="multi-value__remove"]') as HTMLElement;
+      await userEvent.click(removeBtn);
+      await waitFor(() => expect(canvas.getAllByTestId("select-multivalue")).toHaveLength(1));
+    });
+
+    await step("clears all remaining values with the clear button", async () => {
+      const clearWrapper = canvas.getByTestId("select-clear");
+      // Click the react-select ClearIndicator element (direct child of our NDS wrapper)
+      const clearBtn = clearWrapper.querySelector('[class*="clear-indicator"]') as HTMLElement;
+      await userEvent.click(clearBtn);
+      await waitFor(() => expect(canvas.queryByTestId("select-multivalue")).not.toBeInTheDocument());
+    });
+  },
 };
 
 export const WithCloseMenuOnSelectTurnedOff = {
