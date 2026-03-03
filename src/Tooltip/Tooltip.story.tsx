@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import React from "react";
+import { expect, screen, userEvent, waitFor, within } from "storybook/test";
 import {
   Box,
   Button,
@@ -33,6 +34,24 @@ export const Default: Story = {
       </Tooltip>
     </Flex>
   ),
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+
+    await step("tooltip is not visible before interaction", async () => {
+      await expect(screen.queryByRole("tooltip")).not.toBeInTheDocument();
+    });
+
+    await step("shows tooltip text on hover", async () => {
+      await userEvent.hover(canvas.getByTestId("tooltip-trigger"));
+      // Radix renders the tooltip in a body portal, so use screen (not canvas)
+      await waitFor(() => expect(screen.getByRole("tooltip")).toHaveTextContent("I am a Tooltip!"));
+    });
+
+    await step("hides tooltip when moving away", async () => {
+      await userEvent.unhover(canvas.getByTestId("tooltip-trigger"));
+      await waitFor(() => expect(screen.queryByRole("tooltip")).not.toBeInTheDocument());
+    });
+  },
 };
 
 export const WithWrappedText: Story = {
