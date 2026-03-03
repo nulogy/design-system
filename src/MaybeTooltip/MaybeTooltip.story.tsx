@@ -1,5 +1,5 @@
 import React from "react";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Text } from "../Type";
 import { Box } from "../Box";
 import MaybeTooltip from "./MaybeTooltip";

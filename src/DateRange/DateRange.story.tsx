@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { action } from "@storybook/addon-actions";
+import { action } from "storybook/actions";
 
 import { Button, Box, Flex, PrimaryButton } from "..";
 import DateRange from "./DateRange";

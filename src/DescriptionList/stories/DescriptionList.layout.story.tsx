@@ -36,41 +36,43 @@ export const Stacked = () => {
   );
 };
 
-export const Auto = () => {
-  return (
-    <Flex flexDirection="column" gap="x2">
-      <Flex flexDirection="column" gap="x1">
-        <Heading1 compact>Auto Layout</Heading1>
-        <Text fontSize="sm">
-          Automatically switches between <Code>stacked</Code> and <Code>inline</Code> layouts based on the specified
-          container width. Default breakpoint is set to <Code>640px</Code>.
-        </Text>
-        <Flex alignItems="center" gap="half" mb="x2">
-          <Icon icon="info" color="midGrey" />
-          <Text fontSize="sm" color="darkGrey">
-            The breakpoint is based on the container width, not the viewport width. See component{" "}
-            <Link href="https://github.com/nulogy/design-system/blob/main/src/DescriptionList/README.md">
-              documentation
-            </Link>
-            .
+export const Auto = {
+  render: () => {
+    return (
+      <Flex flexDirection="column" gap="x2">
+        <Flex flexDirection="column" gap="x1">
+          <Heading1 compact>Auto Layout</Heading1>
+          <Text fontSize="sm">
+            Automatically switches between <Code>stacked</Code> and <Code>inline</Code> layouts based on the specified
+            container width. Default breakpoint is set to <Code>640px</Code>.
           </Text>
+          <Flex alignItems="center" gap="half" mb="x2">
+            <Icon icon="info" color="midGrey" />
+            <Text fontSize="sm" color="darkGrey">
+              The breakpoint is based on the container width, not the viewport width. See component{" "}
+              <Link href="https://github.com/nulogy/design-system/blob/main/src/DescriptionList/README.md">
+                documentation
+              </Link>
+              .
+            </Text>
+          </Flex>
         </Flex>
+        <Resizable containerWidth="100%" showContainerOutline>
+          <DescriptionList layout="auto" autoLayoutBreakpoint="640px">
+            <SampleContent />
+          </DescriptionList>
+        </Resizable>
       </Flex>
-      <Resizable containerWidth="100%" showContainerOutline>
-        <DescriptionList layout="auto" autoLayoutBreakpoint="640px">
-          <SampleContent />
-        </DescriptionList>
-      </Resizable>
-    </Flex>
-  );
-};
+    );
+  },
 
-Auto.parameters = {
-  chromatic: {
-    viewports: [
-      parseInt(legacy.breakpoints.extraSmall),
-      parseInt(legacy.breakpoints.small),
-      parseInt(legacy.breakpoints.medium),
-    ],
+  parameters: {
+    chromatic: {
+      viewports: [
+        parseInt(legacy.breakpoints.extraSmall),
+        parseInt(legacy.breakpoints.small),
+        parseInt(legacy.breakpoints.medium),
+      ],
+    },
   },
 };

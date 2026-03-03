@@ -1,5 +1,5 @@
 import React from "react";
-import { action } from "@storybook/addon-actions";
+import { action } from "storybook/actions";
 import { Select } from "../index";
 import { Box } from "../Box";
 
@@ -40,115 +40,91 @@ export default {
   title: "VisualTests/Select",
 };
 
-export const WithADefaultValue = () => (
-  <Select
-    defaultValue={options[0].value}
-    placeholder="Please select inventory status"
-    onChange={action("selection changed")}
-    onBlur={action("blurred")}
-    options={options}
-    labelText="Inventory status"
-    onInputChange={action("typed input value changed")}
-  />
-);
+export const WithADefaultValue = {
+  render: () => (
+    <Select
+      defaultValue={options[0].value}
+      placeholder="Please select inventory status"
+      onChange={action("selection changed")}
+      onBlur={action("blurred")}
+      options={options}
+      labelText="Inventory status"
+      onInputChange={action("typed input value changed")}
+    />
+  ),
 
-WithADefaultValue.story = {
   name: "with a defaultValue",
 };
 
-export const WithABlankValue = () => {
-  const optionsWithBlank = [{ value: null, label: "" }, ...options];
-  return (
-    <Select
-      placeholder="Please select inventory status"
-      onChange={action("selection changed")}
-      onBlur={action("blurred")}
-      options={optionsWithBlank}
-      labelText="Inventory status"
-      onInputChange={action("typed input value changed")}
-    />
-  );
-};
+export const WithABlankValue = {
+  render: () => {
+    const optionsWithBlank = [{ value: null, label: "" }, ...options];
+    return (
+      <Select
+        placeholder="Please select inventory status"
+        onChange={action("selection changed")}
+        onBlur={action("blurred")}
+        options={optionsWithBlank}
+        labelText="Inventory status"
+        onInputChange={action("typed input value changed")}
+      />
+    );
+  },
 
-WithABlankValue.story = {
   name: "with a blank value",
 };
 
-export const WithAnOptionSelected = () => (
-  <>
-    <Select
-      value={options[0].value}
-      placeholder="Please select inventory status"
-      options={options}
-      labelText="Inventory status"
-      onChange={action("selection changed")}
-      onBlur={action("blurred")}
-      onInputChange={action("typed input value changed")}
-    />
-    <br />
-    <Select
-      value={options[0].value}
-      placeholder="Please select inventory status"
-      options={options}
-      labelText="Inventory status"
-      initialIsOpen
-      onChange={action("selection changed")}
-      onBlur={action("blurred")}
-      onInputChange={action("typed input value changed")}
-    />
-  </>
-);
+export const WithAnOptionSelected = {
+  render: () => (
+    <>
+      <Select
+        value={options[0].value}
+        placeholder="Please select inventory status"
+        options={options}
+        labelText="Inventory status"
+        onChange={action("selection changed")}
+        onBlur={action("blurred")}
+        onInputChange={action("typed input value changed")}
+      />
+      <br />
+      <Select
+        value={options[0].value}
+        placeholder="Please select inventory status"
+        options={options}
+        labelText="Inventory status"
+        initialIsOpen
+        onChange={action("selection changed")}
+        onBlur={action("blurred")}
+        onInputChange={action("typed input value changed")}
+      />
+    </>
+  ),
 
-WithAnOptionSelected.story = {
   name: "with an option selected",
 };
 
-export const WithWrappingText = () => (
-  <Select
-    initialIsOpen
-    value={options[0].value}
-    placeholder="Please select inventory status"
-    options={wrappingOptions}
-    labelText="Inventory status"
-    onChange={action("selection changed")}
-    onBlur={action("blurred")}
-    onInputChange={action("typed input value changed")}
-  />
-);
-
-WithWrappingText.story = {
-  name: "With wrapping text",
-};
-
-export const TestMultiselectOverflow = () => (
-  <>
+export const WithWrappingText = {
+  render: () => (
     <Select
-      defaultValue={["accepted", "assigned"]}
-      noOptionsMessage={() => "No options"}
+      initialIsOpen
+      value={options[0].value}
       placeholder="Please select inventory status"
-      options={options}
+      options={wrappingOptions}
       labelText="Inventory status"
       onChange={action("selection changed")}
       onBlur={action("blurred")}
-      multiselect
       onInputChange={action("typed input value changed")}
     />
-    <Box width="300px">
+  ),
+
+  name: "With wrapping text",
+};
+
+export const TestMultiselectOverflow = {
+  render: () => (
+    <>
       <Select
-        defaultValue={partnerCompanyName.map((item) => item.value)}
-        noOptionsMessage={() => "No options"}
-        placeholder="Please select inventory status"
-        options={partnerCompanyName}
-        labelText="PCN"
-        onChange={action("selection changed")}
-        onBlur={action("blurred")}
-        multiselect
-        onInputChange={action("typed input value changed")}
-      />
-    </Box>
-    <Box width="400px">
-      <Select
-        defaultValue={options.map((item) => item.value)}
+        defaultValue={["accepted", "assigned"]}
         noOptionsMessage={() => "No options"}
         placeholder="Please select inventory status"
         options={options}
@@ -158,29 +134,53 @@ export const TestMultiselectOverflow = () => (
         multiselect
         onInputChange={action("typed input value changed")}
       />
-    </Box>
-  </>
-);
+      <Box width="300px">
+        <Select
+          defaultValue={partnerCompanyName.map((item) => item.value)}
+          noOptionsMessage={() => "No options"}
+          placeholder="Please select inventory status"
+          options={partnerCompanyName}
+          labelText="PCN"
+          onChange={action("selection changed")}
+          onBlur={action("blurred")}
+          multiselect
+          onInputChange={action("typed input value changed")}
+        />
+      </Box>
+      <Box width="400px">
+        <Select
+          defaultValue={options.map((item) => item.value)}
+          noOptionsMessage={() => "No options"}
+          placeholder="Please select inventory status"
+          options={options}
+          labelText="Inventory status"
+          onChange={action("selection changed")}
+          onBlur={action("blurred")}
+          multiselect
+          onInputChange={action("typed input value changed")}
+        />
+      </Box>
+    </>
+  ),
 
-TestMultiselectOverflow.story = {
   name: "test multiselect overflow",
 };
 
-export const WithANullValue = () => {
-  const optionsWithBlank = [{ value: null, label: "Nullable" }, { value: null, label: "Other null" }, ...options];
-  return (
-    <Select
-      defaultValue={null}
-      placeholder="Please select inventory status"
-      onChange={action("selection changed")}
-      onBlur={action("blurred")}
-      options={optionsWithBlank}
-      labelText="Inventory status"
-      onInputChange={action("typed input value changed")}
-    />
-  );
-};
+export const WithANullValue = {
+  render: () => {
+    const optionsWithBlank = [{ value: null, label: "Nullable" }, { value: null, label: "Other null" }, ...options];
+    return (
+      <Select
+        defaultValue={null}
+        placeholder="Please select inventory status"
+        onChange={action("selection changed")}
+        onBlur={action("blurred")}
+        options={optionsWithBlank}
+        labelText="Inventory status"
+        onInputChange={action("typed input value changed")}
+      />
+    );
+  },
 
-WithANullValue.story = {
   name: "with a null value",
 };

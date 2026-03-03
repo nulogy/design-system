@@ -77,33 +77,34 @@ const ColumnDemo = ({
 };
 
 export const TwoColumns = () => <ColumnDemo title="Two Columns" columns={2} />;
-
 export const ThreeColumns = () => <ColumnDemo title="Three Columns" columns={3} />;
 
-export const ResponsiveColumns = () => (
-  <ColumnDemo
-    resizable
-    title="Responsive Columns"
-    columns={{ small: 1, medium: 3, large: 6 }}
-    description="Small: 1 column, Medium: 3 columns, Large: 6 columns"
-    info={
-      <Text fontSize="sm" color="darkGrey">
-        The breakpoint is based on the container width, not the viewport width. See component{" "}
-        <Link href="https://github.com/nulogy/design-system/blob/main/src/DescriptionList/README.md">
-          documentation
-        </Link>
-        .
-      </Text>
-    }
-  />
-);
+export const ResponsiveColumns = {
+  render: () => (
+    <ColumnDemo
+      resizable
+      title="Responsive Columns"
+      columns={{ small: 1, medium: 3, large: 6 }}
+      description="Small: 1 column, Medium: 3 columns, Large: 6 columns"
+      info={
+        <Text fontSize="sm" color="darkGrey">
+          The breakpoint is based on the container width, not the viewport width. See component{" "}
+          <Link href="https://github.com/nulogy/design-system/blob/main/src/DescriptionList/README.md">
+            documentation
+          </Link>
+          .
+        </Text>
+      }
+    />
+  ),
 
-ResponsiveColumns.parameters = {
-  chromatic: {
-    viewports: [
-      parseInt(legacy.breakpoints.small),
-      parseInt(legacy.breakpoints.medium),
-      parseInt(legacy.breakpoints.large),
-    ],
+  parameters: {
+    chromatic: {
+      viewports: [
+        parseInt(legacy.breakpoints.small),
+        parseInt(legacy.breakpoints.medium),
+        parseInt(legacy.breakpoints.large),
+      ],
+    },
   },
 };

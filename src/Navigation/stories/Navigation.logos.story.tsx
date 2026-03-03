@@ -49,6 +49,7 @@ export const UsingClientRouting = () => {
     </BrowserRouter>
   );
 };
+
 export const WithANulogyApplicationName = () => {
   const [application, setApplication] = useState<NulogyAppName>("supplier-collaboration");
 
@@ -159,42 +160,42 @@ export const WithACustomPrimaryLogo = () => {
   );
 };
 
-export const WithNavigationLogoWrapper = () => {
-  return (
-    <ApplicationFrame
-      navBar={
-        <Navigation
-          secondaryLogo={
-            <NavigationLogoLink href="/" aria-label="Custom Logo">
-              <NavigationLogo>
-                <CustomLogo2 />
-              </NavigationLogo>
-            </NavigationLogoLink>
-          }
-        />
-      }
-    >
-      <Page fullHeight>
-        <Flex flexDirection="column" gap="x2">
-          <Text>
-            Secondary logos are not styled, ensure setting an explicit <Code>width</Code> / <Code>height</Code> on the
-            passed <Code>ReactNode</Code> to prevent overflow, or using the <Code>NavigationLogo</Code> helper.
-          </Text>
-          <Text>
-            <Code>NavigationLogo</Code> component constrains logos to maximum <Code>184px</Code> width and{" "}
-            <Code>36px</Code> height by default to prevent overflow in the Navigation.
-          </Text>
+export const WithNavigationLogoWrapper = {
+  render: () => {
+    return (
+      <ApplicationFrame
+        navBar={
+          <Navigation
+            secondaryLogo={
+              <NavigationLogoLink href="/" aria-label="Custom Logo">
+                <NavigationLogo>
+                  <CustomLogo2 />
+                </NavigationLogo>
+              </NavigationLogoLink>
+            }
+          />
+        }
+      >
+        <Page fullHeight>
+          <Flex flexDirection="column" gap="x2">
+            <Text>
+              Secondary logos are not styled, ensure setting an explicit <Code>width</Code> / <Code>height</Code> on the
+              passed <Code>ReactNode</Code> to prevent overflow, or using the <Code>NavigationLogo</Code> helper.
+            </Text>
+            <Text>
+              <Code>NavigationLogo</Code> component constrains logos to maximum <Code>184px</Code> width and{" "}
+              <Code>36px</Code> height by default to prevent overflow in the Navigation.
+            </Text>
 
-          <Text>
-            You can adjust this by passing <Code>maxWidth</Code> and <Code>maxHeight</Code> props to the{" "}
-            <Code>NavigationLogo</Code> component.
-          </Text>
-        </Flex>
-      </Page>
-    </ApplicationFrame>
-  );
-};
+            <Text>
+              You can adjust this by passing <Code>maxWidth</Code> and <Code>maxHeight</Code> props to the{" "}
+              <Code>NavigationLogo</Code> component.
+            </Text>
+          </Flex>
+        </Page>
+      </ApplicationFrame>
+    );
+  },
 
-WithNavigationLogoWrapper.story = {
   name: "With NavigationLogo wrapper",
 };

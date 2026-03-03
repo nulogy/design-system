@@ -7,82 +7,82 @@ export default {
   title: "Components/CheckboxGroup",
 };
 
-export const _CheckboxGroup = () => (
-  <CheckboxGroup labelText="Setting Selection" name="settingSelection">
-    <Checkbox value="a" labelText="Option A" />
-    <Checkbox value="b" labelText="Option B" />
-    <Checkbox value="c" labelText="Option C" />
-  </CheckboxGroup>
-);
+export const _CheckboxGroup = {
+  render: () => (
+    <CheckboxGroup labelText="Setting Selection" name="settingSelection">
+      <Checkbox value="a" labelText="Option A" />
+      <Checkbox value="b" labelText="Option B" />
+      <Checkbox value="c" labelText="Option C" />
+    </CheckboxGroup>
+  ),
 
-_CheckboxGroup.story = {
   name: "CheckboxGroup",
 };
 
-export const CheckboxGroupWithAllProps = () => (
-  <CheckboxGroup
-    labelText="Setting Selection"
-    name="settingSelection"
-    helpText="Select a setting from the menu below:"
-    required
-    requirementText="(Required)"
-    hint="This is a hint"
-    defaultValue={["a"]}
-  >
-    <Checkbox value="a" labelText="Option A" />
-    <Checkbox value="b" labelText="Option B" />
-    <Checkbox value="c" labelText="Option C" />
-  </CheckboxGroup>
-);
+export const CheckboxGroupWithAllProps = {
+  render: () => (
+    <CheckboxGroup
+      labelText="Setting Selection"
+      name="settingSelection"
+      helpText="Select a setting from the menu below:"
+      required
+      requirementText="(Required)"
+      hint="This is a hint"
+      defaultValue={["a"]}
+    >
+      <Checkbox value="a" labelText="Option A" />
+      <Checkbox value="b" labelText="Option B" />
+      <Checkbox value="c" labelText="Option C" />
+    </CheckboxGroup>
+  ),
 
-CheckboxGroupWithAllProps.story = {
   name: "CheckboxGroup with all props",
 };
 
-export const WithErrorMessage = () => (
-  <CheckboxGroup
-    errorMessage="Please select an option"
-    labelText="Setting Selection"
-    name="settingSelection"
-    defaultValue={["a"]}
-  >
-    <Checkbox value="a" labelText="Option A" />
-    <Checkbox value="b" labelText="Option B" />
-    <Checkbox value="c" labelText="Option C" />
-  </CheckboxGroup>
-);
+export const WithErrorMessage = {
+  render: () => (
+    <CheckboxGroup
+      errorMessage="Please select an option"
+      labelText="Setting Selection"
+      name="settingSelection"
+      defaultValue={["a"]}
+    >
+      <Checkbox value="a" labelText="Option A" />
+      <Checkbox value="b" labelText="Option B" />
+      <Checkbox value="c" labelText="Option C" />
+    </CheckboxGroup>
+  ),
 
-WithErrorMessage.story = {
   name: "with error message",
 };
 
-export const WithErrorList = () => (
-  <CheckboxGroup
-    errorMessage="Please select an option"
-    errorList={errorList}
-    labelText="Setting Selection"
-    name="settingSelection"
-    defaultValue={["a"]}
-  >
-    <Checkbox value="a" labelText="Option A" />
-    <Checkbox value="b" labelText="Option B" />
-    <Checkbox value="c" labelText="Option C" />
-  </CheckboxGroup>
-);
+export const WithErrorList = {
+  render: () => (
+    <CheckboxGroup
+      errorMessage="Please select an option"
+      errorList={errorList}
+      labelText="Setting Selection"
+      name="settingSelection"
+      defaultValue={["a"]}
+    >
+      <Checkbox value="a" labelText="Option A" />
+      <Checkbox value="b" labelText="Option B" />
+      <Checkbox value="c" labelText="Option C" />
+    </CheckboxGroup>
+  ),
 
-WithErrorList.story = {
   name: "with error list",
 };
 
-export const SetToDisabled = () => (
-  <CheckboxGroup disabled labelText="Setting Selection" name="settingSelection" defaultValue={["a"]}>
-    <Checkbox value="a" labelText="Option A" />
-    <Checkbox value="b" labelText="Option B" />
-    <Checkbox value="c" labelText="Option C" />
-  </CheckboxGroup>
-);
+export const SetToDisabled = {
+  render: () => (
+    <CheckboxGroup disabled labelText="Setting Selection" name="settingSelection" defaultValue={["a"]}>
+      <Checkbox value="a" labelText="Option A" />
+      <Checkbox value="b" labelText="Option B" />
+      <Checkbox value="c" labelText="Option C" />
+    </CheckboxGroup>
+  ),
 
-SetToDisabled.story = {
   name: "Set to disabled",
 };
 

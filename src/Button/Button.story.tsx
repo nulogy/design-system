@@ -8,21 +8,19 @@ export default {
 };
 
 export const _Button = () => <Button>Create project</Button>;
-export const _PrimaryButton = () => <PrimaryButton>Create project</PrimaryButton>;
 
-_PrimaryButton.story = {
+export const _PrimaryButton = {
+  render: () => <PrimaryButton>Create project</PrimaryButton>,
   name: "PrimaryButton",
 };
 
-export const _DangerButton = () => <DangerButton>Delete project</DangerButton>;
-
-_DangerButton.story = {
+export const _DangerButton = {
+  render: () => <DangerButton>Delete project</DangerButton>,
   name: "DangerButton",
 };
 
-export const _QuietButton = () => <QuietButton>Create project</QuietButton>;
-
-_QuietButton.story = {
+export const _QuietButton = {
+  render: () => <QuietButton>Create project</QuietButton>,
   name: "QuietButton",
 };
 
@@ -49,39 +47,37 @@ export const WithDifferentSizes = () => (
   </Flex>
 );
 
-export const WithASelectedIcon = () => (
-  <>
-    <Button icon="add" iconSide="left" size="small" onClick={() => {}} disabled>
-      Create project
-    </Button>
-    <Button icon="add" iconSide="right">
-      Create project
-    </Button>
-  </>
-);
+export const WithASelectedIcon = {
+  render: () => (
+    <>
+      <Button icon="add" iconSide="left" size="small" onClick={() => {}} disabled>
+        Create project
+      </Button>
+      <Button icon="add" iconSide="right">
+        Create project
+      </Button>
+    </>
+  ),
 
-WithASelectedIcon.story = {
   name: "With a selected Icon",
 };
 
-export const SetToFullWidth = () => <PrimaryButton fullWidth>Create project</PrimaryButton>;
-
-SetToFullWidth.story = {
+export const SetToFullWidth = {
+  render: () => <PrimaryButton fullWidth>Create project</PrimaryButton>,
   name: "Set to full width",
 };
 
-export const SetToDisabled = () => <PrimaryButton disabled>Create project</PrimaryButton>;
-
-SetToDisabled.story = {
+export const SetToDisabled = {
+  render: () => <PrimaryButton disabled>Create project</PrimaryButton>,
   name: "Set to disabled",
 };
 
-export const AsALink = () => (
-  <PrimaryButton asLink href="/">
-    Create project
-  </PrimaryButton>
-);
+export const AsALink = {
+  render: () => (
+    <PrimaryButton asLink href="/">
+      Create project
+    </PrimaryButton>
+  ),
 
-AsALink.story = {
   name: "As a link",
 };

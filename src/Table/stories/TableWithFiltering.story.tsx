@@ -70,14 +70,12 @@ export default {
   title: "Components/Table/with filtering",
 };
 
-export const WithFiltering = () => <TableWithFilters />;
-
-WithFiltering.story = {
+export const WithFiltering = {
+  render: () => <TableWithFilters />,
   name: "with filtering",
 };
 
-export const WithFilteringAndPagination = () => <TableWithFilters rowsPerPage={4} />;
-
-WithFilteringAndPagination.story = {
+export const WithFilteringAndPagination = {
+  render: () => <TableWithFilters rowsPerPage={4} />,
   name: "with filtering and pagination",
 };

@@ -24,13 +24,13 @@ export default {
 
 export const _Card = () => <Card>I am a card.</Card>;
 
-export const CustomCard = () => (
-  <Card bg="black" color="white" borderRadius="small" p="x1">
-    I am a custom card.
-  </Card>
-);
+export const CustomCard = {
+  render: () => (
+    <Card bg="black" color="white" borderRadius="small" p="x1">
+      I am a custom card.
+    </Card>
+  ),
 
-CustomCard.story = {
   name: "Custom card",
 };
 
@@ -93,34 +93,36 @@ function AdvancedCard() {
   );
 }
 
-export const AdvancedUsage = () => {
-  return (
-    <ApplicationFrame
-      navBar={
-        <TopBar.Root>
-          <TopBar.BackLink href="/cycle-counts">Cycle counts</TopBar.BackLink>
-          <TopBar.PageTitle>Cycle count #3992</TopBar.PageTitle>
-          <TopBar.Menu>
-            {menuItems.map((props) => (
-              <TopBar.MenuItem key={props.title}>
-                <TopBar.MenuItemLink {...props} />
-              </TopBar.MenuItem>
+export const AdvancedUsage = {
+  render: () => {
+    return (
+      <ApplicationFrame
+        navBar={
+          <TopBar.Root>
+            <TopBar.BackLink href="/cycle-counts">Cycle counts</TopBar.BackLink>
+            <TopBar.PageTitle>Cycle count #3992</TopBar.PageTitle>
+            <TopBar.Menu>
+              {menuItems.map((props) => (
+                <TopBar.MenuItem key={props.title}>
+                  <TopBar.MenuItemLink {...props} />
+                </TopBar.MenuItem>
+              ))}
+            </TopBar.Menu>
+          </TopBar.Root>
+        }
+      >
+        <Page fullHeight>
+          <CardSet>
+            {[...Array(10)].map((_, i) => (
+              <AdvancedCard key={i} />
             ))}
-          </TopBar.Menu>
-        </TopBar.Root>
-      }
-    >
-      <Page fullHeight>
-        <CardSet>
-          {[...Array(10)].map((_, i) => (
-            <AdvancedCard key={i} />
-          ))}
-        </CardSet>
-      </Page>
-    </ApplicationFrame>
-  );
-};
+          </CardSet>
+        </Page>
+      </ApplicationFrame>
+    );
+  },
 
-AdvancedUsage.parameters = {
-  layout: "fullscreen",
+  parameters: {
+    layout: "fullscreen",
+  },
 };

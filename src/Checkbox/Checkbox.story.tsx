@@ -46,110 +46,117 @@ export default {
 };
 
 export const _Checkbox = () => <Checkbox p="x3" id="checkbox" labelText="I am a checkbox" />;
-export const Multiline = () => <Checkbox p="x3" id="checkbox" labelText="Lorem ipsum dolor sit amet consecutor" />;
-Multiline.decorators = [(story) => <div style={{ width: "200px" }}>{story()}</div>];
 
-export const SetToDefaultChecked = () => <Checkbox id="checkbox" defaultChecked labelText="I am checked by default" />;
+export const Multiline = {
+  render: () => <Checkbox p="x3" id="checkbox" labelText="Lorem ipsum dolor sit amet consecutor" />,
+  decorators: [(Story) => <div style={{ width: "200px" }}><Story /></div>],
+};
 
-SetToDefaultChecked.story = {
+export const SetToDefaultChecked = {
+  render: () => <Checkbox id="checkbox" defaultChecked labelText="I am checked by default" />,
   name: "Set to defaultChecked",
 };
 
-export const SetToDisabled = () => (
-  <>
-    <Checkbox id="checkbox-1" disabled labelText="I am disabled" />
-    <Checkbox id="checkbox-2" checked disabled labelText="I am disabled" />
-  </>
-);
+export const SetToDisabled = {
+  render: () => (
+    <>
+      <Checkbox id="checkbox-1" disabled labelText="I am disabled" />
+      <Checkbox id="checkbox-2" checked disabled labelText="I am disabled" />
+    </>
+  ),
 
-SetToDisabled.story = {
   name: "Set to disabled",
 };
 
-export const CheckboxWithNoLabel = () => (
-  <>
-    <Checkbox />
-  </>
-);
+export const CheckboxWithNoLabel = {
+  render: () => (
+    <>
+      <Checkbox />
+    </>
+  ),
 
-CheckboxWithNoLabel.story = {
   name: "Checkbox with no label",
 };
 
-export const SetToError = () => (
-  <>
-    <Checkbox id="checkbox" error labelText="I am error" />
-    <Checkbox id="checkbox" defaultChecked error labelText="I am error" />
-  </>
-);
+export const SetToError = {
+  render: () => (
+    <>
+      <Checkbox id="checkbox" error labelText="I am error" />
+      <Checkbox id="checkbox" defaultChecked error labelText="I am error" />
+    </>
+  ),
 
-SetToError.story = {
   name: "Set to error",
 };
 
-export const SetToRequired = () => (
-  <>
-    <Checkbox id="checkbox" labelText="I am a checkbox" required />
-  </>
-);
+export const SetToRequired = {
+  render: () => (
+    <>
+      <Checkbox id="checkbox" labelText="I am a checkbox" required />
+    </>
+  ),
 
-SetToRequired.story = {
   name: "Set to required",
 };
 
-export const Indeterminate = () => (
-  <>
-    <Checkbox id="checkbox" labelText="I am an indeterminate checkbox" readOnly checked indeterminate />
-    <Checkbox
-      id="checkbox"
-      labelText="I am a unchecked indeterminate checkbox"
-      readOnly
-      checked={false}
-      indeterminate
-    />
-    <Checkbox
-      id="checkbox"
-      labelText="I am an indeterminate checkbox with an error"
-      readOnly
-      checked
-      indeterminate
-      error
-    />
-    <Checkbox
-      id="checkbox"
-      labelText="I am a disabled indeterminate checkbox"
-      readOnly
-      checked
-      indeterminate
-      disabled
-    />
-  </>
-);
+export const Indeterminate = {
+  render: () => (
+    <>
+      <Checkbox id="checkbox" labelText="I am an indeterminate checkbox" readOnly checked indeterminate />
+      <Checkbox
+        id="checkbox"
+        labelText="I am a unchecked indeterminate checkbox"
+        readOnly
+        checked={false}
+        indeterminate
+      />
+      <Checkbox
+        id="checkbox"
+        labelText="I am an indeterminate checkbox with an error"
+        readOnly
+        checked
+        indeterminate
+        error
+      />
+      <Checkbox
+        id="checkbox"
+        labelText="I am a disabled indeterminate checkbox"
+        readOnly
+        checked
+        indeterminate
+        disabled
+      />
+    </>
+  ),
 
-Indeterminate.story = {
   name: "indeterminate",
 };
 
-export const WithState = () => <CheckboxWithState />;
-
-WithState.story = {
+export const WithState = {
+  render: () => <CheckboxWithState />,
   name: "With state",
 };
 
-export const UsingRefToControlFocus = () => {
-  const ref = useRef(null);
-  const handleClick = () => {
-    ref.current.focus();
-  };
+export const UsingRefToControlFocus = {
+  render: () => {
+    const ref = useRef(null);
+    const handleClick = () => {
+      ref.current.focus();
+    };
 
-  return (
-    <>
-      <Checkbox ref={ref} labelText="I am a unchecked indeterminate checkbox" readOnly checked={false} indeterminate />
-      <Button onClick={handleClick}>Focus the Input</Button>
-    </>
-  );
-};
+    return (
+      <>
+        <Checkbox
+          ref={ref}
+          labelText="I am a unchecked indeterminate checkbox"
+          readOnly
+          checked={false}
+          indeterminate
+        />
+        <Button onClick={handleClick}>Focus the Input</Button>
+      </>
+    );
+  },
 
-UsingRefToControlFocus.story = {
   name: "using ref to control focus",
 };

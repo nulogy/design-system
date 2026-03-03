@@ -1,5 +1,5 @@
 import React from "react";
-import { action } from "@storybook/addon-actions";
+import { action } from "storybook/actions";
 import { Input } from "../../Input";
 import { Columns } from "../Table.types";
 import { Table } from "..";

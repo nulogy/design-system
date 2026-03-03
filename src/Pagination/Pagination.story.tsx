@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { styled } from "styled-components";
-import { action } from "@storybook/addon-actions";
+import { action } from "storybook/actions";
 import { Switch, Switcher } from "../Switcher";
 import { Flex } from "../Flex";
 import { Heading1, Text } from "../Type";
@@ -29,19 +29,20 @@ export const _Pagination = () => (
   </Flex>
 );
 
-export const OnTheFirstPage = () => <Pagination currentPage={1} totalPages={10} />;
-
-OnTheFirstPage.story = {
+export const OnTheFirstPage = {
+  render: () => <Pagination currentPage={1} totalPages={10} />,
   name: "on the first page",
 };
 
-export const OnTheLastPage = () => <Pagination currentPage={10} totalPages={10} />;
-
-OnTheLastPage.story = {
+export const OnTheLastPage = {
+  render: () => <Pagination currentPage={10} totalPages={10} />,
   name: "on the last page",
 };
 
-export const WithLessThan5Pages = () => <Pagination currentPage={3} totalPages={4} />;
+export const WithLessThan5Pages = {
+  render: () => <Pagination currentPage={3} totalPages={4} />,
+  name: "with less than 5 pages",
+};
 
 const AccentedRange = styled.input.attrs({ type: "range" })`
   accent-color: ${({ theme }) => theme.colors.darkBlue};
@@ -103,10 +104,6 @@ export const CustomMaxVisiblePages = () => {
       />
     </Flex>
   );
-};
-
-WithLessThan5Pages.story = {
-  name: "with less than 5 pages",
 };
 
 export function ScrollAfterPagination() {

@@ -1,5 +1,5 @@
 import React from "react";
-import { action } from "@storybook/addon-actions";
+import { action } from "storybook/actions";
 import { Table } from "..";
 import { Box, Text } from "../..";
 
@@ -75,30 +75,30 @@ export default {
   title: "Components/Table/with expandable rows",
 };
 
-export const WithExpandableRows = () => (
-  <Table
-    columns={columns}
-    rows={rowDataWithExpandable}
-    hasExpandableRows
-    onRowExpansionChange={action("toggled expand")}
-  />
-);
+export const WithExpandableRows = {
+  render: () => (
+    <Table
+      columns={columns}
+      rows={rowDataWithExpandable}
+      hasExpandableRows
+      onRowExpansionChange={action("toggled expand")}
+    />
+  ),
 
-WithExpandableRows.story = {
   name: "with expandable rows",
 };
 
-export const WithRowsExpandedByDefault = () => (
-  <Table
-    columns={columns}
-    rows={rowDataWithExpandable}
-    hasExpandableRows
-    expandedRows={["2019-10-04", "2019-10-22"]}
-    keyField="date"
-    onRowSelectionChange={action("row selection changed")}
-  />
-);
+export const WithRowsExpandedByDefault = {
+  render: () => (
+    <Table
+      columns={columns}
+      rows={rowDataWithExpandable}
+      hasExpandableRows
+      expandedRows={["2019-10-04", "2019-10-22"]}
+      keyField="date"
+      onRowSelectionChange={action("row selection changed")}
+    />
+  ),
 
-WithRowsExpandedByDefault.story = {
   name: "with rows expanded by default",
 };

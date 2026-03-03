@@ -6,14 +6,14 @@ export default {
   title: "Components/Overlay",
 };
 
-export const LightDefault = () => (
-  <>
-    <Text>Background content</Text>
-    <Overlay>Overlay content</Overlay>
-  </>
-);
+export const LightDefault = {
+  render: () => (
+    <>
+      <Text>Background content</Text>
+      <Overlay>Overlay content</Overlay>
+    </>
+  ),
 
-LightDefault.story = {
   name: "Light (default)",
 };
 

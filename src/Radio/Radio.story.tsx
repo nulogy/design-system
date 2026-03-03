@@ -1,6 +1,6 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import React, { useRef } from "react";
-import { action } from "@storybook/addon-actions";
+import { action } from "storybook/actions";
 import { Radio, Button } from "../index";
 
 export default {
