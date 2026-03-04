@@ -138,9 +138,7 @@ export const OpenByDefault: Story = {
     await step("close button dismisses the sidebar", async () => {
       const canvas = within(canvasElement);
       await userEvent.click(canvas.getByLabelText("Close"));
-      await waitFor(() =>
-        expect(canvasElement.querySelector("[data-testid='sidebar-overlay']")).toBeNull()
-      );
+      await waitFor(() => expect(canvasElement.querySelector("[data-testid='sidebar-overlay']")).toBeNull());
     });
   },
   render: () => {
