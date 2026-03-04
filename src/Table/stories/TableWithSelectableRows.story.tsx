@@ -82,7 +82,9 @@ export const WithSelectableRows = {
     await step("can select all rows using the header checkbox", async () => {
       const tableHead = canvasElement.querySelector("[data-testid='table-head']") as HTMLElement;
       await userEvent.click(within(tableHead).getByTestId("visual-checkbox"));
-      const headerInput = canvasElement.querySelector("[data-testid='table-head'] [type='checkbox']") as HTMLInputElement;
+      const headerInput = canvasElement.querySelector(
+        "[data-testid='table-head'] [type='checkbox']"
+      ) as HTMLInputElement;
       await expect(headerInput).toBeChecked();
     });
   },
