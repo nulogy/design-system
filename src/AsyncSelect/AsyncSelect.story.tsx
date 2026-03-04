@@ -88,7 +88,6 @@ export const Multiselect = {
       loadOptions={loadMatchingProvinces}
     />
   ),
-  name: "Multiselect",
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
     await step("can select multiple values", async () => {
