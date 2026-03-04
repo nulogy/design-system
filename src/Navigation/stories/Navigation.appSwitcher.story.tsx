@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { expect, screen, userEvent, waitFor, within } from "storybook/test";
+import { expect, screen, waitFor } from "storybook/test";
 import useConditionalAutoClick from "../../utils/testing/useConditionalAutoClick";
 import Navigation from "../Navigation";
 import { ApplicationFrame, Page } from "../../Layout";
@@ -64,8 +64,7 @@ const AllAppsComponent = () => {
 export const AllApps = {
   render: () => <AllAppsComponent />,
   name: "All Apps",
-  play: async ({ canvasElement, step }) => {
-    const canvas = within(canvasElement);
+  play: async ({ canvasElement: _canvasElement, step }) => {
     await step("auto-opens the app switcher", async () => {
       await waitFor(() => expect(screen.getByText("Production Scheduling")).toBeVisible(), { timeout: 3000 });
     });

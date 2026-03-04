@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { expect, screen, userEvent, waitFor, within } from "storybook/test";
+import { expect, screen, userEvent, within } from "storybook/test";
 import { action } from "storybook/actions";
 
 import { Button, PrimaryButton } from "..";
