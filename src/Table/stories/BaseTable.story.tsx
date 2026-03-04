@@ -1,6 +1,7 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { action } from "storybook/actions";
+import { expect, within } from "storybook/test";
 import { Box, DropdownButton, DropdownMenu, Button, Text, Flex } from "../..";
 import { getMockRows, mockColumns } from "../Table.mock-utils";
 import { Columns } from "../Table.types";
@@ -345,6 +346,21 @@ export const WithLotsOfRowsAndColumns: Story = {
     loading: {
       control: { type: "boolean" },
     },
+  },
+};
+
+export const WithLoading: Story = {
+  args: {
+    columns,
+    rows: rowData,
+    loading: true,
+  },
+  name: "with loading state",
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await expect(canvas.getByText("Loading...")).toBeInTheDocument();
+    const rows = canvasElement.querySelectorAll("tbody tr");
+    await expect(rows).toHaveLength(1);
   },
 };
 
