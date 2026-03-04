@@ -29,15 +29,6 @@ jobs:
           cache: "pnpm"
           node-version-file: ".tool-versions"
 
-      - name: Cache Cypress
-        uses: actions/cache@v5
-        id: cache-cypress
-        with:
-          path: ~/.cache/Cypress
-          key: ${{ runner.os }}-cypress-${{ hashFiles('pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-cypress-
-
       - name: Install dependencies
         run: pnpm install
 
@@ -65,15 +56,6 @@ jobs:
           cache: "pnpm"
           node-version-file: ".tool-versions"
 
-      - name: Cache Cypress
-        uses: actions/cache@v5
-        id: cache-cypress
-        with:
-          path: ~/.cache/Cypress
-          key: ${{ runner.os }}-cypress-${{ hashFiles('pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-cypress-
-
       - name: Install dependencies
         run: pnpm install
 
@@ -82,6 +64,10 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
+    container:
+      # Make sure to grab the latest version of the Playwright image
+      # https://playwright.dev/docs/docker#pull-the-image
+      image: mcr.microsoft.com/playwright:v1.52.0-noble
 
     steps:
       - name: Checkout
@@ -98,20 +84,8 @@ jobs:
           cache: "pnpm"
           node-version-file: ".tool-versions"
 
-      - name: Cache Cypress
-        uses: actions/cache@v5
-        id: cache-cypress
-        with:
-          path: ~/.cache/Cypress
-          key: ${{ runner.os }}-cypress-${{ hashFiles('pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-cypress-
-
       - name: Install dependencies
         run: pnpm install
 
-      - name: Vitest
-        run: pnpm test:components
-
-      - name: Cypress
-        run: pnpm test:cypress
+      - name: Test
+        run: pnpm test
