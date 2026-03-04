@@ -170,8 +170,6 @@ export const WithTooltip = {
       </Flex>
     );
   },
-
-  name: "With Tooltip",
 };
 
 export const InsideAModal = {
