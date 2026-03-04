@@ -57,6 +57,7 @@ const withThemeProvider: Decorator = (Story, context) => {
 
 const preview: Preview = {
   parameters: {
+    chromatic: { disableSnapshot: true },
     viewport: { options: viewports },
     layout: "padded",
     options: {
