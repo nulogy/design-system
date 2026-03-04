@@ -1,5 +1,5 @@
 import React from "react";
-import { expect, screen, userEvent, waitFor, within } from "storybook/test";
+import { expect, screen, waitFor } from "storybook/test";
 import { BrowserRouter, Link } from "react-router-dom";
 import { Flex } from "../../Flex";
 import { Input } from "../../Input";
@@ -89,8 +89,7 @@ const BasicUsageComponent = () => {
 export const BasicUsage = {
   render: () => <BasicUsageComponent />,
   name: "Basic Usage",
-  play: async ({ canvasElement, step }) => {
-    const canvas = within(canvasElement);
+  play: async ({ canvasElement: _canvasElement, step }) => {
     await step("auto-opens the user menu", async () => {
       await waitFor(() => expect(screen.getByText("Haider Alshamma")).toBeVisible(), { timeout: 3000 });
     });

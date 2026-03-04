@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { expect, screen, userEvent, waitFor } from "storybook/test";
+import { expect, screen, waitFor } from "storybook/test";
 import { Input } from "../../Input";
 import { Navigation } from "..";
 import { ApplicationFrame, Page, Sidebar } from "../../Layout";
