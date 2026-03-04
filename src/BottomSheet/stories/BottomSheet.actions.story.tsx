@@ -36,7 +36,7 @@ export const WithAHiddenCloseButton = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
     await step("is open initially without a close button", async () => {
-      await expect(screen.getByRole("dialog")).toBeVisible();
+      await waitFor(() => expect(screen.getByRole("dialog")).toBeVisible());
       await expect(screen.queryByText("Close")).not.toBeInTheDocument();
     });
     await step("can be closed using primary action", async () => {

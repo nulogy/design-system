@@ -28,7 +28,7 @@ export const BasicUsage = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
     await step("is open initially", async () => {
-      await expect(screen.getByRole("dialog")).toBeVisible();
+      await waitFor(() => expect(screen.getByRole("dialog")).toBeVisible());
     });
     await step("closes when Close button is clicked", async () => {
       await userEvent.click(screen.getByText("Close"));
