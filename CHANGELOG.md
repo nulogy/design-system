@@ -1,3 +1,10 @@
+## [16.0.4](https://github.com/nulogy/design-system/compare/v16.0.3...v16.0.4) (2026-03-04)
+
+
+### Bug Fixes
+
+* **AsyncSelect:** update Apollo Client imports for v4 compatibility ([0f0ea79](https://github.com/nulogy/design-system/commit/0f0ea7932fa5aea97be592e249b57dbe9203fb1c))
+
 ## [16.0.3](https://github.com/nulogy/design-system/compare/v16.0.2...v16.0.3) (2026-03-04)
 
 
