@@ -1,3 +1,14 @@
+## [16.0.3](https://github.com/nulogy/design-system/compare/v16.0.2...v16.0.3) (2026-03-04)
+
+
+### Bug Fixes
+
+* remove unused imports in story play functions ([bc0ec30](https://github.com/nulogy/design-system/commit/bc0ec308bb97422738e36b2856e6c29fcb268b09))
+* replace Playwright Docker container with explicit browser install in CI ([8878689](https://github.com/nulogy/design-system/commit/8878689fd7aa613b5926f1533cd382d18ed8492c))
+* Resolve some lint warnings ([45a1994](https://github.com/nulogy/design-system/commit/45a1994335a866371ae9dabde58a8ccd4517f4e6))
+* Workflows have been fixed ([4c2120b](https://github.com/nulogy/design-system/commit/4c2120bd93d6b54e0cc8b7d8383b3315d889c839))
+* wrap initial toBeVisible assertions in waitFor for BottomSheet stories ([5e29b1c](https://github.com/nulogy/design-system/commit/5e29b1c06446c7d6b96da4054f844199ca2b6330))
+
 ## [16.0.2](https://github.com/nulogy/design-system/compare/v16.0.1...v16.0.2) (2026-03-03)
 
 
