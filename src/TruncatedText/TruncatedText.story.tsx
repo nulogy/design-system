@@ -21,9 +21,7 @@ export const _TruncatedText = {
     await step("shows a tooltip with full content on hover", async () => {
       await userEvent.hover(canvas.getByTestId("truncated-text"));
       await waitFor(() =>
-        expect(screen.getByRole("tooltip")).toHaveTextContent(
-          "Special instructions are provided for the shipment"
-        )
+        expect(screen.getByRole("tooltip")).toHaveTextContent("Special instructions are provided for the shipment")
       );
     });
   },

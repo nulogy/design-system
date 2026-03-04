@@ -196,9 +196,7 @@ export const InsideAModal = {
     });
     await step("shows a tooltip with the app name on hover", async () => {
       await userEvent.hover(screen.getByText("DQI"));
-      await waitFor(() =>
-        expect(screen.getByRole("tooltip")).toHaveTextContent("Digital Quality Inspection")
-      );
+      await waitFor(() => expect(screen.getByRole("tooltip")).toHaveTextContent("Digital Quality Inspection"));
     });
   },
 };

@@ -267,7 +267,9 @@ export const WithEverything: Story = {
     await step("saves row selections when navigating pages", async () => {
       const tableHead = canvasElement.querySelector("[data-testid='table-head']") as HTMLElement;
       await userEvent.click(within(tableHead).getByTestId("visual-checkbox"));
-      const headerInput = canvasElement.querySelector("[data-testid='table-head'] [type='checkbox']") as HTMLInputElement;
+      const headerInput = canvasElement.querySelector(
+        "[data-testid='table-head'] [type='checkbox']"
+      ) as HTMLInputElement;
       await expect(headerInput).toBeChecked();
       await userEvent.click(canvas.getByLabelText("Go to next results"));
       await userEvent.click(canvas.getByLabelText("Go to previous results"));
