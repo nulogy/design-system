@@ -30,10 +30,6 @@ pnpm test:components -- src/Button/Button.spec.tsx
 # Unit tests in watch mode
 pnpm test:components:watch
 
-# E2E tests (requires Storybook running on port 9999)
-pnpm start:storybook   # in one terminal
-pnpm test:cypress      # in another
-
 # Type check, lint, and format validation
 pnpm check
 
@@ -51,8 +47,7 @@ pnpm fix
 - **@radix-ui** — accessible primitives (Tooltip, NavigationMenu)
 - **i18next / react-i18next** — internationalization
 - **Vitest** + **React Testing Library** — unit tests
-- **Cypress** — E2E tests against Storybook
-- **Storybook 8** — component documentation and visual testing via Chromatic
+- **Storybook 10** — component documentation and visual testing via Chromatic
 
 ### Provider System
 

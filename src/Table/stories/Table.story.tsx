@@ -279,6 +279,19 @@ export const WithEverything: Story = {
 };
 
 export const WithOnHoverActions: Story = {
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("reveals row actions when mouse enters a row", async () => {
+      const rows = canvas.getAllByTestId("table-row");
+      await userEvent.hover(rows[0]);
+      await waitFor(() => expect(within(rows[0]).getByRole("button")).toBeInTheDocument());
+    });
+    await step("hides row actions when mouse leaves the row", async () => {
+      const rows = canvas.getAllByTestId("table-row");
+      await userEvent.unhover(rows[0]);
+      await waitFor(() => expect(within(rows[0]).queryByRole("button")).not.toBeInTheDocument());
+    });
+  },
   render: (args) => {
     const rowDataWithHovers = [
       {
