@@ -1,5 +1,6 @@
-import { gql, useLazyQuery } from "@apollo/client";
-import { MockedProvider } from "@apollo/client/testing";
+import { gql } from "@apollo/client";
+import { useLazyQuery } from "@apollo/client/react";
+import { MockedProvider } from "@apollo/client/testing/react";
 import React, { useCallback } from "react";
 import { AsyncSelect } from "../index";
 
@@ -42,7 +43,7 @@ const mocks = [
 ];
 
 const AsyncSelectWithApollo = () => {
-  const [getCountries, { data }] = useLazyQuery(GET_COUNTRIES);
+  const [getCountries, { data }] = useLazyQuery<{ countries: Country[] }>(GET_COUNTRIES);
 
   const loadOptions = useCallback(
     async (inputValue: string) => {
@@ -66,7 +67,7 @@ const AsyncSelectWithApollo = () => {
 };
 
 export const WithApolloClientExample = () => (
-  <MockedProvider mocks={mocks} addTypename={false}>
+  <MockedProvider mocks={mocks}>
     <AsyncSelectWithApollo />
   </MockedProvider>
 );
