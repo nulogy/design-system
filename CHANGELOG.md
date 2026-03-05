@@ -1,3 +1,16 @@
+# [16.1.0](https://github.com/nulogy/design-system/compare/v16.0.4...v16.1.0) (2026-03-05)
+
+
+### Bug Fixes
+
+* **Modal:** query dialog from document.body in play() test ([d152e53](https://github.com/nulogy/design-system/commit/d152e53c99d44dd81b41409ef331d148f0432e6f))
+
+
+### Features
+
+* **IconicButton:** replace react-popper-2 with CSS absolute positioning ([ae865da](https://github.com/nulogy/design-system/commit/ae865dab7e92c3522b853eb7bfaaf570a808e8ad))
+* **Modal:** migrate from react-modal to @radix-ui/react-dialog ([d5d63f5](https://github.com/nulogy/design-system/commit/d5d63f557a4e1fc6655be8620474c159212d4d33))
+
 ## [16.0.4](https://github.com/nulogy/design-system/compare/v16.0.3...v16.0.4) (2026-03-04)
 
 
