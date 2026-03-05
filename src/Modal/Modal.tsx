@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { styled, useTheme } from "styled-components";
 import * as Dialog from "@radix-ui/react-dialog";
 import { transparentize } from "polished";
@@ -104,7 +104,8 @@ function Modal({
     <Dialog.Root
       open={isOpen}
       onOpenChange={(open) => {
-        if (!open) onRequestClose?.();
+        if (open) onAfterOpen?.();
+        else onRequestClose?.();
       }}
     >
       <Dialog.Portal container={parentSelector?.()}>
@@ -129,7 +130,6 @@ function Modal({
             title={title}
             onRequestClose={onRequestClose}
             footerContent={footerContent}
-            onAfterOpen={onAfterOpen}
           >
             {children}
           </ModalWrapper>
@@ -146,7 +146,6 @@ function ModalWrapper({
   closeAriaLabel,
   children,
   footerContent,
-  onAfterOpen,
 }: {
   modalHasHeader: boolean;
   title: string;
@@ -154,14 +153,9 @@ function ModalWrapper({
   closeAriaLabel: string;
   children: React.ReactNode;
   footerContent: React.ReactNode;
-  onAfterOpen?: () => void;
 }) {
   const theme = useTheme();
   useScrollLock();
-
-  useEffect(() => {
-    onAfterOpen?.();
-  }, []);
 
   return (
     <>
