@@ -227,15 +227,16 @@ export const ExampleControlledModal: Story = {
   name: "example controlled modal",
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
+    const body = within(document.body);
 
     await userEvent.click(canvas.getByRole("button", { name: "Open Modal" }));
 
-    const dialog = await canvas.findByRole("dialog");
+    const dialog = await body.findByRole("dialog");
     expect(dialog).toBeVisible();
 
     await userEvent.keyboard("{Escape}");
 
-    expect(canvas.queryByRole("dialog")).not.toBeInTheDocument();
+    expect(body.queryByRole("dialog")).not.toBeInTheDocument();
   },
 };
 
