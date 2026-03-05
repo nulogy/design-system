@@ -86,6 +86,10 @@ Testing is **Storybook-first**. The three layers are:
 
 Test IDs must be preserved across refactors to avoid breaking downstream consuming apps.
 
+## Before Committing
+
+Always run `pnpm check && pnpm test` before creating a commit. The pre-push hook enforces this, so failing to run it locally will block the push. Run `pnpm fix` first to auto-correct any lint or formatting issues.
+
 ## Releases & Commits
 
 Uses [Conventional Commits](https://www.conventionalcommits.org) with semantic-release for automated versioning.
