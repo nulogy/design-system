@@ -51,14 +51,14 @@ const StyledDialogContent = styled(Dialog.Content)<{ $maxWidth?: string }>(({ th
   MozOsxFontSmoothing: "grayscale",
 }));
 
-type ModalProps = {
+interface ModalProps {
   children?: React.ReactNode;
   isOpen?: boolean;
   title?: string;
   ariaLabel?: string;
-  onRequestClose?: (...args: any[]) => any;
+  onRequestClose?: () => void;
   closeAriaLabel?: string;
-  onAfterOpen?: (...args: any[]) => any;
+  onAfterOpen?: () => void;
   shouldFocusAfterRender?: boolean;
   shouldReturnFocusAfterClose?: boolean;
   ariaDescribedBy?: string;
@@ -74,8 +74,8 @@ type ModalProps = {
   /** @deprecated No-op. Radix handles aria hiding automatically. */
   ariaHideApp?: boolean;
   footerContent?: React.ReactNode;
-  parentSelector?: (...args: any) => HTMLElement;
-};
+  parentSelector?: () => HTMLElement;
+}
 
 function Modal({
   isOpen = true,
@@ -150,11 +150,11 @@ function ModalWrapper({
 }: {
   modalHasHeader: boolean;
   title: string;
-  onRequestClose: (...args: any[]) => any;
+  onRequestClose: () => void;
   closeAriaLabel: string;
   children: React.ReactNode;
   footerContent: React.ReactNode;
-  onAfterOpen?: (...args: any[]) => any;
+  onAfterOpen?: () => void;
 }) {
   const theme = useTheme();
   useScrollLock();
@@ -183,7 +183,7 @@ function ModalWrapper({
   );
 }
 
-Modal.setAppElement = (_appElement?: any) => {
+Modal.setAppElement = (_appElement?: string | HTMLElement) => {
   console.warn(
     "[NDS] Modal.setAppElement() is deprecated and has no effect. " +
       "The Modal component now uses @radix-ui/react-dialog, which handles aria-modal automatically."
