@@ -16,42 +16,40 @@ const StyledDialogOverlay = styled(Dialog.Overlay)(({ theme }) => ({
   zIndex: theme.zIndices.overlay,
 }));
 
-const StyledDialogContent = styled(Dialog.Content)<{ $maxWidth?: string }>(
-  ({ theme, $maxWidth }) => ({
-    "&:focus": {
-      outline: "none",
-    },
-    display: "flex",
-    flexDirection: "column",
-    position: "fixed",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    backgroundColor: theme.colors.white,
-    borderRadius: theme.radii.medium,
-    boxShadow: theme.shadows.large,
-    width: `calc(100% - ${theme.space.x4})`,
-    maxWidth: $maxWidth,
-    maxHeight: `calc(100vh - ${theme.space.x8})`,
-    height: "auto",
-    overflow: "hidden",
-    padding: 0,
-    zIndex: theme.zIndices.overlay,
-    [`@media only screen and (max-width: ${theme.breakpoints.small})`]: {
-      maxWidth: "100%",
-      width: "100%",
-    },
-    "*": {
-      boxSizing: "border-box",
-    },
-    color: theme.colors.black,
-    fontFamily: theme.fonts.base,
-    fontSize: theme.fontSizes.base,
-    lineHeight: theme.lineHeights.base,
-    WebkitFontSmoothing: "antialiased",
-    MozOsxFontSmoothing: "grayscale",
-  })
-);
+const StyledDialogContent = styled(Dialog.Content)<{ $maxWidth?: string }>(({ theme, $maxWidth }) => ({
+  "&:focus": {
+    outline: "none",
+  },
+  display: "flex",
+  flexDirection: "column",
+  position: "fixed",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  backgroundColor: theme.colors.white,
+  borderRadius: theme.radii.medium,
+  boxShadow: theme.shadows.large,
+  width: `calc(100% - ${theme.space.x4})`,
+  maxWidth: $maxWidth,
+  maxHeight: `calc(100vh - ${theme.space.x8})`,
+  height: "auto",
+  overflow: "hidden",
+  padding: 0,
+  zIndex: theme.zIndices.overlay,
+  [`@media only screen and (max-width: ${theme.breakpoints.small})`]: {
+    maxWidth: "100%",
+    width: "100%",
+  },
+  "*": {
+    boxSizing: "border-box",
+  },
+  color: theme.colors.black,
+  fontFamily: theme.fonts.base,
+  fontSize: theme.fontSizes.base,
+  lineHeight: theme.lineHeights.base,
+  WebkitFontSmoothing: "antialiased",
+  MozOsxFontSmoothing: "grayscale",
+}));
 
 type ModalProps = {
   children?: React.ReactNode;
@@ -103,7 +101,12 @@ function Modal({
 }: ModalProps) {
   const modalHasHeader = Boolean(onRequestClose || title);
   return (
-    <Dialog.Root open={isOpen} onOpenChange={(open) => { if (!open) onRequestClose?.(); }}>
+    <Dialog.Root
+      open={isOpen}
+      onOpenChange={(open) => {
+        if (!open) onRequestClose?.();
+      }}
+    >
       <Dialog.Portal container={parentSelector?.()}>
         <StyledDialogOverlay />
         <StyledDialogContent
@@ -113,8 +116,12 @@ function Modal({
           aria-describedby={ariaDescribedBy}
           className={className}
           id={id}
-          onOpenAutoFocus={(e) => { if (!shouldFocusAfterRender) e.preventDefault(); }}
-          onCloseAutoFocus={(e) => { if (!shouldReturnFocusAfterClose) e.preventDefault(); }}
+          onOpenAutoFocus={(e) => {
+            if (!shouldFocusAfterRender) e.preventDefault();
+          }}
+          onCloseAutoFocus={(e) => {
+            if (!shouldReturnFocusAfterClose) e.preventDefault();
+          }}
         >
           <ModalWrapper
             closeAriaLabel={closeAriaLabel}
