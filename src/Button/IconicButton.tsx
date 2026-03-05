@@ -1,7 +1,6 @@
 import React from "react";
 import { styled } from "styled-components";
 import { space, SpaceProps, variant } from "styled-system";
-import { Manager, Reference, Popper } from "react-popper-2";
 import { transparentize } from "polished";
 import icons from "@nulogy/icons";
 import { IconName } from "@nulogy/icons";
@@ -36,7 +35,7 @@ const IconWrapper = styled.span<{ size: string }>(({ theme, size }) => ({
 
 const HoverText = styled.div(({ theme }) => ({
   whiteSpace: "nowrap",
-  ontSize: theme.fontSizes.small,
+  fontSize: theme.fontSizes.small,
   lineHeight: theme.lineHeights.smallTextCompressed,
   color: theme.colors.whiteGrey,
   backgroundColor: transparentize(0.15, theme.colors.blackBlue),
@@ -44,6 +43,11 @@ const HoverText = styled.div(({ theme }) => ({
   marginTop: theme.space.half,
   padding: `${theme.space.half} ${theme.space.x1}`,
   pointerEvents: "none",
+  position: "absolute",
+  top: "100%",
+  left: "50%",
+  transform: "translateX(-50%)",
+  zIndex: 1,
 }));
 
 const WrapperButton = styled.button<IconicButtonProps>(
@@ -139,36 +143,10 @@ const IconicButton = React.forwardRef<HTMLButtonElement, IconicButtonProps>(
         variant={componentVariant}
         {...props}
       >
-        <Manager>
-          <Reference>
-            {({ ref }) => (
-              <IconWrapper ref={ref} size={iconSize}>
-                <Icon size={iconSize} icon={icon} color={color} />
-              </IconWrapper>
-            )}
-          </Reference>
-          <Popper
-            placement="bottom"
-            modifiers={[
-              {
-                name: "preventOverflow",
-                enabled: true,
-                options: {
-                  padding: 8,
-                  rootBoundary: "viewport",
-                },
-              },
-            ]}
-          >
-            {({ ref, style }) =>
-              labelHidden || tooltip ? (
-                <HoverText ref={ref} style={style}>
-                  {tooltip ? tooltip : children}
-                </HoverText>
-              ) : null
-            }
-          </Popper>
-        </Manager>
+        <IconWrapper size={iconSize}>
+          <Icon size={iconSize} icon={icon} color={color} />
+        </IconWrapper>
+        {(labelHidden || tooltip) && <HoverText>{tooltip ?? children}</HoverText>}
         {children &&
           !labelHidden &&
           (typeof children === "string" || typeof children === "number" ? (
