@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
-import { styled, ThemeContext, CSSObject, useTheme } from "styled-components";
-import ReactModal from "react-modal";
+import React, { useEffect } from "react";
+import { styled, useTheme } from "styled-components";
+import * as Dialog from "@radix-ui/react-dialog";
 import { transparentize } from "polished";
 import { Heading2 } from "../Type";
 import { useScrollLock } from "../utils/useScrollLock";
@@ -9,51 +9,43 @@ import ModalFooter from "./ModalFooter";
 import ModalHeader from "./ModalHeader";
 import ModalCloseButton from "./ModalCloseButton";
 
-const overlayStyle = (theme) => ({
+const StyledDialogOverlay = styled(Dialog.Overlay)(({ theme }) => ({
   position: "fixed",
-  top: 0,
-  left: 0,
-  right: 0,
-  bottom: 0,
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
+  inset: 0,
   backgroundColor: transparentize(0.5, theme.colors.blackBlue),
   zIndex: theme.zIndices.overlay,
-});
+}));
 
-const StyledReactModal = styled(ReactModal)(
-  ({ maxWidth }) => ({
-    maxWidth,
-  }),
-  ({ theme }): CSSObject => ({
+const StyledDialogContent = styled(Dialog.Content)<{ $maxWidth?: string }>(
+  ({ theme, $maxWidth }) => ({
     "&:focus": {
       outline: "none",
     },
     display: "flex",
     flexDirection: "column",
-    position: "relative",
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
+    position: "fixed",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
     backgroundColor: theme.colors.white,
     borderRadius: theme.radii.medium,
     boxShadow: theme.shadows.large,
-    border: undefined,
-    width: "100%",
-    height: "auto",
+    width: `calc(100% - ${theme.space.x4})`,
+    maxWidth: $maxWidth,
     maxHeight: `calc(100vh - ${theme.space.x8})`,
-    margin: `0px ${theme.space.x2}`,
+    height: "auto",
+    overflow: "hidden",
     padding: 0,
+    zIndex: theme.zIndices.overlay,
     [`@media only screen and (max-width: ${theme.breakpoints.small})`]: {
-      width: "100%",
       maxWidth: "100%",
+      width: "100%",
     },
     "*": {
       boxSizing: "border-box",
     },
     color: theme.colors.black,
+    fontFamily: theme.fonts.base,
     fontSize: theme.fontSizes.base,
     lineHeight: theme.lineHeights.base,
     WebkitFontSmoothing: "antialiased",
@@ -73,11 +65,15 @@ type ModalProps = {
   shouldReturnFocusAfterClose?: boolean;
   ariaDescribedBy?: string;
   maxWidth?: string;
+  /** @deprecated No-op. Radix handles portal class automatically. */
   portalClassName?: string;
+  /** @deprecated No-op. Use className for the modal content element. */
   overlayClassName?: string;
   className?: string;
   id?: string;
+  /** @deprecated No-op. Radix handles aria-modal automatically. */
   appElement?: JSX.Element;
+  /** @deprecated No-op. Radix handles aria hiding automatically. */
   ariaHideApp?: boolean;
   footerContent?: React.ReactNode;
   parentSelector?: (...args: any) => HTMLElement;
@@ -88,60 +84,51 @@ function Modal({
   shouldFocusAfterRender = true,
   shouldReturnFocusAfterClose = true,
   maxWidth = "624px",
-  ariaHideApp = true,
   children,
   title,
   onRequestClose,
   onAfterOpen,
   ariaLabel,
   ariaDescribedBy,
-  portalClassName,
-  overlayClassName,
   className,
   id,
-  appElement,
   footerContent,
   closeAriaLabel,
   parentSelector,
+  // accepted but unused (no-ops):
+  portalClassName: _portalClassName,
+  overlayClassName: _overlayClassName,
+  appElement: _appElement,
+  ariaHideApp: _ariaHideApp,
 }: ModalProps) {
   const modalHasHeader = Boolean(onRequestClose || title);
-  const themeContext = useContext(ThemeContext);
   return (
-    <StyledReactModal
-      maxWidth={maxWidth}
-      contentLabel={ariaLabel}
-      onRequestClose={onRequestClose}
-      onAfterOpen={onAfterOpen}
-      shouldFocusAfterRender={shouldFocusAfterRender}
-      shouldReturnFocusAfterClose={shouldReturnFocusAfterClose}
-      isOpen={isOpen}
-      portalClassName={portalClassName}
-      overlayClassName={overlayClassName}
-      className={className}
-      id={id}
-      aria={{
-        labelledby: title ? "modal-title" : undefined,
-        describedby: ariaDescribedBy,
-      }}
-      shouldCloseOnOverlayClick
-      shouldCloseOnEsc
-      style={{
-        overlay: overlayStyle(themeContext),
-      }}
-      appElement={appElement}
-      ariaHideApp={ariaHideApp}
-      parentSelector={parentSelector}
-    >
-      <ModalWrapper
-        closeAriaLabel={closeAriaLabel}
-        modalHasHeader={modalHasHeader}
-        title={title}
-        onRequestClose={onRequestClose}
-        footerContent={footerContent}
-      >
-        {children}
-      </ModalWrapper>
-    </StyledReactModal>
+    <Dialog.Root open={isOpen} onOpenChange={(open) => { if (!open) onRequestClose?.(); }}>
+      <Dialog.Portal container={parentSelector?.()}>
+        <StyledDialogOverlay />
+        <StyledDialogContent
+          $maxWidth={maxWidth}
+          aria-label={!title ? ariaLabel : undefined}
+          aria-labelledby={title ? "modal-title" : undefined}
+          aria-describedby={ariaDescribedBy}
+          className={className}
+          id={id}
+          onOpenAutoFocus={(e) => { if (!shouldFocusAfterRender) e.preventDefault(); }}
+          onCloseAutoFocus={(e) => { if (!shouldReturnFocusAfterClose) e.preventDefault(); }}
+        >
+          <ModalWrapper
+            closeAriaLabel={closeAriaLabel}
+            modalHasHeader={modalHasHeader}
+            title={title}
+            onRequestClose={onRequestClose}
+            footerContent={footerContent}
+            onAfterOpen={onAfterOpen}
+          >
+            {children}
+          </ModalWrapper>
+        </StyledDialogContent>
+      </Dialog.Portal>
+    </Dialog.Root>
   );
 }
 
@@ -152,6 +139,7 @@ function ModalWrapper({
   closeAriaLabel,
   children,
   footerContent,
+  onAfterOpen,
 }: {
   modalHasHeader: boolean;
   title: string;
@@ -159,9 +147,14 @@ function ModalWrapper({
   closeAriaLabel: string;
   children: React.ReactNode;
   footerContent: React.ReactNode;
+  onAfterOpen?: (...args: any[]) => any;
 }) {
   const theme = useTheme();
   useScrollLock();
+
+  useEffect(() => {
+    onAfterOpen?.();
+  }, []);
 
   return (
     <>
@@ -183,6 +176,11 @@ function ModalWrapper({
   );
 }
 
-Modal.setAppElement = ReactModal.setAppElement;
+Modal.setAppElement = (_appElement?: any) => {
+  console.warn(
+    "[NDS] Modal.setAppElement() is deprecated and has no effect. " +
+      "The Modal component now uses @radix-ui/react-dialog, which handles aria-modal automatically."
+  );
+};
 
 export default Modal;

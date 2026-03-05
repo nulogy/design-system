@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
+import { expect, userEvent, within } from "storybook/test";
 import React, { useState } from "react";
 import {
   Modal as NDSModal,
@@ -49,16 +50,6 @@ export const Default: Story = {
     footerContent: ModalButtons,
     onRequestClose: () => {},
   },
-};
-
-export const WithCloseButton: Story = {
-  args: {
-    children: "Content Content Content",
-    title: "Modal Title",
-    footerContent: ModalButtons,
-    onRequestClose: () => {},
-  },
-  name: "with close button",
 };
 
 export const WithScrollingContent: Story = {
@@ -234,6 +225,18 @@ export const WithParentSelector: Story = {
 export const ExampleControlledModal: Story = {
   render: () => <ModalExample />,
   name: "example controlled modal",
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    await userEvent.click(canvas.getByRole("button", { name: "Open Modal" }));
+
+    const dialog = await canvas.findByRole("dialog");
+    expect(dialog).toBeVisible();
+
+    await userEvent.keyboard("{Escape}");
+
+    expect(canvas.queryByRole("dialog")).not.toBeInTheDocument();
+  },
 };
 
 const ModalExample = () => {
