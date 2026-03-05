@@ -64,8 +64,7 @@ Each component lives in `src/[ComponentName]/` and typically contains:
 ```
 ComponentName/
 ├── ComponentName.tsx        # Component implementation
-├── ComponentName.story.tsx  # Storybook stories
-├── ComponentName.spec.tsx   # Unit tests (if needed)
+├── ComponentName.story.tsx  # Storybook stories (primary test surface)
 └── index.ts                 # Re-exports
 ```
 
@@ -77,11 +76,15 @@ Components use `styled-components` with styled-system utilities. Spacing props (
 
 ### Testing Conventions
 
-- **Unit tests**: Test event handlers and complex logic. Use React Testing Library.
-- **E2E tests**: Use Cypress + Storybook for interactive components.
-- **Visual tests**: Every story gets a visual snapshot via Chromatic.
-- **Selector priority**: Label → Placeholder → Text → Alt → Title → Role → TestID. Avoid class names and IDs.
-- Test IDs must be preserved across refactors to avoid breaking downstream consuming apps.
+Testing is **Storybook-first**. The three layers are:
+
+- **Storybook `play()` functions** — primary home for component interaction tests (clicks, keyboard, focus, visible state changes). Import from `storybook/test`: `expect`, `userEvent`, `waitFor`, `within`. Every interactive component should have at least one story with a `play()` function covering its key behaviour.
+- **Vitest specs** — reserved strictly for **pure utility functions** (no component rendering). If a test mounts a component, it belongs in a `play()` function instead. Spec files live alongside the utility they test.
+- **Chromatic visual snapshots** — every story is snapshotted automatically on CI.
+
+**Selector priority**: Label → Placeholder → Text → Alt → Title → Role → TestID. Avoid class names and IDs.
+
+Test IDs must be preserved across refactors to avoid breaking downstream consuming apps.
 
 ## Releases & Commits
 
