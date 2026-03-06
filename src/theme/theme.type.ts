@@ -100,6 +100,7 @@ interface Fonts {
   base: string;
   mono: string;
   sc: string;
+  jp: string;
 }
 
 type Borders = Array<any>;

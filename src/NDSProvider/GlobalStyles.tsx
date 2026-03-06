@@ -3,7 +3,11 @@ import { styled } from "styled-components";
 const GlobalStyles = styled.div<{
   locale?: string;
 }>(({ theme, locale }) => {
-  const fontFamily = locale === "zh_CN" ? theme.fonts.sc : theme.fonts.base;
+  const localeFontMap: Record<string, string> = {
+    zh_CN: theme.fonts.sc,
+    ja_JP: theme.fonts.jp,
+  };
+  const fontFamily = (locale && localeFontMap[locale]) || theme.fonts.base;
   return {
     color: theme.colors.black,
     fontFamily,
