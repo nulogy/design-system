@@ -103,8 +103,8 @@ importers:
         specifier: ^9.0.0
         version: 9.39.2
       '@nulogy/icons':
-        specifier: ^4.37.2
-        version: 4.38.1
+        specifier: ^4.39.0
+        version: 4.39.0
       '@semantic-release/changelog':
         specifier: ^6.0.2
         version: 6.0.3(semantic-release@24.2.5(typescript@5.9.3))
@@ -849,8 +849,8 @@ packages:
     resolution: {integrity: sha512-BTIhocbPBSrRmHxOAJFtR18oLhxTtAFDAvL8hY1S3iU8k+E60W/YFs4jrixGzQjMpF4qPXxIQHcjVD9dz1C2QA==}
     engines: {node: '>= 8'}
 
-  '@nulogy/icons@4.38.1':
-    resolution: {integrity: sha512-qDTUCuvc5RSxygXHw3QLt9duXdRYNUjNJIvGeKj9mUoi/5ekMhii9jrMO4EaGtfYLz3s1Ij4cqKAZQWw+zuwGA==}
+  '@nulogy/icons@4.39.0':
+    resolution: {integrity: sha512-NsgmVy7PJkq4F14pr5b3GJrqqRFJ7r5+7vrRxnsprPv690F5LOkXEQyZ/SzT3aEdo7+xEG4kRjF4R/QXlmQSug==}
 
   '@nulogy/tokens@6.1.1':
     resolution: {integrity: sha512-5UqGPU+/sgf40owem02HG6HnVMcG9PvG/p/jL8T3CJjnfJeVRHubFfcqJeWXlwMutgR2jOFnS/yfH/YUdfzzrw==}
@@ -6455,7 +6455,7 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.11.0
 
-  '@nulogy/icons@4.38.1': {}
+  '@nulogy/icons@4.39.0': {}
 
   '@nulogy/tokens@6.1.1': {}
 
