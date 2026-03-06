@@ -70,7 +70,7 @@
   "devDependencies": {
     "@apollo/client": "^4.1.6",
     "@eslint/js": "^9.0.0",
-    "@nulogy/icons": "^4.37.2",
+    "@nulogy/icons": "^4.39.0",
     "@semantic-release/changelog": "^6.0.2",
     "@semantic-release/commit-analyzer": "^9.0.2",
     "@semantic-release/git": "^10.0.1",
