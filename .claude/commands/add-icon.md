@@ -150,13 +150,24 @@ gh pr create \
   --repo nulogy/design-system \
   --base main \
   --title "feat: update @nulogy/icons to {newVersion}" \
-  --body "## Summary
+  --body "## Description
 
-Updates \`@nulogy/icons\` to \`{newVersion}\`.
+Updates \`@nulogy/icons\` to \`{newVersion}\`, adding the \`{camelCaseName}\` icon. {intended usage}
 
-**Adds:** \`{camelCaseName}\` icon — {intended usage}
+**nds-icons PR:** {link to merged nds-icons PR}
 
-**nds-icons PR:** {link to merged nds-icons PR}" \
+## Changes include
+
+- [ ] breaking change: a change that is not backwards-compatible and/or changes current functionality
+- [ ] fix: a non-breaking change that solves an issue
+- [x] feature: a non-breaking change that adds functionality
+- [ ] chore: contains no changes affecting the library, such as documentation or test updates
+
+## Feature checklist
+
+- [ ] Appropriate tests have been added
+- [x] Documentation has been updated
+- [x] Accessibility has been considered" \
   --reviewer nikola-nulogy \
   --reviewer jherdman
 ```
