@@ -16,7 +16,7 @@ const blurVariants = {
     WebkitBackdropFilter: "blur(8px)",
     transition: {
       duration: 0.5,
-      ease: "easeInOut",
+      ease: "easeInOut" as const,
     },
   },
   exit: {
@@ -24,7 +24,7 @@ const blurVariants = {
     WebkitBackdropFilter: "blur(0px)",
     transition: {
       duration: 0.5,
-      ease: "easeOut",
+      ease: "easeOut" as const,
     },
   },
 };

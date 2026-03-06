@@ -23,12 +23,12 @@ export const toastAnimationConfig = {
   animate: {
     opacity: 1,
     y: -30,
-    transition: { type: "spring", bounce: 0.4, duration: 0.6 },
+    transition: { type: "spring" as const, bounce: 0.4, duration: 0.6 },
   },
   exit: {
     y: 50,
     opacity: 0,
-    transition: { ease: "easeOut", duration: 0.15 },
+    transition: { ease: "easeOut" as const, duration: 0.15 },
   },
 };
 

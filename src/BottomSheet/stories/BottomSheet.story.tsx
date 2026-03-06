@@ -14,7 +14,7 @@ export default {
 
 export const BasicUsage = {
   render: () => {
-    const [isOpen, setIsOpen] = React.useState(true);
+    const [isOpen, setIsOpen] = React.useState(false);
 
     return (
       <>
@@ -27,14 +27,15 @@ export const BasicUsage = {
   },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
-    await step("is open initially", async () => {
+    await step("opens when trigger button is clicked", async () => {
+      await userEvent.click(canvas.getByText("Open Sheet"));
       await waitFor(() => expect(screen.getByRole("dialog")).toBeVisible());
     });
     await step("closes when Close button is clicked", async () => {
       await userEvent.click(screen.getByText("Close"));
       await waitFor(() => expect(screen.queryByRole("dialog")).not.toBeInTheDocument());
     });
-    await step("opens when trigger button is clicked", async () => {
+    await step("can be reopened", async () => {
       await userEvent.click(canvas.getByText("Open Sheet"));
       await waitFor(() => expect(screen.getByRole("dialog")).toBeVisible());
     });
