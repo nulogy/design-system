@@ -14,7 +14,7 @@ export default {
 
 export const WithAHiddenCloseButton = {
   render: () => {
-    const [isOpen, setIsOpen] = React.useState(true);
+    const [isOpen, setIsOpen] = React.useState(false);
 
     return (
       <>
@@ -35,7 +35,8 @@ export const WithAHiddenCloseButton = {
   name: "With a hidden close button",
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
-    await step("is open initially without a close button", async () => {
+    await step("opens when trigger button is clicked without a close button", async () => {
+      await userEvent.click(canvas.getByText("Open Sheet"));
       await waitFor(() => expect(screen.getByRole("dialog")).toBeVisible());
       await expect(screen.queryByText("Close")).not.toBeInTheDocument();
     });
@@ -43,7 +44,7 @@ export const WithAHiddenCloseButton = {
       await userEvent.click(screen.getByText("Submit"));
       await waitFor(() => expect(screen.queryByRole("dialog")).not.toBeInTheDocument());
     });
-    await step("opens when trigger button is clicked", async () => {
+    await step("can be reopened", async () => {
       await userEvent.click(canvas.getByText("Open Sheet"));
       await waitFor(() => expect(screen.getByRole("dialog")).toBeVisible());
     });

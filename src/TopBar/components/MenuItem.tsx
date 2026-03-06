@@ -8,7 +8,7 @@ const fadeInVariants = {
     y: -16,
     scale: 0.95,
     transition: {
-      ease: "easeOut",
+      ease: "easeOut" as const,
       duration: 0.25,
     },
   },
@@ -18,7 +18,7 @@ const fadeInVariants = {
     y: 0,
     scale: 1,
     transition: {
-      type: "spring",
+      type: "spring" as const,
       duration: 0.75,
     },
   },

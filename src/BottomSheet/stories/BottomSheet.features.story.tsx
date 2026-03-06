@@ -1,5 +1,5 @@
 import React from "react";
-import { expect, screen, userEvent, waitFor } from "storybook/test";
+import { expect, screen, userEvent, waitFor, within } from "storybook/test";
 import { Box } from "../../Box";
 import { Button, IconicButton } from "../../Button";
 import { Flex } from "../../Flex";
@@ -81,7 +81,7 @@ export const WithAnApplicationFrame = {
 
 export const DisableCloseOnOverlayClick = {
   render: () => {
-    const [isOpen, setIsOpen] = React.useState(true);
+    const [isOpen, setIsOpen] = React.useState(false);
     return (
       <Box>
         <Button onClick={() => setIsOpen(true)}>Open Sheet</Button>
@@ -102,13 +102,19 @@ export const DisableCloseOnOverlayClick = {
   },
 
   name: "Disable close on overlay click",
-  play: async ({ canvasElement: _canvasElement, step }) => {
-    await step("is open initially", async () => {
-      await waitFor(() => expect(screen.getByRole("dialog")).toBeVisible(), { timeout: 3000 });
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("opens when trigger button is clicked", async () => {
+      await userEvent.click(canvas.getByText("Open Sheet"));
+      await waitFor(() => expect(screen.getByRole("dialog")).toBeVisible());
     });
     await step("closes when close button is clicked", async () => {
       await userEvent.click(screen.getByText("Close"));
       await waitFor(() => expect(screen.queryByRole("dialog")).not.toBeInTheDocument());
+    });
+    await step("can be reopened", async () => {
+      await userEvent.click(canvas.getByText("Open Sheet"));
+      await waitFor(() => expect(screen.getByRole("dialog")).toBeVisible());
     });
   },
 };

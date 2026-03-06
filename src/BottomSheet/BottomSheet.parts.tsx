@@ -1,8 +1,18 @@
-import { DialogContentProps, DialogOverlayProps } from "@reach/dialog";
+import { DialogOverlayProps } from "@reach/dialog";
 import { AnimatePresence, AnimatePresenceProps } from "framer-motion";
 import React from "react";
 import { HeightProps, LayoutProps, MaxHeightProps, MaxWidthProps, SpaceProps, WidthProps } from "styled-system";
-import { Overlay, Sheet, ContentContainer, Footer, Header, Title, HelpText } from "./BottomSheet.styled";
+import {
+  OverlayDialog,
+  Overlay,
+  SheetDialog,
+  Sheet,
+  ContentContainer,
+  Footer,
+  Header,
+  Title,
+  HelpText,
+} from "./BottomSheet.styled";
 import { BottomSheetProvider, useBottomSheet } from "./BottomSheetProvider";
 
 const overlayVariants = {
@@ -17,7 +27,7 @@ const sheetVariants = {
 
 const transition = {
   duration: 0.5,
-  ease: [0.32, 0.72, 0, 1],
+  ease: [0.32, 0.72, 0, 1] as [number, number, number, number],
 };
 
 interface RootProps extends AnimatePresenceProps {
@@ -30,7 +40,7 @@ function Root({ isOpen, onClose, children, ...props }: RootProps) {
   return (
     <AnimatePresence {...props}>
       {isOpen && (
-        <BottomSheetProvider isOpen={isOpen} onClose={onClose}>
+        <BottomSheetProvider key="bottom-sheet" isOpen={isOpen} onClose={onClose}>
           {children}
         </BottomSheetProvider>
       )}
@@ -47,35 +57,34 @@ function OverlayPart({ closeOnClick, children, ...props }: OverlayPartProps) {
   const [isAnimationComplete, setAnimationComplete] = React.useState(false);
 
   return (
-    <Overlay
-      data-testid="bottom-sheet-overlay"
-      data-visible={isAnimationComplete ? true : undefined}
-      variants={overlayVariants}
-      initial="hidden"
-      animate="visible"
-      exit="hidden"
-      transition={transition}
-      onAnimationComplete={() => {
-        if (isOpen) {
-          setAnimationComplete(true);
-        }
-      }}
-      onClick={closeOnClick ? onClose : undefined}
-      isOpen={isOpen}
-      {...props}
-    >
-      {children}
-    </Overlay>
+    <OverlayDialog isOpen={isOpen} {...props}>
+      <Overlay
+        data-testid="bottom-sheet-overlay"
+        data-visible={isAnimationComplete ? true : undefined}
+        variants={overlayVariants}
+        initial="hidden"
+        animate="visible"
+        exit="hidden"
+        transition={transition}
+        onAnimationComplete={() => {
+          if (isOpen) {
+            setAnimationComplete(true);
+          }
+        }}
+        onClick={closeOnClick ? onClose : undefined}
+      >
+        {children}
+      </Overlay>
+    </OverlayDialog>
   );
 }
 
-interface SheetPartProps
-  extends DialogContentProps, WidthProps, MaxWidthProps, HeightProps, MaxHeightProps, SpaceProps, LayoutProps {
+interface SheetPartProps extends WidthProps, MaxWidthProps, HeightProps, MaxHeightProps, SpaceProps, LayoutProps {
   children: React.ReactNode;
   "aria-label": string;
 }
 
-function SheetPart({ children, ...props }: SheetPartProps) {
+function SheetPart({ children, "aria-label": ariaLabel, ...props }: SheetPartProps) {
   const { isOpen } = useBottomSheet();
   const [isAnimationComplete, setAnimationComplete] = React.useState(false);
 
@@ -84,25 +93,26 @@ function SheetPart({ children, ...props }: SheetPartProps) {
   }
 
   return (
-    <Sheet
-      data-testid="bottom-sheet-body"
-      aria-label={props["aria-label"]}
-      data-visible={isAnimationComplete ? true : undefined}
-      variants={sheetVariants}
-      initial="hidden"
-      animate="visible"
-      exit="hidden"
-      transition={transition}
-      onAnimationComplete={() => {
-        if (isOpen) {
-          setAnimationComplete(true);
-        }
-      }}
-      onClick={handleSheetClick}
-      {...props}
-    >
-      {children}
-    </Sheet>
+    <SheetDialog aria-label={ariaLabel}>
+      <Sheet
+        data-testid="bottom-sheet-body"
+        data-visible={isAnimationComplete ? true : undefined}
+        variants={sheetVariants}
+        initial="hidden"
+        animate="visible"
+        exit="hidden"
+        transition={transition}
+        onAnimationComplete={() => {
+          if (isOpen) {
+            setAnimationComplete(true);
+          }
+        }}
+        onClick={handleSheetClick}
+        {...props}
+      >
+        {children}
+      </Sheet>
+    </SheetDialog>
   );
 }
 

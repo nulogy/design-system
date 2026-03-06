@@ -2,8 +2,10 @@ import {
   DialogContent as ReachDialogContent,
   DialogContentProps,
   DialogOverlay as ReachDialogOverlay,
+  DialogOverlayProps,
 } from "@reach/dialog";
-import type { AnimationProps } from "framer-motion";
+import React from "react";
+import type { MotionProps } from "framer-motion";
 import { motion } from "framer-motion";
 import { transparentize } from "polished";
 import { styled } from "styled-components";
@@ -12,7 +14,11 @@ import type { HeightProps, LayoutProps, MaxHeightProps, MaxWidthProps, SpaceProp
 import { Heading2, Text } from "../Type";
 import { excludeStyledProps } from "../StyledProps";
 
-const Overlay = styled(motion(ReachDialogOverlay))(({ theme }) => ({
+// Portal + focus-lock + scroll-lock wrapper (no visual styles)
+const OverlayDialog = styled(ReachDialogOverlay as React.ComponentType<DialogOverlayProps>)({});
+
+// Animated backdrop
+const Overlay = styled(motion.div)(({ theme }) => ({
   position: "fixed",
   inset: 0,
   display: "flex",
@@ -22,20 +28,21 @@ const Overlay = styled(motion(ReachDialogOverlay))(({ theme }) => ({
   zIndex: theme.zIndices.overlay,
 }));
 
+// Transparent a11y wrapper (role="dialog", aria-modal, focus containment)
+const SheetDialog = styled(ReachDialogContent as React.ComponentType<DialogContentProps>)({
+  width: "100%",
+  display: "flex",
+  justifyContent: "center",
+  padding: 0,
+  background: "none",
+});
+
 interface SheetProps
-  extends
-    DialogContentProps,
-    AnimationProps,
-    WidthProps,
-    MaxWidthProps,
-    HeightProps,
-    MaxHeightProps,
-    SpaceProps,
-    LayoutProps {}
+  extends MotionProps, WidthProps, MaxWidthProps, HeightProps, MaxHeightProps, SpaceProps, LayoutProps {}
 
 const styleFns = [width, maxWidth, height, maxHeight, space, layout];
 
-const Sheet = styled(motion(ReachDialogContent)).withConfig({
+const Sheet = styled(motion.div).withConfig({
   shouldForwardProp: excludeStyledProps(...styleFns),
 })<SheetProps>(
   ({ theme }) => ({
@@ -113,4 +120,4 @@ const HelpText = styled(Text)(({ theme }) => ({
   },
 }));
 
-export { Overlay, Sheet, ContentContainer, Footer, Header, Title, HelpText };
+export { OverlayDialog, Overlay, SheetDialog, Sheet, ContentContainer, Footer, Header, Title, HelpText };
