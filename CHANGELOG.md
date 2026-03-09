@@ -1,3 +1,20 @@
+# [17.0.0](https://github.com/nulogy/design-system/compare/v16.2.0...v17.0.0) (2026-03-09)
+
+
+### Features
+
+* support tree-shaking via preserveModules ESM build ([a868238](https://github.com/nulogy/design-system/commit/a868238f43d07434ce3d88aaebeba6db6aaabb09))
+
+
+### BREAKING CHANGES
+
+* The ESM entry point has moved from dist/main.module.js
+to dist/esm/index.js. Consumers relying on the `module` or `exports.import`
+fields will pick this up automatically via package.json. Consumers with
+hardcoded paths to dist/main.module.js must update to dist/esm/index.js.
+
+Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>
+
 # [16.2.0](https://github.com/nulogy/design-system/compare/v16.1.0...v16.2.0) (2026-03-06)
 
 
