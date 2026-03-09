@@ -3,8 +3,6 @@ import { DefaultNDSThemeType } from "./theme.type";
 
 type ThemeKey = "legacy" | "experimental" | "tablet" | "phone";
 
-const IBM_PLEX_SANS_JP = "'IBM Plex Sans JP', sans-serif";
-
 export const themes: Record<ThemeKey, DefaultNDSThemeType> = {
   legacy: {
     colors: {
@@ -42,7 +40,7 @@ export const themes: Record<ThemeKey, DefaultNDSThemeType> = {
       base: tokens.DESKTOP_FONT_FAMILY_BASE,
       mono: tokens.DESKTOP_FONT_FAMILY_MONO,
       sc: tokens.DESKTOP_FONT_FAMILY_SC,
-      jp: IBM_PLEX_SANS_JP,
+      jp: tokens.DESKTOP_FONT_FAMILY_JP,
     },
     shadows: {
       small: tokens.DESKTOP_SHADOW_SMALL,
@@ -205,7 +203,7 @@ export const themes: Record<ThemeKey, DefaultNDSThemeType> = {
       base: tokens.DESKTOP_FONT_FAMILY_BASE,
       mono: tokens.DESKTOP_FONT_FAMILY_MONO,
       sc: tokens.DESKTOP_FONT_FAMILY_SC,
-      jp: IBM_PLEX_SANS_JP,
+      jp: tokens.DESKTOP_FONT_FAMILY_JP,
     },
     shadows: {
       small: tokens.DESKTOP_SHADOW_SMALL,
@@ -368,7 +366,7 @@ export const themes: Record<ThemeKey, DefaultNDSThemeType> = {
       base: tokens.TABLET_FONT_FAMILY_BASE,
       mono: tokens.TABLET_FONT_FAMILY_MONO,
       sc: tokens.TABLET_FONT_FAMILY_SC,
-      jp: IBM_PLEX_SANS_JP,
+      jp: tokens.TABLET_FONT_FAMILY_JP,
     },
     shadows: {
       small: tokens.TABLET_SHADOW_SMALL,
@@ -531,7 +529,7 @@ export const themes: Record<ThemeKey, DefaultNDSThemeType> = {
       base: tokens.PHONE_FONT_FAMILY_BASE,
       mono: tokens.PHONE_FONT_FAMILY_MONO,
       sc: tokens.PHONE_FONT_FAMILY_SC,
-      jp: IBM_PLEX_SANS_JP,
+      jp: tokens.PHONE_FONT_FAMILY_JP,
     },
     shadows: {
       small: tokens.PHONE_SHADOW_SMALL,

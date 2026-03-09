@@ -18,8 +18,8 @@ importers:
         specifier: ^1.3.1
         version: 1.4.0
       '@nulogy/tokens':
-        specifier: ^6.1.1
-        version: 6.1.1
+        specifier: ^6.2.0
+        version: 6.2.0
       '@radix-ui/react-dialog':
         specifier: ^1.1.0
         version: 1.1.15(@types/react-dom@18.3.7(@types/react@18.3.28))(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -828,8 +828,8 @@ packages:
   '@nulogy/icons@4.39.0':
     resolution: {integrity: sha512-NsgmVy7PJkq4F14pr5b3GJrqqRFJ7r5+7vrRxnsprPv690F5LOkXEQyZ/SzT3aEdo7+xEG4kRjF4R/QXlmQSug==}
 
-  '@nulogy/tokens@6.1.1':
-    resolution: {integrity: sha512-5UqGPU+/sgf40owem02HG6HnVMcG9PvG/p/jL8T3CJjnfJeVRHubFfcqJeWXlwMutgR2jOFnS/yfH/YUdfzzrw==}
+  '@nulogy/tokens@6.2.0':
+    resolution: {integrity: sha512-LzpHnSjU38p/U0/0dWVTG/hPgQ31TRGvWUQBByIpUG4N0sAD/50TW+YJJANpAyDVec+IbC4xkXcsnjNxE5Yjww==}
 
   '@octokit/auth-token@3.0.4':
     resolution: {integrity: sha512-TWFX7cZF2LXoCvdmJWY7XVPi74aSY0+FfBZNSXEXFkMpjcqsQwDSYVv5FhRFaI0V1ECnwbz4j59T/G+rXNWaIQ==}
@@ -6416,7 +6416,7 @@ snapshots:
 
   '@nulogy/icons@4.39.0': {}
 
-  '@nulogy/tokens@6.1.1': {}
+  '@nulogy/tokens@6.2.0': {}
 
   '@octokit/auth-token@3.0.4': {}
 
