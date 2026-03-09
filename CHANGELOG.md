@@ -1,3 +1,10 @@
+# [17.1.0](https://github.com/nulogy/design-system/compare/v17.0.0...v17.1.0) (2026-03-09)
+
+
+### Features
+
+* add IBM Plex Sans JP custom font for ja_JP locale ([dfa9fff](https://github.com/nulogy/design-system/commit/dfa9fffa23fa46ba21dc4164857462a813cd2afb))
+
 # [17.0.0](https://github.com/nulogy/design-system/compare/v16.2.0...v17.0.0) (2026-03-09)
 
 
