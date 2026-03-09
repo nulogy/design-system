@@ -47,22 +47,30 @@ export default defineConfig({
   },
   build: {
     emptyOutDir: false,
-    lib: {
-      entry: resolve(__dirname, "src/index.ts"),
-      name: "NDSComponents",
-      formats: ["umd", "es"],
-      fileName: (format) => {
-        if (format === "umd") {
-          return "main.js";
-        }
-        return "main.module.js";
-      },
-    },
     rollupOptions: {
+      input: resolve(__dirname, "src/index.ts"),
       external,
-      output: {
-        globals: GLOBALS,
-      },
+      preserveEntrySignatures: "strict",
+      output: [
+        // ESM with preserved modules — enables tree-shaking in consumers
+        {
+          format: "es",
+          dir: "dist/esm",
+          preserveModules: true,
+          preserveModulesRoot: "src",
+          entryFileNames: "[name].js",
+          exports: "named",
+        },
+        // UMD monolith — retained for legacy/CDN use
+        {
+          format: "umd",
+          dir: "dist",
+          entryFileNames: "main.js",
+          name: "NDSComponents",
+          globals: GLOBALS,
+          exports: "named",
+        },
+      ],
     },
     sourcemap: true,
     minify: false,

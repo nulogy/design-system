@@ -47,17 +47,26 @@ const resources = {
     nds: zh_CN,
   },
 };
-i18n.init({
-  ns: ["nds"],
-  defaultNS: "nds",
-  resources,
-  lng: "en_US",
+let initialized = false;
 
-  keySeparator: false, // we do not use keys in form messages.welcome
+export function initI18n() {
+  if (initialized) return i18n;
+  initialized = true;
 
-  interpolation: {
-    escapeValue: false, // react already safes from xss
-  },
-});
+  i18n.init({
+    ns: ["nds"],
+    defaultNS: "nds",
+    resources,
+    lng: "en_US",
+
+    keySeparator: false, // we do not use keys in form messages.welcome
+
+    interpolation: {
+      escapeValue: false, // react already safes from xss
+    },
+  });
+
+  return i18n;
+}
 
 export default i18n;

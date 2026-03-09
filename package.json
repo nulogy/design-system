@@ -48,12 +48,13 @@
     "component library"
   ],
   "main": "dist/main.js",
-  "module": "dist/main.module.js",
+  "module": "dist/esm/index.js",
   "typings": "dist/src/index.d.ts",
+  "sideEffects": false,
   "exports": {
     ".": {
       "types": "./dist/src/index.d.ts",
-      "import": "./dist/main.module.js",
+      "import": "./dist/esm/index.js",
       "require": "./dist/main.js"
     }
   },
