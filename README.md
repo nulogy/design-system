@@ -34,6 +34,12 @@ If your application supports Simplified Chinese, you'll also need to load [Noto 
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet" />
 ```
 
+If your application supports Japanese, you'll also need to load [IBM Plex Sans JP](https://fonts.google.com/specimen/IBM+Plex+Sans+JP).
+
+```html
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@300;400;500;600&display=swap" rel="stylesheet" />
+```
+
 Note that loading fonts from Google API is just an example and not the most performant way to load fonts for your application. You'll most likely want to include the font's inside your existing asset pipeline.
 
 ### 2. Wrap your application in our theme provider
