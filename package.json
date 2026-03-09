@@ -138,7 +138,7 @@
     "debounce": "^3.0.0",
     "deep-equal": "^2.2.1",
     "framer-motion": "^12.35.0",
-    "i18next": "^19.3.1",
+    "i18next": "^25.8.16",
     "polished": "4.3.1",
     "react-datepicker": "^4.25.0",
     "react-fast-compare": "^3.2.0",
