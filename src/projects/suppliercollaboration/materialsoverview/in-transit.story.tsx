@@ -845,6 +845,7 @@ export const Filters = () => {
   const [shippingConditions, setShippingConditions] = useState<any[]>([]);
   const [tmsNumbers, setTmsNumbers] = useState<any[]>([]);
   const [proNumbers, setProNumbers] = useState<any[]>([]);
+  const [sealNumbers, setSealNumbers] = useState<any[]>([]);
   const [trailerNumbers, setTrailerNumbers] = useState<any[]>([]);
   const [palletNumbers, setPalletNumbers] = useState<any[]>([]);
   const [customerLotCodes, setCustomerLotCodes] = useState<any[]>([]);
@@ -898,6 +899,10 @@ export const Filters = () => {
     return [];
   };
 
+  const loadSealNumbers = async (inputValue: string) => {
+    return [];
+  };
+
   const loadCustomerLotCodes = async (inputValue: string) => {
     return [];
   };
@@ -933,6 +938,7 @@ export const Filters = () => {
     if (shippingConditions.length > 0) count++;
     if (tmsNumbers.length > 0) count++;
     if (proNumbers.length > 0) count++;
+    if (sealNumbers.length > 0) count++;
     if (trailerNumbers.length > 0) count++;
     if (palletNumbers.length > 0) count++;
     if (customerLotCodes.length > 0) count++;
@@ -1171,6 +1177,16 @@ export const Filters = () => {
                     loadOptions={loadProNumbers}
                     value={proNumbers}
                     onChange={(value) => setProNumbers((value as any[]) || [])}
+                    multiselect
+                  />
+                </Box>
+                <Box>
+                  <AsyncSelect
+                    labelText="Seal numbers"
+                    placeholder="Start typing"
+                    loadOptions={loadSealNumbers}
+                    value={sealNumbers}
+                    onChange={(value) => setSealNumbers((value as any[]) || [])}
                     multiselect
                   />
                 </Box>
