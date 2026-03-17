@@ -5,3 +5,5 @@ package.json
 storybook-static
 dist
 *.md
+node_modules
+.pnpm-store
