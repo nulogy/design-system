@@ -832,6 +832,8 @@ export const Filters = () => {
   const [savedFilters, setSavedFilters] = useState<string | null>(null);
   const [orderNumbers, setOrderNumbers] = useState<any[]>([]);
   const [orderStatuses, setOrderStatuses] = useState<any[]>(["open"]);
+  const [orderExpectedShipDate, setOrderExpectedShipDate] = useState<any>(null);
+  const [orderExpectedReceiveDate, setOrderExpectedReceiveDate] = useState<any>(null);
   const [poNumbers, setPoNumbers] = useState<any[]>([]);
   const [shippingFacilities, setShippingFacilities] = useState<any[]>([]);
   const [receivingFacilities, setReceivingFacilities] = useState<any[]>([]);
@@ -925,6 +927,8 @@ export const Filters = () => {
     let count = 0;
     if (orderNumbers.length > 0) count++;
     if (orderStatuses.length > 0) count++;
+    if (orderExpectedShipDate) count++;
+    if (orderExpectedReceiveDate) count++;
     if (poNumbers.length > 0) count++;
     if (shippingFacilities.length > 0) count++;
     if (receivingFacilities.length > 0) count++;
@@ -1051,6 +1055,24 @@ export const Filters = () => {
                   />
                 </Box>
                 <Box>
+                  <Select
+                    labelText="In-transit order expected ship date"
+                    placeholder="Select"
+                    value={orderExpectedShipDate}
+                    onChange={(value) => setOrderExpectedShipDate(value)}
+                    options={[]}
+                  />
+                </Box>
+                <Box>
+                  <Select
+                    labelText="In-transit order expected receive date"
+                    placeholder="Select"
+                    value={orderExpectedReceiveDate}
+                    onChange={(value) => setOrderExpectedReceiveDate(value)}
+                    options={[]}
+                  />
+                </Box>
+                <Box>
                   <AsyncSelect
                     labelText="PO numbers"
                     placeholder="Start typing"
@@ -1151,6 +1173,16 @@ export const Filters = () => {
                   />
                 </Box>
                 <Box>
+                  <AsyncSelect
+                    labelText="Trailer numbers"
+                    placeholder="Start typing"
+                    loadOptions={loadTrailerNumbers}
+                    value={trailerNumbers}
+                    onChange={(value) => setTrailerNumbers((value as any[]) || [])}
+                    multiselect
+                  />
+                </Box>
+                <Box>
                   <Select
                     labelText="Shipping conditions"
                     placeholder="Select"
@@ -1187,16 +1219,6 @@ export const Filters = () => {
                     loadOptions={loadSealNumbers}
                     value={sealNumbers}
                     onChange={(value) => setSealNumbers((value as any[]) || [])}
-                    multiselect
-                  />
-                </Box>
-                <Box>
-                  <AsyncSelect
-                    labelText="Trailer numbers"
-                    placeholder="Start typing"
-                    loadOptions={loadTrailerNumbers}
-                    value={trailerNumbers}
-                    onChange={(value) => setTrailerNumbers((value as any[]) || [])}
                     multiselect
                   />
                 </Box>
