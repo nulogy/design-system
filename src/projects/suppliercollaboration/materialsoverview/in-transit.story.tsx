@@ -59,7 +59,8 @@ export const InTransit = () => {
 
   // Lot code column configuration
   const [showCustomerLotCode, setShowCustomerLotCode] = useState(true);
-  const [showSupplierLotCode, setShowSupplierLotCode] = useState(true); // Always true, disabled
+  const [showShipperLotCode, setShowShipperLotCode] = useState(true);
+  const [showReceiverLotCode, setShowReceiverLotCode] = useState(true);
 
   const breadcrumbs = (
     <Breadcrumbs>
@@ -88,21 +89,16 @@ export const InTransit = () => {
 
   // Build header label based on configuration
   const getLotCodeHeaderLabel = () => {
-    // If only Supplier is checked, don't show any label
-    if (showSupplierLotCode && !showCustomerLotCode) {
-      return "";
-    }
-
     const labels: string[] = [];
     if (showCustomerLotCode) labels.push("Customer's");
-    if (showSupplierLotCode) labels.push("Supplier's");
-
-    return labels.length > 0 ? `(${labels.join(" / ")})` : "";
+    if (showShipperLotCode) labels.push("Shipper's");
+    if (showReceiverLotCode) labels.push("Receiver's");
+    // If only one type is checked, don't show label (match Inventory summary)
+    return labels.length > 1 ? `(${labels.join(" / ")})` : "";
   };
 
-  // Table data with 2-tier structure (main rows and sub-rows)
+  // Table data: single item with 8 sub-rows for lot code examples (Customer's / Shipper's / Receiver's)
   const itemsData = [
-    // Main row for item 1
     {
       id: "item-1",
       isMainRow: true,
@@ -110,17 +106,18 @@ export const InTransit = () => {
       item: "2349-GranolaPack - Gr...",
       poNumber: "",
       palletNumber: "",
-      customerLotCode: "",
-      supplierLotCode: "",
+      customerLotCode: "-",
+      shipperLotCode: "-",
+      receiverLotCode: "-",
       expiryDate: "",
       shippedPalletQuantity: "",
-      requiredQuantity: "18,000 eaches",
-      shippedQuantity: "18,000 eaches",
-      receivedQuantity: "18,000 eaches",
+      requiredQuantity: "7,000 eaches",
+      shippedQuantity: "7,000 eaches",
+      receivedQuantity: "7,000 eaches",
       freightClass: "",
       notes: "",
     },
-    // Sub-rows for item 1
+    // All 3 (long values to show truncation)
     {
       id: "item-1-sub-1",
       isSubRow: true,
@@ -130,15 +127,17 @@ export const InTransit = () => {
       poNumber: "",
       palletNumber: "",
       customerLotCode: "BRK489-VERY-LONG-CUSTOMER-LOT-CODE-THAT-SHOULD-TRUNCATE-WHEN-DISPLAYED-IN-THE-TABLE",
-      supplierLotCode: "BRK489-SUP-VERY-LONG-SUPPLIER-LOT-CODE-THAT-SHOULD-ALSO-TRUNCATE-WHEN-DISPLAYED-IN-THE-TABLE",
-      expiryDate: "2026-09-27",
-      shippedPalletQuantity: "220 CHEP",
+      shipperLotCode: "BRK489-SUP-VERY-LONG-SHIPPER-LOT-CODE-THAT-SHOULD-ALSO-TRUNCATE-WHEN-DISPLAYED",
+      receiverLotCode: "BRK489-REC-VERY-LONG-RECEIVER-LOT-CODE-THAT-SHOULD-TRUNCATE-IN-THE-TABLE",
+      expiryDate: "2026-10-01",
+      shippedPalletQuantity: "100 CHEP",
       requiredQuantity: "",
-      shippedQuantity: "11,000 eaches",
-      receivedQuantity: "11,000 eaches",
+      shippedQuantity: "1,000 eaches",
+      receivedQuantity: "1,000 eaches",
       freightClass: "",
       notes: "",
     },
+    // Only customer (long value to show truncation)
     {
       id: "item-1-sub-2",
       isSubRow: true,
@@ -147,17 +146,117 @@ export const InTransit = () => {
       item: "",
       poNumber: "",
       palletNumber: "",
-      customerLotCode: "-",
-      supplierLotCode: "LYN839-SUP",
-      expiryDate: "2026-09-19",
-      shippedPalletQuantity: "140 Plastic",
+      customerLotCode: "C-ONLY-VERY-LONG-CUSTOMER-LOT-CODE-THAT-SHOULD-TRUNCATE-WHEN-DISPLAYED-IN-THE-LOT-CODE-COLUMN",
+      shipperLotCode: "-",
+      receiverLotCode: "-",
+      expiryDate: "2026-10-02",
+      shippedPalletQuantity: "100 CHEP",
       requiredQuantity: "",
-      shippedQuantity: "7,000 eaches",
-      receivedQuantity: "7,000 eaches",
+      shippedQuantity: "1,000 eaches",
+      receivedQuantity: "1,000 eaches",
       freightClass: "",
       notes: "",
     },
-    // Total row for item 1
+    // Only shipper (long value to show truncation)
+    {
+      id: "item-1-sub-3",
+      isSubRow: true,
+      parentId: "item-1",
+      verticalAlign: "top",
+      item: "",
+      poNumber: "",
+      palletNumber: "",
+      customerLotCode: "-",
+      shipperLotCode: "S-ONLY-VERY-LONG-SHIPPER-LOT-CODE-THAT-SHOULD-TRUNCATE-WHEN-DISPLAYED-IN-THE-TABLE",
+      receiverLotCode: "-",
+      expiryDate: "2026-10-03",
+      shippedPalletQuantity: "100 CHEP",
+      requiredQuantity: "",
+      shippedQuantity: "1,000 eaches",
+      receivedQuantity: "1,000 eaches",
+      freightClass: "",
+      notes: "",
+    },
+    // Only receiver
+    {
+      id: "item-1-sub-4",
+      isSubRow: true,
+      parentId: "item-1",
+      verticalAlign: "top",
+      item: "",
+      poNumber: "",
+      palletNumber: "",
+      customerLotCode: "-",
+      shipperLotCode: "-",
+      receiverLotCode: "R-ONLY",
+      expiryDate: "2026-10-04",
+      shippedPalletQuantity: "100 CHEP",
+      requiredQuantity: "",
+      shippedQuantity: "1,000 eaches",
+      receivedQuantity: "1,000 eaches",
+      freightClass: "",
+      notes: "",
+    },
+    // Customer and shipper (long values to show truncation)
+    {
+      id: "item-1-sub-5",
+      isSubRow: true,
+      parentId: "item-1",
+      verticalAlign: "top",
+      item: "",
+      poNumber: "",
+      palletNumber: "",
+      customerLotCode: "C-VAL-LONG-CUSTOMER-LOT-CODE-THAT-SHOULD-TRUNCATE-IN-THE-FIRST-LINE",
+      shipperLotCode: "S-VAL-LONG-SHIPPER-LOT-CODE-THAT-SHOULD-TRUNCATE-IN-SECOND-LINE",
+      receiverLotCode: "-",
+      expiryDate: "2026-10-06",
+      shippedPalletQuantity: "100 CHEP",
+      requiredQuantity: "",
+      shippedQuantity: "1,000 eaches",
+      receivedQuantity: "1,000 eaches",
+      freightClass: "",
+      notes: "",
+    },
+    // Shipper and receiver
+    {
+      id: "item-1-sub-6",
+      isSubRow: true,
+      parentId: "item-1",
+      verticalAlign: "top",
+      item: "",
+      poNumber: "",
+      palletNumber: "",
+      customerLotCode: "-",
+      shipperLotCode: "S-VAL",
+      receiverLotCode: "R-VAL",
+      expiryDate: "2026-10-07",
+      shippedPalletQuantity: "100 CHEP",
+      requiredQuantity: "",
+      shippedQuantity: "1,000 eaches",
+      receivedQuantity: "1,000 eaches",
+      freightClass: "",
+      notes: "",
+    },
+    // Customer and receiver
+    {
+      id: "item-1-sub-7",
+      isSubRow: true,
+      parentId: "item-1",
+      verticalAlign: "top",
+      item: "",
+      poNumber: "",
+      palletNumber: "",
+      customerLotCode: "C-VAL",
+      shipperLotCode: "-",
+      receiverLotCode: "R-VAL",
+      expiryDate: "2026-10-08",
+      shippedPalletQuantity: "100 CHEP",
+      requiredQuantity: "",
+      shippedQuantity: "1,000 eaches",
+      receivedQuantity: "1,000 eaches",
+      freightClass: "",
+      notes: "",
+    },
     {
       id: "item-1-total",
       isTotalRow: true,
@@ -166,99 +265,26 @@ export const InTransit = () => {
       item: "",
       poNumber: "",
       palletNumber: "",
-      customerLotCode: "",
-      supplierLotCode: "",
+      customerLotCode: "-",
+      shipperLotCode: "-",
+      receiverLotCode: "-",
       expiryDate: "",
       shippedPalletQuantity: "",
-      requiredQuantity: "18,000 eaches",
-      shippedQuantity: "18,000 eaches",
-      receivedQuantity: "18,000 eaches",
-      freightClass: "Class 70",
-      notes: "",
-    },
-    // Main row for item 2
-    {
-      id: "item-2",
-      isMainRow: true,
-      verticalAlign: "top",
-      item: "4687-ChocGranola-51...",
-      poNumber: "",
-      palletNumber: "",
-      customerLotCode: "",
-      supplierLotCode: "",
-      expiryDate: "",
-      shippedPalletQuantity: "",
-      requiredQuantity: "26,000 eaches",
-      shippedQuantity: "26,000 eaches",
-      receivedQuantity: "26,000 eaches",
-      freightClass: "",
-      notes: "",
-    },
-    // Sub-rows for item 2
-    {
-      id: "item-2-sub-1",
-      isSubRow: true,
-      parentId: "item-2",
-      verticalAlign: "top",
-      item: "",
-      poNumber: "",
-      palletNumber: "",
-      customerLotCode: "ALC312",
-      supplierLotCode: "-",
-      expiryDate: "2026-09-06",
-      shippedPalletQuantity: "260 CHEP",
-      requiredQuantity: "",
-      shippedQuantity: "13,000 eaches",
-      receivedQuantity: "13,000 eaches",
-      freightClass: "",
-      notes: "",
-    },
-    {
-      id: "item-2-sub-2",
-      isSubRow: true,
-      parentId: "item-2",
-      verticalAlign: "top",
-      item: "",
-      poNumber: "",
-      palletNumber: "",
-      customerLotCode: "CAR726",
-      supplierLotCode: "-",
-      expiryDate: "2026-09-26",
-      shippedPalletQuantity: "260 CHEP",
-      requiredQuantity: "",
-      shippedQuantity: "13,000 eaches",
-      receivedQuantity: "13,000 eaches",
-      freightClass: "",
-      notes: "",
-    },
-    // Total row for item 2
-    {
-      id: "item-2-total",
-      isTotalRow: true,
-      parentId: "item-2",
-      verticalAlign: "top",
-      item: "",
-      poNumber: "",
-      palletNumber: "",
-      customerLotCode: "",
-      supplierLotCode: "",
-      expiryDate: "",
-      shippedPalletQuantity: "",
-      requiredQuantity: "26,000 eaches",
-      shippedQuantity: "26,000 eaches",
-      receivedQuantity: "26,000 eaches",
+      requiredQuantity: "7,000 eaches",
+      shippedQuantity: "7,000 eaches",
+      receivedQuantity: "7,000 eaches",
       freightClass: "Class 70",
       notes: "",
     },
   ];
 
-  // Determine cell padding based on lot code configuration
-  const cellPadding = showCustomerLotCode ? "x1" : "x2";
-  // When customer is ON, use pt="x1" and pb="x3" for all cells except Lot code
-  const cellPaddingTop = showCustomerLotCode ? "x1" : "x2";
-  const cellPaddingBottom = showCustomerLotCode ? "x3" : "x2";
-  // Header padding based on lot code configuration
-  const headerPaddingBottom = showCustomerLotCode ? "x0_75" : "x1";
+  // Determine cell padding based on lot code configuration (match Inventory summary)
+  const hasMultipleLotCodeTypes =
+    [showCustomerLotCode, showShipperLotCode, showReceiverLotCode].filter(Boolean).length >= 2;
+  const cellPadding = hasMultipleLotCodeTypes ? "x1" : "x2";
+  const cellPaddingTop = hasMultipleLotCodeTypes ? "x1" : "x2";
+  const cellPaddingBottom = hasMultipleLotCodeTypes ? "x3" : "x2";
+  const headerPaddingBottom = hasMultipleLotCodeTypes ? "x0_75" : "x1";
 
   // Table columns
   const columns = [
@@ -328,11 +354,11 @@ export const InTransit = () => {
     {
       label: "Lot code",
       dataKey: "lotCode",
-      width: "240px",
+      width: "280px",
       headerFormatter: () => {
         const label = getLotCodeHeaderLabel();
         return (
-          <Box pt="x1" pb={headerPaddingBottom} pr="x1">
+          <Box pt="x1_25" pb="x0_75" pr="x1">
             <Text>Lot code</Text>
             {label && (
               <Text fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
@@ -343,74 +369,57 @@ export const InTransit = () => {
         );
       },
       cellRenderer: ({ row }: { row: any }) => {
-        // Main rows don't show lot code
-        if (row.isMainRow) {
-          return (
-            <Box mr="x1" pt={cellPaddingTop} pb={cellPaddingBottom}>
-              <Text color="midGrey">-</Text>
-            </Box>
-          );
-        }
         // Total rows don't show lot code (return null instead of "-")
         if (row.isTotalRow) {
           return null;
         }
 
-        // For sub-rows, determine primary and secondary values based on configuration
+        // Determine primary and secondary values; use "-" for any configured type with missing value
         let primaryValue: string;
         const secondaryValues: string[] = [];
 
         if (showCustomerLotCode) {
-          // If Customer is checked, it's primary
           primaryValue = row.customerLotCode || "-";
-          // Secondary row: Supplier
-          if (showSupplierLotCode && row.supplierLotCode) {
-            secondaryValues.push(row.supplierLotCode);
-          }
+          if (showShipperLotCode) secondaryValues.push(row.shipperLotCode || "-");
+          if (showReceiverLotCode) secondaryValues.push(row.receiverLotCode || "-");
+        } else if (showShipperLotCode) {
+          primaryValue = row.shipperLotCode || "-";
+          if (showReceiverLotCode) secondaryValues.push(row.receiverLotCode || "-");
         } else {
-          // If Customer is not checked, Supplier is primary (only 1 value)
-          primaryValue = row.supplierLotCode || "-";
+          primaryValue = row.receiverLotCode || "-";
         }
 
-        // If all lot codes are empty or none are configured, don't render anything
-        const hasAnyValue = row.customerLotCode || row.supplierLotCode;
-        const hasAnyConfigured = showCustomerLotCode || showSupplierLotCode;
-        if (!hasAnyValue || !hasAnyConfigured) {
-          return (
-            <Box mr="x1" pt={cellPaddingTop} pb={cellPaddingBottom}>
-              <Text color="midGrey">-</Text>
-            </Box>
-          );
+        const hasAnyConfigured = showCustomerLotCode || showShipperLotCode || showReceiverLotCode;
+        if (!hasAnyConfigured) {
+          return null;
         }
 
-        // If customer is off, show only single value with x2 padding
-        if (!showCustomerLotCode) {
+        // Single value: match Inventory summary single-line styling
+        if (secondaryValues.length === 0) {
           return (
-            <Box mr="x1" pt={cellPaddingTop} pb={cellPaddingBottom} width="264px">
-              <TruncatedText fullWidth fontSize="medium">
+            <Box mr="x1" pt={cellPaddingTop} pb={cellPaddingBottom} width="280px">
+              <TruncatedText fullWidth width="auto" maxWidth="304px" fontSize="medium">
                 {primaryValue}
               </TruncatedText>
             </Box>
           );
         }
 
-        // If customer is on, show primary and secondary values
+        // Multiple values: match Inventory summary cell formatting
         return (
           <Flex
-            mr="x1"
-            pr="x1"
-            py={secondaryValues.length > 0 ? "x0_75" : "x0_75"}
+            px="x1"
+            py="x0_75"
             gap="x0_25"
             flexDirection="column"
             alignItems="flex-start"
             style={{ alignSelf: "flex-start" }}
-            width="264px"
           >
-            <TruncatedText fullWidth fontSize="small" lineHeight="smallTextCompressed">
+            <TruncatedText fullWidth width="auto" maxWidth="304px" fontSize="medium">
               {primaryValue}
             </TruncatedText>
             {secondaryValues.length > 0 && (
-              <Flex gap="half" width="248px">
+              <Flex gap="half">
                 {secondaryValues.map((value, index) => (
                   <React.Fragment key={index}>
                     {index > 0 && (
@@ -418,7 +427,14 @@ export const InTransit = () => {
                         /
                       </Text>
                     )}
-                    <TruncatedText fullWidth fontSize="small" lineHeight="smallTextCompressed" color="midGrey">
+                    <TruncatedText
+                      fullWidth
+                      width="auto"
+                      maxWidth={secondaryValues.length === 1 ? "304px" : "140px"}
+                      fontSize="small"
+                      lineHeight="smallTextCompressed"
+                      color="midGrey"
+                    >
                       {value}
                     </TruncatedText>
                   </React.Fragment>
@@ -817,10 +833,14 @@ export const InTransit = () => {
             labelText="Customer"
           />
           <Checkbox
-            checked={showSupplierLotCode}
-            onChange={(e) => setShowSupplierLotCode(e.target.checked)}
-            labelText="Supplier"
-            disabled
+            checked={showShipperLotCode}
+            onChange={(e) => setShowShipperLotCode(e.target.checked)}
+            labelText="Shipper"
+          />
+          <Checkbox
+            checked={showReceiverLotCode}
+            onChange={(e) => setShowReceiverLotCode(e.target.checked)}
+            labelText="Receiver"
           />
         </Flex>
       </Box>
