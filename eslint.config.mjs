@@ -118,6 +118,7 @@ export default tseslint.config(
       "**/typings/**",
       "**/jspm_packages/**",
       "**/bower_components/**",
+      "**/.claude/**",
     ],
   },
   storybook.configs["flat/recommended"]
