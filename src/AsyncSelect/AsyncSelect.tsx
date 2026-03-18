@@ -102,7 +102,7 @@ const AsyncSelect = forwardRef(
           <AsyncReactSelect
             className={className}
             classNamePrefix={classNamePrefix}
-            noOptionsMessage={noOptionsMessage || t("no options")}
+            noOptionsMessage={noOptionsMessage}
             value={value}
             ref={ref}
             defaultInputValue={defaultValue}

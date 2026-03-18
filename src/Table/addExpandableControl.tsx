@@ -14,11 +14,11 @@ interface ExpandCellProps {
   expandAriaLabel?: string;
 }
 
-const ExpandCell = ({ row, onRowExpansionChange }: ExpandCellProps) => {
+const ExpandCell = ({ row, onRowExpansionChange, collapseAriaLabel, expandAriaLabel }: ExpandCellProps) => {
   const expandRowHandler = () => onRowExpansionChange(row);
   const { t } = useTranslation();
-  const collapseLabel = row.collapseAriaLabel || t("collapse row");
-  const expandLabel = row.expandAriaLabel || t("expand row");
+  const collapseLabel = collapseAriaLabel || t("collapse row");
+  const expandLabel = expandAriaLabel || t("expand row");
   return (
     <>
       {row.expandedContent && (
