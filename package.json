@@ -102,7 +102,7 @@
     "eslint-plugin-react": "^7.37.0",
     "eslint-plugin-react-hooks": "^7.0.0",
     "eslint-plugin-storybook": "10.2.14",
-    "globals": "^15.0.0",
+    "globals": "^17.4.0",
     "graphql": "16.13.1",
     "husky": "^9.1.7",
     "jsdom": "^29.0.0",
