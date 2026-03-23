@@ -11,11 +11,11 @@ export interface UserMenu {
   menuItems?: UserMenuItem[];
 }
 
-export type UserMenuInfo = {
+export interface UserMenuInfo {
   title: string;
   subtitle1?: string;
   subtitle2?: string;
-};
+}
 
 export type UserMenuItem = BaseUserMenuItem & (LinkUserMenuItem | ButtonUserMenuItem | CustomUserMenuItem);
 
@@ -63,25 +63,25 @@ type MobileVisibility =
    */
   | "hidden";
 
-export type MenuItemBase = {
+export interface MenuItemBase {
   mobileVisibility?: MobileVisibility;
   key: string;
-};
+}
 
-type WithIcon = {
+interface WithIcon {
   icon: IconName;
   tooltip: string;
   label?: string;
-};
+}
 
-type WithLabel = {
+interface WithLabel {
   label: string;
-};
+}
 
-type CustomMenuItem = {
+interface CustomMenuItem {
   type: "custom";
   render: (props: { withinSubMenu: boolean; level: number; withinMobileNav: boolean }) => JSX.Element;
-};
+}
 
 type MenuItemButton = {
   type: "button";
@@ -95,6 +95,6 @@ type MenuItemLink = {
   props?: React.ComponentPropsWithoutRef<"a">;
 } & (WithIcon | WithLabel);
 
-type MenuItemSeparator = {
+interface MenuItemSeparator {
   type: "separator";
-};
+}
