@@ -169,8 +169,8 @@ importers:
         specifier: ^4.0.18
         version: 4.0.18(playwright@1.58.2)(vite@7.3.1(@types/node@25.5.0)(terser@5.44.1))(vitest@4.0.18)
       chromatic:
-        specifier: ^15.3.0
-        version: 15.3.0
+        specifier: ^16.0.0
+        version: 16.0.0
       concurrently:
         specifier: ^9.2.0
         version: 9.2.1
@@ -2350,8 +2350,8 @@ packages:
     resolution: {integrity: sha512-PAJdDJusoxnwm1VwW07VWwUN1sl7smmC3OKggvndJFadxxDRyFJBX/ggnu/KE4kQAB7a3Dp8f/YXC1FlUprWmA==}
     engines: {node: '>= 16'}
 
-  chromatic@15.3.0:
-    resolution: {integrity: sha512-ficw/Pz9OpBnPoWDRmuwFDwzLPSN0o90x6X+0+rbnMFYtDTPWXddW6R14jQ56SgYSByJ67OyHZg2gW6U6HF2Qw==}
+  chromatic@16.0.0:
+    resolution: {integrity: sha512-O81RVGDXXoreNeG894hjaUx08xep+C/BA6aJNMZkwSjH7Lln8IweZekBpBEoQPNNpjmHyZvcTIwN/aGitdK53Q==}
     hasBin: true
     peerDependencies:
       '@chromatic-com/cypress': ^0.*.* || ^1.0.0
@@ -7737,7 +7737,7 @@ snapshots:
 
   check-error@2.1.3: {}
 
-  chromatic@15.3.0: {}
+  chromatic@16.0.0: {}
 
   class-utils@0.3.6:
     dependencies:
