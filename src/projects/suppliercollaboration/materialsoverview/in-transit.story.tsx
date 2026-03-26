@@ -871,7 +871,8 @@ export const Filters = () => {
   const [trailerNumbers, setTrailerNumbers] = useState<any[]>([]);
   const [palletNumbers, setPalletNumbers] = useState<any[]>([]);
   const [customerLotCodes, setCustomerLotCodes] = useState<any[]>([]);
-  const [supplierLotCodes, setSupplierLotCodes] = useState<any[]>([]);
+  const [shipperLotCodes, setShipperLotCodes] = useState<any[]>([]);
+  const [receiverLotCodes, setReceiverLotCodes] = useState<any[]>([]);
   const [freightClasses, setFreightClasses] = useState<any[]>([]);
   const [items, setItems] = useState<any[]>([]);
   const [supplierPlanners, setSupplierPlanners] = useState<any[]>([]);
@@ -929,7 +930,11 @@ export const Filters = () => {
     return [];
   };
 
-  const loadSupplierLotCodes = async (inputValue: string) => {
+  const loadShipperLotCodes = async (inputValue: string) => {
+    return [];
+  };
+
+  const loadReceiverLotCodes = async (inputValue: string) => {
     return [];
   };
 
@@ -966,7 +971,8 @@ export const Filters = () => {
     if (trailerNumbers.length > 0) count++;
     if (palletNumbers.length > 0) count++;
     if (customerLotCodes.length > 0) count++;
-    if (supplierLotCodes.length > 0) count++;
+    if (shipperLotCodes.length > 0) count++;
+    if (receiverLotCodes.length > 0) count++;
     if (freightClasses.length > 0) count++;
     if (items.length > 0) count++;
     if (brands.length > 0) count++;
@@ -1020,7 +1026,8 @@ export const Filters = () => {
                   setTrailerNumbers([]);
                   setPalletNumbers([]);
                   setCustomerLotCodes([]);
-                  setSupplierLotCodes([]);
+                  setShipperLotCodes([]);
+                  setReceiverLotCodes([]);
                   setFreightClasses([]);
                   setItems([]);
                   setBrands([]);
@@ -1264,11 +1271,21 @@ export const Filters = () => {
                 </Box>
                 <Box>
                   <AsyncSelect
-                    labelText="Supplier's lot codes"
+                    labelText="Shipper's lot codes"
                     placeholder="Start typing"
-                    loadOptions={loadSupplierLotCodes}
-                    value={supplierLotCodes}
-                    onChange={(value) => setSupplierLotCodes((value as any[]) || [])}
+                    loadOptions={loadShipperLotCodes}
+                    value={shipperLotCodes}
+                    onChange={(value) => setShipperLotCodes((value as any[]) || [])}
+                    multiselect
+                  />
+                </Box>
+                <Box>
+                  <AsyncSelect
+                    labelText="Receiver's lot codes"
+                    placeholder="Start typing"
+                    loadOptions={loadReceiverLotCodes}
+                    value={receiverLotCodes}
+                    onChange={(value) => setReceiverLotCodes((value as any[]) || [])}
                     multiselect
                   />
                 </Box>
