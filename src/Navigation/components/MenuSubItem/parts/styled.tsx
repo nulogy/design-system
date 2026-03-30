@@ -28,6 +28,7 @@ export const SubMenuItemLink = styled(RadixNavigationMenu.Link)<StyledProps>(
     alignItems: "flex-start",
     alignSelf: "stretch",
     width: "100%",
+    color: theme.colors.darkGrey,
     textDecoration: "none",
     "&:hover, &:focus": {
       backgroundColor: theme.colors.lightBlue,

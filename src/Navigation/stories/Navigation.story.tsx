@@ -228,7 +228,18 @@ export const WithACustomBreakpoint = () => {
       navBar={
         <Navigation
           primaryNavigation={[{ key: "dashboard", label: "Dashboard", type: "link" }]}
-          secondaryNavigation={[{ key: "settings", icon: "settings", tooltip: "Settings", type: "button" }]}
+          secondaryNavigation={[
+            {
+              key: "settings",
+              icon: "settings",
+              tooltip: "Settings",
+              type: "button",
+              items: [
+                { key: "boms", label: "BOMs", type: "link", props: { href: "/admin/bom_visualizer" } },
+                { key: "other", label: "Other Page", type: "link", props: { href: "/admin/other_page" } },
+              ],
+            },
+          ]}
           breakpoint={breakpoint}
         />
       }
