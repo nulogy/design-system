@@ -1,3 +1,10 @@
+## [17.1.1](https://github.com/nulogy/design-system/compare/v17.1.0...v17.1.1) (2026-03-30)
+
+
+### Bug Fixes
+
+* sub-menu link items rendering in browser-default blue when unvisited ([c63485a](https://github.com/nulogy/design-system/commit/c63485a549d0956e1e6552edba29b204156d15fd))
+
 # [17.1.0](https://github.com/nulogy/design-system/compare/v17.0.0...v17.1.0) (2026-03-09)
 
 
