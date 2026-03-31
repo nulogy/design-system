@@ -48,7 +48,7 @@ export default function DesktopNav({
 
         <RadixNavigationMenuItem display="flex">
           {primaryLogo ?? (
-            <NavigationLogoLink href="/" aria-label="Nulogy Logo">
+            <NavigationLogoLink href="/" aria-label={t("Nulogy logo")}>
               <NulogyLogo />
             </NavigationLogoLink>
           )}

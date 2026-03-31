@@ -23,11 +23,13 @@ export function DatePickerHeader({
   nextMonthButtonDisabled,
   locale,
 }: Props) {
+  const { t } = useTranslation();
+
   return (
     <Flex justifyContent="space-between" alignItems="center" py="half" px="x1">
       <ControlIcon
         icon="leftArrow"
-        label="go to previous month"
+        label={t("go to previous month")}
         onClick={decreaseMonth}
         disabled={prevMonthButtonDisabled}
       />
@@ -43,7 +45,7 @@ export function DatePickerHeader({
       </Text>
       <ControlIcon
         icon="rightArrow"
-        label="go to next month"
+        label={t("go to next month")}
         onClick={increaseMonth}
         disabled={nextMonthButtonDisabled}
       />

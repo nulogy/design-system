@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Box } from "../Box";
 import { Link } from "../Link";
 import { Branding } from "../Branding";
@@ -22,10 +23,12 @@ const BrandLogoContainer = ({
   brandingLinkComponent,
   subtext,
 }: BrandLogoContainerProps) => {
+  const { t } = useTranslation();
+
   return (
     <Box maxWidth={MAX_LOGO_WIDTH} maxHeight={MAX_LOGO_HEIGHT}>
       <Link
-        aria-label="Home"
+        aria-label={t("home")}
         href={brandingLinkHref}
         to={brandingLinkTo}
         as={brandingLinkComponent}
