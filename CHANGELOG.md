@@ -1,3 +1,10 @@
+## [17.1.2](https://github.com/nulogy/design-system/compare/v17.1.1...v17.1.2) (2026-03-31)
+
+
+### Bug Fixes
+
+* wrap untranslated bare strings in t() ([af6302f](https://github.com/nulogy/design-system/commit/af6302f6c22fe1b8a21a1996082fca449d3d39ab))
+
 ## [17.1.1](https://github.com/nulogy/design-system/compare/v17.1.0...v17.1.1) (2026-03-30)
 
 
