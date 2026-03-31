@@ -1,6 +1,6 @@
 import React from "react";
 import { styled } from "styled-components";
-import ReactResizeDetector from "react-resize-detector";
+import { useResizeDetector } from "react-resize-detector";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
 import { Flex } from "../Flex";
@@ -121,19 +121,18 @@ type BaseNavBarProps = {
   logoSrc?: string;
 };
 
-const BaseNavBar = ({ environment, breakpointUpper = "medium", ...props }: BaseNavBarProps) => {
+const BaseNavBar = ({ environment, breakpointUpper = "medium", className, ...props }: BaseNavBarProps) => {
   const { breakpoints } = useTheme();
+  const { width, ref } = useResizeDetector<HTMLDivElement>({ handleHeight: false });
   return (
-    <ReactResizeDetector handleWidth>
-      {({ width }) => (
-        <SelectNavBarBasedOnWidth
-          breakpointUpper={breakpoints[breakpointUpper] || breakpointUpper}
-          width={width}
-          environment={environment}
-          {...props}
-        />
-      )}
-    </ReactResizeDetector>
+    <div ref={ref} className={className}>
+      <SelectNavBarBasedOnWidth
+        breakpointUpper={breakpoints[breakpointUpper] || breakpointUpper}
+        width={width}
+        environment={environment}
+        {...props}
+      />
+    </div>
   );
 };
 

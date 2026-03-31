@@ -1,159 +1,118 @@
-// @ts-nocheck
+import React, { useCallback, useEffect, useState } from "react";
 import { styled } from "styled-components";
-import React from "react";
+import { useResizeDetector } from "react-resize-detector";
 import TabScrollIndicator from "./TabScrollIndicator";
-const TabScrollIndicatorContainer = styled.div(({ width, theme }) => ({
+
+const TabScrollIndicatorContainer = styled.div<{ width: number }>(({ width, theme }) => ({
   position: "absolute",
   width,
   height: theme.space.x5,
 }));
-type TabScrollIndicatorsProps = {
-  tabRefs?: {
-    offsetWidth?: number;
-  }[];
-  tabContainerRef?: {
-    current?: object;
-  };
+
+interface TabScrollIndicatorsProps {
+  tabRefs?: Array<HTMLButtonElement | null>;
+  tabContainerRef?: React.RefObject<HTMLDivElement>;
   indicatorWidth?: number;
-};
-type TabScrollIndicatorsState = {
-  contentHiddenLeft: boolean;
-  contentHiddenRight: boolean;
-};
-class TabScrollIndicators extends React.Component<TabScrollIndicatorsProps, TabScrollIndicatorsState> {
-  constructor(props) {
-    super(props);
-    this.state = {
-      contentHiddenLeft: this.contentHiddenLeft(),
-      contentHiddenRight: this.contentHiddenRight(),
-    };
-    this.handleIndicatorClick = this.handleIndicatorClick.bind(this);
-    this.getScrollLeftValueByTabIndex = this.getScrollLeftValueByTabIndex.bind(this);
-    this.contentHiddenLeft = this.contentHiddenLeft.bind(this);
-    this.contentHiddenRight = this.contentHiddenRight.bind(this);
-    this.handleScroll = this.handleScroll.bind(this);
-    this.handleResize = this.handleResize.bind(this);
-  }
-  componentDidMount() {
-    this.conditionallyUpdateState();
-  }
-  getScrollLeftValueByTabIndex(index) {
-    const { tabRefs } = this.props;
-    let scrollLeftSum = 0;
-    for (let i = 0; i < index; i += 1) {
-      scrollLeftSum += tabRefs[i].offsetWidth;
-    }
-    return scrollLeftSum;
-  }
-  contentHiddenRight() {
-    const { tabContainerRef } = this.props;
-    if (!tabContainerRef.current) {
-      return false;
-    }
-    return (
-      tabContainerRef.current.scrollLeft + tabContainerRef.current.offsetWidth < tabContainerRef.current.scrollWidth
-    );
-  }
-  contentHiddenLeft() {
-    const { tabContainerRef } = this.props;
-    if (!tabContainerRef.current) {
-      return false;
-    }
-    return (
-      tabContainerRef.current.scrollLeft !== 0 &&
-      tabContainerRef.current.offsetWidth < tabContainerRef.current.scrollWidth
-    );
-  }
-  findLastVisibleTab() {
-    const { tabContainerRef, tabRefs, indicatorWidth } = this.props;
-    const rightMarker = tabContainerRef.current.scrollLeft + tabContainerRef.current.offsetWidth - indicatorWidth;
-    let scrollLeftSum = 0;
-    for (let i = 0; i < tabRefs.length; i += 1) {
-      scrollLeftSum += tabRefs[i].offsetWidth;
-      if (rightMarker <= scrollLeftSum) {
-        return i;
-      }
-    }
-    return null;
-  }
-  findFirstVisibleTab() {
-    const { tabContainerRef, tabRefs, indicatorWidth } = this.props;
-    const leftMarker = tabContainerRef.current.scrollLeft + indicatorWidth;
-    let scrollLeftSum = 0;
-    for (let i = 0; i < tabRefs.length; i += 1) {
-      scrollLeftSum += tabRefs[i].offsetWidth;
-      if (leftMarker <= scrollLeftSum) {
-        return i;
-      }
-    }
-    return null;
-  }
-  handleScroll() {
-    this.conditionallyUpdateState();
-  }
-  handleResize() {
-    this.setState({
-      contentHiddenLeft: this.contentHiddenLeft(),
-      contentHiddenRight: this.contentHiddenRight(),
-    });
-  }
-  conditionallyUpdateState() {
-    const { contentHiddenLeft, contentHiddenRight } = this.state;
-    const currentContentHiddenLeft = this.contentHiddenLeft();
-    const currentContentHiddenRight = this.contentHiddenRight();
-    if (currentContentHiddenLeft !== contentHiddenLeft) {
-      this.setState({ contentHiddenLeft: currentContentHiddenLeft });
-    }
-    if (currentContentHiddenRight !== contentHiddenRight) {
-      this.setState({ contentHiddenRight: currentContentHiddenRight });
-    }
-  }
-  handleIndicatorClick(side) {
-    const { tabRefs, tabContainerRef, indicatorWidth } = this.props;
-    if (side === "right") {
-      const lastVisibleTab = this.findLastVisibleTab();
-      const scrollLeft = this.getScrollLeftValueByTabIndex(lastVisibleTab) - indicatorWidth;
-      this.applyScrollLeft(scrollLeft);
-    } else {
-      const firstVisibleTab = this.findFirstVisibleTab();
-      const scrollLeft =
-        this.getScrollLeftValueByTabIndex(firstVisibleTab) +
-        indicatorWidth +
-        tabRefs[firstVisibleTab].offsetWidth -
-        tabContainerRef.current.offsetWidth;
-      this.applyScrollLeft(scrollLeft);
-    }
-  }
-  applyScrollLeft(scrollLeft) {
-    const { tabContainerRef } = this.props;
-    tabContainerRef.current.scroll({ left: scrollLeft, behavior: "smooth" });
-  }
-  render() {
-    const { tabContainerRef, indicatorWidth, children } = this.props;
-    const { contentHiddenLeft, contentHiddenRight } = this.state;
-    return (
-      <>
-        <TabScrollIndicatorContainer width={tabContainerRef.current ? tabContainerRef.current.offsetWidth : 0}>
-          {contentHiddenLeft && (
-            <TabScrollIndicator width={indicatorWidth} side="left" onClick={this.handleIndicatorClick} />
-          )}
-          {contentHiddenRight && (
-            <TabScrollIndicator width={indicatorWidth} side="right" onClick={this.handleIndicatorClick} />
-          )}
-        </TabScrollIndicatorContainer>
-        {children({
-          handleScroll: this.handleScroll,
-          handleResize: this.handleResize,
-        })}
-      </>
-    );
-  }
+  children: (handlers: { handleScroll: () => void; handleResize: () => void }) => React.ReactNode;
 }
 
-TabScrollIndicators.defaultProps = {
-  tabRefs: undefined,
-  tabContainerRef: undefined,
-  indicatorWidth: 40,
-};
+function TabScrollIndicators({ tabRefs, tabContainerRef, indicatorWidth = 40, children }: TabScrollIndicatorsProps) {
+  const [hiddenLeft, setHiddenLeft] = useState(false);
+  const [hiddenRight, setHiddenRight] = useState(false);
+
+  const isHiddenLeft = useCallback(() => {
+    const container = tabContainerRef?.current;
+    if (!container) return false;
+    return container.scrollLeft !== 0 && container.offsetWidth < container.scrollWidth;
+  }, [tabContainerRef]);
+
+  const isHiddenRight = useCallback(() => {
+    const container = tabContainerRef?.current;
+    if (!container) return false;
+    return container.scrollLeft + container.offsetWidth < container.scrollWidth;
+  }, [tabContainerRef]);
+
+  const updateVisibility = useCallback(() => {
+    setHiddenLeft(isHiddenLeft());
+    setHiddenRight(isHiddenRight());
+  }, [isHiddenLeft, isHiddenRight]);
+
+  useEffect(() => {
+    updateVisibility();
+  }, [updateVisibility]);
+
+  useResizeDetector({
+    targetRef: tabContainerRef as React.MutableRefObject<HTMLDivElement | null>,
+    onResize: updateVisibility,
+  });
+
+  const handleScroll = useCallback(() => {
+    updateVisibility();
+  }, [updateVisibility]);
+
+  function getScrollLeftByTabIndex(index: number) {
+    let sum = 0;
+    for (let i = 0; i < index; i++) {
+      sum += tabRefs[i]?.offsetWidth ?? 0;
+    }
+    return sum;
+  }
+
+  function findLastVisibleTab() {
+    const container = tabContainerRef.current;
+    const rightMarker = container.scrollLeft + container.offsetWidth - indicatorWidth;
+    let sum = 0;
+    for (let i = 0; i < tabRefs.length; i++) {
+      sum += tabRefs[i]?.offsetWidth ?? 0;
+      if (rightMarker <= sum) return i;
+    }
+    return null;
+  }
+
+  function findFirstVisibleTab() {
+    const container = tabContainerRef.current;
+    const leftMarker = container.scrollLeft + indicatorWidth;
+    let sum = 0;
+    for (let i = 0; i < tabRefs.length; i++) {
+      sum += tabRefs[i]?.offsetWidth ?? 0;
+      if (leftMarker <= sum) return i;
+    }
+    return null;
+  }
+
+  function handleIndicatorClick(side: "left" | "right") {
+    const container = tabContainerRef.current;
+    if (side === "right") {
+      const lastVisible = findLastVisibleTab();
+      container.scroll({ left: getScrollLeftByTabIndex(lastVisible) - indicatorWidth, behavior: "smooth" });
+    } else {
+      const firstVisible = findFirstVisibleTab();
+      container.scroll({
+        left:
+          getScrollLeftByTabIndex(firstVisible) +
+          indicatorWidth +
+          (tabRefs[firstVisible]?.offsetWidth ?? 0) -
+          container.offsetWidth,
+        behavior: "smooth",
+      });
+    }
+  }
+
+  const containerWidth = tabContainerRef?.current?.offsetWidth ?? 0;
+
+  return (
+    <>
+      <TabScrollIndicatorContainer width={containerWidth}>
+        {hiddenLeft && (
+          <TabScrollIndicator width={indicatorWidth} side="left" onClick={() => handleIndicatorClick("left")} />
+        )}
+        {hiddenRight && (
+          <TabScrollIndicator width={indicatorWidth} side="right" onClick={() => handleIndicatorClick("right")} />
+        )}
+      </TabScrollIndicatorContainer>
+      {children({ handleScroll, handleResize: updateVisibility })}
+    </>
+  );
+}
 
 export default TabScrollIndicators;
