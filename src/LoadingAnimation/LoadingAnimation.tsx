@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
 
 interface Props extends React.ComponentPropsWithRef<"svg"> {
@@ -6,6 +7,7 @@ interface Props extends React.ComponentPropsWithRef<"svg"> {
 }
 
 export default function LoadingAnimation({ inactive = false }: Props) {
+  const { t } = useTranslation();
   const { colors } = useTheme();
 
   const color1 = inactive ? colors.grey : colors.blue;
@@ -21,7 +23,7 @@ export default function LoadingAnimation({ inactive = false }: Props) {
       preserveAspectRatio="xMidYMid"
       role="img"
     >
-      <title>Loading animation</title>
+      <title>{t("loading animation")}</title>
       <g transform="translate(4 5)">
         <circle cx="0" cy="0" r="4" fill={color1} transform="scale(0.275039 0.275039)">
           <animateTransform

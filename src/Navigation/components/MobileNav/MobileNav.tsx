@@ -38,7 +38,7 @@ export default function MobileNav({
         <NulogyAppSwitcher config={appSwitcher} />
         <RadixNavigationMenuItem display="flex">
           {primaryLogo ?? (
-            <NavigationLogoLink href="/" aria-label={t("nulogy logo")}>
+            <NavigationLogoLink href="/" aria-label={t("Nulogy logo")}>
               <NulogyLogo />
             </NavigationLogoLink>
           )}

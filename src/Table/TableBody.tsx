@@ -1,4 +1,5 @@
 import React, { type ReactNode } from "react";
+import { useTranslation } from "react-i18next";
 import { styled } from "styled-components";
 import { Box } from "../Box";
 import { DefaultNDSThemeType } from "../theme";
@@ -129,9 +130,10 @@ const TableMessageContainer = ({ colSpan, children }: { colSpan: number; childre
   </tr>
 );
 
-const LoadingContent = ({ colSpan }: { colSpan: number }) => (
-  <TableMessageContainer colSpan={colSpan}>Loading...</TableMessageContainer>
-);
+const LoadingContent = ({ colSpan }: { colSpan: number }) => {
+  const { t } = useTranslation();
+  return <TableMessageContainer colSpan={colSpan}>{t("loading")}</TableMessageContainer>;
+};
 
 interface TableBodyProps {
   rows: any[];
