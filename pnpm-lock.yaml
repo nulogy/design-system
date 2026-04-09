@@ -230,7 +230,7 @@ importers:
         version: 18.3.1(react@18.3.1)
       react-router-dom:
         specifier: ^7.13.2
-        version: 7.13.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 7.14.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       semantic-release:
         specifier: ^25.0.3
         version: 25.0.3(typescript@5.9.3)
@@ -4505,15 +4505,15 @@ packages:
     peerDependencies:
       react: ^18.0.0 || ^19.0.0
 
-  react-router-dom@7.13.2:
-    resolution: {integrity: sha512-aR7SUORwTqAW0JDeiWF07e9SBE9qGpByR9I8kJT5h/FrBKxPMS6TiC7rmVO+gC0q52Bx7JnjWe8Z1sR9faN4YA==}
+  react-router-dom@7.14.0:
+    resolution: {integrity: sha512-2G3ajSVSZMEtmTjIklRWlNvo8wICEpLihfD/0YMDxbWK2UyP5EGfnoIn9AIQGnF3G/FX0MRbHXdFcD+rL1ZreQ==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  react-router@7.13.2:
-    resolution: {integrity: sha512-tX1Aee+ArlKQP+NIUd7SE6Li+CiGKwQtbS+FfRxPX6Pe4vHOo6nr9d++u5cwg+Z8K/x8tP+7qLmujDtfrAoUJA==}
+  react-router@7.14.0:
+    resolution: {integrity: sha512-m/xR9N4LQLmAS0ZhkY2nkPA1N7gQ5TUVa5n8TgANuDTARbn1gt+zLPXEm7W0XDTbrQ2AJSJKhoa6yx1D8BcpxQ==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       react: '>=18'
@@ -10051,13 +10051,13 @@ snapshots:
       es-toolkit: 1.45.1
       react: 18.3.1
 
-  react-router-dom@7.13.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  react-router-dom@7.14.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
-      react-router: 7.13.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react-router: 7.14.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
 
-  react-router@7.13.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  react-router@7.14.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       cookie: 1.1.1
       react: 18.3.1
