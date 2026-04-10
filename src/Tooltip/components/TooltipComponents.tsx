@@ -1,88 +1,90 @@
-import * as React from "react";
 import * as TooltipPrimitive from "@radix-ui/react-tooltip";
-import { styled, keyframes, useTheme } from "styled-components";
+import * as React from "react";
+import { keyframes, styled, useTheme } from "styled-components";
+import type { MaxWidthProps } from "styled-system";
 import { maxWidth } from "styled-system";
-import { MaxWidthProps } from "styled-system";
 
 // A helper hook to determine if the device supports hover
 function useHasHover() {
-  try {
-    return matchMedia("(hover: hover)").matches;
-  } catch {
-    // Assume that if the browser is too old to support matchMedia, it's likely not a touch device
-    return true;
-  }
+	try {
+		return matchMedia("(hover: hover)").matches;
+	} catch {
+		// Assume that if the browser is too old to support matchMedia, it's likely not a touch device
+		return true;
+	}
 }
 
 type TooltipTriggerContextType = {
-  supportMobileTap: boolean;
-  open: boolean;
-  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+	supportMobileTap: boolean;
+	open: boolean;
+	setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 const TooltipTriggerContext = React.createContext<TooltipTriggerContextType>({
-  supportMobileTap: false,
-  open: false,
-  setOpen: () => {},
+	supportMobileTap: false,
+	open: false,
+	setOpen: () => {},
 });
 
 const TooltipProvider = TooltipPrimitive.Provider;
 
 type TooltipProps = TooltipPrimitive.TooltipProps & {
-  supportMobileTap?: boolean;
+	supportMobileTap?: boolean;
 };
 
 function Tooltip({ children, ...props }: TooltipProps) {
-  const [open, setOpen] = React.useState<boolean>(props.defaultOpen ?? false);
-  const hasHover = useHasHover();
+	const [open, setOpen] = React.useState<boolean>(props.defaultOpen ?? false);
+	const hasHover = useHasHover();
 
-  return (
-    <TooltipPrimitive.Root
-      delayDuration={!hasHover && props.supportMobileTap ? 0 : props.delayDuration}
-      onOpenChange={setOpen}
-      open={open}
-    >
-      <TooltipTriggerContext.Provider
-        value={{
-          open,
-          setOpen,
-          supportMobileTap: props.supportMobileTap ?? false,
-        }}
-      >
-        {children}
-      </TooltipTriggerContext.Provider>
-    </TooltipPrimitive.Root>
-  );
+	return (
+		<TooltipPrimitive.Root
+			delayDuration={
+				!hasHover && props.supportMobileTap ? 0 : props.delayDuration
+			}
+			onOpenChange={setOpen}
+			open={open}
+		>
+			<TooltipTriggerContext.Provider
+				value={{
+					open,
+					setOpen,
+					supportMobileTap: props.supportMobileTap ?? false,
+				}}
+			>
+				{children}
+			</TooltipTriggerContext.Provider>
+		</TooltipPrimitive.Root>
+	);
 }
 
 Tooltip.displayName = TooltipPrimitive.Root.displayName;
 
 const TooltipTrigger = React.forwardRef<
-  React.ElementRef<typeof TooltipPrimitive.Trigger>,
-  React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Trigger>
+	React.ElementRef<typeof TooltipPrimitive.Trigger>,
+	React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Trigger>
 >(({ children, ...props }, ref) => {
-  const hasHover = useHasHover();
-  const { setOpen, supportMobileTap } = React.useContext(TooltipTriggerContext);
+	const hasHover = useHasHover();
+	const { setOpen, supportMobileTap } = React.useContext(TooltipTriggerContext);
 
-  const { onClick: onClickProp } = props;
+	const { onClick: onClickProp } = props;
 
-  const onClick = React.useCallback(
-    (e: React.MouseEvent<HTMLButtonElement>) => {
-      if (!hasHover && supportMobileTap) {
-        e.preventDefault();
-        setOpen(true);
-      } else {
-        onClickProp?.(e);
-      }
-    },
-    [setOpen, hasHover, supportMobileTap, onClickProp]
-  );
+	const onClick = React.useCallback(
+		(e: React.MouseEvent<HTMLButtonElement>) => {
+			if (!hasHover && supportMobileTap) {
+				e.preventDefault();
+				setOpen(true);
+			} else {
+				onClickProp?.(e);
+			}
+		},
+		[setOpen, hasHover, supportMobileTap, onClickProp],
+	);
 
-  return (
-    <TooltipPrimitive.Trigger ref={ref} {...props} onClick={onClick}>
-      {children}
-    </TooltipPrimitive.Trigger>
-  );
+	return (
+		<TooltipPrimitive.Trigger ref={ref} {...props} onClick={onClick}>
+			{children}
+		</TooltipPrimitive.Trigger>
+	);
 });
 
 TooltipTrigger.displayName = TooltipPrimitive.Trigger.displayName;
@@ -162,26 +164,28 @@ const StyledContent = styled(TooltipPrimitive.Content)`
 `;
 
 const StyledArrow = styled(TooltipPrimitive.Arrow)(({ theme }) => ({
-  fill: theme.colors.white,
-  filter: `drop-shadow(0px 1px 0px ${theme.colors.grey})`,
+	fill: theme.colors.white,
+	filter: `drop-shadow(0px 1px 0px ${theme.colors.grey})`,
 }));
 
 interface StyledTooltipContentProps
-  extends React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Content>, MaxWidthProps {
-  children?: React.ReactNode;
+	extends React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Content>,
+		MaxWidthProps {
+	children?: React.ReactNode;
 }
 
-const TooltipContent = React.forwardRef<React.ElementRef<typeof TooltipPrimitive.Content>, StyledTooltipContentProps>(
-  ({ sideOffset = 4, children, ...props }, ref) => {
-    const theme = useTheme();
-    return (
-      <StyledContent ref={ref} sideOffset={sideOffset} {...props}>
-        {children}
-        <StyledArrow width={theme.space.x1_5} height={theme.space.x0_75} />
-      </StyledContent>
-    );
-  }
-);
+const TooltipContent = React.forwardRef<
+	React.ElementRef<typeof TooltipPrimitive.Content>,
+	StyledTooltipContentProps
+>(({ sideOffset = 4, children, ...props }, ref) => {
+	const theme = useTheme();
+	return (
+		<StyledContent ref={ref} sideOffset={sideOffset} {...props}>
+			{children}
+			<StyledArrow width={theme.space.x1_5} height={theme.space.x0_75} />
+		</StyledContent>
+	);
+});
 
 TooltipContent.displayName = TooltipPrimitive.Content.displayName;
 

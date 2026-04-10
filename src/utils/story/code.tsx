@@ -1,5 +1,5 @@
-import { styled } from "styled-components";
 import { transparentize } from "polished";
+import { styled } from "styled-components";
 
 /**
  * A styled component for displaying code in a storybook.

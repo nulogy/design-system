@@ -1,2 +1,2 @@
-export { themes, phone, tablet, legacy as desktop } from "./theme";
-export type { ThemeType, DefaultNDSThemeType } from "./theme.type";
+export { legacy as desktop, phone, tablet, themes } from "./theme";
+export type { DefaultNDSThemeType, ThemeType } from "./theme.type";

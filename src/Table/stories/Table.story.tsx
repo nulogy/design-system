@@ -1,447 +1,466 @@
-import React from "react";
-import { expect, userEvent, waitFor, within } from "storybook/test";
-import { action } from "storybook/actions";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { useState } from "react";
+import { action } from "storybook/actions";
+import { expect, userEvent, waitFor, within } from "storybook/test";
 import { Box, DropdownButton, DropdownMenu, Text } from "../..";
 import { Table } from "..";
 
 const dateToString = ({ cellData }) => {
-  return new Date(cellData).toUTCString().split(" ").splice(0, 4).join(" ");
+	return new Date(cellData).toUTCString().split(" ").splice(0, 4).join(" ");
 };
 
 const sectionRow = ({ cellData }) => (
-  <Box bg="lightBlue" py="x1" px="x2">
-    <Text fontWeight="bold" color="blackBlue">
-      {cellData}
-    </Text>
-  </Box>
+	<Box bg="lightBlue" py="x1" px="x2">
+		<Text fontWeight="bold" color="blackBlue">
+			{cellData}
+		</Text>
+	</Box>
 );
 
 const expandedContent = () => (
-  <Box bg="lightBlue" py="x1" px="x2">
-    <Text fontWeight="bold" color="blackBlue">
-      Expands!
-    </Text>
-  </Box>
+	<Box bg="lightBlue" py="x1" px="x2">
+		<Text fontWeight="bold" color="blackBlue">
+			Expands!
+		</Text>
+	</Box>
 );
 
 const dropdownCellRenderer = ({ cellData }) => {
-  return (
-    <Box textAlign="right" pr="x3">
-      <DropdownMenu>
-        <DropdownButton onClick={action(cellData)}>Edit</DropdownButton>
-        <DropdownButton onClick={action(cellData)}>Delete</DropdownButton>
-      </DropdownMenu>
-    </Box>
-  );
+	return (
+		<Box textAlign="right" pr="x3">
+			<DropdownMenu>
+				<DropdownButton onClick={action(cellData)}>Edit</DropdownButton>
+				<DropdownButton onClick={action(cellData)}>Delete</DropdownButton>
+			</DropdownMenu>
+		</Box>
+	);
 };
 
 const columns = [
-  { label: "Date", dataKey: "date" },
-  { label: "Expected Quantity", dataKey: "expectedQuantity" },
-  { label: "Actual Quantity", dataKey: "actualQuantity" },
+	{ label: "Date", dataKey: "date" },
+	{ label: "Expected Quantity", dataKey: "expectedQuantity" },
+	{ label: "Actual Quantity", dataKey: "actualQuantity" },
 ];
 
 const columnsWithEverything = [
-  { label: "Date", dataKey: "date", cellFormatter: dateToString, width: "15%" },
-  { label: "Expected Quantity", dataKey: "expectedQuantity", width: "20%" },
-  { label: "Actual Quantity", dataKey: "actualQuantity", width: "20%" },
-  { label: "Note", dataKey: "note", width: "45%" },
-  {
-    label: "",
-    key: "actions",
-    width: "5%",
-    cellRenderer: dropdownCellRenderer,
-  },
+	{ label: "Date", dataKey: "date", cellFormatter: dateToString, width: "15%" },
+	{ label: "Expected Quantity", dataKey: "expectedQuantity", width: "20%" },
+	{ label: "Actual Quantity", dataKey: "actualQuantity", width: "20%" },
+	{ label: "Note", dataKey: "note", width: "45%" },
+	{
+		label: "",
+		key: "actions",
+		width: "5%",
+		cellRenderer: dropdownCellRenderer,
+	},
 ];
 
 const rowData = [
-  {
-    date: "2019-10-01",
-    expectedQuantity: "2,025 eaches",
-    actualQuantity: "1,800 eaches",
-    id: "r1",
-  },
-  {
-    date: "2019-10-02",
-    expectedQuantity: "2,475 eaches",
-    actualQuantity: "2,250 eaches",
-    id: "r2",
-  },
-  {
-    date: "2019-10-03",
-    expectedQuantity: "2,475 eaches",
-    actualQuantity: "1,425 eaches",
-    id: "r3",
-  },
-  {
-    date: "2019-10-04",
-    expectedQuantity: "2,475 eaches",
-    actualQuantity: "675 eaches",
-    id: "r4",
-  },
-  {
-    date: "2019-10-07",
-    expectedQuantity: "2,475 eaches",
-    actualQuantity: "1,575 eaches",
-    id: "r5",
-  },
-  {
-    date: "2019-10-22",
-    expectedQuantity: "1,725 eaches",
-    actualQuantity: "-",
-    id: "r7",
-  },
-  {
-    date: "2019-10-23",
-    expectedQuantity: "2,475 eaches",
-    actualQuantity: "-",
-    id: "r8",
-  },
-  {
-    date: "2019-10-24",
-    expectedQuantity: "2,475 eaches",
-    actualQuantity: "-",
-    id: "r9",
-  },
+	{
+		date: "2019-10-01",
+		expectedQuantity: "2,025 eaches",
+		actualQuantity: "1,800 eaches",
+		id: "r1",
+	},
+	{
+		date: "2019-10-02",
+		expectedQuantity: "2,475 eaches",
+		actualQuantity: "2,250 eaches",
+		id: "r2",
+	},
+	{
+		date: "2019-10-03",
+		expectedQuantity: "2,475 eaches",
+		actualQuantity: "1,425 eaches",
+		id: "r3",
+	},
+	{
+		date: "2019-10-04",
+		expectedQuantity: "2,475 eaches",
+		actualQuantity: "675 eaches",
+		id: "r4",
+	},
+	{
+		date: "2019-10-07",
+		expectedQuantity: "2,475 eaches",
+		actualQuantity: "1,575 eaches",
+		id: "r5",
+	},
+	{
+		date: "2019-10-22",
+		expectedQuantity: "1,725 eaches",
+		actualQuantity: "-",
+		id: "r7",
+	},
+	{
+		date: "2019-10-23",
+		expectedQuantity: "2,475 eaches",
+		actualQuantity: "-",
+		id: "r8",
+	},
+	{
+		date: "2019-10-24",
+		expectedQuantity: "2,475 eaches",
+		actualQuantity: "-",
+		id: "r9",
+	},
 ];
 
 const rowDataWithEverything = [
-  {
-    heading: "ABC & XYZ Company",
-    cellRenderer: sectionRow,
-    id: "r1",
-  },
-  {
-    date: "2019-10-01",
-    expectedQuantity: "2,025 eaches",
-    actualQuantity: "1,800 eaches",
-    id: "r2",
-    expandedContent,
-    selectAriaLabel: "select item 12",
-    deselectAriaLabel: "deselect item 12",
-  },
-  {
-    date: "2019-10-02",
-    expectedQuantity: "2,475 eaches",
-    actualQuantity: "2,250 eaches",
-    id: "r3",
-  },
-  {
-    date: "2019-10-03",
-    expectedQuantity: "2,475 eaches",
-    actualQuantity: "1,425 eaches",
-    id: "r4",
-  },
-  {
-    date: "2019-10-04",
-    expectedQuantity: "2,475 eaches",
-    actualQuantity: "675 eaches",
-    note: "1c Other Plant-related issue, equipment issues",
-    id: "r5",
-  },
-  {
-    date: "2019-10-07",
-    expectedQuantity: "2,475 eaches",
-    actualQuantity: "1,575 eaches",
-    id: "r6",
-  },
-  {
-    date: "2019-10-22",
-    expectedQuantity: "1,725 eaches",
-    actualQuantity: "-",
-    id: "r7",
-  },
-  { heading: "And Another Company", cellRenderer: sectionRow, id: "r8" },
-  {
-    date: "2019-10-23",
-    expectedQuantity: "2,475 eaches",
-    actualQuantity: "-",
-    id: "r9",
-    expandedContent,
-  },
-  {
-    date: "2019-10-24",
-    expectedQuantity: "2,475 eaches",
-    actualQuantity: "-",
-    id: "r10",
-  },
-  {
-    date: "2020-01-24",
-    expectedQuantity: { value: 2475, unit: "eaches" },
-    id: "r11",
-  },
+	{
+		heading: "ABC & XYZ Company",
+		cellRenderer: sectionRow,
+		id: "r1",
+	},
+	{
+		date: "2019-10-01",
+		expectedQuantity: "2,025 eaches",
+		actualQuantity: "1,800 eaches",
+		id: "r2",
+		expandedContent,
+		selectAriaLabel: "select item 12",
+		deselectAriaLabel: "deselect item 12",
+	},
+	{
+		date: "2019-10-02",
+		expectedQuantity: "2,475 eaches",
+		actualQuantity: "2,250 eaches",
+		id: "r3",
+	},
+	{
+		date: "2019-10-03",
+		expectedQuantity: "2,475 eaches",
+		actualQuantity: "1,425 eaches",
+		id: "r4",
+	},
+	{
+		date: "2019-10-04",
+		expectedQuantity: "2,475 eaches",
+		actualQuantity: "675 eaches",
+		note: "1c Other Plant-related issue, equipment issues",
+		id: "r5",
+	},
+	{
+		date: "2019-10-07",
+		expectedQuantity: "2,475 eaches",
+		actualQuantity: "1,575 eaches",
+		id: "r6",
+	},
+	{
+		date: "2019-10-22",
+		expectedQuantity: "1,725 eaches",
+		actualQuantity: "-",
+		id: "r7",
+	},
+	{ heading: "And Another Company", cellRenderer: sectionRow, id: "r8" },
+	{
+		date: "2019-10-23",
+		expectedQuantity: "2,475 eaches",
+		actualQuantity: "-",
+		id: "r9",
+		expandedContent,
+	},
+	{
+		date: "2019-10-24",
+		expectedQuantity: "2,475 eaches",
+		actualQuantity: "-",
+		id: "r10",
+	},
+	{
+		date: "2020-01-24",
+		expectedQuantity: { value: 2475, unit: "eaches" },
+		id: "r11",
+	},
 ];
 
 const footerRowData = [
-  {
-    date: "Total",
-    expectedQuantity: "18,000 eaches",
-    actualQuantity: "7,725 eaches",
-    id: "f1",
-  },
-  {
-    date: "Attainment",
-    expectedQuantity: "",
-    actualQuantity: "41.5%",
-    id: "f2",
-  },
+	{
+		date: "Total",
+		expectedQuantity: "18,000 eaches",
+		actualQuantity: "7,725 eaches",
+		id: "f1",
+	},
+	{
+		date: "Attainment",
+		expectedQuantity: "",
+		actualQuantity: "41.5%",
+		id: "f2",
+	},
 ];
 
 export default {
-  title: "Components/Table",
-  component: Table,
+	title: "Components/Table",
+	component: Table,
 } satisfies Meta<typeof Table>;
 
 type Story = StoryObj<typeof Table>;
 
 export const WithPagination: Story = {
-  args: {
-    columns,
-    rows: rowData,
-    rowsPerPage: 1,
-    onPageChange: action("page changed"),
-    className: "Table",
-  },
-  argTypes: {
-    rowsPerPage: {
-      control: { type: "number" },
-    },
-  },
-  name: "with pagination",
-  play: async ({ canvasElement, step }) => {
-    const canvas = within(canvasElement);
-    await step("navigates to next page", async () => {
-      await userEvent.click(canvas.getByLabelText("Go to next results"));
-      await expect(canvas.getByTestId("table-body")).toHaveTextContent("2019-10-02");
-    });
-    await step("navigates to previous page", async () => {
-      await userEvent.click(canvas.getByLabelText("Go to previous results"));
-      await expect(canvas.getByTestId("table-body")).toHaveTextContent("2019-10-01");
-    });
-    await step("navigates to a specific page", async () => {
-      await userEvent.click(canvas.getByRole("button", { name: "Go to page 5" }));
-      await expect(canvas.getByTestId("table-body")).toHaveTextContent("2019-10-07");
-    });
-  },
+	args: {
+		columns,
+		rows: rowData,
+		rowsPerPage: 1,
+		onPageChange: action("page changed"),
+		className: "Table",
+	},
+	argTypes: {
+		rowsPerPage: {
+			control: { type: "number" },
+		},
+	},
+	name: "with pagination",
+	play: async ({ canvasElement, step }) => {
+		const canvas = within(canvasElement);
+		await step("navigates to next page", async () => {
+			await userEvent.click(canvas.getByLabelText("Go to next results"));
+			await expect(canvas.getByTestId("table-body")).toHaveTextContent(
+				"2019-10-02",
+			);
+		});
+		await step("navigates to previous page", async () => {
+			await userEvent.click(canvas.getByLabelText("Go to previous results"));
+			await expect(canvas.getByTestId("table-body")).toHaveTextContent(
+				"2019-10-01",
+			);
+		});
+		await step("navigates to a specific page", async () => {
+			await userEvent.click(
+				canvas.getByRole("button", { name: "Go to page 5" }),
+			);
+			await expect(canvas.getByTestId("table-body")).toHaveTextContent(
+				"2019-10-07",
+			);
+		});
+	},
 };
 
 export const WithEverything: Story = {
-  args: {
-    columns: columnsWithEverything,
-    rows: rowDataWithEverything,
-    footerRows: footerRowData,
-    rowsPerPage: 5,
-    hasExpandableRows: true,
-    onRowExpansionChange: action("toggled expand"),
-    hasSelectableRows: true,
-    onRowSelectionChange: action("row selection changed"),
-    onPageChange: action("page changed"),
-    className: "Table",
-    onRowMouseEnter: action("row mouse enter"),
-    onRowMouseLeave: action("row mouse leave"),
-  },
-  argTypes: {
-    rowsPerPage: {
-      control: { type: "number" },
-    },
-    hasExpandableRows: {
-      control: { type: "boolean" },
-    },
-    hasSelectableRows: {
-      control: { type: "boolean" },
-    },
-  },
-  name: "with everything",
-  play: async ({ canvasElement, step }) => {
-    const canvas = within(canvasElement);
-    await step("can expand a row", async () => {
-      await userEvent.click(canvas.getByLabelText("Expand row"));
-      await expect(canvas.getByTestId("table-body")).toHaveTextContent("Expands!");
-    });
-    await step("can collapse the expanded row", async () => {
-      await userEvent.click(canvas.getByLabelText("Collapse row"));
-      await waitFor(() => expect(canvas.getByTestId("table-body")).not.toHaveTextContent("Expands!"));
-    });
-    await step("saves row selections when navigating pages", async () => {
-      const tableHead = canvasElement.querySelector("[data-testid='table-head']") as HTMLElement;
-      await userEvent.click(within(tableHead).getByTestId("visual-checkbox"));
-      const headerInput = canvasElement.querySelector(
-        "[data-testid='table-head'] [type='checkbox']"
-      ) as HTMLInputElement;
-      await expect(headerInput).toBeChecked();
-      await userEvent.click(canvas.getByLabelText("Go to next results"));
-      await userEvent.click(canvas.getByLabelText("Go to previous results"));
-      await expect(headerInput).toBeChecked();
-    });
-  },
+	args: {
+		columns: columnsWithEverything,
+		rows: rowDataWithEverything,
+		footerRows: footerRowData,
+		rowsPerPage: 5,
+		hasExpandableRows: true,
+		onRowExpansionChange: action("toggled expand"),
+		hasSelectableRows: true,
+		onRowSelectionChange: action("row selection changed"),
+		onPageChange: action("page changed"),
+		className: "Table",
+		onRowMouseEnter: action("row mouse enter"),
+		onRowMouseLeave: action("row mouse leave"),
+	},
+	argTypes: {
+		rowsPerPage: {
+			control: { type: "number" },
+		},
+		hasExpandableRows: {
+			control: { type: "boolean" },
+		},
+		hasSelectableRows: {
+			control: { type: "boolean" },
+		},
+	},
+	name: "with everything",
+	play: async ({ canvasElement, step }) => {
+		const canvas = within(canvasElement);
+		await step("can expand a row", async () => {
+			await userEvent.click(canvas.getByLabelText("Expand row"));
+			await expect(canvas.getByTestId("table-body")).toHaveTextContent(
+				"Expands!",
+			);
+		});
+		await step("can collapse the expanded row", async () => {
+			await userEvent.click(canvas.getByLabelText("Collapse row"));
+			await waitFor(() =>
+				expect(canvas.getByTestId("table-body")).not.toHaveTextContent(
+					"Expands!",
+				),
+			);
+		});
+		await step("saves row selections when navigating pages", async () => {
+			const tableHead = canvasElement.querySelector(
+				"[data-testid='table-head']",
+			) as HTMLElement;
+			await userEvent.click(within(tableHead).getByTestId("visual-checkbox"));
+			const headerInput = canvasElement.querySelector(
+				"[data-testid='table-head'] [type='checkbox']",
+			) as HTMLInputElement;
+			await expect(headerInput).toBeChecked();
+			await userEvent.click(canvas.getByLabelText("Go to next results"));
+			await userEvent.click(canvas.getByLabelText("Go to previous results"));
+			await expect(headerInput).toBeChecked();
+		});
+	},
 };
 
 export const WithOnHoverActions: Story = {
-  play: async ({ canvasElement, step }) => {
-    const canvas = within(canvasElement);
-    await step("reveals row actions when mouse enters a row", async () => {
-      const rows = canvas.getAllByTestId("table-row");
-      await userEvent.hover(rows[0]);
-      await waitFor(() => expect(within(rows[0]).getByRole("button")).toBeInTheDocument());
-    });
-    await step("hides row actions when mouse leaves the row", async () => {
-      const rows = canvas.getAllByTestId("table-row");
-      await userEvent.unhover(rows[0]);
-      await waitFor(() => expect(within(rows[0]).queryByRole("button")).not.toBeInTheDocument());
-    });
-  },
-  render: (args) => {
-    const rowDataWithHovers = [
-      {
-        date: "2019-10-01",
-        expectedQuantity: "2,025 eaches",
-        actualQuantity: "1,800 eaches",
-        id: "r1",
-      },
-      {
-        date: "2019-10-01",
-        expectedQuantity: "2,025 eaches",
-        actualQuantity: "1,800 eaches",
-        id: "r2",
-      },
-      {
-        date: "2019-10-02",
-        expectedQuantity: "2,475 eaches",
-        actualQuantity: "2,250 eaches",
-        id: "r3",
-      },
-      {
-        date: "2019-10-03",
-        expectedQuantity: "2,475 eaches",
-        actualQuantity: "1,425 eaches",
-        id: "r4",
-      },
-      {
-        date: "2019-10-04",
-        expectedQuantity: "2,475 eaches",
-        actualQuantity: "675 eaches",
-        note: "1c Other Plant-related issue, equipment issues",
-        id: "r5",
-      },
-      {
-        date: "2019-10-07",
-        expectedQuantity: "2,475 eaches",
-        actualQuantity: "1,575 eaches",
-        id: "r6",
-      },
-      {
-        date: "2019-10-22",
-        expectedQuantity: "1,725 eaches",
-        actualQuantity: "-",
-        id: "r7",
-      },
-      {
-        date: "2019-10-23",
-        expectedQuantity: "2,475 eaches",
-        actualQuantity: "-",
-        id: "r8",
-      },
-      {
-        date: "2019-10-23",
-        expectedQuantity: "2,475 eaches",
-        actualQuantity: "-",
-        id: "r9",
-      },
-      {
-        date: "2019-10-24",
-        expectedQuantity: "2,475 eaches",
-        actualQuantity: "-",
-        id: "r10",
-      },
-      {
-        date: "2019-10-23",
-        expectedQuantity: "2,475 eaches",
-        actualQuantity: "-",
-        id: "r11",
-      },
-      {
-        date: "2019-10-23",
-        expectedQuantity: "2,475 eaches",
-        actualQuantity: "-",
-        id: "r12",
-      },
-      {
-        date: "2019-10-24",
-        expectedQuantity: "2,475 eaches",
-        actualQuantity: "-",
-        id: "r13",
-      },
-      {
-        date: "2019-10-24",
-        expectedQuantity: "2,475 eaches",
-        actualQuantity: "-",
-        id: "r14",
-      },
-      {
-        date: "2019-10-24",
-        expectedQuantity: "2,475 eaches",
-        actualQuantity: "-",
-        id: "r15",
-      },
-    ];
-    const [hoveredRow, setHoveredRow] = useState(null);
-    const dropdownCellRendererWithHover = ({ cellData, row }) => {
-      return (
-        <Box textAlign="right" pr="x3" width="40px">
-          {row.id === hoveredRow && (
-            <DropdownMenu>
-              <DropdownButton onClick={action(cellData)}>Edit</DropdownButton>
-              <DropdownButton onClick={action(cellData)}>Delete</DropdownButton>
-            </DropdownMenu>
-          )}
-        </Box>
-      );
-    };
-    const columnsWithHovers = [
-      {
-        label: "Date",
-        dataKey: "date",
-        cellFormatter: dateToString,
-        width: "15%",
-      },
-      { label: "Expected Quantity", dataKey: "expectedQuantity", width: "20%" },
-      { label: "Actual Quantity", dataKey: "actualQuantity", width: "20%" },
-      { label: "Note", dataKey: "note", width: "45%" },
-      {
-        label: "",
-        dataKey: "actions",
-        width: "100px",
-        cellRenderer: dropdownCellRendererWithHover,
-      },
-    ];
-    const onMouseEnter = ({ row }) => {
-      setHoveredRow(row.id);
-    };
-    const onMouseLeave = () => {
-      setHoveredRow(null);
-    };
-    return (
-      <Table
-        columns={columnsWithHovers}
-        rows={rowDataWithHovers}
-        footerRows={footerRowData}
-        hasSelectableRows={args.hasSelectableRows}
-        onRowSelectionChange={action("row selection changed")}
-        className="Table"
-        onRowMouseEnter={onMouseEnter}
-        onRowMouseLeave={onMouseLeave}
-        onMouseLeave={onMouseLeave}
-      />
-    );
-  },
-  args: {
-    hasSelectableRows: true,
-  },
-  argTypes: {
-    hasSelectableRows: {
-      control: { type: "boolean" },
-    },
-  },
+	play: async ({ canvasElement, step }) => {
+		const canvas = within(canvasElement);
+		await step("reveals row actions when mouse enters a row", async () => {
+			const rows = canvas.getAllByTestId("table-row");
+			await userEvent.hover(rows[0]);
+			await waitFor(() =>
+				expect(within(rows[0]).getByRole("button")).toBeInTheDocument(),
+			);
+		});
+		await step("hides row actions when mouse leaves the row", async () => {
+			const rows = canvas.getAllByTestId("table-row");
+			await userEvent.unhover(rows[0]);
+			await waitFor(() =>
+				expect(within(rows[0]).queryByRole("button")).not.toBeInTheDocument(),
+			);
+		});
+	},
+	render: (args) => {
+		const rowDataWithHovers = [
+			{
+				date: "2019-10-01",
+				expectedQuantity: "2,025 eaches",
+				actualQuantity: "1,800 eaches",
+				id: "r1",
+			},
+			{
+				date: "2019-10-01",
+				expectedQuantity: "2,025 eaches",
+				actualQuantity: "1,800 eaches",
+				id: "r2",
+			},
+			{
+				date: "2019-10-02",
+				expectedQuantity: "2,475 eaches",
+				actualQuantity: "2,250 eaches",
+				id: "r3",
+			},
+			{
+				date: "2019-10-03",
+				expectedQuantity: "2,475 eaches",
+				actualQuantity: "1,425 eaches",
+				id: "r4",
+			},
+			{
+				date: "2019-10-04",
+				expectedQuantity: "2,475 eaches",
+				actualQuantity: "675 eaches",
+				note: "1c Other Plant-related issue, equipment issues",
+				id: "r5",
+			},
+			{
+				date: "2019-10-07",
+				expectedQuantity: "2,475 eaches",
+				actualQuantity: "1,575 eaches",
+				id: "r6",
+			},
+			{
+				date: "2019-10-22",
+				expectedQuantity: "1,725 eaches",
+				actualQuantity: "-",
+				id: "r7",
+			},
+			{
+				date: "2019-10-23",
+				expectedQuantity: "2,475 eaches",
+				actualQuantity: "-",
+				id: "r8",
+			},
+			{
+				date: "2019-10-23",
+				expectedQuantity: "2,475 eaches",
+				actualQuantity: "-",
+				id: "r9",
+			},
+			{
+				date: "2019-10-24",
+				expectedQuantity: "2,475 eaches",
+				actualQuantity: "-",
+				id: "r10",
+			},
+			{
+				date: "2019-10-23",
+				expectedQuantity: "2,475 eaches",
+				actualQuantity: "-",
+				id: "r11",
+			},
+			{
+				date: "2019-10-23",
+				expectedQuantity: "2,475 eaches",
+				actualQuantity: "-",
+				id: "r12",
+			},
+			{
+				date: "2019-10-24",
+				expectedQuantity: "2,475 eaches",
+				actualQuantity: "-",
+				id: "r13",
+			},
+			{
+				date: "2019-10-24",
+				expectedQuantity: "2,475 eaches",
+				actualQuantity: "-",
+				id: "r14",
+			},
+			{
+				date: "2019-10-24",
+				expectedQuantity: "2,475 eaches",
+				actualQuantity: "-",
+				id: "r15",
+			},
+		];
+		const [hoveredRow, setHoveredRow] = useState(null);
+		const dropdownCellRendererWithHover = ({ cellData, row }) => {
+			return (
+				<Box textAlign="right" pr="x3" width="40px">
+					{row.id === hoveredRow && (
+						<DropdownMenu>
+							<DropdownButton onClick={action(cellData)}>Edit</DropdownButton>
+							<DropdownButton onClick={action(cellData)}>Delete</DropdownButton>
+						</DropdownMenu>
+					)}
+				</Box>
+			);
+		};
+		const columnsWithHovers = [
+			{
+				label: "Date",
+				dataKey: "date",
+				cellFormatter: dateToString,
+				width: "15%",
+			},
+			{ label: "Expected Quantity", dataKey: "expectedQuantity", width: "20%" },
+			{ label: "Actual Quantity", dataKey: "actualQuantity", width: "20%" },
+			{ label: "Note", dataKey: "note", width: "45%" },
+			{
+				label: "",
+				dataKey: "actions",
+				width: "100px",
+				cellRenderer: dropdownCellRendererWithHover,
+			},
+		];
+		const onMouseEnter = ({ row }) => {
+			setHoveredRow(row.id);
+		};
+		const onMouseLeave = () => {
+			setHoveredRow(null);
+		};
+		return (
+			<Table
+				columns={columnsWithHovers}
+				rows={rowDataWithHovers}
+				footerRows={footerRowData}
+				hasSelectableRows={args.hasSelectableRows}
+				onRowSelectionChange={action("row selection changed")}
+				className="Table"
+				onRowMouseEnter={onMouseEnter}
+				onRowMouseLeave={onMouseLeave}
+				onMouseLeave={onMouseLeave}
+			/>
+		);
+	},
+	args: {
+		hasSelectableRows: true,
+	},
+	argTypes: {
+		hasSelectableRows: {
+			control: { type: "boolean" },
+		},
+	},
 };

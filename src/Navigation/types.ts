@@ -1,100 +1,106 @@
-import React from "react";
-import { IconName } from "@nulogy/icons";
+import type { IconName } from "@nulogy/icons";
+import type React from "react";
 
 /* -------------------------------------------------------------------
  * User Menu
  * -----------------------------------------------------------------*/
 export interface UserMenu {
-  triggerText: UserMenuInfo;
-  header?: UserMenuInfo;
-  controls?: (props: { withinMobileNav: boolean }) => JSX.Element;
-  menuItems?: UserMenuItem[];
+	triggerText: UserMenuInfo;
+	header?: UserMenuInfo;
+	controls?: (props: { withinMobileNav: boolean }) => JSX.Element;
+	menuItems?: UserMenuItem[];
 }
 
 export type UserMenuInfo = {
-  title: string;
-  subtitle1?: string;
-  subtitle2?: string;
+	title: string;
+	subtitle1?: string;
+	subtitle2?: string;
 };
 
-export type UserMenuItem = BaseUserMenuItem & (LinkUserMenuItem | ButtonUserMenuItem | CustomUserMenuItem);
+export type UserMenuItem = BaseUserMenuItem &
+	(LinkUserMenuItem | ButtonUserMenuItem | CustomUserMenuItem);
 
 interface BaseUserMenuItem {
-  key: string;
+	key: string;
 }
 
 interface LinkUserMenuItem {
-  label: string;
-  type: "link";
-  props?: React.ComponentPropsWithoutRef<"a">;
-  element?: JSX.Element;
+	label: string;
+	type: "link";
+	props?: React.ComponentPropsWithoutRef<"a">;
+	element?: JSX.Element;
 }
 
 interface ButtonUserMenuItem {
-  label: string;
-  type: "button";
-  props?: React.ComponentPropsWithoutRef<"button">;
+	label: string;
+	type: "button";
+	props?: React.ComponentPropsWithoutRef<"button">;
 }
 
 interface CustomUserMenuItem {
-  type: "custom";
-  render: (props: { level: number; withinMobileNav: boolean }) => JSX.Element;
+	type: "custom";
+	render: (props: { level: number; withinMobileNav: boolean }) => JSX.Element;
 }
 
 /* -------------------------------------------------------------------
  * Menu Items
  * -----------------------------------------------------------------*/
 
-export type MenuItem = MenuItemBase & (CustomMenuItem | MenuItemButton | MenuItemLink | MenuItemSeparator);
+export type MenuItem = MenuItemBase &
+	(CustomMenuItem | MenuItemButton | MenuItemLink | MenuItemSeparator);
 
 export type MenuItems = MenuItem[];
 
 type MobileVisibility =
-  /**
-   * Show on the navigation bar, just before the mobile navigation menu trigger
-   */
-  | "navigationBar"
-  /**
-   * Show inside the mobile navigation menu (default behavior)
-   */
-  | "navigationMenu"
-  /**
-   * Hide item completely
-   */
-  | "hidden";
+	/**
+	 * Show on the navigation bar, just before the mobile navigation menu trigger
+	 */
+	| "navigationBar"
+	/**
+	 * Show inside the mobile navigation menu (default behavior)
+	 */
+	| "navigationMenu"
+	/**
+	 * Hide item completely
+	 */
+	| "hidden";
 
 export type MenuItemBase = {
-  mobileVisibility?: MobileVisibility;
-  key: string;
+	mobileVisibility?: MobileVisibility;
+	key: string;
 };
 
 type WithIcon = {
-  icon: IconName;
-  tooltip: string;
-  label?: string;
+	icon: IconName;
+	tooltip: string;
+	label?: string;
 };
 
 type WithLabel = {
-  label: string;
+	label: string;
 };
 
 type CustomMenuItem = {
-  type: "custom";
-  render: (props: { withinSubMenu: boolean; level: number; withinMobileNav: boolean }) => JSX.Element;
+	type: "custom";
+	render: (props: {
+		withinSubMenu: boolean;
+		level: number;
+		withinMobileNav: boolean;
+	}) => JSX.Element;
 };
 
 type MenuItemButton = {
-  type: "button";
-  items?: MenuItem[];
-  props?: React.ComponentPropsWithoutRef<"button">;
+	type: "button";
+	items?: MenuItem[];
+	props?: React.ComponentPropsWithoutRef<"button">;
 } & (WithIcon | WithLabel);
 
 type MenuItemLink = {
-  type: "link";
-  element?: JSX.Element;
-  props?: React.ComponentPropsWithoutRef<"a">;
+	type: "link";
+	element?: JSX.Element;
+	props?: React.ComponentPropsWithoutRef<"a">;
 } & (WithIcon | WithLabel);
 
 type MenuItemSeparator = {
-  type: "separator";
+	type: "separator";
 };

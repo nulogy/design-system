@@ -1,15 +1,21 @@
 {
-  "formatter": {
-    "enabled": true,
-    "indentStyle": "space",
-    "lineWidth": 120
-  },
-  "linter": {
-    "enabled": false
-  },
-  "javascript": {
-    "formatter": {
-      "trailingComma": "es5"
-    }
-  }
+	"$schema": "https://biomejs.dev/schemas/2.4.11/schema.json",
+	"files": {
+		"includes": ["**", "!dist", "!storybook-static", "!coverage", "!.claude"]
+	},
+	"linter": {
+		"rules": {
+			"recommended": true,
+			"suspicious": {
+				"noExplicitAny": "off",
+				"noArrayIndexKey": "off"
+			},
+			"correctness": {
+				"useExhaustiveDependencies": "off"
+			},
+			"a11y": {
+				"noSvgWithoutTitle": "off"
+			}
+		}
+	}
 }

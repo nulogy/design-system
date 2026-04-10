@@ -1,276 +1,300 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
+import { useState } from "react";
 import { expect, userEvent, within } from "storybook/test";
-import React, { useState } from "react";
 import {
-  Modal as NDSModal,
-  Button,
-  QuietButton,
-  PrimaryButton,
-  ButtonGroup,
-  Form,
-  Input,
-  Select,
-  Text,
-  DatePicker,
+	Button,
+	ButtonGroup,
+	DatePicker,
+	Form,
+	Input,
+	Modal as NDSModal,
+	PrimaryButton,
+	QuietButton,
+	Select,
+	Text,
 } from "../index";
 
 if (process.env.NODE_ENV !== "test") NDSModal.setAppElement("#storybook-root");
 
 const options = [
-  { value: "accepted", label: "Accepted" },
-  { value: "assigned", label: "Assigned to a line" },
-  { value: "hold", label: "On hold" },
-  { value: "rejected", label: "Rejected" },
-  { value: "open", label: "Open" },
-  { value: "progress", label: "In progress" },
-  { value: "quarantine", label: "In quarantine" },
+	{ value: "accepted", label: "Accepted" },
+	{ value: "assigned", label: "Assigned to a line" },
+	{ value: "hold", label: "On hold" },
+	{ value: "rejected", label: "Rejected" },
+	{ value: "open", label: "Open" },
+	{ value: "progress", label: "In progress" },
+	{ value: "quarantine", label: "In quarantine" },
 ];
 
 const ModalButtons = (
-  <ButtonGroup>
-    <PrimaryButton>Add job to line</PrimaryButton>
-    <QuietButton>Cancel</QuietButton>
-  </ButtonGroup>
+	<ButtonGroup>
+		<PrimaryButton>Add job to line</PrimaryButton>
+		<QuietButton>Cancel</QuietButton>
+	</ButtonGroup>
 );
 
 export default {
-  title: "Components/Modal",
-  component: NDSModal,
-  args: {
-    ariaHideApp: process.env.NODE_ENV === "test" ? false : undefined,
-  },
+	title: "Components/Modal",
+	component: NDSModal,
+	args: {
+		ariaHideApp: process.env.NODE_ENV === "test" ? false : undefined,
+	},
 } satisfies Meta<typeof NDSModal>;
 
 type Story = StoryObj<typeof NDSModal>;
 
 export const Default: Story = {
-  args: {
-    children: "Content Content Content",
-    title: "Modal Title",
-    footerContent: ModalButtons,
-    onRequestClose: () => {},
-  },
+	args: {
+		children: "Content Content Content",
+		title: "Modal Title",
+		footerContent: ModalButtons,
+		onRequestClose: () => {},
+	},
 };
 
 export const WithScrollingContent: Story = {
-  args: {
-    title: "Modal Title",
-    footerContent: ModalButtons,
-    children: (
-      <>
-        <Text>
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-        </Text>
-        <Text>
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-        </Text>
-        <Text>
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-        </Text>
-        <Text>
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-        </Text>
-        <Text>
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-        </Text>
-        <Text>
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-        </Text>
-      </>
-    ),
-  },
-  name: "with scrolling content",
+	args: {
+		title: "Modal Title",
+		footerContent: ModalButtons,
+		children: (
+			<>
+				<Text>
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content
+				</Text>
+				<Text>
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content
+				</Text>
+				<Text>
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content
+				</Text>
+				<Text>
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content
+				</Text>
+				<Text>
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content
+				</Text>
+				<Text>
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content
+				</Text>
+			</>
+		),
+	},
+	name: "with scrolling content",
 };
 
 export const WithScrollingContentWithoutFooterContent: Story = {
-  args: {
-    title: "Modal Title",
-    children: (
-      <>
-        <Text>
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-        </Text>
-        <Text>
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-        </Text>
-        <Text>
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-        </Text>
-        <Text>
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-        </Text>
-        <Text>
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-        </Text>
-        <Text>
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-          Content Content Content Content Content Content Content Content Content Content Content Content Content
-        </Text>
-      </>
-    ),
-  },
-  name: "with scrolling content without footer content",
+	args: {
+		title: "Modal Title",
+		children: (
+			<>
+				<Text>
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content
+				</Text>
+				<Text>
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content
+				</Text>
+				<Text>
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content
+				</Text>
+				<Text>
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content
+				</Text>
+				<Text>
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content
+				</Text>
+				<Text>
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content Content
+					Content Content Content Content Content Content Content
+				</Text>
+			</>
+		),
+	},
+	name: "with scrolling content without footer content",
 };
 
 export const WithNoTitle: Story = {
-  args: {
-    children: "Content Content Content",
-    footerContent: ModalButtons,
-  },
-  name: "with no title",
+	args: {
+		children: "Content Content Content",
+		footerContent: ModalButtons,
+	},
+	name: "with no title",
 };
 
 export const WithNoFooterContent: Story = {
-  args: {
-    children: "Content Content Content",
-    title: "Without footerContent",
-    onRequestClose: () => {},
-  },
-  name: "with no footerContent",
+	args: {
+		children: "Content Content Content",
+		title: "Without footerContent",
+		onRequestClose: () => {},
+	},
+	name: "with no footerContent",
 };
 
 export const WithCustomMaxWidth: Story = {
-  args: {
-    children: "Content Content Content",
-    title: "Modal Title",
-    footerContent: ModalButtons,
-    maxWidth: "1000px",
-  },
-  name: "with custom maxWidth",
+	args: {
+		children: "Content Content Content",
+		title: "Modal Title",
+		footerContent: ModalButtons,
+		maxWidth: "1000px",
+	},
+	name: "with custom maxWidth",
 };
 
 export const WithSelect: Story = {
-  args: {
-    title: "Edit Profile",
-    footerContent: ModalButtons,
-    maxWidth: "456px",
-    onRequestClose: () => {},
-    children: (
-      <Form id="myForm" mb="x2">
-        <Select
-          maxHeight="96px"
-          placeholder="Please select inventory status"
-          options={options}
-          labelText="Inventory status"
-        />
-      </Form>
-    ),
-  },
-  name: "with select",
+	args: {
+		title: "Edit Profile",
+		footerContent: ModalButtons,
+		maxWidth: "456px",
+		onRequestClose: () => {},
+		children: (
+			<Form id="myForm" mb="x2">
+				<Select
+					maxHeight="96px"
+					placeholder="Please select inventory status"
+					options={options}
+					labelText="Inventory status"
+				/>
+			</Form>
+		),
+	},
+	name: "with select",
 };
 
 export const WithSelectAndScrollingContent: Story = {
-  args: {
-    title: "Edit Profile",
-    footerContent: ModalButtons,
-    maxWidth: "456px",
-    onRequestClose: () => {},
-    children: (
-      <Form id="myForm" mb="x2">
-        <Input name="name" id="name" labelText="Name" />
-        <Input type="number" name="age" id="age" labelText="Age" />
-        <Input name="name" id="name" labelText="Name" />
-        <Input type="number" name="age" id="age" labelText="Age" />
-        <Input name="name" id="name" labelText="Name" />
-        <Input type="number" name="age" id="age" labelText="Age" />
-        <Select
-          maxHeight="96px"
-          placeholder="Please select inventory status"
-          options={options}
-          labelText="Inventory status"
-        />
-      </Form>
-    ),
-  },
-  name: "with select and scrolling content",
+	args: {
+		title: "Edit Profile",
+		footerContent: ModalButtons,
+		maxWidth: "456px",
+		onRequestClose: () => {},
+		children: (
+			<Form id="myForm" mb="x2">
+				<Input name="name" id="name" labelText="Name" />
+				<Input type="number" name="age" id="age" labelText="Age" />
+				<Input name="name" id="name" labelText="Name" />
+				<Input type="number" name="age" id="age" labelText="Age" />
+				<Input name="name" id="name" labelText="Name" />
+				<Input type="number" name="age" id="age" labelText="Age" />
+				<Select
+					maxHeight="96px"
+					placeholder="Please select inventory status"
+					options={options}
+					labelText="Inventory status"
+				/>
+			</Form>
+		),
+	},
+	name: "with select and scrolling content",
 };
 
 export const WithParentSelector: Story = {
-  args: {
-    title: "Modal Title",
-    footerContent: ModalButtons,
-    parentSelector: () => document.getElementById("parent-selector"),
-  },
-  name: "with a parent selector",
-  render: (args) => (
-    <div id="parent-selector">
-      <NDSModal {...args}>Content</NDSModal>
-    </div>
-  ),
+	args: {
+		title: "Modal Title",
+		footerContent: ModalButtons,
+		parentSelector: () => document.getElementById("parent-selector"),
+	},
+	name: "with a parent selector",
+	render: (args) => (
+		<div id="parent-selector">
+			<NDSModal {...args}>Content</NDSModal>
+		</div>
+	),
 };
 
 export const ExampleControlledModal: Story = {
-  render: () => <ModalExample />,
-  name: "example controlled modal",
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const body = within(document.body);
+	render: () => <ModalExample />,
+	name: "example controlled modal",
+	play: async ({ canvasElement }) => {
+		const canvas = within(canvasElement);
+		const body = within(document.body);
 
-    await userEvent.click(canvas.getByRole("button", { name: "Open Modal" }));
+		await userEvent.click(canvas.getByRole("button", { name: "Open Modal" }));
 
-    const dialog = await body.findByRole("dialog");
-    expect(dialog).toBeVisible();
+		const dialog = await body.findByRole("dialog");
+		expect(dialog).toBeVisible();
 
-    await userEvent.keyboard("{Escape}");
+		await userEvent.keyboard("{Escape}");
 
-    expect(body.queryByRole("dialog")).not.toBeInTheDocument();
-  },
+		expect(body.queryByRole("dialog")).not.toBeInTheDocument();
+	},
 };
 
 const ModalExample = () => {
-  const [isOpen, setIsOpen] = useState(false);
+	const [isOpen, setIsOpen] = useState(false);
 
-  return (
-    <>
-      <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
-      <NDSModal
-        title="Edit Profile"
-        footerContent={
-          <ButtonGroup>
-            <PrimaryButton type="submit" form="myForm">
-              Add job to line
-            </PrimaryButton>
-            <QuietButton onClick={() => setIsOpen(false)}>Cancel</QuietButton>
-          </ButtonGroup>
-        }
-        onRequestClose={() => setIsOpen(false)}
-        isOpen={isOpen}
-        maxWidth="456px"
-      >
-        <Form id="myForm" mb="x2">
-          <Input name="name" id="name" labelText="Name" />
-          <Input type="number" name="age" id="age" labelText="Age" />
-          <DatePicker
-            selected={new Date("Fri, 01 Jan 2019")}
-            dateFormat="MMMM d, yyyy"
-            onChange={(val) => val}
-            onInputChange={(val) => val}
-          />
-        </Form>
-      </NDSModal>
-    </>
-  );
+	return (
+		<>
+			<Button onClick={() => setIsOpen(true)}>Open Modal</Button>
+			<NDSModal
+				title="Edit Profile"
+				footerContent={
+					<ButtonGroup>
+						<PrimaryButton type="submit" form="myForm">
+							Add job to line
+						</PrimaryButton>
+						<QuietButton onClick={() => setIsOpen(false)}>Cancel</QuietButton>
+					</ButtonGroup>
+				}
+				onRequestClose={() => setIsOpen(false)}
+				isOpen={isOpen}
+				maxWidth="456px"
+			>
+				<Form id="myForm" mb="x2">
+					<Input name="name" id="name" labelText="Name" />
+					<Input type="number" name="age" id="age" labelText="Age" />
+					<DatePicker
+						selected={new Date("Fri, 01 Jan 2019")}
+						dateFormat="MMMM d, yyyy"
+						onChange={(val) => val}
+						onInputChange={(val) => val}
+					/>
+				</Form>
+			</NDSModal>
+		</>
+	);
 };

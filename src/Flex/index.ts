@@ -1,2 +1,1 @@
-export { default as Flex } from "./Flex";
-export { InlineFlex } from "./Flex";
+export { default as Flex, InlineFlex } from "./Flex";

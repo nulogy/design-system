@@ -7,14 +7,14 @@ import mediaQuery from "css-mediaquery";
  *
  */
 export const createMatchMedia =
-  (width: number) =>
-  (query: string): MediaQueryList => ({
-    matches: mediaQuery.match(query, { width }),
-    addListener: () => {},
-    removeListener: () => {},
-    addEventListener: () => {},
-    removeEventListener: () => {},
-    dispatchEvent: () => false,
-    media: query,
-    onchange: null,
-  });
+	(width: number) =>
+	(query: string): MediaQueryList => ({
+		matches: mediaQuery.match(query, { width }),
+		addListener: () => {},
+		removeListener: () => {},
+		addEventListener: () => {},
+		removeEventListener: () => {},
+		dispatchEvent: () => false,
+		media: query,
+		onchange: null,
+	});

@@ -1,5 +1,7 @@
-export type { DescriptionListProps } from "./lib/types";
 export { default as DescriptionList } from "./DescriptionList";
-export { DescriptionGroup } from "./DescriptionList.parts";
-export { DescriptionTerm } from "./DescriptionList.parts";
-export { DescriptionDetails } from "./DescriptionList.parts";
+export {
+	DescriptionDetails,
+	DescriptionGroup,
+	DescriptionTerm,
+} from "./DescriptionList.parts";
+export type { DescriptionListProps } from "./lib/types";

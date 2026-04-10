@@ -3,5 +3,5 @@
  * @param {string} dimension - A css dimension
  */
 export default function (dimension: string | number): number {
-  return parseInt(String(dimension), 10);
+	return parseInt(String(dimension), 10);
 }
