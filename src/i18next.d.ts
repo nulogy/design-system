@@ -12,7 +12,7 @@
 import "i18next";
 
 declare module "i18next" {
-  interface TypeOptions {
-    allowObjectInHTMLChildren: false;
-  }
+	interface TypeOptions {
+		allowObjectInHTMLChildren: false;
+	}
 }

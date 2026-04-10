@@ -1,17 +1,17 @@
 export async function filterOptions(
-  inputValue: string,
-  options: { value: string; label: string }[],
-  simulatedNetworkDelayMs = 450
+	inputValue: string,
+	options: { value: string; label: string }[],
+	simulatedNetworkDelayMs = 450,
 ): Promise<Response> {
-  const filteredOptions = options.filter((option) => {
-    return option.label.toLowerCase().startsWith(inputValue.toLowerCase());
-  });
+	const filteredOptions = options.filter((option) => {
+		return option.label.toLowerCase().startsWith(inputValue.toLowerCase());
+	});
 
-  const responseBody = JSON.stringify(filteredOptions);
+	const responseBody = JSON.stringify(filteredOptions);
 
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(new Response(responseBody));
-    }, simulatedNetworkDelayMs);
-  });
+	return new Promise((resolve) => {
+		setTimeout(() => {
+			resolve(new Response(responseBody));
+		}, simulatedNetworkDelayMs);
+	});
 }

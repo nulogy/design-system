@@ -1,11 +1,10 @@
-import React from "react";
 import { RangeContainer } from ".";
 
 export default {
-  title: "Components/RangeContainer",
+	title: "Components/RangeContainer",
 };
 
 export const _RangeContainer = {
-  render: () => <RangeContainer>Example</RangeContainer>,
-  name: "RangeContainer",
+	render: () => <RangeContainer>Example</RangeContainer>,
+	name: "RangeContainer",
 };

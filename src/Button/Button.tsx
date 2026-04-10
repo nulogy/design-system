@@ -1,122 +1,140 @@
+import type { IconName } from "@nulogy/icons";
 import React from "react";
 import { styled, useTheme } from "styled-components";
-import type { IconName } from "@nulogy/icons";
-import { space, SpaceProps, variant } from "styled-system";
+import { type SpaceProps, space, variant } from "styled-system";
 import { Icon } from "../Icon";
-import { DefaultNDSThemeType } from "../theme";
 import {
-  useComponentVariant,
-  ComponentVariant as ContextComponentSize,
-  ComponentVariant,
+	type ComponentVariant,
+	type ComponentVariant as ContextComponentSize,
+	useComponentVariant,
 } from "../NDSProvider/ComponentVariantContext";
+import type { DefaultNDSThemeType } from "../theme";
 import { subPx } from "../utils";
 
 export type ButtonProps = SpaceProps &
-  React.ComponentPropsWithRef<"button"> & {
-    className?: string;
-    icon?: IconName | "loading";
-    iconSide?: "left" | "right";
-    size?: "small" | "medium";
-    variant?: ComponentVariant;
-    fullWidth?: boolean;
-    asLink?: boolean;
-    children?: React.ReactNode;
-    theme?: DefaultNDSThemeType;
-    href?: string;
-  };
+	React.ComponentPropsWithRef<"button"> & {
+		className?: string;
+		icon?: IconName | "loading";
+		iconSide?: "left" | "right";
+		size?: "small" | "medium";
+		variant?: ComponentVariant;
+		fullWidth?: boolean;
+		asLink?: boolean;
+		children?: React.ReactNode;
+		theme?: DefaultNDSThemeType;
+		href?: string;
+	};
 
 const WrapperButton = styled.button<ButtonProps>(
-  ({ fullWidth }) => ({
-    width: fullWidth ? "100%" : "auto",
-  }),
-  ({ disabled, theme }) => ({
-    userSelect: "none",
-    touchAction: "none",
-    display: "inline-flex",
-    justifyContent: "center",
-    alignItems: "center",
-    fontSize: theme.fontSizes.medium,
-    fontWeight: theme.fontWeights.medium,
-    textDecoration: "none",
-    verticalAlign: "middle",
-    lineHeight: theme.lineHeights.base,
-    cursor: disabled ? "default" : "pointer",
-    color: theme.colors.blue,
-    backgroundColor: theme.colors.white,
-    border: `1px solid ${theme.colors.blue}`,
-    borderRadius: theme.radii.medium,
-    margin: theme.space.none,
-    transition: "background-color .2s, transform .2s ease-in",
-    "&:hover": {
-      backgroundColor: disabled ? null : theme.colors.lightBlue,
-    },
-    "&:focus": {
-      outline: "none",
-      borderColor: theme.colors.blue,
-      boxShadow: theme.shadows.focus,
-      backgroundColor: theme.colors.white,
-      "&:hover": {
-        backgroundColor: theme.colors.lightBlue,
-      },
-    },
-    "&:active": {
-      transform: "scale(0.98)",
-    },
-    "&:disabled": {
-      opacity: ".5",
-    },
-    padding: `${subPx(theme.space.x1)} ${theme.space.x2}`,
-  }),
-  variant({
-    variants: {
-      touch: {
-        fontSize: "md",
-        lineHeight: "base",
-      },
-    },
-  }),
-  ({ theme }) =>
-    variant({
-      prop: "size",
-      variants: {
-        small: {
-          fontSize: "small",
-          lineHeight: "smallTextCompressed",
-          padding: `${subPx(theme.space.half)} ${theme.space.x1}`,
-        },
+	({ fullWidth }) => ({
+		width: fullWidth ? "100%" : "auto",
+	}),
+	({ disabled, theme }) => ({
+		userSelect: "none",
+		touchAction: "none",
+		display: "inline-flex",
+		justifyContent: "center",
+		alignItems: "center",
+		fontSize: theme.fontSizes.medium,
+		fontWeight: theme.fontWeights.medium,
+		textDecoration: "none",
+		verticalAlign: "middle",
+		lineHeight: theme.lineHeights.base,
+		cursor: disabled ? "default" : "pointer",
+		color: theme.colors.blue,
+		backgroundColor: theme.colors.white,
+		border: `1px solid ${theme.colors.blue}`,
+		borderRadius: theme.radii.medium,
+		margin: theme.space.none,
+		transition: "background-color .2s, transform .2s ease-in",
+		"&:hover": {
+			backgroundColor: disabled ? null : theme.colors.lightBlue,
+		},
+		"&:focus": {
+			outline: "none",
+			borderColor: theme.colors.blue,
+			boxShadow: theme.shadows.focus,
+			backgroundColor: theme.colors.white,
+			"&:hover": {
+				backgroundColor: theme.colors.lightBlue,
+			},
+		},
+		"&:active": {
+			transform: "scale(0.98)",
+		},
+		"&:disabled": {
+			opacity: ".5",
+		},
+		padding: `${subPx(theme.space.x1)} ${theme.space.x2}`,
+	}),
+	variant({
+		variants: {
+			touch: {
+				fontSize: "md",
+				lineHeight: "base",
+			},
+		},
+	}),
+	({ theme }) =>
+		variant({
+			prop: "size",
+			variants: {
+				small: {
+					fontSize: "small",
+					lineHeight: "smallTextCompressed",
+					padding: `${subPx(theme.space.half)} ${theme.space.x1}`,
+				},
 
-        medium: {
-          fontSize: "base",
-          padding: `${subPx(theme.space.x1)} ${theme.space.x2}`,
-        },
-      },
-    }),
-  space
+				medium: {
+					fontSize: "base",
+					padding: `${subPx(theme.space.x1)} ${theme.space.x2}`,
+				},
+			},
+		}),
+	space,
 );
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ children, iconSide = "right", icon, className, asLink, variant, size, ...props }: ButtonProps, ref) => {
-    const {
-      lineHeights: { smallTextCompressed },
-    } = useTheme();
+	(
+		{
+			children,
+			iconSide = "right",
+			icon,
+			className,
+			asLink,
+			variant,
+			size,
+			...props
+		}: ButtonProps,
+		ref,
+	) => {
+		const {
+			lineHeights: { smallTextCompressed },
+		} = useTheme();
 
-    const componentVariant = useComponentVariant(variant as ContextComponentSize);
+		const componentVariant = useComponentVariant(
+			variant as ContextComponentSize,
+		);
 
-    return (
-      <WrapperButton
-        as={asLink ? "a" : "button"}
-        ref={ref}
-        className={className}
-        variant={componentVariant}
-        size={size}
-        {...props}
-      >
-        {icon && iconSide === "left" && <Icon size={`${smallTextCompressed}em`} mr="half" icon={icon} />}
-        {children}
-        {icon && iconSide === "right" && <Icon size={`${smallTextCompressed}em`} ml="half" icon={icon} />}
-      </WrapperButton>
-    );
-  }
+		return (
+			<WrapperButton
+				as={asLink ? "a" : "button"}
+				ref={ref}
+				className={className}
+				variant={componentVariant}
+				size={size}
+				{...props}
+			>
+				{icon && iconSide === "left" && (
+					<Icon size={`${smallTextCompressed}em`} mr="half" icon={icon} />
+				)}
+				{children}
+				{icon && iconSide === "right" && (
+					<Icon size={`${smallTextCompressed}em`} ml="half" icon={icon} />
+				)}
+			</WrapperButton>
+		);
+	},
 );
 
 export default Button;

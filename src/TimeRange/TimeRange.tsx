@@ -1,182 +1,201 @@
-import React, { useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
+import type React from "react";
+import {
+	forwardRef,
+	useEffect,
+	useImperativeHandle,
+	useRef,
+	useState,
+} from "react";
 import { useTranslation } from "react-i18next";
-import { SpaceProps } from "styled-system";
-import { TimePicker } from "../TimePicker";
-import { RangeContainer } from "../RangeContainer";
+import type { SpaceProps } from "styled-system";
 import { FieldLabelDefaultProps } from "../FieldLabel/FieldLabel.type";
-import { ComponentVariant, useComponentVariant } from "../NDSProvider/ComponentVariantContext";
+import {
+	type ComponentVariant,
+	useComponentVariant,
+} from "../NDSProvider/ComponentVariantContext";
+import { RangeContainer } from "../RangeContainer";
+import { TimePicker } from "../TimePicker";
 import { getDuration } from "./TimeRange.utils";
 
 const DEFAULT_LABEL = "Time Range";
 
 type TimeRangeProps = SpaceProps & {
-  variant?: ComponentVariant;
-  timeFormat?: string;
-  onRangeChange?: (range: { startTime?: string; endTime?: string; error?: string }) => void;
-  onStartTimeChange?: (label: string) => void;
-  onEndTimeChange?: (label: string) => void;
-  ref?: React.MutableRefObject<unknown>;
-  errorMessage?: string;
-  defaultStartTime?: string;
-  defaultEndTime?: string;
-  disableRangeValidation?: boolean;
-  labelProps?: any;
-  minTime?: string;
-  maxTime?: string;
-  interval?: number;
-  startAriaLabel?: string;
-  endAriaLabel?: string;
-  endTimeProps?: any;
-  startTimeProps?: any;
+	variant?: ComponentVariant;
+	timeFormat?: string;
+	onRangeChange?: (range: {
+		startTime?: string;
+		endTime?: string;
+		error?: string;
+	}) => void;
+	onStartTimeChange?: (label: string) => void;
+	onEndTimeChange?: (label: string) => void;
+	ref?: React.MutableRefObject<unknown>;
+	errorMessage?: string;
+	defaultStartTime?: string;
+	defaultEndTime?: string;
+	disableRangeValidation?: boolean;
+	labelProps?: any;
+	minTime?: string;
+	maxTime?: string;
+	interval?: number;
+	startAriaLabel?: string;
+	endAriaLabel?: string;
+	endTimeProps?: any;
+	startTimeProps?: any;
 };
 
 const TimeRange = forwardRef(
-  (
-    {
-      timeFormat,
-      onRangeChange,
-      onStartTimeChange,
-      onEndTimeChange,
-      errorMessage,
-      defaultStartTime,
-      defaultEndTime,
-      minTime,
-      maxTime,
-      interval,
-      startAriaLabel,
-      endAriaLabel,
-      endTimeProps,
-      startTimeProps,
-      variant,
-      disableRangeValidation = false,
-      labelProps = {
-        ...FieldLabelDefaultProps,
-        labelText: DEFAULT_LABEL,
-      },
-      ...props
-    }: TimeRangeProps,
-    ref
-  ) => {
-    const [startTime, setStartTime] = useState();
-    const [endTime, setEndTime] = useState();
-    const [rangeError, setRangeError] = useState();
+	(
+		{
+			timeFormat,
+			onRangeChange,
+			onStartTimeChange,
+			onEndTimeChange,
+			errorMessage,
+			defaultStartTime,
+			defaultEndTime,
+			minTime,
+			maxTime,
+			interval,
+			startAriaLabel,
+			endAriaLabel,
+			endTimeProps,
+			startTimeProps,
+			variant,
+			disableRangeValidation = false,
+			labelProps = {
+				...FieldLabelDefaultProps,
+				labelText: DEFAULT_LABEL,
+			},
+			...props
+		}: TimeRangeProps,
+		ref,
+	) => {
+		const [startTime, setStartTime] = useState<string | undefined>();
+		const [endTime, setEndTime] = useState<string | undefined>();
+		const [rangeError, setRangeError] = useState<string | undefined>();
 
-    const inputRef1 = useRef();
-    const inputRef2 = useRef();
+		const inputRef1 = useRef();
+		const inputRef2 = useRef();
 
-    const { t } = useTranslation();
+		const { t } = useTranslation();
 
-    const componentVariant = useComponentVariant(variant);
+		const componentVariant = useComponentVariant(variant);
 
-    useImperativeHandle(ref, () => ({
-      inputRef1: {
-        ...inputRef1,
-        focus: () => {
-          if (inputRef1.current) {
-            // @ts-expect-error - focus method exists on input elements but type may not be narrowed correctly
-            inputRef1.current.focus();
-          }
-        },
-      },
-      inputRef2: {
-        ...inputRef2,
-        focus: () => {
-          if (inputRef2.current) {
-            // @ts-expect-error - focus method exists on input elements but type may not be narrowed correctly
-            inputRef2.current.focus();
-          }
-        },
-      },
-    }));
+		useImperativeHandle(ref, () => ({
+			inputRef1: {
+				...inputRef1,
+				focus: () => {
+					if (inputRef1.current) {
+						// @ts-expect-error - focus method exists on input elements but type may not be narrowed correctly
+						inputRef1.current.focus();
+					}
+				},
+			},
+			inputRef2: {
+				...inputRef2,
+				focus: () => {
+					if (inputRef2.current) {
+						// @ts-expect-error - focus method exists on input elements but type may not be narrowed correctly
+						inputRef2.current.focus();
+					}
+				},
+			},
+		}));
 
-    useEffect(() => {
-      validateTimeRange();
-    }, [startTime, endTime]);
+		const validateTimeRange = () => {
+			let error: string | undefined;
+			const end = endTime || defaultEndTime;
+			const start = startTime || defaultStartTime;
+			if (start && end) {
+				const duration = getDuration(start, end);
+				if (duration < 0) {
+					error = "end time is before start time";
+				}
+			}
+			setRangeError(error);
+			if (onRangeChange) {
+				onRangeChange({
+					startTime,
+					endTime,
+					error,
+				});
+			}
+		};
 
-    const changeStartTimeHandler = (label, value) => {
-      setStartTime(value);
-      if (onStartTimeChange) {
-        onStartTimeChange(label);
-      }
-    };
+		useEffect(() => {
+			validateTimeRange();
+		}, [validateTimeRange]);
 
-    const changeEndTimeHandler = (label, value) => {
-      setEndTime(value);
-      if (onEndTimeChange) {
-        onEndTimeChange(label);
-      }
-    };
+		const changeStartTimeHandler = (label, value) => {
+			setStartTime(value);
+			if (onStartTimeChange) {
+				onStartTimeChange(label);
+			}
+		};
 
-    const validateTimeRange = () => {
-      let error;
-      const end = endTime || defaultEndTime;
-      const start = startTime || defaultStartTime;
-      if (start && end) {
-        const duration = getDuration(start, end);
-        if (duration < 0) {
-          error = "end time is before start time";
-        }
-      }
-      setRangeError(error);
-      if (onRangeChange) {
-        onRangeChange({
-          startTime,
-          endTime,
-          error,
-        });
-      }
-    };
+		const changeEndTimeHandler = (label, value) => {
+			setEndTime(value);
+			if (onEndTimeChange) {
+				onEndTimeChange(label);
+			}
+		};
 
-    const startInput = (
-      <TimePicker
-        timeFormat={timeFormat}
-        defaultValue={defaultStartTime}
-        selected={startTime}
-        onChange={changeStartTimeHandler}
-        minTime={minTime}
-        maxTime={endTime || maxTime}
-        interval={interval}
-        aria-label={startAriaLabel || t("select a start time")}
-        data-testid="timerange-start-time"
-        ref={inputRef1}
-        error={rangeError}
-        variant={componentVariant}
-        {...startTimeProps}
-      />
-    );
+		const startInput = (
+			<TimePicker
+				timeFormat={timeFormat}
+				defaultValue={defaultStartTime}
+				selected={startTime}
+				onChange={changeStartTimeHandler}
+				minTime={minTime}
+				maxTime={endTime || maxTime}
+				interval={interval}
+				aria-label={startAriaLabel || t("select a start time")}
+				data-testid="timerange-start-time"
+				ref={inputRef1}
+				error={rangeError}
+				variant={componentVariant}
+				{...startTimeProps}
+			/>
+		);
 
-    const endInput = (
-      <TimePicker
-        timeFormat={timeFormat}
-        defaultValue={defaultEndTime}
-        selected={endTime}
-        onChange={changeEndTimeHandler}
-        maxTime={maxTime}
-        minTime={startTime || minTime}
-        interval={interval}
-        aria-label={endAriaLabel || t("select an end time")}
-        data-testid="timerange-end-time"
-        ref={inputRef2}
-        error={rangeError}
-        variant={componentVariant}
-        {...endTimeProps}
-      />
-    );
+		const endInput = (
+			<TimePicker
+				timeFormat={timeFormat}
+				defaultValue={defaultEndTime}
+				selected={endTime}
+				onChange={changeEndTimeHandler}
+				maxTime={maxTime}
+				minTime={startTime || minTime}
+				interval={interval}
+				aria-label={endAriaLabel || t("select an end time")}
+				data-testid="timerange-end-time"
+				ref={inputRef2}
+				error={rangeError}
+				variant={componentVariant}
+				{...endTimeProps}
+			/>
+		);
 
-    return (
-      <RangeContainer
-        labelProps={{
-          ...labelProps,
-          labelText: labelProps.labelText === DEFAULT_LABEL ? t("time range") : labelProps.labelText,
-        }}
-        startComponent={startInput}
-        endComponent={endInput}
-        errorMessages={!disableRangeValidation ? [rangeError, errorMessage] : [errorMessage]}
-        variant={componentVariant}
-        {...props}
-      />
-    );
-  }
+		return (
+			<RangeContainer
+				labelProps={{
+					...labelProps,
+					labelText:
+						labelProps.labelText === DEFAULT_LABEL
+							? t("time range")
+							: labelProps.labelText,
+				}}
+				startComponent={startInput}
+				endComponent={endInput}
+				errorMessages={
+					!disableRangeValidation ? [rangeError, errorMessage] : [errorMessage]
+				}
+				variant={componentVariant}
+				{...props}
+			/>
+		);
+	},
 );
 
 export default TimeRange;

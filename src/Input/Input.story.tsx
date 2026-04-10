@@ -1,215 +1,262 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { action } from "storybook/actions";
-import { Input, Form, FormSection, PrimaryButton, Button, Flex, Heading4 } from "../index";
+import {
+	Button,
+	Flex,
+	Form,
+	FormSection,
+	Heading4,
+	Input,
+	PrimaryButton,
+} from "../index";
 
 const errorList = ["Error message 1", "Error message 2"];
 
 export default {
-  title: "Components/Input",
+	title: "Components/Input",
 };
 
-export const _Input = () => <Input labelText="Input" onChange={action("value changed")} onBlur={action("blurred")} />;
+export const _Input = () => (
+	<Input
+		labelText="Input"
+		onChange={action("value changed")}
+		onBlur={action("blurred")}
+	/>
+);
 
 export const WithAllProps = {
-  render: () => (
-    <Input
-      placeholder="Placeholder"
-      p="x3"
-      labelText="Input"
-      helpText="Additional help text"
-      requirementText="Required"
-      onChange={action("value changed")}
-      onBlur={action("blurred")}
-      required
-    />
-  ),
+	render: () => (
+		<Input
+			placeholder="Placeholder"
+			p="x3"
+			labelText="Input"
+			helpText="Additional help text"
+			requirementText="Required"
+			onChange={action("value changed")}
+			onBlur={action("blurred")}
+			required
+		/>
+	),
 
-  name: "with all props",
+	name: "with all props",
 };
 
 export const SetToDisabled = {
-  render: () => <Input labelText="Set to disabled" disabled onBlur={action("blurred")} value="Disabled" />,
+	render: () => (
+		<Input
+			labelText="Set to disabled"
+			disabled
+			onBlur={action("blurred")}
+			value="Disabled"
+		/>
+	),
 
-  name: "set to disabled",
+	name: "set to disabled",
 };
 
 export const WithErrorMessage = {
-  render: () => (
-    <Input
-      labelText="Label"
-      errorMessage="Error message"
-      onChange={action("value changed")}
-      onBlur={action("blurred")}
-    />
-  ),
+	render: () => (
+		<Input
+			labelText="Label"
+			errorMessage="Error message"
+			onChange={action("value changed")}
+			onBlur={action("blurred")}
+		/>
+	),
 
-  name: "with error message",
+	name: "with error message",
 };
 
 export const WithErrorList = {
-  render: () => (
-    <Input
-      labelText="Label"
-      errorMessage="Error message"
-      errorList={errorList}
-      onChange={action("value changed")}
-      onBlur={action("blurred")}
-    />
-  ),
+	render: () => (
+		<Input
+			labelText="Label"
+			errorMessage="Error message"
+			errorList={errorList}
+			onChange={action("value changed")}
+			onBlur={action("blurred")}
+		/>
+	),
 
-  name: "with error list ",
+	name: "with error list ",
 };
 
 export const WithCustomId = {
-  render: () => (
-    <Input id="my-own-id" labelText="Label" onChange={action("value changed")} onBlur={action("blurred")} />
-  ),
+	render: () => (
+		<Input
+			id="my-own-id"
+			labelText="Label"
+			onChange={action("value changed")}
+			onBlur={action("blurred")}
+		/>
+	),
 
-  name: "with custom ID",
+	name: "with custom ID",
 };
 
 export const SetToRequired = {
-  render: () => (
-    <>
-      <Form title="Required field example">
-        <Input required labelText="Label" onChange={action("value changed")} onBlur={action("blurred")} />
-        <PrimaryButton>Send</PrimaryButton>
-      </Form>
-    </>
-  ),
+	render: () => (
+		<>
+			<Form title="Required field example">
+				<Input
+					required
+					labelText="Label"
+					onChange={action("value changed")}
+					onBlur={action("blurred")}
+				/>
+				<PrimaryButton>Send</PrimaryButton>
+			</Form>
+		</>
+	),
 
-  name: "set to required",
+	name: "set to required",
 };
 
 export const WithAAffixPrefixAndSuffix = {
-  render: () => (
-    <>
-      <Form title="Suffix" mb="x6">
-        <FormSection>
-          <Input suffix="Eaches" />
-          <Input suffix="Pallets and boxes" />
-        </FormSection>
-        <FormSection title="With Custom Width">
-          <Input suffix="Eaches" suffixWidth="360px" prefixAlignment="right" />
-          <Input suffix="Pallets and boxes" suffixWidth="360px" />
-        </FormSection>
-      </Form>
-      <Form title="Prefix" mb="x6">
-        <FormSection>
-          <Input prefix="Eaches" />
-          <Input prefix="Pallets and boxes" />
-        </FormSection>
-        <FormSection title="With Custom Width">
-          <Input prefix="Eaches" prefixWidth="360px" />
-          <Input prefix="Pallets and boxes" prefixWidth="360px" />
-        </FormSection>
-        <FormSection title="With right alignment">
-          <Input prefix="Eaches" prefixWidth="360px" prefixAlignment="right" />
-          <Input prefix="Pallets and boxes" prefixWidth="360px" prefixAlignment="right" />
-        </FormSection>
-      </Form>
-      <Form title="Prefix and Suffix" mb="x6">
-        <Input prefix="Quantity" suffix="Eaches" />
-      </Form>
-    </>
-  ),
+	render: () => (
+		<>
+			<Form title="Suffix" mb="x6">
+				<FormSection>
+					<Input suffix="Eaches" />
+					<Input suffix="Pallets and boxes" />
+				</FormSection>
+				<FormSection title="With Custom Width">
+					<Input suffix="Eaches" suffixWidth="360px" prefixAlignment="right" />
+					<Input suffix="Pallets and boxes" suffixWidth="360px" />
+				</FormSection>
+			</Form>
+			<Form title="Prefix" mb="x6">
+				<FormSection>
+					<Input prefix="Eaches" />
+					<Input prefix="Pallets and boxes" />
+				</FormSection>
+				<FormSection title="With Custom Width">
+					<Input prefix="Eaches" prefixWidth="360px" />
+					<Input prefix="Pallets and boxes" prefixWidth="360px" />
+				</FormSection>
+				<FormSection title="With right alignment">
+					<Input prefix="Eaches" prefixWidth="360px" prefixAlignment="right" />
+					<Input
+						prefix="Pallets and boxes"
+						prefixWidth="360px"
+						prefixAlignment="right"
+					/>
+				</FormSection>
+			</Form>
+			<Form title="Prefix and Suffix" mb="x6">
+				<Input prefix="Quantity" suffix="Eaches" />
+			</Form>
+		</>
+	),
 
-  name: "with a affix (prefix and suffix)",
+	name: "with a affix (prefix and suffix)",
 };
 
 export const WithAnIcon = () => (
-  <Flex flexDirection="column" gap="x2">
-    <Input maxWidth="320px" inputWidth="320px" iconLeft="search" placeholder="Search by SKU" labelText="Left Icon" />
-    <Input maxWidth="320px" inputWidth="320px" iconRight="barcode" placeholder="Search by SKU" labelText="Right Icon" />
-    <Input
-      maxWidth="320px"
-      inputWidth="320px"
-      iconRight="barcode"
-      iconLeft="search"
-      placeholder="Search by SKU"
-      labelText="Left and right icons"
-    />
-    <Input
-      maxWidth="320px"
-      inputWidth="320px"
-      iconLeft="search"
-      iconLeftSize="x2"
-      placeholder="Search by SKU"
-      labelText="Custom icon size"
-    />
-  </Flex>
+	<Flex flexDirection="column" gap="x2">
+		<Input
+			maxWidth="320px"
+			inputWidth="320px"
+			iconLeft="search"
+			placeholder="Search by SKU"
+			labelText="Left Icon"
+		/>
+		<Input
+			maxWidth="320px"
+			inputWidth="320px"
+			iconRight="barcode"
+			placeholder="Search by SKU"
+			labelText="Right Icon"
+		/>
+		<Input
+			maxWidth="320px"
+			inputWidth="320px"
+			iconRight="barcode"
+			iconLeft="search"
+			placeholder="Search by SKU"
+			labelText="Left and right icons"
+		/>
+		<Input
+			maxWidth="320px"
+			inputWidth="320px"
+			iconLeft="search"
+			iconLeftSize="x2"
+			placeholder="Search by SKU"
+			labelText="Custom icon size"
+		/>
+	</Flex>
 );
 
 export const WithIconTooltips = () => (
-  <Flex flexDirection="column" gap="x2">
-    <Heading4>
-      You can use tooltips to provide additional information about the icon. Tooltips can be customized with the same
-      props as the Tooltip component.
-    </Heading4>
-    <Input
-      maxWidth="320px"
-      inputWidth="320px"
-      iconLeft="search"
-      iconLeftTooltip="Search products"
-      iconLeftTooltipProps={{
-        placement: "right",
-        showDelay: "500",
-      }}
-      placeholder="Search by SKU"
-      labelText="Hover over the search icon (right placement, 500ms delay)"
-    />
-    <Input
-      maxWidth="320px"
-      inputWidth="320px"
-      iconRight="barcode"
-      iconRightTooltip="Scan barcode"
-      iconRightTooltipProps={{
-        placement: "left",
-      }}
-      placeholder="Scan product"
-      labelText="Hover over the barcode icon (left placement, 1s hide delay)"
-    />
-    <Input
-      maxWidth="320px"
-      inputWidth="320px"
-      iconRight="info"
-      iconRightTooltip="Your access number can be found on your access card"
-      iconLeft="lock"
-      iconLeftTooltip="Your information is secure"
-      iconRightTooltipProps={{
-        placement: "bottom",
-        maxWidth: "150px",
-      }}
-      iconLeftTooltipProps={{
-        placement: "top",
-        maxWidth: "150px",
-      }}
-      placeholder="Enter your access number"
-      labelText="Different placements (top and bottom)"
-    />
-  </Flex>
+	<Flex flexDirection="column" gap="x2">
+		<Heading4>
+			You can use tooltips to provide additional information about the icon.
+			Tooltips can be customized with the same props as the Tooltip component.
+		</Heading4>
+		<Input
+			maxWidth="320px"
+			inputWidth="320px"
+			iconLeft="search"
+			iconLeftTooltip="Search products"
+			iconLeftTooltipProps={{
+				placement: "right",
+				showDelay: "500",
+			}}
+			placeholder="Search by SKU"
+			labelText="Hover over the search icon (right placement, 500ms delay)"
+		/>
+		<Input
+			maxWidth="320px"
+			inputWidth="320px"
+			iconRight="barcode"
+			iconRightTooltip="Scan barcode"
+			iconRightTooltipProps={{
+				placement: "left",
+			}}
+			placeholder="Scan product"
+			labelText="Hover over the barcode icon (left placement, 1s hide delay)"
+		/>
+		<Input
+			maxWidth="320px"
+			inputWidth="320px"
+			iconRight="info"
+			iconRightTooltip="Your access number can be found on your access card"
+			iconLeft="lock"
+			iconLeftTooltip="Your information is secure"
+			iconRightTooltipProps={{
+				placement: "bottom",
+				maxWidth: "150px",
+			}}
+			iconLeftTooltipProps={{
+				placement: "top",
+				maxWidth: "150px",
+			}}
+			placeholder="Enter your access number"
+			labelText="Different placements (top and bottom)"
+		/>
+	</Flex>
 );
 
 export const UsingRefToControlFocus = {
-  render: () => {
-    const ref = useRef(null);
-    const handleClick = () => {
-      ref.current.focus();
-    };
+	render: () => {
+		const ref = useRef(null);
+		const handleClick = () => {
+			ref.current.focus();
+		};
 
-    return (
-      <>
-        <Input
-          id="my-own-id"
-          ref={ref}
-          labelText="Label"
-          onChange={action("value changed")}
-          onBlur={action("blurred")}
-        />
-        <Button onClick={handleClick}>Focus the Input</Button>
-      </>
-    );
-  },
+		return (
+			<>
+				<Input
+					id="my-own-id"
+					ref={ref}
+					labelText="Label"
+					onChange={action("value changed")}
+					onBlur={action("blurred")}
+				/>
+				<Button onClick={handleClick}>Focus the Input</Button>
+			</>
+		);
+	},
 
-  name: "using ref to control focus",
+	name: "using ref to control focus",
 };

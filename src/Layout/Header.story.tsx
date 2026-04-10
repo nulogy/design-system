@@ -1,212 +1,254 @@
 import type { Meta } from "@storybook/react-vite";
-import React from "react";
 import {
-  Box,
-  Breadcrumbs,
-  Button,
-  DropdownButton,
-  DropdownLink,
-  Flex,
-  Link,
-  PrimaryButton,
-  StatusIndicator,
-  Header,
-  Text,
-  Heading1,
-  Icon,
+	Box,
+	Breadcrumbs,
+	Button,
+	DropdownButton,
+	DropdownLink,
+	Flex,
+	Header,
+	Heading1,
+	Icon,
+	Link,
+	PrimaryButton,
+	StatusIndicator,
+	Text,
 } from "..";
-import Summary from "../Summary/Summary";
-import SummaryItem from "../Summary/SummaryItem";
-import SummaryDivider from "../Summary/SummaryDivider";
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
-import numberFromDimension from "../utils/numberFromDimension";
+import Summary from "../Summary/Summary";
+import SummaryDivider from "../Summary/SummaryDivider";
+import SummaryItem from "../Summary/SummaryItem";
 import { legacy as theme } from "../theme/theme";
+import numberFromDimension from "../utils/numberFromDimension";
 
-const viewports = [theme.breakpoints.small, theme.breakpoints.medium, theme.breakpoints.large].map(numberFromDimension);
+const viewports = [
+	theme.breakpoints.small,
+	theme.breakpoints.medium,
+	theme.breakpoints.large,
+].map(numberFromDimension);
 
 export default {
-  title: "Components/Header",
-  component: Header,
-  parameters: {
-    layout: "fullscreen",
-    chromatic: { viewports },
-  },
+	title: "Components/Header",
+	component: Header,
+	parameters: {
+		layout: "fullscreen",
+		chromatic: { viewports },
+	},
 } satisfies Meta<typeof Header>;
 
 export const Default = () => (
-  <Header
-    renderBreadcrumbs={() => (
-      <Breadcrumbs>
-        <Link href="/">Home</Link>
-        <Link href="/">Materials</Link>
-      </Breadcrumbs>
-    )}
-    title="Materials Overview"
-  />
+	<Header
+		renderBreadcrumbs={() => (
+			<Breadcrumbs>
+				<Link href="/">Home</Link>
+				<Link href="/">Materials</Link>
+			</Breadcrumbs>
+		)}
+		title="Materials Overview"
+	/>
 );
 
 export const TitleAsReactElement = () => (
-  <Header
-    renderBreadcrumbs={() => (
-      <Breadcrumbs>
-        <Link href="/">Home</Link>
-        <Link href="/">Materials</Link>
-      </Breadcrumbs>
-    )}
-    title={
-      <Heading1 mb="0">
-        Bacon <Icon icon="info" />
-      </Heading1>
-    }
-  />
+	<Header
+		renderBreadcrumbs={() => (
+			<Breadcrumbs>
+				<Link href="/">Home</Link>
+				<Link href="/">Materials</Link>
+			</Breadcrumbs>
+		)}
+		title={
+			<Heading1 mb="0">
+				Bacon <Icon icon="info" />
+			</Heading1>
+		}
+	/>
 );
 
 export const WithActions = () => (
-  <Header
-    renderBreadcrumbs={() => (
-      <Breadcrumbs>
-        <Link href="/">Home</Link>
-        <Link href="/">Materials</Link>
-      </Breadcrumbs>
-    )}
-    title="Materials Overview"
-    renderActions={() => (
-      <Flex gap="x1">
-        <PrimaryButton size="small"> Archive</PrimaryButton>
-        <Button size="small">Delete</Button>
-        <DropdownMenu showArrow={false} defaultOpen={false}>
-          <DropdownLink href="/">Dropdown Link</DropdownLink>
-          <DropdownButton>Dropdown Button</DropdownButton>
-        </DropdownMenu>
-      </Flex>
-    )}
-  />
+	<Header
+		renderBreadcrumbs={() => (
+			<Breadcrumbs>
+				<Link href="/">Home</Link>
+				<Link href="/">Materials</Link>
+			</Breadcrumbs>
+		)}
+		title="Materials Overview"
+		renderActions={() => (
+			<Flex gap="x1">
+				<PrimaryButton size="small"> Archive</PrimaryButton>
+				<Button size="small">Delete</Button>
+				<DropdownMenu showArrow={false} defaultOpen={false}>
+					<DropdownLink href="/">Dropdown Link</DropdownLink>
+					<DropdownButton>Dropdown Button</DropdownButton>
+				</DropdownMenu>
+			</Flex>
+		)}
+	/>
 );
 
 export const WithSubTitle = () => (
-  <Header
-    renderBreadcrumbs={() => (
-      <Breadcrumbs>
-        <Link href="/">Home</Link>
-        <Link href="/">Materials</Link>
-      </Breadcrumbs>
-    )}
-    title="Materials Overview"
-    subtitle="Materials Overview"
-  />
+	<Header
+		renderBreadcrumbs={() => (
+			<Breadcrumbs>
+				<Link href="/">Home</Link>
+				<Link href="/">Materials</Link>
+			</Breadcrumbs>
+		)}
+		title="Materials Overview"
+		subtitle="Materials Overview"
+	/>
 );
 
 export const WithContent = () => (
-  <Header
-    renderBreadcrumbs={() => (
-      <Breadcrumbs>
-        <Link href="/">Home</Link>
-        <Link href="/">Materials</Link>
-        <Text>Orders</Text>
-      </Breadcrumbs>
-    )}
-    title="Materials Overview"
-    subtitle="Materials Overview"
-  >
-    <Box border="1px dashed" borderColor="grey" py="half" px="x1" borderRadius="small">
-      Extra content
-    </Box>
-  </Header>
+	<Header
+		renderBreadcrumbs={() => (
+			<Breadcrumbs>
+				<Link href="/">Home</Link>
+				<Link href="/">Materials</Link>
+				<Text>Orders</Text>
+			</Breadcrumbs>
+		)}
+		title="Materials Overview"
+		subtitle="Materials Overview"
+	>
+		<Box
+			border="1px dashed"
+			borderColor="grey"
+			py="half"
+			px="x1"
+			borderRadius="small"
+		>
+			Extra content
+		</Box>
+	</Header>
 );
 
 export const WithSummary = () => (
-  <Header
-    breakpoints={{
-      medium: 1200,
-    }}
-    renderBreadcrumbs={() => (
-      <Breadcrumbs>
-        <Link underline={false} href="/">
-          Home
-        </Link>
-        <Link underline={false} href="/">
-          Materials
-        </Link>
-      </Breadcrumbs>
-    )}
-    title="Page title"
-    renderSummary={() => (
-      <Summary breakpoint={1200}>
-        <SummaryItem value={42} status={<StatusIndicator type="informative">On Time</StatusIndicator>} />
-        <SummaryItem value={42} status={<StatusIndicator type="informative">On Time</StatusIndicator>} />
-        <SummaryItem value={42} status={<StatusIndicator type="informative">On Time</StatusIndicator>} />
-      </Summary>
-    )}
-  />
+	<Header
+		breakpoints={{
+			medium: 1200,
+		}}
+		renderBreadcrumbs={() => (
+			<Breadcrumbs>
+				<Link underline={false} href="/">
+					Home
+				</Link>
+				<Link underline={false} href="/">
+					Materials
+				</Link>
+			</Breadcrumbs>
+		)}
+		title="Page title"
+		renderSummary={() => (
+			<Summary breakpoint={1200}>
+				<SummaryItem
+					value={42}
+					status={<StatusIndicator type="informative">On Time</StatusIndicator>}
+				/>
+				<SummaryItem
+					value={42}
+					status={<StatusIndicator type="informative">On Time</StatusIndicator>}
+				/>
+				<SummaryItem
+					value={42}
+					status={<StatusIndicator type="informative">On Time</StatusIndicator>}
+				/>
+			</Summary>
+		)}
+	/>
 );
 
 export const WithAnUndecoratedBackground = () => (
-  <Header
-    undecorated
-    renderBreadcrumbs={() => (
-      <Breadcrumbs>
-        <Link href="/">Home</Link>
-        <Link href="/">Materials</Link>
-      </Breadcrumbs>
-    )}
-    title="Materials Overview"
-  />
+	<Header
+		undecorated
+		renderBreadcrumbs={() => (
+			<Breadcrumbs>
+				<Link href="/">Home</Link>
+				<Link href="/">Materials</Link>
+			</Breadcrumbs>
+		)}
+		title="Materials Overview"
+	/>
 );
 
 export const WithCustomBackground = () => (
-  <Header
-    renderBreadcrumbs={() => (
-      <Breadcrumbs>
-        <Link href="/">Home</Link>
-        <Link href="/">Materials</Link>
-      </Breadcrumbs>
-    )}
-    title="Materials Overview"
-    background="#98FB98"
-    undecorated
-  />
+	<Header
+		renderBreadcrumbs={() => (
+			<Breadcrumbs>
+				<Link href="/">Home</Link>
+				<Link href="/">Materials</Link>
+			</Breadcrumbs>
+		)}
+		title="Materials Overview"
+		background="#98FB98"
+		undecorated
+	/>
 );
 
 export const WithEverything = () => (
-  <Header
-    breakpoints={{
-      small: 768,
-      medium: 1200,
-    }}
-    renderBreadcrumbs={() => (
-      <Breadcrumbs>
-        <Link underline={false} href="/">
-          Home
-        </Link>
-        <Link underline={false} href="/">
-          Materials
-        </Link>
-      </Breadcrumbs>
-    )}
-    title="Page title"
-    subtitle="Alternative page title"
-    renderSummary={() => (
-      <Summary breakpoint={1200}>
-        <SummaryItem value={42} status={<StatusIndicator type="informative">On Time</StatusIndicator>} />
-        <SummaryItem value={42} status={<StatusIndicator type="informative">On Time</StatusIndicator>} />
-        <SummaryItem value={42} status={<StatusIndicator type="informative">On Time</StatusIndicator>} />
+	<Header
+		breakpoints={{
+			small: 768,
+			medium: 1200,
+		}}
+		renderBreadcrumbs={() => (
+			<Breadcrumbs>
+				<Link underline={false} href="/">
+					Home
+				</Link>
+				<Link underline={false} href="/">
+					Materials
+				</Link>
+			</Breadcrumbs>
+		)}
+		title="Page title"
+		subtitle="Alternative page title"
+		renderSummary={() => (
+			<Summary breakpoint={1200}>
+				<SummaryItem
+					value={42}
+					status={<StatusIndicator type="informative">On Time</StatusIndicator>}
+				/>
+				<SummaryItem
+					value={42}
+					status={<StatusIndicator type="informative">On Time</StatusIndicator>}
+				/>
+				<SummaryItem
+					value={42}
+					status={<StatusIndicator type="informative">On Time</StatusIndicator>}
+				/>
 
-        <SummaryDivider />
+				<SummaryDivider />
 
-        <SummaryItem value={42} status={<StatusIndicator type="informative">On Time</StatusIndicator>} />
-        <SummaryItem value={42} status={<StatusIndicator type="informative">On Time</StatusIndicator>} />
-        <SummaryItem value={42} status={<StatusIndicator type="informative">On Time</StatusIndicator>} />
-      </Summary>
-    )}
-    renderActions={() => (
-      <DropdownMenu showArrow={false} defaultOpen={false}>
-        <DropdownLink href="/">Dropdown Link</DropdownLink>
-        <DropdownButton>Dropdown Button</DropdownButton>
-      </DropdownMenu>
-    )}
-  >
-    <Box border="1px dashed" borderColor="grey" py="half" px="x1" borderRadius="small">
-      Extra content
-    </Box>
-  </Header>
+				<SummaryItem
+					value={42}
+					status={<StatusIndicator type="informative">On Time</StatusIndicator>}
+				/>
+				<SummaryItem
+					value={42}
+					status={<StatusIndicator type="informative">On Time</StatusIndicator>}
+				/>
+				<SummaryItem
+					value={42}
+					status={<StatusIndicator type="informative">On Time</StatusIndicator>}
+				/>
+			</Summary>
+		)}
+		renderActions={() => (
+			<DropdownMenu showArrow={false} defaultOpen={false}>
+				<DropdownLink href="/">Dropdown Link</DropdownLink>
+				<DropdownButton>Dropdown Button</DropdownButton>
+			</DropdownMenu>
+		)}
+	>
+		<Box
+			border="1px dashed"
+			borderColor="grey"
+			py="half"
+			px="x1"
+			borderRadius="small"
+		>
+			Extra content
+		</Box>
+	</Header>
 );

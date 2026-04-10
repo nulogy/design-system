@@ -5,7 +5,10 @@ type CSSUnit = string;
  * @param subtractValue The value to subtract (defaults to '1px')
  * @returns A CSS calc() expression
  */
-export default function subPx(baseValue: CSSUnit, subtractValue?: CSSUnit): string {
-  const valueToSubtract: CSSUnit = subtractValue ?? "1px";
-  return `calc(${baseValue} - ${valueToSubtract})`;
+export default function subPx(
+	baseValue: CSSUnit,
+	subtractValue?: CSSUnit,
+): string {
+	const valueToSubtract: CSSUnit = subtractValue ?? "1px";
+	return `calc(${baseValue} - ${valueToSubtract})`;
 }

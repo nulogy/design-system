@@ -7,9 +7,9 @@ let randomId = 0;
  * @deprecated use `useId` instead
  */
 const generateId = () => {
-  randomId += 1;
+	randomId += 1;
 
-  return prefix + randomId;
+	return prefix + randomId;
 };
 
 export default generateId;

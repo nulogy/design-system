@@ -1,15 +1,14 @@
-import { DefaultNDSThemeType, ThemeType } from "./theme.type";
+import type { DefaultNDSThemeType, ThemeType } from "./theme.type";
 
-export const mergeThemes = (theme: DefaultNDSThemeType, customTheme: ThemeType): DefaultNDSThemeType =>
-  Object.keys(theme).reduce((mergedTheme, group) => {
-    if (customTheme && mergedTheme[group] && customTheme[group]) {
-      return {
-        ...mergedTheme,
-        [group]: {
-          ...mergedTheme[group],
-          ...customTheme[group],
-        },
-      };
-    }
-    return mergedTheme;
-  }, theme);
+export const mergeThemes = (
+	theme: DefaultNDSThemeType,
+	customTheme: ThemeType,
+): DefaultNDSThemeType => {
+	const result = { ...theme };
+	for (const group of Object.keys(theme)) {
+		if (customTheme && result[group] && customTheme[group]) {
+			result[group] = { ...result[group], ...customTheme[group] };
+		}
+	}
+	return result;
+};
