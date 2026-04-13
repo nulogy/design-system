@@ -9,94 +9,75 @@ import SubMenuTriggerButton from "./SubMenuTriggerButton";
 import type { TriggerFunctionProps } from "./TriggerFunctionProps";
 
 type SubMenuTriggerProps = React.ComponentPropsWithRef<"button"> & {
-	name?: string;
-	isOpen?: boolean;
-	onItemClick?: any;
-	menuData: any[];
-	trigger: (props: TriggerFunctionProps) => React.ReactNode;
-	layer: number;
-	menuType: MenuType;
+  name?: string;
+  isOpen?: boolean;
+  onItemClick?: any;
+  menuData: any[];
+  trigger: (props: TriggerFunctionProps) => React.ReactNode;
+  layer: number;
+  menuType: MenuType;
 };
 
-const SubMenuTrigger = ({
-	menuData,
-	name,
-	onItemClick,
-	trigger,
-	layer,
-	menuType,
-	...props
-}: SubMenuTriggerProps) => {
-	const theme = useTheme();
+const SubMenuTrigger = ({ menuData, name, onItemClick, trigger, layer, menuType, ...props }: SubMenuTriggerProps) => {
+  const theme = useTheme();
 
-	return (
-		<NavBarDropdownMenu
-			placement={getPlacement(menuType)}
-			modifiers={{
-				preventOverflow: {
-					enabled: true,
-					padding: theme.space.x1,
-					boundariesElement: "viewport",
-				},
-			}}
-			showArrow={true}
-			triggerTogglesMenuState={false}
-			{...props}
-			dropdownMenuContainerEventHandlers={({ openMenu, closeMenu }) => ({
-				onMouseEnter: openMenu,
-				onMouseLeave: closeMenu,
-			})}
-			trigger={({ closeMenu, openMenu, isOpen }) => {
-				const defaultRender = () => (
-					<SubMenuTriggerButton
-						isOpen={isOpen}
-						name={name}
-						onMouseEnter={openMenu}
-						onMouseLeave={closeMenu}
-					/>
-				);
-				const triggerProps: TriggerFunctionProps = {
-					size: "medium",
-					closeMenu,
-					openMenu,
-					isOpen,
-					defaultRender,
-					layer,
-				};
-				return trigger ? trigger(triggerProps) : defaultRender();
-			}}
-		>
-			<SubMenuItemsList>
-				{renderSubMenuItems(
-					menuData,
-					onItemClick,
-					SubMenuTrigger,
-					layer + 1,
-					menuType,
-				)}
-			</SubMenuItemsList>
-		</NavBarDropdownMenu>
-	);
+  return (
+    <NavBarDropdownMenu
+      placement={getPlacement(menuType)}
+      modifiers={{
+        preventOverflow: {
+          enabled: true,
+          padding: theme.space.x1,
+          boundariesElement: "viewport",
+        },
+      }}
+      showArrow={true}
+      triggerTogglesMenuState={false}
+      {...props}
+      dropdownMenuContainerEventHandlers={({ openMenu, closeMenu }) => ({
+        onMouseEnter: openMenu,
+        onMouseLeave: closeMenu,
+      })}
+      trigger={({ closeMenu, openMenu, isOpen }) => {
+        const defaultRender = () => (
+          <SubMenuTriggerButton isOpen={isOpen} name={name} onMouseEnter={openMenu} onMouseLeave={closeMenu} />
+        );
+        const triggerProps: TriggerFunctionProps = {
+          size: "medium",
+          closeMenu,
+          openMenu,
+          isOpen,
+          defaultRender,
+          layer,
+        };
+        return trigger ? trigger(triggerProps) : defaultRender();
+      }}
+    >
+      <SubMenuItemsList>
+        {renderSubMenuItems(menuData, onItemClick, SubMenuTrigger, layer + 1, menuType)}
+      </SubMenuItemsList>
+    </NavBarDropdownMenu>
+  );
 };
 
 const SubMenuItemsList = styled("ul")(
-	({ theme }) => ({
-		listStyle: "none",
-		margin: "0",
-		padding: "0",
-		maxHeight: `calc(100vh - ${NAVBAR_HEIGHT} - ${theme.space.x3})`,
-		overflowY: "auto",
-	}),
-	addStyledProps,
+  ({ theme }) => ({
+    listStyle: "none",
+    margin: "0",
+    padding: "0",
+    maxHeight: `calc(100vh - ${NAVBAR_HEIGHT} - ${theme.space.x3})`,
+    overflowY: "auto",
+  }),
+  addStyledProps,
 );
 
 function getPlacement(menuType) {
-	switch (menuType) {
-		case "primary":
-			return "right-start";
-		case "secondary":
-			return "left-start";
-	}
+  switch (menuType) {
+    case "primary":
+      return "right-start";
+    case "secondary":
+      return "left-start";
+  }
 }
 
 /** @deprecated The BrandedNavBar component is deprecated. Use the Navigation component instead. */

@@ -7,9 +7,9 @@ export { NavigationLogoLink } from "./components/shared/NavigationLogoLink";
 export type { NavigationProps } from "./Navigation";
 export { default as Navigation } from "./Navigation";
 export type {
-	MenuItem,
-	MenuItems,
-	UserMenu,
-	UserMenuInfo,
-	UserMenuItem,
+  MenuItem,
+  MenuItems,
+  UserMenu,
+  UserMenuInfo,
+  UserMenuItem,
 } from "./types";

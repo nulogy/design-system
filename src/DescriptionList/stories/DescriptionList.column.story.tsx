@@ -14,105 +14,98 @@ import type { Columns } from "../lib/types";
 import { OutlinedDd, OutlinedDt } from "./fixtures";
 
 export default {
-	title: "Components/DescriptionList/Columns",
-	component: DescriptionList,
+  title: "Components/DescriptionList/Columns",
+  component: DescriptionList,
 };
 
 const ColumnDemo = ({
-	resizable = false,
-	columns,
-	title,
-	description,
-	info,
+  resizable = false,
+  columns,
+  title,
+  description,
+  info,
 }: {
-	resizable?: boolean;
-	columns: Columns;
-	title: string;
-	description?: string;
-	info?: React.ReactNode | string;
+  resizable?: boolean;
+  columns: Columns;
+  title: string;
+  description?: string;
+  info?: React.ReactNode | string;
 }) => {
-	const [outlined, setOutlined] = useState(true);
+  const [outlined, setOutlined] = useState(true);
 
-	const DescriptionListElement = (
-		<DescriptionList columns={columns}>
-			{[1, 2, 3, 4, 5, 6].map((i) => (
-				<DescriptionGroup key={i}>
-					<OutlinedDt $outlined={outlined}>Key {i}</OutlinedDt>
-					<OutlinedDd $outlined={outlined}>Value {i}</OutlinedDd>
-				</DescriptionGroup>
-			))}
-		</DescriptionList>
-	);
+  const DescriptionListElement = (
+    <DescriptionList columns={columns}>
+      {[1, 2, 3, 4, 5, 6].map((i) => (
+        <DescriptionGroup key={i}>
+          <OutlinedDt $outlined={outlined}>Key {i}</OutlinedDt>
+          <OutlinedDd $outlined={outlined}>Value {i}</OutlinedDd>
+        </DescriptionGroup>
+      ))}
+    </DescriptionList>
+  );
 
-	return (
-		<Flex flexDirection="column" gap="x4">
-			<Flex flexDirection="column" gap="x1">
-				<Flex flexDirection="row" alignItems="baseline" gap="half">
-					<Heading1 compact>{title}</Heading1>
-					<VerticalDivider />
-					<Checkbox
-						labelText="Show group outline"
-						checked={outlined}
-						onChange={() => setOutlined(!outlined)}
-					/>
-				</Flex>
-				{description && <Text fontSize="sm">{description}</Text>}
-				{info && (
-					<Flex alignItems="center" gap="half">
-						<Icon icon="info" color="midGrey" />
-						{typeof info === "string" ? (
-							<Text fontSize="sm" color="darkGrey">
-								{info}
-							</Text>
-						) : (
-							info
-						)}
-					</Flex>
-				)}
-			</Flex>
-			{resizable ? (
-				<Resizable containerWidth="100%" showContainerOutline>
-					{DescriptionListElement}
-				</Resizable>
-			) : (
-				DescriptionListElement
-			)}
-		</Flex>
-	);
+  return (
+    <Flex flexDirection="column" gap="x4">
+      <Flex flexDirection="column" gap="x1">
+        <Flex flexDirection="row" alignItems="baseline" gap="half">
+          <Heading1 compact>{title}</Heading1>
+          <VerticalDivider />
+          <Checkbox labelText="Show group outline" checked={outlined} onChange={() => setOutlined(!outlined)} />
+        </Flex>
+        {description && <Text fontSize="sm">{description}</Text>}
+        {info && (
+          <Flex alignItems="center" gap="half">
+            <Icon icon="info" color="midGrey" />
+            {typeof info === "string" ? (
+              <Text fontSize="sm" color="darkGrey">
+                {info}
+              </Text>
+            ) : (
+              info
+            )}
+          </Flex>
+        )}
+      </Flex>
+      {resizable ? (
+        <Resizable containerWidth="100%" showContainerOutline>
+          {DescriptionListElement}
+        </Resizable>
+      ) : (
+        DescriptionListElement
+      )}
+    </Flex>
+  );
 };
 
 export const TwoColumns = () => <ColumnDemo title="Two Columns" columns={2} />;
-export const ThreeColumns = () => (
-	<ColumnDemo title="Three Columns" columns={3} />
-);
+export const ThreeColumns = () => <ColumnDemo title="Three Columns" columns={3} />;
 
 export const ResponsiveColumns = {
-	render: () => (
-		<ColumnDemo
-			resizable
-			title="Responsive Columns"
-			columns={{ small: 1, medium: 3, large: 6 }}
-			description="Small: 1 column, Medium: 3 columns, Large: 6 columns"
-			info={
-				<Text fontSize="sm" color="darkGrey">
-					The breakpoint is based on the container width, not the viewport
-					width. See component{" "}
-					<Link href="https://github.com/nulogy/design-system/blob/main/src/DescriptionList/README.md">
-						documentation
-					</Link>
-					.
-				</Text>
-			}
-		/>
-	),
+  render: () => (
+    <ColumnDemo
+      resizable
+      title="Responsive Columns"
+      columns={{ small: 1, medium: 3, large: 6 }}
+      description="Small: 1 column, Medium: 3 columns, Large: 6 columns"
+      info={
+        <Text fontSize="sm" color="darkGrey">
+          The breakpoint is based on the container width, not the viewport width. See component{" "}
+          <Link href="https://github.com/nulogy/design-system/blob/main/src/DescriptionList/README.md">
+            documentation
+          </Link>
+          .
+        </Text>
+      }
+    />
+  ),
 
-	parameters: {
-		chromatic: {
-			viewports: [
-				parseInt(legacy.breakpoints.small, 10),
-				parseInt(legacy.breakpoints.medium, 10),
-				parseInt(legacy.breakpoints.large, 10),
-			],
-		},
-	},
+  parameters: {
+    chromatic: {
+      viewports: [
+        parseInt(legacy.breakpoints.small, 10),
+        parseInt(legacy.breakpoints.medium, 10),
+        parseInt(legacy.breakpoints.large, 10),
+      ],
+    },
+  },
 };

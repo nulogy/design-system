@@ -1,3 +1,3 @@
 export const TOPBAR = {
-	themedHeight: "x6",
+  themedHeight: "x6",
 };

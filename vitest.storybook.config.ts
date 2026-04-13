@@ -20,20 +20,20 @@ import { playwright } from "@vitest/browser-playwright";
 import { defineConfig } from "vitest/config";
 
 export default defineConfig({
-	plugins: [
-		react(),
-		storybookTest({
-			configDir: resolve(__dirname, ".storybook"),
-		}),
-	],
-	test: {
-		name: "storybook",
-		browser: {
-			enabled: true,
-			provider: playwright(),
-			headless: true,
-			instances: [{ browser: "chromium" }],
-		},
-		setupFiles: [resolve(__dirname, ".storybook/vitest.setup.ts")],
-	},
+  plugins: [
+    react(),
+    storybookTest({
+      configDir: resolve(__dirname, ".storybook"),
+    }),
+  ],
+  test: {
+    name: "storybook",
+    browser: {
+      enabled: true,
+      provider: playwright(),
+      headless: true,
+      instances: [{ browser: "chromium" }],
+    },
+    setupFiles: [resolve(__dirname, ".storybook/vitest.setup.ts")],
+  },
 });

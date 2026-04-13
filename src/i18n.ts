@@ -13,60 +13,60 @@ import ro_RO from "../locales/ro_RO.json";
 import zh_CN from "../locales/zh_CN.json";
 
 const resources = {
-	de_DE: {
-		nds: de_DE,
-	},
-	en_US: {
-		nds: en_US,
-	},
-	es_MX: {
-		nds: es_MX,
-	},
-	es_ES: {
-		nds: es_ES,
-	},
-	fr_FR: {
-		nds: fr_FR,
-	},
-	ja_JP: {
-		nds: ja_JP,
-	},
-	nl_NL: {
-		nds: nl_NL,
-	},
-	pl_PL: {
-		nds: pl_PL,
-	},
-	pt_BR: {
-		nds: pt_BR,
-	},
-	ro_RO: {
-		nds: ro_RO,
-	},
-	zh_CN: {
-		nds: zh_CN,
-	},
+  de_DE: {
+    nds: de_DE,
+  },
+  en_US: {
+    nds: en_US,
+  },
+  es_MX: {
+    nds: es_MX,
+  },
+  es_ES: {
+    nds: es_ES,
+  },
+  fr_FR: {
+    nds: fr_FR,
+  },
+  ja_JP: {
+    nds: ja_JP,
+  },
+  nl_NL: {
+    nds: nl_NL,
+  },
+  pl_PL: {
+    nds: pl_PL,
+  },
+  pt_BR: {
+    nds: pt_BR,
+  },
+  ro_RO: {
+    nds: ro_RO,
+  },
+  zh_CN: {
+    nds: zh_CN,
+  },
 };
 let initialized = false;
 
 export function initI18n() {
-	if (initialized) return i18n;
-	initialized = true;
+  if (initialized) return i18n;
+  initialized = true;
 
-	i18n.init({
-		ns: ["nds"],
-		defaultNS: "nds",
-		resources,
-		lng: "en_US",
+  i18n.init({
+    ns: ["nds"],
+    defaultNS: "nds",
+    resources,
+    lng: "en_US",
 
-		keySeparator: false, // we do not use keys in form messages.welcome
+    keySeparator: false, // we do not use keys in form messages.welcome
 
-		interpolation: {
-			escapeValue: false, // react already safes from xss
-		},
-	});
+    interpolation: {
+      escapeValue: false, // react already safes from xss
+    },
+  });
 
-	return i18n;
+  return i18n;
 }
 
 export default i18n;

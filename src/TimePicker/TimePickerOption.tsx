@@ -4,38 +4,38 @@ import { variant } from "styled-system";
 import type { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
 
 type TimePickerOptionProps = React.ComponentProps<"li"> & {
-	variant?: ComponentVariant;
-	isSelected: boolean;
-	isFocused: boolean;
-	isClosest: boolean;
+  variant?: ComponentVariant;
+  isSelected: boolean;
+  isFocused: boolean;
+  isClosest: boolean;
 };
 
 const TimePickerOption = styled.li<TimePickerOptionProps>(
-	({ theme, isSelected }) => ({
-		marginBottom: "0px",
-		backgroundColor: isSelected ? theme.colors.darkBlue : theme.colors.white,
-		color: isSelected ? theme.colors.white : theme.colors.black,
-		"&:hover": {
-			background: !isSelected && theme.colors.lightBlue,
-		},
-		padding: theme.space.x1,
-	}),
-	variant({
-		variants: {
-			touch: {
-				fontSize: "md",
-				lineHeight: "base",
-			},
-		},
-	}),
-	({ isSelected, theme, isFocused, isClosest }) => {
-		if (isFocused || isClosest) {
-			return {
-				background: !isSelected && theme.colors.lightBlue,
-				outline: "none",
-			};
-		}
-	},
+  ({ theme, isSelected }) => ({
+    marginBottom: "0px",
+    backgroundColor: isSelected ? theme.colors.darkBlue : theme.colors.white,
+    color: isSelected ? theme.colors.white : theme.colors.black,
+    "&:hover": {
+      background: !isSelected && theme.colors.lightBlue,
+    },
+    padding: theme.space.x1,
+  }),
+  variant({
+    variants: {
+      touch: {
+        fontSize: "md",
+        lineHeight: "base",
+      },
+    },
+  }),
+  ({ isSelected, theme, isFocused, isClosest }) => {
+    if (isFocused || isClosest) {
+      return {
+        background: !isSelected && theme.colors.lightBlue,
+        outline: "none",
+      };
+    }
+  },
 );
 
 export default TimePickerOption;

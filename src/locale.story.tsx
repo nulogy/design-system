@@ -16,111 +16,104 @@ import type { Columns } from "./Table/Table.types";
 import { Heading1, Text } from "./Type";
 
 interface Locale {
-	name: string;
-	keys: Record<string, string>;
+  name: string;
+  keys: Record<string, string>;
 }
 
 const locales: Record<string, Locale> = {
-	de_DE: {
-		name: "German",
-		keys: deDE,
-	},
-	en_US: {
-		name: "English (US)",
-		keys: enUS,
-	},
-	es_ES: {
-		name: "Spanish (Spain)",
-		keys: esES,
-	},
-	es_MX: {
-		name: "Spanish (Mexico)",
-		keys: esMX,
-	},
-	fr_FR: {
-		name: "French (France)",
-		keys: frFR,
-	},
-	ja_JP: {
-		name: "Japanese (Japan)",
-		keys: jaJP,
-	},
-	nl_NL: {
-		name: "Dutch",
-		keys: nlNL,
-	},
-	pl_PL: {
-		name: "Polish",
-		keys: plPL,
-	},
-	pt_BR: {
-		name: "Portuguese (Brazil)",
-		keys: ptBR,
-	},
-	ro_RO: {
-		name: "Romanian",
-		keys: roRO,
-	},
-	zh_CN: {
-		name: "Chinese (Simplified)",
-		keys: zhCN,
-	},
+  de_DE: {
+    name: "German",
+    keys: deDE,
+  },
+  en_US: {
+    name: "English (US)",
+    keys: enUS,
+  },
+  es_ES: {
+    name: "Spanish (Spain)",
+    keys: esES,
+  },
+  es_MX: {
+    name: "Spanish (Mexico)",
+    keys: esMX,
+  },
+  fr_FR: {
+    name: "French (France)",
+    keys: frFR,
+  },
+  ja_JP: {
+    name: "Japanese (Japan)",
+    keys: jaJP,
+  },
+  nl_NL: {
+    name: "Dutch",
+    keys: nlNL,
+  },
+  pl_PL: {
+    name: "Polish",
+    keys: plPL,
+  },
+  pt_BR: {
+    name: "Portuguese (Brazil)",
+    keys: ptBR,
+  },
+  ro_RO: {
+    name: "Romanian",
+    keys: roRO,
+  },
+  zh_CN: {
+    name: "Chinese (Simplified)",
+    keys: zhCN,
+  },
 };
 
 const getColumns = () => {
-	return Object.keys(locales).map((locale) => ({
-		label: locales[locale].name,
-		headerFormatter: ({ label }) => (
-			<Flex flexDirection="column">
-				<Text>{label}</Text>
-				<Text fontSize="small" color="midGrey">
-					{locale}
-				</Text>
-			</Flex>
-		),
-		dataKey: locale,
-		width: "8%",
-	})) as Columns<unknown>;
+  return Object.keys(locales).map((locale) => ({
+    label: locales[locale].name,
+    headerFormatter: ({ label }) => (
+      <Flex flexDirection="column">
+        <Text>{label}</Text>
+        <Text fontSize="small" color="midGrey">
+          {locale}
+        </Text>
+      </Flex>
+    ),
+    dataKey: locale,
+    width: "8%",
+  })) as Columns<unknown>;
 };
 
 const getRows = () => {
-	const allKeys = new Set<string>();
-	Object.keys(locales).forEach((locale) => {
-		const localeData = locales[locale];
-		if (localeData) {
-			Object.keys(localeData.keys).forEach((key) => {
-				allKeys.add(key);
-			});
-		}
-	});
+  const allKeys = new Set<string>();
+  Object.keys(locales).forEach((locale) => {
+    const localeData = locales[locale];
+    if (localeData) {
+      Object.keys(localeData.keys).forEach((key) => {
+        allKeys.add(key);
+      });
+    }
+  });
 
-	return Array.from(allKeys).map((key) => {
-		const row: Record<string, string> = { key, id: key };
-		Object.keys(locales).forEach((locale) => {
-			const translations = locales[locale].keys;
-			row[locale] = translations?.[key] || "-";
-		});
-		return row;
-	});
+  return Array.from(allKeys).map((key) => {
+    const row: Record<string, string> = { key, id: key };
+    Object.keys(locales).forEach((locale) => {
+      const translations = locales[locale].keys;
+      row[locale] = translations?.[key] || "-";
+    });
+    return row;
+  });
 };
 
 export default {
-	title: "Components/Locale",
-	parameters: {
-		layout: "fullscreen",
-	},
+  title: "Components/Locale",
+  parameters: {
+    layout: "fullscreen",
+  },
 };
 
 export const LocaleTable = () => (
-	<Box p="x3">
-		<Heading1>Locale Translations</Heading1>
-		<Table
-			columns={getColumns()}
-			rows={getRows()}
-			rowBorder
-			rowHovers
-			stickyHeader
-			className="LocaleTable"
-		/>
-	</Box>
+  <Box p="x3">
+    <Heading1>Locale Translations</Heading1>
+    <Table columns={getColumns()} rows={getRows()} rowBorder rowHovers stickyHeader className="LocaleTable" />
+  </Box>
 );

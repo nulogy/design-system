@@ -7,17 +7,17 @@ import { gap } from "../StyledProps";
 export interface FlexProps extends BoxProps, GapProps {}
 
 const Flex = styled(Box)<FlexProps>(
-	{
-		display: "flex",
-	},
-	gap,
+  {
+    display: "flex",
+  },
+  gap,
 );
 
 const InlineFlex = styled(Box)<FlexProps>(
-	{
-		display: "inline-flex",
-	},
-	gap,
+  {
+    display: "inline-flex",
+  },
+  gap,
 );
 
 export default Flex;
