@@ -72,7 +72,7 @@ export const Toast = ({
     if (!isCloseable) hideToast(showDuration);
   };
 
-  // biome-ignore lint/correctness/useExhaustiveDependencies: triggerToast and cancelHidingToast are intentionally inline; wrapping in useCallback would cause circular deps
+  // biome-ignore lint/correctness/useExhaustiveDependencies: triggerToast, cancelHidingToast, and onHide are intentionally excluded — the effect must only re-run when triggered changes; onHide is excluded because callers routinely pass non-memoized callbacks and adding it would cause an infinite re-render loop
   useEffect(() => {
     if (triggered) {
       triggerToast();
@@ -84,7 +84,7 @@ export const Toast = ({
     return () => {
       cancelHidingToast();
     };
-  }, [triggered, onHide]);
+  }, [triggered]);
 
   const onMouseIn = () => {
     if (!isCloseable) {
