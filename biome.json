@@ -7,15 +7,20 @@
 		"rules": {
 			"recommended": true,
 			"suspicious": {
-				"noExplicitAny": "off",
-				"noArrayIndexKey": "off"
-			},
-			"correctness": {
-				"useExhaustiveDependencies": "off"
-			},
-			"a11y": {
-				"noSvgWithoutTitle": "off"
+				"noExplicitAny": "off"
 			}
 		}
-	}
+	},
+	"overrides": [
+		{
+			"includes": ["**/*.story.tsx", "**/__mocks__/**"],
+			"linter": {
+				"rules": {
+					"suspicious": {
+						"noArrayIndexKey": "off"
+					}
+				}
+			}
+		}
+	]
 }

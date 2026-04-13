@@ -28,6 +28,7 @@ export default function LettermarkLogo({
 	return (
 		<svg
 			{...getSize(size)}
+			aria-hidden="true"
 			{...props}
 			viewBox="0 0 37 32"
 			style={{ display: "block", margin: size === "large" ? null : "2px 0" }}

@@ -88,10 +88,11 @@ function Pagination({
 					(page, index) => {
 						const isCurrentPage = currentPage === page;
 
-						if (page === SEPARATOR)
+						if (page === SEPARATOR) {
+							const sepKey = `sep${index}`;
 							return (
 								<Text
-									key={`sep${index}`}
+									key={sepKey}
 									py="x1"
 									fontSize="small"
 									lineHeight="smallTextBase"
@@ -99,7 +100,7 @@ function Pagination({
 									{SEPARATOR}
 								</Text>
 							);
-						else
+						} else
 							return (
 								<PageNumber
 									aria-current={isCurrentPage}

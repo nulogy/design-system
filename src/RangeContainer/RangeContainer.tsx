@@ -41,8 +41,8 @@ const RangeContainer = ({
 				</Flex>
 				<Flex>{endComponent}</Flex>
 			</Flex>
-			{errorMessages.map((errorMessage, i) => (
-				<InlineValidation key={i} errorMessage={errorMessage} />
+			{errorMessages.map((errorMessage) => (
+				<InlineValidation key={errorMessage} errorMessage={errorMessage} />
 			))}
 		</Flex>
 	);

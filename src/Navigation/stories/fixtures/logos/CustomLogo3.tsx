@@ -6,6 +6,7 @@ export default function CustomLogo3(props: SVGProps<SVGSVGElement>) {
 			viewBox="0 0 415 109"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
+			aria-hidden="true"
 			{...props}
 		>
 			<path

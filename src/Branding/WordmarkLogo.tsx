@@ -33,6 +33,7 @@ export default function WordmarkLogo({
 	return (
 		<svg
 			{...getSize(size)}
+			aria-hidden="true"
 			{...props}
 			viewBox="0 0 133 32"
 			style={{ display: "block", margin: size === "medium" ? "2px 0" : null }}
