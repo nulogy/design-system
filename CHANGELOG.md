@@ -1,3 +1,10 @@
+## [17.1.3](https://github.com/nulogy/design-system/compare/v17.1.2...v17.1.3) (2026-04-13)
+
+
+### Bug Fixes
+
+* **Toast:** remove onHide from useEffect deps to prevent infinite re-render loop ([7d028ac](https://github.com/nulogy/design-system/commit/7d028ac83a47c3b87e10675c1599be61dc7b92df))
+
 ## [17.1.2](https://github.com/nulogy/design-system/compare/v17.1.1...v17.1.2) (2026-03-31)
 
 
