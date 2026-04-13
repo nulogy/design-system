@@ -30,9 +30,10 @@ const SelectWithManyOptions = ({
 		setPhotoList(result);
 	};
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: intentional one-time fetch on mount
 	useEffect(() => {
 		setOptions();
-	}, [setOptions]);
+	}, []);
 
 	return (
 		<Select

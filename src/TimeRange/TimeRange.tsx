@@ -123,9 +123,10 @@ const TimeRange = forwardRef(
 			}
 		};
 
+		// biome-ignore lint/correctness/useExhaustiveDependencies: validateTimeRange captures the listed deps; listing the function would cause infinite re-renders
 		useEffect(() => {
 			validateTimeRange();
-		}, [validateTimeRange]);
+		}, [startTime, endTime, defaultStartTime, defaultEndTime, onRangeChange]);
 
 		const changeStartTimeHandler = (label, value) => {
 			setStartTime(value);

@@ -61,9 +61,10 @@ const TableWithFilters = ({ rowsPerPage }: TableWithFiltersProps) => {
 				: filteredRowsByLength[0] || ROWS;
 		setRows(commonRows);
 	};
+	// biome-ignore lint/correctness/useExhaustiveDependencies: filterRows only depends on filter and stable ROWS constant
 	useEffect(() => {
 		filterRows(filter);
-	}, [filter, filterRows]);
+	}, [filter]);
 
 	const onFilterInputChange = (dataKey, e) => {
 		const filterValue = e.currentTarget.value;

@@ -13,12 +13,12 @@ import {
 } from "./BreadcrumbsListItem";
 
 const insertSeparators = (items: JSX.Element[]) => {
-	return items.reduce((acc: JSX.Element[], current, index) => {
+	return items.reduce((acc: JSX.Element[], current) => {
 		return acc.concat(
 			current,
 			<BreadcrumbsListSeparator
 				aria-hidden
-				key={`separator-${index}`}
+				key={`separator-${current.key}`}
 				className="separator"
 			>
 				<Icon icon="rightArrow" />
@@ -37,11 +37,11 @@ const Breadcrumbs = ({
 }: BreadcrumbsProps) => {
 	const componentVariant = useComponentVariant(variant);
 
-	const allItems = React.Children.map(children, (child, index) => {
+	const allItems = React.Children.map(children, (child) => {
 		if (!isValidElement(child)) return null;
 
 		return (
-			<BreadcrumbsListItem variant={componentVariant} key={`child-${index}`}>
+			<BreadcrumbsListItem variant={componentVariant} key={child.key}>
 				{child}
 			</BreadcrumbsListItem>
 		);

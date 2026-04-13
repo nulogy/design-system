@@ -154,9 +154,10 @@ const DateRange = forwardRef<unknown, DateRangeProps>(
 			}
 		};
 
+		// biome-ignore lint/correctness/useExhaustiveDependencies: validateDateRange captures the listed deps; listing the function would cause infinite re-renders
 		useEffect(() => {
 			validateDateRange();
-		}, [validateDateRange]);
+		}, [startDate, endDate, startTime, endTime, showTimes, onRangeChange]);
 
 		const changeStartTimeHandler = (label, value) => {
 			setStartTime(value);

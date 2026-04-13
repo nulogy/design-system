@@ -1,5 +1,5 @@
 const NulogyLogo = () => (
-	<svg width="76px" height="18px" viewBox="0 0 76 18">
+	<svg width="76px" height="18px" viewBox="0 0 76 18" aria-hidden="true">
 		<g id="FInal" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 			<g id="DQI" transform="translate(-924.000000, -30.000000)">
 				<g id="Branding" transform="translate(916.000000, 24.000000)">

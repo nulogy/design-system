@@ -22,8 +22,8 @@ export interface IconProps extends SpaceProps {
 
 const getPathElements = (icon: any) => (
 	<>
-		{icon.path.map((path: string, index: number) => (
-			<path key={index} d={path} />
+		{icon.path.map((path: string) => (
+			<path key={path} d={path} />
 		))}
 	</>
 );
@@ -63,6 +63,7 @@ const Svg = React.forwardRef<SVGSVGElement, IconProps>(
 
 		return (
 			icons[icon] && (
+				// biome-ignore lint/a11y/noSvgWithoutTitle: aria-hidden is set dynamically based on title prop; <title> is rendered conditionally
 				<svg
 					ref={ref}
 					aria-hidden={title == null}
@@ -74,6 +75,7 @@ const Svg = React.forwardRef<SVGSVGElement, IconProps>(
 					className={`${className} nds-icon--${icon}`}
 					{...props}
 				>
+					{title && <title>{title}</title>}
 					{getPathElements(icons[icon])}
 				</svg>
 			)

@@ -89,6 +89,7 @@ const Popper = React.forwardRef<React.Ref<unknown>, PopperProps>(
 			setPopUpState(false, skipDelay);
 		};
 
+		// biome-ignore lint/correctness/useExhaustiveDependencies: resetTimeoutId uses a ref (stable) and closePopUp is intentionally inline; this effect runs once on mount
 		useEffect(() => {
 			function handleKeyDown(event: KeyboardEvent) {
 				if (event.code === "Escape") {
@@ -104,7 +105,7 @@ const Popper = React.forwardRef<React.Ref<unknown>, PopperProps>(
 			};
 
 			return cleanup;
-		}, [resetTimeoutId, closePopUp]);
+		}, []);
 
 		const openPopUp = (skipDelay: boolean) => {
 			setPopUpState(true, skipDelay);
@@ -151,6 +152,7 @@ const Popper = React.forwardRef<React.Ref<unknown>, PopperProps>(
 					},
 				});
 				return React.cloneElement(transformedElement, {
+					// biome-ignore lint/suspicious/noArrayIndexKey: popup children may have no explicit keys
 					key: i,
 				});
 			});
