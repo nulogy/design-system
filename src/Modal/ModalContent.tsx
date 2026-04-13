@@ -3,20 +3,18 @@ import { styled } from "styled-components";
 import type { DefaultNDSThemeType } from "../theme";
 
 type ModalContentProps = React.ComponentPropsWithRef<"div"> & {
-	hasFooter?: any;
-	theme?: DefaultNDSThemeType;
+  hasFooter?: any;
+  theme?: DefaultNDSThemeType;
 };
 
-const ModalContent = styled.div<ModalContentProps>(
-	({ hasFooter, theme }: ModalContentProps) => ({
-		marginTop: "-64px",
-		marginBottom: hasFooter ? "-72px" : 0,
-		overflow: "auto",
-		paddingTop: "88px",
-		paddingBottom: hasFooter ? "96px" : theme.space.x2,
-		paddingLeft: theme.space.x3,
-		paddingRight: theme.space.x3,
-	}),
-);
+const ModalContent = styled.div<ModalContentProps>(({ hasFooter, theme }: ModalContentProps) => ({
+  marginTop: "-64px",
+  marginBottom: hasFooter ? "-72px" : 0,
+  overflow: "auto",
+  paddingTop: "88px",
+  paddingBottom: hasFooter ? "96px" : theme.space.x2,
+  paddingLeft: theme.space.x3,
+  paddingRight: theme.space.x3,
+}));
 
 export default ModalContent;

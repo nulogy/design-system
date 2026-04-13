@@ -9,50 +9,38 @@ const MAX_LOGO_HEIGHT = "36px";
 
 /** @deprecated The BrandedNavBar component is deprecated. Use the Navigation component instead. */
 export type BrandLogoContainerProps = {
-	logoSrc?: string;
-	brandingLinkHref?: string;
-	brandingLinkTo?: string;
-	brandingLinkComponent?: React.ElementType;
-	subtext?: string;
+  logoSrc?: string;
+  brandingLinkHref?: string;
+  brandingLinkTo?: string;
+  brandingLinkComponent?: React.ElementType;
+  subtext?: string;
 };
 
 const BrandLogoContainer = ({
-	logoSrc,
-	brandingLinkHref,
-	brandingLinkTo,
-	brandingLinkComponent,
-	subtext,
+  logoSrc,
+  brandingLinkHref,
+  brandingLinkTo,
+  brandingLinkComponent,
+  subtext,
 }: BrandLogoContainerProps) => {
-	const { t } = useTranslation();
+  const { t } = useTranslation();
 
-	return (
-		<Box maxWidth={MAX_LOGO_WIDTH} maxHeight={MAX_LOGO_HEIGHT}>
-			<Link
-				aria-label={t("home")}
-				href={brandingLinkHref}
-				to={brandingLinkTo}
-				as={brandingLinkComponent}
-				underline={false}
-				variant="desktop"
-				style={{ display: "block" }}
-			>
-				{logoSrc && (
-					<img
-						src={logoSrc}
-						style={{ maxWidth: MAX_LOGO_WIDTH, maxHeight: MAX_LOGO_HEIGHT }}
-						alt=""
-					/>
-				)}
-				{!logoSrc && (
-					<Branding
-						size={subtext ? "small" : "medium"}
-						logoColor="blue"
-						subtext={subtext}
-					/>
-				)}
-			</Link>
-		</Box>
-	);
+  return (
+    <Box maxWidth={MAX_LOGO_WIDTH} maxHeight={MAX_LOGO_HEIGHT}>
+      <Link
+        aria-label={t("home")}
+        href={brandingLinkHref}
+        to={brandingLinkTo}
+        as={brandingLinkComponent}
+        underline={false}
+        variant="desktop"
+        style={{ display: "block" }}
+      >
+        {logoSrc && <img src={logoSrc} style={{ maxWidth: MAX_LOGO_WIDTH, maxHeight: MAX_LOGO_HEIGHT }} alt="" />}
+        {!logoSrc && <Branding size={subtext ? "small" : "medium"} logoColor="blue" subtext={subtext} />}
+      </Link>
+    </Box>
+  );
 };
 
 /** @deprecated The BrandedNavBar component is deprecated. Use the Navigation component instead. */

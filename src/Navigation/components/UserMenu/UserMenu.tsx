@@ -6,14 +6,14 @@ import Item from "./parts/Item";
 import MobileItem from "./parts/MobileItem";
 
 const Container = styled(RadixNavigationMenu.Sub).attrs({
-	orientation: "vertical",
+  orientation: "vertical",
 })<StyledProps>(addStyledProps);
 
 const UserMenu = {
-	Header,
-	Container,
-	Item,
-	MobileItem,
+  Header,
+  Container,
+  Item,
+  MobileItem,
 };
 
 export default UserMenu;

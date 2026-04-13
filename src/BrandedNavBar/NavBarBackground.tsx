@@ -5,18 +5,18 @@ import type { DefaultNDSThemeType } from "../theme";
 
 /** @deprecated The BrandedNavBar component is deprecated. Use the Navigation component instead. */
 export type NavBarBackgroundProps = {
-	theme?: DefaultNDSThemeType;
+  theme?: DefaultNDSThemeType;
 } & StyledProps;
 
 const NavBarBackground = styled(Flex)(
-	({ theme }: NavBarBackgroundProps): CSSObject => ({
-		padding: `0 ${theme.space.x3}`,
-		borderBottom: `1px solid ${theme.colors.lightGrey}`,
-		alignItems: "center",
-		zIndex: theme.zIndices.navBar,
-		position: "relative",
-	}),
-	addStyledProps,
+  ({ theme }: NavBarBackgroundProps): CSSObject => ({
+    padding: `0 ${theme.space.x3}`,
+    borderBottom: `1px solid ${theme.colors.lightGrey}`,
+    alignItems: "center",
+    zIndex: theme.zIndices.navBar,
+    position: "relative",
+  }),
+  addStyledProps,
 );
 
 /** @deprecated The BrandedNavBar component is deprecated. Use the Navigation component instead. */

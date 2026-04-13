@@ -4,34 +4,34 @@ import type { ReactNode } from "react";
 import { keyframes, styled } from "styled-components";
 
 type TooltipProps = {
-	children: ReactNode;
-	content: ReactNode;
-	hideTooltip?: boolean;
-	sideOffset?: number;
-	delayDuration?: number;
+  children: ReactNode;
+  content: ReactNode;
+  hideTooltip?: boolean;
+  sideOffset?: number;
+  delayDuration?: number;
 };
 
 export function MiniTooltip({
-	children,
-	content,
-	sideOffset = 4,
-	hideTooltip = false,
-	delayDuration = 700,
+  children,
+  content,
+  sideOffset = 4,
+  hideTooltip = false,
+  delayDuration = 700,
 }: TooltipProps) {
-	if (hideTooltip) {
-		return <>{children}</>;
-	}
+  if (hideTooltip) {
+    return <>{children}</>;
+  }
 
-	return (
-		<TooltipPrimitive.Provider delayDuration={delayDuration}>
-			<TooltipPrimitive.Root>
-				<TooltipPrimitive.Trigger asChild>{children}</TooltipPrimitive.Trigger>
-				<TooltipPrimitive.Portal>
-					<TooltipContent sideOffset={sideOffset}>{content}</TooltipContent>
-				</TooltipPrimitive.Portal>
-			</TooltipPrimitive.Root>
-		</TooltipPrimitive.Provider>
-	);
+  return (
+    <TooltipPrimitive.Provider delayDuration={delayDuration}>
+      <TooltipPrimitive.Root>
+        <TooltipPrimitive.Trigger asChild>{children}</TooltipPrimitive.Trigger>
+        <TooltipPrimitive.Portal>
+          <TooltipContent sideOffset={sideOffset}>{content}</TooltipContent>
+        </TooltipPrimitive.Portal>
+      </TooltipPrimitive.Root>
+    </TooltipPrimitive.Provider>
+  );
 }
 
 const slideUpAndFade = keyframes`

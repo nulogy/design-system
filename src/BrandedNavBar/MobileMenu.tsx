@@ -17,295 +17,254 @@ import type { TriggerFunctionProps } from "./TriggerFunctionProps";
 const borderStyle = "1px solid #e4e7eb";
 
 const BrandingWrap = styled.div(({ theme }) => ({
-	marginLeft: theme.space.x3,
-	color: theme.colors.white,
-	marginBottom: theme.space.x1,
+  marginLeft: theme.space.x3,
+  color: theme.colors.white,
+  marginBottom: theme.space.x1,
 }));
 
 const getPaddingLeft = (layer) => `${24 * layer + 24}px`;
 
 const getSharedStyles = (theme: DefaultNDSThemeType): CSSObject => ({
-	display: "flex",
-	alignItems: "center",
-	gap: theme.space.half,
-	textDecoration: "none",
-	border: "none",
-	backgroundColor: "transparent",
-	fontSize: theme.fontSizes.large,
-	fontWeight: theme.fontWeights.medium,
-	lineHeight: theme.lineHeights.heading3,
-	padding: `${theme.space.x1} ${theme.space.x3}`,
+  display: "flex",
+  alignItems: "center",
+  gap: theme.space.half,
+  textDecoration: "none",
+  border: "none",
+  backgroundColor: "transparent",
+  fontSize: theme.fontSizes.large,
+  fontWeight: theme.fontWeights.medium,
+  lineHeight: theme.lineHeights.heading3,
+  padding: `${theme.space.x1} ${theme.space.x3}`,
 });
 
 const TopLevelLink = styled(Link)(
-	({ theme }) => ({
-		...getSharedStyles(theme),
-		color: theme.colors.darkBlue,
-		"&:visited": {
-			color: theme.colors.darkBlue,
-		},
-		width: "100%",
-		borderRadius: "0",
-		transition: ".2s",
-		"&:hover, &:focus": {
-			outline: "none",
-			color: theme.colors.blackBlue,
-			backgroundColor: theme.colors.whiteGrey,
-			cursor: "pointer",
-		},
-		"&:focus": {
-			boxShadow: theme.shadows.focus,
-		},
-		"&:disabled": {
-			opacity: ".5",
-		},
-	}),
-	addStyledProps,
+  ({ theme }) => ({
+    ...getSharedStyles(theme),
+    color: theme.colors.darkBlue,
+    "&:visited": {
+      color: theme.colors.darkBlue,
+    },
+    width: "100%",
+    borderRadius: "0",
+    transition: ".2s",
+    "&:hover, &:focus": {
+      outline: "none",
+      color: theme.colors.blackBlue,
+      backgroundColor: theme.colors.whiteGrey,
+      cursor: "pointer",
+    },
+    "&:focus": {
+      boxShadow: theme.shadows.focus,
+    },
+    "&:disabled": {
+      opacity: ".5",
+    },
+  }),
+  addStyledProps,
 );
 
 const TopLevelText = styled(Text)(
-	({ theme }) => ({
-		...getSharedStyles(theme),
-		color: theme.colors.blackBlue,
-	}),
-	addStyledProps,
+  ({ theme }) => ({
+    ...getSharedStyles(theme),
+    color: theme.colors.blackBlue,
+  }),
+  addStyledProps,
 );
 
 const SubMenuItemsList = styled.ul({
-	listStyle: "none",
-	paddingLeft: "0",
-	margin: "0",
+  listStyle: "none",
+  paddingLeft: "0",
+  margin: "0",
 });
 
 const renderMenuLink = (menuItem, linkOnClick, _themeColorObject, layer) => {
-	const sharedLinkProps = {
-		onClick: linkOnClick,
-		href: menuItem.href,
-		as: menuItem.as,
-		to: menuItem.to,
+  const sharedLinkProps = {
+    onClick: linkOnClick,
+    href: menuItem.href,
+    as: menuItem.as,
+    to: menuItem.to,
 
-		pl: layer === 0 ? getPaddingLeft(layer) : `${24 * layer + 20}px`,
-		mb: "x1",
-		target: menuItem.openInNew ? "_blank" : undefined,
-	};
-	const topLevel = layer === 0;
+    pl: layer === 0 ? getPaddingLeft(layer) : `${24 * layer + 20}px`,
+    mb: "x1",
+    target: menuItem.openInNew ? "_blank" : undefined,
+  };
+  const topLevel = layer === 0;
 
-	return (
-		<li key={menuItem.key ?? menuItem.name}>
-			{topLevel ? (
-				<TopLevelLink {...sharedLinkProps}>
-					{menuItem.name}
-					{menuItem.openInNew && (
-						<Icon size={topLevel ? "x3" : "x2"} icon="openInNew" />
-					)}
-				</TopLevelLink>
-			) : (
-				<DropdownLink {...sharedLinkProps}>
-					{menuItem.name}
-					{menuItem.openInNew && (
-						<Icon size={topLevel ? "x3" : "x2"} icon="openInNew" />
-					)}
-				</DropdownLink>
-			)}
-		</li>
-	);
+  return (
+    <li key={menuItem.key ?? menuItem.name}>
+      {topLevel ? (
+        <TopLevelLink {...sharedLinkProps}>
+          {menuItem.name}
+          {menuItem.openInNew && <Icon size={topLevel ? "x3" : "x2"} icon="openInNew" />}
+        </TopLevelLink>
+      ) : (
+        <DropdownLink {...sharedLinkProps}>
+          {menuItem.name}
+          {menuItem.openInNew && <Icon size={topLevel ? "x3" : "x2"} icon="openInNew" />}
+        </DropdownLink>
+      )}
+    </li>
+  );
 };
 
 const renderCustom = (menuItem, linkOnClick, _themeColorObject, layer) => (
-	<li key={menuItem.key ?? menuItem.name}>
-		{menuItem.render({ size: "small", onItemClick: linkOnClick, layer })}
-	</li>
+  <li key={menuItem.key ?? menuItem.name}>{menuItem.render({ size: "small", onItemClick: linkOnClick, layer })}</li>
 );
 
 const renderSubMenu = (menuItem, linkOnClick, themeColorObject, layer) => (
-	<li key={menuItem.key ?? menuItem.name} style={{ display: "block" }}>
-		<SubMenu
-			menuItem={menuItem}
-			layer={layer}
-			themeColorObject={themeColorObject}
-			linkOnClick={linkOnClick}
-		/>
-	</li>
+  <li key={menuItem.key ?? menuItem.name} style={{ display: "block" }}>
+    <SubMenu menuItem={menuItem} layer={layer} themeColorObject={themeColorObject} linkOnClick={linkOnClick} />
+  </li>
 );
 
 const renderText = (menuItem, _linkOnClick, _themeColorObject, layer) => {
-	const MenuText = layer === 0 ? TopLevelText : DropdownText;
-	return (
-		<li key={menuItem.key ?? menuItem.name}>
-			<MenuText pl={getPaddingLeft(layer)} mb="x1">
-				{menuItem.name}
-			</MenuText>
-		</li>
-	);
+  const MenuText = layer === 0 ? TopLevelText : DropdownText;
+  return (
+    <li key={menuItem.key ?? menuItem.name}>
+      <MenuText pl={getPaddingLeft(layer)} mb="x1">
+        {menuItem.name}
+      </MenuText>
+    </li>
+  );
 };
 
 const getRenderFunction = (menuItem) => {
-	if (menuItem.items) {
-		return renderSubMenu;
-	} else if (menuItem.href || menuItem.to) {
-		return renderMenuLink;
-	} else if (menuItem.render) {
-		return renderCustom;
-	} else {
-		return renderText;
-	}
+  if (menuItem.items) {
+    return renderSubMenu;
+  } else if (menuItem.href || menuItem.to) {
+    return renderMenuLink;
+  } else if (menuItem.render) {
+    return renderCustom;
+  } else {
+    return renderText;
+  }
 };
 
 const renderMenuItems = (menuItems, linkOnClick, themeColorObject, layer) =>
-	menuItems.map((menuItem) => {
-		const render = getRenderFunction(menuItem);
-		return render(menuItem, linkOnClick, themeColorObject, layer);
-	});
+  menuItems.map((menuItem) => {
+    const render = getRenderFunction(menuItem);
+    return render(menuItem, linkOnClick, themeColorObject, layer);
+  });
 
 const renderTopLayerMenuItems = (menuData, linkOnClick, themeColorObject) =>
-	renderMenuItems(menuData, linkOnClick, themeColorObject, 0);
+  renderMenuItems(menuData, linkOnClick, themeColorObject, 0);
 
 const getSubMenuHeading = (layer, name) =>
-	layer === 0 ? (
-		<TopLevelText as="h3" mb="x1">
-			{name}
-		</TopLevelText>
-	) : (
-		<DropdownText mb="x1" pl={getPaddingLeft(layer)}>
-			{name}
-		</DropdownText>
-	);
+  layer === 0 ? (
+    <TopLevelText as="h3" mb="x1">
+      {name}
+    </TopLevelText>
+  ) : (
+    <DropdownText mb="x1" pl={getPaddingLeft(layer)}>
+      {name}
+    </DropdownText>
+  );
 
 type ThemeColorObject = {
-	textColor?: string;
-	background?: string;
-	logoColor?: "white" | "blue";
+  textColor?: string;
+  background?: string;
+  logoColor?: "white" | "blue";
 };
 
 type MenuItem = {
-	items?: any[];
-	name?: string;
-	trigger?: (props: TriggerFunctionProps) => React.ReactNode;
+  items?: any[];
+  name?: string;
+  trigger?: (props: TriggerFunctionProps) => React.ReactNode;
 };
 
 type SubMenuProps = {
-	layer?: number;
-	menuItem?: MenuItem;
-	linkOnClick?: React.MouseEventHandler<HTMLElement>;
-	themeColorObject?: ThemeColorObject;
+  layer?: number;
+  menuItem?: MenuItem;
+  linkOnClick?: React.MouseEventHandler<HTMLElement>;
+  themeColorObject?: ThemeColorObject;
 };
 
-const SubMenu = ({
-	menuItem,
-	linkOnClick,
-	themeColorObject,
-	layer,
-}: SubMenuProps) => {
-	const defaultRender = () => getSubMenuHeading(layer, menuItem.name);
-	return (
-		<>
-			{menuItem.trigger
-				? menuItem.trigger({ size: "small", defaultRender, layer })
-				: defaultRender()}
-			<SubMenuItemsList>
-				{renderMenuItems(
-					menuItem.items,
-					linkOnClick,
-					themeColorObject,
-					layer + 1,
-				)}
-			</SubMenuItemsList>
-		</>
-	);
+const SubMenu = ({ menuItem, linkOnClick, themeColorObject, layer }: SubMenuProps) => {
+  const defaultRender = () => getSubMenuHeading(layer, menuItem.name);
+  return (
+    <>
+      {menuItem.trigger ? menuItem.trigger({ size: "small", defaultRender, layer }) : defaultRender()}
+      <SubMenuItemsList>{renderMenuItems(menuItem.items, linkOnClick, themeColorObject, layer + 1)}</SubMenuItemsList>
+    </>
+  );
 };
 
 const Menu = styled.ul(({ theme }) => ({
-	listStyle: "none",
-	margin: "0",
-	padding: `${theme.space.x1} 0`,
-	zIndex: theme.zIndices.content,
-	width: "100%",
-	color: theme.colors.white,
-	[`${TopLevelText}`]: {
-		padding: `${theme.space.x1} 0 ${theme.space.x1} ${theme.space.x3}`,
-	},
+  listStyle: "none",
+  margin: "0",
+  padding: `${theme.space.x1} 0`,
+  zIndex: theme.zIndices.content,
+  width: "100%",
+  color: theme.colors.white,
+  [`${TopLevelText}`]: {
+    padding: `${theme.space.x1} 0 ${theme.space.x1} ${theme.space.x3}`,
+  },
 }));
 
 type NavProps = {
-	backgroundColor: string;
+  backgroundColor: string;
 };
 
 const Nav = styled.nav<NavProps>(
-	({ backgroundColor }) => ({
-		backgroundColor,
-	}),
-	{
-		minHeight: "calc(100vh - 72px)",
-	},
+  ({ backgroundColor }) => ({
+    backgroundColor,
+  }),
+  {
+    minHeight: "calc(100vh - 72px)",
+  },
 );
 
 type MenuData = {
-	primaryMenu?: any[];
-	secondaryMenu?: any[];
+  primaryMenu?: any[];
+  secondaryMenu?: any[];
 };
 
 type BaseMobileMenuProps = {
-	menuData: MenuData;
-	subtext?: string;
-	closeMenu?: React.MouseEventHandler<HTMLElement>;
-	themeColorObject?: ThemeColorObject;
-	showNulogyLogo?: boolean;
+  menuData: MenuData;
+  subtext?: string;
+  closeMenu?: React.MouseEventHandler<HTMLElement>;
+  themeColorObject?: ThemeColorObject;
+  showNulogyLogo?: boolean;
 };
 
 const BaseMobileMenu = ({
-	menuData,
-	closeMenu,
-	subtext,
-	themeColorObject,
-	showNulogyLogo,
-	...props
+  menuData,
+  closeMenu,
+  subtext,
+  themeColorObject,
+  showNulogyLogo,
+  ...props
 }: BaseMobileMenuProps) => {
-	useScrollLock();
+  useScrollLock();
 
-	return (
-		<Nav backgroundColor={themeColorObject?.background} {...props}>
-			<BrandingWrap>
-				<BrandingText logoColor={themeColorObject?.logoColor} />
-			</BrandingWrap>
-			<Menu>
-				{menuData.primaryMenu &&
-					renderTopLayerMenuItems(
-						menuData.primaryMenu,
-						closeMenu,
-						themeColorObject,
-					)}
-				{menuData.secondaryMenu &&
-					renderTopLayerMenuItems(
-						menuData.secondaryMenu,
-						closeMenu,
-						themeColorObject,
-					)}
-			</Menu>
-			{showNulogyLogo && (
-				<Flex
-					textAlign="center"
-					borderTop={borderStyle}
-					height="40px"
-					alignItems="center"
-					justifyContent="center"
-				>
-					<NulogyLogo />
-					{subtext && (
-						<Text
-							fontSize="8px"
-							lineHeight="0"
-							color="darkGrey"
-							fontWeight="medium"
-							textTransform="uppercase"
-							letterSpacing=".5px"
-						>
-							{subtext}
-						</Text>
-					)}
-				</Flex>
-			)}
-		</Nav>
-	);
+  return (
+    <Nav backgroundColor={themeColorObject?.background} {...props}>
+      <BrandingWrap>
+        <BrandingText logoColor={themeColorObject?.logoColor} />
+      </BrandingWrap>
+      <Menu>
+        {menuData.primaryMenu && renderTopLayerMenuItems(menuData.primaryMenu, closeMenu, themeColorObject)}
+        {menuData.secondaryMenu && renderTopLayerMenuItems(menuData.secondaryMenu, closeMenu, themeColorObject)}
+      </Menu>
+      {showNulogyLogo && (
+        <Flex textAlign="center" borderTop={borderStyle} height="40px" alignItems="center" justifyContent="center">
+          <NulogyLogo />
+          {subtext && (
+            <Text
+              fontSize="8px"
+              lineHeight="0"
+              color="darkGrey"
+              fontWeight="medium"
+              textTransform="uppercase"
+              letterSpacing=".5px"
+            >
+              {subtext}
+            </Text>
+          )}
+        </Flex>
+      )}
+    </Nav>
+  );
 };
 
 /** @deprecated The BrandedNavBar component is deprecated. Use the Navigation component instead. */

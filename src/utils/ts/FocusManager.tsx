@@ -2,77 +2,69 @@ import type React from "react";
 import { type ReactNode, useEffect, useRef, useState } from "react";
 
 type Reference = {
-	current?: JSX.Element;
-	focus?: (...args: any[]) => any;
+  current?: JSX.Element;
+  focus?: (...args: any[]) => any;
 };
 
 type ChildrenHandlers = {
-	focusedIndex: number;
-	handleArrowNavigation: (e: React.KeyboardEvent) => void;
-	setFocusedIndex: React.Dispatch<React.SetStateAction<number>>;
+  focusedIndex: number;
+  handleArrowNavigation: (e: React.KeyboardEvent) => void;
+  setFocusedIndex: React.Dispatch<React.SetStateAction<number>>;
 };
 
 type FocusManagerProps = {
-	refs?: Array<Reference>;
-	defaultFocusedIndex: number | null;
-	children: (handlers: ChildrenHandlers) => ReactNode;
+  refs?: Array<Reference>;
+  defaultFocusedIndex: number | null;
+  children: (handlers: ChildrenHandlers) => ReactNode;
 };
 
-function FocusManager({
-	children,
-	refs = undefined,
-	defaultFocusedIndex,
-}: FocusManagerProps) {
-	const [focusedIndex, setFocusedIndex] = useState<number>(
-		defaultFocusedIndex ?? 0,
-	);
-	const prevFocusedIndex = useRef<number>(focusedIndex);
+function FocusManager({ children, refs = undefined, defaultFocusedIndex }: FocusManagerProps) {
+  const [focusedIndex, setFocusedIndex] = useState<number>(defaultFocusedIndex ?? 0);
+  const prevFocusedIndex = useRef<number>(focusedIndex);
 
-	const focusPrevious = () => {
-		setFocusedIndex(
-			(prevFocusedIndex) => (prevFocusedIndex - 1 + refs.length) % refs.length,
-		);
-	};
+  const focusPrevious = () => {
+    setFocusedIndex((prevFocusedIndex) => (prevFocusedIndex - 1 + refs.length) % refs.length);
+  };
 
-	const focusNext = () => {
-		setFocusedIndex((prevFocusedIndex) => (prevFocusedIndex + 1) % refs.length);
-	};
+  const focusNext = () => {
+    setFocusedIndex((prevFocusedIndex) => (prevFocusedIndex + 1) % refs.length);
+  };
 
-	const handleArrowNavigation = (e) => {
-		switch (e.key) {
-			case "ArrowLeft":
-				e.preventDefault();
-				focusPrevious();
-				break;
-			case "ArrowRight":
-				e.preventDefault();
-				focusNext();
-				break;
-			default:
-				break;
-		}
-	};
+  const handleArrowNavigation = (e) => {
+    switch (e.key) {
+      case "ArrowLeft":
+        e.preventDefault();
+        focusPrevious();
+        break;
+      case "ArrowRight":
+        e.preventDefault();
+        focusNext();
+        break;
+      default:
+        break;
+    }
+  };
 
-	useEffect(() => {
-		const updateFocused = () => {
-			refs[focusedIndex].focus();
-		};
+  useEffect(() => {
+    const updateFocused = () => {
+      refs[focusedIndex].focus();
+    };
 
-		if (prevFocusedIndex.current !== focusedIndex) {
-			updateFocused();
-			prevFocusedIndex.current = focusedIndex;
-		}
-	}, [focusedIndex, refs]);
+    if (prevFocusedIndex.current !== focusedIndex) {
+      updateFocused();
+      prevFocusedIndex.current = focusedIndex;
+    }
+  }, [focusedIndex, refs]);
 
-	return (
-		<>
-			{children({
-				focusedIndex,
-				setFocusedIndex,
-				handleArrowNavigation,
-			})}
-		</>
-	);
+  return (
+    <>
+      {children({
+        focusedIndex,
+        setFocusedIndex,
+        handleArrowNavigation,
+      })}
+    </>
+  );
 }
 
 export default FocusManager;

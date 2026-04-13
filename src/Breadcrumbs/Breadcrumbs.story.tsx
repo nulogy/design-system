@@ -4,47 +4,47 @@ import { Text } from "../Type";
 import { Breadcrumbs } from "./index";
 
 export default {
-	title: "Components/Breadcrumbs",
+  title: "Components/Breadcrumbs",
 };
 
 export const _Breadcrumbs = () => (
-	<>
-		<Breadcrumbs>
-			<Link href="/">Home</Link>
-		</Breadcrumbs>
-		<Breadcrumbs>
-			<Link href="/">Home</Link>
-			<Link href="/">Tenants</Link>
-		</Breadcrumbs>
-	</>
+  <>
+    <Breadcrumbs>
+      <Link href="/">Home</Link>
+    </Breadcrumbs>
+    <Breadcrumbs>
+      <Link href="/">Home</Link>
+      <Link href="/">Tenants</Link>
+    </Breadcrumbs>
+  </>
 );
 
 export const WithoutLink = {
-	render: () => (
-		<Breadcrumbs>
-			<Link href="/">Home</Link>
-			<Link href="/">Tenants</Link>
-			<Text>Current Tenant</Text>
-		</Breadcrumbs>
-	),
+  render: () => (
+    <Breadcrumbs>
+      <Link href="/">Home</Link>
+      <Link href="/">Tenants</Link>
+      <Text>Current Tenant</Text>
+    </Breadcrumbs>
+  ),
 
-	name: "without link",
+  name: "without link",
 };
 
 export const WithReactRouter = {
-	render: () => (
-		<BrowserRouter>
-			<Breadcrumbs>
-				<Link as={ReactRouterLink} to="/">
-					Home
-				</Link>
-				<Link as={ReactRouterLink} to="/">
-					Tenants
-				</Link>
-				<Text>Current Tenant</Text>
-			</Breadcrumbs>
-		</BrowserRouter>
-	),
+  render: () => (
+    <BrowserRouter>
+      <Breadcrumbs>
+        <Link as={ReactRouterLink} to="/">
+          Home
+        </Link>
+        <Link as={ReactRouterLink} to="/">
+          Tenants
+        </Link>
+        <Text>Current Tenant</Text>
+      </Breadcrumbs>
+    </BrowserRouter>
+  ),
 
-	name: "with react router",
+  name: "with react router",
 };

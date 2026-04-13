@@ -10,28 +10,23 @@ import { TileLink } from "../TopBar.styled";
 const MotionText = motion(Text);
 
 export interface MenuItemLinkProps extends ComponentProps<typeof TileLink> {
-	as?: React.ElementType;
-	to?: string;
-	title: string;
-	description?: string;
-	icon: IconName;
+  as?: React.ElementType;
+  to?: string;
+  title: string;
+  description?: string;
+  icon: IconName;
 }
 
-export function MenuItemLink({
-	description,
-	title,
-	icon,
-	...props
-}: MenuItemLinkProps) {
-	return (
-		<TileLink {...props}>
-			<Icon icon={icon} size="x3" />
-			<Flex flexDirection="column" justifyContent="center">
-				<MotionText fontWeight="medium" fontSize="md" lineHeight="base">
-					{title}
-				</MotionText>
-				<MotionText fontSize="xs">{description}</MotionText>
-			</Flex>
-		</TileLink>
-	);
+export function MenuItemLink({ description, title, icon, ...props }: MenuItemLinkProps) {
+  return (
+    <TileLink {...props}>
+      <Icon icon={icon} size="x3" />
+      <Flex flexDirection="column" justifyContent="center">
+        <MotionText fontWeight="medium" fontSize="md" lineHeight="base">
+          {title}
+        </MotionText>
+        <MotionText fontSize="xs">{description}</MotionText>
+      </Flex>
+    </TileLink>
+  );
 }

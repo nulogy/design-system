@@ -9,88 +9,79 @@ import { InlineValidation } from "../Validation";
 import Checkbox from "./Checkbox";
 
 interface CheckboxGroupProps {
-	children?: React.ReactNode;
-	errorMessage?: string;
-	errorList?: string[];
-	labelText: string;
-	name: string;
-	defaultValue?: string[];
-	checkedValue?: string[];
-	onChange?: (...args: any[]) => any;
-	className?: string;
-	id?: string;
-	helpText?: React.ReactNode;
-	requirementText?: string;
-	required?: boolean;
-	disabled?: boolean;
-	hint?: string;
+  children?: React.ReactNode;
+  errorMessage?: string;
+  errorList?: string[];
+  labelText: string;
+  name: string;
+  defaultValue?: string[];
+  checkedValue?: string[];
+  onChange?: (...args: any[]) => any;
+  className?: string;
+  id?: string;
+  helpText?: React.ReactNode;
+  requirementText?: string;
+  required?: boolean;
+  disabled?: boolean;
+  hint?: string;
 }
 
 export default function CheckboxGroup({
-	className,
-	id,
-	errorMessage,
-	errorList,
-	labelText,
-	helpText,
-	requirementText,
-	hint,
-	...props
+  className,
+  id,
+  errorMessage,
+  errorList,
+  labelText,
+  helpText,
+  requirementText,
+  hint,
+  ...props
 }: CheckboxGroupProps) {
-	const otherProps = { ...props, errorMessage, errorList };
-	return (
-		<Fieldset className={className} id={id}>
-			<Legend>
-				<LabelContent data-testid="label-content">
-					<LabelText data-testid="label-text">{labelText}</LabelText>
-					{requirementText && (
-						<RequirementText data-testid="requirement-text" ml="none">
-							{requirementText}
-						</RequirementText>
-					)}
-					{hint && (
-						<Tooltip tooltip={hint}>
-							<InlineIcon color="darkGrey" size="x2" icon="info" />
-						</Tooltip>
-					)}
-				</LabelContent>
-			</Legend>
-			{helpText && <HelpText>{helpText}</HelpText>}
-			{getCheckboxButtons(otherProps)}
-			<InlineValidation
-				mt="x1"
-				errorMessage={errorMessage}
-				errorList={errorList}
-			/>
-		</Fieldset>
-	);
+  const otherProps = { ...props, errorMessage, errorList };
+  return (
+    <Fieldset className={className} id={id}>
+      <Legend>
+        <LabelContent data-testid="label-content">
+          <LabelText data-testid="label-text">{labelText}</LabelText>
+          {requirementText && (
+            <RequirementText data-testid="requirement-text" ml="none">
+              {requirementText}
+            </RequirementText>
+          )}
+          {hint && (
+            <Tooltip tooltip={hint}>
+              <InlineIcon color="darkGrey" size="x2" icon="info" />
+            </Tooltip>
+          )}
+        </LabelContent>
+      </Legend>
+      {helpText && <HelpText>{helpText}</HelpText>}
+      {getCheckboxButtons(otherProps)}
+      <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
+    </Fieldset>
+  );
 }
 
 const getCheckboxButtons = (props) => {
-	const checkboxButtons = React.Children.map(props.children, (checkbox) => {
-		const { value, disabled, required, onChange, ...checkboxProps } =
-			checkbox.props;
-		return (
-			<Checkbox
-				{...checkboxProps}
-				value={value}
-				disabled={props.disabled || disabled}
-				error={!!(props.errorMessage || props.errorList)}
-				required={props.required || required}
-				name={props.name}
-				defaultChecked={
-					props.defaultValue ? props.defaultValue.includes(value) : undefined
-				}
-				checked={
-					props.checkedValue ? props.checkedValue.includes(value) : undefined
-				}
-				onChange={props.onChange || onChange}
-			/>
-		);
-	});
-	return checkboxButtons;
+  const checkboxButtons = React.Children.map(props.children, (checkbox) => {
+    const { value, disabled, required, onChange, ...checkboxProps } = checkbox.props;
+    return (
+      <Checkbox
+        {...checkboxProps}
+        value={value}
+        disabled={props.disabled || disabled}
+        error={!!(props.errorMessage || props.errorList)}
+        required={props.required || required}
+        name={props.name}
+        defaultChecked={props.defaultValue ? props.defaultValue.includes(value) : undefined}
+        checked={props.checkedValue ? props.checkedValue.includes(value) : undefined}
+        onChange={props.onChange || onChange}
+      />
+    );
+  });
+  return checkboxButtons;
 };
 
 const Legend = styled.legend(({ theme }) => ({
-	marginBottom: theme.space.x1,
+  marginBottom: theme.space.x1,
 }));

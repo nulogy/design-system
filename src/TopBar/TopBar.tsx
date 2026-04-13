@@ -7,24 +7,24 @@ import { PageTitle } from "./components/PageTitle";
 import { Header, Navigation, NavigationItemsList } from "./TopBar.styled";
 
 export interface TopBarProps {
-	children?: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 export default function Root({ children }: TopBarProps) {
-	return (
-		<Header>
-			<Navigation>
-				<NavigationItemsList>{children}</NavigationItemsList>
-			</Navigation>
-		</Header>
-	);
+  return (
+    <Header>
+      <Navigation>
+        <NavigationItemsList>{children}</NavigationItemsList>
+      </Navigation>
+    </Header>
+  );
 }
 
 export const TopBar = {
-	Root,
-	PageTitle,
-	BackLink,
-	Menu,
-	MenuItem,
-	MenuItemLink,
+  Root,
+  PageTitle,
+  BackLink,
+  Menu,
+  MenuItem,
+  MenuItemLink,
 };

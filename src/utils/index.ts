@@ -7,7 +7,7 @@ export { default as ScrollIndicators } from "./ScrollIndicators";
 export { default as subPx } from "./subPx";
 export { default as useWindowDimensions } from "./useWindowDimensions";
 export type {
-	AcceptsMenuStateProps,
-	WithMenuStateProps,
+  AcceptsMenuStateProps,
+  WithMenuStateProps,
 } from "./withMenuState";
 export { default as withMenuState } from "./withMenuState";

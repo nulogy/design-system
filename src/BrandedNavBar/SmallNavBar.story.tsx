@@ -9,182 +9,156 @@ import BrandLogoContainer from "./BrandLogoContainer";
 import { SmallNavBar } from "./index";
 
 const ResetStorybookView = styled.div({
-	position: "absolute",
-	top: 0,
-	left: 0,
-	width: "100vw",
-	height: "100vh",
+  position: "absolute",
+  top: 0,
+  left: 0,
+  width: "100vw",
+  height: "100vh",
 });
 
 const WrappedSmallNavBar = (props: Partial<SmallNavBarProps>) => (
-	<ResetStorybookView>
-		<SmallNavBar navBarHeight="56px" {...props} />
-		<Heading1 mt="x3" ml="x1">
-			Some content
-		</Heading1>
-	</ResetStorybookView>
+  <ResetStorybookView>
+    <SmallNavBar navBarHeight="56px" {...props} />
+    <Heading1 mt="x3" ml="x1">
+      Some content
+    </Heading1>
+  </ResetStorybookView>
 );
 
 const primaryMenu = [
-	{
-		name: "Dashboard",
-		items: [
-			{ name: "Items", href: "/" },
-			{ name: "Carriers", href: "/" },
-			{ name: "Only text submenu" },
-		],
-	},
-	{
-		name: "Operations",
-		items: [
-			{
-				name: "Production",
-				items: [
-					{ name: "Dashboard", href: "/" },
-					{
-						name: "Projects",
-						items: [
-							{ name: "Cycle Counts", href: "/" },
-							{ name: "Blind Counts", href: "/" },
-						],
-					},
-					{
-						name: "Jobs",
-						items: [{ name: "Job 1", href: "/" }],
-					},
-				],
-			},
-		],
-	},
-	{ name: "Link", href: "/" },
-	{ name: "Only text" },
+  {
+    name: "Dashboard",
+    items: [{ name: "Items", href: "/" }, { name: "Carriers", href: "/" }, { name: "Only text submenu" }],
+  },
+  {
+    name: "Operations",
+    items: [
+      {
+        name: "Production",
+        items: [
+          { name: "Dashboard", href: "/" },
+          {
+            name: "Projects",
+            items: [
+              { name: "Cycle Counts", href: "/" },
+              { name: "Blind Counts", href: "/" },
+            ],
+          },
+          {
+            name: "Jobs",
+            items: [{ name: "Job 1", href: "/" }],
+          },
+        ],
+      },
+    ],
+  },
+  { name: "Link", href: "/" },
+  { name: "Only text" },
 ];
 
 const secondaryMenu = [
-	{
-		name: "User@Nulogy.com",
-		items: [
-			{ name: "Profile", href: "/" },
-			{ name: "Preferences", href: "/" },
-			{ name: "Logout", href: "/" },
-		],
-	},
-	{
-		name: "Settings",
-		items: [
-			{ name: "Permissions", href: "/" },
-			{ name: "Manage account", href: "/" },
-		],
-	},
+  {
+    name: "User@Nulogy.com",
+    items: [
+      { name: "Profile", href: "/" },
+      { name: "Preferences", href: "/" },
+      { name: "Logout", href: "/" },
+    ],
+  },
+  {
+    name: "Settings",
+    items: [
+      { name: "Permissions", href: "/" },
+      { name: "Manage account", href: "/" },
+    ],
+  },
 ];
 
 const smallViewport = {
-	viewport: {
-		defaultViewport: "small", // for some reason this has to match the viewport key, NOT the name!
-	},
-	chromatic: { viewports: [parseInt(theme.breakpoints.small, 10)] },
+  viewport: {
+    defaultViewport: "small", // for some reason this has to match the viewport key, NOT the name!
+  },
+  chromatic: { viewports: [parseInt(theme.breakpoints.small, 10)] },
 };
 
 export default {
-	title: "Components/BrandedNavBar/SmallNavBar",
-	parameters: smallViewport,
+  title: "Components/BrandedNavBar/SmallNavBar",
+  parameters: smallViewport,
 } satisfies Meta<typeof SmallNavBar>;
 
 type Story = StoryObj<typeof SmallNavBar>;
 
-export const _SmallNavBar = () => (
-	<WrappedSmallNavBar menuData={{ primaryMenu, secondaryMenu }} />
-);
+export const _SmallNavBar = () => <WrappedSmallNavBar menuData={{ primaryMenu, secondaryMenu }} />;
 
-export const SmallNavBarOpen = () => (
-	<WrappedSmallNavBar menuData={{ primaryMenu, secondaryMenu }} defaultOpen />
-);
+export const SmallNavBarOpen = () => <WrappedSmallNavBar menuData={{ primaryMenu, secondaryMenu }} defaultOpen />;
 
 export const WithALogo = () => (
-	<WrappedSmallNavBar
-		menuData={{ primaryMenu, secondaryMenu }}
-		logo={
-			<Link
-				aria-label="Home"
-				href="/"
-				underline={false}
-				style={{ display: "block" }}
-			>
-				<Branding size="medium" logoType="wordmark" logoColor="blue" />
-			</Link>
-		}
-	/>
+  <WrappedSmallNavBar
+    menuData={{ primaryMenu, secondaryMenu }}
+    logo={
+      <Link aria-label="Home" href="/" underline={false} style={{ display: "block" }}>
+        <Branding size="medium" logoType="wordmark" logoColor="blue" />
+      </Link>
+    }
+  />
 );
 
 export const WithALogoOpen = () => (
-	<WrappedSmallNavBar
-		menuData={{ primaryMenu, secondaryMenu }}
-		defaultOpen
-		logo={
-			<Link
-				aria-label="Home"
-				href="/"
-				underline={false}
-				style={{ display: "block" }}
-			>
-				<Branding size="medium" logoType="wordmark" logoColor="blue" />
-			</Link>
-		}
-	/>
+  <WrappedSmallNavBar
+    menuData={{ primaryMenu, secondaryMenu }}
+    defaultOpen
+    logo={
+      <Link aria-label="Home" href="/" underline={false} style={{ display: "block" }}>
+        <Branding size="medium" logoType="wordmark" logoColor="blue" />
+      </Link>
+    }
+  />
 );
 export const WithABrandLogoContainerLogo = () => (
-	<WrappedSmallNavBar
-		menuData={{ primaryMenu, secondaryMenu }}
-		logo={<BrandLogoContainer brandingLinkHref="/" />}
-	/>
+  <WrappedSmallNavBar menuData={{ primaryMenu, secondaryMenu }} logo={<BrandLogoContainer brandingLinkHref="/" />} />
 );
 
 export const WithANulogyLogoAndAppName = () => (
-	<WrappedSmallNavBar
-		menuData={{ primaryMenu, secondaryMenu }}
-		subtext="Quality control"
-		showNulogyLogo={true}
-		defaultOpen
-	/>
+  <WrappedSmallNavBar
+    menuData={{ primaryMenu, secondaryMenu }}
+    subtext="Quality control"
+    showNulogyLogo={true}
+    defaultOpen
+  />
 );
 
 export const WithEnvironmentBanner: Story = {
-	render: (args) => (
-		<WrappedSmallNavBar
-			menuData={{ primaryMenu, secondaryMenu }}
-			environment={args.environment}
-		/>
-	),
-	args: {
-		environment: "training",
-	},
-	argTypes: {
-		environment: {
-			control: { type: "select" },
-			options: ["training", "development"],
-		},
-	},
+  render: (args) => <WrappedSmallNavBar menuData={{ primaryMenu, secondaryMenu }} environment={args.environment} />,
+  args: {
+    environment: "training",
+  },
+  argTypes: {
+    environment: {
+      control: { type: "select" },
+      options: ["training", "development"],
+    },
+  },
 };
 
 export const WithCustomMenuButton: Story = {
-	render: (args) => (
-		<WrappedSmallNavBar
-			menuData={{ primaryMenu, secondaryMenu }}
-			environment={args.environment}
-			renderMenuButton={({ onClick, ariaExpanded, isOpen }) => (
-				<Button onClick={onClick} aria-expanded={ariaExpanded}>
-					Click to {isOpen ? "close" : "open"}
-				</Button>
-			)}
-		/>
-	),
-	args: {
-		environment: "training",
-	},
-	argTypes: {
-		environment: {
-			control: { type: "select" },
-			options: ["training", "development"],
-		},
-	},
+  render: (args) => (
+    <WrappedSmallNavBar
+      menuData={{ primaryMenu, secondaryMenu }}
+      environment={args.environment}
+      renderMenuButton={({ onClick, ariaExpanded, isOpen }) => (
+        <Button onClick={onClick} aria-expanded={ariaExpanded}>
+          Click to {isOpen ? "close" : "open"}
+        </Button>
+      )}
+    />
+  ),
+  args: {
+    environment: "training",
+  },
+  argTypes: {
+    environment: {
+      control: { type: "select" },
+      options: ["training", "development"],
+    },
+  },
 };

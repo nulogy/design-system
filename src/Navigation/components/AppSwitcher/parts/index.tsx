@@ -6,36 +6,36 @@ import Item from "./Item";
 import Link from "./Link";
 
 const List = styled(RadixNavigationMenu.List)(({ theme }) => ({
-	margin: 0,
-	padding: 0,
-	gap: theme.space.x2,
-	listStyle: "none",
+  margin: 0,
+  padding: 0,
+  gap: theme.space.x2,
+  listStyle: "none",
 }));
 
 const Header = styled("div")(({ theme }) => ({
-	display: "flex",
-	alignItems: "center",
-	gap: theme.space.x1,
+  display: "flex",
+  alignItems: "center",
+  gap: theme.space.x1,
 }));
 
 const Title = styled(Heading4).attrs({
-	color: "darkGrey",
-	compact: true,
+  color: "darkGrey",
+  compact: true,
 })({});
 
 const Description = styled(Text).attrs({
-	color: "midGrey",
-	fontSize: "smaller",
+  color: "midGrey",
+  fontSize: "smaller",
 })({});
 
 const AppSwitcher = {
-	Content,
-	List,
-	Item,
-	Link,
-	Header,
-	Title,
-	Description,
+  Content,
+  List,
+  Item,
+  Link,
+  Header,
+  Title,
+  Description,
 };
 
 export default AppSwitcher;

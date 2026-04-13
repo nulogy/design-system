@@ -6,10 +6,10 @@ import { addStyledProps } from "../StyledProps";
 export type FieldProps = BoxProps;
 
 const Field = styled(Box)(
-	{
-		width: "100%",
-	},
-	addStyledProps,
+  {
+    width: "100%",
+  },
+  addStyledProps,
 );
 
 export default Field;
