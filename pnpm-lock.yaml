@@ -94,7 +94,7 @@ importers:
         version: 5.1.5
       stylis:
         specifier: ^4.0.0
-        version: 4.3.6
+        version: 4.4.0
     devDependencies:
       '@apollo/client':
         specifier: ^4.1.6
@@ -4248,6 +4248,9 @@ packages:
 
   stylis@4.3.6:
     resolution: {integrity: sha512-yQ3rwFWRfwNUY7H5vpU0wfdkNSnvnJinhF9830Swlaxl03zsOjCfmX0ugac+3LtK0lYSgwL/KXc8oYL3mG4YFQ==}
+
+  stylis@4.4.0:
+    resolution: {integrity: sha512-5Z9ZpRzfuH6l/UAvCPAPUo3665Nk2wLaZU3x+TLHKVzIz33+sbJqbtrYoC3KD4/uVOr2Zp+L0LySezP9OHV9yA==}
 
   super-regex@1.1.0:
     resolution: {integrity: sha512-WHkws2ZflZe41zj6AolvvmaTrWds/VuyeYr9iPVv/oQeaIoVxMKaushfFWpOGDT+GuBrM/sVqF8KUCYQlSSTdQ==}
@@ -8842,6 +8845,8 @@ snapshots:
   stylis@4.2.0: {}
 
   stylis@4.3.6: {}
+
+  stylis@4.4.0: {}
 
   super-regex@1.1.0:
     dependencies:
