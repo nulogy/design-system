@@ -67,7 +67,7 @@
   },
   "devDependencies": {
     "@apollo/client": "^4.1.6",
-    "@biomejs/biome": "^2.4.11",
+    "@biomejs/biome": "^2.4.14",
     "@nulogy/icons": "^4.39.0",
     "@semantic-release/changelog": "^6.0.2",
     "@semantic-release/commit-analyzer": "^13.0.1",
