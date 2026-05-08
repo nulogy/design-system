@@ -7,3 +7,53 @@ experimental = true
 
 [hooks]
 postinstall = 'corepack enable'
+
+[tasks.install]
+description = "Install JavaScript dependencies"
+run = "pnpm install"
+
+[tasks.build]
+description = "Build the package"
+depends = ["install"]
+run = "pnpm build"
+
+[tasks."check"]
+description = "Run all check tasks"
+depends = ["check:*"]
+
+[tasks."build:verify"]
+description = "Verify the built package"
+depends = ["build"]
+run = "pnpm build:verify"
+
+[tasks."check:types"]
+description = "Type check"
+depends = ["install"]
+run = "pnpm check:types"
+
+[tasks."check:biome"]
+description = "Lint and format check"
+depends = ["install"]
+run = "pnpm check:biome"
+
+[tasks."test"]
+description = "Run all tests"
+depends = ["test:*"]
+
+[tasks."test:components"]
+description = "Run component unit tests"
+depends = ["install"]
+run = "pnpm test:components"
+
+[tasks."test:storybook"]
+description = "Run Storybook tests"
+depends = ["install"]
+run = "pnpm test:storybook"
+
+[tasks.ci]
+description = "Run the full CI pipeline"
+depends = [
+  "build:verify",
+  "check",
+  "test"
+]
