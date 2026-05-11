@@ -3,10 +3,7 @@ import { createGlobalStyle } from "styled-components";
 const ModalStyleOverride = createGlobalStyle<{ locale?: string }>(({ theme, locale }) => {
   const fontFamily = locale === "zh_CN" ? theme.fonts.sc : theme.fonts.base;
   return {
-    ":root": {
-      "--reach-dialog": 1,
-    },
-    ".ReactModal__Content, [data-reach-dialog-content]": {
+    '.ReactModal__Content, [role="dialog"]': {
       "-webkit-font-smoothing": "antialiased",
       "-moz-osx-font-smoothing": "grayscale",
       "*": { boxSizing: "border-box" },
