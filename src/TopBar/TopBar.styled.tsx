@@ -1,4 +1,3 @@
-import { DialogOverlay } from "@reach/dialog";
 import { motion } from "framer-motion";
 import { transparentize } from "polished";
 import { styled } from "styled-components";
@@ -112,7 +111,7 @@ const StyledPageTitle = styled.li(({ theme }) => ({
   overflow: "hidden",
 }));
 
-const Overlay = styled(motion(DialogOverlay))(({ theme }) => ({
+const Overlay = styled(motion.div)(({ theme }) => ({
   position: "fixed",
   top: theme.space[TOPBAR.themedHeight],
   bottom: theme.space.none,
