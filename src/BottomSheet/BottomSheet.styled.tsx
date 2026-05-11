@@ -1,23 +1,13 @@
-import {
-  type DialogContentProps,
-  type DialogOverlayProps,
-  DialogContent as ReachDialogContent,
-  DialogOverlay as ReachDialogOverlay,
-} from "@reach/dialog";
 import type { MotionProps } from "framer-motion";
 import { motion } from "framer-motion";
 import { transparentize } from "polished";
-import type React from "react";
 import { styled } from "styled-components";
 import type { HeightProps, LayoutProps, MaxHeightProps, MaxWidthProps, SpaceProps, WidthProps } from "styled-system";
 import { compose, height, layout, maxHeight, maxWidth, space, width } from "styled-system";
 import { excludeStyledProps } from "../StyledProps";
 import { Heading2, Text } from "../Type";
 
-// Portal + focus-lock + scroll-lock wrapper (no visual styles)
-const OverlayDialog = styled(ReachDialogOverlay as React.ComponentType<DialogOverlayProps>)({});
-
-// Animated backdrop
+// Animated backdrop (composed with Dialog.Overlay via asChild at the call site)
 const Overlay = styled(motion.div)(({ theme }) => ({
   position: "fixed",
   inset: 0,
@@ -27,15 +17,6 @@ const Overlay = styled(motion.div)(({ theme }) => ({
   backgroundColor: transparentize(0.5, theme.colors.blackBlue),
   zIndex: theme.zIndices.overlay,
 }));
-
-// Transparent a11y wrapper (role="dialog", aria-modal, focus containment)
-const SheetDialog = styled(ReachDialogContent as React.ComponentType<DialogContentProps>)({
-  width: "100%",
-  display: "flex",
-  justifyContent: "center",
-  padding: 0,
-  background: "none",
-});
 
 interface SheetProps
   extends MotionProps,
@@ -126,4 +107,4 @@ const HelpText = styled(Text)(({ theme }) => ({
   },
 }));
 
-export { ContentContainer, Footer, Header, HelpText, Overlay, OverlayDialog, Sheet, SheetDialog, Title };
+export { ContentContainer, Footer, Header, HelpText, Overlay, Sheet, Title };

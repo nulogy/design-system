@@ -1,18 +1,9 @@
-import type { DialogOverlayProps } from "@reach/dialog";
+import * as Dialog from "@radix-ui/react-dialog";
 import { AnimatePresence, type AnimatePresenceProps } from "framer-motion";
 import React from "react";
 import type { HeightProps, LayoutProps, MaxHeightProps, MaxWidthProps, SpaceProps, WidthProps } from "styled-system";
-import {
-  ContentContainer,
-  Footer,
-  Header,
-  HelpText,
-  Overlay,
-  OverlayDialog,
-  Sheet,
-  SheetDialog,
-  Title,
-} from "./BottomSheet.styled";
+import { useScrollLock } from "../utils/useScrollLock";
+import { ContentContainer, Footer, Header, HelpText, Overlay, Sheet, Title } from "./BottomSheet.styled";
 import { BottomSheetProvider, useBottomSheet } from "./BottomSheetProvider";
 
 const overlayVariants = {
@@ -38,44 +29,54 @@ interface RootProps extends AnimatePresenceProps {
 
 function Root({ isOpen, onClose, children, ...props }: RootProps) {
   return (
-    <AnimatePresence {...props}>
-      {isOpen && (
-        <BottomSheetProvider key="bottom-sheet" isOpen={isOpen} onClose={onClose}>
-          {children}
-        </BottomSheetProvider>
-      )}
-    </AnimatePresence>
+    <Dialog.Root
+      open={isOpen}
+      onOpenChange={(open) => {
+        if (!open) onClose();
+      }}
+    >
+      <AnimatePresence {...props}>
+        {isOpen && (
+          <BottomSheetProvider key="bottom-sheet" isOpen={isOpen} onClose={onClose}>
+            {children}
+          </BottomSheetProvider>
+        )}
+      </AnimatePresence>
+    </Dialog.Root>
   );
 }
 
-interface OverlayPartProps extends DialogOverlayProps {
+interface OverlayPartProps {
   closeOnClick?: boolean;
+  children: React.ReactNode;
 }
 
-function OverlayPart({ closeOnClick, children, ...props }: OverlayPartProps) {
+function OverlayPart({ closeOnClick, children }: OverlayPartProps) {
   const { onClose, isOpen } = useBottomSheet();
   const [isAnimationComplete, setAnimationComplete] = React.useState(false);
 
   return (
-    <OverlayDialog isOpen={isOpen} {...props}>
-      <Overlay
-        data-testid="bottom-sheet-overlay"
-        data-visible={isAnimationComplete ? true : undefined}
-        variants={overlayVariants}
-        initial="hidden"
-        animate="visible"
-        exit="hidden"
-        transition={transition}
-        onAnimationComplete={() => {
-          if (isOpen) {
-            setAnimationComplete(true);
-          }
-        }}
-        onClick={closeOnClick ? onClose : undefined}
-      >
-        {children}
-      </Overlay>
-    </OverlayDialog>
+    <Dialog.Portal forceMount>
+      <Dialog.Overlay asChild forceMount>
+        <Overlay
+          data-testid="bottom-sheet-overlay"
+          data-visible={isAnimationComplete ? true : undefined}
+          variants={overlayVariants}
+          initial="hidden"
+          animate="visible"
+          exit="hidden"
+          transition={transition}
+          onAnimationComplete={() => {
+            if (isOpen) {
+              setAnimationComplete(true);
+            }
+          }}
+          onClick={closeOnClick ? onClose : undefined}
+        >
+          {children}
+        </Overlay>
+      </Dialog.Overlay>
+    </Dialog.Portal>
   );
 }
 
@@ -87,13 +88,20 @@ interface SheetPartProps extends WidthProps, MaxWidthProps, HeightProps, MaxHeig
 function SheetPart({ children, "aria-label": ariaLabel, ...props }: SheetPartProps) {
   const { isOpen } = useBottomSheet();
   const [isAnimationComplete, setAnimationComplete] = React.useState(false);
+  useScrollLock();
 
   function handleSheetClick(e: React.MouseEvent<HTMLDivElement, MouseEvent>) {
     e.stopPropagation();
   }
 
   return (
-    <SheetDialog aria-label={ariaLabel}>
+    <Dialog.Content
+      asChild
+      forceMount
+      aria-label={ariaLabel}
+      onEscapeKeyDown={(e) => e.preventDefault()}
+      onPointerDownOutside={(e) => e.preventDefault()}
+    >
       <Sheet
         data-testid="bottom-sheet-body"
         data-visible={isAnimationComplete ? true : undefined}
@@ -112,7 +120,7 @@ function SheetPart({ children, "aria-label": ariaLabel, ...props }: SheetPartPro
       >
         {children}
       </Sheet>
-    </SheetDialog>
+    </Dialog.Content>
   );
 }
 
