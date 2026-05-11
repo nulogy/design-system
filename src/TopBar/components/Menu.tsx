@@ -1,4 +1,4 @@
-import { DialogContent } from "@reach/dialog";
+import * as Dialog from "@radix-ui/react-dialog";
 import { AnimatePresence } from "framer-motion";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -42,50 +42,50 @@ export function Menu({
   const [animationComplete, setAnimationComplete] = React.useState(false);
   const { t } = useTranslation();
 
-  function close() {
-    setShowMenu(false);
-    setAnimationComplete(false);
-  }
-
-  function toggle() {
-    if (!showMenu) {
-      setAnimationComplete(false);
-    }
-    setShowMenu((s) => !s);
-  }
-
   return (
     <Flex justifyContent="flex-end" as="li" color="black" flex="1 1">
-      <MenuButton onClick={toggle} data-testid="topbar-menu-button">
-        <Icon size="x3" color="midGrey" icon={showMenu ? "close" : "apps"} />
-      </MenuButton>
-      <AnimatePresence>
-        {showMenu && (
-          <Overlay
-            data-testid="topbar-menu-overlay"
-            data-visible={animationComplete ? "true" : undefined}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            variants={blurVariants}
-            isOpen={showMenu}
-            onAnimationComplete={() => {
-              if (showMenu) {
-                setAnimationComplete(true);
-              }
-            }}
-            onDismiss={close}
-          >
-            <DialogContent
-              data-testid="topbar-menu"
-              data-visible={animationComplete ? true : undefined}
-              aria-label={props["aria-label"] ?? t("menu options")}
-            >
-              <MenuItemList>{children}</MenuItemList>
-            </DialogContent>
-          </Overlay>
-        )}
-      </AnimatePresence>
+      <Dialog.Root
+        open={showMenu}
+        onOpenChange={(open) => {
+          if (!open) setAnimationComplete(false);
+          setShowMenu(open);
+        }}
+      >
+        <Dialog.Trigger asChild>
+          <MenuButton data-testid="topbar-menu-button">
+            <Icon size="x3" color="midGrey" icon={showMenu ? "close" : "apps"} />
+          </MenuButton>
+        </Dialog.Trigger>
+        <AnimatePresence>
+          {showMenu && (
+            <Dialog.Portal forceMount>
+              <Dialog.Overlay asChild forceMount>
+                <Overlay
+                  data-testid="topbar-menu-overlay"
+                  data-visible={animationComplete ? "true" : undefined}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  variants={blurVariants}
+                  onAnimationComplete={() => {
+                    if (showMenu) {
+                      setAnimationComplete(true);
+                    }
+                  }}
+                >
+                  <Dialog.Content
+                    data-testid="topbar-menu"
+                    data-visible={animationComplete ? true : undefined}
+                    aria-label={props["aria-label"] ?? t("menu options")}
+                  >
+                    <MenuItemList>{children}</MenuItemList>
+                  </Dialog.Content>
+                </Overlay>
+              </Dialog.Overlay>
+            </Dialog.Portal>
+          )}
+        </AnimatePresence>
+      </Dialog.Root>
     </Flex>
   );
 }
