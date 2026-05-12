@@ -1,4 +1,5 @@
 import * as Dialog from "@radix-ui/react-dialog";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { AnimatePresence } from "framer-motion";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -78,6 +79,9 @@ export function Menu({
                     data-visible={animationComplete ? true : undefined}
                     aria-label={props["aria-label"] ?? t("menu options")}
                   >
+                    <VisuallyHidden asChild>
+                      <Dialog.Title>{props["aria-label"] ?? t("menu options")}</Dialog.Title>
+                    </VisuallyHidden>
                     <MenuItemList>{children}</MenuItemList>
                   </Dialog.Content>
                 </Overlay>
