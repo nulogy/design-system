@@ -1,3 +1,10 @@
+## [18.0.1](https://github.com/nulogy/design-system/compare/v18.0.0...v18.0.1) (2026-05-12)
+
+
+### Bug Fixes
+
+* Resolve some deprecation warnings ([0c971ce](https://github.com/nulogy/design-system/commit/0c971ce562beb9981fe729fd68bb922a7fb2a54d))
+
 # [18.0.0](https://github.com/nulogy/design-system/compare/v17.1.3...v18.0.0) (2026-05-12)
 
 
