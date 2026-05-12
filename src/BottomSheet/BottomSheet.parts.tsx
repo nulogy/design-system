@@ -1,4 +1,5 @@
 import * as Dialog from "@radix-ui/react-dialog";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { AnimatePresence, type AnimatePresenceProps } from "framer-motion";
 import React from "react";
 import type { HeightProps, LayoutProps, MaxHeightProps, MaxWidthProps, SpaceProps, WidthProps } from "styled-system";
@@ -118,6 +119,9 @@ function SheetPart({ children, "aria-label": ariaLabel, ...props }: SheetPartPro
         onClick={handleSheetClick}
         {...props}
       >
+        <VisuallyHidden asChild>
+          <Dialog.Title>{ariaLabel}</Dialog.Title>
+        </VisuallyHidden>
         {children}
       </Sheet>
     </Dialog.Content>

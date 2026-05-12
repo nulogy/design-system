@@ -7,7 +7,7 @@ import { Icon } from "../../Icon";
 import { Text } from "../../Type";
 import { TileLink } from "../TopBar.styled";
 
-const MotionText = motion(Text);
+const MotionText = motion.create(Text);
 
 export interface MenuItemLinkProps extends ComponentProps<typeof TileLink> {
   as?: React.ElementType;
