@@ -1,3 +1,23 @@
+# [18.0.0](https://github.com/nulogy/design-system/compare/v17.1.3...v18.0.0) (2026-05-12)
+
+
+### chore
+
+* drop @reach/dialog dependency ([dc464b4](https://github.com/nulogy/design-system/commit/dc464b41dd6aa0770625c52c2c8e811416468a86))
+
+
+### BREAKING CHANGES
+
+* @reach/dialog is no longer a dependency of @nulogy/components,
+and the [data-reach-dialog-content] attribute is no longer emitted by Modal,
+BottomSheet, or TopBar Menu. Consumers relying on @reach/dialog as a transitive
+dependency must install it directly, and any consumer CSS targeting
+[data-reach-dialog-content] must switch to [role="dialog"]. BottomSheet's
+OverlayPart no longer accepts Reach-specific props — its public surface is now
+{ closeOnClick?, children }.
+
+Co-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>
+
 ## [17.1.3](https://github.com/nulogy/design-system/compare/v17.1.2...v17.1.3) (2026-04-13)
 
 
