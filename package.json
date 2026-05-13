@@ -111,7 +111,7 @@
   },
   "dependencies": {
     "@emotion/is-prop-valid": "^1.3.1",
-    "@floating-ui/react": "^0.26.28",
+    "@floating-ui/react": "^0.27.19",
     "@nulogy/tokens": "^6.2.0",
     "@radix-ui/react-dialog": "^1.1.0",
     "@radix-ui/react-navigation-menu": "^1.1.4",
