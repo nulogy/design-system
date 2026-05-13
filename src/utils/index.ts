@@ -6,8 +6,3 @@ export { default as PopperArrow } from "./PopperArrow";
 export { default as ScrollIndicators } from "./ScrollIndicators";
 export { default as subPx } from "./subPx";
 export { default as useWindowDimensions } from "./useWindowDimensions";
-export type {
-  AcceptsMenuStateProps,
-  WithMenuStateProps,
-} from "./withMenuState";
-export { default as withMenuState } from "./withMenuState";

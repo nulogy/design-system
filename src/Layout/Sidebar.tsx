@@ -6,7 +6,6 @@ import { useTheme } from "styled-components";
 import type { ZIndexProps } from "styled-system";
 import { Box } from "../Box";
 import { AnimatedBox, type AnimatedBoxProps } from "../Box/Box";
-import { NAVBAR_HEIGHT } from "../BrandedNavBar/NavBar";
 import { IconicButton } from "../Button";
 import { Flex } from "../Flex";
 import { NAVIGATION_MENU_HEIGHT_STYLED_UNITS } from "../Navigation/components/shared/constants";
@@ -107,7 +106,7 @@ function Sidebar({
   const { navigationV3 } = useFeatureFlags();
   const theme = useTheme();
 
-  top ||= navigationV3 ? theme.space[NAVIGATION_MENU_HEIGHT_STYLED_UNITS] : NAVBAR_HEIGHT;
+  top ||= navigationV3 ? theme.space[NAVIGATION_MENU_HEIGHT_STYLED_UNITS] : "56px";
 
   useScrollLock({
     autoLock: overlay && disableScroll && isOpen,
@@ -185,7 +184,7 @@ function Sidebar({
         bg="white"
         display="flex"
         flexDirection="column"
-        height={`calc(100% - ${navigationV3 ? theme.space[NAVIGATION_MENU_HEIGHT_STYLED_UNITS] : NAVBAR_HEIGHT})`}
+        height={`calc(100% - ${navigationV3 ? theme.space[NAVIGATION_MENU_HEIGHT_STYLED_UNITS] : "56px"})`}
         borderLeftWidth="1px"
         borderLeftStyle="solid"
         borderLeftColor="lightGrey"

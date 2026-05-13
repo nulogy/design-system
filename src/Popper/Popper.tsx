@@ -1,29 +1,42 @@
-// @ts-nocheck
-import React, { useEffect, useRef, useState } from "react";
+import {
+  arrow,
+  autoUpdate,
+  FloatingPortal,
+  flip,
+  type Middleware,
+  offset,
+  type Placement,
+  safePolygon,
+  shift,
+  useClick,
+  useDismiss,
+  useFloating,
+  useFocus,
+  useHover,
+  useInteractions,
+} from "@floating-ui/react";
+import React, { useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Manager, Popper as ReactPopperPopUp, Reference } from "react-popper";
 import { PopperArrow } from "../utils";
 
-const makeArray = (children) => {
-  if (!Array.isArray(children)) {
-    return [children];
-  }
-  return children;
+type LegacyModifiers = {
+  preventOverflow?: { enabled?: boolean; padding?: number };
+  flip?: { enabled?: boolean };
+  offset?: { enabled?: boolean; offset?: number };
+  [key: string]: unknown;
 };
 
-const wrapInFunction = (x: unknown) => (typeof x === "function" ? x : () => x);
-
 type PopperProps = {
-  children?: React.ReactNode;
-  popperPlacement?: string;
+  children?: React.ReactElement;
+  popperPlacement?: Placement;
   defaultOpen?: boolean;
   showDelay?: string | number;
   hideDelay?: string | number;
   id?: string;
-  trigger: React.ReactNode;
+  trigger: React.ReactElement;
   openOnClick?: boolean;
   openOnHover?: boolean;
-  modifiers?: object;
+  modifiers?: LegacyModifiers;
   backgroundColor?: string;
   borderColor?: string;
   showArrow?: boolean;
@@ -31,7 +44,55 @@ type PopperProps = {
   closeAriaLabel?: string;
 };
 
-const Popper = React.forwardRef<React.Ref<unknown>, PopperProps>(
+const KNOWN_MODIFIER_KEYS = new Set(["preventOverflow", "flip", "offset"]);
+
+const toMs = (delay: string | number | undefined, fallback: number): number => {
+  if (delay == null) return fallback;
+  const n = typeof delay === "string" ? Number.parseInt(delay, 10) : delay;
+  return Number.isFinite(n) ? n : fallback;
+};
+
+const translateModifiers = (modifiers: LegacyModifiers | undefined): Middleware[] => {
+  const middleware: Middleware[] = [];
+
+  if (modifiers?.offset && modifiers.offset.enabled !== false) {
+    const value = typeof modifiers.offset.offset === "number" ? modifiers.offset.offset : 0;
+    middleware.push(offset(value));
+  }
+
+  if (modifiers?.flip?.enabled !== false) {
+    middleware.push(flip());
+  }
+
+  if (modifiers?.preventOverflow?.enabled !== false) {
+    const padding = typeof modifiers?.preventOverflow?.padding === "number" ? modifiers.preventOverflow.padding : 8;
+    middleware.push(shift({ padding }));
+  }
+
+  if (process.env.NODE_ENV !== "production" && modifiers) {
+    for (const key of Object.keys(modifiers)) {
+      if (!KNOWN_MODIFIER_KEYS.has(key)) {
+        console.warn(
+          `[Popper] Unsupported modifier "${key}" ignored. The floating-ui adapter only translates preventOverflow, flip, and offset.`,
+        );
+      }
+    }
+  }
+
+  return middleware;
+};
+
+const makeArray = <T,>(value: T | T[]): T[] => (Array.isArray(value) ? value : [value]);
+
+const wrapInFunction = <T,>(
+  x: T | ((args: { closeMenu: (e: React.MouseEvent) => void; openMenu: (e: React.MouseEvent) => void }) => T),
+) =>
+  (typeof x === "function" ? x : () => x) as (args: {
+    closeMenu: (e: React.MouseEvent) => void;
+    openMenu: (e: React.MouseEvent) => void;
+  }) => T;
+
+const Popper = React.forwardRef<unknown, PopperProps>(
   (
     {
       id,
@@ -50,167 +111,123 @@ const Popper = React.forwardRef<React.Ref<unknown>, PopperProps>(
       openOnHover = true,
       showArrow = true,
     },
-    popperRef,
+    _popperRef,
   ) => {
-    // We're going to manage the ID of the timeout in a ref so that we can examine
-    // it without causing a re-render. Note that "0" will denote "no jobs running",
-    // whereas positive values are the ID of the running job.
-    const timeoutId = useRef(0);
-
-    const resetTimeoutId = () => {
-      clearTimeout(timeoutId.current);
-      timeoutId.current = 0;
-    };
-
     const [isOpen, setIsOpen] = useState(defaultOpen);
+    const arrowRef = useRef<HTMLDivElement | null>(null);
 
-    const conditionallyApplyDelay = (fnc: () => void, delay: number, skipDelay = true) => {
-      if (!skipDelay) {
-        timeoutId.current = setTimeout(fnc, delay);
-      } else {
-        fnc();
+    const middleware = useMemo(() => {
+      const result = translateModifiers(modifiers);
+      if (showArrow) {
+        result.push(arrow({ element: arrowRef }));
       }
-    };
+      return result;
+    }, [modifiers, showArrow]);
 
-    const setPopUpState = (nextIsOpenState: boolean, skipDelay: boolean) => {
-      resetTimeoutId();
-      conditionallyApplyDelay(() => setIsOpen(nextIsOpenState), nextIsOpenState ? showDelay : hideDelay, skipDelay);
-    };
+    const { refs, floatingStyles, context, placement, middlewareData, isPositioned } = useFloating({
+      open: isOpen,
+      onOpenChange: setIsOpen,
+      placement: popperPlacement,
+      middleware,
+      whileElementsMounted: autoUpdate,
+    });
 
-    const closePopUp = (skipDelay: boolean) => {
-      setPopUpState(false, skipDelay);
-    };
+    const hover = useHover(context, {
+      enabled: openOnHover,
+      delay: { open: toMs(showDelay, 100), close: toMs(hideDelay, 350) },
+      handleClose: safePolygon(),
+    });
+    const click = useClick(context, { enabled: openOnClick });
+    const focus = useFocus(context);
+    const dismiss = useDismiss(context, { escapeKey: true, outsidePress: true });
 
-    // biome-ignore lint/correctness/useExhaustiveDependencies: mount-only listener — closePopUp is excluded because it transitively calls setIsOpen, which React guarantees is stable; showDelay/hideDelay are irrelevant on the Escape path (skipDelay defaults to true)
-    useEffect(() => {
-      function handleKeyDown(event: KeyboardEvent) {
-        if (event.code === "Escape") {
-          closePopUp();
-        }
-      }
+    const { getReferenceProps, getFloatingProps } = useInteractions([hover, click, focus, dismiss]);
 
-      document.addEventListener("keydown", handleKeyDown);
+    const { t } = useTranslation();
+    const openLabel = openAriaLabel || t("open");
+    const closeLabel = closeAriaLabel || t("close");
 
-      const cleanup = () => {
-        document.removeEventListener("keydown", handleKeyDown);
-        resetTimeoutId();
-      };
-
-      return cleanup;
-    }, []);
-
-    const openPopUp = (skipDelay: boolean) => {
-      setPopUpState(true, skipDelay);
-    };
-
-    const onClickEventHandlers = openOnClick
-      ? {
-          onClick: () => {
-            if (isOpen) {
-              closePopUp(false);
-            } else {
-              openPopUp(false);
-            }
-          },
-        }
-      : null;
-
-    const onHoverHandlers = openOnHover
-      ? {
-          onMouseEnter: () => openPopUp(false),
-          onMouseLeave: () => closePopUp(false),
-        }
-      : null;
-
-    const eventHandlers = {
-      onFocus: () => openPopUp(false),
-      onBlur: () => {
-        closePopUp(false);
-      },
-      ...onHoverHandlers,
-      ...onClickEventHandlers,
-    };
-
-    const transformInnerChildren = (elements) =>
+    const transformInnerChildren = (elements: React.ReactNode): React.ReactNode =>
       makeArray(elements).map((element, i) => {
-        const transformedElement = wrapInFunction(element)({
+        const transformedElement = wrapInFunction(element as React.ReactNode)({
           closeMenu: (e: React.MouseEvent) => {
-            closePopUp();
+            setIsOpen(false);
             e.stopPropagation();
           },
           openMenu: (e: React.MouseEvent) => {
-            openPopUp();
+            setIsOpen(true);
             e.stopPropagation();
           },
         });
-        return React.cloneElement(transformedElement, {
-          // biome-ignore lint/suspicious/noArrayIndexKey: popup children may have no explicit keys
-          key: i,
-        });
+        return React.isValidElement(transformedElement)
+          ? React.cloneElement(transformedElement, {
+              // biome-ignore lint/suspicious/noArrayIndexKey: popup children may have no explicit keys
+              key: i,
+            })
+          : transformedElement;
       });
 
-    const renderInnerChildren = () => {
-      const innerChildren = children.props.children;
+    const renderInnerChildren = (popupChildren: React.ReactElement): React.ReactNode => {
+      const innerChildren = (popupChildren.props as { children?: React.ReactNode }).children;
       return typeof innerChildren !== "string" ? transformInnerChildren(innerChildren) : innerChildren;
     };
 
-    const { t } = useTranslation();
+    const arrowData = middlewareData.arrow;
 
-    const openLabel = openAriaLabel || t("open");
-
-    const closeLabel = closeAriaLabel || t("close");
+    const popupChildren = children as React.ReactElement<{
+      style?: React.CSSProperties;
+      className?: string;
+    }>;
 
     return (
-      <Manager ref={popperRef}>
-        <Reference>
-          {({ ref }) =>
-            React.cloneElement(trigger, {
-              "aria-haspopup": true,
-              "aria-expanded": isOpen,
-              "aria-describedby": id,
-              "aria-label": isOpen ? closeLabel : openLabel,
-              ...eventHandlers,
-              ref,
-            })
-          }
-        </Reference>
-        <ReactPopperPopUp placement={popperPlacement} modifiers={modifiers}>
-          {({ ref, style, placement, arrowProps }) => (
-            <>
-              {isOpen &&
-                React.cloneElement(
-                  children,
-                  {
-                    open: isOpen,
-                    ref,
-                    id,
-                    style: {
-                      position: "absolute",
-                      ...(isOpen ? style : null),
-                      top: isOpen ? 0 : "-9999px",
-                    },
-                    dataPlacement: placement,
-                    className: `${children.props.className || ""} nds-popper-pop-up`,
-                    ...eventHandlers,
-                  },
-                  [
-                    ...renderInnerChildren(),
-                    showArrow && (
-                      <PopperArrow
-                        key="popper-arrow"
-                        {...arrowProps}
-                        placement={placement}
-                        ref={arrowProps.ref}
-                        backgroundColor={backgroundColor}
-                        borderColor={borderColor}
-                      />
-                    ),
-                  ],
-                )}
-            </>
-          )}
-        </ReactPopperPopUp>
-      </Manager>
+      <>
+        {React.cloneElement(trigger, {
+          ref: refs.setReference,
+          "aria-haspopup": true,
+          "aria-expanded": isOpen,
+          "aria-describedby": id,
+          "aria-label": isOpen ? closeLabel : openLabel,
+          ...getReferenceProps(),
+        } as React.HTMLAttributes<HTMLElement> & { ref: React.Ref<HTMLElement> })}
+        {isOpen && popupChildren && (
+          <FloatingPortal>
+            {React.cloneElement(
+              popupChildren,
+              {
+                ref: refs.setFloating,
+                id,
+                style: {
+                  ...floatingStyles,
+                  visibility: isPositioned ? "visible" : "hidden",
+                  ...popupChildren.props.style,
+                },
+                dataPlacement: placement,
+                className: `${popupChildren.props.className || ""} nds-popper-pop-up`.trim(),
+                ...getFloatingProps(),
+              } as React.HTMLAttributes<HTMLElement> & {
+                ref: React.Ref<HTMLElement>;
+                dataPlacement: Placement;
+              },
+              [
+                ...makeArray(renderInnerChildren(popupChildren)),
+                showArrow && (
+                  <PopperArrow
+                    key="popper-arrow"
+                    ref={arrowRef}
+                    placement={placement}
+                    backgroundColor={backgroundColor}
+                    borderColor={borderColor}
+                    style={{
+                      left: arrowData?.x != null ? `${arrowData.x}px` : undefined,
+                      top: arrowData?.y != null ? `${arrowData.y}px` : undefined,
+                    }}
+                  />
+                ),
+              ],
+            )}
+          </FloatingPortal>
+        )}
+      </>
     );
   },
 );

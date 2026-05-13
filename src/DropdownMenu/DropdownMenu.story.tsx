@@ -47,6 +47,42 @@ export const _DropdownMenu = {
   },
 };
 
+export const ClosesOnEscape = {
+  render: () => (
+    <DropdownMenu openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
+      <DropdownLink href="/never_been">Dropdown Link</DropdownLink>
+      <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
+    </DropdownMenu>
+  ),
+
+  name: "closes on Escape",
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await userEvent.click(canvas.getByLabelText("open dropdown"));
+    await waitFor(() => expect(screen.getByText("Dropdown Button")).toBeVisible());
+    await userEvent.keyboard("{Escape}");
+    await waitFor(() => expect(canvas.queryByLabelText("close dropdown")).not.toBeInTheDocument());
+  },
+};
+
+export const ClosesOnOutsideClick = {
+  render: () => (
+    <DropdownMenu openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
+      <DropdownLink href="/never_been">Dropdown Link</DropdownLink>
+      <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
+    </DropdownMenu>
+  ),
+
+  name: "closes on outside click",
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await userEvent.click(canvas.getByLabelText("open dropdown"));
+    await waitFor(() => expect(screen.getByText("Dropdown Button")).toBeVisible());
+    await userEvent.click(document.body);
+    await waitFor(() => expect(canvas.queryByLabelText("close dropdown")).not.toBeInTheDocument());
+  },
+};
+
 export const WithCustomTrigger = {
   render: () => (
     <DropdownMenu
@@ -223,4 +259,36 @@ export const WithRenderProps = {
   ),
 
   name: "With render props",
+};
+
+const PLACEMENTS = [
+  "top",
+  "top-start",
+  "top-end",
+  "bottom",
+  "bottom-start",
+  "bottom-end",
+  "left",
+  "left-start",
+  "left-end",
+  "right",
+  "right-start",
+  "right-end",
+] as const;
+
+export const WithPlacement = {
+  render: () => (
+    <Flex flexWrap="wrap" gap="x6" padding="x6" justifyContent="center">
+      {PLACEMENTS.map((placement) => (
+        <Flex key={placement} flexDirection="column" alignItems="center" minWidth="160px">
+          <Text mb="x2">{placement}</Text>
+          <DropdownMenu defaultOpen placement={placement} trigger={() => <Button>{placement}</Button>}>
+            <DropdownButton onClick={() => {}}>Item</DropdownButton>
+          </DropdownMenu>
+        </Flex>
+      ))}
+    </Flex>
+  ),
+
+  name: "with all placements",
 };

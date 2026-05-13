@@ -1,5 +1,35 @@
 # Migration Guide
 
+## Migrating from v18 to v19:
+
+### `BrandedNavBar` has been removed
+
+Use the `Navigation` component instead. The following exports are gone:
+
+- `BrandedNavBar`
+- `BrandLogoContainer`
+- `DesktopMenu`
+- `MenuTrigger`
+- `NavBarBackground`
+- `SmallNavBar`
+- The associated types: `BrandLogoContainerProps`, `DesktopMenuProps`, `MenuTriggerProps`, `NavBarBackgroundProps`, `RenderMenuButtonProps`, `SmallNavBarProps`
+- The `withMenuState` HOC and its `AcceptsMenuStateProps` / `WithMenuStateProps` types (previously re-exported from the package root)
+
+If you were relying on the internal `NAVBAR_HEIGHT` constant for layout offsets, hard-code `"56px"` or switch to the height exposed by the Navigation component.
+
+### `DropdownMenu` now renders through a portal
+
+`DropdownMenu`'s popup is rendered via `FloatingPortal` (a child of `document.body`) instead of inline next to the trigger. This eliminates clipping inside `overflow: hidden` parents. If you were styling the popup with descendant CSS selectors from your app shell (e.g. `.app-shell .nds-popper-pop-up { ... }`), switch to class-name or attribute selectors that work regardless of DOM location.
+
+The `nds-popper-pop-up` className is still applied to the popup element.
+
+### `react-popper` is no longer a dependency
+
+`DropdownMenu`'s positioning has been migrated to `@floating-ui/react`. The public API of `DropdownMenu` is unchanged — `placement`, `modifiers`, `boundariesElement`, `showArrow`, `showDelay`, `hideDelay`, and `defaultOpen` all behave the same way for the common cases. Two notes:
+
+- The `modifiers` prop is now translated to floating-ui middleware internally. Only `preventOverflow`, `flip`, and `offset` modifier keys are translated; other keys are silently ignored (with a dev-only `console.warn`). If you were passing custom modifier objects beyond these three, they will no longer take effect.
+- `boundariesElement` is similarly translated. The default (`"viewport"`) maps to floating-ui's `clippingAncestors` boundary, which is strictly more correct.
+
 ## Migrating from v5 to v6:
 
 ### Remove deprecated props and components

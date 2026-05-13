@@ -1,8 +1,7 @@
-import type { PropsWithChildren } from "react";
-import type { PopperArrowProps as ReactPopperArrowProps } from "react-popper";
+import type { ComponentProps, PropsWithChildren } from "react";
 import { styled } from "styled-components";
 
-type PopperArrowProps = ReactPopperArrowProps & {
+type PopperArrowProps = ComponentProps<"div"> & {
   placement?: string;
   borderColor?: string;
   backgroundColor?: string;
