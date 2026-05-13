@@ -39,6 +39,15 @@ const getMenuMargin = (placement, showArrow) => {
 const DropdownMenuContainer = styled(Box)<DropdownMenuContainerProps>(
   color,
   ({ dataPlacement, showArrow = true, backgroundColor = "white", theme }: DropdownMenuContainerProps): any => ({
+    fontFamily: theme.fonts.base,
+    fontSize: theme.fontSizes.base,
+    lineHeight: theme.lineHeights.base,
+    color: theme.colors.black,
+    WebkitFontSmoothing: "antialiased",
+    MozOsxFontSmoothing: "grayscale",
+    "button, input, textarea": {
+      fontFamily: theme.fonts.base,
+    },
     borderRadius: theme.radii.medium,
     backgroundColor: theme.colors[backgroundColor],
     borderTop: `1px solid  ${theme.colors[backgroundColor]}`,

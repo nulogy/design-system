@@ -9,22 +9,6 @@ export { Banner } from "./Banner";
 export type { BottomSheetProps } from "./BottomSheet";
 export { BottomSheet, BottomSheetParts } from "./BottomSheet";
 export { AnimatedBox, Box } from "./Box";
-export type {
-  BrandLogoContainerProps,
-  DesktopMenuProps,
-  MenuTriggerProps,
-  NavBarBackgroundProps,
-  RenderMenuButtonProps,
-  SmallNavBarProps,
-} from "./BrandedNavBar";
-export {
-  BrandedNavBar,
-  BrandLogoContainer,
-  DesktopMenu,
-  MenuTrigger,
-  NavBarBackground,
-  SmallNavBar,
-} from "./BrandedNavBar";
 export { Branding } from "./Branding";
 export { Breadcrumbs } from "./Breadcrumbs";
 export {
