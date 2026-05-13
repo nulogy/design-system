@@ -25,7 +25,7 @@ import { InlineValidation } from "../Validation";
 import { WeekPickerStyles } from "./custom/weekPickerStyles";
 import { DatePickerHeader } from "./shared/components/DatePickerHeader";
 import DatePickerInput from "./shared/components/DatePickerInput";
-import { getPopperModifiers } from "./shared/helpers";
+import { getPopperProps } from "./shared/helpers";
 import { DatePickerStyles } from "./shared/styles";
 
 type OmittedFieldProps = "onChange" | "onBlur" | "onFocus";
@@ -226,7 +226,8 @@ const WeekPicker = forwardRef<unknown, WeekPickerProps>(
           ref={weekPickerRefHandler}
           onFocus={onFocus}
           onBlur={onBlur}
-          popperModifiers={getPopperModifiers(disableFlipping)}
+          popperPlacement="bottom-start"
+          popperProps={getPopperProps(disableFlipping)}
           disabledKeyboardNavigation
         />
         <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />

@@ -9,7 +9,7 @@ import { useLocale } from "../../../NDSProvider/LocaleContext";
 import { registerDatePickerLocales } from "../../../utils/datePickerLocales";
 import { getSubset } from "../../../utils/subset";
 import { InlineValidation } from "../../../Validation";
-import { getPopperModifiers } from "../helpers";
+import { getPopperProps } from "../helpers";
 import { DatePickerStyles } from "../styles";
 import type { DatePickerProps } from "../types";
 import DatePickerInput from "./DatePickerInput";
@@ -143,7 +143,8 @@ export const BasePicker = forwardRef<ReactDatePicker, BasePickerProps>(
           name={name}
           required={required}
           onEnterKeyPress={onEnterKeyPress}
-          popperModifiers={getPopperModifiers(disableFlipping)}
+          popperPlacement="bottom-start"
+          popperProps={getPopperProps(disableFlipping)}
           disabledKeyboardNavigation={disabledKeyboardNavigation}
         />
         <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
