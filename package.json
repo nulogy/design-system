@@ -121,7 +121,7 @@
     "@styled-system/theme-get": "^5.1.2",
     "@types/react-window": "^1.8.8",
     "@types/styled-system": "5.1.25",
-    "date-fns": "^2.30.0",
+    "date-fns": "^3.6.0",
     "debounce": "^3.0.0",
     "deep-equal": "^2.2.1",
     "framer-motion": "^12.38.0",
