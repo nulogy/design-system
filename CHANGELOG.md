@@ -1,3 +1,24 @@
+# [19.0.0](https://github.com/nulogy/design-system/compare/v18.0.1...v19.0.0) (2026-05-13)
+
+
+### Features
+
+* remove react-popper and BrandedNavBar ([9a13028](https://github.com/nulogy/design-system/commit/9a1302856dd51a0f3c9631ef7f5af7b8d7e431d6))
+
+
+### BREAKING CHANGES
+
+* BrandedNavBar and its associated exports
+(BrandLogoContainer, DesktopMenu, MenuTrigger, NavBarBackground,
+SmallNavBar, withMenuState, NAVBAR_HEIGHT) have been removed. Use the
+Navigation component instead.
+* DropdownMenu's popup is now portaled to document.body.
+Consumer apps using descendant CSS selectors targeting
+.nds-popper-pop-up from inside their app shell must switch to global
+class-name or attribute selectors. See MIGRATION.md for full details.
+
+Co-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>
+
 ## [18.0.1](https://github.com/nulogy/design-system/compare/v18.0.0...v18.0.1) (2026-05-12)
 
 
