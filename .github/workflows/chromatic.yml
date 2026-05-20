@@ -33,7 +33,7 @@ jobs:
       - name: Build Storybook
         run: pnpm build:storybook
 
-      - uses: chromaui/action@v16
+      - uses: chromaui/action@v17
         with:
           projectToken: ${{ secrets.CHROMATIC_TOKEN }}
           token: ${{ secrets.GITHUB_TOKEN }}
