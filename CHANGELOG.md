@@ -1,3 +1,10 @@
+# [19.1.0](https://github.com/nulogy/design-system/compare/v19.0.0...v19.1.0) (2026-06-01)
+
+
+### Features
+
+* add Czech, Austrian German, Hungarian, Italian, Slovak, and Ukrainian locales ([#1798](https://github.com/nulogy/design-system/issues/1798)) ([af94135](https://github.com/nulogy/design-system/commit/af941358770e0c7905718c2b546b49542ef2de49))
+
 # [19.0.0](https://github.com/nulogy/design-system/compare/v18.0.1...v19.0.0) (2026-05-13)
 
 
