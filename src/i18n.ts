@@ -1,18 +1,30 @@
 import i18n from "i18next";
 
+import cs_CZ from "../locales/cs_CZ.json";
+import de_AT from "../locales/de_AT.json";
 import de_DE from "../locales/de_DE.json";
 import en_US from "../locales/en_US.json";
 import es_ES from "../locales/es_ES.json";
 import es_MX from "../locales/es_MX.json";
 import fr_FR from "../locales/fr_FR.json";
+import hu_HU from "../locales/hu_HU.json";
+import it_IT from "../locales/it_IT.json";
 import ja_JP from "../locales/ja_JP.json";
 import nl_NL from "../locales/nl_NL.json";
 import pl_PL from "../locales/pl_PL.json";
 import pt_BR from "../locales/pt_BR.json";
 import ro_RO from "../locales/ro_RO.json";
+import sk_SK from "../locales/sk_SK.json";
+import uk_UA from "../locales/uk_UA.json";
 import zh_CN from "../locales/zh_CN.json";
 
 const resources = {
+  cs_CZ: {
+    nds: cs_CZ,
+  },
+  de_AT: {
+    nds: de_AT,
+  },
   de_DE: {
     nds: de_DE,
   },
@@ -28,6 +40,12 @@ const resources = {
   fr_FR: {
     nds: fr_FR,
   },
+  hu_HU: {
+    nds: hu_HU,
+  },
+  it_IT: {
+    nds: it_IT,
+  },
   ja_JP: {
     nds: ja_JP,
   },
@@ -42,6 +60,12 @@ const resources = {
   },
   ro_RO: {
     nds: ro_RO,
+  },
+  sk_SK: {
+    nds: sk_SK,
+  },
+  uk_UA: {
+    nds: uk_UA,
   },
   zh_CN: {
     nds: zh_CN,

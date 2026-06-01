@@ -95,5 +95,6 @@ yarn-error.log*
 .vscode
 
 # Claude Code local settings (personal, not shared)
+.claude/scheduled_tasks.lock
 .claude/settings.local.json
 .claude/worktrees/
