@@ -1,5 +1,8 @@
 [tools]
-node = "24"
+# Pinned to 24.15.0: Node 24.16.0 hangs/fails during `playwright install`
+# (browser download), breaking CI and local test setup. Revisit when a newer
+# Node 24.x resolves the Playwright download regression.
+node = "24.15.0"
 
 [settings]
 # This must be enabled to make the hooks work
