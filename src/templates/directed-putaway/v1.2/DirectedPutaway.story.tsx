@@ -599,12 +599,12 @@ export const Default = () => {
             status: "Good",
             quantity: "10,000.0 ea",
           };
-      
+
       // Automatically add to in-transit list
       setPickedUpPallets([mockPallet, ...pickedUpPallets]);
       setPalletInput("");
       setPalletData(null);
-      
+
       // Show success toast
       toast.success("Pallet picked up successfully");
     }
