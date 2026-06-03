@@ -1,3 +1,10 @@
+## [19.1.1](https://github.com/nulogy/design-system/compare/v19.1.0...v19.1.1) (2026-06-03)
+
+
+### Bug Fixes
+
+* **Navigation:** keep dropdown menus within the viewport and scroll ([#1800](https://github.com/nulogy/design-system/issues/1800)) ([ecb3fdf](https://github.com/nulogy/design-system/commit/ecb3fdf6e1784b1a3169deb3e7995bc70d6954ed))
+
 # [19.1.0](https://github.com/nulogy/design-system/compare/v19.0.0...v19.1.0) (2026-06-01)
 
 
