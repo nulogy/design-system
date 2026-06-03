@@ -14,13 +14,15 @@ import { CaretDown, NavigationMenuLink, NavigationMenuTrigger, RadixNavigationMe
 export interface NavigationMenuItemProps extends RadixNavigationMenu.NavigationMenuItemProps {
   item: MenuItem;
   level?: number;
+  /** Which edge the dropdown aligns to. Secondary (right-hand) menus use "end" so they don't run off-screen. */
+  align?: "start" | "end";
 }
 
 /**
  * A single Radix <NavigationMenu.Item> that can represent any MenuItem variant.
  */
 export const NavigationMenuItem = React.forwardRef<HTMLLIElement, NavigationMenuItemProps>(
-  ({ item, level = 0, ...props }, forwardedRef) => {
+  ({ item, level = 0, align = "start", ...props }, forwardedRef) => {
     if (item.type === "separator") {
       return (
         <RadixNavigationMenuItem ref={forwardedRef} {...props}>
@@ -107,7 +109,7 @@ export const NavigationMenuItem = React.forwardRef<HTMLLIElement, NavigationMenu
         </NavigationMenuTrigger>
 
         {hasSubMenu && (
-          <SubMenuContent>
+          <SubMenuContent style={align === "end" ? { left: "auto", right: 0 } : undefined}>
             <RadixNavigationMenu.Sub orientation="vertical">
               <NavigationMenuSubList>
                 {item.items?.map((sub) => (

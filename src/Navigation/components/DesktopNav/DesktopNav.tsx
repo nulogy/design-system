@@ -66,7 +66,7 @@ export default function DesktopNav({
       {/* ----------------------- Secondary ------------------------------ */}
       <NavigationMenuList ref={secondaryMenuRef}>
         {secondaryNavigation.map((item) => (
-          <NavigationMenuItem key={item.key} item={item} />
+          <NavigationMenuItem key={item.key} item={item} align="end" />
         ))}
 
         {secondaryNavigation.length > 0 && userMenuExists && <VerticalDivider />}
