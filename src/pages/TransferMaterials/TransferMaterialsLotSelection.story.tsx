@@ -10,11 +10,11 @@ import {
   Icon,
   IconicButton,
   List,
-  ListItem as NDSListItem,
   Modal,
+  ListItem as NDSListItem,
+  Table as NDSTable,
   PrimaryButton,
   QuietButton,
-  Table as NDSTable,
   type TableCellInfoType,
   type TableColumnType,
   Text,
@@ -120,7 +120,7 @@ const MOCK_JOBS: SourceJobWithLots[] = [
 
 // Different work order jobs — Track by Job excluded server-side for cross-WO transfers,
 // so only Pallet and Pallet-FIFO lots appear here.
-const DIFFERENT_WO_JOBS: SourceJobWithLots[] = [
+const _DIFFERENT_WO_JOBS: SourceJobWithLots[] = [
   {
     id: "job-3",
     naturalKey: 998,
@@ -180,13 +180,10 @@ const DIFFERENT_WO_JOBS: SourceJobWithLots[] = [
 function useLotSelection(jobs: SourceJobWithLots[], initiallySelected = true) {
   const initialSelected: Record<string, Set<string>> = {};
   for (const job of jobs) {
-    initialSelected[job.id] = initiallySelected
-      ? new Set(job.lots.map((l) => l.lotId))
-      : new Set<string>();
+    initialSelected[job.id] = initiallySelected ? new Set(job.lots.map((l) => l.lotId)) : new Set<string>();
   }
 
-  const [selectedLots, setSelectedLots] =
-    useState<Record<string, Set<string>>>(initialSelected);
+  const [selectedLots, setSelectedLots] = useState<Record<string, Set<string>>>(initialSelected);
 
   const toggleJob = (jobId: string) => {
     const job = jobs.find((j) => j.id === jobId);
@@ -246,17 +243,11 @@ function useLotSelection(jobs: SourceJobWithLots[], initiallySelected = true) {
 
 // --- Shared table helpers ---
 
-const headerFormatter = ({ label }: TableColumnType) => (
-  <Text fontWeight="bold">{label}</Text>
-);
+const headerFormatter = ({ label }: TableColumnType) => <Text fontWeight="bold">{label}</Text>;
 
-const cellRenderer = ({ cellData }: TableCellInfoType) => (
-  <Text>{cellData || "--"}</Text>
-);
+const cellRenderer = ({ cellData }: TableCellInfoType) => <Text>{cellData || "--"}</Text>;
 
-const boldCellRenderer = ({ cellData }: TableCellInfoType) => (
-  <Text fontWeight="bold">{cellData || "--"}</Text>
-);
+const boldCellRenderer = ({ cellData }: TableCellInfoType) => <Text fontWeight="bold">{cellData || "--"}</Text>;
 
 // Parses "6.00 ea" → { value: 6, uom: "ea" } and sums quantities for a group of lots.
 function sumQuantities(lots: LotItem[]): string {
@@ -304,11 +295,7 @@ function InfoAccordion() {
 
   return (
     <Box bg="whiteGrey" mb="x2" px="x2" py="x1">
-      <Flex
-        onClick={() => setIsOpen(!isOpen)}
-        width={1}
-        style={{ cursor: "pointer" }}
-      >
+      <Flex onClick={() => setIsOpen(!isOpen)} width={1} style={{ cursor: "pointer" }}>
         <IconicButton icon={isOpen ? "upArrow" : "downArrow"} />
         <Flex alignItems="center" ml="x1">
           <Text color="darkBlue" fontWeight="medium">
@@ -319,8 +306,8 @@ function InfoAccordion() {
       {isOpen && (
         <Box pb="x1">
           <Text mb="x2" mt="x1">
-            Job 1 is eligible to have its materials transferred to Job 2 within
-            the same Work Order if it meets the following criteria:
+            Job 1 is eligible to have its materials transferred to Job 2 within the same Work Order if it meets the
+            following criteria:
           </Text>
           <List compact leftAlign>
             <ListItem>Job 1 is on the same Line as Job 2</ListItem>
@@ -330,17 +317,16 @@ function InfoAccordion() {
             <ListItem>Job 1 was created in the last six months</ListItem>
           </List>
           <Text mb="x2" mt="x2">
-            In order to transfer materials to a Job on a different Work Order,
-            it must meet all the same criteria listed above and, in addition:
+            In order to transfer materials to a Job on a different Work Order, it must meet all the same criteria listed
+            above and, in addition:
           </Text>
           <List compact leftAlign>
             <ListItem>
-              Job 1 must have at least one subcomponent in WIP that is also on
-              Job 2&apos;s BOM version
+              Job 1 must have at least one subcomponent in WIP that is also on Job 2&apos;s BOM version
             </ListItem>
             <ListItem>
-              Items to be transferred must be set to Track Lots and Expiries by{" "}
-              <i>Pallet</i> or <i>Pallet-FIFO Consumption</i>
+              Items to be transferred must be set to Track Lots and Expiries by <i>Pallet</i> or{" "}
+              <i>Pallet-FIFO Consumption</i>
             </ListItem>
           </List>
         </Box>
@@ -377,11 +363,8 @@ function Option1LotRows({
         const lots = bySkuCode[skuCode];
         const skuDescription = lots[0].skuDescription;
         const uom = lots[0].quantity.split(" ").slice(1).join(" ");
-        const selectedLots = lots.filter((lot) =>
-          isLotSelected(job.id, lot.lotId),
-        );
-        const total =
-          selectedLots.length > 0 ? sumQuantities(selectedLots) : `0.00 ${uom}`;
+        const selectedLots = lots.filter((lot) => isLotSelected(job.id, lot.lotId));
+        const total = selectedLots.length > 0 ? sumQuantities(selectedLots) : `0.00 ${uom}`;
         const totalColor = selectedLots.length > 0 ? "darkGrey" : "grey";
         return (
           <Box key={skuCode} mb="x1">
@@ -395,10 +378,7 @@ function Option1LotRows({
             </Flex>
             {lots.map((lot) => (
               <Flex key={lot.lotId} alignItems="center" py="x1" ml="x2">
-                <Checkbox
-                  checked={isLotSelected(job.id, lot.lotId)}
-                  onChange={() => toggleLot(job.id, lot.lotId)}
-                />
+                <Checkbox checked={isLotSelected(job.id, lot.lotId)} onChange={() => toggleLot(job.id, lot.lotId)} />
                 <Text ml="x2" width="160px">
                   {lot.lotCode}
                 </Text>
@@ -416,14 +396,8 @@ function Option1LotRows({
 }
 
 function Option1Modal() {
-  const {
-    toggleJob,
-    toggleLot,
-    isJobChecked,
-    isJobIndeterminate,
-    isLotSelected,
-    hasAnySelected,
-  } = useLotSelection(MOCK_JOBS);
+  const { toggleJob, toggleLot, isJobChecked, isJobIndeterminate, isLotSelected, hasAnySelected } =
+    useLotSelection(MOCK_JOBS);
 
   const columns: TableColumnType[] = [
     {
@@ -481,13 +455,7 @@ function Option1Modal() {
     actualEnd: job.actualEnd ?? "In Progress",
     jobChecked: isJobChecked(job.id),
     jobIndeterminate: isJobIndeterminate(job.id),
-    expandedContent: () => (
-      <Option1LotRows
-        job={job}
-        isLotSelected={isLotSelected}
-        toggleLot={toggleLot}
-      />
-    ),
+    expandedContent: () => <Option1LotRows job={job} isLotSelected={isLotSelected} toggleLot={toggleLot} />,
   }));
 
   return (
@@ -508,10 +476,7 @@ function Option1Modal() {
       title="Transfer Materials"
     >
       <InfoAccordion />
-      <Text mb="x2">
-        Select the Jobs and lots from which you would like to transfer eligible
-        Subcomponents.
-      </Text>
+      <Text mb="x2">Select the Jobs and lots from which you would like to transfer eligible Subcomponents.</Text>
       <Box mb="x2">
         <StyledSourceTable
           columns={columns}
@@ -528,8 +493,7 @@ function Option1Modal() {
 }
 
 export const Option1JobsSubcomponentsLots = () => <Option1Modal />;
-Option1JobsSubcomponentsLots.storyName =
-  "Option 1 – Jobs → Subcomponents → Lots";
+Option1JobsSubcomponentsLots.storyName = "Option 1 – Jobs → Subcomponents → Lots";
 
 // === OPTION 2: Job as section header, flat lot table per job ===
 
@@ -550,9 +514,7 @@ function Option2JobSection({
 }) {
   const lotColumns: TableColumnType[] = [
     {
-      cellRenderer: ({ cellData }: TableCellInfoType) => (
-        <Text fontWeight="bold">{cellData || "--"}</Text>
-      ),
+      cellRenderer: ({ cellData }: TableCellInfoType) => <Text fontWeight="bold">{cellData || "--"}</Text>,
       dataKey: "skuLabel",
       headerFormatter,
       label: "Subcomponent",
@@ -624,14 +586,8 @@ function Option2JobSection({
 }
 
 function Option2Modal() {
-  const {
-    selectedLots,
-    toggleJob,
-    toggleLot,
-    isJobChecked,
-    isJobIndeterminate,
-    hasAnySelected,
-  } = useLotSelection(MOCK_JOBS);
+  const { selectedLots, toggleJob, toggleLot, isJobChecked, isJobIndeterminate, hasAnySelected } =
+    useLotSelection(MOCK_JOBS);
 
   return (
     <Modal
@@ -651,10 +607,7 @@ function Option2Modal() {
       title="Transfer Materials"
     >
       <InfoAccordion />
-      <Text mb="x2">
-        Select the Jobs and lots from which you would like to transfer eligible
-        Subcomponents.
-      </Text>
+      <Text mb="x2">Select the Jobs and lots from which you would like to transfer eligible Subcomponents.</Text>
       <Box mb="x2">
         {MOCK_JOBS.map((job) => (
           <Option2JobSection
@@ -669,12 +622,8 @@ function Option2Modal() {
               if (!job_) return;
               // Determine which lots were added/removed by diffing
               const prevSelected = Array.from(selectedLots[job.id] ?? []);
-              const added = newSelected.filter(
-                (id) => !prevSelected.includes(id),
-              );
-              const removed = prevSelected.filter(
-                (id) => !newSelected.includes(id),
-              );
+              const added = newSelected.filter((id) => !prevSelected.includes(id));
+              const removed = prevSelected.filter((id) => !newSelected.includes(id));
               for (const lotId of added) toggleLot(job.id, lotId);
               for (const lotId of removed) toggleLot(job.id, lotId);
             }}
@@ -686,8 +635,7 @@ function Option2Modal() {
 }
 
 export const Option2JobSectionHeadersLotTable = () => <Option2Modal />;
-Option2JobSectionHeadersLotTable.storyName =
-  "Option 2 – Job Section Headers + Lot Table";
+Option2JobSectionHeadersLotTable.storyName = "Option 2 – Job Section Headers + Lot Table";
 
 // === OPTION 3: Job rows expand to flat lot table ===
 
@@ -756,14 +704,8 @@ function Option3ExpandedLots({
 }
 
 function Option3Modal() {
-  const {
-    selectedLots,
-    toggleJob,
-    toggleLot,
-    isJobChecked,
-    isJobIndeterminate,
-    hasAnySelected,
-  } = useLotSelection(MOCK_JOBS);
+  const { selectedLots, toggleJob, toggleLot, isJobChecked, isJobIndeterminate, hasAnySelected } =
+    useLotSelection(MOCK_JOBS);
 
   const columns: TableColumnType[] = [
     {
@@ -828,9 +770,7 @@ function Option3Modal() {
         onRowSelectionChange={(newSelected) => {
           const prevSelected = Array.from(selectedLots[job.id] ?? []);
           const added = newSelected.filter((id) => !prevSelected.includes(id));
-          const removed = prevSelected.filter(
-            (id) => !newSelected.includes(id),
-          );
+          const removed = prevSelected.filter((id) => !newSelected.includes(id));
           for (const lotId of added) toggleLot(job.id, lotId);
           for (const lotId of removed) toggleLot(job.id, lotId);
         }}
@@ -856,10 +796,7 @@ function Option3Modal() {
       title="Transfer Materials"
     >
       <InfoAccordion />
-      <Text mb="x2">
-        Select the Jobs and lots from which you would like to transfer eligible
-        Subcomponents.
-      </Text>
+      <Text mb="x2">Select the Jobs and lots from which you would like to transfer eligible Subcomponents.</Text>
       <Box mb="x2">
         <StyledSourceTable
           columns={columns}
@@ -902,13 +839,7 @@ const skuGroupSectionRow = ({ cellData }: TableCellInfoType) => {
         {skuCode} — {skuDescription}
       </Text>
       {/* width matches the quantity column (25%) so the total aligns with the column values below */}
-      <Text
-        color={totalColor}
-        fontWeight="medium"
-        textAlign="right"
-        width="25%"
-        pr="x2"
-      >
+      <Text color={totalColor} fontWeight="medium" textAlign="right" width="25%" pr="x2">
         {total}
       </Text>
     </Flex>
@@ -970,10 +901,7 @@ function Option4JobSection({
     const lots = bySkuCode[skuCode];
     const uom = lots[0].quantity.split(" ").slice(1).join(" ");
     const selectedSkuLots = lots.filter((lot) => selectedLots.has(lot.lotId));
-    const total =
-      selectedSkuLots.length > 0
-        ? sumQuantities(selectedSkuLots)
-        : `0.00 ${uom}`;
+    const total = selectedSkuLots.length > 0 ? sumQuantities(selectedSkuLots) : `0.00 ${uom}`;
     const totalColor = selectedSkuLots.length > 0 ? "darkGrey" : "grey";
 
     return [
@@ -1044,11 +972,7 @@ function Option4JobSection({
           indeterminate={jobIndeterminate}
           onChange={() => toggleJob(job.id)}
         />
-        <IconicButton
-          icon={isExpanded ? "upArrow" : "downArrow"}
-          ml="x1"
-          onClick={() => setIsExpanded(!isExpanded)}
-        />
+        <IconicButton icon={isExpanded ? "upArrow" : "downArrow"} ml="x1" onClick={() => setIsExpanded(!isExpanded)} />
         <Text ml="x1">
           <Text as="span" fontWeight="bold">
             Job {job.naturalKey}
@@ -1075,12 +999,8 @@ function Option4JobSection({
           selectedRows={selectedLotIds}
           onRowSelectionChange={(newSelected) => {
             // Filter out heading row IDs — they can't be clicked but may appear via select-all
-            const lotIds = (newSelected as string[]).filter(
-              (id) => !id.startsWith("heading-"),
-            );
-            const prevLotIds = job.lots
-              .map((l) => l.lotId)
-              .filter((id) => selectedLots.has(id));
+            const lotIds = (newSelected as string[]).filter((id) => !id.startsWith("heading-"));
+            const prevLotIds = job.lots.map((l) => l.lotId).filter((id) => selectedLots.has(id));
             const added = lotIds.filter((id) => !prevLotIds.includes(id));
             const removed = prevLotIds.filter((id) => !lotIds.includes(id));
             for (const lotId of added) toggleLot(job.id, lotId);
@@ -1093,14 +1013,8 @@ function Option4JobSection({
 }
 
 function Option4Modal() {
-  const {
-    selectedLots,
-    toggleJob,
-    toggleLot,
-    isJobChecked,
-    isJobIndeterminate,
-    hasAnySelected,
-  } = useLotSelection(MOCK_JOBS);
+  const { selectedLots, toggleJob, toggleLot, isJobChecked, isJobIndeterminate, hasAnySelected } =
+    useLotSelection(MOCK_JOBS);
 
   return (
     <Modal
@@ -1120,10 +1034,7 @@ function Option4Modal() {
       title="Transfer Materials"
     >
       <InfoAccordion />
-      <Text mb="x2">
-        Select the Jobs and lots from which you would like to transfer eligible
-        Subcomponents.
-      </Text>
+      <Text mb="x2">Select the Jobs and lots from which you would like to transfer eligible Subcomponents.</Text>
       <Box mb="x2">
         {MOCK_JOBS.map((job, index) => (
           <React.Fragment key={job.id}>
@@ -1144,8 +1055,7 @@ function Option4Modal() {
 }
 
 export const Option4JobSectionsWithSubcomponentGroups = () => <Option4Modal />;
-Option4JobSectionsWithSubcomponentGroups.storyName =
-  "Option 4 – Job Sections + Subcomponent Groups";
+Option4JobSectionsWithSubcomponentGroups.storyName = "Option 4 – Job Sections + Subcomponent Groups";
 
 // === OPTION 5: Job sections as collapsible Cards ===
 //
@@ -1156,13 +1066,11 @@ Option4JobSectionsWithSubcomponentGroups.storyName =
 
 // Animates open/close with an S-curve (symmetric ease-in-out).
 // max-height is used because `height: auto` cannot be CSS-transitioned.
-const AnimatedCardContent = styled(Box)<{ isExpanded: boolean }>(
-  ({ isExpanded }) => ({
-    overflow: "hidden",
-    maxHeight: isExpanded ? "1000px" : "0",
-    transition: "max-height 0.35s cubic-bezier(0.37, 0, 0.63, 1)",
-  }),
-);
+const AnimatedCardContent = styled(Box)<{ isExpanded: boolean }>(({ isExpanded }) => ({
+  overflow: "hidden",
+  maxHeight: isExpanded ? "1000px" : "0",
+  transition: "max-height 0.35s cubic-bezier(0.37, 0, 0.63, 1)",
+}));
 
 // Extended lot type for Option 5, carrying track-by policy and selectability.
 interface Option5LotItem {
@@ -1386,13 +1294,10 @@ const OPTION5_DIFFERENT_WO_JOBS: Option5Job[] = [
 
 // Per-job activation + per-selectable-lot selection state for Option 5.
 function useOption5Selection(jobs: Option5Job[]) {
-  const selectableLots = (job: Option5Job) =>
-    job.lots.filter((l) => l.isSelectable);
+  const selectableLots = (job: Option5Job) => job.lots.filter((l) => l.isSelectable);
 
   const [activatedJobs, setActivatedJobs] = useState<Set<string>>(new Set());
-  const [selectedLots, setSelectedLots] = useState<Record<string, Set<string>>>(
-    {},
-  );
+  const [selectedLots, setSelectedLots] = useState<Record<string, Set<string>>>({});
 
   const toggleJob = (jobId: string) => {
     const job = jobs.find((j) => j.id === jobId);
@@ -1446,8 +1351,7 @@ function useOption5Selection(jobs: Option5Job[]) {
     return count > 0 && count < sl.length;
   };
 
-  const isLotSelected = (jobId: string, lotId: string) =>
-    (selectedLots[jobId] ?? new Set<string>()).has(lotId);
+  const isLotSelected = (jobId: string, lotId: string) => (selectedLots[jobId] ?? new Set<string>()).has(lotId);
 
   const hasAnySelected = activatedJobs.size > 0;
 
@@ -1471,15 +1375,13 @@ function useOption6Selection(jobs: Option5Job[]) {
   const [activatedJobs, setActivatedJobs] = useState<Set<string>>(new Set());
   // All lots start unchecked. Selection state accumulates as the user makes changes
   // and is preserved when the job is toggled off and on again.
-  const [selectedLots, setSelectedLots] = useState<Record<string, Set<string>>>(
-    () => {
-      const init: Record<string, Set<string>> = {};
-      for (const job of jobs) {
-        init[job.id] = new Set<string>();
-      }
-      return init;
-    },
-  );
+  const [selectedLots, setSelectedLots] = useState<Record<string, Set<string>>>(() => {
+    const init: Record<string, Set<string>> = {};
+    for (const job of jobs) {
+      init[job.id] = new Set<string>();
+    }
+    return init;
+  });
 
   const toggleJob = (jobId: string) => {
     // Just toggle activation — lot selection state is preserved either way.
@@ -1509,8 +1411,7 @@ function useOption6Selection(jobs: Option5Job[]) {
   // isJobChecked: true when the job is activated (binary — no indeterminate at job level).
   const isJobChecked = (jobId: string) => activatedJobs.has(jobId);
 
-  const isLotSelected = (jobId: string, lotId: string) =>
-    (selectedLots[jobId] ?? new Set<string>()).has(lotId);
+  const isLotSelected = (jobId: string, lotId: string) => (selectedLots[jobId] ?? new Set<string>()).has(lotId);
 
   const hasAnySelected = activatedJobs.size > 0;
 
@@ -1570,8 +1471,7 @@ function Option5JobSection({
     // Heading total:
     //   Pallet / Pallet-FIFO → sum per-lot quantities.
     //   Job-tracked → subcomponent total stored on the lot (no per-lot math).
-    const total =
-      first.trackByPolicy === "job" ? first.quantity : sumQuantities(lots);
+    const total = first.trackByPolicy === "job" ? first.quantity : sumQuantities(lots);
 
     const headingRow = {
       id: `heading-${job.id}-${skuCode}`,
@@ -1612,13 +1512,7 @@ function Option5JobSection({
         const lotId = row.id as string;
         // When the job is inactive, show lots pre-checked but disabled (preview of what will transfer).
         const isChecked = isJobActive ? selectedLots.has(lotId) : true;
-        return (
-          <Checkbox
-            checked={isChecked}
-            disabled={!isJobActive}
-            onChange={() => toggleLot(job.id, lotId)}
-          />
-        );
+        return <Checkbox checked={isChecked} disabled={!isJobActive} onChange={() => toggleLot(job.id, lotId)} />;
       },
     },
     {
@@ -1665,11 +1559,7 @@ function Option5JobSection({
             if (!jobChecked && !jobIndeterminate) setIsExpanded(true);
           }}
         />
-        <IconicButton
-          icon={isExpanded ? "upArrow" : "downArrow"}
-          ml="x1"
-          onClick={() => setIsExpanded(!isExpanded)}
-        />
+        <IconicButton icon={isExpanded ? "upArrow" : "downArrow"} ml="x1" onClick={() => setIsExpanded(!isExpanded)} />
         <Text ml="x1">
           <Text as="span" fontWeight="bold">
             Job {job.naturalKey}
@@ -1697,21 +1587,9 @@ function Option5JobSection({
           Eligible subcomponents
         </Text>
         {jobHasSelectableLots ? (
-          <StyledOption4Table
-            columns={columns}
-            compact
-            keyField="id"
-            rowHovers={false}
-            rows={tableRows}
-          />
+          <StyledOption4Table columns={columns} compact keyField="id" rowHovers={false} rows={tableRows} />
         ) : (
-          <StyledOption4TableNoHeader
-            columns={columns}
-            compact
-            keyField="id"
-            rowHovers={false}
-            rows={tableRows}
-          />
+          <StyledOption4TableNoHeader columns={columns} compact keyField="id" rowHovers={false} rows={tableRows} />
         )}
       </AnimatedCardContent>
     </Card>
@@ -1723,10 +1601,7 @@ function Option5Modal() {
   const differentWO = useOption5Selection(OPTION5_DIFFERENT_WO_JOBS);
   const hasAnySelected = currentWO.hasAnySelected || differentWO.hasAnySelected;
 
-  function renderJobSections(
-    jobs: Option5Job[],
-    ctx: ReturnType<typeof useOption5Selection>,
-  ) {
+  function renderJobSections(jobs: Option5Job[], ctx: ReturnType<typeof useOption5Selection>) {
     return jobs.map((job) => (
       <Option5JobSection
         key={job.id}
@@ -1758,10 +1633,7 @@ function Option5Modal() {
       title="Transfer Materials"
     >
       <InfoAccordion />
-      <Text mb="x2">
-        Select the Jobs and lots from which you would like to transfer eligible
-        Subcomponents.
-      </Text>
+      <Text mb="x2">Select the Jobs and lots from which you would like to transfer eligible Subcomponents.</Text>
       <Box mb="x2">
         <Text fontWeight="bold" mb="x2">
           Current Work Order:
@@ -1893,10 +1765,7 @@ function Option6JobSection({
           ? lots[0].quantity
           : (() => {
               const uom = first.quantity.split(" ").slice(1).join(" ");
-              const sum = lots.reduce(
-                (acc, l) => acc + parseFloat(l.quantity),
-                0,
-              );
+              const sum = lots.reduce((acc, l) => acc + parseFloat(l.quantity), 0);
               return `${sum.toFixed(2)} ${uom}`;
             })();
       // Only job-tracked subcomponents show lot code and expiry date.
@@ -1907,10 +1776,7 @@ function Option6JobSection({
         skuCode,
         item: `${skuCode} — ${first.skuDescription}`,
         lotCode: showLotDetail && lots.length === 1 ? lots[0].lotCode : null,
-        expiryDate:
-          showLotDetail && lots.length === 1
-            ? (lots[0].expiryDate ?? "--")
-            : null,
+        expiryDate: showLotDetail && lots.length === 1 ? (lots[0].expiryDate ?? "--") : null,
         quantity,
         isLotRow: false,
       });
@@ -1983,10 +1849,7 @@ function Option6JobSection({
           <Flex alignItems="center">
             <Text fontWeight="medium">{cellData as string}</Text>
             {hasError && (
-              <Tooltip
-                placement="top"
-                tooltip="At least one lot must be selected to transfer this subcomponent."
-              >
+              <Tooltip placement="top" tooltip="At least one lot must be selected to transfer this subcomponent.">
                 <Icon icon="error" size="x3" color="red" ml="x1" />
               </Tooltip>
             )}
@@ -2046,11 +1909,7 @@ function Option6JobSection({
             if (!jobChecked) setIsExpanded(true);
           }}
         />
-        <IconicButton
-          icon={isExpanded ? "upArrow" : "downArrow"}
-          ml="x1"
-          onClick={() => setIsExpanded(!isExpanded)}
-        />
+        <IconicButton icon={isExpanded ? "upArrow" : "downArrow"} ml="x1" onClick={() => setIsExpanded(!isExpanded)} />
         <Text ml="x1">
           <Text as="span" fontWeight="bold">
             Job {job.naturalKey}
@@ -2075,13 +1934,7 @@ function Option6JobSection({
       </Flex>
       <AnimatedCardContent isExpanded={isExpanded}>
         <Divider />
-        <StyledOption6Table
-          compact
-          columns={columns}
-          keyField="id"
-          rowHovers={false}
-          rows={tableRows}
-        />
+        <StyledOption6Table compact columns={columns} keyField="id" rowHovers={false} rows={tableRows} />
       </AnimatedCardContent>
     </Card>
   );
@@ -2093,19 +1946,14 @@ function Option6Modal() {
   const hasAnySelected = currentWO.hasAnySelected || differentWO.hasAnySelected;
 
   // submitErrors: per-job set of SKU codes whose lot selection is empty at submit time.
-  const [submitErrors, setSubmitErrors] = useState<Record<string, Set<string>>>(
-    {},
-  );
+  const [submitErrors, setSubmitErrors] = useState<Record<string, Set<string>>>({});
 
   const clearErrors = () => setSubmitErrors({});
 
   const handleSubmit = () => {
     const errors: Record<string, Set<string>> = {};
 
-    const check = (
-      jobs: Option5Job[],
-      ctx: ReturnType<typeof useOption6Selection>,
-    ) => {
+    const check = (jobs: Option5Job[], ctx: ReturnType<typeof useOption6Selection>) => {
       for (const job of jobs) {
         if (!ctx.activatedJobs.has(job.id)) continue;
         const bySkuCode: Record<string, string[]> = {};
@@ -2138,10 +1986,7 @@ function Option6Modal() {
     // All valid — proceed with transfer.
   };
 
-  function renderJobSections(
-    jobs: Option5Job[],
-    ctx: ReturnType<typeof useOption6Selection>,
-  ) {
+  function renderJobSections(jobs: Option5Job[], ctx: ReturnType<typeof useOption6Selection>) {
     return jobs.map((job) => (
       <Option6JobSection
         key={job.id}
@@ -2174,10 +2019,7 @@ function Option6Modal() {
       title="Transfer Materials"
     >
       <InfoAccordion />
-      <Text mb="x2">
-        Select the jobs and lot codes from which you would like to transfer
-        eligible subcomponents.
-      </Text>
+      <Text mb="x2">Select the jobs and lot codes from which you would like to transfer eligible subcomponents.</Text>
       <Box mb="x2">
         <Text fontWeight="bold" mb="x2">
           Current work order:
@@ -2194,8 +2036,7 @@ function Option6Modal() {
 }
 
 export const Option6FlatTableWithItemColumn = () => <Option6Modal />;
-Option6FlatTableWithItemColumn.storyName =
-  "Option 6 – Flat Table with Item Column";
+Option6FlatTableWithItemColumn.storyName = "Option 6 – Flat Table with Item Column";
 
 const ListItem = styled(NDSListItem)(() => ({
   listStyle: "initial",
