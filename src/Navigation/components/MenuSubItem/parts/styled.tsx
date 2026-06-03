@@ -2,7 +2,7 @@ import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
 import { styled } from "styled-components";
 import { addStyledProps, type StyledProps } from "../../../../StyledProps";
 import type { DefaultNDSThemeType } from "../../../../theme";
-import { NAVIGATION_SUB_MENU_MIN_WIDTH_PX } from "../../shared/constants";
+import { NAVIGATION_MENU_HEIGHT_STYLED_UNITS, NAVIGATION_SUB_MENU_MIN_WIDTH_PX } from "../../shared/constants";
 import { disableHoverEvents } from "../../shared/disableHoverEvents";
 
 const getSharedPaddingStyles = (theme: DefaultNDSThemeType) => ({
@@ -71,6 +71,12 @@ export const SubMenuContent = styled(RadixNavigationMenu.Content).attrs(disableH
     position: "absolute",
     top: `calc(100% + ${theme.space.half})`,
     left: 0,
+    // Cap to the viewport so a long top-level menu scrolls rather than running
+    // off the bottom. Nested flyouts override this via floating-ui (see
+    // MenuSubItem); they are fixed-positioned so overflow here does not clip them.
+    maxHeight: `calc(100dvh - ${theme.space.x2} - ${theme.space[NAVIGATION_MENU_HEIGHT_STYLED_UNITS]})`,
+    overflowX: "hidden",
+    overflowY: "auto",
     minWidth: NAVIGATION_SUB_MENU_MIN_WIDTH_PX,
     display: "flex",
     flexDirection: "column",

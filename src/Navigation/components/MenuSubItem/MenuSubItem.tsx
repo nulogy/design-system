@@ -1,3 +1,4 @@
+import { autoUpdate, flip, offset, shift, size, useFloating } from "@floating-ui/react";
 import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
 import React from "react";
 import { useTheme } from "styled-components";
@@ -15,6 +16,30 @@ type Props = {
 
 export function MenuSubItem({ item, level }: Props) {
   const theme = useTheme();
+
+  // Position the submenu flyout with floating-ui so it stays within the
+  // viewport: flip/shift off the edges and cap its height to the available
+  // space (it scrolls via overflow-y) instead of running off-screen.
+  const { refs, floatingStyles } = useFloating({
+    placement: "right-start",
+    strategy: "fixed",
+    // Position via top/left rather than a transform so the flyout is not a
+    // containing block for deeper (fixed) flyouts — they need to escape its
+    // overflow-x: hidden.
+    transform: false,
+    middleware: [
+      offset({ crossAxis: -parseFloat(theme.space.x1), mainAxis: -parseFloat(theme.space.half) }),
+      flip({ fallbackAxisSideDirection: "start" }),
+      shift({ padding: parseFloat(theme.space.x1) }),
+      size({
+        padding: parseFloat(theme.space.x1),
+        apply({ availableHeight, elements }) {
+          elements.floating.style.maxHeight = `${availableHeight}px`;
+        },
+      }),
+    ],
+    whileElementsMounted: autoUpdate,
+  });
 
   /* ---------------------------------------------------------------------
    * Separator
@@ -69,9 +94,14 @@ export function MenuSubItem({ item, level }: Props) {
         </SubMenuItemLink>
       ) : (
         <>
-          <SubMenuItemButton {...item.props}>{content}</SubMenuItemButton>
+          <SubMenuItemButton ref={refs.setReference} {...item.props}>
+            {content}
+          </SubMenuItemButton>
           {hasSubMenu && (
-            <SubMenuContent left={`calc(100% - ${theme.space.half})`} top={`calc(-1 * ${theme.space.x1})`}>
+            <SubMenuContent
+              ref={refs.setFloating}
+              style={{ ...floatingStyles, overflowX: "hidden", overflowY: "auto" }}
+            >
               <RadixNavigationMenu.Sub orientation="vertical">
                 <SubMenuList>
                   {item.items?.map((subItem) => (

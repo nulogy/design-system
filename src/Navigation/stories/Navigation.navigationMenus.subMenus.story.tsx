@@ -125,6 +125,47 @@ export const SubMenus = () => {
   );
 };
 
+const manyItems = (prefix: string, count: number) =>
+  Array.from({ length: count }, (_, index) => ({
+    key: `${prefix}-${index}`,
+    label: `${prefix} item ${index + 1}`,
+    type: "button" as const,
+  }));
+
+export const TallMenus = () => {
+  return (
+    <Navigation
+      primaryNavigation={[
+        {
+          key: "reports",
+          label: "Reports",
+          type: "button",
+          items: [
+            ...manyItems("Category", 4),
+            {
+              key: "tall-submenu",
+              label: "Tall submenu",
+              type: "button",
+              // More items than fit on screen: the flyout should cap to the
+              // viewport and scroll rather than run off the bottom.
+              items: manyItems("Report", 30),
+            },
+          ],
+        },
+      ]}
+      secondaryNavigation={[
+        {
+          key: "create",
+          label: "Create",
+          type: "button",
+          // A tall top-level menu, to exercise overflow at the top level too.
+          items: manyItems("Create", 30),
+        },
+      ]}
+    />
+  );
+};
+
 export const SubMenuSeparator = () => {
   return (
     <Navigation
