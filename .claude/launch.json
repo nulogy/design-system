@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "storybook",
+      "runtimeExecutable": "node_modules/.bin/start-storybook",
+      "runtimeArgs": ["-p", "9999"],
+      "port": 9999,
+      "autoPort": false
+    }
+  ]
+}
