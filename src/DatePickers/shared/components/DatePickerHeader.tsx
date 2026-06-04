@@ -3,6 +3,7 @@ import type { ReactDatePickerCustomHeaderProps } from "react-datepicker";
 import { useTranslation } from "react-i18next";
 import { ControlIcon } from "../../../Button";
 import { Flex } from "../../../Flex";
+import { useLocale } from "../../../NDSProvider/LocaleContext";
 import { Text } from "../../../Type";
 import { localizedFormat } from "../../../utils/localized-date-fns";
 
@@ -24,6 +25,8 @@ export function DatePickerHeader({
   locale,
 }: Props) {
   const { t } = useTranslation();
+  const { locale: contextLocale } = useLocale();
+  const resolvedLocale = locale ?? contextLocale;
 
   return (
     <Flex justifyContent="space-between" alignItems="center" py="half" px="x1">
@@ -41,7 +44,7 @@ export function DatePickerHeader({
         fontSize="large"
         style={{ textTransform: "capitalize" }}
       >
-        {localizedFormat(date, "MMMM yyyy", locale)}
+        {localizedFormat(date, "MMMM yyyy", resolvedLocale)}
       </Text>
       <ControlIcon
         icon="rightArrow"
@@ -62,6 +65,8 @@ export function MonthDatePickerHeader({
   locale,
 }: ReactDatePickerCustomHeaderProps & { locale?: string }) {
   const { t } = useTranslation();
+  const { locale: contextLocale } = useLocale();
+  const resolvedLocale = locale ?? contextLocale;
 
   return (
     <Flex justifyContent="space-between" alignItems="center" pb="x1_5">
@@ -72,7 +77,7 @@ export function MonthDatePickerHeader({
         disabled={prevMonthButtonDisabled}
       />
       <Text fontWeight="bold" color="blackBlue" px="x8" fontSize="large" style={{ textTransform: "capitalize" }}>
-        {localizedFormat(date, "yyyy", locale)}
+        {localizedFormat(date, "yyyy", resolvedLocale)}
       </Text>
       <ControlIcon
         icon="rightArrow"
