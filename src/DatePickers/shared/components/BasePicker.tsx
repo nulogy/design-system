@@ -145,6 +145,7 @@ export const BasePicker = forwardRef<ReactDatePicker, BasePickerProps>(
           onEnterKeyPress={onEnterKeyPress}
           popperPlacement="bottom-start"
           popperProps={getPopperProps(disableFlipping)}
+          portalId="nds-date-picker-portal"
           disabledKeyboardNavigation={disabledKeyboardNavigation}
         />
         <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />

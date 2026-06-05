@@ -10,6 +10,10 @@ export const DatePickerStyles = createGlobalStyle(({ theme }) => ({
         position: "relative",
       },
     },
+  },
+  // The calendar renders in a portal (`portalId` in BasePicker), so its styles are
+  // scoped to that portal node.
+  "#nds-date-picker-portal": {
     ".react-datepicker__header": {
       backgroundColor: theme.colors.white,
       borderBottom: "none",
@@ -20,7 +24,7 @@ export const DatePickerStyles = createGlobalStyle(({ theme }) => ({
       display: "none",
     },
     ".react-datepicker-popper": {
-      zIndex: theme.zIndices.openControl,
+      zIndex: theme.zIndices.aboveOverlay,
     },
     ".react-datepicker-popper[data-placement^='bottom']": {
       marginTop: "0",

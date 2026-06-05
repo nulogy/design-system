@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { useState } from "react";
-import { expect, userEvent, within } from "storybook/test";
+import { expect, userEvent, waitFor, within } from "storybook/test";
 import {
   Button,
   ButtonGroup,
@@ -206,6 +206,39 @@ export const WithSelectAndScrollingContent: Story = {
     ),
   },
   name: "with select and scrolling content",
+};
+
+// Guards the date picker's portal behaviour: in a short modal the open calendar
+// extends past the modal body, so it must render in a portal to avoid being clipped
+// by the modal's overflow.
+export const WithDatePicker: Story = {
+  args: {
+    title: "Schedule delivery",
+    footerContent: (
+      <ButtonGroup>
+        <PrimaryButton>Schedule</PrimaryButton>
+        <QuietButton>Cancel</QuietButton>
+      </ButtonGroup>
+    ),
+    maxWidth: "456px",
+    onRequestClose: () => {},
+    children: (
+      <Form id="myForm" mb="x2">
+        <DatePicker
+          selected={new Date("2019-01-01T05:00:00.000Z")}
+          dateFormat="MMMM d, yyyy"
+          onChange={(val) => val}
+          onInputChange={(val) => val}
+        />
+      </Form>
+    ),
+  },
+  name: "with date picker",
+  play: async () => {
+    const body = within(document.body);
+    await userEvent.click(body.getByLabelText("select a date"));
+    await waitFor(() => expect(document.querySelector(".react-datepicker-popper")).toBeInTheDocument());
+  },
 };
 
 export const WithParentSelector: Story = {
