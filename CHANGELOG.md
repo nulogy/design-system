@@ -1,3 +1,11 @@
+## [19.1.2](https://github.com/nulogy/design-system/compare/v19.1.1...v19.1.2) (2026-06-06)
+
+
+### Bug Fixes
+
+* **DatePickers:** localize month and year header via context locale ([94956ed](https://github.com/nulogy/design-system/commit/94956ed5744300c0fa2b37eebbf51d66b6b9014d))
+* **DatePickers:** render the calendar in a portal so it escapes modal overflow ([ef02d8a](https://github.com/nulogy/design-system/commit/ef02d8af97a71126a04c0e7d333148db4eb9f9fd))
+
 ## [19.1.1](https://github.com/nulogy/design-system/compare/v19.1.0...v19.1.1) (2026-06-03)
 
 
