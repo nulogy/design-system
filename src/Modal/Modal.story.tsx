@@ -238,6 +238,12 @@ export const WithDatePicker: Story = {
     const body = within(document.body);
     await userEvent.click(body.getByLabelText("select a date"));
     await waitFor(() => expect(document.querySelector(".react-datepicker-popper")).toBeInTheDocument());
+
+    // Selecting a day must not close the modal: the calendar renders in a portal
+    // outside the modal's DOM, so the dismissable layer must ignore it.
+    const day = document.querySelector(".react-datepicker__day--015:not(.react-datepicker__day--outside-month)");
+    await userEvent.click(day as Element);
+    expect(body.getByRole("dialog")).toBeInTheDocument();
   },
 };
 

@@ -14,6 +14,10 @@ export const DatePickerStyles = createGlobalStyle(({ theme }) => ({
   // The calendar renders in a portal (`portalId` in BasePicker), so its styles are
   // scoped to that portal node.
   "#nds-date-picker-portal": {
+    // A Radix modal sets `pointer-events: none` on everything outside its dialog. The
+    // calendar is portaled to the body, outside the dialog, so re-enable interaction
+    // here — otherwise day clicks pass through to the overlay and close the modal.
+    pointerEvents: "auto",
     ".react-datepicker__header": {
       backgroundColor: theme.colors.white,
       borderBottom: "none",
