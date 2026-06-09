@@ -1,3 +1,10 @@
+## [19.1.3](https://github.com/nulogy/design-system/compare/v19.1.2...v19.1.3) (2026-06-09)
+
+
+### Bug Fixes
+
+* **DatePickers:** keep the calendar clickable inside a modal ([#1802](https://github.com/nulogy/design-system/issues/1802)) ([4fa737d](https://github.com/nulogy/design-system/commit/4fa737d497bb0da98605665522fffc105f9e676f))
+
 ## [19.1.2](https://github.com/nulogy/design-system/compare/v19.1.1...v19.1.2) (2026-06-06)
 
 
