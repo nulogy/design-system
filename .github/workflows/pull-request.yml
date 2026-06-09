@@ -73,6 +73,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # The browser-based Vitest suite (Playwright Chromium) fills the runner disk,
+      # intermittently failing with "No space left on device". Remove large
+      # preinstalled SDKs we don't use to reclaim ~10+ GB before installing.
+      - name: Free disk space
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /usr/local/.ghcup || true
+          df -h
+
       - name: Checkout
         uses: actions/checkout@v6
 
