@@ -1,3 +1,10 @@
+## [19.1.4](https://github.com/nulogy/design-system/compare/v19.1.3...v19.1.4) (2026-06-30)
+
+
+### Bug Fixes
+
+* **DateRange:** stop onRangeChange infinite loop with inline callbacks ([e35ec83](https://github.com/nulogy/design-system/commit/e35ec83737690cafab10cd62312ca35d9230bab6))
+
 ## [19.1.3](https://github.com/nulogy/design-system/compare/v19.1.2...v19.1.3) (2026-06-09)
 
 
