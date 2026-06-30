@@ -1,6 +1,6 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { action } from "storybook/actions";
-import { expect, userEvent, waitFor, within } from "storybook/test";
+import { expect, fn, userEvent, waitFor, within } from "storybook/test";
 
 import { Box, Button, Flex, PrimaryButton } from "..";
 import DateRange from "./DateRange";
@@ -243,4 +243,99 @@ export const UsingRefToControlFocus = () => {
       </Flex>
     </Flex>
   );
+};
+
+// Regression test for the onRangeChange infinite loop (GO-11207). The wrapper passes a fresh
+// inline callback every render that also setStates — the exact consumer pattern that used to
+// re-fire the effect on every render and peg the CPU. The module-scoped spy is shared with
+// the play() function, which measures how many times the callback fires in a quiet window.
+const dateRangeLoopSpy = fn();
+export const DoesNotLoopWithInlineCallback = {
+  render: () => {
+    const [, setTick] = useState(0);
+    return (
+      <DateRange
+        onRangeChange={(value) => {
+          dateRangeLoopSpy(value);
+          setTick((tick) => tick + 1);
+        }}
+      />
+    );
+  },
+  name: "does not loop with an inline onRangeChange",
+  play: async () => {
+    await waitFor(() => expect(dateRangeLoopSpy).toHaveBeenCalled());
+    const before = dateRangeLoopSpy.mock.calls.length;
+    await new Promise((resolve) => setTimeout(resolve, 200));
+    const after = dateRangeLoopSpy.mock.calls.length;
+    // Pre-fix the effect re-fired every render, so this quiet window captured hundreds of
+    // calls (the loop was measured at ~1000 in 1.5s). Post-fix it fires once on mount and
+    // then stays quiescent — no growth.
+    expect(after - before).toBeLessThan(3);
+  },
+};
+
+// Mount fire: the parent learns the initial/default range + validation error exactly once.
+const mountFireSpy = fn();
+export const FiresOnceOnMountWithDefaults = {
+  render: () => (
+    <DateRange
+      defaultStartDate={new Date("2019-01-01T05:00:00.000Z")}
+      defaultEndDate={new Date("2019-01-05T05:00:00.000Z")}
+      onRangeChange={mountFireSpy}
+    />
+  ),
+  name: "fires onRangeChange once on mount with defaults",
+  play: async () => {
+    await waitFor(() => expect(mountFireSpy).toHaveBeenCalledTimes(1));
+    const payload = mountFireSpy.mock.calls[0][0];
+    expect(payload.startDate).toEqual(new Date("2019-01-01T05:00:00.000Z"));
+    expect(payload.endDate).toEqual(new Date("2019-01-05T05:00:00.000Z"));
+    expect(payload.error).toBeUndefined();
+  },
+};
+
+// Invalid defaults: an end date before the start date is reported in the mount payload's error.
+const invalidDefaultsSpy = fn();
+export const ReportsErrorForInvalidDefaultsOnMount = {
+  render: () => (
+    <DateRange
+      defaultStartDate={new Date("2019-01-05T05:00:00.000Z")}
+      defaultEndDate={new Date("2019-01-01T05:00:00.000Z")}
+      onRangeChange={invalidDefaultsSpy}
+    />
+  ),
+  name: "reports error for invalid defaults on mount",
+  play: async () => {
+    await waitFor(() => expect(invalidDefaultsSpy).toHaveBeenCalledTimes(1));
+    expect(invalidDefaultsSpy.mock.calls[0][0].error).toBe("end date is before start date");
+  },
+};
+
+// C1 behavior: toggling the display-only `showTimes` prop must NOT fire onRangeChange — the
+// range didn't change. (Pre-refactor it fired because `showTimes` was in the effect deps.)
+const toggleSpy = fn();
+export const TogglingShowTimesDoesNotFire = {
+  render: () => {
+    const [showTimes, setShowTimes] = useState(false);
+    return (
+      <>
+        <DateRange
+          defaultStartDate={new Date("2019-01-01T05:00:00.000Z")}
+          defaultEndDate={new Date("2019-01-05T05:00:00.000Z")}
+          showTimes={showTimes}
+          onRangeChange={toggleSpy}
+        />
+        <Button onClick={() => setShowTimes((value) => !value)}>Toggle times</Button>
+      </>
+    );
+  },
+  name: "toggling showTimes does not fire onRangeChange",
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await waitFor(() => expect(toggleSpy).toHaveBeenCalledTimes(1)); // mount fire
+    await userEvent.click(canvas.getByText("Toggle times"));
+    await new Promise((resolve) => setTimeout(resolve, 100));
+    expect(toggleSpy).toHaveBeenCalledTimes(1); // no extra fire for the toggle
+  },
 };

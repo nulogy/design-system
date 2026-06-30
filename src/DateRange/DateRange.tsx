@@ -46,6 +46,29 @@ type DateRangeProps = FieldProps & {
 
 const DEFAULT_LABEL = "Date Range";
 
+type RangeErrorInput = {
+  startDate?: Date | null;
+  endDate?: Date | null;
+  startTime?: string;
+  endTime?: string;
+  showTimes?: boolean;
+};
+
+function computeRangeError({ startDate, endDate, startTime, endTime, showTimes }: RangeErrorInput) {
+  let error: string | undefined;
+  if (endDate && startDate) {
+    if (isBefore(endDate, startDate) && (showTimes || !isSameDay(endDate, startDate))) {
+      error = "end date is before start date";
+    }
+    if (isSameDay(endDate, startDate) && showTimes) {
+      if (getDuration(startTime, endTime) < 0) {
+        error = "end time is before start time";
+      }
+    }
+  }
+  return error;
+}
+
 const DateRange = forwardRef<unknown, DateRangeProps>(
   (
     {
@@ -93,8 +116,19 @@ const DateRange = forwardRef<unknown, DateRangeProps>(
     const [endDate, setEndDate] = useState(defaultEndDate);
     const [startTime, setStartTime] = useState(defaultStartTime);
     const [endTime, setEndTime] = useState(defaultEndTime);
-    const [rangeError, setRangeError] = useState<string | undefined>();
     const { t } = useTranslation();
+
+    // Derived during render — a pure function of the dates/times/showTimes. No state, no effect.
+    const rangeError = computeRangeError({ startDate, endDate, startTime, endTime, showTimes });
+
+    // Notify the parent of the new range + its validation error. Called from the change handlers
+    // (which carry the new value as `overrides`, since the corresponding state setter hasn't
+    // updated the closure yet this render) and once on mount. No effect depends on changing data,
+    // so an inline `onRangeChange` can never re-trigger a loop.
+    const emitRange = (overrides: Partial<RangeErrorInput>) => {
+      const next = { startDate, endDate, startTime, endTime, ...overrides };
+      onRangeChange?.({ ...next, error: computeRangeError({ ...next, showTimes }) });
+    };
 
     const componentVariant = useComponentVariant(variant);
 
@@ -117,41 +151,19 @@ const DateRange = forwardRef<unknown, DateRangeProps>(
       },
     }));
 
-    const validateDateRange = () => {
-      let error: string | undefined;
-      if (endDate && startDate) {
-        if (isBefore(endDate, startDate) && (showTimes || !isSameDay(endDate, startDate))) {
-          error = "end date is before start date";
-        }
-        if (isSameDay(endDate, startDate) && showTimes) {
-          const duration = getDuration(startTime, endTime);
-          if (duration < 0) {
-            error = "end time is before start time";
-          }
-        }
-      }
-      setRangeError(error);
-      if (onRangeChange) {
-        onRangeChange({
-          startDate,
-          endDate,
-          startTime,
-          endTime,
-          error,
-        });
-      }
-    };
-
-    // biome-ignore lint/correctness/useExhaustiveDependencies: validateDateRange captures the listed deps; listing the function would cause infinite re-renders
+    // Mount-only by design — reports the initial/default range + error to the parent once.
+    // Empty deps cannot re-run, so no loop is possible even with an inline onRangeChange.
+    // biome-ignore lint/correctness/useExhaustiveDependencies: emitRange is intentionally excluded so this fires exactly once on mount.
     useEffect(() => {
-      validateDateRange();
-    }, [startDate, endDate, startTime, endTime, showTimes, onRangeChange]);
+      emitRange({});
+    }, []);
 
     const changeStartTimeHandler = (label, value) => {
       setStartTime(value);
       if (onStartTimeChange) {
         onStartTimeChange(label, value);
       }
+      emitRange({ startTime: value });
     };
 
     const changeEndTimeHandler = (label, value) => {
@@ -159,6 +171,7 @@ const DateRange = forwardRef<unknown, DateRangeProps>(
       if (onEndTimeChange) {
         onEndTimeChange(label, value);
       }
+      emitRange({ endTime: value });
     };
 
     const changeStartDateHandler = (date) => {
@@ -166,6 +179,7 @@ const DateRange = forwardRef<unknown, DateRangeProps>(
       if (onStartDateChange) {
         onStartDateChange(date);
       }
+      emitRange({ startDate: date });
     };
 
     const changeEndDateHandler = (date) => {
@@ -173,6 +187,7 @@ const DateRange = forwardRef<unknown, DateRangeProps>(
       if (onEndDateChange) {
         onEndDateChange(date);
       }
+      emitRange({ endDate: date });
     };
 
     const startInputProps = {

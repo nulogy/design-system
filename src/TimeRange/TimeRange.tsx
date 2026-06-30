@@ -10,6 +10,22 @@ import { getDuration } from "./TimeRange.utils";
 
 const DEFAULT_LABEL = "Time Range";
 
+type TimeRangeErrorInput = {
+  startTime?: string;
+  endTime?: string;
+  defaultStartTime?: string;
+  defaultEndTime?: string;
+};
+
+function computeTimeRangeError({ startTime, endTime, defaultStartTime, defaultEndTime }: TimeRangeErrorInput) {
+  const start = startTime || defaultStartTime;
+  const end = endTime || defaultEndTime;
+  if (start && end && getDuration(start, end) < 0) {
+    return "end time is before start time";
+  }
+  return undefined;
+}
+
 type TimeRangeProps = SpaceProps & {
   variant?: ComponentVariant;
   timeFormat?: string;
@@ -60,7 +76,18 @@ const TimeRange = forwardRef(
   ) => {
     const [startTime, setStartTime] = useState<string | undefined>();
     const [endTime, setEndTime] = useState<string | undefined>();
-    const [rangeError, setRangeError] = useState<string | undefined>();
+
+    // Derived during render — pure function of the times (with the default* fallbacks).
+    const rangeError = computeTimeRangeError({ startTime, endTime, defaultStartTime, defaultEndTime });
+
+    // Notify the parent of the new range + its validation error. Called from the change handlers
+    // (carrying the new value as `overrides`, since the state setter hasn't updated the closure
+    // yet this render) and once on mount. No effect depends on changing data, so an inline
+    // `onRangeChange` can never re-trigger a loop.
+    const emitRange = (overrides: Partial<TimeRangeErrorInput>) => {
+      const next = { startTime, endTime, ...overrides };
+      onRangeChange?.({ ...next, error: computeTimeRangeError({ ...next, defaultStartTime, defaultEndTime }) });
+    };
 
     const inputRef1 = useRef();
     const inputRef2 = useRef();
@@ -90,36 +117,19 @@ const TimeRange = forwardRef(
       },
     }));
 
-    const validateTimeRange = () => {
-      let error: string | undefined;
-      const end = endTime || defaultEndTime;
-      const start = startTime || defaultStartTime;
-      if (start && end) {
-        const duration = getDuration(start, end);
-        if (duration < 0) {
-          error = "end time is before start time";
-        }
-      }
-      setRangeError(error);
-      if (onRangeChange) {
-        onRangeChange({
-          startTime,
-          endTime,
-          error,
-        });
-      }
-    };
-
-    // biome-ignore lint/correctness/useExhaustiveDependencies: validateTimeRange captures the listed deps; listing the function would cause infinite re-renders
+    // Mount-only by design — reports the initial/default range + error to the parent once.
+    // Empty deps cannot re-run, so no loop is possible even with an inline onRangeChange.
+    // biome-ignore lint/correctness/useExhaustiveDependencies: emitRange is intentionally excluded so this fires exactly once on mount.
     useEffect(() => {
-      validateTimeRange();
-    }, [startTime, endTime, defaultStartTime, defaultEndTime, onRangeChange]);
+      emitRange({});
+    }, []);
 
     const changeStartTimeHandler = (label, value) => {
       setStartTime(value);
       if (onStartTimeChange) {
         onStartTimeChange(label);
       }
+      emitRange({ startTime: value });
     };
 
     const changeEndTimeHandler = (label, value) => {
@@ -127,6 +137,7 @@ const TimeRange = forwardRef(
       if (onEndTimeChange) {
         onEndTimeChange(label);
       }
+      emitRange({ endTime: value });
     };
 
     const startInput = (
