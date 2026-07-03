@@ -98,3 +98,5 @@ yarn-error.log*
 .claude/scheduled_tasks.lock
 .claude/settings.local.json
 .claude/worktrees/
+
+tmp/
