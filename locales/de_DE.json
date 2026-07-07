@@ -64,5 +64,9 @@
   "production scheduling app description": "Visualisieren und optimieren Sie Ihren Produktionsplan anhand von Bedarf, Ausfallzeiten, Produktionsraten und mehr",
   "shop floor control app description": "Verwalten Sie den Fertigungsbereich, um Transparenz, Geschwindigkeit und betriebliche Effizienz zu steigern",
   "supplier collaboration app description": "Arbeiten Sie in Echtzeit mit Partnern im Lieferkettennetzwerk zusammen, um Transparenz und Reaktionsfähigkeit zu verbessern",
-  "smart factory app description": "Automatisieren Sie die Maschinendatenerfassung, um Ausfallzeiten zu reduzieren und den Produktionsdurchsatz zu verbessern"
+  "smart factory app description": "Automatisieren Sie die Maschinendatenerfassung, um Ausfallzeiten zu reduzieren und den Produktionsdurchsatz zu verbessern",
+  "hours": "Stunden",
+  "minutes": "Minuten",
+  "seconds": "Sekunden",
+  "open time picker": "Zeitauswahl öffnen"
 }

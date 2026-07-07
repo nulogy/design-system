@@ -64,5 +64,9 @@
   "production scheduling app description": "Visualice y optimice su programa de producción utilizando la demanda, los tiempos de inactividad, las tasas de producción y más",
   "shop floor control app description": "Gestione las operaciones del taller para impulsar la visibilidad, la velocidad y la eficiencia operativa",
   "supplier collaboration app description": "Colabore en tiempo real con socios de la red de la cadena de suministro para mejorar la visibilidad y la capacidad de respuesta",
-  "smart factory app description": "Automatice la captura de datos de máquinas para reducir el tiempo de inactividad y mejorar el rendimiento de la producción"
+  "smart factory app description": "Automatice la captura de datos de máquinas para reducir el tiempo de inactividad y mejorar el rendimiento de la producción",
+  "hours": "Horas",
+  "minutes": "Minutos",
+  "seconds": "Segundos",
+  "open time picker": "Abrir selector de hora"
 }

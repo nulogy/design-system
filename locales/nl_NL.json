@@ -64,5 +64,9 @@
   "production scheduling app description": "Visualiseer en optimaliseer uw productieschema met behulp van vraag, stilstandtijden, productiesnelheden en meer",
   "shop floor control app description": "Beheer de werkvloeractiviteiten om de zichtbaarheid, snelheid en operationele efficiëntie te verhogen",
   "supplier collaboration app description": "Werk in realtime samen met partners in het supply chain-netwerk voor verbeterde zichtbaarheid en responsiviteit",
-  "smart factory app description": "Automatiseer de gegevensverzameling van machines om stilstand te verminderen en de productiedoorvoer te verbeteren"
+  "smart factory app description": "Automatiseer de gegevensverzameling van machines om stilstand te verminderen en de productiedoorvoer te verbeteren",
+  "hours": "Uren",
+  "minutes": "Minuten",
+  "seconds": "Seconden",
+  "open time picker": "Tijdkiezer openen"
 }

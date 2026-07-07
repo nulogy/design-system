@@ -64,5 +64,9 @@
   "production scheduling app description": "需要、ダウンタイム、稼働率などを使用して生産スケジュールを可視化・最適化",
   "shop floor control app description": "現場オペレーションを管理し、可視性、スピード、運用効率を向上",
   "supplier collaboration app description": "サプライチェーンネットワークパートナーとリアルタイムで連携し、可視性と対応力を強化",
-  "smart factory app description": "機械データの自動収集によりダウンタイムを削減し、生産スループットを改善"
+  "smart factory app description": "機械データの自動収集によりダウンタイムを削減し、生産スループットを改善",
+  "hours": "時",
+  "minutes": "分",
+  "seconds": "秒",
+  "open time picker": "時刻ピッカーを開く"
 }
