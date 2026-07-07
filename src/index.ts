@@ -74,6 +74,7 @@ export { Overlay } from "./Overlay";
 export { Pagination } from "./Pagination";
 export { Radio, RadioGroup } from "./Radio";
 export { RangeContainer } from "./RangeContainer";
+export { ScrollTimePicker, type ScrollTimePickerProps } from "./ScrollTimePicker";
 export {
   type NDSOption,
   type NDSOptionValue,
