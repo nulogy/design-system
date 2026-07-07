@@ -62,8 +62,11 @@ function prefersReducedMotion(): boolean {
 
 const CLOCK_ICON_SIZE = "x2";
 
+// `width: fit-content` shrinks this positioning context to the input's width so the
+// absolutely-positioned clock button anchors to the input's right edge, not the full row.
 const FieldGroup = styled(Box)({
   position: "relative",
+  width: "fit-content",
 });
 
 // Reserve room on the right of the input so typed text never runs under the clock button.
