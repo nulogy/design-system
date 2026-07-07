@@ -12,7 +12,10 @@ export default {
 
 export const Default = {
   render: () => (
-    <ScrollTimePicker labelText="Time" onChange={action("changed")} onInputChange={action("input changed")} />
+    <>
+      <ScrollTimePicker labelText="Local Time" onChange={action("changed")} onInputChange={action("input changed")} />
+      <ScrollTimePicker labelText="UTC Time" utc onChange={action("changed")} onInputChange={action("input changed")} />
+    </>
   ),
   name: "default",
 };
