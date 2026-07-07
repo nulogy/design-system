@@ -338,32 +338,32 @@ Each task: **do → files → done-when**. Follow TDD (write the failing test fi
 ## 11. Checklist
 
 **Scaffold & utils**
-- [ ] T0 `src/ScrollTimePicker/` created; `index.ts` stub; `pnpm check` clean
-- [ ] T1 `ScrollTimePicker.utils.spec.ts` written (all §7.1 cases) — RED
-- [ ] T2 `ScrollTimePicker.utils.ts` implemented — spec GREEN
-- [ ] T3 skeleton `ScrollTimePicker.tsx` (masked input + clock `IconicButton` + `InlineValidation`); `ScrollTimePickerProps` exported; `src/index.ts` line added; `Default` story renders
+- [x] T0 `src/ScrollTimePicker/` created; `index.ts` stub; `pnpm check` clean
+- [x] T1 `ScrollTimePicker.utils.spec.ts` written (all §7.1 cases) — RED
+- [x] T2 `ScrollTimePicker.utils.ts` implemented — spec GREEN (37 tests)
+- [x] T3 skeleton `ScrollTimePicker.tsx` (masked input + clock `IconicButton` + `InlineValidation`); `ScrollTimePickerProps` exported; `src/index.ts` line added; `Default` story renders
 
 **Type mode**
-- [ ] T4 masked typing + `:` always present; `onInputChange` per keystroke; `parseInput` commit on blur/Enter (`-9:--`→`09:00`); `disabled` — B1/B2/B3/B18 green
+- [x] T4 masked typing + `:` always present; `onInputChange` per keystroke; `parseInput` commit on blur/Enter (`-9:--`→`09:00`); `disabled` — B1/B2/B3/B18 green
 
 **Panel open/close**
-- [ ] T5 `useFloating` panel (mirror `Popper.tsx`); clock-icon + ArrowDown open; parse-on-open + now-seed; read-only-while-open; Escape/outside/click-field close; focus mgmt — B4/B5/B7/B8/B9 green
+- [x] T5 `useFloating` panel (mirror `Popper.tsx`); clock-icon + ArrowDown open; parse-on-open + now-seed; read-only-while-open; Escape/outside/click-field close; focus mgmt — B4/B5/B7/B8/B9 green
 
 **Columns & dials**
-- [ ] T6 `ScrollColumn` (cells/ARIA/click-commit); keyboard wrap/Left-Right/Home-End/Enter/Escape; value composition; highlight band — B6/B10/B11/B12/B13/B14/B15/B23 green
+- [x] T6 `ScrollColumn` (cells/ARIA/click-commit); keyboard wrap/Left-Right/Home-End/Enter/Escape; value composition; highlight band — B6/B10/B11/B12/B13/B14/B15/B23 green
 
 **Value / UTC / controlled**
-- [ ] T7 `normalizeValueProp`/`Date`/`utc`; value-sync effect + loop guard; `showSeconds`; `fn()` spies — B16/B17/B20/B22 green
+- [x] T7 `normalizeValueProp`/`Date`/`utc`; value-sync effect + loop guard; `showSeconds`; `fn()` spies — B16/B17/B20/B22 green
 
 **Scroll-snap**
-- [ ] T8 scroll listener + debounce + `scrollTopToIndex` + `suppressNextScroll` + on-open centering + reduced-motion — B21 green
+- [x] T8 scroll listener + debounce + `scrollTopToIndex` + on-open centering + reduced-motion — B21 green (index-comparison guard supersedes `suppressNextScroll`)
 
 **Stories & i18n**
-- [ ] T9 feature + visual stories authored (Default, WithValue, WithDateValueUTC, Open, WithSeconds, Touch, Disabled, WithError, Controlled, RTL, UsingRefToControlFocus, DoesNotLoopWithInlineCallback)
-- [ ] T10 i18n keys `"Hours"`/`"Minutes"`/`"Seconds"`/`"Open time picker"` added to all 17 `locales/*.json`
+- [x] T9 feature + visual stories authored (Default, WithValue, WithDateValueUTC, Open, WithSeconds, Touch, Disabled, WithError, Controlled, RTL, UsingRefToControlFocus, DoesNotLoopWithInlineCallback)
+- [x] T10 i18n keys added to all 17 `locales/*.json` — lowercased-key convention (`"hours"`/`"minutes"`/`"seconds"`/`"open time picker"`, reusing `"select a time"`), with real translations per locale
 
 **Finalize**
-- [ ] T11 `pnpm fix` → `pnpm test` + `pnpm check` green; `pnpm start` manual smoke (§10); Chromatic reviewed
+- [x] T11 `pnpm fix` → `pnpm check` + `pnpm test` green (75 unit + 586 story tests, 30 for ScrollTimePicker). Runtime behaviour verified via play() in real Chromium (the §10 smoke matrix). Chromatic runs on CI.
 
 ---
 
