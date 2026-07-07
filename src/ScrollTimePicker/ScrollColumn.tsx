@@ -78,6 +78,7 @@ const ScrollColumn = forwardRef<HTMLDivElement, ScrollColumnProps>(
   ) => {
     const listRef = useRef<HTMLDivElement | null>(null);
     const settleTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+    const hasCenteredRef = useRef(false);
     const setListRef = (node: HTMLDivElement | null) => {
       listRef.current = node;
       if (typeof forwardedRef === "function") forwardedRef(node);
@@ -90,12 +91,19 @@ const ScrollColumn = forwardRef<HTMLDivElement, ScrollColumnProps>(
     // Centre the selected cell whenever the selection changes (and on open). Because this scrolls
     // to exactly `selectedIndex`, the scroll-settle listener resolves back to the same index and
     // never re-commits — no suppression flag needed.
+    //
+    // The first centring runs while the floating panel is still positioning (visibility:hidden until
+    // floating-ui measures it). Browsers drop a `behavior: "smooth"` scroll on a not-yet-painted
+    // element, which would leave the column pinned at the top so the highlight band shows "00".
+    // So the initial centring snaps instantly; only later selection changes animate.
     useEffect(() => {
       const list = listRef.current;
       if (!list) return;
+      const behavior = hasCenteredRef.current && !reducedMotion ? "smooth" : "auto";
+      hasCenteredRef.current = true;
       list.scrollTo({
         top: indexToScrollTop(selectedIndex, cellHeight),
-        behavior: reducedMotion ? "auto" : "smooth",
+        behavior,
       });
     }, [selectedIndex, cellHeight, reducedMotion]);
 

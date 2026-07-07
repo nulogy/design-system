@@ -22,6 +22,25 @@ export const WithValue = {
   name: "with value",
 };
 
+// B24 — on open, each column is scrolled so its selected value sits under the highlight band.
+// Regression: the first centring fires while the floating panel is still visibility:hidden, and a
+// smooth scroll on a hidden element is dropped — leaving every column pinned at index 0 ("00").
+export const CentersSelectionOnOpen = {
+  render: () => <ScrollTimePicker labelText="Time" defaultValue="09:30" onChange={fn()} />,
+  name: "centers the selection under the highlight band on open",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("opening scrolls the hour and minute columns to their selected values", async () => {
+      await userEvent.click(canvas.getByTestId("scroll-time-picker-open"));
+      await screen.findByTestId("scroll-time-picker-panel");
+      const hourColumn = screen.getByTestId("scroll-time-column-hour");
+      const minuteColumn = screen.getByTestId("scroll-time-column-minute");
+      await waitFor(() => expect(hourColumn.scrollTop).toBe(indexToScrollTop(9, CELL_HEIGHT)));
+      await waitFor(() => expect(minuteColumn.scrollTop).toBe(indexToScrollTop(30, CELL_HEIGHT)));
+    });
+  },
+};
+
 // Visual: the panel open, showing the columns, centred selection and highlight band.
 export const Open = {
   render: () => <ScrollTimePicker labelText="Time" defaultValue="09:30" onChange={action("changed")} />,
