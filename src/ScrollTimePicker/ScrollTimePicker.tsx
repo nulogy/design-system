@@ -8,7 +8,7 @@ import {
   useFloating,
   useInteractions,
 } from "@floating-ui/react";
-import React, { forwardRef, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import React, { forwardRef, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { styled } from "styled-components";
 import type { SpaceProps } from "styled-system";
@@ -22,7 +22,9 @@ import {
   buildHourOptions,
   buildMinuteOptions,
   buildSecondOptions,
+  caretIndexAfterDigits,
   composeValueFromIndices,
+  countDigits,
   dateToTimeParts,
   digitsFromRaw,
   formatTime,
@@ -170,6 +172,8 @@ const ScrollTimePicker = forwardRef<HTMLInputElement, ScrollTimePickerProps>(
     const valueAtOpenRef = useRef<string>(committedValue);
 
     const inputRef = useRef<HTMLInputElement | null>(null);
+    // Caret index to restore after a masked re-render (null when there's nothing pending).
+    const pendingCaretRef = useRef<number | null>(null);
     const columnRefs = useRef<(HTMLDivElement | null)[]>([]);
     const setInputRef = useCallback(
       (node: HTMLInputElement | null) => {
@@ -211,11 +215,31 @@ const ScrollTimePicker = forwardRef<HTMLInputElement, ScrollTimePickerProps>(
     }, [rawInput, commitValue, timeOptions]);
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-      const digits = digitsFromRaw(event.currentTarget.value, timeOptions);
+      const rawValue = event.currentTarget.value;
+      // Anchor the caret to the number of digits before it, not the raw index — masking inserts
+      // and removes separators/placeholders, so the raw index would drift.
+      const caret = event.currentTarget.selectionStart ?? rawValue.length;
+      const digitsBeforeCaret = countDigits(rawValue.slice(0, caret));
+
+      const digits = digitsFromRaw(rawValue, timeOptions);
       const masked = digits === "" ? "" : timeWithSeparator(digits, timeOptions);
+      pendingCaretRef.current = caretIndexAfterDigits(masked, digitsBeforeCaret);
       setRawInput(masked);
       onInputChange?.(masked);
     };
+
+    // Restore the caret after the masked value re-renders (otherwise the browser drops it at the
+    // end of the field). Runs before paint so the caret never visibly jumps.
+    // biome-ignore lint/correctness/useExhaustiveDependencies: rawInput is the trigger — the effect must re-run after the masked value re-renders so the caret is restored on the updated DOM value.
+    useLayoutEffect(() => {
+      const caret = pendingCaretRef.current;
+      if (caret === null) return;
+      pendingCaretRef.current = null;
+      const input = inputRef.current;
+      if (input && document.activeElement === input) {
+        input.setSelectionRange(caret, caret);
+      }
+    }, [rawInput]);
 
     const focusField = useCallback(() => {
       requestAnimationFrame(() => inputRef.current?.focus());

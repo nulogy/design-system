@@ -124,6 +124,27 @@ export const TypingKeepsColon = {
   },
 };
 
+// B1b — editing mid-string keeps the caret where the user typed instead of jumping to the end.
+export const TypingKeepsCaretPosition = {
+  render: () => <ScrollTimePicker labelText="Time" onChange={fn()} onInputChange={fn()} />,
+  name: "typing keeps the caret position",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    const field = canvas.getByTestId("scroll-time-picker-input") as HTMLInputElement;
+    await step("fill the field", async () => {
+      await userEvent.type(field, "1234");
+      await expect(field).toHaveValue("12:34");
+    });
+    await step("inserting a digit mid-string keeps the caret after the typed digit", async () => {
+      // Caret between "1" and "2", then type "9": "12:34" -> "19:23", caret stays after the "9".
+      await userEvent.type(field, "9", { initialSelectionStart: 1, initialSelectionEnd: 1 });
+      await expect(field).toHaveValue("19:23");
+      await expect(field.selectionStart).toBe(2);
+      await expect(field.selectionEnd).toBe(2);
+    });
+  },
+};
+
 // B2 — blur commits and normalizes the partial input; onChange gets the normalized value.
 const b2OnChange = fn();
 export const BlurCommits = {

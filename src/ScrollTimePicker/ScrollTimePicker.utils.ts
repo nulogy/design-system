@@ -124,6 +124,31 @@ export function timeWithSeparator(digits: string, { showSeconds }: TimeOptions =
   return slots.join(":");
 }
 
+// --- caret preservation for the masked field ---
+//
+// The masked value re-renders on every keystroke, which resets the caret to the end. To keep
+// the caret where the user was typing, we anchor it to the digit it follows rather than a raw
+// string index (separators/placeholders shift raw indices around as the mask fills).
+
+// Count the digit characters in a string (i.e. the digits typed so far up to some point).
+export function countDigits(text: string): number {
+  return (text.match(/\d/g) ?? []).length;
+}
+
+// Given a masked value and how many digits should sit before the caret, return the string index
+// just after that many digits. Falls back to the end of the string when there aren't that many.
+export function caretIndexAfterDigits(masked: string, digitCount: number): number {
+  if (digitCount <= 0) return 0;
+  let seen = 0;
+  for (let i = 0; i < masked.length; i += 1) {
+    if (masked[i] >= "0" && masked[i] <= "9") {
+      seen += 1;
+      if (seen === digitCount) return i + 1;
+    }
+  }
+  return masked.length;
+}
+
 export function dateToTimeParts(date: Date, { utc }: TimeOptions = {}): TimeParts {
   return utc
     ? { hour: date.getUTCHours(), minute: date.getUTCMinutes(), second: date.getUTCSeconds() }

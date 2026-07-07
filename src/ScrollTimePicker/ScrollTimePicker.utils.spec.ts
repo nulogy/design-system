@@ -4,8 +4,10 @@ import {
   buildHourOptions,
   buildMinuteOptions,
   buildSecondOptions,
+  caretIndexAfterDigits,
   clampIndex,
   composeValueFromIndices,
+  countDigits,
   dateToTimeParts,
   digitsFromRaw,
   fieldsFromDigitStream,
@@ -196,6 +198,36 @@ describe("timeWithSeparator", () => {
   });
   it("defaults to no seconds when options are omitted", () => {
     expect(timeWithSeparator("1430")).toBe("14:30");
+  });
+});
+
+describe("countDigits", () => {
+  it("counts only digit characters", () => {
+    expect(countDigits("")).toBe(0);
+    expect(countDigits("12:3")).toBe(3);
+    expect(countDigits("--:--")).toBe(0);
+    expect(countDigits("1-:--")).toBe(1);
+    expect(countDigits("12:34:56")).toBe(6);
+  });
+});
+
+describe("caretIndexAfterDigits", () => {
+  it("returns 0 when no digits precede the caret", () => {
+    expect(caretIndexAfterDigits("12:34", 0)).toBe(0);
+  });
+  it("returns the index just after the Nth digit", () => {
+    expect(caretIndexAfterDigits("12:34", 1)).toBe(1); // after "1"
+    expect(caretIndexAfterDigits("12:34", 2)).toBe(2); // after "12", before ":"
+    expect(caretIndexAfterDigits("12:34", 3)).toBe(4); // after "3" (skips ":")
+    expect(caretIndexAfterDigits("12:34", 4)).toBe(5); // after "4"
+  });
+  it("skips separators and placeholders while counting", () => {
+    expect(caretIndexAfterDigits("1-:--", 1)).toBe(1);
+    expect(caretIndexAfterDigits("09:3-", 3)).toBe(4);
+  });
+  it("clamps to the end when there aren't that many digits", () => {
+    expect(caretIndexAfterDigits("12:34", 9)).toBe(5);
+    expect(caretIndexAfterDigits("", 3)).toBe(0);
   });
 });
 
