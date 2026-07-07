@@ -39,8 +39,9 @@ export function isValidTimeString(value: string | undefined | null): boolean {
 }
 
 // Forgiving parse — used for free-typed masked input on commit.
-// Splits on ":" (or chunks a bare digit run into pairs), strips non-digits from each
-// field, clamps to range. Returns null only when nothing at all has been typed.
+// Splits on ":" (or chunks a bare digit run into pairs), then reads each field positionally:
+// a "-" placeholder is the empty digit in its own column, so "1-" is a filled tens column and
+// reads as 10 (not 01). Clamps to range; returns null only when nothing at all has been typed.
 export function parseInput(raw: string, { showSeconds }: TimeOptions = {}): TimeParts | null {
   const fieldCount = showSeconds ? 3 : 2;
 
@@ -52,12 +53,16 @@ export function parseInput(raw: string, { showSeconds }: TimeOptions = {}): Time
     rawFields = [digits.slice(0, 2), digits.slice(2, 4), digits.slice(4, 6)];
   }
 
-  const digitFields = rawFields.slice(0, fieldCount).map((field) => field.replace(/\D/g, ""));
-  if (digitFields.every((field) => field === "")) return null;
+  const fields = rawFields.slice(0, fieldCount);
+  if (fields.every((field) => field.replace(/\D/g, "") === "")) return null;
+
+  // A dash holds a digit's place (an unfilled column), so read it as 0 in position rather than
+  // dropping it — that keeps "1-" in the tens column (10) instead of collapsing it to 01.
+  const positionalFields = fields.map((field) => field.replace(/-/g, "0").replace(/\D/g, ""));
 
   const maxima = [HOUR_MAX, MINUTE_MAX, SECOND_MAX];
   const [hour, minute, second] = [0, 1, 2].map((i) =>
-    clampNumber(Number.parseInt(digitFields[i] || "0", 10), maxima[i]),
+    clampNumber(Number.parseInt(positionalFields[i] || "0", 10), maxima[i]),
   );
   return { hour, minute, second };
 }
@@ -101,21 +106,43 @@ export function fieldsFromDigitStream(digits: string, fieldCount: number): strin
   return fields;
 }
 
-// Render the visible masked string from a raw digit stream. Completed fields are zero-padded;
-// the in-progress trailing field shows its digit followed by "-"; untyped slots show "--".
-export function timeWithSeparator(digits: string, { showSeconds }: TimeOptions = {}): string {
+// Split raw field text into per-field digit strings for masking.
+//
+// When the raw text has no ":" yet (the first keystroke, or a pasted digit run) there are no
+// field boundaries to honour, so we greedily flow the digit stream across fields — "930" → 09:30.
+//
+// Once a ":" is present it delimits the fields the user is editing, so we keep each field's
+// digits in place instead of collapsing everything back into one stream and re-flowing it.
+// That makes editing field-local: backspacing the "5" in "15:30" gives "1-:30", not "13:0-".
+// A field can still overflow (e.g. inserting a digit into an already-full field), so any digits
+// past the second cascade into the following field — inserting "9" into "12:34" gives "19:23".
+export function fieldsFromRaw(raw: string, { showSeconds }: TimeOptions = {}): string[] {
   const fieldCount = showSeconds ? 3 : 2;
-  const fields = fieldsFromDigitStream(digits, fieldCount);
+  if (!raw.includes(":")) {
+    return fieldsFromDigitStream(digitsFromRaw(raw, { showSeconds }), fieldCount);
+  }
+  const segments = raw.split(":").map((segment) => segment.replace(/\D/g, ""));
+  const fields: string[] = [];
+  let carry = "";
+  for (let f = 0; f < fieldCount; f += 1) {
+    const combined = carry + (segments[f] ?? "");
+    fields.push(combined.slice(0, 2));
+    carry = combined.slice(2);
+  }
+  return fields;
+}
+
+// Render the visible masked string from per-field digit strings. A completed (two-digit) field
+// is shown as-is; a field holding a single digit that could still take a tens/ones partner shows
+// that digit followed by "-"; an empty/untyped field shows "--".
+export function renderFields(fields: string[], { showSeconds }: TimeOptions = {}): string {
+  const fieldCount = showSeconds ? 3 : 2;
   const slots: string[] = [];
   for (let f = 0; f < fieldCount; f += 1) {
-    const value = fields[f];
-    if (value === undefined) {
+    const value = fields[f] ?? "";
+    if (value === "") {
       slots.push("--");
-      continue;
-    }
-    const isLastField = f === fields.length - 1;
-    const canHaveSecondDigit = value.length === 1 && Number(value) <= FIELD_FIRST_DIGIT_MAX[f];
-    if (isLastField && canHaveSecondDigit) {
+    } else if (value.length === 1 && Number(value) <= FIELD_FIRST_DIGIT_MAX[f]) {
       slots.push(`${value}-`);
     } else {
       slots.push(value.padStart(2, "0"));
@@ -127,26 +154,44 @@ export function timeWithSeparator(digits: string, { showSeconds }: TimeOptions =
 // --- caret preservation for the masked field ---
 //
 // The masked value re-renders on every keystroke, which resets the caret to the end. To keep
-// the caret where the user was typing, we anchor it to the digit it follows rather than a raw
-// string index (separators/placeholders shift raw indices around as the mask fills).
+// the caret where the user was typing, we anchor it to the number of digits it followed and
+// re-derive the string index from the freshly parsed fields (separators and placeholders shift
+// raw indices around as the mask fills).
 
 // Count the digit characters in a string (i.e. the digits typed so far up to some point).
 export function countDigits(text: string): number {
   return (text.match(/\d/g) ?? []).length;
 }
 
-// Given a masked value and how many digits should sit before the caret, return the string index
-// just after that many digits. Falls back to the end of the string when there aren't that many.
-export function caretIndexAfterDigits(masked: string, digitCount: number): number {
+// Where to place the caret after re-masking: walk the parsed fields counting only the digits the
+// user actually typed — render padding (e.g. "9" shown as "09") is NOT a typed digit — and return
+// the string index just after the `digitCount`-th typed digit. Because we count typed digits (not
+// the digits in the masked string) the caret no longer drifts when a field auto-zero-pads.
+export function caretIndexForTypedDigits(
+  fields: string[],
+  digitCount: number,
+  { showSeconds }: TimeOptions = {},
+): number {
   if (digitCount <= 0) return 0;
-  let seen = 0;
-  for (let i = 0; i < masked.length; i += 1) {
-    if (masked[i] >= "0" && masked[i] <= "9") {
-      seen += 1;
-      if (seen === digitCount) return i + 1;
+  const fieldCount = showSeconds ? 3 : 2;
+  let pos = 0;
+  let remaining = digitCount;
+  for (let f = 0; f < fieldCount; f += 1) {
+    if (f > 0) pos += 1; // ":" separator
+    const value = fields[f] ?? "";
+    const typed = value.length;
+    if (remaining > typed) {
+      pos += 2; // caret is past this whole 2-char slot
+      remaining -= typed;
+      continue;
     }
+    // In-progress fields render left-aligned ("d-"); completed/zero-padded fields right-aligned
+    // ("09"), so a padded field's typed digits sit in its rightmost columns.
+    const isInProgress = typed === 1 && Number(value) <= FIELD_FIRST_DIGIT_MAX[f];
+    pos += isInProgress ? remaining : 2 - typed + remaining;
+    return pos;
   }
-  return masked.length;
+  return pos;
 }
 
 export function dateToTimeParts(date: Date, { utc }: TimeOptions = {}): TimeParts {

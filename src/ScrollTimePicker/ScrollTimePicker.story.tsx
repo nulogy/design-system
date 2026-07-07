@@ -145,6 +145,31 @@ export const TypingKeepsCaretPosition = {
   },
 };
 
+// B1c — backspacing a digit is field-local: it blanks that digit's slot and leaves the other
+// field untouched, instead of collapsing every digit into one stream and re-flowing it.
+export const BackspaceIsFieldLocal = {
+  render: () => <ScrollTimePicker labelText="Time" onChange={fn()} onInputChange={fn()} />,
+  name: "backspace is field-local",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    const field = canvas.getByTestId("scroll-time-picker-input") as HTMLInputElement;
+    await step("fill the field", async () => {
+      await userEvent.type(field, "1530");
+      await expect(field).toHaveValue("15:30");
+    });
+    await step("cursor after the hours ones-digit, Backspace blanks only that digit", async () => {
+      // Caret between "5" and ":", then Backspace: "15:30" -> "1-:30", minutes untouched.
+      field.setSelectionRange(2, 2);
+      await userEvent.keyboard("{Backspace}");
+      await expect(field).toHaveValue("1-:30");
+    });
+    await step("committing keeps the digit in its column: 1- reads as 10, not 01", async () => {
+      await userEvent.tab();
+      await expect(field).toHaveValue("10:30");
+    });
+  },
+};
+
 // B2 — blur commits and normalizes the partial input; onChange gets the normalized value.
 const b2OnChange = fn();
 export const BlurCommits = {

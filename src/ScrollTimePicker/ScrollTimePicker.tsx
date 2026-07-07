@@ -22,19 +22,19 @@ import {
   buildHourOptions,
   buildMinuteOptions,
   buildSecondOptions,
-  caretIndexAfterDigits,
+  caretIndexForTypedDigits,
   composeValueFromIndices,
   countDigits,
   dateToTimeParts,
-  digitsFromRaw,
+  fieldsFromRaw,
   formatTime,
   maskPlaceholder,
   normalizeValueProp,
   parseInput,
+  renderFields,
   resolveInitialIndices,
   type TimeIndices,
   type TimeOptions,
-  timeWithSeparator,
 } from "./ScrollTimePicker.utils";
 
 export interface ScrollTimePickerProps extends SpaceProps {
@@ -221,9 +221,9 @@ const ScrollTimePicker = forwardRef<HTMLInputElement, ScrollTimePickerProps>(
       const caret = event.currentTarget.selectionStart ?? rawValue.length;
       const digitsBeforeCaret = countDigits(rawValue.slice(0, caret));
 
-      const digits = digitsFromRaw(rawValue, timeOptions);
-      const masked = digits === "" ? "" : timeWithSeparator(digits, timeOptions);
-      pendingCaretRef.current = caretIndexAfterDigits(masked, digitsBeforeCaret);
+      const fields = fieldsFromRaw(rawValue, timeOptions);
+      const masked = fields.every((field) => field === "") ? "" : renderFields(fields, timeOptions);
+      pendingCaretRef.current = caretIndexForTypedDigits(fields, digitsBeforeCaret, timeOptions);
       setRawInput(masked);
       onInputChange?.(masked);
     };

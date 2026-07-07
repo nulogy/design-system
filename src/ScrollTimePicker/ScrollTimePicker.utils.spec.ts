@@ -4,13 +4,14 @@ import {
   buildHourOptions,
   buildMinuteOptions,
   buildSecondOptions,
-  caretIndexAfterDigits,
+  caretIndexForTypedDigits,
   clampIndex,
   composeValueFromIndices,
   countDigits,
   dateToTimeParts,
   digitsFromRaw,
   fieldsFromDigitStream,
+  fieldsFromRaw,
   formatTime,
   indexToScrollTop,
   indexToValue,
@@ -22,9 +23,9 @@ import {
   parseInput,
   parseTime,
   prevIndex,
+  renderFields,
   resolveInitialIndices,
   scrollTopToIndex,
-  timeWithSeparator,
   valueToIndex,
   wrapIndex,
 } from "./ScrollTimePicker.utils";
@@ -73,6 +74,11 @@ describe("parseInput (forgiving)", () => {
   });
   it("accepts single-digit fields", () => {
     expect(parseInput("14:5", { showSeconds: false })).toEqual({ hour: 14, minute: 5, second: 0 });
+  });
+  it("reads a dash as the empty digit in its own column", () => {
+    // "1-" is a filled tens column with an empty ones column, so it reads as 10, not 01.
+    expect(parseInput("1-:30", { showSeconds: false })).toEqual({ hour: 10, minute: 30, second: 0 });
+    expect(parseInput("1-:--", { showSeconds: false })).toEqual({ hour: 10, minute: 0, second: 0 });
   });
   it("clamps out-of-range fields", () => {
     expect(parseInput("99:99", { showSeconds: false })).toEqual({ hour: 23, minute: 59, second: 0 });
@@ -163,41 +169,41 @@ describe("fieldsFromDigitStream", () => {
   });
 });
 
-describe("timeWithSeparator", () => {
-  it("renders the empty mask", () => {
-    expect(timeWithSeparator("", { showSeconds: false })).toBe("--:--");
-    expect(timeWithSeparator("", { showSeconds: true })).toBe("--:--:--");
+describe("fieldsFromRaw", () => {
+  it("greedily flows a separator-less digit run across fields", () => {
+    expect(fieldsFromRaw("930", { showSeconds: false })).toEqual(["9", "30"]);
+    expect(fieldsFromRaw("1430", { showSeconds: false })).toEqual(["14", "30"]);
   });
-  it("zero-pads a complete single-digit hour", () => {
-    expect(timeWithSeparator("9", { showSeconds: false })).toBe("09:--");
-    expect(timeWithSeparator("3", { showSeconds: false })).toBe("03:--");
+  it("keeps each field's digits in place when a separator delimits them", () => {
+    // Backspacing the "5" out of "15:30" leaves "1:30" — the hour keeps its lone "1".
+    expect(fieldsFromRaw("1:30", { showSeconds: false })).toEqual(["1", "30"]);
+    expect(fieldsFromRaw("15:30", { showSeconds: false })).toEqual(["15", "30"]);
   });
-  it("shows an in-progress single tens digit with a trailing dash", () => {
-    expect(timeWithSeparator("1", { showSeconds: false })).toBe("1-:--");
-    expect(timeWithSeparator("2", { showSeconds: false })).toBe("2-:--");
+  it("cascades an overfull field's overflow into the next field", () => {
+    // Inserting "9" into "12:34" yields the raw "192:34"; the extra digit flows rightward.
+    expect(fieldsFromRaw("192:34", { showSeconds: false })).toEqual(["19", "23"]);
   });
-  it("renders a completed two-digit hour", () => {
-    expect(timeWithSeparator("12", { showSeconds: false })).toBe("12:--");
-    expect(timeWithSeparator("14", { showSeconds: false })).toBe("14:--");
+  it("pads out missing trailing fields with empty strings", () => {
+    expect(fieldsFromRaw("1:", { showSeconds: false })).toEqual(["1", ""]);
+    expect(fieldsFromRaw("12:34", { showSeconds: true })).toEqual(["12", "34", ""]);
   });
-  it("fills minutes after a high leading hour digit", () => {
-    expect(timeWithSeparator("93", { showSeconds: false })).toBe("09:3-");
-    expect(timeWithSeparator("930", { showSeconds: false })).toBe("09:30");
+});
+
+describe("renderFields", () => {
+  it("renders empty fields as placeholders", () => {
+    expect(renderFields(["", ""], { showSeconds: false })).toBe("--:--");
+    expect(renderFields([], { showSeconds: true })).toBe("--:--:--");
   });
-  it("renders a full HH:mm", () => {
-    expect(timeWithSeparator("1430", { showSeconds: false })).toBe("14:30");
+  it("shows a lone tens-eligible digit with a trailing dash in any field", () => {
+    expect(renderFields(["1", "30"], { showSeconds: false })).toBe("1-:30");
+    expect(renderFields(["12", "3"], { showSeconds: false })).toBe("12:3-");
   });
-  it("truncates digits beyond the field count", () => {
-    expect(timeWithSeparator("123456", { showSeconds: false })).toBe("12:34");
+  it("zero-pads a lone digit that cannot take a partner", () => {
+    expect(renderFields(["9", "30"], { showSeconds: false })).toBe("09:30");
   });
-  it("renders with seconds", () => {
-    expect(timeWithSeparator("1", { showSeconds: true })).toBe("1-:--:--");
-    expect(timeWithSeparator("9", { showSeconds: true })).toBe("09:--:--");
-    expect(timeWithSeparator("010203", { showSeconds: true })).toBe("01:02:03");
-    expect(timeWithSeparator("120305", { showSeconds: true })).toBe("12:03:05");
-  });
-  it("defaults to no seconds when options are omitted", () => {
-    expect(timeWithSeparator("1430")).toBe("14:30");
+  it("renders completed fields as-is", () => {
+    expect(renderFields(["15", "30"], { showSeconds: false })).toBe("15:30");
+    expect(renderFields(["01", "02", "03"], { showSeconds: true })).toBe("01:02:03");
   });
 });
 
@@ -211,23 +217,28 @@ describe("countDigits", () => {
   });
 });
 
-describe("caretIndexAfterDigits", () => {
+describe("caretIndexForTypedDigits", () => {
   it("returns 0 when no digits precede the caret", () => {
-    expect(caretIndexAfterDigits("12:34", 0)).toBe(0);
+    expect(caretIndexForTypedDigits(["12", "34"], 0)).toBe(0);
   });
-  it("returns the index just after the Nth digit", () => {
-    expect(caretIndexAfterDigits("12:34", 1)).toBe(1); // after "1"
-    expect(caretIndexAfterDigits("12:34", 2)).toBe(2); // after "12", before ":"
-    expect(caretIndexAfterDigits("12:34", 3)).toBe(4); // after "3" (skips ":")
-    expect(caretIndexAfterDigits("12:34", 4)).toBe(5); // after "4"
+  it("returns the index just after the Nth typed digit", () => {
+    expect(caretIndexForTypedDigits(["12", "34"], 1)).toBe(1); // after "1"
+    expect(caretIndexForTypedDigits(["12", "34"], 2)).toBe(2); // after "12", before ":"
+    expect(caretIndexForTypedDigits(["12", "34"], 3)).toBe(4); // after "3" (past ":")
+    expect(caretIndexForTypedDigits(["12", "34"], 4)).toBe(5); // after "4"
   });
-  it("skips separators and placeholders while counting", () => {
-    expect(caretIndexAfterDigits("1-:--", 1)).toBe(1);
-    expect(caretIndexAfterDigits("09:3-", 3)).toBe(4);
+  it("does not count render padding, so a padded field's caret lands after the typed digit", () => {
+    // "9" renders as "09"; its one typed digit sits in the ones column, so the caret is at index 2.
+    expect(caretIndexForTypedDigits(["9"], 1)).toBe(2);
+    // A single in-progress "1" renders "1-", so the caret sits between the "1" and the dash.
+    expect(caretIndexForTypedDigits(["1"], 1)).toBe(1);
   });
-  it("clamps to the end when there aren't that many digits", () => {
-    expect(caretIndexAfterDigits("12:34", 9)).toBe(5);
-    expect(caretIndexAfterDigits("", 3)).toBe(0);
+  it("walks past filled fields into a later in-progress field", () => {
+    expect(caretIndexForTypedDigits(["09", "3"], 3)).toBe(4); // "09:3-" -> after "3"
+  });
+  it("clamps to the end when there aren't that many typed digits", () => {
+    expect(caretIndexForTypedDigits(["12", "34"], 9)).toBe(5);
+    expect(caretIndexForTypedDigits([], 3)).toBe(5);
   });
 });
 
