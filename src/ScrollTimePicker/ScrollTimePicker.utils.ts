@@ -84,13 +84,13 @@ export function digitsFromRaw(raw: string, { showSeconds }: TimeOptions = {}): s
 
 // Greedily split a raw digit stream into up to `fieldCount` fields, taking two digits when the
 // leading digit could be a tens digit (per FIELD_FIRST_DIGIT_MAX) and another digit is present.
-export function fieldsFromDigits(digits: string, fieldCount: number): string[] {
+export function fieldsFromDigitStream(digits: string, fieldCount: number): string[] {
   const fields: string[] = [];
   let i = 0;
   while (i < digits.length && fields.length < fieldCount) {
-    const first = Number(digits[i]);
-    const canTakeTwo = first <= FIELD_FIRST_DIGIT_MAX[fields.length] && i + 1 < digits.length;
-    if (canTakeTwo) {
+    const leftDigit = Number(digits[i]);
+    const canHaveSecondDigit = leftDigit <= FIELD_FIRST_DIGIT_MAX[fields.length] && i + 1 < digits.length;
+    if (canHaveSecondDigit) {
       fields.push(digits.slice(i, i + 2));
       i += 2;
     } else {
@@ -103,9 +103,9 @@ export function fieldsFromDigits(digits: string, fieldCount: number): string[] {
 
 // Render the visible masked string from a raw digit stream. Completed fields are zero-padded;
 // the in-progress trailing field shows its digit followed by "-"; untyped slots show "--".
-export function buildMask(digits: string, { showSeconds }: TimeOptions = {}): string {
+export function timeWithSeparator(digits: string, { showSeconds }: TimeOptions = {}): string {
   const fieldCount = showSeconds ? 3 : 2;
-  const fields = fieldsFromDigits(digits, fieldCount);
+  const fields = fieldsFromDigitStream(digits, fieldCount);
   const slots: string[] = [];
   for (let f = 0; f < fieldCount; f += 1) {
     const value = fields[f];
@@ -113,9 +113,13 @@ export function buildMask(digits: string, { showSeconds }: TimeOptions = {}): st
       slots.push("--");
       continue;
     }
-    const isLast = f === fields.length - 1;
-    const canGrow = value.length === 1 && Number(value) <= FIELD_FIRST_DIGIT_MAX[f];
-    slots.push(isLast && canGrow ? `${value}-` : value.padStart(2, "0"));
+    const isLastField = f === fields.length - 1;
+    const canHaveSecondDigit = value.length === 1 && Number(value) <= FIELD_FIRST_DIGIT_MAX[f];
+    if (isLastField && canHaveSecondDigit) {
+      slots.push(`${value}-`);
+    } else {
+      slots.push(value.padStart(2, "0"));
+    }
   }
   return slots.join(":");
 }

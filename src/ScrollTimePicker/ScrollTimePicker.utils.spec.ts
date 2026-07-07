@@ -2,14 +2,13 @@ import { describe, expect, it } from "vitest";
 
 import {
   buildHourOptions,
-  buildMask,
   buildMinuteOptions,
   buildSecondOptions,
   clampIndex,
   composeValueFromIndices,
   dateToTimeParts,
   digitsFromRaw,
-  fieldsFromDigits,
+  fieldsFromDigitStream,
   formatTime,
   indexToScrollTop,
   indexToValue,
@@ -23,6 +22,7 @@ import {
   prevIndex,
   resolveInitialIndices,
   scrollTopToIndex,
+  timeWithSeparator,
   valueToIndex,
   wrapIndex,
 } from "./ScrollTimePicker.utils";
@@ -125,77 +125,77 @@ describe("digitsFromRaw", () => {
   });
 });
 
-describe("fieldsFromDigits", () => {
+describe("fieldsFromDigitStream", () => {
   it("returns no fields for an empty stream", () => {
-    expect(fieldsFromDigits("", 2)).toEqual([]);
+    expect(fieldsFromDigitStream("", 2)).toEqual([]);
   });
   it("keeps a lone leading tens-eligible digit as an in-progress single field", () => {
-    expect(fieldsFromDigits("1", 2)).toEqual(["1"]);
-    expect(fieldsFromDigits("2", 2)).toEqual(["2"]);
+    expect(fieldsFromDigitStream("1", 2)).toEqual(["1"]);
+    expect(fieldsFromDigitStream("2", 2)).toEqual(["2"]);
   });
   it("treats a leading digit above the tens max as a complete single field", () => {
-    expect(fieldsFromDigits("3", 2)).toEqual(["3"]);
-    expect(fieldsFromDigits("9", 2)).toEqual(["9"]);
+    expect(fieldsFromDigitStream("3", 2)).toEqual(["3"]);
+    expect(fieldsFromDigitStream("9", 2)).toEqual(["9"]);
   });
   it("takes two digits when the leading digit can be a tens digit", () => {
-    expect(fieldsFromDigits("12", 2)).toEqual(["12"]);
-    expect(fieldsFromDigits("14", 2)).toEqual(["14"]);
+    expect(fieldsFromDigitStream("12", 2)).toEqual(["12"]);
+    expect(fieldsFromDigitStream("14", 2)).toEqual(["14"]);
   });
   it("advances to the next field after a high leading hour digit", () => {
-    expect(fieldsFromDigits("93", 2)).toEqual(["9", "3"]);
-    expect(fieldsFromDigits("930", 2)).toEqual(["9", "30"]);
+    expect(fieldsFromDigitStream("93", 2)).toEqual(["9", "3"]);
+    expect(fieldsFromDigitStream("930", 2)).toEqual(["9", "30"]);
   });
   it("splits a full HHMM stream", () => {
-    expect(fieldsFromDigits("1430", 2)).toEqual(["14", "30"]);
+    expect(fieldsFromDigitStream("1430", 2)).toEqual(["14", "30"]);
   });
   it("uses the minute tens max (5) for the second field", () => {
-    expect(fieldsFromDigits("176", 2)).toEqual(["17", "6"]); // 6 > 5 => ones digit only
-    expect(fieldsFromDigits("1759", 2)).toEqual(["17", "59"]);
+    expect(fieldsFromDigitStream("176", 2)).toEqual(["17", "6"]); // 6 > 5 => ones digit only
+    expect(fieldsFromDigitStream("1759", 2)).toEqual(["17", "59"]);
   });
   it("stops once fieldCount fields are filled, ignoring extra digits", () => {
-    expect(fieldsFromDigits("12345", 2)).toEqual(["12", "34"]);
+    expect(fieldsFromDigitStream("12345", 2)).toEqual(["12", "34"]);
   });
   it("splits three fields when asked", () => {
-    expect(fieldsFromDigits("010203", 3)).toEqual(["01", "02", "03"]);
-    expect(fieldsFromDigits("120000", 3)).toEqual(["12", "00", "00"]);
+    expect(fieldsFromDigitStream("010203", 3)).toEqual(["01", "02", "03"]);
+    expect(fieldsFromDigitStream("120000", 3)).toEqual(["12", "00", "00"]);
   });
 });
 
-describe("buildMask", () => {
+describe("timeWithSeparator", () => {
   it("renders the empty mask", () => {
-    expect(buildMask("", { showSeconds: false })).toBe("--:--");
-    expect(buildMask("", { showSeconds: true })).toBe("--:--:--");
+    expect(timeWithSeparator("", { showSeconds: false })).toBe("--:--");
+    expect(timeWithSeparator("", { showSeconds: true })).toBe("--:--:--");
   });
   it("zero-pads a complete single-digit hour", () => {
-    expect(buildMask("9", { showSeconds: false })).toBe("09:--");
-    expect(buildMask("3", { showSeconds: false })).toBe("03:--");
+    expect(timeWithSeparator("9", { showSeconds: false })).toBe("09:--");
+    expect(timeWithSeparator("3", { showSeconds: false })).toBe("03:--");
   });
   it("shows an in-progress single tens digit with a trailing dash", () => {
-    expect(buildMask("1", { showSeconds: false })).toBe("1-:--");
-    expect(buildMask("2", { showSeconds: false })).toBe("2-:--");
+    expect(timeWithSeparator("1", { showSeconds: false })).toBe("1-:--");
+    expect(timeWithSeparator("2", { showSeconds: false })).toBe("2-:--");
   });
   it("renders a completed two-digit hour", () => {
-    expect(buildMask("12", { showSeconds: false })).toBe("12:--");
-    expect(buildMask("14", { showSeconds: false })).toBe("14:--");
+    expect(timeWithSeparator("12", { showSeconds: false })).toBe("12:--");
+    expect(timeWithSeparator("14", { showSeconds: false })).toBe("14:--");
   });
   it("fills minutes after a high leading hour digit", () => {
-    expect(buildMask("93", { showSeconds: false })).toBe("09:3-");
-    expect(buildMask("930", { showSeconds: false })).toBe("09:30");
+    expect(timeWithSeparator("93", { showSeconds: false })).toBe("09:3-");
+    expect(timeWithSeparator("930", { showSeconds: false })).toBe("09:30");
   });
   it("renders a full HH:mm", () => {
-    expect(buildMask("1430", { showSeconds: false })).toBe("14:30");
+    expect(timeWithSeparator("1430", { showSeconds: false })).toBe("14:30");
   });
   it("truncates digits beyond the field count", () => {
-    expect(buildMask("123456", { showSeconds: false })).toBe("12:34");
+    expect(timeWithSeparator("123456", { showSeconds: false })).toBe("12:34");
   });
   it("renders with seconds", () => {
-    expect(buildMask("1", { showSeconds: true })).toBe("1-:--:--");
-    expect(buildMask("9", { showSeconds: true })).toBe("09:--:--");
-    expect(buildMask("010203", { showSeconds: true })).toBe("01:02:03");
-    expect(buildMask("120305", { showSeconds: true })).toBe("12:03:05");
+    expect(timeWithSeparator("1", { showSeconds: true })).toBe("1-:--:--");
+    expect(timeWithSeparator("9", { showSeconds: true })).toBe("09:--:--");
+    expect(timeWithSeparator("010203", { showSeconds: true })).toBe("01:02:03");
+    expect(timeWithSeparator("120305", { showSeconds: true })).toBe("12:03:05");
   });
   it("defaults to no seconds when options are omitted", () => {
-    expect(buildMask("1430")).toBe("14:30");
+    expect(timeWithSeparator("1430")).toBe("14:30");
   });
 });
 

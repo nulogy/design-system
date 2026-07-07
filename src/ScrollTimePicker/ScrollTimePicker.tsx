@@ -20,7 +20,6 @@ import { InlineValidation } from "../Validation";
 import ScrollColumn, { CELL_HEIGHT, TOUCH_CELL_HEIGHT } from "./ScrollColumn";
 import {
   buildHourOptions,
-  buildMask,
   buildMinuteOptions,
   buildSecondOptions,
   composeValueFromIndices,
@@ -33,6 +32,7 @@ import {
   resolveInitialIndices,
   type TimeIndices,
   type TimeOptions,
+  timeWithSeparator,
 } from "./ScrollTimePicker.utils";
 
 export interface ScrollTimePickerProps extends SpaceProps {
@@ -209,7 +209,7 @@ const ScrollTimePicker = forwardRef<HTMLInputElement, ScrollTimePickerProps>(
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
       const digits = digitsFromRaw(event.currentTarget.value, timeOptions);
-      const masked = digits === "" ? "" : buildMask(digits, timeOptions);
+      const masked = digits === "" ? "" : timeWithSeparator(digits, timeOptions);
       setRawInput(masked);
       onInputChange?.(masked);
     };
