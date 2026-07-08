@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { combineDateAndTime, formatInstantForField, splitDateTime } from "./DateTimePicker.utils";
+import { combineDateAndTime, formatFieldValue, formatInstantForField, splitDateTime } from "./DateTimePicker.utils";
 
 describe("splitDateTime", () => {
   it("returns empty parts for undefined, null, or an invalid Date", () => {
@@ -76,6 +76,48 @@ describe("formatInstantForField", () => {
     const { dateForPicker, time } = splitDateTime(original, { utc: false });
     const emitted = combineDateAndTime(dateForPicker, time, { utc: false });
     expect(formatInstantForField(emitted, { utc: false })).toBe("2026-07-08T14:30:00.000");
+  });
+});
+
+describe("formatFieldValue", () => {
+  // Local `now` built with the local constructor, and a UTC `now` via Date.UTC, so each stays fixed
+  // regardless of the runner's timezone.
+  const localNow = new Date(2026, 0, 15, 12, 0);
+  const utcNow = new Date(Date.UTC(2026, 0, 15, 12, 0));
+
+  it("returns '' when neither date nor time is populated", () => {
+    expect(formatFieldValue(undefined, "", localNow, { utc: false })).toBe("");
+    expect(formatFieldValue(undefined, "garbage", localNow, { utc: false })).toBe("");
+  });
+
+  it("combines a populated date and time (local)", () => {
+    expect(formatFieldValue(new Date(2026, 6, 8), "09:30", localNow, { utc: false })).toBe("2026-07-08T09:30:00.000");
+  });
+
+  it("combines a populated date and time (utc)", () => {
+    expect(formatFieldValue(new Date(2026, 6, 8), "09:30", utcNow, { utc: true })).toBe("2026-07-08T09:30:00.000Z");
+  });
+
+  it("uses 00:00 when a date is set but the time is empty", () => {
+    expect(formatFieldValue(new Date(2026, 6, 8), "", localNow, { utc: false })).toBe("2026-07-08T00:00:00.000");
+    expect(formatFieldValue(new Date(2026, 6, 8), "", utcNow, { utc: true })).toBe("2026-07-08T00:00:00.000Z");
+  });
+
+  it("uses today's date when a time is set but the date is empty (local)", () => {
+    expect(formatFieldValue(undefined, "09:30", localNow, { utc: false })).toBe("2026-01-15T09:30:00.000");
+  });
+
+  it("uses today's UTC date when a time is set but the date is empty (utc)", () => {
+    expect(formatFieldValue(undefined, "09:30", utcNow, { utc: true })).toBe("2026-01-15T09:30:00.000Z");
+  });
+
+  it("respects showSeconds", () => {
+    expect(formatFieldValue(new Date(2026, 6, 8), "09:30:45", localNow, { utc: false })).toBe(
+      "2026-07-08T09:30:00.000",
+    );
+    expect(formatFieldValue(new Date(2026, 6, 8), "09:30:45", localNow, { utc: false, showSeconds: true })).toBe(
+      "2026-07-08T09:30:45.000",
+    );
   });
 });
 

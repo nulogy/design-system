@@ -11,7 +11,7 @@ import { type ComponentVariant, useComponentVariant } from "../NDSProvider/Compo
 import { ScrollTimePicker, type ScrollTimePickerProps } from "../ScrollTimePicker";
 import { getSubset, omitSubset } from "../utils/subset";
 import { InlineValidation } from "../Validation";
-import { combineDateAndTime, formatInstantForField, splitDateTime } from "./DateTimePicker.utils";
+import { combineDateAndTime, formatFieldValue, splitDateTime } from "./DateTimePicker.utils";
 
 export interface DateTimePickerProps extends SpaceProps {
   /** Controlled instant. */
@@ -26,10 +26,12 @@ export interface DateTimePickerProps extends SpaceProps {
   showSeconds?: boolean;
   disabled?: boolean;
   /**
-   * Opt into native form submission: renders a hidden input under this `name` carrying the emitted
-   * instant as an ISO 8601 string matching the displayed wall-clock — UTC (`…Z`, via `toISOString()`)
-   * when `utc`, or the local wall-clock with no zone suffix otherwise — or "" while no date is
-   * selected. Without a `name` the component is controlled-only and submits nothing natively.
+   * Opt into native form submission: renders a hidden input under this `name` carrying the instant
+   * as an ISO 8601 string matching the displayed wall-clock — UTC (`…Z`, via `toISOString()`) when
+   * `utc`, or the local wall-clock with no zone suffix otherwise. A partial selection is completed
+   * for submission: a time with no date uses today, a date with no time uses 00:00; the field is ""
+   * only when nothing is selected. Without a `name` the component is controlled-only and submits
+   * nothing natively.
    */
   name?: string;
   /** Optional label for the whole date+time group. */
@@ -119,10 +121,6 @@ const DateTimePicker = forwardRef<HTMLInputElement, DateTimePickerProps>(
       emit({ time: nextTime });
     };
 
-    // The same instant `emit` would send to `onChange`, derived for the hidden form input so native
-    // submission carries exactly what the parent sees. `undefined` (no date) serializes to "".
-    const emittedValue = combineDateAndTime(dateForPicker, time, { utc, showSeconds });
-
     return (
       <Field id={id} className={className} {...spaceProps} {...restProps}>
         <MaybeFieldLabel labelText={labelText}>
@@ -164,7 +162,7 @@ const DateTimePicker = forwardRef<HTMLInputElement, DateTimePickerProps>(
           <input
             type="hidden"
             name={name}
-            value={emittedValue ? formatInstantForField(emittedValue, { utc }) : ""}
+            value={formatFieldValue(dateForPicker, time, new Date(), { utc, showSeconds })}
             data-testid="date-time-picker-hidden-input"
           />
         )}

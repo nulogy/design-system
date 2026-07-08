@@ -290,6 +290,54 @@ export const NativeFormSubmissionLocal = {
   },
 };
 
+// A partial selection still submits a whole instant: a time with no date borrows today's calendar
+// day (and, symmetrically, a date with no time would submit 00:00 — see the utils specs).
+export const FillsInTodayWhenOnlyTimePicked = {
+  render: () => {
+    const [submitted, setSubmitted] = useState<string>("");
+    return (
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          const data = new FormData(e.currentTarget);
+          setSubmitted(String(data.get("startsAt")));
+        }}
+      >
+        <DateTimePicker labelText="Starts at (UTC)" name="startsAt" utc onChange={action("changed")} />
+        <button type="submit" data-testid="submit-partial">
+          Submit
+        </button>
+        <div data-testid="submitted-value-partial">{submitted || "none"}</div>
+      </form>
+    );
+  },
+  name: "fills in today's date when only a time is picked",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    const hidden = canvas.getByTestId("date-time-picker-hidden-input");
+    // Today's UTC calendar day, computed from behavior (not by re-calling the helper).
+    const pad = (n: number) => String(n).padStart(2, "0");
+    const now = new Date();
+    const todayUtc = `${now.getUTCFullYear()}-${pad(now.getUTCMonth() + 1)}-${pad(now.getUTCDate())}`;
+
+    await step("with nothing selected, the field is empty", async () => {
+      await expect(hidden).toHaveValue("");
+    });
+    await step("pick 09:30 without touching the date", async () => {
+      await userEvent.click(canvas.getByTestId("scroll-time-picker-open"));
+      await screen.findByTestId("scroll-time-picker-panel");
+      await userEvent.click(screen.getByTestId("scroll-time-cell-hour-09"));
+      await userEvent.click(screen.getByTestId("scroll-time-cell-minute-30"));
+    });
+    await step("the field submits today's date at the picked time", async () => {
+      await waitFor(() => expect(hidden).toHaveValue(`${todayUtc}T09:30:00.000Z`));
+      await expect(canvas.getByLabelText("select a date")).toHaveValue(""); // date field itself stays empty
+      await userEvent.click(canvas.getByTestId("submit-partial"));
+      await expect(canvas.getByTestId("submitted-value-partial")).toHaveTextContent(`${todayUtc}T09:30:00.000Z`);
+    });
+  },
+};
+
 export const Disabled = {
   render: () => (
     <DateTimePicker labelText="Disabled" value={new Date(Date.UTC(2026, 6, 8, 14, 30))} utc disabled onChange={fn()} />

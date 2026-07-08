@@ -63,3 +63,24 @@ export function formatInstantForField(date: Date, { utc }: TimeOptions = {}): st
   const timePart = `${pad(date.getHours())}:${pad(date.getMinutes())}:${pad(date.getSeconds())}.${pad(date.getMilliseconds(), 3)}`;
   return `${datePart}T${timePart}`;
 }
+
+// Build the value for the hidden form field, completing a partial selection so it still submits a
+// whole instant:
+//   • a valid time with no date borrows today's calendar day (in the active zone);
+//   • a date with no (or an unparseable) time reads as 00:00 — combineDateAndTime's existing rule.
+// Returns "" only when neither half is populated. `now` is injected so the function stays pure.
+export function formatFieldValue(
+  dateForPicker: Date | undefined,
+  time: string,
+  now: Date,
+  { utc, showSeconds }: TimeOptions = {},
+): string {
+  const hasDate = isValidDate(dateForPicker);
+  const hasTime = parseTime(time) != null;
+  if (!hasDate && !hasTime) return "";
+
+  // Today as a picker day: mirrors splitDateTime's proxy so UTC mode uses today's UTC calendar day.
+  const today = utc ? new Date(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()) : now;
+  const instant = combineDateAndTime(hasDate ? dateForPicker : today, time, { utc, showSeconds });
+  return instant ? formatInstantForField(instant, { utc }) : "";
+}
