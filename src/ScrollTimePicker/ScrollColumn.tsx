@@ -3,8 +3,8 @@ import { forwardRef, useEffect, useRef } from "react";
 import { styled } from "styled-components";
 import { indexToScrollTop, nextIndex, pad2, prevIndex, scrollTopToIndex } from "./ScrollTimePicker.utils";
 
-export const CELL_HEIGHT = 36;
-export const TOUCH_CELL_HEIGHT = 44;
+export const CELL_HEIGHT = 32;
+export const TOUCH_CELL_HEIGHT = 40;
 export const VISIBLE_CELLS = 5; // odd, so exactly one cell sits in the centre band
 const SCROLL_SETTLE_MS = 100; // debounce before resolving a scrolled-to index
 
@@ -25,7 +25,7 @@ export interface ScrollColumnProps {
 const ColumnList = styled.div<{ $cellHeight: number }>(({ theme, $cellHeight }) => ({
   position: "relative",
   height: `${VISIBLE_CELLS * $cellHeight}px`,
-  width: theme.space.x5,
+  width: theme.space.x4,
   overflowY: "auto",
   scrollSnapType: "y mandatory",
   outline: "none",

@@ -92,7 +92,7 @@ const Panel = styled.div(({ theme }) => ({
   border: `1px solid ${theme.colors.grey}`,
   borderRadius: theme.radii.medium,
   boxShadow: theme.shadows.medium,
-  padding: theme.space.x1,
+  padding: theme.space.half,
   zIndex: theme.zIndices.overlay,
 }));
 
@@ -105,7 +105,7 @@ const Columns = styled.div(({ theme }) => ({
   zIndex: 1,
   display: "flex",
   alignItems: "stretch",
-  gap: theme.space.half,
+  gap: theme.space.x0_25,
 }));
 
 const Separator = styled.div(({ theme }) => ({
