@@ -112,6 +112,45 @@ export const Controlled = {
   },
 };
 
+// Regression: locally clearing the time field must not permanently desync it from a controlled
+// value. After a clear, re-applying the parent value — even the SAME value — must still show it.
+export const ReSyncsTimeAfterLocalClear = {
+  render: () => {
+    const [value, setValue] = useState<Date | undefined>(new Date(Date.UTC(2026, 6, 8, 9, 0)));
+    return (
+      <>
+        <DateTimePicker labelText="Controlled (UTC)" value={value} utc onChange={setValue} />
+        <button
+          type="button"
+          data-testid="set-external"
+          onClick={() => setValue(new Date(Date.UTC(2026, 11, 25, 18, 45)))}
+        >
+          set 2026-12-25 18:45 UTC
+        </button>
+      </>
+    );
+  },
+  name: "re-syncs the time field after a local clear",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    const timeInput = canvas.getByTestId("scroll-time-picker-input");
+    await step("set the parent to 18:45", async () => {
+      await userEvent.click(canvas.getByTestId("set-external"));
+      await waitFor(() => expect(timeInput).toHaveValue("18:45"));
+    });
+    await step("clearing the time field snaps back to the controlled value on blur", async () => {
+      await userEvent.clear(timeInput);
+      await userEvent.tab();
+      await expect(timeInput).toHaveValue("18:45");
+    });
+    await step("re-applying the same parent value keeps both fields in sync", async () => {
+      await userEvent.click(canvas.getByTestId("set-external"));
+      await expect(canvas.getByLabelText("select a date")).toHaveValue("2026-Dec-25");
+      await expect(timeInput).toHaveValue("18:45");
+    });
+  },
+};
+
 // An inline onChange that also setStates must not loop (mirrors ScrollTimePicker's guard).
 const inlineCallbackSpy = fn();
 export const DoesNotLoopWithInlineCallback = {

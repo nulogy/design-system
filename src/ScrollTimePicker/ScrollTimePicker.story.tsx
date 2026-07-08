@@ -493,6 +493,39 @@ export const Controlled = {
   },
 };
 
+// Controlled invariant: the display always reflects the value prop. Clearing the field never
+// commits (an empty field emits no onChange), so on blur the display must snap back to the
+// controlled value rather than diverge to blank — otherwise re-applying the SAME value can't
+// restore it, because the sync effect only reacts to value *changes*. (Regression: DateTimePicker
+// controlled story — clear the time, then set the parent to the same value.)
+export const ControlledClearSnapsBack = {
+  render: () => {
+    const [value, setValue] = useState("18:45");
+    return (
+      <>
+        <ScrollTimePicker labelText="Time" value={value} onChange={setValue} />
+        <button type="button" data-testid="set-same" onClick={() => setValue("18:45")}>
+          set 18:45 (same)
+        </button>
+      </>
+    );
+  },
+  name: "controlled clear snaps back to the value prop",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    const field = canvas.getByTestId("scroll-time-picker-input");
+    await step("clearing then blurring snaps the display back to the controlled value", async () => {
+      await userEvent.clear(field);
+      await userEvent.tab();
+      await expect(field).toHaveValue("18:45");
+    });
+    await step("re-applying the same value keeps the display correct", async () => {
+      await userEvent.click(canvas.getByTestId("set-same"));
+      await expect(field).toHaveValue("18:45");
+    });
+  },
+};
+
 // A Date value with utc reads the UTC wall-clock time.
 export const WithDateValueUTC = {
   render: () => (

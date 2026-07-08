@@ -213,10 +213,16 @@ const ScrollTimePicker = forwardRef<HTMLInputElement, ScrollTimePickerProps>(
       const parts = parseInput(rawInput, timeOptions);
       if (parts) {
         commitValue(formatTime(parts, timeOptions));
+      } else if (isControlled) {
+        // Controlled: the display must reflect the value prop. An empty/unparseable field never
+        // commits (no onChange fires), so rather than let the display diverge to blank — where a
+        // later re-apply of the *same* value can't restore it (the sync effect only reacts to value
+        // *changes*) — snap the display back to the controlled value.
+        setRawInput(committedValue);
       } else {
         setRawInput("");
       }
-    }, [rawInput, commitValue, timeOptions]);
+    }, [rawInput, commitValue, timeOptions, isControlled, committedValue]);
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
       const rawValue = event.currentTarget.value;
