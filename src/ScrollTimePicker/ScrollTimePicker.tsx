@@ -47,6 +47,9 @@ export interface ScrollTimePickerProps extends SpaceProps {
   disabled?: boolean;
   labelText?: string;
   placeholder?: string;
+  // Force the error (red) styling without an inline message — used by composing components
+  // (e.g. DateTimePicker) that render a single shared validation message for the whole group.
+  error?: boolean;
   errorMessage?: string;
   errorList?: string[];
   "aria-label"?: string;
@@ -140,6 +143,7 @@ const ScrollTimePicker = forwardRef<HTMLInputElement, ScrollTimePickerProps>(
       disabled = false,
       labelText,
       placeholder,
+      error = false,
       errorMessage,
       errorList,
       "aria-label": ariaLabel,
@@ -184,7 +188,7 @@ const ScrollTimePicker = forwardRef<HTMLInputElement, ScrollTimePickerProps>(
       [forwardedRef],
     );
 
-    const hasError = !!(errorMessage || errorList);
+    const hasError = !!(error || errorMessage || errorList);
     const panelId = id ? `${id}-panel` : undefined;
 
     const hourOptions = useMemo(() => buildHourOptions(), []);

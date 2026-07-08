@@ -24,6 +24,7 @@ export { Card, CardSet } from "./Card";
 export { Checkbox, CheckboxGroup } from "./Checkbox";
 export { DatePicker, MonthPicker, WeekPicker } from "./DatePickers";
 export { DateRange } from "./DateRange";
+export { DateTimePicker, type DateTimePickerProps } from "./DateTimePicker";
 export type { DescriptionListProps } from "./DescriptionList";
 export {
   DescriptionDetails,

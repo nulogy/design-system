@@ -111,26 +111,39 @@ export function combineDateAndTime(dateForPicker, time, { utc, showSeconds } = {
 
 ## Execution checklist
 
-- [ ] `src/DateTimePicker/DateTimePicker.utils.ts` — `splitDateTime`, `combineDateAndTime`.
-- [ ] `src/DateTimePicker/DateTimePicker.utils.spec.ts` — Vitest (`import from "vitest"`):
-  - [ ] UTC near-midnight: `splitDateTime(new Date(Date.UTC(2020,0,1,23,30)), {utc:true})` → day `2020-01-01`, `time === "23:30"`.
-  - [ ] UTC round-trip: `combineDateAndTime(split.dateForPicker, split.time, {utc:true})` === original instant.
-  - [ ] Local round-trip (`utc:false`).
-  - [ ] `showSeconds` on/off; missing time → `00:00`; `undefined`/invalid `Date` inputs.
-- [ ] `src/DateTimePicker/DateTimePicker.tsx` — component per above.
-- [ ] `src/DateTimePicker/DateTimePicker.story.tsx` — `title: "Components/DateTimePicker"`; import from
+- [x] `src/DateTimePicker/DateTimePicker.utils.ts` — `splitDateTime`, `combineDateAndTime`.
+- [x] `src/DateTimePicker/DateTimePicker.utils.spec.ts` — Vitest (`import from "vitest"`):
+  - [x] UTC near-midnight: `splitDateTime(new Date(Date.UTC(2020,0,1,23,30)), {utc:true})` → day `2020-01-01`, `time === "23:30"`.
+  - [x] UTC round-trip: `combineDateAndTime(split.dateForPicker, split.time, {utc:true})` === original instant.
+  - [x] Local round-trip (`utc:false`).
+  - [x] `showSeconds` on/off; missing time → `00:00`; `undefined`/invalid `Date` inputs.
+- [x] `src/DateTimePicker/DateTimePicker.tsx` — component per above.
+- [x] `src/DateTimePicker/DateTimePicker.story.tsx` — `title: "Components/DateTimePicker"`; import from
       `storybook/test`; `action`/`fn` for callbacks. Portal selectors: calendar via
       `document.querySelector(".react-datepicker-popper")`/`.react-datepicker__day--0NN`; time via
       `screen` + testids `scroll-time-picker-*`. Stories:
-  - [ ] `Default` (local) + `UTC`.
-  - [ ] `WithValue` — `value={new Date(Date.UTC(2026,6,8,14,30))} utc` → date shows `2026-Jul-08`, time `14:30`.
-  - [ ] `EmitsMergedDate` — pick day + time; `onChange` spy last called with correct single UTC `Date`.
-  - [ ] `Controlled` — parent `useState` + external "set" button re-syncs both fields.
-  - [ ] `DoesNotLoopWithInlineCallback` — inline `onChange={setValue}` doesn't loop (mirror ScrollTimePicker B22).
-  - [ ] `Disabled`, `WithError`, `WithSeconds`, `Touch` (`variant="touch"`), `RTL`.
-- [ ] `src/DateTimePicker/index.ts` — barrel: `export { default as DateTimePicker } ...` + `export type { DateTimePickerProps } ...`.
-- [ ] `src/index.ts` — add after `DateRange` line (~26): `export { DateTimePicker, type DateTimePickerProps } from "./DateTimePicker";`
-- [ ] (Optional) `src/ScrollTimePicker/ScrollTimePicker.tsx` — optional `error?: boolean` passthrough.
+  - [x] `Default` (local) + `UTC`.
+  - [x] `WithValue` — `value={new Date(Date.UTC(2026,6,8,14,30))} utc` → date shows `2026-Jul-08`, time `14:30`.
+  - [x] `EmitsMergedDate` — pick day + time; `onChange` spy last called with correct single UTC `Date`.
+  - [x] `Controlled` — parent `useState` + external "set" button re-syncs both fields.
+  - [x] `DoesNotLoopWithInlineCallback` — inline `onChange={setValue}` doesn't loop (mirror ScrollTimePicker B22).
+  - [x] `Disabled`, `WithError`, `WithSeconds`, `Touch` (`variant="touch"`), `RTL`.
+- [x] `src/DateTimePicker/index.ts` — barrel: `export { default as DateTimePicker } ...` + `export type { DateTimePickerProps } ...`.
+- [x] `src/index.ts` — add after `DateRange` line (~26): `export { DateTimePicker, type DateTimePickerProps } from "./DateTimePicker";`
+- [x] `src/ScrollTimePicker/ScrollTimePicker.tsx` — added optional `error?: boolean` passthrough (OR'd into `hasError`).
+
+### Deviations from plan
+
+- **i18n `"select a date"`**: the plan assumed this key already lived in every `locales/*.json`. It does
+  **not** — only `"select a time"` / `"select a start date"` do. `DatePickerInput` already references
+  `t("select a date")` and relies on i18next's missing-key fallback (returns the literal lowercase
+  `"select a date"`), which is what the existing DatePicker/MonthPicker/WeekPicker story tests query by
+  `getByLabelText("select a date")`. Adding the key with proper Title-case would have changed that
+  rendered string and broken ~11 assertions across 3 unrelated components. So the key was **not** added;
+  the date field just inherits DatePicker's existing default aria-label. Adding the translated key +
+  updating those tests is a reasonable follow-up but out of scope for this spike.
+- **`combineDateAndTime` signature**: shipped as `combineDateAndTime(dateForPicker, time, { utc, showSeconds })`
+  (positional data values, options-object for the boolean flags), matching the ScrollTimePicker util convention.
 
 ## Verify
 
