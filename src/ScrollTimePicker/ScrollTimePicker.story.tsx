@@ -25,7 +25,7 @@ export const WithValue = {
   name: "with value",
 };
 
-// B24 — on open, each column is scrolled so its selected value sits under the highlight band.
+// On open, each column is scrolled so its selected value sits under the highlight band.
 // Regression: the first centring fires while the floating panel is still visibility:hidden, and a
 // smooth scroll on a hidden element is dropped — leaving every column pinned at index 0 ("00").
 export const CentersSelectionOnOpen = {
@@ -105,10 +105,10 @@ export const UsingRefToControlFocus = {
   },
 };
 
-// B1 — typing fills the mask, keeps the colon, and fires onInputChange per keystroke; no panel.
-const b1OnInputChange = fn();
+// Typing fills the mask, keeps the colon, and fires onInputChange per keystroke; no panel.
+const typingOnInputChange = fn();
 export const TypingKeepsColon = {
-  render: () => <ScrollTimePicker labelText="Time" onChange={fn()} onInputChange={b1OnInputChange} />,
+  render: () => <ScrollTimePicker labelText="Time" onChange={fn()} onInputChange={typingOnInputChange} />,
   name: "typing keeps the colon",
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
@@ -118,13 +118,13 @@ export const TypingKeepsColon = {
       await expect(field).toHaveValue("09:30");
     });
     await step("fires onInputChange without opening a panel", async () => {
-      await expect(b1OnInputChange).toHaveBeenCalled();
+      await expect(typingOnInputChange).toHaveBeenCalled();
       await expect(screen.queryByTestId("scroll-time-picker-panel")).not.toBeInTheDocument();
     });
   },
 };
 
-// B1b — editing mid-string keeps the caret where the user typed instead of jumping to the end.
+// Editing mid-string keeps the caret where the user typed instead of jumping to the end.
 export const TypingKeepsCaretPosition = {
   render: () => <ScrollTimePicker labelText="Time" onChange={fn()} onInputChange={fn()} />,
   name: "typing keeps the caret position",
@@ -145,7 +145,7 @@ export const TypingKeepsCaretPosition = {
   },
 };
 
-// B1c — backspacing a digit is field-local: it blanks that digit's slot and leaves the other
+// Backspacing a digit is field-local: it blanks that digit's slot and leaves the other
 // field untouched, instead of collapsing every digit into one stream and re-flowing it.
 export const BackspaceIsFieldLocal = {
   render: () => <ScrollTimePicker labelText="Time" onChange={fn()} onInputChange={fn()} />,
@@ -170,10 +170,10 @@ export const BackspaceIsFieldLocal = {
   },
 };
 
-// B2 — blur commits and normalizes the partial input; onChange gets the normalized value.
-const b2OnChange = fn();
+// Blur commits and normalizes the partial input; onChange gets the normalized value.
+const blurOnChange = fn();
 export const BlurCommits = {
-  render: () => <ScrollTimePicker labelText="Time" onChange={b2OnChange} />,
+  render: () => <ScrollTimePicker labelText="Time" onChange={blurOnChange} />,
   name: "blur commits and normalizes",
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
@@ -182,15 +182,15 @@ export const BlurCommits = {
       await userEvent.type(field, "9");
       await userEvent.tab();
       await expect(field).toHaveValue("09:00");
-      await expect(b2OnChange).toHaveBeenLastCalledWith("09:00");
+      await expect(blurOnChange).toHaveBeenLastCalledWith("09:00");
     });
   },
 };
 
-// B3 — Enter commits the typed value.
-const b3OnChange = fn();
+// Enter commits the typed value.
+const enterCommitsOnChange = fn();
 export const EnterCommits = {
-  render: () => <ScrollTimePicker labelText="Time" onChange={b3OnChange} />,
+  render: () => <ScrollTimePicker labelText="Time" onChange={enterCommitsOnChange} />,
   name: "enter commits",
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
@@ -199,12 +199,12 @@ export const EnterCommits = {
       await userEvent.type(field, "1430");
       await userEvent.keyboard("{Enter}");
       await expect(field).toHaveValue("14:30");
-      await expect(b3OnChange).toHaveBeenLastCalledWith("14:30");
+      await expect(enterCommitsOnChange).toHaveBeenLastCalledWith("14:30");
     });
   },
 };
 
-// B18 — disabled cannot open the panel or accept typing.
+// Disabled cannot open the panel or accept typing.
 export const Disabled = {
   render: () => <ScrollTimePicker labelText="Time" disabled onChange={fn()} />,
   name: "disabled",
@@ -220,10 +220,10 @@ export const Disabled = {
   },
 };
 
-// B4 — the clock button parses the partial input on open and seeds the dials.
-const b4OnChange = fn();
+// The clock button parses the partial input on open and seeds the dials.
+const clockOpenOnChange = fn();
 export const ClockOpensAndParses = {
-  render: () => <ScrollTimePicker labelText="Time" onChange={b4OnChange} />,
+  render: () => <ScrollTimePicker labelText="Time" onChange={clockOpenOnChange} />,
   name: "clock opens and parses on open",
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
@@ -241,7 +241,7 @@ export const ClockOpensAndParses = {
   },
 };
 
-// B5 — ArrowDown on the focused field opens the panel and moves focus to a listbox column.
+// ArrowDown on the focused field opens the panel and moves focus to a listbox column.
 export const ArrowDownOpens = {
   render: () => <ScrollTimePicker labelText="Time" onChange={fn()} />,
   name: "arrow down opens",
@@ -257,7 +257,7 @@ export const ArrowDownOpens = {
   },
 };
 
-// B6 — the field is read-only while the panel is open.
+// The field is read-only while the panel is open.
 export const ReadOnlyWhileOpen = {
   render: () => <ScrollTimePicker labelText="Time" defaultValue="10:00" onChange={fn()} />,
   name: "read-only while open",
@@ -274,10 +274,10 @@ export const ReadOnlyWhileOpen = {
   },
 };
 
-// B7 — opening an empty field seeds the dials to "now" but fires no onChange.
-const b7OnChange = fn();
+// Opening an empty field seeds the dials to "now" but fires no onChange.
+const emptyOpenOnChange = fn();
 export const EmptyOpenSeedsNow = {
-  render: () => <ScrollTimePicker labelText="Time" onChange={b7OnChange} />,
+  render: () => <ScrollTimePicker labelText="Time" onChange={emptyOpenOnChange} />,
   name: "empty open seeds now without onChange",
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
@@ -286,12 +286,12 @@ export const EmptyOpenSeedsNow = {
       await screen.findByTestId("scroll-time-picker-panel");
       const hourColumn = screen.getByTestId("scroll-time-column-hour");
       await expect(within(hourColumn).getAllByRole("option", { selected: true })).toHaveLength(1);
-      await expect(b7OnChange).not.toHaveBeenCalled();
+      await expect(emptyOpenOnChange).not.toHaveBeenCalled();
     });
   },
 };
 
-// B8 — clicking outside closes the panel.
+// Clicking outside closes the panel.
 export const OutsideClickCloses = {
   render: () => (
     <>
@@ -313,7 +313,7 @@ export const OutsideClickCloses = {
   },
 };
 
-// B9 — clicking the read-only field closes the panel back into type mode.
+// Clicking the read-only field closes the panel back into type mode.
 export const ClickFieldClosesToTypeMode = {
   render: () => <ScrollTimePicker labelText="Time" defaultValue="10:00" onChange={fn()} />,
   name: "clicking the field closes to type mode",
@@ -330,10 +330,10 @@ export const ClickFieldClosesToTypeMode = {
   },
 };
 
-// B10 — Escape reverts the draft to the value at open and returns focus to the field.
-const b10OnChange = fn();
+// Escape reverts the draft to the value at open and returns focus to the field.
+const escapeRevertsOnChange = fn();
 export const EscapeReverts = {
-  render: () => <ScrollTimePicker labelText="Time" defaultValue="10:00" onChange={b10OnChange} />,
+  render: () => <ScrollTimePicker labelText="Time" defaultValue="10:00" onChange={escapeRevertsOnChange} />,
   name: "escape reverts and refocuses",
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
@@ -352,10 +352,10 @@ export const EscapeReverts = {
   },
 };
 
-// B11 — clicking a cell commits the value and keeps the panel open.
-const b11OnChange = fn();
+// Clicking a cell commits the value and keeps the panel open.
+const clickCellOnChange = fn();
 export const ClickCellCommits = {
-  render: () => <ScrollTimePicker labelText="Time" defaultValue="00:00" onChange={b11OnChange} />,
+  render: () => <ScrollTimePicker labelText="Time" defaultValue="00:00" onChange={clickCellOnChange} />,
   name: "clicking a cell commits and stays open",
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
@@ -367,15 +367,15 @@ export const ClickCellCommits = {
       await expect(screen.getByTestId("scroll-time-cell-hour-09")).toHaveAttribute("aria-selected", "true");
       await expect(panel).toBeInTheDocument();
       await expect(field).toHaveValue("09:00");
-      await expect(b11OnChange).toHaveBeenLastCalledWith("09:00");
+      await expect(clickCellOnChange).toHaveBeenLastCalledWith("09:00");
     });
   },
 };
 
-// B12 — ArrowUp wraps past the first option to the last.
-const b12OnChange = fn();
+// ArrowUp wraps past the first option to the last.
+const arrowWrapOnChange = fn();
 export const ArrowWrap = {
-  render: () => <ScrollTimePicker labelText="Time" defaultValue="00:00" onChange={b12OnChange} />,
+  render: () => <ScrollTimePicker labelText="Time" defaultValue="00:00" onChange={arrowWrapOnChange} />,
   name: "arrow up wraps",
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
@@ -388,12 +388,12 @@ export const ArrowWrap = {
       const hourColumn = screen.getByTestId("scroll-time-column-hour");
       await expect(hourColumn).toHaveAttribute("aria-activedescendant", "scroll-time-hour-23");
       await expect(screen.getByTestId("scroll-time-cell-hour-23")).toHaveAttribute("aria-selected", "true");
-      await expect(b12OnChange).toHaveBeenLastCalledWith("23:00");
+      await expect(arrowWrapOnChange).toHaveBeenLastCalledWith("23:00");
     });
   },
 };
 
-// B13 — Left/Right move focus between columns, no-op at the ends.
+// Left/Right move focus between columns, no-op at the ends.
 export const ArrowMovesColumns = {
   render: () => <ScrollTimePicker labelText="Time" defaultValue="00:00" onChange={fn()} />,
   name: "left/right move between columns",
@@ -411,10 +411,10 @@ export const ArrowMovesColumns = {
   },
 };
 
-// B14 — Home/End jump to the first/last option.
-const b14OnChange = fn();
+// Home/End jump to the first/last option.
+const homeEndOnChange = fn();
 export const HomeEnd = {
-  render: () => <ScrollTimePicker labelText="Time" defaultValue="00:00" onChange={b14OnChange} />,
+  render: () => <ScrollTimePicker labelText="Time" defaultValue="00:00" onChange={homeEndOnChange} />,
   name: "home and end",
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
@@ -424,18 +424,18 @@ export const HomeEnd = {
       await waitFor(() => expect(screen.getByTestId("scroll-time-column-hour")).toHaveFocus());
       await userEvent.keyboard("{End}");
       await expect(screen.getByTestId("scroll-time-cell-hour-23")).toHaveAttribute("aria-selected", "true");
-      await expect(b14OnChange).toHaveBeenLastCalledWith("23:00");
+      await expect(homeEndOnChange).toHaveBeenLastCalledWith("23:00");
       await userEvent.keyboard("{Home}");
       await expect(screen.getByTestId("scroll-time-cell-hour-00")).toHaveAttribute("aria-selected", "true");
-      await expect(b14OnChange).toHaveBeenLastCalledWith("00:00");
+      await expect(homeEndOnChange).toHaveBeenLastCalledWith("00:00");
     });
   },
 };
 
-// B15 — Enter commits and closes, returning focus to the field.
-const b15OnChange = fn();
+// Enter commits and closes, returning focus to the field.
+const enterClosesOnChange = fn();
 export const EnterCommitsAndCloses = {
-  render: () => <ScrollTimePicker labelText="Time" defaultValue="00:00" onChange={b15OnChange} />,
+  render: () => <ScrollTimePicker labelText="Time" defaultValue="00:00" onChange={enterClosesOnChange} />,
   name: "enter commits and closes the panel",
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
@@ -451,12 +451,12 @@ export const EnterCommitsAndCloses = {
       await waitFor(() => expect(screen.queryByTestId("scroll-time-picker-panel")).not.toBeInTheDocument());
       await expect(field).toHaveValue("00:01");
       await waitFor(() => expect(field).toHaveFocus());
-      await expect(b15OnChange).toHaveBeenLastCalledWith("00:01");
+      await expect(enterClosesOnChange).toHaveBeenLastCalledWith("00:01");
     });
   },
 };
 
-// B16 — controlled: a dial commit updates the parent, and an external value change re-selects.
+// Controlled: a dial commit updates the parent, and an external value change re-selects.
 export const Controlled = {
   render: () => {
     const [value, setValue] = useState("00:00");
@@ -493,7 +493,7 @@ export const Controlled = {
   },
 };
 
-// B17 — a Date value with utc reads the UTC wall-clock time.
+// A Date value with utc reads the UTC wall-clock time.
 export const WithDateValueUTC = {
   render: () => (
     <ScrollTimePicker labelText="Time" value={new Date(Date.UTC(2020, 0, 1, 23, 30))} utc onChange={fn()} />
@@ -512,7 +512,7 @@ export const WithDateValueUTC = {
   },
 };
 
-// B20 — the minute column always spans the full 00..59 range at step 1.
+// The minute column always spans the full 00..59 range at step 1.
 export const FullMinuteRange = {
   render: () => <ScrollTimePicker labelText="Time" value="09:32" onChange={fn()} />,
   name: "full minute range",
@@ -528,8 +528,8 @@ export const FullMinuteRange = {
   },
 };
 
-// B22 — an inline onChange that also setStates must not loop.
-const b22Spy = fn();
+// An inline onChange that also setStates must not loop.
+const inlineCallbackSpy = fn();
 export const DoesNotLoopWithInlineCallback = {
   render: () => {
     const [value, setValue] = useState("00:00");
@@ -539,7 +539,7 @@ export const DoesNotLoopWithInlineCallback = {
         labelText="Time"
         value={value}
         onChange={(next) => {
-          b22Spy(next);
+          inlineCallbackSpy(next);
           setValue(next);
           setTick((tick) => tick + 1);
         }}
@@ -553,19 +553,19 @@ export const DoesNotLoopWithInlineCallback = {
       await userEvent.click(canvas.getByTestId("scroll-time-picker-open"));
       await screen.findByTestId("scroll-time-picker-panel");
       await userEvent.click(screen.getByTestId("scroll-time-cell-hour-09"));
-      const before = b22Spy.mock.calls.length;
+      const before = inlineCallbackSpy.mock.calls.length;
       await new Promise((resolve) => setTimeout(resolve, 200));
-      const after = b22Spy.mock.calls.length;
+      const after = inlineCallbackSpy.mock.calls.length;
       // A loop would keep re-firing onChange in this quiet window; post-fix it stays put.
       expect(after - before).toBeLessThan(3);
     });
   },
 };
 
-// B21 — scrolling a column settles on the nearest cell and commits it.
-const b21OnChange = fn();
+// Scrolling a column settles on the nearest cell and commits it.
+const scrollSnapOnChange = fn();
 export const ScrollSnapSettles = {
-  render: () => <ScrollTimePicker labelText="Time" defaultValue="00:00" onChange={b21OnChange} />,
+  render: () => <ScrollTimePicker labelText="Time" defaultValue="00:00" onChange={scrollSnapOnChange} />,
   name: "scroll snap settles",
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
@@ -578,15 +578,15 @@ export const ScrollSnapSettles = {
       await waitFor(() =>
         expect(screen.getByTestId("scroll-time-cell-minute-05")).toHaveAttribute("aria-selected", "true"),
       );
-      await waitFor(() => expect(b21OnChange).toHaveBeenLastCalledWith("00:05"));
+      await waitFor(() => expect(scrollSnapOnChange).toHaveBeenLastCalledWith("00:05"));
     });
   },
 };
 
-// B19 — showSeconds adds a third column and a :ss field.
-const b19OnChange = fn();
+// showSeconds adds a third column and a :ss field.
+const withSecondsOnChange = fn();
 export const WithSeconds = {
-  render: () => <ScrollTimePicker labelText="Time" showSeconds onChange={b19OnChange} />,
+  render: () => <ScrollTimePicker labelText="Time" showSeconds onChange={withSecondsOnChange} />,
   name: "with seconds",
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
@@ -598,12 +598,12 @@ export const WithSeconds = {
       await expect(screen.getAllByRole("listbox")).toHaveLength(3);
       await userEvent.click(screen.getByTestId("scroll-time-cell-second-05"));
       await waitFor(() => expect(field.value).toMatch(/^\d{2}:\d{2}:05$/));
-      expect(b19OnChange.mock.calls.at(-1)?.[0]).toMatch(/^\d{2}:\d{2}:05$/);
+      expect(withSecondsOnChange.mock.calls.at(-1)?.[0]).toMatch(/^\d{2}:\d{2}:05$/);
     });
   },
 };
 
-// B23 — exactly one option is selected per column.
+// Exactly one option is selected per column.
 export const SingleSelectionPerColumn = {
   render: () => <ScrollTimePicker labelText="Time" defaultValue="09:30" onChange={fn()} />,
   name: "single selection per column",
