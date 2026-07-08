@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { combineDateAndTime, splitDateTime } from "./DateTimePicker.utils";
+import { combineDateAndTime, formatInstantForField, splitDateTime } from "./DateTimePicker.utils";
 
 describe("splitDateTime", () => {
   it("returns empty parts for undefined, null, or an invalid Date", () => {
@@ -52,6 +52,30 @@ describe("combineDateAndTime", () => {
     const day = new Date(2020, 0, 1);
     expect(combineDateAndTime(day, "08:07:06", { showSeconds: false }).getSeconds()).toBe(0);
     expect(combineDateAndTime(day, "08:07:06", { showSeconds: true }).getSeconds()).toBe(6);
+  });
+});
+
+describe("formatInstantForField", () => {
+  it("serializes as a UTC ISO string (…Z) in utc mode", () => {
+    expect(formatInstantForField(new Date(Date.UTC(2026, 6, 8, 14, 30)), { utc: true })).toBe(
+      "2026-07-08T14:30:00.000Z",
+    );
+  });
+
+  it("serializes the LOCAL wall-clock with no zone suffix in local mode", () => {
+    // Built with the local Date constructor, so the wall-clock digits are fixed in any timezone.
+    expect(formatInstantForField(new Date(2026, 6, 8, 14, 30), { utc: false })).toBe("2026-07-08T14:30:00.000");
+  });
+
+  it("zero-pads every field", () => {
+    expect(formatInstantForField(new Date(2026, 0, 3, 5, 6, 7), { utc: false })).toBe("2026-01-03T05:06:07.000");
+  });
+
+  it("round-trips through combineDateAndTime for the value the field submits (local)", () => {
+    const original = new Date(2026, 6, 8, 14, 30);
+    const { dateForPicker, time } = splitDateTime(original, { utc: false });
+    const emitted = combineDateAndTime(dateForPicker, time, { utc: false });
+    expect(formatInstantForField(emitted, { utc: false })).toBe("2026-07-08T14:30:00.000");
   });
 });
 

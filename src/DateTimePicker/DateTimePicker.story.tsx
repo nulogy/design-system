@@ -200,6 +200,96 @@ export const WithSeconds = {
   },
 };
 
+// With a `name`, the emitted instant is mirrored into a hidden input so a native <form> submits it
+// as a single ISO-8601 field — no separate date/time keys.
+export const NativeFormSubmission = {
+  render: () => {
+    const [submitted, setSubmitted] = useState<string>("");
+    return (
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          const data = new FormData(e.currentTarget);
+          setSubmitted(String(data.get("startsAt")));
+        }}
+      >
+        <DateTimePicker
+          labelText="Starts at (UTC)"
+          name="startsAt"
+          defaultValue={new Date(Date.UTC(2026, 6, 8, 14, 30))}
+          utc
+          onChange={action("changed")}
+        />
+        <button type="submit" data-testid="submit">
+          Submit
+        </button>
+        <div data-testid="submitted-value">{submitted || "none"}</div>
+      </form>
+    );
+  },
+  name: "submits a single field in a native form",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    await step("the hidden input carries the emitted instant as an ISO string", async () => {
+      await expect(canvas.getByTestId("date-time-picker-hidden-input")).toHaveValue("2026-07-08T14:30:00.000Z");
+    });
+    await step("FormData exposes it under a single `name` key", async () => {
+      await userEvent.click(canvas.getByTestId("submit"));
+      await expect(canvas.getByTestId("submitted-value")).toHaveTextContent("2026-07-08T14:30:00.000Z");
+    });
+  },
+};
+
+// Contrast with NativeFormSubmission (utc): the hidden input mirrors whichever wall-clock the fields
+// show. With `utc` off the emitted instant is serialized from its LOCAL components with no zone
+// suffix, so the field carries the literal local wall-clock (2026-07-08T14:30:00.000) — NOT that
+// instant shifted to UTC (which would read 18:30Z in a UTC-4 zone). The value is timezone-independent.
+export const NativeFormSubmissionLocal = {
+  render: () => {
+    const [submitted, setSubmitted] = useState<string>("");
+    return (
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          const data = new FormData(e.currentTarget);
+          setSubmitted(String(data.get("startsAt")));
+        }}
+      >
+        <DateTimePicker
+          labelText="Starts at (local)"
+          name="startsAt"
+          defaultValue={new Date(2026, 6, 8, 14, 30)}
+          onChange={action("changed")}
+        />
+        <button type="submit" data-testid="submit-local">
+          Submit
+        </button>
+        <div data-testid="submitted-value-local">{submitted || "none"}</div>
+      </form>
+    );
+  },
+  name: "submits the local wall-clock as an ISO string with no zone",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    // The local wall-clock digits are fixed regardless of the runner's zone, so this is not TZ-guarded.
+    const localWallClock = "2026-07-08T14:30:00.000";
+    await step("the fields show the picked wall-clock (14:30 on Jul 8, local)", async () => {
+      await expect(canvas.getByLabelText("select a date")).toHaveValue("2026-Jul-08");
+      await expect(canvas.getByTestId("scroll-time-picker-input")).toHaveValue("14:30");
+    });
+    await step("the hidden input carries that LOCAL wall-clock, with no zone suffix", async () => {
+      const hidden = canvas.getByTestId("date-time-picker-hidden-input");
+      await expect(hidden).toHaveValue(localWallClock);
+      // Not the UTC form: no trailing Z, and not shifted by the browser offset.
+      await expect(hidden).not.toHaveValue("2026-07-08T14:30:00.000Z");
+    });
+    await step("FormData exposes the same single field", async () => {
+      await userEvent.click(canvas.getByTestId("submit-local"));
+      await expect(canvas.getByTestId("submitted-value-local")).toHaveTextContent(localWallClock);
+    });
+  },
+};
+
 export const Disabled = {
   render: () => (
     <DateTimePicker labelText="Disabled" value={new Date(Date.UTC(2026, 6, 8, 14, 30))} utc disabled onChange={fn()} />

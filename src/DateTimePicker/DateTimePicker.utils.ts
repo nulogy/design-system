@@ -50,3 +50,16 @@ export function combineDateAndTime(
 
   return utc ? new Date(Date.UTC(y, m, d, hour, minute, s)) : new Date(y, m, d, hour, minute, s);
 }
+
+// Serialize the emitted instant for the hidden form input, matching whichever wall-clock the fields
+// show. In UTC mode this is the canonical `toISOString()` (a `…Z` string). In local mode we emit the
+// SAME ISO shape but from the instant's LOCAL components with no zone suffix — i.e. the local
+// wall-clock the user actually sees, NOT that instant shifted to UTC.
+export function formatInstantForField(date: Date, { utc }: TimeOptions = {}): string {
+  if (utc) return date.toISOString();
+
+  const pad = (value: number, length = 2) => String(value).padStart(length, "0");
+  const datePart = `${pad(date.getFullYear(), 4)}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
+  const timePart = `${pad(date.getHours())}:${pad(date.getMinutes())}:${pad(date.getSeconds())}.${pad(date.getMilliseconds(), 3)}`;
+  return `${datePart}T${timePart}`;
+}
