@@ -102,14 +102,17 @@ export const UsingRefToControlFocus = {
     const field = canvas.getByTestId("scroll-time-picker-input");
     await userEvent.click(canvas.getByTestId("focus-field"));
     await waitFor(() => expect(field).toHaveFocus());
+    // Focusing via ref also opens the panel (open-on-focus).
+    await expect(await screen.findByTestId("scroll-time-picker-panel")).toBeInTheDocument();
   },
 };
 
-// Typing fills the mask, keeps the colon, and fires onInputChange per keystroke; no panel.
+// Typing fills the mask, keeps the colon, and fires onInputChange per keystroke. The panel opened
+// on focus and stays open while typing (focus-driven redesign — panel and typing coexist).
 const typingOnInputChange = fn();
 export const TypingKeepsColon = {
   render: () => <ScrollTimePicker labelText="Time" onChange={fn()} onInputChange={typingOnInputChange} />,
-  name: "typing keeps the colon",
+  name: "typing keeps the colon and keeps the panel open",
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
     const field = canvas.getByTestId("scroll-time-picker-input");
@@ -117,9 +120,9 @@ export const TypingKeepsColon = {
       await userEvent.type(field, "930");
       await expect(field).toHaveValue("09:30");
     });
-    await step("fires onInputChange without opening a panel", async () => {
+    await step("fires onInputChange and keeps the panel open", async () => {
       await expect(typingOnInputChange).toHaveBeenCalled();
-      await expect(screen.queryByTestId("scroll-time-picker-panel")).not.toBeInTheDocument();
+      await expect(await screen.findByTestId("scroll-time-picker-panel")).toBeInTheDocument();
     });
   },
 };
@@ -195,11 +198,13 @@ export const EnterCommits = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
     const field = canvas.getByTestId("scroll-time-picker-input");
-    await step("typing a full time then Enter commits it", async () => {
+    await step("typing a full time then Enter commits it and closes the panel", async () => {
       await userEvent.type(field, "1430");
       await userEvent.keyboard("{Enter}");
       await expect(field).toHaveValue("14:30");
       await expect(enterCommitsOnChange).toHaveBeenLastCalledWith("14:30");
+      // Enter in the field now also closes the panel (the field keeps focus + stays editable).
+      await expect(screen.queryByTestId("scroll-time-picker-panel")).not.toBeInTheDocument();
     });
   },
 };
@@ -233,7 +238,10 @@ export const ClockOpensAndParses = {
       await userEvent.click(canvas.getByTestId("scroll-time-picker-open"));
       const panel = await screen.findByTestId("scroll-time-picker-panel");
       await expect(panel).toBeInTheDocument();
+      // Normalize-on-handoff: the explicit clock gesture commits the typed partial so the field
+      // matches the dials (plain focus never would). onChange fires on this deliberate action.
       await expect(field).toHaveValue("09:00");
+      await expect(clockOpenOnChange).toHaveBeenLastCalledWith("09:00");
       await expect(field).toHaveAttribute("readonly");
       await expect(screen.getByTestId("scroll-time-cell-hour-09")).toHaveAttribute("aria-selected", "true");
       await expect(screen.getByTestId("scroll-time-cell-minute-00")).toHaveAttribute("aria-selected", "true");
@@ -241,35 +249,38 @@ export const ClockOpensAndParses = {
   },
 };
 
-// ArrowDown on the focused field opens the panel and moves focus to a listbox column.
+// Focusing the field already opens the panel; ArrowDown then hands focus off to a listbox column.
 export const ArrowDownOpens = {
   render: () => <ScrollTimePicker labelText="Time" onChange={fn()} />,
-  name: "arrow down opens",
+  name: "arrow down moves focus into the columns",
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
     const field = canvas.getByTestId("scroll-time-picker-input");
-    await step("ArrowDown opens the panel and focuses a listbox", async () => {
+    await step("focus opens the panel; ArrowDown then focuses a listbox", async () => {
       await userEvent.click(field);
+      await screen.findByTestId("scroll-time-picker-panel"); // already open on focus, before ArrowDown
+      await expect(field).not.toHaveAttribute("readonly");
       await userEvent.keyboard("{ArrowDown}");
-      await screen.findByTestId("scroll-time-picker-panel");
       await waitFor(() => expect(document.activeElement).toHaveAttribute("role", "listbox"));
     });
   },
 };
 
-// The field is read-only while the panel is open.
-export const ReadOnlyWhileOpen = {
+// read-only now tracks "focus is in the columns," not "panel open." Entering the columns makes the
+// field read-only so arrow keys drive the dial instead of the text.
+export const ReadOnlyWhileColumnsFocused = {
   render: () => <ScrollTimePicker labelText="Time" defaultValue="10:00" onChange={fn()} />,
-  name: "read-only while open",
+  name: "read-only while focus is in the columns",
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
     const field = canvas.getByTestId("scroll-time-picker-input");
-    await step("typing into the field while open does nothing", async () => {
+    await step("entering the columns makes the field read-only and arrows drive the dial", async () => {
       await userEvent.click(canvas.getByTestId("scroll-time-picker-open"));
       await screen.findByTestId("scroll-time-picker-panel");
+      await waitFor(() => expect(document.activeElement).toHaveAttribute("role", "listbox"));
       await expect(field).toHaveAttribute("readonly");
-      await userEvent.type(field, "5").catch(() => {});
-      await expect(field).toHaveValue("10:00");
+      await userEvent.keyboard("{ArrowDown}");
+      await expect(screen.getByTestId("scroll-time-cell-hour-11")).toHaveAttribute("aria-selected", "true");
     });
   },
 };
@@ -313,19 +324,22 @@ export const OutsideClickCloses = {
   },
 };
 
-// Clicking the read-only field closes the panel back into type mode.
-export const ClickFieldClosesToTypeMode = {
+// A mouse round-trip from the columns back to the field re-enables typing while the panel stays
+// open (the panel and typing coexist; clicking the field no longer closes it).
+export const ClickFieldReturnsToEditable = {
   render: () => <ScrollTimePicker labelText="Time" defaultValue="10:00" onChange={fn()} />,
-  name: "clicking the field closes to type mode",
+  name: "clicking the field returns from columns to editable",
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
     const field = canvas.getByTestId("scroll-time-picker-input");
-    await step("clicking the field closes the panel and makes it editable", async () => {
-      await userEvent.click(canvas.getByTestId("scroll-time-picker-open"));
-      await screen.findByTestId("scroll-time-picker-panel");
+    await step("clicking the field while focus is in the columns re-enables typing, panel stays open", async () => {
+      await userEvent.click(canvas.getByTestId("scroll-time-picker-open")); // enterColumns
+      const panel = await screen.findByTestId("scroll-time-picker-panel");
+      await waitFor(() => expect(field).toHaveAttribute("readonly")); // region: columns
       await userEvent.click(field);
-      await waitFor(() => expect(screen.queryByTestId("scroll-time-picker-panel")).not.toBeInTheDocument());
-      await expect(field).not.toHaveAttribute("readonly");
+      await expect(panel).toBeInTheDocument(); // still open
+      await expect(field).not.toHaveAttribute("readonly"); // region: field
+      await expect(field).toHaveFocus();
     });
   },
 };
@@ -649,6 +663,113 @@ export const SingleSelectionPerColumn = {
       const minuteColumn = screen.getByTestId("scroll-time-column-minute");
       await expect(within(hourColumn).getAllByRole("option", { selected: true })).toHaveLength(1);
       await expect(within(minuteColumn).getAllByRole("option", { selected: true })).toHaveLength(1);
+    });
+  },
+};
+
+// Focus opens the panel while the field stays editable and focused (not moved into the columns).
+const focusOpensOnChange = fn();
+export const FocusOpensPanel = {
+  render: () => <ScrollTimePicker labelText="Time" onChange={focusOpensOnChange} />,
+  name: "focus opens the panel and keeps the field editable",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    const field = canvas.getByTestId("scroll-time-picker-input");
+    await step("clicking the field opens the panel; focus and editability stay in the field", async () => {
+      await userEvent.click(field);
+      await screen.findByTestId("scroll-time-picker-panel");
+      await expect(field).toHaveFocus();
+      await expect(field).not.toHaveAttribute("readonly");
+      await expect(document.activeElement).toBe(field); // focus stays in the field, not a listbox
+      await expect(focusOpensOnChange).not.toHaveBeenCalled();
+    });
+  },
+};
+
+// The sharpest proof the panel does NOT sync to typing: the dials seed once (on focus) and then
+// stay put while the field text changes.
+export const TypingKeepsPanelOpenDialsStale = {
+  render: () => <ScrollTimePicker labelText="Time" defaultValue="10:00" onChange={fn()} onInputChange={fn()} />,
+  name: "typing keeps the panel open and the dials stale",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    const field = canvas.getByTestId("scroll-time-picker-input");
+    await step("dials seed to 10:00 on focus, then stay put while typing 07:30", async () => {
+      await userEvent.click(field); // dials seed to 10:00
+      await screen.findByTestId("scroll-time-picker-panel");
+      await userEvent.clear(field);
+      await userEvent.type(field, "0730");
+      await expect(field).toHaveValue("07:30");
+      await expect(screen.getByTestId("scroll-time-picker-panel")).toBeInTheDocument();
+      await expect(screen.getByTestId("scroll-time-cell-hour-10")).toHaveAttribute("aria-selected", "true");
+      await expect(screen.getByTestId("scroll-time-cell-hour-07")).toHaveAttribute("aria-selected", "false");
+    });
+  },
+};
+
+// Commit + close fire only when focus leaves the whole widget, not when moving field↔columns.
+const blurOutsideSpy = fn();
+export const BlurOutsideCommitsAndCloses = {
+  render: () => (
+    <>
+      <ScrollTimePicker labelText="Time" onChange={blurOutsideSpy} />
+      <button type="button" data-testid="outside">
+        outside
+      </button>
+    </>
+  ),
+  name: "blurring outside the widget commits and closes",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    const field = canvas.getByTestId("scroll-time-picker-input");
+    await step("typing then clicking an outside element commits 09:00 and closes", async () => {
+      await userEvent.type(field, "9"); // focus opens the panel
+      await screen.findByTestId("scroll-time-picker-panel");
+      await userEvent.click(canvas.getByTestId("outside"));
+      await expect(field).toHaveValue("09:00");
+      await expect(blurOutsideSpy).toHaveBeenLastCalledWith("09:00");
+      await waitFor(() => expect(screen.queryByTestId("scroll-time-picker-panel")).not.toBeInTheDocument());
+    });
+  },
+};
+
+// Open-on-focus must never mutate or commit an empty field — it only seeds the dials to "now".
+const focusEmptySpy = fn();
+export const FocusDoesNotCommitEmpty = {
+  render: () => <ScrollTimePicker labelText="Time" onChange={focusEmptySpy} />,
+  name: "focus never commits or clears an empty field",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    const field = canvas.getByTestId("scroll-time-picker-input");
+    await step("focusing an empty field opens the panel and seeds the dials but commits nothing", async () => {
+      await userEvent.click(field);
+      await screen.findByTestId("scroll-time-picker-panel");
+      await expect(field).toHaveValue(""); // not normalized, not cleared to a seeded value
+      await expect(focusEmptySpy).not.toHaveBeenCalled();
+      const hourColumn = screen.getByTestId("scroll-time-column-hour");
+      await expect(within(hourColumn).getAllByRole("option", { selected: true })).toHaveLength(1); // seeded to "now"
+    });
+  },
+};
+
+// Escape closes and refocuses the field without instantly reopening (the reopen guard); a later
+// keystroke reopens the panel.
+export const TypingReopensAfterEscape = {
+  render: () => <ScrollTimePicker labelText="Time" defaultValue="10:00" onChange={fn()} />,
+  name: "typing reopens the panel after Escape",
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    const field = canvas.getByTestId("scroll-time-picker-input");
+    await step("Escape closes and refocuses the field without reopening", async () => {
+      await userEvent.click(canvas.getByTestId("scroll-time-picker-open")); // enterColumns, focus in columns
+      await screen.findByTestId("scroll-time-picker-panel");
+      await userEvent.keyboard("{Escape}");
+      await waitFor(() => expect(screen.queryByTestId("scroll-time-picker-panel")).not.toBeInTheDocument());
+      await waitFor(() => expect(field).toHaveFocus()); // refocused, NOT reopened (guard held)
+    });
+    await step("typing then reopens the panel", async () => {
+      await userEvent.type(field, "0");
+      await expect(await screen.findByTestId("scroll-time-picker-panel")).toBeInTheDocument();
     });
   },
 };

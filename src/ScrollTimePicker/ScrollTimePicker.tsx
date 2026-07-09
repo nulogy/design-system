@@ -166,7 +166,13 @@ const ScrollTimePicker = forwardRef<HTMLInputElement, ScrollTimePickerProps>(
     );
     const committedValue = isControlled ? (normalizedProp ?? "") : internalValue;
 
+    // `open` means "panel visible" (set on field focus). `region` is where keyboard focus lives;
+    // `readOnly` derives from it, not from `open`, so the field stays editable while the panel is open.
     const [open, setOpen] = useState(false);
+    const [region, setRegion] = useState<"field" | "columns">("field");
+    // Guards the programmatic refocus after Escape/Enter-in-column so open-on-focus doesn't
+    // instantly reopen the panel we just closed. Cleared once, in handleInputFocus.
+    const suppressReopenRef = useRef(false);
     const [rawInput, setRawInput] = useState<string>(committedValue);
     const [draft, setDraft] = useState<TimeIndices>(() => resolveInitialIndices(committedValue, timeOptions));
     const draftRef = useRef(draft);
@@ -236,6 +242,9 @@ const ScrollTimePicker = forwardRef<HTMLInputElement, ScrollTimePickerProps>(
       pendingCaretRef.current = caretIndexForTypedDigits(fields, digitsBeforeCaret, timeOptions);
       setRawInput(masked);
       onInputChange?.(masked);
+      // Reopen a dismissed-but-focused field (e.g. after Escape) on the next keystroke. No-op when
+      // already open, so `draft` stays stale during normal typing (the dials must not follow keys).
+      if (!open) openPanelForField();
     };
 
     // Restore the caret after the masked value re-renders (otherwise the browser drops it at the
@@ -259,25 +268,48 @@ const ScrollTimePicker = forwardRef<HTMLInputElement, ScrollTimePickerProps>(
       columnRefs.current[index]?.focus();
     }, []);
 
-    // Parse the (possibly partial) field, seed the dials, and open the panel. A parseable
-    // value is committed; an empty/unparseable field seeds the dials to the current time but
-    // commits nothing (the field stays empty until the user interacts).
-    const openPanel = useCallback(() => {
+    // Seed the dials from a (possibly partial) source string without mutating the field text or
+    // committing. Parseable → those parts; otherwise the committed value, else the current time.
+    // Never calls commitValue / setRawInput / onChange.
+    const seedDraft = useCallback(
+      (sourceRaw: string) => {
+        const parts = parseInput(sourceRaw, timeOptions);
+        const seedValue = parts
+          ? formatTime(parts, timeOptions)
+          : committedValue || formatTime(dateToTimeParts(new Date(), timeOptions), timeOptions);
+        setDraft(resolveInitialIndices(seedValue, timeOptions));
+      },
+      [committedValue, timeOptions],
+    );
+
+    // Open-on-focus: show the panel but keep focus + editability in the field. Snapshotting the
+    // Escape baseline and seeding only on the closed→open edge means refocusing an already-open
+    // field (columns→field) neither resets the baseline nor re-seeds the dials.
+    const openPanelForField = useCallback(() => {
       if (disabled) return;
-      const parts = parseInput(rawInput, timeOptions);
-      let seedValue: string;
-      if (parts) {
-        seedValue = formatTime(parts, timeOptions);
-        commitValue(seedValue);
-        valueAtOpenRef.current = seedValue;
-      } else {
-        seedValue = formatTime(dateToTimeParts(new Date(), timeOptions), timeOptions);
-        setRawInput("");
-        valueAtOpenRef.current = "";
+      setRegion("field");
+      if (!open) {
+        valueAtOpenRef.current = committedValue;
+        setOpen(true);
+        seedDraft(rawInput);
       }
-      setDraft(resolveInitialIndices(seedValue, timeOptions));
-      setOpen(true);
-    }, [disabled, rawInput, commitValue, timeOptions]);
+    }, [disabled, open, committedValue, rawInput, seedDraft]);
+
+    // Explicit "go to the dials" gesture (ArrowDown / clock). Normalizes the typed partial on this
+    // deliberate handoff (so the field matches the dials), re-seeds the dials from it, then moves
+    // focus into the columns. Re-seeding here — not during typing — is what makes the clock/ArrowDown
+    // parse the partial while dials never move during plain typing.
+    const enterColumns = useCallback(() => {
+      if (disabled) return;
+      if (!open) {
+        valueAtOpenRef.current = committedValue;
+        setOpen(true);
+      }
+      commitTypedInput();
+      seedDraft(rawInput);
+      setRegion("columns");
+      requestAnimationFrame(() => columnRefs.current[0]?.focus());
+    }, [disabled, open, committedValue, rawInput, seedDraft, commitTypedInput]);
 
     // A dial interaction: update the draft index for a column and commit the composed value.
     const selectDialIndex = useCallback(
@@ -291,6 +323,9 @@ const ScrollTimePicker = forwardRef<HTMLInputElement, ScrollTimePickerProps>(
 
     const commitAndClose = useCallback(() => {
       commitValue(composeValueFromIndices(draftRef.current, timeOptions));
+      setRegion("field");
+      // Arm BEFORE focusField() so the rAF focusin it triggers doesn't reopen the panel.
+      suppressReopenRef.current = true;
       setOpen(false);
       focusField();
     }, [commitValue, timeOptions, focusField]);
@@ -315,7 +350,15 @@ const ScrollTimePicker = forwardRef<HTMLInputElement, ScrollTimePickerProps>(
         }
         if (reason === "escape-key") {
           revertToValueAtOpen();
-          focusField();
+          // Only arm the guard when a real focusin will actually fire to consume it. If Escape is
+          // pressed while the field itself is focused (never entered a column), focusField() is a
+          // no-op and fires no focusin — an unconditional guard would stick true and silently break
+          // the next reopen.
+          if (document.activeElement !== inputRef.current) {
+            suppressReopenRef.current = true;
+            focusField();
+          }
+          setRegion("field");
         }
         setOpen(false);
       },
@@ -332,13 +375,6 @@ const ScrollTimePicker = forwardRef<HTMLInputElement, ScrollTimePickerProps>(
     const dismiss = useDismiss(context, { escapeKey: true, outsidePress: true });
     const { getReferenceProps, getFloatingProps } = useInteractions([dismiss]);
 
-    // Move focus into the first column when the panel opens.
-    useEffect(() => {
-      if (open) {
-        requestAnimationFrame(() => columnRefs.current[0]?.focus());
-      }
-    }, [open]);
-
     // Sync the field text + dials when the committed value changes from outside — a controlled
     // `value` update, or a rejected commit snapping back. Only re-derives when the parsed value
     // actually changed and never calls onChange (loop guard, mirrors TimeRange GO-11207).
@@ -350,27 +386,43 @@ const ScrollTimePicker = forwardRef<HTMLInputElement, ScrollTimePickerProps>(
       }
     }, [committedValue, timeOptions]);
 
+    // Open-on-focus, unless this focusin is the programmatic refocus after Escape / Enter-in-column
+    // (guarded), which must not reopen the panel it just closed.
+    const handleInputFocus = () => {
+      if (disabled) return;
+      if (suppressReopenRef.current) {
+        suppressReopenRef.current = false;
+        setRegion("field");
+        return;
+      }
+      openPanelForField();
+    };
+
     const handleInputKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
-      if (open) return;
       if (event.key === "Enter") {
         event.preventDefault();
+        // Commit the typed value and close; the field keeps focus and stays editable. Closing fires
+        // no focus event, so there's nothing to guard against reopening.
         commitTypedInput();
+        setOpen(false);
       } else if (event.key === "ArrowDown") {
         event.preventDefault();
-        openPanel();
+        enterColumns();
       }
     };
 
-    const handleInputBlur = () => {
-      if (!open) commitTypedInput();
-    };
-
-    // Clicking the read-only field while the panel is open returns to type mode.
-    const handleInputClick = () => {
-      if (open) {
-        setOpen(false);
-        focusField();
-      }
+    // Commit only when focus leaves the WHOLE widget. The panel lives in a FloatingPortal — a React
+    // child of this Box but a DOM sibling in document.body — and React's onBlur (focusout) bubbles
+    // along the React tree, so this receives focusout from the field, the clock button, and the
+    // portaled columns alike. FieldGroup is not a React ancestor of the portal, so this must be on Box.
+    const handleWidgetBlur = (event: React.FocusEvent) => {
+      const next = event.relatedTarget as Node | null;
+      const reference = refs.domReference.current; // FieldGroup (the real DOM node, not a virtual el)
+      const floating = refs.floating.current; // Panel
+      if (next && (reference?.contains(next) || floating?.contains(next))) return; // stayed inside
+      commitTypedInput(); // "9" -> "09:00"; onChange deduped by lastCommittedRef
+      setRegion("field");
+      setOpen(false);
     };
 
     const columns = [
@@ -382,7 +434,7 @@ const ScrollTimePicker = forwardRef<HTMLInputElement, ScrollTimePickerProps>(
     ];
 
     return (
-      <Box className={className} {...spaceProps}>
+      <Box className={className} onBlur={handleWidgetBlur} {...spaceProps}>
         <FieldGroup ref={refs.setReference} {...getReferenceProps()}>
           <StyledField
             ref={setInputRef}
@@ -394,9 +446,8 @@ const ScrollTimePicker = forwardRef<HTMLInputElement, ScrollTimePickerProps>(
             placeholder={placeholder ?? maskPlaceholder(timeOptions)}
             onChange={handleInputChange}
             onKeyDown={handleInputKeyDown}
-            onBlur={handleInputBlur}
-            onClick={handleInputClick}
-            readOnly={open}
+            onFocus={handleInputFocus}
+            readOnly={region === "columns"}
             aria-label={ariaLabel || t("select a time")}
             aria-invalid={hasError}
             aria-haspopup="dialog"
@@ -413,7 +464,10 @@ const ScrollTimePicker = forwardRef<HTMLInputElement, ScrollTimePickerProps>(
               icon="queryBuilder"
               iconSize={CLOCK_ICON_SIZE}
               disabled={disabled}
-              onClick={openPanel}
+              onClick={enterColumns}
+              // Pure mouse affordance, out of the tab order: keyboard/SR users open the panel just
+              // by focusing the field, keeping the field the widget's single tab stop.
+              tabIndex={-1}
               data-testid="scroll-time-picker-open"
               aria-label={t("open time picker")}
               aria-haspopup="dialog"

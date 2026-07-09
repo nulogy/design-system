@@ -168,7 +168,10 @@ const ScrollColumn = forwardRef<HTMLDivElement, ScrollColumnProps>(
         aria-orientation="vertical"
         aria-label={label}
         aria-activedescendant={cellId(options[selectedIndex])}
-        tabIndex={0}
+        // Programmatically focusable (element.focus() works on -1) but out of the tab order, so the
+        // field is the widget's single tab stop — the canonical ARIA combobox shape. Load-bearing:
+        // it keeps Tab from landing in the portaled columns, so widget-blur can commit on tab-out.
+        tabIndex={-1}
         data-testid={`scroll-time-column-${columnKey}`}
         onKeyDown={handleKeyDown}
         onScroll={handleScroll}
