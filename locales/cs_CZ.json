@@ -64,5 +64,9 @@
   "production scheduling app description": "Vizualizujte a optimalizujte svůj výrobní plán pomocí poptávky, prostojů, výrobních rychlostí a dalších údajů",
   "shop floor control app description": "Spravujte provoz ve výrobní hale pro zvýšení přehlednosti, rychlosti a provozní efektivity",
   "supplier collaboration app description": "Spolupracujte v reálném čase s partnery dodavatelské sítě pro lepší přehlednost a schopnost reakce",
-  "smart factory app description": "Automatizujte sběr dat ze strojů pro snížení prostojů a zlepšení výrobní propustnosti"
+  "smart factory app description": "Automatizujte sběr dat ze strojů pro snížení prostojů a zlepšení výrobní propustnosti",
+  "hours": "Hodiny",
+  "minutes": "Minuty",
+  "seconds": "Sekundy",
+  "open time picker": "Otevřít výběr času"
 }

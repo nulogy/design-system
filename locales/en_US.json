@@ -64,5 +64,9 @@
   "production scheduling app description": "Visualize and optimize your production schedule using demand, downtimes, run rates, and more",
   "shop floor control app description": "Manage shop floor operations to boost visibility, speed, and operational efficiency",
   "supplier collaboration app description": "Collaborate in real time with supply chain network partners for enhanced visibility and responsiveness",
-  "smart factory app description": "Automate machine data capture to reduce downtime and improve production throughput"
+  "smart factory app description": "Automate machine data capture to reduce downtime and improve production throughput",
+  "hours": "Hours",
+  "minutes": "Minutes",
+  "seconds": "Seconds",
+  "open time picker": "Open time picker"
 }

@@ -64,5 +64,9 @@
   "production scheduling app description": "Jelenítse meg és optimalizálja a gyártási ütemtervet a kereslet, az állásidők, a gyártási ütemek és egyebek alapján",
   "shop floor control app description": "Kezelje az üzemi műveleteket a láthatóság, a sebesség és a működési hatékonyság növelése érdekében",
   "supplier collaboration app description": "Működjön együtt valós időben az ellátási lánc hálózati partnereivel a jobb láthatóság és reagálóképesség érdekében",
-  "smart factory app description": "Automatizálja a gépadatok gyűjtését az állásidő csökkentése és a gyártási teljesítmény javítása érdekében"
+  "smart factory app description": "Automatizálja a gépadatok gyűjtését az állásidő csökkentése és a gyártási teljesítmény javítása érdekében",
+  "hours": "Óra",
+  "minutes": "Perc",
+  "seconds": "Másodperc",
+  "open time picker": "Időválasztó megnyitása"
 }

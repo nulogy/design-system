@@ -64,5 +64,9 @@
   "production scheduling app description": "Vizualizați și optimizați programul de producție utilizând cererea, timpii de nefuncționare, ratele de producție și multe altele",
   "shop floor control app description": "Gestionați operațiunile din atelierul de producție pentru a spori vizibilitatea, viteza și eficiența operațională",
   "supplier collaboration app description": "Colaborați în timp real cu partenerii din rețeaua lanțului de aprovizionare pentru vizibilitate și receptivitate sporite",
-  "smart factory app description": "Automatizați captarea datelor de la mașini pentru a reduce timpul de nefuncționare și a îmbunătăți debitul de producție"
+  "smart factory app description": "Automatizați captarea datelor de la mașini pentru a reduce timpul de nefuncționare și a îmbunătăți debitul de producție",
+  "hours": "Ore",
+  "minutes": "Minute",
+  "seconds": "Secunde",
+  "open time picker": "Deschide selectorul de timp"
 }

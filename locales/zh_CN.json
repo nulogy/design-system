@@ -64,5 +64,9 @@
   "production scheduling app description": "利用需求、停机时间、运行率等信息，可视化并优化您的生产计划",
   "shop floor control app description": "管理车间运营，以提高可见性、速度和运营效率",
   "supplier collaboration app description": "与供应链网络合作伙伴实时协作，以增强可见性和响应能力",
-  "smart factory app description": "自动化机器数据捕获，以减少停机时间并提高生产吞吐量"
+  "smart factory app description": "自动化机器数据捕获，以减少停机时间并提高生产吞吐量",
+  "hours": "小时",
+  "minutes": "分钟",
+  "seconds": "秒",
+  "open time picker": "打开时间选择器"
 }
