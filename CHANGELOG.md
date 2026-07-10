@@ -1,3 +1,10 @@
+# [19.2.0](https://github.com/nulogy/design-system/compare/v19.1.4...v19.2.0) (2026-07-10)
+
+
+### Features
+
+* add ScrollTimePicker and UTC-aware DateTimePicker ([#1815](https://github.com/nulogy/design-system/issues/1815)) ([e344032](https://github.com/nulogy/design-system/commit/e34403234ca997c583f57649d24937a9284c2536))
+
 ## [19.1.4](https://github.com/nulogy/design-system/compare/v19.1.3...v19.1.4) (2026-06-30)
 
 
