@@ -119,7 +119,7 @@ const DropdownMenu = React.forwardRef<unknown, DropdownMenuProps>(
           {typeof children === "function"
             ? (children as unknown as React.ReactNode)
             : React.Children.map(children, (child) => {
-                if (React.isValidElement(child)) {
+                if (React.isValidElement<{ children?: React.ReactNode; [key: string]: unknown }>(child)) {
                   return React.cloneElement(child, { size: componentVariant, ...child.props }, child.props.children);
                 }
               })}

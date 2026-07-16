@@ -89,8 +89,8 @@ const TimeRange = forwardRef(
       onRangeChange?.({ ...next, error: computeTimeRangeError({ ...next, defaultStartTime, defaultEndTime }) });
     };
 
-    const inputRef1 = useRef();
-    const inputRef2 = useRef();
+    const inputRef1 = useRef<HTMLInputElement>(null);
+    const inputRef2 = useRef<HTMLInputElement>(null);
 
     const { t } = useTranslation();
 
@@ -101,7 +101,6 @@ const TimeRange = forwardRef(
         ...inputRef1,
         focus: () => {
           if (inputRef1.current) {
-            // @ts-expect-error - focus method exists on input elements but type may not be narrowed correctly
             inputRef1.current.focus();
           }
         },
@@ -110,7 +109,6 @@ const TimeRange = forwardRef(
         ...inputRef2,
         focus: () => {
           if (inputRef2.current) {
-            // @ts-expect-error - focus method exists on input elements but type may not be narrowed correctly
             inputRef2.current.focus();
           }
         },

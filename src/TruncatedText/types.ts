@@ -5,7 +5,7 @@ import type { TextProps } from "../Type";
 export interface TruncatedTextProps extends TextProps {
   children?: string;
   indicator?: string;
-  element?: ReactElement;
+  element?: ReactElement<Record<string, unknown>>;
   maxCharacters?: number;
   showTooltip?: boolean;
   fullWidth?: boolean;

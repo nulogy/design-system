@@ -1,6 +1,7 @@
 import * as Dialog from "@radix-ui/react-dialog";
 import { transparentize } from "polished";
 import type React from "react";
+import type { JSX } from "react";
 import { styled, useTheme } from "styled-components";
 import { Heading2 } from "../Type";
 import { useScrollLock } from "../utils/useScrollLock";

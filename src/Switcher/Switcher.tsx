@@ -25,7 +25,7 @@ function Switcher({ variant, selected, onChange, ...rest }: SwitcherProps) {
 
   const getSelectedIndex = () => {
     return React.Children.toArray(rest.children).findIndex(
-      (child) => (child as ReactElement)?.props?.value === selected,
+      (child) => (child as ReactElement<SwitchProps>)?.props?.value === selected,
     );
   };
 

@@ -4,6 +4,7 @@ import { Box } from "../Box";
 import { type ComponentVariant, useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import { getSubset } from "../utils/subset";
 import FocusManager from "../utils/ts/FocusManager";
+import type { TabProps } from "./Tab";
 import TabContainer from "./TabContainer";
 import TabScrollIndicators from "./TabScrollIndicators";
 
@@ -52,11 +53,11 @@ function Tabs(props: TabsProps) {
     focusedIndex: number,
     handleArrowNavigation: (e: React.KeyboardEvent) => void,
   ) {
-    const tabs = React.Children.toArray(children) as React.ReactElement[];
+    const tabs = React.Children.toArray(children) as React.ReactElement<TabProps & { index?: number }>[];
 
     return tabs.filter(Boolean).map((tab, index) =>
       React.cloneElement(tab, {
-        onClick: (e: React.MouseEvent) => {
+        onClick: (e: React.MouseEvent<HTMLButtonElement>) => {
           setFocusToTab(index);
           tab.props.onClick?.(e);
           if (onTabClick) {
@@ -83,13 +84,13 @@ function Tabs(props: TabsProps) {
   }
 
   function getTabContent() {
-    const tabs = React.Children.toArray(children) as React.ReactElement[];
+    const tabs = React.Children.toArray(children) as React.ReactElement<TabProps & { index?: number }>[];
 
     return tabs.filter(Boolean).map((tab, index) => {
       const selected = index === selectedIndex;
       if (renderTabContentOnlyWhenSelected && !selected) return null;
       return (
-        <div aria-hidden={!selected} hidden={!selected} key={tab.key ?? tab.props.label}>
+        <div aria-hidden={!selected} hidden={!selected} key={tab.key ?? index}>
           {tab.props.children}
         </div>
       );

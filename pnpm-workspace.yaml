@@ -1,6 +1,11 @@
 allowBuilds:
   esbuild: true
 
+overrides:
+  "@emotion/react": "^11.14.0"
+  "@types/react": "^19.0.0"
+  "@types/react-dom": "^19.0.0"
+
 onlyBuiltDependencies:
   - "@swc/core"
   - core-js

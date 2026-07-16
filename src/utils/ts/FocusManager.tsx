@@ -1,5 +1,5 @@
 import type React from "react";
-import { type ReactNode, useEffect, useRef, useState } from "react";
+import { type JSX, type ReactNode, useEffect, useRef, useState } from "react";
 
 type Reference = {
   current?: JSX.Element;
