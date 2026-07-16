@@ -37,13 +37,20 @@ export const DefaultStartAndEndDate = {
     });
     await step("shows an error when start date is set after end date", async () => {
       await userEvent.click(canvas.getByLabelText("Select a start date"));
-      // Both pickers portal to the same node. Opening the start-date calendar
-      // closes the end-date one from the previous step via click-outside, but
-      // that close is timing-sensitive with animations enabled (as in Chromatic,
-      // which local runs mask by disabling animations). Wait until only the
-      // start-date calendar remains so the day click can't land in the wrong one.
-      await waitFor(() => expect(document.querySelectorAll(".react-datepicker")).toHaveLength(1));
-      const day8 = document.querySelector(".react-datepicker__day--008") as HTMLElement;
+      // Both pickers portal into the same node and the end-date calendar from the
+      // previous step can stay open (in Chromatic's animated capture, click-outside
+      // and Escape don't reliably close it — local runs disable animations and mask
+      // this). Identify the start-date calendar by its selected day (Jan 1) rather
+      // than DOM position, then click day 8 within it — clicking the first match
+      // would otherwise land in the lingering end-date calendar.
+      const day8 = await waitFor(() => {
+        const startCalendar = [...document.querySelectorAll(".react-datepicker")].find((calendar) =>
+          calendar.querySelector(".react-datepicker__day--001.react-datepicker__day--selected"),
+        );
+        const el = startCalendar?.querySelector(".react-datepicker__day--008");
+        expect(el).toBeInTheDocument();
+        return el as HTMLElement;
+      });
       await userEvent.click(day8);
       await waitFor(() => expect(canvas.getByText("End date is before start date")).toBeVisible());
     });
