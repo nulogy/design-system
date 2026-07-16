@@ -1,3 +1,10 @@
+## [19.2.1](https://github.com/nulogy/design-system/compare/v19.2.0...v19.2.1) (2026-07-16)
+
+
+### Bug Fixes
+
+* **DatePicker:** restore calendar font and upgrade react-datepicker to v9 ([8ebfcd6](https://github.com/nulogy/design-system/commit/8ebfcd6fd50e41d4c156240a7292b17cab9256bf)), closes [#1821](https://github.com/nulogy/design-system/issues/1821)
+
 # [19.2.0](https://github.com/nulogy/design-system/compare/v19.1.4...v19.2.0) (2026-07-10)
 
 
