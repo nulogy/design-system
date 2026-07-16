@@ -1,5 +1,5 @@
 import propTypes from "@styled-system/prop-types";
-import React, { forwardRef, useState } from "react";
+import React, { forwardRef, type JSX, useState } from "react";
 import ReactDatePicker, { type ReactDatePickerCustomHeaderProps } from "react-datepicker";
 import { Field } from "../../../Form";
 import { InputFieldDefaultProps } from "../../../Input/InputField";

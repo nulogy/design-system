@@ -131,20 +131,20 @@ export const getTimeOptions = (interval, timeFormat, minTime, maxTime, locale) =
 const TimePicker = forwardRef<any, TimePickerProps>(
   (
     {
-      timeFormat,
-      interval,
+      timeFormat = DEFAULT_TIME_FORMAT,
+      interval = 15,
       className,
       minTime,
       maxTime,
-      defaultValue,
+      defaultValue = "",
       onInputChange,
-      onBlur,
-      onFocus,
+      onBlur = () => {},
+      onFocus = () => {},
       errorMessage,
       errorList,
       labelText,
-      placeholder,
-      onClick,
+      placeholder = DEFAULT_PLACEHOLDER,
+      onClick = () => {},
       onChange,
       "aria-label": ariaLabel,
       value,
@@ -333,24 +333,5 @@ const TimePicker = forwardRef<any, TimePickerProps>(
     );
   },
 );
-
-TimePicker.defaultProps = {
-  timeFormat: DEFAULT_TIME_FORMAT,
-  interval: 15,
-  placeholder: DEFAULT_PLACEHOLDER,
-  className: undefined,
-  onChange: undefined,
-  onInputChange: undefined,
-  minTime: undefined,
-  maxTime: undefined,
-  defaultValue: "",
-  "aria-label": undefined,
-  errorMessage: undefined,
-  errorList: undefined,
-  labelText: undefined,
-  onClick: () => {},
-  onBlur: () => {},
-  onFocus: () => {},
-};
 
 export default TimePicker;

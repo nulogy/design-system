@@ -1,4 +1,4 @@
-import React, { isValidElement } from "react";
+import React, { isValidElement, type JSX } from "react";
 import { Flex } from "../Flex";
 import type { FlexProps } from "../Flex/Flex";
 import { Icon } from "../Icon";

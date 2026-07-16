@@ -1,6 +1,8 @@
 import type { IconName } from "@nulogy/icons";
 import type React from "react";
 
+import type { JSX } from "react";
+
 /* -------------------------------------------------------------------
  * User Menu
  * -----------------------------------------------------------------*/
