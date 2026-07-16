@@ -1,3 +1,19 @@
+# [20.0.0](https://github.com/nulogy/design-system/compare/v19.2.1...v20.0.0) (2026-07-16)
+
+
+* feat!: support React 19 ([305c966](https://github.com/nulogy/design-system/commit/305c966a050616f060e92f01099d1ff55ea1ec45))
+
+
+### BREAKING CHANGES
+
+* @nulogy/components now targets React 19 as its primary,
+tested version. React 18 remains supported through the widened peer range
+(>=16.10.2 <20), but the previously bundled `react-modal` and `react-color`
+dependencies have been removed — consumers that relied on either being
+installed transitively must now add it as a direct dependency.
+
+Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>
+
 ## [19.2.1](https://github.com/nulogy/design-system/compare/v19.2.0...v19.2.1) (2026-07-16)
 
 
