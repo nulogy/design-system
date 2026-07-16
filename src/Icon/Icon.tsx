@@ -3,6 +3,7 @@ import icons from "@nulogy/icons";
 import React from "react";
 import { styled, useTheme } from "styled-components";
 import { type PositionProps, position, type SpaceProps, space } from "styled-system";
+import { excludeStyledProps } from "../StyledProps";
 import LoadingIcon from "./LoadingIcon";
 
 export interface IconProps extends SpaceProps {
@@ -78,7 +79,12 @@ const Svg = React.forwardRef<SVGSVGElement, IconProps>(
   },
 );
 
-const Icon = styled(Svg)<IconProps>(space, ({ theme, color = "currentColor", size }) => ({
+// `styled(Svg)` has a component target, so styled-system space props would be
+// forwarded through `Svg`'s `{...props}` spread onto the <svg> DOM node. Drop
+// them here — they're consumed as styles by the `space` transform above.
+const Icon = styled(Svg).withConfig({
+  shouldForwardProp: excludeStyledProps(space),
+})<IconProps>(space, ({ theme, color = "currentColor", size }) => ({
   minWidth: theme.sizes[size] ?? size ?? theme.sizes.x3,
   color: color,
 }));
