@@ -87,5 +87,8 @@ export const WrappingButtons = {
   ),
 
   name: "wrapping buttons",
-  parameters: { viewport: { defaultViewport: "extraSmall" } },
+  // Storybook 10 selects the active viewport via a toolbar global, not
+  // `parameters.viewport.defaultViewport` (which is silently ignored) — without
+  // this the story renders full-width and the buttons never wrap.
+  globals: { viewport: { value: "extraSmall", isRotated: false } },
 };

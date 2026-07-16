@@ -96,6 +96,31 @@ export const WithCustomTrigger = {
   ),
 
   name: "with custom trigger",
+  // Visual snapshot of the closed custom trigger; the open-menu interaction
+  // lives in "opens with custom trigger" below.
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await expect(canvas.getByText("Custom Trigger")).toBeVisible();
+  },
+};
+
+export const OpensWithCustomTrigger = {
+  render: () => (
+    <DropdownMenu
+      openAriaLabel="open dropdown"
+      closeAriaLabel="close dropdown"
+      trigger={() => <Button>Custom Trigger</Button>}
+    >
+      <DropdownLink href="/never_been">Dropdown Link</DropdownLink>
+      <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
+    </DropdownMenu>
+  ),
+
+  name: "opens with custom trigger",
+  // Leaving the menu open would diff against the closed-trigger baseline, and the
+  // open menu is already snapshotted by "set to defaultOpen". This story owns the
+  // custom-trigger interaction only.
+  parameters: { chromatic: { disableSnapshot: true } },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
     await step("opens the menu with a custom trigger", async () => {

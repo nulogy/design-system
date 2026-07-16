@@ -54,6 +54,13 @@ const Sheet = styled(motion.div).withConfig({
     MozOsxFontSmoothing: "grayscale",
     position: "relative",
     overflow: "hidden",
+    // Establish a containing block for the `position: fixed` Footer so it's
+    // positioned and clipped against the sheet, not the viewport. Without this it
+    // only stayed contained while framer-motion's entrance transform was applied;
+    // once the animation settles to `transform: none` the footer escaped and spilled
+    // full-width past the sheet's edge. `contain: paint` survives framer overwriting
+    // `transform` (which `will-change`/`translateZ` would not).
+    contain: "paint",
     display: "flex",
     flexDirection: "column",
     background: "white",

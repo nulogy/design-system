@@ -10,6 +10,16 @@ export default {
 export const Default = {
   render: () => <MonthPicker inputProps={{ labelText: "Expiry Date" }} />,
   name: "Default",
+};
+
+// The interaction lives here, not on `Default`: selecting a month leaves the input
+// filled + focused, which pollutes `Default`'s empty-placeholder visual (the filled
+// state is already covered by `WithDefaultValue`). Snapshot disabled — this story
+// exists for the behavioural assertions, not a picture.
+export const SelectingAMonth = {
+  render: () => <MonthPicker inputProps={{ labelText: "Expiry Date" }} />,
+  name: "Selecting a month",
+  parameters: { chromatic: { disableSnapshot: true } },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
     await step("can open a month picker on click", async () => {
@@ -40,8 +50,9 @@ export const Disabled = () => {
 };
 
 export const WithDefaultValue = () => {
-  const defaultDate = new Date();
-  defaultDate.setMonth(defaultDate.getMonth() - 1);
+  // Fixed date, NOT `new Date()` — a relative value drifts every month, so the
+  // Chromatic snapshot would diff against itself on an unrelated schedule.
+  const defaultDate = new Date(2020, 0, 1);
   return <MonthPicker inputProps={{ labelText: "Expiry Date" }} selected={defaultDate} />;
 };
 

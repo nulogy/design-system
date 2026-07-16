@@ -169,7 +169,10 @@ export const WithScrollingTabs = {
   ),
 
   name: "with scrolling tabs",
-  parameters: { viewport: { defaultViewport: "extraSmall" } },
+  // Storybook 10 selects the active viewport via a toolbar global, not
+  // `parameters.viewport.defaultViewport` (which is silently ignored) — without
+  // this the story renders full-width and the tabs never overflow to scroll.
+  globals: { viewport: { value: "extraSmall", isRotated: false } },
 };
 
 export const Controlled = {

@@ -8,7 +8,10 @@ export default {
 };
 
 export const Default = {
-  render: () => <WeekPicker inputProps={{ labelText: "Expiry Date" }} />,
+  // Fixed `selected` date so the play opens the calendar to a deterministic month.
+  // Without it `openToDate` is undefined and the calendar defaults to `new Date()`,
+  // so the open-calendar snapshot would drift every month.
+  render: () => <WeekPicker inputProps={{ labelText: "Expiry Date" }} selected={new Date(2025, 0, 15)} />,
   name: "Default",
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
@@ -58,7 +61,9 @@ export const WithPreselectedDate = () => (
 );
 
 export const WithCustomLocale = {
-  render: () => <WeekPicker inputProps={{ labelText: "Semaine" }} locale="fr_FR" />,
+  // Fixed `selected` date so the opened calendar shows a deterministic month
+  // rather than drifting with `new Date()` (the play leaves the calendar open).
+  render: () => <WeekPicker inputProps={{ labelText: "Semaine" }} locale="fr_FR" selected={new Date(2025, 0, 15)} />,
   name: "with custom locale",
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);

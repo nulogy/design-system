@@ -97,6 +97,10 @@ const Panel = styled.div(({ theme }) => ({
   boxShadow: theme.shadows.medium,
   padding: theme.space.half,
   zIndex: theme.zIndices.overlay,
+  // The panel renders in a FloatingPortal (document.body), outside NDSProvider's
+  // GlobalStyles font wrapper, so it can't inherit the NDS font — declare it
+  // explicitly or the digits fall back to the browser default (serif).
+  fontFamily: theme.fonts.base,
 }));
 
 const PanelInner = styled.div({
