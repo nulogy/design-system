@@ -176,7 +176,7 @@ const WeekPicker = forwardRef<unknown, WeekPickerProps>(
       return <DatePickerHeader locale={currentLocale} {...props} />;
     };
 
-    const weekPickerRefHandler = (r: ReactDatePicker<string>) => {
+    const weekPickerRefHandler = (r: ReactDatePicker) => {
       if (datePickerRef && typeof datePickerRef !== "function") {
         datePickerRef.current = r;
       }
@@ -206,7 +206,7 @@ const WeekPicker = forwardRef<unknown, WeekPickerProps>(
 
     return (
       <Field className={`${className} nds-date-picker`} {...spaceProps}>
-        <DatePickerStyles />
+        <DatePickerStyles locale={currentLocale} />
         <WeekPickerStyles variant={componentVariant} />
         <ReactDatePicker
           showWeekNumbers

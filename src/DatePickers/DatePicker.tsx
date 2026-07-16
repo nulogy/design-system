@@ -1,6 +1,7 @@
 import { addDays, isAfter, isBefore, isSameDay, isValid, subDays } from "date-fns";
 import { forwardRef, useEffect, useState } from "react";
-import type { ReactDatePicker, ReactDatePickerCustomHeaderProps } from "react-datepicker";
+import type ReactDatePicker from "react-datepicker";
+import type { ReactDatePickerCustomHeaderProps } from "react-datepicker";
 import { BasePicker } from "./shared/components/BasePicker";
 import { DatePickerHeader } from "./shared/components/DatePickerHeader";
 import type { DatePickerProps } from "./shared/types";
@@ -11,7 +12,6 @@ const DEFAULT_PLACEHOLDER = "YYYY-Mon-DD";
 const DatePicker = forwardRef<ReactDatePicker, DatePickerProps>(
   ({ selected, dateFormat = DEFAULT_DATE_FORMAT, onChange, ...props }, datePickerRef) => {
     const [selectedDate, setSelectedDate] = useState(selected);
-    const [ref] = useState(null);
 
     useEffect(() => {
       setSelectedDate(selected);
@@ -38,13 +38,6 @@ const DatePicker = forwardRef<ReactDatePicker, DatePickerProps>(
       }
     };
 
-    const handleEnterKey = () => {
-      if (ref) {
-        const isOpen = ref.isCalendarOpen();
-        ref.setOpen(!isOpen);
-      }
-    };
-
     return (
       <BasePicker
         {...props}
@@ -58,7 +51,6 @@ const DatePicker = forwardRef<ReactDatePicker, DatePickerProps>(
         disabledKeyboardNavigation
         onUpKeyPress={handleUpKey}
         onDownKeyPress={handleDownKey}
-        onEnterKeyPress={handleEnterKey}
         renderHeader={(headerProps: ReactDatePickerCustomHeaderProps) => (
           <DatePickerHeader locale={props.locale} {...headerProps} />
         )}

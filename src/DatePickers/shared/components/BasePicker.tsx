@@ -25,7 +25,6 @@ interface BasePickerProps extends DatePickerProps {
   renderHeader: (props: ReactDatePickerCustomHeaderProps) => JSX.Element;
   onUpKeyPress?: () => void;
   onDownKeyPress?: () => void;
-  onEnterKeyPress?: () => void;
 }
 
 export const BasePicker = forwardRef<ReactDatePicker, BasePickerProps>(
@@ -52,7 +51,6 @@ export const BasePicker = forwardRef<ReactDatePicker, BasePickerProps>(
       renderHeader,
       onUpKeyPress,
       onDownKeyPress,
-      onEnterKeyPress,
       locale,
       disabledKeyboardNavigation,
       name,
@@ -111,7 +109,7 @@ export const BasePicker = forwardRef<ReactDatePicker, BasePickerProps>(
       />
     );
 
-    const pickerRefHandler = (r: ReactDatePicker<string>) => {
+    const pickerRefHandler = (r: ReactDatePicker) => {
       if (pickerRef && typeof pickerRef !== "function") {
         pickerRef.current = r;
       }
@@ -122,7 +120,7 @@ export const BasePicker = forwardRef<ReactDatePicker, BasePickerProps>(
 
     return (
       <Field className={`${className} nds-date-picker`} {...spaceProps}>
-        <DatePickerStyles />
+        <DatePickerStyles locale={currentLocale} />
         <ReactDatePicker
           highlightDates={highlightDates}
           selected={selected}
@@ -142,7 +140,6 @@ export const BasePicker = forwardRef<ReactDatePicker, BasePickerProps>(
           showWeekNumbers={showWeekNumbers}
           name={name}
           required={required}
-          onEnterKeyPress={onEnterKeyPress}
           popperPlacement="bottom-start"
           popperProps={getPopperProps(disableFlipping)}
           portalId="nds-date-picker-portal"
