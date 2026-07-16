@@ -2,10 +2,16 @@ import * as RadixNavigationMenu from "@radix-ui/react-navigation-menu";
 import { type CSSProperties, styled } from "styled-components";
 import { Icon } from "../../../Icon";
 import type { IconProps } from "../../../Icon/Icon";
-import { addStyledProps, type StyledProps } from "../../../StyledProps";
+import { addStyledProps, excludeStyledProps, type StyledProps } from "../../../StyledProps";
 import type { DefaultNDSThemeType } from "../../../theme";
 import { NAVIGATION_MENU_HEIGHT_STYLED_UNITS } from "./constants";
 import { disableHoverEvents } from "./disableHoverEvents";
+
+// These components are `styled(RadixNavigationMenu.*)` — a component target, so
+// NDSProvider's global filter forwards every prop, and Radix (via `asChild`)
+// passes them onto the rendered DOM element. Drop the styled-system props here;
+// they're still applied as styles by `addStyledProps` below.
+const shouldForwardProp = excludeStyledProps(addStyledProps);
 
 function itemStyles(theme: DefaultNDSThemeType): CSSProperties {
   return {
@@ -56,15 +62,15 @@ interface NavigationMenuTriggerProps extends RadixNavigationMenu.NavigationMenuT
   disableMenuToggleOnHover?: boolean;
 }
 
-export const NavigationMenuTrigger = styled(RadixNavigationMenu.Trigger).attrs<NavigationMenuTriggerProps>(
-  ({ disableMenuToggleOnHover = true }) => {
+export const NavigationMenuTrigger = styled(RadixNavigationMenu.Trigger)
+  .attrs<NavigationMenuTriggerProps>(({ disableMenuToggleOnHover = true }) => {
     if (disableMenuToggleOnHover) {
       return {
         ...disableHoverEvents,
       };
     }
-  },
-)(
+  })
+  .withConfig({ shouldForwardProp })(
   ({ theme }) => ({
     all: "unset",
     ...itemStyles(theme),
@@ -88,7 +94,7 @@ export const NavigationMenuTrigger = styled(RadixNavigationMenu.Trigger).attrs<N
   addStyledProps,
 );
 
-export const NavigationMenuLink = styled(RadixNavigationMenu.Link)<StyledProps>(
+export const NavigationMenuLink = styled(RadixNavigationMenu.Link).withConfig({ shouldForwardProp })<StyledProps>(
   ({ theme }) => ({
     ...itemStyles(theme),
     display: "flex",

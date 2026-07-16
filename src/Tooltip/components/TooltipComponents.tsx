@@ -2,7 +2,8 @@ import * as TooltipPrimitive from "@radix-ui/react-tooltip";
 import * as React from "react";
 import { keyframes, styled, useTheme } from "styled-components";
 import type { MaxWidthProps } from "styled-system";
-import { maxWidth } from "styled-system";
+import { maxWidth, space } from "styled-system";
+import { excludeStyledProps } from "../../StyledProps";
 
 // A helper hook to determine if the device supports hover
 function useHasHover() {
@@ -131,7 +132,14 @@ const slideLeftAndFade = keyframes`
   }
 `;
 
-const StyledContent = styled(TooltipPrimitive.Content)`
+// `styled(TooltipPrimitive.Content)` has a component (non-string) target, so
+// NDSProvider's global `shouldForwardProp` forwards every prop — leaking
+// styled-system props (maxWidth, paddingLeft, …) through Radix onto the DOM.
+// Drop the styled-system props here; Radix's own props (side, align, …) still
+// pass through since they aren't styled-system prop names.
+const StyledContent = styled(TooltipPrimitive.Content).withConfig({
+  shouldForwardProp: excludeStyledProps(maxWidth, space),
+})`
   font-family: ${({ theme }) => theme.fonts.base};
   font-size: ${({ theme }) => theme.fontSizes.small};
   line-height: ${({ theme }) => theme.lineHeights.smallTextBase};
