@@ -30,11 +30,24 @@ export const WithACloseButton: Story = {
     children: "This is an alert with a close button",
   },
   name: "With a close button",
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await expect(canvas.getByRole("alert")).toBeVisible();
+  },
+};
+
+export const ClosesWhenDismissed: Story = {
+  args: {
+    isCloseable: true,
+    children: "This is an alert with a close button",
+  },
+  name: "Closes when dismissed",
+  // Dismissing unmounts the alert (Alert returns null), so the post-play DOM is
+  // empty — a useless snapshot that also diffs against the open-alert baseline.
+  // The visual lives in "With a close button"; this story owns the interaction.
+  parameters: { chromatic: { disableSnapshot: true } },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
-    await step("shows an alert", async () => {
-      await expect(canvas.getByRole("alert")).toBeVisible();
-    });
     await step("hides the alert when closed", async () => {
       await userEvent.click(canvas.getByLabelText("Close"));
       await waitFor(() => expect(canvas.queryByRole("alert")).not.toBeInTheDocument());
