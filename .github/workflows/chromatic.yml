@@ -38,5 +38,8 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_TOKEN }}
           token: ${{ secrets.GITHUB_TOKEN }}
           storybookBuildDir: "storybook-static"
-          exitOnceUploaded: true
           onlyChanged: true
+          # Gate PRs on visual changes: the action exits non-zero when there are
+          # unreviewed changes (so the check goes red until reviewed in Chromatic).
+          # Pushes to main auto-accept, updating the baseline post-merge.
+          autoAcceptChanges: main
