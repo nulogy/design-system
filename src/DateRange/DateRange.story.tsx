@@ -37,6 +37,12 @@ export const DefaultStartAndEndDate = {
     });
     await step("shows an error when start date is set after end date", async () => {
       await userEvent.click(canvas.getByLabelText("Select a start date"));
+      // Both pickers portal to the same node. Opening the start-date calendar
+      // closes the end-date one from the previous step via click-outside, but
+      // that close is timing-sensitive with animations enabled (as in Chromatic,
+      // which local runs mask by disabling animations). Wait until only the
+      // start-date calendar remains so the day click can't land in the wrong one.
+      await waitFor(() => expect(document.querySelectorAll(".react-datepicker")).toHaveLength(1));
       const day8 = document.querySelector(".react-datepicker__day--008") as HTMLElement;
       await userEvent.click(day8);
       await waitFor(() => expect(canvas.getByText("End date is before start date")).toBeVisible());
@@ -146,7 +152,11 @@ export const WithTimes = {
     const canvas = within(canvasElement);
     await step("shows an error when start time is after end time on the same day", async () => {
       await userEvent.click(canvas.getByLabelText("Select a start date"));
-      const day8Start = document.querySelector(".react-datepicker__day--008") as HTMLElement;
+      const day8Start = await waitFor(() => {
+        const el = document.querySelector(".react-datepicker__day--008");
+        expect(el).toBeInTheDocument();
+        return el as HTMLElement;
+      });
       await userEvent.click(day8Start);
       await userEvent.click(canvas.getByLabelText("Select a start time"));
       const startOptions = within(canvas.getByTestId("daterange-start-time")).getAllByTestId(/select-option/);
@@ -155,7 +165,11 @@ export const WithTimes = {
       const endOptions = within(canvas.getByTestId("daterange-end-time")).getAllByTestId(/select-option/);
       await userEvent.click(endOptions[3]);
       await userEvent.click(canvas.getByLabelText("Select an end date"));
-      const day8End = document.querySelector(".react-datepicker__day--008") as HTMLElement;
+      const day8End = await waitFor(() => {
+        const el = document.querySelector(".react-datepicker__day--008");
+        expect(el).toBeInTheDocument();
+        return el as HTMLElement;
+      });
       await userEvent.click(day8End);
       await waitFor(() => expect(canvas.getByText("End time is before start time")).toBeVisible());
     });
