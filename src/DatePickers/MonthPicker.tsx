@@ -1,5 +1,6 @@
 import { forwardRef, useEffect, useState } from "react";
-import type { ReactDatePicker, ReactDatePickerCustomHeaderProps } from "react-datepicker";
+import type ReactDatePicker from "react-datepicker";
+import type { ReactDatePickerCustomHeaderProps } from "react-datepicker";
 import { noop } from "../utils/noop";
 import { MonthDatePickerHeader } from "./custom/MonthPickerHeader";
 import { BasePicker } from "./shared/components/BasePicker";
@@ -13,7 +14,6 @@ export const DEFAULT_PLACEHOLDER = "YYYY-Mon";
 const MonthPicker = forwardRef<ReactDatePicker, MonthPickerProps>(
   ({ selected, dateFormat = DEFAULT_MONTH_FORMAT, onChange, ...props }, monthPickerRef) => {
     const [selectedDate, setSelectedDate] = useState(selected);
-    const [ref] = useState(null);
 
     useEffect(() => {
       setSelectedDate(selected);
@@ -28,13 +28,6 @@ const MonthPicker = forwardRef<ReactDatePicker, MonthPickerProps>(
 
     const handleUpKey = noop;
     const handleDownKey = noop;
-
-    const handleEnterKey = () => {
-      if (ref) {
-        const isOpen = ref.isCalendarOpen();
-        ref.setOpen(!isOpen);
-      }
-    };
 
     return (
       <BasePicker
@@ -51,7 +44,6 @@ const MonthPicker = forwardRef<ReactDatePicker, MonthPickerProps>(
         )}
         onUpKeyPress={handleUpKey}
         onDownKeyPress={handleDownKey}
-        onEnterKeyPress={handleEnterKey}
       />
     );
   },

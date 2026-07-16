@@ -1,4 +1,4 @@
-import type { ReactDatePickerProps } from "react-datepicker";
+import type { DatePickerProps as ReactDatePickerProps } from "react-datepicker";
 import type { FieldProps } from "../../Form/Field";
 import type { InputFieldProps } from "../../Input/InputField";
 

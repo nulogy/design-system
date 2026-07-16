@@ -1,6 +1,32 @@
 import { createGlobalStyle } from "styled-components";
+import type { DefaultNDSThemeType } from "../../theme";
 
-export const DatePickerStyles = createGlobalStyle(({ theme }) => ({
+// Mirrors the locale → font resolution in NDSProvider/GlobalStyles.
+const resolveFontFamily = (theme: DefaultNDSThemeType, locale?: string) => {
+  const localeFontMap: Record<string, string> = {
+    zh_CN: theme.fonts.sc,
+    ja_JP: theme.fonts.jp,
+  };
+  return (locale && localeFontMap[locale]) || theme.fonts.base;
+};
+
+export const DatePickerStyles = createGlobalStyle<{ locale?: string }>(({ theme, locale }) => ({
+  // react-datepicker v9 renders each day name as a visible short label plus a
+  // `.react-datepicker__sr-only` span holding the full weekday name for screen
+  // readers. Its own stylesheet hides that span; since NDS ships bespoke styles
+  // (and doesn't import react-datepicker's CSS) we must hide it ourselves,
+  // otherwise the full day names render visibly and overlap the header row.
+  ".react-datepicker__sr-only": {
+    position: "absolute",
+    width: "1px",
+    height: "1px",
+    padding: "0",
+    margin: "-1px",
+    overflow: "hidden",
+    clip: "rect(0, 0, 0, 0)",
+    whiteSpace: "nowrap",
+    borderWidth: "0",
+  },
   ".nds-date-picker": {
     ".react-datepicker-wrapper": {
       width: "fit-content",
@@ -18,6 +44,10 @@ export const DatePickerStyles = createGlobalStyle(({ theme }) => ({
     // calendar is portaled to the body, outside the dialog, so re-enable interaction
     // here — otherwise day clicks pass through to the overlay and close the modal.
     pointerEvents: "auto",
+    // The calendar is portaled to document.body, outside NDSProvider's GlobalStyles
+    // font wrapper, so it can't inherit the NDS font — it must declare it explicitly,
+    // otherwise the calendar falls back to the browser default (serif).
+    fontFamily: resolveFontFamily(theme, locale),
     ".react-datepicker__header": {
       backgroundColor: theme.colors.white,
       borderBottom: "none",

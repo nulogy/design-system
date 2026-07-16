@@ -1,6 +1,6 @@
 import { isBefore, isSameDay } from "date-fns";
 import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from "react";
-import type { ReactDatePicker } from "react-datepicker";
+import type ReactDatePicker from "react-datepicker";
 import { useTranslation } from "react-i18next";
 import { DatePicker } from "../DatePickers";
 import { FieldLabelDefaultProps } from "../FieldLabel/FieldLabel.type";

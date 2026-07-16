@@ -51,6 +51,34 @@ export const Default: Story = {
   },
 };
 
+// Opens the calendar and leaves it open so Chromatic captures the open popper.
+// The `Default` story closes the calendar (it selects a date), so no snapshot
+// ever covered the open calendar — which is how a font regression in the
+// portaled calendar (see DatePickers/shared/styles.ts) slipped through.
+export const OpenCalendar: Story = {
+  args: {
+    selected: selectedDateExamples[0],
+    inputProps: { labelText: "Expiry Date" },
+  },
+  parameters: {
+    // Give the portaled popper a beat to position before Chromatic snapshots.
+    chromatic: { delay: 300 },
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await userEvent.click(canvas.getByLabelText("select a date"));
+    const calendar = await waitFor(() => {
+      const el = document.querySelector(".react-datepicker");
+      expect(el).toBeInTheDocument();
+      return el as HTMLElement;
+    });
+    // Regression guard: the calendar renders in a portal on document.body, outside
+    // NDSProvider's font wrapper, so it must declare the NDS font itself. Without it
+    // the calendar falls back to the browser default (serif).
+    await expect(getComputedStyle(calendar).fontFamily).toContain("IBM Plex Sans");
+  },
+};
+
 export const WithCustomDateFormat: Story = {
   args: {
     selected: selectedDateExamples[0],
