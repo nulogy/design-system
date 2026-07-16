@@ -1,5 +1,9 @@
 import type { Decorator, Preview } from "@storybook/react-vite";
-import { ALL_NDS_LOCALES, NDSProvider } from "../src";
+// Import from specific modules, NOT the package barrel (`../src`): importing the
+// barrel pulls every component into preview's dependency graph, which defeats
+// Chromatic's TurboSnap (any component change forces a full snapshot build).
+import { ALL_NDS_LOCALES } from "../src/locales.const";
+import { NDSProvider } from "../src/NDSProvider";
 import { desktop as theme } from "../src/theme";
 
 const viewports = {
