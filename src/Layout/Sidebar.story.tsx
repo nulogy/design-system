@@ -130,56 +130,69 @@ export const WithoutOverlay = () => {
   );
 };
 
+const OpenByDefaultComponent = () => {
+  const [isOpen, setIsOpen] = useState(true);
+  const triggerRef = useRef(null);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+  const closeSidebar = () => {
+    setIsOpen(false);
+  };
+
+  return (
+    <ApplicationFrame navBar={<Navigation />} overflowX="hidden">
+      <Page
+        breadcrumbs={
+          <Breadcrumbs>
+            <Link href="/">Home</Link>
+            <Link href="/">Materials</Link>
+          </Breadcrumbs>
+        }
+        title="Materials Overview"
+      >
+        <Box minWidth="300px">
+          <PrimaryButton onClick={toggleSidebar} ref={triggerRef} id="openSidebarTrigger">
+            Open Sidebar
+          </PrimaryButton>
+          <Box height="3000px" width="100%" bg="lightBlue" mt="x3" p="x2">
+            Space for more content
+          </Box>
+        </Box>
+        <ExampleSidebar
+          isOpen={isOpen}
+          onClose={closeSidebar}
+          triggerRef={triggerRef}
+          aria-controls="openSidebarTrigger"
+        />
+      </Page>
+    </ApplicationFrame>
+  );
+};
+
 export const OpenByDefault: Story = {
+  render: () => <OpenByDefaultComponent />,
+  // Snapshot the open sidebar — the whole point of this story. The close
+  // interaction lives in `ClosesWithCloseButton`; leaving it here dismissed the
+  // sidebar before the snapshot, so "open by default" rendered closed.
+  play: async ({ canvasElement }) => {
+    await expect(canvasElement.querySelector("[data-testid='sidebar-overlay']")).toBeTruthy();
+  },
+};
+
+export const ClosesWithCloseButton: Story = {
+  render: () => <OpenByDefaultComponent />,
+  name: "closes with close button",
+  // Interaction only — ends with the sidebar dismissed, so its snapshot isn't
+  // useful (the open visual is covered by `OpenByDefault`).
+  parameters: { chromatic: { disableSnapshot: true } },
   play: async ({ canvasElement, step }) => {
-    await step("overlay is visible when sidebar is open", async () => {
-      await expect(canvasElement.querySelector("[data-testid='sidebar-overlay']")).toBeTruthy();
-    });
     await step("close button dismisses the sidebar", async () => {
       const canvas = within(canvasElement);
       await userEvent.click(canvas.getByLabelText("Close"));
       await waitFor(() => expect(canvasElement.querySelector("[data-testid='sidebar-overlay']")).toBeNull());
     });
-  },
-  render: () => {
-    const [isOpen, setIsOpen] = useState(true);
-    const triggerRef = useRef(null);
-
-    const toggleSidebar = () => {
-      setIsOpen(!isOpen);
-    };
-    const closeSidebar = () => {
-      setIsOpen(false);
-    };
-
-    return (
-      <ApplicationFrame navBar={<Navigation />} overflowX="hidden">
-        <Page
-          breadcrumbs={
-            <Breadcrumbs>
-              <Link href="/">Home</Link>
-              <Link href="/">Materials</Link>
-            </Breadcrumbs>
-          }
-          title="Materials Overview"
-        >
-          <Box minWidth="300px">
-            <PrimaryButton onClick={toggleSidebar} ref={triggerRef} id="openSidebarTrigger">
-              Open Sidebar
-            </PrimaryButton>
-            <Box height="3000px" width="100%" bg="lightBlue" mt="x3" p="x2">
-              Space for more content
-            </Box>
-          </Box>
-          <ExampleSidebar
-            isOpen={isOpen}
-            onClose={closeSidebar}
-            triggerRef={triggerRef}
-            aria-controls="openSidebarTrigger"
-          />
-        </Page>
-      </ApplicationFrame>
-    );
   },
 };
 
