@@ -1,3 +1,4 @@
+import MockDate from "mockdate";
 import { type ReactElement, useState } from "react";
 import { action } from "storybook/actions";
 import { expect, fn, screen, userEvent, waitFor, within } from "storybook/test";
@@ -312,14 +313,18 @@ export const FillsInTodayWhenOnlyTimePicked = {
     );
   },
   name: "fills in today's date when only a time is picked",
+  // The component reads `new Date()` at render (DateTimePicker.tsx) to borrow "today" for the missing
+  // calendar day, so the emitted instant would otherwise drift day-to-day and re-diff in Chromatic.
+  // Freeze "now" to a fixed UTC day so the borrowed date — and this story's snapshot — is deterministic.
+  // The cleanup resets the mock after capture so sibling stories keep the real clock.
+  beforeEach: () => {
+    MockDate.set(new Date(Date.UTC(2026, 6, 16, 9, 0, 0))); // 2026-07-16 UTC
+    return () => MockDate.reset();
+  },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
     const hidden = canvas.getByTestId("date-time-picker-hidden-input");
-    // Today's UTC calendar day, computed from behavior (not by re-calling the helper).
-    const pad = (n: number) => String(n).padStart(2, "0");
-    const now = new Date();
-    const todayUtc = `${now.getUTCFullYear()}-${pad(now.getUTCMonth() + 1)}-${pad(now.getUTCDate())}`;
-
+    // The frozen "today" (see beforeEach) is 2026-07-16 UTC, so the borrowed calendar day is fixed.
     await step("with nothing selected, the field is empty", async () => {
       await expect(hidden).toHaveValue("");
     });
@@ -329,11 +334,11 @@ export const FillsInTodayWhenOnlyTimePicked = {
       await userEvent.click(screen.getByTestId("scroll-time-cell-hour-09"));
       await userEvent.click(screen.getByTestId("scroll-time-cell-minute-30"));
     });
-    await step("the field submits today's date at the picked time", async () => {
-      await waitFor(() => expect(hidden).toHaveValue(`${todayUtc}T09:30:00.000Z`));
+    await step("the field submits the frozen today's date at the picked time", async () => {
+      await waitFor(() => expect(hidden).toHaveValue("2026-07-16T09:30:00.000Z"));
       await expect(canvas.getByLabelText("select a date")).toHaveValue(""); // date field itself stays empty
       await userEvent.click(canvas.getByTestId("submit-partial"));
-      await expect(canvas.getByTestId("submitted-value-partial")).toHaveTextContent(`${todayUtc}T09:30:00.000Z`);
+      await expect(canvas.getByTestId("submitted-value-partial")).toHaveTextContent("2026-07-16T09:30:00.000Z");
     });
   },
 };
