@@ -23,6 +23,14 @@ export const Default = {
     await step("shows week numbers in the calendar", async () => {
       expect(document.querySelector(".react-datepicker__week-number")).toBeTruthy();
     });
+    await step("renders the calendar with NDS styles applied", async () => {
+      // Regression guard: WeekPicker renders both DatePickerStyles' base layout and
+      // its week overrides via a single global style. If the two ever split back into
+      // colliding `createGlobalStyle`s (or the calendar stops portaling), the base
+      // rules drop and the calendar falls back to the browser default serif font.
+      const calendar = document.querySelector(".react-datepicker");
+      expect(getComputedStyle(calendar).fontFamily).toContain("IBM Plex Sans");
+    });
   },
 };
 

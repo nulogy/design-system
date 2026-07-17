@@ -167,7 +167,7 @@ export const WithoutATrigger = () => {
   );
 };
 
-export const Header = () => {
+const HeaderComponent = () => {
   const [title, setTitle] = React.useState("Haider Alshamma");
   const [subtitle1, setSubtitle1] = React.useState("haidera@nulogy.com");
   const [subtitle2, setSubtitle2] = React.useState("Nulogy");
@@ -230,7 +230,19 @@ export const Header = () => {
   );
 };
 
-export const Controls = () => {
+export const Header = {
+  render: () => <HeaderComponent />,
+  name: "Header",
+  // The menu auto-opens asynchronously (useConditionalAutoClick). Without a play to
+  // await it, Chromatic snapshots the still-closed trigger; gate on the open panel.
+  play: async ({ step }) => {
+    await step("auto-opens the user menu", async () => {
+      await waitFor(() => expect(screen.getByText("Haider Alshamma")).toBeVisible(), { timeout: 3000 });
+    });
+  },
+};
+
+const ControlsComponent = () => {
   useConditionalAutoClick({
     selector: userMenuToggleSelector,
     condition: {
@@ -274,7 +286,19 @@ export const Controls = () => {
   );
 };
 
-export const MenuItems = () => {
+export const Controls = {
+  render: () => <ControlsComponent />,
+  name: "Controls",
+  // Gate the snapshot on the auto-opened panel (see Header) — the select controls
+  // only exist once the menu is open.
+  play: async ({ step }) => {
+    await step("auto-opens the user menu", async () => {
+      await waitFor(() => expect(screen.getByText("Base")).toBeVisible(), { timeout: 3000 });
+    });
+  },
+};
+
+const MenuItemsComponent = () => {
   useConditionalAutoClick({
     selector: userMenuToggleSelector,
     condition: {
@@ -327,4 +351,16 @@ export const MenuItems = () => {
       />
     </BrowserRouter>
   );
+};
+
+export const MenuItems = {
+  render: () => <MenuItemsComponent />,
+  name: "Menu Items",
+  // Gate the snapshot on the auto-opened panel (see Header) — the menu items only
+  // render once the menu is open.
+  play: async ({ step }) => {
+    await step("auto-opens the user menu", async () => {
+      await waitFor(() => expect(screen.getByText("A menu item can be a link")).toBeVisible(), { timeout: 3000 });
+    });
+  },
 };

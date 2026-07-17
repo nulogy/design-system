@@ -22,7 +22,6 @@ import { useLocale } from "../NDSProvider/LocaleContext";
 import { registerDatePickerLocales } from "../utils/datePickerLocales";
 import { getSubset } from "../utils/subset";
 import { InlineValidation } from "../Validation";
-import { WeekPickerStyles } from "./custom/weekPickerStyles";
 import { DatePickerHeader } from "./shared/components/DatePickerHeader";
 import DatePickerInput from "./shared/components/DatePickerInput";
 import { getPopperProps } from "./shared/helpers";
@@ -206,8 +205,11 @@ const WeekPicker = forwardRef<unknown, WeekPickerProps>(
 
     return (
       <Field className={`${className} nds-date-picker`} {...spaceProps}>
-        <DatePickerStyles locale={currentLocale} />
-        <WeekPickerStyles variant={componentVariant} />
+        {/* Single global style: base calendar layout + week overrides. Rendering a
+            separate WeekPickerStyles here used to collide with DatePickerStyles (both
+            createGlobalStyle with empty static parts share an id and get deduped), so
+            only one injected and the calendar rendered unstyled. */}
+        <DatePickerStyles locale={currentLocale} weekPicker />
         <ReactDatePicker
           showWeekNumbers
           showWeekPicker
@@ -228,6 +230,9 @@ const WeekPicker = forwardRef<unknown, WeekPickerProps>(
           onBlur={onBlur}
           popperPlacement="bottom-start"
           popperProps={getPopperProps(disableFlipping)}
+          // Portal the calendar into the same node as the other pickers so the
+          // `#nds-date-picker-portal`-scoped base + week styles actually apply.
+          portalId="nds-date-picker-portal"
           disabledKeyboardNavigation
         />
         <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />

@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { type CSSObject, createGlobalStyle } from "styled-components";
 import type { DefaultNDSThemeType } from "../../theme";
 
 // Mirrors the locale → font resolution in NDSProvider/GlobalStyles.
@@ -10,7 +10,140 @@ const resolveFontFamily = (theme: DefaultNDSThemeType, locale?: string) => {
   return (locale && localeFontMap[locale]) || theme.fonts.base;
 };
 
-export const DatePickerStyles = createGlobalStyle<{ locale?: string }>(({ theme, locale }) => ({
+// WeekPicker-only overrides, scoped to the same `#nds-date-picker-portal` node as
+// the base calendar rules below. These are returned as flat top-level keys (rather
+// than nested under a `#nds-date-picker-portal` object) so they merge with — instead
+// of colliding with — the base rules: JS objects can't hold two `#nds-date-picker-portal`
+// keys, and react-datepicker adds no week-picker-specific container class to nest under.
+// Equal specificity to the base rules, but emitted afterwards, so these win on ties.
+//
+// These live in DatePickerStyles rather than a separate `createGlobalStyle` on purpose:
+// two `createGlobalStyle`s built from an object/function with empty static template
+// parts share a styledComponentId, so styled-components v6 dedupes them and only one
+// ever injects. Folding the week rules in here guarantees WeekPicker renders a single
+// global style that carries both the base layout and the week overrides.
+const weekPickerRules = (theme: DefaultNDSThemeType): CSSObject => {
+  // ONE column model, shared by the header row and the day grid so that header cell N
+  // and body cell N have identical left/right edges and every weekday label centers
+  // over its column of numbers. The geometry (content width + horizontal padding, all
+  // content-box) is defined once here and reused by both rows to keep them in lockstep.
+  // Column widths are token-derived (not variant-specific magic numbers) because the
+  // day cells themselves are the same size in every component variant.
+  const columnWidth = `calc(${theme.space.x3} + ${theme.space.half})`; // day-cell content width
+  const columnPadX = `calc(${theme.space.half} + 2px)`; // default horizontal padding per cell
+  const mondayPadLeft = theme.space.x3; // Monday is nudged right to clear the week-number rail
+  const railPadLeft = theme.space.x1; // week-number rail (column 0) left padding
+  const railPadRight = theme.space.x3; // week-number rail right padding, before the divider
+
+  return {
+    // Cell shape shared by the day cells and the week-number rail.
+    "#nds-date-picker-portal .react-datepicker__day, #nds-date-picker-portal .react-datepicker__week-number": {
+      fontSize: theme.fontSizes.base,
+      borderRadius: theme.radii.large,
+      color: theme.colors.darkGrey,
+      display: "inline-block",
+      boxSizing: "content-box",
+      lineHeight: theme.lineHeights.base,
+      textAlign: "center",
+      width: columnWidth,
+      margin: 0,
+      border: "none",
+      paddingLeft: columnPadX,
+      paddingRight: columnPadX,
+      paddingTop: theme.space.x1_5,
+      paddingBottom: theme.space.x1_5,
+      "&--today": {
+        fontWeight: theme.fontWeights.bold,
+        color: theme.colors.black,
+      },
+      "&--disabled": {
+        color: theme.colors.grey,
+        "&:hover": {
+          color: theme.colors.grey,
+        },
+      },
+    },
+    "#nds-date-picker-portal .react-datepicker__day--selected, #nds-date-picker-portal .react-datepicker__week-number--selected":
+      {
+        color: theme.colors.white,
+        cursor: "initial",
+        "&:hover": {
+          color: theme.colors.white,
+          background: theme.colors.darkBlue,
+        },
+      },
+    // Header cells adopt the same column model as the day grid. Scoped under
+    // `.react-datepicker__day-names` to out-specify the base `.react-datepicker__day-name`
+    // width rule below.
+    "#nds-date-picker-portal .react-datepicker__day-names .react-datepicker__day-name": {
+      boxSizing: "content-box",
+      width: columnWidth,
+      margin: 0,
+      paddingLeft: columnPadX,
+      paddingRight: columnPadX,
+      paddingTop: theme.space.x1,
+      paddingBottom: theme.space.x1_5,
+    },
+    "#nds-date-picker-portal .react-datepicker__day-names": {
+      marginBottom: -1,
+    },
+    // Column 0 — the week-number rail: the header "W" cell and the body week-number
+    // cell share width + padding + divider border so the column lines up. (`:first-child`
+    // and the plain `.react-datepicker__week-number` also out-specify the shared rules.)
+    "#nds-date-picker-portal .react-datepicker__day-names .react-datepicker__day-name:first-child, #nds-date-picker-portal .react-datepicker__week-number":
+      {
+        width: columnWidth,
+        paddingLeft: railPadLeft,
+        paddingRight: railPadRight,
+        borderRight: `1px solid ${theme.colors.grey}`,
+        borderTopRightRadius: 0,
+        borderBottomRightRadius: 0,
+      },
+    // The rail reads as greyed-out until its week is clickable.
+    "#nds-date-picker-portal .react-datepicker__week-number": {
+      color: theme.colors.grey,
+      "&--clickable:not(:has(~ .react-datepicker__day--disabled))": {
+        color: theme.colors.darkGrey,
+        cursor: "pointer",
+      },
+    },
+    // Column 1 — Monday: the header cell and the body cell share the same left offset,
+    // so the extra padding lands identically in both rows.
+    "#nds-date-picker-portal .react-datepicker__day-names .react-datepicker__day-name:nth-child(2), #nds-date-picker-portal .react-datepicker__day:nth-child(2)":
+      {
+        paddingLeft: mondayPadLeft,
+      },
+    // The whole week row is the interactive/selectable unit, not the individual day.
+    "#nds-date-picker-portal .react-datepicker__week": {
+      borderRadius: theme.radii.large,
+      "&:not(:has(.react-datepicker__day--disabled)):hover": {
+        backgroundColor: theme.colors.lightBlue,
+      },
+      "&--selected .react-datepicker__day": {
+        "&:hover": {
+          backgroundColor: theme.colors.darkBlue,
+          color: theme.colors.white,
+        },
+      },
+      "&--selected, &:has(.react-datepicker__day--selected)": {
+        backgroundColor: theme.colors.darkBlue,
+        ".react-datepicker__day, .react-datepicker__week-number": {
+          color: theme.colors.white,
+        },
+        "&:hover": {
+          background: theme.colors.darkBlue,
+          color: theme.colors.white,
+        },
+      },
+    },
+  };
+};
+
+export const DatePickerStyles = createGlobalStyle<{
+  locale?: string;
+  // When set, the calendar is a WeekPicker and gets the week-specific overrides above.
+  weekPicker?: boolean;
+}>(({ theme, locale, weekPicker }) => ({
   // react-datepicker v9 renders each day name as a visible short label plus a
   // `.react-datepicker__sr-only` span holding the full weekday name for screen
   // readers. Its own stylesheet hides that span; since NDS ships bespoke styles
@@ -203,4 +336,7 @@ export const DatePickerStyles = createGlobalStyle<{ locale?: string }>(({ theme,
       },
     },
   },
+  // Appended after the base `#nds-date-picker-portal` block so week overrides win on
+  // equal-specificity ties. Empty object for non-week pickers (DatePicker/MonthPicker).
+  ...(weekPicker ? weekPickerRules(theme) : {}),
 }));
