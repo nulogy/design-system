@@ -89,7 +89,9 @@ export const UsingRefToControlFocus = {
     const ref = useRef<HTMLInputElement>(null);
     return (
       <>
-        <ScrollTimePicker labelText="Time" ref={ref} onChange={fn()} />
+        {/* Fixed time, NOT `new Date()`: focusing opens the panel and an empty field seeds the
+            open dials from the current time, so the snapshot would drift every run. */}
+        <ScrollTimePicker labelText="Time" ref={ref} defaultValue="13:37" onChange={fn()} />
         <button type="button" data-testid="focus-field" onClick={() => ref.current?.focus()}>
           Focus the field
         </button>
@@ -113,6 +115,10 @@ const typingOnInputChange = fn();
 export const TypingKeepsColon = {
   render: () => <ScrollTimePicker labelText="Time" onChange={fn()} onInputChange={typingOnInputChange} />,
   name: "typing keeps the colon and keeps the panel open",
+  // Behavioural, not a picture: the field must start empty to test typing into the mask, and the
+  // panel it opens seeds the dials from `new Date()` — a fixed value would defeat the test, so the
+  // snapshot would drift every run. Snapshot disabled.
+  parameters: { chromatic: { disableSnapshot: true } },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
     const field = canvas.getByTestId("scroll-time-picker-input");
@@ -131,6 +137,10 @@ export const TypingKeepsColon = {
 export const TypingKeepsCaretPosition = {
   render: () => <ScrollTimePicker labelText="Time" onChange={fn()} onInputChange={fn()} />,
   name: "typing keeps the caret position",
+  // Behavioural, not a picture: the field must start empty to test caret handling while typing, and
+  // the panel it opens seeds the dials from `new Date()` — a fixed value would defeat the test, so
+  // the snapshot would drift every run. Snapshot disabled.
+  parameters: { chromatic: { disableSnapshot: true } },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
     const field = canvas.getByTestId("scroll-time-picker-input") as HTMLInputElement;
@@ -251,7 +261,9 @@ export const ClockOpensAndParses = {
 
 // Focusing the field already opens the panel; ArrowDown then hands focus off to a listbox column.
 export const ArrowDownOpens = {
-  render: () => <ScrollTimePicker labelText="Time" onChange={fn()} />,
+  // Fixed time, NOT `new Date()`: the panel ends open, and an empty field seeds the dials from the
+  // current time, so the snapshot would drift every run.
+  render: () => <ScrollTimePicker labelText="Time" defaultValue="13:37" onChange={fn()} />,
   name: "arrow down moves focus into the columns",
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
@@ -290,6 +302,9 @@ const emptyOpenOnChange = fn();
 export const EmptyOpenSeedsNow = {
   render: () => <ScrollTimePicker labelText="Time" onChange={emptyOpenOnChange} />,
   name: "empty open seeds now without onChange",
+  // Behavioural, not a picture: the empty field is the whole point (it seeds the open dials from
+  // `new Date()`), so the snapshot would drift every run. Snapshot disabled.
+  parameters: { chromatic: { disableSnapshot: true } },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
     await step("opening an empty field selects some time and does not commit", async () => {
@@ -633,7 +648,11 @@ export const ScrollSnapSettles = {
 // showSeconds adds a third column and a :ss field.
 const withSecondsOnChange = fn();
 export const WithSeconds = {
-  render: () => <ScrollTimePicker labelText="Time" showSeconds onChange={withSecondsOnChange} />,
+  // Fixed time, NOT `new Date()`: the panel ends open, and an empty field seeds the hour/minute
+  // dials from the current time, so the snapshot would drift every run.
+  render: () => (
+    <ScrollTimePicker labelText="Time" showSeconds defaultValue="12:34:56" onChange={withSecondsOnChange} />
+  ),
   name: "with seconds",
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
@@ -670,7 +689,9 @@ export const SingleSelectionPerColumn = {
 // Focus opens the panel while the field stays editable and focused (not moved into the columns).
 const focusOpensOnChange = fn();
 export const FocusOpensPanel = {
-  render: () => <ScrollTimePicker labelText="Time" onChange={focusOpensOnChange} />,
+  // Fixed time, NOT `new Date()`: focusing opens the panel and an empty field seeds the dials from
+  // the current time, so the snapshot would drift every run. onChange still never fires on focus.
+  render: () => <ScrollTimePicker labelText="Time" defaultValue="13:37" onChange={focusOpensOnChange} />,
   name: "focus opens the panel and keeps the field editable",
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
@@ -738,6 +759,10 @@ const focusEmptySpy = fn();
 export const FocusDoesNotCommitEmpty = {
   render: () => <ScrollTimePicker labelText="Time" onChange={focusEmptySpy} />,
   name: "focus never commits or clears an empty field",
+  // Behavioural, not a picture: the empty field is the whole point (the play asserts the value stays
+  // ""), and the panel it opens seeds the dials from `new Date()`, so the snapshot would drift every
+  // run. Snapshot disabled.
+  parameters: { chromatic: { disableSnapshot: true } },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
     const field = canvas.getByTestId("scroll-time-picker-input");

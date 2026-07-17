@@ -19,6 +19,23 @@ export const Default: Story = {
   args: {
     labelText: "I am a radio button",
   },
+  // Pure resting visual: an unchecked radio. The click interaction lives in
+  // `CanBeChecked` so this snapshot stays deterministic (the play no longer
+  // leaves the radio selected).
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await expect(canvas.getByRole("radio")).not.toBeChecked();
+  },
+};
+
+// Interaction-only: exercises clicking the radio, which leaves it checked.
+// Snapshot disabled because the checked visual is already covered by
+// `SetToDefaultChecked` and `Controlled`, so there's nothing new to capture.
+export const CanBeChecked: Story = {
+  args: {
+    labelText: "I am a radio button",
+  },
+  parameters: { chromatic: { disableSnapshot: true } },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
     await step("can be checked", async () => {

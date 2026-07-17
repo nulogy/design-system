@@ -171,6 +171,17 @@ export const _Select: Story = {
       control: { type: "boolean" },
     },
   },
+};
+
+// The interaction lives here, not on `_Select`: selecting an option leaves the
+// controls-playground story filled + focused (and auto-selects on every load),
+// polluting its empty resting visual. The empty and selected states are already
+// covered by `with a blank value` and `with an option selected`, so this story's
+// snapshot is disabled — it exists for the open/close/select behaviour.
+export const SelectingAnOption: Story = {
+  args: _Select.args,
+  name: "selecting an option",
+  parameters: { chromatic: { disableSnapshot: true } },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
 
@@ -463,6 +474,9 @@ export const WithMultiselect = {
 
   name: "with multiselect",
 
+  // Only the non-mutating assertion runs here, so the snapshot keeps the default
+  // chips (the point of this story). The remove/clear interaction — which ends with
+  // an empty select — lives in `removing multiselect values` below.
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
 
@@ -472,6 +486,18 @@ export const WithMultiselect = {
       // PCN4 is an unselected option — should not be visible while dropdown is closed
       await expect(canvas.queryByText("PCN4")).not.toBeInTheDocument();
     });
+  },
+};
+
+// Removing one value then clearing all leaves the select empty, which would erase
+// the chips `with multiselect` exists to show. Snapshot disabled — this story owns
+// the remove/clear behaviour; the populated visual stays on `with multiselect`.
+export const RemovingMultiselectValues = {
+  render: WithMultiselect.render,
+  name: "removing multiselect values",
+  parameters: { chromatic: { disableSnapshot: true } },
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
 
     await step("removes a selected value via its remove button", async () => {
       const [firstMultivalue] = canvas.getAllByTestId("select-multivalue");
