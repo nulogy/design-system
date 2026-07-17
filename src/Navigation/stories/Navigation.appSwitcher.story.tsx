@@ -79,7 +79,7 @@ export const AllApps = {
   },
 };
 
-export const OnlySelectApps = () => {
+const OnlySelectAppsComponent = () => {
   useConditionalAutoClick({
     selector: appSwitcherToggleSelector,
     condition: {
@@ -104,6 +104,26 @@ export const OnlySelectApps = () => {
       }}
     />
   );
+};
+
+export const OnlySelectApps = {
+  render: () => <OnlySelectAppsComponent />,
+  name: "Only Select Apps",
+  // The switcher auto-opens via useConditionalAutoClick's async setTimeout. Awaiting the
+  // open panel here keeps Chromatic's snapshot deterministic (it captures the open state
+  // rather than racing the closed trigger). The open 3-app subset is unique to this story
+  // — AllApps snapshots the full list — so we keep the snapshot rather than disable it.
+  play: async ({ canvasElement: _canvasElement, step }) => {
+    await step("auto-opens the app switcher", async () => {
+      await waitFor(() => expect(screen.getByText("Production Scheduling")).toBeVisible(), { timeout: 3000 });
+    });
+    await step("displays only the configured apps", async () => {
+      await expect(screen.getByText("Digital Quality Inspection")).toBeVisible();
+      await expect(screen.getByText(/Shop Floor/)).toBeVisible();
+      await expect(screen.queryByText("Supplier Collaboration")).not.toBeInTheDocument();
+      await expect(screen.queryByText("Smart Factory")).not.toBeInTheDocument();
+    });
+  },
 };
 
 export const WithConditionallyVisibleApps = () => {

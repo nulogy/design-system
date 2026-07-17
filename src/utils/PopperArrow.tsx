@@ -119,7 +119,15 @@ const PopperArrow = styled.div<PropsWithChildren<PopperArrowProps>>(
     position: "absolute",
     height: theme.space.x1,
     width: theme.space.x1,
-    margin: "12px",
+    // No blanket margin here. Popper positions this arrow along the parallel
+    // axis with floating-ui's `arrow` middleware output (`left: arrowData.x` for
+    // top/bottom placements, `top: arrowData.y` for left/right). floating-ui
+    // computes that offset assuming the arrow sits at exactly that coordinate
+    // with NO extra margin on the parallel axis, so any parallel-axis margin
+    // here would shift the arrow off the trigger's centre. `positionArrow`
+    // below supplies the per-placement PERPENDICULAR margin/side that makes the
+    // arrow overlap the menu edge (e.g. `top: 0; marginTop: -7px`).
+    margin: 0,
     "&:before": {
       borderStyle: "solid",
       content: "''",
