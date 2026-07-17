@@ -126,7 +126,7 @@ export const OnlySelectApps = {
   },
 };
 
-export const WithConditionallyVisibleApps = () => {
+const WithConditionallyVisibleAppsComponent = () => {
   const [isAdmin, setIsAdmin] = useState(false);
 
   useConditionalAutoClick({
@@ -188,7 +188,25 @@ export const WithConditionallyVisibleApps = () => {
   );
 };
 
-export const WithAnIndicator = () => {
+export const WithConditionallyVisibleApps = {
+  render: () => <WithConditionallyVisibleAppsComponent />,
+  name: "With Conditionally Visible Apps",
+  // The switcher auto-opens via useConditionalAutoClick's async setTimeout. Awaiting the
+  // open panel keeps Chromatic's snapshot deterministic (it captures the open state rather
+  // than racing the closed trigger). The default non-admin state hides Smart Factory, so
+  // this open panel — the conditionally-hidden admin app — is unique to this story and we
+  // keep the snapshot rather than disable it.
+  play: async ({ canvasElement: _canvasElement, step }) => {
+    await step("auto-opens the app switcher", async () => {
+      await waitFor(() => expect(screen.getByText("Production Scheduling")).toBeVisible(), { timeout: 3000 });
+    });
+    await step("hides admin-only apps for non-admin users", async () => {
+      await expect(screen.queryByText("Smart Factory")).not.toBeInTheDocument();
+    });
+  },
+};
+
+const WithAnIndicatorComponent = () => {
   useConditionalAutoClick({
     selector: appSwitcherToggleSelector,
     condition: {
@@ -256,4 +274,22 @@ export const WithAnIndicator = () => {
       </Page>
     </ApplicationFrame>
   );
+};
+
+export const WithAnIndicator = {
+  render: () => <WithAnIndicatorComponent />,
+  name: "With An Indicator",
+  // The switcher auto-opens via useConditionalAutoClick's async setTimeout. Awaiting the
+  // open panel keeps Chromatic's snapshot deterministic (it captures the open state rather
+  // than racing the closed trigger). The indicator badges ("new" / "Not available") are
+  // unique visuals to this story, so we keep the snapshot rather than disable it.
+  play: async ({ canvasElement: _canvasElement, step }) => {
+    await step("auto-opens the app switcher", async () => {
+      await waitFor(() => expect(screen.getByText("Production Scheduling")).toBeVisible(), { timeout: 3000 });
+    });
+    await step("displays the app indicators", async () => {
+      await expect(screen.getByText("new")).toBeVisible();
+      await expect(screen.getByText("Not available")).toBeVisible();
+    });
+  },
 };

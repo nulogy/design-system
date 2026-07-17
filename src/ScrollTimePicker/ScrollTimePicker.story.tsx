@@ -89,9 +89,11 @@ export const UsingRefToControlFocus = {
     const ref = useRef<HTMLInputElement>(null);
     return (
       <>
-        {/* Fixed time, NOT `new Date()`: focusing opens the panel and an empty field seeds the
-            open dials from the current time, so the snapshot would drift every run. */}
-        <ScrollTimePicker labelText="Time" ref={ref} defaultValue="13:37" onChange={fn()} />
+        {/* Empty field on purpose — this story demonstrates ref-driven focus, not a
+            selected time. Focusing opens the panel, whose dials then seed from
+            `new Date()`, so the snapshot would drift; disabled below rather than
+            faking a value. */}
+        <ScrollTimePicker labelText="Time" ref={ref} onChange={fn()} />
         <button type="button" data-testid="focus-field" onClick={() => ref.current?.focus()}>
           Focus the field
         </button>
@@ -99,6 +101,9 @@ export const UsingRefToControlFocus = {
     );
   },
   name: "using ref to control focus",
+  // Behavioural (ref focus opens the panel); the open dials seed from `new Date()`,
+  // so the snapshot would drift. The open-panel visual is covered by `Open`/`Touch`.
+  parameters: { chromatic: { disableSnapshot: true } },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const field = canvas.getByTestId("scroll-time-picker-input");
