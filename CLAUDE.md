@@ -78,7 +78,7 @@ Components use `styled-components` with styled-system utilities. Spacing props (
 
 Testing is **Storybook-first**. The three layers are:
 
-- **Storybook `play()` functions** — primary home for component interaction tests (clicks, keyboard, focus, visible state changes). Import from `storybook/test`: `expect`, `userEvent`, `waitFor`, `within`. Every interactive component should have at least one story with a `play()` function covering its key behaviour.
+- **Storybook `play()` functions** — primary home for component interaction tests (clicks, keyboard, focus, visible state changes). Import from `storybook/test`: `expect`, `userEvent`, `waitFor`, `within`. Every interactive component should have at least one story with a `play()` function covering its key behaviour. Note that these stories are tested via Chromatic and must be stable as they are tested for visual regressions (e.g. freeze time, consistent end state).
 - **Vitest specs** — reserved strictly for **pure utility functions** (no component rendering). If a test mounts a component, it belongs in a `play()` function instead. Spec files live alongside the utility they test.
 - **Chromatic visual snapshots** — every story is snapshotted automatically on CI.
 

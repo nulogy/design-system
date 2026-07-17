@@ -160,6 +160,12 @@ const ScrollAfterPaginationComponent = () => {
 export const ScrollAfterPagination = {
   render: () => <ScrollAfterPaginationComponent />,
   name: "Scroll After Pagination",
+  // This story exists purely to exercise scroll-after-pagination behaviour, which
+  // a static snapshot can't capture anyway. The play also switches the scroll target
+  // away from the default "None", so the post-play DOM diffs against the baseline.
+  // The Pagination visual is covered by the other stories here, and the segmented
+  // control by Switcher's own stories, so there's no unique visual worth snapshotting.
+  parameters: { chromatic: { disableSnapshot: true } },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
     await step("renders pagination with scroll target switcher", async () => {

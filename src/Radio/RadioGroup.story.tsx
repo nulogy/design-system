@@ -20,6 +20,9 @@ export const _RadioGroup = {
   ),
 
   name: "RadioGroup",
+  // Pure resting visual: all options unchecked. The click interaction lives in
+  // `CanSelectAnOption` so this snapshot stays deterministic (the play no longer
+  // leaves an option selected).
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
     await step("has the correct initial values", async () => {
@@ -28,6 +31,28 @@ export const _RadioGroup = {
       await expect(radios[1]).not.toBeChecked();
       await expect(radios[2]).not.toBeChecked();
     });
+  },
+};
+
+// Interaction-only: exercises selecting options, which leaves one checked.
+// Snapshot disabled because the selected visual is already covered by
+// `RadioGroupWithAllProps`, `Controlled`, and `SetToDisabled`, so there's
+// nothing new to capture.
+export const CanSelectAnOption = {
+  render: () => (
+    <RadioGroup labelText="Setting Selection" name="settingSelection">
+      <Radio value="a" labelText="Option A" />
+      <Radio value="b" labelText="Option B" />
+      <Radio value="c" labelText="Option C" />
+    </RadioGroup>
+  ),
+
+  name: "Can select an option",
+
+  parameters: { chromatic: { disableSnapshot: true } },
+
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
     await step("can be checked", async () => {
       const radios = canvas.getAllByRole("radio");
       await userEvent.click(radios[1]);
