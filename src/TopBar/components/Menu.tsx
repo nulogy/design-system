@@ -5,7 +5,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Flex } from "../../Flex";
 import { Icon } from "../../Icon";
-import { MenuButton, MenuItemList, Overlay } from "../TopBar.styled";
+import { MenuButton, MenuItemList, MenuPanel, Overlay } from "../TopBar.styled";
 
 const blurVariants = {
   hidden: {
@@ -74,15 +74,13 @@ export function Menu({
                     }
                   }}
                 >
-                  <Dialog.Content
-                    data-testid="topbar-menu"
-                    data-visible={animationComplete ? true : undefined}
-                    aria-label={props["aria-label"] ?? t("menu options")}
-                  >
-                    <VisuallyHidden asChild>
-                      <Dialog.Title>{props["aria-label"] ?? t("menu options")}</Dialog.Title>
-                    </VisuallyHidden>
-                    <MenuItemList>{children}</MenuItemList>
+                  <Dialog.Content asChild aria-label={props["aria-label"] ?? t("menu options")}>
+                    <MenuPanel data-testid="topbar-menu" data-visible={animationComplete ? true : undefined}>
+                      <VisuallyHidden asChild>
+                        <Dialog.Title>{props["aria-label"] ?? t("menu options")}</Dialog.Title>
+                      </VisuallyHidden>
+                      <MenuItemList>{children}</MenuItemList>
+                    </MenuPanel>
                   </Dialog.Content>
                 </Overlay>
               </Dialog.Overlay>

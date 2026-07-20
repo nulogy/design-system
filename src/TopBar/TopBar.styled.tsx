@@ -123,6 +123,18 @@ const Overlay = styled(motion.div)(({ theme }) => ({
   backgroundColor: transparentize(0.85, theme.colors.white),
 }));
 
+// Styled wrapper for the radix Dialog.Content. The @reach → @radix migration left
+// Content unstyled, so — pushed to the top-right by the Overlay's `flex-end` — it sat
+// flush against the viewport edge, and radix's on-open focus put a stray outline on
+// the panel itself. Restore the edge spacing and suppress the container's focus ring
+// (the menu tiles keep their own), mirroring BottomSheet's Sheet.
+const MenuPanel = styled.div(({ theme }) => ({
+  margin: theme.space.x2,
+  "&:focus": {
+    outline: "none",
+  },
+}));
+
 const TileLink = styled.a(({ theme }) => ({
   backgroundColor: transparentize(0.15)(theme.colors.blackBlue),
   borderRadius: theme.radii.large,
@@ -159,6 +171,7 @@ export {
   Header,
   MenuButton,
   MenuItemList,
+  MenuPanel,
   Navigation,
   NavigationItemsList,
   Overlay,
