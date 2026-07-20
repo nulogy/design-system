@@ -1,3 +1,13 @@
+## [20.0.1](https://github.com/nulogy/design-system/compare/v20.0.0...v20.0.1) (2026-07-20)
+
+
+### Bug Fixes
+
+* **chromatic:** Tonnes of fixes ([472b4a9](https://github.com/nulogy/design-system/commit/472b4a9e4bd0204412e22dd5127323bcfaa7566e))
+* stop styled-system props leaking onto the DOM via styled(component) wrappers ([7fc2604](https://github.com/nulogy/design-system/commit/7fc26047a6f5f03369472dd949bce45a8a285c58)), closes [#1825](https://github.com/nulogy/design-system/issues/1825)
+* **TopBar:** restore menu panel spacing and focus outline after radix migration ([034b1d5](https://github.com/nulogy/design-system/commit/034b1d5cee6ed01f9d35631449a8015c27a62f6f))
+* WeekPicker calendar rendering, popover arrow alignment, and menu snapshot races ([dc3f957](https://github.com/nulogy/design-system/commit/dc3f95789562386df72671e8fc32a3e70ec3e531))
+
 # [20.0.0](https://github.com/nulogy/design-system/compare/v19.2.1...v20.0.0) (2026-07-16)
 
 
