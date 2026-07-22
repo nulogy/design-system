@@ -202,7 +202,7 @@ importers:
         version: 10.5.3(@types/react@19.2.17)(react@19.2.7)
       styled-components:
         specifier: ^6.3.11
-        version: 6.4.3(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+        version: 6.4.4(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       svg-sprite-loader:
         specifier: ^6.0.11
         version: 6.0.11
@@ -4470,8 +4470,8 @@ packages:
     resolution: {integrity: sha512-4gB8na07fecVVkOI6Rs4e7T6NOTki5EmL7TUduTs6bu3EdnSycntVJ4re8kgZA+wx9IueI2Y11bfbgwtzuE0KQ==}
     engines: {node: '>=0.10.0'}
 
-  styled-components@6.4.3:
-    resolution: {integrity: sha512-wYXrhu+JmDjZ1Tv7O0OopGTfztbzun43Pjjhh2H+xc0h5A09dwpZ5FJbrifJDcL8g5TA9btpWOX2+iSRuJTExw==}
+  styled-components@6.4.4:
+    resolution: {integrity: sha512-tJk5CmKUPMDoTsZQ8m0hHInBk9HFKUPSusqmbBuefDX+yUbMBWea2Ob/wdXFyHW8XZqXkprJscysAdKeGWNqlA==}
     engines: {node: '>= 16'}
     peerDependencies:
       css-to-react-native: '>= 3.2.0'
@@ -9181,7 +9181,7 @@ snapshots:
 
   strip-json-comments@2.0.1: {}
 
-  styled-components@6.4.3(react-dom@19.2.7(react@19.2.7))(react@19.2.7):
+  styled-components@6.4.4(react-dom@19.2.7(react@19.2.7))(react@19.2.7):
     dependencies:
       '@emotion/is-prop-valid': 1.4.0
       csstype: 3.2.3
