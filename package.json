@@ -5,7 +5,8 @@
   "description": "Component library for the Nulogy Design System - http://nulogy.design",
   "private": false,
   "publishConfig": {
-    "access": "public"
+    "registry": "https://npm.pkg.github.com",
+    "access": "restricted"
   },
   "scripts": {
     "ci": "pnpm install && pnpm build && pnpm build:verify && pnpm test && pnpm run check",
