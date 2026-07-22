@@ -3,6 +3,11 @@
 name: Chromatic
 on:
   push:
+
+env:
+  # Install @nulogy/tokens + @nulogy/icons from GitHub Packages
+  GITHUB_NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 jobs:
   test:
     runs-on: ubuntu-latest

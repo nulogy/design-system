@@ -8,6 +8,10 @@ node = "24.15.0"
 # This must be enabled to make the hooks work
 experimental = true
 
+[env]
+# Local dev: derive a GitHub Packages read token from the gh CLI (see the script for the guard).
+_.source = "scripts/github-packages-token.sh"
+
 [hooks]
 postinstall = 'corepack enable'
 
