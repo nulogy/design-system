@@ -10,6 +10,17 @@
 
 ### 1. Add the package
 
+`@nulogy/components` is published to [GitHub Packages](https://docs.github.com/en/packages) under the `@nulogy` scope. Point the scope at GitHub Packages in your `.npmrc` and authenticate with a token that has `read:packages`:
+
+```
+@nulogy:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}
+```
+
+Then add the package:
+
+`yarn add @nulogy/components`
+
 ## Peer dependencies
 
 @nulogy/components relies on React, ReactDOM and Styled Components. You will need to add these to your projects dependencies if they are not there already.
