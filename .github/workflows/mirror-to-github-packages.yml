@@ -1,0 +1,41 @@
+name: Mirror versions to GitHub Packages
+
+# One-off (SPAR-444): republish existing npmjs versions of this package to
+# GitHub Packages. semantic-release only publishes versions forward, so the
+# older versions consumers still pin have to be mirrored for them to install
+# from GitHub Packages.
+
+on:
+  workflow_dispatch:
+    inputs:
+      versions:
+        description: "Space-separated npmjs versions to mirror (e.g. 19.1.3 15.1.4)"
+        required: true
+
+permissions:
+  packages: write
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://npm.pkg.github.com
+          scope: "@nulogy"
+      - name: Mirror npmjs -> GitHub Packages
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PKG: "@nulogy/components"
+          VERSIONS: ${{ inputs.versions }}
+        run: |
+          set -euo pipefail
+          for v in $VERSIONS; do
+            echo "::group::$PKG@$v"
+            # Pack from npmjs — the @nulogy scope is pointed at GitHub Packages
+            # for publish, so override it back to npmjs just for the fetch.
+            tarball=$(npm pack "$PKG@$v" --@nulogy:registry=https://registry.npmjs.org 2>/dev/null | tail -1)
+            npm publish "$tarball" --access restricted
+            echo "::endgroup::"
+          done
