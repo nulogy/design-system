@@ -7,6 +7,11 @@ on:
       - main
       - next
       - beta
+
+env:
+  # Install @nulogy/tokens + @nulogy/icons from GitHub Packages
+  GITHUB_NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 jobs:
   release:
     name: Release

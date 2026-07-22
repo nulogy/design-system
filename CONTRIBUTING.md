@@ -9,6 +9,14 @@ Additionally, verify that the new component has already been added to the design
 
 1. Download and install the Node version in the `.tool-versions` file.
 2. Download and install the package manager [pnpm](https://pnpm.io/installation)
+3. `@nulogy/*` dependencies install from GitHub Packages, which requires authentication — no personal access token
+   needed. mise exports a read token from your GitHub CLI login automatically; you just need the `read:packages`
+   scope on that login once (if you authenticated `gh` with a bare token rather than the web flow, ensure it carries
+   `read:packages`):
+
+   ```sh
+   gh auth refresh -h github.com -s read:packages
+   ```
 
 ### Cloning the repo
 
