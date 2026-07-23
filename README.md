@@ -10,11 +10,18 @@
 
 ### 1. Add the package
 
-`@nulogy/components` is published to [GitHub Packages](https://docs.github.com/en/packages) under the `@nulogy` scope. Point the scope at GitHub Packages in your `.npmrc` and authenticate with a token that has `read:packages`:
+`@nulogy/components` is published to [GitHub Packages](https://docs.github.com/en/packages) under the `@nulogy` scope. Point the scope at GitHub Packages in your `.npmrc`:
 
 ```
 @nulogy:registry=https://npm.pkg.github.com
-//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}
+//npm.pkg.github.com/:_authToken=${GITHUB_NPM_AUTH_TOKEN}
+```
+
+GitHub Packages requires authentication even for reads. No personal access token is needed — reuse your GitHub CLI login:
+
+```sh
+gh auth refresh -h github.com -s read:packages   # one-time
+export GITHUB_NPM_AUTH_TOKEN=$(gh auth token)     # add to your shell profile
 ```
 
 Then add the package:
