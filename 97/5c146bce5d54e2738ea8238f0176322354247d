@@ -1,0 +1,30 @@
+package.json
+  h_e15d085370a827 137,143
+pnpm-lock.yaml
+  h_e15d085370a827 48-49,66-67,763-768,2253-2256,2389-2390,4210-4211,4213-4218,4833-4835,5900,5909,5922-5928,5930,7548-7549,7695,9595,9597-9599,10435-10436
+src/DatePickers/DatePicker.tsx
+  h_e15d085370a827 2,11
+src/DatePickers/MonthPicker.tsx
+  h_e15d085370a827 2,13
+src/DatePickers/WeekPicker.tsx
+  h_e15d085370a827 179
+src/DatePickers/shared/components/BasePicker.tsx
+  h_e15d085370a827 113
+src/DatePickers/shared/helpers.ts
+  h_e15d085370a827 1-3
+src/DatePickers/shared/types.ts
+  h_e15d085370a827 1,13
+src/DateRange/DateRange.tsx
+  h_e15d085370a827 5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "975c146bce5d54e2738ea8238f0176322354247d",
+  "prompts": {},
+  "humans": {
+    "h_e15d085370a827": {
+      "author": "James Herdman <james.herdman@gmail.com>"
+    }
+  }
+}
