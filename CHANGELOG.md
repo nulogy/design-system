@@ -1,3 +1,11 @@
+## [20.0.2](https://github.com/nulogy/design-system/compare/v20.0.1...v20.0.2) (2026-09-16)
+
+
+### Bug Fixes
+
+* **css:** Typo broke visibility ([01d4f09](https://github.com/nulogy/design-system/commit/01d4f097bbe5563d8a5abeb57a1afe06a3a82b36))
+* Regenerate broken lockfile ([26c7f68](https://github.com/nulogy/design-system/commit/26c7f680dde642e8d1c83de04a8fd4a0108f9171))
+
 ## [20.0.1](https://github.com/nulogy/design-system/compare/v20.0.0...v20.0.1) (2026-07-20)
 
 
