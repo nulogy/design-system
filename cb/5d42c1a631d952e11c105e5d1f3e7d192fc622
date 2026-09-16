@@ -1,0 +1,14 @@
+src/Layout/Sidebar.tsx
+  h_e15d085370a827 135,144
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "cb5d42c1a631d952e11c105e5d1f3e7d192fc622",
+  "prompts": {},
+  "humans": {
+    "h_e15d085370a827": {
+      "author": "James Herdman <james.herdman@gmail.com>"
+    }
+  }
+}
