@@ -1,0 +1,29 @@
+src/DatePickers/WeekPicker.tsx
+  s_e4ccf7d1ba22a5::t_2c65c9a5bc2ee8 208-212,233-235
+src/DatePickers/shared/styles.ts
+  s_e4ccf7d1ba22a5::t_bb4198fd8ff2bd 1,13-146,339-341
+src/DatePickers/stories/WeekPicker.story.tsx
+  s_e4ccf7d1ba22a5::t_912bf3c2887156 26-33
+src/Navigation/stories/Navigation.appSwitcher.story.tsx
+  s_e4ccf7d1ba22a5::t_da40875fe0cf3c 82,109-128
+src/Navigation/stories/Navigation.userMenu.story.tsx
+  s_e4ccf7d1ba22a5::t_c43f13ef8ebf8b 170,233-245,289-301,355-366
+src/utils/PopperArrow.tsx
+  s_e4ccf7d1ba22a5::t_9701316c13a27c 122-130
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "7169ff1bd80f365722cc824f0a9b080897cd1199",
+  "prompts": {},
+  "sessions": {
+    "s_e4ccf7d1ba22a5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_e4ccf7d1ba22a5",
+        "model": "unknown"
+      },
+      "human_author": "James Herdman <james.herdman@gmail.com>"
+    }
+  }
+}
