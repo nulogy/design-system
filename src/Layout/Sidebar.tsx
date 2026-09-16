@@ -132,7 +132,7 @@ function Sidebar({
     open: {
       x: 0,
       right: offset,
-      visiblility: "visible",
+      visibility: "visible",
       transition: {
         duration: duration,
         when: "beforeChildren",
@@ -141,7 +141,7 @@ function Sidebar({
     closed: {
       x: "100%",
       right: "0px",
-      visiblility: "hidden",
+      visibility: "hidden",
       transition: {
         duration: duration,
       },
