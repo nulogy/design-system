@@ -1,0 +1,28 @@
+src/Alert/Alert.story.tsx
+  h_e15d085370a827 33-48
+src/BottomSheet/BottomSheet.styled.tsx
+  h_e15d085370a827 57-63
+src/ButtonGroup/ButtonGroup.story.tsx
+  h_e15d085370a827 90-93
+src/DatePickers/stories/MonthPicker.story.tsx
+  h_e15d085370a827 13-22,53-55
+src/DatePickers/stories/WeekPicker.story.tsx
+  h_e15d085370a827 11-14,64-66
+src/DropdownMenu/DropdownMenu.story.tsx
+  h_e15d085370a827 99-123
+src/ScrollTimePicker/ScrollTimePicker.tsx
+  h_e15d085370a827 100-103
+src/Tabs/Tabs.story.tsx
+  h_e15d085370a827 172-175
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "c02bd2ee4e88db4a7cb79d0f234f3c2ebe5708ad",
+  "prompts": {},
+  "humans": {
+    "h_e15d085370a827": {
+      "author": "James Herdman <james.herdman@gmail.com>"
+    }
+  }
+}
