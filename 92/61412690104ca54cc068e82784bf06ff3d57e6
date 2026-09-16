@@ -1,0 +1,33 @@
+.storybook/main.ts
+  s_302aaef6d444a5::t_b5d2c4f85b46c1 6
+.storybook/vitest.setup.ts
+  s_302aaef6d444a5::t_86085ee50a7a48 1-8
+package.json
+  s_302aaef6d444a5::t_1318cbbd5e922f 32-33,85,96-97,110,117,132
+pnpm-lock.yaml
+  s_302aaef6d444a5::t_049a015543eae1 132-134,165-170,228-230,274-275,953-955,1471-1488,1867-1877,1881-1882,1884-1885,1898-1899,1901-1902,1904-1905,1910-1911,1916-1917,3209-3213,4260-4263,4745-4748,4753-4766,5373-5376,5780-5783,6110-6111,6118-6121,7028-7029,7584-7597,8084-8113,8122,8126-8127,8131,8133,8143,8147,8149,8152,8154,8162,8170,8172,9734-9736,10771-10772,11096-11099,11105-11114,11839-11844,12348-12349,12617,12619-12625,12641
+src/DescriptionList/stories/DescriptionList.story.tsx
+  s_302aaef6d444a5::t_80ecdbbc1f9094 6-8
+src/Select/Select.story.tsx
+  s_302aaef6d444a5::t_31947fbad66a82 4,173-196,464-490
+src/Tooltip/Tooltip.story.tsx
+  s_302aaef6d444a5::t_f5a0af9e8757a8 3,37-54
+vitest.storybook.config.ts
+  s_302aaef6d444a5::t_6a36d0be47c506 1-38
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "9261412690104ca54cc068e82784bf06ff3d57e6",
+  "prompts": {},
+  "sessions": {
+    "s_302aaef6d444a5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_302aaef6d444a5",
+        "model": "unknown"
+      },
+      "human_author": "James Herdman <james.herdman@gmail.com>"
+    }
+  }
+}
