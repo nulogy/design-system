@@ -1,0 +1,23 @@
+src/Layout/Sidebar.story.tsx
+  s_e7af1dd7426106::t_40003c8431ba56 133-173,175-189
+src/Pagination/Pagination.story.tsx
+  s_e7af1dd7426106::t_dfb822cdd238df 163-168
+src/Radio/RadioGroup.story.tsx
+  s_e7af1dd7426106::t_a11d08e1a15ff5 23-25,34-55
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "3fb716b41a27187781067dd7beb6b618045bf617",
+  "prompts": {},
+  "sessions": {
+    "s_e7af1dd7426106": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_e7af1dd7426106",
+        "model": "unknown"
+      },
+      "human_author": "James Herdman <james.herdman@gmail.com>"
+    }
+  }
+}
