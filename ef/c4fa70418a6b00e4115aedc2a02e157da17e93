@@ -1,0 +1,14 @@
+src/Navigation/types.ts
+  h_e15d085370a827 14,66,71,77,81,98
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "efc4fa70418a6b00e4115aedc2a02e157da17e93",
+  "prompts": {},
+  "humans": {
+    "h_e15d085370a827": {
+      "author": "James Herdman <james.herdman@gmail.com>"
+    }
+  }
+}
