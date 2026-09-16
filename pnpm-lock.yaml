@@ -1005,10 +1005,10 @@ packages:
       '@emnapi/runtime': ^1.7.1
 
   '@nulogy/icons@4.39.0':
-    resolution: {integrity: sha512-NsgmVy7PJkq4F14pr5b3GJrqqRFJ7r5+7vrRxnsprPv690F5LOkXEQyZ/SzT3aEdo7+xEG4kRjF4R/QXlmQSug==}
+    resolution: {integrity: sha512-NsgmVy7PJkq4F14pr5b3GJrqqRFJ7r5+7vrRxnsprPv690F5LOkXEQyZ/SzT3aEdo7+xEG4kRjF4R/QXlmQSug==, tarball: https://npm.pkg.github.com/download/@nulogy/icons/4.39.0/91915189eaef636892bc24d4b29cb1e7d466b479}
 
   '@nulogy/tokens@6.2.0':
-    resolution: {integrity: sha512-LzpHnSjU38p/U0/0dWVTG/hPgQ31TRGvWUQBByIpUG4N0sAD/50TW+YJJANpAyDVec+IbC4xkXcsnjNxE5Yjww==}
+    resolution: {integrity: sha512-LzpHnSjU38p/U0/0dWVTG/hPgQ31TRGvWUQBByIpUG4N0sAD/50TW+YJJANpAyDVec+IbC4xkXcsnjNxE5Yjww==, tarball: https://npm.pkg.github.com/download/@nulogy/tokens/6.2.0/c20d03ace69e5631d6d8ca81b83b30b638443a45}
 
   '@octokit/auth-token@6.0.0':
     resolution: {integrity: sha512-P4YJBPdPSpWTQ1NU4XYdvHvXJJDxM6YwpS0FZHRgP7YFkdVxsWcpWGy/NVqlAA7PcPCnMacXlRm1y2PFZRWL/w==}
