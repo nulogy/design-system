@@ -1,0 +1,27 @@
+src/Box/Box.tsx
+  s_b88331a1ffdd86::t_f4d3895797fc01 1-2,17-24
+src/Icon/Icon.tsx
+  s_b88331a1ffdd86::t_cd6bccec122bac 6,82-87
+src/Navigation/components/UserMenu/UserMenu.tsx
+  s_b88331a1ffdd86::t_874e47e54a3f60 3,8-14
+src/Navigation/components/shared/components.tsx
+  s_b88331a1ffdd86::t_2fac1d436c36df 5,10-15,65-66,72-73,97
+src/Tooltip/components/TooltipComponents.tsx
+  s_b88331a1ffdd86::t_d58c82251f4327 5-6,135-142
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "6c93907e4d1307ed1ccabe4ec3e782e1966d0632",
+  "prompts": {},
+  "sessions": {
+    "s_b88331a1ffdd86": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_b88331a1ffdd86",
+        "model": "unknown"
+      },
+      "human_author": "James Herdman <james.herdman@gmail.com>"
+    }
+  }
+}
