@@ -1,0 +1,21 @@
+src/TopBar/TopBar.styled.tsx
+  s_36e211e3d6e9e6::t_22eeaddf905d31 126-137,174
+src/TopBar/components/Menu.tsx
+  s_36e211e3d6e9e6::t_5f54d5db506cb5 8,77-83
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "bc08ff4ce099ff170ec81acb253da350bae59353",
+  "prompts": {},
+  "sessions": {
+    "s_36e211e3d6e9e6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_36e211e3d6e9e6",
+        "model": "unknown"
+      },
+      "human_author": "James Herdman <james.herdman@gmail.com>"
+    }
+  }
+}
