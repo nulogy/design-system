@@ -1,0 +1,21 @@
+.github/workflows/chromatic.yml
+  s_216b32d76563ab::t_e95f3ebfb925f8 42-45
+.storybook/preview.tsx
+  s_216b32d76563ab::t_d189f45aac94da 2-6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "cbe80b46abde8d7baff8c9267125f35759697048",
+  "prompts": {},
+  "sessions": {
+    "s_216b32d76563ab": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_216b32d76563ab",
+        "model": "unknown"
+      },
+      "human_author": "James Herdman <james.herdman@gmail.com>"
+    }
+  }
+}
