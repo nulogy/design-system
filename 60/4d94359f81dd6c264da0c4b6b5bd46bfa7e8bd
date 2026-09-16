@@ -1,0 +1,21 @@
+package.json
+  s_2e6d82d207d06c::t_d9854777a4585d 21,27
+pnpm-lock.yaml
+  s_2e6d82d207d06c::t_52b18a1013f3ac 5800,5884,6088,6104,6777,6790,6806,6824,6846,6902,6918,7214,7252,7264,7274,7283,7292,7329,7341,7360,7375,7390,8116,8584,9100,9107,9136,10615
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "604d94359f81dd6c264da0c4b6b5bd46bfa7e8bd",
+  "prompts": {},
+  "sessions": {
+    "s_2e6d82d207d06c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_2e6d82d207d06c",
+        "model": "unknown"
+      },
+      "human_author": "James Herdman <james.herdman@gmail.com>"
+    }
+  }
+}
