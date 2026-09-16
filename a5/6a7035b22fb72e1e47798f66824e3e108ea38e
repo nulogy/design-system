@@ -1,0 +1,21 @@
+src/Navigation/stories/Navigation.appSwitcher.story.tsx
+  s_1c571c0827de9d::t_ae9c7c5cb30c9a 129,191-209,278-295
+src/ScrollTimePicker/ScrollTimePicker.story.tsx
+  s_1c571c0827de9d::t_a86af516b31431 92-96,104-106
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "a56a7035b22fb72e1e47798f66824e3e108ea38e",
+  "prompts": {},
+  "sessions": {
+    "s_1c571c0827de9d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_1c571c0827de9d",
+        "model": "unknown"
+      },
+      "human_author": "James Herdman <james.herdman@gmail.com>"
+    }
+  }
+}
