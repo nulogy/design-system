@@ -1,0 +1,19 @@
+src/DateRange/DateRange.story.tsx
+  s_f6541cab5a6b0e::t_766bb147accd4b 40-45,155-159,168-172
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "b61130367ac24bbb24041cbc39864a6ab6718762",
+  "prompts": {},
+  "sessions": {
+    "s_f6541cab5a6b0e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_f6541cab5a6b0e",
+        "model": "unknown"
+      },
+      "human_author": "James Herdman <james.herdman@gmail.com>"
+    }
+  }
+}
