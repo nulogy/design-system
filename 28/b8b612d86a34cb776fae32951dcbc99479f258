@@ -1,0 +1,19 @@
+pnpm-lock.yaml
+  s_547594794cefeb::t_fbd9ab5d0b977c 1008,1011
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "28b8b612d86a34cb776fae32951dcbc99479f258",
+  "prompts": {},
+  "sessions": {
+    "s_547594794cefeb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b30e5d8d-7a3a-4fd1-b2e7-1bb5400e4c68",
+        "model": "claude-opus-5"
+      },
+      "human_author": "James Herdman <james.herdman@gmail.com>"
+    }
+  }
+}
