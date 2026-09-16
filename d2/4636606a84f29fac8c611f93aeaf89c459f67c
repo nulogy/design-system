@@ -1,0 +1,25 @@
+src/AppTag/stories/AppTag.usecases.story.tsx
+  s_b2278b85207d4d::t_d6e78d948bf84e 199
+src/Table/stories/Table.story.tsx
+  s_b2278b85207d4d::t_c125e1465d9f41 270-272
+src/Table/stories/TableWithSelectableRows.story.tsx
+  s_b2278b85207d4d::t_da547b4ccaaf47 85-87
+src/TruncatedText/TruncatedText.story.tsx
+  s_b2278b85207d4d::t_d9142ef695fdff 24
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "d24636606a84f29fac8c611f93aeaf89c459f67c",
+  "prompts": {},
+  "sessions": {
+    "s_b2278b85207d4d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_b2278b85207d4d",
+        "model": "unknown"
+      },
+      "human_author": "James Herdman <james.herdman@gmail.com>"
+    }
+  }
+}
