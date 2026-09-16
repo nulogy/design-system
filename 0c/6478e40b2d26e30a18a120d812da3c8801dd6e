@@ -1,0 +1,77 @@
+src/Alert/Alert.story.tsx
+  s_ea8e24021ad6cd::t_e0b4f7a58e31ba 3,34-43
+src/AppTag/stories/AppTag.usecases.story.tsx
+  s_ea8e24021ad6cd::t_ffa4c0b7a9ca8b 2,192-203
+src/AsyncSelect/AsyncSelect.story.tsx
+  s_ea8e24021ad6cd::t_2a61d345c3fc07 2,51-56,77-106
+src/BottomSheet/stories/BottomSheet.actions.story.tsx
+  s_ea8e24021ad6cd::t_dc3c2e449682a3 2,15-17,19-50
+src/BottomSheet/stories/BottomSheet.features.story.tsx
+  s_ea8e24021ad6cd::t_4c0c4fcd36634e 2,82-113
+src/BottomSheet/stories/BottomSheet.story.tsx
+  s_ea8e24021ad6cd::t_89f7e198fee9f7 2,15-17,19-41
+src/DatePickers/stories/DatePicker.story.tsx
+  s_ea8e24021ad6cd::t_b44e0c44c3cf42 2,37-52,96-131
+src/DatePickers/stories/MonthPicker.story.tsx
+  s_ea8e24021ad6cd::t_fbbce100ddf816 2,10-31
+src/DatePickers/stories/WeekPicker.story.tsx
+  s_ea8e24021ad6cd::t_e13870be5ab43c 2,10-24,30-31,40-49,60-72,74-94
+src/DateRange/DateRange.story.tsx
+  s_ea8e24021ad6cd::t_b34ee09364b1d2 2,21-45,133-163
+src/DropdownMenu/DropdownMenu.story.tsx
+  s_ea8e24021ad6cd::t_0fda3c2cfdd370 2,37-48,64-70,96-106,167-177
+src/Navigation/stories/Navigation.appSwitcher.story.tsx
+  s_ea8e24021ad6cd::t_ef024a112bb2da 2,24,64-82
+src/Navigation/stories/Navigation.story.tsx
+  s_ea8e24021ad6cd::t_0cc9fdf0232f99 2,21-48,50-58,60-66,68-74,76-83,86-98,101-108,111-118,121-126,128-129,131,133-134,137,142,144-145,148,152-221
+src/Navigation/stories/Navigation.userMenu.story.tsx
+  s_ea8e24021ad6cd::t_c1fd96073c0d76 2,22,89-110
+src/Pagination/Pagination.story.tsx
+  s_ea8e24021ad6cd::t_934f7f1874cd1c 2,110,161-182
+src/Radio/Radio.story.tsx
+  s_ea8e24021ad6cd::t_7a944af1a0edda 3,22-30,39-42,53-65,100-107,129-136
+src/Radio/RadioGroup.story.tsx
+  s_ea8e24021ad6cd::t_82de081c74a488 2,24-40,74-83,131-145,148-165
+src/Switcher/Switcher.story.tsx
+  s_ea8e24021ad6cd::t_cd5ae9047da6fe 2,21-40
+src/Table/stories/Table.story.tsx
+  s_ea8e24021ad6cd::t_aad8906bc1adb5 2,213-227,257-276
+src/Table/stories/TableWithFiltering.story.tsx
+  s_ea8e24021ad6cd::t_5287718cf024b0 2,82-91
+src/Table/stories/TableWithSelectableRows.story.tsx
+  s_ea8e24021ad6cd::t_9bb637abce482f 2,73-88
+src/Tabs/Tabs.story.tsx
+  s_ea8e24021ad6cd::t_c74e2b7de451fb 2,50-89,104-125
+src/TimePicker/TimePicker.story.tsx
+  s_ea8e24021ad6cd::t_e320a96522e0d2 2,21-32
+src/TimePicker/TimePicker.tsx
+  s_ea8e24021ad6cd::t_40961aee0f464e 167
+src/TimeRange/TimeRange.story.tsx
+  s_ea8e24021ad6cd::t_fd95ff515a5bf3 2,65-77
+src/Toast/Toast.story.tsx
+  s_ea8e24021ad6cd::t_bfb5838d760eb0 2,10-27,29-41,184-197
+src/ToastContainer/ToastContainer.story.tsx
+  s_ea8e24021ad6cd::t_8bf9dff02bcbd0 2,20,129-140
+src/Toggle/Toggle.story.tsx
+  s_ea8e24021ad6cd::t_a6081e5fbde48a 2,13-26,76-83
+src/TopBar/stories/TopBar.story.tsx
+  s_ea8e24021ad6cd::t_cb4fe677a45488 2,28-56
+src/TruncatedText/TruncatedText.story.tsx
+  s_ea8e24021ad6cd::t_f24c1904ac0d82 2,16-29,36-45,96-99
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "0c6478e40b2d26e30a18a120d812da3c8801dd6e",
+  "prompts": {},
+  "sessions": {
+    "s_ea8e24021ad6cd": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_ea8e24021ad6cd",
+        "model": "unknown"
+      },
+      "human_author": "James Herdman <james.herdman@gmail.com>"
+    }
+  }
+}
