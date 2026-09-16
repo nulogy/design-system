@@ -1,0 +1,25 @@
+src/DateTimePicker/DateTimePicker.story.tsx
+  s_1cf5dd8eb7837d::t_1ea830118cfc31 1,316-323,327,337-338,341
+src/Radio/Radio.story.tsx
+  s_1cf5dd8eb7837d::t_31cc76c00af238 22-38
+src/ScrollTimePicker/ScrollTimePicker.story.tsx
+  s_1cf5dd8eb7837d::t_324ee75f34a4cf 92-94,118-121,140-143,264-266,305-307,651-655,692-694,762-765
+src/Select/Select.story.tsx
+  s_1cf5dd8eb7837d::t_3dce83ed84bee0 174-184,477-479,489-500
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "0eb401b680d9fd63f597b703cdfd8654f59e67f1",
+  "prompts": {},
+  "sessions": {
+    "s_1cf5dd8eb7837d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_1cf5dd8eb7837d",
+        "model": "unknown"
+      },
+      "human_author": "James Herdman <james.herdman@gmail.com>"
+    }
+  }
+}
