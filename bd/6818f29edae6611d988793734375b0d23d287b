@@ -1,0 +1,20 @@
+package.json
+  h_e15d085370a827 149
+pnpm-lock.yaml
+  h_e15d085370a827 84-85,1429,1435,1441,1447,1453,1459,1465,1471,1477,1483,1489,1495,1501,2798-2800,4501-4502,4504,8290-8291,10037,10039
+src/BrandedNavBar/NavBar.tsx
+  h_e15d085370a827 3,126,128-135
+src/Tabs/Tabs.tsx
+  h_e15d085370a827 4,26-34,143
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "bd6818f29edae6611d988793734375b0d23d287b",
+  "prompts": {},
+  "humans": {
+    "h_e15d085370a827": {
+      "author": "James Herdman <james.herdman@gmail.com>"
+    }
+  }
+}
