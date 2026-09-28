@@ -1,3 +1,10 @@
+# [20.1.0](https://github.com/nulogy/design-system/compare/v20.0.2...v20.1.0) (2026-09-28)
+
+
+### Features
+
+* add Vietnamese (vi_VN) and Punjabi (pa_IN) locales ([#1840](https://github.com/nulogy/design-system/issues/1840)) ([1be2795](https://github.com/nulogy/design-system/commit/1be2795dec74272ebd0069c8332d6e3af64fbbb1))
+
 ## [20.0.2](https://github.com/nulogy/design-system/compare/v20.0.1...v20.0.2) (2026-09-16)
 
 
