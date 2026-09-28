@@ -11,11 +11,13 @@ import hu_HU from "../locales/hu_HU.json";
 import it_IT from "../locales/it_IT.json";
 import ja_JP from "../locales/ja_JP.json";
 import nl_NL from "../locales/nl_NL.json";
+import pa_IN from "../locales/pa_IN.json";
 import pl_PL from "../locales/pl_PL.json";
 import pt_BR from "../locales/pt_BR.json";
 import ro_RO from "../locales/ro_RO.json";
 import sk_SK from "../locales/sk_SK.json";
 import uk_UA from "../locales/uk_UA.json";
+import vi_VN from "../locales/vi_VN.json";
 import zh_CN from "../locales/zh_CN.json";
 
 const resources = {
@@ -52,6 +54,9 @@ const resources = {
   nl_NL: {
     nds: nl_NL,
   },
+  pa_IN: {
+    nds: pa_IN,
+  },
   pl_PL: {
     nds: pl_PL,
   },
@@ -66,6 +71,9 @@ const resources = {
   },
   uk_UA: {
     nds: uk_UA,
+  },
+  vi_VN: {
+    nds: vi_VN,
   },
   zh_CN: {
     nds: zh_CN,

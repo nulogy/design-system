@@ -1,5 +1,5 @@
 /* These locales are exported for use in the docs site and storybook */
-import { cs, de, deAT, enUS, es, fr, hu, it, ja, nl, pl, ptBR, ro, sk, uk, zhCN } from "date-fns/locale";
+import { cs, de, deAT, enUS, es, fr, hu, it, ja, nl, pl, ptBR, ro, sk, uk, vi, zhCN } from "date-fns/locale";
 
 export const NDS_TO_DATE_FN_LOCALES_MAP = {
   cs_CZ: cs,
@@ -13,11 +13,14 @@ export const NDS_TO_DATE_FN_LOCALES_MAP = {
   it_IT: it,
   ja_JP: ja,
   nl_NL: nl,
+  // No date-fns release ships Punjabi, so date pickers fall back to English month/day names
+  pa_IN: enUS,
   pl_PL: pl,
   pt_BR: ptBR,
   ro_RO: ro,
   sk_SK: sk,
   uk_UA: uk,
+  vi_VN: vi,
   zh_CN: zhCN,
 } as const;
 
@@ -73,6 +76,11 @@ export const ALL_NDS_LOCALES = [
     dateFnsValue: NDS_TO_DATE_FN_LOCALES_MAP.nl_NL,
   },
   {
+    label: "Punjabi (India)",
+    value: "pa_IN",
+    dateFnsValue: NDS_TO_DATE_FN_LOCALES_MAP.pa_IN,
+  },
+  {
     label: "Polish (Poland)",
     value: "pl_PL",
     dateFnsValue: NDS_TO_DATE_FN_LOCALES_MAP.pl_PL,
@@ -96,6 +104,11 @@ export const ALL_NDS_LOCALES = [
     label: "Ukrainian (Ukraine)",
     value: "uk_UA",
     dateFnsValue: NDS_TO_DATE_FN_LOCALES_MAP.uk_UA,
+  },
+  {
+    label: "Vietnamese (Vietnam)",
+    value: "vi_VN",
+    dateFnsValue: NDS_TO_DATE_FN_LOCALES_MAP.vi_VN,
   },
   {
     label: "Simplified Chinese (China)",

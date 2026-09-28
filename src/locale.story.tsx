@@ -9,11 +9,13 @@ import huHU from "../locales/hu_HU.json";
 import itIT from "../locales/it_IT.json";
 import jaJP from "../locales/ja_JP.json";
 import nlNL from "../locales/nl_NL.json";
+import paIN from "../locales/pa_IN.json";
 import plPL from "../locales/pl_PL.json";
 import ptBR from "../locales/pt_BR.json";
 import roRO from "../locales/ro_RO.json";
 import skSK from "../locales/sk_SK.json";
 import ukUA from "../locales/uk_UA.json";
+import viVN from "../locales/vi_VN.json";
 import zhCN from "../locales/zh_CN.json";
 import { Box } from "./Box";
 import { Flex } from "./Flex";
@@ -71,6 +73,10 @@ const locales: Record<string, Locale> = {
     name: "Dutch",
     keys: nlNL,
   },
+  pa_IN: {
+    name: "Punjabi (India)",
+    keys: paIN,
+  },
   pl_PL: {
     name: "Polish",
     keys: plPL,
@@ -90,6 +96,10 @@ const locales: Record<string, Locale> = {
   uk_UA: {
     name: "Ukrainian",
     keys: ukUA,
+  },
+  vi_VN: {
+    name: "Vietnamese",
+    keys: viVN,
   },
   zh_CN: {
     name: "Chinese (Simplified)",
