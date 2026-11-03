@@ -1,0 +1,23 @@
+.github/workflows/pull-request.yml
+  s_8545e8e3519aaa::t_4b8c27adb16c01 77,121
+package.json
+  s_8545e8e3519aaa::t_6455f6fd57f1e7 99
+pnpm-lock.yaml
+  s_8545e8e3519aaa::t_ec886db94503f5 160,183-184,3922-3924,3927-3929,6455,6720,6724,8556,8558,8560,9598
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0b325a35155973c92c53cc91e3a95aa3bc1ef340",
+  "prompts": {},
+  "sessions": {
+    "s_8545e8e3519aaa": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "783e57ca-f56b-40bf-9376-6ae42c4fec0c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Andrii Kaban <andriik@nulogy.com>"
+    }
+  }
+}
