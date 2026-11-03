@@ -1,3 +1,10 @@
+## [20.1.1](https://github.com/nulogy/design-system/compare/v20.1.0...v20.1.1) (2026-11-03)
+
+
+### Bug Fixes
+
+* **DatePicker:** keep calendar height fixed between months ([215045b](https://github.com/nulogy/design-system/commit/215045b23bdd30a06375ee39f27ff420d87abf51)), closes [#1851](https://github.com/nulogy/design-system/issues/1851)
+
 # [20.1.0](https://github.com/nulogy/design-system/compare/v20.0.2...v20.1.0) (2026-09-28)
 
 
