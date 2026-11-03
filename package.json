@@ -96,7 +96,7 @@
     "husky": "^9.1.7",
     "jsdom": "^29.0.0",
     "mockdate": "^3.0.5",
-    "playwright": "^1.58.2",
+    "playwright": "^1.64.1",
     "re-resizable": "^6.10.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
