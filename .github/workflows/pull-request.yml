@@ -74,8 +74,7 @@ jobs:
         run: pnpm run check
 
   test:
-    # Playwright 1.59 can't install Chromium deps on ubuntu-latest (26.04)
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
 
     steps:
       # The browser-based Vitest suite (Playwright Chromium) fills the runner disk,
@@ -119,8 +118,7 @@ jobs:
   # against React 19 (the default in package.json); this job re-runs the suite
   # pinned to React 18 so a React-19-only regression can't slip through.
   test-react18:
-    # Playwright 1.59 can't install Chromium deps on ubuntu-latest (26.04)
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Free disk space
