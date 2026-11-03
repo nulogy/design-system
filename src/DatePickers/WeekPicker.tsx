@@ -213,6 +213,7 @@ const WeekPicker = forwardRef<unknown, WeekPickerProps>(
         <ReactDatePicker
           showWeekNumbers
           showWeekPicker
+          fixedHeight
           weekLabel={weekShorthand}
           calendarStartDay={WEEK_START_DAY}
           selected={selectedDate}

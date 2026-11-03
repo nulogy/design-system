@@ -138,6 +138,7 @@ export const BasePicker = forwardRef<ReactDatePicker, BasePickerProps>(
           onBlur={onBlur}
           showMonthYearPicker={showMonthYearPicker}
           showWeekNumbers={showWeekNumbers}
+          fixedHeight
           name={name}
           required={required}
           popperPlacement="bottom-start"

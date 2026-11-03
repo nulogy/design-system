@@ -79,6 +79,37 @@ export const OpenCalendar: Story = {
   },
 };
 
+// Regression guard: the calendar always renders six week rows, so its height
+// (and the month buttons when it opens above the input) stays put between months.
+export const FixedHeightCalendar: Story = {
+  args: {
+    // February 2026 needs only four rows.
+    selected: new Date(2026, 1, 15),
+    inputProps: { labelText: "Expiry Date" },
+  },
+  parameters: {
+    chromatic: { delay: 300 },
+  },
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    const weekCount = () => document.querySelectorAll(".react-datepicker__week").length;
+
+    await userEvent.click(canvas.getByLabelText("select a date"));
+    await waitFor(() => expect(document.querySelector(".react-datepicker")).toBeInTheDocument());
+
+    await step("renders six rows for a four-row month", async () => {
+      await expect(weekCount()).toBe(6);
+    });
+    await step("keeps six rows after moving to a six-row month", async () => {
+      await userEvent.click(within(document.body).getByLabelText("Go to next month"));
+      await userEvent.click(within(document.body).getByLabelText("Go to next month"));
+      await userEvent.click(within(document.body).getByLabelText("Go to next month"));
+      await waitFor(() => expect(document.body).toHaveTextContent("May 2026"));
+      await expect(weekCount()).toBe(6);
+    });
+  },
+};
+
 export const WithCustomDateFormat: Story = {
   args: {
     selected: selectedDateExamples[0],
