@@ -1,0 +1,19 @@
+.github/workflows/pull-request.yml
+  s_8545e8e3519aaa::t_b87d76f651c575 77-78,122-123
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d228d199b3149b3745cd07dff21d443f70ca322a",
+  "prompts": {},
+  "sessions": {
+    "s_8545e8e3519aaa": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "783e57ca-f56b-40bf-9376-6ae42c4fec0c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Andrii Kaban <andriik@nulogy.com>"
+    }
+  }
+}
