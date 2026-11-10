@@ -79,7 +79,7 @@ export const WithRangeOfInputComponents = () => (
     </FieldLabel>
 
     <FieldLabel labelText="Label with hint" hint="This is a hint for the input field" requirementText="(Required)">
-      <Toggle onText="on" offText="off" toggled={true} />
+      <Toggle onText="on" offText="off" checked={true} />
     </FieldLabel>
     <FieldLabel labelText="Label with hint" hint="This is a hint for the input field" requirementText="(Required)">
       <RadioGroup name="settingSelection">

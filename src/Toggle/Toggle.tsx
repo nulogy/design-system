@@ -10,7 +10,7 @@ import type { DefaultNDSThemeType } from "../theme";
 import { getSubset, omitSubset } from "../utils/subset";
 import ToggleButton from "./ToggleButton";
 
-interface ToggleProps extends SpaceProps {
+export interface ToggleProps extends SpaceProps {
   /**
    * @see FieldLabel
    */
@@ -93,13 +93,13 @@ const Toggle = React.forwardRef<HTMLInputElement, ToggleProps>(
       if (defaultToggled) {
         console.warn("defaultToggled is deprecated. Use checked instead.");
       }
-      if (checked) {
-        console.warn("checked is deprecated. Use checked instead.");
+      if (toggled !== undefined) {
+        console.warn("toggled is deprecated. Use checked instead.");
       }
       if (onClick) {
         console.warn("onClick is deprecated. Use onChange instead.");
       }
-    }, [defaultToggled, checked, onClick]);
+    }, [defaultToggled, toggled, onClick]);
 
     const _checked = checked ?? defaultToggled ?? toggled;
 
