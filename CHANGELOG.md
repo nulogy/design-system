@@ -1,3 +1,12 @@
+## [20.1.2](https://github.com/nulogy/design-system/compare/v20.1.1...v20.1.2) (2026-11-10)
+
+
+### Bug Fixes
+
+* **Link:** stop styling props leaking onto `as` components ([a7f9904](https://github.com/nulogy/design-system/commit/a7f99046415f4f4bf19765d3cbd2c6295c77531d))
+* **Modal:** render title through Radix Dialog.Title ([503f87e](https://github.com/nulogy/design-system/commit/503f87ebef13ea87fb83d46cc6f1eb884d3d404d))
+* **Toggle:** warn about deprecated `toggled`, not supported `checked` ([49f9312](https://github.com/nulogy/design-system/commit/49f9312a723d2489ad0de19d011b9ad54f9cd34a))
+
 ## [20.1.1](https://github.com/nulogy/design-system/compare/v20.1.0...v20.1.1) (2026-11-03)
 
 
