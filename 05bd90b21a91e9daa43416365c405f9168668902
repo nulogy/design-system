@@ -1,0 +1,24 @@
+src/DatePickers/stories/DatePicker.story.tsx
+  s_8545e8e3519aaa::t_5f32cd5213d58f 82-103,107-112
+  s_8545e8e3519aaa::t_6e6841e4d4bedd 104-106
+src/DatePickers/WeekPicker.tsx
+  s_8545e8e3519aaa::t_696fed04c413b1 216
+src/DatePickers/shared/components/BasePicker.tsx
+  s_8545e8e3519aaa::t_bc280af0115e7d 141
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "05bd90b21a91e9daa43416365c405f9168668902",
+  "prompts": {},
+  "sessions": {
+    "s_8545e8e3519aaa": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "783e57ca-f56b-40bf-9376-6ae42c4fec0c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Andrii Kaban <andriik@nulogy.com>"
+    }
+  }
+}
