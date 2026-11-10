@@ -1,6 +1,7 @@
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { useRef, useState } from "react";
 import { action } from "storybook/actions";
-import { expect, userEvent, within } from "storybook/test";
+import { expect, spyOn, userEvent, within } from "storybook/test";
 import { Box, Button, Toggle } from "../index";
 import { dashed } from "../utils/story/dashed";
 
@@ -8,12 +9,15 @@ const DashedBox = dashed(Box);
 
 export default {
   title: "Components/Toggle",
-};
+  component: Toggle,
+} satisfies Meta<typeof Toggle>;
 
-export const _Toggle = {
+type Story = StoryObj<typeof Toggle>;
+
+export const _Toggle: Story = {
   render: () => {
     const [toggled, setToggled] = useState(false);
-    return <Toggle data-testid="toggle-example" toggled={toggled} onChange={(e) => setToggled(e.target.checked)} />;
+    return <Toggle data-testid="toggle-example" checked={toggled} onChange={(e) => setToggled(e.target.checked)} />;
   },
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
@@ -23,10 +27,29 @@ export const _Toggle = {
       await userEvent.click(canvas.getByTestId("toggle-example"));
       await expect(input).toBeChecked();
     });
+    await step("does not warn about the supported checked prop", async () => {
+      await expect(console.warn).not.toHaveBeenCalledWith(expect.stringContaining("deprecated"));
+    });
+  },
+  beforeEach: () => {
+    const warn = spyOn(console, "warn");
+    return () => warn.mockRestore();
   },
 };
 
-export const ToggleWithAllProps = {
+export const WithDeprecatedToggledProp: Story = {
+  render: () => <Toggle toggled onChange={() => {}} />,
+  name: "With deprecated toggled prop",
+  play: async () => {
+    await expect(console.warn).toHaveBeenCalledWith("toggled is deprecated. Use checked instead.");
+  },
+  beforeEach: () => {
+    const warn = spyOn(console, "warn").mockImplementation(() => {});
+    return () => warn.mockRestore();
+  },
+};
+
+export const ToggleWithAllProps: Story = {
   render: () => {
     const [toggled, setToggled] = useState(true);
 
@@ -36,7 +59,7 @@ export const ToggleWithAllProps = {
         helpText="Turns setting on/off"
         onText="on"
         offText="off"
-        toggled={toggled}
+        checked={toggled}
         required
         requirementText="(Required)"
         onChange={(e) => setToggled(e.target.checked)}
@@ -47,7 +70,7 @@ export const ToggleWithAllProps = {
   name: "Toggle with all props",
 };
 
-export const ToggleSetToDisabled = {
+export const ToggleSetToDisabled: Story = {
   render: () => {
     return (
       <>
@@ -64,7 +87,7 @@ export const ToggleSetToDisabled = {
           disabled
           onText="on"
           offText="off"
-          toggled={true}
+          checked={true}
           labelText="Toggle"
           onChange={action("on change")}
         />
@@ -83,7 +106,7 @@ export const ToggleSetToDisabled = {
   },
 };
 
-export const WithCustomId = {
+export const WithCustomId: Story = {
   render: () => {
     const [toggled, setToggled] = useState(true);
 
@@ -93,7 +116,7 @@ export const WithCustomId = {
         labelText="Toggle"
         onText="on"
         offText="off"
-        toggled={toggled}
+        checked={toggled}
         onChange={(e) => setToggled(e.target.checked)}
       />
     );
@@ -102,7 +125,7 @@ export const WithCustomId = {
   name: "With custom id",
 };
 
-export const WithText = {
+export const WithText: Story = {
   render: () => {
     const [toggled, setToggled] = useState(true);
 
@@ -111,7 +134,7 @@ export const WithText = {
         labelText="Toggle"
         onText="on"
         offText="off"
-        toggled={toggled}
+        checked={toggled}
         onChange={(e) => setToggled(e.target.checked)}
       />
     );
@@ -120,14 +143,14 @@ export const WithText = {
   name: "With text",
 };
 
-export const WithLongText = {
+export const WithLongText: Story = {
   render: () => {
     const [toggled, setToggled] = useState(true);
 
     return (
       <Toggle
         labelText="Toggle"
-        toggled={toggled}
+        checked={toggled}
         onText="this state has a very long text label to explain it's state"
         offText="not this one"
         onChange={(e) => setToggled(e.target.checked)}
@@ -138,7 +161,7 @@ export const WithLongText = {
   name: "With long text",
 };
 
-export const WithContraintWidth = {
+export const WithContraintWidth: Story = {
   render: () => {
     const [toggled, setToggled] = useState(true);
 
@@ -148,7 +171,7 @@ export const WithContraintWidth = {
           labelText="Toggle"
           onText="This is a long On label for the toggle component."
           offText="This is a long Off label for the toggle component."
-          toggled={toggled}
+          checked={toggled}
           onChange={(e) => setToggled(e.target.checked)}
         />
       </DashedBox>
@@ -158,7 +181,7 @@ export const WithContraintWidth = {
   name: "With constraint width",
 };
 
-export const UsingRefToControlFocus = {
+export const UsingRefToControlFocus: Story = {
   render: () => {
     const [toggled, setToggled] = useState(true);
     const ref = useRef<HTMLInputElement>(null);
@@ -173,7 +196,7 @@ export const UsingRefToControlFocus = {
           labelText="Toggle"
           onText="on"
           offText="off"
-          toggled={toggled}
+          checked={toggled}
           onChange={(e) => setToggled(e.target.checked)}
           ref={ref}
         />
