@@ -1,4 +1,5 @@
 import * as Dialog from "@radix-ui/react-dialog";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { transparentize } from "polished";
 import type React from "react";
 import type { JSX } from "react";
@@ -113,8 +114,6 @@ function Modal({
         <StyledDialogOverlay />
         <StyledDialogContent
           $maxWidth={maxWidth}
-          aria-label={!title ? ariaLabel : undefined}
-          aria-labelledby={title ? "modal-title" : undefined}
           aria-describedby={ariaDescribedBy}
           className={className}
           id={id}
@@ -129,6 +128,7 @@ function Modal({
             closeAriaLabel={closeAriaLabel}
             modalHasHeader={modalHasHeader}
             title={title}
+            ariaLabel={ariaLabel}
             onRequestClose={onRequestClose}
             footerContent={footerContent}
           >
@@ -143,6 +143,7 @@ function Modal({
 function ModalWrapper({
   modalHasHeader,
   title,
+  ariaLabel,
   onRequestClose,
   closeAriaLabel,
   children,
@@ -150,6 +151,7 @@ function ModalWrapper({
 }: {
   modalHasHeader: boolean;
   title: string;
+  ariaLabel: string;
   onRequestClose: () => void;
   closeAriaLabel: string;
   children: React.ReactNode;
@@ -160,12 +162,17 @@ function ModalWrapper({
 
   return (
     <>
+      {!title && ariaLabel && (
+        <VisuallyHidden asChild>
+          <Dialog.Title>{ariaLabel}</Dialog.Title>
+        </VisuallyHidden>
+      )}
       {modalHasHeader && (
         <ModalHeader hasCloseButton={Boolean(onRequestClose)}>
           {title ? (
-            <Heading2 id="modal-title" mb="none">
-              {title}
-            </Heading2>
+            <Dialog.Title asChild>
+              <Heading2 mb="none">{title}</Heading2>
+            </Dialog.Title>
           ) : (
             <div style={{ height: theme.space.x4 }} />
           )}

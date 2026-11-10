@@ -50,6 +50,24 @@ export const Default: Story = {
     footerContent: ModalButtons,
     onRequestClose: () => {},
   },
+  play: async () => {
+    const dialog = within(document.body).getByRole("dialog", { name: "Modal Title" });
+    // Radix logs a missing DialogTitle error unless aria-labelledby points at its own Dialog.Title
+    await expect(document.getElementById(dialog.getAttribute("aria-labelledby"))).toHaveTextContent("Modal Title");
+  },
+};
+
+export const WithAriaLabel: Story = {
+  args: {
+    children: "Content Content Content",
+    ariaLabel: "Modal aria label",
+    footerContent: ModalButtons,
+  },
+  name: "with an aria label and no title",
+  play: async () => {
+    const dialog = within(document.body).getByRole("dialog", { name: "Modal aria label" });
+    await expect(document.getElementById(dialog.getAttribute("aria-labelledby"))).toHaveTextContent("Modal aria label");
+  },
 };
 
 export const WithScrollingContent: Story = {
@@ -137,6 +155,7 @@ export const WithScrollingContentWithoutFooterContent: Story = {
 
 export const WithNoTitle: Story = {
   args: {
+    ariaLabel: "Modal with no title",
     children: "Content Content Content",
     footerContent: ModalButtons,
   },
