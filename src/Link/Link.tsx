@@ -1,3 +1,4 @@
+import isPropValid from "@emotion/is-prop-valid";
 import { themeGet } from "@styled-system/theme-get";
 import { darken } from "polished";
 import type React from "react";
@@ -6,7 +7,7 @@ import { AppTag } from "../AppTag";
 import { InlineFlex } from "../Flex";
 import { Icon } from "../Icon";
 import type { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
-import { addStyledProps, type StyledProps } from "../StyledProps";
+import { addStyledProps, excludeStyledProps, type StyledProps } from "../StyledProps";
 import type { DefaultNDSThemeType } from "../theme";
 import type { NulogyAppName } from "../types/NulogyApp";
 
@@ -67,7 +68,16 @@ function getColor(props: StyledLinkProps) {
 
 const getHoverColor = (props: StyledLinkProps) => (props.hover ? getColor(props) : darken("0.1", getColor(props)));
 
-const Anchor = styled.a<LinkProps>(
+const linkOnlyProps = ["underline", "hover", "variant"];
+const isNotStyledProp = excludeStyledProps(addStyledProps);
+
+// A component-level filter replaces NDSThemeProvider's global one, so DOM targets
+// still need the isPropValid check. Component targets (via `as`, e.g. React Router's
+// Link) get a denylist instead, so their own props like `to` and `state` pass through.
+const Anchor = styled.a.withConfig({
+  shouldForwardProp: (prop, target) =>
+    typeof target === "string" ? isPropValid(prop) : !linkOnlyProps.includes(String(prop)) && isNotStyledProp(prop),
+})<LinkProps>(
   ({ underline = true, as, ...props }) => ({
     ...resetButtonStyles,
     padding: as === "button" ? "0" : undefined,
