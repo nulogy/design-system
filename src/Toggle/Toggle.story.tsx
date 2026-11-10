@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { useRef, useState } from "react";
 import { action } from "storybook/actions";
-import { expect, spyOn, userEvent, within } from "storybook/test";
+import { expect, spyOn, userEvent, waitFor, within } from "storybook/test";
 import { Box, Button, Toggle } from "../index";
 import { dashed } from "../utils/story/dashed";
 
@@ -41,7 +41,8 @@ export const WithDeprecatedToggledProp: Story = {
   render: () => <Toggle toggled onChange={() => {}} />,
   name: "With deprecated toggled prop",
   play: async () => {
-    await expect(console.warn).toHaveBeenCalledWith("toggled is deprecated. Use checked instead.");
+    // The warning fires from an effect, which may not have run yet outside the test environment (e.g. Chromatic)
+    await waitFor(() => expect(console.warn).toHaveBeenCalledWith("toggled is deprecated. Use checked instead."));
   },
   beforeEach: () => {
     const warn = spyOn(console, "warn").mockImplementation(() => {});
